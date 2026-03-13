@@ -15,6 +15,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0001 | plan-diff-apply-verify-report | agent-workflows | promoted | Change protocol for safe, reviewable agent operations |
 | AOA-T-0002 | source-of-truth-layout | docs | promoted | Repository document role separation to reduce drift |
 | AOA-T-0003 | contract-first-smoke-summary | evaluation | promoted | Runnable smoke pattern with machine-readable summary as the primary validation contract |
+| AOA-T-0004 | intent-plan-dry-run-contract-chain | agent-workflows | promoted | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks |
 
 ## Deprecated techniques
 
