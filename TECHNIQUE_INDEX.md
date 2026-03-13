@@ -21,6 +21,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0007 | signal-first-gate-promotion | evaluation | promoted | Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early |
 | AOA-T-0008 | published-summary-remediation-snapshot | evaluation | promoted | Read-only aggregation of latest published summaries into a bounded remediation snapshot without history recomputation |
 | AOA-T-0009 | lightweight-status-snapshot | docs | promoted | Keep top-level status documents short and link-driven while detailed execution state lives in canonical docs |
+| AOA-T-0010 | telemetry-integrity-snapshot | evaluation | promoted | Read-only integrity verdict over latest published summaries, telemetry counters, and summary-layout invariants |
 
 ## Deprecated techniques
 
