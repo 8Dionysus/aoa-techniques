@@ -19,6 +19,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift |
 | AOA-T-0006 | latest-alias-plus-history-copy | evaluation | promoted | Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation |
 | AOA-T-0007 | signal-first-gate-promotion | evaluation | promoted | Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early |
+| AOA-T-0008 | published-summary-remediation-snapshot | evaluation | promoted | Read-only aggregation of latest published summaries into a bounded remediation snapshot without history recomputation |
 
 ## Deprecated techniques
 
