@@ -17,6 +17,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0003 | contract-first-smoke-summary | evaluation | promoted | Runnable smoke pattern with machine-readable summary as the primary validation contract |
 | AOA-T-0004 | intent-plan-dry-run-contract-chain | agent-workflows | promoted | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks |
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift |
+| AOA-T-0006 | latest-alias-plus-history-copy | evaluation | promoted | Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation |
 
 ## Deprecated techniques
 
