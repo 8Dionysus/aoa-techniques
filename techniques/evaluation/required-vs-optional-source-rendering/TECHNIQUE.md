@@ -91,6 +91,7 @@ Verify the technique by confirming that:
 - the surface still exposes source references so operators can navigate to the published artifact when available
 
 See `checks/required-vs-optional-rendering-checklist.md`.
+For source-backed origin proof, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -100,11 +101,19 @@ What can vary across projects:
 - whether warnings are in logs, JSON summary fields, UI badges, or all three
 - which soft-info artifacts are attached to a primary summary
 
+Project-shaped details that should not be treated as invariant:
+- the specific `Latest Metrics` panel structure used by `atm10-agent`
+- the exact optional published sources such as remediation, integrity, or operating-cycle summaries
+- the exact alias field names kept for backward compatibility
+- the exact non-blocking soft-info artifact name such as `brief_md`
+
 What should stay invariant:
 - required and optional sources remain separate policy classes
 - optional-source absence is visible but non-fatal
 - invalid optional data yields warnings
 - read-only rendering does not expand into action execution
+
+Within the G2 published-summary package, this technique is the rendering and contract policy for required versus optional published sources. `AOA-T-0008` supplies one optional remediation surface, and `AOA-T-0010` supplies one optional diagnostic trust surface.
 
 ## Public sanitization notes
 

@@ -93,20 +93,30 @@ Verify the technique by confirming that:
 - the final report includes both outcome and rollback thinking
 
 See `checks/review-checklist.md`.
+For second-context evidence and canonical-readiness review, see `notes/second-context-adaptation.md` and `notes/canonical-readiness.md`.
 
 ## Adaptation notes
 
-What usually changes across projects:
+What can vary across projects:
 - validation depth and tool choice
 - risk classification language
-- runtime and deployment assumptions
+- runtime, deployment, or review-surface assumptions
 - repository layout and ownership expectations
+- whether verification is a runtime smoke test, a checklist, or a document consistency review
+
+Project-shaped details that should not be treated as invariant:
+- CI job names or review tool names
+- deployment approval gates or release holds
+- owner or team labels
+- patch transport or execution tooling
 
 What should stay invariant:
 - explicit plan before apply
 - scoped diff
 - named verification
 - concise outcome reporting
+
+See `notes/second-context-adaptation.md` for a public second-context example.
 
 ## Public sanitization notes
 
@@ -129,5 +139,5 @@ See `checks/review-checklist.md`.
 ## Future evolution
 
 - add clearer risk tiers for lightweight versus high-impact changes
-- add adaptation notes from a second real project
+- capture a third context with stronger runtime validation
 - add optional machine-readable check metadata if the repository later needs it

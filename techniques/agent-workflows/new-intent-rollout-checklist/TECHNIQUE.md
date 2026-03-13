@@ -85,6 +85,7 @@ Verify the technique by confirming that:
 - at least one regression test covers the new intent rollout
 
 See `checks/intent-rollout-checklist.md`.
+For source-backed origin evidence, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -95,11 +96,19 @@ What can vary across projects:
 - whether `trace_id` and `intent_id` are optional or required
 - CI systems and artifact publishing surfaces
 
+Project-shaped details that should not be treated as invariant:
+- exact fixture naming patterns such as `intent_<new_intent_type>.json`
+- exact thresholds such as minimum action count or minimum step count
+- exact CI summary-table names or artifact-upload labels
+- whether one rollout example uses keyboard-only, pointer, API, or other dry-run actions
+
 What should stay invariant:
 - each new intent rollout has one canonical fixture
 - rollout uses the existing dry-run chain rather than a parallel shortcut path
 - contract-check asserts the expected routing explicitly
 - rollout produces machine-readable output suitable for review
+
+Relationship to adjacent techniques: this technique is the bounded rollout checklist for adding one new intent into the existing `intent-plan-dry-run-contract-chain` without creating a parallel validation path.
 
 ## Public sanitization notes
 
@@ -121,6 +130,6 @@ See `checks/intent-rollout-checklist.md`.
 
 ## Future evolution
 
-- add a companion technique for troubleshooting failed new-intent rollouts
+- add a failure-triage note for common rollout breakages across fixture, smoke, and contract-check layers
 - add a variant for non-CI operator approval workflows
 - add cross-version guidance for evolving intent schemas safely
