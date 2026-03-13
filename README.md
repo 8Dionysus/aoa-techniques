@@ -1,0 +1,93 @@
+# aoa-techniques
+
+Public library of reusable techniques for coding agents and humans.
+
+`aoa-techniques` is not a snippet dump and not an “awesome list”.
+It is a curated collection of **reproducible techniques**:
+workflows, validation patterns, safety protocols, documentation layouts,
+evaluation loops, and cross-repo transfer methods.
+
+A technique here is a minimal reproducible unit of engineering practice.
+
+## What belongs here
+
+Good candidates:
+- agent workflows
+- validation patterns
+- documentation structures
+- evaluation and monitoring loops
+- safety and sanitization patterns
+- infra operation techniques
+- cross-repo promotion and reuse patterns
+
+Bad candidates:
+- random snippets
+- private project hacks without adaptation notes
+- secret-bearing configs
+- raw logs
+- undocumented scripts
+- anything that only works in one private environment and was not generalized
+
+## Core principles
+
+- truth and reproducibility over legend
+- publish techniques, not accidents
+- small reversible patterns are preferred
+- human meaning, agent acceleration
+- public by design, sanitized by default
+- origin matters
+- validation matters
+- adaptation notes matter
+
+## Maturity model
+
+This repository primarily stores techniques in these public states:
+
+- `promoted`
+- `canonical`
+- `deprecated`
+
+Earlier stages such as `seed` and `proven` may exist in source projects,
+but only curated public techniques should live here.
+
+## Repository structure
+
+- `techniques/` — canonical techniques grouped by domain
+- `templates/` — templates for technique authoring and promotion
+- `TECHNIQUE_INDEX.md` — repository-wide technique map
+- `schemas/` — optional machine-readable schemas
+- `scripts/` — optional repo validation helpers
+
+## Intended users
+
+- coding agents
+- solo builders
+- infra engineers
+- product engineers
+- AI workflow designers
+- teams that want reusable operational knowledge
+
+## What a good technique includes
+
+A strong technique should have:
+- clear intent
+- usage boundaries
+- inputs and outputs
+- risks
+- validation method
+- adaptation notes
+- maturity status
+- origin and promotion history
+
+## Contribution model
+
+A technique is usually born in a real project, validated there,
+sanitized, documented, and then promoted into this public repository.
+
+In short:
+
+`project -> validation -> sanitization -> promotion -> public canon`
+
+## License
+
+Apache-2.0
