@@ -102,6 +102,7 @@ Verify the technique by confirming that:
 - long history and artifact detail stay out of lightweight entrypoint docs
 
 See `checks/doc-role-checklist.md`.
+For second-context evidence and canonical-readiness review, see `notes/second-context-adaptation.md` and `notes/canonical-readiness.md`.
 
 ## Adaptation notes
 
@@ -109,13 +110,22 @@ What can vary across projects:
 - `MANIFEST` can be omitted in smaller repositories
 - `SESSION_*` can be daily, weekly, or milestone-based
 - `ARCHIVED_TRACKS` is optional if the project has no recoverable sidelines
+- active work and goal tracking can live in repository files or an external system
 - filenames can vary as long as the role map stays explicit
+
+Project-shaped details that should not be treated as invariant:
+- exact filenames used by the origin repository
+- whether `MANIFEST` or `SESSION_*` exists at all
+- whether `TODO`, `PLANS`, and `RUNBOOK` live in the repository or are delegated elsewhere
+- the size of the role map in a compact public repository versus an operational one
 
 What should stay invariant:
 - one canonical home per recurring information class
 - explicit update-routing rules
 - lightweight entrypoint docs
 - deliberate separation between active work, long history, decisions, and runnable operations
+
+See `notes/second-context-adaptation.md` for a compact public-repository variant.
 
 ## Public sanitization notes
 
@@ -137,6 +147,6 @@ See `checks/doc-role-checklist.md`.
 
 ## Future evolution
 
-- add adaptation notes from a second repository
-- add a companion technique for lightweight status snapshots
+- add guidance for repositories that keep active work outside the repo
+- capture a third context with issue-tracker-backed planning or external runbooks
 - add an optional machine-readable role-map format if the repository later needs automated checks

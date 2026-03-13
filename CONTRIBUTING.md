@@ -62,11 +62,14 @@ PRs are reviewed for:
 ## Status transitions
 
 ### promoted -> canonical
-Usually requires stronger evidence, such as:
-- successful reuse
-- stronger validation
-- broader applicability
-- cleaner adaptation pattern
+Should usually demonstrate all of the following:
+- reuse evidence beyond the origin project, ideally a second real context
+- stronger validation than the initial promotion baseline
+- a clear reason the technique should be recommended by default
+- adaptation notes that separate invariant core from project-shaped details
+- a fresh public-safety review confirming sanitization still holds
+
+Do not mark a technique `canonical` based only on abstraction or preference.
 
 ### canonical -> deprecated
 Requires:

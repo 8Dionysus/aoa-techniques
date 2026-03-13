@@ -47,12 +47,19 @@ This repository primarily stores techniques in these public states:
 - `canonical`
 - `deprecated`
 
+In this repository:
+
+- `promoted` means reusable and public-safe, but not yet the default choice.
+- `canonical` means recommended by default after reuse evidence, stronger validation, and a clear default-use rationale.
+- `deprecated` means historically preserved, with a replacement or caution note when possible.
+
 Earlier stages such as `seed` and `proven` may exist in source projects,
 but only curated public techniques should live here.
 
 ## Repository structure
 
 - `techniques/` — canonical techniques grouped by domain
+- `techniques/<domain>/<technique>/notes/` — optional evidence notes such as second-context adaptations or canonical-readiness reviews
 - `templates/` — templates for technique authoring and promotion
 - `TECHNIQUE_INDEX.md` — repository-wide technique map
 - `schemas/` — optional machine-readable schemas
