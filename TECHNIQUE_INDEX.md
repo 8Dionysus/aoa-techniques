@@ -12,7 +12,7 @@ This file is the repository-wide map of public techniques.
 
 | id | name | domain | status | summary |
 |---|---|---|---|---|
-| - | - | - | - | - |
+| AOA-T-0001 | plan-diff-apply-verify-report | agent-workflows | promoted | Change protocol for safe, reviewable agent operations |
 
 ## Deprecated techniques
 
