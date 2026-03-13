@@ -85,6 +85,7 @@ Verify the technique by confirming that:
 - a downstream consumer can read the summary without scraping console logs
 
 See `checks/summary-contract-checklist.md`.
+For source-backed origin evidence, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -95,11 +96,19 @@ What can vary across projects:
 - additional contract-check layers
 - downstream consumers such as CI, dashboards, local tools, or agents
 
+Project-shaped details that should not be treated as invariant:
+- exact smoke family names such as phase, retrieval, gateway, or Streamlit
+- whether some smoke paths publish `smoke_summary.json` while others publish `contract_summary.json`
+- exact artifact upload grouping or step-summary presentation in CI
+- exact schema names or observed fields used by one repository
+
 What should stay invariant:
 - one machine-readable summary per smoke path
 - explicit status and outcome semantics
 - stable summary discovery
 - no dependence on raw logs as the only source of truth
+
+Relationship to adjacent techniques: this technique produces the machine-readable summaries that `latest-alias-plus-history-copy` later stabilizes for history consumers and that `signal-first-gate-promotion` later uses for staged enforcement.
 
 ## Public sanitization notes
 
@@ -122,5 +131,5 @@ See `checks/summary-contract-checklist.md`.
 ## Future evolution
 
 - add an adaptation example from a non-Python repository
-- add a companion technique for summary history plus latest-alias patterns
 - add optional guidance for backward-compatible summary evolution
+- add a variant for long-running smoke families that publish richer diagnostic envelopes

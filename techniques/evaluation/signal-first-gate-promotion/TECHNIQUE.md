@@ -92,6 +92,7 @@ Verify the technique by confirming that:
 - non-promoted surfaces remain observational
 
 See `checks/gate-promotion-checklist.md`.
+For source-backed origin evidence, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -102,11 +103,19 @@ What can vary across projects:
 - enforcement surfaces such as nightly jobs, scheduled workflows, release trains, or dedicated ops runs
 - manual override policy when it is explicit and auditable
 
+Project-shaped details that should not be treated as invariant:
+- exact policy names such as `signal_only`, `fail_nightly`, or `report_only`
+- the specific telemetry-layer names used by one repository
+- exact readiness windows, streak thresholds, or reason-code vocabularies
+- whether the narrow strict surface is a nightly workflow, a release train, or another scheduled path
+
 What should stay invariant:
 - promotion is staged rather than immediate
 - one narrow surface is chosen for strict enforcement
 - observational surfaces continue publishing diagnostics
 - evidence and decision layers stay explicit
+
+Relationship to adjacent techniques: this technique assumes a stable summary producer from `contract-first-smoke-summary` and a trustworthy latest/history layout from `latest-alias-plus-history-copy` before promotion from observation to strict enforcement.
 
 ## Public sanitization notes
 
@@ -128,6 +137,6 @@ See `checks/gate-promotion-checklist.md`.
 
 ## Future evolution
 
-- add a companion technique for remediation snapshots built on top of promoted gates
 - add a variant for multi-surface promotion across release trains
 - add guidance for demotion back to signal mode after unstable strict rollout
+- add an example where promotion intentionally stays report-only for a long-lived warning signal

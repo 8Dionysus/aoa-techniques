@@ -41,7 +41,7 @@ Create one reviewable remediation snapshot from already-published latest summari
 
 - a fixed set of latest published summary aliases
 - one deterministic bucket policy
-- one explicit candidate cap per bucket
+- one explicit candidate cap policy
 - optional freshness rules for stale or missing source summaries
 
 ## Outputs
@@ -57,7 +57,7 @@ Create one reviewable remediation snapshot from already-published latest summari
 2. Read only those latest aliases and do not scan historical runs.
 3. Apply one deterministic bucket policy to the observed latest state.
 4. Place candidate items into a fixed bucket set such as `failing_now`, `stale_inputs`, and `follow_up_needed`.
-5. Cap each bucket explicitly so the remediation surface stays reviewable.
+5. Apply the explicit candidate cap or truncation policy so the remediation surface stays reviewable.
 6. Preserve source references for every emitted candidate item.
 7. Report missing or stale sources explicitly in the snapshot instead of silently skipping them.
 8. Publish the remediation snapshot as a read-only downstream view over existing summaries.
@@ -67,7 +67,7 @@ Create one reviewable remediation snapshot from already-published latest summari
 - the helper reads latest published summaries only
 - the helper does not replay history or recompute trend state
 - the bucket set is fixed and deterministic for a given snapshot version
-- each bucket has an explicit candidate cap
+- the candidate cap or truncation policy is explicit rather than incidental
 - candidate ordering and truncation policy are explicit rather than incidental
 - missing or stale source summaries are surfaced explicitly
 - emitted items retain traceable references to their source summary paths
@@ -87,12 +87,13 @@ Verify the technique by confirming that:
 - only latest published summary aliases are read
 - no history replay or trend recomputation is required
 - the bucket set is fixed and documented
-- each bucket has a documented cap
+- the candidate cap policy is documented
 - missing or stale sources are reported explicitly
 - emitted candidates retain source references
 - snapshot generation is read-only with respect to source artifacts
 
 See `checks/remediation-snapshot-checklist.md`.
+For source-backed origin proof, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -100,15 +101,24 @@ What can vary across projects:
 - summary filenames and alias paths
 - bucket names and ordering rules
 - freshness windows for stale inputs
+- whether the candidate cap applies per snapshot, per bucket, or by priority band
 - candidate ranking fields inside each bucket
 - output format details such as plain JSON, artifact bundles, or UI adapters
+
+Project-shaped details that should not be treated as invariant:
+- the exact G2 bucket names used by `atm10-agent`
+- the specific nightly workflow or operator panel that consumes the snapshot
+- the exact latest alias path layout used by the origin project
+- the exact follow-up reason codes published for one operational loop
 
 What should stay invariant:
 - the helper reads latest published summaries rather than historical runs
 - the bucket set is deterministic
-- per-bucket caps are explicit
+- the candidate cap policy is explicit
 - source references stay attached to emitted candidates
 - the snapshot remains a read-only downstream view
+
+Within the G2 published-summary package, this technique is the bounded remediation rollup. `AOA-T-0010` checks whether those published summaries are trustworthy, and `AOA-T-0011` defines how optional remediation surfaces should render.
 
 ## Public sanitization notes
 
@@ -130,6 +140,6 @@ See `checks/remediation-snapshot-checklist.md`.
 
 ## Future evolution
 
-- add a companion technique for telemetry-integrity snapshots over published summary layouts
 - add an adaptation example for object-store-backed summary aliases
 - add guidance for versioning bucket policy without breaking snapshot consumers
+- add a variant for hierarchical buckets that still preserves fixed candidate caps

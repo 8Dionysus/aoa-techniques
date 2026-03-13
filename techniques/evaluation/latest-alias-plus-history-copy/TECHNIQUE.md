@@ -88,6 +88,7 @@ Verify the technique by confirming that:
 - fallback to latest alias happens only when no nested rows exist
 
 See `checks/dual-write-history-checklist.md`.
+For source-backed origin evidence, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -98,11 +99,19 @@ What can vary across projects:
 - local filesystem, object-store, or equivalent alias and history layouts
 - explicit backfill policies for migrations
 
+Project-shaped details that should not be treated as invariant:
+- exact run-directory naming patterns and timestamp formats
+- whether producers emit both `summary_json` and `history_summary_json` path fields
+- whether the first adopter is a nightly checker, a smoke helper, or another summary producer
+- the exact retention window or cache wiring around the latest and history layout
+
 What should stay invariant:
 - one stable latest alias exists for consumers
 - one nested history copy exists for accumulation
 - readers prefer nested history rows
 - fallback behavior is explicit instead of accidental
+
+Relationship to adjacent techniques: this technique stores the summaries produced by `contract-first-smoke-summary` in a latest-plus-history layout that `signal-first-gate-promotion` can accumulate without double-counting.
 
 ## Public sanitization notes
 
@@ -124,6 +133,6 @@ See `checks/dual-write-history-checklist.md`.
 
 ## Future evolution
 
-- add a companion technique for integrity checks over published summary layouts
 - add an adaptation example for object-store backed artifacts
 - add guidance for safe migration from single-write to dual-write history
+- add retention-policy examples for teams that expire history rows aggressively

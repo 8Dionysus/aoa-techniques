@@ -84,6 +84,7 @@ Verify the technique by confirming that:
 - contract-check output can fail the workflow on structural or routing violations
 
 See `checks/chain-contract-checklist.md`.
+For source-backed origin evidence, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -94,11 +95,19 @@ What can vary across projects:
 - whether trace or intent IDs are optional or required
 - dry-run engines and downstream validators
 
+Project-shaped details that should not be treated as invariant:
+- exact artifact filenames such as `chain_summary.json` or `automation_plan.json`
+- whether traceability IDs are optional metadata or strict required fields
+- whether the dry-run chain targets UI automation, API orchestration, or another domain
+- exact CI summary tables or artifact-upload conventions around the chain
+
 What should stay invariant:
 - intent is normalized before execution
 - dry-run happens before any real action path
 - chain artifacts are explicit
 - contract-check validates the produced artifacts rather than relying on logs alone
+
+Relationship to adjacent techniques: this technique is the core intent -> plan -> dry-run -> contract chain that `new-intent-rollout-checklist` extends when one new intent is added safely.
 
 ## Public sanitization notes
 
@@ -120,6 +129,6 @@ See `checks/chain-contract-checklist.md`.
 
 ## Future evolution
 
-- add a companion technique for onboarding new intent types safely
 - add examples from a non-UI automation system
+- add guidance for partial rollout where some intents still use legacy validation paths
 - add optional guidance for compatibility evolution across intent and plan schemas

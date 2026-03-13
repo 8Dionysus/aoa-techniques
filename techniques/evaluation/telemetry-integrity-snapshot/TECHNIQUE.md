@@ -93,6 +93,7 @@ Verify the technique by confirming that:
 - the final decision remains diagnostic and read-only
 
 See `checks/telemetry-integrity-checklist.md`.
+For source-backed origin proof, see `notes/origin-evidence.md`.
 
 ## Adaptation notes
 
@@ -103,12 +104,20 @@ What can vary across projects:
 - decision labels such as `clean`, `attention`, `warn`, or `needs_repair`
 - whether the snapshot is consumed by CI, nightly summaries, dashboards, or local operator tools
 
+Project-shaped details that should not be treated as invariant:
+- the exact G2 source set used by `atm10-agent`
+- the specific telemetry counter names emitted by one producer family
+- the exact optional cadence or guardrail source checked by the origin project
+- the exact verdict labels or summary section names used in one workflow
+
 What should stay invariant:
 - latest published summaries are the only inputs
 - required source health is explicit
 - dual-write and anti-double-count checks stay first-class
 - optional consistency checks remain explicit rather than implicit
 - the helper stays diagnostic unless a separate rollout chooses otherwise
+
+Within the G2 published-summary package, this technique is the diagnostic trust check over published summaries. `AOA-T-0008` consumes published summaries as a bounded remediation rollup, and `AOA-T-0011` governs how optional integrity surfaces render to operators and smoke checks.
 
 ## Public sanitization notes
 

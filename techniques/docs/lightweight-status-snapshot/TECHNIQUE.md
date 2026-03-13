@@ -85,6 +85,7 @@ Verify the technique by confirming that:
 - a reader can understand the current state quickly and then navigate to the right detailed document
 
 See `checks/lightweight-snapshot-checklist.md`.
+For source-backed evidence, see `notes/origin-evidence.md` and `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 
@@ -93,12 +94,21 @@ What can vary across projects:
 - the exact snapshot sections such as current status, active capabilities, or quick links
 - whether the detailed history doc is daily, weekly, or milestone-based
 - whether CI links are explicit URLs or just canonical doc references
+- whether one snapshot doc is enough or both `README` and `MANIFEST` stay lightweight
 
 What should stay invariant:
 - snapshot docs stay short
 - canonical detail is linked rather than duplicated
 - current-state evidence is anchored in one detailed location
 - top-level docs remain orientation surfaces rather than archives
+
+Project-shaped details that should not be treated as invariant:
+- the exact status bullets shown in the snapshot
+- whether capabilities are listed in `README`, `MANIFEST`, or both
+- the exact session file date linked from the current snapshot
+- whether current-state evidence comes from CI, session docs, or a similar published summary surface
+
+See `notes/second-context-adaptation.md` for a compact public-repository variant.
 
 ## Public sanitization notes
 
@@ -122,4 +132,4 @@ See `checks/lightweight-snapshot-checklist.md`.
 
 - add a companion example for repositories without `MANIFEST`
 - add optional guidance for snapshot freshness checks
-- add a relationship note for weekly summary templates and release notes
+- add canonical-readiness evidence once a second real context is documented
