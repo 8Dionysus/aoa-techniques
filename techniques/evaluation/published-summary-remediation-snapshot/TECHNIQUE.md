@@ -94,11 +94,13 @@ Verify the technique by confirming that:
 
 See `checks/remediation-snapshot-checklist.md`.
 For source-backed origin proof, see `notes/origin-evidence.md`.
+For bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 
 What can vary across projects:
 - summary filenames and alias paths
+- whether latest aliases are local files or object-store keys
 - bucket names and ordering rules
 - freshness windows for stale inputs
 - whether the candidate cap applies per snapshot, per bucket, or by priority band
@@ -118,7 +120,7 @@ What should stay invariant:
 - source references stay attached to emitted candidates
 - the snapshot remains a read-only downstream view
 
-Within the G2 published-summary package, this technique is the bounded remediation rollup. `AOA-T-0010` checks whether those published summaries are trustworthy, and `AOA-T-0011` defines how optional remediation surfaces should render.
+Within the G2 published-summary package, this technique is the bounded remediation rollup over the published latest-alias contract from `AOA-T-0006`. `AOA-T-0010` checks whether those published summaries and remediation inputs are trustworthy, and `AOA-T-0011` defines how optional remediation surfaces should render.
 
 ## Public sanitization notes
 
@@ -126,7 +128,7 @@ ATM10-specific gateway names, workflow names, thresholds, run roots, and remedia
 
 ## Example
 
-See `examples/minimal-remediation-snapshot.md`.
+See `examples/minimal-remediation-snapshot.md` and `examples/object-store-remediation-snapshot.md`.
 
 ## Checks
 
@@ -140,6 +142,5 @@ See `checks/remediation-snapshot-checklist.md`.
 
 ## Future evolution
 
-- add an adaptation example for object-store-backed summary aliases
 - add guidance for versioning bucket policy without breaking snapshot consumers
 - add a variant for hierarchical buckets that still preserves fixed candidate caps

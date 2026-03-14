@@ -21,11 +21,11 @@ summary: Distinguish strict required sources from tolerant optional sources so o
 
 ## Intent
 
-Keep summary-driven operator surfaces resilient by enforcing strict behavior for required sources while letting optional enrichments render as `not available yet` or warnings instead of taking down the whole surface.
+Keep summary-driven surfaces resilient by enforcing strict behavior for required sources while letting optional enrichments render as `not available yet` or warnings instead of taking down the whole surface.
 
 ## When to use
 
-- a UI, dashboard, or smoke check reads multiple published summary artifacts
+- a UI, dashboard, CLI report, or smoke check reads multiple published summary artifacts
 - some sources are mandatory for the base contract, while others are supporting enrichments
 - the surface should stay useful even when supporting summaries are unpublished or temporarily invalid
 - smoke or regression checks need to distinguish hard failure from observability noise
@@ -42,7 +42,7 @@ Keep summary-driven operator surfaces resilient by enforcing strict behavior for
 - a fixed set of required summary sources
 - a fixed set of optional summary sources
 - source loading rules that can detect missing files, parse failures, and schema mismatch
-- one operator-facing summary surface or smoke check
+- one summary surface, report consumer, or smoke check
 
 ## Outputs
 
@@ -71,7 +71,7 @@ Keep summary-driven operator surfaces resilient by enforcing strict behavior for
 - backward-compatible fields such as `missing_sources` may alias required missing sources only
 - soft-info artifacts such as `brief_md` are optional unless explicitly promoted to required
 - the surface reads published summaries only and does not trigger new operational work as part of rendering
-- this technique applies to summary-driven operator surfaces and smoke policies; it is not a general UI style guideline
+- this technique applies to summary-driven operator surfaces, CLI reports, and smoke policies; it is not a general UI style guideline
 
 ## Risks
 
@@ -92,13 +92,14 @@ Verify the technique by confirming that:
 
 See `checks/required-vs-optional-rendering-checklist.md`.
 For source-backed origin proof, see `notes/origin-evidence.md`.
+For bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 
 What can vary across projects:
 - the exact required and optional source lists
 - the wording of empty or warning states
-- whether warnings are in logs, JSON summary fields, UI badges, or all three
+- whether warnings are in logs, JSON summary fields, CLI sections, UI badges, or all four
 - which soft-info artifacts are attached to a primary summary
 
 Project-shaped details that should not be treated as invariant:
@@ -111,9 +112,10 @@ What should stay invariant:
 - required and optional sources remain separate policy classes
 - optional-source absence is visible but non-fatal
 - invalid optional data yields warnings
+- promotion from optional to required stays explicit and staged rather than silent
 - read-only rendering does not expand into action execution
 
-Within the G2 published-summary package, this technique is the rendering and contract policy for required versus optional published sources. `AOA-T-0008` supplies one optional remediation surface, and `AOA-T-0010` supplies one optional diagnostic trust surface.
+Within the G2 published-summary package, this technique is the rendering and contract policy for required versus optional published sources across operator panels, CLI reports, and smoke summaries. `AOA-T-0008` supplies one optional remediation surface, and `AOA-T-0010` supplies one optional diagnostic trust surface.
 
 ## Public sanitization notes
 
@@ -121,7 +123,7 @@ ATM10-specific Streamlit tab names, gateway summary names, local paths, and UI w
 
 ## Example
 
-See `examples/minimal-required-vs-optional-rendering.md`.
+See `examples/minimal-required-vs-optional-rendering.md` and `examples/non-ui-required-vs-optional-rendering.md`.
 
 ## Checks
 
@@ -136,5 +138,4 @@ See `checks/required-vs-optional-rendering-checklist.md`.
 ## Future evolution
 
 - add a companion technique for operator-facing artifact link panels
-- add guidance for escalating an optional source to required through staged rollout
-- add an example from a non-UI summary surface
+- add policy examples for multi-consumer staged promotion from optional to required
