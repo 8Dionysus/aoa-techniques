@@ -15,6 +15,21 @@ tags:
   - rollout
   - diagnostics
 summary: Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early.
+maturity_score: 4
+rigor_level: strict
+reversibility: hard
+review_required: true
+validation_strength: source_backed
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: requires
+    target: AOA-T-0003
+  - type: requires
+    target: AOA-T-0006
+evidence:
+  - kind: origin_evidence
+    path: notes/origin-evidence.md
 ---
 
 # signal-first-gate-promotion

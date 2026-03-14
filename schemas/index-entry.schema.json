@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa-techniques.dev/schemas/index-entry.schema.json",
+  "title": "Technique Index Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "domain",
+    "status",
+    "summary",
+    "maturity_score",
+    "rigor_level",
+    "reversibility",
+    "review_required",
+    "validation_strength",
+    "export_ready",
+    "technique_path"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^AOA-T-[0-9]{4}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "agent-workflows",
+        "docs",
+        "evaluation"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "canonical",
+        "promoted",
+        "deprecated"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "maturity_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "rigor_level": {
+      "type": "string",
+      "enum": [
+        "light",
+        "bounded",
+        "strict"
+      ]
+    },
+    "reversibility": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "moderate",
+        "hard"
+      ]
+    },
+    "review_required": {
+      "type": "boolean"
+    },
+    "validation_strength": {
+      "type": "string",
+      "enum": [
+        "baseline",
+        "source_backed",
+        "cross_context"
+      ]
+    },
+    "export_ready": {
+      "type": "boolean"
+    },
+    "technique_path": {
+      "type": "string",
+      "pattern": "^techniques/[A-Za-z0-9._/-]+/TECHNIQUE\\.md$"
+    }
+  }
+}

@@ -15,6 +15,25 @@ tags:
   - summaries
   - resilience
 summary: Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures.
+maturity_score: 5
+rigor_level: strict
+reversibility: moderate
+review_required: true
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: complements
+    target: AOA-T-0008
+  - type: complements
+    target: AOA-T-0010
+evidence:
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: origin_evidence
+    path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # required-vs-optional-source-rendering

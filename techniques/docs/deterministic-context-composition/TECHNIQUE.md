@@ -16,6 +16,21 @@ tags:
   - traceability
   - generated-artifact
 summary: Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability.
+maturity_score: 4
+rigor_level: bounded
+reversibility: moderate
+review_required: true
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations: []
+evidence:
+  - kind: external_review
+    path: notes/external-import-review.md
+  - kind: external_origin
+    path: notes/external-origin.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # deterministic-context-composition

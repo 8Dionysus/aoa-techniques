@@ -15,6 +15,23 @@ tags:
   - rollout
   - dry-run
 summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
+maturity_score: 3
+rigor_level: bounded
+reversibility: easy
+review_required: true
+validation_strength: source_backed
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: requires
+    target: AOA-T-0004
+  - type: complements
+    target: AOA-T-0001
+evidence:
+  - kind: origin_evidence
+    path: notes/origin-evidence.md
+  - kind: support_note
+    path: notes/rollout-failure-triage.md
 ---
 
 # new-intent-rollout-checklist
