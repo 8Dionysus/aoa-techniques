@@ -23,6 +23,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0010 | telemetry-integrity-snapshot | evaluation | promoted | Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface. |
 | AOA-T-0011 | required-vs-optional-source-rendering | evaluation | promoted | Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures. |
 | AOA-T-0012 | deterministic-context-composition | docs | promoted | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
+| AOA-T-0013 | single-source-rule-distribution | docs | promoted | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
 
 ## Deprecated techniques
 
