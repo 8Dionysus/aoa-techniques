@@ -84,7 +84,7 @@ Verify the technique by confirming that:
 - contributors can identify the source of truth without ambiguity
 
 See `checks/deterministic-context-composition-checklist.md`.
-For external provenance and second-context adaptation, see `notes/external-origin.md` and `notes/second-context-adaptation.md`.
+For external provenance, second-context adaptation, and the first import-review outcome, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, and `notes/external-import-review.md`.
 
 ## Adaptation notes
 
@@ -122,6 +122,7 @@ See `checks/deterministic-context-composition-checklist.md`.
 
 - adapted from open-source `agents-md`
 - imported into `aoa-techniques` on 2026-03-14 as the first external-import pilot with explicit provenance and bounded adaptation review
+- passed first external-import review on 2026-03-15; keep the technique `promoted` while preparing second-donor evaluation rather than widening this bundle
 
 ## Future evolution
 
