@@ -2,7 +2,7 @@
 id: AOA-T-0002
 name: source-of-truth-layout
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/SOURCE_OF_TRUTH.md
@@ -144,6 +144,7 @@ See `checks/doc-role-checklist.md`.
 - born in `atm10-agent`
 - validated through active use across `README`, `MANIFEST`, `TODO`, `PLANS`, `DECISIONS`, `RUNBOOK`, and `SESSION_*` documents
 - promoted to `aoa-techniques` on 2026-03-13
+- approved as `canonical` in `aoa-techniques` on 2026-03-14 after fresh public-safety review and default-use confirmation
 
 ## Future evolution
 

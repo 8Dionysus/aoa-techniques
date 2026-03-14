@@ -2,7 +2,7 @@
 id: AOA-T-0001
 name: plan-diff-apply-verify-report
 domain: agent-workflows
-status: promoted
+status: canonical
 origin:
   project: abyss-stack
   path: AGENTS.md
@@ -135,6 +135,7 @@ See `checks/review-checklist.md`.
 - born in `abyss-stack`
 - validated as a reusable agent workflow outside the original project context
 - promoted to `aoa-techniques` on 2026-03-13
+- approved as `canonical` in `aoa-techniques` on 2026-03-14 after fresh public-safety review and default-use confirmation
 
 ## Future evolution
 

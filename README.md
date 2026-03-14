@@ -9,6 +9,17 @@ evaluation loops, and cross-repo transfer methods.
 
 A technique here is a minimal reproducible unit of engineering practice.
 
+## Start here
+
+If you are new to this repository, follow this short path:
+
+1. Read `TECHNIQUE_INDEX.md` to see the current technique map.
+2. Open `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md` to see one full technique end to end.
+3. Use `templates/TECHNIQUE.template.md` as the starting point for authoring a new technique.
+4. Follow `CONTRIBUTING.md` for the contribution and PR path.
+
+See also: `WALKTHROUGH.md` for a short example of how one real practice became a published technique and then proved reusable in a second context.
+
 ## What belongs here
 
 Good candidates:

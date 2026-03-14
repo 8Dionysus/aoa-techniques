@@ -1,3 +1,7 @@
 seed.txt
-seed_2.txt
-seed_3.txt
+seed_*.txt
+
+# Local planning docs
+TODO.md
+PLANS.md
+ROADMAP.md

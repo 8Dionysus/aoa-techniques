@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reporting
+    url: https://github.com/8Dionysus/aoa-techniques/blob/main/SECURITY.md
+    about: Do not use public issues for leaks, secrets, credentials, or infrastructure-sensitive details.
+  - name: Contribution guide
+    url: https://github.com/8Dionysus/aoa-techniques/blob/main/CONTRIBUTING.md
+    about: Review contribution rules, provenance guidance, and PR expectations before opening an issue or pull request.
