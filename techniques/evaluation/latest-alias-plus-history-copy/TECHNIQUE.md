@@ -90,6 +90,7 @@ Verify the technique by confirming that:
 See `checks/dual-write-history-checklist.md`.
 For source-backed origin evidence, see `notes/origin-evidence.md`.
 For bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.
+For canonical-prep readiness, see `notes/canonical-readiness.md`.
 
 ## Adaptation notes
 
