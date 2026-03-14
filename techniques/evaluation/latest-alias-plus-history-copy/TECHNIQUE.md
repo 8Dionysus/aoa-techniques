@@ -2,7 +2,7 @@
 id: AOA-T-0006
 name: latest-alias-plus-history-copy
 domain: evaluation
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/RUNBOOK.md
@@ -133,6 +133,7 @@ See `checks/dual-write-history-checklist.md`.
 - born in `atm10-agent`
 - validated through dual-write summary producers, nested-history-first collectors, and integrity checks over alias and history invariants
 - promoted to `aoa-techniques` on 2026-03-13
+- approved as `canonical` in `aoa-techniques` on 2026-03-15 after fresh public-safety review and default-use confirmation
 
 ## Future evolution
 
