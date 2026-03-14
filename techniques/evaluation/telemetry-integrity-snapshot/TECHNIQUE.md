@@ -94,11 +94,13 @@ Verify the technique by confirming that:
 
 See `checks/telemetry-integrity-checklist.md`.
 For source-backed origin proof, see `notes/origin-evidence.md`.
+For bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 
 What can vary across projects:
 - source names and schema versions
+- whether published summaries are local files or object-store keys
 - the exact telemetry or mismatch counters
 - the optional guardrail or cadence source
 - decision labels such as `clean`, `attention`, `warn`, or `needs_repair`
@@ -117,7 +119,7 @@ What should stay invariant:
 - optional consistency checks remain explicit rather than implicit
 - the helper stays diagnostic unless a separate rollout chooses otherwise
 
-Within the G2 published-summary package, this technique is the diagnostic trust check over published summaries. `AOA-T-0008` consumes published summaries as a bounded remediation rollup, and `AOA-T-0011` governs how optional integrity surfaces render to operators and smoke checks.
+Within the G2 published-summary package, this technique is the diagnostic trust layer over the published-summary contract from `AOA-T-0006` and the downstream remediation output from `AOA-T-0008`. `AOA-T-0011` governs how optional integrity and remediation surfaces render to operators, smoke checks, or other summary consumers.
 
 ## Public sanitization notes
 
@@ -125,7 +127,7 @@ ATM10-specific gateway names, nightly workflow names, thresholds, UTC policy det
 
 ## Example
 
-See `examples/minimal-telemetry-integrity-snapshot.md`.
+See `examples/minimal-telemetry-integrity-snapshot.md` and `examples/object-store-telemetry-integrity-snapshot.md`.
 
 ## Checks
 
@@ -139,6 +141,5 @@ See `checks/telemetry-integrity-checklist.md`.
 
 ## Future evolution
 
-- add an example for object-store-backed summary paths
 - add guidance for rolling out an integrity verdict into stricter enforcement
 - add a companion technique for operator-facing triage when integrity is not clean

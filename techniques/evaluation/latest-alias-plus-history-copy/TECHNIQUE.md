@@ -89,6 +89,7 @@ Verify the technique by confirming that:
 
 See `checks/dual-write-history-checklist.md`.
 For source-backed origin evidence, see `notes/origin-evidence.md`.
+For bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 
@@ -112,6 +113,7 @@ What should stay invariant:
 - fallback behavior is explicit instead of accidental
 
 Relationship to adjacent techniques: this technique stores the summaries produced by `contract-first-smoke-summary` in a latest-plus-history layout that `signal-first-gate-promotion` can accumulate without double-counting.
+Within the published-summary package, it is also the storage contract that `AOA-T-0008` and `AOA-T-0010` assume when they read stable latest aliases without turning the alias itself into history.
 
 ## Public sanitization notes
 
@@ -119,7 +121,7 @@ ATM10-specific gateway names, nightly workflow names, UTC guardrail details, and
 
 ## Example
 
-See `examples/minimal-latest-history-layout.md`.
+See `examples/minimal-latest-history-layout.md` and `examples/object-store-latest-history-layout.md`.
 
 ## Checks
 
@@ -133,6 +135,5 @@ See `checks/dual-write-history-checklist.md`.
 
 ## Future evolution
 
-- add an adaptation example for object-store backed artifacts
 - add guidance for safe migration from single-write to dual-write history
 - add retention-policy examples for teams that expire history rows aggressively
