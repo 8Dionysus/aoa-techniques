@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa-techniques.dev/schemas/relation.schema.json",
+  "title": "Technique Relation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "target"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "requires",
+        "complements",
+        "supersedes",
+        "conflicts_with",
+        "used_together_for",
+        "derived_from",
+        "shares_contract_with"
+      ]
+    },
+    "target": {
+      "type": "string",
+      "pattern": "^AOA-T-[0-9]{4}$"
+    }
+  }
+}

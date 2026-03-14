@@ -15,6 +15,23 @@ tags:
   - dry-run
   - traceability
 summary: Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists.
+maturity_score: 4
+rigor_level: strict
+reversibility: moderate
+review_required: true
+validation_strength: source_backed
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: complements
+    target: AOA-T-0001
+  - type: used_together_for
+    target: AOA-T-0005
+evidence:
+  - kind: support_note
+    path: notes/bounded-transfer.md
+  - kind: origin_evidence
+    path: notes/origin-evidence.md
 ---
 
 # intent-plan-dry-run-contract-chain

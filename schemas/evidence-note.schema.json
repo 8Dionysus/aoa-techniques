@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa-techniques.dev/schemas/evidence-note.schema.json",
+  "title": "Evidence Note",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "path"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [
+        "origin_evidence",
+        "second_context",
+        "canonical_readiness",
+        "external_origin",
+        "external_review",
+        "support_note"
+      ]
+    },
+    "path": {
+      "type": "string",
+      "pattern": "^notes/[A-Za-z0-9._/-]+\\.md$"
+    }
+  }
+}

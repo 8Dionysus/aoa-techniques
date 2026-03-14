@@ -15,6 +15,21 @@ tags:
   - anti-drift
   - reusable
 summary: Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes.
+maturity_score: 5
+rigor_level: bounded
+reversibility: easy
+review_required: false
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: complements
+    target: AOA-T-0009
+evidence:
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # source-of-truth-layout

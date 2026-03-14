@@ -15,6 +15,21 @@ tags:
   - anti-drift
   - status
 summary: Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes.
+maturity_score: 4
+rigor_level: light
+reversibility: easy
+review_required: false
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: complements
+    target: AOA-T-0002
+evidence:
+  - kind: origin_evidence
+    path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # lightweight-status-snapshot

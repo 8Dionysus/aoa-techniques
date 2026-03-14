@@ -15,6 +15,23 @@ tags:
   - reviewable
   - reproducible
 summary: Safe workflow for agent-driven changes using explicit planning, scoped diffs, explicit validation, and concise reporting.
+maturity_score: 5
+rigor_level: bounded
+reversibility: easy
+review_required: true
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: complements
+    target: AOA-T-0004
+  - type: complements
+    target: AOA-T-0005
+evidence:
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # plan-diff-apply-verify-report

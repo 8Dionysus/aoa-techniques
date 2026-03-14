@@ -15,6 +15,21 @@ tags:
   - contracts
   - ci
 summary: Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract.
+maturity_score: 4
+rigor_level: strict
+reversibility: moderate
+review_required: true
+validation_strength: source_backed
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: used_together_for
+    target: AOA-T-0006
+  - type: used_together_for
+    target: AOA-T-0007
+evidence:
+  - kind: origin_evidence
+    path: notes/origin-evidence.md
 ---
 
 # contract-first-smoke-summary

@@ -16,6 +16,21 @@ tags:
   - agent-instructions
   - anti-drift
 summary: Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth.
+maturity_score: 4
+rigor_level: bounded
+reversibility: moderate
+review_required: true
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-15
+export_ready: true
+relations:
+  - type: complements
+    target: AOA-T-0002
+evidence:
+  - kind: external_origin
+    path: notes/external-origin.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # single-source-rule-distribution

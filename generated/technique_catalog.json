@@ -1,0 +1,652 @@
+{
+  "catalog_version": 1,
+  "source_of_truth": "markdown-frontmatter-v2",
+  "techniques": [
+    {
+      "id": "AOA-T-0001",
+      "name": "plan-diff-apply-verify-report",
+      "domain": "agent-workflows",
+      "status": "canonical",
+      "summary": "Safe workflow for agent-driven changes using explicit planning, scoped diffs, explicit validation, and concise reporting.",
+      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "origin": {
+        "project": "abyss-stack",
+        "path": "AGENTS.md",
+        "note": "Derived from a real operational workflow and sanitized for public reuse."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflow",
+        "safety",
+        "reviewable",
+        "reproducible"
+      ],
+      "maturity_score": 5,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0004"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0005"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0002",
+      "name": "source-of-truth-layout",
+      "domain": "docs",
+      "status": "canonical",
+      "summary": "Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes.",
+      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/SOURCE_OF_TRUTH.md",
+        "note": "Derived from a real solo+AI repository with explicit document-role policy and reduced doc drift."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "repo-hygiene",
+        "anti-drift",
+        "reusable"
+      ],
+      "maturity_score": 5,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": false,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0009"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0003",
+      "name": "contract-first-smoke-summary",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract.",
+      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real repository pattern where runnable smoke entrypoints emit machine-readable summaries consumed by CI, UI, and agents."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "smoke",
+        "contracts",
+        "ci"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "strict",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0006"
+        },
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0007"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0004",
+      "name": "intent-plan-dry-run-contract-chain",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists.",
+      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real automation workflow where intent payloads are normalized into traceable plans, validated through dry-run, and enforced by contract checks."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflow",
+        "automation",
+        "dry-run",
+        "traceability"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "strict",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        },
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0005"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "support_note",
+          "path": "notes/bounded-transfer.md"
+        },
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0005",
+      "name": "new-intent-rollout-checklist",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
+      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real CI rollout policy for safely adding a new intent_type to a dry-run automation chain without contract drift."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflow",
+        "automation",
+        "rollout",
+        "dry-run"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "requires",
+          "target": "AOA-T-0004"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "support_note",
+          "path": "notes/rollout-failure-triage.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0006",
+      "name": "latest-alias-plus-history-copy",
+      "domain": "evaluation",
+      "status": "canonical",
+      "summary": "Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation.",
+      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real summary pipeline that writes a stable latest alias plus a nested history copy and uses anti-double-count readers for collectors and review surfaces."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "summaries",
+        "history",
+        "contracts"
+      ],
+      "maturity_score": 5,
+      "rigor_level": "strict",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "requires",
+          "target": "AOA-T-0003"
+        },
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0007"
+        },
+        {
+          "type": "shares_contract_with",
+          "target": "AOA-T-0008"
+        },
+        {
+          "type": "shares_contract_with",
+          "target": "AOA-T-0010"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0007",
+      "name": "signal-first-gate-promotion",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early.",
+      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real gate rollout where critical regressions were first observed in signal-only mode, then promoted through readiness, governance, progress, and transition telemetry before strict enforcement was enabled on a narrow surface."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "gates",
+        "rollout",
+        "diagnostics"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "strict",
+      "reversibility": "hard",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "requires",
+          "target": "AOA-T-0003"
+        },
+        {
+          "type": "requires",
+          "target": "AOA-T-0006"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0008",
+      "name": "published-summary-remediation-snapshot",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior.",
+      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real nightly remediation helper that read already-published summaries and turned them into a bounded, reviewable backlog without recomputing source history or widening product surface area."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "remediation",
+        "summaries",
+        "bounded"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "requires",
+          "target": "AOA-T-0006"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0010"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0011"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0009",
+      "name": "lightweight-status-snapshot",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes.",
+      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/DECISIONS.md",
+        "note": "Derived from a real doc-hygiene transition where README and MANIFEST were reduced to short snapshots that linked to canonical execution, history, decision, and runbook documents instead of duplicating long status blocks."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "snapshots",
+        "anti-drift",
+        "status"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "light",
+      "reversibility": "easy",
+      "review_required": false,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0002"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0010",
+      "name": "telemetry-integrity-snapshot",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface.",
+      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real nightly helper that consumed published G2 summaries and produced a machine-readable integrity verdict over telemetry counters, dual-write paths, anti-double-count rules, and UTC guardrail consistency without introducing a new hard gate."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "integrity",
+        "telemetry",
+        "diagnostics"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "requires",
+          "target": "AOA-T-0006"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0008"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0011"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0011",
+      "name": "required-vs-optional-source-rendering",
+      "domain": "evaluation",
+      "status": "canonical",
+      "summary": "Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures.",
+      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "docs/RUNBOOK.md",
+        "note": "Derived from a real operator-facing summary surface where canonical smoke sources remained strict, while optional progress, remediation, integrity, and operating-cycle summaries rendered as not-available or warnings instead of crashing the panel or smoke contract."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "ui-surfaces",
+        "summaries",
+        "resilience"
+      ],
+      "maturity_score": 5,
+      "rigor_level": "strict",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0008"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0010"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0012",
+      "name": "deterministic-context-composition",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability.",
+      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "origin": {
+        "project": "agents-md",
+        "path": "README.md",
+        "note": "Adapted from the open-source agents-md project, which composes generated agent-context files from markdown fragments with deterministic ordering and source annotations."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "agent-context",
+        "composition",
+        "traceability",
+        "generated-artifact"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0013",
+      "name": "single-source-rule-distribution",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth.",
+      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "origin": {
+        "project": "ruler",
+        "path": "README.md",
+        "note": "Adapted from the open-source ruler project, which keeps AI instructions in one canonical rule source and applies them to multiple agent-facing instruction files."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "source-of-truth",
+        "rule-distribution",
+        "agent-instructions",
+        "anti-drift"
+      ],
+      "maturity_score": 4,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-15",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0002"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    }
+  ]
+}
