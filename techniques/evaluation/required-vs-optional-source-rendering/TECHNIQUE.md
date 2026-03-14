@@ -2,7 +2,7 @@
 id: AOA-T-0011
 name: required-vs-optional-source-rendering
 domain: evaluation
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/RUNBOOK.md
@@ -135,6 +135,7 @@ See `checks/required-vs-optional-rendering-checklist.md`.
 - born in `atm10-agent`
 - validated through operator-panel loading rules and smoke tests that separated `required_missing_sources` from `optional_missing_sources` and preserved non-blocking handling for optional summaries and `brief_md`
 - promoted to `aoa-techniques` on 2026-03-14
+- approved as `canonical` in `aoa-techniques` on 2026-03-15 after fresh public-safety review and default-use confirmation
 
 ## Future evolution
 

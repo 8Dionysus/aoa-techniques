@@ -5,7 +5,7 @@
 - name: required-vs-optional-source-rendering
 
 ## Verdict
-- ready for canonical review
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents explicit `required_missing_sources` and `optional_missing_sources`, tolerant optional rendering, and non-blocking soft-info behavior in both smoke output and operator-facing summary surfaces
@@ -25,8 +25,7 @@
 - public reuse check: the public bundle now reads beyond one operator panel and remains understandable without hidden repository surfaces
 
 ## Remaining gaps
-- no blocking readiness gaps found for a first canonical review within the natural scope of multi-source summary consumers
-- a future third live context would strengthen breadth further, but the current smoke plus non-UI evidence is already sufficient for review
+- a future third live context would strengthen breadth further, but the current smoke plus non-UI evidence is already sufficient for a first canonical promotion review
 
 ## Recommendation
-- open a future canonical review for `AOA-T-0011` as the default required-versus-optional source policy for summary-driven surfaces within its stated scope
+- approve `AOA-T-0011` for `promoted -> canonical` in this wave; the contract already travels across operator panels, smoke outputs, and non-UI consumers, and the fresh public-safety pass remains clean

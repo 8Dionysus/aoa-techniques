@@ -5,7 +5,7 @@
 - name: latest-alias-plus-history-copy
 
 ## Verdict
-- ready for canonical review
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents the dual-write contract across `readiness`, `governance`, `progress`, and `transition`, with explicit latest alias paths, nested history copies, and anti-double-count reader rules
@@ -25,8 +25,7 @@
 - public reuse check: the public examples, checklist, and adaptation note remain understandable without origin-project access and do not depend on hidden tooling assumptions
 
 ## Remaining gaps
-- no blocking readiness gaps found for a first canonical review within the natural scope of published summary storage contracts
-- a future third live context would widen the proof surface further, but it is not required for opening review
+- a future third live context would widen the proof surface further, but it is not required for a first canonical promotion review
 
 ## Recommendation
-- open a future canonical review for `AOA-T-0006` as the default latest-plus-history storage pattern for published machine-readable summaries within its stated scope
+- approve `AOA-T-0006` for `promoted -> canonical` in this wave; the default-use case is strong, the validation surfaces are already broader than the initial promotion baseline, and the fresh public-safety pass is clean
