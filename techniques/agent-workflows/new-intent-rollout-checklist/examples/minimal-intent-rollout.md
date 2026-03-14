@@ -37,7 +37,7 @@ python scripts/check_intent_chain_contract.py \
   --summary-json runs/ci-smoke-intent-chain-<new_intent_type>/contract_summary.json
 ```
 
-## 4. Publish the artifacts
+## 4. Publish the artifacts and review row
 
 Make the smoke run and contract summary part of the same review surface:
 
@@ -48,3 +48,26 @@ Make the smoke run and contract summary part of the same review surface:
 ## 5. Add one regression expectation
 
 Add at least one automated test that proves the new intent flows through normalization, dry-run, and contract-check without real side effects.
+
+## 6. Expected contract summary shape
+
+The published contract summary should make rollout drift obvious:
+
+```json
+{
+  "status": "ok",
+  "observed": {
+    "intent_type": "<new_intent_type>",
+    "trace_id": "trace-demo-001",
+    "intent_id": "intent-demo-001"
+  },
+  "violations": []
+}
+```
+
+## 7. Common rollout failures to catch
+
+- The fixture exists but is not wired into the shared smoke path.
+- The smoke path works, but the contract-check is still asserting the old `intent_type`.
+- `contract_summary.json` is produced locally but not published in the main review surface.
+- The rollout looks green in CI, but no targeted regression test proves the new intent uses the existing chain.

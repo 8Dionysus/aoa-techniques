@@ -13,10 +13,11 @@
   - `atm10-agent/docs/SESSION_2026-03-03.md`
 
 ## Evidence
-- `atm10-agent/docs/DECISIONS.md` records the formal onboarding policy for each new `intent_type`: one canonical fixture, one smoke run, one strict contract-check with `--require-trace-id` and `--require-intent-id`, summary and artifact wiring, and at least one end-to-end regression test.
-- `atm10-agent/docs/RUNBOOK.md` turns that policy into a concrete rollout checklist with explicit commands for the fixture path, smoke run, strict `expected-intent-type` contract-check, summary row, artifact path, and minimum regression coverage.
-- `atm10-agent/docs/SESSION_2026-02-24.md` records the precursor contract hardening that makes the checklist meaningful: canonical fixtures carry `intent_id/trace_id`, CI exposes those fields in `Automation Smoke Contracts`, and strict traceability checks are enabled for intent-chain validation.
-- `atm10-agent/docs/SESSION_2026-03-03.md` shows the checklist used end-to-end for `open_world_map`: a new canonical fixture, dedicated smoke run, strict `expected-intent-type open_world_map` validation, new summary row, new artifact path, targeted tests, and full regression.
+- `atm10-agent/docs/SESSION_2026-02-24.md` records the contract hardening that makes the rollout checklist real rather than ceremonial: canonical fixtures carry `intent_id/trace_id`, CI summaries expose those fields, and strict `--require-trace-id` plus `--require-intent-id` checks are enabled for intent-chain validation.
+- `atm10-agent/docs/DECISIONS.md` formalizes the onboarding policy for each new `intent_type`: one canonical fixture, one smoke run, one strict contract-check with explicit routing assertions, summary and artifact wiring, and at least one end-to-end regression test.
+- `atm10-agent/docs/RUNBOOK.md` turns that policy into a concrete reusable checklist in `M6.19`, while `M6.8` adds the complementary troubleshooting procedure for failures across fixture, smoke, contract-check, and artifact-wiring layers.
+- `atm10-agent/docs/SESSION_2026-03-03.md` shows the checklist executed end to end for `open_world_map`: a new canonical fixture, dedicated smoke run, strict `expected-intent-type open_world_map` validation, new summary row, new artifact path, targeted tests, and a full regression pass.
+- The same 2026-03-03 session explicitly notes that the public `automation_plan_v1` contract did not change, which shows the rollout checklist can extend the supported intent set without redefining the shared chain itself.
 
 ## Interpretation
-- The origin proves this technique as a bounded extension checklist for an existing dry-run automation chain: new intent rollouts stay reviewable, traceable, and contract-enforced instead of becoming one-off workflow edits.
+- The origin proves this technique as a bounded extension checklist for an existing dry-run automation chain: new intent rollouts stay reviewable, traceable, artifact-visible, and contract-enforced instead of becoming one-off workflow edits.
