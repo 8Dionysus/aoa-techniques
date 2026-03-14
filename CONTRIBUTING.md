@@ -32,6 +32,29 @@ Please make sure:
 - maturity status is set correctly
 - origin is stated clearly
 
+## External provenance
+
+If a contribution is adapted from an external open-source source, include a normal `TECHNIQUE.md` and add `templates/EXTERNAL_ORIGIN.template.md` as the provenance note.
+
+Use the external-origin note only for external-source contributions.
+It should record `source_repo`, `source_license`, `inspired_by` or `adapted_from`, and `what_changed`.
+
+External imports must still be sanitized, reusable, and bounded.
+The provenance note complements the technique document; it does not replace the canonical `TECHNIQUE.md`.
+
+## GitHub intake surfaces
+
+Use the GitHub templates for the first public intake layer:
+- new technique proposal
+- `canonical` promotion review
+- external import review
+
+Use the pull request template when opening a PR so the summary, validation, and public-safety checks stay explicit and reviewable.
+
+Do not use public issues for leaks, secrets, credentials, or infrastructure-sensitive details; follow `SECURITY.md` instead.
+
+`CODEOWNERS` is intentionally deferred until the intake path proves stable.
+
 ## Preferred PR scope
 
 Prefer:
