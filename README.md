@@ -69,12 +69,12 @@ but only curated public techniques should live here.
 
 ## Repository structure
 
-- `techniques/` — canonical techniques grouped by domain
+- `techniques/` — published technique bundles grouped by domain
 - `techniques/<domain>/<technique>/notes/` — optional evidence notes such as second-context adaptations or canonical-readiness reviews
 - `templates/` — templates for technique authoring and promotion
 - `TECHNIQUE_INDEX.md` — repository-wide technique map
 - `schemas/` — optional machine-readable schemas
-- `scripts/` — optional repo validation helpers
+- `scripts/` — repo validation helpers
 
 ## Intended users
 

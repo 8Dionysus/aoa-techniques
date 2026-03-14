@@ -32,6 +32,8 @@ Please make sure:
 - maturity status is set correctly
 - origin is stated clearly
 
+Before opening a PR, run `python scripts/validate_repo.py` to check technique-bundle structure and `TECHNIQUE_INDEX.md` parity locally.
+
 ## External provenance
 
 If a contribution is adapted from an external open-source source, include a normal `TECHNIQUE.md` and add `templates/EXTERNAL_ORIGIN.template.md` as the provenance note.
