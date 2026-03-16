@@ -38,6 +38,7 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
 )
+REQUIRED_SELECTION_FILES = ("docs/TECHNIQUE_SELECTION.md",)
 
 SECTION_STATUS = {
     "Canonical techniques": "canonical",
@@ -47,6 +48,16 @@ SECTION_STATUS = {
 
 STATUS_SECTION = {value: key for key, value in SECTION_STATUS.items()}
 DOMAIN_VALUES = {"agent-workflows", "docs", "evaluation"}
+DOMAIN_ORDER = ("agent-workflows", "docs", "evaluation")
+RELATION_TYPE_ORDER = (
+    "requires",
+    "complements",
+    "supersedes",
+    "conflicts_with",
+    "used_together_for",
+    "derived_from",
+    "shares_contract_with",
+)
 SUPPORT_PATH_RE = re.compile(r"(?<!\w)(?:checks|examples|notes)/[A-Za-z0-9._/-]+\.md")
 FRONTMATTER_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n?", re.DOTALL)
 SECTION_RE = re.compile(r"^## (.+)$", re.MULTILINE)
@@ -434,6 +445,13 @@ def validate_stage1_files(repo_root: Path) -> None:
             fail(f"{repo_root}: missing required Stage 1 file '{relative_path}'")
 
 
+def validate_selection_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_SELECTION_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required selection file '{relative_path}'")
+
+
 def validate_technique_bundle(
     technique_dir: Path, expected_domain: str, schema_store: dict[str, Any]
 ) -> TechniqueRecord:
@@ -704,12 +722,140 @@ def build_catalog_payloads(
     return full_catalog, min_catalog
 
 
+def selection_technique_link(entry: dict[str, Any]) -> str:
+    return f"[{entry['id']}](../{entry['technique_path']})"
+
+
+def relation_summary(entry: dict[str, Any], entries_by_id: dict[str, dict[str, Any]]) -> str:
+    grouped: dict[str, list[str]] = {}
+    for relation_type in RELATION_TYPE_ORDER:
+        grouped[relation_type] = []
+
+    for relation in entry.get("relations", []):
+        target = entries_by_id[relation["target"]]
+        grouped[relation["type"]].append(selection_technique_link(target))
+
+    parts: list[str] = []
+    for relation_type in RELATION_TYPE_ORDER:
+        targets = grouped[relation_type]
+        if targets:
+            parts.append(f"`{relation_type}` " + ", ".join(targets))
+    return "; ".join(parts) if parts else "none"
+
+
+def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
+    entries = list(full_catalog["techniques"])
+    entries_by_id = {entry["id"]: entry for entry in entries}
+    canonical_by_domain: dict[str, list[dict[str, Any]]] = {domain: [] for domain in DOMAIN_ORDER}
+    entries_by_domain: dict[str, list[dict[str, Any]]] = {domain: [] for domain in DOMAIN_ORDER}
+
+    for entry in entries:
+        domain = entry["domain"]
+        entries_by_domain[domain].append(entry)
+        if entry["status"] == "canonical":
+            canonical_by_domain[domain].append(entry)
+
+    export_ready_true = sum(1 for entry in entries if entry["export_ready"])
+    total_entries = len(entries)
+    evaluation_starters = canonical_by_domain["evaluation"]
+
+    lines = [
+        "# Technique Selection",
+        "",
+        "This file is generated from `../generated/technique_catalog.json` and the authoritative markdown frontmatter.",
+        "Do not edit it by hand; run `python scripts/build_catalog.py`.",
+        "",
+        "Use this surface to make one bounded choice:",
+        "1. narrow by `domain` first",
+        "2. prefer `canonical` techniques for default use",
+        "3. use `validation_strength` as an evidence-breadth signal",
+        "4. use direct `relations` as adjacency hints, not graph traversal",
+        "",
+        "See also:",
+        "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
+        "- [CANONICAL_RUBRIC](CANONICAL_RUBRIC.md)",
+        "- [Full catalog JSON](../generated/technique_catalog.json)",
+        "- [Min catalog JSON](../generated/technique_catalog.min.json)",
+        "",
+        "## Quick Questions",
+        "",
+        "### I need an evaluation pattern. Where do I start?",
+        "",
+        "| technique | validation | summary |",
+        "|---|---|---|",
+    ]
+
+    for entry in evaluation_starters:
+        lines.append(
+            f"| {selection_technique_link(entry)} | `{entry['validation_strength']}` | {entry['summary']} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "### What are the current canonical defaults by domain?",
+            "",
+            "| domain | canonical defaults |",
+            "|---|---|",
+        ]
+    )
+
+    for domain in DOMAIN_ORDER:
+        defaults = ", ".join(selection_technique_link(entry) for entry in canonical_by_domain[domain])
+        lines.append(f"| `{domain}` | {defaults or '-'} |")
+
+    lines.extend(
+        [
+            "",
+            "### If I choose one technique, what nearby techniques usually go with it?",
+            "",
+        ]
+    )
+
+    for entry in entries:
+        lines.append(f"- {selection_technique_link(entry)}: {relation_summary(entry, entries_by_id)}")
+
+    lines.extend(["", "## Browse By Domain", ""])
+
+    for domain in DOMAIN_ORDER:
+        lines.extend(
+            [
+                f"### `{domain}`",
+                "",
+                "| technique | status | validation | rigor | summary |",
+                "|---|---|---|---|---|",
+            ]
+        )
+        for entry in entries_by_domain[domain]:
+            lines.append(
+                f"| {selection_technique_link(entry)} | `{entry['status']}` | `{entry['validation_strength']}` | `{entry['rigor_level']}` | {entry['summary']} |"
+            )
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Current Catalog Audit",
+            "",
+            f"- `export_ready` is currently `true` for {export_ready_true}/{total_entries} techniques.",
+            "- Treat that field as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.",
+            "- Next bounded follow-up: decide whether `export_ready` should become more selective or remain uniform with clearer policy language.",
+            "",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
 def write_json_file(path: Path, payload: Any, compact: bool) -> None:
     if compact:
         encoded = json.dumps(payload, ensure_ascii=True, separators=(",", ":"))
     else:
         encoded = json.dumps(payload, ensure_ascii=True, indent=2)
     path.write_text(encoded + "\n", encoding="utf-8")
+
+
+def write_text_file(path: Path, text: str) -> None:
+    path.write_text(text, encoding="utf-8")
 
 
 def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_store: dict[str, Any]) -> None:
@@ -757,14 +903,29 @@ def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_st
         fail(f"{min_path}: min catalog must stay a projection of the full catalog")
 
 
+def validate_selection_surface(repo_root: Path) -> None:
+    selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
+    full_path = repo_root / "generated" / "technique_catalog.json"
+
+    expected = build_selection_surface_markdown(read_json(full_path))
+    actual = read_text(selection_path)
+
+    if actual != expected:
+        fail(
+            f"{selection_path}: generated selection surface is out of date; run 'python scripts/build_catalog.py'"
+        )
+
+
 def validate_repo(repo_root: Path) -> None:
     validate_stage1_files(repo_root)
+    validate_selection_files(repo_root)
     schema_store = load_schema_store(repo_root)
     records = collect_techniques(repo_root, schema_store)
     validate_index(repo_root, records)
     validate_evidence(records)
     validate_relations(records)
     validate_catalogs(repo_root, records, schema_store)
+    validate_selection_surface(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
     promoted_count = sum(1 for record in records if record.status == "promoted")
@@ -777,6 +938,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated TECHNIQUE_INDEX.md structure and parity")
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
+    print("[ok] validated generated selection surface parity")
 
 
 def main() -> int:

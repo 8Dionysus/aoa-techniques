@@ -19,6 +19,7 @@ If you are new to this repository, follow this short path:
 4. Follow `CONTRIBUTING.md` for the contribution and PR path.
 
 See also: `WALKTHROUGH.md` for a short example of how one real practice became a published technique and then proved reusable in a second context.
+See also: `docs/TECHNIQUE_SELECTION.md` for the generated chooser by domain, status, validation strength, and direct relation hints.
 
 ## What belongs here
 
