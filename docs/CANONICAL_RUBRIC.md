@@ -15,7 +15,7 @@ Markdown stays authoritative.
 | `review_required` | Whether normal adoption should include explicit human review before the technique becomes a default in a new context. |
 | `validation_strength` | Evidence strength. `baseline` means mostly structural validation, `source_backed` means real-project evidence exists, `cross_context` means real-project evidence plus second-context or canonical-review reinforcement exists. |
 | `public_safety_reviewed_at` | Most recent public-safety review date for the published technique bundle, formatted as `YYYY-MM-DD`. |
-| `export_ready` | Whether the technique is safe to include in Stage 1 structured catalog outputs. This field is about machine-readable publication safety, not graph or AoA export. |
+| `export_ready` | Whether the technique is safe to include in Stage 1 structured catalog outputs. This field is about machine-readable publication safety for the committed repo-local catalog, not graph or AoA export. |
 | `relations` | Small structured links to other in-repo techniques. Keep the list bounded to direct reusable relationships only. |
 | `evidence` | Structured list of tracked note files that justify the technique's current public bundle and review posture. |
 
@@ -48,7 +48,20 @@ This rubric does not introduce graph inference, scoring automation, or selection
 
 ## Stage 1 discipline
 
+Current repo state:
+
+- all currently tracked techniques are `export_ready: true`
+- this is intentional for the current corpus and means every published bundle is considered safe for Stage 1 catalog publication
+- this does **not** make `export_ready` a useful selector yet; for now it is a publication floor, not a ranking or recommendation signal
+
+Concrete reasons a future technique might be `export_ready: false`:
+
+- the bundle is still public-safe as markdown, but its structured frontmatter or evidence surface is not yet trustworthy enough for machine-readable publication
+- the technique has a bounded unresolved publication-safety question that should keep it out of the derived catalog until review closes
+- the bundle is intentionally tracked during a transition where Stage 1 structured publication would overstate its readiness or stability
+
 - Keep frontmatter values operational and reviewable.
 - Do not treat `relations` as a graph design surface yet.
 - Do not treat `export_ready` as permission for AoA, graph, or vector export work.
+- Do not treat `export_ready` as a default-use selector while the field remains uniformly true across the current corpus.
 - If catalog output drifts from markdown, fix markdown or rerun `python scripts/build_catalog.py`; do not hand-edit generated files.
