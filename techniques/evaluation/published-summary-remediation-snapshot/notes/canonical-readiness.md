@@ -5,7 +5,7 @@
 - name: published-summary-remediation-snapshot
 
 ## Verdict
-- ready for canonical review
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents a live remediation helper that reads only latest published summaries, uses deterministic buckets, applies explicit caps, and serves as the workflow-published triage source of truth
@@ -28,4 +28,4 @@
 - a future third live context would widen the proof surface further, but it is not required for a first canonical review of this bounded downstream rollup pattern
 
 ## Recommendation
-- open a bounded canonical-review wave for `AOA-T-0008`; the default-use case now reads as the natural downstream rollup within its scope, the validation surfaces are stronger than the initial promotion baseline, and the fresh public-safety pass remains clean
+- approve `AOA-T-0008` for `promoted -> canonical` in this wave; the default-use case now reads as the natural downstream rollup within its scope, the validation surfaces are stronger than the initial promotion baseline, and the fresh public-safety pass remains clean

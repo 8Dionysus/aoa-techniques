@@ -2,7 +2,7 @@
 id: AOA-T-0010
 name: telemetry-integrity-snapshot
 domain: evaluation
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/RUNBOOK.md
@@ -20,7 +20,7 @@ rigor_level: bounded
 reversibility: easy
 review_required: true
 validation_strength: cross_context
-public_safety_reviewed_at: 2026-03-15
+public_safety_reviewed_at: 2026-03-16
 export_ready: true
 relations:
   - type: requires
@@ -163,6 +163,7 @@ See `checks/telemetry-integrity-checklist.md`.
 - born in `atm10-agent`
 - validated through nightly integrity summaries and tests covering telemetry counter violations, dual-write mismatches, anti-double-count breakage, and optional guardrail inconsistency
 - promoted to `aoa-techniques` on 2026-03-14
+- approved as `canonical` in `aoa-techniques` on 2026-03-16 after fresh public-safety review and default-use confirmation
 
 ## Future evolution
 
