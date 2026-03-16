@@ -47,6 +47,7 @@ Provide one machine-readable diagnostic verdict over published summary invariant
 ## When to use
 
 - several latest published summaries already exist for one operational decision path
+- several published summaries or downstream rollups are interpreted by more than one consumer
 - the project needs to validate telemetry counters and artifact-layout invariants across those summaries
 - dual-write latest plus history patterns are already in use
 - the team wants a diagnostic integrity layer without turning it into a new hard gate by default
@@ -57,6 +58,7 @@ Provide one machine-readable diagnostic verdict over published summary invariant
 - the project needs direct enforcement instead of a diagnostic verdict
 - there is no explicit artifact layout or counter policy to verify
 - one source alone is sufficient and cross-summary integrity checks add no value
+- each consumer can still inspect source trust directly without duplicating integrity logic across surfaces
 
 ## Inputs
 
@@ -142,6 +144,7 @@ What should stay invariant:
 - the helper stays diagnostic unless a separate rollout chooses otherwise
 
 Within the G2 published-summary package, this technique is the diagnostic trust layer over the published-summary contract from `AOA-T-0006` and the downstream remediation output from `AOA-T-0008`. `AOA-T-0011` governs how optional integrity and remediation surfaces render to operators, smoke checks, or other summary consumers.
+Within its natural scope, this becomes the default trust layer when several published summaries or downstream rollups are consumed in more than one place and each consumer should not re-implement the same integrity checks independently.
 
 ## Public sanitization notes
 

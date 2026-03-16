@@ -47,13 +47,16 @@ Create one reviewable remediation snapshot from already-published latest summari
 ## When to use
 
 - nightly or scheduled checks already publish stable machine-readable latest summaries
+- several stable published summaries feed more than one downstream triage consumer
 - operators need a compact remediation backlog instead of reading many separate summaries
+- one published backlog should serve operators, reports, and agent handoff from the same read-only source
 - the project wants deterministic follow-up buckets with explicit caps
 - the project needs a read-only helper that can support humans, UIs, and agents from the same published artifacts
 
 ## When not to use
 
 - source checks do not publish stable latest summaries yet
+- the source set is still small enough that every consumer can read each summary directly without duplicated triage logic
 - the workflow must actively execute remediation instead of producing a review surface
 - historical replay is required to answer the question, rather than the latest published state
 - the bucket policy is still unstable enough that snapshot output would drift from run to run
@@ -143,6 +146,7 @@ What should stay invariant:
 - the snapshot remains a read-only downstream view
 
 Within the G2 published-summary package, this technique is the bounded remediation rollup over the published latest-alias contract from `AOA-T-0006`. `AOA-T-0010` checks whether those published summaries and remediation inputs are trustworthy, and `AOA-T-0011` defines how optional remediation surfaces should render.
+Within its natural scope, this becomes the default downstream rollup when several published summaries feed several bounded consumers and direct per-source reading stops being reviewable across each consumer separately.
 
 ## Public sanitization notes
 

@@ -19,6 +19,7 @@
 - contract: the helper reads only latest published summaries and never scans historical runs
 - validation logic: fixed buckets, explicit caps, and source references remain required for a trustworthy snapshot
 - safety rules: snapshot generation stays read-only and does not widen into a second evaluator or executor
+- default-use trigger: once several published summaries feed several downstream consumers, one bounded remediation backlog becomes the default downstream rollup instead of repeating direct per-source triage in each consumer
 
 ## Risks introduced by adaptation
 - object alias publication can lag and make stale-input reporting more important
@@ -29,6 +30,7 @@
 - the origin already proves a read-only remediation helper over published latest summaries with deterministic buckets and explicit caps
 - `AOA-T-0006` already isolates the stable latest-alias contract that this snapshot depends on
 - the adaptation changes only where the latest summaries live, not the bounded remediation role of the helper
+- object-store publication makes the same pattern suitable as one shared backlog for operators, reports, and agent handoff when several consumers would otherwise repeat the same latest-summary triage separately
 
 ## Result
-- works as a bounded object-store second context for a promoted technique without widening the snapshot into history replay or storage-specific automation
+- works as a bounded object-store second context for a promoted technique without widening the snapshot into history replay or storage-specific automation, and keeps the snapshot readable as the default downstream rollup for multi-summary, multi-consumer systems
