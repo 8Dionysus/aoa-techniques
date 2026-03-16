@@ -837,8 +837,9 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
             "## Current Catalog Audit",
             "",
             f"- `export_ready` is currently `true` for {export_ready_true}/{total_entries} techniques.",
-            "- Treat that field as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.",
-            "- Next bounded follow-up: decide whether `export_ready` should become more selective or remain uniform with clearer policy language.",
+            "- For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.",
+            "- Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.",
+            "- A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.",
             "",
         ]
     )
