@@ -3,10 +3,12 @@ from __future__ import annotations
 from pathlib import Path
 
 from validate_repo import (
+    build_selection_surface_markdown,
     build_catalog_payloads,
     collect_techniques,
     load_schema_store,
     write_json_file,
+    write_text_file,
 )
 
 
@@ -18,15 +20,20 @@ def main() -> int:
 
     generated_dir = repo_root / "generated"
     generated_dir.mkdir(exist_ok=True)
+    docs_dir = repo_root / "docs"
+    docs_dir.mkdir(exist_ok=True)
 
     full_path = generated_dir / "technique_catalog.json"
     min_path = generated_dir / "technique_catalog.min.json"
+    selection_path = docs_dir / "TECHNIQUE_SELECTION.md"
 
     write_json_file(full_path, full_catalog, compact=False)
     write_json_file(min_path, min_catalog, compact=True)
+    write_text_file(selection_path, build_selection_surface_markdown(full_catalog))
 
     print(f"[ok] wrote {full_path.relative_to(repo_root).as_posix()}")
     print(f"[ok] wrote {min_path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {selection_path.relative_to(repo_root).as_posix()}")
     return 0
 
 
