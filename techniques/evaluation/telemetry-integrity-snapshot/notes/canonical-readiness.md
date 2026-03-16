@@ -5,7 +5,7 @@
 - name: telemetry-integrity-snapshot
 
 ## Verdict
-- ready for canonical review
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents a dedicated integrity helper that validates required source health, telemetry counters, dual-write consistency, anti-double-count rules, and optional guardrail consistency without becoming a new hard gate
@@ -28,4 +28,4 @@
 - a future third live context would widen the proof surface further, but it is not required for a first canonical review of this bounded diagnostic trust-layer pattern
 
 ## Recommendation
-- open a bounded canonical-review wave for `AOA-T-0010`; the adoption trigger is now crisp, the live multi-consumer evidence is strong enough within scope, and the fresh public-safety pass remains clean
+- approve `AOA-T-0010` for `promoted -> canonical` in this wave; the adoption trigger is now crisp, the live multi-consumer evidence is strong enough within scope, and the fresh public-safety pass remains clean

@@ -349,7 +349,7 @@
       "id": "AOA-T-0008",
       "name": "published-summary-remediation-snapshot",
       "domain": "evaluation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior.",
       "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
       "origin": {
@@ -371,7 +371,7 @@
       "reversibility": "easy",
       "review_required": true,
       "validation_strength": "cross_context",
-      "public_safety_reviewed_at": "2026-03-15",
+      "public_safety_reviewed_at": "2026-03-16",
       "export_ready": true,
       "relations": [
         {
@@ -451,7 +451,7 @@
       "id": "AOA-T-0010",
       "name": "telemetry-integrity-snapshot",
       "domain": "evaluation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface.",
       "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
       "origin": {
@@ -473,7 +473,7 @@
       "reversibility": "easy",
       "review_required": true,
       "validation_strength": "cross_context",
-      "public_safety_reviewed_at": "2026-03-15",
+      "public_safety_reviewed_at": "2026-03-16",
       "export_ready": true,
       "relations": [
         {
