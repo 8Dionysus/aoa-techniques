@@ -5,27 +5,27 @@
 - name: telemetry-integrity-snapshot
 
 ## Verdict
-- defer for now
+- ready for canonical review
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents a dedicated integrity helper that validates required source health, telemetry counters, dual-write consistency, anti-double-count rules, and optional guardrail consistency without becoming a new hard gate
-- origin reinforcement: `D:\atm10-agent\docs\SESSION_2026-03-12.md` and `SESSION_2026-03-13.md` show the integrity snapshot as a live published artifact with explicit invariant results and a clean separation from enforcement decisions
-- second context: `aoa-techniques` now documents the same pattern in a bounded object-store adaptation that preserves the diagnostic-only role over published summary inputs
-- validation strength: the technique has two examples, a checklist, source-backed origin evidence, and a second-context adaptation note that keeps integrity distinct from gate logic
+- origin reinforcement: `D:\atm10-agent\docs\SESSION_2026-03-12.md`, `SESSION_2026-03-13.md`, `RUNBOOK.md`, and `DECISIONS.md` now show the integrity snapshot reused across nightly workflow publication, Streamlit visibility, local operating-cycle interpretation, and regression tests as one first-class diagnostic artifact
+- second context: `aoa-techniques` documents the same pattern in a bounded object-store adaptation that preserves the diagnostic-only role over published summary inputs and frames it as the shared trust layer for multi-summary systems
+- validation strength: the technique has two examples, a checklist, source-backed origin evidence, a second-context adaptation note, and sharper adoption-trigger wording that explains when a separate integrity layer should replace duplicated consumer-local trust logic
 
 ## Default-use rationale
-- this is a strong companion when several published summaries feed downstream decisions and teams need a separate trust verdict before interpreting remediation or rollout signals
-- a non-default alternative is still better when a single producer is simple enough to inspect directly, or when the repository has not yet reached the point where a separate integrity layer should be default
+- this is now a strong default when several published summaries or downstream rollups feed more than one consumer and each consumer should not re-implement integrity checks independently
+- it preserves one read-only trust verdict over source health, telemetry counters, dual-write consistency, and anti-double-count invariants before operators, reports, or agents interpret downstream signals
+- a non-default alternative is still better when one producer is simple enough to inspect directly, or when the repository has not yet reached the point where a separate integrity layer adds more clarity than duplication
 
 ## Fresh public-safety check
-- review date: 2026-03-15
+- review date: 2026-03-16
 - result: pass
 - sanitization still holds: the public technique keeps only reusable integrity and artifact-layout invariants, without ATM10-specific workflow names, thresholds, UTC policy details, or repo-specific run roots
-- public reuse check: the public bundle remains understandable without hidden source access and the adaptation note does not widen the pattern into vendor-specific storage or enforcement policy
+- public reuse check: the public bundle remains understandable without hidden source access, the stronger multi-consumer evidence stays generalized, and the adaptation note does not widen the pattern into vendor-specific storage or enforcement policy
 
 ## Remaining gaps
-- the current proof surface still centers on one published-summary cluster, so the case for this being a default diagnostic layer across repositories is not yet as strong as the case for `AOA-T-0006` or `AOA-T-0011`
-- the boundary between "useful default trust layer" and "strong optional companion" still needs either another live context or a crisper adoption trigger before canonical review
+- a future third live context would widen the proof surface further, but it is not required for a first canonical review of this bounded diagnostic trust-layer pattern
 
 ## Recommendation
-- defer for now and reopen readiness after broader reuse evidence or clearer proof that a separate integrity snapshot should be the default companion in multi-summary systems
+- open a bounded canonical-review wave for `AOA-T-0010`; the adoption trigger is now crisp, the live multi-consumer evidence is strong enough within scope, and the fresh public-safety pass remains clean
