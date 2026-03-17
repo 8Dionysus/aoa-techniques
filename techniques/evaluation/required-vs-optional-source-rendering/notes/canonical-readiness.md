@@ -9,7 +9,7 @@
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents explicit `required_missing_sources` and `optional_missing_sources`, tolerant optional rendering, and non-blocking soft-info behavior in both smoke output and operator-facing summary surfaces
-- origin reinforcement: `D:\atm10-agent\docs\SESSION_2026-03-12.md` and `SESSION_2026-03-13.md` show remediation, integrity, and operating-cycle summaries rendered as optional published sources without hiding strict failures
+- origin reinforcement: `atm10-agent/docs/SESSION_2026-03-12.md` and `atm10-agent/docs/SESSION_2026-03-13.md` show remediation, integrity, and operating-cycle summaries rendered as optional published sources without hiding strict failures
 - second context: `aoa-techniques` now documents the same contract beyond UI panels through CLI and machine-readable report consumers, plus explicit staged optional-to-required promotion guidance
 - validation strength: the technique has two examples, a checklist, source-backed origin evidence, a bounded second-context adaptation note, and clearer wording that separates invariant source-class policy from one specific UI surface
 
