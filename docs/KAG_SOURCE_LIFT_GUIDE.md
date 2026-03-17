@@ -37,6 +37,13 @@ The first implementation-oriented extraction pilot now stays equally narrow:
 
 Those files stay derived from authoritative markdown and expose only the first 10 KAG target sections. They do not add graph, rationale, search, or scoring behavior.
 
+The next implementation-oriented source-class pilot now stays equally bounded:
+
+- `generated/technique_checklist_manifest.json`
+- `generated/technique_checklist_manifest.min.json`
+
+Those files lift authored validation checklists into derived validation knowledge only. They are not executable policy, hard-gate semantics, or a new scoring layer.
+
 See also: [FRONTMATTER_METADATA_SPINE_GUIDE.md](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
 See also: [BOUNDED_RELATION_LIFT_GUIDE.md](BOUNDED_RELATION_LIFT_GUIDE.md) for the next bounded family member, which keeps current typed relations explicitly limited to direct-edge lifting rather than graph behavior.
 See also: [RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md) for the bounded caution-layer member, which keeps shadow meaning markdown-first while making future caution lift explicit.
