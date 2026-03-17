@@ -30,13 +30,15 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # signal-first-gate-promotion
 
 ## Intent
 
-Turn an observed validation signal into a hard gate gradually, so the team can collect evidence, preserve diagnostics, and choose a narrow enforcement surface before fail-fast behavior becomes operational.
+Turn an observed validation signal into the default staged path toward a hard gate, so the team can collect evidence, preserve diagnostics, and choose a narrow enforcement surface before fail-fast behavior becomes operational.
 
 ## When to use
 
@@ -44,6 +46,7 @@ Turn an observed validation signal into a hard gate gradually, so the team can c
 - the team wants to observe regressions before converting them into hard failures
 - different execution surfaces need different risk levels
 - promotion to strict mode should be justified by history rather than one bad or good run
+- an already-summary-producing signal should become enforceable gradually instead of jumping straight from observation to broad hard gating
 
 ## When not to use
 
@@ -87,6 +90,7 @@ Turn an observed validation signal into a hard gate gradually, so the team can c
 - readiness, governance, progress, and transition remain decision telemetry rather than hidden runtime logic
 - diagnostics remain published even when the strict surface goes red
 - non-promoted surfaces do not silently inherit strict behavior
+- this technique owns the staged enforcement rollout only; summary production and latest/history storage remain separate prerequisite contracts
 
 ## Risks
 
@@ -107,7 +111,7 @@ Verify the technique by confirming that:
 - non-promoted surfaces remain observational
 
 See `checks/gate-promotion-checklist.md`.
-For source-backed origin evidence, see `notes/origin-evidence.md`.
+For source-backed origin evidence and bounded second-context reinforcement, see `notes/origin-evidence.md` and `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 

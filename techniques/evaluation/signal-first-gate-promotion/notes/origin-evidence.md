@@ -22,6 +22,8 @@
 - `atm10-agent/docs/SESSION_2026-03-02.md` records governance rollout as staged instrumentation with no hard-gate switch yet, while still publishing workflow artifacts and keeping `pytest.yml` observational.
 - `atm10-agent/docs/SESSION_2026-03-03.md` records the post-switch policy explicitly: enforcement remains only in the nightly workflow, while `readiness`, `governance`, `progress`, and `transition` continue as telemetry and reason-code layers for triage.
 - `atm10-agent/docs/SESSION_2026-03-12.md` and `atm10-agent/docs/SESSION_2026-03-13.md` show that diagnostics continue to publish after strict nightly operation through missing-safe summary sections, remediation and integrity layers, and live `hold` snapshots with preserved reason codes.
+- together these origin surfaces show the full staged pattern rather than one isolated rule: observational mode, explicit readiness/governance/progress/transition telemetry, one narrow strict surface, and continued published diagnostics after strict activation
+- the same evidence makes the default-use trigger clear inside the origin: once a summary-producing signal is important enough to matter but too risky for immediate broad gating, staged promotion becomes the default rollout path
 
 ## Interpretation
-- The origin proves this technique as a real staged-promotion pattern: one signal starts observational, gains explicit decision telemetry, and only then moves into a narrowly scoped strict surface while published diagnostics stay intact.
+- The origin proves this technique as a real staged-promotion pattern: one signal starts observational, gains explicit decision telemetry, and only then moves into a narrowly scoped strict surface while published diagnostics stay intact and non-promoted surfaces remain observational.
