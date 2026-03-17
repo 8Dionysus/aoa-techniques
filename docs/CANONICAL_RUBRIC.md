@@ -10,6 +10,7 @@ Markdown stays authoritative.
 Stage 1 metadata can inform selection and canonical review, but it does not replace explicit review judgment.
 
 - frontmatter fields help reviewers understand maturity, validation posture, and publication safety
+- the same bounded frontmatter layer can also serve as a metadata spine for later generated KAG entrypoints, while markdown sections remain authoritative and section-level lift stays separate
 - they do not auto-promote a technique to `canonical`
 - `promoted -> canonical` decisions should follow the bounded review contract in [CANONICAL_REVIEW_GUIDE.md](CANONICAL_REVIEW_GUIDE.md)
 
