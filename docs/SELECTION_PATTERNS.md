@@ -1,0 +1,61 @@
+# Selection Patterns
+
+This file is generated from `../generated/technique_catalog.json`, current direct `relations`, and a bounded in-repo mapping of review-backed working sets.
+Do not edit it by hand; run `python scripts/build_catalog.py`.
+
+Use this surface when the flat adjacency list in `TECHNIQUE_SELECTION.md` is not enough and you want one bounded answer to:
+- "What nearby technique should I inspect next, and why?"
+
+This surface uses direct relation navigation and review-backed clusters only. It does not do graph search, scoring, or multi-hop reasoning.
+
+See also:
+- [Technique Selection](TECHNIQUE_SELECTION.md)
+- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
+- [Full catalog JSON](../generated/technique_catalog.json)
+
+## Starting Points
+
+| domain | canonical defaults | start here |
+|---|---|---|
+| `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) | Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized. |
+| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | Start with the canonical document-role layout, then inspect the docs boundary pair if top-level summaries begin duplicating canonical detail. |
+| `evaluation` | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear. |
+
+## Working Sets
+
+### Published-summary cluster
+
+- Techniques: [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md)
+- Review: [PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- Why grouped: Storage, remediation, integrity, and rendering policy for published summary systems.
+
+### Evaluation-chain pair
+
+- Techniques: [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md)
+- Review: [EVALUATION_CHAIN_SEMANTIC_REVIEW.md](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
+- Why grouped: Summary-contract production plus staged promotion from observation to narrow enforcement.
+
+### Docs boundary pair
+
+- Techniques: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md)
+- Review: [DOCS_BOUNDARY_SEMANTIC_REVIEW.md](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+- Why grouped: Repository-wide document-role layout plus lightweight entrypoint snapshot discipline.
+
+## Common Moves
+
+| situation | inspect next | why |
+|---|---|---|
+| I have a summary producer and need history/trend-safe storage | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) | Natural next move after a stable summary contract such as `AOA-T-0003`. |
+| I already publish summaries and need one remediation backlog | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) | Use when several latest summaries should collapse into one bounded follow-up surface. |
+| I already publish summaries and need one trust verdict | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) | Use when several consumers should not duplicate integrity checks independently. |
+| I need strict-vs-optional rendering policy | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | Use when supporting summaries should stay visible but non-fatal in one consumer. |
+| I need doc-role separation | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | Start here when the repository needs explicit canonical homes and update-routing rules. |
+| I need top-level docs to stay short | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | Inspect alongside `AOA-T-0002` when entrypoint docs start duplicating operational detail. |
+
+## Relation Notes
+
+- `requires` means one technique usually depends on another contract already existing.
+- `complements` means two techniques commonly strengthen each other without collapsing into one pattern.
+- `used_together_for` means the pair commonly appears in the same operating path, even if one does not strictly depend on the other.
+- `shares_contract_with` means neighboring techniques rely on the same bounded contract but still do different work.
+- This surface uses direct relation hints only. It does not do graph traversal, ranking, or multi-hop inference.
