@@ -25,7 +25,7 @@ Stage 1 metadata can inform selection and canonical review, but it does not repl
 | `validation_strength` | Evidence strength. `baseline` means mostly structural validation, `source_backed` means real-project evidence exists, `cross_context` means real-project evidence plus second-context or canonical-review reinforcement exists. |
 | `public_safety_reviewed_at` | Most recent public-safety review date for the published technique bundle, formatted as `YYYY-MM-DD`. |
 | `export_ready` | Whether the technique is safe to include in Stage 1 structured catalog outputs. This field is about machine-readable publication safety for the committed repo-local catalog, not graph or AoA export. |
-| `relations` | Small structured links to other in-repo techniques. Keep the list bounded to direct reusable relationships only. |
+| `relations` | Small structured links to other in-repo techniques. Keep the list bounded to direct reusable relationships only; this is already suitable for later direct-edge KAG lifting, but rationale and graph behavior remain separate. |
 | `evidence` | Structured list of tracked note files that justify the technique's current public bundle and review posture. |
 
 ## Relation types
