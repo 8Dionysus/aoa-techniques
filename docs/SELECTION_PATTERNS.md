@@ -18,7 +18,7 @@ See also:
 | domain | canonical defaults | start here |
 |---|---|---|
 | `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) | Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized. |
-| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | Start with the canonical document-role layout, then inspect the docs boundary pair if top-level summaries begin duplicating canonical detail. |
+| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | Start with the canonical document-role layout, then inspect the docs boundary pair if top-level summaries begin duplicating canonical detail. |
 | `evaluation` | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear. |
 
 ## Working Sets

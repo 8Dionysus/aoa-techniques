@@ -2,7 +2,7 @@
 id: AOA-T-0009
 name: lightweight-status-snapshot
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/DECISIONS.md
@@ -15,7 +15,7 @@ tags:
   - anti-drift
   - status
 summary: Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes.
-maturity_score: 4
+maturity_score: 5
 rigor_level: light
 reversibility: easy
 review_required: false
@@ -26,6 +26,8 @@ relations:
   - type: complements
     target: AOA-T-0002
 evidence:
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
   - kind: origin_evidence
     path: notes/origin-evidence.md
   - kind: second_context
@@ -142,9 +144,9 @@ See `checks/lightweight-snapshot-checklist.md`.
 - born in `atm10-agent`
 - validated through a doc-hygiene transition where `README.md` and `MANIFEST.md` were trimmed to snapshot form while detailed state stayed in `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, and `SESSION_*`
 - promoted to `aoa-techniques` on 2026-03-14
+- approved for `canonical` in `aoa-techniques` on 2026-03-16 after cross-context evidence, a clean docs-boundary semantic review, and a fresh public-safety recheck
 
 ## Future evolution
 
 - add a companion example for repositories without `MANIFEST`
 - add optional guidance for snapshot freshness checks
-- add canonical-readiness evidence once a second real context is documented
