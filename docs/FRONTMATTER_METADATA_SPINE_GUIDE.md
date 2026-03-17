@@ -55,6 +55,7 @@ Current frontmatter and catalog outputs should not be treated as:
 - a reason to widen metadata before the source-lift family proves it is needed
 
 If a question needs section meaning, detailed caution language, or nuanced provenance explanation, the answer still lives in markdown sections and note files.
+That includes risk, failure, and negative-effect meaning: the metadata spine can point to those surfaces later, but it does not replace the authored `Risks` section.
 
 ## Explicitly Deferred
 

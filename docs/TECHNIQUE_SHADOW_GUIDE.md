@@ -70,6 +70,8 @@ For now, keep the required top-level `## Risks` section and structure it like th
 
 This is the near-term authoring contract for new or substantially revised techniques. It strengthens language without changing frontmatter or validator behavior.
 
+The same shadow-language contract is also the current upstream for bounded caution/source-lift work. That future lift still stays markdown-first until the repo proves it needs more than authored `Risks` sections.
+
 ## Explicitly Deferred
 
 Not part of this first wave:
