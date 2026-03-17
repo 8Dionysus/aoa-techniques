@@ -144,7 +144,7 @@ ATM10-specific gateway names, exact thresholds, workflow names, and project-spec
 
 ## Example
 
-See `examples/minimal-signal-first-rollout.md`.
+See `examples/minimal-signal-first-rollout.md` for the generic pattern and `examples/concrete-repo-validation-rollout.md` for one more concrete public-safe rollout scenario.
 
 ## Checks
 
