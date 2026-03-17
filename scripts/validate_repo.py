@@ -39,6 +39,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_section_manifest.py",
     "scripts/build_checklist_manifest.py",
     "scripts/build_example_manifest.py",
+    "scripts/build_evidence_note_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_section_manifest.json",
@@ -47,6 +48,8 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_checklist_manifest.min.json",
     "generated/technique_example_manifest.json",
     "generated/technique_example_manifest.min.json",
+    "generated/technique_evidence_note_manifest.json",
+    "generated/technique_evidence_note_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
@@ -131,6 +134,7 @@ RELATION_TYPE_ORDER = (
 SUPPORT_PATH_RE = re.compile(r"(?<!\w)(?:checks|examples|notes)/[A-Za-z0-9._/-]+\.md")
 FRONTMATTER_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n?", re.DOTALL)
 SECTION_RE = re.compile(r"^## (.+)$", re.MULTILINE)
+NOTE_FIELD_RE = re.compile(r"- ([a-z0-9][a-z0-9_ /-]*):\s*(.*)")
 EVIDENCE_KIND_BY_NAME = {
     "origin-evidence.md": "origin_evidence",
     "second-context-adaptation.md": "second_context",
@@ -144,6 +148,69 @@ CHECKLIST_MANIFEST_VERSION = 1
 CHECKLIST_MANIFEST_SOURCE_OF_TRUTH = "markdown-checklists-v1"
 EXAMPLE_MANIFEST_VERSION = 1
 EXAMPLE_MANIFEST_SOURCE_OF_TRUTH = "markdown-examples-v1"
+EVIDENCE_NOTE_MANIFEST_VERSION = 1
+EVIDENCE_NOTE_MANIFEST_SOURCE_OF_TRUTH = "markdown-evidence-notes-v1"
+NOTE_SHAPE_TYPED = "typed_sections"
+NOTE_SHAPE_OPAQUE = "opaque_body"
+NOTE_PAYLOAD_FIELDS = "fields"
+NOTE_PAYLOAD_ITEMS = "items"
+NOTE_PAYLOAD_MARKDOWN = "markdown"
+TYPED_NOTE_KIND_ORDER = (
+    "origin_evidence",
+    "second_context",
+    "canonical_readiness",
+    "external_origin",
+    "external_review",
+)
+TYPED_NOTE_TITLES = {
+    "origin_evidence": "Origin Evidence",
+    "second_context": "Second Context Adaptation",
+    "canonical_readiness": "Canonical Readiness",
+    "external_origin": "External Origin Note",
+    "external_review": "External Import Review",
+}
+TYPED_NOTE_SECTION_SCOPES = {
+    "origin_evidence": (
+        "Technique",
+        "Source project",
+        "Evidence",
+        "Interpretation",
+    ),
+    "second_context": (
+        "Technique",
+        "Target project",
+        "What changed",
+        "What stayed invariant",
+        "Risks introduced by adaptation",
+        "Evidence",
+        "Result",
+    ),
+    "canonical_readiness": (
+        "Technique",
+        "Verdict",
+        "Evidence summary",
+        "Default-use rationale",
+        "Fresh public-safety check",
+        "Remaining gaps",
+        "Recommendation",
+    ),
+    "external_origin": (
+        "Source",
+        "What changed",
+        "Public-safety review",
+        "Review notes",
+    ),
+    "external_review": (
+        "Technique",
+        "Verdict",
+        "Evidence summary",
+        "Boundedness check",
+        "Provenance readability",
+        "Import-path assessment",
+        "Remaining gaps",
+        "Recommendation",
+    ),
+}
 
 
 class ValidationError(RuntimeError):
@@ -177,6 +244,37 @@ class TechniqueExample:
 
 
 @dataclass(frozen=True)
+class NoteField:
+    key: str
+    value_markdown: str
+
+
+@dataclass(frozen=True)
+class NoteItem:
+    text: str
+
+
+@dataclass(frozen=True)
+class EvidenceNoteSection:
+    heading: str
+    payload_type: str
+    fields: tuple[NoteField, ...]
+    items: tuple[NoteItem, ...]
+    markdown: str
+
+
+@dataclass(frozen=True)
+class TechniqueNote:
+    note_path: str
+    kind: str
+    title: str
+    note_shape: str
+    intro_markdown: str
+    sections: tuple[EvidenceNoteSection, ...]
+    body_markdown: str
+
+
+@dataclass(frozen=True)
 class TechniqueRecord:
     technique_dir: Path
     technique_path: Path
@@ -190,6 +288,7 @@ class TechniqueRecord:
     sections: tuple[TechniqueSection, ...]
     checklists: tuple[TechniqueChecklist, ...]
     examples: tuple[TechniqueExample, ...]
+    notes: tuple[TechniqueNote, ...]
 
 
 @dataclass(frozen=True)
@@ -715,6 +814,215 @@ def parse_examples(repo_root: Path, technique_dir: Path) -> tuple[TechniqueExamp
     return tuple(parse_example_file(path, repo_root) for path in example_paths)
 
 
+def parse_titled_markdown_file(markdown_path: Path, kind_label: str) -> tuple[str, list[str], int]:
+    lines = read_text(markdown_path).splitlines()
+    nonblank_indexes = [index for index, line in enumerate(lines) if line.strip()]
+    if not nonblank_indexes:
+        fail(f"{markdown_path}: {kind_label} file must start with a '# ' title")
+
+    title_index = nonblank_indexes[0]
+    title_line = lines[title_index]
+    if not title_line.startswith("# ") or title_line.startswith("##"):
+        fail(f"{markdown_path}: first meaningful line must be a single '# ' title")
+
+    title = title_line[2:].strip()
+    if not title:
+        fail(f"{markdown_path}: {kind_label} title must not be empty")
+
+    return title, lines, title_index
+
+
+def split_typed_note_body(note_path: Path, body: str) -> tuple[str, tuple[TechniqueSection, ...]]:
+    matches = list(SECTION_RE.finditer(body))
+    if not matches:
+        fail(f"{note_path}: typed note must include top-level '## ' sections")
+
+    intro_markdown = normalize_section_markdown(body[: matches[0].start()])
+    sections: list[TechniqueSection] = []
+
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+        sections.append(
+            TechniqueSection(
+                heading=match.group(1).strip(),
+                markdown=normalize_section_markdown(body[start:end]),
+            )
+        )
+
+    return intro_markdown, tuple(sections)
+
+
+def top_level_meaningful_indexes(lines: list[str]) -> list[int]:
+    return [
+        index
+        for index, line in enumerate(lines)
+        if line.strip() and not line.startswith((" ", "\t"))
+    ]
+
+
+def normalize_indented_markdown(lines: list[str]) -> str:
+    trimmed = list(lines)
+    while trimmed and not trimmed[0].strip():
+        trimmed.pop(0)
+    while trimmed and not trimmed[-1].strip():
+        trimmed.pop()
+
+    if not trimmed:
+        return ""
+
+    indents = [
+        len(line) - len(line.lstrip(" "))
+        for line in trimmed
+        if line.strip() and line.startswith(" ")
+    ]
+    min_indent = min(indents) if indents else 0
+
+    normalized_lines: list[str] = []
+    for line in trimmed:
+        if min_indent and line.startswith(" " * min_indent):
+            normalized_lines.append(line[min_indent:])
+        else:
+            normalized_lines.append(line)
+
+    return "\n".join(normalized_lines).rstrip()
+
+
+def field_value_markdown(first_value: str, continuation_lines: list[str]) -> str:
+    continuation_markdown = normalize_indented_markdown(continuation_lines)
+    if first_value and continuation_markdown:
+        return f"{first_value}\n{continuation_markdown}"
+    if continuation_markdown:
+        return continuation_markdown
+    return first_value
+
+
+def item_text_markdown(first_text: str, continuation_lines: list[str]) -> str:
+    continuation_markdown = normalize_indented_markdown(continuation_lines)
+    if first_text and continuation_markdown:
+        return f"{first_text}\n{continuation_markdown}"
+    if continuation_markdown:
+        return continuation_markdown
+    return first_text
+
+
+def parse_note_section_payload(
+    note_path: Path, heading: str, section_markdown: str
+) -> EvidenceNoteSection:
+    lines = section_markdown.splitlines()
+    top_level_indexes = top_level_meaningful_indexes(lines)
+    top_level_lines = [lines[index] for index in top_level_indexes]
+    key_value_matches = [NOTE_FIELD_RE.fullmatch(line) for line in top_level_lines]
+
+    if top_level_lines and all(match is not None for match in key_value_matches):
+        fields: list[NoteField] = []
+        for order, start_index in enumerate(top_level_indexes, start=1):
+            end_index = (
+                top_level_indexes[order] if order < len(top_level_indexes) else len(lines)
+            )
+            chunk_lines = lines[start_index:end_index]
+            match = NOTE_FIELD_RE.fullmatch(chunk_lines[0])
+            if match is None:
+                fail(f"{note_path}: section '{heading}' must keep key/value bullet structure")
+            fields.append(
+                NoteField(
+                    key=match.group(1).strip(),
+                    value_markdown=field_value_markdown(
+                        match.group(2).rstrip(), chunk_lines[1:]
+                    ),
+                )
+            )
+
+        return EvidenceNoteSection(
+            heading=heading,
+            payload_type=NOTE_PAYLOAD_FIELDS,
+            fields=tuple(fields),
+            items=(),
+            markdown="",
+        )
+
+    if top_level_lines and all(line.startswith("- ") for line in top_level_lines):
+        items: list[NoteItem] = []
+        for order, start_index in enumerate(top_level_indexes, start=1):
+            end_index = (
+                top_level_indexes[order] if order < len(top_level_indexes) else len(lines)
+            )
+            chunk_lines = lines[start_index:end_index]
+            item_text = item_text_markdown(chunk_lines[0][2:].strip(), chunk_lines[1:])
+            if not item_text:
+                fail(f"{note_path}: section '{heading}' contains an empty bullet item")
+            items.append(NoteItem(text=item_text))
+
+        return EvidenceNoteSection(
+            heading=heading,
+            payload_type=NOTE_PAYLOAD_ITEMS,
+            fields=(),
+            items=tuple(items),
+            markdown="",
+        )
+
+    return EvidenceNoteSection(
+        heading=heading,
+        payload_type=NOTE_PAYLOAD_MARKDOWN,
+        fields=(),
+        items=(),
+        markdown=section_markdown,
+    )
+
+
+def parse_note_file(note_path: Path, repo_root: Path) -> TechniqueNote:
+    title, lines, title_index = parse_titled_markdown_file(note_path, "note")
+    note_path_str = note_path.relative_to(repo_root).as_posix()
+    kind = expected_evidence_kind(note_path_str)
+    body = "\n".join(lines[title_index + 1 :])
+
+    if kind not in TYPED_NOTE_SECTION_SCOPES:
+        return TechniqueNote(
+            note_path=note_path_str,
+            kind=kind,
+            title=title,
+            note_shape=NOTE_SHAPE_OPAQUE,
+            intro_markdown="",
+            sections=(),
+            body_markdown=normalize_section_markdown(body),
+        )
+
+    expected_title = TYPED_NOTE_TITLES[kind]
+    if title != expected_title:
+        fail(f"{note_path}: typed note title must be '{expected_title}', found '{title}'")
+
+    intro_markdown, parsed_sections = split_typed_note_body(note_path, body)
+    actual_headings = tuple(section.heading for section in parsed_sections)
+    expected_headings = TYPED_NOTE_SECTION_SCOPES[kind]
+    if actual_headings != expected_headings:
+        expected = ", ".join(f"'## {heading}'" for heading in expected_headings)
+        actual = ", ".join(f"'## {heading}'" for heading in actual_headings) or "none"
+        fail(
+            f"{note_path}: typed note sections must stay in standard order [{expected}], "
+            f"found [{actual}]"
+        )
+
+    sections = tuple(
+        parse_note_section_payload(note_path, section.heading, section.markdown)
+        for section in parsed_sections
+    )
+    return TechniqueNote(
+        note_path=note_path_str,
+        kind=kind,
+        title=title,
+        note_shape=NOTE_SHAPE_TYPED,
+        intro_markdown=intro_markdown,
+        sections=sections,
+        body_markdown="",
+    )
+
+
+def parse_notes(repo_root: Path, technique_dir: Path) -> tuple[TechniqueNote, ...]:
+    notes_dir = technique_dir / "notes"
+    note_paths = sorted(notes_dir.rglob("*.md"), key=lambda path: path.relative_to(repo_root).as_posix())
+    return tuple(parse_note_file(path, repo_root) for path in note_paths)
+
+
 def validate_stage1_files(repo_root: Path) -> None:
     for relative_path in REQUIRED_STAGE1_FILES:
         target = repo_root / relative_path
@@ -744,6 +1052,7 @@ def validate_technique_bundle(
     sections = validate_sections(body, technique_path)
     checklists = parse_checklists(repo_root, technique_dir)
     examples = parse_examples(repo_root, technique_dir)
+    notes = parse_notes(repo_root, technique_dir)
     validate_support_references(body, technique_dir, technique_path)
 
     if frontmatter["domain"] != expected_domain:
@@ -764,6 +1073,7 @@ def validate_technique_bundle(
         sections=sections,
         checklists=checklists,
         examples=examples,
+        notes=notes,
     )
 
 
@@ -1112,6 +1422,140 @@ def project_min_example_manifest(full_manifest: dict[str, Any]) -> dict[str, Any
     }
 
 
+def typed_note_scopes_payload() -> dict[str, Any]:
+    return {
+        kind: {
+            "title": TYPED_NOTE_TITLES[kind],
+            "section_scope": list(TYPED_NOTE_SECTION_SCOPES[kind]),
+        }
+        for kind in TYPED_NOTE_KIND_ORDER
+    }
+
+
+def full_note_section_payload(section: EvidenceNoteSection, order: int) -> dict[str, Any]:
+    payload = {
+        "heading": section.heading,
+        "order": order,
+        "payload_type": section.payload_type,
+    }
+    if section.payload_type == NOTE_PAYLOAD_FIELDS:
+        payload["fields"] = [
+            {
+                "order": field_order,
+                "key": field.key,
+                "value_markdown": field.value_markdown,
+            }
+            for field_order, field in enumerate(section.fields, start=1)
+        ]
+    elif section.payload_type == NOTE_PAYLOAD_ITEMS:
+        payload["items"] = [
+            {
+                "order": item_order,
+                "text": item.text,
+            }
+            for item_order, item in enumerate(section.items, start=1)
+        ]
+    else:
+        payload["markdown"] = section.markdown
+    return payload
+
+
+def full_evidence_note_manifest_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any]:
+    return {
+        "id": record.id,
+        "technique_path": record.technique_path.relative_to(repo_root).as_posix(),
+        "notes": [
+            {
+                "note_path": note.note_path,
+                "kind": note.kind,
+                "title": note.title,
+                "note_shape": note.note_shape,
+                **(
+                    {
+                        "intro_markdown": note.intro_markdown,
+                        "sections": [
+                            full_note_section_payload(section, order)
+                            for order, section in enumerate(note.sections, start=1)
+                        ],
+                    }
+                    if note.note_shape == NOTE_SHAPE_TYPED
+                    else {"body_markdown": note.body_markdown}
+                ),
+            }
+            for note in record.notes
+        ],
+    }
+
+
+def project_min_evidence_note_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "typed_note_scopes": full_manifest["typed_note_scopes"],
+        "techniques": [
+            {
+                "id": technique["id"],
+                "technique_path": technique["technique_path"],
+                "notes": [
+                    {
+                        "note_path": note["note_path"],
+                        "kind": note["kind"],
+                        "title": note["title"],
+                        "note_shape": note["note_shape"],
+                        **(
+                            {
+                                "intro_present": note["intro_markdown"] != "",
+                                "sections": [
+                                    {
+                                        "heading": section["heading"],
+                                        "order": section["order"],
+                                        "payload_type": section["payload_type"],
+                                        **(
+                                            {
+                                                "fields": [
+                                                    {
+                                                        "order": field["order"],
+                                                        "key": field["key"],
+                                                    }
+                                                    for field in section["fields"]
+                                                ]
+                                            }
+                                            if section["payload_type"] == NOTE_PAYLOAD_FIELDS
+                                            else {}
+                                        ),
+                                        **(
+                                            {
+                                                "items": [
+                                                    {
+                                                        "order": item["order"],
+                                                    }
+                                                    for item in section["items"]
+                                                ]
+                                            }
+                                            if section["payload_type"] == NOTE_PAYLOAD_ITEMS
+                                            else {}
+                                        ),
+                                        **(
+                                            {"markdown_present": section["markdown"] != ""}
+                                            if section["payload_type"] == NOTE_PAYLOAD_MARKDOWN
+                                            else {}
+                                        ),
+                                    }
+                                    for section in note["sections"]
+                                ],
+                            }
+                            if note["note_shape"] == NOTE_SHAPE_TYPED
+                            else {"body_present": note["body_markdown"] != ""}
+                        ),
+                    }
+                    for note in technique["notes"]
+                ],
+            }
+            for technique in full_manifest["techniques"]
+        ],
+    }
+
+
 def build_catalog_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -1164,6 +1608,21 @@ def build_example_manifest_payloads(
         "techniques": [full_example_manifest_entry(repo_root, record) for record in sorted_records],
     }
     return full_manifest, project_min_example_manifest(full_manifest)
+
+
+def build_evidence_note_manifest_payloads(
+    repo_root: Path, records: list[TechniqueRecord]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    sorted_records = sorted(records, key=lambda record: record.id)
+    full_manifest = {
+        "manifest_version": EVIDENCE_NOTE_MANIFEST_VERSION,
+        "source_of_truth": EVIDENCE_NOTE_MANIFEST_SOURCE_OF_TRUTH,
+        "typed_note_scopes": typed_note_scopes_payload(),
+        "techniques": [
+            full_evidence_note_manifest_entry(repo_root, record) for record in sorted_records
+        ],
+    }
+    return full_manifest, project_min_evidence_note_manifest(full_manifest)
 
 
 def selection_technique_link(entry: dict[str, Any]) -> str:
@@ -1528,6 +1987,30 @@ def validate_example_manifests(repo_root: Path, records: list[TechniqueRecord]) 
         fail(f"{min_path}: min example manifest must stay a projection of the full manifest")
 
 
+def validate_evidence_note_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    full_path = repo_root / "generated" / "technique_evidence_note_manifest.json"
+    min_path = repo_root / "generated" / "technique_evidence_note_manifest.min.json"
+
+    expected_full, expected_min = build_evidence_note_manifest_payloads(repo_root, records)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated evidence note manifest is out of date; "
+            f"run 'python scripts/build_evidence_note_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated evidence note min manifest is out of date; "
+            f"run 'python scripts/build_evidence_note_manifest.py'"
+        )
+
+    projected_min = project_min_evidence_note_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min evidence note manifest must stay a projection of the full manifest")
+
+
 def validate_selection_surface(repo_root: Path) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -1561,6 +2044,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_section_manifests(repo_root, records)
     validate_checklist_manifests(repo_root, records)
     validate_example_manifests(repo_root, records)
+    validate_evidence_note_manifests(repo_root, records)
     validate_selection_surface(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -1577,6 +2061,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated section manifest parity")
     print("[ok] validated generated checklist manifest parity")
     print("[ok] validated generated example manifest parity")
+    print("[ok] validated generated evidence note manifest parity")
     print("[ok] validated generated selection surface parity")
 
 

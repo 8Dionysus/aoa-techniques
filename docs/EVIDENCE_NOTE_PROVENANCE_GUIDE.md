@@ -4,7 +4,7 @@ This guide defines the bounded contract for `evidence-note-provenance-lift`.
 
 Use it when the repository already has typed evidence notes and explicit note paths, but the next question is how those notes can serve as provenance handles for later KAG-oriented layers without pretending they already form a merged note graph.
 
-This guide is provenance-first. It does not add note IDs, schema fields, extraction scripts, or cross-note graph semantics.
+This guide is provenance-first. It allows one bounded generated evidence-note manifest while still avoiding note IDs, schema fields, or cross-note graph semantics.
 
 ## Current Note Roles
 
@@ -78,6 +78,23 @@ Treat the current evidence-note layer as useful for:
 
 That is a provenance layer, not a note graph platform.
 
+## First Generated Provenance Lift
+
+The first implementation-oriented lift now stays equally bounded:
+
+- `generated/technique_evidence_note_manifest.json`
+- `generated/technique_evidence_note_manifest.min.json`
+
+Those files stay derived from authoritative note markdown.
+
+They only do three bounded things:
+
+- keep `support_note` files opaque at file level
+- lift repeated typed note kinds through exact `##` section order
+- preserve section content as ordered `fields`, `items`, or fallback `markdown`
+
+They do not flatten note meaning into one top-level machine schema.
+
 ## What Evidence Notes Are Not
 
 Current evidence notes should not be treated as:
@@ -96,10 +113,9 @@ Not part of this wave:
 
 - no note schema expansion
 - no note IDs
-- no automatic note extraction
 - no cross-note graph layer
 - no relation-rationale metadata
-- no generated provenance outputs
-- no bundle or generated catalog changes
+- no flattened top-level note semantics like `verdict`, `source_project`, or note scoring
+- no bundle or generated catalog changes beyond the bounded evidence note manifest
 
-The current job is only to make the existing evidence-note provenance layer explicit so later KAG-oriented waves can build on it without reopening what these notes are for.
+The current job is to keep the evidence-note provenance layer explicit and bounded while allowing one derived manifest that still preserves note-level authorship and context.

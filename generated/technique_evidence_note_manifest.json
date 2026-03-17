@@ -1,0 +1,4146 @@
+{
+  "manifest_version": 1,
+  "source_of_truth": "markdown-evidence-notes-v1",
+  "typed_note_scopes": {
+    "origin_evidence": {
+      "title": "Origin Evidence",
+      "section_scope": [
+        "Technique",
+        "Source project",
+        "Evidence",
+        "Interpretation"
+      ]
+    },
+    "second_context": {
+      "title": "Second Context Adaptation",
+      "section_scope": [
+        "Technique",
+        "Target project",
+        "What changed",
+        "What stayed invariant",
+        "Risks introduced by adaptation",
+        "Evidence",
+        "Result"
+      ]
+    },
+    "canonical_readiness": {
+      "title": "Canonical Readiness",
+      "section_scope": [
+        "Technique",
+        "Verdict",
+        "Evidence summary",
+        "Default-use rationale",
+        "Fresh public-safety check",
+        "Remaining gaps",
+        "Recommendation"
+      ]
+    },
+    "external_origin": {
+      "title": "External Origin Note",
+      "section_scope": [
+        "Source",
+        "What changed",
+        "Public-safety review",
+        "Review notes"
+      ]
+    },
+    "external_review": {
+      "title": "External Import Review",
+      "section_scope": [
+        "Technique",
+        "Verdict",
+        "Evidence summary",
+        "Boundedness check",
+        "Provenance readability",
+        "Import-path assessment",
+        "Remaining gaps",
+        "Recommendation"
+      ]
+    }
+  },
+  "techniques": [
+    {
+      "id": "AOA-T-0001",
+      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/plan-diff-apply-verify-report/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0001"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "plan-diff-apply-verify-report"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "born in `abyss-stack` and already published with reusable contracts, checklist, example, and sanitization notes"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` uses the same contribution doctrine in `AGENTS.md`, making the workflow operative outside the origin repository"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the technique now has one reusable example, one checklist, one public second-context adaptation note, and repo-level canonical criteria in contribution docs"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is a safe default for non-trivial agent or human+agent changes because it requires scope, validation, and recovery thinking without forcing project-specific tooling"
+                },
+                {
+                  "order": 2,
+                  "text": "it scales from documentation changes to code or operations changes while staying reviewable"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-14"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique remains free of secrets, private infrastructure details, internal-only URLs, and project-bound operational assumptions"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "examples, checks, and adaptation notes remain repository-agnostic and understandable without origin-project access"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "risk tiers are still described narratively rather than through a shared rubric or machine-readable schema"
+                },
+                {
+                  "order": 2,
+                  "text": "a future third context would strengthen breadth further, but it is not required for a first canonical promotion review"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0001` for `promoted -> canonical` in this wave; the repo-level rubric is met, the second-context evidence remains representative, and the public-safety pass is clean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/plan-diff-apply-verify-report/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0001"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "plan-diff-apply-verify-report"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human+agent contribution workflow over reviewable repository changes"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin focused on a source-project `AGENTS.md`; this adaptation applies the same flow across repository policy files, technique docs, examples, and checks"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no deployment or production runtime is involved; verification is usually document consistency review, checklist confirmation, or repository hygiene review"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on clear contribution rules in `AGENTS.md` and `CONTRIBUTING.md` rather than environment-specific tooling"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributions are public-safe by default, scoped to reviewable diffs, and reported back with explicit validation notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "every non-trivial change starts with an explicit plan, stays scoped during the diff, names verification, and ends with a concise report"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "verification is still explicit and cannot be replaced by implied confidence"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "rollback thinking and reviewability remain required before wider application"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "documentation-heavy work can make `VERIFY` too symbolic if contributors stop naming concrete review steps"
+                },
+                {
+                  "order": 2,
+                  "text": "low-risk changes can tempt contributors to skip rollback thinking even when a simple recovery path should still be stated"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`AGENTS.md` codifies `PLAN -> DIFF -> VERIFY -> REPORT` as the repository contribution doctrine"
+                },
+                {
+                  "order": 2,
+                  "text": "`CONTRIBUTING.md` and the technique's own example/checklist keep the workflow reviewable at repository scope rather than only in the origin project"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0002",
+      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/source-of-truth-layout/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0002"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "source-of-truth-layout"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent/docs/SOURCE_OF_TRUTH.md` explicitly defines canonical roles and update rules across status, plans, history, decisions, and run instructions"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "`atm10-agent/README.md` and `atm10-agent/MANIFEST.md` already behave as lightweight entrypoints that link to `TODO`, `PLANS`, `docs/RUNBOOK.md`, `docs/DECISIONS.md`, `docs/SESSION_2026-03-13.md`, and `docs/SOURCE_OF_TRUTH.md`"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` applies the same one-home-per-information-class rule to a smaller public repository with `README`, `TECHNIQUE_INDEX`, `AGENTS`, `CONTRIBUTING`, and `SECURITY`"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the technique has a reusable example, checklist, public second-context adaptation note, and clearer separation between invariant routing rules and project-shaped file names"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is a good default for repositories that keep accumulating top-level docs because it prevents status, policy, and operating instructions from drifting across multiple files"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique adapts well: smaller repos can use a reduced role map, while larger repos can expand to `TODO`, `PLANS`, `RUNBOOK`, and history docs"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-14"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps only reusable document-role and routing guidance, with origin-specific paths, run artifacts, and local operational details removed"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the reduced public-repository variant remains understandable on its own and does not depend on hidden repository surfaces to explain the core contract"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public second context is smaller than the origin and does not exercise every operational role in the recommended map"
+                },
+                {
+                  "order": 2,
+                  "text": "a future context with issue-tracker-backed active work or non-file-backed runbooks would broaden the proof surface"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0002` for `promoted -> canonical` in this wave; the reduced public-repository variant is sufficient for a first default documentation pattern, and the public-safety pass is clean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/source-of-truth-layout/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0002"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "source-of-truth-layout"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with community files, technique catalog, and authoring templates"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository without in-repo `TODO`, `PLANS`, or `RUNBOOK` surfaces"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin mapped `README`, `MANIFEST`, `TODO`, `PLANS`, `DECISIONS`, `RUNBOOK`, and `SESSION_*`; this adaptation maps `README`, `TECHNIQUE_INDEX`, `AGENTS`, `CONTRIBUTING`, `SECURITY`, and `templates/`"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no operator runbook or session-log layer lives in this repository; the document-role map is reduced to the information classes that actually exist here"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on a small stable set of public docs instead of a larger operational doc tree"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "entrypoint docs should link to canonical policy or catalog docs rather than duplicate contribution, security, or index content"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "each recurring information class still has one canonical home"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "routing questions can still be answered by asking which document owns a given class of information first"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "entrypoint docs stay lightweight, and policy or index details are not duplicated across multiple top-level docs"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smaller repository can hide missing document classes behind simplicity and make the role map feel implicit again"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors may treat `README` as a catch-all summary unless the role map stays explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence in `atm10-agent/docs/SOURCE_OF_TRUTH.md` explicitly assigns canonical roles to `README.md`, `MANIFEST.md`, `TODO.md`, `PLANS.md`, `docs/SESSION_*.md`, `docs/DECISIONS.md`, and `docs/RUNBOOK.md`"
+                },
+                {
+                  "order": 2,
+                  "text": "the same source file also fixes update-routing rules such as `behavior/architecture -> docs/DECISIONS.md`, `commands/setup -> docs/RUNBOOK.md`, `important run/result -> docs/SESSION_*.md`, `active steps -> TODO.md`, and `goals/DoD -> PLANS.md`"
+                },
+                {
+                  "order": 3,
+                  "text": "`atm10-agent/README.md` and `atm10-agent/MANIFEST.md` both act as lightweight entrypoints that link outward to canonical documents instead of duplicating long history"
+                },
+                {
+                  "order": 4,
+                  "text": "in `aoa-techniques`, `README.md` acts as the short public entrypoint, `TECHNIQUE_INDEX.md` owns catalog state, `CONTRIBUTING.md` owns contribution rules, `SECURITY.md` owns sensitive reporting, and `AGENTS.md` owns collaboration workflow"
+                },
+                {
+                  "order": 5,
+                  "text": "this is a reduced variant of the technique rather than a full operational map with `TODO`, `PLANS`, `RUNBOOK`, and `SESSION_*`"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0003",
+      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/contract-first-smoke-summary/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0003"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-first-smoke-summary"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` documents the summary-first producer contract across multiple smoke families with stable `--summary-json` outputs and explicit summary-based acceptance behavior"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "the same origin surfaces show the summary contract reused by CI verdicts, operator-facing review paths, and agent-readable structured outputs rather than by log scraping alone"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "the new bounded adaptation note shows the same producer-layer contract holding for a smaller generic repository where one smoke or repo-health path still emits one stable machine-readable summary for multiple consumers"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the technique now has a reusable example, checklist, stronger origin evidence, a bounded second-context note, and a semantic review that keeps it distinct from storage/history and staged rollout techniques"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this now reads as the default producer-layer pattern when a runnable smoke or probe path should publish one stable machine-readable acceptance surface for CI, operators, and agents"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than adjacent techniques: `AOA-T-0006` stabilizes published latest/history storage after the summary exists, and `AOA-T-0007` governs staged enforcement only after a summary-producing signal already exists"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-16"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps only the reusable summary-contract pattern and removes ATM10-specific smoke families, workflow names, run layouts, and threshold detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the current bundle remains understandable without origin-project access and does not depend on hidden operational surfaces to explain the contract"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would widen the proof surface further, but it is not required before a first canonical review of this bounded producer-layer contract"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0003` for `promoted -> canonical` in this wave; the current support surfaces now make it read as the natural default producer contract within its bounded scope without widening into storage, rollout, or downstream helper semantics"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/contract-first-smoke-summary/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0003"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-first-smoke-summary"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/docs/DECISIONS.md`\n- `atm10-agent/docs/RUNBOOK.md`\n- `atm10-agent/docs/SESSION_2026-03-12.md`\n- `atm10-agent/docs/SESSION_2026-03-13.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`atm10-agent/docs/DECISIONS.md` records that the repository standardized a machine-readable summary layer for non-automation smoke with `scripts/collect_smoke_run_summary.py` and one `smoke_summary.json` contract instead of relying on console output."
+                },
+                {
+                  "order": 2,
+                  "text": "The same source records reuse of the same contract-first pattern across multiple smoke families: gateway smoke publishes `gateway_smoke_summary.json`, gateway HTTP smoke publishes `gateway_http_smoke_summary.json`, and Streamlit smoke publishes `streamlit_smoke_summary_v1`."
+                },
+                {
+                  "order": 3,
+                  "text": "`atm10-agent/docs/RUNBOOK.md` lists concrete smoke commands with stable `--summary-json` surfaces and expected artifact paths for phase, retrieval, automation contract, gateway, gateway HTTP, SLA, and Streamlit smoke flows."
+                },
+                {
+                  "order": 4,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-12.md` records a live Streamlit smoke run on the normal summary path with the schema left unchanged, showing that the published summary contract stayed stable while the surrounding implementation evolved."
+                },
+                {
+                  "order": 5,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-13.md` states explicitly that the green verdict is determined by `streamlit_smoke_summary_v1` rather than by debug process-exit details, confirming summary-first acceptance behavior."
+                },
+                {
+                  "order": 6,
+                  "text": "the same origin surfaces show multiple downstream consumers of the same summary contract: CI verdicts, operator-facing review paths, and agent-readable structured outputs all depend on the emitted summaries rather than on log scraping"
+                },
+                {
+                  "order": 7,
+                  "text": "together these sources show the pattern as the default producer layer once a smoke family needs one reusable acceptance surface for more than one consumer"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a reusable producer-layer contract over multiple smoke families and consumers: summaries are standardized, discoverable, and treated as the default acceptance surface for downstream CI, operators, and agents before storage, rollout, or remediation helpers are added."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/contract-first-smoke-summary/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0003"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-first-smoke-summary"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "generic repository with one published repo-health or smoke-validation summary"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public-safe validation paths where CI, operators, or agents need one stable machine-readable result instead of console parsing"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "scheduled, CI, or local validation entrypoints that emit one summary artifact per bounded smoke path"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin used several ATM10 smoke families and run-directory conventions; this adaptation uses one generic repo-health or service-smoke summary path"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "the validation entrypoint may check docs, service health, contract parity, or another bounded probe; the technique does not depend on one product domain"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "downstream consumers rely on one declared summary file or stable `--summary-json` output, not ATM10 workflow naming"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "the project may have only one or a few smoke paths, but each still publishes one stable machine-readable contract surface"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "each smoke or probe path emits one machine-readable summary that becomes the primary acceptance surface"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "explicit status, stable discovery, and enough observed fields for basic diagnosis remain required"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "downstream consumers still read the summary first and do not fall back to log scraping as the main contract"
+                },
+                {
+                  "order": 4,
+                  "key": "default-use trigger",
+                  "value_markdown": "once a runnable smoke or probe path feeds CI, operators, or agents, one summary-first contract is the default producer layer before storage, rollout, or remediation helpers appear"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "small repositories can treat the summary as an afterthought and drift back toward console-first acceptance"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can emit a nominal JSON file that still lacks enough observed detail for diagnosis"
+                },
+                {
+                  "order": 3,
+                  "text": "one-project naming habits can leak back into the adaptation and make the technique look more ATM10-shaped than it is"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin already proves the same contract across multiple smoke families with summary-first acceptance behavior"
+                },
+                {
+                  "order": 2,
+                  "text": "the semantic review for `AOA-T-0003` versus `AOA-T-0007` already confirms that this technique stays the producer layer rather than drifting into rollout semantics"
+                },
+                {
+                  "order": 3,
+                  "text": "the adaptation changes only the smoke family width and domain flavor, not the core rule that a bounded runnable validation path should publish one stable summary contract for downstream consumers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded second context for repositories that need one stable smoke or probe summary before any storage, history, gate-promotion, or remediation layer is added"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0004",
+      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/bounded-transfer.md",
+          "kind": "support_note",
+          "title": "Bounded Transfer",
+          "note_shape": "opaque_body",
+          "body_markdown": "This note explains what transfers cleanly from the ATM10 origin and what should not be mistaken for the core of `AOA-T-0004`.\n\n## What transfers cleanly\n\n- a stable intent payload is normalized into a plan artifact before any execution layer runs\n- the execution layer is dry-run only and emits explicit artifacts rather than relying on logs\n- a contract-check reads those artifacts and produces a machine-readable verdict\n- routing and traceability data can be surfaced in the contract summary when policy requires it\n- the contract result is the stop signal that prevents premature progression to real execution\n\n## What is not the core technique\n\n- exact ATM10 script names such as `intent_to_automation_plan.py` or `automation_intent_chain_smoke.py`\n- exact artifact names such as `automation_plan.json`, `chain_summary.json`, or `contract_summary.json`\n- exact CI workflow layout, summary-table labels, or artifact-upload conventions\n- exact thresholds such as minimum action count or minimum step count\n- UI-automation specifics, keyboard actions, or other donor-specific payload shapes\n\n## Minimum portability bar\n\nA project can reasonably claim this technique only if all of the following hold:\n\n- the plan artifact is written before dry-run execution\n- the dry-run path is side-effect free in the same sense that the project documents and enforces\n- the contract-check reads artifacts directly and returns an explicit pass or fail verdict\n- routing expectations are checked explicitly instead of being inferred from human log review\n- failing the contract blocks progression to any real execution path\n\n## Misreadings to avoid\n\n- adding an adapter with side effects is not this technique\n- emitting logs without stable artifacts is not this technique\n- carrying trace IDs without checking or publishing them when policy requires them is not this technique\n- copying ATM10 filenames or commands without preserving the artifact-first contract misses the transferable core\n\n## Source backing\n\nThe transfer boundary comes from the ATM10 sequence around `M6.3`, `M6.4`, `M6.6`, and the 2026-02-24 traceability hardening: the durable pattern is the artifact-first chain plus explicit contract verdict, not the donor repository's exact script or CI layout."
+        },
+        {
+          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0004"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "intent-plan-dry-run-contract-chain"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/docs/DECISIONS.md`\n- `atm10-agent/docs/RUNBOOK.md`\n- `atm10-agent/docs/SESSION_2026-02-23.md`\n- `atm10-agent/docs/SESSION_2026-02-24.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`atm10-agent/docs/SESSION_2026-02-23.md` records the incremental build-up of the chain in `M6.3`, `M6.4`, `M6.6`, and `M6.7`: first the intent-to-plan adapter, then the unified dry-run chain entrypoint, then the contract checker, then machine-readable `summary_json` output."
+                },
+                {
+                  "order": 2,
+                  "text": "The same session log lists the artifact contract explicitly for the unified chain: `run.json`, `chain_summary.json`, `automation_plan.json`, and `child_runs/*`, plus local validation that both `dry_run` and `intent_chain` contract modes return `status=ok`."
+                },
+                {
+                  "order": 3,
+                  "text": "`atm10-agent/docs/RUNBOOK.md` makes the chain public and repeatable: `M6.3` keeps the adapter dry-run only, `M6.4` documents the unified chain, and `M6.6` defines concrete contract-check commands and machine-readable `contract_summary.json` output."
+                },
+                {
+                  "order": 4,
+                  "text": "`atm10-agent/docs/DECISIONS.md` formalizes the same layers as explicit policy rather than ad hoc commands: adapter output is an `automation_plan_v1` artifact, the chain writes linkable artifacts, and the checker is the CI contract surface."
+                },
+                {
+                  "order": 5,
+                  "text": "`atm10-agent/docs/SESSION_2026-02-24.md` records the stronger planning metadata envelope in `automation_plan_v1`: `intent_type`, `intent_schema_version`, `adapter_name`, `adapter_version`, and propagated `intent_id/trace_id`."
+                },
+                {
+                  "order": 6,
+                  "text": "The same 2026-02-24 sources record the strict traceability hardening: `check_automation_smoke_contract.py` writes `trace_id` and `intent_id` into `summary_json.observed`, and missing required IDs are treated as contract violations with non-zero exit."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a real artifact-first safety chain, not just a naming convention: intent is normalized into a plan artifact, executed only in dry-run, summarized through explicit chain artifacts, and gated by a machine-readable contract result before any real execution path is considered."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0005",
+      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0005"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "new-intent-rollout-checklist"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/docs/DECISIONS.md`\n- `atm10-agent/docs/RUNBOOK.md`\n- `atm10-agent/docs/SESSION_2026-02-24.md`\n- `atm10-agent/docs/SESSION_2026-03-03.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`atm10-agent/docs/SESSION_2026-02-24.md` records the contract hardening that makes the rollout checklist real rather than ceremonial: canonical fixtures carry `intent_id/trace_id`, CI summaries expose those fields, and strict `--require-trace-id` plus `--require-intent-id` checks are enabled for intent-chain validation."
+                },
+                {
+                  "order": 2,
+                  "text": "`atm10-agent/docs/DECISIONS.md` formalizes the onboarding policy for each new `intent_type`: one canonical fixture, one smoke run, one strict contract-check with explicit routing assertions, summary and artifact wiring, and at least one end-to-end regression test."
+                },
+                {
+                  "order": 3,
+                  "text": "`atm10-agent/docs/RUNBOOK.md` turns that policy into a concrete reusable checklist in `M6.19`, while `M6.8` adds the complementary troubleshooting procedure for failures across fixture, smoke, contract-check, and artifact-wiring layers."
+                },
+                {
+                  "order": 4,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-03.md` shows the checklist executed end to end for `open_world_map`: a new canonical fixture, dedicated smoke run, strict `expected-intent-type open_world_map` validation, new summary row, new artifact path, targeted tests, and a full regression pass."
+                },
+                {
+                  "order": 5,
+                  "text": "The same 2026-03-03 session explicitly notes that the public `automation_plan_v1` contract did not change, which shows the rollout checklist can extend the supported intent set without redefining the shared chain itself."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a bounded extension checklist for an existing dry-run automation chain: new intent rollouts stay reviewable, traceable, artifact-visible, and contract-enforced instead of becoming one-off workflow edits."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/rollout-failure-triage.md",
+          "kind": "support_note",
+          "title": "Rollout Failure Triage",
+          "note_shape": "opaque_body",
+          "body_markdown": "This note generalizes the rollout-debugging path behind `AOA-T-0005` so a new intent can be repaired without widening scope or bypassing the shared chain.\n\n## Triage order\n\nCheck failures in this order:\n\n1. canonical fixture\n2. smoke path\n3. contract-check\n4. artifact publishing\n5. regression coverage\n\nThat order keeps the diagnosis close to the source of truth and avoids debugging summary surfaces before the underlying rollout path is valid.\n\n## 1. Fixture problems\n\nLook here first when:\n\n- the new intent never appears in the smoke run\n- the contract summary shows the wrong `intent_type`\n- required `trace_id` or `intent_id` fields are missing from the observed data\n\nTypical fix:\n\n- repair the canonical fixture before touching CI or summary wiring\n\n## 2. Smoke path problems\n\nLook here when:\n\n- the fixture exists but the run directory or expected artifacts are missing\n- the rollout path uses a one-off helper instead of the shared intent-chain flow\n- the smoke step fails before any contract summary is produced\n\nTypical fix:\n\n- reproduce the dry-run smoke locally against the canonical fixture and confirm it writes the same artifact family expected by existing intent paths\n\n## 3. Contract-check problems\n\nLook here when:\n\n- `expected_intent_type` does not match the new route\n- summary `violations` show missing artifact, routing mismatch, or missing traceability fields\n- the smoke run succeeds but the contract verdict is failing\n\nTypical fix:\n\n- adjust the strict routing or traceability assertions so they match the intended contract of the new rollout, not the previous intent path\n\n## 4. Artifact publishing problems\n\nLook here when:\n\n- `contract_summary.json` exists locally but is absent from the main review surface\n- the new intent path runs, but there is no summary row or stable artifact path for reviewers\n- humans can only discover the result by opening raw logs\n\nTypical fix:\n\n- wire the new summary and artifact path into the same surface already used for existing intents\n\n## 5. Regression coverage problems\n\nLook here when:\n\n- the rollout appears green in smoke and contract checks, but there is no targeted regression proof\n- future refactors can silently remove the new intent path without an obvious failure signal\n\nTypical fix:\n\n- add at least one automated test that exercises the new intent through normalization, dry-run, and contract-check\n\n## Source backing\n\nThis triage shape is generalized from the ATM10 material around `M6.8` troubleshooting guidance, `M6.19` rollout policy, the 2026-02-24 traceability hardening, and the 2026-03-03 `open_world_map` rollout."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0006",
+      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0006"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "latest-alias-plus-history-copy"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` documents the dual-write contract across `readiness`, `governance`, `progress`, and `transition`, with explicit latest alias paths, nested history copies, and anti-double-count reader rules"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "`atm10-agent/docs/SESSION_2026-03-12.md` and `atm10-agent/docs/SESSION_2026-03-13.md` show live integrity checks over `history_summary_json` plus higher-level helpers that reuse latest aliases as a real consumer surface"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now documents the same contract in a bounded object-store-backed adaptation without changing the invariant latest-plus-history pattern"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the technique has two examples, a checklist, source-backed origin evidence, a second-context adaptation note, and explicit package adjacency to downstream published-summary consumers"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is a strong default when a repository publishes machine-readable summaries that need both easy latest discovery and trustworthy historical accumulation"
+                },
+                {
+                  "order": 2,
+                  "text": "it preserves backwards-friendly latest consumption without sacrificing immutable run history or allowing silent double-count drift"
+                },
+                {
+                  "order": 3,
+                  "text": "a non-default alternative is still better when summaries are purely ephemeral or when consumers already address immutable per-run objects directly and do not need a stable latest alias"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-15"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps only the reusable dual-write storage and reader contract, without ATM10-specific workflow names, thresholds, run roots, or private operational details"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public examples, checklist, and adaptation note remain understandable without origin-project access and do not depend on hidden tooling assumptions"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would widen the proof surface further, but it is not required for a first canonical promotion review"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0006` for `promoted -> canonical` in this wave; the default-use case is strong, the validation surfaces are already broader than the initial promotion baseline, and the fresh public-safety pass is clean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0006"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "latest-alias-plus-history-copy"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/docs/DECISIONS.md`\n- `atm10-agent/docs/RUNBOOK.md`\n- `atm10-agent/docs/SESSION_2026-03-12.md`\n- `atm10-agent/docs/SESSION_2026-03-13.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`atm10-agent/docs/DECISIONS.md` records the first history-friendly upgrade as `scripts/check_gateway_sla.py --runs-dir`, where the checker writes a timestamped run plus a nested history copy without changing the existing latest summary contract."
+                },
+                {
+                  "order": 2,
+                  "text": "The same source later fixes the dual-write pattern for nightly `readiness`, `governance`, `progress`, and `transition`: each run writes one top-level latest alias and one history copy under `run_dir/<summary>.json`."
+                },
+                {
+                  "order": 3,
+                  "text": "`atm10-agent/docs/DECISIONS.md` also records the collector rule directly: when history copies exist, readers must exclude the top-level latest alias from history scans, with fallback to the alias only for legacy layouts that do not have history rows yet."
+                },
+                {
+                  "order": 4,
+                  "text": "`atm10-agent/docs/RUNBOOK.md` defines the consumer-facing layout explicitly, including named latest aliases, timestamped history rows, and path metadata such as `paths.summary_json` and `paths.history_summary_json`."
+                },
+                {
+                  "order": 5,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-12.md` records a live integrity snapshot with explicit latest alias and history copy paths and checks dual-write and anti-double-count invariants over `run_json` and `history_summary_json`."
+                },
+                {
+                  "order": 6,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-13.md` shows that higher-level operator helpers read latest `readiness`, `governance`, `progress`, `transition`, `remediation`, `integrity`, and `cadence` summaries first and reuse those aliases when they are still fresh, proving the alias is a real consumer surface rather than a write-only convenience."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin shows this technique as a real storage and reader contract for published summaries: it keeps latest discovery simple, preserves run history, and makes collector behavior explicit enough to avoid silent double-count inflation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0006"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "latest-alias-plus-history-copy"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "generic evaluation repository with published artifacts in object storage"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public-safe summary pipelines that publish stable object keys for latest state and immutable per-run evidence"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "storage-backed helpers that read and write object keys rather than local filesystem paths"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin used local run directories; this adaptation uses stable object keys for the latest alias and immutable per-run history objects"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "object publication may be handled by any storage client or workflow step; the technique does not depend on a specific vendor or SDK"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "readers need stable alias discovery and explicit history-object scanning rather than a local directory walk"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "history objects stay immutable, and the latest alias remains a consumer convenience rather than the canonical accumulation source"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one stable latest alias exists for simple discovery, and one distinct history copy exists for each run"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "schema, status, and path metadata stay coherent between the alias and the history copy"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "collectors prefer history objects for accumulation and use the latest alias only for explicit legacy fallback"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "object lifecycle rules can delete history rows too aggressively and weaken accumulation"
+                },
+                {
+                  "order": 2,
+                  "text": "readers can accidentally scan both latest aliases and history keys unless prefix rules stay explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "mutable object-version policies can blur the boundary unless the history key remains distinct from the latest alias"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin already treats alias plus history as separate published summary surfaces with explicit `summary_json`, `history_summary_json`, and `run_dir` metadata"
+                },
+                {
+                  "order": 2,
+                  "text": "this repository already documents published-summary consumers that depend on stable latest aliases rather than ad hoc log discovery"
+                },
+                {
+                  "order": 3,
+                  "text": "the adaptation changes only the storage medium, not the dual-write or anti-double-count contract"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded second context for published object storage without widening the technique into vendor-specific storage automation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0007",
+      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/signal-first-gate-promotion/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0007"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "signal-first-gate-promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` documents a real staged rollout from `signal_only` observation through explicit readiness, governance, progress, and transition telemetry to one narrow strict nightly surface"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "the same origin surfaces show diagnostics continuing to publish after strict activation and keep non-promoted surfaces observational rather than silently inheriting strict behavior"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "the revised adaptation note now makes the beyond-origin case concrete with named pull-request observation, nightly-only strict enforcement, and explicit readiness, governance, progress, and transition summary surfaces"
+                },
+                {
+                  "order": 4,
+                  "key": "concrete reinforcement",
+                  "value_markdown": "the repo-validation rollout example shows one full non-origin staged path with published summaries before and after strict activation, so the bundle no longer depends on an abstract placeholder adaptation"
+                },
+                {
+                  "order": 5,
+                  "key": "validation strength",
+                  "value_markdown": "the technique now has a reusable example, a concrete beyond-origin example, checklist, stronger origin evidence, a bounded second-context note, and a semantic review that keeps it distinct from producer and storage contracts"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle now explains clearly when staged promotion is the right path: once an already-summary-producing signal matters enough to consider enforcement but is still too risky for immediate broad hard gating"
+                },
+                {
+                  "order": 2,
+                  "text": "it now reads as the bounded default rollout pattern for promoting one published signal from observation to one narrow strict surface while keeping decision telemetry and diagnostics visible"
+                },
+                {
+                  "order": 3,
+                  "text": "it remains distinct from `AOA-T-0003` producer semantics and `AOA-T-0006` storage/history semantics, and it does not read like a generic governance stack"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-17"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps only the reusable staged-promotion pattern and removes ATM10-specific gateway names, policy labels, workflow names, nightly paths, and threshold detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the current bundle is readable without origin-project access, and the new adaptation plus concrete example stay explicitly framed as public-safe adaptation surfaces rather than hidden donor-project evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would widen the proof surface further, but it is not required before a first canonical review of this bounded staged-rollout contract"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0007` for `promoted -> canonical` in this wave; the current support surfaces now make it read as the natural default staged-promotion pattern once a summary-producing signal should move from observation to one narrow strict enforcement surface"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/signal-first-gate-promotion/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0007"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "signal-first-gate-promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/docs/DECISIONS.md`\n- `atm10-agent/docs/RUNBOOK.md`\n- `atm10-agent/docs/SESSION_2026-03-02.md`\n- `atm10-agent/docs/SESSION_2026-03-03.md`\n- `atm10-agent/docs/SESSION_2026-03-12.md`\n- `atm10-agent/docs/SESSION_2026-03-13.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`atm10-agent/docs/DECISIONS.md` records the baseline gate policy as `signal_only`, with an explicit opt-in `fail_nightly` mode for stricter enforcement rather than an implicit widening of the fail surface."
+                },
+                {
+                  "order": 2,
+                  "text": "The same source records the staged decision path in order: readiness stays `report_only`, governance turns history into explicit `go|hold`, progress reports the remaining gap, and transition tracks strict-switch telemetry."
+                },
+                {
+                  "order": 3,
+                  "text": "`atm10-agent/docs/DECISIONS.md` also fixes the narrow enforcement surface as `nightly_only`, keeps `pytest.yml` in `signal_only`, and later records the manual nightly strict override without converting the telemetry layers into hidden runtime gating."
+                },
+                {
+                  "order": 4,
+                  "text": "`atm10-agent/docs/RUNBOOK.md` defines the exit behavior for `signal_only`, `fail_nightly`, `report_only`, and `fail_if_not_go`, and documents the published artifact and summary surfaces for readiness, governance, and progress."
+                },
+                {
+                  "order": 5,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-02.md` records governance rollout as staged instrumentation with no hard-gate switch yet, while still publishing workflow artifacts and keeping `pytest.yml` observational."
+                },
+                {
+                  "order": 6,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-03.md` records the post-switch policy explicitly: enforcement remains only in the nightly workflow, while `readiness`, `governance`, `progress`, and `transition` continue as telemetry and reason-code layers for triage."
+                },
+                {
+                  "order": 7,
+                  "text": "`atm10-agent/docs/SESSION_2026-03-12.md` and `atm10-agent/docs/SESSION_2026-03-13.md` show that diagnostics continue to publish after strict nightly operation through missing-safe summary sections, remediation and integrity layers, and live `hold` snapshots with preserved reason codes."
+                },
+                {
+                  "order": 8,
+                  "text": "together these origin surfaces show the full staged pattern rather than one isolated rule: observational mode, explicit readiness/governance/progress/transition telemetry, one narrow strict surface, and continued published diagnostics after strict activation"
+                },
+                {
+                  "order": 9,
+                  "text": "the same evidence makes the default-use trigger clear inside the origin: once a summary-producing signal is important enough to matter but too risky for immediate broad gating, staged promotion becomes the default rollout path"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a real staged-promotion pattern: one signal starts observational, gains explicit decision telemetry, and only then moves into a narrowly scoped strict surface while published diagnostics stay intact and non-promoted surfaces remain observational."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/signal-first-gate-promotion/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0007"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "signal-first-gate-promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "generic repository with one published repo-validation signal and one narrow strict nightly surface"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public-safe repository validation where pull requests stay observational while nightly validation becomes the first strict surface"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "CI plus one scheduled nightly validation path that can preserve summaries before and after strict activation"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin used ATM10 nightly and telemetry-layer paths; this adaptation uses `runs/repo-validation/` plus explicit readiness, governance, progress, and transition summary directories"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "the promoted signal is a repo-validation or docs-parity style check rather than an ATM10 gateway signal"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "pull requests publish one observational summary such as `pr_summary.json`, while nightly uses one strict `nightly_summary.json`; the rollout still depends on short retained history and explicit decision summaries"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "strict activation happens only on nightly, while pull requests and local debugging remain observational during the rollout"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one summary-producing signal starts observational and promotes to one explicitly chosen strict surface only after evidence accumulates"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "readiness uses history, governance makes `go` or `hold` explicit, and progress/transition summaries stay published with explicit artifact paths"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "diagnostics continue to publish even after strict activation, and non-promoted surfaces do not silently inherit strict failure behavior"
+                },
+                {
+                  "order": 4,
+                  "key": "default-use trigger",
+                  "value_markdown": "once an already-summary-producing repo-validation signal should become enforceable without turning every pull request red immediately, staged promotion is the default pattern before jumping straight to broad hard gating"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams can collapse readiness, governance, progress, and transition summaries into one implicit policy and lose the staged-review nature of the rollout"
+                },
+                {
+                  "order": 2,
+                  "text": "strict behavior can spread from nightly into pull requests if the strict-surface boundary is not written down explicitly"
+                },
+                {
+                  "order": 3,
+                  "text": "small repositories can under-invest in retained history and promote from too little evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin already proves observational mode, explicit readiness/governance/progress/transition telemetry, one narrow strict surface, and preserved diagnostics after strict activation"
+                },
+                {
+                  "order": 2,
+                  "text": "the semantic review for `AOA-T-0003` versus `AOA-T-0007` already confirms that this technique stays a rollout layer over an existing summary contract rather than a producer or storage contract"
+                },
+                {
+                  "order": 3,
+                  "text": "the concrete repo-validation scenario keeps the same staged path while making the beyond-origin rollout surfaces explicit: pull-request observation, nightly-only strict enforcement, and named readiness/governance/progress/transition summaries"
+                },
+                {
+                  "order": 4,
+                  "text": "the paired example `examples/concrete-repo-validation-rollout.md` shows the same contract without relying on ATM10-specific policy labels, product domains, or hidden donor context"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded concrete second context for repositories that want to move one repo-validation signal from pull-request observation to one strict nightly surface without losing explicit rollout telemetry or diagnostic publication"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0008",
+      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0008"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "published-summary-remediation-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` documents a live remediation helper that reads only latest published summaries, uses deterministic buckets, applies explicit caps, and serves as the workflow-published triage source of truth"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "`atm10-agent/docs/SESSION_2026-03-12.md`, `atm10-agent/docs/SESSION_2026-03-13.md`, `atm10-agent/docs/RUNBOOK.md`, and `atm10-agent/docs/DECISIONS.md` now show the remediation snapshot reused across nightly workflow publication, Streamlit `Latest Metrics`, local operating-cycle triage, and regression tests as one shared read-only backlog surface"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` documents the same pattern with an object-store-backed adaptation and a portable example that preserves read-only latest-alias consumption while serving operators, reports, and agent handoff from one published backlog"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the technique has two examples, a checklist, source-backed origin evidence, a bounded second-context adaptation note, and sharper adoption-trigger wording that distinguishes default use in multi-summary, multi-consumer systems from simpler direct-triage cases"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is now a strong default when several stable published summaries feed more than one downstream triage consumer and direct per-source reading stops being reviewable across each consumer separately"
+                },
+                {
+                  "order": 2,
+                  "text": "it gives operators, reports, and agent handoff one bounded remediation backlog without replaying history, recomputing source checks, or letting each consumer invent its own triage surface"
+                },
+                {
+                  "order": 3,
+                  "text": "a non-default alternative is still better when the source set remains small enough for direct review, or when the remediation bucket policy is still too immature to act as the shared downstream view"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-16"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the public technique keeps only the reusable read-only rollup pattern and removes ATM10-specific gateway names, workflow labels, reason vocabularies, and local run paths"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the current bundle is readable without origin-project access, the stronger multi-consumer evidence stays generalized, and the second-context surfaces remain bounded and public-safe"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would widen the proof surface further, but it is not required for a first canonical review of this bounded downstream rollup pattern"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0008` for `promoted -> canonical` in this wave; the default-use case now reads as the natural downstream rollup within its scope, the validation surfaces are stronger than the initial promotion baseline, and the fresh public-safety pass remains clean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0008"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "published-summary-remediation-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `.github/workflows/gateway-sla-readiness-nightly.yml`\n- `docs/DECISIONS.md`\n- `docs/MANIFEST.md`\n- `docs/README.md`\n- `docs/RUNBOOK.md`\n- `docs/SESSION_2026-03-12.md`\n- `docs/SESSION_2026-03-13.md`\n- `tests/test_gateway_sla_readiness_nightly_workflow.py`\n- `tests/test_run_gateway_sla_operating_cycle.py`\n- `tests/test_streamlit_operator_panel.py`\n- `tests/test_streamlit_operator_panel_smoke.py`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`docs/DECISIONS.md` records a read-only remediation helper that aggregates only latest published summaries such as `readiness`, `governance`, `progress`, and `transition`, and states explicitly that it does not recompute history."
+                },
+                {
+                  "order": 2,
+                  "text": "The same source records a deterministic bucket policy with fixed bucket names and an explicit maximum of 5 candidate items so nightly triage stays reviewable."
+                },
+                {
+                  "order": 3,
+                  "text": "`docs/RUNBOOK.md` defines the helper contract and policy surface as `report_only|fail_if_remediation_required`, including the rule that `fail_if_remediation_required` trips on broken required sources or non-empty remediation backlog."
+                },
+                {
+                  "order": 4,
+                  "text": "`.github/workflows/gateway-sla-readiness-nightly.yml` and `tests/test_gateway_sla_readiness_nightly_workflow.py` show the snapshot as a workflow-published artifact with explicit source-of-truth path `runs/nightly-gateway-sla-remediation/remediation_summary.json`."
+                },
+                {
+                  "order": 5,
+                  "text": "`docs/SESSION_2026-03-12.md` treats that workflow-published remediation summary as the nightly source-of-truth and records Streamlit `Latest Metrics` visibility as a separate downstream consumer surface."
+                },
+                {
+                  "order": 6,
+                  "text": "`docs/SESSION_2026-03-13.md` shows the snapshot as a live triage surface with a bounded candidate set, concrete bucket output, preserved reason-code reporting, and local operating-cycle use."
+                },
+                {
+                  "order": 7,
+                  "text": "`tests/test_streamlit_operator_panel.py` and `tests/test_streamlit_operator_panel_smoke.py` treat the remediation snapshot as a first-class published contract for tolerant UI loading rather than as incidental helper output."
+                },
+                {
+                  "order": 8,
+                  "text": "`tests/test_run_gateway_sla_operating_cycle.py` shows a second non-UI consumer path: the local operating-cycle helper reads the remediation snapshot to drive triage interpretation and next-action hints."
+                },
+                {
+                  "order": 9,
+                  "text": "`README.md` and `MANIFEST.md` describe the remediation snapshot as part of the public-facing monitoring surface, which reinforces that one published backlog serves more than one bounded consumer."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as an active published-summary rollup, not just as an abstract helper outline: it is documented in policy, published by workflow, and consumed by multiple bounded downstream surfaces such as nightly triage, Streamlit visibility, and local operating-cycle interpretation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0008"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "published-summary-remediation-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "generic evaluation repository with read-only triage helpers over published object-store summaries"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public-safe summary pipelines that publish latest aliases as stable object keys"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "scheduled or on-demand remediation helpers that consume published summaries without replaying history"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin used local published summary paths; this adaptation reads stable object keys for latest aliases"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "snapshot generation may run in any scheduler or helper process; the technique does not depend on one workflow system"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the helper needs stable latest-alias discovery, a deterministic bucket policy, and explicit source references, not local directory traversal"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "the helper remains read-only and bounded even when the storage layer is remote"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "the helper reads only latest published summaries and never scans historical runs"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "fixed buckets, explicit caps, and source references remain required for a trustworthy snapshot"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "snapshot generation stays read-only and does not widen into a second evaluator or executor"
+                },
+                {
+                  "order": 4,
+                  "key": "default-use trigger",
+                  "value_markdown": "once several published summaries feed several downstream consumers, one bounded remediation backlog becomes the default downstream rollup instead of repeating direct per-source triage in each consumer"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "object alias publication can lag and make stale-input reporting more important"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can accidentally reintroduce history replay by scanning object prefixes instead of reading declared latest aliases"
+                },
+                {
+                  "order": 3,
+                  "text": "snapshot consumers can lose auditability if emitted candidates do not preserve exact source object keys"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin already proves a read-only remediation helper over published latest summaries with deterministic buckets and explicit caps"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0006` already isolates the stable latest-alias contract that this snapshot depends on"
+                },
+                {
+                  "order": 3,
+                  "text": "the adaptation changes only where the latest summaries live, not the bounded remediation role of the helper"
+                },
+                {
+                  "order": 4,
+                  "text": "object-store publication makes the same pattern suitable as one shared backlog for operators, reports, and agent handoff when several consumers would otherwise repeat the same latest-summary triage separately"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded object-store second context for a promoted technique without widening the snapshot into history replay or storage-specific automation, and keeps the snapshot readable as the default downstream rollup for multi-summary, multi-consumer systems"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0009",
+      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/lightweight-status-snapshot/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0009"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "lightweight-status-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent/docs/SOURCE_OF_TRUTH.md`, `README.md`, `MANIFEST.md`, and `docs/DECISIONS.md` already show lightweight snapshot discipline as an active doc-hygiene policy rather than a one-off cleanup"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` applies the same pattern to a smaller public repository where `README.md` stays short and links outward to `TECHNIQUE_INDEX.md`, `AGENTS.md`, `CONTRIBUTING.md`, and `SECURITY.md`"
+                },
+                {
+                  "order": 3,
+                  "key": "semantic reinforcement",
+                  "value_markdown": "`docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` found the `AOA-T-0002` / `AOA-T-0009` seam `clear`, confirming that the snapshot discipline stays distinct from the broader source-of-truth layout"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the technique already has source-backed origin evidence, second-context adaptation, a reusable example, and a bounded checklist"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is a good default when a repository already has canonical homes for detail but its entrypoint docs are starting to accumulate long status prose, counters, or history that should be linked rather than recopied"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0009` remains narrower than `AOA-T-0002`: it is the default snapshot-discipline layer for top-level docs, not a replacement for the broader document-role layout"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-16"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps only reusable snapshot-discipline guidance, with origin-specific capabilities, workflow names, local paths, and session-specific counters removed"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public second context remains understandable on its own and does not rely on hidden operator-only surfaces to explain the core contract"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public second context uses only one lightweight top-level snapshot doc rather than both `README` and `MANIFEST`, so the smaller variant does not exercise every possible snapshot split"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0009` for `promoted -> canonical` in this wave; it now reads as the default narrow snapshot discipline for repositories that already have canonical homes for detailed operational truth"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/lightweight-status-snapshot/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0009"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "lightweight-status-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `docs/SOURCE_OF_TRUTH.md`\n- `README.md`\n- `MANIFEST.md`\n- `docs/DECISIONS.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`docs/SOURCE_OF_TRUTH.md` assigns `README.md` the role of short human-facing entrypoint and `MANIFEST.md` the role of short machine/human snapshot, while routing long chronology to `docs/SESSION_*.md`"
+                },
+                {
+                  "order": 2,
+                  "text": "the same source file explicitly says test counters should not be duplicated everywhere and that current-state truth should live in CI plus the latest `docs/SESSION_*.md`"
+                },
+                {
+                  "order": 3,
+                  "text": "`README.md` keeps quick links to canonical docs and points current-state evidence to CI plus `docs/SESSION_2026-03-13.md`"
+                },
+                {
+                  "order": 4,
+                  "text": "`MANIFEST.md` stays in snapshot form: current date, active capabilities, and canonical doc links without long historical logs"
+                },
+                {
+                  "order": 5,
+                  "text": "`docs/DECISIONS.md` records the doc-hygiene transition explicitly: `README.md` and `MANIFEST.md` were moved to lightweight snapshot form with links to `TODO/PLANS/RUNBOOK/SESSION`"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this origin is not only descriptive; it shows the technique as an active policy, a recorded transition decision, and a live repository state"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/lightweight-status-snapshot/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0009"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "lightweight-status-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with a short top-level entrypoint and canonical policy/catalog docs"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository without a separate `MANIFEST`"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin uses both `README.md` and `MANIFEST.md`; this adaptation uses `README.md` as the single lightweight snapshot surface"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "there is no operator session log, CI dashboard, or active execution plan inside this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on outward links to `TECHNIQUE_INDEX.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `AGENTS.md`"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "the top-level entrypoint should orient new readers quickly and defer policy, contribution, and catalog detail to canonical documents"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "the snapshot stays short and link-driven"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "detailed policy and catalog truth lives outside the entrypoint"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "the entrypoint is not allowed to become a running archive of status detail"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "without a separate `MANIFEST`, contributors may overload `README.md` with operational detail"
+                },
+                {
+                  "order": 2,
+                  "text": "a small repository can make snapshot drift harder to notice because duplicated prose still feels manageable"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`README.md` in `aoa-techniques` remains a short entrypoint for purpose, structure, maturity model, and contribution framing"
+                },
+                {
+                  "order": 2,
+                  "text": "detailed technique state lives in `TECHNIQUE_INDEX.md`, while policy and operating guidance live in `AGENTS.md`, `CONTRIBUTING.md`, and `SECURITY.md`"
+                },
+                {
+                  "order": 3,
+                  "text": "the adaptation keeps the snapshot discipline even though the repository uses only one top-level snapshot doc instead of two"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0010",
+      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0010"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telemetry-integrity-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` documents a dedicated integrity helper that validates required source health, telemetry counters, dual-write consistency, anti-double-count rules, and optional guardrail consistency without becoming a new hard gate"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "`atm10-agent/docs/SESSION_2026-03-12.md`, `atm10-agent/docs/SESSION_2026-03-13.md`, `atm10-agent/docs/RUNBOOK.md`, and `atm10-agent/docs/DECISIONS.md` now show the integrity snapshot reused across nightly workflow publication, Streamlit visibility, local operating-cycle interpretation, and regression tests as one first-class diagnostic artifact"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` documents the same pattern in a bounded object-store adaptation that preserves the diagnostic-only role over published summary inputs and frames it as the shared trust layer for multi-summary systems"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the technique has two examples, a checklist, source-backed origin evidence, a second-context adaptation note, and sharper adoption-trigger wording that explains when a separate integrity layer should replace duplicated consumer-local trust logic"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is now a strong default when several published summaries or downstream rollups feed more than one consumer and each consumer should not re-implement integrity checks independently"
+                },
+                {
+                  "order": 2,
+                  "text": "it preserves one read-only trust verdict over source health, telemetry counters, dual-write consistency, and anti-double-count invariants before operators, reports, or agents interpret downstream signals"
+                },
+                {
+                  "order": 3,
+                  "text": "a non-default alternative is still better when one producer is simple enough to inspect directly, or when the repository has not yet reached the point where a separate integrity layer adds more clarity than duplication"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-16"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the public technique keeps only reusable integrity and artifact-layout invariants, without ATM10-specific workflow names, thresholds, UTC policy details, or repo-specific run roots"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public bundle remains understandable without hidden source access, the stronger multi-consumer evidence stays generalized, and the adaptation note does not widen the pattern into vendor-specific storage or enforcement policy"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would widen the proof surface further, but it is not required for a first canonical review of this bounded diagnostic trust-layer pattern"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0010` for `promoted -> canonical` in this wave; the adoption trigger is now crisp, the live multi-consumer evidence is strong enough within scope, and the fresh public-safety pass remains clean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0010"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telemetry-integrity-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `.github/workflows/gateway-sla-readiness-nightly.yml`\n- `docs/DECISIONS.md`\n- `docs/MANIFEST.md`\n- `docs/README.md`\n- `docs/RUNBOOK.md`\n- `docs/SESSION_2026-03-12.md`\n- `docs/SESSION_2026-03-13.md`\n- `tests/test_check_gateway_sla_fail_nightly_integrity.py`\n- `tests/test_gateway_sla_readiness_nightly_workflow.py`\n- `tests/test_run_gateway_sla_operating_cycle.py`\n- `tests/test_streamlit_operator_panel.py`\n- `tests/test_streamlit_operator_panel_smoke.py`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`docs/DECISIONS.md` records a dedicated integrity layer that checks required source health, telemetry counters, dual-write consistency, anti-double-count rules, and optional UTC-guardrail consistency."
+                },
+                {
+                  "order": 2,
+                  "text": "The same source states that the integrity layer is strictly diagnostic and does not add a new hard fail surface beyond the already active strict trend gate."
+                },
+                {
+                  "order": 3,
+                  "text": "`.github/workflows/gateway-sla-readiness-nightly.yml` and `tests/test_gateway_sla_readiness_nightly_workflow.py` show the integrity snapshot as a workflow-published artifact with explicit summary path and summary-section wiring."
+                },
+                {
+                  "order": 4,
+                  "text": "`docs/SESSION_2026-03-12.md` records the published artifact layout explicitly: latest alias `runs/nightly-gateway-sla-integrity/integrity_summary.json` plus a nested history copy in the timestamped run directory."
+                },
+                {
+                  "order": 5,
+                  "text": "The same session note lists the exact invariant families checked by the helper: required source health, `invalid_or_mismatched_count == 0`, dual-write and anti-double-count checks, and optional cadence/UTC consistency."
+                },
+                {
+                  "order": 6,
+                  "text": "`docs/RUNBOOK.md` defines the helper contract as `report_only`, records the expected sources, and keeps the integrity snapshot as a workflow-published artifact rather than an implicit side effect."
+                },
+                {
+                  "order": 7,
+                  "text": "`docs/SESSION_2026-03-13.md` shows the integrity snapshot as a live machine-readable source with `integrity_status=clean`, `telemetry_ok=true`, `dual_write_ok=true`, and `anti_double_count_ok=true`, while remaining separate from enforcement decisions and feeding local operating-cycle interpretation."
+                },
+                {
+                  "order": 8,
+                  "text": "`tests/test_check_gateway_sla_fail_nightly_integrity.py` treats the integrity snapshot as a first-class contract with explicit happy-path and attention-path cases over telemetry, dual-write, anti-double-count, and UTC guardrail checks."
+                },
+                {
+                  "order": 9,
+                  "text": "`tests/test_streamlit_operator_panel.py` and `tests/test_streamlit_operator_panel_smoke.py` show a separate downstream consumer path where Streamlit reads the integrity snapshot as an optional published source without embedding the trust logic directly in the UI."
+                },
+                {
+                  "order": 10,
+                  "text": "`tests/test_run_gateway_sla_operating_cycle.py` shows another non-UI consumer path where the operating-cycle helper uses `integrity_status` to decide whether telemetry repair should outrank remediation backlog interpretation."
+                },
+                {
+                  "order": 11,
+                  "text": "`README.md` and `MANIFEST.md` describe the integrity snapshot as part of the public monitoring surface, reinforcing that one published trust verdict serves more than one bounded consumer."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin shows this technique as a diagnostic trust check over published summaries: it validates whether downstream rollups can be trusted without itself becoming the next enforcement gate, and it already serves multiple bounded consumers instead of forcing each consumer to re-implement trust logic."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0010"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telemetry-integrity-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "generic evaluation repository with published summaries in object storage"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public-safe summary pipelines that need a diagnostic trust layer before downstream rollups are interpreted"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "scheduled or on-demand helpers that read published latest aliases and emit one integrity verdict"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin used local published summary paths; this adaptation reads stable latest-alias object keys"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "the integrity helper may run in any scheduler or operator tool; it does not depend on one CI or workflow platform"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the helper needs required-source classification, invariant checks, and explicit source references rather than direct filesystem assumptions"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "the helper remains diagnostic even when the published summaries live in remote storage"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "the helper reads latest published summaries only and emits one concise trust verdict"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "required source health, telemetry checks, dual-write checks, anti-double-count checks, and optional consistency checks remain first-class"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "the integrity layer stays read-only and diagnostic rather than silently becoming the next enforcement surface"
+                },
+                {
+                  "order": 4,
+                  "key": "default-use trigger",
+                  "value_markdown": "once several published summaries or downstream rollups feed several consumers, one shared trust verdict becomes the default companion layer instead of duplicating integrity logic inside each consumer"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "remote publication latency can make missing or stale source reporting more important"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can weaken integrity checks if they treat object publication as a reason to skip dual-write or anti-double-count validation"
+                },
+                {
+                  "order": 3,
+                  "text": "optional consistency inputs can become noisy unless their absence or disagreement stays explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin already proves a published diagnostic integrity helper over latest summaries with explicit invariant families"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0006` already provides the storage contract that keeps latest aliases and history copies coherent"
+                },
+                {
+                  "order": 3,
+                  "text": "`AOA-T-0008` already shows a downstream remediation consumer that benefits from a separate trust verdict before its output is interpreted"
+                },
+                {
+                  "order": 4,
+                  "text": "object-store publication preserves the same default pattern when several downstream consumers need one shared read-only trust layer instead of embedding integrity checks separately in reports, dashboards, or agent handoff surfaces"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded object-store second context for a diagnostic published-summary trust layer without merging integrity policy into gate policy, and keeps the layer readable as the default trust companion for multi-summary, multi-consumer systems"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0011",
+      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0011"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "required-vs-optional-source-rendering"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` documents explicit `required_missing_sources` and `optional_missing_sources`, tolerant optional rendering, and non-blocking soft-info behavior in both smoke output and operator-facing summary surfaces"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "`atm10-agent/docs/SESSION_2026-03-12.md` and `atm10-agent/docs/SESSION_2026-03-13.md` show remediation, integrity, and operating-cycle summaries rendered as optional published sources without hiding strict failures"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now documents the same contract beyond UI panels through CLI and machine-readable report consumers, plus explicit staged optional-to-required promotion guidance"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the technique has two examples, a checklist, source-backed origin evidence, a bounded second-context adaptation note, and clearer wording that separates invariant source-class policy from one specific UI surface"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is a strong default whenever one summary-driven surface combines truly required sources with optional enrichments, because it preserves honest hard failures while keeping supporting signals observable and non-fatal"
+                },
+                {
+                  "order": 2,
+                  "text": "it scales across operator panels, CLI reports, and smoke summaries without changing the core required-versus-optional contract"
+                },
+                {
+                  "order": 3,
+                  "text": "a non-default alternative is still better when every source is equally required, or when optional tolerance would hide genuinely unsafe behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-15"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the public technique keeps only the reusable rendering and contract policy, with ATM10-specific panel names, local paths, and project-specific source names removed"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public bundle now reads beyond one operator panel and remains understandable without hidden repository surfaces"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would strengthen breadth further, but the current smoke plus non-UI evidence is already sufficient for a first canonical promotion review"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0011` for `promoted -> canonical` in this wave; the contract already travels across operator panels, smoke outputs, and non-UI consumers, and the fresh public-safety pass remains clean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0011"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "required-vs-optional-source-rendering"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `docs/DECISIONS.md`\n- `docs/RUNBOOK.md`\n- `docs/SESSION_2026-03-12.md`\n- `docs/SESSION_2026-03-13.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`docs/DECISIONS.md` records the addition of `required_missing_sources` and `optional_missing_sources`, with strict smoke failure reserved for required canonical sources."
+                },
+                {
+                  "order": 2,
+                  "text": "The same source also records the tolerant rendering rule for optional published summaries: missing optional artifacts render as `not available yet`, while parse or contract drift yields warnings without crashing the surface."
+                },
+                {
+                  "order": 3,
+                  "text": "`docs/RUNBOOK.md` defines the concrete smoke-summary fields `missing_sources`, `required_missing_sources`, and `optional_missing_sources`, and states that optional G2 sources remain observability signals rather than hard failures."
+                },
+                {
+                  "order": 4,
+                  "text": "`docs/RUNBOOK.md` also records soft-info behavior: artifacts such as optional briefs do not escalate into warning or error when the primary JSON summary is present."
+                },
+                {
+                  "order": 5,
+                  "text": "`docs/SESSION_2026-03-12.md` shows the concrete operator surface as `Latest Metrics`, where remediation and integrity summaries are loaded as optional sources with tolerant missing and warning behavior."
+                },
+                {
+                  "order": 6,
+                  "text": "`docs/SESSION_2026-03-13.md` extends the same pattern to `operating_cycle_summary.json`, confirms that `optional_missing_sources` stays observable in smoke output, and keeps the panel useful when optional sources are absent."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a concrete rendering and smoke-policy contract over published summaries, anchored in a real operator surface rather than in generic UI guidance."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0011"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "required-vs-optional-source-rendering"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "generic evaluation repository with CLI and machine-readable summary consumers"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public-safe summary pipelines where dashboards are optional and many consumers are JSON reports, smoke summaries, or command-line status views"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "read-only summary loaders that classify required and optional sources before rendering one report"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "surface",
+                  "value_markdown": "the origin centered on an operator-facing panel; this adaptation applies the same policy to CLI and machine-readable report consumers"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no UI framework is required, only explicit source loading and rendering rules"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on source classification and stable summary discovery rather than tab layout or panel components"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "promotion of an optional source to required must be explicit, staged, and auditable rather than silent contract drift"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "required sources fail strictly, while optional sources remain observable but non-fatal"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "missing required sources, missing optional sources, and invalid optional sources stay separate outcomes"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "the consumer remains read-only and does not hide critical failures by overusing the optional class"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "CLI or JSON consumers can hide warning detail if they collapse optional-source problems into one generic status"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can silently promote optional sources to required behavior without updating the documented contract"
+                },
+                {
+                  "order": 3,
+                  "text": "optional-source noise can accumulate if warning surfaces are not kept concise and reviewable"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin already proves that required and optional sources can be separated in smoke outputs as well as in a human-facing panel"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0008` and `AOA-T-0010` already define optional published-summary surfaces that a non-UI consumer may want to render tolerantly"
+                },
+                {
+                  "order": 3,
+                  "text": "the adaptation changes only the consumer surface, not the required-versus-optional contract"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded non-UI second context for promoted summary consumers, with staged optional-to-required rollout kept explicit instead of silent"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0012",
+      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/deterministic-context-composition/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0012"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "deterministic-context-composition"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-15"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle already includes the expected external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe example, and one checklist"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: fragment-first authoring composes into one deterministic generated context artifact with explicit source traceability"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records `source_repo`, `source_license`, `adapted_from`, `what_changed`, retained invariants, removed donor-specific details, and a public-safety review"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note points to concrete donor evidence in `README.md`, `docs/design.md`, and `test/compose.test.ts`, then explains how the pattern was narrowed for `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 2,
+                  "key": "the invariant core stays narrow",
+                  "value_markdown": "fragment-first authoring, deterministic ordering, derived output, and traceability back to source fragments"
+                },
+                {
+                  "order": 3,
+                  "key": "excluded donor features are named explicitly and kept out of scope",
+                  "value_markdown": "CLI packaging, package-manager/runtime assumptions, reporting, token estimates, watch mode, migration helpers, and exact filename conventions"
+                },
+                {
+                  "order": 4,
+                  "key": "future expansion is also bounded",
+                  "value_markdown": "the technique proposes separate follow-on siblings for broader context partitioning or reporting instead of silently widening the current bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique without opening hidden internal context: source, license, adaptation boundary, removed project-shaped details, and public-safety notes are all explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "the external-origin note and second-context note complement each other cleanly: one explains where the technique came from and what was removed, the other explains how the pattern survives in a second public context"
+                },
+                {
+                  "order": 4,
+                  "text": "no repo-wide provenance gap was discovered during this review; the current template and issue surface are sufficient for another bounded import"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the first external-import path looks readable, bounded, and public-safe at the current scale"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable documentation technique rather than as a disguised donor feature dump"
+                },
+                {
+                  "order": 4,
+                  "text": "no blocking wording or intake fix is required before evaluating a second donor, provided the next import stays equally narrow"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique still has only one external donor and one documentation-first second context, so it should remain `promoted` rather than be treated as a default import pattern"
+                },
+                {
+                  "order": 2,
+                  "text": "a second donor is still useful to prove that the repo can repeat the import path without losing boundedness or provenance readability"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0012` as a successful first external-import pilot and close the current review wave"
+                },
+                {
+                  "order": 2,
+                  "text": "proceed to second-donor evaluation with default bias toward `ruler`, but keep the candidate narrow: one `docs`-domain pattern for single-source rule distribution / propagation only"
+                },
+                {
+                  "order": 3,
+                  "text": "do not widen `AOA-T-0012` itself into reporting, migration, token-accounting, or toolchain-specific follow-on features during the next wave"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/deterministic-context-composition/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/ivawzh/agents-md`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`agents-md` composition model for generated `AGENTS.md` files built from markdown fragments with deterministic ordering and source annotations"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded pattern: deterministic composition from fragments into a stable generated context artifact"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "fragment-first authoring, deterministic ordering, generated output, and explicit source traceability"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "CLI commands, package-manager assumptions, report and token-estimate features, watch mode, migration helpers, and exact filename conventions"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths and operational assumptions were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: Bun, `npx`, and repo-specific command flows were removed from the core technique contract"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: later follow-on techniques should review reporting, migration, or automation layers separately rather than treating them as part of this bounded import"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many agent-oriented repositories need a stable generated context surface without collapsing everything into one manually maintained file"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first external-import pilot intentionally excludes CI reporting, token accounting, and migration helpers so provenance readability and bounded adaptation stay clear"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/deterministic-context-composition/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0012"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "deterministic-context-composition"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with policy docs, technique catalog, and explicit agent-facing documentation surfaces"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that documents the pattern rather than running the donor toolchain itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor composes `AGENTS.md` from `*.agents.md` or `agents-md/**/*.md`; this adaptation presents a generic fragment-to-generated-context pattern that can fit other source layouts"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no local compose CLI, watch mode, report output, or migration command is required in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on deterministic ordering and explicit source traceability, not on Bun, npm, or the donor package"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should treat generated context surfaces as derived artifacts and edit source fragments instead"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "small source fragments compose into one stable generated context artifact"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "ordering stays deterministic and the output can be traced back to source fragments"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "generated context should be reviewed through source fragments, not by hand-editing the generated file"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project copies fragment composition without writing explicit ordering rules"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may keep generated context files but skip source annotations or equivalent traceability metadata"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` documents fragment discovery, generated `AGENTS.md` targets, deterministic ordering, and source annotations"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor `docs/design.md` defines stable ordering by priority then path, plus generated-file banners and idempotent writes"
+                },
+                {
+                  "order": 3,
+                  "text": "the donor `test/compose.test.ts` verifies source annotations, deterministic ordering, scoped outputs, and no-op rewrites when content does not change"
+                },
+                {
+                  "order": 4,
+                  "text": "this imported technique narrows those behaviors into a reusable pattern that fits a public documentation repository"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific toolchain assumptions"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0013",
+      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/single-source-rule-distribution/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/intellectronica/ruler`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`ruler` single-source instruction model where one canonical rule directory is applied to multiple agent-facing instruction files"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded docs pattern: one canonical rule source distributed to multiple agent-facing instruction surfaces"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "one canonical rule source, repeatable propagation to multiple targets, managed target files, and anti-duplication behavior on re-apply"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "exact supported-agent matrix, CLI flags, Node/npm assumptions, nested loading as a core contract, MCP propagation, skills propagation, `.gitignore` automation, and backup/revert behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths, environment conventions, and generated target layouts were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on `npm`, `npx`, or a particular local runtime even though the donor repository ships a Node-based CLI"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is scope creep rather than security leakage; later sibling techniques should review nested loading, MCP propagation, or skills propagation separately instead of widening this bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "repositories that support multiple coding agents often need shared guidance to reach several instruction surfaces without making each target file canonical"
+                },
+                {
+                  "order": 2,
+                  "key": "primary evidence used",
+                  "value_markdown": "`README.md` in `ruler` defines the single-source-to-many-target contract, and `tests/mixed-agents-duplication.test.ts` shows repeated application without duplicating shared instructions"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first draft intentionally ignores beta-preview product breadth and keeps the technique at the `docs` layer only"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/single-source-rule-distribution/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0013"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-source-rule-distribution"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with canonical policy docs, one agent-facing collaboration surface, and no built-in multi-agent distribution toolchain"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that can describe the pattern clearly even when it does not automate the donor workflow directly"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor uses `.ruler/` as the canonical rule hub; this adaptation presents a generic canonical rule source such as `rules/` or another docs directory"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "there is no local `ruler` CLI or automatic fan-out step in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on a clear canonical source plus managed target policy, not on Node, npm, or the donor package"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "a public docs-oriented repository could keep one canonical rule source and distribute it into multiple agent-facing instruction surfaces while keeping those targets derived rather than canonical"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one canonical rule source fans out to multiple agent-facing instruction surfaces"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "repeated application should not duplicate shared instructions across targets"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "managed targets should not become hand-maintained source-of-truth files"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a small repository may over-abstract the pattern before it truly needs multiple target surfaces"
+                },
+                {
+                  "order": 2,
+                  "text": "without an actual apply step, contributors could describe the pattern well but fail to prove synchronization discipline in practice"
+                },
+                {
+                  "order": 3,
+                  "text": "the donor's nested-loading and broader orchestration surfaces could blur the boundary unless they stay explicitly excluded"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`AOA-T-0002 source-of-truth-layout` already proves that this repository values one canonical home per information class rather than many drifting copies"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0012 deterministic-context-composition` already proves that this repository can publish bounded docs patterns around managed derived outputs"
+                },
+                {
+                  "order": 3,
+                  "text": "this adaptation combines those repository-native instincts into a bounded sketch for one canonical rule source that could fan out into several agent-facing instruction surfaces without making each target canonical"
+                },
+                {
+                  "order": 4,
+                  "text": "this is sufficient as repo-local adaptation evidence for a first `promoted` external-import draft, but it is not enough to argue for `canonical` status on its own"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
