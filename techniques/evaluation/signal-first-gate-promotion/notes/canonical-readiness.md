@@ -5,7 +5,7 @@
 - name: signal-first-gate-promotion
 
 ## Verdict
-- ready for canonical review
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents a real staged rollout from `signal_only` observation through explicit readiness, governance, progress, and transition telemetry to one narrow strict nightly surface
@@ -20,13 +20,13 @@
 - it remains distinct from `AOA-T-0003` producer semantics and `AOA-T-0006` storage/history semantics, and it does not read like a generic governance stack
 
 ## Fresh public-safety check
-- review date: 2026-03-16
+- review date: 2026-03-17
 - result: pass
 - sanitization still holds: the published technique keeps only the reusable staged-promotion pattern and removes ATM10-specific gateway names, policy labels, workflow names, nightly paths, and threshold detail
 - public reuse check: the current bundle is readable without origin-project access, and the new adaptation plus concrete example stay explicitly framed as public-safe adaptation surfaces rather than hidden donor-project evidence
 
 ## Remaining gaps
-- none that block a canonical review within the current bounded scope
+- a future third live context would widen the proof surface further, but it is not required before a first canonical review of this bounded staged-rollout contract
 
 ## Recommendation
-- treat `AOA-T-0007` as ready for a separate `promoted -> canonical` review wave, using the current bundle as evidence for the bounded default staged-promotion pattern
+- approve `AOA-T-0007` for `promoted -> canonical` in this wave; the current support surfaces now make it read as the natural default staged-promotion pattern once a summary-producing signal should move from observation to one narrow strict enforcement surface

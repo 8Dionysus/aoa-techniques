@@ -2,7 +2,7 @@
 id: AOA-T-0007
 name: signal-first-gate-promotion
 domain: evaluation
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/RUNBOOK.md
@@ -15,7 +15,7 @@ tags:
   - rollout
   - diagnostics
 summary: Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early.
-maturity_score: 4
+maturity_score: 5
 rigor_level: strict
 reversibility: hard
 review_required: true
@@ -155,6 +155,7 @@ See `checks/gate-promotion-checklist.md`.
 - born in `atm10-agent`
 - validated through summary contracts, history-based readiness, explicit `go|hold` governance, progress telemetry, and a narrow strict enforcement surface
 - promoted to `aoa-techniques` on 2026-03-13
+- approved for `canonical` in `aoa-techniques` on 2026-03-17 after stronger bounded second-context reinforcement, a concrete beyond-origin rollout example, and a fresh public-safety recheck
 
 ## Future evolution
 

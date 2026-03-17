@@ -312,7 +312,7 @@
       "id": "AOA-T-0007",
       "name": "signal-first-gate-promotion",
       "domain": "evaluation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early.",
       "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
       "origin": {
@@ -329,7 +329,7 @@
         "rollout",
         "diagnostics"
       ],
-      "maturity_score": 4,
+      "maturity_score": 5,
       "rigor_level": "strict",
       "reversibility": "hard",
       "review_required": true,
