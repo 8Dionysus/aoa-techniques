@@ -1,0 +1,591 @@
+{
+  "manifest_version": 1,
+  "source_of_truth": "markdown-checklists-v1",
+  "techniques": [
+    {
+      "id": "AOA-T-0001",
+      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/plan-diff-apply-verify-report/checks/review-checklist.md",
+          "title": "Review Checklist",
+          "intro_markdown": "Use this checklist to validate whether a change actually followed `plan-diff-apply-verify-report`.",
+          "items": [
+            {
+              "order": 1,
+              "text": "`PLAN`: the goal, touched surfaces, main risk, and rollback idea are explicit before apply."
+            },
+            {
+              "order": 2,
+              "text": "`DIFF`: the change is scoped to the stated goal and avoids unrelated refactors."
+            },
+            {
+              "order": 3,
+              "text": "`APPLY`: the implementation matches the declared plan instead of drifting into adjacent work."
+            },
+            {
+              "order": 4,
+              "text": "`VERIFY`: at least one concrete check, smoke, or review step is named and its result is reported."
+            },
+            {
+              "order": 5,
+              "text": "`REPORT`: the final summary states what changed, what was validated, and how recovery would work."
+            },
+            {
+              "order": 6,
+              "text": "`PUBLIC HYGIENE`: examples and notes contain no secrets, private URLs, internal hostnames, or private paths."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0002",
+      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/source-of-truth-layout/checks/doc-role-checklist.md",
+          "title": "Doc Role Checklist",
+          "intro_markdown": "Use this checklist to validate whether a repository really follows `source-of-truth-layout`.",
+          "items": [
+            {
+              "order": 1,
+              "text": "Each major document or delegated surface has one explicit primary role."
+            },
+            {
+              "order": 2,
+              "text": "Active status is not duplicated across multiple documents or tracked surfaces."
+            },
+            {
+              "order": 3,
+              "text": "Long run history is not stored in `README` or the active-work surface."
+            },
+            {
+              "order": 4,
+              "text": "Setup commands and operator procedures have one explicit canonical home, such as `RUNBOOK` or a delegated external runbook."
+            },
+            {
+              "order": 5,
+              "text": "Architecture and policy changes have one explicit canonical home, such as `DECISIONS`."
+            },
+            {
+              "order": 6,
+              "text": "Current work has one explicit canonical home, such as `TODO` or a delegated external tracker."
+            },
+            {
+              "order": 7,
+              "text": "Goals, milestones, DoD, and risks have one explicit canonical home, such as `PLANS` or a delegated external planning surface."
+            },
+            {
+              "order": 8,
+              "text": "Entry-point docs stay lightweight and mostly link to canonical detail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0003",
+      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/contract-first-smoke-summary/checks/summary-contract-checklist.md",
+          "title": "Summary Contract Checklist",
+          "intro_markdown": "Use this checklist to validate whether a smoke path really follows `contract-first-smoke-summary`.",
+          "items": [
+            {
+              "order": 1,
+              "text": "A summary file is produced for the smoke path."
+            },
+            {
+              "order": 2,
+              "text": "The summary is machine-readable JSON."
+            },
+            {
+              "order": 3,
+              "text": "The summary includes an explicit success or error status."
+            },
+            {
+              "order": 4,
+              "text": "The summary captures enough observed data for basic diagnosis."
+            },
+            {
+              "order": 5,
+              "text": "Exit code aligns with summary status."
+            },
+            {
+              "order": 6,
+              "text": "Downstream consumers can use the summary without scraping raw logs."
+            },
+            {
+              "order": 7,
+              "text": "Summary discovery is stable through a fixed path or a stable `--summary-json` flag."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0004",
+      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md",
+          "title": "Chain Contract Checklist",
+          "intro_markdown": "Use this checklist to validate whether a workflow really follows `intent-plan-dry-run-contract-chain`.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The intent payload is well-formed and validated before planning."
+            },
+            {
+              "order": 2,
+              "text": "A normalized plan artifact is written."
+            },
+            {
+              "order": 3,
+              "text": "The plan artifact exists before dry-run execution starts."
+            },
+            {
+              "order": 4,
+              "text": "The execution step is dry-run only and performs no real side effects."
+            },
+            {
+              "order": 5,
+              "text": "Chain artifacts such as `run.json`, plan output, link summary, and contract summary exist."
+            },
+            {
+              "order": 6,
+              "text": "Contract-check reads artifacts directly rather than depending on log scraping."
+            },
+            {
+              "order": 7,
+              "text": "Contract-check validates expected intent routing or equivalent dispatch rules."
+            },
+            {
+              "order": 8,
+              "text": "Required traceability metadata is preserved and surfaced when policy requires it."
+            },
+            {
+              "order": 9,
+              "text": "Missing artifacts or routing mismatches produce an explicit fail verdict."
+            },
+            {
+              "order": 10,
+              "text": "Exit behavior is explicit and blocks progression to any real execution path."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0005",
+      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/new-intent-rollout-checklist/checks/intent-rollout-checklist.md",
+          "title": "intent-rollout-checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "canonical fixture exists for the new intent path"
+            },
+            {
+              "order": 2,
+              "text": "fixture includes required traceability fields when policy requires them"
+            },
+            {
+              "order": 3,
+              "text": "dedicated smoke path exists for the new intent"
+            },
+            {
+              "order": 4,
+              "text": "smoke path uses the shared intent-chain flow rather than a one-off shortcut"
+            },
+            {
+              "order": 5,
+              "text": "contract-check asserts the expected intent type"
+            },
+            {
+              "order": 6,
+              "text": "strict traceability flags are enabled when policy requires them"
+            },
+            {
+              "order": 7,
+              "text": "machine-readable summary is produced and published"
+            },
+            {
+              "order": 8,
+              "text": "the new intent appears in the same review surface as existing intent paths"
+            },
+            {
+              "order": 9,
+              "text": "artifact paths match between smoke and contract-check steps"
+            },
+            {
+              "order": 10,
+              "text": "regression test exists for the new intent rollout"
+            },
+            {
+              "order": 11,
+              "text": "rollout remains dry-run only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0006",
+      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/latest-alias-plus-history-copy/checks/dual-write-history-checklist.md",
+          "title": "dual-write-history-checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "latest alias exists at the stable expected path"
+            },
+            {
+              "order": 2,
+              "text": "history copy exists under `run_dir`"
+            },
+            {
+              "order": 3,
+              "text": "history copy differs from latest alias"
+            },
+            {
+              "order": 4,
+              "text": "emitted `summary_json` and `history_summary_json` match actual files when present"
+            },
+            {
+              "order": 5,
+              "text": "schema and status match between latest alias and history copy"
+            },
+            {
+              "order": 6,
+              "text": "readers exclude the alias when nested history rows exist"
+            },
+            {
+              "order": 7,
+              "text": "the same alias and history invariants still hold when the published paths are object-store keys instead of local filesystem paths"
+            },
+            {
+              "order": 8,
+              "text": "legacy fallback is explicit and only used when no nested rows exist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0007",
+      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/signal-first-gate-promotion/checks/gate-promotion-checklist.md",
+          "title": "gate-promotion-checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "signal-only mode publishes machine-readable output"
+            },
+            {
+              "order": 2,
+              "text": "strict mode is introduced only on an explicit enforcement surface"
+            },
+            {
+              "order": 3,
+              "text": "readiness uses history rather than a single run"
+            },
+            {
+              "order": 4,
+              "text": "governance makes `go` or `hold` explicit"
+            },
+            {
+              "order": 5,
+              "text": "progress reports the remaining gap to promotion"
+            },
+            {
+              "order": 6,
+              "text": "diagnostics still publish when the strict surface fails"
+            },
+            {
+              "order": 7,
+              "text": "non-promoted surfaces do not silently inherit strict failure behavior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0008",
+      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/published-summary-remediation-snapshot/checks/remediation-snapshot-checklist.md",
+          "title": "remediation-snapshot-checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "reads only latest published summary aliases"
+            },
+            {
+              "order": 2,
+              "text": "does not replay history or recompute trend state"
+            },
+            {
+              "order": 3,
+              "text": "uses one fixed documented bucket set"
+            },
+            {
+              "order": 4,
+              "text": "applies an explicit cap to each bucket"
+            },
+            {
+              "order": 5,
+              "text": "reports missing or stale inputs explicitly"
+            },
+            {
+              "order": 6,
+              "text": "keeps source summary references on emitted candidates"
+            },
+            {
+              "order": 7,
+              "text": "when several published summaries feed several downstream consumers, the snapshot is preferred over repeating direct per-source triage in each surface"
+            },
+            {
+              "order": 8,
+              "text": "the same cap, determinism, and source-traceability rules still hold when latest summaries are published as object-store keys"
+            },
+            {
+              "order": 9,
+              "text": "remains read-only with respect to source artifacts and upstream behavior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0009",
+      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/lightweight-status-snapshot/checks/lightweight-snapshot-checklist.md",
+          "title": "lightweight-snapshot-checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "`README` stays a short human-facing entrypoint"
+            },
+            {
+              "order": 2,
+              "text": "`MANIFEST`, when present, stays a compact machine or mixed snapshot"
+            },
+            {
+              "order": 3,
+              "text": "long run IDs and historical metric blocks are absent from snapshot docs"
+            },
+            {
+              "order": 4,
+              "text": "detailed execution state lives in canonical docs such as `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, or `SESSION_*`"
+            },
+            {
+              "order": 5,
+              "text": "snapshot docs link outward instead of copying canonical detail"
+            },
+            {
+              "order": 6,
+              "text": "current-state evidence points to CI or the latest session-style snapshot"
+            },
+            {
+              "order": 7,
+              "text": "snapshot docs remain readable in one screen or close to it"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0010",
+      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/telemetry-integrity-snapshot/checks/telemetry-integrity-checklist.md",
+          "title": "telemetry-integrity-checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "required source presence and schema health are checked explicitly"
+            },
+            {
+              "order": 2,
+              "text": "telemetry or mismatch counters are surfaced in the snapshot"
+            },
+            {
+              "order": 3,
+              "text": "latest alias and nested history copy are both validated"
+            },
+            {
+              "order": 4,
+              "text": "anti-double-count rules confirm the history path differs from the latest alias"
+            },
+            {
+              "order": 5,
+              "text": "optional guardrail consistency is reported explicitly as `ok`, `attention`, or `not_available`"
+            },
+            {
+              "order": 6,
+              "text": "the snapshot emits a concise integrity decision with reason codes"
+            },
+            {
+              "order": 7,
+              "text": "when several latest summaries feed several downstream decisions, the integrity snapshot is preferred over duplicating trust logic inside each consumer"
+            },
+            {
+              "order": 8,
+              "text": "object-store publication does not remove the need for explicit required-source health, dual-write checks, and anti-double-count checks"
+            },
+            {
+              "order": 9,
+              "text": "the helper remains diagnostic and read-only rather than creating a hidden hard gate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0011",
+      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/required-vs-optional-source-rendering/checks/required-vs-optional-rendering-checklist.md",
+          "title": "required-vs-optional-rendering-checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "required source set and optional source set are documented explicitly"
+            },
+            {
+              "order": 2,
+              "text": "required missing sources are reported separately from optional missing sources"
+            },
+            {
+              "order": 3,
+              "text": "required-source failure can fail smoke or strict contract checks"
+            },
+            {
+              "order": 4,
+              "text": "missing optional sources render as `not available yet`"
+            },
+            {
+              "order": 5,
+              "text": "invalid optional sources produce warnings without taking down the full surface"
+            },
+            {
+              "order": 6,
+              "text": "soft-info artifacts such as `brief_md` remain non-blocking unless explicitly promoted"
+            },
+            {
+              "order": 7,
+              "text": "optional-source tolerance remains observable in non-UI consumers such as JSON reports or CLI summaries"
+            },
+            {
+              "order": 8,
+              "text": "the surface stays read-only and summary-driven"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0012",
+      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/deterministic-context-composition/checks/deterministic-context-composition-checklist.md",
+          "title": "Deterministic Context Composition Checklist",
+          "intro_markdown": "Use this checklist to validate whether a repository really follows `deterministic-context-composition`.",
+          "items": [
+            {
+              "order": 1,
+              "text": "Source fragments are the canonical editable inputs."
+            },
+            {
+              "order": 2,
+              "text": "The generated context artifact is explicitly treated as derived output."
+            },
+            {
+              "order": 3,
+              "text": "Composition order is deterministic and documented."
+            },
+            {
+              "order": 4,
+              "text": "Explicit priority or equivalent ordering rules surface earlier content first."
+            },
+            {
+              "order": 5,
+              "text": "Output sections remain traceable to their source fragments."
+            },
+            {
+              "order": 6,
+              "text": "Changing or removing a fragment updates the generated artifact predictably."
+            },
+            {
+              "order": 7,
+              "text": "Contributors can tell that the generated file should be regenerated, not hand-edited."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0013",
+      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md",
+          "title": "Single-Source Rule Distribution Checklist",
+          "intro_markdown": "Use this checklist to validate whether a repository really follows `single-source-rule-distribution`.",
+          "items": [
+            {
+              "order": 1,
+              "text": "One canonical rule source is named explicitly."
+            },
+            {
+              "order": 2,
+              "text": "At least two agent-facing instruction surfaces receive the shared rule core."
+            },
+            {
+              "order": 3,
+              "text": "Target files are treated as managed or derived outputs."
+            },
+            {
+              "order": 4,
+              "text": "Contributors can tell they should edit the canonical source first, not the target files."
+            },
+            {
+              "order": 5,
+              "text": "Re-applying the distribution step does not duplicate shared instructions in target surfaces."
+            },
+            {
+              "order": 6,
+              "text": "Target-specific formatting stays minimal and does not change the shared rule intent."
+            },
+            {
+              "order": 7,
+              "text": "MCP propagation, skills propagation, nested loading, or other wider behavior are not silently bundled into the same technique contract."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -37,10 +37,13 @@ REQUIRED_STAGE1_FILES = (
     "schemas/index-entry.schema.json",
     "scripts/build_catalog.py",
     "scripts/build_section_manifest.py",
+    "scripts/build_checklist_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_section_manifest.json",
     "generated/technique_section_manifest.min.json",
+    "generated/technique_checklist_manifest.json",
+    "generated/technique_checklist_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
@@ -134,6 +137,8 @@ EVIDENCE_KIND_BY_NAME = {
 }
 SECTION_MANIFEST_VERSION = 1
 SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
+CHECKLIST_MANIFEST_VERSION = 1
+CHECKLIST_MANIFEST_SOURCE_OF_TRUTH = "markdown-checklists-v1"
 
 
 class ValidationError(RuntimeError):
@@ -144,6 +149,19 @@ class ValidationError(RuntimeError):
 class TechniqueSection:
     heading: str
     markdown: str
+
+
+@dataclass(frozen=True)
+class ChecklistItem:
+    text: str
+
+
+@dataclass(frozen=True)
+class TechniqueChecklist:
+    check_path: str
+    title: str
+    intro_markdown: str
+    items: tuple[ChecklistItem, ...]
 
 
 @dataclass(frozen=True)
@@ -158,6 +176,7 @@ class TechniqueRecord:
     frontmatter: dict[str, Any]
     body: str
     sections: tuple[TechniqueSection, ...]
+    checklists: tuple[TechniqueChecklist, ...]
 
 
 @dataclass(frozen=True)
@@ -576,6 +595,82 @@ def validate_support_references(body: str, technique_dir: Path, technique_path: 
             fail(f"{technique_path}: referenced support path '{relative_path}' does not exist")
 
 
+def normalize_intro_markdown(lines: list[str]) -> str:
+    return "\n".join(lines).rstrip()
+
+
+def parse_checklist_file(check_path: Path, repo_root: Path) -> TechniqueChecklist:
+    lines = read_text(check_path).splitlines()
+    nonblank_indexes = [index for index, line in enumerate(lines) if line.strip()]
+    if not nonblank_indexes:
+        fail(f"{check_path}: checklist file must start with a '# ' title and at least one item")
+
+    title_index = nonblank_indexes[0]
+    title_line = lines[title_index]
+    if not title_line.startswith("# ") or title_line.startswith("##"):
+        fail(f"{check_path}: first meaningful line must be a single '# ' title")
+
+    title = title_line[2:].strip()
+    if not title:
+        fail(f"{check_path}: checklist title must not be empty")
+
+    index = title_index + 1
+    while index < len(lines) and not lines[index].strip():
+        index += 1
+
+    intro_lines: list[str] = []
+    while index < len(lines):
+        line = lines[index]
+        if not line.strip() or line.startswith("- "):
+            break
+        if line.startswith("#"):
+            fail(f"{check_path}: headings after the checklist title are not supported")
+        if line.startswith((" ", "\t")):
+            fail(f"{check_path}: indented intro or wrapped checklist content is not supported")
+        intro_lines.append(line)
+        index += 1
+
+    while index < len(lines) and not lines[index].strip():
+        index += 1
+
+    items: list[ChecklistItem] = []
+    while index < len(lines):
+        line = lines[index]
+        if not line.strip():
+            index += 1
+            continue
+        if line.startswith("- "):
+            item_text = line[2:].strip()
+            if not item_text:
+                fail(f"{check_path}: checklist items must not be empty")
+            items.append(ChecklistItem(text=item_text))
+            index += 1
+            continue
+        if line.startswith((" ", "\t")):
+            fail(f"{check_path}: nested bullets or wrapped checklist items are not supported")
+        if line.startswith("#"):
+            fail(f"{check_path}: headings after the checklist title are not supported")
+        fail(f"{check_path}: prose after checklist items is not supported")
+
+    if not items:
+        fail(f"{check_path}: checklist file must include at least one top-level '- ' item")
+
+    return TechniqueChecklist(
+        check_path=check_path.relative_to(repo_root).as_posix(),
+        title=title,
+        intro_markdown=normalize_intro_markdown(intro_lines),
+        items=tuple(items),
+    )
+
+
+def parse_checklists(repo_root: Path, technique_dir: Path) -> tuple[TechniqueChecklist, ...]:
+    checks_dir = technique_dir / "checks"
+    checklist_paths = sorted(
+        checks_dir.rglob("*.md"), key=lambda path: path.relative_to(repo_root).as_posix()
+    )
+    return tuple(parse_checklist_file(path, repo_root) for path in checklist_paths)
+
+
 def validate_stage1_files(repo_root: Path) -> None:
     for relative_path in REQUIRED_STAGE1_FILES:
         target = repo_root / relative_path
@@ -591,7 +686,7 @@ def validate_selection_files(repo_root: Path) -> None:
 
 
 def validate_technique_bundle(
-    technique_dir: Path, expected_domain: str, schema_store: dict[str, Any]
+    repo_root: Path, technique_dir: Path, expected_domain: str, schema_store: dict[str, Any]
 ) -> TechniqueRecord:
     technique_path = technique_dir / "TECHNIQUE.md"
     if not technique_path.is_file():
@@ -603,6 +698,7 @@ def validate_technique_bundle(
     frontmatter = parse_frontmatter(frontmatter_text, technique_path)
     validate_frontmatter_schema(frontmatter, technique_path, schema_store)
     sections = validate_sections(body, technique_path)
+    checklists = parse_checklists(repo_root, technique_dir)
     validate_support_references(body, technique_dir, technique_path)
 
     if frontmatter["domain"] != expected_domain:
@@ -621,6 +717,7 @@ def validate_technique_bundle(
         frontmatter=frontmatter,
         body=body,
         sections=sections,
+        checklists=checklists,
     )
 
 
@@ -637,7 +734,7 @@ def collect_techniques(repo_root: Path, schema_store: dict[str, Any]) -> list[Te
             fail(f"{domain_dir}: unsupported domain directory '{domain_dir.name}'")
 
         for technique_dir in sorted(path for path in domain_dir.iterdir() if path.is_dir()):
-            record = validate_technique_bundle(technique_dir, domain_dir.name, schema_store)
+            record = validate_technique_bundle(repo_root, technique_dir, domain_dir.name, schema_store)
             if record.id in seen_ids:
                 fail(f"duplicate technique id '{record.id}' at {record.technique_dir}")
             seen_ids.add(record.id)
@@ -882,6 +979,56 @@ def project_min_section_manifest(full_manifest: dict[str, Any]) -> dict[str, Any
     }
 
 
+def full_checklist_manifest_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any]:
+    return {
+        "id": record.id,
+        "technique_path": record.technique_path.relative_to(repo_root).as_posix(),
+        "checklists": [
+            {
+                "check_path": checklist.check_path,
+                "title": checklist.title,
+                "intro_markdown": checklist.intro_markdown,
+                "items": [
+                    {
+                        "order": order,
+                        "text": item.text,
+                    }
+                    for order, item in enumerate(checklist.items, start=1)
+                ],
+            }
+            for checklist in record.checklists
+        ],
+    }
+
+
+def project_min_checklist_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "techniques": [
+            {
+                "id": technique["id"],
+                "technique_path": technique["technique_path"],
+                "checklists": [
+                    {
+                        "check_path": checklist["check_path"],
+                        "title": checklist["title"],
+                        "item_count": len(checklist["items"]),
+                        "items": [
+                            {
+                                "order": item["order"],
+                            }
+                            for item in checklist["items"]
+                        ],
+                    }
+                    for checklist in technique["checklists"]
+                ],
+            }
+            for technique in full_manifest["techniques"]
+        ],
+    }
+
+
 def build_catalog_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -910,6 +1057,18 @@ def build_section_manifest_payloads(
         "techniques": [full_section_manifest_entry(repo_root, record) for record in sorted_records],
     }
     return full_manifest, project_min_section_manifest(full_manifest)
+
+
+def build_checklist_manifest_payloads(
+    repo_root: Path, records: list[TechniqueRecord]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    sorted_records = sorted(records, key=lambda record: record.id)
+    full_manifest = {
+        "manifest_version": CHECKLIST_MANIFEST_VERSION,
+        "source_of_truth": CHECKLIST_MANIFEST_SOURCE_OF_TRUTH,
+        "techniques": [full_checklist_manifest_entry(repo_root, record) for record in sorted_records],
+    }
+    return full_manifest, project_min_checklist_manifest(full_manifest)
 
 
 def selection_technique_link(entry: dict[str, Any]) -> str:
@@ -1226,6 +1385,30 @@ def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) 
         fail(f"{min_path}: min section manifest must stay a projection of the full manifest")
 
 
+def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    full_path = repo_root / "generated" / "technique_checklist_manifest.json"
+    min_path = repo_root / "generated" / "technique_checklist_manifest.min.json"
+
+    expected_full, expected_min = build_checklist_manifest_payloads(repo_root, records)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated checklist manifest is out of date; "
+            f"run 'python scripts/build_checklist_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated checklist min manifest is out of date; "
+            f"run 'python scripts/build_checklist_manifest.py'"
+        )
+
+    projected_min = project_min_checklist_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min checklist manifest must stay a projection of the full manifest")
+
+
 def validate_selection_surface(repo_root: Path) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -1257,6 +1440,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_relations(records)
     validate_catalogs(repo_root, records, schema_store)
     validate_section_manifests(repo_root, records)
+    validate_checklist_manifests(repo_root, records)
     validate_selection_surface(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -1271,6 +1455,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
     print("[ok] validated generated section manifest parity")
+    print("[ok] validated generated checklist manifest parity")
     print("[ok] validated generated selection surface parity")
 
 
