@@ -9,7 +9,7 @@
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents a live remediation helper that reads only latest published summaries, uses deterministic buckets, applies explicit caps, and serves as the workflow-published triage source of truth
-- origin reinforcement: `D:\atm10-agent\docs\SESSION_2026-03-12.md`, `SESSION_2026-03-13.md`, `RUNBOOK.md`, and `DECISIONS.md` now show the remediation snapshot reused across nightly workflow publication, Streamlit `Latest Metrics`, local operating-cycle triage, and regression tests as one shared read-only backlog surface
+- origin reinforcement: `atm10-agent/docs/SESSION_2026-03-12.md`, `atm10-agent/docs/SESSION_2026-03-13.md`, `atm10-agent/docs/RUNBOOK.md`, and `atm10-agent/docs/DECISIONS.md` now show the remediation snapshot reused across nightly workflow publication, Streamlit `Latest Metrics`, local operating-cycle triage, and regression tests as one shared read-only backlog surface
 - second context: `aoa-techniques` documents the same pattern with an object-store-backed adaptation and a portable example that preserves read-only latest-alias consumption while serving operators, reports, and agent handoff from one published backlog
 - validation strength: the technique has two examples, a checklist, source-backed origin evidence, a bounded second-context adaptation note, and sharper adoption-trigger wording that distinguishes default use in multi-summary, multi-consumer systems from simpler direct-triage cases
 

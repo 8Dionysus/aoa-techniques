@@ -9,7 +9,7 @@
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents a dedicated integrity helper that validates required source health, telemetry counters, dual-write consistency, anti-double-count rules, and optional guardrail consistency without becoming a new hard gate
-- origin reinforcement: `D:\atm10-agent\docs\SESSION_2026-03-12.md`, `SESSION_2026-03-13.md`, `RUNBOOK.md`, and `DECISIONS.md` now show the integrity snapshot reused across nightly workflow publication, Streamlit visibility, local operating-cycle interpretation, and regression tests as one first-class diagnostic artifact
+- origin reinforcement: `atm10-agent/docs/SESSION_2026-03-12.md`, `atm10-agent/docs/SESSION_2026-03-13.md`, `atm10-agent/docs/RUNBOOK.md`, and `atm10-agent/docs/DECISIONS.md` now show the integrity snapshot reused across nightly workflow publication, Streamlit visibility, local operating-cycle interpretation, and regression tests as one first-class diagnostic artifact
 - second context: `aoa-techniques` documents the same pattern in a bounded object-store adaptation that preserves the diagnostic-only role over published summary inputs and frames it as the shared trust layer for multi-summary systems
 - validation strength: the technique has two examples, a checklist, source-backed origin evidence, a second-context adaptation note, and sharper adoption-trigger wording that explains when a separate integrity layer should replace duplicated consumer-local trust logic
 

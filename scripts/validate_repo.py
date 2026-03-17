@@ -4,7 +4,7 @@ import json
 import re
 import sys
 from dataclasses import dataclass
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 
 
@@ -240,9 +240,13 @@ def parse_list(
             continue
 
         if ":" in content:
-            key, rest = content.split(":", 1)
+            key, raw_rest = content.split(":", 1)
             key = key.strip()
-            rest = rest.strip()
+            if raw_rest and not raw_rest.startswith(" "):
+                items.append(parse_scalar(content))
+                continue
+
+            rest = raw_rest.strip()
             if not key:
                 fail(f"{technique_path}: malformed inline mapping list item: {line!r}")
 
@@ -433,7 +437,15 @@ def validate_support_dirs(technique_dir: Path) -> None:
 
 def validate_support_references(body: str, technique_dir: Path, technique_path: Path) -> None:
     for relative_path in sorted(set(match.group(0) for match in SUPPORT_PATH_RE.finditer(body))):
-        target = technique_dir / relative_path
+        pure_path = PurePosixPath(relative_path)
+        if not pure_path.parts or pure_path.parts[0] not in REQUIRED_SUPPORT_DIRS:
+            fail(f"{technique_path}: referenced support path '{relative_path}' is not allowed")
+        if any(part == ".." for part in pure_path.parts):
+            fail(
+                f"{technique_path}: referenced support path '{relative_path}' must stay inside the technique bundle"
+            )
+
+        target = technique_dir.joinpath(*pure_path.parts)
         if not target.is_file():
             fail(f"{technique_path}: referenced support path '{relative_path}' does not exist")
 
@@ -726,6 +738,11 @@ def selection_technique_link(entry: dict[str, Any]) -> str:
     return f"[{entry['id']}](../{entry['technique_path']})"
 
 
+def escape_markdown_table_cell(value: str) -> str:
+    flattened = re.sub(r"\s*\r?\n\s*", " ", value).strip()
+    return flattened.replace("|", r"\|")
+
+
 def relation_summary(entry: dict[str, Any], entries_by_id: dict[str, dict[str, Any]]) -> str:
     grouped: dict[str, list[str]] = {}
     for relation_type in RELATION_TYPE_ORDER:
@@ -787,7 +804,10 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
 
     for entry in evaluation_starters:
         lines.append(
-            f"| {selection_technique_link(entry)} | `{entry['validation_strength']}` | {entry['summary']} |"
+            "| "
+            f"{selection_technique_link(entry)} | "
+            f"`{entry['validation_strength']}` | "
+            f"{escape_markdown_table_cell(entry['summary'])} |"
         )
 
     lines.extend(
@@ -828,7 +848,12 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         )
         for entry in entries_by_domain[domain]:
             lines.append(
-                f"| {selection_technique_link(entry)} | `{entry['status']}` | `{entry['validation_strength']}` | `{entry['rigor_level']}` | {entry['summary']} |"
+                "| "
+                f"{selection_technique_link(entry)} | "
+                f"`{entry['status']}` | "
+                f"`{entry['validation_strength']}` | "
+                f"`{entry['rigor_level']}` | "
+                f"{escape_markdown_table_cell(entry['summary'])} |"
             )
         lines.append("")
 

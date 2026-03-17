@@ -9,7 +9,7 @@
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents the dual-write contract across `readiness`, `governance`, `progress`, and `transition`, with explicit latest alias paths, nested history copies, and anti-double-count reader rules
-- origin reinforcement: `D:\atm10-agent\docs\SESSION_2026-03-12.md` and `SESSION_2026-03-13.md` show live integrity checks over `history_summary_json` plus higher-level helpers that reuse latest aliases as a real consumer surface
+- origin reinforcement: `atm10-agent/docs/SESSION_2026-03-12.md` and `atm10-agent/docs/SESSION_2026-03-13.md` show live integrity checks over `history_summary_json` plus higher-level helpers that reuse latest aliases as a real consumer surface
 - second context: `aoa-techniques` now documents the same contract in a bounded object-store-backed adaptation without changing the invariant latest-plus-history pattern
 - validation strength: the technique has two examples, a checklist, source-backed origin evidence, a second-context adaptation note, and explicit package adjacency to downstream published-summary consumers
 
