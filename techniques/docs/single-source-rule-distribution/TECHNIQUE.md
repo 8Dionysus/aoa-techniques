@@ -88,10 +88,37 @@ Relationship to adjacent techniques: unlike `AOA-T-0002 source-of-truth-layout`,
 
 ## Risks
 
-- per-agent quirks can tempt maintainers to widen the pattern into agent-specific product behavior instead of keeping one shared rule core
-- contributors may edit target files directly and reintroduce drift
-- distribution can look consistent while silently duplicating content unless repeatability is checked after re-apply
-- an import can sprawl if MCP propagation, skills propagation, nested loading, or backup/revert behavior are treated as part of the same technique
+### Failure modes
+
+- target instruction surfaces drift away from the canonical rule source because local edits or wrapper changes are applied without flowing back through the source
+- contributors edit target files directly and quietly reintroduce duplicated authority across files that were supposed to stay managed
+- re-apply behavior stops being repeatable, so distribution looks successful while shared rules are duplicated, dropped, or reshaped across targets
+
+### Negative effects
+
+- one-to-many distribution can hide target-specific divergence longer than hand-maintained files would, because synchronized-looking outputs feel safer than they are
+- wrapper or formatting differences can make shared rule intent harder to compare across targets even while every file appears up to date
+- the technique can create false-success by making all targets look freshly synchronized even after the canonical rule meaning has already split in practice
+
+### Misuse patterns
+
+- widening the technique into per-agent product behavior instead of keeping one shared rule core with minimal target-specific formatting
+- treating nested loading, MCP propagation, skills propagation, or other broader orchestration features as if they belong inside this same bounded contract
+- adding target-specific shadow logic until each managed surface becomes a semi-canonical source in disguise
+
+### Detection signals
+
+- canonical rule changes stop flowing cleanly through one source and instead require hand-fixes or exceptions in multiple target files
+- targets look synchronized at a glance, but reviewers cannot confirm that the shared rule intent still matches across wrappers or re-apply passes
+- managed targets accumulate local edits that are not obviously derivable from the canonical source
+- the team starts discussing target-specific behavior more than the shared core rule set that was supposed to own the content
+
+### Mitigations
+
+- re-narrow the contract so one canonical rule source owns the shared content and target files keep only the minimum destination-specific wrapper
+- remove local target edits and route every shared-rule change back through the canonical source before re-applying distribution
+- treat repeatability checks as part of the distribution contract so synchronized appearance does not substitute for actual source-to-target parity
+- split broader propagation or loading behavior into separate techniques instead of letting target-specific shadow logic accumulate inside this one
 
 ## Validation
 
