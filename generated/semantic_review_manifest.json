@@ -1,0 +1,222 @@
+{
+  "manifest_version": 1,
+  "source_of_truth": "markdown-semantic-reviews-v1",
+  "review_scope": {
+    "map": {
+      "first_section_suffix": "Map",
+      "table_header": [
+        "technique",
+        "current role"
+      ]
+    },
+    "seams": {
+      "section_heading": "Seam Review",
+      "subsection_level": "###",
+      "question_prefix": "Question: ",
+      "outcome_marker": "Outcome: "
+    },
+    "findings": {
+      "section_heading": "Findings",
+      "overall_outcome_prefix": "Overall outcome: "
+    },
+    "next_step": {
+      "section_heading": "Next Step"
+    }
+  },
+  "reviews": [
+    {
+      "review_id": "docs_boundary",
+      "review_path": "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
+      "title": "Docs Boundary Semantic Review",
+      "intro_markdown": "This review-only pilot checks whether the docs pair still reads as two distinct techniques rather than one broad \"good docs hygiene\" pattern.\n\nWhy this pair was chosen now:\n\n- it is the next nearest-neighbor docs pair after the two evaluation pilots\n- both techniques already point to each other through current `relations`\n- the main question is whether repository-wide document-role layout stays distinct from top-level snapshot trimming discipline\n- this pair is a good boundary test before moving from semantic pilots toward richer navigation work\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "map_heading": "Pair Map",
+      "map_entries": [
+        {
+          "order": 1,
+          "technique_id": "AOA-T-0002",
+          "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+          "current_role": "repository-wide document-role layout and update-routing pattern"
+        },
+        {
+          "order": 2,
+          "technique_id": "AOA-T-0009",
+          "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+          "current_role": "narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative"
+        }
+      ],
+      "seams": [
+        {
+          "heading": "`AOA-T-0002` vs `AOA-T-0009`",
+          "order": 1,
+          "question": "where does the broader document-role layout stop and the narrower snapshot discipline begin?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map, update-routing rules, and separation of active work, decisions, runbooks, and long history. [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) begins only after that broader layout exists and constrains how `README` and optional `MANIFEST` stay short, readable, and link-driven.\n- Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class and explicit routing rules for updates. Use `0009` when those canonical homes already exist and the remaining problem is that top-level status docs are growing into mini-archives or duplicate summaries.\n- Relation check: mutual `complements` is appropriate and still bounded. It communicates that the snapshot discipline strengthens the broader layout without replacing it. A stronger relation such as `requires` would overstate dependency because a repository can apply lightweight snapshot discipline in a simpler form without adopting the full role map verbatim.\n- Evidence check: `0002` checklist remains role-map centric, covering document roles, routing, and keeping long history out of `README` and `TODO`. `0009` checklist remains snapshot centric, covering short entrypoints, outward links, absent run-history blocks, and one-screen readability. The pair's support surfaces reinforce separation rather than blur it. Outcome: `clear`.",
+          "outcome": "`clear`."
+        }
+      ],
+      "context_notes": [],
+      "findings": [
+        {
+          "order": 1,
+          "text": "`AOA-T-0002` is semantically distinct as the broader source-of-truth layout pattern. No drift signal found."
+        },
+        {
+          "order": 2,
+          "text": "`AOA-T-0009` is semantically distinct as a lighter snapshot discipline layered on top of a broader document map."
+        },
+        {
+          "order": 3,
+          "text": "Current `relations` for this pair are helpful and still minimal. No cleanup is justified in this pilot."
+        },
+        {
+          "order": 4,
+          "text": "Current `examples/` and `checks/` support the claimed contracts well enough for a review-only docs semantic surface."
+        }
+      ],
+      "overall_outcome": "`clear`",
+      "next_step_markdown": "No narrow docs remediation wave is justified from this pilot alone.\n\nWith the first three bounded semantic pilots now complete, the next step should shift from semantic review toward the first richer relation consumer or another bounded navigation surface built on the existing catalog and review corpus."
+    },
+    {
+      "review_id": "evaluation_chain",
+      "review_path": "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
+      "title": "Evaluation-Chain Semantic Review",
+      "intro_markdown": "This review-only pilot checks whether the upstream evaluation-chain pair still reads as two distinct techniques rather than one merged \"smoke plus gate\" pattern.\n\nWhy this pair was chosen now:\n\n- it is the next nearest-neighbor evaluation pair after the published-summary pilot\n- both techniques are still `promoted`, so semantic clarity matters before any future status review\n- both techniques already share current relation language in the catalog\n- the main question is whether summary-contract production stays distinct from staged enforcement rollout\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "map_heading": "Pair Map",
+      "map_entries": [
+        {
+          "order": 1,
+          "technique_id": "AOA-T-0003",
+          "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+          "current_role": "summary-contract producer for runnable smoke or probe paths"
+        },
+        {
+          "order": 2,
+          "technique_id": "AOA-T-0007",
+          "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+          "current_role": "staged rollout pattern that promotes one observed signal from non-blocking publication to one narrow strict enforcement surface"
+        }
+      ],
+      "seams": [
+        {
+          "heading": "`AOA-T-0003` vs `AOA-T-0007`",
+          "order": 1,
+          "question": "where does summary-contract production stop and staged promotion semantics begin?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) owns the existence and shape of one stable machine-readable summary per smoke path, including exit-code alignment and basic diagnosability. [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) begins only after that contract already exists and governs how one observed signal moves from `signal_only` publication to a narrow strict surface through readiness, governance, progress, and transition layers.\n- Default-use trigger: use `0003` when a runnable smoke or probe path still needs a real summary contract that CI, dashboards, or agents can consume without log scraping. Use `0007` when an already-summary-producing check must be promoted gradually into enforcement without losing diagnostics or widening strict failure too early.\n- Relation check: `AOA-T-0007 -> requires -> AOA-T-0003` helps and reads correctly as \"rollout depends on a stable summary producer.\" `AOA-T-0003 -> used_together_for -> AOA-T-0007` also helps because the producer can exist independently, while the rollout pattern is only one downstream use of that contract. The current relation pair is bounded and does not yet look noisy.\n- Evidence check: `0003` example and checklist remain contract-centric: summary emission, machine-readable status, stable discovery, and no log scraping. `0007` example and checklist remain rollout-centric: signal-only mode, readiness over history, explicit `go|hold`, progress telemetry, narrow strict enforcement, and preserved diagnostics. The support surfaces reinforce separation rather than collapse the pair into one technique. Outcome: `clear`.",
+          "outcome": "`clear`."
+        }
+      ],
+      "context_notes": [
+        {
+          "heading": "Adjacent Technique Note: `AOA-T-0006`",
+          "order": 1,
+          "markdown": "[AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) matters here as an adjacent dependency, but not as a third full review target in this pilot.\n\n- `AOA-T-0007` currently `requires` `AOA-T-0006` because staged promotion becomes stronger once history and latest-alias layout are trustworthy across repeated runs.\n- That adjacency does not make `AOA-T-0007` a storage-layout technique. The semantic core of `0007` is still staged enforcement policy over an existing signal, not dual-write layout or anti-double-count behavior.\n- This dependency is worth watching later only if rollout wording starts absorbing too much latest/history implementation detail. At the moment, the boundary still reads cleanly. Outcome: `watch`.",
+          "outcome": "`watch`."
+        }
+      ],
+      "findings": [
+        {
+          "order": 1,
+          "text": "`AOA-T-0003` is semantically distinct as the summary-contract producer. No drift signal found."
+        },
+        {
+          "order": 2,
+          "text": "`AOA-T-0007` is semantically distinct as the staged promotion pattern over an existing summary-producing signal."
+        },
+        {
+          "order": 3,
+          "text": "Current relation language for this pair is helpful and still bounded. No cleanup is justified in this pilot."
+        },
+        {
+          "order": 4,
+          "text": "The main watch point is adjacency to `AOA-T-0006`: future wording should keep storage-layout assumptions subordinate to rollout semantics."
+        },
+        {
+          "order": 5,
+          "text": "Current `examples/` and `checks/` support the claimed contracts well enough for a review-only second semantic surface."
+        }
+      ],
+      "overall_outcome": "`clear with one watch dependency note`",
+      "next_step_markdown": "No narrow remediation wave is justified for this pair from this pilot alone.\n\nThe next semantic-review wave should move to `AOA-T-0002` and `AOA-T-0009`, where the likely boundary question is source-of-truth document layout versus lightweight snapshot discipline."
+    },
+    {
+      "review_id": "published_summary",
+      "review_path": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
+      "title": "Published-Summary Semantic Review",
+      "intro_markdown": "This review-only pilot checks whether the published-summary cluster still reads as four distinct techniques rather than one blurred evaluation package.\n\nWhy this cluster was chosen first:\n\n- all four techniques are already `canonical`\n- all four are tightly connected by current `relations`\n- the cluster already has strong examples, checks, and second-context notes\n- the main remaining question is semantic clarity, not missing structure\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "map_heading": "Cluster Map",
+      "map_entries": [
+        {
+          "order": 1,
+          "technique_id": "AOA-T-0006",
+          "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+          "current_role": "storage contract for stable latest alias plus immutable history copy"
+        },
+        {
+          "order": 2,
+          "technique_id": "AOA-T-0008",
+          "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+          "current_role": "bounded remediation rollup over latest published summaries"
+        },
+        {
+          "order": 3,
+          "technique_id": "AOA-T-0010",
+          "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+          "current_role": "diagnostic trust layer over published summaries and downstream rollups"
+        },
+        {
+          "order": 4,
+          "technique_id": "AOA-T-0011",
+          "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+          "current_role": "rendering and contract policy for required versus optional summary sources"
+        }
+      ],
+      "seams": [
+        {
+          "heading": "`AOA-T-0006` vs `AOA-T-0008` / `AOA-T-0010`",
+          "order": 1,
+          "question": "where does the storage contract end and the downstream consumer layer begin?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) owns alias/history layout, dual-write invariants, and anti-double-count reader behavior. [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) and [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) begin only after stable latest published summaries already exist.\n- Default-use trigger: use `0006` when a producer must publish discoverable current state and trustworthy history. Use `0008` when several published summaries need one bounded remediation backlog. Use `0010` when several published summaries or rollups need one reusable trust verdict.\n- Relation check: current `shares_contract_with` from `0006` to `0008` and `0010` helps. It correctly reads as shared dependency on the latest-summary contract rather than semantic duplication.\n- Evidence check: `0006` examples and checklist stay focused on alias/history layout, not downstream rollups. The object-store example reinforces storage invariants without bleeding into remediation or integrity semantics. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0008` vs `AOA-T-0010`",
+          "order": 2,
+          "question": "are remediation rollup and integrity verdict still distinct, or are they drifting toward one combined downstream helper?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) answers \"what needs follow-up?\" through bounded buckets and source references. [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) answers \"are these published summaries trustworthy enough to interpret?\" through diagnostic invariants and reason codes.\n- Default-use trigger: choose `0008` when operators or agents need one reviewable backlog instead of reading each latest summary directly. Choose `0010` when multiple consumers should not duplicate source-health, dual-write, and anti-double-count checks independently.\n- Relation check: mutual `complements` is appropriate and still minimal. Anything stronger than `complements` would risk implying one technique subsumes the other.\n- Evidence check: `0008` checklist and object-store example stay bucket-and-source-reference centric; `0010` checklist and object-store example stay trust-and-integrity centric. The support surfaces currently reinforce separation rather than blur it. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0008` / `AOA-T-0010` vs `AOA-T-0011`",
+          "order": 3,
+          "question": "where do downstream summary surfaces stop and rendering policy begin?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) and [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) define optional downstream summary artifacts. [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) defines how a consumer treats those artifacts once they exist or are missing.\n- Default-use trigger: use `0008` or `0010` when the project needs the remediation or integrity artifact at all. Use `0011` when a UI, CLI report, or smoke summary must stay useful while optional supporting artifacts remain observable but non-fatal.\n- Relation check: `0008 -> complements -> 0011` and `0010 -> complements -> 0011` are helpful because they point from optional published artifacts to the rendering policy that consumes them. The current relation set is enough; adding `requires` here would overstate dependency.\n- Evidence check: `0008` and `0010` examples focus on emitting optional downstream artifacts; `0011` example and checklist focus on required/optional handling in a consumer, including non-UI output. That keeps producer semantics separate from rendering semantics. Outcome: `watch`.\n\nWhy `watch` instead of `clear`:\n\n- `AOA-T-0011` uses remediation and integrity as its clearest optional-source examples, so future wording drift could accidentally make `0011` read like a bundle-specific rendering appendix instead of a general summary-consumer policy.\n- The current support surfaces are still strong enough, but this seam is the most likely place for future overlap if later examples become too package-shaped.",
+          "outcome": "`watch`."
+        }
+      ],
+      "context_notes": [],
+      "findings": [
+        {
+          "order": 1,
+          "text": "`AOA-T-0006` is semantically distinct as the storage contract. No drift signal found."
+        },
+        {
+          "order": 2,
+          "text": "`AOA-T-0008` and `AOA-T-0010` are distinct downstream consumers: one prioritizes follow-up backlog, the other trustworthiness of interpretation."
+        },
+        {
+          "order": 3,
+          "text": "`AOA-T-0011` remains distinct as rendering policy, but its strongest examples are currently anchored in the same package. This is acceptable now and worth watching later."
+        },
+        {
+          "order": 4,
+          "text": "Current `relations` for this cluster are helpful and still bounded. No relation cleanup is justified in this pilot."
+        },
+        {
+          "order": 5,
+          "text": "Current `examples/` and `checks/` support the claimed contracts well enough for a review-only first semantic surface."
+        }
+      ],
+      "overall_outcome": "`clear with one watch seam`",
+      "next_step_markdown": "No immediate published-summary remediation wave is justified from this pilot alone.\n\nThe next semantic-review wave should move upstream to `AOA-T-0003` and `AOA-T-0007`, where the likely boundary question is producer contract versus staged gate-promotion semantics."
+    }
+  ]
+}

@@ -41,6 +41,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_example_manifest.py",
     "scripts/build_evidence_note_manifest.py",
     "scripts/build_github_review_template_manifest.py",
+    "scripts/build_semantic_review_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_section_manifest.json",
@@ -53,6 +54,8 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_evidence_note_manifest.min.json",
     "generated/github_review_template_manifest.json",
     "generated/github_review_template_manifest.min.json",
+    "generated/semantic_review_manifest.json",
+    "generated/semantic_review_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
@@ -137,6 +140,7 @@ RELATION_TYPE_ORDER = (
 SUPPORT_PATH_RE = re.compile(r"(?<!\w)(?:checks|examples|notes)/[A-Za-z0-9._/-]+\.md")
 FRONTMATTER_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n?", re.DOTALL)
 SECTION_RE = re.compile(r"^## (.+)$", re.MULTILINE)
+SUBSECTION_RE = re.compile(r"^### (.+)$", re.MULTILINE)
 NOTE_FIELD_RE = re.compile(r"- ([a-z0-9][a-z0-9_ /-]*):\s*(.*)")
 TEMPLATE_FIELD_RE = re.compile(r"- ([^:]+):\s*(.*)")
 TEMPLATE_CHECKBOX_RE = re.compile(r"- \[( |x|X)\] (.*)")
@@ -157,6 +161,8 @@ EVIDENCE_NOTE_MANIFEST_VERSION = 1
 EVIDENCE_NOTE_MANIFEST_SOURCE_OF_TRUTH = "markdown-evidence-notes-v1"
 GITHUB_REVIEW_TEMPLATE_MANIFEST_VERSION = 1
 GITHUB_REVIEW_TEMPLATE_MANIFEST_SOURCE_OF_TRUTH = "github-review-templates-v1"
+SEMANTIC_REVIEW_MANIFEST_VERSION = 1
+SEMANTIC_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-semantic-reviews-v1"
 NOTE_SHAPE_TYPED = "typed_sections"
 NOTE_SHAPE_OPAQUE = "opaque_body"
 NOTE_PAYLOAD_FIELDS = "fields"
@@ -169,6 +175,11 @@ REVIEW_TEMPLATE_PAYLOAD_ITEMS = "items"
 REVIEW_TEMPLATE_PAYLOAD_CHECKBOXES = "checkboxes"
 REVIEW_TEMPLATE_PAYLOAD_MARKDOWN = "markdown"
 REVIEW_TEMPLATE_METADATA_KEYS = ("name", "about", "title")
+SEMANTIC_REVIEW_MAP_HEADER = "| technique | current role |"
+SEMANTIC_REVIEW_MAP_DIVIDER = "|---|---|"
+SEMANTIC_REVIEW_QUESTION_PREFIX = "Question: "
+SEMANTIC_REVIEW_OUTCOME_MARKER = "Outcome: "
+SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX = "Overall outcome: "
 GITHUB_REVIEW_TEMPLATE_SPECS = (
     {
         "template_id": "canonical-promotion",
@@ -374,6 +385,48 @@ class GitHubReviewTemplate:
     template_type: str
     metadata: dict[str, str] | None
     sections: tuple[ReviewTemplateSection, ...]
+
+
+@dataclass(frozen=True)
+class SemanticReviewMapEntry:
+    technique_id: str
+    technique_path: str
+    current_role: str
+
+
+@dataclass(frozen=True)
+class SemanticReviewSeam:
+    heading: str
+    question: str
+    analysis_markdown: str
+    outcome: str
+
+
+@dataclass(frozen=True)
+class SemanticReviewContextNote:
+    heading: str
+    markdown: str
+    outcome: str | None
+
+
+@dataclass(frozen=True)
+class SemanticReviewFinding:
+    text: str
+
+
+@dataclass(frozen=True)
+class SemanticReview:
+    review_id: str
+    review_path: str
+    title: str
+    intro_markdown: str
+    map_heading: str
+    map_entries: tuple[SemanticReviewMapEntry, ...]
+    seams: tuple[SemanticReviewSeam, ...]
+    context_notes: tuple[SemanticReviewContextNote, ...]
+    findings: tuple[SemanticReviewFinding, ...]
+    overall_outcome: str
+    next_step_markdown: str
 
 
 @dataclass(frozen=True)
@@ -1327,6 +1380,268 @@ def parse_github_review_templates(repo_root: Path) -> tuple[GitHubReviewTemplate
     return tuple(templates)
 
 
+def semantic_review_id_from_path(review_path: Path) -> str:
+    stem = review_path.stem
+    suffix = "_SEMANTIC_REVIEW"
+    if not stem.endswith(suffix):
+        fail(f"{review_path}: semantic review filename must end with '{suffix}.md'")
+    review_id = stem[: -len(suffix)].lower()
+    if not review_id:
+        fail(f"{review_path}: semantic review filename must include a non-empty review id")
+    return review_id
+
+
+def split_semantic_review_body(
+    review_path: Path, body: str
+) -> tuple[str, tuple[TechniqueSection, ...]]:
+    matches = list(SECTION_RE.finditer(body))
+    if not matches:
+        fail(f"{review_path}: semantic review doc must include top-level '## ' sections")
+
+    intro_markdown = normalize_section_markdown(body[: matches[0].start()])
+    sections: list[TechniqueSection] = []
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+        sections.append(
+            TechniqueSection(
+                heading=match.group(1).strip(),
+                markdown=normalize_section_markdown(body[start:end]),
+            )
+        )
+
+    return intro_markdown, tuple(sections)
+
+
+def extract_last_outcome(markdown: str) -> str | None:
+    matches = list(re.finditer(r"Outcome:\s*(.+)", markdown))
+    if not matches:
+        return None
+    return matches[-1].group(1).strip()
+
+
+def parse_semantic_review_map_entries(
+    review_path: Path, repo_root: Path, map_markdown: str
+) -> tuple[SemanticReviewMapEntry, ...]:
+    lines = [line.rstrip() for line in map_markdown.splitlines() if line.strip()]
+    if len(lines) < 3:
+        fail(f"{review_path}: semantic review map must include a header, divider, and one row")
+    if lines[0] != SEMANTIC_REVIEW_MAP_HEADER:
+        fail(
+            f"{review_path}: semantic review map must start with exact header "
+            f"'{SEMANTIC_REVIEW_MAP_HEADER}'"
+        )
+    if lines[1] != SEMANTIC_REVIEW_MAP_DIVIDER:
+        fail(
+            f"{review_path}: semantic review map must use exact divider "
+            f"'{SEMANTIC_REVIEW_MAP_DIVIDER}'"
+        )
+
+    entries: list[SemanticReviewMapEntry] = []
+    row_re = re.compile(r"^\| \[([A-Za-z0-9-]+)\]\(([^)]+)\) \| (.+) \|$")
+    for row_order, line in enumerate(lines[2:], start=1):
+        match = row_re.fullmatch(line)
+        if match is None:
+            fail(f"{review_path}: semantic review map row {row_order} is malformed")
+        technique_id = match.group(1).strip()
+        target = match.group(2).strip()
+        current_role = match.group(3).strip()
+        if not current_role:
+            fail(f"{review_path}: semantic review map row {row_order} must include current role")
+
+        resolved_target = review_path.parent.joinpath(*PurePosixPath(target).parts).resolve()
+        try:
+            technique_path = resolved_target.relative_to(repo_root.resolve()).as_posix()
+        except ValueError:
+            fail(
+                f"{review_path}: semantic review map row {row_order} points outside the repo: "
+                f"'{target}'"
+            )
+        if not resolved_target.is_file():
+            fail(
+                f"{review_path}: semantic review map row {row_order} points to missing file "
+                f"'{target}'"
+            )
+
+        entries.append(
+            SemanticReviewMapEntry(
+                technique_id=technique_id,
+                technique_path=technique_path,
+                current_role=current_role,
+            )
+        )
+
+    return tuple(entries)
+
+
+def parse_semantic_review_seams(
+    review_path: Path, seam_markdown: str
+) -> tuple[SemanticReviewSeam, ...]:
+    matches = list(SUBSECTION_RE.finditer(seam_markdown))
+    if not matches:
+        fail(f"{review_path}: semantic review '## Seam Review' must include '### ' subsections")
+
+    intro = normalize_section_markdown(seam_markdown[: matches[0].start()])
+    if intro:
+        fail(f"{review_path}: semantic review '## Seam Review' must not include prose before seams")
+
+    seams: list[SemanticReviewSeam] = []
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(seam_markdown)
+        heading = match.group(1).strip()
+        body_markdown = normalize_section_markdown(seam_markdown[start:end])
+        if not body_markdown:
+            fail(f"{review_path}: semantic review seam '{heading}' must not be empty")
+
+        lines = body_markdown.splitlines()
+        nonblank_indexes = [line_index for line_index, line in enumerate(lines) if line.strip()]
+        if not nonblank_indexes:
+            fail(f"{review_path}: semantic review seam '{heading}' must contain a question")
+        question_index = nonblank_indexes[0]
+        question_line = lines[question_index].strip()
+        if not question_line.startswith(SEMANTIC_REVIEW_QUESTION_PREFIX):
+            fail(
+                f"{review_path}: semantic review seam '{heading}' must start with "
+                f"'{SEMANTIC_REVIEW_QUESTION_PREFIX}'"
+            )
+        question = question_line[len(SEMANTIC_REVIEW_QUESTION_PREFIX) :].strip()
+        if not question:
+            fail(f"{review_path}: semantic review seam '{heading}' question must not be empty")
+
+        analysis_markdown = normalize_section_markdown("\n".join(lines[question_index + 1 :]))
+        if not analysis_markdown:
+            fail(f"{review_path}: semantic review seam '{heading}' must include analysis markdown")
+        outcome = extract_last_outcome(analysis_markdown)
+        if outcome is None:
+            fail(
+                f"{review_path}: semantic review seam '{heading}' must include an "
+                f"'{SEMANTIC_REVIEW_OUTCOME_MARKER}' marker"
+            )
+
+        seams.append(
+            SemanticReviewSeam(
+                heading=heading,
+                question=question,
+                analysis_markdown=analysis_markdown,
+                outcome=outcome,
+            )
+        )
+
+    return tuple(seams)
+
+
+def parse_semantic_review_findings(
+    review_path: Path, findings_markdown: str
+) -> tuple[tuple[SemanticReviewFinding, ...], str]:
+    lines = findings_markdown.splitlines()
+    top_level_indexes = top_level_meaningful_indexes(lines)
+    if len(top_level_indexes) < 2:
+        fail(
+            f"{review_path}: semantic review '## Findings' must include bullet findings and "
+            f"'{SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX}'"
+        )
+
+    last_index = top_level_indexes[-1]
+    overall_line = lines[last_index].strip()
+    if not overall_line.startswith(SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX):
+        fail(
+            f"{review_path}: semantic review '## Findings' must end with "
+            f"'{SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX}'"
+        )
+    overall_outcome = overall_line[len(SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX) :].strip()
+    if not overall_outcome:
+        fail(f"{review_path}: semantic review overall outcome must not be empty")
+
+    findings: list[SemanticReviewFinding] = []
+    item_indexes = top_level_indexes[:-1]
+    for order, start_index in enumerate(item_indexes, start=1):
+        line = lines[start_index]
+        if not line.startswith("- "):
+            fail(
+                f"{review_path}: semantic review findings must use top-level '- ' bullets before "
+                f"the overall outcome"
+            )
+        end_index = item_indexes[order] if order < len(item_indexes) else last_index
+        chunk_lines = lines[start_index:end_index]
+        text = item_text_markdown(chunk_lines[0][2:].strip(), chunk_lines[1:])
+        if not text:
+            fail(f"{review_path}: semantic review finding {order} must not be empty")
+        findings.append(SemanticReviewFinding(text=text))
+
+    return tuple(findings), overall_outcome
+
+
+def parse_semantic_review_file(review_path: Path, repo_root: Path) -> SemanticReview:
+    title, lines, title_index = parse_titled_markdown_file(review_path, "semantic review")
+    review_id = semantic_review_id_from_path(review_path)
+    review_path_str = review_path.relative_to(repo_root).as_posix()
+    body = "\n".join(lines[title_index + 1 :])
+
+    intro_markdown, sections = split_semantic_review_body(review_path, body)
+    if len(sections) < 4:
+        fail(
+            f"{review_path}: semantic review doc must include map, seam review, findings, and "
+            f"next step sections"
+        )
+
+    headings = [section.heading for section in sections]
+    if not headings[0].endswith(" Map"):
+        fail(f"{review_path}: first semantic review section must end with ' Map'")
+    if headings[1] != "Seam Review":
+        fail(f"{review_path}: second semantic review section must be '## Seam Review'")
+    if headings[-2] != "Findings":
+        fail(f"{review_path}: penultimate semantic review section must be '## Findings'")
+    if headings[-1] != "Next Step":
+        fail(f"{review_path}: final semantic review section must be '## Next Step'")
+    if headings.count("Findings") != 1:
+        fail(f"{review_path}: semantic review doc must contain exactly one '## Findings'")
+    if headings.count("Next Step") != 1:
+        fail(f"{review_path}: semantic review doc must contain exactly one '## Next Step'")
+
+    map_section = sections[0]
+    seam_section = sections[1]
+    context_sections = sections[2:-2]
+    findings_section = sections[-2]
+    next_step_section = sections[-1]
+
+    map_entries = parse_semantic_review_map_entries(review_path, repo_root, map_section.markdown)
+    seams = parse_semantic_review_seams(review_path, seam_section.markdown)
+    context_notes = tuple(
+        SemanticReviewContextNote(
+            heading=section.heading,
+            markdown=section.markdown,
+            outcome=extract_last_outcome(section.markdown),
+        )
+        for section in context_sections
+    )
+    findings, overall_outcome = parse_semantic_review_findings(
+        review_path, findings_section.markdown
+    )
+
+    return SemanticReview(
+        review_id=review_id,
+        review_path=review_path_str,
+        title=title,
+        intro_markdown=intro_markdown,
+        map_heading=map_section.heading,
+        map_entries=map_entries,
+        seams=seams,
+        context_notes=context_notes,
+        findings=findings,
+        overall_outcome=overall_outcome,
+        next_step_markdown=next_step_section.markdown,
+    )
+
+
+def parse_semantic_reviews(repo_root: Path) -> tuple[SemanticReview, ...]:
+    review_paths = sorted(
+        (repo_root / "docs").glob("*_SEMANTIC_REVIEW.md"),
+        key=lambda path: path.relative_to(repo_root).as_posix(),
+    )
+    return tuple(parse_semantic_review_file(path, repo_root) for path in review_paths)
+
+
 def validate_stage1_files(repo_root: Path) -> None:
     for relative_path in REQUIRED_STAGE1_FILES:
         target = repo_root / relative_path
@@ -1980,6 +2295,122 @@ def project_min_github_review_template_manifest(full_manifest: dict[str, Any]) -
     }
 
 
+def semantic_review_scope_payload() -> dict[str, Any]:
+    return {
+        "map": {
+            "first_section_suffix": "Map",
+            "table_header": ["technique", "current role"],
+        },
+        "seams": {
+            "section_heading": "Seam Review",
+            "subsection_level": "###",
+            "question_prefix": SEMANTIC_REVIEW_QUESTION_PREFIX,
+            "outcome_marker": SEMANTIC_REVIEW_OUTCOME_MARKER,
+        },
+        "findings": {
+            "section_heading": "Findings",
+            "overall_outcome_prefix": SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX,
+        },
+        "next_step": {
+            "section_heading": "Next Step",
+        },
+    }
+
+
+def full_semantic_review_manifest_entry(review: SemanticReview) -> dict[str, Any]:
+    return {
+        "review_id": review.review_id,
+        "review_path": review.review_path,
+        "title": review.title,
+        "intro_markdown": review.intro_markdown,
+        "map_heading": review.map_heading,
+        "map_entries": [
+            {
+                "order": order,
+                "technique_id": entry.technique_id,
+                "technique_path": entry.technique_path,
+                "current_role": entry.current_role,
+            }
+            for order, entry in enumerate(review.map_entries, start=1)
+        ],
+        "seams": [
+            {
+                "heading": seam.heading,
+                "order": order,
+                "question": seam.question,
+                "analysis_markdown": seam.analysis_markdown,
+                "outcome": seam.outcome,
+            }
+            for order, seam in enumerate(review.seams, start=1)
+        ],
+        "context_notes": [
+            {
+                "heading": note.heading,
+                "order": order,
+                "markdown": note.markdown,
+                "outcome": note.outcome,
+            }
+            for order, note in enumerate(review.context_notes, start=1)
+        ],
+        "findings": [
+            {
+                "order": order,
+                "text": finding.text,
+            }
+            for order, finding in enumerate(review.findings, start=1)
+        ],
+        "overall_outcome": review.overall_outcome,
+        "next_step_markdown": review.next_step_markdown,
+    }
+
+
+def project_min_semantic_review_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "review_scope": full_manifest["review_scope"],
+        "reviews": [
+            {
+                "review_id": review["review_id"],
+                "review_path": review["review_path"],
+                "title": review["title"],
+                "intro_present": review["intro_markdown"] != "",
+                "map_heading": review["map_heading"],
+                "map_entries": [
+                    {
+                        "order": entry["order"],
+                        "technique_id": entry["technique_id"],
+                        "technique_path": entry["technique_path"],
+                    }
+                    for entry in review["map_entries"]
+                ],
+                "seams": [
+                    {
+                        "heading": seam["heading"],
+                        "order": seam["order"],
+                        "question_present": seam["question"] != "",
+                        "outcome": seam["outcome"],
+                    }
+                    for seam in review["seams"]
+                ],
+                "context_notes": [
+                    {
+                        "heading": note["heading"],
+                        "order": note["order"],
+                        "outcome_present": note["outcome"] is not None,
+                        **({"outcome": note["outcome"]} if note["outcome"] is not None else {}),
+                    }
+                    for note in review["context_notes"]
+                ],
+                "finding_count": len(review["findings"]),
+                "overall_outcome": review["overall_outcome"],
+                "next_step_present": review["next_step_markdown"] != "",
+            }
+            for review in full_manifest["reviews"]
+        ],
+    }
+
+
 def build_catalog_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -2062,6 +2493,19 @@ def build_github_review_template_manifest_payloads(
         ],
     }
     return full_manifest, project_min_github_review_template_manifest(full_manifest)
+
+
+def build_semantic_review_manifest_payloads(
+    repo_root: Path,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    reviews = parse_semantic_reviews(repo_root)
+    full_manifest = {
+        "manifest_version": SEMANTIC_REVIEW_MANIFEST_VERSION,
+        "source_of_truth": SEMANTIC_REVIEW_MANIFEST_SOURCE_OF_TRUTH,
+        "review_scope": semantic_review_scope_payload(),
+        "reviews": [full_semantic_review_manifest_entry(review) for review in reviews],
+    }
+    return full_manifest, project_min_semantic_review_manifest(full_manifest)
 
 
 def selection_technique_link(entry: dict[str, Any]) -> str:
@@ -2476,6 +2920,30 @@ def validate_github_review_template_manifests(repo_root: Path) -> None:
         )
 
 
+def validate_semantic_review_manifests(repo_root: Path) -> None:
+    full_path = repo_root / "generated" / "semantic_review_manifest.json"
+    min_path = repo_root / "generated" / "semantic_review_manifest.min.json"
+
+    expected_full, expected_min = build_semantic_review_manifest_payloads(repo_root)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated semantic review manifest is out of date; "
+            f"run 'python scripts/build_semantic_review_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated semantic review min manifest is out of date; "
+            f"run 'python scripts/build_semantic_review_manifest.py'"
+        )
+
+    projected_min = project_min_semantic_review_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min semantic review manifest must stay a projection of the full manifest")
+
+
 def validate_selection_surface(repo_root: Path) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -2511,6 +2979,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_example_manifests(repo_root, records)
     validate_evidence_note_manifests(repo_root, records)
     validate_github_review_template_manifests(repo_root)
+    validate_semantic_review_manifests(repo_root)
     validate_selection_surface(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -2529,6 +2998,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated example manifest parity")
     print("[ok] validated generated evidence note manifest parity")
     print("[ok] validated generated GitHub review template manifest parity")
+    print("[ok] validated generated semantic review manifest parity")
     print("[ok] validated generated selection surface parity")
 
 
