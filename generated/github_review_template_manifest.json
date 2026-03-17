@@ -1,0 +1,540 @@
+{
+  "manifest_version": 1,
+  "source_of_truth": "github-review-templates-v1",
+  "template_scopes": {
+    "canonical-promotion": {
+      "template_type": "issue_template",
+      "section_scope": [
+        "Technique",
+        "Review Contract",
+        "Default-Use Rationale",
+        "Reuse Beyond Origin",
+        "Stronger Validation Than Initial Promotion Baseline",
+        "Adaptation Boundary Check",
+        "Public-Safety Recheck",
+        "Recommendation"
+      ]
+    },
+    "external-import-review": {
+      "template_type": "issue_template",
+      "section_scope": [
+        "Source",
+        "Proposed technique",
+        "Adaptation summary",
+        "Validation and reuse",
+        "Public-safety review"
+      ]
+    },
+    "technique-proposal": {
+      "template_type": "issue_template",
+      "section_scope": [
+        "Summary",
+        "Why it belongs here",
+        "Evidence and validation",
+        "Public safety",
+        "Expected contribution shape"
+      ]
+    },
+    "pull-request-template": {
+      "template_type": "pull_request_template",
+      "section_scope": [
+        "Summary",
+        "Validation",
+        "Notes",
+        "Checklist"
+      ]
+    }
+  },
+  "templates": [
+    {
+      "template_id": "canonical-promotion",
+      "template_path": ".github/ISSUE_TEMPLATE/canonical-promotion.md",
+      "template_type": "issue_template",
+      "sections": [
+        {
+          "heading": "Technique",
+          "order": 1,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "id",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "name",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "current status",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Review Contract",
+          "order": 2,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "proposed outcome",
+              "value_markdown": "approve for canonical promotion or defer for now"
+            },
+            {
+              "order": 2,
+              "key": "bounded scope where this would be the default",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Default-Use Rationale",
+          "order": 3,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "default-use rationale",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "when a non-default alternative is still better",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Reuse Beyond Origin",
+          "order": 4,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "origin evidence",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "second context or broader reuse evidence",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Stronger Validation Than Initial Promotion Baseline",
+          "order": 5,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "example, checklist, or stronger validation reviewed",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "supporting note paths",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Adaptation Boundary Check",
+          "order": 6,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "invariant core remains clear",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "project-shaped details stay subordinate",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Public-Safety Recheck",
+          "order": 7,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "sanitization still holds",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "private paths, URLs, or operational details removed",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "remaining public-safety concerns",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Recommendation",
+          "order": 8,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "recommended result",
+              "value_markdown": "approve for canonical promotion or defer for now"
+            },
+            {
+              "order": 2,
+              "key": "remaining gaps, if deferred",
+              "value_markdown": ""
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "name": "Canonical promotion review",
+        "about": "Review whether an existing technique should move to canonical",
+        "title": "canonical review: "
+      }
+    },
+    {
+      "template_id": "external-import-review",
+      "template_path": ".github/ISSUE_TEMPLATE/external-import-review.md",
+      "template_type": "issue_template",
+      "sections": [
+        {
+          "heading": "Source",
+          "order": 1,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "source_repo",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "source_license",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "inspired_by",
+              "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "adapted_from",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Proposed technique",
+          "order": 2,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "proposed technique name",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "target domain",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "linked `TECHNIQUE.md`, if drafted",
+              "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "linked `EXTERNAL_ORIGIN` note, if drafted",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Adaptation summary",
+          "order": 3,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "what_changed",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "invariant core kept",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "project-shaped details removed or generalized",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Validation and reuse",
+          "order": 4,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "why this is reusable here",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "example, checklist, or validation path",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "remaining adaptation risks",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Public-safety review",
+          "order": 5,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "secrets or tokens removed",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "private URLs, IDs, or paths removed",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "environment-specific assumptions generalized",
+              "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "remaining public-safety concerns",
+              "value_markdown": ""
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "name": "External import review",
+        "about": "Review a technique adapted from an external open-source source",
+        "title": "external import review: "
+      }
+    },
+    {
+      "template_id": "technique-proposal",
+      "template_path": ".github/ISSUE_TEMPLATE/technique-proposal.md",
+      "template_type": "issue_template",
+      "sections": [
+        {
+          "heading": "Summary",
+          "order": 1,
+          "payload_type": "markdown",
+          "markdown": "Describe the proposed technique in 2-4 sentences."
+        },
+        {
+          "heading": "Why it belongs here",
+          "order": 2,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "problem it solves",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "who can reuse it",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "why it is more than a project-specific workaround",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Evidence and validation",
+          "order": 3,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "origin project or origin practice",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "reuse evidence beyond the origin, if any",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "example, checklist, smoke, or validation path",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Public safety",
+          "order": 4,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "secrets, tokens, or private URLs removed",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "private infrastructure details generalized",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "remaining public-safety concerns",
+              "value_markdown": ""
+            }
+          ]
+        },
+        {
+          "heading": "Expected contribution shape",
+          "order": 5,
+          "payload_type": "fields",
+          "fields": [
+            {
+              "order": 1,
+              "key": "canonical `TECHNIQUE.md`",
+              "value_markdown": ""
+            },
+            {
+              "order": 2,
+              "key": "supporting `examples/`, `checks/`, or `notes/`",
+              "value_markdown": ""
+            },
+            {
+              "order": 3,
+              "key": "current maturity target",
+              "value_markdown": ""
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "name": "Technique proposal",
+        "about": "Propose a new public reusable technique for the repository",
+        "title": "technique proposal: "
+      }
+    },
+    {
+      "template_id": "pull-request-template",
+      "template_path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "template_type": "pull_request_template",
+      "sections": [
+        {
+          "heading": "Summary",
+          "order": 1,
+          "payload_type": "items",
+          "items": [
+            {
+              "order": 1,
+              "text": "what changed:"
+            },
+            {
+              "order": 2,
+              "text": "why:"
+            }
+          ]
+        },
+        {
+          "heading": "Validation",
+          "order": 2,
+          "payload_type": "items",
+          "items": [
+            {
+              "order": 1,
+              "text": "checks, smoke, or review steps run:"
+            },
+            {
+              "order": 2,
+              "text": "anything intentionally not validated:"
+            }
+          ]
+        },
+        {
+          "heading": "Notes",
+          "order": 3,
+          "payload_type": "items",
+          "items": [
+            {
+              "order": 1,
+              "text": "linked issue, if any:"
+            },
+            {
+              "order": 2,
+              "text": "related note or template included, if needed:"
+            }
+          ]
+        },
+        {
+          "heading": "Checklist",
+          "order": 4,
+          "payload_type": "checkboxes",
+          "checkboxes": [
+            {
+              "order": 1,
+              "text": "The change is reusable, sanitized, and safe for public review.",
+              "checked": false
+            },
+            {
+              "order": 2,
+              "text": "The diff is bounded and does not include unrelated cleanup.",
+              "checked": false
+            },
+            {
+              "order": 3,
+              "text": "Validation or review steps are named explicitly.",
+              "checked": false
+            },
+            {
+              "order": 4,
+              "text": "A canonical `TECHNIQUE.md` is present or updated when required.",
+              "checked": false
+            },
+            {
+              "order": 5,
+              "text": "Relevant supporting notes or templates are included when needed, such as promotion, adaptation, or external-origin evidence.",
+              "checked": false
+            },
+            {
+              "order": 6,
+              "text": "No security-sensitive material is being disclosed publicly.",
+              "checked": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
