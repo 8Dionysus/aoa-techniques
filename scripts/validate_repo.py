@@ -38,7 +38,67 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
 )
-REQUIRED_SELECTION_FILES = ("docs/TECHNIQUE_SELECTION.md",)
+REQUIRED_SELECTION_FILES = (
+    "docs/TECHNIQUE_SELECTION.md",
+    "docs/SELECTION_PATTERNS.md",
+)
+SELECTION_REVIEW_DOCS = {
+    "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
+    "evaluation_chain": "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
+    "docs_boundary": "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
+}
+WORKING_SET_SPECS = (
+    {
+        "title": "Published-summary cluster",
+        "technique_ids": ("AOA-T-0006", "AOA-T-0008", "AOA-T-0010", "AOA-T-0011"),
+        "review_doc": SELECTION_REVIEW_DOCS["published_summary"],
+        "note": "Storage, remediation, integrity, and rendering policy for published summary systems.",
+    },
+    {
+        "title": "Evaluation-chain pair",
+        "technique_ids": ("AOA-T-0003", "AOA-T-0007"),
+        "review_doc": SELECTION_REVIEW_DOCS["evaluation_chain"],
+        "note": "Summary-contract production plus staged promotion from observation to narrow enforcement.",
+    },
+    {
+        "title": "Docs boundary pair",
+        "technique_ids": ("AOA-T-0002", "AOA-T-0009"),
+        "review_doc": SELECTION_REVIEW_DOCS["docs_boundary"],
+        "note": "Repository-wide document-role layout plus lightweight entrypoint snapshot discipline.",
+    },
+)
+COMMON_MOVE_SPECS = (
+    (
+        "I have a summary producer and need history/trend-safe storage",
+        "AOA-T-0006",
+        "Natural next move after a stable summary contract such as `AOA-T-0003`.",
+    ),
+    (
+        "I already publish summaries and need one remediation backlog",
+        "AOA-T-0008",
+        "Use when several latest summaries should collapse into one bounded follow-up surface.",
+    ),
+    (
+        "I already publish summaries and need one trust verdict",
+        "AOA-T-0010",
+        "Use when several consumers should not duplicate integrity checks independently.",
+    ),
+    (
+        "I need strict-vs-optional rendering policy",
+        "AOA-T-0011",
+        "Use when supporting summaries should stay visible but non-fatal in one consumer.",
+    ),
+    (
+        "I need doc-role separation",
+        "AOA-T-0002",
+        "Start here when the repository needs explicit canonical homes and update-routing rules.",
+    ),
+    (
+        "I need top-level docs to stay short",
+        "AOA-T-0009",
+        "Inspect alongside `AOA-T-0002` when entrypoint docs start duplicating operational detail.",
+    ),
+)
 
 SECTION_STATUS = {
     "Canonical techniques": "canonical",
@@ -872,6 +932,101 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
+    entries = list(full_catalog["techniques"])
+    entries_by_id = {entry["id"]: entry for entry in entries}
+    canonical_by_domain: dict[str, list[dict[str, Any]]] = {domain: [] for domain in DOMAIN_ORDER}
+
+    for entry in entries:
+        if entry["status"] == "canonical":
+            canonical_by_domain[entry["domain"]].append(entry)
+
+    start_notes = {
+        "agent-workflows": "Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized.",
+        "docs": "Start with the canonical document-role layout, then inspect the docs boundary pair if top-level summaries begin duplicating canonical detail.",
+        "evaluation": "Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear.",
+    }
+
+    lines = [
+        "# Selection Patterns",
+        "",
+        "This file is generated from `../generated/technique_catalog.json`, current direct `relations`, and a bounded in-repo mapping of review-backed working sets.",
+        "Do not edit it by hand; run `python scripts/build_catalog.py`.",
+        "",
+        "Use this surface when the flat adjacency list in `TECHNIQUE_SELECTION.md` is not enough and you want one bounded answer to:",
+        '- "What nearby technique should I inspect next, and why?"',
+        "",
+        "This surface uses direct relation navigation and review-backed clusters only. It does not do graph search, scoring, or multi-hop reasoning.",
+        "",
+        "See also:",
+        "- [Technique Selection](TECHNIQUE_SELECTION.md)",
+        "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
+        "- [Full catalog JSON](../generated/technique_catalog.json)",
+        "",
+        "## Starting Points",
+        "",
+        "| domain | canonical defaults | start here |",
+        "|---|---|---|",
+    ]
+
+    for domain in DOMAIN_ORDER:
+        defaults = ", ".join(selection_technique_link(entry) for entry in canonical_by_domain[domain])
+        lines.append(
+            f"| `{domain}` | {defaults or '-'} | {escape_markdown_table_cell(start_notes[domain])} |"
+        )
+
+    lines.extend(["", "## Working Sets", ""])
+
+    for spec in WORKING_SET_SPECS:
+        linked_techniques = ", ".join(
+            selection_technique_link(entries_by_id[technique_id]) for technique_id in spec["technique_ids"]
+        )
+        review_doc_name = Path(spec["review_doc"]).name
+        lines.extend(
+            [
+                f"### {spec['title']}",
+                "",
+                f"- Techniques: {linked_techniques}",
+                f"- Review: [{review_doc_name}]({review_doc_name})",
+                f"- Why grouped: {spec['note']}",
+                "",
+            ]
+        )
+
+    lines.extend(
+        [
+            "## Common Moves",
+            "",
+            "| situation | inspect next | why |",
+            "|---|---|---|",
+        ]
+    )
+
+    for prompt, technique_id, note in COMMON_MOVE_SPECS:
+        lines.append(
+            "| "
+            f"{escape_markdown_table_cell(prompt)} | "
+            f"{selection_technique_link(entries_by_id[technique_id])} | "
+            f"{escape_markdown_table_cell(note)} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Relation Notes",
+            "",
+            "- `requires` means one technique usually depends on another contract already existing.",
+            "- `complements` means two techniques commonly strengthen each other without collapsing into one pattern.",
+            "- `used_together_for` means the pair commonly appears in the same operating path, even if one does not strictly depend on the other.",
+            "- `shares_contract_with` means neighboring techniques rely on the same bounded contract but still do different work.",
+            "- This surface uses direct relation hints only. It does not do graph traversal, ranking, or multi-hop inference.",
+            "",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
 def write_json_file(path: Path, payload: Any, compact: bool) -> None:
     if compact:
         encoded = json.dumps(payload, ensure_ascii=True, separators=(",", ":"))
@@ -931,14 +1086,22 @@ def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_st
 
 def validate_selection_surface(repo_root: Path) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
+    patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
     full_path = repo_root / "generated" / "technique_catalog.json"
 
-    expected = build_selection_surface_markdown(read_json(full_path))
+    full_catalog = read_json(full_path)
+    expected = build_selection_surface_markdown(full_catalog)
+    expected_patterns = build_selection_patterns_markdown(full_catalog)
     actual = read_text(selection_path)
+    actual_patterns = read_text(patterns_path)
 
     if actual != expected:
         fail(
             f"{selection_path}: generated selection surface is out of date; run 'python scripts/build_catalog.py'"
+        )
+    if actual_patterns != expected_patterns:
+        fail(
+            f"{patterns_path}: generated selection patterns surface is out of date; run 'python scripts/build_catalog.py'"
         )
 
 
