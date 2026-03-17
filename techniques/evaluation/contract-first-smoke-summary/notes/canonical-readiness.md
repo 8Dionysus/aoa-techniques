@@ -5,7 +5,7 @@
 - name: contract-first-smoke-summary
 
 ## Verdict
-- ready for canonical review
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence: `atm10-agent` documents the summary-first producer contract across multiple smoke families with stable `--summary-json` outputs and explicit summary-based acceptance behavior
@@ -27,4 +27,4 @@
 - a future third live context would widen the proof surface further, but it is not required before a first canonical review of this bounded producer-layer contract
 
 ## Recommendation
-- reopen `AOA-T-0003` for `promoted -> canonical` review in a dedicated next wave; the current support surfaces now make it read as the natural default producer contract within its bounded scope
+- approve `AOA-T-0003` for `promoted -> canonical` in this wave; the current support surfaces now make it read as the natural default producer contract within its bounded scope without widening into storage, rollout, or downstream helper semantics

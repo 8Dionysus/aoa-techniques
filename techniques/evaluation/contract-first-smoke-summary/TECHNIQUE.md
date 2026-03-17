@@ -2,7 +2,7 @@
 id: AOA-T-0003
 name: contract-first-smoke-summary
 domain: evaluation
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/RUNBOOK.md
@@ -15,7 +15,7 @@ tags:
   - contracts
   - ci
 summary: Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract.
-maturity_score: 4
+maturity_score: 5
 rigor_level: strict
 reversibility: moderate
 review_required: true
@@ -148,6 +148,7 @@ See `checks/summary-contract-checklist.md`.
 - born in `atm10-agent`
 - validated across multiple smoke paths that publish structured summary artifacts for CI and operator use
 - promoted to `aoa-techniques` on 2026-03-13
+- approved for `canonical` in `aoa-techniques` on 2026-03-16 after stronger multi-family producer evidence, bounded second-context reinforcement, and a fresh public-safety recheck
 
 ## Future evolution
 
