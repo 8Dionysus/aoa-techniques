@@ -27,12 +27,14 @@ Please make sure:
 - the technique has a clear purpose
 - the technique includes a canonical `TECHNIQUE.md`
 - examples are public-safe
-- risks are documented
+- risks are documented as failure modes, negative effects, misuse patterns, detection signals, and mitigations
 - validation exists as a check, smoke, or checklist
 - maturity status is set correctly
 - origin is stated clearly
 
 Before opening a PR, run `python -m unittest discover -s tests` and `python scripts/validate_repo.py` to check regression coverage, technique-bundle structure, and `TECHNIQUE_INDEX.md` parity locally.
+
+See `docs/TECHNIQUE_SHADOW_GUIDE.md` for the repo-level shadow-discipline guidance behind the `## Risks` section.
 
 ## External provenance
 

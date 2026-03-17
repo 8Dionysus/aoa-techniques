@@ -64,8 +64,25 @@ List invariants, rules, interfaces, or expectations.
 
 ## Risks
 
-- risk 1
-- risk 2
+### Failure modes
+
+- how the contract can break
+
+### Negative effects
+
+- what the technique worsens even when it appears to work
+
+### Misuse patterns
+
+- how the technique gets applied outside its bounded role
+
+### Detection signals
+
+- what early signals show drift or false-success
+
+### Mitigations
+
+- how to narrow, roll back, or contain the damage
 
 ## Validation
 

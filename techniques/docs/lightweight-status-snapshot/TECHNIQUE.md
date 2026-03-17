@@ -87,10 +87,34 @@ Keep repository entrypoint status easy to scan by turning top-level status docs 
 
 ## Risks
 
-- making the snapshot so short that it stops being useful for orientation
-- keeping stale links after the canonical doc map evolves
-- allowing new summary prose to drift back into `README` and `MANIFEST`
-- confusing lightweight summaries with a complete operational record
+### Failure modes
+
+- the snapshot becomes so thin that it no longer gives enough orientation to send readers to the right canonical detail
+- outward links go stale after the canonical doc map evolves, so the snapshot keeps pointing to the wrong current-state surfaces
+
+### Negative effects
+
+- excessive trimming can make operational truth harder to find even while the entrypoint docs look cleaner
+- the snapshot can hide active gaps in status hygiene by removing detail faster than the repository learns where that detail should live
+
+### Misuse patterns
+
+- using the technique as a reason to delete detail instead of routing it to canonical homes
+- treating `README` or `MANIFEST` cleanliness as the goal by itself, even when navigability and current-state orientation get worse
+
+### Detection signals
+
+- new readers can tell that the entrypoint docs are short, but still cannot find the current detailed status quickly
+- links from the snapshot stop resolving to the latest `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, or session detail
+- teams keep re-adding summary prose to `README` or `MANIFEST` because the snapshot no longer feels sufficient for orientation
+- the entrypoint docs look clean, but operators still need to ask around to learn where real operational truth now lives
+
+### Mitigations
+
+- restore just enough orientation context to make the snapshot navigable before adding back long chronology
+- fix or rotate canonical links whenever the doc map changes
+- move removed detail into explicit canonical homes instead of dropping it entirely
+- treat repeated confusion about where current truth lives as a signal to strengthen routing, not to turn the snapshot back into a log
 
 ## Validation
 
