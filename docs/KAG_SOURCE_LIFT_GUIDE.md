@@ -4,7 +4,7 @@ This guide defines the first bounded repo-level contract for `canonical techniqu
 
 Use it when the repository already looks strong as structured markdown, but the next question is how to lift that source into later KAG-friendly outputs without pretending the repo is already a graph platform or section-level schema.
 
-This guide is source-first. It does not add new schema fields, generated KAG artifacts, or bundle-level section IDs.
+This guide is source-first. It allows one bounded generated lift surface in the section manifest while still avoiding new schema fields, graph behavior, or bundle-level section IDs.
 
 ## What Already Exists
 
@@ -29,6 +29,13 @@ Its job is narrow:
 - preserve the current markdown authority instead of replacing it
 
 This is a source-lift discipline, not a graph engine.
+
+The first implementation-oriented extraction pilot now stays equally narrow:
+
+- `generated/technique_section_manifest.json`
+- `generated/technique_section_manifest.min.json`
+
+Those files stay derived from authoritative markdown and expose only the first 10 KAG target sections. They do not add graph, rationale, search, or scoring behavior.
 
 See also: [FRONTMATTER_METADATA_SPINE_GUIDE.md](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
 See also: [BOUNDED_RELATION_LIFT_GUIDE.md](BOUNDED_RELATION_LIFT_GUIDE.md) for the next bounded family member, which keeps current typed relations explicitly limited to direct-edge lifting rather than graph behavior.
@@ -80,8 +87,8 @@ Not part of this first wave:
 - no bundle-level section IDs
 - no schema or frontmatter expansion
 - no `build_kag` or similar script
-- no generated KAG artifacts
+- no generated KAG artifacts beyond the bounded section manifest
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move is to publish how the current markdown canon can act as upstream for later generated KAG layers. Implementation and extraction can come later as separate bounded techniques.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The first implementation move is the bounded section manifest, with broader extraction still deferred to later techniques.

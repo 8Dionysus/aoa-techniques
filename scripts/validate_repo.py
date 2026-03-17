@@ -25,6 +25,7 @@ REQUIRED_SECTIONS = (
     "Promotion history",
     "Future evolution",
 )
+SECTION_LIFT_HEADINGS = REQUIRED_SECTIONS[:10]
 
 REQUIRED_SUPPORT_DIRS = ("checks", "examples", "notes")
 REQUIRED_STAGE1_FILES = (
@@ -35,8 +36,11 @@ REQUIRED_STAGE1_FILES = (
     "schemas/relation.schema.json",
     "schemas/index-entry.schema.json",
     "scripts/build_catalog.py",
+    "scripts/build_section_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
+    "generated/technique_section_manifest.json",
+    "generated/technique_section_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
@@ -128,10 +132,18 @@ EVIDENCE_KIND_BY_NAME = {
     "external-origin.md": "external_origin",
     "external-import-review.md": "external_review",
 }
+SECTION_MANIFEST_VERSION = 1
+SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
 
 
 class ValidationError(RuntimeError):
     pass
+
+
+@dataclass(frozen=True)
+class TechniqueSection:
+    heading: str
+    markdown: str
 
 
 @dataclass(frozen=True)
@@ -145,6 +157,7 @@ class TechniqueRecord:
     summary: str
     frontmatter: dict[str, Any]
     body: str
+    sections: tuple[TechniqueSection, ...]
 
 
 @dataclass(frozen=True)
@@ -478,11 +491,64 @@ def validate_frontmatter_schema(
     validate_schema_instance(frontmatter, schema, str(technique_path), schema_store)
 
 
-def validate_sections(body: str, technique_path: Path) -> None:
-    present_sections = {match.group(1).strip() for match in SECTION_RE.finditer(body)}
+def normalize_section_markdown(raw_markdown: str) -> str:
+    return raw_markdown.lstrip("\r\n").rstrip()
+
+
+def parse_sections(body: str) -> tuple[TechniqueSection, ...]:
+    matches = list(SECTION_RE.finditer(body))
+    sections: list[TechniqueSection] = []
+
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+        sections.append(
+            TechniqueSection(
+                heading=match.group(1).strip(),
+                markdown=normalize_section_markdown(body[start:end]),
+            )
+        )
+
+    return tuple(sections)
+
+
+def validate_sections(body: str, technique_path: Path) -> tuple[TechniqueSection, ...]:
+    sections = parse_sections(body)
+    present_sections = [section.heading for section in sections]
     for required_section in REQUIRED_SECTIONS:
         if required_section not in present_sections:
             fail(f"{technique_path}: missing required section '## {required_section}'")
+
+    lift_positions: list[int] = []
+    for heading in SECTION_LIFT_HEADINGS:
+        matches = [index for index, section in enumerate(sections) if section.heading == heading]
+        if len(matches) != 1:
+            fail(
+                f"{technique_path}: lift section '## {heading}' must appear exactly once"
+            )
+        lift_positions.extend(matches)
+
+    if lift_positions != sorted(lift_positions):
+        actual_lift_order = [
+            section.heading for section in sections if section.heading in SECTION_LIFT_HEADINGS
+        ]
+        expected = ", ".join(f"'## {heading}'" for heading in SECTION_LIFT_HEADINGS)
+        actual = ", ".join(f"'## {heading}'" for heading in actual_lift_order)
+        fail(
+            f"{technique_path}: lift sections must stay in standard order [{expected}], "
+            f"found [{actual}]"
+        )
+
+    actual_lift_order = [sections[index].heading for index in lift_positions]
+    if tuple(actual_lift_order) != SECTION_LIFT_HEADINGS:
+        expected = ", ".join(f"'## {heading}'" for heading in SECTION_LIFT_HEADINGS)
+        actual = ", ".join(f"'## {heading}'" for heading in actual_lift_order)
+        fail(
+            f"{technique_path}: lift sections must stay in standard order [{expected}], "
+            f"found [{actual}]"
+        )
+
+    return sections
 
 
 def validate_support_dirs(technique_dir: Path) -> None:
@@ -536,7 +602,7 @@ def validate_technique_bundle(
     frontmatter_text, body = split_frontmatter(technique_path)
     frontmatter = parse_frontmatter(frontmatter_text, technique_path)
     validate_frontmatter_schema(frontmatter, technique_path, schema_store)
-    validate_sections(body, technique_path)
+    sections = validate_sections(body, technique_path)
     validate_support_references(body, technique_dir, technique_path)
 
     if frontmatter["domain"] != expected_domain:
@@ -554,6 +620,7 @@ def validate_technique_bundle(
         summary=frontmatter["summary"],
         frontmatter=frontmatter,
         body=body,
+        sections=sections,
     )
 
 
@@ -777,6 +844,44 @@ def min_catalog_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any
     }
 
 
+def full_section_manifest_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any]:
+    sections_by_heading = {section.heading: section for section in record.sections}
+    return {
+        "id": record.id,
+        "technique_path": record.technique_path.relative_to(repo_root).as_posix(),
+        "sections": [
+            {
+                "heading": heading,
+                "order": order,
+                "markdown": sections_by_heading[heading].markdown,
+            }
+            for order, heading in enumerate(SECTION_LIFT_HEADINGS, start=1)
+        ],
+    }
+
+
+def project_min_section_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "section_scope": full_manifest["section_scope"],
+        "techniques": [
+            {
+                "id": technique["id"],
+                "technique_path": technique["technique_path"],
+                "sections": [
+                    {
+                        "heading": section["heading"],
+                        "order": section["order"],
+                    }
+                    for section in technique["sections"]
+                ],
+            }
+            for technique in full_manifest["techniques"]
+        ],
+    }
+
+
 def build_catalog_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -792,6 +897,19 @@ def build_catalog_payloads(
         "techniques": [min_catalog_entry(repo_root, record) for record in sorted_records],
     }
     return full_catalog, min_catalog
+
+
+def build_section_manifest_payloads(
+    repo_root: Path, records: list[TechniqueRecord]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    sorted_records = sorted(records, key=lambda record: record.id)
+    full_manifest = {
+        "manifest_version": SECTION_MANIFEST_VERSION,
+        "source_of_truth": SECTION_MANIFEST_SOURCE_OF_TRUTH,
+        "section_scope": list(SECTION_LIFT_HEADINGS),
+        "techniques": [full_section_manifest_entry(repo_root, record) for record in sorted_records],
+    }
+    return full_manifest, project_min_section_manifest(full_manifest)
 
 
 def selection_technique_link(entry: dict[str, Any]) -> str:
@@ -1084,6 +1202,30 @@ def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_st
         fail(f"{min_path}: min catalog must stay a projection of the full catalog")
 
 
+def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    full_path = repo_root / "generated" / "technique_section_manifest.json"
+    min_path = repo_root / "generated" / "technique_section_manifest.min.json"
+
+    expected_full, expected_min = build_section_manifest_payloads(repo_root, records)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated section manifest is out of date; "
+            f"run 'python scripts/build_section_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated section min manifest is out of date; "
+            f"run 'python scripts/build_section_manifest.py'"
+        )
+
+    projected_min = project_min_section_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min section manifest must stay a projection of the full manifest")
+
+
 def validate_selection_surface(repo_root: Path) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -1114,6 +1256,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_evidence(records)
     validate_relations(records)
     validate_catalogs(repo_root, records, schema_store)
+    validate_section_manifests(repo_root, records)
     validate_selection_surface(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -1127,6 +1270,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated TECHNIQUE_INDEX.md structure and parity")
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
+    print("[ok] validated generated section manifest parity")
     print("[ok] validated generated selection surface parity")
 
 
