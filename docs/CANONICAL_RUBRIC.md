@@ -5,6 +5,14 @@ This document defines the Stage 1 machine-readable fields used in `TECHNIQUE.md`
 Markdown stays authoritative.
 `generated/technique_catalog.json` and `generated/technique_catalog.min.json` are derived outputs built from tracked markdown plus `schemas/`.
 
+## Metadata And Canonical Review
+
+Stage 1 metadata can inform selection and canonical review, but it does not replace explicit review judgment.
+
+- frontmatter fields help reviewers understand maturity, validation posture, and publication safety
+- they do not auto-promote a technique to `canonical`
+- `promoted -> canonical` decisions should follow the bounded review contract in [CANONICAL_REVIEW_GUIDE.md](CANONICAL_REVIEW_GUIDE.md)
+
 ## Field meanings
 
 | field | meaning |
