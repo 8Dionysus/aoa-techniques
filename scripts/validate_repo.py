@@ -40,6 +40,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_checklist_manifest.py",
     "scripts/build_example_manifest.py",
     "scripts/build_evidence_note_manifest.py",
+    "scripts/build_github_review_template_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_section_manifest.json",
@@ -50,6 +51,8 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_example_manifest.min.json",
     "generated/technique_evidence_note_manifest.json",
     "generated/technique_evidence_note_manifest.min.json",
+    "generated/github_review_template_manifest.json",
+    "generated/github_review_template_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
@@ -135,6 +138,8 @@ SUPPORT_PATH_RE = re.compile(r"(?<!\w)(?:checks|examples|notes)/[A-Za-z0-9._/-]+
 FRONTMATTER_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n?", re.DOTALL)
 SECTION_RE = re.compile(r"^## (.+)$", re.MULTILINE)
 NOTE_FIELD_RE = re.compile(r"- ([a-z0-9][a-z0-9_ /-]*):\s*(.*)")
+TEMPLATE_FIELD_RE = re.compile(r"- ([^:]+):\s*(.*)")
+TEMPLATE_CHECKBOX_RE = re.compile(r"- \[( |x|X)\] (.*)")
 EVIDENCE_KIND_BY_NAME = {
     "origin-evidence.md": "origin_evidence",
     "second-context-adaptation.md": "second_context",
@@ -150,11 +155,72 @@ EXAMPLE_MANIFEST_VERSION = 1
 EXAMPLE_MANIFEST_SOURCE_OF_TRUTH = "markdown-examples-v1"
 EVIDENCE_NOTE_MANIFEST_VERSION = 1
 EVIDENCE_NOTE_MANIFEST_SOURCE_OF_TRUTH = "markdown-evidence-notes-v1"
+GITHUB_REVIEW_TEMPLATE_MANIFEST_VERSION = 1
+GITHUB_REVIEW_TEMPLATE_MANIFEST_SOURCE_OF_TRUTH = "github-review-templates-v1"
 NOTE_SHAPE_TYPED = "typed_sections"
 NOTE_SHAPE_OPAQUE = "opaque_body"
 NOTE_PAYLOAD_FIELDS = "fields"
 NOTE_PAYLOAD_ITEMS = "items"
 NOTE_PAYLOAD_MARKDOWN = "markdown"
+REVIEW_TEMPLATE_TYPE_ISSUE = "issue_template"
+REVIEW_TEMPLATE_TYPE_PULL_REQUEST = "pull_request_template"
+REVIEW_TEMPLATE_PAYLOAD_FIELDS = "fields"
+REVIEW_TEMPLATE_PAYLOAD_ITEMS = "items"
+REVIEW_TEMPLATE_PAYLOAD_CHECKBOXES = "checkboxes"
+REVIEW_TEMPLATE_PAYLOAD_MARKDOWN = "markdown"
+REVIEW_TEMPLATE_METADATA_KEYS = ("name", "about", "title")
+GITHUB_REVIEW_TEMPLATE_SPECS = (
+    {
+        "template_id": "canonical-promotion",
+        "template_path": ".github/ISSUE_TEMPLATE/canonical-promotion.md",
+        "template_type": REVIEW_TEMPLATE_TYPE_ISSUE,
+        "section_scope": (
+            "Technique",
+            "Review Contract",
+            "Default-Use Rationale",
+            "Reuse Beyond Origin",
+            "Stronger Validation Than Initial Promotion Baseline",
+            "Adaptation Boundary Check",
+            "Public-Safety Recheck",
+            "Recommendation",
+        ),
+    },
+    {
+        "template_id": "external-import-review",
+        "template_path": ".github/ISSUE_TEMPLATE/external-import-review.md",
+        "template_type": REVIEW_TEMPLATE_TYPE_ISSUE,
+        "section_scope": (
+            "Source",
+            "Proposed technique",
+            "Adaptation summary",
+            "Validation and reuse",
+            "Public-safety review",
+        ),
+    },
+    {
+        "template_id": "technique-proposal",
+        "template_path": ".github/ISSUE_TEMPLATE/technique-proposal.md",
+        "template_type": REVIEW_TEMPLATE_TYPE_ISSUE,
+        "section_scope": (
+            "Summary",
+            "Why it belongs here",
+            "Evidence and validation",
+            "Public safety",
+            "Expected contribution shape",
+        ),
+    },
+    {
+        "template_id": "pull-request-template",
+        "template_path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "template_type": REVIEW_TEMPLATE_TYPE_PULL_REQUEST,
+        "section_scope": (
+            "Summary",
+            "Validation",
+            "Notes",
+            "Checklist",
+        ),
+    },
+)
 TYPED_NOTE_KIND_ORDER = (
     "origin_evidence",
     "second_context",
@@ -272,6 +338,42 @@ class TechniqueNote:
     intro_markdown: str
     sections: tuple[EvidenceNoteSection, ...]
     body_markdown: str
+
+
+@dataclass(frozen=True)
+class ReviewTemplateField:
+    key: str
+    value_markdown: str
+
+
+@dataclass(frozen=True)
+class ReviewTemplateItem:
+    text: str
+
+
+@dataclass(frozen=True)
+class ReviewTemplateCheckbox:
+    text: str
+    checked: bool
+
+
+@dataclass(frozen=True)
+class ReviewTemplateSection:
+    heading: str
+    payload_type: str
+    fields: tuple[ReviewTemplateField, ...]
+    items: tuple[ReviewTemplateItem, ...]
+    checkboxes: tuple[ReviewTemplateCheckbox, ...]
+    markdown: str
+
+
+@dataclass(frozen=True)
+class GitHubReviewTemplate:
+    template_id: str
+    template_path: str
+    template_type: str
+    metadata: dict[str, str] | None
+    sections: tuple[ReviewTemplateSection, ...]
 
 
 @dataclass(frozen=True)
@@ -1023,6 +1125,208 @@ def parse_notes(repo_root: Path, technique_dir: Path) -> tuple[TechniqueNote, ..
     return tuple(parse_note_file(path, repo_root) for path in note_paths)
 
 
+def split_optional_frontmatter(markdown_path: Path) -> tuple[str | None, str]:
+    text = read_text(markdown_path)
+    match = FRONTMATTER_RE.match(text)
+    if not match:
+        return None, text
+    return match.group(1), text[match.end() :]
+
+
+def review_template_scopes_payload() -> dict[str, Any]:
+    return {
+        spec["template_id"]: {
+            "template_type": spec["template_type"],
+            "section_scope": list(spec["section_scope"]),
+        }
+        for spec in GITHUB_REVIEW_TEMPLATE_SPECS
+    }
+
+
+def validate_issue_template_metadata(
+    template_path: Path, metadata: dict[str, Any]
+) -> dict[str, str]:
+    if tuple(metadata.keys()) != REVIEW_TEMPLATE_METADATA_KEYS:
+        fail(
+            f"{template_path}: issue template metadata must use exact keys "
+            f"{list(REVIEW_TEMPLATE_METADATA_KEYS)}"
+        )
+
+    validated: dict[str, str] = {}
+    for key in REVIEW_TEMPLATE_METADATA_KEYS:
+        value = metadata[key]
+        if not isinstance(value, str) or not value.strip():
+            fail(f"{template_path}: metadata field '{key}' must be a non-empty string")
+        validated[key] = value
+    return validated
+
+
+def parse_review_template_sections(
+    template_path: Path, body: str, expected_headings: tuple[str, ...]
+) -> tuple[TechniqueSection, ...]:
+    matches = list(SECTION_RE.finditer(body))
+    if not matches:
+        fail(f"{template_path}: template body must include top-level '## ' sections")
+    if normalize_section_markdown(body[: matches[0].start()]) != "":
+        fail(f"{template_path}: template body must start directly with its first '## ' section")
+
+    sections = parse_sections(body)
+    actual_headings = tuple(section.heading for section in sections)
+    if actual_headings != expected_headings:
+        expected = ", ".join(f"'## {heading}'" for heading in expected_headings)
+        actual = ", ".join(f"'## {heading}'" for heading in actual_headings) or "none"
+        fail(
+            f"{template_path}: review-template sections must stay in standard order "
+            f"[{expected}], found [{actual}]"
+        )
+    return sections
+
+
+def parse_review_template_section_payload(
+    template_path: Path,
+    template_type: str,
+    heading: str,
+    section_markdown: str,
+) -> ReviewTemplateSection:
+    lines = section_markdown.splitlines()
+    top_level_indexes = top_level_meaningful_indexes(lines)
+    top_level_lines = [lines[index] for index in top_level_indexes]
+    checkbox_matches = [TEMPLATE_CHECKBOX_RE.fullmatch(line) for line in top_level_lines]
+    field_matches = [TEMPLATE_FIELD_RE.fullmatch(line) for line in top_level_lines]
+
+    if top_level_lines and all(match is not None for match in checkbox_matches):
+        checkboxes: list[ReviewTemplateCheckbox] = []
+        for order, start_index in enumerate(top_level_indexes, start=1):
+            end_index = (
+                top_level_indexes[order] if order < len(top_level_indexes) else len(lines)
+            )
+            chunk_lines = lines[start_index:end_index]
+            match = TEMPLATE_CHECKBOX_RE.fullmatch(chunk_lines[0])
+            if match is None:
+                fail(f"{template_path}: section '{heading}' must keep checkbox structure")
+            text = item_text_markdown(match.group(2).strip(), chunk_lines[1:])
+            if not text:
+                fail(f"{template_path}: section '{heading}' contains an empty checkbox item")
+            checkboxes.append(
+                ReviewTemplateCheckbox(text=text, checked=match.group(1).lower() == "x")
+            )
+
+        return ReviewTemplateSection(
+            heading=heading,
+            payload_type=REVIEW_TEMPLATE_PAYLOAD_CHECKBOXES,
+            fields=(),
+            items=(),
+            checkboxes=tuple(checkboxes),
+            markdown="",
+        )
+
+    if (
+        template_type == REVIEW_TEMPLATE_TYPE_ISSUE
+        and top_level_lines
+        and all(match is not None for match in field_matches)
+    ):
+        fields: list[ReviewTemplateField] = []
+        for order, start_index in enumerate(top_level_indexes, start=1):
+            end_index = (
+                top_level_indexes[order] if order < len(top_level_indexes) else len(lines)
+            )
+            chunk_lines = lines[start_index:end_index]
+            match = TEMPLATE_FIELD_RE.fullmatch(chunk_lines[0])
+            if match is None:
+                fail(f"{template_path}: section '{heading}' must keep field-bullet structure")
+            key = match.group(1).strip()
+            if not key:
+                fail(f"{template_path}: section '{heading}' contains an empty field key")
+            fields.append(
+                ReviewTemplateField(
+                    key=key,
+                    value_markdown=field_value_markdown(match.group(2).rstrip(), chunk_lines[1:]),
+                )
+            )
+
+        return ReviewTemplateSection(
+            heading=heading,
+            payload_type=REVIEW_TEMPLATE_PAYLOAD_FIELDS,
+            fields=tuple(fields),
+            items=(),
+            checkboxes=(),
+            markdown="",
+        )
+
+    if top_level_lines and all(line.startswith("- ") for line in top_level_lines):
+        items: list[ReviewTemplateItem] = []
+        for order, start_index in enumerate(top_level_indexes, start=1):
+            end_index = (
+                top_level_indexes[order] if order < len(top_level_indexes) else len(lines)
+            )
+            chunk_lines = lines[start_index:end_index]
+            item_text = item_text_markdown(chunk_lines[0][2:].strip(), chunk_lines[1:])
+            if not item_text:
+                fail(f"{template_path}: section '{heading}' contains an empty item")
+            items.append(ReviewTemplateItem(text=item_text))
+
+        return ReviewTemplateSection(
+            heading=heading,
+            payload_type=REVIEW_TEMPLATE_PAYLOAD_ITEMS,
+            fields=(),
+            items=tuple(items),
+            checkboxes=(),
+            markdown="",
+        )
+
+    return ReviewTemplateSection(
+        heading=heading,
+        payload_type=REVIEW_TEMPLATE_PAYLOAD_MARKDOWN,
+        fields=(),
+        items=(),
+        checkboxes=(),
+        markdown=section_markdown,
+    )
+
+
+def parse_github_review_templates(repo_root: Path) -> tuple[GitHubReviewTemplate, ...]:
+    templates: list[GitHubReviewTemplate] = []
+
+    for spec in GITHUB_REVIEW_TEMPLATE_SPECS:
+        template_path = repo_root / spec["template_path"]
+        if not template_path.is_file():
+            fail(f"{template_path}: missing required GitHub review template")
+
+        raw_frontmatter, body = split_optional_frontmatter(template_path)
+        template_type = spec["template_type"]
+        metadata: dict[str, str] | None
+
+        if template_type == REVIEW_TEMPLATE_TYPE_ISSUE:
+            if raw_frontmatter is None:
+                fail(f"{template_path}: issue template must start with YAML frontmatter")
+            metadata = validate_issue_template_metadata(
+                template_path, parse_frontmatter(raw_frontmatter, template_path)
+            )
+        else:
+            if raw_frontmatter is not None:
+                fail(f"{template_path}: pull request template must not use YAML frontmatter")
+            metadata = None
+
+        sections = parse_review_template_sections(template_path, body, spec["section_scope"])
+        parsed_sections = tuple(
+            parse_review_template_section_payload(
+                template_path, template_type, section.heading, section.markdown
+            )
+            for section in sections
+        )
+        templates.append(
+            GitHubReviewTemplate(
+                template_id=spec["template_id"],
+                template_path=template_path.relative_to(repo_root).as_posix(),
+                template_type=template_type,
+                metadata=metadata,
+                sections=parsed_sections,
+            )
+        )
+
+    return tuple(templates)
+
+
 def validate_stage1_files(repo_root: Path) -> None:
     for relative_path in REQUIRED_STAGE1_FILES:
         target = repo_root / relative_path
@@ -1556,6 +1860,126 @@ def project_min_evidence_note_manifest(full_manifest: dict[str, Any]) -> dict[st
     }
 
 
+def full_review_template_section_payload(section: ReviewTemplateSection, order: int) -> dict[str, Any]:
+    payload = {
+        "heading": section.heading,
+        "order": order,
+        "payload_type": section.payload_type,
+    }
+    if section.payload_type == REVIEW_TEMPLATE_PAYLOAD_FIELDS:
+        payload["fields"] = [
+            {
+                "order": field_order,
+                "key": field.key,
+                "value_markdown": field.value_markdown,
+            }
+            for field_order, field in enumerate(section.fields, start=1)
+        ]
+    elif section.payload_type == REVIEW_TEMPLATE_PAYLOAD_ITEMS:
+        payload["items"] = [
+            {
+                "order": item_order,
+                "text": item.text,
+            }
+            for item_order, item in enumerate(section.items, start=1)
+        ]
+    elif section.payload_type == REVIEW_TEMPLATE_PAYLOAD_CHECKBOXES:
+        payload["checkboxes"] = [
+            {
+                "order": checkbox_order,
+                "text": checkbox.text,
+                "checked": checkbox.checked,
+            }
+            for checkbox_order, checkbox in enumerate(section.checkboxes, start=1)
+        ]
+    else:
+        payload["markdown"] = section.markdown
+    return payload
+
+
+def full_github_review_template_manifest_entry(template: GitHubReviewTemplate) -> dict[str, Any]:
+    payload = {
+        "template_id": template.template_id,
+        "template_path": template.template_path,
+        "template_type": template.template_type,
+        "sections": [
+            full_review_template_section_payload(section, order)
+            for order, section in enumerate(template.sections, start=1)
+        ],
+    }
+    if template.metadata is not None:
+        payload["metadata"] = {key: template.metadata[key] for key in REVIEW_TEMPLATE_METADATA_KEYS}
+    return payload
+
+
+def project_min_github_review_template_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "template_scopes": full_manifest["template_scopes"],
+        "templates": [
+            {
+                "template_id": template["template_id"],
+                "template_path": template["template_path"],
+                "template_type": template["template_type"],
+                **({"metadata": template["metadata"]} if "metadata" in template else {}),
+                "sections": [
+                    {
+                        "heading": section["heading"],
+                        "order": section["order"],
+                        "payload_type": section["payload_type"],
+                        **(
+                            {
+                                "fields": [
+                                    {
+                                        "order": field["order"],
+                                        "key": field["key"],
+                                    }
+                                    for field in section["fields"]
+                                ]
+                            }
+                            if section["payload_type"] == REVIEW_TEMPLATE_PAYLOAD_FIELDS
+                            else {}
+                        ),
+                        **(
+                            {
+                                "items": [
+                                    {
+                                        "order": item["order"],
+                                    }
+                                    for item in section["items"]
+                                ]
+                            }
+                            if section["payload_type"] == REVIEW_TEMPLATE_PAYLOAD_ITEMS
+                            else {}
+                        ),
+                        **(
+                            {
+                                "checkboxes": [
+                                    {
+                                        "order": checkbox["order"],
+                                        "checked": checkbox["checked"],
+                                    }
+                                    for checkbox in section["checkboxes"]
+                                ]
+                            }
+                            if section["payload_type"] == REVIEW_TEMPLATE_PAYLOAD_CHECKBOXES
+                            else {}
+                        ),
+                        **(
+                            {"markdown_present": section["markdown"] != ""}
+                            if section["payload_type"] == REVIEW_TEMPLATE_PAYLOAD_MARKDOWN
+                            else {}
+                        ),
+                    }
+                    for section in template["sections"]
+                ],
+            }
+            for template in full_manifest["templates"]
+        ],
+    }
+
+
 def build_catalog_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -1623,6 +2047,21 @@ def build_evidence_note_manifest_payloads(
         ],
     }
     return full_manifest, project_min_evidence_note_manifest(full_manifest)
+
+
+def build_github_review_template_manifest_payloads(
+    repo_root: Path,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    templates = parse_github_review_templates(repo_root)
+    full_manifest = {
+        "manifest_version": GITHUB_REVIEW_TEMPLATE_MANIFEST_VERSION,
+        "source_of_truth": GITHUB_REVIEW_TEMPLATE_MANIFEST_SOURCE_OF_TRUTH,
+        "template_scopes": review_template_scopes_payload(),
+        "templates": [
+            full_github_review_template_manifest_entry(template) for template in templates
+        ],
+    }
+    return full_manifest, project_min_github_review_template_manifest(full_manifest)
 
 
 def selection_technique_link(entry: dict[str, Any]) -> str:
@@ -2011,6 +2450,32 @@ def validate_evidence_note_manifests(repo_root: Path, records: list[TechniqueRec
         fail(f"{min_path}: min evidence note manifest must stay a projection of the full manifest")
 
 
+def validate_github_review_template_manifests(repo_root: Path) -> None:
+    full_path = repo_root / "generated" / "github_review_template_manifest.json"
+    min_path = repo_root / "generated" / "github_review_template_manifest.min.json"
+
+    expected_full, expected_min = build_github_review_template_manifest_payloads(repo_root)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated GitHub review template manifest is out of date; "
+            f"run 'python scripts/build_github_review_template_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated GitHub review template min manifest is out of date; "
+            f"run 'python scripts/build_github_review_template_manifest.py'"
+        )
+
+    projected_min = project_min_github_review_template_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(
+            f"{min_path}: min GitHub review template manifest must stay a projection of the full manifest"
+        )
+
+
 def validate_selection_surface(repo_root: Path) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -2045,6 +2510,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_checklist_manifests(repo_root, records)
     validate_example_manifests(repo_root, records)
     validate_evidence_note_manifests(repo_root, records)
+    validate_github_review_template_manifests(repo_root)
     validate_selection_surface(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -2062,6 +2528,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated checklist manifest parity")
     print("[ok] validated generated example manifest parity")
     print("[ok] validated generated evidence note manifest parity")
+    print("[ok] validated generated GitHub review template manifest parity")
     print("[ok] validated generated selection surface parity")
 
 
