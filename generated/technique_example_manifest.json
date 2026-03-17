@@ -1,0 +1,174 @@
+{
+  "manifest_version": 1,
+  "source_of_truth": "markdown-examples-v1",
+  "techniques": [
+    {
+      "id": "AOA-T-0001",
+      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/plan-diff-apply-verify-report/examples/minimal-change-flow.md",
+          "title": "Minimal Change Flow",
+          "body_markdown": "This example shows the technique as a reusable outline for a small, reviewable change.\n\n## Scenario\n\nUpdate a public README section to clarify repository intent without changing repository structure or policy.\n\n## PLAN\n\n- Goal: make the README clearer for first-time readers\n- Touched surface: `README.md`\n- Main risk: accidentally changing meaning instead of clarifying wording\n- Rollback idea: revert the single documentation patch if the wording introduces ambiguity\n\n## DIFF\n\n- Prepare one focused patch that changes only the target section\n- Avoid unrelated formatting cleanup or additional document edits\n\n## APPLY\n\n- Apply the scoped README patch\n- Keep the change aligned with the stated goal\n\n## VERIFY\n\n- Re-read the updated section for clarity and consistency\n- Confirm that no other repository documents now contradict the new wording\n\n## REPORT\n\n- Changed: clarified the README intent statement\n- Verified: wording matches repository purpose and does not conflict with contribution rules\n- Rollback: restore the previous README wording if reviewers find the new text less precise"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0002",
+      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/source-of-truth-layout/examples/minimal-doc-routing.md",
+          "title": "Minimal Doc Routing",
+          "body_markdown": "This example shows how a repository can route common updates without duplicating status across many files.\n\n## Document map\n\n- `README` keeps a short project overview and links to canonical docs.\n- `MANIFEST` keeps a compact machine/human snapshot.\n- `TODO` tracks active work.\n- `PLANS` tracks goals, milestones, and risks.\n- `DECISIONS` records architecture and policy changes.\n- `RUNBOOK` stores runnable commands and operating procedures.\n- `SESSION_2026-03-13` stores detailed run history for the day.\n\n## Example routing\n\n- A new architectural rule is added: write it to `DECISIONS`.\n- The startup command changes: update `RUNBOOK`.\n- The team begins a new active task: update `TODO`.\n- A milestone moves from planned to complete: update `PLANS`.\n- A smoke run finishes and produces detailed notes: append the result to `SESSION_2026-03-13`.\n- The top-level project status changes: keep the summary short in `README` or `MANIFEST` and link to the detailed docs instead of copying long history.\n\n## Anti-drift rule\n\nIf the same status paragraph starts appearing in `README`, `TODO`, and `PLANS`, move the detail back to its canonical home and leave only short references elsewhere."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0003",
+      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/contract-first-smoke-summary/examples/minimal-smoke-summary-flow.md",
+          "title": "Minimal Smoke Summary Flow",
+          "body_markdown": "This example shows a generic smoke path that publishes a machine-readable summary instead of relying on console logs as the main contract.\n\n## Scenario\n\nA repository has a smoke script that checks whether a local service can start and respond to one request.\n\n## Flow\n\n1. Run the smoke entrypoint.\n2. Create normal run artifacts.\n3. Write `smoke_summary.json` with an explicit status.\n4. Exit with `0` when the summary contract is satisfied.\n5. Exit non-zero when the contract fails.\n6. Upload or read the same summary in CI, dashboards, or agent tooling.\n\n## Example summary shape\n\n```json\n{\n  \"checked_at_utc\": \"2026-03-13T12:00:00Z\",\n  \"ok\": true,\n  \"status\": \"ok\",\n  \"observed\": {\n    \"request_count\": 1,\n    \"latency_ms\": 120\n  },\n  \"violations\": []\n}\n```\n\n## Anti-drift rule\n\nIf downstream tooling must parse console logs to understand whether the smoke run passed, the summary contract is not strong enough yet."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0004",
+      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/examples/minimal-intent-chain.md",
+          "title": "Minimal Intent Chain",
+          "body_markdown": "This example shows a generic automation chain that turns high-level intent into a dry-run-only validation path.\n\n## Input intent\n\n```json\n{\n  \"schema_version\": \"example_intent_v1\",\n  \"intent_type\": \"open_status_panel\",\n  \"goal\": \"open the status panel and inspect current state\",\n  \"intent_id\": \"intent-001\",\n  \"trace_id\": \"trace-001\"\n}\n```\n\n## Flow\n\n1. Normalize the intent into a plan artifact.\n2. Attach planning metadata such as `intent_type`, adapter identity, schema version, and traceability IDs.\n3. Persist the plan artifact before running any dry-run executor.\n4. Run a dry-run executor against the plan.\n5. Emit `run.json`, `automation_plan.json`, and `chain_summary.json`.\n6. Run a contract-check that validates expected routing, structural completeness, and any required traceability fields.\n\n## Expected artifacts\n\nThe minimum artifact set should make the chain reviewable without log scraping:\n\n- `automation_plan.json` or equivalent normalized plan artifact\n- `run.json` or equivalent dry-run record\n- `chain_summary.json` or equivalent linking artifact\n- `contract_summary.json` or equivalent machine-readable contract verdict\n\n## Contract-check summary\n\n```json\n{\n  \"ok\": true,\n  \"status\": \"ok\",\n  \"observed\": {\n    \"intent_type\": \"open_status_panel\",\n    \"trace_id\": \"trace-001\",\n    \"intent_id\": \"intent-001\"\n  },\n  \"violations\": []\n}\n```\n\n## Failure signals to preserve\n\n- If `automation_plan.json` is missing, the contract-check should fail rather than infer success from logs.\n- If `intent_type` does not match the expected route, the contract summary should record that mismatch explicitly.\n- If the workflow requires `trace_id` or `intent_id`, the contract-check should fail when those fields are missing rather than silently downgrading traceability.\n- A passing dry-run is not enough by itself; the chain should still require an explicit contract verdict before any real execution path is enabled.\n\n## Traceability note\n\nIf the workflow requires `trace_id` or `intent_id`, the contract-check should surface them in the machine-readable summary so CI or operator review can correlate the run without opening raw logs."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0005",
+      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/new-intent-rollout-checklist/examples/minimal-intent-rollout.md",
+          "title": "minimal-intent-rollout",
+          "body_markdown": "This example shows a generic checklist-shaped rollout for a new dry-run intent path.\n\n## 1. Add the canonical fixture\n\nCreate one public fixture placeholder such as:\n\n```json\n{\n  \"schema_version\": \"intent_v1\",\n  \"intent_type\": \"<new_intent_type>\",\n  \"intent_id\": \"intent-demo-001\",\n  \"trace_id\": \"trace-demo-001\",\n  \"goal\": \"Describe the operator-facing goal here\"\n}\n```\n\nStore it in a stable location such as `tests/fixtures/intent_<new_intent_type>.json`.\n\n## 2. Add one dedicated chain smoke command\n\n```bash\npython scripts/intent_chain_smoke.py \\\n  --intent-json tests/fixtures/intent_<new_intent_type>.json \\\n  --runs-dir runs/ci-smoke-intent-chain-<new_intent_type>\n```\n\n## 3. Add one strict contract-check command\n\n```bash\npython scripts/check_intent_chain_contract.py \\\n  --runs-dir runs/ci-smoke-intent-chain-<new_intent_type> \\\n  --expected-intent-type <new_intent_type> \\\n  --require-trace-id \\\n  --require-intent-id \\\n  --summary-json runs/ci-smoke-intent-chain-<new_intent_type>/contract_summary.json\n```\n\n## 4. Publish the artifacts and review row\n\nMake the smoke run and contract summary part of the same review surface:\n\n- include one summary row for `<new_intent_type>` in CI output\n- upload `contract_summary.json` with the rest of the smoke artifacts\n- keep the artifact path stable so humans and agents can find it without log scraping\n\n## 5. Add one regression expectation\n\nAdd at least one automated test that proves the new intent flows through normalization, dry-run, and contract-check without real side effects.\n\n## 6. Expected contract summary shape\n\nThe published contract summary should make rollout drift obvious:\n\n```json\n{\n  \"status\": \"ok\",\n  \"observed\": {\n    \"intent_type\": \"<new_intent_type>\",\n    \"trace_id\": \"trace-demo-001\",\n    \"intent_id\": \"intent-demo-001\"\n  },\n  \"violations\": []\n}\n```\n\n## 7. Common rollout failures to catch\n\n- The fixture exists but is not wired into the shared smoke path.\n- The smoke path works, but the contract-check is still asserting the old `intent_type`.\n- `contract_summary.json` is produced locally but not published in the main review surface.\n- The rollout looks green in CI, but no targeted regression test proves the new intent uses the existing chain."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0006",
+      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/latest-alias-plus-history-copy/examples/minimal-latest-history-layout.md",
+          "title": "minimal-latest-history-layout",
+          "body_markdown": "This example shows a generic dual-write layout for a machine-readable summary.\n\n## Layout\n\n```text\nruns/\n  latest-check/\n    summary.json\n    20260313_101500-check/\n      run.json\n      summary.json\n```\n\n- `runs/latest-check/summary.json` is the stable latest alias.\n- `runs/latest-check/20260313_101500-check/summary.json` is the history copy for one execution.\n\n## Producer metadata\n\nIf the producer emits path metadata, keep both paths explicit:\n\n```json\n{\n  \"paths\": {\n    \"run_dir\": \"runs/latest-check/20260313_101500-check\",\n    \"summary_json\": \"runs/latest-check/summary.json\",\n    \"history_summary_json\": \"runs/latest-check/20260313_101500-check/summary.json\"\n  }\n}\n```\n\n## Reader rule\n\nUse nested history rows first:\n\n1. Scan `runs/latest-check/**/summary.json`.\n2. If nested rows exist, accumulate only those rows.\n3. If no nested rows exist, fall back to `runs/latest-check/summary.json` for legacy compatibility.\n\nThis keeps the latest alias easy to consume without letting scanners count the same run twice."
+        },
+        {
+          "example_path": "techniques/evaluation/latest-alias-plus-history-copy/examples/object-store-latest-history-layout.md",
+          "title": "object-store-latest-history-layout",
+          "body_markdown": "This example shows the same dual-write contract when published summaries live under generic object keys rather than local filesystem paths.\n\n## Object keys\n\n```text\npublished/gateway-readiness/latest/summary.json\npublished/gateway-readiness/history/2026-03-15T09-15-00Z/summary.json\npublished/gateway-readiness/history/2026-03-15T09-15-00Z/run.json\n```\n\n- `published/gateway-readiness/latest/summary.json` is the stable latest alias object.\n- `published/gateway-readiness/history/2026-03-15T09-15-00Z/summary.json` is the immutable history copy for one execution.\n\n## Producer metadata\n\nIf the producer emits path metadata, keep both object keys explicit:\n\n```json\n{\n  \"paths\": {\n    \"latest_summary_key\": \"published/gateway-readiness/latest/summary.json\",\n    \"history_summary_key\": \"published/gateway-readiness/history/2026-03-15T09-15-00Z/summary.json\",\n    \"run_manifest_key\": \"published/gateway-readiness/history/2026-03-15T09-15-00Z/run.json\"\n  }\n}\n```\n\n## Reader rule\n\n1. Scan `published/gateway-readiness/history/*/summary.json`.\n2. If history objects exist, accumulate only those objects.\n3. Use the latest alias only for direct current-state consumers or explicit legacy fallback.\n\nThe storage medium changed, but the anti-double-count rule did not."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0007",
+      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/signal-first-gate-promotion/examples/concrete-repo-validation-rollout.md",
+          "title": "Concrete Repo-Validation Rollout",
+          "body_markdown": "This example shows one concrete public-safe adaptation of `signal-first-gate-promotion` for a repository validation signal.\n\n## Scenario\n\nA repository already publishes one machine-readable validation summary on every pull request. The team wants to move that signal toward strict enforcement, but only on one narrow nightly surface until the rollout proves stable.\n\n## 1. Keep pull requests observational\n\nRun the validation check in observational mode on pull requests:\n\n```bash\npython scripts/check_repo_contracts.py --policy signal_only --summary-json runs/repo-validation/pr_summary.json\n```\n\n- the summary still publishes on failure\n- pull requests stay reviewable without turning every unstable failure into an immediate hard block\n\n## 2. Publish readiness from recent runs\n\nBuild a readiness summary from recent validation history:\n\n```bash\npython scripts/check_repo_contracts_readiness.py --history-dir runs/repo-validation-history --policy report_only --summary-json runs/repo-validation-readiness/readiness_summary.json\n```\n\nThe readiness summary should answer whether the signal is stable enough to consider narrow strict enforcement.\n\n## 3. Make governance explicit\n\nTurn readiness history into one visible promotion decision:\n\n```bash\npython scripts/check_repo_contracts_governance.py --readiness-dir runs/repo-validation-readiness --policy report_only --summary-json runs/repo-validation-governance/governance_summary.json\n```\n\nThe output should be one explicit `go` or `hold`, plus reason codes when promotion is still blocked.\n\n## 4. Publish progress and transition summaries\n\nKeep rollout telemetry visible even before strict activation:\n\n- `runs/repo-validation-progress/progress_summary.json`\n- `runs/repo-validation-transition/transition_summary.json`\n\nThese summaries should publish:\n\n- remaining stable runs needed\n- remaining streak needed\n- current strict-surface choice\n- any reasons why promotion is still incomplete\n\n## 5. Activate one narrow strict surface only\n\nWhen governance says `go`, switch only the nightly validation surface to strict mode:\n\n```bash\npython scripts/check_repo_contracts.py --policy fail_nightly --summary-json runs/repo-validation/nightly_summary.json\n```\n\nKeep other surfaces observational:\n\n- pull requests: `signal_only`\n- local debugging: `signal_only`\n- ad hoc triage runs: observational unless explicitly promoted later\n\n## 6. Preserve diagnostics after strict failure\n\nEven if the nightly strict run fails:\n\n- `nightly_summary.json` still publishes\n- readiness/governance/progress/transition summaries still publish\n- operators can see why the signal went red without scraping logs\n\n## Anti-drift rule\n\nIf the repository silently turns multiple surfaces strict at once, or stops publishing summaries once strict mode starts failing, the rollout is no longer following `signal-first-gate-promotion`."
+        },
+        {
+          "example_path": "techniques/evaluation/signal-first-gate-promotion/examples/minimal-signal-first-rollout.md",
+          "title": "minimal-signal-first-rollout",
+          "body_markdown": "This example shows a generic staged promotion path from observation to strict enforcement.\n\n## 1. Start in `signal_only`\n\nRun one summary-producing check in observational mode:\n\n```bash\npython scripts/check_service_health.py --policy signal_only --summary-json runs/health/latest_summary.json\n```\n\n- the summary is still published when the signal is bad\n- exit behavior stays non-blocking while the signal is being calibrated\n\n## 2. Add readiness over recent history\n\nBuild a readiness summary from recent published runs:\n\n```bash\npython scripts/check_service_health_readiness.py --history-dir runs/health-history --policy report_only --summary-json runs/health-readiness/readiness_summary.json\n```\n\nThe readiness layer asks whether the signal has been stable enough for a stricter rollout.\n\n## 3. Make governance explicit\n\nTurn readiness evidence into a formal decision:\n\n```bash\npython scripts/check_service_health_governance.py --readiness-dir runs/health-readiness --policy report_only --summary-json runs/health-governance/governance_summary.json\n```\n\nThe output should be a clear `go` or `hold`, not an implicit guess.\n\n## 4. Publish progress telemetry\n\nTrack the remaining gap:\n\n- runs still needed\n- streak still needed\n- reason codes explaining why promotion is not complete yet\n\n## 5. Promote one narrow strict surface\n\nWhen governance says `go`, enable strict behavior only on one narrow surface such as a nightly job:\n\n- nightly: strict `fail_nightly`\n- pull requests: still `signal_only`\n- local debugging: still observational\n\nDiagnostics should continue to publish even if the strict nightly run goes red."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0008",
+      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/published-summary-remediation-snapshot/examples/minimal-remediation-snapshot.md",
+          "title": "minimal-remediation-snapshot",
+          "body_markdown": "This example shows a portable remediation snapshot built from a small set of latest published summaries.\n\n## Source aliases\n\n```text\nruns/gateway-sla/latest_summary.json\nruns/gateway-readiness/latest_summary.json\nruns/gateway-integrity/latest_summary.json\n```\n\nThe snapshot reads only these latest aliases. It does not scan nested history directories or recompute prior runs.\n\n## Fixed buckets\n\n- `failing_now`\n- `stale_inputs`\n- `follow_up_needed`\n\n## Per-bucket cap\n\nEach bucket keeps at most 2 candidate items so the remediation surface stays reviewable.\n\n## Example snapshot\n\n```json\n{\n  \"generated_at_utc\": \"2026-03-14T09:00:00Z\",\n  \"source_count\": 3,\n  \"truncated\": false,\n  \"buckets\": {\n    \"failing_now\": [\n      {\n        \"id\": \"gateway-sla\",\n        \"reason\": \"latest status is fail_nightly\",\n        \"source_summary_path\": \"runs/gateway-sla/latest_summary.json\"\n      }\n    ],\n    \"stale_inputs\": [\n      {\n        \"id\": \"gateway-integrity\",\n        \"reason\": \"latest summary is older than freshness window\",\n        \"source_summary_path\": \"runs/gateway-integrity/latest_summary.json\"\n      }\n    ],\n    \"follow_up_needed\": [\n      {\n        \"id\": \"gateway-readiness\",\n        \"reason\": \"governance state is hold with explicit gap remaining\",\n        \"source_summary_path\": \"runs/gateway-readiness/latest_summary.json\"\n      }\n    ]\n  }\n}\n```\n\n## Review rule\n\nIf a candidate item cannot point back to the exact latest summary path that produced it, the remediation snapshot is too weak for operator or agent handoff."
+        },
+        {
+          "example_path": "techniques/evaluation/published-summary-remediation-snapshot/examples/object-store-remediation-snapshot.md",
+          "title": "object-store-remediation-snapshot",
+          "body_markdown": "This example shows the same bounded remediation rollup when latest published summaries are stored under generic object keys.\n\n## Source aliases\n\n```text\npublished/gateway-readiness/latest/summary.json\npublished/gateway-governance/latest/summary.json\npublished/gateway-integrity/latest/summary.json\n```\n\nThe helper reads only these latest alias objects. It does not scan `history/` prefixes or rebuild prior state.\n\n## Fixed buckets\n\n- `failing_now`\n- `stale_inputs`\n- `follow_up_needed`\n\n## Per-bucket cap\n\nEach bucket keeps at most 2 candidate items so the remediation surface stays reviewable.\n\n## Example snapshot\n\n```json\n{\n  \"generated_at_utc\": \"2026-03-15T09:00:00Z\",\n  \"source_count\": 3,\n  \"truncated\": false,\n  \"buckets\": {\n    \"failing_now\": [\n      {\n        \"id\": \"gateway-readiness\",\n        \"reason\": \"latest status is fail_nightly\",\n        \"source_summary_key\": \"published/gateway-readiness/latest/summary.json\"\n      }\n    ],\n    \"stale_inputs\": [\n      {\n        \"id\": \"gateway-integrity\",\n        \"reason\": \"latest summary is older than freshness window\",\n        \"source_summary_key\": \"published/gateway-integrity/latest/summary.json\"\n      }\n    ],\n    \"follow_up_needed\": [\n      {\n        \"id\": \"gateway-governance\",\n        \"reason\": \"governance state is hold with explicit gap remaining\",\n        \"source_summary_key\": \"published/gateway-governance/latest/summary.json\"\n      }\n    ]\n  }\n}\n```\n\n## Review rule\n\nIf a candidate item cannot point back to the exact published latest alias object that produced it, the remediation snapshot is too weak for operator or agent handoff."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0009",
+      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/lightweight-status-snapshot/examples/minimal-lightweight-snapshot.md",
+          "title": "minimal-lightweight-snapshot",
+          "body_markdown": "This example shows how a repository can keep top-level status docs lightweight without losing operational detail.\n\n## `README`\n\n- one-sentence project description\n- quick links to `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, and the latest session snapshot\n- 5-10 short current-status bullets\n- no long run lists or copied metric history\n\n## `MANIFEST`\n\n- current date\n- target platform or runtime\n- active capabilities\n- canonical docs map\n- short data or commit policy\n\n## Canonical detail stays elsewhere\n\n- active execution state lives in `TODO`\n- goals and milestones live in `PLANS`\n- runnable commands live in `RUNBOOK`\n- architecture and policy changes live in `DECISIONS`\n- detailed chronology and run evidence live in `SESSION_*`\n\n## Anti-drift rule\n\nIf a top-level snapshot starts collecting long test counts, many run IDs, or detailed troubleshooting notes, move that detail back to its canonical document and leave only a short link or summary line."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0010",
+      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/telemetry-integrity-snapshot/examples/minimal-telemetry-integrity-snapshot.md",
+          "title": "minimal-telemetry-integrity-snapshot",
+          "body_markdown": "This example shows a compact integrity verdict built from latest published summaries.\n\n## Latest sources\n\n```text\nruns/nightly-readiness/readiness_summary.json\nruns/nightly-governance/governance_summary.json\nruns/nightly-progress/progress_summary.json\nruns/nightly-transition/transition_summary.json\nruns/nightly-remediation/remediation_summary.json\nruns/nightly-manual-cadence/cadence_brief.json\n```\n\nThe first five are required. `manual-cadence` is optional and only used for extra consistency checks.\n\n## Example snapshot\n\n```json\n{\n  \"integrity_status\": \"attention\",\n  \"reason_codes\": [\n    \"telemetry_counters_nonzero\",\n    \"anti_double_count_invariant_broken\"\n  ],\n  \"observed\": {\n    \"telemetry_ok\": false,\n    \"dual_write_ok\": false,\n    \"anti_double_count_ok\": false,\n    \"utc_guardrail_status\": \"not_available\"\n  }\n}\n```\n\n## Interpretation rule\n\nThe snapshot tells operators whether the published summaries are trustworthy enough to interpret. It does not itself replay history, repair data, or create a new hard gate."
+        },
+        {
+          "example_path": "techniques/evaluation/telemetry-integrity-snapshot/examples/object-store-telemetry-integrity-snapshot.md",
+          "title": "object-store-telemetry-integrity-snapshot",
+          "body_markdown": "This example shows a diagnostic integrity verdict over latest published summaries stored as generic object keys.\n\n## Latest sources\n\n```text\npublished/nightly-readiness/latest/summary.json\npublished/nightly-governance/latest/summary.json\npublished/nightly-progress/latest/summary.json\npublished/nightly-transition/latest/summary.json\npublished/nightly-remediation/latest/summary.json\npublished/nightly-cadence/latest/brief.json\n```\n\nThe first five are required. `published/nightly-cadence/latest/brief.json` is optional and only used for extra consistency checks.\n\n## Example snapshot\n\n```json\n{\n  \"integrity_status\": \"attention\",\n  \"reason_codes\": [\n    \"telemetry_counters_nonzero\",\n    \"anti_double_count_invariant_broken\"\n  ],\n  \"observed\": {\n    \"required_sources_ok\": true,\n    \"telemetry_ok\": false,\n    \"dual_write_ok\": false,\n    \"anti_double_count_ok\": false,\n    \"cadence_consistency_status\": \"not_available\"\n  },\n  \"source_keys\": {\n    \"readiness\": \"published/nightly-readiness/latest/summary.json\",\n    \"remediation\": \"published/nightly-remediation/latest/summary.json\",\n    \"cadence\": \"published/nightly-cadence/latest/brief.json\"\n  }\n}\n```\n\n## Interpretation rule\n\nThe snapshot tells downstream consumers whether the published summaries are trustworthy enough to interpret. It does not itself repair broken artifacts or become the enforcement gate."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0011",
+      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/required-vs-optional-source-rendering/examples/minimal-required-vs-optional-rendering.md",
+          "title": "minimal-required-vs-optional-rendering",
+          "body_markdown": "This example shows a summary-driven operator surface with strict base data and tolerant enrichments.\n\n## Required sources\n\n- `runs/ci-smoke-phase-a/smoke_summary.json`\n- `runs/ci-smoke-retrieve/smoke_summary.json`\n- `runs/ci-smoke-eval/smoke_summary.json`\n\nIf one of these is missing, the smoke contract fails.\n\n## Optional sources\n\n- `runs/nightly-progress/progress_summary.json`\n- `runs/nightly-remediation/remediation_summary.json`\n- `runs/nightly-integrity/integrity_summary.json`\n- `runs/nightly-operating-cycle/operating_cycle_summary.json`\n\nIf one of these is missing, the panel still renders and shows `not available yet`.\n\n## Soft-info artifact\n\n- `runs/nightly-operating-cycle/triage_brief.md`\n\nIf this file is absent while the main summary JSON exists, the surface shows the JSON-backed block normally and treats the missing brief as soft-info rather than warning or error.\n\n## Example smoke summary fields\n\n```json\n{\n  \"status\": \"ok\",\n  \"missing_sources\": [],\n  \"required_missing_sources\": [],\n  \"optional_missing_sources\": [\n    \"runs/nightly-remediation/remediation_summary.json\"\n  ],\n  \"errors\": []\n}\n```\n\n## Rendering rule\n\nOptional-source tolerance is allowed only when the base required surface is still trustworthy. It is not a license to downgrade real hard failures into warnings."
+        },
+        {
+          "example_path": "techniques/evaluation/required-vs-optional-source-rendering/examples/non-ui-required-vs-optional-rendering.md",
+          "title": "non-ui-required-vs-optional-rendering",
+          "body_markdown": "This example shows the same required-versus-optional policy in a machine-readable CLI or smoke report rather than a UI panel.\n\n## Required sources\n\n- `published/nightly-readiness/latest/summary.json`\n- `published/nightly-governance/latest/summary.json`\n- `published/nightly-transition/latest/summary.json`\n\nIf one of these is missing or invalid, the strict contract fails.\n\n## Optional sources\n\n- `published/nightly-remediation/latest/summary.json`\n- `published/nightly-integrity/latest/summary.json`\n- `published/nightly-operating-cycle/latest/summary.json`\n\nIf one of these is missing, the report still renders and records the absence explicitly.\n\n## Example report\n\n```json\n{\n  \"status\": \"ok\",\n  \"required_missing_sources\": [],\n  \"optional_missing_sources\": [\n    \"published/nightly-remediation/latest/summary.json\"\n  ],\n  \"warnings\": [\n    \"optional source published/nightly-remediation/latest/summary.json not available yet\"\n  ]\n}\n```\n\n## Staged promotion rule\n\nIf `published/nightly-integrity/latest/summary.json` later becomes required, that change should happen through an explicit contract update, a staged rollout, and an updated required-source list. It should not silently stop being optional because one consumer started to rely on it."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0012",
+      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/deterministic-context-composition/examples/minimal-deterministic-context-composition.md",
+          "title": "Minimal Deterministic Context Composition",
+          "body_markdown": "This example shows a small fragment set that composes into one stable generated context artifact.\n\n## Source fragments\n\n`security.agents.md`\n\n```md\n<!-- priority: 10 -->\nAlways confirm destructive actions before execution.\n```\n\n`workflow.agents.md`\n\n```md\nPlan before apply.\nState validation clearly in the final report.\n```\n\n## Generated context artifact\n\n```md\n<!-- Generated file. Edit source fragments instead. -->\n<!-- source: security.agents.md priority=10 -->\nAlways confirm destructive actions before execution.\n<!-- /source: security.agents.md -->\n<!-- source: workflow.agents.md priority=0 -->\nPlan before apply.\nState validation clearly in the final report.\n<!-- /source: workflow.agents.md -->\n```\n\n## Deterministic behavior\n\n- the higher-priority fragment surfaces first\n- the output keeps explicit source annotations\n- contributors update fragment files rather than editing the generated artifact directly"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0013",
+      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md",
+          "title": "Minimal Single-Source Rule Distribution",
+          "body_markdown": "This example shows one canonical rule source being propagated to two agent-facing instruction files.\n\n## Canonical rule source\n\n`rules/agent-guidance.md`\n\n```md\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Generated from rules/agent-guidance.md. Edit the source file instead. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed instruction file derived from rules/agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n## What this proves\n\n- one canonical source owns the shared rule content\n- more than one target surface can stay aligned without copy-paste maintenance\n- the target files are clearly marked as managed rather than canonical"
+        }
+      ]
+    }
+  ]
+}

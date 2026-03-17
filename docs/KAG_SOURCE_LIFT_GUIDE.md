@@ -4,7 +4,7 @@ This guide defines the first bounded repo-level contract for `canonical techniqu
 
 Use it when the repository already looks strong as structured markdown, but the next question is how to lift that source into later KAG-friendly outputs without pretending the repo is already a graph platform or section-level schema.
 
-This guide is source-first. It allows one bounded generated lift surface in the section manifest while still avoiding new schema fields, graph behavior, or bundle-level section IDs.
+This guide is source-first. It allows a small bounded set of generated lift surfaces while still avoiding new schema fields, graph behavior, or bundle-level section IDs.
 
 ## What Already Exists
 
@@ -43,6 +43,13 @@ The next implementation-oriented source-class pilot now stays equally bounded:
 - `generated/technique_checklist_manifest.min.json`
 
 Those files lift authored validation checklists into derived validation knowledge only. They are not executable policy, hard-gate semantics, or a new scoring layer.
+
+The next implementation-oriented source-class pilot after checklists now stays equally bounded:
+
+- `generated/technique_example_manifest.json`
+- `generated/technique_example_manifest.min.json`
+
+Those files lift authored example narratives into derived example knowledge only. They are not scenario graphs, executable tests, or a richer step-extraction layer yet.
 
 See also: [FRONTMATTER_METADATA_SPINE_GUIDE.md](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
 See also: [BOUNDED_RELATION_LIFT_GUIDE.md](BOUNDED_RELATION_LIFT_GUIDE.md) for the next bounded family member, which keeps current typed relations explicitly limited to direct-edge lifting rather than graph behavior.
@@ -94,8 +101,8 @@ Not part of this first wave:
 - no bundle-level section IDs
 - no schema or frontmatter expansion
 - no `build_kag` or similar script
-- no generated KAG artifacts beyond the bounded section manifest
+- no generated KAG artifacts beyond the bounded section, checklist, and example manifests
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The first implementation move is the bounded section manifest, with broader extraction still deferred to later techniques.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The first implementation moves are the bounded section, checklist, and example manifests, with broader extraction still deferred to later techniques.
