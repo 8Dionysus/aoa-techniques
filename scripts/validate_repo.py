@@ -38,12 +38,15 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_catalog.py",
     "scripts/build_section_manifest.py",
     "scripts/build_checklist_manifest.py",
+    "scripts/build_example_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_section_manifest.json",
     "generated/technique_section_manifest.min.json",
     "generated/technique_checklist_manifest.json",
     "generated/technique_checklist_manifest.min.json",
+    "generated/technique_example_manifest.json",
+    "generated/technique_example_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
@@ -139,6 +142,8 @@ SECTION_MANIFEST_VERSION = 1
 SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
 CHECKLIST_MANIFEST_VERSION = 1
 CHECKLIST_MANIFEST_SOURCE_OF_TRUTH = "markdown-checklists-v1"
+EXAMPLE_MANIFEST_VERSION = 1
+EXAMPLE_MANIFEST_SOURCE_OF_TRUTH = "markdown-examples-v1"
 
 
 class ValidationError(RuntimeError):
@@ -165,6 +170,13 @@ class TechniqueChecklist:
 
 
 @dataclass(frozen=True)
+class TechniqueExample:
+    example_path: str
+    title: str
+    body_markdown: str
+
+
+@dataclass(frozen=True)
 class TechniqueRecord:
     technique_dir: Path
     technique_path: Path
@@ -177,6 +189,7 @@ class TechniqueRecord:
     body: str
     sections: tuple[TechniqueSection, ...]
     checklists: tuple[TechniqueChecklist, ...]
+    examples: tuple[TechniqueExample, ...]
 
 
 @dataclass(frozen=True)
@@ -671,6 +684,37 @@ def parse_checklists(repo_root: Path, technique_dir: Path) -> tuple[TechniqueChe
     return tuple(parse_checklist_file(path, repo_root) for path in checklist_paths)
 
 
+def parse_example_file(example_path: Path, repo_root: Path) -> TechniqueExample:
+    lines = read_text(example_path).splitlines()
+    nonblank_indexes = [index for index, line in enumerate(lines) if line.strip()]
+    if not nonblank_indexes:
+        fail(f"{example_path}: example file must start with a '# ' title")
+
+    title_index = nonblank_indexes[0]
+    title_line = lines[title_index]
+    if not title_line.startswith("# ") or title_line.startswith("##"):
+        fail(f"{example_path}: first meaningful line must be a single '# ' title")
+
+    title = title_line[2:].strip()
+    if not title:
+        fail(f"{example_path}: example title must not be empty")
+
+    body_markdown = normalize_section_markdown("\n".join(lines[title_index + 1 :]))
+    return TechniqueExample(
+        example_path=example_path.relative_to(repo_root).as_posix(),
+        title=title,
+        body_markdown=body_markdown,
+    )
+
+
+def parse_examples(repo_root: Path, technique_dir: Path) -> tuple[TechniqueExample, ...]:
+    examples_dir = technique_dir / "examples"
+    example_paths = sorted(
+        examples_dir.rglob("*.md"), key=lambda path: path.relative_to(repo_root).as_posix()
+    )
+    return tuple(parse_example_file(path, repo_root) for path in example_paths)
+
+
 def validate_stage1_files(repo_root: Path) -> None:
     for relative_path in REQUIRED_STAGE1_FILES:
         target = repo_root / relative_path
@@ -699,6 +743,7 @@ def validate_technique_bundle(
     validate_frontmatter_schema(frontmatter, technique_path, schema_store)
     sections = validate_sections(body, technique_path)
     checklists = parse_checklists(repo_root, technique_dir)
+    examples = parse_examples(repo_root, technique_dir)
     validate_support_references(body, technique_dir, technique_path)
 
     if frontmatter["domain"] != expected_domain:
@@ -718,6 +763,7 @@ def validate_technique_bundle(
         body=body,
         sections=sections,
         checklists=checklists,
+        examples=examples,
     )
 
 
@@ -1029,6 +1075,43 @@ def project_min_checklist_manifest(full_manifest: dict[str, Any]) -> dict[str, A
     }
 
 
+def full_example_manifest_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any]:
+    return {
+        "id": record.id,
+        "technique_path": record.technique_path.relative_to(repo_root).as_posix(),
+        "examples": [
+            {
+                "example_path": example.example_path,
+                "title": example.title,
+                "body_markdown": example.body_markdown,
+            }
+            for example in record.examples
+        ],
+    }
+
+
+def project_min_example_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "techniques": [
+            {
+                "id": technique["id"],
+                "technique_path": technique["technique_path"],
+                "examples": [
+                    {
+                        "example_path": example["example_path"],
+                        "title": example["title"],
+                        "body_present": example["body_markdown"] != "",
+                    }
+                    for example in technique["examples"]
+                ],
+            }
+            for technique in full_manifest["techniques"]
+        ],
+    }
+
+
 def build_catalog_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -1069,6 +1152,18 @@ def build_checklist_manifest_payloads(
         "techniques": [full_checklist_manifest_entry(repo_root, record) for record in sorted_records],
     }
     return full_manifest, project_min_checklist_manifest(full_manifest)
+
+
+def build_example_manifest_payloads(
+    repo_root: Path, records: list[TechniqueRecord]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    sorted_records = sorted(records, key=lambda record: record.id)
+    full_manifest = {
+        "manifest_version": EXAMPLE_MANIFEST_VERSION,
+        "source_of_truth": EXAMPLE_MANIFEST_SOURCE_OF_TRUTH,
+        "techniques": [full_example_manifest_entry(repo_root, record) for record in sorted_records],
+    }
+    return full_manifest, project_min_example_manifest(full_manifest)
 
 
 def selection_technique_link(entry: dict[str, Any]) -> str:
@@ -1409,6 +1504,30 @@ def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]
         fail(f"{min_path}: min checklist manifest must stay a projection of the full manifest")
 
 
+def validate_example_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    full_path = repo_root / "generated" / "technique_example_manifest.json"
+    min_path = repo_root / "generated" / "technique_example_manifest.min.json"
+
+    expected_full, expected_min = build_example_manifest_payloads(repo_root, records)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated example manifest is out of date; "
+            f"run 'python scripts/build_example_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated example min manifest is out of date; "
+            f"run 'python scripts/build_example_manifest.py'"
+        )
+
+    projected_min = project_min_example_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min example manifest must stay a projection of the full manifest")
+
+
 def validate_selection_surface(repo_root: Path) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -1441,6 +1560,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_catalogs(repo_root, records, schema_store)
     validate_section_manifests(repo_root, records)
     validate_checklist_manifests(repo_root, records)
+    validate_example_manifests(repo_root, records)
     validate_selection_surface(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -1456,6 +1576,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated catalog parity")
     print("[ok] validated generated section manifest parity")
     print("[ok] validated generated checklist manifest parity")
+    print("[ok] validated generated example manifest parity")
     print("[ok] validated generated selection surface parity")
 
 
