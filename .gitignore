@@ -1,5 +1,4 @@
-seed.txt
-seed_*.txt
+seeds/
 
 # Local planning docs
 TODO.md
