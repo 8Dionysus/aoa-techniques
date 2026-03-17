@@ -10,25 +10,38 @@ title: "canonical review: "
 - name:
 - current status:
 
-## Why this should be canonical
+## Review Contract
+
+- proposed outcome: approve for canonical promotion or defer for now
+- bounded scope where this would be the default:
+
+## Default-Use Rationale
 
 - default-use rationale:
 - when a non-default alternative is still better:
 
-## Evidence reviewed
+## Reuse Beyond Origin
 
 - origin evidence:
 - second context or broader reuse evidence:
+
+## Stronger Validation Than Initial Promotion Baseline
+
 - example, checklist, or stronger validation reviewed:
 - supporting note paths:
 
-## Public-safety recheck
+## Adaptation Boundary Check
+
+- invariant core remains clear:
+- project-shaped details stay subordinate:
+
+## Public-Safety Recheck
 
 - sanitization still holds:
 - private paths, URLs, or operational details removed:
 - remaining public-safety concerns:
 
-## Review outcome
+## Recommendation
 
-- recommended result: approve or defer
+- recommended result: approve for canonical promotion or defer for now
 - remaining gaps, if deferred:
