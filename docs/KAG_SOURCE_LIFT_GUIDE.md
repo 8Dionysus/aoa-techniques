@@ -65,6 +65,13 @@ The next implementation-oriented source-class pilot after evidence notes now sta
 
 Those files lift authored GitHub issue and pull-request review templates into derived intake knowledge only. They do not replace the human-first templates or turn review prompts into a policy engine.
 
+The next implementation-oriented source-class pilot after GitHub review templates now stays equally bounded:
+
+- `generated/semantic_review_manifest.json`
+- `generated/semantic_review_manifest.min.json`
+
+Those files lift authored repo-level semantic review docs into derived review knowledge only. They do not replace the markdown review surfaces, infer verdict policy, or turn semantic review into a graph engine.
+
 See also: [FRONTMATTER_METADATA_SPINE_GUIDE.md](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
 See also: [BOUNDED_RELATION_LIFT_GUIDE.md](BOUNDED_RELATION_LIFT_GUIDE.md) for the next bounded family member, which keeps current typed relations explicitly limited to direct-edge lifting rather than graph behavior.
 See also: [RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md) for the bounded caution-layer member, which keeps shadow meaning markdown-first while making future caution lift explicit.
@@ -115,8 +122,8 @@ Not part of this first wave:
 - no bundle-level section IDs
 - no schema or frontmatter expansion
 - no `build_kag` or similar script
-- no generated KAG artifacts beyond the bounded section, checklist, example, evidence note, and GitHub review template manifests
+- no generated KAG artifacts beyond the bounded section, checklist, example, evidence note, GitHub review template, and semantic review manifests
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The first implementation moves are the bounded section, checklist, example, evidence note, and GitHub review template manifests, with broader extraction still deferred to later techniques.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The first implementation moves are the bounded section, checklist, example, evidence note, GitHub review template, and semantic review manifests, with broader extraction still deferred to later techniques.
