@@ -95,9 +95,37 @@ Keep machine-readable summaries easy to discover for consumers while also preser
 
 ## Risks
 
-- latest alias and history copy can drift if only one path is updated
-- collectors can silently double-count if they read both alias and nested rows as independent runs
-- ad hoc backfill can corrupt accumulation windows if older single-write runs are mixed with dual-write runs without policy
+### Failure modes
+
+- the latest alias and nested history copy drift because only one path is updated or one write quietly fails
+- collectors silently double-count runs when they treat the latest alias and nested history rows as separate accumulation inputs
+- ad hoc migration or backfill corrupts accumulation windows by mixing older single-write runs with dual-write history without an explicit cutoff
+
+### Negative effects
+
+- the dual-write layout adds storage and reader-policy complexity even when the summary payload itself stays simple
+- teams can spend more time preserving path shape than checking whether accumulated history is still trustworthy
+- a clean latest alias can create false-success by making the newest run look healthy while historical accumulation is already broken
+
+### Misuse patterns
+
+- treating the technique as a generic archival strategy instead of a bounded latest-plus-history contract for machine-readable summaries
+- adding more alias layers, mirrors, or backfill passes instead of keeping one stable consumer path and one nested history copy
+- assuming every reader may choose its own scan path instead of enforcing nested-history-first behavior explicitly
+
+### Detection signals
+
+- the latest alias and history copy disagree on schema, status, or reported paths
+- trend or accumulation outputs jump unexpectedly after a migration even though recent run summaries look normal
+- readers or review surfaces start reading both top-level alias data and nested history rows in the same accumulation path
+- incident review keeps finding the newest summary quickly, but cannot reconcile it with recent historical totals or streaks
+
+### Mitigations
+
+- narrow the contract back to one stable alias path and one nested history copy, removing extra mirrors or unofficial scan targets
+- make reader precedence explicit so nested history rows win whenever they exist and alias fallback stays limited to legacy layouts
+- gate migrations with a clear first dual-write boundary instead of inventing retrospective backfill across incompatible eras
+- stop expanding storage complexity when accumulation trust is unclear; re-establish alias/history parity before adding retention or archive variants
 
 ## Validation
 

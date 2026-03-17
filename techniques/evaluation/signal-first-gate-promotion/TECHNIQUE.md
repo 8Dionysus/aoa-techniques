@@ -96,10 +96,38 @@ Turn an observed validation signal into the default staged path toward a hard ga
 
 ## Risks
 
-- promoting too early from a shallow history window
-- letting strict behavior spread from one intended surface into unrelated paths
-- losing diagnostic summaries exactly when strict mode starts failing
-- mixing decision telemetry with runtime gating so the rollout becomes harder to reason about
+### Failure modes
+
+- promotion happens from a shallow or noisy history window, so strict mode is enabled before the signal is actually stable
+- strict behavior leaks from the chosen enforcement surface into unrelated paths that were supposed to stay observational
+- diagnostic summaries stop publishing exactly when strict mode starts failing, removing the evidence needed to understand regressions
+- decision telemetry and runtime gating get mixed together until nobody can explain which layer is reporting, holding, or enforcing
+
+### Negative effects
+
+- long staged rollouts can slow response to real regressions when immediate hard blocking would have been the healthier contract
+- extra readiness, governance, progress, and transition layers can make the rollout feel controlled while actual gate state becomes harder to explain
+- a telemetry-rich rollout can create false-success by looking well-instrumented even when the team still has no clear narrow enforcement decision
+
+### Misuse patterns
+
+- keeping the technique in endless `signal_only` observation instead of choosing whether the signal deserves one strict surface at all
+- spreading staged-promotion telemetry across many surfaces until the technique becomes a generic governance stack
+- using the technique when the real need is an immediate hard gate, not a cautious rollout over existing summary contracts
+
+### Detection signals
+
+- operators cannot state which single surface is strict, which ones remain observational, and why that boundary exists
+- summaries publish readiness or progress signals, but promotion decisions keep stalling without a clear `go` or `hold` interpretation
+- a formerly narrow strict rule starts appearing in additional workflows, schedules, or review paths without an explicit promotion decision
+- strict failures appear without the diagnostic artifacts that were supposed to remain visible after rollout
+
+### Mitigations
+
+- re-narrow strict enforcement to one explicitly chosen surface and move all other paths back to observational mode until the boundary is clear again
+- keep summary publication mandatory across both observational and strict runs before adding more telemetry layers
+- collapse or remove decision layers that no longer help explain the rollout, instead of treating more telemetry as automatic progress
+- stop using the technique for a bounded context when the right answer is immediate hard blocking rather than staged promotion
 
 ## Validation
 
