@@ -104,9 +104,34 @@ Recommended update-routing rules:
 
 ## Risks
 
-- over-structuring a repository that is too small to need this layout
-- letting the role map go stale after repo evolution
-- creating duplicate summaries anyway because contributors ignore routing rules
+### Failure modes
+
+- the role map drifts after repo evolution, so real updates no longer route to one canonical home
+- contributors keep bypassing the routing rules and duplicate active status or decisions across multiple documents
+
+### Negative effects
+
+- over-structuring a repository that is too small to need the full layout can add maintenance cost without reducing drift
+- the repository can look orderly while change friction quietly rises because every small update now feels like document choreography
+
+### Misuse patterns
+
+- treating the recommended role map as a mandatory full-size layout instead of narrowing it for a smaller repository
+- using the technique as a reason to add more docs even when the real need is to simplify or merge existing roles
+
+### Detection signals
+
+- the same status or policy change routinely appears in more than one primary document
+- contributors start asking where a recurring update belongs because the routing rules no longer feel obvious
+- `README`, `TODO`, or session/history docs begin to accumulate duplicate summary prose that should already have a canonical home
+- the repo looks well-organized at a glance, but a sample change no longer routes cleanly to one primary document first
+
+### Mitigations
+
+- shrink the role map for smaller repositories instead of preserving a larger operational layout by habit
+- refresh the canonical-home table and routing rules whenever new recurring information classes appear
+- collapse or remove underused document roles when they stop preventing drift
+- treat repeated duplicate-summary relapse as a sign to simplify the layout, not to add another coordinating document
 
 ## Validation
 
