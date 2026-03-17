@@ -30,13 +30,15 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # contract-first-smoke-summary
 
 ## Intent
 
-Make smoke checks reviewable, automatable, and reusable by treating the machine-readable summary as the primary contract instead of relying on console text alone.
+Make smoke checks reviewable, automatable, and reusable by treating the machine-readable summary as the default producer-layer contract instead of relying on console text alone.
 
 ## When to use
 
@@ -44,6 +46,7 @@ Make smoke checks reviewable, automatable, and reusable by treating the machine-
 - CI pipelines that need stable pass or fail signals
 - local operator tools or dashboards that consume validation results
 - agent workflows that need structured outputs instead of log scraping
+- cases where one bounded smoke or probe path should publish the same acceptance surface for CI, operators, and agents before any storage/history or gate-promotion layer is added
 
 ## When not to use
 
@@ -84,6 +87,7 @@ Make smoke checks reviewable, automatable, and reusable by treating the machine-
 - the summary path is stable, either by convention or via a stable `--summary-json` flag
 - exit code aligns with summary status
 - console output may help humans, but it is not the primary contract surface
+- this technique owns the producer contract only; storage/history, staged enforcement, and downstream rollups remain separate adjacent techniques
 
 ## Risks
 
@@ -100,7 +104,7 @@ Verify the technique by confirming that:
 - a downstream consumer can read the summary without scraping console logs
 
 See `checks/summary-contract-checklist.md`.
-For source-backed origin evidence, see `notes/origin-evidence.md`.
+For source-backed origin evidence and bounded second-context reinforcement, see `notes/origin-evidence.md` and `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 
