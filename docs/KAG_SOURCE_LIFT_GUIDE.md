@@ -30,6 +30,8 @@ Its job is narrow:
 
 This is a source-lift discipline, not a graph engine.
 
+See also: [FRONTMATTER_METADATA_SPINE_GUIDE.md](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
+
 ## Stable Source Surfaces
 
 For the first source-lift wave, treat these surfaces as stable:
