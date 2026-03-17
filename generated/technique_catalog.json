@@ -100,7 +100,7 @@
       "id": "AOA-T-0003",
       "name": "contract-first-smoke-summary",
       "domain": "evaluation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract.",
       "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
       "origin": {
@@ -117,7 +117,7 @@
         "contracts",
         "ci"
       ],
-      "maturity_score": 4,
+      "maturity_score": 5,
       "rigor_level": "strict",
       "reversibility": "moderate",
       "review_required": true,
