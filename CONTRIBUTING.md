@@ -55,6 +55,9 @@ Use the GitHub templates for the first public intake layer:
 
 Use the pull request template when opening a PR so the summary, validation, and public-safety checks stay explicit and reviewable.
 
+These issue and PR templates remain the authoritative human-first intake surfaces.
+Any later generated manifest over them is derived only and must not replace the authored templates themselves.
+
 Do not use public issues for leaks, secrets, credentials, or infrastructure-sensitive details; follow `SECURITY.md` instead.
 
 `CODEOWNERS` is intentionally deferred until the intake path proves stable.
