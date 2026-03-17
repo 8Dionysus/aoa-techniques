@@ -85,9 +85,37 @@ Keep agent context scalable by composing it from smaller source fragments into a
 
 ## Risks
 
-- hidden priority rules can make composition feel deterministic only to maintainers who already know the ordering logic
-- contributors may edit the generated artifact directly and break the fragment-first contract
-- traceability can erode if source annotations or equivalent metadata are removed without replacement
+### Failure modes
+
+- ordering and priority rules become implicit, so the generated artifact changes in ways contributors cannot predict from the fragment set alone
+- contributors edit the generated artifact directly and break the fragment-first source-of-truth contract
+- source annotations or equivalent metadata erode until output sections can no longer be traced back to the fragments that produced them
+
+### Negative effects
+
+- deterministic composition can add hidden review overhead when maintainers must mentally reconstruct precedence instead of reading one obvious source path
+- fragment-first authoring can make context feel cleaner while actually making routing and responsibility harder for new contributors to understand
+- a generated artifact can create false-success by looking stable and ordered even when only a small set of maintainers can explain why it rendered that way
+
+### Misuse patterns
+
+- widening the technique into a general documentation build system instead of keeping it bounded to many fragments composing into one generated context artifact
+- adding more precedence rules, fallback layers, or special-case routing instead of simplifying composition order
+- treating traceability annotations as optional decoration rather than part of the bounded review contract
+
+### Detection signals
+
+- reviewers cannot explain output ordering without consulting tribal knowledge or implementation details outside the fragment set
+- generated artifact edits appear in normal maintenance diffs instead of source-fragment changes driving regeneration
+- contributors know the output changed, but cannot quickly identify which fragment or precedence rule caused the change
+- the output still looks deterministic, but repeated review comments reveal confusion about fragment authority, ordering, or ownership boundaries
+
+### Mitigations
+
+- simplify the ordering contract so precedence is explainable from the fragment set and one small set of deterministic rules
+- reassert fragment-first authority by rejecting direct edits to the generated artifact and routing fixes back to canonical fragments
+- restore explicit traceability from output sections to source fragments before adding more composition features or target variants
+- narrow the technique back to one generated context surface when additional routing rules start making source-of-truth boundaries opaque
 
 ## Validation
 
