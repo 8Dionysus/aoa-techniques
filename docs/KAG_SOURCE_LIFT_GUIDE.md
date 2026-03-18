@@ -72,9 +72,11 @@ The next implementation-oriented source-class pilot after GitHub review template
 
 Those files lift authored repo-level semantic review docs into derived review knowledge only. They do not replace the markdown review surfaces, infer verdict policy, or turn semantic review into a graph engine.
 
-See also: [FRONTMATTER_METADATA_SPINE_GUIDE.md](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
-See also: [BOUNDED_RELATION_LIFT_GUIDE.md](BOUNDED_RELATION_LIFT_GUIDE.md) for the next bounded family member, which keeps current typed relations explicitly limited to direct-edge lifting rather than graph behavior.
-See also: [RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md) for the bounded caution-layer member, which keeps shadow meaning markdown-first while making future caution lift explicit.
+See also:
+- [Documentation Map](README.md)
+- [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
+- [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md) for the next bounded family member, which keeps current typed relations explicitly limited to direct-edge lifting rather than graph behavior.
+- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md) for the bounded caution-layer member, which keeps shadow meaning markdown-first while making future caution lift explicit.
 
 ## Stable Source Surfaces
 
