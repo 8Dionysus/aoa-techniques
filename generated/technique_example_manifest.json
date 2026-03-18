@@ -169,6 +169,17 @@
           "body_markdown": "This example shows one canonical rule source being propagated to two agent-facing instruction files.\n\n## Canonical rule source\n\n`rules/agent-guidance.md`\n\n```md\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Generated from rules/agent-guidance.md. Edit the source file instead. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed instruction file derived from rules/agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n## What this proves\n\n- one canonical source owns the shared rule content\n- more than one target surface can stay aligned without copy-paste maintenance\n- the target files are clearly marked as managed rather than canonical"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0014",
+      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/tdd-slice/examples/minimal-tdd-slice.md",
+          "title": "Minimal TDD Slice",
+          "body_markdown": "This example shows a small bounded behavior change handled through `tdd-slice`.\n\n## Scenario\n\nA formatter should preserve leading `+` for international phone numbers instead of stripping it during normalization.\n\n## Flow\n\n1. State the bounded behavior change: \"`+15551234567` should remain prefixed with `+` after normalization.\"\n2. Add or update one failing test around that observable behavior.\n3. Make the smallest implementation change needed to satisfy the test.\n4. Refactor only the normalization helper touched by that slice.\n5. Re-run the relevant tests and report the result.\n\n## Why this stays bounded\n\n- The change is framed as one concrete behavior rule.\n- The tests constrain observable output rather than internal helper structure.\n- Any larger cleanup of phone-number parsing is explicitly left for a separate change."
+        }
+      ]
     }
   ]
 }

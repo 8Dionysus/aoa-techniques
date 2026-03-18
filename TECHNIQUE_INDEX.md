@@ -24,6 +24,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
 | AOA-T-0012 | deterministic-context-composition | docs | promoted | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | AOA-T-0013 | single-source-rule-distribution | docs | promoted | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
+| AOA-T-0014 | tdd-slice | agent-workflows | promoted | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. |
 
 ## Deprecated techniques
 

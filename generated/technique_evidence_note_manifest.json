@@ -4141,6 +4141,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0014",
+      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/tdd-slice/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0014"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "tdd-slice"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/planning-layer/`\n- `atm10-agent/docs/`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin repeatedly needed one bounded implementation slice that could be described in reviewable behavior language before any code was changed."
+                },
+                {
+                  "order": 2,
+                  "text": "The same planning-layer work kept the discipline narrow: write or update the relevant test surface first, implement the smallest passing change, and defer unrelated cleanup to a separate follow-up."
+                },
+                {
+                  "order": 3,
+                  "text": "The origin pressure was specifically human+agent collaboration, where a test-first slice acted as a compact executable contract instead of a long speculative implementation plan."
+                },
+                {
+                  "order": 4,
+                  "text": "Across those uses, the main reusable invariant stayed stable: behavior framing first, minimal implementation second, bounded refactor only after the slice is green."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a reusable bounded-change workflow: TDD is valuable here not as ritual, but as a way to keep one behavior slice explicit, reviewable, and resistant to scope drift."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

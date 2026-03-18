@@ -51,6 +51,7 @@ See also:
 - [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md): `complements` [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md)
 - [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md): none
 - [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
+- [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md): `complements` [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -61,6 +62,7 @@ See also:
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Safe workflow for agent-driven changes using explicit planning, scoped diffs, explicit validation, and concise reporting. |
 | [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) | `promoted` | `source_backed` | `strict` | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists. |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. |
 
 ### `docs`
 
@@ -84,7 +86,7 @@ See also:
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 13/13 techniques.
+- `export_ready` is currently `true` for 14/14 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.
