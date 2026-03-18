@@ -6,6 +6,10 @@ Use it when the repository already has typed evidence notes and explicit note pa
 
 This guide is provenance-first. It allows one bounded generated evidence-note manifest while still avoiding note IDs, schema fields, or cross-note graph semantics.
 
+See also:
+- [Documentation Map](README.md)
+- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+
 ## Current Note Roles
 
 The current evidence-note layer already separates note roles in a useful way:

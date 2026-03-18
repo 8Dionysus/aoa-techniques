@@ -6,6 +6,10 @@ Use it when a technique already looks strong and reusable, but the repo still ne
 
 This guide is review-first. It does not auto-promote techniques from frontmatter metadata, generated catalog fields, or validator results.
 
+See also:
+- [Documentation Map](README.md)
+- [Canonical Rubric](CANONICAL_RUBRIC.md)
+
 ## Outcomes
 
 Canonical review should end in one of two outcomes only:
@@ -37,8 +41,6 @@ Stage 1 metadata can support canonical review, but it does not decide it.
 - `export_ready` only concerns Stage 1 catalog publication safety.
 
 None of these fields auto-promote a technique. Canonical promotion still requires an explicit human review outcome.
-
-See also: [CANONICAL_RUBRIC.md](CANONICAL_RUBRIC.md).
 
 ## Review Notes
 

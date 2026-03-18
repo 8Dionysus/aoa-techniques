@@ -4,6 +4,10 @@ This repository is released as a public documentation-and-technique corpus.
 
 Releases should stay small, explicit, and easy to verify.
 
+See also:
+- [Documentation Map](README.md)
+- [CHANGELOG](../CHANGELOG.md)
+
 ## Release goals
 
 A release should make it easy to answer:

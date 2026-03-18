@@ -6,6 +6,11 @@ Use it when the repository already has typed direct `relations`, but the next qu
 
 This guide is edge-first. It does not add new relation types, relation-rationale fields, graph traversal rules, or generated graph artifacts.
 
+See also:
+- [Documentation Map](README.md)
+- [Selection Patterns](SELECTION_PATTERNS.md)
+- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+
 ## Role Split
 
 Keep the current relation surfaces distinct:
