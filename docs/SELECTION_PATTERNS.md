@@ -9,7 +9,6 @@ Use this surface when the flat adjacency list in `TECHNIQUE_SELECTION.md` is not
 This surface uses direct relation navigation and review-backed clusters only. It does not do graph search, scoring, or multi-hop reasoning.
 
 See also:
-- [Documentation Map](README.md)
 - [Technique Selection](TECHNIQUE_SELECTION.md)
 - [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
 - [Full catalog JSON](../generated/technique_catalog.json)
