@@ -755,6 +755,51 @@
       ]
     },
     {
+      "id": "AOA-T-0016",
+      "name": "bounded-context-map",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible.",
+      "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "planning-layer",
+        "note": "Extracted from repeated need to keep agent work semantically scoped by clarifying domain and subsystem boundaries."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "architecture",
+        "ddd-lite",
+        "contexts",
+        "vocabulary"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-18",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0002"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
+    },
+    {
       "id": "AOA-T-0017",
       "name": "property-invariants",
       "domain": "evaluation",

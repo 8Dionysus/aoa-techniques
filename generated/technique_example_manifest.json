@@ -193,6 +193,17 @@
       ]
     },
     {
+      "id": "AOA-T-0016",
+      "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/bounded-context-map/examples/minimal-context-boundary-map.md",
+          "title": "Minimal Context Boundary Map",
+          "body_markdown": "This example shows a small mapping exercise handled through `bounded-context-map`.\n\n## Scenario\n\nA repository keeps mixing up \u201cretrieval orchestration\u201d with \u201cevidence storage,\u201d causing changes and reviews to spill across both areas.\n\n## Flow\n\n1. Name the two neighboring contexts explicitly: retrieval orchestration and evidence storage.\n2. State the core responsibility of each context in one bounded sentence.\n3. Mark the handoff surface: retrieval writes bounded evidence artifacts, storage preserves and indexes them.\n4. Call out the overloaded terms that previously blurred the two contexts.\n5. Use the map to keep the next change scoped to one context unless the handoff itself is being changed.\n\n## Why this stays bounded\n\n- The map clarifies one concrete confusion instead of introducing a full architecture taxonomy.\n- The interface between the contexts is named explicitly.\n- Larger restructuring questions are deferred until there is a real need for them."
+        }
+      ]
+    },
+    {
       "id": "AOA-T-0017",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "examples": [

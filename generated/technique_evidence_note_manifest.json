@@ -4309,6 +4309,89 @@
       ]
     },
     {
+      "id": "AOA-T-0016",
+      "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/bounded-context-map/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0016"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-context-map"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/planning-layer/`\n- `atm10-agent/docs/`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin repeatedly needed a compact way to keep agent and human work semantically scoped when neighboring subsystems or concepts started to blur together."
+                },
+                {
+                  "order": 2,
+                  "text": "The same planning-layer work reused one stable pattern: name the bounded contexts, clarify what belongs inside each one, and make the handoff surfaces visible before larger changes expanded the wrong area."
+                },
+                {
+                  "order": 3,
+                  "text": "In those uses, the value came less from formal architecture diagrams and more from reducing vocabulary drift so reviews and implementation could stay inside the right responsibility boundary."
+                },
+                {
+                  "order": 4,
+                  "text": "Across repeated uses, the reusable invariant stayed stable: context naming should narrow ambiguity, expose interfaces, and help future changes stay better scoped."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a reusable documentation and scoping pattern: a bounded context map is useful here because it reduces semantic drift and makes subsystem boundaries reviewable before code changes widen unnecessarily."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "AOA-T-0017",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "notes": [
