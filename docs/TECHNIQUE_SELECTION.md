@@ -10,6 +10,7 @@ Use this surface to make one bounded choice:
 4. use direct `relations` as adjacency hints, not graph traversal
 
 See also:
+- [Documentation Map](README.md)
 - [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
 - [CANONICAL_RUBRIC](CANONICAL_RUBRIC.md)
 - [Full catalog JSON](../generated/technique_catalog.json)

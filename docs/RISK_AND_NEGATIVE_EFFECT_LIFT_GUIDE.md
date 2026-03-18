@@ -6,6 +6,11 @@ Use it when the repository already has a stronger shadow-language contract insid
 
 This guide is caution-first. It does not add shadow fields, generated caution outputs, or validator logic.
 
+See also:
+- [Documentation Map](README.md)
+- [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
+- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+
 ## Role Split
 
 Keep the current caution surfaces distinct:

@@ -5,6 +5,10 @@ This document defines the Stage 1 machine-readable fields used in `TECHNIQUE.md`
 Markdown stays authoritative.
 `generated/technique_catalog.json` and `generated/technique_catalog.min.json` are derived outputs built from tracked markdown plus `schemas/`.
 
+See also:
+- [Documentation Map](README.md)
+- [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
+
 ## Metadata And Canonical Review
 
 Stage 1 metadata can inform selection and canonical review, but it does not replace explicit review judgment.

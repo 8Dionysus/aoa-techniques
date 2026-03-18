@@ -6,6 +6,10 @@ Use it when the repository already works as authoritative markdown, but the next
 
 This guide is metadata-first. It does not add new frontmatter fields, generated KAG outputs, or section-level extraction logic.
 
+See also:
+- [Documentation Map](README.md)
+- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+
 ## Role Split
 
 Keep the current source surfaces distinct:

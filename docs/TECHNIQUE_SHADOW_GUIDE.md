@@ -6,6 +6,10 @@ Use it when a technique already has intent, contracts, and validation, but its `
 
 This guide is review-first. It does not add schema fields, validator rules, or machine-readable shadow metadata.
 
+See also:
+- [Documentation Map](README.md)
+- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+
 ## Why `Risks` Alone Is Too Weak
 
 A flat `Risks` list often mixes together very different problems:
