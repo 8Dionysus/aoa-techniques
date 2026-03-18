@@ -753,6 +753,51 @@
           "path": "notes/origin-evidence.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0017",
+      "name": "property-invariants",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set.",
+      "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "planning-layer",
+        "note": "Extracted from repeated need to turn system truths into invariant-oriented checks that cover more than a few fixed examples."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "testing",
+        "properties",
+        "invariants",
+        "agent-friendly"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-18",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0007"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
     }
   ]
 }

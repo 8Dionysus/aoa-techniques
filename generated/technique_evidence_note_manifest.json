@@ -4307,6 +4307,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0017",
+      "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/property-invariants/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0017"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "property-invariants"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "atm10-agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `atm10-agent/planning-layer/`\n- `atm10-agent/docs/`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin repeatedly needed a stronger validation surface than a few handpicked examples when behavior had to remain true across a wider input or state space."
+                },
+                {
+                  "order": 2,
+                  "text": "The same planning-layer work kept reusing one pattern: identify the domain truth that should stay stable, encode it as an invariant-oriented check, and keep the input strategy explicit enough for review."
+                },
+                {
+                  "order": 3,
+                  "text": "In those uses, the reusable value did not come from random generation by itself; it came from expressing a meaningful invariant that constrained future regressions across many cases."
+                },
+                {
+                  "order": 4,
+                  "text": "Across repeated uses, the stable invariant-first discipline remained the same: choose the domain truth carefully, keep the generator or repeated input surface bounded, and report what the property truly proves."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a reusable evaluation pattern for broader behavioral coverage: invariants are valuable here because they express stable truths that should survive beyond a narrow example list."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

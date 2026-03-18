@@ -853,6 +853,62 @@
           "markdown": "What can vary across projects:\n- the shape of the boundary (API, file contract, summary artifact, message queue, service wrapper)\n- the validation mechanism (unit, smoke, structured summary, contract suite)\n- how downstream consumers are documented\n\nWhat should stay invariant:\n- explicit contract framing\n- boundary-first validation discipline\n- visibility of downstream assumptions when relevant\n- concise statement of what is guaranteed"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0017",
+      "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Reduce weak example-only validation by expressing stable system or domain truths as invariant-oriented checks that should hold across many cases."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- rules that should hold across a wide input or state space\n- situations where example-based tests feel too narrow\n- systems with conservation, monotonicity, idempotency, structural, or safety invariants\n- agent-assisted validation work where the invariant can act as a compact spec"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- presentation-only behavior where concrete examples are clearer\n- situations where no meaningful invariant is yet understood\n- systems where the main problem is unknown requirements rather than coverage breadth"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- target rule or system truth\n- current examples or tests\n- candidate input space or generators\n- known edge cases"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- explicit invariant statements\n- property-oriented tests or checks\n- notes on assumptions behind the generators or input space\n- concise validation result"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. identify what must remain true across many cases\n2. separate strong invariants from weak hopes or vague expectations\n3. express those invariants as property-oriented tests or repeated checks\n4. keep the generator or input strategy bounded and reviewable\n5. run the checks and record what properties now constrain behavior\n6. report what the properties do and do not prove"
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- each property should express a meaningful invariant\n- the technique should broaden coverage beyond a tiny fixed example set\n- generator assumptions should remain understandable\n- the resulting checks should help future regressions surface earlier"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the property is too weak to constrain real behavior\n- the generator range never reaches meaningful stress points\n- the checks are random-looking but semantically shallow\n\n### Negative effects\n\n- overly complex generator logic can hide rather than clarify the domain truth\n- large noisy failing cases can make debugging slower if the invariant was poorly chosen\n\n### Misuse patterns\n\n- writing vague properties like \u201cshould not fail\u201d and calling them invariants\n- confusing random data generation with meaningful property testing\n- using property checks where a few concrete examples would communicate better\n\n### Detection signals\n\n- the property could pass for many broken implementations\n- no one can explain why the invariant matters to the domain\n- the generated space is large but the signal gained is small\n\n### Mitigations\n\n- rewrite the property around a stronger domain truth\n- narrow the generator to meaningful ranges first\n- combine property checks with a few clear examples for readability"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the property expresses a meaningful invariant rather than a vague expectation\n- the resulting check broadens coverage beyond a small fixed example set\n- generator or input assumptions are understandable enough to review\n- the final report states what the invariant actually constrains"
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- test framework and generator tooling\n- the shape of the input space\n- whether the invariant is implemented as a formal property test or a repeated structured check\n- the strength of shrinking or failure reporting tools\n\nWhat should stay invariant:\n- meaningful invariant framing\n- broader coverage than handpicked examples alone\n- explicit generator or input assumptions\n- honest statement of what the property proves"
+        }
+      ]
     }
   ]
 }
