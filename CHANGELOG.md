@@ -8,6 +8,9 @@ The format is intentionally simple and human-first.
 
 First public baseline release.
 
+This changelog entry uses the release-prep merge date.
+The GitHub release for `v0.1.0` was published on `2026-03-18`.
+
 ### Added
 
 - initial public release of `aoa-techniques` as a public library of reusable techniques for coding agents and humans
