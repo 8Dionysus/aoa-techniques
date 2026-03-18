@@ -664,6 +664,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0017",
+      "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/property-invariants/checks/property-invariants-checklist.md",
+          "title": "Property Invariants Checklist",
+          "intro_markdown": "Use this checklist to verify that an invariant-oriented check is expressing a meaningful property rather than random-data theater.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The invariant names a real domain or system truth."
+            },
+            {
+              "order": 2,
+              "text": "The property would fail for a meaningfully broken implementation."
+            },
+            {
+              "order": 3,
+              "text": "The generator or repeated input strategy is bounded and understandable."
+            },
+            {
+              "order": 4,
+              "text": "The broader input space adds signal beyond a tiny fixed example list."
+            },
+            {
+              "order": 5,
+              "text": "The result states what the invariant constrains and what it still does not prove."
+            },
+            {
+              "order": 6,
+              "text": "Any companion example tests used for readability remain clearly distinct from the invariant itself."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

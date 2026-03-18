@@ -1,7 +1,7 @@
 ---
 id: AOA-T-0017
 name: property-invariants
-domain: testing
+domain: evaluation
 status: promoted
 origin:
   project: atm10-agent
@@ -19,7 +19,7 @@ maturity_score: 3
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: bounded_checklist
+validation_strength: source_backed
 public_safety_reviewed_at: 2026-03-18
 export_ready: true
 relations:
@@ -140,11 +140,11 @@ This public version removes project-specific data shapes and tool details while 
 
 ## Example
 
-A later revision should include one public example where a domain invariant is expressed as a property and shown to catch cases beyond a fixed test list.
+See `examples/minimal-invariant-check.md` for a small flow where one stable rule is expressed as an invariant instead of a tiny fixed example list.
 
 ## Checks
 
-A minimal review pass should confirm that the property is meaningful, bounded, and not merely random-data theater.
+See `checks/property-invariants-checklist.md` for a minimal review pass covering invariant strength, bounded input assumptions, and honest reporting.
 
 ## Promotion history
 

@@ -191,6 +191,17 @@
           "body_markdown": "This example shows a small boundary change handled through `contract-test-design`.\n\n## Scenario\n\nA worker emits a JSON summary consumed by another service, and the team needs to refactor internals without breaking the consumer-facing shape.\n\n## Flow\n\n1. Name the boundary explicitly: the emitted summary file and the consumer that reads it.\n2. Describe the expected contract in bounded terms: required keys, value shapes, and error behavior.\n3. Add a contract-oriented test or smoke check around that emitted summary.\n4. Refactor the internal worker logic without widening the contract.\n5. Run the contract check and report both what is guaranteed and what remains outside the contract.\n\n## Why this stays bounded\n\n- The contract is framed around the consumer-visible artifact.\n- Internal refactor freedom is preserved as long as the boundary behavior remains stable.\n- Any broader redesign of the summary format is deferred to a separate change."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0017",
+      "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/property-invariants/examples/minimal-invariant-check.md",
+          "title": "Minimal Invariant Check",
+          "body_markdown": "This example shows a small rule expressed through `property-invariants`.\n\n## Scenario\n\nA normalization helper should always return lowercase ASCII slugs containing only letters, digits, and hyphens for accepted input titles.\n\n## Flow\n\n1. Name the invariant explicitly: accepted titles should normalize into a slug-safe shape every time.\n2. Keep the input strategy bounded to meaningful title-like strings instead of arbitrary byte noise.\n3. Run an invariant-oriented check that the result stays lowercase and matches the allowed slug character set.\n4. Pair the invariant with a few concrete examples only if they make the rule easier to understand.\n5. Report what the invariant constrains and what input cases still remain outside the current property surface.\n\n## Why this stays bounded\n\n- The invariant is tied to one stable output rule.\n- The input space is broad enough to add signal but narrow enough to review.\n- Bigger questions about slug semantics or unsupported languages are deferred to separate work."
+        }
+      ]
     }
   ]
 }
