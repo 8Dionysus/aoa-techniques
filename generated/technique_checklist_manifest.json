@@ -627,6 +627,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0015",
+      "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/contract-test-design/checks/contract-test-design-checklist.md",
+          "title": "Contract Test Design Checklist",
+          "intro_markdown": "Use this checklist to verify that a change really validates a boundary contract rather than only exercising hidden internals.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The boundary and its consumers were named explicitly."
+            },
+            {
+              "order": 2,
+              "text": "The contract described observable inputs, outputs, or failure behavior."
+            },
+            {
+              "order": 3,
+              "text": "Validation targeted the real boundary surface instead of an internal surrogate."
+            },
+            {
+              "order": 4,
+              "text": "Downstream assumptions were stated where they materially affected the contract."
+            },
+            {
+              "order": 5,
+              "text": "The change report stated what the contract now guarantees."
+            },
+            {
+              "order": 6,
+              "text": "Remaining weak edges or out-of-contract behavior were named explicitly."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -25,6 +25,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0012 | deterministic-context-composition | docs | promoted | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | AOA-T-0013 | single-source-rule-distribution | docs | promoted | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
 | AOA-T-0014 | tdd-slice | agent-workflows | promoted | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. |
+| AOA-T-0015 | contract-test-design | evaluation | promoted | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
 
 ## Deprecated techniques
 
