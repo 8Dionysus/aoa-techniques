@@ -667,6 +667,47 @@
           "path": "notes/second-context-adaptation.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0014",
+      "name": "tdd-slice",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits.",
+      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "planning-layer",
+        "note": "Extracted from bounded feature-slice needs around agent-friendly testing discipline and prepared for first public reusable form."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "testing",
+        "tdd",
+        "bounded-change",
+        "agent-friendly"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-18",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
     }
   ]
 }

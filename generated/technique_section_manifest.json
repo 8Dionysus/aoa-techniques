@@ -741,6 +741,62 @@
           "markdown": "What can vary across projects:\n- the canonical source directory name such as `.ruler/`, `rules/`, or another docs folder\n- the exact set of target instruction files\n- whether the distribution step is a CLI command, script, build task, or CI-enforced local check\n- the target-specific wrapper format used around shared instructions\n\nWhat should stay invariant:\n- one canonical rule source owns the shared instruction content\n- multiple agent-facing instruction surfaces can be refreshed from that source\n- target files remain derived rather than hand-maintained canonical documents\n- distribution exists to reduce drift, not to create many divergent instruction variants\n\nProject-shaped details that should not be treated as invariant:\n- the donor repository's exact supported-agent matrix\n- Node, npm, or any specific packaging/runtime assumptions\n- nested loading behavior, which may support broader systems but is not part of this first technique contract\n- MCP propagation, skills propagation, `.gitignore` automation, backup/revert flows, and other wider product behavior\n\nSee `notes/second-context-adaptation.md` for a bounded docs-repository adaptation sketch."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0014",
+      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Reduce ambiguity and regression risk by expressing a bounded behavior change as tests before implementation, then keeping both implementation and refactor inside that slice."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- small or medium feature slices with clearly describable behavior\n- logic changes that benefit from explicit behavioral framing\n- refactors where a bounded test surface should constrain change\n- agent-assisted implementation where the task needs a compact executable specification"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- exploratory work where the behavior is still too vague to test meaningfully\n- large structural rewrites where test-first on one slice would hide the real scope\n- purely mechanical or wording-only changes with no meaningful behavior surface"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- desired behavior or rule change\n- bounded module or slice under change\n- constraints and non-goals\n- available test surface"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- new or updated tests\n- minimal implementation satisfying the tests\n- bounded refactor if needed\n- concise validation result"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. state the behavior in bounded, reviewable language\n2. write or update tests before implementation where the task shape allows it\n3. make the smallest implementation change that satisfies the tests\n4. refactor only inside the declared slice\n5. run the relevant tests and record the result\n6. report what behavior is now specified and what remains out of scope"
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- tests should express behavior rather than incidental implementation detail\n- the implementation should stay bounded to the declared slice\n- unrelated cleanup should not be smuggled into the change\n- the final result should make future regressions easier to detect"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- tests mirror the implementation instead of constraining it\n- the slice is too broad and hides an architectural rewrite\n- the chosen test surface is too weak to catch real regressions\n\n### Negative effects\n\n- ritualized TDD can slow work when the problem is still undefined\n- narrow tests can create false confidence if the slice was chosen poorly\n\n### Misuse patterns\n\n- writing tests after the code and labeling it test-first\n- forcing TDD on glue code or one-off scripts with no stable behavioral core\n- using the test suite as permission to widen scope without naming it\n\n### Detection signals\n\n- tests mention internal implementation details more than behavior\n- the diff grows far beyond the declared slice\n- the post-change explanation cannot clearly state what behavior is now specified\n\n### Mitigations\n\n- narrow the slice before continuing\n- rewrite tests around behavior and observable outcomes\n- split architectural cleanup into a separate change"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- tests were added or updated before implementation when the task was suitable for TDD\n- the implementation stayed inside the declared slice\n- the relevant test surface passed after the change\n- the final report names both the covered behavior and the remaining out-of-scope behavior"
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- testing framework and command surface\n- module boundaries\n- naming for behavior slices versus acceptance slices\n- whether the tests are unit, contract, or smoke tests\n\nWhat should stay invariant:\n- explicit behavior framing before implementation\n- bounded slice discipline\n- minimal implementation before refactor expansion\n- visible verification at the end"
+        }
+      ]
     }
   ]
 }

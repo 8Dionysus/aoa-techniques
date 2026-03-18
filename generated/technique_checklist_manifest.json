@@ -586,6 +586,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0014",
+      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/tdd-slice/checks/tdd-slice-checklist.md",
+          "title": "TDD Slice Checklist",
+          "intro_markdown": "Use this checklist to verify that a change really stayed inside a bounded `tdd-slice`.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The target behavior was stated explicitly before implementation changed."
+            },
+            {
+              "order": 2,
+              "text": "The initial test surface targeted observable behavior rather than hidden internals."
+            },
+            {
+              "order": 3,
+              "text": "The implementation diff stayed inside the declared slice."
+            },
+            {
+              "order": 4,
+              "text": "Refactor work stayed subordinate to making the bounded slice pass."
+            },
+            {
+              "order": 5,
+              "text": "Unrelated cleanup was deferred instead of being folded into the same change."
+            },
+            {
+              "order": 6,
+              "text": "The final validation step named which tests passed."
+            },
+            {
+              "order": 7,
+              "text": "The final report stated both the covered behavior and what remained out of scope."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
