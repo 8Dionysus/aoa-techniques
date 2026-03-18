@@ -4224,6 +4224,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0015",
+      "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/contract-test-design/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0015"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-test-design"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "abyss-stack"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `abyss-stack/planning-layer/`\n- `abyss-stack/docs/`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin repeatedly needed service and workflow boundaries to be reviewed at the consumer-visible contract surface instead of only through internal implementation checks."
+                },
+                {
+                  "order": 2,
+                  "text": "The same planning-layer work kept forcing one reusable pattern: make the expected inputs, outputs, and failure surface explicit before refactor or feature pressure widened the change."
+                },
+                {
+                  "order": 3,
+                  "text": "In those uses, contract-oriented verification was strongest when downstream assumptions were named directly rather than being hidden inside implicit implementation knowledge."
+                },
+                {
+                  "order": 4,
+                  "text": "Across repeated uses, the stable reusable invariant was boundary-first verification: describe the observable contract, test or check that surface, and report what is guaranteed versus what still remains outside the contract."
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The origin proves this technique as a reusable evaluation discipline for boundary stability: the contract is valuable because it keeps interface expectations explicit, reviewable, and resistant to internal churn."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

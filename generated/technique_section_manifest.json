@@ -797,6 +797,62 @@
           "markdown": "What can vary across projects:\n- testing framework and command surface\n- module boundaries\n- naming for behavior slices versus acceptance slices\n- whether the tests are unit, contract, or smoke tests\n\nWhat should stay invariant:\n- explicit behavior framing before implementation\n- bounded slice discipline\n- minimal implementation before refactor expansion\n- visible verification at the end"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0015",
+      "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Reduce breakage at boundaries by expressing the expected interface behavior explicitly and verifying it at the contract surface rather than only through internal tests."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- service or module boundaries with downstream consumers\n- smoke paths that should emit stable summaries or structured output\n- interface changes where downstream drift is a risk\n- refactors that keep internals moving while the boundary must remain stable"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- purely local logic with no meaningful boundary\n- situations where the real problem is that the boundary itself is still undefined\n- very small changes where a boundary contract would add ceremony without value"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- boundary under review\n- expected inputs and outputs\n- known downstream expectations\n- current validation surface"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- explicit contract assumptions\n- contract-oriented tests or checks\n- downstream impact notes\n- concise validation result"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. identify the boundary and its consumers\n2. describe the expected inputs, outputs, and failure behavior in bounded terms\n3. express the contract through tests, smoke summaries, or structured checks\n4. avoid overfitting to internals that consumers never observe\n5. run the contract checks and record what they do and do not prove\n6. report the contract surface that is now explicit and any remaining weak edges"
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the contract should be visible and reviewable by another human or agent\n- validation should target the boundary surface, not only hidden internals\n- downstream assumptions should be named when they matter\n- interface changes should not be smuggled in without explicit note"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the contract is too vague to constrain behavior\n- validation covers a summary artifact but not the real consumer boundary\n- downstream compatibility assumptions remain implicit\n\n### Negative effects\n\n- an oversized contract can freeze useful internal evolution unnecessarily\n- weak contract definitions can create false confidence\n\n### Misuse patterns\n\n- calling any smoke test a contract test without boundary discipline\n- encoding internal implementation details into the boundary contract\n- widening the contract surface simply because a tool makes it easy\n\n### Detection signals\n\n- the supposed contract mostly references internals rather than observable inputs/outputs\n- downstream consumers are still surprised after the contract change\n- the validation surface does not actually exercise the real boundary\n\n### Mitigations\n\n- narrow the contract to what the consumer really observes\n- separate internal correctness tests from boundary stability tests\n- add downstream impact notes before changing the boundary"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the boundary and consumers were named explicitly\n- tests or checks target observable contract behavior\n- downstream impact was considered where relevant\n- the result states what the contract guarantees and what it does not"
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the shape of the boundary (API, file contract, summary artifact, message queue, service wrapper)\n- the validation mechanism (unit, smoke, structured summary, contract suite)\n- how downstream consumers are documented\n\nWhat should stay invariant:\n- explicit contract framing\n- boundary-first validation discipline\n- visibility of downstream assumptions when relevant\n- concise statement of what is guaranteed"
+        }
+      ]
     }
   ]
 }

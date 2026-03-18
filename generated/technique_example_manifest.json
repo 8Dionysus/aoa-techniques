@@ -180,6 +180,17 @@
           "body_markdown": "This example shows a small bounded behavior change handled through `tdd-slice`.\n\n## Scenario\n\nA formatter should preserve leading `+` for international phone numbers instead of stripping it during normalization.\n\n## Flow\n\n1. State the bounded behavior change: \"`+15551234567` should remain prefixed with `+` after normalization.\"\n2. Add or update one failing test around that observable behavior.\n3. Make the smallest implementation change needed to satisfy the test.\n4. Refactor only the normalization helper touched by that slice.\n5. Re-run the relevant tests and report the result.\n\n## Why this stays bounded\n\n- The change is framed as one concrete behavior rule.\n- The tests constrain observable output rather than internal helper structure.\n- Any larger cleanup of phone-number parsing is explicitly left for a separate change."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0015",
+      "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/contract-test-design/examples/minimal-contract-boundary.md",
+          "title": "Minimal Contract Boundary",
+          "body_markdown": "This example shows a small boundary change handled through `contract-test-design`.\n\n## Scenario\n\nA worker emits a JSON summary consumed by another service, and the team needs to refactor internals without breaking the consumer-facing shape.\n\n## Flow\n\n1. Name the boundary explicitly: the emitted summary file and the consumer that reads it.\n2. Describe the expected contract in bounded terms: required keys, value shapes, and error behavior.\n3. Add a contract-oriented test or smoke check around that emitted summary.\n4. Refactor the internal worker logic without widening the contract.\n5. Run the contract check and report both what is guaranteed and what remains outside the contract.\n\n## Why this stays bounded\n\n- The contract is framed around the consumer-visible artifact.\n- Internal refactor freedom is preserved as long as the boundary behavior remains stable.\n- Any broader redesign of the summary format is deferred to a separate change."
+        }
+      ]
     }
   ]
 }

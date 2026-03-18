@@ -708,6 +708,51 @@
           "path": "notes/origin-evidence.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0015",
+      "name": "contract-test-design",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals.",
+      "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+      "origin": {
+        "project": "abyss-stack",
+        "path": "planning-layer",
+        "note": "Extracted from repeated need to make service and workflow boundaries explicit and reviewable for agents and humans."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "testing",
+        "contracts",
+        "boundaries",
+        "agent-friendly"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-18",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0003"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
     }
   ]
 }
