@@ -29,7 +29,7 @@ A release should make it easy to answer:
    - no raw sensitive logs
 7. Merge the release-prep PR to `main`.
 8. Create a Git tag such as `v0.1.0`.
-9. Publish GitHub release notes using the matching changelog section.
+9. Publish GitHub release notes using the matching changelog section or a clearly equivalent human-first shape.
 
 ## Release note shape
 
@@ -37,9 +37,11 @@ Recommended GitHub release note sections:
 
 - summary
 - added
-- changed
+- included in this release
 - validation
-- not included
+- notes or not included
+
+Exact headings do not need to be rigid, but the changelog entry and the published GitHub release should answer the same release-goal questions in roughly the same shape.
 
 ## Versioning guidance
 
