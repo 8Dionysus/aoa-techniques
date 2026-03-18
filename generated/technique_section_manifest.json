@@ -855,6 +855,62 @@
       ]
     },
     {
+      "id": "AOA-T-0016",
+      "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Reduce semantic confusion and misplaced changes by naming bounded contexts, clarifying their responsibilities, and making the interfaces between them visible."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- repositories with several domains, services, or subsystems that can blur together\n- situations where naming is overloaded or ambiguous\n- architecture discussions that need a compact context boundary map before coding safely\n- agent-assisted work where semantic confusion would widen the context unnecessarily"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- tiny repositories with no meaningful subsystem ambiguity\n- changes that are fully local and already clearly bounded\n- situations where drawing context labels would only add ceremony without reducing confusion"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- target area, subsystem, or domain surface\n- current vocabulary and responsibilities\n- neighboring areas likely to be confused with the target\n- known ambiguous or overloaded terms"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- named bounded contexts or subsystem groupings\n- rough responsibility map\n- visible handoff or interface notes\n- ambiguity notes and recommended vocabulary"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. identify the target area and the words currently used to describe it\n2. separate responsibilities into bounded contexts or subsystem groupings\n3. name what belongs inside each context and what stays outside\n4. describe the handoff points, interfaces, or translation surfaces between contexts\n5. surface ambiguous terms and propose clearer language\n6. report how the map should constrain future changes or reviews"
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- context boundaries should reduce semantic confusion rather than create taxonomy for its own sake\n- neighboring contexts should be named explicitly when they matter\n- handoff or translation points should be visible\n- the result should help a future reviewer scope work more safely"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- too many contexts are invented for a small problem\n- the map renames concepts without reducing ambiguity\n- interfaces remain muddy even after the map is drawn\n\n### Negative effects\n\n- over-structuring can slow small projects if no real confusion exists\n- premature context formalization can freeze evolving vocabulary too early\n\n### Misuse patterns\n\n- using context mapping as a substitute for real interface cleanup\n- declaring a DDD-style map without changing how reviews or changes are scoped\n- treating every folder boundary as a bounded context automatically\n\n### Detection signals\n\n- contributors still confuse neighboring areas after the map is written\n- the context names overlap or feel interchangeable\n- handoff points are still implicit or undocumented\n\n### Mitigations\n\n- collapse weak or ceremonial contexts\n- tighten the vocabulary around observable responsibilities\n- add or clarify the interface notes between contexts"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the main ambiguity or vocabulary drift was reduced\n- contexts or subsystems were named with clearer responsibility boundaries\n- handoff or interface points were made visible\n- the result would help a future change stay better scoped"
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- whether the units are called bounded contexts, subsystems, domains, or responsibility zones\n- how formal the map needs to be\n- how vocabulary is recorded\n- where the interface notes live\n\nWhat should stay invariant:\n- visible responsibility boundaries\n- reduction of semantic confusion\n- explicit handoff or interface notes where relevant\n- usefulness for future change scoping"
+        }
+      ]
+    },
+    {
       "id": "AOA-T-0017",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "sections": [

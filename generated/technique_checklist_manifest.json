@@ -666,6 +666,43 @@
       ]
     },
     {
+      "id": "AOA-T-0016",
+      "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/bounded-context-map/checks/bounded-context-map-checklist.md",
+          "title": "Bounded Context Map Checklist",
+          "intro_markdown": "Use this checklist to verify that a context map actually reduces semantic confusion instead of merely adding labels.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The main ambiguous terms or overlapping areas were named explicitly."
+            },
+            {
+              "order": 2,
+              "text": "Each context or subsystem has a clearer responsibility boundary after the map."
+            },
+            {
+              "order": 3,
+              "text": "Neighboring contexts that matter were distinguished clearly enough for review."
+            },
+            {
+              "order": 4,
+              "text": "Handoff or interface points were made visible where confusion previously existed."
+            },
+            {
+              "order": 5,
+              "text": "The resulting map would help a future change stay inside the intended scope."
+            },
+            {
+              "order": 6,
+              "text": "Weak or ceremonial contexts were avoided or collapsed."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "AOA-T-0017",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "checklists": [

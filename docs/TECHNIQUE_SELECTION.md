@@ -53,6 +53,7 @@ See also:
 - [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
 - [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md): `complements` [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 - [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md): `complements` [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
+- [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 - [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md): `complements` [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 
 ## Browse By Domain
@@ -74,6 +75,7 @@ See also:
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | `canonical` | `cross_context` | `light` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) | `promoted` | `cross_context` | `bounded` | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `promoted` | `cross_context` | `bounded` | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
+| [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible. |
 
 ### `evaluation`
 
@@ -90,7 +92,7 @@ See also:
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 16/16 techniques.
+- `export_ready` is currently `true` for 17/17 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.
