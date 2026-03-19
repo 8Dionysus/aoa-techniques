@@ -4,6 +4,7 @@ Use this checklist to verify that an invariant-oriented check is expressing a me
 
 - The invariant names a real domain or system truth.
 - The property would fail for a meaningfully broken implementation.
+- The property stayed centered on a meaningful invariant rather than turning into a disguised consumer-boundary contract.
 - The generator or repeated input strategy is bounded and understandable.
 - The broader input space adds signal beyond a tiny fixed example list.
 - The result states what the invariant constrains and what it still does not prove.
