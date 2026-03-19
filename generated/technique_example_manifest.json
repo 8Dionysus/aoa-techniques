@@ -175,6 +175,11 @@
       "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
       "examples": [
         {
+          "example_path": "techniques/agent-workflows/tdd-slice/examples/concrete-application-handler-slice.md",
+          "title": "Concrete Application Handler Slice",
+          "body_markdown": "This example shows a more concrete bounded behavior change handled through `tdd-slice`.\n\n## Scenario\n\nAn application handler returns a status summary for background imports. It currently collapses `partial_success` into `success`, which hides item-level failures from callers that only inspect the final handler result.\n\n## Flow\n\n1. State the bounded behavior slice explicitly: when some items succeed and some fail, the handler should return `partial_success` instead of `success`.\n2. Add one failing test at the handler boundary around the observable returned status and summary payload.\n3. Make the smallest implementation change needed in the nearby result-mapping logic.\n4. Refactor only the local status-mapping helper touched by that slice.\n5. Re-run the relevant tests and report that the handler now distinguishes partial success without widening the change into a broader import redesign.\n\n## Why this stays bounded\n\n- The example centers one observable behavior rule rather than a larger boundary or schema rewrite.\n- The test surface stays focused on handler output, not a wider API or downstream contract package.\n- Broader questions about retry policy, import orchestration, or payload redesign are explicitly deferred."
+        },
+        {
           "example_path": "techniques/agent-workflows/tdd-slice/examples/minimal-tdd-slice.md",
           "title": "Minimal TDD Slice",
           "body_markdown": "This example shows a small bounded behavior change handled through `tdd-slice`.\n\n## Scenario\n\nA formatter should preserve leading `+` for international phone numbers instead of stripping it during normalization.\n\n## Flow\n\n1. State the bounded behavior change: \"`+15551234567` should remain prefixed with `+` after normalization.\"\n2. Add or update one failing test around that observable behavior.\n3. Make the smallest implementation change needed to satisfy the test.\n4. Refactor only the normalization helper touched by that slice.\n5. Re-run the relevant tests and report the result.\n\n## Why this stays bounded\n\n- The change is framed as one concrete behavior rule.\n- The tests constrain observable output rather than internal helper structure.\n- Any larger cleanup of phone-number parsing is explicitly left for a separate change."
@@ -185,6 +190,11 @@
       "id": "AOA-T-0015",
       "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
       "examples": [
+        {
+          "example_path": "techniques/evaluation/contract-test-design/examples/concrete-api-contract-boundary.md",
+          "title": "Concrete API Contract Boundary",
+          "body_markdown": "This example shows a more concrete consumer-visible boundary change handled through `contract-test-design`.\n\n## Scenario\n\nAn API endpoint returns `422` validation errors consumed by a web client. The team wants to refactor internal validation code, but the response contract must keep the same public shape: `code`, `message`, and `field` for each validation failure.\n\n## Flow\n\n1. Name the real boundary explicitly: the HTTP response body returned to the web client, not the internal validator objects.\n2. Describe the bounded contract in consumer terms: required error keys, expected status code, and the rule for missing-field failures.\n3. Add or update a contract-oriented test around the endpoint response so the client-visible payload is the surface under validation.\n4. Refactor the internal validation and mapping logic without widening or renaming the consumer-facing error shape.\n5. Run the contract check and report what the boundary now guarantees, while leaving broader API versioning or authentication changes out of scope.\n\n## Why this stays bounded\n\n- The example is anchored to one observable consumer-facing payload contract.\n- Internal refactor freedom remains available as long as the public response contract stays stable.\n- The example does not broaden into general property coverage or a wider API redesign."
+        },
         {
           "example_path": "techniques/evaluation/contract-test-design/examples/minimal-contract-boundary.md",
           "title": "Minimal Contract Boundary",
@@ -197,6 +207,11 @@
       "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
       "examples": [
         {
+          "example_path": "techniques/docs/bounded-context-map/examples/concrete-infra-context-map.md",
+          "title": "Concrete Infra Context Map",
+          "body_markdown": "This example shows a more concrete infra-repository scoping exercise handled through `bounded-context-map`.\n\n## Scenario\n\nAn infrastructure repository keeps mixing up \"cluster bootstrap\" with \"service rollout configuration,\" causing reviews and implementation plans to spill across both areas.\n\n## Flow\n\n1. Name the two neighboring contexts explicitly: cluster bootstrap and service rollout configuration.\n2. State the main responsibility of each context in one bounded sentence so the overlap becomes visible.\n3. Mark the handoff surface: bootstrap exposes shared platform primitives, while rollout configuration consumes those primitives by reference.\n4. Call out overloaded terms such as \"environment config\" that previously blurred the two areas.\n5. Use the map to keep the next change scoped to rollout configuration unless the handoff itself is what needs revision.\n\n## Why this stays bounded\n\n- The example reduces one concrete ambiguity instead of introducing a full architecture taxonomy.\n- The handoff between the contexts is named explicitly enough for review and future scoping.\n- Broader platform modeling or domain-architecture work is deferred until there is a separate reason to do it."
+        },
+        {
           "example_path": "techniques/docs/bounded-context-map/examples/minimal-context-boundary-map.md",
           "title": "Minimal Context Boundary Map",
           "body_markdown": "This example shows a small mapping exercise handled through `bounded-context-map`.\n\n## Scenario\n\nA repository keeps mixing up \u201cretrieval orchestration\u201d with \u201cevidence storage,\u201d causing changes and reviews to spill across both areas.\n\n## Flow\n\n1. Name the two neighboring contexts explicitly: retrieval orchestration and evidence storage.\n2. State the core responsibility of each context in one bounded sentence.\n3. Mark the handoff surface: retrieval writes bounded evidence artifacts, storage preserves and indexes them.\n4. Call out the overloaded terms that previously blurred the two contexts.\n5. Use the map to keep the next change scoped to one context unless the handoff itself is being changed.\n\n## Why this stays bounded\n\n- The map clarifies one concrete confusion instead of introducing a full architecture taxonomy.\n- The interface between the contexts is named explicitly.\n- Larger restructuring questions are deferred until there is a real need for them."
@@ -207,6 +222,11 @@
       "id": "AOA-T-0017",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "examples": [
+        {
+          "example_path": "techniques/evaluation/property-invariants/examples/concrete-config-invariant-check.md",
+          "title": "Concrete Config Invariant Check",
+          "body_markdown": "This example shows a more concrete config-validation case handled through `property-invariants`.\n\n## Scenario\n\nA configuration merger combines a base worker config with bounded environment overrides. Across realistic profile combinations, every enabled worker should still resolve to exactly one queue name in the final rendered config.\n\n## Flow\n\n1. Name the invariant explicitly: no enabled worker should end up with zero queue names or multiple queue names after config merge.\n2. Keep the input strategy bounded to realistic base-and-override combinations rather than arbitrary random structures.\n3. Run a repeated invariant-oriented check across those bounded configuration cases.\n4. Pair the invariant with a few concrete examples only if they make the rule easier to read, not as a substitute for the invariant.\n5. Report what the invariant now constrains and what remains outside scope, such as queue priority policy or autoscaling behavior.\n\n## Why this stays bounded\n\n- The example centers one meaningful invariant about rendered config shape rather than a broad contract suite.\n- The input space is wide enough to add coverage but still narrow enough to review.\n- Larger questions about deployment policy or API compatibility are explicitly deferred."
+        },
         {
           "example_path": "techniques/evaluation/property-invariants/examples/minimal-invariant-check.md",
           "title": "Minimal Invariant Check",

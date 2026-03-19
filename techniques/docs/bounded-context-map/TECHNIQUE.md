@@ -143,6 +143,7 @@ This public version strips project-specific naming and local architecture layout
 ## Example
 
 See `examples/minimal-context-boundary-map.md` for a small example where two neighboring contexts are separated and their handoff is named explicitly.
+See `examples/concrete-infra-context-map.md` for a more concrete public-safe infra-repository example where scoping and handoff naming reduce drift without turning into generic architecture taxonomy.
 
 ## Checks
 
@@ -155,6 +156,5 @@ See `checks/bounded-context-map-checklist.md` for a minimal review pass covering
 
 ## Future evolution
 
-- add a second-context example from an infra-oriented repository
 - connect more explicitly to ubiquitous-language guidance
 - record stronger examples of handoff notes

@@ -143,6 +143,7 @@ This public version removes project-specific data shapes and tool details while 
 ## Example
 
 See `examples/minimal-invariant-check.md` for a small flow where one stable rule is expressed as an invariant instead of a tiny fixed example list.
+See `examples/concrete-config-invariant-check.md` for a more concrete public-safe config-validation example where one meaningful invariant is checked across bounded configuration cases.
 
 ## Checks
 
@@ -155,6 +156,5 @@ See `checks/property-invariants-checklist.md` for a minimal review pass covering
 
 ## Future evolution
 
-- add a second-context example from an infra or config validation setting
 - strengthen guidance on choosing strong invariants
 - connect more explicitly to signal-first promotion of checks
