@@ -142,6 +142,7 @@ This public version removes project-specific endpoints, service names, and opera
 ## Example
 
 See `examples/minimal-contract-boundary.md` for a small flow where one boundary contract is made explicit before refactor work proceeds.
+See `examples/concrete-api-contract-boundary.md` for a more concrete public-safe API boundary example where consumer-visible payload guarantees stay stable through internal refactor.
 
 ## Checks
 
@@ -155,5 +156,4 @@ See `checks/contract-test-design-checklist.md` for a minimal review pass coverin
 ## Future evolution
 
 - connect more explicitly to structured smoke-summary techniques
-- add a second-context example from an application-code repository
 - strengthen guidance on keeping contracts narrow

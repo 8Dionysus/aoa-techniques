@@ -141,6 +141,7 @@ This first public version generalizes the technique into a repository-agnostic b
 ## Example
 
 See `examples/minimal-tdd-slice.md` for a small bounded flow where one behavior rule is expressed first in tests and then implemented with a minimal diff.
+See `examples/concrete-application-handler-slice.md` for a more concrete public-safe application-handler change where one observable behavior slice is fixed tests-first without widening into boundary redesign.
 
 ## Checks
 
@@ -153,6 +154,5 @@ See `checks/tdd-slice-checklist.md` for a minimal review pass covering bounded s
 
 ## Future evolution
 
-- add a second-context example outside the original planning pressure
 - add a stronger note on when not to use TDD ritualistically
 - connect to skill-level guidance in `aoa-skills`
