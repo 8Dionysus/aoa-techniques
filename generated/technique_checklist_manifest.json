@@ -610,18 +610,22 @@
             },
             {
               "order": 4,
-              "text": "Refactor work stayed subordinate to making the bounded slice pass."
+              "text": "The slice did not widen into a broader boundary, schema, or workflow redesign."
             },
             {
               "order": 5,
-              "text": "Unrelated cleanup was deferred instead of being folded into the same change."
+              "text": "Refactor work stayed subordinate to making the bounded slice pass."
             },
             {
               "order": 6,
-              "text": "The final validation step named which tests passed."
+              "text": "Unrelated cleanup was deferred instead of being folded into the same change."
             },
             {
               "order": 7,
+              "text": "The final validation step named which tests passed."
+            },
+            {
+              "order": 8,
               "text": "The final report stated both the covered behavior and what remained out of scope."
             }
           ]
@@ -651,14 +655,22 @@
             },
             {
               "order": 4,
-              "text": "Downstream assumptions were stated where they materially affected the contract."
+              "text": "The contract stayed narrow enough that internal refactor freedom remained behind the boundary."
             },
             {
               "order": 5,
-              "text": "The change report stated what the contract now guarantees."
+              "text": "Downstream assumptions were stated where they materially affected the contract."
             },
             {
               "order": 6,
+              "text": "Broader invariant or coverage goals were deferred instead of being folded into the contract test."
+            },
+            {
+              "order": 7,
+              "text": "The change report stated what the contract now guarantees."
+            },
+            {
+              "order": 8,
               "text": "Remaining weak edges or out-of-contract behavior were named explicitly."
             }
           ]
@@ -692,10 +704,14 @@
             },
             {
               "order": 5,
-              "text": "The resulting map would help a future change stay inside the intended scope."
+              "text": "The map stayed focused on scoping and handoff clarity rather than expanding into a generic architecture taxonomy."
             },
             {
               "order": 6,
+              "text": "The resulting map would help a future change stay inside the intended scope."
+            },
+            {
+              "order": 7,
               "text": "Weak or ceremonial contexts were avoided or collapsed."
             }
           ]
@@ -721,18 +737,22 @@
             },
             {
               "order": 3,
-              "text": "The generator or repeated input strategy is bounded and understandable."
+              "text": "The property stayed centered on a meaningful invariant rather than turning into a disguised consumer-boundary contract."
             },
             {
               "order": 4,
-              "text": "The broader input space adds signal beyond a tiny fixed example list."
+              "text": "The generator or repeated input strategy is bounded and understandable."
             },
             {
               "order": 5,
-              "text": "The result states what the invariant constrains and what it still does not prove."
+              "text": "The broader input space adds signal beyond a tiny fixed example list."
             },
             {
               "order": 6,
+              "text": "The result states what the invariant constrains and what it still does not prove."
+            },
+            {
+              "order": 7,
               "text": "Any companion example tests used for readability remain clearly distinct from the invariant itself."
             }
           ]
