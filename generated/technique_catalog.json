@@ -1047,6 +1047,48 @@
           "path": "notes/origin-evidence.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0022",
+      "name": "risk-and-negative-effect-lift",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata or scoring.",
+      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "docs/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md",
+        "note": "Extracted from the current shadow guides, validator-enforced Risks contract, and live corpus to keep caution lookup bounded and markdown-first without turning caution into metadata or scoring."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "shadow",
+        "caution",
+        "risks",
+        "source-lift"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-19",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0018"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
     }
   ]
 }

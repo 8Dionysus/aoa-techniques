@@ -12,6 +12,7 @@ See also:
 - [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
 - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
 - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 ## What Already Exists
 
@@ -115,7 +116,7 @@ Treat sections like these as the current lift candidates:
 - `Detection signals`
 - `Mitigations`
 
-That makes shadow/caution lifting a later possibility, but not a reason to add machine-readable shadow fields yet.
+That makes shadow/caution lifting a bounded reusable companion surface now captured in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), but not a reason to add machine-readable shadow fields yet.
 
 ## Explicitly Deferred
 
@@ -129,4 +130,4 @@ Not part of this first wave:
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current technique quartet now makes that family reusable without changing the bounded implementation order: section lift first, metadata spine and provenance lift alongside the current manifests, and bounded direct-relation lift without graph behavior.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, and markdown-first caution lift without metadata or generated caution outputs.

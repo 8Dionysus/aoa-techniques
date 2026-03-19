@@ -9,6 +9,7 @@ This guide is review-first. It does not add schema fields or machine-readable sh
 See also:
 - [Documentation Map](README.md)
 - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+- [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 ## Why `Risks` Alone Is Too Weak
 
@@ -74,7 +75,7 @@ The current repository now requires the top-level `## Risks` section to stay str
 
 This is the current markdown-first authoring contract across the published corpus. It strengthens review language without changing frontmatter or introducing machine-readable shadow fields.
 
-The same shadow-language contract is also the current upstream for bounded caution/source-lift work. That future lift still stays markdown-first until the repo proves it needs more than authored `Risks` sections.
+The same shadow-language contract is also the current upstream for bounded caution/source-lift work. The first reusable implementation surface for that lift now lives in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), and it still stays markdown-first until the repo proves it needs more than authored `Risks` sections.
 
 ## Explicitly Deferred
 

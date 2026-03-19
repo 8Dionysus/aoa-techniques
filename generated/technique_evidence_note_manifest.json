@@ -5856,6 +5856,93 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0022",
+      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/risk-and-negative-effect-lift/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0022"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "risk-and-negative-effect-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `docs/TECHNIQUE_SHADOW_GUIDE.md`\n- `docs/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md`\n- `scripts/validate_repo.py`\n- published `TECHNIQUE.md` bundles across the live corpus"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`docs/TECHNIQUE_SHADOW_GUIDE.md` already defines the five-part shadow-language split as the current markdown-first caution contract"
+                },
+                {
+                  "order": 2,
+                  "text": "`docs/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md` already describes bounded caution lift as a later reusable source-lift surface without metadata or scoring"
+                },
+                {
+                  "order": 3,
+                  "text": "`scripts/validate_repo.py` already enforces the fixed `Risks` subsection structure across published techniques"
+                },
+                {
+                  "order": 4,
+                  "text": "the live corpus already uses the richer `Risks` shape, so caution lookup is grounded in an existing repo-wide authoring contract rather than a speculative future program"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable pattern already exists in a live public repository as markdown-first caution lift over authored `Risks`"
+                },
+                {
+                  "order": 2,
+                  "text": "this technique does not invent a new caution layer; it generalizes the caution discipline that `aoa-techniques` already uses and keeps bounded"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -235,7 +235,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(21, len(technique_paths))
+        self.assertEqual(22, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -267,7 +267,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual({"agent-workflows", "docs", "evaluation"}, domain_values)
         self.assertEqual(10, status_counts["canonical"])
-        self.assertEqual(11, status_counts["promoted"])
+        self.assertEqual(12, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -420,11 +420,17 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             selection_patterns,
         )
 
-    def test_docs_readme_and_kag_guides_link_to_quartet(self) -> None:
+    def test_docs_readme_and_guides_link_to_reusable_lift_family(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(
             encoding="utf-8"
         )
+        shadow_guide = (REPO_ROOT / "docs" / "TECHNIQUE_SHADOW_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+        risk_guide = (
+            REPO_ROOT / "docs" / "RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md"
+        ).read_text(encoding="utf-8")
         metadata_guide = (
             REPO_ROOT / "docs" / "FRONTMATTER_METADATA_SPINE_GUIDE.md"
         ).read_text(encoding="utf-8")
@@ -439,10 +445,28 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("frontmatter-metadata-spine", docs_readme)
         self.assertIn("evidence-note-provenance-lift", docs_readme)
         self.assertIn("bounded-relation-lift-for-kag", docs_readme)
+        self.assertIn("risk-and-negative-effect-lift", docs_readme)
         self.assertIn("markdown-technique-section-lift", kag_source_guide)
+        self.assertIn("risk-and-negative-effect-lift", kag_source_guide)
+        self.assertIn("risk-and-negative-effect-lift", shadow_guide)
+        self.assertIn("risk-and-negative-effect-lift", risk_guide)
         self.assertIn("frontmatter-metadata-spine", metadata_guide)
         self.assertIn("evidence-note-provenance-lift", provenance_guide)
         self.assertIn("bounded-relation-lift-for-kag", relation_guide)
+
+    def test_shadow_wave_bundle_is_present_in_index_catalog_and_selection_surface(self) -> None:
+        technique_index = (REPO_ROOT / "TECHNIQUE_INDEX.md").read_text(encoding="utf-8")
+        selection = (REPO_ROOT / "docs" / "TECHNIQUE_SELECTION.md").read_text(
+            encoding="utf-8"
+        )
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        entry = next(entry for entry in catalog["techniques"] if entry["id"] == "AOA-T-0022")
+
+        self.assertEqual("docs", entry["domain"])
+        self.assertEqual("promoted", entry["status"])
+        self.assertIn("risk-and-negative-effect-lift", technique_index)
+        self.assertIn("AOA-T-0022", selection)
+        self.assertIn("risk-and-negative-effect-lift", selection)
 
 
 if __name__ == "__main__":

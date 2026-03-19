@@ -32,6 +32,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0019 | frontmatter-metadata-spine | docs | promoted | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning. |
 | AOA-T-0020 | evidence-note-provenance-lift | docs | promoted | Use typed evidence notes and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
 | AOA-T-0021 | bounded-relation-lift-for-kag | docs | promoted | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
+| AOA-T-0022 | risk-and-negative-effect-lift | docs | promoted | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata or scoring. |
 
 ## Deprecated techniques
 
