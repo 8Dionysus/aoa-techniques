@@ -155,7 +155,7 @@ This imported technique narrows the donor repository to one bounded pattern: det
 
 ## Example
 
-See `examples/minimal-deterministic-context-composition.md`.
+See `examples/minimal-deterministic-context-composition.md` for the smallest bounded composition flow and `examples/concrete-skill-doc-composition.md` for a public-safe `AGENTS.md`-style composition example with deterministic ordering and explicit source annotations.
 
 ## Checks
 
