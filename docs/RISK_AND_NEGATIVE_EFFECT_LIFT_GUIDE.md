@@ -4,7 +4,7 @@ This guide defines the bounded contract for `risk-and-negative-effect-lift`.
 
 Use it when the repository already has a stronger shadow-language contract inside `TECHNIQUE.md`, but the next question is how that caution language can act as a later KAG-oriented lift surface without pretending it is already machine-readable caution metadata.
 
-This guide is caution-first. It does not add shadow fields, generated caution outputs, or validator logic.
+This guide is caution-first. It does not add shadow fields or generated caution outputs.
 
 See also:
 - [Documentation Map](README.md)
@@ -48,18 +48,17 @@ The current `Risks` surface should not be treated as:
 - a risk score
 - a threat model
 - machine-extracted policy
-- a reason to widen validator behavior
+- a reason to widen validator behavior beyond enforcing the current markdown-first `Risks` contract
 
 If a reviewer needs the actual meaning of a failure mode, hidden tradeoff, or mitigation boundary, the answer still lives in authored markdown.
 
 ## Explicitly Deferred
 
-Not part of this wave:
+Still intentionally deferred:
 
 - no shadow metadata fields
 - no caution IDs
 - no generated caution outputs
 - no canonical-only `adverse-effects-review` requirement yet
-- no bundle retrofits in the same wave
 
-The current job is only to make the bounded caution layer explicit so later extraction work can build on it without reopening whether shadow meaning belongs in markdown or metadata.
+The current job is to keep the bounded caution layer explicit and enforced in markdown so later extraction work can build on it without reopening whether shadow meaning belongs in markdown or metadata.

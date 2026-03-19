@@ -68,4 +68,4 @@ Overall outcome: `clear with one watch seam`
 
 No immediate published-summary remediation wave is justified from this pilot alone.
 
-The next semantic-review wave should move upstream to `AOA-T-0003` and `AOA-T-0007`, where the likely boundary question is producer contract versus staged gate-promotion semantics.
+The upstream `AOA-T-0003` / `AOA-T-0007` review wave has already landed, so the next step here is only to keep the documented watch seam around `AOA-T-0011` under review and open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package.

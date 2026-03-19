@@ -24,6 +24,14 @@ A release should make it easy to answer:
 3. Run local validation:
    - `python -m unittest discover -s tests`
    - `python scripts/validate_repo.py`
+   - `python scripts/build_section_manifest.py`
+   - `python scripts/build_checklist_manifest.py`
+   - `python scripts/build_example_manifest.py`
+   - `python scripts/build_evidence_note_manifest.py`
+   - `python scripts/build_github_review_template_manifest.py`
+   - `python scripts/build_semantic_review_manifest.py`
+   - `python scripts/build_catalog.py`
+   - `git diff --exit-code`
 4. Confirm `TECHNIQUE_INDEX.md` matches the current published catalog.
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
 6. Review public-safety hygiene:

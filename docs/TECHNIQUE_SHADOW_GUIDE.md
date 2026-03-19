@@ -4,7 +4,7 @@ This guide defines the first markdown-first contract for `technique shadow disci
 
 Use it when a technique already has intent, contracts, and validation, but its `Risks` section is still too vague to explain how the technique can quietly make a system worse.
 
-This guide is review-first. It does not add schema fields, validator rules, or machine-readable shadow metadata.
+This guide is review-first. It does not add schema fields or machine-readable shadow metadata.
 
 See also:
 - [Documentation Map](README.md)
@@ -49,9 +49,9 @@ When reviewing a technique's shadow, ask:
 
 These prompts are especially important when the technique affects defaults, summaries, memory, rules, or operator-facing review surfaces.
 
-## Near-Term Authoring Shape
+## Current Authoring Shape
 
-For now, keep the required top-level `## Risks` section and structure it like this:
+The current repository now requires the top-level `## Risks` section to stay structured like this:
 
 ```md
 ## Risks
@@ -72,17 +72,16 @@ For now, keep the required top-level `## Risks` section and structure it like th
 - how to narrow, roll back, or contain the damage
 ```
 
-This is the near-term authoring contract for new or substantially revised techniques. It strengthens language without changing frontmatter or validator behavior.
+This is the current markdown-first authoring contract across the published corpus. It strengthens review language without changing frontmatter or introducing machine-readable shadow fields.
 
 The same shadow-language contract is also the current upstream for bounded caution/source-lift work. That future lift still stays markdown-first until the repo proves it needs more than authored `Risks` sections.
 
 ## Explicitly Deferred
 
-Not part of this first wave:
+Still intentionally deferred:
 
 - no new schema or frontmatter fields for shadow metadata
 - no validator mode for scoring technique shadow quality
-- no repo-wide retrofit of existing bundles in the same wave
 - no canonical-only `notes/adverse-effects-review.md` requirement yet
 
 A later wave may add a canonical-only adverse review note if the corpus shows that the extra surface materially helps review.

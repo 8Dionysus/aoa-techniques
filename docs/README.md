@@ -41,7 +41,7 @@ These are reader-facing navigation artifacts derived from authoritative markdown
 - [Technique Selection](TECHNIQUE_SELECTION.md)
   - use when you need one bounded choice by domain, status, validation strength, or nearby relations
 - [Selection Patterns](SELECTION_PATTERNS.md)
-  - use when direct adjacency is not enough and you want review-backed working sets or common next moves
+  - use when direct adjacency is not enough and you want validator-backed starting points, common next moves, or review-backed working sets
 
 ### Authored review and governance guides
 
