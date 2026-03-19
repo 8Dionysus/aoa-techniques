@@ -4692,6 +4692,158 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/docs/bounded-context-map/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0016"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-context-map"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human+agent contribution workflow over reviewable repository changes"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "adaptation path",
+                  "value_markdown": "the context-mapping pattern was extracted into one focused public docs/scoping bundle rather than opening a separate architecture domain"
+                },
+                {
+                  "order": 2,
+                  "key": "scoping surface",
+                  "value_markdown": "origin-specific planning-layer boundary pressure was rewritten as repo-agnostic vocabulary, responsibility, and handoff framing for public-safe reuse"
+                },
+                {
+                  "order": 3,
+                  "key": "support surfaces",
+                  "value_markdown": "the public form now includes a bounded checklist, a minimal example, an origin note, and derived repository manifests"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors need a compact way to reduce semantic confusion before implementation or evaluation work widens into the wrong area"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "the technique still names visible responsibility boundaries rather than creating taxonomy for its own sake"
+                },
+                {
+                  "order": 2,
+                  "key": "scoping value",
+                  "value_markdown": "the main goal remains reducing semantic confusion and making handoff or interface points explicit enough for future reviewers"
+                },
+                {
+                  "order": 3,
+                  "key": "reporting",
+                  "value_markdown": "the result still constrains later work by clarifying what belongs inside the target context and what should stay outside it"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can drift into generic architecture formalism if future examples stop being scoping- and handoff-centric"
+                },
+                {
+                  "order": 2,
+                  "text": "public vocabulary can encourage over-structuring if later notes present context maps as default ceremony rather than as a response to real ambiguity"
+                },
+                {
+                  "order": 3,
+                  "text": "broad architectural language can hide the technique's practical docs/scoping role if contributors stop tying the map back to bounded change decisions"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The focused landing into `aoa-techniques` kept the pattern in `docs` as a scoping technique rather than using it to justify a new architecture-domain opening."
+                },
+                {
+                  "order": 2,
+                  "text": "The public checklist and minimal example still center vocabulary drift, responsibility clarity, and visible handoff notes instead of abstract platform modeling."
+                },
+                {
+                  "order": 3,
+                  "text": "The later `Skill-Support Semantic Review` preserved `AOA-T-0016` as a docs/scoping pattern and identified architecture-formalism drift as a watch seam without justifying remediation or domain expansion."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the technique remained readable and bounded as a docs/scoping pattern after public shaping into `aoa-techniques`"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4771,6 +4923,158 @@
                 {
                   "order": 1,
                   "text": "The origin proves this technique as a reusable evaluation pattern for broader behavioral coverage: invariants are valuable here because they express stable truths that should survive beyond a narrow example list."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/property-invariants/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0017"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "property-invariants"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human+agent contribution workflow over reviewable repository changes"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "adaptation path",
+                  "value_markdown": "the invariant-first validation pattern was extracted into one focused public evaluation bundle after the skill-support split rather than remaining implicit inside a broader testing wave"
+                },
+                {
+                  "order": 2,
+                  "key": "validation framing",
+                  "value_markdown": "origin-specific validation pressure was rewritten as repo-agnostic invariant language over stable truths, bounded input strategy, and explicit reporting of what the property proves"
+                },
+                {
+                  "order": 3,
+                  "key": "support surfaces",
+                  "value_markdown": "the public form now includes a bounded checklist, a minimal example, an origin note, and derived repository manifests"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors need a reusable way to broaden coverage beyond a few fixed examples without hiding the meaning of the invariant behind tool-specific detail"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "the technique still starts from one meaningful invariant rather than from random generation by itself"
+                },
+                {
+                  "order": 2,
+                  "key": "coverage shape",
+                  "value_markdown": "the goal remains broader behavioral coverage than handpicked examples alone while keeping the input strategy bounded enough to review"
+                },
+                {
+                  "order": 3,
+                  "key": "reporting",
+                  "value_markdown": "the result still states what the invariant actually constrains and what remains outside that proof surface"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can drift into generic \"stronger tests\" language if future examples stop centering one meaningful invariant and bounded input assumptions"
+                },
+                {
+                  "order": 2,
+                  "text": "weak invariants can look impressive in public packaging while failing to constrain real behavior"
+                },
+                {
+                  "order": 3,
+                  "text": "overlap pressure with contract-surface validation can blur the pattern if later notes describe broad coverage without keeping the invariant-centered distinction explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The focused landing into `aoa-techniques` kept the pattern separate from boundary-contract validation and bounded execution discipline rather than leaving it inside one mixed skill-support branch."
+                },
+                {
+                  "order": 2,
+                  "text": "The public checklist and minimal example still center invariant strength, bounded input assumptions, and honest reporting instead of treating generator breadth as value by itself."
+                },
+                {
+                  "order": 3,
+                  "text": "The later `Skill-Support Semantic Review` kept `AOA-T-0015` vs `AOA-T-0017` as a watch seam while still preserving `AOA-T-0017` as a distinct invariant-oriented coverage technique."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the technique remained distinct and reusable after public shaping into `aoa-techniques` without collapsing into generic contract-test or broad-testing language"
                 }
               ]
             }
