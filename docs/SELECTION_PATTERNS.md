@@ -47,6 +47,12 @@ See also:
 - Review: [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md)
 - Why grouped: Artifact-first intent normalization and dry-run contract validation plus safe rollout of one new intent type on top of that chain.
 
+### Instruction-surface pair
+
+- Techniques: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+- Review: [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
+- Why grouped: Fragment-first composition into one generated context artifact plus single-source distribution to multiple agent-facing instruction surfaces.
+
 ### Skill-support cluster
 
 - Techniques: [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md), [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md), [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md)
