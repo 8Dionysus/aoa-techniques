@@ -4,6 +4,29 @@ All notable changes to `aoa-techniques` will be documented in this file.
 
 The format is intentionally simple and human-first.
 
+## [Unreleased]
+
+Mainline corpus and validator hardening after `v0.1.0`.
+
+### Added
+
+- `AOA-T-0014` through `AOA-T-0017`, bringing the published corpus to 17 techniques (`10` canonical, `7` promoted)
+
+### Changed
+
+- `SELECTION_PATTERNS.md` working sets are now validator-checked against their linked semantic review maps
+- all published techniques now use the same richer `## Risks` subsection contract
+- bounded public-hygiene validation now blocks obvious local paths, loopback-only hosts, and token or private-key markers on public-authored and generated surfaces
+- `DOCS_BOUNDARY_SEMANTIC_REVIEW.md` and semantic review manifests now reflect that a richer relation consumer has already landed
+- local validation no longer dirties `git status` with Python cache artifacts
+
+### Validation
+
+- `python -m unittest discover -s tests`
+- `python scripts/validate_repo.py`
+- `python scripts/build_catalog.py`
+- `python scripts/build_semantic_review_manifest.py`
+
 ## [0.1.0] - 2026-03-17
 
 First public baseline release.

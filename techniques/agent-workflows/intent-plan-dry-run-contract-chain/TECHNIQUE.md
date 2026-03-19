@@ -91,10 +91,30 @@ Turn high-level intent into a traceable, reviewable, dry-run-only chain that emi
 
 ## Risks
 
-- false confidence if dry-run artifacts look complete but do not reflect real execution constraints
-- metadata drift between intent, normalized plan, and contract-check layers
-- overfitting the chain to one project's payload shape or artifact naming
-- treating CI table layout or exact thresholds as the technique instead of the chain contract
+### Failure modes
+
+- dry-run artifacts look complete but do not reflect real execution constraints, creating false confidence
+- metadata drifts between intent, normalized plan, and contract-check layers until routing or traceability breaks
+
+### Negative effects
+
+- overfitting the chain to one project's payload shape or artifact naming reduces portability
+- teams can spend more time preserving one CI table layout or threshold set than preserving the chain contract itself
+
+### Misuse patterns
+
+- treating dry-run completeness as proof that real execution would be safe without further validation
+- defining the technique in terms of one repository's artifact names, table layout, or exact thresholds
+
+### Detection signals
+
+- contract checks stay green while hand review finds mismatched routing metadata or incomplete traceability
+- examples and rollout notes talk more about one project-specific presentation layer than about intent-plan-contract invariants
+
+### Mitigations
+
+- keep contract checks anchored to routing, traceability, and no-side-effect guarantees rather than presentation details
+- re-check the chain in a second context with renamed payloads or artifact paths to confirm the invariant contract still holds
 
 ## Validation
 

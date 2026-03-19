@@ -78,8 +78,95 @@ relations:
         self.assertIn("Alpha \\| Beta Gamma", rendered)
         self.assertNotIn("Alpha | Beta\nGamma", rendered)
 
+    def test_selection_working_sets_match_linked_semantic_reviews(self) -> None:
+        reviews_by_path = {
+            review.review_path: tuple(entry.technique_id for entry in review.map_entries)
+            for review in validate_repo.parse_semantic_reviews(REPO_ROOT)
+        }
+
+        for spec in validate_repo.WORKING_SET_SPECS:
+            self.assertIn(spec["review_doc"], reviews_by_path)
+            self.assertEqual(tuple(spec["technique_ids"]), reviews_by_path[spec["review_doc"]])
+
+        validate_repo.validate_selection_working_set_specs(REPO_ROOT)
+
+    def test_validate_risks_markdown_accepts_fixed_subsection_order(self) -> None:
+        validate_repo.validate_risks_markdown(
+            """### Failure modes
+
+- misses the main failure
+
+### Negative effects
+
+- adds avoidable friction
+
+### Misuse patterns
+
+- expands the pattern casually
+
+### Detection signals
+
+- drift shows up in review
+
+### Mitigations
+
+- narrow the contract again
+""",
+            Path("TECHNIQUE.md"),
+        )
+
+    def test_validate_risks_markdown_rejects_flat_bullets(self) -> None:
+        with self.assertRaises(validate_repo.ValidationError):
+            validate_repo.validate_risks_markdown(
+                "- still a flat bullet list\n- without fixed subsections\n",
+                Path("TECHNIQUE.md"),
+            )
+
+    def test_public_hygiene_allows_public_github_urls(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            docs_dir = repo_root / "docs"
+            docs_dir.mkdir(parents=True)
+            (docs_dir / "provenance.md").write_text(
+                "Source: https://github.com/example/public-technique\n",
+                encoding="utf-8",
+            )
+
+            validate_repo.validate_public_hygiene(repo_root)
+
+    def test_public_hygiene_rejects_blocked_patterns_on_scanned_surfaces(self) -> None:
+        blocked_cases = (
+            "D:\\private-repo\\docs\\secret.md",
+            "/Users/alice/private-notes.md",
+            "See http://localhost:3000/status for details.",
+            "Loopback host 127.0.0.1 should not appear here.",
+            "ghp_exampletokenvalue",
+            "gho_exampletokenvalue",
+            "AKIAEXAMPLEKEY",
+            "BEGIN OPENSSH PRIVATE KEY",
+        )
+
+        for blocked_text in blocked_cases:
+            with self.subTest(blocked_text=blocked_text):
+                with TemporaryDirectory() as temp_dir:
+                    repo_root = Path(temp_dir)
+                    docs_dir = repo_root / "docs"
+                    docs_dir.mkdir(parents=True)
+                    (docs_dir / "public.md").write_text(blocked_text + "\n", encoding="utf-8")
+
+                    with self.assertRaises(validate_repo.ValidationError):
+                        validate_repo.validate_public_hygiene(repo_root)
+
 
 class TechniqueContentSmokeTests(unittest.TestCase):
+    def test_all_published_techniques_use_richer_risks_contract(self) -> None:
+        technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
+        self.assertEqual(17, len(technique_paths))
+
+        for technique_path in technique_paths:
+            _frontmatter, body = validate_repo.split_frontmatter(technique_path)
+            validate_repo.validate_sections(body, technique_path)
+
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
             REPO_ROOT
@@ -172,6 +259,26 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             content = note_path.read_text(encoding="utf-8")
             self.assertNotIn("D:\\", content)
             self.assertIn("atm10-agent/docs/", content)
+
+    def test_docs_boundary_next_step_matches_generated_semantic_manifest(self) -> None:
+        expected_phrase = "validator-synchronized with authored semantic reviews"
+        review_path = REPO_ROOT / "docs" / "DOCS_BOUNDARY_SEMANTIC_REVIEW.md"
+        review_content = review_path.read_text(encoding="utf-8")
+        manifest = validate_repo.read_json(REPO_ROOT / "generated" / "semantic_review_manifest.json")
+        manifest_entry = next(
+            review
+            for review in manifest["reviews"]
+            if review["review_path"] == "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md"
+        )
+
+        self.assertIn(expected_phrase, review_content)
+        self.assertIn(expected_phrase, manifest_entry["next_step_markdown"])
+
+    def test_changelog_tracks_unreleased_without_losing_v010_entry(self) -> None:
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("## [Unreleased]", changelog)
+        self.assertIn("## [0.1.0] - 2026-03-17", changelog)
 
 
 if __name__ == "__main__":

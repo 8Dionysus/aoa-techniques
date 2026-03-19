@@ -100,10 +100,31 @@ Create one reviewable remediation snapshot from already-published latest summari
 
 ## Risks
 
-- letting the bucket policy grow ad hoc until the snapshot stops being reviewable
-- hiding missing or stale sources, which can make the backlog look healthier than reality
-- accidentally reintroducing history replay and turning a snapshot into a second evaluator
-- dropping source references and making remediation items harder to audit or verify
+### Failure modes
+
+- missing or stale sources are hidden, making the backlog look healthier than reality
+- history replay slips back in and turns the snapshot into a second evaluator
+- source references disappear and make remediation items harder to audit or verify
+
+### Negative effects
+
+- the bucket policy can grow ad hoc until the snapshot stops being reviewable as one bounded surface
+- remediation output becomes harder to compare over time when grouping and truncation stop being stable
+
+### Misuse patterns
+
+- widening the bucket set or candidate policy casually instead of versioning a fixed bounded policy
+- treating the snapshot as a place to recompute history, trend state, or upstream judgments
+
+### Detection signals
+
+- new buckets keep appearing without a clearly documented policy change
+- remediation items no longer point back to their source summaries or stale-source reporting goes missing
+
+### Mitigations
+
+- keep the bucket set and candidate cap fixed for each snapshot version and document policy changes explicitly
+- preserve latest-only input rules, explicit stale-source reporting, and source references for every emitted item
 
 ## Validation
 

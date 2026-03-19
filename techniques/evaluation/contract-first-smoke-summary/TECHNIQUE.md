@@ -93,9 +93,30 @@ Make smoke checks reviewable, automatable, and reusable by treating the machine-
 
 ## Risks
 
-- creating overly shallow summaries that say `error` without useful context
-- changing summary shape too often and breaking downstream consumers
+### Failure modes
+
+- summaries collapse to a bare `error` signal without enough observed context to diagnose what failed
+- summary shape changes too often and breaks downstream consumers that expect a stable contract
+
+### Negative effects
+
+- over-minimal summaries push humans back toward manual debugging even when the machine-readable path exists
+- pressure-driven fallback to raw logs can become sticky and weaken the producer contract over time
+
+### Misuse patterns
+
 - treating summary generation as optional and falling back to log parsing under pressure
+- changing filenames, fields, or status semantics without a bounded compatibility plan
+
+### Detection signals
+
+- downstream consumers start scraping console logs again instead of reading the summary artifact
+- repeated failures show `error` with too little observed data to explain the problem quickly
+
+### Mitigations
+
+- keep one stable machine-readable summary path and evolve schema deliberately rather than casually
+- require summary generation on every run path possible, including failure paths whenever the process can still write output
 
 ## Validation
 

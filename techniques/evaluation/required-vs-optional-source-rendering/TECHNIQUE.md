@@ -94,10 +94,30 @@ Keep summary-driven surfaces resilient by enforcing strict behavior for required
 
 ## Risks
 
-- misclassifying an actually critical source as optional
-- letting optional-source warnings accumulate until the surface becomes noisy
-- hiding optional-source absence completely instead of surfacing it
+### Failure modes
+
+- an actually critical source is misclassified as optional
+- optional-source absence is hidden completely instead of being surfaced explicitly
+
+### Negative effects
+
+- optional-source warnings can accumulate until the surface becomes noisy
+- the rendering surface can drift away from its bounded summary role and become harder to trust
+
+### Misuse patterns
+
+- treating `optional` as meaning "never operationally important" rather than "visible but non-fatal for this contract"
 - expanding the rendering surface so it performs actions rather than staying read-only
+
+### Detection signals
+
+- operators stop noticing missing-source signals because the warning stream is constant and unsorted
+- the renderer starts adding retry, repair, or other mutating behavior to compensate for absent summaries
+
+### Mitigations
+
+- review required-versus-optional classification explicitly and promote sources when the contract changes
+- keep warnings bounded, visible, and read-only so missing optional data stays observable without turning the surface into an action layer
 
 ## Validation
 

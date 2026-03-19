@@ -100,10 +100,30 @@ Provide one machine-readable diagnostic verdict over published summary invariant
 
 ## Risks
 
-- treating the integrity snapshot as a replacement for fixing broken producers
-- checking too many optional invariants and turning a focused diagnostic layer into noise
-- allowing schema drift between latest alias and history copies to go undetected
-- promoting an integrity helper into a hard gate without an explicit rollout decision
+### Failure modes
+
+- schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions
+- teams treat the integrity snapshot as a replacement for fixing broken producers instead of a diagnostic signal
+
+### Negative effects
+
+- checking too many optional invariants turns a focused diagnostic layer into noise
+- promoting an integrity helper into a hard gate without an explicit rollout decision can make enforcement brittle
+
+### Misuse patterns
+
+- using the helper as a default enforcement gate even though the technique defines a diagnostic, read-only surface
+- expanding optional guardrail or consistency checks until they overshadow required source health and dual-write invariants
+
+### Detection signals
+
+- integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response
+- optional-source or low-value consistency checks dominate the snapshot more than required health, dual-write, or anti-double-count issues
+
+### Mitigations
+
+- keep the snapshot focused on required source health, telemetry invariants, dual-write coherence, and anti-double-count checks
+- make any hard-gate promotion a separate explicit rollout decision rather than an implicit property of the helper
 
 ## Validation
 

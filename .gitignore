@@ -1,5 +1,9 @@
 seeds/
 
+# Python cache artifacts
+__pycache__/
+*.py[cod]
+
 # Local planning docs
 TODO.md
 PLANS.md
