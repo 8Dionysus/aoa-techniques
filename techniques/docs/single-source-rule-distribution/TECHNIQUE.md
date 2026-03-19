@@ -160,7 +160,7 @@ This imported technique narrows the donor repository to one docs pattern: one ca
 
 ## Example
 
-See `examples/minimal-single-source-rule-distribution.md`.
+See `examples/minimal-single-source-rule-distribution.md` for the smallest bounded distribution flow and `examples/concrete-multi-agent-rule-sync.md` for a concrete multi-target sync example with one canonical rule source and minimal managed wrappers.
 
 ## Checks
 
