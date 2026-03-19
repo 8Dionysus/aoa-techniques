@@ -758,6 +758,138 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0018",
+      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/markdown-technique-section-lift/checks/section-lift-checklist.md",
+          "title": "Section Lift Checklist",
+          "intro_markdown": "Use this checklist to confirm that a section-level lift still behaves like a derived markdown surface rather than a second authored source.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The lifted sections come from one authoritative `TECHNIQUE.md` bundle."
+            },
+            {
+              "order": 2,
+              "text": "The lifted scope is explicit and limited to stable recurring headings."
+            },
+            {
+              "order": 3,
+              "text": "Section order in the derived output matches the source markdown order."
+            },
+            {
+              "order": 4,
+              "text": "Consumers can route from the lifted output back to the source bundle and heading."
+            },
+            {
+              "order": 5,
+              "text": "The workflow does not need section IDs, a new `kag` domain, or graph semantics to stay useful."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0019",
+      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/frontmatter-metadata-spine/checks/metadata-spine-checklist.md",
+          "title": "Metadata Spine Checklist",
+          "intro_markdown": "Use this checklist to confirm that frontmatter still behaves like a bounded metadata spine rather than a shadow copy of the full technique.",
+          "items": [
+            {
+              "order": 1,
+              "text": "Frontmatter exposes only identity, routing, review, evidence, and direct-adjacency handles."
+            },
+            {
+              "order": 2,
+              "text": "The derived catalog is rebuilt from source frontmatter instead of edited by hand."
+            },
+            {
+              "order": 3,
+              "text": "The catalog answers bounded routing questions such as status, domain, or direct relation lookup."
+            },
+            {
+              "order": 4,
+              "text": "Questions about section meaning, caution language, or provenance still route back to markdown files."
+            },
+            {
+              "order": 5,
+              "text": "No new `kag` domain, richer schema, or metadata-first source-of-truth claim was needed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0020",
+      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/evidence-note-provenance-lift/checks/evidence-note-provenance-checklist.md",
+          "title": "Evidence Note Provenance Checklist",
+          "intro_markdown": "Use this checklist to confirm that note-level provenance stays bounded and markdown-first.",
+          "items": [
+            {
+              "order": 1,
+              "text": "Each supporting note is reachable through explicit `evidence.kind` and `evidence.path`."
+            },
+            {
+              "order": 2,
+              "text": "Note roles are small, understandable, and review-shaped."
+            },
+            {
+              "order": 3,
+              "text": "The derived provenance surface is rebuilt from authored notes instead of edited directly."
+            },
+            {
+              "order": 4,
+              "text": "Opaque notes stay opaque unless a reusable typed shape is truly stable."
+            },
+            {
+              "order": 5,
+              "text": "The workflow does not require note IDs, a merged note graph, or proof-object semantics."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0021",
+      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md",
+          "title": "Relation Lift Checklist",
+          "intro_markdown": "Use this checklist to confirm that direct relations still behave like bounded adjacency hints.",
+          "items": [
+            {
+              "order": 1,
+              "text": "Each relation points to a real direct target bundle."
+            },
+            {
+              "order": 2,
+              "text": "Current consumers use the edge for one-step inspection or navigation only."
+            },
+            {
+              "order": 3,
+              "text": "The relation vocabulary stays small and human-reviewable."
+            },
+            {
+              "order": 4,
+              "text": "Reviewers can still answer \"why does this edge exist?\" from markdown or semantic review surfaces."
+            },
+            {
+              "order": 5,
+              "text": "The workflow does not require weighting, multi-hop traversal, or a new graph/export layer."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

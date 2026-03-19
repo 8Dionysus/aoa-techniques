@@ -28,6 +28,10 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0015 | contract-test-design | evaluation | promoted | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
 | AOA-T-0017 | property-invariants | evaluation | promoted | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
 | AOA-T-0016 | bounded-context-map | docs | promoted | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible. |
+| AOA-T-0018 | markdown-technique-section-lift | docs | promoted | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
+| AOA-T-0019 | frontmatter-metadata-spine | docs | promoted | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning. |
+| AOA-T-0020 | evidence-note-provenance-lift | docs | promoted | Use typed evidence notes and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
+| AOA-T-0021 | bounded-relation-lift-for-kag | docs | promoted | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
 
 ## Deprecated techniques
 

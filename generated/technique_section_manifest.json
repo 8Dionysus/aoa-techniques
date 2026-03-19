@@ -965,6 +965,230 @@
           "markdown": "What can vary across projects:\n- test framework and generator tooling\n- the shape of the input space\n- whether the invariant is implemented as a formal property test or a repeated structured check\n- the strength of shrinking or failure reporting tools\n\nWhat should stay invariant:\n- meaningful invariant framing\n- broader coverage than handpicked examples alone\n- explicit generator or input assumptions\n- honest statement of what the property proves"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0018",
+      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surface so retrieval and review can target one bounded section without replacing markdown as the source of truth."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- repositories with stable technique or pattern documents that already use recurring top-level headings\n- generated knowledge or retrieval layers that need section-level routing without inventing new authored section files\n- documentation systems where another human or agent should be able to jump directly to `Intent`, `Contracts`, `Risks`, or `Validation`\n- KAG-oriented work that needs bounded section lookup before any graph or section-ID program exists"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- repos where section headings are still unstable or heavily experimental\n- systems that want section-level authorship to move out of the markdown bundle into separate files or metadata\n- cases where the real need is graph semantics, ranking, or multi-hop reasoning rather than bounded section lift\n- workflows that would treat the manifest as the new editable source of truth"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one authoritative `TECHNIQUE.md` bundle\n- a small stable set of top-level section headings worth lifting\n- one derived output surface such as a section manifest\n- a rebuild path that can regenerate the derived output from markdown"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- derived section-level units with preserved order\n- explicit section headings that remain traceable to the source bundle\n- section lookup surface for review or retrieval\n- preserved markdown authority over section meaning"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Keep the technique bundle as the only authored source for section meaning.\n2. Decide which recurring top-level sections are stable enough to lift.\n3. Extract only those sections into a derived manifest or equivalent lookup surface.\n4. Preserve the original section order and heading text instead of inventing a second parallel structure.\n5. Rebuild the derived output whenever the source bundle changes.\n6. Route readers or tooling back to the source markdown path when they need the full meaning of a lifted section."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the markdown bundle remains the authoritative source of section meaning\n- lifted sections stay bounded to an explicit stable scope rather than every possible heading\n- derived output preserves section order instead of reinterpreting the document as an unordered field set\n- consumers can map a lifted section back to the source bundle and heading\n- the technique does not require section IDs, graph edges, or authored section files to work"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- unstable or project-shaped headings are lifted too early, so the derived surface changes shape faster than consumers can trust it\n- maintainers start editing the derived manifest instead of the bundle markdown and break source-of-truth boundaries\n- the lift scope silently widens until the derived output looks like a shadow schema rather than a bounded retrieval surface\n\n### Negative effects\n\n- section-level retrieval can create false confidence that the full technique is understood when a reader has only consumed one bounded section\n- a derived manifest can make documents feel more structured while hiding that some meaning still depends on surrounding prose\n- teams can over-invest in extraction polish before proving that section-level lookup materially improves review or reuse\n\n### Misuse patterns\n\n- treating section lift as a reason to create a new `kag` domain or a larger graph program\n- lifting headings that are too local, temporary, or donor-shaped to be reusable\n- flattening full section meaning into metadata or machine-first fields because a manifest already exists\n\n### Detection signals\n\n- reviewers fix the manifest directly instead of fixing `TECHNIQUE.md`\n- consumers rely on section snippets but cannot explain how those sections fit into the full bundle contract\n- new headings keep appearing only to satisfy extraction rather than to improve the authored document\n- the lift starts demanding section IDs, graph semantics, or schema expansion to stay usable\n\n### Mitigations\n\n- keep the lift scope narrow and explicit around stable recurring headings only\n- route all meaning changes back through the source bundle and regenerate derived outputs afterward\n- drop weak or unstable section targets before adding new derived behavior\n- stop at bounded lookup when the next request would require graph behavior rather than better markdown structure"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- lifted sections come from one authoritative `TECHNIQUE.md` bundle\n- the derived output preserves the expected section order\n- the selected headings are stable and explicitly bounded\n- consumers can route back from the lifted output to the source bundle and heading\n- no new authored source of truth was introduced beyond markdown plus derived artifacts\n\nSee `checks/section-lift-checklist.md` and `examples/minimal-section-lift.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact stable heading set\n- the derived output filename or manifest format\n- whether lifted sections are consumed by retrieval, review tooling, or human navigation surfaces\n- the rebuild command used to regenerate the derived output\n\nWhat should stay invariant:\n- markdown remains authoritative\n- section lift stays derived-only\n- lift scope is explicit and bounded\n- consumers can still route back to the source bundle\n\nThis technique does not require a new `kag` domain. Keep it inside the existing domain that already owns the markdown source vocabulary."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0019",
+      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Use shallow frontmatter and derived catalog outputs as a stable metadata spine for bundle identity, routing, and review posture without pretending that frontmatter already contains the technique's full knowledge."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- markdown-first repositories that need a small machine-readable layer for lookup or routing\n- corpora where domain, status, summary, evidence handles, and direct relations should be visible without opening every bundle first\n- generated catalog or selection surfaces that must stay derived from authoritative markdown\n- KAG-oriented work that needs bundle-level metadata handles before section or provenance consumers go deeper"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- systems that want full section meaning, rationale, or caution language to live in metadata\n- repos where frontmatter is still unstable or overloaded with project-local details\n- cases where the next step is graph behavior, section IDs, or schema expansion rather than bounded routing metadata\n- workflows that would hand-edit the derived catalog instead of regenerating it"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- bounded frontmatter on each authoritative bundle\n- a validator or generator that can project frontmatter into a derived catalog\n- current routing questions such as lookup by status, domain, review posture, or direct adjacency\n- explicit agreement that markdown sections still hold the real technique meaning"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- stable bundle-level metadata handles\n- derived catalog entries for lookup and navigation\n- explicit separation between metadata and section meaning\n- reusable routing surface for later bounded consumers"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Keep only bundle identity, review posture, summary, evidence handles, and direct adjacency in frontmatter.\n2. Generate a catalog from that frontmatter rather than maintaining a second hand-authored metadata source.\n3. Use the catalog for bundle lookup, status routing, or direct-edge hints.\n4. Route any question about section meaning, caution language, or provenance argument back to markdown sections and note files.\n5. Add new metadata only when the routing problem cannot be solved by the current bounded spine.\n6. Rebuild the catalog whenever source frontmatter changes."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- frontmatter stays shallow and bounded\n- the catalog remains fully derived from authoritative markdown-frontmatter\n- metadata supports routing and lookup, not full knowledge replacement\n- caution language, section meaning, and provenance interpretation remain in markdown\n- the technique does not require schema expansion or a new `kag` domain"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- frontmatter widens until it starts carrying section meaning or policy semantics that belong in markdown\n- maintainers edit the derived catalog directly and break metadata-source parity\n- routing questions pile up faster than the spine can answer, but the response is to add fields instead of narrowing the metadata problem\n\n### Negative effects\n\n- a clean catalog can create false confidence that the corpus is fully machine-readable when important meaning still lives only in authored markdown\n- teams can start optimizing metadata shape before proving that the current catalog actually helps navigation or review\n- shallow metadata can hide ambiguity if consumers forget to read the underlying technique or evidence notes\n\n### Misuse patterns\n\n- treating the catalog as a replacement for reading `TECHNIQUE.md`\n- adding new fields because a future KAG layer might want them, rather than because current bounded routing needs them\n- moving caution, relation rationale, or section payloads into frontmatter for convenience\n\n### Detection signals\n\n- proposed metadata additions mostly duplicate section prose or note content\n- contributors ask to fix generated catalog data without touching source frontmatter\n- the same routing question still requires opening markdown, but the response is more metadata churn rather than a better bundle or guide\n- consumers interpret the metadata spine as a graph or policy surface instead of a bounded routing layer\n\n### Mitigations\n\n- keep metadata changes tied to one concrete routing problem at a time\n- regenerate and validate derived catalog outputs instead of editing them by hand\n- move meaning questions back to markdown bundles and notes before adding fields\n- stop widening the spine when the next request is really for section lift, provenance lift, or relation review"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- bundle identity and routing fields are visible in frontmatter\n- derived catalog entries match source frontmatter\n- the catalog helps answer bounded routing questions such as status, domain, or direct adjacency\n- questions about deeper meaning still route back to markdown sections or notes\n- no schema or frontmatter widening was needed beyond the bounded metadata spine\n\nSee `checks/metadata-spine-checklist.md` and `examples/frontmatter-to-catalog-entry.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact bounded field set used for routing\n- the catalog filename or projection format\n- which repo-level navigation surfaces consume the metadata spine\n- how often the catalog is rebuilt\n\nWhat should stay invariant:\n- metadata remains shallow\n- the catalog is derived, not hand-maintained\n- markdown sections still hold the real technique meaning\n- the spine is justified by current routing value, not by future graph ambition\n\nDo not widen the technique into richer schema just because later KAG work exists. The point is a bounded metadata spine, not metadata-first authorship."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0020",
+      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Lift typed evidence notes into a bounded provenance surface so readers and tooling can find supporting origin, transfer, or review context without collapsing notes into one merged graph."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- repositories where technique bundles already point to typed supporting notes\n- provenance questions such as origin proof, second-context evidence, readiness review, or external import review\n- generated entrypoints that should expose note roles and paths without replacing the note body\n- KAG-oriented work that needs note-level handles before any cross-note graph program exists"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- systems that have no stable note roles or no explicit note paths\n- cases where the real need is note IDs, cross-note graph semantics, or machine-extracted proof objects\n- repositories that want to flatten all provenance meaning into frontmatter\n- workflows where maintainers would rather edit generated note manifests than update the notes themselves"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- typed evidence handles such as `evidence.kind` and `evidence.path`\n- bounded note files under `notes/`\n- recurring note shapes where they already exist\n- one derived provenance surface such as an evidence-note manifest"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- bounded provenance handles for supporting notes\n- derived note manifest entries\n- preserved note-level authorship and context\n- reusable note-role map for origin, transfer, readiness, or import review surfaces"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Keep the supporting notes as authored markdown under `notes/`.\n2. Point to those notes from bundle metadata through typed evidence handles.\n3. Lift the note layer into a derived manifest that preserves note role, path, and bounded content shape.\n4. Keep opaque notes opaque when they do not share a reusable typed structure.\n5. Use the derived manifest for provenance lookup, not for replacing the note body.\n6. Route interpretation and public-safety reasoning back to the underlying note when meaning matters."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- note paths and note kinds remain explicit\n- note meaning stays in authored markdown\n- derived provenance output preserves note-level context rather than flattening all notes into one schema\n- supporting notes stay bounded to reviewable roles such as origin, second context, readiness, or external review\n- the technique does not require note IDs, graph semantics, or a new source of truth"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- note kinds drift until the manifest can no longer tell which provenance role a note is meant to play\n- flattening pressure strips interpretation or review nuance out of the note body\n- contributors start treating the manifest entry as the note itself\n\n### Negative effects\n\n- a clean provenance surface can hide how much judgment still lives in the authored note text\n- repeated typed notes can tempt maintainers into premature rigidity or over-schemafication\n- provenance lookup can feel complete even when only one origin note exists and second-context evidence is still absent\n\n### Misuse patterns\n\n- turning note roles into graph nodes with stable IDs before the note layer proves it needs them\n- extracting verdicts, scoring, or relation rationale from notes just because a manifest exists\n- using opaque support notes as a reason to widen note metadata instead of narrowing the review question\n\n### Detection signals\n\n- contributors ask for note-meaning changes by editing the manifest rather than the note body\n- note types multiply faster than reviewers can explain their distinct roles\n- flattened manifest fields lose the argument or interpretation that made the note trustworthy\n- provenance questions now depend on cross-note graph logic rather than on bounded note lookup\n\n### Mitigations\n\n- keep note kinds small and review-shaped\n- preserve authored note text as the place where interpretation and public-safety reasoning live\n- add new note roles only when one current role is clearly overloaded\n- stop at bounded provenance handles when the next request is really for a graph or scoring layer"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- bundles point to supporting notes through explicit `evidence.kind` and `evidence.path`\n- note roles remain understandable and bounded\n- the derived provenance surface can be rebuilt from note markdown\n- readers can use the manifest to find the right supporting note without losing note-level context\n- note meaning still routes back to authored markdown instead of flattened metadata\n\nSee `checks/evidence-note-provenance-checklist.md` and `examples/evidence-note-to-manifest.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- which note roles are present\n- whether some notes are fully typed or intentionally opaque\n- the manifest format used for provenance lookup\n- the exact note filename conventions\n\nWhat should stay invariant:\n- note roles remain explicit\n- notes remain authored markdown\n- manifest output stays derived and bounded\n- provenance lift does not become a note graph or proof-object system\n\nThis technique sits downstream from a bounded metadata spine. If note lookup stops being enough and the next request is graph behavior, that is a different wave."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0021",
+      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Use a small typed set of direct bundle relations as bounded edge hints for generated consumers without pretending that those edges already carry rationale, weighting, or multi-hop graph truth."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- corpora that already have explicit direct relations between bundles\n- navigation or retrieval surfaces that need one-step adjacency hints\n- KAG-oriented work that wants future edge inputs without jumping straight to graph behavior\n- review paths where relation vocabulary should stay small and human-readable"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- systems that need relation rationale, weighted edges, or multi-hop traversal policy right now\n- repositories where direct relations are still too noisy or unstable to trust as bounded adjacency hints\n- cases where the real problem is semantic ambiguity between techniques, which should be handled by review rather than by more edges\n- workflows that would use current relations as transitive truth or graph-engine inputs by default"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- bounded typed `relations` in frontmatter\n- direct target technique IDs\n- one or more current relation consumers such as catalog or selection surfaces\n- explicit agreement that relation explanation still lives in markdown and review docs"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- bounded direct-edge hints\n- derived consumers that can show nearby techniques\n- reusable small relation vocabulary\n- future-ready edge surface that remains human-reviewable"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Keep the relation vocabulary intentionally small and direct.\n2. Record only immediate adjacency that helps navigation or bounded review.\n3. Project those edges into derived consumers such as catalogs or selection surfaces.\n4. Use relations for one-step inspection hints rather than multi-hop inference.\n5. Keep the explanation for why an edge exists in markdown bundles or review docs.\n6. Refuse to widen the edge layer unless current direct-edge use has clearly stopped being enough."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- relations stay direct and typed\n- edge meaning is bounded to one-step adjacency hints\n- relation rationale remains outside frontmatter\n- derived consumers remain navigation aids rather than graph engines\n- the technique does not require new relation types, weighting, or a new `kag` domain"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- relations multiply until the signal-to-noise ratio drops and adjacency hints stop helping\n- consumers infer transitive truth or ranking from edges that were only meant as direct hints\n- teams widen relation vocabulary to patch unclear technique boundaries instead of fixing the underlying docs\n\n### Negative effects\n\n- even a bounded edge layer can make the repository feel more graph-ready than it really is\n- relation consumers can pull attention away from reading the bundle itself\n- small relation vocabularies can over-simplify why two techniques are near each other\n\n### Misuse patterns\n\n- treating `relations` as a substitute for semantic review\n- adding rationale, scoring, or traversal rules because one navigation surface is already helpful\n- using direct edges as a reason to open graph/export programs before current use is proven\n\n### Detection signals\n\n- contributors debate relation semantics more than they improve the underlying bundle boundaries\n- one-step edges are no longer enough and consumers keep asking for inferred hops or ranking\n- relation explanations are missing from markdown, but people still trust the edge layer to answer \"why\"\n- new relation types appear mainly to patch wording drift or bundle overlap\n\n### Mitigations\n\n- keep the relation set small and review-shaped\n- move \"why does this edge exist?\" questions back to markdown bundles and semantic review docs\n- remove weak or noisy edges before adding new types\n- stop at bounded adjacency when the next request is really for a separate graph or review layer"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- each relation points to a real direct target\n- current consumers use the edges for one-step navigation rather than inference\n- the relation vocabulary remains small and bounded\n- reviewers can still find edge rationale in markdown or review surfaces\n- no new graph behavior was needed to make the relation layer useful\n\nSee `checks/relation-lift-checklist.md` and `examples/direct-relation-to-selection-hint.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact set of direct relation consumers\n- how adjacency is displayed in generated surfaces\n- which small relation vocabulary best fits the corpus\n- how often relations are reviewed for noise or drift\n\nWhat should stay invariant:\n- edges remain direct\n- relation types remain bounded\n- rationale stays in markdown or review docs\n- the edge layer does not become graph semantics by accident\n\nThis technique sits downstream from a bounded metadata spine. If the next need is graph traversal, relation weighting, or exports, that is a later platform wave, not this technique."
+        }
+      ]
     }
   ]
 }

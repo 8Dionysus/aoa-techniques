@@ -871,6 +871,182 @@
           "path": "notes/second-context-adaptation.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0018",
+      "name": "markdown-technique-section-lift",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative.",
+      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "scripts/build_section_manifest.py",
+        "note": "Extracted from the current section-manifest implementation and KAG source-lift guidance to keep section extraction derived from canonical markdown bundles."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "kag",
+        "source-lift",
+        "sections",
+        "manifests"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-19",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0019"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0019",
+      "name": "frontmatter-metadata-spine",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning.",
+      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "scripts/build_catalog.py",
+        "note": "Extracted from the current catalog layer and metadata-spine guidance to keep routing metadata bounded while markdown bundles hold the real technique meaning."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "kag",
+        "metadata",
+        "frontmatter",
+        "catalog"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-19",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0018"
+        },
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0020"
+        },
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0021"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0020",
+      "name": "evidence-note-provenance-lift",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Use typed evidence notes and note paths as bounded provenance handles in derived manifests without flattening them into a note graph.",
+      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "scripts/build_evidence_note_manifest.py",
+        "note": "Extracted from the current evidence-note manifest layer and provenance guidance to keep note-level support surfaces typed and reachable without flattening them into a note graph."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "kag",
+        "provenance",
+        "evidence-notes",
+        "manifests"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-19",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "requires",
+          "target": "AOA-T-0019"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0021",
+      "name": "bounded-relation-lift-for-kag",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics.",
+      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "docs/SELECTION_PATTERNS.md",
+        "note": "Extracted from the current direct-relation consumers and relation-lift guidance to keep typed edges useful for navigation without widening them into graph semantics."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "kag",
+        "relations",
+        "edges",
+        "navigation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-19",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "requires",
+          "target": "AOA-T-0019"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
     }
   ]
 }
