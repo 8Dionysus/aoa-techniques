@@ -145,7 +145,8 @@ ATM10-specific intent names, UI coordinates, fixture payload details, exact work
 
 ## Example
 
-See `examples/minimal-intent-chain.md`.
+See `examples/minimal-intent-chain.md` for a small generic flow where one intent is normalized, validated through dry-run, and checked by an explicit contract summary.
+See `examples/concrete-non-ui-intent-chain.md` for a more concrete public-safe non-UI maintenance flow where `refresh_skill_index` stays artifact-first and dry-run only before any real write path is considered.
 
 ## Checks
 
@@ -159,6 +160,5 @@ See `checks/chain-contract-checklist.md`.
 
 ## Future evolution
 
-- add examples from a non-UI automation system
 - add guidance for partial rollout where some intents still use legacy validation paths
 - add optional guidance for compatibility evolution across intent and plan schemas

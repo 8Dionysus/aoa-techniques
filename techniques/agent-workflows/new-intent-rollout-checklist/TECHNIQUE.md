@@ -146,7 +146,8 @@ ATM10-specific intent names, fixture payload details, UI-specific behavior, work
 
 ## Example
 
-See `examples/minimal-intent-rollout.md`.
+See `examples/minimal-intent-rollout.md` for a small checklist-shaped rollout where one new intent path is added to an existing dry-run chain.
+See `examples/concrete-non-ui-intent-rollout.md` for a more concrete public-safe rollout of `refresh_skill_index`, including one canonical fixture, one dedicated smoke path, one strict contract-check, one published review surface, and one regression proof.
 
 ## Checks
 
