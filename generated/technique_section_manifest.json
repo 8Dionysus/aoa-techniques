@@ -677,7 +677,7 @@
         {
           "heading": "Validation",
           "order": 9,
-          "markdown": "Verify the technique by confirming that:\n- the generated artifact can be recreated from source fragments without manual merge steps\n- higher-priority fragments surface earlier and stable fallback ordering is predictable\n- output sections can be traced back to source fragments\n- removing or changing one fragment updates the generated artifact in a predictable way\n- contributors can identify the source of truth without ambiguity\n\nSee `checks/deterministic-context-composition-checklist.md`.\nFor external provenance, second-context adaptation, and the first import-review outcome, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, and `notes/external-import-review.md`."
+          "markdown": "Verify the technique by confirming that:\n- the generated artifact can be recreated from source fragments without manual merge steps\n- higher-priority fragments surface earlier and stable fallback ordering is predictable\n- output sections can be traced back to source fragments\n- removing or changing one fragment updates the generated artifact in a predictable way\n- contributors can identify the source of truth without ambiguity\n\nSee `checks/deterministic-context-composition-checklist.md`.\nFor external provenance, second-context adaptation, the first import-review outcome, and canonical-readiness review, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, `notes/external-import-review.md`, and `notes/canonical-readiness.md`."
         },
         {
           "heading": "Adaptation notes",

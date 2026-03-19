@@ -31,6 +31,8 @@ evidence:
     path: notes/external-origin.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # deterministic-context-composition
@@ -127,7 +129,7 @@ Verify the technique by confirming that:
 - contributors can identify the source of truth without ambiguity
 
 See `checks/deterministic-context-composition-checklist.md`.
-For external provenance, second-context adaptation, and the first import-review outcome, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, and `notes/external-import-review.md`.
+For external provenance, second-context adaptation, the first import-review outcome, and canonical-readiness review, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, `notes/external-import-review.md`, and `notes/canonical-readiness.md`.
 
 ## Adaptation notes
 
