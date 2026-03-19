@@ -32,6 +32,8 @@ evidence:
     path: notes/bounded-transfer.md
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # intent-plan-dry-run-contract-chain
@@ -105,7 +107,7 @@ Verify the technique by confirming that:
 - required traceability fields are surfaced or rejected explicitly according to policy
 
 See `checks/chain-contract-checklist.md`.
-For source-backed origin evidence and transfer boundaries, see `notes/origin-evidence.md` and `notes/bounded-transfer.md`.
+For source-backed origin evidence, transfer boundaries, and second-context adaptation, see `notes/origin-evidence.md`, `notes/bounded-transfer.md`, and `notes/second-context-adaptation.md`.
 
 ## Adaptation notes
 
@@ -160,4 +162,3 @@ See `checks/chain-contract-checklist.md`.
 - add examples from a non-UI automation system
 - add guidance for partial rollout where some intents still use legacy validation paths
 - add optional guidance for compatibility evolution across intent and plan schemas
-- add a second-context note from a non-automation repository that still uses the same artifact-first contract

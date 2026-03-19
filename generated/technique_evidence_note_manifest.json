@@ -1087,6 +1087,153 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0004"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "intent-plan-dry-run-contract-chain"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public repository of reusable skills for human+agent workflows"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "markdown-authored skill composition with explicit upstream technique linkage"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "adaptation path",
+                  "value_markdown": "the full artifact-first automation-chain technique is reused downstream as a narrower skill-level preview-first contract rather than copied as ATM10-shaped workflow detail"
+                },
+                {
+                  "order": 2,
+                  "key": "downstream surface",
+                  "value_markdown": "the visible reuse point is a skill trigger, procedure, contract, and verification surface instead of a full implementation guide for plan artifacts and chain wiring"
+                },
+                {
+                  "order": 3,
+                  "key": "linkage form",
+                  "value_markdown": "downstream reuse is made explicit through `skills/aoa-dry-run-first/techniques.yaml`, including a pinned upstream `source_ref`, rather than through prose-only borrowing"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "preview-first bias",
+                  "value_markdown": "dry-run or preview remains preferred before real execution when the action has meaningful operational consequences"
+                },
+                {
+                  "order": 2,
+                  "key": "honesty about proof",
+                  "value_markdown": "preview output should reduce uncertainty without being overstated as proof of total safety"
+                },
+                {
+                  "order": 3,
+                  "key": "execution boundary",
+                  "value_markdown": "real execution should not be smuggled into the preview step"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "skill-level narrowing can hide the artifact-first chain detail and make the technique sound like generic caution guidance"
+                },
+                {
+                  "order": 2,
+                  "text": "downstream wording can over-center preview mindset and under-surface explicit plan artifact and contract-check structure"
+                },
+                {
+                  "order": 3,
+                  "text": "future readers could mistake a linked skill scaffold for proof that every dry-run-first pattern automatically satisfies the full upstream chain contract"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`skills/aoa-dry-run-first/techniques.yaml` already links `AOA-T-0004` as an upstream source with a concrete `source_ref` and a bounded `use_sections` subset, which shows explicit downstream reuse rather than only conceptual similarity."
+                },
+                {
+                  "order": 2,
+                  "text": "`skills/aoa-dry-run-first/SKILL.md` keeps the same preview-first core in narrower skill form: prefer dry-run before real execution, name preview limits honestly, and avoid letting the preview silently become the real action."
+                },
+                {
+                  "order": 3,
+                  "text": "The downstream skill does not copy ATM10-specific artifact names or workflow layout, which shows that the portable contract is the reusable safety discipline rather than donor-specific implementation detail."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the technique remains reusable under a narrower downstream skill projection without collapsing into project-specific automation detail"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
