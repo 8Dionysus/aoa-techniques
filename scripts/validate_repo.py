@@ -65,6 +65,7 @@ SELECTION_REVIEW_DOCS = {
     "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
     "evaluation_chain": "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
     "docs_boundary": "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
+    "skill_support": "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
 }
 WORKING_SET_SPECS = (
     {
@@ -84,6 +85,12 @@ WORKING_SET_SPECS = (
         "technique_ids": ("AOA-T-0002", "AOA-T-0009"),
         "review_doc": SELECTION_REVIEW_DOCS["docs_boundary"],
         "note": "Repository-wide document-role layout plus lightweight entrypoint snapshot discipline.",
+    },
+    {
+        "title": "Skill-support cluster",
+        "technique_ids": ("AOA-T-0014", "AOA-T-0015", "AOA-T-0017", "AOA-T-0016"),
+        "review_doc": SELECTION_REVIEW_DOCS["skill_support"],
+        "note": "Bounded test-first slicing, contract-surface validation, invariant coverage broadening, and semantic scoping for recent skill-support techniques.",
     },
 )
 COMMON_MOVE_SPECS = (
