@@ -4222,6 +4222,158 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/tdd-slice/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0014"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "tdd-slice"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human+agent contribution workflow over reviewable repository changes"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "adaptation path",
+                  "value_markdown": "the technique was rehomed from a broader draft wave into one focused promoted bundle rather than landing as part of an umbrella branch"
+                },
+                {
+                  "order": 2,
+                  "key": "support surfaces",
+                  "value_markdown": "the public form now includes a bounded checklist, a minimal example, an origin note, and derived repository manifests"
+                },
+                {
+                  "order": 3,
+                  "key": "workflow surface",
+                  "value_markdown": "the adaptation turns planning-layer testing pressure into a portable repository technique that can guide bounded behavior changes across public-safe engineering work"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors work through explicit diffs, named validation steps, and reviewable out-of-scope boundaries"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one bounded behavior slice is named before implementation widens"
+                },
+                {
+                  "order": 2,
+                  "key": "sequence",
+                  "value_markdown": "tests-first where appropriate, smallest passing change next, bounded refactor only after the slice is green"
+                },
+                {
+                  "order": 3,
+                  "key": "reporting",
+                  "value_markdown": "the final result still names what behavior is now covered and what remains outside the slice"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "documentation packaging can make the technique sound like generic TDD ritual if future examples stop centering one concrete bounded slice"
+                },
+                {
+                  "order": 2,
+                  "text": "narrow example surfaces can create false confidence if contributors copy the checklist without keeping the behavior boundary explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "repository promotion can hide the execution discipline if future notes focus on artifacts rather than the bounded change path itself"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The focused landing into `aoa-techniques` kept the technique distinct from boundary-contract and property-oriented validation patterns rather than leaving it inside one mixed skill-support branch."
+                },
+                {
+                  "order": 2,
+                  "text": "The public checklist and minimal example still center behavior-shaped tests, smallest passing change, and bounded refactor instead of generic testing advice."
+                },
+                {
+                  "order": 3,
+                  "text": "The later `Skill-Support Semantic Review` kept `AOA-T-0014` distinct as an execution discipline for one bounded behavior slice rather than as a generic evaluation technique."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the technique remained readable, bounded, and semantically distinct after public extraction into `aoa-techniques`"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4301,6 +4453,158 @@
                 {
                   "order": 1,
                   "text": "The origin proves this technique as a reusable evaluation discipline for boundary stability: the contract is valuable because it keeps interface expectations explicit, reviewable, and resistant to internal churn."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/contract-test-design/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0015"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-test-design"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human+agent contribution workflow over reviewable repository changes"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "adaptation path",
+                  "value_markdown": "the origin-specific boundary pattern was extracted from a larger draft wave into one focused promoted evaluation bundle"
+                },
+                {
+                  "order": 2,
+                  "key": "boundary surface",
+                  "value_markdown": "project-specific service and workflow edges were rewritten as repo-agnostic contract framing over observable inputs, outputs, and failure behavior"
+                },
+                {
+                  "order": 3,
+                  "key": "support surfaces",
+                  "value_markdown": "the public form now includes an explicit checklist, a minimal boundary example, an origin note, and derived repository manifests"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "downstream expectations must be reviewable in public-safe language rather than carried implicitly in private implementation context"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "the important validation surface is still the consumer-visible boundary rather than hidden internals"
+                },
+                {
+                  "order": 2,
+                  "key": "reasoning",
+                  "value_markdown": "downstream assumptions remain explicit when they materially shape the contract"
+                },
+                {
+                  "order": 3,
+                  "key": "reporting",
+                  "value_markdown": "the result still states what the contract guarantees and what remains outside that guarantee"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can drift into generic \"stronger tests\" language if future examples stop centering one observable boundary"
+                },
+                {
+                  "order": 2,
+                  "text": "overlap pressure with invariant-oriented validation can blur the pattern if later notes describe broad coverage instead of contract-surface guarantees"
+                },
+                {
+                  "order": 3,
+                  "text": "public generalization can weaken the role of downstream consumers if future wording keeps only the interface shape and drops the consumer perspective"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The focused landing into `aoa-techniques` kept the pattern separate from both bounded execution discipline and invariant-oriented coverage broadening."
+                },
+                {
+                  "order": 2,
+                  "text": "The public checklist and minimal example still center observable contract behavior, downstream assumptions, and refactor freedom behind the boundary."
+                },
+                {
+                  "order": 3,
+                  "text": "The later `Skill-Support Semantic Review` kept `AOA-T-0015` distinct as a boundary-contract technique and identified its watch seam with `AOA-T-0017` without collapsing the two patterns."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the technique remained distinct and reusable after public bundle shaping into `aoa-techniques`"
                 }
               ]
             }

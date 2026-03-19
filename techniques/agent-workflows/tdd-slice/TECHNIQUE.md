@@ -28,6 +28,8 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
 ---
 
 # tdd-slice
