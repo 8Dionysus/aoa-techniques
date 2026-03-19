@@ -114,37 +114,77 @@ WORKING_SET_SPECS = (
         "note": "Bounded test-first slicing, contract-surface validation, invariant coverage broadening, and semantic scoping for recent skill-support techniques.",
     },
 )
+DOMAIN_START_SPECS = (
+    {
+        "domain": "agent-workflows",
+        "lead_ids": ("AOA-T-0001",),
+        "review_docs": (),
+        "note": "Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized.",
+    },
+    {
+        "domain": "docs",
+        "lead_ids": ("AOA-T-0002", "AOA-T-0009", "AOA-T-0012"),
+        "review_docs": (
+            SELECTION_REVIEW_DOCS["docs_boundary"],
+            SELECTION_REVIEW_DOCS["instruction_surface"],
+        ),
+        "note": "Start with the canonical document-role layout, then inspect the docs boundary pair or instruction-surface pair when generation and entrypoint discipline become the next bounded question.",
+    },
+    {
+        "domain": "evaluation",
+        "lead_ids": ("AOA-T-0003", "AOA-T-0006", "AOA-T-0007", "AOA-T-0008", "AOA-T-0010", "AOA-T-0011"),
+        "review_docs": (
+            SELECTION_REVIEW_DOCS["published_summary"],
+            SELECTION_REVIEW_DOCS["evaluation_chain"],
+        ),
+        "note": "Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear.",
+    },
+)
+COMMON_MOVE_BASIS_DIRECT_RELATION = "direct_relation"
+COMMON_MOVE_BASIS_DOMAIN_START = "domain_start"
 COMMON_MOVE_SPECS = (
-    (
-        "I have a summary producer and need history/trend-safe storage",
-        "AOA-T-0006",
-        "Natural next move after a stable summary contract such as `AOA-T-0003`.",
-    ),
-    (
-        "I already publish summaries and need one remediation backlog",
-        "AOA-T-0008",
-        "Use when several latest summaries should collapse into one bounded follow-up surface.",
-    ),
-    (
-        "I already publish summaries and need one trust verdict",
-        "AOA-T-0010",
-        "Use when several consumers should not duplicate integrity checks independently.",
-    ),
-    (
-        "I need strict-vs-optional rendering policy",
-        "AOA-T-0011",
-        "Use when supporting summaries should stay visible but non-fatal in one consumer.",
-    ),
-    (
-        "I need doc-role separation",
-        "AOA-T-0002",
-        "Start here when the repository needs explicit canonical homes and update-routing rules.",
-    ),
-    (
-        "I need top-level docs to stay short",
-        "AOA-T-0009",
-        "Inspect alongside `AOA-T-0002` when entrypoint docs start duplicating operational detail.",
-    ),
+    {
+        "prompt": "I have a summary producer and need history/trend-safe storage",
+        "target_id": "AOA-T-0006",
+        "basis_type": COMMON_MOVE_BASIS_DIRECT_RELATION,
+        "anchor_ids": ("AOA-T-0003",),
+        "note": "Natural next move after a stable summary contract such as `AOA-T-0003`.",
+    },
+    {
+        "prompt": "I already publish summaries and need one remediation backlog",
+        "target_id": "AOA-T-0008",
+        "basis_type": COMMON_MOVE_BASIS_DIRECT_RELATION,
+        "anchor_ids": ("AOA-T-0006",),
+        "note": "Use when several latest summaries should collapse into one bounded follow-up surface.",
+    },
+    {
+        "prompt": "I already publish summaries and need one trust verdict",
+        "target_id": "AOA-T-0010",
+        "basis_type": COMMON_MOVE_BASIS_DIRECT_RELATION,
+        "anchor_ids": ("AOA-T-0006",),
+        "note": "Use when several consumers should not duplicate integrity checks independently.",
+    },
+    {
+        "prompt": "I need strict-vs-optional rendering policy",
+        "target_id": "AOA-T-0011",
+        "basis_type": COMMON_MOVE_BASIS_DIRECT_RELATION,
+        "anchor_ids": ("AOA-T-0010",),
+        "note": "Use when supporting summaries should stay visible but non-fatal in one consumer.",
+    },
+    {
+        "prompt": "I need doc-role separation",
+        "target_id": "AOA-T-0002",
+        "basis_type": COMMON_MOVE_BASIS_DOMAIN_START,
+        "domain": "docs",
+        "note": "Start here when the repository needs explicit canonical homes and update-routing rules.",
+    },
+    {
+        "prompt": "I need top-level docs to stay short",
+        "target_id": "AOA-T-0009",
+        "basis_type": COMMON_MOVE_BASIS_DIRECT_RELATION,
+        "anchor_ids": ("AOA-T-0002",),
+        "note": "Inspect alongside `AOA-T-0002` when entrypoint docs start duplicating operational detail.",
+    },
 )
 
 SECTION_STATUS = {
@@ -1761,6 +1801,100 @@ def validate_selection_working_set_specs(repo_root: Path) -> None:
             )
 
 
+def validate_selection_navigation_specs(records: list[TechniqueRecord], repo_root: Path) -> None:
+    records_by_id = {record.id: record for record in records}
+    reviews_by_path = {
+        review.review_path: review for review in parse_semantic_reviews(repo_root)
+    }
+
+    if len(DOMAIN_START_SPECS) != len(DOMAIN_ORDER):
+        fail("DOMAIN_START_SPECS must contain exactly one spec per domain")
+
+    seen_domains: set[str] = set()
+    domain_start_targets: dict[str, str] = {}
+    for spec in DOMAIN_START_SPECS:
+        domain = spec["domain"]
+        if domain not in DOMAIN_VALUES:
+            fail(f"DOMAIN_START_SPECS: unsupported domain '{domain}'")
+        if domain in seen_domains:
+            fail(f"DOMAIN_START_SPECS: duplicate domain '{domain}'")
+        seen_domains.add(domain)
+
+        lead_ids = tuple(spec["lead_ids"])
+        if not lead_ids:
+            fail(f"DOMAIN_START_SPECS[{domain}]: lead_ids must not be empty")
+        domain_start_targets[domain] = lead_ids[0]
+
+        for review_doc in spec.get("review_docs", ()):
+            if review_doc not in reviews_by_path:
+                fail(
+                    f"DOMAIN_START_SPECS[{domain}]: review doc '{review_doc}' does not exist"
+                )
+
+        for technique_id in lead_ids:
+            record = records_by_id.get(technique_id)
+            if record is None:
+                fail(f"DOMAIN_START_SPECS[{domain}]: unknown technique id '{technique_id}'")
+            if record.status != "canonical":
+                fail(
+                    f"DOMAIN_START_SPECS[{domain}]: lead_id '{technique_id}' must be canonical"
+                )
+            if record.domain != domain:
+                fail(
+                    f"DOMAIN_START_SPECS[{domain}]: lead_id '{technique_id}' must belong to domain '{domain}'"
+                )
+
+    if set(domain_start_targets) != set(DOMAIN_ORDER):
+        fail("DOMAIN_START_SPECS must cover every domain exactly once")
+
+    for spec in COMMON_MOVE_SPECS:
+        target_id = spec["target_id"]
+        record = records_by_id.get(target_id)
+        if record is None:
+            fail(f"COMMON_MOVE_SPECS: unknown target_id '{target_id}'")
+        if record.status != "canonical":
+            fail(f"COMMON_MOVE_SPECS: target_id '{target_id}' must be canonical")
+
+        basis_type = spec["basis_type"]
+        if basis_type == COMMON_MOVE_BASIS_DIRECT_RELATION:
+            anchor_ids = tuple(spec.get("anchor_ids", ()))
+            if not anchor_ids:
+                fail(
+                    f"COMMON_MOVE_SPECS[{target_id}]: direct_relation moves require non-empty anchor_ids"
+                )
+            for anchor_id in anchor_ids:
+                anchor = records_by_id.get(anchor_id)
+                if anchor is None:
+                    fail(f"COMMON_MOVE_SPECS[{target_id}]: unknown anchor_id '{anchor_id}'")
+                direct_relation_found = any(
+                    relation["target"] == target_id for relation in anchor.frontmatter["relations"]
+                ) or any(
+                    relation["target"] == anchor_id for relation in record.frontmatter["relations"]
+                )
+                if not direct_relation_found:
+                    fail(
+                        f"COMMON_MOVE_SPECS[{target_id}]: anchor_id '{anchor_id}' must have a direct relation with '{target_id}'"
+                    )
+            continue
+
+        if basis_type == COMMON_MOVE_BASIS_DOMAIN_START:
+            domain = spec.get("domain")
+            if domain not in domain_start_targets:
+                fail(
+                    f"COMMON_MOVE_SPECS[{target_id}]: domain_start move requires a valid domain"
+                )
+            expected_target = domain_start_targets[domain]
+            if target_id != expected_target:
+                fail(
+                    f"COMMON_MOVE_SPECS[{target_id}]: domain_start move for '{domain}' must point to '{expected_target}'"
+                )
+            continue
+
+        fail(
+            f"COMMON_MOVE_SPECS[{target_id}]: unsupported basis_type '{basis_type}'"
+        )
+
+
 def strip_allowlisted_public_urls(text: str) -> str:
     def replace(match: re.Match[str]) -> str:
         url = match.group(0)
@@ -2828,23 +2962,18 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
     for entry in entries:
         if entry["status"] == "canonical":
             canonical_by_domain[entry["domain"]].append(entry)
-
-    start_notes = {
-        "agent-workflows": "Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized.",
-        "docs": "Start with the canonical document-role layout, then inspect the docs boundary pair if top-level summaries begin duplicating canonical detail.",
-        "evaluation": "Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear.",
-    }
+    domain_specs = {spec["domain"]: spec for spec in DOMAIN_START_SPECS}
 
     lines = [
         "# Selection Patterns",
         "",
-        "This file is generated from `../generated/technique_catalog.json`, current direct `relations`, and a bounded in-repo mapping of review-backed working sets.",
+        "This file is generated from `../generated/technique_catalog.json`, current direct `relations`, validator-backed navigation specs, and review-backed working sets.",
         "Do not edit it by hand; run `python scripts/build_catalog.py`.",
         "",
         "Use this surface when the flat adjacency list in `TECHNIQUE_SELECTION.md` is not enough and you want one bounded answer to:",
         '- "What nearby technique should I inspect next, and why?"',
         "",
-        "This surface uses direct relation navigation and review-backed clusters only. It does not do graph search, scoring, or multi-hop reasoning.",
+        "This surface uses direct relation navigation, validator-backed starting points and common moves, and review-backed clusters only. It does not do graph search, scoring, or multi-hop reasoning.",
         "",
         "See also:",
         "- [Technique Selection](TECHNIQUE_SELECTION.md)",
@@ -2859,8 +2988,9 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
 
     for domain in DOMAIN_ORDER:
         defaults = ", ".join(selection_technique_link(entry) for entry in canonical_by_domain[domain])
+        spec = domain_specs[domain]
         lines.append(
-            f"| `{domain}` | {defaults or '-'} | {escape_markdown_table_cell(start_notes[domain])} |"
+            f"| `{domain}` | {defaults or '-'} | {escape_markdown_table_cell(spec['note'])} |"
         )
 
     lines.extend(["", "## Working Sets", ""])
@@ -2890,12 +3020,12 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
         ]
     )
 
-    for prompt, technique_id, note in COMMON_MOVE_SPECS:
+    for spec in COMMON_MOVE_SPECS:
         lines.append(
             "| "
-            f"{escape_markdown_table_cell(prompt)} | "
-            f"{selection_technique_link(entries_by_id[technique_id])} | "
-            f"{escape_markdown_table_cell(note)} |"
+            f"{escape_markdown_table_cell(spec['prompt'])} | "
+            f"{selection_technique_link(entries_by_id[spec['target_id']])} | "
+            f"{escape_markdown_table_cell(spec['note'])} |"
         )
 
     lines.extend(
@@ -3146,6 +3276,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_selection_files(repo_root)
     schema_store = load_schema_store(repo_root)
     records = collect_techniques(repo_root, schema_store)
+    validate_selection_navigation_specs(records, repo_root)
     validate_index(repo_root, records)
     validate_evidence(records)
     validate_relations(records)
@@ -3177,7 +3308,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated GitHub review template manifest parity")
     print("[ok] validated generated semantic review manifest parity")
     print("[ok] validated generated selection surface parity")
-    print("[ok] validated review-backed working set parity and bounded public hygiene")
+    print("[ok] validated selection navigation specs, review-backed working sets, and bounded public hygiene")
 
 
 def main() -> int:

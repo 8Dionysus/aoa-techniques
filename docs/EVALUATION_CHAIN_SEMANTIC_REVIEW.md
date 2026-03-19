@@ -51,4 +51,4 @@ Overall outcome: `clear with one watch dependency note`
 
 No narrow remediation wave is justified for this pair from this pilot alone.
 
-The next semantic-review wave should move to `AOA-T-0002` and `AOA-T-0009`, where the likely boundary question is source-of-truth document layout versus lightweight snapshot discipline.
+The downstream docs-boundary review wave has already landed, so the next step here is only to keep the `AOA-T-0006` dependency watch note bounded and open a new pilot only if storage-layout detail starts crowding out rollout semantics.

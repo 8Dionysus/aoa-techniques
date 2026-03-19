@@ -43,4 +43,4 @@ Overall outcome: `clear with one watch seam`
 
 No immediate semantic-remediation wave is justified for this pair from this pilot alone.
 
-The next step should move to concrete example strengthening for `AOA-T-0012` and `AOA-T-0013`.
+Concrete example strengthening has already landed for both techniques, so the next step should move to stronger live multi-target reuse evidence for `AOA-T-0013` rather than more example-only reinforcement.

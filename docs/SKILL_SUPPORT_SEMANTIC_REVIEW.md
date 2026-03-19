@@ -65,4 +65,4 @@ Overall outcome: `clear with two watch seams`
 
 No immediate semantic-remediation wave is justified for this cluster from this pilot alone.
 
-The next step should move to second-context evidence strengthening for the strongest two recent techniques, starting with `AOA-T-0014` and `AOA-T-0015`.
+Second-context evidence strengthening has already landed for `AOA-T-0014` and `AOA-T-0015`, so the next step should focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and `AOA-T-0016` drift toward generic architecture formalism.

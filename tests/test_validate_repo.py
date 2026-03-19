@@ -90,6 +90,59 @@ relations:
 
         validate_repo.validate_selection_working_set_specs(REPO_ROOT)
 
+    def test_selection_navigation_specs_are_structurally_valid(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        records_by_id = {record.id: record for record in records}
+
+        self.assertEqual(len(validate_repo.DOMAIN_ORDER), len(validate_repo.DOMAIN_START_SPECS))
+        seen_domains: set[str] = set()
+        for spec in validate_repo.DOMAIN_START_SPECS:
+            domain = spec["domain"]
+            self.assertNotIn(domain, seen_domains)
+            seen_domains.add(domain)
+
+            lead_ids = tuple(spec["lead_ids"])
+            self.assertTrue(lead_ids)
+            for technique_id in lead_ids:
+                record = records_by_id[technique_id]
+                self.assertEqual("canonical", record.status)
+                self.assertEqual(domain, record.domain)
+
+        self.assertEqual(set(validate_repo.DOMAIN_ORDER), seen_domains)
+
+        domain_start_targets = {
+            spec["domain"]: tuple(spec["lead_ids"])[0] for spec in validate_repo.DOMAIN_START_SPECS
+        }
+        for spec in validate_repo.COMMON_MOVE_SPECS:
+            target = records_by_id[spec["target_id"]]
+            self.assertEqual("canonical", target.status)
+
+            if spec["basis_type"] == validate_repo.COMMON_MOVE_BASIS_DIRECT_RELATION:
+                self.assertTrue(spec.get("anchor_ids"))
+                for anchor_id in spec["anchor_ids"]:
+                    anchor = records_by_id[anchor_id]
+                    direct_relation_found = any(
+                        relation["target"] == spec["target_id"]
+                        for relation in anchor.frontmatter["relations"]
+                    ) or any(
+                        relation["target"] == anchor_id
+                        for relation in target.frontmatter["relations"]
+                    )
+                    self.assertTrue(direct_relation_found)
+                continue
+
+            self.assertEqual(
+                validate_repo.COMMON_MOVE_BASIS_DOMAIN_START,
+                spec["basis_type"],
+            )
+            self.assertEqual(
+                domain_start_targets[spec["domain"]],
+                spec["target_id"],
+            )
+
+        validate_repo.validate_selection_navigation_specs(records, REPO_ROOT)
+
     def test_validate_risks_markdown_accepts_fixed_subsection_order(self) -> None:
         validate_repo.validate_risks_markdown(
             """### Failure modes
@@ -159,6 +212,27 @@ relations:
 
 
 class TechniqueContentSmokeTests(unittest.TestCase):
+    def test_shadow_and_caution_guides_match_current_enforced_contract(self) -> None:
+        shadow_guide = (REPO_ROOT / "docs" / "TECHNIQUE_SHADOW_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+        risk_guide = (
+            REPO_ROOT / "docs" / "RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("The current repository now requires", shadow_guide)
+        self.assertNotIn("does not add schema fields, validator rules", shadow_guide)
+        self.assertNotIn("no repo-wide retrofit of existing bundles", shadow_guide)
+        self.assertIn(
+            "enforcing the current markdown-first `Risks` contract",
+            risk_guide,
+        )
+        self.assertNotIn(
+            "does not add shadow fields, generated caution outputs, or validator logic",
+            risk_guide,
+        )
+        self.assertNotIn("no bundle retrofits in the same wave", risk_guide)
+
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
         self.assertEqual(17, len(technique_paths))
@@ -274,11 +348,49 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn(expected_phrase, review_content)
         self.assertIn(expected_phrase, manifest_entry["next_step_markdown"])
 
+    def test_semantic_review_next_steps_match_generated_manifest(self) -> None:
+        expected_phrases = {
+            "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md": "open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package",
+            "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
+            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "stronger live multi-target reuse evidence for `AOA-T-0013`",
+            "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and `AOA-T-0016` drift toward generic architecture formalism",
+        }
+        manifest = validate_repo.read_json(REPO_ROOT / "generated" / "semantic_review_manifest.json")
+        reviews_by_path = {review["review_path"]: review for review in manifest["reviews"]}
+
+        for review_path, expected_phrase in expected_phrases.items():
+            with self.subTest(review_path=review_path):
+                review_content = (REPO_ROOT / review_path).read_text(encoding="utf-8")
+                self.assertIn(expected_phrase, review_content)
+                self.assertIn(expected_phrase, reviews_by_path[review_path]["next_step_markdown"])
+
     def test_changelog_tracks_unreleased_without_losing_v010_entry(self) -> None:
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("## [Unreleased]", changelog)
         self.assertIn("## [0.1.0] - 2026-03-17", changelog)
+
+    def test_selection_patterns_describes_validator_backed_navigation(self) -> None:
+        selection_patterns = (REPO_ROOT / "docs" / "SELECTION_PATTERNS.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn(
+            "validator-backed navigation specs, and review-backed working sets",
+            selection_patterns,
+        )
+        self.assertIn(
+            "validator-backed starting points and common moves",
+            selection_patterns,
+        )
+        self.assertIn(
+            "| I need doc-role separation | [AOA-T-0002]",
+            selection_patterns,
+        )
+        self.assertIn(
+            "| I need strict-vs-optional rendering policy | [AOA-T-0011]",
+            selection_patterns,
+        )
 
 
 if __name__ == "__main__":
