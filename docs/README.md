@@ -26,6 +26,7 @@ Choose the path that matches your question:
   - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
   - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
   - [Docs Boundary Semantic Review](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+  - [Skill-Support Semantic Review](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 - I need release process guidance:
   - [Releasing `aoa-techniques`](RELEASING.md)
 
@@ -66,6 +67,7 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
 - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
 - [Docs Boundary Semantic Review](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+- [Skill-Support Semantic Review](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 
 ## Recommended Reading Paths
 
