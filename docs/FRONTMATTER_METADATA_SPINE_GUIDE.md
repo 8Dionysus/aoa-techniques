@@ -9,6 +9,7 @@ This guide is metadata-first. It does not add new frontmatter fields, generated 
 See also:
 - [Documentation Map](README.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+- [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
 
 ## Role Split
 
@@ -73,4 +74,4 @@ Not part of this wave:
 - no caution/shadow fields
 - no new `kag` domain
 
-The current job is only to make the bounded metadata spine explicit so later KAG-oriented waves can build on it without reopening whether markdown or metadata is authoritative.
+The current job is to keep the bounded metadata spine explicit both as a repo rule and as the reusable technique captured in [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md), without reopening whether markdown or metadata is authoritative.

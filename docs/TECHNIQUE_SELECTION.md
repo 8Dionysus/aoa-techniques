@@ -55,6 +55,10 @@ See also:
 - [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md): `complements` [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 - [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 - [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md): `complements` [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
+- [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md): `complements` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+- [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md): `complements` [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md); `used_together_for` [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md): `requires` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+- [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md): `requires` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -76,6 +80,10 @@ See also:
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `promoted` | `cross_context` | `bounded` | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
 | [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible. |
+| [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
+| [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning. |
+| [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Use typed evidence notes and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
+| [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
 
 ### `evaluation`
 
@@ -92,7 +100,7 @@ See also:
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 17/17 techniques.
+- `export_ready` is currently `true` for 21/21 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

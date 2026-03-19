@@ -22,6 +22,11 @@ Choose the path that matches your question:
   - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
   - [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
   - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
+- I need the first reusable KAG/source-lift techniques:
+  - [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+  - [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+  - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+  - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - I need to inspect the semantic-review pilots:
   - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
   - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
@@ -62,6 +67,19 @@ These guides explain what the repo can already support as a future lift surface 
 - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
 
+### First KAG/source-lift techniques
+
+These are reusable technique bundles extracted from the repo's current generated layer without widening into a graph platform.
+
+- [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+  - use when stable markdown sections should become one bounded derived lookup surface
+- [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+  - use when bundle routing needs shallow frontmatter plus a derived catalog, not richer schema
+- [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+  - use when typed supporting notes should act as provenance handles without becoming a note graph
+- [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+  - use when direct relations should power bounded adjacency hints without graph semantics
+
 ### Semantic-review pilots
 
 These review-only docs test whether nearby techniques still read as distinct, bounded patterns rather than one blurred package.
@@ -96,6 +114,7 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 3. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
 4. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 5. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+6. one of the quartet bundles in `../techniques/docs/` that matches the concrete lift question
 
 ## Companion Repository Surfaces
 

@@ -6,6 +6,13 @@ Use it when the repository already looks strong as structured markdown, but the 
 
 This guide is source-first. It allows a small bounded set of generated lift surfaces while still avoiding new schema fields, graph behavior, or bundle-level section IDs.
 
+See also:
+- [Documentation Map](README.md)
+- [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+- [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+- [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+- [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+
 ## What Already Exists
 
 The current repository is already strong enough for `technique-as-node` KAG because it has:
@@ -72,12 +79,6 @@ The next implementation-oriented source-class pilot after GitHub review template
 
 Those files lift authored repo-level semantic review docs into derived review knowledge only. They do not replace the markdown review surfaces, infer verdict policy, or turn semantic review into a graph engine.
 
-See also:
-- [Documentation Map](README.md)
-- [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md) for the second bounded family member, which clarifies how existing frontmatter and derived catalog outputs already act as the current metadata spine for bundle-level KAG entrypoints.
-- [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md) for the next bounded family member, which keeps current typed relations explicitly limited to direct-edge lifting rather than graph behavior.
-- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md) for the bounded caution-layer member, which keeps shadow meaning markdown-first while making future caution lift explicit.
-
 ## Stable Source Surfaces
 
 For the first source-lift wave, treat these surfaces as stable:
@@ -128,4 +129,4 @@ Not part of this first wave:
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The first implementation moves are the bounded section, checklist, example, evidence note, GitHub review template, and semantic review manifests, with broader extraction still deferred to later techniques.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current technique quartet now makes that family reusable without changing the bounded implementation order: section lift first, metadata spine and provenance lift alongside the current manifests, and bounded direct-relation lift without graph behavior.

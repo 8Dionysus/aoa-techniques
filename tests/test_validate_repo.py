@@ -235,11 +235,39 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(17, len(technique_paths))
+        self.assertEqual(21, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
             validate_repo.validate_sections(body, technique_path)
+
+    def test_kag_quartet_lands_as_promoted_docs_family(self) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        entries_by_id = {entry["id"]: entry for entry in catalog["techniques"]}
+        expected_ids = (
+            "AOA-T-0018",
+            "AOA-T-0019",
+            "AOA-T-0020",
+            "AOA-T-0021",
+        )
+
+        for technique_id in expected_ids:
+            with self.subTest(technique_id=technique_id):
+                entry = entries_by_id[technique_id]
+                self.assertEqual("docs", entry["domain"])
+                self.assertEqual("promoted", entry["status"])
+
+    def test_corpus_status_split_and_domain_set_remain_bounded(self) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        status_counts: dict[str, int] = {}
+        domain_values = {entry["domain"] for entry in catalog["techniques"]}
+
+        for entry in catalog["techniques"]:
+            status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
+
+        self.assertEqual({"agent-workflows", "docs", "evaluation"}, domain_values)
+        self.assertEqual(10, status_counts["canonical"])
+        self.assertEqual(11, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -391,6 +419,30 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "| I need strict-vs-optional rendering policy | [AOA-T-0011]",
             selection_patterns,
         )
+
+    def test_docs_readme_and_kag_guides_link_to_quartet(self) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+        metadata_guide = (
+            REPO_ROOT / "docs" / "FRONTMATTER_METADATA_SPINE_GUIDE.md"
+        ).read_text(encoding="utf-8")
+        provenance_guide = (
+            REPO_ROOT / "docs" / "EVIDENCE_NOTE_PROVENANCE_GUIDE.md"
+        ).read_text(encoding="utf-8")
+        relation_guide = (
+            REPO_ROOT / "docs" / "BOUNDED_RELATION_LIFT_GUIDE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("markdown-technique-section-lift", docs_readme)
+        self.assertIn("frontmatter-metadata-spine", docs_readme)
+        self.assertIn("evidence-note-provenance-lift", docs_readme)
+        self.assertIn("bounded-relation-lift-for-kag", docs_readme)
+        self.assertIn("markdown-technique-section-lift", kag_source_guide)
+        self.assertIn("frontmatter-metadata-spine", metadata_guide)
+        self.assertIn("evidence-note-provenance-lift", provenance_guide)
+        self.assertIn("bounded-relation-lift-for-kag", relation_guide)
 
 
 if __name__ == "__main__":

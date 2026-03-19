@@ -9,6 +9,7 @@ This guide is provenance-first. It allows one bounded generated evidence-note ma
 See also:
 - [Documentation Map](README.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+- [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
 
 ## Current Note Roles
 
@@ -122,4 +123,4 @@ Not part of this wave:
 - no flattened top-level note semantics like `verdict`, `source_project`, or note scoring
 - no bundle or generated catalog changes beyond the bounded evidence note manifest
 
-The current job is to keep the evidence-note provenance layer explicit and bounded while allowing one derived manifest that still preserves note-level authorship and context.
+The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context.

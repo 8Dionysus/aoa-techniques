@@ -5524,6 +5524,338 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0018",
+      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/markdown-technique-section-lift/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0018"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "markdown-technique-section-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `scripts/build_section_manifest.py`\n- `generated/technique_section_manifest.json`\n- `docs/KAG_SOURCE_LIFT_GUIDE.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`scripts/build_section_manifest.py` already derives a bounded section manifest from authoritative `TECHNIQUE.md` bundles instead of asking maintainers to author section metadata separately"
+                },
+                {
+                  "order": 2,
+                  "text": "`generated/technique_section_manifest.json` shows the current repo already consumes that lift as a stable derived surface"
+                },
+                {
+                  "order": 3,
+                  "text": "`docs/KAG_SOURCE_LIFT_GUIDE.md` explicitly frames section lift as a bounded family member rather than a graph or schema program"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable pattern already exists in a live public repository as markdown-first source lift with a generated section surface"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique is not speculative; it is a compact generalization of the section-manifest behavior that `aoa-techniques` already uses"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0019",
+      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0019"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "frontmatter-metadata-spine"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `scripts/build_catalog.py`\n- `generated/technique_catalog.json`\n- `generated/technique_catalog.min.json`\n- `docs/FRONTMATTER_METADATA_SPINE_GUIDE.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`scripts/build_catalog.py` already projects bounded frontmatter into derived catalog outputs rather than asking maintainers to keep a second metadata source by hand"
+                },
+                {
+                  "order": 2,
+                  "text": "`generated/technique_catalog.json` and `.min.json` already act as bundle-level routing surfaces for status, domain, summary, evidence handles, and direct adjacency"
+                },
+                {
+                  "order": 3,
+                  "text": "`docs/FRONTMATTER_METADATA_SPINE_GUIDE.md` explicitly frames this behavior as a metadata spine and keeps section meaning outside frontmatter"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique is grounded in an active public repository where shallow frontmatter already powers real generated navigation outputs"
+                },
+                {
+                  "order": 2,
+                  "text": "the reusable contract is the bounded metadata split, not the exact shape of one repository's catalog JSON"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0020",
+      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/evidence-note-provenance-lift/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0020"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "evidence-note-provenance-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `scripts/build_evidence_note_manifest.py`\n- `generated/technique_evidence_note_manifest.json`\n- `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`scripts/build_evidence_note_manifest.py` already lifts typed note roles into a derived provenance surface while preserving note-level context"
+                },
+                {
+                  "order": 2,
+                  "text": "`generated/technique_evidence_note_manifest.json` shows the current repo already consumes note roles and paths as bounded provenance handles"
+                },
+                {
+                  "order": 3,
+                  "text": "`docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md` explicitly frames the note layer as provenance-first and keeps note IDs, note graphs, and flattened semantics deferred"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the live repository already uses note files as typed supporting evidence rather than as unstructured attachment clutter"
+                },
+                {
+                  "order": 2,
+                  "text": "the reusable pattern is bounded provenance lookup from markdown notes, not a claim that note manifests replace authored review context"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0021",
+      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0021"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-relation-lift-for-kag"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `generated/technique_catalog.json`\n- `docs/TECHNIQUE_SELECTION.md`\n- `docs/SELECTION_PATTERNS.md`\n- `docs/BOUNDED_RELATION_LIFT_GUIDE.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`generated/technique_catalog.json` already carries the current direct typed relation layer as derived metadata"
+                },
+                {
+                  "order": 2,
+                  "text": "`docs/TECHNIQUE_SELECTION.md` and `docs/SELECTION_PATTERNS.md` already use those relations for bounded navigation rather than for graph inference"
+                },
+                {
+                  "order": 3,
+                  "text": "`docs/BOUNDED_RELATION_LIFT_GUIDE.md` explicitly keeps relation rationale, weighting, and multi-hop semantics out of the current edge layer"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the repository already proves that a small direct-edge vocabulary can help navigation without turning into a graph platform"
+                },
+                {
+                  "order": 2,
+                  "text": "the reusable technique is the bounded relation lift itself, not any promise of future graph behavior"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

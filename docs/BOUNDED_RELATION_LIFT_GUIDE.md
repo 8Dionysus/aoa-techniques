@@ -10,6 +10,7 @@ See also:
 - [Documentation Map](README.md)
 - [Selection Patterns](SELECTION_PATTERNS.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+- [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 
 ## Role Split
 
@@ -80,4 +81,4 @@ Not part of this wave:
 - no generated graph artifacts
 - no bundle or generated catalog changes
 
-The current job is only to make the bounded direct-edge layer explicit so later KAG-oriented waves can lift those edges without reopening whether relations are already a graph platform.
+The current job is to keep the bounded direct-edge layer explicit both as a repo rule and as the reusable technique captured in [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md), without reopening whether relations are already a graph platform.
