@@ -35,6 +35,19 @@
         "Recommendation"
       ]
     },
+    "adverse_effects_review": {
+      "title": "Adverse Effects Review",
+      "section_scope": [
+        "Technique",
+        "Review focus",
+        "Failure modes",
+        "Negative effects",
+        "Misuse patterns",
+        "Detection signals",
+        "Mitigations",
+        "Recommendation"
+      ]
+    },
     "external_origin": {
       "title": "External Origin Note",
       "section_scope": [
@@ -63,6 +76,135 @@
       "id": "AOA-T-0001",
       "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/agent-workflows/plan-diff-apply-verify-report/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0001"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "plan-diff-apply-verify-report"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default safe workflow for non-trivial agent or human-plus-agent changes"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep concrete verification stronger than ceremony and keep the report subordinate to the diff"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "validation becomes symbolic while the workflow still reports success"
+                },
+                {
+                  "order": 2,
+                  "text": "the plan and report stay present even when the real diff no longer proves the stated scope"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "full workflow ceremony can slow low-risk edits that do not need the same safety loop"
+                },
+                {
+                  "order": 2,
+                  "text": "reporting overhead can crowd out direct diff readability if the summary becomes the main review surface"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "applying the full workflow to trivial wording or formatting edits by habit"
+                },
+                {
+                  "order": 2,
+                  "text": "treating the final report as a substitute for a readable diff and named validation evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "success reports describe validation generically instead of naming concrete checks and results"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors invoke the full workflow for edits with no meaningful operational consequence"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "use a lighter workflow when the change has no meaningful operational impact"
+                },
+                {
+                  "order": 2,
+                  "text": "require validation lines to name what ran and what result was observed before the change is treated as complete"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for ceremony creep or symbolic `VERIFY` language"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/agent-workflows/plan-diff-apply-verify-report/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -334,6 +476,135 @@
       "id": "AOA-T-0002",
       "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/docs/source-of-truth-layout/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0002"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "source-of-truth-layout"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default repository layout pattern for canonical homes and update-routing rules"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the role map useful for routing without turning small repositories into document choreography systems"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the role map no longer routes recurring updates to one obvious canonical home"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors bypass the layout and duplicate the same status or policy across multiple primary documents"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "over-structuring can add maintenance cost faster than it removes drift"
+                },
+                {
+                  "order": 2,
+                  "text": "a repository can look orderly while change friction quietly rises"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating the full recommended role map as mandatory even when a smaller repo needs a reduced variant"
+                },
+                {
+                  "order": 2,
+                  "text": "adding more docs instead of simplifying or collapsing roles that no longer prevent drift"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the same status or policy update keeps appearing in more than one primary document"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors repeatedly ask where a recurring update belongs because the routing rule is no longer obvious"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "shrink the role map for smaller repositories instead of preserving a larger operational layout by habit"
+                },
+                {
+                  "order": 2,
+                  "text": "refresh or simplify canonical-home rules whenever duplicate-summary relapse appears"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for duplicate-summary relapse or layout growth without routing value"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/docs/source-of-truth-layout/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -622,6 +893,135 @@
       "id": "AOA-T-0003",
       "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/evaluation/contract-first-smoke-summary/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0003"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-first-smoke-summary"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default summary-contract producer for runnable smoke and probe paths"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep storage and rollout semantics downstream so the producer contract does not collapse into the broader evaluation chain"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "failure paths emit bare `error` signals with too little observed context to diagnose quickly"
+                },
+                {
+                  "order": 2,
+                  "text": "summary shape drifts often enough to break downstream consumers that expect one stable contract"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "over-minimal summaries can push humans back toward log scraping"
+                },
+                {
+                  "order": 2,
+                  "text": "pressure-driven fallback to raw logs can become sticky and weaken the producer contract over time"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating summary generation as optional when execution is under pressure"
+                },
+                {
+                  "order": 2,
+                  "text": "changing filenames, fields, or status semantics without a bounded compatibility plan"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "downstream consumers start scraping console logs again instead of reading the summary artifact"
+                },
+                {
+                  "order": 2,
+                  "text": "repeated failures show `error` with too little observed data to explain the problem quickly"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep one stable machine-readable summary path across success and failure paths whenever the process can still emit output"
+                },
+                {
+                  "order": 2,
+                  "text": "evolve summary shape deliberately and keep rollout or storage detail outside the producer contract"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for producer drift into storage-layout or staged-enforcement language"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/evaluation/contract-first-smoke-summary/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -1336,6 +1736,135 @@
       "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0006"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "latest-alias-plus-history-copy"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default storage contract for stable latest alias plus nested history copy"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep downstream remediation and integrity consumers subordinate to storage invariants rather than letting them redefine the contract"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "latest alias and nested history drift because only one write path updates or one write quietly fails"
+                },
+                {
+                  "order": 2,
+                  "text": "collectors double-count runs by mixing top-level alias data with nested history rows"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "dual-write layout adds reader-policy and migration complexity even when the summary payload stays simple"
+                },
+                {
+                  "order": 2,
+                  "text": "a clean latest alias can create false confidence while historical accumulation is already broken"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating the pattern as a generic archival strategy instead of one bounded latest-plus-history contract"
+                },
+                {
+                  "order": 2,
+                  "text": "adding extra alias layers or unofficial scan paths instead of enforcing one stable reader precedence"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "latest alias and history copy disagree on schema, status, or reported paths"
+                },
+                {
+                  "order": 2,
+                  "text": "trend outputs jump unexpectedly after migration even though recent run summaries still look normal"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "narrow the layout back to one stable alias path and one nested history copy"
+                },
+                {
+                  "order": 2,
+                  "text": "gate migration boundaries explicitly and re-establish alias/history parity before adding more storage variants"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for storage complexity or downstream-consumer language crowding out alias/history invariants"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -1704,6 +2233,135 @@
       "id": "AOA-T-0007",
       "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/evaluation/signal-first-gate-promotion/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0007"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "signal-first-gate-promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default staged-promotion pattern for moving one observed signal toward one narrow strict enforcement surface"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep storage-layout dependency detail subordinate to rollout semantics and keep one strict surface explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion happens from a shallow or noisy history window and strict mode arrives too early"
+                },
+                {
+                  "order": 2,
+                  "text": "strict behavior leaks from the chosen enforcement surface into unrelated paths that were supposed to remain observational"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "long staged rollouts can slow response to real regressions when immediate blocking would be healthier"
+                },
+                {
+                  "order": 2,
+                  "text": "telemetry-rich rollout language can make control look stronger than the actual enforcement decision"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keeping the technique in endless `signal_only` observation instead of deciding whether the signal deserves a strict surface"
+                },
+                {
+                  "order": 2,
+                  "text": "spreading rollout telemetry across many surfaces until the pattern becomes a generic governance stack"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "operators cannot state which single surface is strict, which surfaces are observational, and why that boundary exists"
+                },
+                {
+                  "order": 2,
+                  "text": "strict failures appear without the diagnostic artifacts that were supposed to remain visible after rollout"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "re-narrow strict enforcement to one explicit surface and keep all other paths observational until the boundary is clear again"
+                },
+                {
+                  "order": 2,
+                  "text": "collapse decision layers that no longer help explain the rollout instead of treating more telemetry as automatic progress"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for rollout-boundary drift or storage-detail crowding in the `AOA-T-0003` / `AOA-T-0006` dependency chain"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/evaluation/signal-first-gate-promotion/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -2100,6 +2758,135 @@
       "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0008"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "published-summary-remediation-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical downstream remediation rollup over latest published summaries"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep remediation follow-up distinct from integrity verdicts and rendering policy inside the published-summary cluster"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "missing or stale sources are hidden and the backlog looks healthier than reality"
+                },
+                {
+                  "order": 2,
+                  "text": "history replay slips back in and turns the snapshot into a second evaluator"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bucket policy can grow ad hoc until the snapshot stops being reviewable as one bounded surface"
+                },
+                {
+                  "order": 2,
+                  "text": "unstable grouping or truncation policy can make remediation output harder to compare over time"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "widening the bucket set casually instead of versioning a fixed bounded policy"
+                },
+                {
+                  "order": 2,
+                  "text": "treating the snapshot as a place to recompute history, trend state, or trust verdicts"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "new buckets appear without a clearly documented policy change"
+                },
+                {
+                  "order": 2,
+                  "text": "remediation items stop pointing back to source summaries or start reading like integrity conclusions"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep bucket policy fixed per snapshot version and preserve latest-only inputs plus explicit source references"
+                },
+                {
+                  "order": 2,
+                  "text": "route trust questions back to integrity review and rendering questions back to consumer policy instead of widening the remediation surface"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for remediation drift into integrity or rendering semantics"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -2490,6 +3277,135 @@
       "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/lightweight-status-snapshot/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0009"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "lightweight-status-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default top-level snapshot discipline once canonical homes for detailed truth already exist"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep entrypoint docs short without making orientation or current-state discovery harder"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the snapshot becomes too thin to point readers toward the right current detail"
+                },
+                {
+                  "order": 2,
+                  "text": "outward links go stale after the doc map evolves"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "aggressive trimming can make operational truth harder to find even while the entrypoint docs look cleaner"
+                },
+                {
+                  "order": 2,
+                  "text": "cleanup can hide unresolved routing gaps by removing detail faster than the repo learns where that detail belongs"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "deleting detail instead of routing it to canonical homes"
+                },
+                {
+                  "order": 2,
+                  "text": "treating short `README` or `MANIFEST` files as the goal even when navigability gets worse"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "new readers still cannot find detailed current state quickly even though entrypoint docs are short"
+                },
+                {
+                  "order": 2,
+                  "text": "teams keep re-adding summary prose because the snapshot no longer feels sufficient for orientation"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "restore just enough orientation context to make the snapshot navigable before adding back long chronology"
+                },
+                {
+                  "order": 2,
+                  "text": "fix canonical links and routing first instead of letting cleanliness stand in for usability"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for navigability loss disguised as entrypoint cleanliness"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/lightweight-status-snapshot/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -2846,6 +3762,135 @@
       "id": "AOA-T-0010",
       "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0010"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telemetry-integrity-snapshot"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical diagnostic trust layer over published summaries and downstream rollups"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve the helper's diagnostic-only role and keep it separate from remediation backlog or rendering-policy semantics"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions"
+                },
+                {
+                  "order": 2,
+                  "text": "the helper is treated as a replacement for fixing broken producers instead of a diagnostic signal"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "checking too many optional invariants can turn a focused trust layer into noise"
+                },
+                {
+                  "order": 2,
+                  "text": "implicit hard-gate promotion can make enforcement brittle while still claiming to be read-only"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the helper as a default enforcement gate instead of a diagnostic surface"
+                },
+                {
+                  "order": 2,
+                  "text": "expanding optional guardrail checks until they overshadow required source health and dual-write invariants"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response"
+                },
+                {
+                  "order": 2,
+                  "text": "optional-source consistency checks dominate the snapshot more than required health or anti-double-count issues"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the snapshot focused on required source health, telemetry invariants, dual-write coherence, and anti-double-count checks"
+                },
+                {
+                  "order": 2,
+                  "text": "make any hard-gate promotion a separate rollout decision instead of an implicit property of the helper"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for diagnostic-helper drift toward hard enforcement or overlap with neighboring downstream consumers"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -3245,6 +4290,135 @@
       "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0011"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "required-vs-optional-source-rendering"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical rendering policy for required versus optional summary sources"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the policy general enough that it does not collapse back into the published-summary package that currently supplies its clearest examples"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "an actually critical source is misclassified as optional"
+                },
+                {
+                  "order": 2,
+                  "text": "optional-source absence is hidden instead of being surfaced explicitly and read-only"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "optional-source warnings can accumulate until the surface becomes noisy"
+                },
+                {
+                  "order": 2,
+                  "text": "the renderer can drift away from its bounded summary role and become harder to trust"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating `optional` as meaning never operationally important rather than visible but non-fatal for this contract"
+                },
+                {
+                  "order": 2,
+                  "text": "expanding the rendering surface so it performs repair or retry actions instead of staying read-only"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "operators stop noticing missing-source signals because the warning stream is constant or unsorted"
+                },
+                {
+                  "order": 2,
+                  "text": "future wording starts reading like a bundle-specific appendix to remediation or integrity instead of a general consumer policy"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "review required-versus-optional classification explicitly and promote sources when the contract changes"
+                },
+                {
+                  "order": 2,
+                  "text": "keep warnings bounded, visible, and read-only so missing optional data stays observable without turning the surface into an action layer"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for the documented `AOA-T-0011` rendering-policy seam inside the published-summary cluster"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -3613,6 +4787,135 @@
       "id": "AOA-T-0012",
       "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/docs/deterministic-context-composition/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0012"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "deterministic-context-composition"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default many-fragment composition pattern for one deterministic generated context artifact"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep source cardinality and one-output composition explicit so the pattern does not blur into generic multi-target instruction management"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "ordering and precedence rules become implicit and stop being explainable from the fragment set"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors edit the generated artifact directly and break the fragment-first source-of-truth contract"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "deterministic composition can add hidden review overhead when maintainers must reconstruct precedence from tribal knowledge"
+                },
+                {
+                  "order": 2,
+                  "text": "a stable generated artifact can create false confidence even while fragment authority and ownership become harder to explain"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "widening the technique into a general documentation build system instead of one bounded generated-context pattern"
+                },
+                {
+                  "order": 2,
+                  "text": "adding more precedence or routing layers instead of simplifying fragment authority"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot explain output ordering or ownership without consulting implementation detail outside the fragments"
+                },
+                {
+                  "order": 2,
+                  "text": "direct generated-artifact edits start showing up in normal maintenance diffs"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "simplify precedence until ordering is explainable from fragments plus one small deterministic rule set"
+                },
+                {
+                  "order": 2,
+                  "text": "reassert fragment-first authority by routing fixes back through source fragments and regeneration"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for source-cardinality drift or opaque precedence in the current `AOA-T-0012` / `AOA-T-0013` seam"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/docs/deterministic-context-composition/notes/canonical-readiness.md",
           "kind": "canonical_readiness",

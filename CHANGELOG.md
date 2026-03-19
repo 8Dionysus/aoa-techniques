@@ -23,6 +23,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 - `SELECTION_PATTERNS.md` working sets are now validator-checked against their linked semantic review maps
 - all published techniques now use the same richer `## Risks` subsection contract
+- all `canonical` techniques now carry a typed `adverse_effects_review` note, and the evidence-note manifest exposes that canonical-only caution supplement without adding generated caution outputs
 - bounded public-hygiene validation now blocks obvious local paths, loopback-only hosts, and token or private-key markers on public-authored and generated surfaces
 - `DOCS_BOUNDARY_SEMANTIC_REVIEW.md` and semantic review manifests now reflect that a richer relation consumer has already landed
 - KAG-oriented repo guides now link directly to the corresponding reusable technique bundles for section lift, metadata spine, provenance lift, and bounded relation lift

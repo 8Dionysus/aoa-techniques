@@ -64,6 +64,7 @@ Lift richer `Risks` language into bounded caution-oriented lookup and reuse so r
 - clearer review access to the five shadow-language distinctions
 - preserved markdown authority over caution meaning
 - reusable source-lift pattern for later derived consumers that still stay bounded
+- canonical-only adverse-effects review notes when one repo needs a separate caution watch surface for its default techniques
 
 ## Core procedure
 
@@ -81,6 +82,7 @@ Lift richer `Risks` language into bounded caution-oriented lookup and reuse so r
 - caution lift stays derived and source-lift oriented rather than metadata-first
 - the technique does not require shadow metadata, caution IDs, generated caution outputs, or a new `kag` domain
 - no new source of truth is introduced beyond markdown bundles and derived artifacts
+- any canonical-only adverse-effects review note remains a supplement over the same markdown-first caution source
 
 ## Risks
 
@@ -142,7 +144,7 @@ What should stay invariant:
 - caution lift stays bounded and review-shaped
 - the pattern does not turn into a machine-readable caution program
 
-This technique is a markdown-first lift over existing `Risks`, not a new shadow platform. Keep generated caution outputs, policy scoring, and canonical-only adverse review notes deferred unless the repo proves those extra surfaces are necessary.
+This technique is a markdown-first lift over existing `Risks`, not a new shadow platform. A canonical-only adverse-effects review note can now supplement the same contract for already-canonical bundles, but generated caution outputs, policy scoring, and metadata layers remain deferred.
 
 ## Public sanitization notes
 
@@ -164,5 +166,5 @@ See `checks/caution-lift-checklist.md`.
 ## Future evolution
 
 - strengthen second-context evidence once another markdown-first corpus reuses the same bounded caution-lift split
-- clarify when a caution question still fits markdown-first lookup versus when a later adverse-review note would actually help
+- clarify when the existing canonical adverse-effects review supplement is enough and when a corpus should still stay with `Risks` alone
 - keep shadow metadata, generated caution outputs, and scoring layers deferred unless bounded caution lookup stops being enough

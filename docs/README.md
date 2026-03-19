@@ -18,6 +18,7 @@ Choose the path that matches your question:
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
   - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
   - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+  - one canonical bundle plus its `notes/adverse-effects-review.md`
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
   - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
@@ -107,7 +108,7 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 
 1. [Canonical Rubric](CANONICAL_RUBRIC.md)
 2. [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-3. one technique bundle plus its `notes/`
+3. one technique bundle plus its `notes/`; for `canonical` bundles include `canonical-readiness.md` and `adverse-effects-review.md`
 4. a relevant semantic-review pilot if the technique sits inside a reviewed cluster
 
 ### KAG / lift path

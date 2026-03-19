@@ -11,6 +11,12 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class ValidateRepoRegressionTests(unittest.TestCase):
+    def test_expected_evidence_kind_maps_adverse_effects_review_filename(self) -> None:
+        self.assertEqual(
+            "adverse_effects_review",
+            validate_repo.expected_evidence_kind("notes/adverse-effects-review.md"),
+        )
+
     def test_parse_frontmatter_keeps_colon_scalars_as_strings(self) -> None:
         frontmatter = """owners:
   - 8Dionysus
@@ -175,6 +181,54 @@ relations:
                 Path("TECHNIQUE.md"),
             )
 
+    def test_parse_notes_accepts_adverse_effects_review_typed_shape(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            technique_dir = repo_root / "technique"
+            notes_dir = technique_dir / "notes"
+            notes_dir.mkdir(parents=True)
+            (notes_dir / "adverse-effects-review.md").write_text(
+                """# Adverse Effects Review
+
+## Technique
+- id: AOA-T-9999
+- name: demo-technique
+
+## Review focus
+- current role: bounded canonical default
+- current watch seam: keep the caution supplement downstream from Risks
+
+## Failure modes
+- the note drifts away from the source markdown
+
+## Negative effects
+- reviewers stop reading the main bundle
+
+## Misuse patterns
+- teams treat the note as policy metadata
+
+## Detection signals
+- the note becomes the only cited caution source
+
+## Mitigations
+- route meaning back to Risks
+
+## Recommendation
+- keep the canonical bundle and use this note as one bounded watch surface
+""",
+                encoding="utf-8",
+            )
+
+            notes = validate_repo.parse_notes(repo_root, technique_dir)
+
+            self.assertEqual(1, len(notes))
+            self.assertEqual("adverse_effects_review", notes[0].kind)
+            self.assertEqual("Adverse Effects Review", notes[0].title)
+            self.assertEqual(
+                tuple(validate_repo.TYPED_NOTE_SECTION_SCOPES["adverse_effects_review"]),
+                tuple(section.heading for section in notes[0].sections),
+            )
+
     def test_public_hygiene_allows_public_github_urls(self) -> None:
         with TemporaryDirectory() as temp_dir:
             repo_root = Path(temp_dir)
@@ -223,6 +277,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("The current repository now requires", shadow_guide)
         self.assertNotIn("does not add schema fields, validator rules", shadow_guide)
         self.assertNotIn("no repo-wide retrofit of existing bundles", shadow_guide)
+        self.assertNotIn("no canonical-only `notes/adverse-effects-review.md` requirement yet", shadow_guide)
+        self.assertIn("no generated caution outputs or caution IDs", shadow_guide)
         self.assertIn(
             "enforcing the current markdown-first `Risks` contract",
             risk_guide,
@@ -232,6 +288,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             risk_guide,
         )
         self.assertNotIn("no bundle retrofits in the same wave", risk_guide)
+        self.assertNotIn("no canonical-only `adverse-effects-review` requirement yet", risk_guide)
+        self.assertIn("no generated caution outputs", risk_guide)
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
@@ -362,6 +420,27 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertNotIn("D:\\", content)
             self.assertIn("atm10-agent/docs/", content)
 
+    def test_canonical_bundles_have_adverse_effects_reviews_and_promoted_bundles_do_not(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        canonical_records = [record for record in records if record.status == "canonical"]
+        promoted_records = [record for record in records if record.status == "promoted"]
+
+        self.assertEqual(10, len(canonical_records))
+
+        for record in canonical_records:
+            self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
+            self.assertEqual(
+                "notes/adverse-effects-review.md",
+                record.frontmatter["evidence"][-1]["path"],
+            )
+
+        for record in promoted_records:
+            self.assertNotIn(
+                "adverse_effects_review",
+                {item["kind"] for item in record.frontmatter["evidence"]},
+            )
+
     def test_docs_boundary_next_step_matches_generated_semantic_manifest(self) -> None:
         expected_phrase = "validator-synchronized with authored semantic reviews"
         review_path = REPO_ROOT / "docs" / "DOCS_BOUNDARY_SEMANTIC_REVIEW.md"
@@ -452,6 +531,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("risk-and-negative-effect-lift", risk_guide)
         self.assertIn("frontmatter-metadata-spine", metadata_guide)
         self.assertIn("evidence-note-provenance-lift", provenance_guide)
+        self.assertIn("adverse_effects_review", provenance_guide)
         self.assertIn("bounded-relation-lift-for-kag", relation_guide)
 
     def test_shadow_wave_bundle_is_present_in_index_catalog_and_selection_surface(self) -> None:
@@ -467,6 +547,32 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("risk-and-negative-effect-lift", technique_index)
         self.assertIn("AOA-T-0022", selection)
         self.assertIn("risk-and-negative-effect-lift", selection)
+
+    def test_evidence_note_manifest_includes_adverse_effects_review_scope_and_entries(self) -> None:
+        manifest = validate_repo.read_json(REPO_ROOT / "generated" / "technique_evidence_note_manifest.json")
+        scope = manifest["typed_note_scopes"]["adverse_effects_review"]
+        adverse_note_count = sum(
+            1
+            for technique in manifest["techniques"]
+            for note in technique["notes"]
+            if note["kind"] == "adverse_effects_review"
+        )
+
+        self.assertEqual("Adverse Effects Review", scope["title"])
+        self.assertEqual(
+            [
+                "Technique",
+                "Review focus",
+                "Failure modes",
+                "Negative effects",
+                "Misuse patterns",
+                "Detection signals",
+                "Mitigations",
+                "Recommendation",
+            ],
+            scope["section_scope"],
+        )
+        self.assertEqual(10, adverse_note_count)
 
 
 if __name__ == "__main__":

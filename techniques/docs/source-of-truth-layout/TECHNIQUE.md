@@ -30,6 +30,8 @@ evidence:
     path: notes/canonical-readiness.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # source-of-truth-layout

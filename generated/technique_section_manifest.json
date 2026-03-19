@@ -1090,7 +1090,7 @@
         {
           "heading": "When to use",
           "order": 2,
-          "markdown": "- repositories where technique bundles already point to typed supporting notes\n- provenance questions such as origin proof, second-context evidence, readiness review, or external import review\n- generated entrypoints that should expose note roles and paths without replacing the note body\n- KAG-oriented work that needs note-level handles before any cross-note graph program exists"
+          "markdown": "- repositories where technique bundles already point to typed supporting notes\n- provenance questions such as origin proof, second-context evidence, readiness review, canonical adverse-effects review, or external import review\n- generated entrypoints that should expose note roles and paths without replacing the note body\n- KAG-oriented work that needs note-level handles before any cross-note graph program exists"
         },
         {
           "heading": "When not to use",
@@ -1115,7 +1115,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- note paths and note kinds remain explicit\n- note meaning stays in authored markdown\n- derived provenance output preserves note-level context rather than flattening all notes into one schema\n- supporting notes stay bounded to reviewable roles such as origin, second context, readiness, or external review\n- the technique does not require note IDs, graph semantics, or a new source of truth"
+          "markdown": "- note paths and note kinds remain explicit\n- note meaning stays in authored markdown\n- derived provenance output preserves note-level context rather than flattening all notes into one schema\n- supporting notes stay bounded to reviewable roles such as origin, second context, readiness, canonical adverse-effects review, or external review\n- the technique does not require note IDs, graph semantics, or a new source of truth"
         },
         {
           "heading": "Risks",
@@ -1217,7 +1217,7 @@
         {
           "heading": "Outputs",
           "order": 5,
-          "markdown": "- bounded caution lookup by technique\n- clearer review access to the five shadow-language distinctions\n- preserved markdown authority over caution meaning\n- reusable source-lift pattern for later derived consumers that still stay bounded"
+          "markdown": "- bounded caution lookup by technique\n- clearer review access to the five shadow-language distinctions\n- preserved markdown authority over caution meaning\n- reusable source-lift pattern for later derived consumers that still stay bounded\n- canonical-only adverse-effects review notes when one repo needs a separate caution watch surface for its default techniques"
         },
         {
           "heading": "Core procedure",
@@ -1227,7 +1227,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- `TECHNIQUE.md` `Risks` remains the primary caution source\n- the five shadow-language distinctions stay explicit and bounded\n- caution lift stays derived and source-lift oriented rather than metadata-first\n- the technique does not require shadow metadata, caution IDs, generated caution outputs, or a new `kag` domain\n- no new source of truth is introduced beyond markdown bundles and derived artifacts"
+          "markdown": "- `TECHNIQUE.md` `Risks` remains the primary caution source\n- the five shadow-language distinctions stay explicit and bounded\n- caution lift stays derived and source-lift oriented rather than metadata-first\n- the technique does not require shadow metadata, caution IDs, generated caution outputs, or a new `kag` domain\n- no new source of truth is introduced beyond markdown bundles and derived artifacts\n- any canonical-only adverse-effects review note remains a supplement over the same markdown-first caution source"
         },
         {
           "heading": "Risks",
@@ -1242,7 +1242,7 @@
         {
           "heading": "Adaptation notes",
           "order": 10,
-          "markdown": "What can vary across projects:\n- which technique families most need explicit caution lookup\n- whether the bounded consumer is a review checklist, retrieval layer, or another reader-facing aid\n- how much prose each caution subsection needs\n- which downstream source-lift surfaces later point readers back to `Risks`\n\nWhat should stay invariant:\n- markdown stays authoritative\n- the five caution distinctions remain explicit\n- caution lift stays bounded and review-shaped\n- the pattern does not turn into a machine-readable caution program\n\nThis technique is a markdown-first lift over existing `Risks`, not a new shadow platform. Keep generated caution outputs, policy scoring, and canonical-only adverse review notes deferred unless the repo proves those extra surfaces are necessary."
+          "markdown": "What can vary across projects:\n- which technique families most need explicit caution lookup\n- whether the bounded consumer is a review checklist, retrieval layer, or another reader-facing aid\n- how much prose each caution subsection needs\n- which downstream source-lift surfaces later point readers back to `Risks`\n\nWhat should stay invariant:\n- markdown stays authoritative\n- the five caution distinctions remain explicit\n- caution lift stays bounded and review-shaped\n- the pattern does not turn into a machine-readable caution program\n\nThis technique is a markdown-first lift over existing `Risks`, not a new shadow platform. A canonical-only adverse-effects review note can now supplement the same contract for already-canonical bundles, but generated caution outputs, policy scoring, and metadata layers remain deferred."
         }
       ]
     }

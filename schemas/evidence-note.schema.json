@@ -15,6 +15,7 @@
         "origin_evidence",
         "second_context",
         "canonical_readiness",
+        "adverse_effects_review",
         "external_origin",
         "external_review",
         "support_note"

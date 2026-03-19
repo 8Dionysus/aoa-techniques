@@ -55,6 +55,7 @@ This rubric does not introduce graph inference, scoring automation, or selection
 | `origin_evidence` | Source-backed note from the original project context. |
 | `second_context` | Bounded adaptation note showing reuse beyond the origin project. |
 | `canonical_readiness` | Review-oriented note that records canonical readiness or canonical review results. |
+| `adverse_effects_review` | Canonical-only caution review supplement that stays downstream from the authored `Risks` section. |
 | `external_origin` | Provenance note for a bounded external import. |
 | `external_review` | Explicit external-import review verdict for an imported technique. |
 | `support_note` | Other tracked support note that materially explains bounded use, rollout, or triage. |

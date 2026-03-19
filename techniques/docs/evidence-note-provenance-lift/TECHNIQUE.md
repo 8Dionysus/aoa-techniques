@@ -40,7 +40,7 @@ Lift typed evidence notes into a bounded provenance surface so readers and tooli
 ## When to use
 
 - repositories where technique bundles already point to typed supporting notes
-- provenance questions such as origin proof, second-context evidence, readiness review, or external import review
+- provenance questions such as origin proof, second-context evidence, readiness review, canonical adverse-effects review, or external import review
 - generated entrypoints that should expose note roles and paths without replacing the note body
 - KAG-oriented work that needs note-level handles before any cross-note graph program exists
 
@@ -79,7 +79,7 @@ Lift typed evidence notes into a bounded provenance surface so readers and tooli
 - note paths and note kinds remain explicit
 - note meaning stays in authored markdown
 - derived provenance output preserves note-level context rather than flattening all notes into one schema
-- supporting notes stay bounded to reviewable roles such as origin, second context, readiness, or external review
+- supporting notes stay bounded to reviewable roles such as origin, second context, readiness, canonical adverse-effects review, or external review
 - the technique does not require note IDs, graph semantics, or a new source of truth
 
 ## Risks

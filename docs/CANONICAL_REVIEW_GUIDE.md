@@ -51,4 +51,6 @@ Canonical review should stay bounded and concrete.
 - If deferred, name the smallest concrete remaining gap rather than a broad wish list.
 - If approved, make the default-use rationale explicit enough that later reviewers do not have to infer it from scattered notes.
 
-The existing `notes/canonical-readiness.md` surface remains the authoritative place to record bundle-level review outcomes.
+The existing `notes/canonical-readiness.md` surface remains the authoritative place to record bundle-level promotion outcomes.
+
+For techniques that are already `canonical`, `notes/adverse-effects-review.md` is now the bounded caution-review supplement. It does not replace `canonical-readiness.md` and should not reopen the promotion verdict by itself.
