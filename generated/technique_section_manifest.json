@@ -229,7 +229,7 @@
         {
           "heading": "Validation",
           "order": 9,
-          "markdown": "Verify the technique by confirming that:\n- the intent payload is accepted or rejected by explicit normalization rules\n- the normalized plan is written as an artifact before dry-run validation\n- the dry-run step performs no real side effects\n- chain artifacts can be traced across adapter, dry-run, and contract-check stages\n- contract-check output is machine-readable and can fail the workflow on structural or routing violations\n- required traceability fields are surfaced or rejected explicitly according to policy\n\nSee `checks/chain-contract-checklist.md`.\nFor source-backed origin evidence and transfer boundaries, see `notes/origin-evidence.md` and `notes/bounded-transfer.md`."
+          "markdown": "Verify the technique by confirming that:\n- the intent payload is accepted or rejected by explicit normalization rules\n- the normalized plan is written as an artifact before dry-run validation\n- the dry-run step performs no real side effects\n- chain artifacts can be traced across adapter, dry-run, and contract-check stages\n- contract-check output is machine-readable and can fail the workflow on structural or routing violations\n- required traceability fields are surfaced or rejected explicitly according to policy\n\nSee `checks/chain-contract-checklist.md`.\nFor source-backed origin evidence, transfer boundaries, and second-context adaptation, see `notes/origin-evidence.md`, `notes/bounded-transfer.md`, and `notes/second-context-adaptation.md`."
         },
         {
           "heading": "Adaptation notes",
