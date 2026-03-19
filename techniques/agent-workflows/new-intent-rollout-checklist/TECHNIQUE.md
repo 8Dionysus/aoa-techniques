@@ -93,11 +93,32 @@ Add a new `intent_type` to an existing `intent -> plan -> dry-run -> contract-ch
 
 ## Risks
 
-- fixture drift can make the rollout look green while real inputs diverge
-- intent routing can regress silently if contract checks stop asserting the expected type
-- traceability fields can disappear during normalization if the rollout checklist is applied only partially
-- artifact wiring can drift so the new intent runs correctly but disappears from the main review surface
-- teams can add one-off intent logic that bypasses the shared chain while still looking superficially complete
+### Failure modes
+
+- fixture drift makes the rollout look green while real inputs have already diverged
+- intent routing regresses silently when contract checks stop asserting the expected type
+- traceability fields disappear during normalization when the checklist is applied only partially
+- artifact wiring drifts so the new intent runs correctly but disappears from the main review surface
+
+### Negative effects
+
+- a rollout can look complete on paper while operators still cannot see the new intent path in the published review surface
+- one-off intent logic can fragment the shared chain and raise maintenance cost even before obvious failures appear
+
+### Misuse patterns
+
+- applying only the happy-path parts of the checklist and skipping fixture, traceability, or surface checks
+- adding special-case intent logic that bypasses the shared chain while still labeling the rollout complete
+
+### Detection signals
+
+- canonical fixtures stop resembling the current intent contract or are not updated when intent shape changes
+- the smoke path is green, but the main published review surface no longer shows the new intent artifacts
+
+### Mitigations
+
+- keep the canonical fixture current and preserve explicit type and traceability assertions in the contract checks
+- require the new intent to stay on the shared chain and to appear on the same review surfaces and regression paths as existing intents
 
 ## Validation
 

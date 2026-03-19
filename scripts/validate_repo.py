@@ -26,6 +26,13 @@ REQUIRED_SECTIONS = (
     "Future evolution",
 )
 SECTION_LIFT_HEADINGS = REQUIRED_SECTIONS[:10]
+RISK_SUBSECTION_HEADINGS = (
+    "Failure modes",
+    "Negative effects",
+    "Misuse patterns",
+    "Detection signals",
+    "Mitigations",
+)
 
 REQUIRED_SUPPORT_DIRS = ("checks", "examples", "notes")
 REQUIRED_STAGE1_FILES = (
@@ -201,6 +208,26 @@ SEMANTIC_REVIEW_MAP_DIVIDER = "|---|---|"
 SEMANTIC_REVIEW_QUESTION_PREFIX = "Question: "
 SEMANTIC_REVIEW_OUTCOME_MARKER = "Outcome: "
 SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX = "Overall outcome: "
+PUBLIC_HYGIENE_SCAN_DIRS = (".github", "docs", "generated", "techniques", "templates")
+PUBLIC_HYGIENE_EXCLUDED_ROOT_FILES = {"TODO.md", "PLANS.md", "ROADMAP.md"}
+PUBLIC_HYGIENE_ALLOWED_URL_PREFIXES = (
+    "https://github.com/",
+    "http://github.com/",
+    "https://raw.githubusercontent.com/",
+    "http://raw.githubusercontent.com/",
+)
+PUBLIC_HYGIENE_URL_RE = re.compile(r"https?://[^\s)>`]+")
+PUBLIC_HYGIENE_BLOCKED_PATTERNS = (
+    ("absolute Windows drive path", re.compile(r"(?<![A-Za-z0-9])[A-Za-z]:\\[^\r\n]*")),
+    ("absolute /Users/ path", re.compile(r"(?<![A-Za-z0-9])/Users/")),
+    ("absolute /home/ path", re.compile(r"(?<![A-Za-z0-9])/home/")),
+    ("localhost reference", re.compile(r"\blocalhost\b", re.IGNORECASE)),
+    ("loopback address", re.compile(r"\b127\.0\.0\.1\b")),
+    ("GitHub personal access token marker", re.compile(r"\bghp_[A-Za-z0-9]+\b")),
+    ("GitHub OAuth token marker", re.compile(r"\bgho_[A-Za-z0-9]+\b")),
+    ("AWS access key marker", re.compile(r"\bAKIA[0-9A-Z]*\b")),
+    ("private key block marker", re.compile(r"BEGIN [A-Z ]*PRIVATE KEY")),
+)
 GITHUB_REVIEW_TEMPLATE_SPECS = (
     {
         "template_id": "canonical-promotion",
@@ -802,6 +829,23 @@ def normalize_section_markdown(raw_markdown: str) -> str:
     return raw_markdown.lstrip("\r\n").rstrip()
 
 
+def parse_subsections(markdown: str) -> tuple[TechniqueSection, ...]:
+    matches = list(SUBSECTION_RE.finditer(markdown))
+    sections: list[TechniqueSection] = []
+
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(markdown)
+        sections.append(
+            TechniqueSection(
+                heading=match.group(1).strip(),
+                markdown=normalize_section_markdown(markdown[start:end]),
+            )
+        )
+
+    return tuple(sections)
+
+
 def parse_sections(body: str) -> tuple[TechniqueSection, ...]:
     matches = list(SECTION_RE.finditer(body))
     sections: list[TechniqueSection] = []
@@ -817,6 +861,33 @@ def parse_sections(body: str) -> tuple[TechniqueSection, ...]:
         )
 
     return tuple(sections)
+
+
+def validate_risks_markdown(risks_markdown: str, technique_path: Path) -> None:
+    subsection_matches = list(SUBSECTION_RE.finditer(risks_markdown))
+    if not subsection_matches:
+        fail(
+            f"{technique_path}: '## Risks' must include fixed '###' subsections for the "
+            f"rich risks contract"
+        )
+
+    intro_markdown = normalize_section_markdown(risks_markdown[: subsection_matches[0].start()])
+    if intro_markdown:
+        fail(f"{technique_path}: '## Risks' must not include prose before its first '###' subsection")
+
+    subsections = parse_subsections(risks_markdown)
+    actual_headings = tuple(section.heading for section in subsections)
+    if actual_headings != RISK_SUBSECTION_HEADINGS:
+        expected = ", ".join(f"'### {heading}'" for heading in RISK_SUBSECTION_HEADINGS)
+        actual = ", ".join(f"'### {heading}'" for heading in actual_headings) or "(none)"
+        fail(
+            f"{technique_path}: '## Risks' must use the fixed subsection order "
+            f"[{expected}], found [{actual}]"
+        )
+
+    for subsection in subsections:
+        if not subsection.markdown:
+            fail(f"{technique_path}: risk subsection '### {subsection.heading}' must not be empty")
 
 
 def validate_sections(body: str, technique_path: Path) -> tuple[TechniqueSection, ...]:
@@ -854,6 +925,11 @@ def validate_sections(body: str, technique_path: Path) -> tuple[TechniqueSection
             f"{technique_path}: lift sections must stay in standard order [{expected}], "
             f"found [{actual}]"
         )
+
+    risk_sections = [section for section in sections if section.heading == "Risks"]
+    if len(risk_sections) != 1:
+        fail(f"{technique_path}: '## Risks' must appear exactly once")
+    validate_risks_markdown(risk_sections[0].markdown, technique_path)
 
     return sections
 
@@ -1661,6 +1737,83 @@ def parse_semantic_reviews(repo_root: Path) -> tuple[SemanticReview, ...]:
         key=lambda path: path.relative_to(repo_root).as_posix(),
     )
     return tuple(parse_semantic_review_file(path, repo_root) for path in review_paths)
+
+
+def validate_selection_working_set_specs(repo_root: Path) -> None:
+    reviews_by_path = {
+        review.review_path: review for review in parse_semantic_reviews(repo_root)
+    }
+
+    for spec in WORKING_SET_SPECS:
+        review_doc = spec["review_doc"]
+        if review_doc not in reviews_by_path:
+            fail(
+                f"{Path(review_doc).name}: review-backed working set '{spec['title']}' points to a "
+                f"missing semantic review doc"
+            )
+
+        actual_ids = tuple(entry.technique_id for entry in reviews_by_path[review_doc].map_entries)
+        expected_ids = tuple(spec["technique_ids"])
+        if actual_ids != expected_ids:
+            fail(
+                f"{Path(review_doc).name}: working set '{spec['title']}' must match semantic review "
+                f"map entry order {expected_ids}, found {actual_ids}"
+            )
+
+
+def strip_allowlisted_public_urls(text: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        url = match.group(0)
+        if url.startswith(PUBLIC_HYGIENE_ALLOWED_URL_PREFIXES):
+            return ""
+        return url
+
+    return PUBLIC_HYGIENE_URL_RE.sub(replace, text)
+
+
+def blocked_public_hygiene_patterns(text: str) -> tuple[str, ...]:
+    candidate = strip_allowlisted_public_urls(text)
+    matches = [
+        description
+        for description, pattern in PUBLIC_HYGIENE_BLOCKED_PATTERNS
+        if pattern.search(candidate)
+    ]
+    return tuple(matches)
+
+
+def iter_public_hygiene_paths(repo_root: Path) -> tuple[Path, ...]:
+    paths: list[Path] = []
+
+    root_files = sorted(
+        path
+        for path in repo_root.iterdir()
+        if path.is_file()
+        and path.suffix == ".md"
+        and path.name not in PUBLIC_HYGIENE_EXCLUDED_ROOT_FILES
+    )
+    paths.extend(root_files)
+
+    for relative_dir in PUBLIC_HYGIENE_SCAN_DIRS:
+        base = repo_root / relative_dir
+        if not base.exists():
+            continue
+        paths.extend(sorted(path for path in base.rglob("*") if path.is_file()))
+
+    return tuple(sorted(paths, key=lambda path: path.relative_to(repo_root).as_posix()))
+
+
+def validate_public_hygiene(repo_root: Path) -> None:
+    for path in iter_public_hygiene_paths(repo_root):
+        try:
+            lines = path.read_text(encoding="utf-8").splitlines()
+        except UnicodeDecodeError:
+            continue
+
+        for line_number, line in enumerate(lines, start=1):
+            matches = blocked_public_hygiene_patterns(line)
+            if matches:
+                blocked = ", ".join(matches)
+                fail(f"{path}:{line_number}: public surface matches blocked pattern(s): {blocked}")
 
 
 def validate_stage1_files(repo_root: Path) -> None:
@@ -2970,6 +3123,8 @@ def validate_selection_surface(repo_root: Path) -> None:
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
     full_path = repo_root / "generated" / "technique_catalog.json"
 
+    validate_selection_working_set_specs(repo_root)
+
     full_catalog = read_json(full_path)
     expected = build_selection_surface_markdown(full_catalog)
     expected_patterns = build_selection_patterns_markdown(full_catalog)
@@ -3002,6 +3157,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_github_review_template_manifests(repo_root)
     validate_semantic_review_manifests(repo_root)
     validate_selection_surface(repo_root)
+    validate_public_hygiene(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
     promoted_count = sum(1 for record in records if record.status == "promoted")
@@ -3021,6 +3177,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated GitHub review template manifest parity")
     print("[ok] validated generated semantic review manifest parity")
     print("[ok] validated generated selection surface parity")
+    print("[ok] validated review-backed working set parity and bounded public hygiene")
 
 
 def main() -> int:

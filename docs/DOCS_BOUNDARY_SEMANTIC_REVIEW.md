@@ -42,4 +42,4 @@ Overall outcome: `clear`
 
 No narrow docs remediation wave is justified from this pilot alone.
 
-With the first three bounded semantic pilots now complete, the next step should shift from semantic review toward the first richer relation consumer or another bounded navigation surface built on the existing catalog and review corpus.
+With the first richer relation consumer now landed in `SELECTION_PATTERNS.md`, the next step should focus on keeping review-backed working sets validator-synchronized with authored semantic reviews and adding new pilots only when another seam becomes ambiguous enough to justify one.

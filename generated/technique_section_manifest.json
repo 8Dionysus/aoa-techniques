@@ -56,7 +56,7 @@
         {
           "heading": "Risks",
           "order": 8,
-          "markdown": "- over-formalizing trivial edits and slowing down simple work\n- creating a false sense of safety if validation is weak or symbolic\n- treating the report as a substitute for a readable diff"
+          "markdown": "### Failure modes\n\n- weak or symbolic validation creates a false sense of safety around the applied change\n- teams use the workflow on trivial edits and lose the bounded judgment about when lighter handling is enough\n\n### Negative effects\n\n- extra ceremony can slow down simple work that does not need a full plan-and-report loop\n- reporting overhead can crowd out the clearer review surface that should still come from the diff itself\n\n### Misuse patterns\n\n- treating the report as a substitute for a readable diff\n- naming a validation step without running a meaningful check or explicitly documenting why it was skipped\n\n### Detection signals\n\n- trivial wording or formatting edits are going through the same ceremony as higher-impact changes\n- final reports describe success in general terms but do not name concrete validation results\n\n### Mitigations\n\n- use a lighter workflow when the change has no meaningful operational consequence\n- keep the diff reviewable on its own and make the validation step concrete, explicit, and scoped"
         },
         {
           "heading": "Validation",
@@ -168,7 +168,7 @@
         {
           "heading": "Risks",
           "order": 8,
-          "markdown": "- creating overly shallow summaries that say `error` without useful context\n- changing summary shape too often and breaking downstream consumers\n- treating summary generation as optional and falling back to log parsing under pressure"
+          "markdown": "### Failure modes\n\n- summaries collapse to a bare `error` signal without enough observed context to diagnose what failed\n- summary shape changes too often and breaks downstream consumers that expect a stable contract\n\n### Negative effects\n\n- over-minimal summaries push humans back toward manual debugging even when the machine-readable path exists\n- pressure-driven fallback to raw logs can become sticky and weaken the producer contract over time\n\n### Misuse patterns\n\n- treating summary generation as optional and falling back to log parsing under pressure\n- changing filenames, fields, or status semantics without a bounded compatibility plan\n\n### Detection signals\n\n- downstream consumers start scraping console logs again instead of reading the summary artifact\n- repeated failures show `error` with too little observed data to explain the problem quickly\n\n### Mitigations\n\n- keep one stable machine-readable summary path and evolve schema deliberately rather than casually\n- require summary generation on every run path possible, including failure paths whenever the process can still write output"
         },
         {
           "heading": "Validation",
@@ -224,7 +224,7 @@
         {
           "heading": "Risks",
           "order": 8,
-          "markdown": "- false confidence if dry-run artifacts look complete but do not reflect real execution constraints\n- metadata drift between intent, normalized plan, and contract-check layers\n- overfitting the chain to one project's payload shape or artifact naming\n- treating CI table layout or exact thresholds as the technique instead of the chain contract"
+          "markdown": "### Failure modes\n\n- dry-run artifacts look complete but do not reflect real execution constraints, creating false confidence\n- metadata drifts between intent, normalized plan, and contract-check layers until routing or traceability breaks\n\n### Negative effects\n\n- overfitting the chain to one project's payload shape or artifact naming reduces portability\n- teams can spend more time preserving one CI table layout or threshold set than preserving the chain contract itself\n\n### Misuse patterns\n\n- treating dry-run completeness as proof that real execution would be safe without further validation\n- defining the technique in terms of one repository's artifact names, table layout, or exact thresholds\n\n### Detection signals\n\n- contract checks stay green while hand review finds mismatched routing metadata or incomplete traceability\n- examples and rollout notes talk more about one project-specific presentation layer than about intent-plan-contract invariants\n\n### Mitigations\n\n- keep contract checks anchored to routing, traceability, and no-side-effect guarantees rather than presentation details\n- re-check the chain in a second context with renamed payloads or artifact paths to confirm the invariant contract still holds"
         },
         {
           "heading": "Validation",
@@ -280,7 +280,7 @@
         {
           "heading": "Risks",
           "order": 8,
-          "markdown": "- fixture drift can make the rollout look green while real inputs diverge\n- intent routing can regress silently if contract checks stop asserting the expected type\n- traceability fields can disappear during normalization if the rollout checklist is applied only partially\n- artifact wiring can drift so the new intent runs correctly but disappears from the main review surface\n- teams can add one-off intent logic that bypasses the shared chain while still looking superficially complete"
+          "markdown": "### Failure modes\n\n- fixture drift makes the rollout look green while real inputs have already diverged\n- intent routing regresses silently when contract checks stop asserting the expected type\n- traceability fields disappear during normalization when the checklist is applied only partially\n- artifact wiring drifts so the new intent runs correctly but disappears from the main review surface\n\n### Negative effects\n\n- a rollout can look complete on paper while operators still cannot see the new intent path in the published review surface\n- one-off intent logic can fragment the shared chain and raise maintenance cost even before obvious failures appear\n\n### Misuse patterns\n\n- applying only the happy-path parts of the checklist and skipping fixture, traceability, or surface checks\n- adding special-case intent logic that bypasses the shared chain while still labeling the rollout complete\n\n### Detection signals\n\n- canonical fixtures stop resembling the current intent contract or are not updated when intent shape changes\n- the smoke path is green, but the main published review surface no longer shows the new intent artifacts\n\n### Mitigations\n\n- keep the canonical fixture current and preserve explicit type and traceability assertions in the contract checks\n- require the new intent to stay on the shared chain and to appear on the same review surfaces and regression paths as existing intents"
         },
         {
           "heading": "Validation",
@@ -448,7 +448,7 @@
         {
           "heading": "Risks",
           "order": 8,
-          "markdown": "- letting the bucket policy grow ad hoc until the snapshot stops being reviewable\n- hiding missing or stale sources, which can make the backlog look healthier than reality\n- accidentally reintroducing history replay and turning a snapshot into a second evaluator\n- dropping source references and making remediation items harder to audit or verify"
+          "markdown": "### Failure modes\n\n- missing or stale sources are hidden, making the backlog look healthier than reality\n- history replay slips back in and turns the snapshot into a second evaluator\n- source references disappear and make remediation items harder to audit or verify\n\n### Negative effects\n\n- the bucket policy can grow ad hoc until the snapshot stops being reviewable as one bounded surface\n- remediation output becomes harder to compare over time when grouping and truncation stop being stable\n\n### Misuse patterns\n\n- widening the bucket set or candidate policy casually instead of versioning a fixed bounded policy\n- treating the snapshot as a place to recompute history, trend state, or upstream judgments\n\n### Detection signals\n\n- new buckets keep appearing without a clearly documented policy change\n- remediation items no longer point back to their source summaries or stale-source reporting goes missing\n\n### Mitigations\n\n- keep the bucket set and candidate cap fixed for each snapshot version and document policy changes explicitly\n- preserve latest-only input rules, explicit stale-source reporting, and source references for every emitted item"
         },
         {
           "heading": "Validation",
@@ -560,7 +560,7 @@
         {
           "heading": "Risks",
           "order": 8,
-          "markdown": "- treating the integrity snapshot as a replacement for fixing broken producers\n- checking too many optional invariants and turning a focused diagnostic layer into noise\n- allowing schema drift between latest alias and history copies to go undetected\n- promoting an integrity helper into a hard gate without an explicit rollout decision"
+          "markdown": "### Failure modes\n\n- schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions\n- teams treat the integrity snapshot as a replacement for fixing broken producers instead of a diagnostic signal\n\n### Negative effects\n\n- checking too many optional invariants turns a focused diagnostic layer into noise\n- promoting an integrity helper into a hard gate without an explicit rollout decision can make enforcement brittle\n\n### Misuse patterns\n\n- using the helper as a default enforcement gate even though the technique defines a diagnostic, read-only surface\n- expanding optional guardrail or consistency checks until they overshadow required source health and dual-write invariants\n\n### Detection signals\n\n- integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response\n- optional-source or low-value consistency checks dominate the snapshot more than required health, dual-write, or anti-double-count issues\n\n### Mitigations\n\n- keep the snapshot focused on required source health, telemetry invariants, dual-write coherence, and anti-double-count checks\n- make any hard-gate promotion a separate explicit rollout decision rather than an implicit property of the helper"
         },
         {
           "heading": "Validation",
@@ -616,7 +616,7 @@
         {
           "heading": "Risks",
           "order": 8,
-          "markdown": "- misclassifying an actually critical source as optional\n- letting optional-source warnings accumulate until the surface becomes noisy\n- hiding optional-source absence completely instead of surfacing it\n- expanding the rendering surface so it performs actions rather than staying read-only"
+          "markdown": "### Failure modes\n\n- an actually critical source is misclassified as optional\n- optional-source absence is hidden completely instead of being surfaced explicitly\n\n### Negative effects\n\n- optional-source warnings can accumulate until the surface becomes noisy\n- the rendering surface can drift away from its bounded summary role and become harder to trust\n\n### Misuse patterns\n\n- treating `optional` as meaning \"never operationally important\" rather than \"visible but non-fatal for this contract\"\n- expanding the rendering surface so it performs actions rather than staying read-only\n\n### Detection signals\n\n- operators stop noticing missing-source signals because the warning stream is constant and unsorted\n- the renderer starts adding retry, repair, or other mutating behavior to compensate for absent summaries\n\n### Mitigations\n\n- review required-versus-optional classification explicitly and promote sources when the contract changes\n- keep warnings bounded, visible, and read-only so missing optional data stays observable without turning the surface into an action layer"
         },
         {
           "heading": "Validation",
