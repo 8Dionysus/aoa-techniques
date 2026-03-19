@@ -585,7 +585,7 @@
       "id": "AOA-T-0012",
       "name": "deterministic-context-composition",
       "domain": "docs",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability.",
       "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
       "origin": {

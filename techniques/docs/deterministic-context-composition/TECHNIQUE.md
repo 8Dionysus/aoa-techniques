@@ -2,7 +2,7 @@
 id: AOA-T-0012
 name: deterministic-context-composition
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: agents-md
   path: README.md
@@ -168,6 +168,7 @@ See `checks/deterministic-context-composition-checklist.md`.
 - adapted from open-source `agents-md`
 - imported into `aoa-techniques` on 2026-03-14 as the first external-import pilot with explicit provenance and bounded adaptation review
 - passed first external-import review on 2026-03-15; keep the technique `promoted` while preparing second-donor evaluation rather than widening this bundle
+- approved for `canonical` in `aoa-techniques` on 2026-03-18 after explicit canonical-readiness review, clear instruction-surface boundary review, and stronger public example coverage
 
 ## Future evolution
 
