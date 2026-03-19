@@ -673,6 +673,10 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
         }
       ]
     },

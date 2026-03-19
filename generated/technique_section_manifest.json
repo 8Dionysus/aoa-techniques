@@ -733,7 +733,7 @@
         {
           "heading": "Validation",
           "order": 9,
-          "markdown": "Verify the technique by confirming that:\n- one canonical rule source is named explicitly\n- at least two target instruction surfaces receive the same shared rule core\n- target files are treated as managed or derived outputs rather than canonical editable files\n- re-applying distribution does not duplicate the shared rules in target files\n- a source change routes through the canonical rule source first instead of through target-file edits\n\nSee `checks/single-source-rule-distribution-checklist.md`.\nFor external provenance and bounded repo-local adaptation, see `notes/external-origin.md` and `notes/second-context-adaptation.md`."
+          "markdown": "Verify the technique by confirming that:\n- one canonical rule source is named explicitly\n- at least two target instruction surfaces receive the same shared rule core\n- target files are treated as managed or derived outputs rather than canonical editable files\n- re-applying distribution does not duplicate the shared rules in target files\n- a source change routes through the canonical rule source first instead of through target-file edits\n\nSee `checks/single-source-rule-distribution-checklist.md`.\nFor external provenance, bounded repo-local adaptation, and the first external-import review outcome, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, and `notes/external-import-review.md`."
         },
         {
           "heading": "Adaptation notes",
