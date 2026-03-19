@@ -3614,6 +3614,139 @@
       "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/deterministic-context-composition/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0012"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "deterministic-context-composition"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "`notes/external-origin.md` already records the donor source, retained bounded contract, and explicit exclusions around toolchain-specific donor behavior"
+                },
+                {
+                  "order": 2,
+                  "key": "external import review",
+                  "value_markdown": "`notes/external-import-review.md` already found the first external-import path readable, bounded, and public-safe without widening the bundle"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`notes/second-context-adaptation.md` shows the same contract surviving in `aoa-techniques` as a documentation-first adaptation rather than a donor-specific toolchain clone"
+                },
+                {
+                  "order": 4,
+                  "key": "semantic reinforcement",
+                  "value_markdown": "`docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md` kept the `AOA-T-0012` vs `AOA-T-0013` seam clear, confirming that one-output deterministic composition remains distinct from one-source multi-target rule distribution"
+                },
+                {
+                  "order": 5,
+                  "key": "stronger validation",
+                  "value_markdown": "the bundle now carries two public-safe examples plus the existing checklist, which is stronger than the initial promoted import floor"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the default when the main problem is many source fragments composing into one generated context artifact with deterministic ordering and explicit source traceability"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0013` remains the better non-default adjacent alternative when one canonical rule source must fan out to multiple managed targets instead of many fragments collapsing into one output"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-18"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the public bundle keeps only the reusable fragment-first composition contract, with donor-specific CLI packaging, runtime assumptions, migration helpers, and other product-width behavior still excluded"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public examples, checklist, semantic-review reinforcement, and adaptation notes remain understandable without hidden internal context or donor-repo access"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "another external adaptation context would widen the proof surface further, but it is not required for a first canonical promotion review"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0012` for `promoted -> canonical`; it now reads as the default one-output composition pattern within its bounded scope"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/deterministic-context-composition/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
