@@ -75,7 +75,7 @@ The current repository now requires the top-level `## Risks` section to stay str
 
 This is the current markdown-first authoring contract across the published corpus. It strengthens review language without changing frontmatter or introducing machine-readable shadow fields.
 
-The same shadow-language contract is also the current upstream for bounded caution/source-lift work. The first reusable implementation surface for that lift now lives in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), and it still stays markdown-first until the repo proves it needs more than authored `Risks` sections.
+The same shadow-language contract is also the current upstream for bounded caution/source-lift work. The first reusable implementation surface for that lift now lives in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles now pair it with one typed `notes/adverse-effects-review.md` supplement when the repo needs a bounded shadow watch surface beyond the main `Risks` section.
 
 ## Explicitly Deferred
 
@@ -83,6 +83,6 @@ Still intentionally deferred:
 
 - no new schema or frontmatter fields for shadow metadata
 - no validator mode for scoring technique shadow quality
-- no canonical-only `notes/adverse-effects-review.md` requirement yet
+- no generated caution outputs or caution IDs
 
-A later wave may add a canonical-only adverse review note if the corpus shows that the extra surface materially helps review.
+The current canonical adverse-effects review note is a bounded supplement over authored `Risks`, not a replacement source or a policy/scoring program.

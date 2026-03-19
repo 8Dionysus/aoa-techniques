@@ -33,6 +33,8 @@ The current repository already has enough structure to support bounded caution l
 
 The first reusable technique surface for that bounded lift now lives in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md).
 
+Canonical bundles now also use one typed `notes/adverse-effects-review.md` supplement as a review-only caution watch surface over the same markdown-first contract.
+
 That lift surface is useful for:
 
 - inspecting how a technique fails
@@ -62,6 +64,5 @@ Still intentionally deferred:
 - no shadow metadata fields
 - no caution IDs
 - no generated caution outputs
-- no canonical-only `adverse-effects-review` requirement yet
 
-The current job is to keep the bounded caution layer explicit and enforced in markdown so later extraction work can build on it without reopening whether shadow meaning belongs in markdown or metadata. The reusable technique now captures that contract without implying that generated caution outputs or adverse-review notes have already landed.
+The current job is to keep the bounded caution layer explicit and enforced in markdown so later extraction work can build on it without reopening whether shadow meaning belongs in markdown or metadata. The reusable technique plus the canonical-only adverse-effects review note now capture that contract without implying that generated caution outputs or policy metadata have already landed.

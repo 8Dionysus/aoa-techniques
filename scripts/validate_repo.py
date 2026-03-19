@@ -216,9 +216,11 @@ EVIDENCE_KIND_BY_NAME = {
     "origin-evidence.md": "origin_evidence",
     "second-context-adaptation.md": "second_context",
     "canonical-readiness.md": "canonical_readiness",
+    "adverse-effects-review.md": "adverse_effects_review",
     "external-origin.md": "external_origin",
     "external-import-review.md": "external_review",
 }
+ADVERSE_EFFECTS_REVIEW_PATH = "notes/adverse-effects-review.md"
 SECTION_MANIFEST_VERSION = 1
 SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
 CHECKLIST_MANIFEST_VERSION = 1
@@ -324,6 +326,7 @@ TYPED_NOTE_KIND_ORDER = (
     "origin_evidence",
     "second_context",
     "canonical_readiness",
+    "adverse_effects_review",
     "external_origin",
     "external_review",
 )
@@ -331,6 +334,7 @@ TYPED_NOTE_TITLES = {
     "origin_evidence": "Origin Evidence",
     "second_context": "Second Context Adaptation",
     "canonical_readiness": "Canonical Readiness",
+    "adverse_effects_review": "Adverse Effects Review",
     "external_origin": "External Origin Note",
     "external_review": "External Import Review",
 }
@@ -357,6 +361,16 @@ TYPED_NOTE_SECTION_SCOPES = {
         "Default-use rationale",
         "Fresh public-safety check",
         "Remaining gaps",
+        "Recommendation",
+    ),
+    "adverse_effects_review": (
+        "Technique",
+        "Review focus",
+        "Failure modes",
+        "Negative effects",
+        "Misuse patterns",
+        "Detection signals",
+        "Mitigations",
         "Recommendation",
     ),
     "external_origin": (
@@ -2153,6 +2167,19 @@ def validate_evidence(records: list[TechniqueRecord]) -> None:
 
         if len(set(evidence_paths)) != len(evidence_paths):
             fail(f"{record.technique_path}: evidence paths must be unique")
+
+        has_adverse_effects_review = ADVERSE_EFFECTS_REVIEW_PATH in actual_note_paths
+        if record.status == "canonical":
+            if not has_adverse_effects_review:
+                fail(
+                    f"{record.technique_path}: canonical techniques must include "
+                    f"'{ADVERSE_EFFECTS_REVIEW_PATH}'"
+                )
+        elif has_adverse_effects_review:
+            fail(
+                f"{record.technique_path}: only canonical techniques may include "
+                f"'{ADVERSE_EFFECTS_REVIEW_PATH}'"
+            )
 
         for item in evidence_items:
             expected_kind = expected_evidence_kind(item["path"])

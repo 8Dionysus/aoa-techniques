@@ -66,6 +66,8 @@ The next implementation-oriented source-class pilot after examples now stays equ
 
 Those files lift authored evidence notes into derived provenance knowledge only. They do not add note IDs, note-graph behavior, relation rationale, or flattened note semantics.
 
+They now include the canonical-only `adverse_effects_review` note role as one more typed note scope, but that still does not make caution machine-readable policy or generated caution output.
+
 The next implementation-oriented source-class pilot after evidence notes now stays equally bounded:
 
 - `generated/github_review_template_manifest.json`
@@ -116,7 +118,7 @@ Treat sections like these as the current lift candidates:
 - `Detection signals`
 - `Mitigations`
 
-That makes shadow/caution lifting a bounded reusable companion surface now captured in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), but not a reason to add machine-readable shadow fields yet.
+That makes shadow/caution lifting a bounded reusable companion surface now captured in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles can now add one typed adverse-effects review note as a bounded review supplement. It is still not a reason to add machine-readable shadow fields or generated caution outputs.
 
 ## Explicitly Deferred
 

@@ -20,6 +20,7 @@ The current evidence-note layer already separates note roles in a useful way:
 | `origin_evidence` | source-backed origin proof for a technique born in a real project |
 | `second_context` | bounded transfer or reuse reinforcement beyond the origin |
 | `canonical_readiness` | review-oriented readiness or canonical-review decision surface |
+| `adverse_effects_review` | canonical-only caution review supplement over an already-authored `Risks` section |
 | `external_origin` | donor provenance for a bounded external import |
 | `external_review` | explicit bounded verdict for an external import wave |
 | `support_note` | other bounded explanatory note such as transfer boundaries or rollout triage |
@@ -64,6 +65,15 @@ Common examples today:
   - `Fresh public-safety check`
   - `Remaining gaps`
   - `Recommendation`
+- adverse-effects review notes:
+  - `Technique`
+  - `Review focus`
+  - `Failure modes`
+  - `Negative effects`
+  - `Misuse patterns`
+  - `Detection signals`
+  - `Mitigations`
+  - `Recommendation`
 - external provenance and review notes:
   - donor/source identity
   - what changed
@@ -78,6 +88,7 @@ Treat the current evidence-note layer as useful for:
 
 - provenance lookup from bundle metadata into supporting review notes
 - understanding why a technique is trusted, transferred, promoted, or imported
+- keeping canonical shadow review explicit without flattening caution into metadata
 - keeping supporting evidence typed without flattening it into bundle frontmatter
 - later generated provenance entrypoints that still preserve note-level authorship and context
 
@@ -98,6 +109,8 @@ They only do three bounded things:
 - lift repeated typed note kinds through exact `##` section order
 - preserve section content as ordered `fields`, `items`, or fallback `markdown`
 
+That now includes the canonical-only `adverse_effects_review` note role as a typed review surface in the manifest, while still keeping caution meaning in authored markdown.
+
 They do not flatten note meaning into one top-level machine schema.
 
 ## What Evidence Notes Are Not
@@ -116,11 +129,10 @@ If a reviewer needs the actual argument, interpretation, or public-safety ration
 
 Not part of this wave:
 
-- no note schema expansion
 - no note IDs
 - no cross-note graph layer
 - no relation-rationale metadata
 - no flattened top-level note semantics like `verdict`, `source_project`, or note scoring
 - no bundle or generated catalog changes beyond the bounded evidence note manifest
 
-The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context.
+The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context across origin, transfer, readiness, external review, and canonical adverse-effects review notes.

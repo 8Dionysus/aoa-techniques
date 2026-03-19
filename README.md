@@ -24,6 +24,7 @@ See also: `docs/TECHNIQUE_SELECTION.md` for the generated chooser by domain, sta
 See also: `docs/SELECTION_PATTERNS.md` for the generated navigation surface built from direct relations, validator-backed navigation specs, and review-backed working sets.
 See also: the first public KAG/source-lift quartet in `techniques/docs/` for reusable section, metadata, provenance, and direct-relation lift patterns without opening a new `kag` domain.
 See also: `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md` for the first reusable markdown-first caution lift pattern over the same corpus.
+See also: canonical bundles now carry `notes/adverse-effects-review.md` as a bounded shadow-review supplement over authored `Risks`.
 See also: `docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md` for the first bounded semantic review pilot over a tightly related canonical cluster.
 See also: `docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md` for the second bounded semantic review pilot over the upstream evaluation-chain pair.
 See also: `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` for the third bounded semantic review pilot over the docs layout-versus-snapshot pair.
@@ -78,7 +79,7 @@ but only curated public techniques should live here.
 ## Repository structure
 
 - `techniques/` — published technique bundles grouped by domain
-- `techniques/<domain>/<technique>/notes/` — optional evidence notes such as second-context adaptations or canonical-readiness reviews
+- `techniques/<domain>/<technique>/notes/` — optional evidence notes such as second-context adaptations, canonical-readiness reviews, or canonical adverse-effects reviews
 - `templates/` — templates for technique authoring and promotion
 - `TECHNIQUE_INDEX.md` — repository-wide technique map
 - `schemas/` — optional machine-readable schemas

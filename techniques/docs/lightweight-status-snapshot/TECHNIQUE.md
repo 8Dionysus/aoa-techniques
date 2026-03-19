@@ -32,6 +32,8 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # lightweight-status-snapshot
