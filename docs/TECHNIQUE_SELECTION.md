@@ -33,7 +33,7 @@ See also:
 | domain | canonical defaults |
 |---|---|
 | `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
+| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md), [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
 | `evaluation` | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
 ### If I choose one technique, what nearby techniques usually go with it?
@@ -73,7 +73,7 @@ See also:
 |---|---|---|---|---|
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | `canonical` | `cross_context` | `light` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
-| [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) | `promoted` | `cross_context` | `bounded` | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
+| [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `promoted` | `cross_context` | `bounded` | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
 | [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible. |
 

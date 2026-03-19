@@ -8,6 +8,7 @@ This file is the repository-wide map of public techniques.
 |---|---|---|---|---|
 | AOA-T-0001 | plan-diff-apply-verify-report | agent-workflows | canonical | Safe workflow for agent-driven changes using explicit planning, scoped diffs, explicit validation, and concise reporting. |
 | AOA-T-0002 | source-of-truth-layout | docs | canonical | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. |
+| AOA-T-0012 | deterministic-context-composition | docs | canonical | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | AOA-T-0003 | contract-first-smoke-summary | evaluation | canonical | Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract. |
 | AOA-T-0009 | lightweight-status-snapshot | docs | canonical | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
 | AOA-T-0006 | latest-alias-plus-history-copy | evaluation | canonical | Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation. |
@@ -22,7 +23,6 @@ This file is the repository-wide map of public techniques.
 |---|---|---|---|---|
 | AOA-T-0004 | intent-plan-dry-run-contract-chain | agent-workflows | promoted | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists. |
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
-| AOA-T-0012 | deterministic-context-composition | docs | promoted | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | AOA-T-0013 | single-source-rule-distribution | docs | promoted | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
 | AOA-T-0014 | tdd-slice | agent-workflows | promoted | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. |
 | AOA-T-0015 | contract-test-design | evaluation | promoted | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
