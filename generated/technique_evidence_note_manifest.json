@@ -4168,6 +4168,169 @@
       "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/single-source-rule-distribution/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0013"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-source-rule-distribution"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-18"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle already includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: one canonical rule source fans out to multiple managed instruction targets without turning those targets into separate sources of truth"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the adaptation honest by saying the current repo-local projection is readable and useful, but not yet strong enough for canonical promotion on its own"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: one canonical rule source, multiple managed instruction targets, repeatable re-application, and minimal target-specific wrappers"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: nested loading, MCP propagation, skills propagation, backup/revert flows, `.gitignore` automation, and other broader orchestration behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the newer concrete example strengthens the bounded contract by showing multi-target synchronization without widening into product-specific automation behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from the donor repository to the public technique through the external-origin note, the bounded exclusions, and the repo-local adaptation note without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle still reads as one docs pattern rather than a disguised donor feature dump or a mixed orchestration package"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path remains public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import, and the bundle is strong enough to remain confidently `promoted`"
+                },
+                {
+                  "order": 3,
+                  "text": "the current repo-local second context is still not strong enough to argue for canonical promotion, because the repository does not yet exercise a live one-source multi-target instruction distribution workflow in practice"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle should therefore stop at import-strengthening in this wave instead of pretending canonical symmetry with `AOA-T-0012`"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique still needs stronger live reuse evidence across multiple agent-facing outputs before any canonical review"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger second context should show an actual managed multi-target instruction flow, not just a readable adaptation sketch"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0013` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "accept this as a successful bounded external-import review wave and defer any canonical-readiness path until stronger live multi-target reuse exists"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/single-source-rule-distribution/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",

@@ -31,6 +31,8 @@ evidence:
     path: notes/external-origin.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: external_review
+    path: notes/external-import-review.md
 ---
 
 # single-source-rule-distribution
@@ -130,7 +132,7 @@ Verify the technique by confirming that:
 - a source change routes through the canonical rule source first instead of through target-file edits
 
 See `checks/single-source-rule-distribution-checklist.md`.
-For external provenance and bounded repo-local adaptation, see `notes/external-origin.md` and `notes/second-context-adaptation.md`.
+For external provenance, bounded repo-local adaptation, and the first external-import review outcome, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, and `notes/external-import-review.md`.
 
 ## Adaptation notes
 
@@ -170,6 +172,7 @@ See `checks/single-source-rule-distribution-checklist.md`.
 
 - adapted from open-source `ruler`
 - imported into `aoa-techniques` on 2026-03-15 as the second bounded external-import draft with explicit exclusions around MCP, skills, nested loading, and other product-width behavior
+- passed first external-import review on 2026-03-18; keep the technique `promoted` until stronger live multi-target reuse exists beyond the current repo-local adaptation sketch
 
 ## Future evolution
 
