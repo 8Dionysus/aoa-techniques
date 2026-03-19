@@ -297,6 +297,17 @@
           "body_markdown": "This example shows how a bounded direct relation can help a generated navigation surface without turning the repository into a graph engine.\n\n## Source frontmatter excerpt\n\n```yaml\nrelations:\n  - type: requires\n    target: AOA-T-0019\n```\n\n## Derived selection hint\n\n```md\n- [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md): `requires` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)\n```\n\n## Why this stays bounded\n\n- the edge says only that one direct contract depends on another existing contract\n- it does not explain the full rationale\n- it does not imply multi-hop traversal, scoring, or graph truth\n\n## Anti-drift rule\n\nIf the selection surface must infer extra edges or hidden rationale to stay useful, the relation lift has widened beyond direct adjacency."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0022",
+      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/risk-and-negative-effect-lift/examples/minimal-risk-and-negative-effect-lift.md",
+          "title": "Minimal Risk And Negative-Effect Lift",
+          "body_markdown": "This example shows how a richer `Risks` section can support bounded caution lookup without creating a new caution metadata or scoring surface.\n\n## Source bundle excerpt\n\n```md\n## Risks\n\n### Failure modes\n- the summary surface can look complete even when a source silently stopped updating\n\n### Negative effects\n- operators can trust the report too early because it still renders cleanly\n\n### Misuse patterns\n- teams start treating the pattern as a generic health score instead of one bounded check\n\n### Detection signals\n- the report keeps rendering but freshness counters stop changing\n\n### Mitigations\n- route the reader back to the source checks and tighten the bounded contract\n```\n\n## Bounded caution-lift usage\n\n```md\nReview prompt for this technique:\n- Open `## Risks` first when you need to understand hidden downside before reuse.\n- Check `Failure modes` and `Detection signals` together for false-success risk.\n- Read `Mitigations` before widening the pattern into a new environment.\n```\n\n## Anti-drift rule\n\nIf a team needs caution IDs, scores, or generated caution outputs to answer the review question, this bounded lift is no longer the right technique."
+        }
+      ]
     }
   ]
 }

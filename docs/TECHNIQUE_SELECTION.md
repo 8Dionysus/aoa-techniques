@@ -59,6 +59,7 @@ See also:
 - [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md): `complements` [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md); `used_together_for` [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md): `requires` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
 - [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md): `requires` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+- [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md): `complements` [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -84,6 +85,7 @@ See also:
 | [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning. |
 | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Use typed evidence notes and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
 | [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
+| [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata or scoring. |
 
 ### `evaluation`
 
@@ -100,7 +102,7 @@ See also:
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 21/21 techniques.
+- `export_ready` is currently `true` for 22/22 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

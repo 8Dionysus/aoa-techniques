@@ -10,12 +10,14 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Added
 
-- `AOA-T-0014` through `AOA-T-0021`, bringing the published corpus to 21 techniques (`10` canonical, `11` promoted)
+- `AOA-T-0014` through `AOA-T-0022`, bringing the published corpus to 22 techniques (`10` canonical, `12` promoted)
 - the first public KAG/source-lift quartet inside the existing `docs` domain:
   - `AOA-T-0018 markdown-technique-section-lift`
   - `AOA-T-0019 frontmatter-metadata-spine`
   - `AOA-T-0020 evidence-note-provenance-lift`
   - `AOA-T-0021 bounded-relation-lift-for-kag`
+- the first reusable markdown-first shadow/caution technique inside the existing `docs` domain:
+  - `AOA-T-0022 risk-and-negative-effect-lift`
 
 ### Changed
 
@@ -24,6 +26,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - bounded public-hygiene validation now blocks obvious local paths, loopback-only hosts, and token or private-key markers on public-authored and generated surfaces
 - `DOCS_BOUNDARY_SEMANTIC_REVIEW.md` and semantic review manifests now reflect that a richer relation consumer has already landed
 - KAG-oriented repo guides now link directly to the corresponding reusable technique bundles for section lift, metadata spine, provenance lift, and bounded relation lift
+- shadow/caution repo guides now point to `risk-and-negative-effect-lift` as the current reusable markdown-first caution implementation surface
 - local validation no longer dirties `git status` with Python cache artifacts
 
 ### Validation

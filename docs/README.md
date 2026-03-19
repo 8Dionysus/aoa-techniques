@@ -17,6 +17,7 @@ Choose the path that matches your question:
 - I need to understand the repo's markdown-first caution discipline:
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
   - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+  - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
   - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
@@ -67,9 +68,9 @@ These guides explain what the repo can already support as a future lift surface 
 - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
 
-### First KAG/source-lift techniques
+### Reusable lift techniques
 
-These are reusable technique bundles extracted from the repo's current generated layer without widening into a graph platform.
+These are reusable technique bundles extracted from the repo's current generated and caution layers without widening into a graph platform or policy engine.
 
 - [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
   - use when stable markdown sections should become one bounded derived lookup surface
@@ -79,6 +80,8 @@ These are reusable technique bundles extracted from the repo's current generated
   - use when typed supporting notes should act as provenance handles without becoming a note graph
 - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
   - use when direct relations should power bounded adjacency hints without graph semantics
+- [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+  - use when richer `Risks` language should act as bounded caution lookup without becoming metadata or scoring
 
 ### Semantic-review pilots
 
@@ -114,7 +117,7 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 3. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
 4. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 5. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-6. one of the quartet bundles in `../techniques/docs/` that matches the concrete lift question
+6. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
 
 ## Companion Repository Surfaces
 
