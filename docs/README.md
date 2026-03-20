@@ -12,7 +12,10 @@ Choose the path that matches your question:
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
 - I need a small local runtime card for one technique:
+  - [Technique Capsules](TECHNIQUE_CAPSULES.md)
+  - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
   - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
+  - [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
 - I need to understand status, review posture, or canonical promotion:
   - [Canonical Rubric](CANONICAL_RUBRIC.md)
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
@@ -65,10 +68,16 @@ These are reader-facing navigation artifacts derived from authoritative markdown
 
 ### Local runtime cards
 
-These are small local derived cards for runtime lookup. They stay subordinate to the authored bundles and do not replace section-level manifests.
+These are small local derived cards for runtime lookup. They stay subordinate to the authored bundles, stay outside the KAG/source-lift family, and do not replace section-level manifests.
 
+- [Technique Capsules](TECHNIQUE_CAPSULES.md)
+  - use when you want one reader-facing local runtime card surface grouped by domain and bounded runtime fields
 - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
   - use when one bounded technique card is enough for local lookup, dispatch, or runtime orientation
+- [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
+  - use when a strict min projection is enough for lightweight local runtime lookup
+- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
+  - use when you need the capsule source contract, field boundaries, or runtime-only scope explained before consuming the generated surfaces
 
 ### Generated docs/status manifests
 
@@ -94,6 +103,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
+- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
 - [Releasing `aoa-techniques`](RELEASING.md)

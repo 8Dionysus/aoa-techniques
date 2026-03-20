@@ -65,6 +65,7 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_capsules.json",
+    "generated/technique_capsules.min.json",
     "generated/technique_section_manifest.json",
     "generated/technique_section_manifest.min.json",
     "generated/technique_checklist_manifest.json",
@@ -87,6 +88,7 @@ REQUIRED_SELECTION_FILES = (
     "docs/SELECTION_PATTERNS.md",
     "docs/SHADOW_PATTERNS.md",
 )
+REQUIRED_CAPSULE_SURFACE_FILES = ("docs/TECHNIQUE_CAPSULES.md",)
 REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
 SELECTION_REVIEW_DOCS = {
     "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
@@ -411,6 +413,18 @@ SECTION_MANIFEST_VERSION = 1
 SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
 CAPSULE_VERSION = 1
 CAPSULE_SOURCE_OF_TRUTH = "frontmatter-summary+markdown-technique-capsules-v1"
+CAPSULE_MIN_FIELDS = (
+    "id",
+    "name",
+    "summary",
+    "one_line_intent",
+    "use_when_short",
+    "do_not_use_short",
+    "core_contract_short",
+    "main_risk_short",
+    "validation_short",
+    "technique_path",
+)
 CHECKLIST_MANIFEST_VERSION = 1
 CHECKLIST_MANIFEST_SOURCE_OF_TRUTH = "markdown-checklists-v1"
 EXAMPLE_MANIFEST_VERSION = 1
@@ -2828,6 +2842,13 @@ def validate_selection_files(repo_root: Path) -> None:
             fail(f"{repo_root}: missing required selection file '{relative_path}'")
 
 
+def validate_capsule_surface_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_CAPSULE_SURFACE_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required capsule surface file '{relative_path}'")
+
+
 def validate_repo_doc_surface_files(repo_root: Path) -> None:
     for relative_path in REQUIRED_REPO_DOC_SURFACE_FILES:
         target = repo_root / relative_path
@@ -3803,6 +3824,23 @@ def build_capsule_payload(repo_root: Path, records: list[TechniqueRecord]) -> di
     }
 
 
+def project_min_capsule_payload(full_payload: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "capsule_version": full_payload["capsule_version"],
+        "source_of_truth": full_payload["source_of_truth"],
+        "techniques": [
+            {key: entry[key] for key in CAPSULE_MIN_FIELDS} for entry in full_payload["techniques"]
+        ],
+    }
+
+
+def build_capsule_payloads(
+    repo_root: Path, records: list[TechniqueRecord]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    full_payload = build_capsule_payload(repo_root, records)
+    return full_payload, project_min_capsule_payload(full_payload)
+
+
 def build_section_manifest_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -3918,6 +3956,20 @@ def record_technique_link(repo_root: Path, record: TechniqueRecord) -> str:
     return f"[{record.id}](../{technique_path})"
 
 
+def strip_display_prefix(text: str, prefix: str) -> str:
+    if text.startswith(prefix):
+        return text[len(prefix) :]
+    return text
+
+
+def capsule_status_rank(status: str) -> int:
+    if status == "canonical":
+        return 0
+    if status == "promoted":
+        return 1
+    return 2
+
+
 def escape_markdown_table_cell(value: str) -> str:
     flattened = re.sub(r"\s*\r?\n\s*", " ", value).strip()
     return flattened.replace("|", r"\|")
@@ -3984,6 +4036,75 @@ def shadow_note_summary(record: TechniqueRecord) -> dict[str, str]:
         "main_failure_mode": failure_modes.items[0].text,
         "note_path": note.note_path,
     }
+
+
+def build_capsule_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
+    records_by_id = {record.id: record for record in records}
+    full_payload = build_capsule_payload(repo_root, records)
+    entries_by_domain: dict[str, list[tuple[TechniqueRecord, dict[str, Any]]]] = {
+        domain: [] for domain in DOMAIN_ORDER
+    }
+
+    for entry in full_payload["techniques"]:
+        record = records_by_id[entry["id"]]
+        entries_by_domain[record.domain].append((record, entry))
+
+    lines = [
+        "# Technique Capsules",
+        "",
+        "This file is generated from authoritative `TECHNIQUE.md` bundles plus the current local capsule payload.",
+        "Do not edit it by hand; run `python scripts/build_capsules.py`.",
+        "",
+        "Use this surface when one bounded local runtime card is enough to orient on a technique without opening selection, review, or manifest layers first.",
+        "",
+        "Capsules are derived local runtime cards for lookup only. They are not the source of truth and they do not replace the authored technique bundles.",
+        "",
+        "See also:",
+        "- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)",
+        "- [Full capsule JSON](../generated/technique_capsules.json)",
+        "- [Min capsule JSON](../generated/technique_capsules.min.json)",
+        "- [Documentation Map](README.md)",
+        "",
+    ]
+
+    for domain in DOMAIN_ORDER:
+        lines.extend([f"## `{domain}`", ""])
+        ordered_entries = sorted(
+            entries_by_domain[domain],
+            key=lambda item: (capsule_status_rank(item[0].status), item[0].status, item[0].id),
+        )
+
+        for record, entry in ordered_entries:
+            lines.extend(
+                [
+                    f"### {record_technique_link(repo_root, record)} - {entry['name']} (`{record.status}`)",
+                    "",
+                    f"- Summary: {entry['summary']}",
+                    f"- Intent: {entry['one_line_intent']}",
+                    f"- Use when: {strip_display_prefix(entry['use_when_short'], 'Use when ')}",
+                    f"- Avoid when: {strip_display_prefix(entry['do_not_use_short'], 'Avoid when ')}",
+                    f"- Needs: {strip_display_prefix(entry['inputs_short'], 'Needs ')}",
+                    f"- Produces: {strip_display_prefix(entry['outputs_short'], 'Produces ')}",
+                    f"- Core contract: {strip_display_prefix(entry['core_contract_short'], 'Core contract: ')}",
+                    f"- Main risk: {strip_display_prefix(entry['main_risk_short'], 'Main risk: ')}",
+                    f"- Validate by: {strip_display_prefix(entry['validation_short'], 'Validate by checking ')}",
+                    f"- Source: [TECHNIQUE.md](../{entry['technique_path']})",
+                    "",
+                ]
+            )
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            "- The source of meaning stays in the authored `TECHNIQUE.md` bundles.",
+            "- Capsules stay local runtime lookup aids only; they are not KAG/source-lift surfaces and they do not replace the full bundle.",
+            "- This surface is not selection, scoring, or policy routing.",
+            "",
+        ]
+    )
+
+    return "\n".join(lines)
 
 
 def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
@@ -4422,11 +4543,27 @@ def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_st
 
 def validate_capsules(repo_root: Path, records: list[TechniqueRecord]) -> None:
     path = repo_root / "generated" / "technique_capsules.json"
-    expected = build_capsule_payload(repo_root, records)
+    min_path = repo_root / "generated" / "technique_capsules.min.json"
+    reader_path = repo_root / "docs" / "TECHNIQUE_CAPSULES.md"
+    expected_full, expected_min = build_capsule_payloads(repo_root, records)
+    expected_reader = build_capsule_markdown(repo_root, records)
     actual = read_json(path)
+    actual_min = read_json(min_path)
+    actual_reader = read_text(reader_path)
 
-    if actual != expected:
+    if actual != expected_full:
         fail(f"{path}: generated capsules are out of date; run 'python scripts/build_capsules.py'")
+    if actual_min != expected_min:
+        fail(f"{min_path}: generated min capsules are out of date; run 'python scripts/build_capsules.py'")
+    if actual_reader != expected_reader:
+        fail(
+            f"{reader_path}: generated capsule reader surface is out of date; "
+            "run 'python scripts/build_capsules.py'"
+        )
+
+    projected_min = project_min_capsule_payload(actual)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min capsules must stay a projection of the full capsule payload")
 
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
     capsule_alignment = [
@@ -4682,6 +4819,7 @@ def validate_repo_doc_surface_reader(repo_root: Path) -> None:
 def validate_repo(repo_root: Path) -> None:
     validate_stage1_files(repo_root)
     validate_selection_files(repo_root)
+    validate_capsule_surface_files(repo_root)
     validate_repo_doc_surface_files(repo_root)
     schema_store = load_schema_store(repo_root)
     records = collect_techniques(repo_root, schema_store)
@@ -4715,7 +4853,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated TECHNIQUE_INDEX.md structure and parity")
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
-    print("[ok] validated generated capsule parity")
+    print("[ok] validated generated capsule parity and reader surface")
     print("[ok] validated generated section manifest parity")
     print("[ok] validated generated checklist manifest parity")
     print("[ok] validated generated example manifest parity")

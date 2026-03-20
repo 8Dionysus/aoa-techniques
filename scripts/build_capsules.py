@@ -3,10 +3,12 @@ from __future__ import annotations
 from pathlib import Path
 
 from validate_repo import (
-    build_capsule_payload,
+    build_capsule_markdown,
+    build_capsule_payloads,
     collect_techniques,
     load_schema_store,
     write_json_file,
+    write_text_file,
 )
 
 
@@ -14,15 +16,24 @@ def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
     schema_store = load_schema_store(repo_root)
     records = collect_techniques(repo_root, schema_store)
-    payload = build_capsule_payload(repo_root, records)
+    full_payload, min_payload = build_capsule_payloads(repo_root, records)
+    reader_markdown = build_capsule_markdown(repo_root, records)
 
     generated_dir = repo_root / "generated"
     generated_dir.mkdir(exist_ok=True)
+    docs_dir = repo_root / "docs"
+    docs_dir.mkdir(exist_ok=True)
 
-    path = generated_dir / "technique_capsules.json"
-    write_json_file(path, payload, compact=False)
+    full_path = generated_dir / "technique_capsules.json"
+    min_path = generated_dir / "technique_capsules.min.json"
+    reader_path = docs_dir / "TECHNIQUE_CAPSULES.md"
+    write_json_file(full_path, full_payload, compact=False)
+    write_json_file(min_path, min_payload, compact=False)
+    write_text_file(reader_path, reader_markdown)
 
-    print(f"[ok] wrote {path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {full_path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {min_path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {reader_path.relative_to(repo_root).as_posix()}")
     return 0
 
 

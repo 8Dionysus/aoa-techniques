@@ -22,6 +22,9 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 ### Changed
 
 - `SELECTION_PATTERNS.md` working sets are now validator-checked against their linked semantic review maps
+- new generated `docs/TECHNIQUE_CAPSULES.md` now provides a human reader surface over local runtime capsule cards grouped by domain and status order
+- new generated `generated/technique_capsules.min.json` now keeps the capsule family on a strict min projection without replacing the full runtime payload
+- new authored `docs/TECHNIQUE_CAPSULE_GUIDE.md` now defines the capsule source contract and runtime-only boundaries outside the KAG/source-lift family
 - new generated `docs/REPO_DOC_SURFACES.md` now routes the authoritative public docs/status layer by bounded roles instead of filesystem guessing
 - new generated `generated/repo_doc_surface_manifest.json` now lifts the 10 authoritative repo docs/status files into derived docs/status routing knowledge only
 - new authored `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md` now defines the bounded source contract and explicit exclusions for that docs/status layer
