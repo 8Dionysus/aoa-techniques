@@ -22,8 +22,8 @@ A release should make it easy to answer:
 1. Confirm the target release scope.
 2. Update `CHANGELOG.md`.
 3. Run local validation:
-   - `python -m unittest discover -s tests`
-   - `python scripts/validate_repo.py`
+   - `python scripts/build_repo_doc_surface_manifest.py`
+   - `python scripts/build_catalog.py`
    - `python scripts/build_capsules.py`
    - `python scripts/build_section_manifest.py`
    - `python scripts/build_checklist_manifest.py`
@@ -31,7 +31,9 @@ A release should make it easy to answer:
    - `python scripts/build_evidence_note_manifest.py`
    - `python scripts/build_github_review_template_manifest.py`
    - `python scripts/build_semantic_review_manifest.py`
-   - `python scripts/build_catalog.py`
+   - `python scripts/build_shadow_review_manifest.py`
+   - `python -m unittest discover -s tests`
+   - `python scripts/validate_repo.py`
    - `git diff --exit-code`
 4. Confirm `TECHNIQUE_INDEX.md` matches the current published catalog.
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.

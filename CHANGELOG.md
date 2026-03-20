@@ -22,6 +22,9 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 ### Changed
 
 - `SELECTION_PATTERNS.md` working sets are now validator-checked against their linked semantic review maps
+- new generated `docs/REPO_DOC_SURFACES.md` now routes the authoritative public docs/status layer by bounded roles instead of filesystem guessing
+- new generated `generated/repo_doc_surface_manifest.json` now lifts the 10 authoritative repo docs/status files into derived docs/status routing knowledge only
+- new authored `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md` now defines the bounded source contract and explicit exclusions for that docs/status layer
 - new generated `docs/SHADOW_PATTERNS.md` now provides one canonical-only shadow operating surface over typed `adverse_effects_review` notes
 - new generated `generated/shadow_review_manifest.json` now lifts authored shadow-review docs into derived review knowledge without turning caution into policy metadata
 - `EVALUATION_CHAIN_SHADOW_REVIEW.md` now adds the second canonical shadow-review pilot for `AOA-T-0003` and `AOA-T-0007`
@@ -39,11 +42,15 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 - `python -m unittest discover -s tests`
 - `python scripts/validate_repo.py`
+- `python scripts/build_repo_doc_surface_manifest.py`
 - `python scripts/build_catalog.py`
 - `python scripts/build_shadow_review_manifest.py`
 - `python scripts/build_capsules.py`
 - `python scripts/build_section_manifest.py`
+- `python scripts/build_checklist_manifest.py`
+- `python scripts/build_example_manifest.py`
 - `python scripts/build_evidence_note_manifest.py`
+- `python scripts/build_github_review_template_manifest.py`
 - `python scripts/build_semantic_review_manifest.py`
 
 ## [0.1.0] - 2026-03-17

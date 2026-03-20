@@ -24,6 +24,10 @@ Choose the path that matches your question:
   - [Evaluation-Chain Shadow Review](EVALUATION_CHAIN_SHADOW_REVIEW.md)
   - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
   - one canonical bundle plus its `notes/adverse-effects-review.md`
+- I need to navigate the authoritative repo docs/status layer:
+  - [Repo Doc Surfaces](REPO_DOC_SURFACES.md)
+  - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
+  - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
   - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
@@ -56,6 +60,8 @@ These are reader-facing navigation artifacts derived from authoritative markdown
   - use when direct adjacency is not enough and you want validator-backed starting points, common next moves, or review-backed working sets
 - [Shadow Patterns](SHADOW_PATTERNS.md)
   - use when you need one bounded answer to where a canonical technique can quietly make the system worse and which watch seam to inspect first
+- [Repo Doc Surfaces](REPO_DOC_SURFACES.md)
+  - use when you need one bounded answer to which authoritative repo doc/status surface to open next
 
 ### Local runtime cards
 
@@ -63,6 +69,13 @@ These are small local derived cards for runtime lookup. They stay subordinate to
 
 - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
   - use when one bounded technique card is enough for local lookup, dispatch, or runtime orientation
+
+### Generated docs/status manifests
+
+These are derived docs/status source-lift surfaces. They stay subordinate to the authored public docs and do not replace those docs as the source of truth.
+
+- [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
+  - use when the 10 authoritative repo docs/status files should be lifted into bounded routing knowledge only
 
 ### Generated review manifests
 
@@ -81,6 +94,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
+- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
 - [Releasing `aoa-techniques`](RELEASING.md)
 
@@ -147,12 +161,14 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 ### KAG / lift path
 
 1. [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-2. [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
-3. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
-4. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
-5. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-6. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
-7. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
+2. [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
+3. [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
+4. [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
+5. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
+6. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
+7. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+8. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
+9. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
 
 ## Companion Repository Surfaces
 
@@ -168,6 +184,7 @@ These are outside `docs/` but matter when navigating the repo:
 ## Notes
 
 - Prefer generated reader surfaces when the question is "what should I inspect next?"
+- Prefer `REPO_DOC_SURFACES.md` when the question is "which authoritative repo doc should I open next?"
 - Prefer `SHADOW_PATTERNS.md` when the question is "where can this canonical technique fail quietly or create false confidence?"
 - Prefer authored guides when the question is "what does this repo mean by this rule or boundary?"
 - Prefer semantic-review pilots when the question is "are these nearby techniques still meaningfully distinct?"
