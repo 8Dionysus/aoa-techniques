@@ -19,29 +19,20 @@ If you are new to this repository, follow this short path:
 4. Use `templates/TECHNIQUE.template.md` as the starting point for authoring a new technique.
 5. Follow `CONTRIBUTING.md` for the contribution and PR path.
 
-See also: `WALKTHROUGH.md` for a short example of how one real practice became a published technique and then proved reusable in a second context.
-See also: `docs/TECHNIQUE_SELECTION.md` for the generated chooser by domain, status, validation strength, and direct relation hints.
-See also: `docs/SELECTION_PATTERNS.md` for the generated navigation surface built from direct relations, validator-backed navigation specs, and review-backed working sets.
-See also: `docs/TECHNIQUE_CAPSULES.md` for the generated human reader surface over local runtime capsule cards.
-See also: `generated/technique_capsules.json` for the full local runtime capsule payload derived from `summary` plus bounded markdown sections.
-See also: `generated/technique_capsules.min.json` for the strict projection of that capsule payload when only the smallest runtime card fields are needed.
-See also: `docs/TECHNIQUE_CAPSULE_GUIDE.md` for the capsule source contract and the runtime-only boundaries of that family.
-See also: `docs/SHADOW_PATTERNS.md` for the generated canonical-only shadow watch surface over current adverse-effects review notes.
-See also: `docs/REPO_DOC_SURFACES.md` for the generated router over the 10 authoritative public docs/status files.
-See also: `generated/repo_doc_surface_manifest.json` for the derived docs/status source-lift manifest over that same bounded source set.
-See also: `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md` for the contract and exclusions behind the docs/status source-lift layer.
-See also: `docs/TECHNIQUE_SECTIONS.md`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, and `docs/EVIDENCE_NOTE_SURFACES.md` for generated KAG/source-lift reader surfaces over section, checklist, example, and evidence-note families.
-See also: `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, and `generated/technique_evidence_note_manifest.json` for the bounded KAG/source-lift manifest families behind those readers.
-See also: `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md` for the authored contracts behind those source classes.
-See also: `generated/shadow_review_manifest.json` for the derived review-knowledge surface over authored cluster-level shadow reviews.
-See also: the first public KAG/source-lift quartet in `techniques/docs/` for reusable section, metadata, provenance, and direct-relation lift patterns without opening a new `kag` domain.
-See also: `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md` for the first reusable markdown-first caution lift pattern over the same corpus.
-See also: canonical bundles now carry `notes/adverse-effects-review.md` as a bounded shadow-review supplement over authored `Risks`.
-See also: `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md` for the first cluster-level shadow review over the canonical published-summary package.
-See also: `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md` for the second cluster-level shadow review over the canonical evaluation-chain pair.
-See also: `docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md` for the first bounded semantic review pilot over a tightly related canonical cluster.
-See also: `docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md` for the second bounded semantic review pilot over the upstream evaluation-chain pair.
-See also: `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` for the third bounded semantic review pilot over the docs layout-versus-snapshot pair.
+## Quick routes
+
+- if you need bounded execution workflows built from techniques, go to [aoa-skills](https://github.com/8Dionysus/aoa-skills)
+- if you need portable proof surfaces for quality or boundary claims, go to [aoa-evals](https://github.com/8Dionysus/aoa-evals)
+- if you need the smallest next surface by task type, go to [aoa-routing](https://github.com/8Dionysus/aoa-routing)
+- if you need the ecosystem layer map and federation center, go to [Agents-of-Abyss](https://github.com/8Dionysus/Agents-of-Abyss)
+
+## Deeper routes
+
+- for one end-to-end origin-to-public example, read `WALKTHROUGH.md`
+- for generated navigation and chooser surfaces, open `docs/TECHNIQUE_SELECTION.md`, `docs/SELECTION_PATTERNS.md`, and `docs/SHADOW_PATTERNS.md`
+- for runtime cards and capsule contracts, open `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
+- for repo-doc routing, source-lift readers and manifests, and reusable lift guides, open `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`, and the reusable lift family under `techniques/docs/`, including `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md`
+- for review and shadow surfaces, open `generated/shadow_review_manifest.json`, canonical `notes/adverse-effects-review.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md`, `docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md`, and `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md`
 
 ## What belongs here
 

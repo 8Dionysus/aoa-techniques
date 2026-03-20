@@ -28,7 +28,7 @@ Open these first when the question is where to start or which public repo map sh
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `Start here`, `What belongs here`, `Core principles`, `Maturity model`, `Repository structure`, `Intended users`, `What a good technique includes`, `Contribution model`, `License` |
+| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `Start here`, `Quick routes`, `Deeper routes`, `What belongs here`, `Core principles`, `Maturity model`, `Repository structure`, `Intended users`, `What a good technique includes`, `Contribution model`, `License` |
 | [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | public corpus map by status, technique id, and domain | `Canonical techniques`, `Promoted techniques`, `Deprecated techniques`, `Notes` |
 | [Documentation Map](README.md) (`docs/README.md`) | docs-layer entrypoint for generated surfaces, guides, and recommended reading paths | `Start Here`, `Surface Types`, `Recommended Reading Paths`, `Companion Repository Surfaces`, `Notes` |
 

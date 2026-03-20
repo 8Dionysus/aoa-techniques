@@ -670,6 +670,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertEqual(
             (
                 "Start here",
+                "Quick routes",
+                "Deeper routes",
                 "What belongs here",
                 "Core principles",
                 "Maturity model",

@@ -32,6 +32,8 @@
       "bounded_role": "root entrypoint for repository purpose, scope, and first-read routing",
       "top_level_sections": [
         "Start here",
+        "Quick routes",
+        "Deeper routes",
         "What belongs here",
         "Core principles",
         "Maturity model",
