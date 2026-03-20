@@ -48,6 +48,7 @@ Choose the path that matches your question:
   - [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
   - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
   - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+  - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 - I need to inspect the semantic-review pilots:
   - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
   - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
@@ -55,6 +56,7 @@ Choose the path that matches your question:
   - [Intent-Chain Semantic Review](INTENT_CHAIN_SEMANTIC_REVIEW.md)
   - [Instruction-Surface Semantic Review](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
   - [Skill-Support Semantic Review](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+  - [KAG Source Lift Semantic Review](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
 - I need release process guidance:
   - [Releasing `aoa-techniques`](RELEASING.md)
 
@@ -175,6 +177,13 @@ These are reusable technique bundles extracted from the repo's current generated
   - use when direct relations should power bounded adjacency hints without graph semantics
 - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
   - use when richer `Risks` language should act as bounded caution lookup without becoming metadata or scoring
+
+### KAG/source-lift family review
+
+This review-only doc keeps the five reusable KAG/source-lift techniques distinct while staying subordinate to authored markdown.
+
+- [KAG Source Lift Semantic Review](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+  - use when the family seams between section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift need one bounded review surface
 
 ### Semantic-review pilots
 

@@ -343,7 +343,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
             validate_repo.validate_sections(body, technique_path)
 
-    def test_kag_quartet_lands_as_promoted_docs_family(self) -> None:
+    def test_kag_source_lift_family_lands_as_promoted_docs_family(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         entries_by_id = {entry["id"]: entry for entry in catalog["techniques"]}
         expected_ids = (
@@ -351,6 +351,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0019",
             "AOA-T-0020",
             "AOA-T-0021",
+            "AOA-T-0022",
         )
 
         for technique_id in expected_ids:
@@ -505,6 +506,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
             "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "stronger live multi-target reuse evidence for `AOA-T-0013`",
             "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and `AOA-T-0016` drift toward generic architecture formalism",
+            "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md": "keep the shared family boundaries readable",
         }
         manifest = validate_repo.read_json(REPO_ROOT / "generated" / "semantic_review_manifest.json")
         reviews_by_path = {review["review_path"]: review for review in manifest["reviews"]}
@@ -542,6 +544,29 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "| I need strict-vs-optional rendering policy | [AOA-T-0011]",
             selection_patterns,
         )
+        self.assertIn("KAG/source-lift family", selection_patterns)
+        self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", selection_patterns)
+
+    def test_kag_source_lift_family_has_second_context_and_readiness_notes(self) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        entries_by_id = {entry["id"]: entry for entry in catalog["techniques"]}
+
+        expected_ids = (
+            "AOA-T-0018",
+            "AOA-T-0019",
+            "AOA-T-0020",
+            "AOA-T-0021",
+            "AOA-T-0022",
+        )
+
+        for technique_id in expected_ids:
+            with self.subTest(technique_id=technique_id):
+                evidence = {
+                    item["kind"]: item["path"] for item in entries_by_id[technique_id]["evidence"]
+                }
+                self.assertEqual("notes/origin-evidence.md", evidence["origin_evidence"])
+                self.assertEqual("notes/second-context-adaptation.md", evidence["second_context"])
+                self.assertEqual("notes/canonical-readiness.md", evidence["canonical_readiness"])
 
     def test_shadow_patterns_generated_surface_matches_builder_and_stays_canonical_only(
         self,
@@ -758,6 +783,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
         self.assertIn("repo_doc_surface_manifest.json", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
+        self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", docs_readme)
+        self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", readme)
+        self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", kag_source_guide)
         self.assertIn("docs/REPO_DOC_SURFACES.md", readme)
         self.assertIn("generated/repo_doc_surface_manifest.json", readme)
         self.assertIn("docs/REPO_DOC_SURFACE_LIFT_GUIDE.md", readme)

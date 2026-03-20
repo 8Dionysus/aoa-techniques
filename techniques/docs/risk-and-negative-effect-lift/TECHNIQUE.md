@@ -6,7 +6,7 @@ status: promoted
 origin:
   project: aoa-techniques
   path: docs/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md
-  note: Extracted from the current shadow guides, validator-enforced Risks contract, and live corpus to keep caution lookup bounded and markdown-first without turning caution into metadata or scoring.
+  note: Extracted from the current shadow guides, validator-enforced Risks contract, and live corpus to keep caution lookup bounded and markdown-first while staying subordinate to authored Risks and canonical adverse-effects review.
 owners:
   - 8Dionysus
 tags:
@@ -15,7 +15,7 @@ tags:
   - caution
   - risks
   - source-lift
-summary: Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata or scoring.
+summary: Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy.
 maturity_score: 3
 rigor_level: bounded
 reversibility: easy
@@ -29,13 +29,17 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # risk-and-negative-effect-lift
 
 ## Intent
 
-Lift richer `Risks` language into bounded caution-oriented lookup and reuse so reviewers and later derived surfaces can find failure, harm, misuse, detection, and mitigation signals without turning caution into metadata, scoring, or a new source of truth.
+Lift richer `Risks` language into bounded caution-oriented lookup and reuse so reviewers and later derived surfaces can find failure, harm, misuse, detection, and mitigation signals without turning caution into metadata, scoring, generated policy, or a new source of truth.
 
 ## When to use
 
@@ -43,12 +47,14 @@ Lift richer `Risks` language into bounded caution-oriented lookup and reuse so r
 - review or reuse flows that need to inspect how a technique can fail, mislead, or quietly make a system worse
 - markdown-first source-lift work that wants bounded caution lookup without widening schema
 - cases where caution should stay attached to the technique bundle instead of becoming a separate policy program
+- corpus-level review paths where a canonical adverse-effects review note can supplement the same markdown-first caution source without replacing it
 
 ## When not to use
 
 - systems that need a threat model, incident taxonomy, or policy-scoring framework rather than bounded technique caution
 - repos that do not yet have stable `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations` language in markdown
 - workflows that want shadow metadata, caution IDs, generated caution outputs, or a new `kag` domain
+- workflows that expect the lifted caution surface to become authoritative over the bundle's authored `Risks`
 - cases where reviewers would treat a lifted caution view as more authoritative than the underlying `TECHNIQUE.md`
 
 ## Inputs
@@ -65,6 +71,7 @@ Lift richer `Risks` language into bounded caution-oriented lookup and reuse so r
 - preserved markdown authority over caution meaning
 - reusable source-lift pattern for later derived consumers that still stay bounded
 - canonical-only adverse-effects review notes when one repo needs a separate caution watch surface for its default techniques
+- no generated caution policy layer, scoring surface, or metadata-only replacement for `Risks`
 
 ## Core procedure
 
@@ -74,6 +81,7 @@ Lift richer `Risks` language into bounded caution-oriented lookup and reuse so r
 4. Route interpretation and policy judgment back to the full markdown section when meaning matters.
 5. Keep any derived caution usage rebuildable from the markdown bundle rather than hand-maintained elsewhere.
 6. Stop and narrow the request if the next step starts asking for shadow metadata, scoring, or generated caution outputs.
+7. Treat any canonical adverse-effects review note as a supplement to `Risks`, not as a new policy source.
 
 ## Contracts
 
@@ -83,6 +91,7 @@ Lift richer `Risks` language into bounded caution-oriented lookup and reuse so r
 - the technique does not require shadow metadata, caution IDs, generated caution outputs, or a new `kag` domain
 - no new source of truth is introduced beyond markdown bundles and derived artifacts
 - any canonical-only adverse-effects review note remains a supplement over the same markdown-first caution source
+- the technique does not turn caution into scoring, generated policy, or a metadata replacement for `Risks`
 
 ## Risks
 
@@ -144,7 +153,7 @@ What should stay invariant:
 - caution lift stays bounded and review-shaped
 - the pattern does not turn into a machine-readable caution program
 
-This technique is a markdown-first lift over existing `Risks`, not a new shadow platform. A canonical-only adverse-effects review note can now supplement the same contract for already-canonical bundles, but generated caution outputs, policy scoring, and metadata layers remain deferred.
+This technique is a markdown-first lift over existing `Risks`, not a new shadow platform. A canonical-only adverse-effects review note can supplement the same contract for already-canonical bundles, but generated caution outputs, policy scoring, and metadata layers remain deferred.
 
 ## Public sanitization notes
 
@@ -167,4 +176,5 @@ See `checks/caution-lift-checklist.md`.
 
 - strengthen second-context evidence once another markdown-first corpus reuses the same bounded caution-lift split
 - clarify when the existing canonical adverse-effects review supplement is enough and when a corpus should still stay with `Risks` alone
+- keep caution lookup bounded to review and reuse questions rather than letting it become a policy or scoring surface
 - keep shadow metadata, generated caution outputs, and scoring layers deferred unless bounded caution lookup stops being enough

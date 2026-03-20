@@ -15,7 +15,7 @@ tags:
   - metadata
   - frontmatter
   - catalog
-summary: Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning.
+summary: Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs.
 maturity_score: 3
 rigor_level: bounded
 reversibility: easy
@@ -33,6 +33,10 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # frontmatter-metadata-spine
@@ -52,7 +56,7 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 
 - systems that want full section meaning, rationale, or caution language to live in metadata
 - repos where frontmatter is still unstable or overloaded with project-local details
-- cases where the next step is graph behavior, section IDs, or schema expansion rather than bounded routing metadata
+- cases where the next step is graph behavior, section IDs, schema expansion, or a metadata-first source of truth rather than bounded routing metadata
 - workflows that would hand-edit the derived catalog instead of regenerating it
 
 ## Inputs
@@ -75,7 +79,7 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 2. Generate a catalog from that frontmatter rather than maintaining a second hand-authored metadata source.
 3. Use the catalog for bundle lookup, status routing, or direct-edge hints.
 4. Route any question about section meaning, caution language, or provenance argument back to markdown sections and note files.
-5. Add new metadata only when the routing problem cannot be solved by the current bounded spine.
+5. Add new metadata only when the routing problem cannot be solved by the current bounded spine and markdown authority still remains primary.
 6. Rebuild the catalog whenever source frontmatter changes.
 
 ## Contracts
@@ -84,7 +88,7 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 - the catalog remains fully derived from authoritative markdown-frontmatter
 - metadata supports routing and lookup, not full knowledge replacement
 - caution language, section meaning, and provenance interpretation remain in markdown
-- the technique does not require schema expansion or a new `kag` domain
+- the technique does not require schema expansion, a new `kag` domain, or a replacement for markdown authority
 
 ## Risks
 
@@ -146,7 +150,7 @@ What should stay invariant:
 - markdown sections still hold the real technique meaning
 - the spine is justified by current routing value, not by future graph ambition
 
-Do not widen the technique into richer schema just because later KAG work exists. The point is a bounded metadata spine, not metadata-first authorship.
+Do not widen the technique into richer schema just because later KAG work exists. The point is a bounded metadata spine, not metadata-first authorship or a replacement for markdown authority.
 
 ## Public sanitization notes
 
