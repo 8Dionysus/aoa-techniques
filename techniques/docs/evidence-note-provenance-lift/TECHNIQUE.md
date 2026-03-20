@@ -6,7 +6,7 @@ status: promoted
 origin:
   project: aoa-techniques
   path: scripts/build_evidence_note_manifest.py
-  note: Extracted from the current evidence-note manifest layer and provenance guidance to keep note-level support surfaces typed and reachable without flattening them into a note graph.
+  note: Extracted from the current evidence-note manifest layer and provenance guidance to keep note-kind and note-path provenance typed and reachable without flattening them into a note graph.
 owners:
   - 8Dionysus
 tags:
@@ -15,7 +15,7 @@ tags:
   - provenance
   - evidence-notes
   - manifests
-summary: Use typed evidence notes and note paths as bounded provenance handles in derived manifests without flattening them into a note graph.
+summary: Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph.
 maturity_score: 3
 rigor_level: bounded
 reversibility: easy
@@ -29,24 +29,28 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # evidence-note-provenance-lift
 
 ## Intent
 
-Lift typed evidence notes into a bounded provenance surface so readers and tooling can find supporting origin, transfer, or review context without collapsing notes into one merged graph.
+Lift typed evidence notes into a bounded provenance surface so readers and tooling can find supporting origin, transfer, or review context through explicit note kind and note path handles without collapsing notes into one merged graph.
 
 ## When to use
 
 - repositories where technique bundles already point to typed supporting notes
 - provenance questions such as origin proof, second-context evidence, readiness review, canonical adverse-effects review, or external import review
-- generated entrypoints that should expose note roles and paths without replacing the note body
+- generated entrypoints that should expose note kinds and paths without replacing the note body
 - KAG-oriented work that needs note-level handles before any cross-note graph program exists
 
 ## When not to use
 
-- systems that have no stable note roles or no explicit note paths
+- systems that have no stable note kinds or no explicit note paths
 - cases where the real need is note IDs, cross-note graph semantics, or machine-extracted proof objects
 - repositories that want to flatten all provenance meaning into frontmatter
 - workflows where maintainers would rather edit generated note manifests than update the notes themselves
@@ -63,13 +67,13 @@ Lift typed evidence notes into a bounded provenance surface so readers and tooli
 - bounded provenance handles for supporting notes
 - derived note manifest entries
 - preserved note-level authorship and context
-- reusable note-role map for origin, transfer, readiness, or import review surfaces
+- reusable note-kind map for origin, transfer, readiness, or import review surfaces
 
 ## Core procedure
 
 1. Keep the supporting notes as authored markdown under `notes/`.
 2. Point to those notes from bundle metadata through typed evidence handles.
-3. Lift the note layer into a derived manifest that preserves note role, path, and bounded content shape.
+3. Lift the note layer into a derived manifest that preserves note kind, path, and bounded content shape.
 4. Keep opaque notes opaque when they do not share a reusable typed structure.
 5. Use the derived manifest for provenance lookup, not for replacing the note body.
 6. Route interpretation and public-safety reasoning back to the underlying note when meaning matters.
@@ -79,14 +83,14 @@ Lift typed evidence notes into a bounded provenance surface so readers and tooli
 - note paths and note kinds remain explicit
 - note meaning stays in authored markdown
 - derived provenance output preserves note-level context rather than flattening all notes into one schema
-- supporting notes stay bounded to reviewable roles such as origin, second context, readiness, canonical adverse-effects review, or external review
+- supporting notes stay bounded to reviewable kinds such as origin, second context, readiness, canonical adverse-effects review, or external review
 - the technique does not require note IDs, graph semantics, or a new source of truth
 
 ## Risks
 
 ### Failure modes
 
-- note kinds drift until the manifest can no longer tell which provenance role a note is meant to play
+- note kinds drift until the manifest can no longer tell which provenance kind a note is meant to play
 - flattening pressure strips interpretation or review nuance out of the note body
 - contributors start treating the manifest entry as the note itself
 
@@ -98,14 +102,14 @@ Lift typed evidence notes into a bounded provenance surface so readers and tooli
 
 ### Misuse patterns
 
-- turning note roles into graph nodes with stable IDs before the note layer proves it needs them
+- turning note kinds into graph nodes with stable IDs before the note layer proves it needs them
 - extracting verdicts, scoring, or relation rationale from notes just because a manifest exists
 - using opaque support notes as a reason to widen note metadata instead of narrowing the review question
 
 ### Detection signals
 
 - contributors ask for note-meaning changes by editing the manifest rather than the note body
-- note types multiply faster than reviewers can explain their distinct roles
+- note kinds multiply faster than reviewers can explain their distinct purposes
 - flattened manifest fields lose the argument or interpretation that made the note trustworthy
 - provenance questions now depend on cross-note graph logic rather than on bounded note lookup
 
@@ -113,14 +117,14 @@ Lift typed evidence notes into a bounded provenance surface so readers and tooli
 
 - keep note kinds small and review-shaped
 - preserve authored note text as the place where interpretation and public-safety reasoning live
-- add new note roles only when one current role is clearly overloaded
+- add new note kinds only when one current kind is clearly overloaded
 - stop at bounded provenance handles when the next request is really for a graph or scoring layer
 
 ## Validation
 
 Verify the technique by confirming that:
 - bundles point to supporting notes through explicit `evidence.kind` and `evidence.path`
-- note roles remain understandable and bounded
+- note kinds remain understandable and bounded
 - the derived provenance surface can be rebuilt from note markdown
 - readers can use the manifest to find the right supporting note without losing note-level context
 - note meaning still routes back to authored markdown instead of flattened metadata
@@ -131,13 +135,13 @@ For repo-grounded origin evidence, see `notes/origin-evidence.md`.
 ## Adaptation notes
 
 What can vary across projects:
-- which note roles are present
+- which note kinds are present
 - whether some notes are fully typed or intentionally opaque
 - the manifest format used for provenance lookup
 - the exact note filename conventions
 
 What should stay invariant:
-- note roles remain explicit
+- note kinds remain explicit
 - notes remain authored markdown
 - manifest output stays derived and bounded
 - provenance lift does not become a note graph or proof-object system
@@ -164,5 +168,5 @@ See `checks/evidence-note-provenance-checklist.md`.
 ## Future evolution
 
 - strengthen second-context evidence once the same bounded provenance pattern appears in another markdown-first corpus
-- clarify when a new note role is warranted versus when an existing role should stay broader
+- clarify when a new note kind is warranted versus when an existing kind should stay broader
 - keep note IDs, cross-note graphs, and flattened trust semantics deferred

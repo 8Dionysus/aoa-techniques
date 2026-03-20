@@ -995,6 +995,14 @@
         {
           "kind": "origin_evidence",
           "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },
@@ -1003,7 +1011,7 @@
       "name": "frontmatter-metadata-spine",
       "domain": "docs",
       "status": "promoted",
-      "summary": "Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning.",
+      "summary": "Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs.",
       "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
       "origin": {
         "project": "aoa-techniques",
@@ -1045,6 +1053,14 @@
         {
           "kind": "origin_evidence",
           "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },
@@ -1053,12 +1069,12 @@
       "name": "evidence-note-provenance-lift",
       "domain": "docs",
       "status": "promoted",
-      "summary": "Use typed evidence notes and note paths as bounded provenance handles in derived manifests without flattening them into a note graph.",
+      "summary": "Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph.",
       "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
       "origin": {
         "project": "aoa-techniques",
         "path": "scripts/build_evidence_note_manifest.py",
-        "note": "Extracted from the current evidence-note manifest layer and provenance guidance to keep note-level support surfaces typed and reachable without flattening them into a note graph."
+        "note": "Extracted from the current evidence-note manifest layer and provenance guidance to keep note-kind and note-path provenance typed and reachable without flattening them into a note graph."
       },
       "owners": [
         "8Dionysus"
@@ -1087,6 +1103,14 @@
         {
           "kind": "origin_evidence",
           "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },
@@ -1129,6 +1153,14 @@
         {
           "kind": "origin_evidence",
           "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },
@@ -1137,12 +1169,12 @@
       "name": "risk-and-negative-effect-lift",
       "domain": "docs",
       "status": "promoted",
-      "summary": "Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata or scoring.",
+      "summary": "Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy.",
       "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
       "origin": {
         "project": "aoa-techniques",
         "path": "docs/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md",
-        "note": "Extracted from the current shadow guides, validator-enforced Risks contract, and live corpus to keep caution lookup bounded and markdown-first without turning caution into metadata or scoring."
+        "note": "Extracted from the current shadow guides, validator-enforced Risks contract, and live corpus to keep caution lookup bounded and markdown-first while staying subordinate to authored Risks and canonical adverse-effects review."
       },
       "owners": [
         "8Dionysus"
@@ -1171,6 +1203,14 @@
         {
           "kind": "origin_evidence",
           "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     }

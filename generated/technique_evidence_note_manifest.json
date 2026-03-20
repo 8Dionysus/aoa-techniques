@@ -8381,6 +8381,141 @@
       "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/markdown-technique-section-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0018"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "markdown-technique-section-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the bundle came from the section-manifest layer and the KAG source-lift guidance, so it already has a bounded generated-output anchor"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the adaptation note shows the lift contract clearly enough to remain reusable, but it still reads as a repo-local lookup sketch rather than a live cross-repo proof"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle has stable sections, examples, and checks, but it still lacks another markdown-first corpus proving the same section-lift discipline in practice"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this remains the right default when section lookup needs to stay derived from markdown rather than from a metadata-first store"
+                },
+                {
+                  "order": 2,
+                  "text": "it is narrower than any metadata-spine technique because the core contract is still section meaning, not routing fields"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle should stay promoted until another repository proves that the same lift remains useful outside this public canon"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable section-lift contract and avoids repo-local implementation trivia"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the pattern remains understandable without hidden automation or private source files"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should show that stable heading lift survives repeated use without turning into metadata-spine semantics"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0018` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/markdown-technique-section-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
@@ -8456,6 +8591,147 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/docs/markdown-technique-section-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0018"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "markdown-technique-section-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique canon with authored markdown bundles, generated lookup surfaces, and no separate section-ID authoring system"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "repository documentation and generated readers that need bounded section lookup without moving meaning out of markdown"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the source bundle is `techniques/docs/markdown-technique-section-lift/TECHNIQUE.md`; the derived surface is the section manifest and reader companion, not a new authored section store"
+                },
+                {
+                  "order": 2,
+                  "key": "dependencies",
+                  "value_markdown": "the pattern depends on stable top-level headings and rebuildable derived outputs, not on graph behavior or section IDs"
+                },
+                {
+                  "order": 3,
+                  "key": "operating assumptions",
+                  "value_markdown": "a public docs repository can lift stable headings into a bounded lookup surface while keeping authored prose as the only semantic home"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one markdown bundle remains the authoritative source of section meaning"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "the derived surface should rebuild from markdown and preserve heading order"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "metadata can help route readers, but it must not become the place where section meaning lives"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a repository may start treating the lifted view as a substitute for the bundle instead of a routing aid"
+                },
+                {
+                  "order": 2,
+                  "text": "metadata richness can make the lift feel more complete than it is, especially when the surrounding prose still carries the real contract"
+                },
+                {
+                  "order": 3,
+                  "text": "a small stable heading set can drift into a shadow schema if consumers keep asking for more fields instead of reading the bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`AOA-T-0002 source-of-truth-layout` already proves that this repository prefers canonical homes for meaning instead of duplicate role copies"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0012 deterministic-context-composition` already proves that this repository can publish bounded derived doc surfaces while preserving authored source authority"
+                },
+                {
+                  "order": 3,
+                  "text": "the current section-lift bundle fits those instincts by keeping lookup derived and section meaning rooted in markdown"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded repo-local adaptation sketch for a promoted source-lift technique, while still needing stronger live reuse evidence before any future canonical review"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8463,6 +8739,137 @@
       "id": "AOA-T-0019",
       "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0019"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "frontmatter-metadata-spine"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the current catalog layer already projects bounded frontmatter into derived routing outputs, so the metadata spine is real and not hypothetical"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the repo-local adaptation note shows the same contract surviving in `aoa-techniques` as a public routing layer rather than as schema expansion"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle already has a checklist, a reusable example, and clear separation between metadata, derived catalog outputs, and markdown meaning"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right default when a repository needs small routing fields for lookup, review posture, and direct adjacency without turning frontmatter into the technique's primary knowledge source"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than section lift or provenance lift because it should help navigate the bundle, not replace the bundle's prose"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable metadata-spine contract and strips project-specific implementation detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the current wording remains understandable without hidden repository context or a richer schema contract"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the missing proof is a second live context where the same bounded metadata spine is reused outside this repository narrative"
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should show that shallow frontmatter remains enough even when the downstream routing problem is slightly different"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0019` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until the technique proves itself in another live reuse context and the metadata spine still stays shallow"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/docs/frontmatter-metadata-spine/notes/origin-evidence.md",
           "kind": "origin_evidence",
@@ -8539,6 +8946,152 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0019"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "frontmatter-metadata-spine"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with technique bundles, a generated catalog, and reader-facing navigation surfaces"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "markdown-first repository where frontmatter must stay shallow and derived outputs stay subordinate to authored bundle meaning"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the origin uses a richer internal catalog spine; this adaptation keeps the same bounded routing idea but maps it onto public technique bundles and generated catalog surfaces"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "there is no need for additional schema layers, graph behavior, or hand-authored metadata mirrors in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on a small stable set of frontmatter fields plus a regenerated catalog, not on richer metadata modeling"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "public docs can use frontmatter for identity and routing while markdown keeps the actual technique meaning"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "shallow frontmatter can still act as a bounded spine for bundle lookup and review posture"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "routing should still come from derived catalog outputs, not from manually edited metadata copies"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "markdown meaning stays authoritative and frontmatter does not become the primary knowledge source"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the repository could start treating the catalog as a substitute for reading the bundle itself"
+                },
+                {
+                  "order": 2,
+                  "text": "frontmatter could widen into a schema-first surface if future KAG work keeps asking for more fields instead of narrower routing"
+                },
+                {
+                  "order": 3,
+                  "text": "small metadata changes could drift into the illusion that the technique owns more meaning than it actually does"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`AOA-T-0002 source-of-truth-layout` already proves this repository values one canonical home per information class rather than many drifting copies"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0018 markdown-technique-section-lift` proves that the repo already supports derived lift surfaces while keeping authored markdown authoritative"
+                },
+                {
+                  "order": 3,
+                  "text": "the current catalog and selection surfaces already consume `AOA-T-0019`-style metadata in a bounded, derived way rather than as a replacement for the bundle text"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger reuse evidence before any future canonical review"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8546,6 +9099,141 @@
       "id": "AOA-T-0020",
       "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/docs/evidence-note-provenance-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0020"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "evidence-note-provenance-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the bundle already has a typed manifest anchor for note-kind and note-path provenance"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the adaptation note shows the technique clearly enough to stay reusable, but it still reads as a repo-local provenance sketch rather than a live cross-repo proof"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle already has a checklist, an example, and explicit note-path routing, but it still lacks another markdown-first corpus proving the same note-kind contract in practice"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this remains the right default when supporting notes should stay reachable by kind and path without becoming a note graph"
+                },
+                {
+                  "order": 2,
+                  "text": "it is narrower than any proof-object or graph layer because the core contract is still provenance lookup, not relation inference"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle should stay promoted until another repository proves that the same note-kind split remains useful outside this public canon"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable provenance pattern and strips repo-local implementation trivia"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the pattern remains understandable without hidden automation or private source files"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should show that typed note kinds and note paths survive repeated use without turning into graph semantics or flattened metadata"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0020` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/docs/evidence-note-provenance-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
@@ -8622,6 +9310,152 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/docs/evidence-note-provenance-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0020"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "evidence-note-provenance-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique canon with typed supporting notes and derived manifests"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "markdown-first repository where provenance lookup must stay readable to humans and agents"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "note kinds",
+                  "value_markdown": "the public form keeps typed note kinds such as origin, second-context adaptation, and canonical readiness instead of flattening all notes into one generic support bucket"
+                },
+                {
+                  "order": 2,
+                  "key": "paths",
+                  "value_markdown": "the public form keeps note paths explicit so each supporting note remains independently reachable"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on authored markdown notes plus a derived manifest, not on note IDs or cross-note graph behavior"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "a public repository can expose provenance handles for note lookup while still leaving the note body as the place where interpretation lives"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "provenance remains note-kind plus note-path lookup"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "readers can find the supporting note without losing the authored note text"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "the manifest stays derived and does not become the source of truth for note meaning"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "note kinds can multiply if future bundles start splitting provenance roles too finely"
+                },
+                {
+                  "order": 2,
+                  "text": "a derived manifest can look complete even when the supporting note text still carries the real judgment"
+                },
+                {
+                  "order": 3,
+                  "text": "if the note kind layer becomes too clever, maintainers may start expecting graph semantics that the technique does not claim"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`AOA-T-0018 markdown-technique-section-lift` already proves this repository is comfortable with bounded derived lookup over authored markdown"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0019 frontmatter-metadata-spine` already proves the repo can keep shallow metadata derived while leaving real meaning in markdown"
+                },
+                {
+                  "order": 3,
+                  "text": "this technique fits the same public pattern by keeping provenance handles small, explicit, and markdown-first"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8629,6 +9463,141 @@
       "id": "AOA-T-0021",
       "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0021"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-relation-lift-for-kag"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the bundle came from relation consumers and relation-lift guidance, so it already has a bounded navigation anchor"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the adaptation note keeps the contract readable as direct typed adjacency, but it still reads as a repo-local navigation sketch rather than a live cross-repo proof"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle has a clear relation vocabulary and current consumers, but it still lacks another markdown-first corpus proving the same bounded edge layer in practice"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this remains the right default when direct relations are only meant to guide nearby inspection"
+                },
+                {
+                  "order": 2,
+                  "text": "it is narrower than any graph-oriented contract because the edge meaning stops at one-step adjacency"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle should stay promoted until another repository proves that the same relation layer remains useful without becoming a rationale or traversal system"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable direct-edge contract and avoids repo-local implementation trivia"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the pattern remains understandable without hidden automation or private source files"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should show that direct typed adjacency survives repeated use without turning into graph semantics or multi-hop inference"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0021` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/origin-evidence.md",
           "kind": "origin_evidence",
@@ -8705,6 +9674,147 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0021"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-relation-lift-for-kag"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique canon with derived navigation surfaces and reviewable direct relations between bundles"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository where adjacency hints should stay bounded and easy to inspect"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the relation layer is surfaced through `docs/SELECTION_PATTERNS.md` and the generated catalog, not through a graph subsystem"
+                },
+                {
+                  "order": 2,
+                  "key": "dependencies",
+                  "value_markdown": "the technique depends on direct typed `relations` plus reviewable markdown bundles, not on inference engines or relation scoring"
+                },
+                {
+                  "order": 3,
+                  "key": "operating assumptions",
+                  "value_markdown": "a public repository can use direct typed hints to guide nearby inspection without promoting the hints into explanation or traversal policy"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one typed relation still means one bounded adjacency hint"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "direct targets should stay explicit and inspectable in the authored bundle"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "rationale, weighting, and multi-hop interpretation stay out of the relation field"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "direct edges can look more authoritative than they are if readers stop opening the underlying bundles"
+                },
+                {
+                  "order": 2,
+                  "text": "generated navigation surfaces can encourage relation drift if maintainers start adding edges to satisfy discoverability instead of semantic clarity"
+                },
+                {
+                  "order": 3,
+                  "text": "the pattern can drift into graph-like thinking if future consumers ask the relation layer to answer \"why\" or \"what next next\" questions"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`AOA-T-0019 frontmatter-metadata-spine` already proves that this repository can keep routing metadata shallow while meaning stays in markdown"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0018 markdown-technique-section-lift` already proves that derived lookup surfaces can remain bounded and subordinate to authored bundles"
+                },
+                {
+                  "order": 3,
+                  "text": "the current `SELECTION_PATTERNS.md` surface already consumes direct relations as nearby-hint navigation rather than as graph traversal"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded repo-local adaptation sketch for direct typed relation hints, while still needing stronger live reuse evidence before any future canonical review"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8712,6 +9822,141 @@
       "id": "AOA-T-0022",
       "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/docs/risk-and-negative-effect-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0022"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "risk-and-negative-effect-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the bundle already has the fixed `Risks` contract plus the public caution-lift guide that keeps the markdown-first split explicit"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the adaptation note shows the contract clearly enough to stay reusable, but it still reads as a repo-local caution sketch rather than a live cross-repo proof"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle already has a checklist, an example, and explicit markdown-first caution routing, but it still lacks another markdown-first corpus proving the same caution-lift split in practice"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this remains the right default when one bundle needs bounded caution lookup over `Risks` without turning that lookup into scoring or policy"
+                },
+                {
+                  "order": 2,
+                  "text": "it is narrower than a threat model, incident taxonomy, or policy-scoring framework because the core contract is still review-oriented markdown lookup"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle should stay promoted until another corpus proves that the same caution split remains useful outside this public canon"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable markdown-first caution pattern and strips repo-local implementation trivia"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the pattern remains understandable without hidden automation or private source files"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should show that caution lookup survives repeated use without turning into generated policy, scoring, or metadata replacement for `Risks`"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0022` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/docs/risk-and-negative-effect-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
@@ -8788,6 +10033,156 @@
                 {
                   "order": 2,
                   "text": "this technique does not invent a new caution layer; it generalizes the caution discipline that `aoa-techniques` already uses and keeps bounded"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/risk-and-negative-effect-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0022"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "risk-and-negative-effect-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with markdown-first technique bundles, validator-enforced Risks language, and canonical adverse-effects review notes on already-canonical bundles"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that can describe the pattern clearly even when it does not automate any caution policy layer directly"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the source guide and live corpus were shaped into one bounded markdown-first caution-lift contract for reuse across review surfaces"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "there is no local scoring engine, caution policy service, or generated caution program in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on authored `Risks` prose and explicit note-backed review surfaces, not on private safety tooling or metadata expansion"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "a public docs-oriented repository can keep caution lookup bounded while still letting canonical bundles add a supplemental adverse-effects review note"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "`Risks` remains the primary caution source for the bundle"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "caution questions should still route back to authored markdown when meaning matters"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "bounded caution lookup must not become metadata, scoring, or generated policy"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a small repository may over-abstract the pattern and start treating caution lookup as a policy layer"
+                },
+                {
+                  "order": 2,
+                  "text": "without the underlying markdown contract, contributors could describe the caution split well but fail to keep it reviewable"
+                },
+                {
+                  "order": 3,
+                  "text": "the presence of a canonical supplement could blur the boundary unless it stays explicitly downstream from `Risks`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`AOA-T-0022` already has the fixed five-part `Risks` shape that the caution-lift contract needs"
+                },
+                {
+                  "order": 2,
+                  "text": "`AOA-T-0022` already sits beside the canonical-only adverse-effects review note pattern, which keeps caution review bounded without introducing metadata policy"
+                },
+                {
+                  "order": 3,
+                  "text": "this adaptation combines those repository-native instincts into a bounded sketch for markdown-first caution lookup without making caution authoritative over the bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "this is sufficient as repo-local adaptation evidence for a first promoted draft, but it is not enough to argue for canonical status on its own"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review"
                 }
               ]
             }

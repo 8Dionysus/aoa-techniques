@@ -29,6 +29,10 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # bounded-relation-lift-for-kag
@@ -43,6 +47,7 @@ Use a small typed set of direct bundle relations as bounded edge hints for gener
 - navigation or retrieval surfaces that need one-step adjacency hints
 - KAG-oriented work that wants future edge inputs without jumping straight to graph behavior
 - review paths where relation vocabulary should stay small and human-readable
+- generated readers that only need direct typed hints, not explanation layers or inferred traversal
 
 ## When not to use
 
@@ -50,13 +55,14 @@ Use a small typed set of direct bundle relations as bounded edge hints for gener
 - repositories where direct relations are still too noisy or unstable to trust as bounded adjacency hints
 - cases where the real problem is semantic ambiguity between techniques, which should be handled by review rather than by more edges
 - workflows that would use current relations as transitive truth or graph-engine inputs by default
+- consumers that want a rationale layer, graph semantics, or multi-hop inference from the relation field itself
 
 ## Inputs
 
 - bounded typed `relations` in frontmatter
 - direct target technique IDs
 - one or more current relation consumers such as catalog or selection surfaces
-- explicit agreement that relation explanation still lives in markdown and review docs
+- explicit agreement that relation explanation, if needed, still lives in markdown and review docs rather than in the relation field
 
 ## Outputs
 
@@ -64,21 +70,22 @@ Use a small typed set of direct bundle relations as bounded edge hints for gener
 - derived consumers that can show nearby techniques
 - reusable small relation vocabulary
 - future-ready edge surface that remains human-reviewable
+- no implied rationale, weighting, or transitive graph behavior
 
 ## Core procedure
 
 1. Keep the relation vocabulary intentionally small and direct.
 2. Record only immediate adjacency that helps navigation or bounded review.
 3. Project those edges into derived consumers such as catalogs or selection surfaces.
-4. Use relations for one-step inspection hints rather than multi-hop inference.
-5. Keep the explanation for why an edge exists in markdown bundles or review docs.
+4. Use relations for one-step inspection hints rather than multi-hop inference or graph traversal.
+5. Keep the explanation for why an edge exists in markdown bundles or review docs, not inside the relation field.
 6. Refuse to widen the edge layer unless current direct-edge use has clearly stopped being enough.
 
 ## Contracts
 
 - relations stay direct and typed
 - edge meaning is bounded to one-step adjacency hints
-- relation rationale remains outside frontmatter
+- relation rationale remains outside frontmatter and outside the relation field
 - derived consumers remain navigation aids rather than graph engines
 - the technique does not require new relation types, weighting, or a new `kag` domain
 
@@ -141,8 +148,10 @@ What should stay invariant:
 - relation types remain bounded
 - rationale stays in markdown or review docs
 - the edge layer does not become graph semantics by accident
+- no multi-hop inference is introduced by the derived consumer
+- the relation field never becomes a rationale store
 
-This technique sits downstream from a bounded metadata spine. If the next need is graph traversal, relation weighting, or exports, that is a later platform wave, not this technique.
+This technique sits downstream from a bounded metadata spine. If the next need is graph traversal, relation weighting, exports, or a rationale layer, that is a later platform wave, not this technique.
 
 ## Public sanitization notes
 
@@ -165,4 +174,4 @@ See `checks/relation-lift-checklist.md`.
 
 - strengthen second-context evidence once another markdown-first corpus uses the same bounded relation layer
 - add clearer relation-review guidance before widening the vocabulary
-- keep relation rationale, weighting, and multi-hop behavior deferred
+- keep relation rationale, weighting, graph semantics, and multi-hop behavior deferred

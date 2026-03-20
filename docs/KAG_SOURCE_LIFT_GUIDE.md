@@ -24,6 +24,7 @@ The current repository is already strong enough for `technique-as-node` KAG beca
 - small typed `relations`
 - explicit evidence-note kinds and paths
 - generated catalog outputs that stay derived from authoritative markdown
+- a companion family review surface that keeps the reusable source-lift techniques distinct
 
 That is enough to treat the repo as a strong upstream source. It is not yet a finished `section-level` KAG schema.
 
@@ -75,6 +76,8 @@ The next implementation-oriented source-class pilot after examples now stays equ
 Those files lift authored evidence notes into derived provenance knowledge only, and their reader companion stays kind-first and routing-first. They do not add note IDs, note-graph behavior, relation rationale, or flattened note semantics.
 
 They now include the canonical-only `adverse_effects_review` note role as one more typed note scope, but that still does not make caution machine-readable policy or generated caution output.
+
+The five reusable lift techniques now have a companion review surface in `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`, which keeps the section, metadata, provenance, relation, and caution seams separate without turning the family into a graph or policy program.
 
 The next implementation-oriented source-class pilot after evidence notes now stays equally bounded:
 
@@ -156,4 +159,4 @@ Not part of this first wave:
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, semantic and shadow review manifests as derived review knowledge only, repo-doc/status surfaces as derived routing knowledge only, and markdown-first caution lift without metadata or generated caution outputs.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, semantic and shadow review manifests as derived review knowledge only, repo-doc/status surfaces as derived routing knowledge only, markdown-first caution lift without metadata or generated caution outputs, and a companion family review surface that keeps the five techniques readable as one bounded source-lift family.

@@ -29,13 +29,17 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # markdown-technique-section-lift
 
 ## Intent
 
-Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surface so retrieval and review can target one bounded section without replacing markdown as the source of truth.
+Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surface so retrieval and review can target one bounded section while the authored bundle remains the source of meaning.
 
 ## When to use
 
@@ -43,6 +47,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 - generated knowledge or retrieval layers that need section-level routing without inventing new authored section files
 - documentation systems where another human or agent should be able to jump directly to `Intent`, `Contracts`, `Risks`, or `Validation`
 - KAG-oriented work that needs bounded section lookup before any graph or section-ID program exists
+- cases where a derived section surface should stay subordinate to the bundle's authored prose instead of becoming a metadata-spine replacement for it
 
 ## When not to use
 
@@ -50,6 +55,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 - systems that want section-level authorship to move out of the markdown bundle into separate files or metadata
 - cases where the real need is graph semantics, ranking, or multi-hop reasoning rather than bounded section lift
 - workflows that would treat the manifest as the new editable source of truth
+- situations where frontmatter metadata already answers the question and the section lift would only duplicate that routing layer
 
 ## Inputs
 
@@ -57,6 +63,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 - a small stable set of top-level section headings worth lifting
 - one derived output surface such as a section manifest
 - a rebuild path that can regenerate the derived output from markdown
+- an explicit decision to keep meaning in the markdown bundle rather than in metadata or section IDs
 
 ## Outputs
 
@@ -64,6 +71,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 - explicit section headings that remain traceable to the source bundle
 - section lookup surface for review or retrieval
 - preserved markdown authority over section meaning
+- bounded derived lookup that does not change the bundle into a metadata-first contract
 
 ## Core procedure
 
@@ -73,6 +81,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 4. Preserve the original section order and heading text instead of inventing a second parallel structure.
 5. Rebuild the derived output whenever the source bundle changes.
 6. Route readers or tooling back to the source markdown path when they need the full meaning of a lifted section.
+7. Treat any metadata or catalog projection as routing help only, not as the place where section meaning now lives.
 
 ## Contracts
 
@@ -81,6 +90,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 - derived output preserves section order instead of reinterpreting the document as an unordered field set
 - consumers can map a lifted section back to the source bundle and heading
 - the technique does not require section IDs, graph edges, or authored section files to work
+- the technique does not collapse into metadata-spine semantics or replace markdown authority with catalog fields
 
 ## Risks
 
@@ -135,14 +145,17 @@ What can vary across projects:
 - the derived output filename or manifest format
 - whether lifted sections are consumed by retrieval, review tooling, or human navigation surfaces
 - the rebuild command used to regenerate the derived output
+- how much metadata support is useful before the lift starts duplicating the catalog layer
 
 What should stay invariant:
 - markdown remains authoritative
 - section lift stays derived-only
 - lift scope is explicit and bounded
 - consumers can still route back to the source bundle
+- metadata can support lookup, but it should not become the semantic home for section meaning
 
 This technique does not require a new `kag` domain. Keep it inside the existing domain that already owns the markdown source vocabulary.
+The derived surface may sit beside a metadata spine, but it should never absorb that spine's job or turn the bundle into a frontmatter-first contract.
 
 ## Public sanitization notes
 
@@ -164,5 +177,6 @@ See `checks/section-lift-checklist.md`.
 ## Future evolution
 
 - strengthen second-context evidence once another markdown-first repository uses the same bounded section-lift discipline
+- keep the current derived lookup subordinate to authored prose even when the catalog or selection layer becomes more convenient
 - add review guidance for when a section is too unstable to keep in the lifted scope
 - keep section IDs and richer graph semantics deferred unless bounded lookup stops being enough

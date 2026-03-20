@@ -59,6 +59,12 @@ See also:
 - Review: [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 - Why grouped: Bounded test-first slicing, contract-surface validation, invariant coverage broadening, and semantic scoping for recent skill-support techniques.
 
+### KAG/source-lift family
+
+- Techniques: [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md), [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md), [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+- Review: [KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+- Why grouped: Section lift, metadata spine, provenance lift, bounded relation lift, and markdown-first caution lift for the current reusable KAG/source-lift family.
+
 ## Common Moves
 
 | situation | inspect next | why |
