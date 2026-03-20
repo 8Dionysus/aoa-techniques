@@ -79,14 +79,20 @@
       "bounded_role": "contributor doctrine for public-safe planning, focused diffs, verification, and reporting",
       "top_level_sections": [
         "Purpose",
+        "Owns",
+        "Does not own",
         "Core rule",
+        "Read this first",
+        "Primary objects",
+        "Allowed changes",
+        "Changes requiring extra care",
         "Hard NO",
-        "Required for every technique",
         "Public hygiene",
         "Contribution doctrine",
-        "Promotion rule",
-        "Preferred PR shape",
-        "Quality bar"
+        "Validation",
+        "Cross-repo neighbors",
+        "Output expectations",
+        "Default editing posture"
       ]
     },
     {
