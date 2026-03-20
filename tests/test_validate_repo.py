@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -766,6 +767,220 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("REPO_DOC_SURFACES.md", kag_source_guide)
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
+
+    def test_section_reader_generated_surface_matches_builder_and_preserves_scope_order(
+        self,
+    ) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        rendered = (REPO_ROOT / "docs" / "TECHNIQUE_SECTIONS.md").read_text(encoding="utf-8")
+
+        validate_repo.validate_section_manifests(REPO_ROOT, records)
+        self.assertEqual(validate_repo.build_section_reader_markdown(REPO_ROOT, records), rendered)
+        self.assertEqual(
+            validate_repo.SECTION_LIFT_HEADINGS,
+            tuple(re.findall(r"^## `(.+?)`$", rendered, flags=re.MULTILINE)),
+        )
+        self.assertIn("## Section Scope", rendered)
+        self.assertNotIn(
+            "Reduce unsafe, opaque, or non-reviewable agent changes by requiring a visible workflow before and after apply.",
+            rendered,
+        )
+        self.assertNotIn("## `Public sanitization notes`", rendered)
+
+    def test_checklist_reader_generated_surface_matches_builder_and_stays_ordered(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        rendered = (REPO_ROOT / "docs" / "TECHNIQUE_CHECKLISTS.md").read_text(encoding="utf-8")
+
+        validate_repo.validate_checklist_manifests(REPO_ROOT, records)
+        self.assertEqual(validate_repo.build_checklist_reader_markdown(REPO_ROOT, records), rendered)
+        self.assertIn("| checklist | intro | items | check path | source |", rendered)
+
+        domain_positions = [rendered.index(f"## `{domain}`") for domain in validate_repo.DOMAIN_ORDER]
+        self.assertEqual(sorted(domain_positions), domain_positions)
+
+        for domain in validate_repo.DOMAIN_ORDER:
+            ordered_records = sorted(
+                [record for record in records if record.domain == domain],
+                key=validate_repo.record_sort_key,
+            )
+            heading_positions = [
+                rendered.index(
+                    f"### {validate_repo.record_technique_link(REPO_ROOT, record)} - {record.name} (`{record.status}`)"
+                )
+                for record in ordered_records
+            ]
+            self.assertEqual(sorted(heading_positions), heading_positions)
+
+    def test_checklist_reader_builder_supports_multiple_checklists_per_technique(self) -> None:
+        technique_dir = REPO_ROOT / "techniques" / "demo"
+        record = validate_repo.TechniqueRecord(
+            technique_dir=technique_dir,
+            technique_path=technique_dir / "TECHNIQUE.md",
+            id="AOA-T-9999",
+            name="demo-technique",
+            domain="docs",
+            status="promoted",
+            summary="demo",
+            frontmatter={},
+            body="",
+            sections=(),
+            checklists=(
+                validate_repo.TechniqueChecklist(
+                    check_path="techniques/demo/checks/first.md",
+                    title="First Checklist",
+                    intro_markdown="short intro",
+                    items=(validate_repo.ChecklistItem(text="one"),),
+                ),
+                validate_repo.TechniqueChecklist(
+                    check_path="techniques/demo/checks/second.md",
+                    title="Second Checklist",
+                    intro_markdown="",
+                    items=(
+                        validate_repo.ChecklistItem(text="one"),
+                        validate_repo.ChecklistItem(text="two"),
+                    ),
+                ),
+            ),
+            examples=(),
+            notes=(),
+        )
+
+        rendered = validate_repo.build_checklist_reader_markdown(REPO_ROOT, [record])
+
+        self.assertIn("First Checklist", rendered)
+        self.assertIn("Second Checklist", rendered)
+        self.assertIn("`present`", rendered)
+        self.assertIn("`absent`", rendered)
+        self.assertIn("`1`", rendered)
+        self.assertIn("`2`", rendered)
+
+    def test_example_reader_generated_surface_matches_builder_and_stays_bounded(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        rendered = (REPO_ROOT / "docs" / "TECHNIQUE_EXAMPLES.md").read_text(encoding="utf-8")
+
+        validate_repo.validate_example_manifests(REPO_ROOT, records)
+        self.assertEqual(validate_repo.build_example_reader_markdown(REPO_ROOT, records), rendered)
+        self.assertIn("| example | body | example path | source |", rendered)
+        self.assertIn("minimal-change-flow.md", rendered)
+        self.assertNotIn(
+            "This example shows the technique as a reusable outline for a small, reviewable change.",
+            rendered,
+        )
+
+        domain_positions = [rendered.index(f"## `{domain}`") for domain in validate_repo.DOMAIN_ORDER]
+        self.assertEqual(sorted(domain_positions), domain_positions)
+
+    def test_evidence_note_reader_generated_surface_matches_builder_and_stays_bounded(
+        self,
+    ) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        rendered = (REPO_ROOT / "docs" / "EVIDENCE_NOTE_SURFACES.md").read_text(
+            encoding="utf-8"
+        )
+
+        validate_repo.validate_evidence_note_manifests(REPO_ROOT, records)
+        self.assertEqual(
+            validate_repo.build_evidence_note_reader_markdown(REPO_ROOT, records),
+            rendered,
+        )
+        self.assertIn("## Note Scope", rendered)
+        self.assertIn("`adverse_effects_review`", rendered)
+        self.assertIn("`typed_sections`", rendered)
+        self.assertIn("opaque note body only", rendered)
+        self.assertNotIn(
+            "validation becomes symbolic while the workflow still reports success",
+            rendered,
+        )
+
+    def test_kag_source_readers_are_discoverable_from_docs_root_readme_changelog_kag_and_release_docs(
+        self,
+    ) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+        releasing = (REPO_ROOT / "docs" / "RELEASING.md").read_text(encoding="utf-8")
+        evidence_guide = (
+            REPO_ROOT / "docs" / "EVIDENCE_NOTE_PROVENANCE_GUIDE.md"
+        ).read_text(encoding="utf-8")
+
+        for target in (
+            "TECHNIQUE_SECTIONS.md",
+            "TECHNIQUE_SECTION_LIFT_GUIDE.md",
+            "TECHNIQUE_CHECKLISTS.md",
+            "TECHNIQUE_CHECKLIST_LIFT_GUIDE.md",
+            "TECHNIQUE_EXAMPLES.md",
+            "TECHNIQUE_EXAMPLE_LIFT_GUIDE.md",
+            "EVIDENCE_NOTE_SURFACES.md",
+            "technique_section_manifest.json",
+            "technique_checklist_manifest.json",
+            "technique_example_manifest.json",
+            "technique_evidence_note_manifest.json",
+        ):
+            self.assertIn(target, docs_readme)
+
+        for target in (
+            "docs/TECHNIQUE_SECTIONS.md",
+            "docs/TECHNIQUE_SECTION_LIFT_GUIDE.md",
+            "docs/TECHNIQUE_CHECKLISTS.md",
+            "docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md",
+            "docs/TECHNIQUE_EXAMPLES.md",
+            "docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md",
+            "docs/EVIDENCE_NOTE_SURFACES.md",
+            "generated/technique_section_manifest.json",
+            "generated/technique_checklist_manifest.json",
+            "generated/technique_example_manifest.json",
+            "generated/technique_evidence_note_manifest.json",
+        ):
+            self.assertIn(target, readme)
+
+        for target in (
+            "TECHNIQUE_SECTIONS.md",
+            "TECHNIQUE_SECTION_LIFT_GUIDE.md",
+            "TECHNIQUE_CHECKLISTS.md",
+            "TECHNIQUE_CHECKLIST_LIFT_GUIDE.md",
+            "TECHNIQUE_EXAMPLES.md",
+            "TECHNIQUE_EXAMPLE_LIFT_GUIDE.md",
+            "EVIDENCE_NOTE_SURFACES.md",
+            "EVIDENCE_NOTE_PROVENANCE_GUIDE.md",
+        ):
+            self.assertIn(target, changelog)
+
+        for target in (
+            "TECHNIQUE_SECTIONS.md",
+            "TECHNIQUE_SECTION_LIFT_GUIDE.md",
+            "TECHNIQUE_CHECKLISTS.md",
+            "TECHNIQUE_CHECKLIST_LIFT_GUIDE.md",
+            "TECHNIQUE_EXAMPLES.md",
+            "TECHNIQUE_EXAMPLE_LIFT_GUIDE.md",
+            "EVIDENCE_NOTE_SURFACES.md",
+        ):
+            self.assertIn(target, kag_source_guide)
+
+        for target in (
+            "python scripts/build_section_manifest.py",
+            "python scripts/build_checklist_manifest.py",
+            "python scripts/build_example_manifest.py",
+            "python scripts/build_evidence_note_manifest.py",
+            "docs/TECHNIQUE_SECTIONS.md",
+            "docs/TECHNIQUE_CHECKLISTS.md",
+            "docs/TECHNIQUE_EXAMPLES.md",
+            "docs/EVIDENCE_NOTE_SURFACES.md",
+            "TECHNIQUE_SECTION_LIFT_GUIDE.md",
+            "TECHNIQUE_CHECKLIST_LIFT_GUIDE.md",
+            "TECHNIQUE_EXAMPLE_LIFT_GUIDE.md",
+            "EVIDENCE_NOTE_PROVENANCE_GUIDE.md",
+        ):
+            self.assertIn(target, releasing)
+
+        self.assertIn("EVIDENCE_NOTE_SURFACES.md", evidence_guide)
+        self.assertIn("authoritative contract doc", evidence_guide)
 
     def test_capsule_surfaces_are_discoverable_from_docs_root_readme_changelog_and_release_docs(
         self,

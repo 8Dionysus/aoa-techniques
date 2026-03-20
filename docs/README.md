@@ -33,6 +33,13 @@ Choose the path that matches your question:
   - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+  - [Technique Sections](TECHNIQUE_SECTIONS.md)
+  - [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
+  - [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
+  - [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
+  - [Technique Examples](TECHNIQUE_EXAMPLES.md)
+  - [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
+  - [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
   - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
   - [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
   - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
@@ -65,6 +72,32 @@ These are reader-facing navigation artifacts derived from authoritative markdown
   - use when you need one bounded answer to where a canonical technique can quietly make the system worse and which watch seam to inspect first
 - [Repo Doc Surfaces](REPO_DOC_SURFACES.md)
   - use when you need one bounded answer to which authoritative repo doc/status surface to open next
+
+### Generated KAG/source-lift readers
+
+These are reader-facing navigation artifacts derived from the current KAG/source-lift manifest families. They stay subordinate to authored markdown and do not become scoring, execution, or graph layers.
+
+- [Technique Sections](TECHNIQUE_SECTIONS.md)
+  - use when you need one heading-first router over the first 10 lifted `TECHNIQUE.md` sections
+- [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
+  - use when you need one bounded checklist inventory by domain and technique
+- [Technique Examples](TECHNIQUE_EXAMPLES.md)
+  - use when you need one bounded example inventory without opening each example body first
+- [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
+  - use when you need note-kind routing, note-shape awareness, or a bounded inventory of evidence-note surfaces
+
+### Generated KAG/source-lift manifests
+
+These are the current bounded JSON lift surfaces behind the reader companions above.
+
+- [`../generated/technique_section_manifest.json`](../generated/technique_section_manifest.json)
+  - use when the first 10 lifted `TECHNIQUE.md` sections should stay machine-readable and order-stable
+- [`../generated/technique_checklist_manifest.json`](../generated/technique_checklist_manifest.json)
+  - use when checklist inventories should stay derived validation knowledge only
+- [`../generated/technique_example_manifest.json`](../generated/technique_example_manifest.json)
+  - use when example inventories should stay derived example knowledge only
+- [`../generated/technique_evidence_note_manifest.json`](../generated/technique_evidence_note_manifest.json)
+  - use when typed and opaque note surfaces should stay derived provenance knowledge only
 
 ### Local runtime cards
 
@@ -120,6 +153,9 @@ These review-only docs inspect where caution language is most likely to blur nei
 These guides explain what the repo can already support as a future lift surface and what remains intentionally deferred.
 
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+- [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
+- [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
+- [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
 - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
 - [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
 - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
@@ -171,14 +207,21 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 ### KAG / lift path
 
 1. [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-2. [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
-3. [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-4. [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
-5. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
-6. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
-7. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-8. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
-9. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
+2. [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
+3. [Technique Sections](TECHNIQUE_SECTIONS.md)
+4. [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
+5. [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
+6. [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
+7. [Technique Examples](TECHNIQUE_EXAMPLES.md)
+8. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
+9. [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
+10. [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
+11. [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
+12. [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
+13. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
+14. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+15. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
+16. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
 
 ## Companion Repository Surfaces
 
@@ -194,6 +237,10 @@ These are outside `docs/` but matter when navigating the repo:
 ## Notes
 
 - Prefer generated reader surfaces when the question is "what should I inspect next?"
+- Prefer `TECHNIQUE_SECTIONS.md` when the question is "which published techniques expose this lifted section heading?"
+- Prefer `TECHNIQUE_CHECKLISTS.md` when the question is "which technique already publishes a reusable checklist?"
+- Prefer `TECHNIQUE_EXAMPLES.md` when the question is "which technique already has a reusable example surface?"
+- Prefer `EVIDENCE_NOTE_SURFACES.md` when the question is "which note kind or note shape should I inspect next?"
 - Prefer `REPO_DOC_SURFACES.md` when the question is "which authoritative repo doc should I open next?"
 - Prefer `SHADOW_PATTERNS.md` when the question is "where can this canonical technique fail quietly or create false confidence?"
 - Prefer authored guides when the question is "what does this repo mean by this rule or boundary?"

@@ -43,29 +43,36 @@ The first implementation-oriented extraction pilot now stays equally narrow:
 
 - `generated/technique_section_manifest.json`
 - `generated/technique_section_manifest.min.json`
+- `docs/TECHNIQUE_SECTIONS.md`
+- `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`
 
-Those files stay derived from authoritative markdown and expose only the first 10 KAG target sections. They do not add graph, rationale, search, or scoring behavior.
+Those files stay derived from authoritative markdown and expose only the first 10 KAG target sections. Their reader companion is heading-first and routing-only. They do not add graph, rationale, search, or scoring behavior.
 
 The next implementation-oriented source-class pilot now stays equally bounded:
 
 - `generated/technique_checklist_manifest.json`
 - `generated/technique_checklist_manifest.min.json`
+- `docs/TECHNIQUE_CHECKLISTS.md`
+- `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`
 
-Those files lift authored validation checklists into derived validation knowledge only. They are not executable policy, hard-gate semantics, or a new scoring layer.
+Those files lift authored validation checklists into derived validation knowledge only, and their reader companion stays inventory-first rather than policy-first. They are not executable policy, hard-gate semantics, or a new scoring layer.
 
 The next implementation-oriented source-class pilot after checklists now stays equally bounded:
 
 - `generated/technique_example_manifest.json`
 - `generated/technique_example_manifest.min.json`
+- `docs/TECHNIQUE_EXAMPLES.md`
+- `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`
 
-Those files lift authored example narratives into derived example knowledge only. They are not scenario graphs, executable tests, or a richer step-extraction layer yet.
+Those files lift authored example narratives into derived example knowledge only, and their reader companion stays inventory-first without inlining full example bodies. They are not scenario graphs, executable tests, or a richer step-extraction layer yet.
 
 The next implementation-oriented source-class pilot after examples now stays equally bounded:
 
 - `generated/technique_evidence_note_manifest.json`
 - `generated/technique_evidence_note_manifest.min.json`
+- `docs/EVIDENCE_NOTE_SURFACES.md`
 
-Those files lift authored evidence notes into derived provenance knowledge only. They do not add note IDs, note-graph behavior, relation rationale, or flattened note semantics.
+Those files lift authored evidence notes into derived provenance knowledge only, and their reader companion stays kind-first and routing-first. They do not add note IDs, note-graph behavior, relation rationale, or flattened note semantics.
 
 They now include the canonical-only `adverse_effects_review` note role as one more typed note scope, but that still does not make caution machine-readable policy or generated caution output.
 

@@ -40,6 +40,12 @@ A release should make it easy to answer:
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
    - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULES.md`.
    - Use `TECHNIQUE_CAPSULE_GUIDE.md` as the authored contract reference when checking that the runtime card family stayed bounded.
+   - This now also includes the KAG/source-lift reader companions for sections, checklists, examples, and evidence notes:
+     - `generated/technique_section_manifest.json` and `docs/TECHNIQUE_SECTIONS.md`
+     - `generated/technique_checklist_manifest.json` and `docs/TECHNIQUE_CHECKLISTS.md`
+     - `generated/technique_example_manifest.json` and `docs/TECHNIQUE_EXAMPLES.md`
+     - `generated/technique_evidence_note_manifest.json` and `docs/EVIDENCE_NOTE_SURFACES.md`
+   - Use `TECHNIQUE_SECTION_LIFT_GUIDE.md`, `TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `EVIDENCE_NOTE_PROVENANCE_GUIDE.md` as the authored contract references when checking that those KAG/source-lift reader families stayed bounded.
 6. Review public-safety hygiene:
    - no secrets
    - no internal-only URLs

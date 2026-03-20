@@ -30,6 +30,9 @@ See also: `docs/SHADOW_PATTERNS.md` for the generated canonical-only shadow watc
 See also: `docs/REPO_DOC_SURFACES.md` for the generated router over the 10 authoritative public docs/status files.
 See also: `generated/repo_doc_surface_manifest.json` for the derived docs/status source-lift manifest over that same bounded source set.
 See also: `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md` for the contract and exclusions behind the docs/status source-lift layer.
+See also: `docs/TECHNIQUE_SECTIONS.md`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, and `docs/EVIDENCE_NOTE_SURFACES.md` for generated KAG/source-lift reader surfaces over section, checklist, example, and evidence-note families.
+See also: `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, and `generated/technique_evidence_note_manifest.json` for the bounded KAG/source-lift manifest families behind those readers.
+See also: `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md` for the authored contracts behind those source classes.
 See also: `generated/shadow_review_manifest.json` for the derived review-knowledge surface over authored cluster-level shadow reviews.
 See also: the first public KAG/source-lift quartet in `techniques/docs/` for reusable section, metadata, provenance, and direct-relation lift patterns without opening a new `kag` domain.
 See also: `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md` for the first reusable markdown-first caution lift pattern over the same corpus.
