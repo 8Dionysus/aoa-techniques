@@ -26,6 +26,7 @@ jobs:
 
       - name: Run generator entrypoints
         run: |
+          python scripts/build_capsules.py
           python scripts/build_section_manifest.py
           python scripts/build_checklist_manifest.py
           python scripts/build_example_manifest.py

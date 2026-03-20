@@ -26,6 +26,16 @@ REQUIRED_SECTIONS = (
     "Future evolution",
 )
 SECTION_LIFT_HEADINGS = REQUIRED_SECTIONS[:10]
+CAPSULE_SECTION_HEADINGS = (
+    "Intent",
+    "When to use",
+    "When not to use",
+    "Inputs",
+    "Outputs",
+    "Contracts",
+    "Risks",
+    "Validation",
+)
 RISK_SUBSECTION_HEADINGS = (
     "Failure modes",
     "Negative effects",
@@ -43,6 +53,7 @@ REQUIRED_STAGE1_FILES = (
     "schemas/relation.schema.json",
     "schemas/index-entry.schema.json",
     "scripts/build_catalog.py",
+    "scripts/build_capsules.py",
     "scripts/build_section_manifest.py",
     "scripts/build_checklist_manifest.py",
     "scripts/build_example_manifest.py",
@@ -51,6 +62,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_semantic_review_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
+    "generated/technique_capsules.json",
     "generated/technique_section_manifest.json",
     "generated/technique_section_manifest.min.json",
     "generated/technique_checklist_manifest.json",
@@ -212,6 +224,10 @@ SUBSECTION_RE = re.compile(r"^### (.+)$", re.MULTILINE)
 NOTE_FIELD_RE = re.compile(r"- ([a-z0-9][a-z0-9_ /-]*):\s*(.*)")
 TEMPLATE_FIELD_RE = re.compile(r"- ([^:]+):\s*(.*)")
 TEMPLATE_CHECKBOX_RE = re.compile(r"- \[( |x|X)\] (.*)")
+MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
+INLINE_CODE_RE = re.compile(r"`([^`]+)`")
+LEADING_LIST_MARKER_RE = re.compile(r"^(?:[-*]\s+|\d+\.\s+)")
+WHITESPACE_RE = re.compile(r"\s+")
 EVIDENCE_KIND_BY_NAME = {
     "origin-evidence.md": "origin_evidence",
     "second-context-adaptation.md": "second_context",
@@ -223,6 +239,8 @@ EVIDENCE_KIND_BY_NAME = {
 ADVERSE_EFFECTS_REVIEW_PATH = "notes/adverse-effects-review.md"
 SECTION_MANIFEST_VERSION = 1
 SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
+CAPSULE_VERSION = 1
+CAPSULE_SOURCE_OF_TRUTH = "frontmatter-summary+markdown-technique-capsules-v1"
 CHECKLIST_MANIFEST_VERSION = 1
 CHECKLIST_MANIFEST_SOURCE_OF_TRUTH = "markdown-checklists-v1"
 EXAMPLE_MANIFEST_VERSION = 1
@@ -915,6 +933,207 @@ def parse_sections(body: str) -> tuple[TechniqueSection, ...]:
         )
 
     return tuple(sections)
+
+
+def normalize_plain_text(text: str) -> str:
+    return WHITESPACE_RE.sub(" ", text).strip()
+
+
+def markdown_line_to_plain_text(line: str) -> str:
+    stripped = line.strip()
+    if not stripped or stripped.startswith(("## ", "### ")):
+        return ""
+    if stripped.startswith("|") and stripped.endswith("|"):
+        return ""
+
+    stripped = LEADING_LIST_MARKER_RE.sub("", stripped)
+    stripped = MARKDOWN_LINK_RE.sub(r"\1", stripped)
+    stripped = INLINE_CODE_RE.sub(r"\1", stripped)
+    stripped = stripped.replace("**", "").replace("*", "")
+    return normalize_plain_text(stripped)
+
+
+def markdown_to_plain_text(markdown: str) -> str:
+    return normalize_plain_text(
+        " ".join(
+            plain_line
+            for plain_line in (markdown_line_to_plain_text(line) for line in markdown.splitlines())
+            if plain_line
+        )
+    )
+
+
+def capsule_markdown_items(markdown: str) -> list[str]:
+    items: list[str] = []
+    for line in markdown.splitlines():
+        if not LEADING_LIST_MARKER_RE.match(line.strip()):
+            continue
+        plain_item = markdown_line_to_plain_text(line)
+        if plain_item:
+            items.append(plain_item)
+    return items
+
+
+def first_sentence(markdown: str) -> str:
+    plain_text = markdown_to_plain_text(markdown)
+    if not plain_text:
+        return ""
+    return re.split(r"(?<=[.!?])\s+", plain_text, maxsplit=1)[0].strip()
+
+
+def finalize_capsule_text(text: str, truncated: bool) -> str:
+    compact = normalize_plain_text(text).rstrip(" .,;:")
+    if not compact:
+        return ""
+    return compact + ("..." if truncated else ".")
+
+
+def truncate_capsule_text(text: str, max_words: int) -> str:
+    normalized = normalize_plain_text(text)
+    if not normalized:
+        return ""
+
+    words = normalized.split()
+    if len(words) <= max_words:
+        return finalize_capsule_text(normalized, truncated=False)
+    return finalize_capsule_text(" ".join(words[:max_words]), truncated=True)
+
+
+def capsule_compare_text(text: str) -> str:
+    comparable = normalize_plain_text(text.replace("...", "").rstrip("."))
+    for prefix in (
+        "Intent: ",
+        "Use when ",
+        "Avoid when ",
+        "Needs ",
+        "Produces ",
+        "Core contract: ",
+        "Main risk: ",
+        "Validate by checking ",
+    ):
+        if comparable.startswith(prefix):
+            comparable = comparable[len(prefix) :]
+            break
+    return normalize_plain_text(comparable)
+
+
+def ensure_derived_capsule_text(candidate: str, source_markdown: str, max_words: int) -> str:
+    source_plain = markdown_to_plain_text(source_markdown)
+    if not source_plain:
+        return candidate
+    if capsule_compare_text(candidate) != capsule_compare_text(source_plain):
+        return candidate
+
+    source_words = source_plain.split()
+    if len(source_words) <= 1:
+        return candidate
+
+    forced_budget = max(1, min(max_words, len(source_words) - 1))
+    return truncate_capsule_text(source_plain, forced_budget)
+
+
+def join_with_or(items: list[str]) -> str:
+    if not items:
+        return ""
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return f"{items[0]} or {items[1]}"
+    return f"{', '.join(items[:-1])}, or {items[-1]}"
+
+
+def join_with_semicolons(items: list[str]) -> str:
+    return "; ".join(item for item in items if item)
+
+
+def capsule_sections_by_heading(record: TechniqueRecord) -> dict[str, TechniqueSection]:
+    sections_by_heading = {section.heading: section for section in record.sections}
+    missing = [heading for heading in CAPSULE_SECTION_HEADINGS if heading not in sections_by_heading]
+    if missing:
+        expected = ", ".join(f"'## {heading}'" for heading in CAPSULE_SECTION_HEADINGS)
+        actual = ", ".join(f"'## {heading}'" for heading in missing)
+        fail(
+            f"{record.technique_path}: capsule source requires sections [{expected}]; "
+            f"missing [{actual}]"
+        )
+    return sections_by_heading
+
+
+def capsule_bullets_or_sentence(markdown: str, fallback_count: int) -> list[str]:
+    items = capsule_markdown_items(markdown)
+    if items:
+        return items[:fallback_count]
+    sentence = first_sentence(markdown)
+    return [sentence] if sentence else []
+
+
+def summarize_capsule_intent(markdown: str) -> str:
+    sentence = first_sentence(markdown)
+    candidate = truncate_capsule_text(sentence, 14)
+    return ensure_derived_capsule_text(candidate, markdown, 12)
+
+
+def summarize_capsule_use_when(markdown: str) -> str:
+    candidate = truncate_capsule_text(
+        f"Use when {join_with_or(capsule_bullets_or_sentence(markdown, 2))}",
+        20,
+    )
+    return ensure_derived_capsule_text(candidate, markdown, 16)
+
+
+def summarize_capsule_do_not_use(markdown: str) -> str:
+    candidate = truncate_capsule_text(
+        f"Avoid when {join_with_or(capsule_bullets_or_sentence(markdown, 2))}",
+        20,
+    )
+    return ensure_derived_capsule_text(candidate, markdown, 16)
+
+
+def summarize_capsule_inputs(markdown: str) -> str:
+    candidate = truncate_capsule_text(
+        f"Needs {join_with_semicolons(capsule_bullets_or_sentence(markdown, 3))}",
+        18,
+    )
+    return ensure_derived_capsule_text(candidate, markdown, 14)
+
+
+def summarize_capsule_outputs(markdown: str) -> str:
+    candidate = truncate_capsule_text(
+        f"Produces {join_with_semicolons(capsule_bullets_or_sentence(markdown, 3))}",
+        18,
+    )
+    return ensure_derived_capsule_text(candidate, markdown, 14)
+
+
+def summarize_capsule_contract(markdown: str) -> str:
+    candidate = truncate_capsule_text(
+        f"Core contract: {join_with_semicolons(capsule_bullets_or_sentence(markdown, 2))}",
+        20,
+    )
+    return ensure_derived_capsule_text(candidate, markdown, 16)
+
+
+def summarize_capsule_risk(markdown: str) -> str:
+    subsection_map = {section.heading: section.markdown for section in parse_subsections(markdown)}
+    for heading in ("Failure modes", "Negative effects", "Misuse patterns"):
+        subsection_markdown = subsection_map.get(heading)
+        if not subsection_markdown:
+            continue
+        signals = capsule_bullets_or_sentence(subsection_markdown, 1)
+        if signals:
+            candidate = truncate_capsule_text(f"Main risk: {signals[0]}", 20)
+            return ensure_derived_capsule_text(candidate, subsection_markdown, 16)
+
+    candidate = truncate_capsule_text(f"Main risk: {first_sentence(markdown)}", 20)
+    return ensure_derived_capsule_text(candidate, markdown, 16)
+
+
+def summarize_capsule_validation(markdown: str) -> str:
+    candidate = truncate_capsule_text(
+        f"Validate by checking {join_with_semicolons(capsule_bullets_or_sentence(markdown, 3))}",
+        22,
+    )
+    return ensure_derived_capsule_text(candidate, markdown, 18)
 
 
 def validate_risks_markdown(risks_markdown: str, technique_path: Path) -> None:
@@ -2251,6 +2470,41 @@ def min_catalog_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any
     }
 
 
+def full_capsule_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any]:
+    sections_by_heading = capsule_sections_by_heading(record)
+    capsule_entry = {
+        "id": record.id,
+        "name": record.name,
+        "summary": record.summary,
+        "one_line_intent": summarize_capsule_intent(sections_by_heading["Intent"].markdown),
+        "use_when_short": summarize_capsule_use_when(sections_by_heading["When to use"].markdown),
+        "do_not_use_short": summarize_capsule_do_not_use(
+            sections_by_heading["When not to use"].markdown
+        ),
+        "inputs_short": summarize_capsule_inputs(sections_by_heading["Inputs"].markdown),
+        "outputs_short": summarize_capsule_outputs(sections_by_heading["Outputs"].markdown),
+        "core_contract_short": summarize_capsule_contract(sections_by_heading["Contracts"].markdown),
+        "main_risk_short": summarize_capsule_risk(sections_by_heading["Risks"].markdown),
+        "validation_short": summarize_capsule_validation(sections_by_heading["Validation"].markdown),
+        "technique_path": record.technique_path.relative_to(repo_root).as_posix(),
+    }
+
+    for key in (
+        "one_line_intent",
+        "use_when_short",
+        "do_not_use_short",
+        "inputs_short",
+        "outputs_short",
+        "core_contract_short",
+        "main_risk_short",
+        "validation_short",
+    ):
+        if not capsule_entry[key]:
+            fail(f"{record.technique_path}: capsule field '{key}' must not be empty")
+
+    return capsule_entry
+
+
 def full_section_manifest_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any]:
     sections_by_heading = {section.heading: section for section in record.sections}
     return {
@@ -2763,6 +3017,15 @@ def build_catalog_payloads(
     return full_catalog, min_catalog
 
 
+def build_capsule_payload(repo_root: Path, records: list[TechniqueRecord]) -> dict[str, Any]:
+    sorted_records = sorted(records, key=lambda record: record.id)
+    return {
+        "capsule_version": CAPSULE_VERSION,
+        "source_of_truth": CAPSULE_SOURCE_OF_TRUTH,
+        "techniques": [full_capsule_entry(repo_root, record) for record in sorted_records],
+    }
+
+
 def build_section_manifest_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -3129,6 +3392,27 @@ def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_st
         fail(f"{min_path}: min catalog must stay a projection of the full catalog")
 
 
+def validate_capsules(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    path = repo_root / "generated" / "technique_capsules.json"
+    expected = build_capsule_payload(repo_root, records)
+    actual = read_json(path)
+
+    if actual != expected:
+        fail(f"{path}: generated capsules are out of date; run 'python scripts/build_capsules.py'")
+
+    catalog = read_json(repo_root / "generated" / "technique_catalog.json")
+    capsule_alignment = [
+        (entry["id"], entry["name"], entry["summary"], entry["technique_path"])
+        for entry in actual["techniques"]
+    ]
+    catalog_alignment = [
+        (entry["id"], entry["name"], entry["summary"], entry["technique_path"])
+        for entry in catalog["techniques"]
+    ]
+    if capsule_alignment != catalog_alignment:
+        fail(f"{path}: capsule entries must stay 1:1 aligned with generated/technique_catalog.json")
+
+
 def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_section_manifest.json"
     min_path = repo_root / "generated" / "technique_section_manifest.min.json"
@@ -3308,6 +3592,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_evidence(records)
     validate_relations(records)
     validate_catalogs(repo_root, records, schema_store)
+    validate_capsules(repo_root, records)
     validate_section_manifests(repo_root, records)
     validate_checklist_manifests(repo_root, records)
     validate_example_manifests(repo_root, records)
@@ -3328,6 +3613,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated TECHNIQUE_INDEX.md structure and parity")
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
+    print("[ok] validated generated capsule parity")
     print("[ok] validated generated section manifest parity")
     print("[ok] validated generated checklist manifest parity")
     print("[ok] validated generated example manifest parity")
