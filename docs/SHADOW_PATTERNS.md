@@ -5,14 +5,15 @@ Do not edit it by hand; run `python scripts/build_catalog.py`.
 
 Use this surface when the main question is not which technique to choose, but where a canonical technique can quietly make the system worse and which watch seam to inspect first.
 
-This surface is canonical-only. It stays bounded to authored markdown, typed adverse-effects notes, one working set, and validator-backed prompts. It does not do scoring, policy routing, or generated caution metadata.
+This surface is canonical-only. It stays bounded to authored markdown, typed adverse-effects notes, review-backed working sets, and validator-backed prompts. It does not do scoring, policy routing, or generated caution metadata.
 
 See also:
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
 - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-- [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [PUBLISHED_SUMMARY_SHADOW_REVIEW.md](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [EVALUATION_CHAIN_SHADOW_REVIEW.md](EVALUATION_CHAIN_SHADOW_REVIEW.md)
 
-## Working Set
+## Working Sets
 
 ### Published-summary shadow cluster
 
@@ -27,6 +28,17 @@ See also:
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) | canonical diagnostic trust layer over published summaries and downstream rollups | preserve the helper's diagnostic-only role, keep optional checks subordinate to required-source health, and keep stricter enforcement as a separate rollout decision | optional consistency noise starts crowding out required-source health and dual-write coherence | [Adverse Effects Review](../techniques/evaluation/telemetry-integrity-snapshot/notes/adverse-effects-review.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | canonical rendering policy for required versus optional summary sources | keep the policy reusable and readable enough that warning traffic does not become ambient noise and the bundle does not collapse into a published-summary appendix | an actually critical source is misclassified as optional and stays there long enough to distort interpretation | [Adverse Effects Review](../techniques/evaluation/required-vs-optional-source-rendering/notes/adverse-effects-review.md) |
 
+### Evaluation-chain shadow pair
+
+- Techniques: [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md)
+- Review: [EVALUATION_CHAIN_SHADOW_REVIEW.md](EVALUATION_CHAIN_SHADOW_REVIEW.md)
+- Why grouped: Canonical producer-contract and staged-enforcement techniques whose caution language now shares one bounded evaluation-chain shadow watch surface.
+
+| technique | current role | watch seam | main failure mode | note |
+|---|---|---|---|---|
+| [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | default summary-contract producer for runnable smoke and probe paths | keep storage and rollout semantics downstream so the producer contract does not collapse into the broader evaluation chain | failure paths emit bare `error` signals with too little observed context to diagnose quickly | [Adverse Effects Review](../techniques/evaluation/contract-first-smoke-summary/notes/adverse-effects-review.md) |
+| [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | default staged-promotion pattern for moving one observed signal toward one narrow strict enforcement surface | keep storage-layout dependency detail subordinate to rollout semantics and keep one strict surface explicit | promotion happens from a shallow or noisy history window and strict mode arrives too early | [Adverse Effects Review](../techniques/evaluation/signal-first-gate-promotion/notes/adverse-effects-review.md) |
+
 ## Common Shadow Questions
 
 | question | inspect first | why |
@@ -35,6 +47,8 @@ See also:
 | I need to stop remediation output from drifting into integrity or rendering policy | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) | Inspect the bounded remediation rollup before widening backlog language into trust verdicts or renderer instructions. |
 | I need to keep a diagnostic helper from turning into an implicit enforcement gate | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) | Inspect the diagnostic-only trust layer and its optional-check noise seam before any stricter rollout decision. |
 | I need optional-source warnings to stay visible without becoming noisy or package-shaped | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | Inspect the required-versus-optional rendering policy and its warning-fatigue plus package-appendix seam. |
+| I need a summary producer to stay diagnostic instead of collapsing back into log scraping | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | Inspect the summary-contract producer and its false-success plus thin-failure-context seam before widening storage or rollout detail. |
+| I need staged enforcement to stay narrow instead of leaking into hidden strictness | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | Inspect the staged-promotion pattern and its shallow-history plus strict-surface leakage seam before adding more rollout telemetry. |
 
 ## Boundaries
 

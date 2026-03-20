@@ -21,6 +21,7 @@ Choose the path that matches your question:
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
   - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
   - [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+  - [Evaluation-Chain Shadow Review](EVALUATION_CHAIN_SHADOW_REVIEW.md)
   - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
   - one canonical bundle plus its `notes/adverse-effects-review.md`
 - I need to understand KAG-oriented lift boundaries:
@@ -63,6 +64,17 @@ These are small local derived cards for runtime lookup. They stay subordinate to
 - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
   - use when one bounded technique card is enough for local lookup, dispatch, or runtime orientation
 
+### Generated review manifests
+
+These are derived review-knowledge surfaces for KAG/source-lift lookup. They stay subordinate to the authored docs and do not replace the human review surfaces.
+
+- [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
+  - use when canonical shadow-review pilots should be lifted as derived review knowledge without turning caution into policy metadata
+- [`../generated/semantic_review_manifest.json`](../generated/semantic_review_manifest.json)
+  - use when authored semantic-review pilots should be lifted as derived boundary-review knowledge only
+- [`../generated/github_review_template_manifest.json`](../generated/github_review_template_manifest.json)
+  - use when GitHub issue or PR review templates should be lifted as derived intake knowledge only
+
 ### Authored review and governance guides
 
 These are human-authored guides that define bounded review, metadata, and documentation discipline.
@@ -77,6 +89,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 These review-only docs inspect where caution language is most likely to blur neighboring canonical techniques or create false confidence.
 
 - [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [Evaluation-Chain Shadow Review](EVALUATION_CHAIN_SHADOW_REVIEW.md)
 
 ### KAG-oriented boundary guides
 
@@ -138,7 +151,8 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 3. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
 4. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 5. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-6. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
+6. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
+7. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
 
 ## Companion Repository Surfaces
 

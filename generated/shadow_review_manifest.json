@@ -1,0 +1,179 @@
+{
+  "manifest_version": 1,
+  "source_of_truth": "markdown-shadow-reviews-v1",
+  "review_scope": {
+    "map": {
+      "first_section_suffix": "Map",
+      "table_header": [
+        "technique",
+        "current role",
+        "current shadow seam"
+      ]
+    },
+    "seams": {
+      "section_heading": "Seam Review",
+      "subsection_level": "###",
+      "question_prefix": "Question: ",
+      "outcome_marker": "Outcome: "
+    },
+    "findings": {
+      "section_heading": "Findings",
+      "overall_outcome_prefix": "Overall outcome: "
+    },
+    "next_step": {
+      "section_heading": "Next Step"
+    }
+  },
+  "reviews": [
+    {
+      "review_id": "evaluation_chain",
+      "review_path": "docs/EVALUATION_CHAIN_SHADOW_REVIEW.md",
+      "title": "Evaluation-Chain Shadow Review",
+      "intro_markdown": "This review-only pilot checks whether the canonical evaluation-chain pair still exposes two bounded shadow seams rather than one blended \"summary plus rollout caution\" layer.\n\nWhy this pair was chosen now:\n\n- both techniques are already `canonical`\n- both already have typed `adverse-effects-review.md` notes\n- the pair already has a semantic-boundary review, so the next bounded question is shadow clarity rather than role confusion\n- evaluation-chain systems are the nearest canonical family where false-success, log-scrape relapse, and hidden strictness can look like healthy operational discipline\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "map_heading": "Pair Map",
+      "map_entries": [
+        {
+          "order": 1,
+          "technique_id": "AOA-T-0003",
+          "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+          "current_role": "default summary-contract producer for runnable smoke and probe paths",
+          "current_shadow_seam": "green-looking summary publication can still hide thin failure context or drift back toward log scraping"
+        },
+        {
+          "order": 2,
+          "technique_id": "AOA-T-0007",
+          "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+          "current_role": "default staged-promotion pattern for moving one observed signal toward one narrow strict enforcement surface",
+          "current_shadow_seam": "staged rollout language can look disciplined while strictness leaks early or telemetry starts masking an undecided enforcement boundary"
+        }
+      ],
+      "seams": [
+        {
+          "heading": "`AOA-T-0003`",
+          "order": 1,
+          "question": "when does a summary producer keep publishing \"success\" while diagnosability is already degrading underneath it?",
+          "analysis_markdown": "- Invariant shadow seam: [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) owns one stable machine-readable producer contract across success and failure paths. Its main shadow is false confidence from summary publication continuing while failure context gets too thin and downstream readers quietly return to log scraping.\n- Successful-failure pattern: the summary still lands at the expected path, but error cases collapse into sparse status fields, supporting details move back into logs, and the contract keeps looking healthy only because the file still exists.\n- Wording check: the bundle and note keep the watch seam on thin failure context, log-scrape relapse, and producer drift into storage or rollout language rather than generic \"more detail would be nice\" commentary. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0007`",
+          "order": 2,
+          "question": "when does staged promotion stop being one explicit rollout path and start acting like hidden strictness with too much telemetry theater?",
+          "analysis_markdown": "- Invariant shadow seam: [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) owns history-backed promotion from observation to one narrow strict surface. Its main shadow is that shallow readiness history, leaking strict behavior, or ever-richer telemetry vocabulary make the rollout look governed even when the real enforcement boundary is still unclear.\n- Successful-failure pattern: dashboards and summaries multiply, but operators cannot state which surface is actually strict, strict consequences appear earlier than intended, or the pair stays stuck in performative observation without a real decision.\n- Wording check: the bundle and note keep the watch seam on premature strictness from shallow history, strict-surface leakage, and telemetry-rich rollout theater rather than broad governance-stack skepticism. Outcome: `clear`.",
+          "outcome": "`clear`."
+        }
+      ],
+      "findings": [
+        {
+          "order": 1,
+          "text": "`AOA-T-0003` still owns producer-contract false success: publication alone is not enough if failures stop carrying bounded diagnostic context and readers drift back to logs."
+        },
+        {
+          "order": 2,
+          "text": "`AOA-T-0007` still owns hidden-strictness drift: the caution is not \"telemetry is bad,\" but that rollout language can outgrow one explicit enforcement boundary."
+        },
+        {
+          "order": 3,
+          "text": "The pair remains shadow-distinct even inside one evaluation chain: `AOA-T-0003` guards contract and diagnosability, while `AOA-T-0007` guards how one observed signal becomes strict."
+        },
+        {
+          "order": 4,
+          "text": "The current adverse-effects notes are already aligned enough for a second shadow-review pilot without reopening either bundle."
+        }
+      ],
+      "overall_outcome": "`clear`",
+      "next_step_markdown": "No broader unified review spine is justified from this pair alone.\n\nKeep the evaluation-chain pair as the second shadow-reviewed canonical family, and treat the docs-boundary pair as the next candidate only if duplicate-summary relapse or navigability loss develops the same need for repo-level shadow lookup."
+    },
+    {
+      "review_id": "published_summary",
+      "review_path": "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+      "title": "Published-Summary Shadow Review",
+      "intro_markdown": "This review-only pilot checks whether the published-summary cluster still exposes four bounded shadow seams rather than one blended caution layer.\n\nWhy this cluster was chosen now:\n\n- all four techniques are already `canonical`\n- all four now have typed `adverse-effects-review.md` notes\n- the cluster already has a semantic-boundary review, so the next bounded question is shadow clarity rather than role confusion\n- published-summary systems are the current densest place for false-success, warning fatigue, and diagnostic drift to hide behind apparently healthy latest outputs\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "map_heading": "Cluster Map",
+      "map_entries": [
+        {
+          "order": 1,
+          "technique_id": "AOA-T-0006",
+          "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+          "current_role": "storage contract for stable latest alias plus immutable history copy",
+          "current_shadow_seam": "latest output can look healthy while history trust or reader precedence is already drifting"
+        },
+        {
+          "order": 2,
+          "technique_id": "AOA-T-0008",
+          "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+          "current_role": "bounded remediation rollup over latest published summaries",
+          "current_shadow_seam": "backlog language can sprawl into integrity verdicts or rendering instructions"
+        },
+        {
+          "order": 3,
+          "technique_id": "AOA-T-0010",
+          "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+          "current_role": "diagnostic trust layer over published summaries and downstream rollups",
+          "current_shadow_seam": "diagnostic helpers can become implicit gates while optional checks create low-value noise"
+        },
+        {
+          "order": 4,
+          "technique_id": "AOA-T-0011",
+          "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+          "current_role": "rendering and contract policy for required versus optional summary sources",
+          "current_shadow_seam": "visible-but-non-fatal warnings can decay into warning fatigue or a package-specific appendix"
+        }
+      ],
+      "seams": [
+        {
+          "heading": "`AOA-T-0006`",
+          "order": 1,
+          "question": "how can the storage contract succeed visibly while accumulation trust is already failing underneath it?",
+          "analysis_markdown": "- Invariant shadow seam: [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) owns alias/history coherence, reader precedence, and anti-double-count trust. Its main shadow is false confidence from the latest alias loading cleanly while historical accumulation is already compromised.\n- Successful-failure pattern: operators find the newest summary quickly and see a clean latest alias, but nested history parity, migration boundaries, or collector precedence have already drifted enough to make trend outputs untrustworthy.\n- Wording check: the bundle and its adverse-effects review now both keep the watch seam on alias/history false confidence plus storage-complexity drift, rather than general archival complexity. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0008`",
+          "order": 2,
+          "question": "when does remediation stop being a bounded backlog and start pretending to be integrity review or rendering policy?",
+          "analysis_markdown": "- Invariant shadow seam: [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) owns deterministic backlog shaping over latest summaries. Its main shadow is that bucket policy and operator-facing language grow until the snapshot reads like a trust verdict or renderer policy instead of one bounded follow-up surface.\n- Successful-failure pattern: the snapshot still emits a backlog, but bucket names, reason text, or truncation language start implying whether the source set is trustworthy or how a consumer should render optional data.\n- Wording check: the bundle and note now keep remediation drift focused on integrity/rendering crossover plus bucket-policy sprawl, not on generic downstream helper growth. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0010`",
+          "order": 3,
+          "question": "when does a diagnostic helper start acting like an implicit enforcement gate and accumulate low-value optional noise?",
+          "analysis_markdown": "- Invariant shadow seam: [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) owns read-only trust diagnosis over published summaries. Its main shadow is that repeated integrity findings and growing optional-check surfaces make the helper behave like a gate without an explicit rollout.\n- Successful-failure pattern: the snapshot is still formally diagnostic, but teams start treating `attention` as a de facto block while the bulk of the output shifts toward optional consistency chatter instead of required-source health and dual-write coherence.\n- Wording check: the bundle and note now keep the watch seam on implicit enforcement drift and optional-check noise, instead of broad \"too many checks\" language alone. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0011`",
+          "order": 4,
+          "question": "when does graceful degradation stop helping and turn into warning fatigue or package-shaped policy?",
+          "analysis_markdown": "- Invariant shadow seam: [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) owns explicit policy for visible-but-non-fatal supporting sources. Its main shadow is that warning traffic becomes ambient noise, critical sources stay optional too long, or the technique starts reading like an appendix for the published-summary package instead of a reusable consumer policy.\n- Successful-failure pattern: the surface stays available and \"works,\" but operators stop reacting to missing optional signals, while new wording keeps anchoring the technique so tightly to remediation and integrity examples that the general contract gets harder to see.\n- Wording check: the bundle and note now keep the watch seam on warning fatigue, bad optional classification, and package-appendix drift while preserving the general consumer-policy contract. Outcome: `watch`.\n\nWhy `watch` instead of `clear`:\n\n- `AOA-T-0011` still draws its clearest optional-source examples from remediation and integrity surfaces in the same cluster.\n- The bundle remains distinct and reusable, but this is still the likeliest place for future caution wording to collapse back into package-specific examples.",
+          "outcome": "`watch`."
+        }
+      ],
+      "findings": [
+        {
+          "order": 1,
+          "text": "`AOA-T-0006` still owns storage-layer false confidence: a clean latest alias can hide broken history trust, and the current shadow language now says that directly."
+        },
+        {
+          "order": 2,
+          "text": "`AOA-T-0008` still owns backlog-shape drift: the main caution is not generic downstream growth, but remediation language widening into trust or rendering semantics."
+        },
+        {
+          "order": 3,
+          "text": "`AOA-T-0010` still owns diagnostic-to-gate drift: the current caution seam is now explicit about implicit enforcement and optional-check noise."
+        },
+        {
+          "order": 4,
+          "text": "`AOA-T-0011` still owns visible-but-non-fatal policy risk: warning fatigue and bad optional classification remain the main reasons to re-open this seam later."
+        },
+        {
+          "order": 5,
+          "text": "The cluster now has a bounded shadow operating layer: bundle-local adverse-effects notes for close review and `SHADOW_PATTERNS.md` for repo-level shadow lookup."
+        }
+      ],
+      "overall_outcome": "`clear with one watch seam`",
+      "next_step_markdown": "No broader repo-wide shadow expansion is justified from this cluster alone.\n\nKeep this published-summary cluster as the first generated shadow operating surface and open a second cluster-level shadow review only when another canonical family develops the same lookup need."
+    }
+  ]
+}

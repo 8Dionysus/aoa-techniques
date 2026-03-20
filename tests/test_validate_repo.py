@@ -178,6 +178,20 @@ relations:
             self.assertEqual("canonical", record.status)
             self.assertIn(spec["target_id"], shadow_targets)
 
+    def test_shadow_working_sets_match_linked_shadow_reviews(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        reviews_by_path = {
+            review.review_path: tuple(entry.technique_id for entry in review.map_entries)
+            for review in validate_repo.parse_shadow_reviews(REPO_ROOT)
+        }
+
+        for spec in validate_repo.SHADOW_WORKING_SET_SPECS:
+            self.assertIn(spec["review_doc"], reviews_by_path)
+            self.assertEqual(tuple(spec["technique_ids"]), reviews_by_path[spec["review_doc"]])
+
+        validate_repo.validate_shadow_working_set_specs(records, REPO_ROOT)
+
     def test_validate_risks_markdown_accepts_fixed_subsection_order(self) -> None:
         validate_repo.validate_risks_markdown(
             """### Failure modes
@@ -544,6 +558,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("Published-summary shadow cluster", shadow_patterns)
         self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", shadow_patterns)
         self.assertIn("validator-backed prompts", shadow_patterns)
+        self.assertIn("Evaluation-chain shadow pair", shadow_patterns)
+        self.assertIn("EVALUATION_CHAIN_SHADOW_REVIEW.md", shadow_patterns)
+        self.assertIn("AOA-T-0003", shadow_patterns)
+        self.assertIn("AOA-T-0007", shadow_patterns)
         self.assertIn("AOA-T-0006", shadow_patterns)
         self.assertIn("AOA-T-0008", shadow_patterns)
         self.assertIn("AOA-T-0010", shadow_patterns)
@@ -571,6 +589,48 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn(
             "| I need optional-source warnings to stay visible without becoming noisy or package-shaped | [AOA-T-0011]",
             shadow_patterns,
+        )
+        self.assertIn(
+            "| I need a summary producer to stay diagnostic instead of collapsing back into log scraping | [AOA-T-0003]",
+            shadow_patterns,
+        )
+        self.assertIn(
+            "| I need staged enforcement to stay narrow instead of leaking into hidden strictness | [AOA-T-0007]",
+            shadow_patterns,
+        )
+
+    def test_shadow_review_manifest_generated_surface_matches_builder(self) -> None:
+        expected_full, expected_min = validate_repo.build_shadow_review_manifest_payloads(REPO_ROOT)
+        actual_full = validate_repo.read_json(REPO_ROOT / "generated" / "shadow_review_manifest.json")
+        actual_min = validate_repo.read_json(REPO_ROOT / "generated" / "shadow_review_manifest.min.json")
+
+        self.assertEqual(expected_full, actual_full)
+        self.assertEqual(expected_min, actual_min)
+        self.assertEqual(
+            validate_repo.project_min_shadow_review_manifest(actual_full),
+            actual_min,
+        )
+
+    def test_shadow_review_docs_follow_bounded_contract(self) -> None:
+        reviews = validate_repo.parse_shadow_reviews(REPO_ROOT)
+        reviews_by_path = {review.review_path: review for review in reviews}
+
+        self.assertEqual(
+            {
+                "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+                "docs/EVALUATION_CHAIN_SHADOW_REVIEW.md",
+            },
+            set(reviews_by_path),
+        )
+        self.assertEqual("Pair Map", reviews_by_path["docs/EVALUATION_CHAIN_SHADOW_REVIEW.md"].map_heading)
+        self.assertEqual(
+            "Cluster Map",
+            reviews_by_path["docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md"].map_heading,
+        )
+        self.assertTrue(reviews_by_path["docs/EVALUATION_CHAIN_SHADOW_REVIEW.md"].seams)
+        self.assertEqual(
+            "`clear`",
+            reviews_by_path["docs/EVALUATION_CHAIN_SHADOW_REVIEW.md"].overall_outcome,
         )
 
     def test_docs_readme_and_guides_link_to_reusable_lift_family(self) -> None:
@@ -600,10 +660,13 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("bounded-relation-lift-for-kag", docs_readme)
         self.assertIn("risk-and-negative-effect-lift", docs_readme)
         self.assertIn("technique_capsules.json", docs_readme)
+        self.assertIn("shadow_review_manifest.json", docs_readme)
         self.assertIn("SHADOW_PATTERNS.md", docs_readme)
         self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", docs_readme)
+        self.assertIn("EVALUATION_CHAIN_SHADOW_REVIEW.md", docs_readme)
         self.assertIn("markdown-technique-section-lift", kag_source_guide)
         self.assertIn("risk-and-negative-effect-lift", kag_source_guide)
+        self.assertIn("shadow_review_manifest.json", kag_source_guide)
         self.assertIn("risk-and-negative-effect-lift", shadow_guide)
         self.assertIn("risk-and-negative-effect-lift", risk_guide)
         self.assertIn("frontmatter-metadata-spine", metadata_guide)
@@ -618,10 +681,16 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertIn("Shadow Patterns", docs_readme)
         self.assertIn("Published-Summary Shadow Review", docs_readme)
+        self.assertIn("Evaluation-Chain Shadow Review", docs_readme)
+        self.assertIn("shadow_review_manifest.json", docs_readme)
         self.assertIn("docs/SHADOW_PATTERNS.md", readme)
         self.assertIn("docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md", readme)
+        self.assertIn("generated/shadow_review_manifest.json", readme)
+        self.assertIn("docs/EVALUATION_CHAIN_SHADOW_REVIEW.md", readme)
         self.assertIn("docs/SHADOW_PATTERNS.md", changelog)
         self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", changelog)
+        self.assertIn("shadow_review_manifest.json", changelog)
+        self.assertIn("EVALUATION_CHAIN_SHADOW_REVIEW.md", changelog)
 
     def test_shadow_wave_bundle_is_present_in_index_catalog_and_selection_surface(self) -> None:
         technique_index = (REPO_ROOT / "TECHNIQUE_INDEX.md").read_text(encoding="utf-8")

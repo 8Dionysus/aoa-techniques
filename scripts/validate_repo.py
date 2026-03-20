@@ -60,6 +60,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_evidence_note_manifest.py",
     "scripts/build_github_review_template_manifest.py",
     "scripts/build_semantic_review_manifest.py",
+    "scripts/build_shadow_review_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_capsules.json",
@@ -75,6 +76,8 @@ REQUIRED_STAGE1_FILES = (
     "generated/github_review_template_manifest.min.json",
     "generated/semantic_review_manifest.json",
     "generated/semantic_review_manifest.min.json",
+    "generated/shadow_review_manifest.json",
+    "generated/shadow_review_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
@@ -201,6 +204,7 @@ COMMON_MOVE_SPECS = (
 )
 SHADOW_REVIEW_DOCS = {
     "published_summary": "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+    "evaluation_chain": "docs/EVALUATION_CHAIN_SHADOW_REVIEW.md",
 }
 SHADOW_WORKING_SET_SPECS = (
     {
@@ -208,6 +212,12 @@ SHADOW_WORKING_SET_SPECS = (
         "technique_ids": ("AOA-T-0006", "AOA-T-0008", "AOA-T-0010", "AOA-T-0011"),
         "review_doc": SHADOW_REVIEW_DOCS["published_summary"],
         "note": "Canonical storage, remediation, integrity, and rendering techniques whose caution language now shares one bounded shadow watch surface.",
+    },
+    {
+        "title": "Evaluation-chain shadow pair",
+        "technique_ids": ("AOA-T-0003", "AOA-T-0007"),
+        "review_doc": SHADOW_REVIEW_DOCS["evaluation_chain"],
+        "note": "Canonical producer-contract and staged-enforcement techniques whose caution language now shares one bounded evaluation-chain shadow watch surface.",
     },
 )
 SHADOW_COMMON_QUESTION_SPECS = (
@@ -230,6 +240,16 @@ SHADOW_COMMON_QUESTION_SPECS = (
         "prompt": "I need optional-source warnings to stay visible without becoming noisy or package-shaped",
         "target_id": "AOA-T-0011",
         "note": "Inspect the required-versus-optional rendering policy and its warning-fatigue plus package-appendix seam.",
+    },
+    {
+        "prompt": "I need a summary producer to stay diagnostic instead of collapsing back into log scraping",
+        "target_id": "AOA-T-0003",
+        "note": "Inspect the summary-contract producer and its false-success plus thin-failure-context seam before widening storage or rollout detail.",
+    },
+    {
+        "prompt": "I need staged enforcement to stay narrow instead of leaking into hidden strictness",
+        "target_id": "AOA-T-0007",
+        "note": "Inspect the staged-promotion pattern and its shallow-history plus strict-surface leakage seam before adding more rollout telemetry.",
     },
 )
 
@@ -285,6 +305,8 @@ GITHUB_REVIEW_TEMPLATE_MANIFEST_VERSION = 1
 GITHUB_REVIEW_TEMPLATE_MANIFEST_SOURCE_OF_TRUTH = "github-review-templates-v1"
 SEMANTIC_REVIEW_MANIFEST_VERSION = 1
 SEMANTIC_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-semantic-reviews-v1"
+SHADOW_REVIEW_MANIFEST_VERSION = 1
+SHADOW_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-shadow-reviews-v1"
 NOTE_SHAPE_TYPED = "typed_sections"
 NOTE_SHAPE_OPAQUE = "opaque_body"
 NOTE_PAYLOAD_FIELDS = "fields"
@@ -302,6 +324,11 @@ SEMANTIC_REVIEW_MAP_DIVIDER = "|---|---|"
 SEMANTIC_REVIEW_QUESTION_PREFIX = "Question: "
 SEMANTIC_REVIEW_OUTCOME_MARKER = "Outcome: "
 SEMANTIC_REVIEW_OVERALL_OUTCOME_PREFIX = "Overall outcome: "
+SHADOW_REVIEW_MAP_HEADER = "| technique | current role | current shadow seam |"
+SHADOW_REVIEW_MAP_DIVIDER = "|---|---|---|"
+SHADOW_REVIEW_QUESTION_PREFIX = "Question: "
+SHADOW_REVIEW_OUTCOME_MARKER = "Outcome: "
+SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX = "Overall outcome: "
 PUBLIC_HYGIENE_SCAN_DIRS = (".github", "docs", "generated", "techniques", "templates")
 PUBLIC_HYGIENE_EXCLUDED_ROOT_FILES = {"TODO.md", "PLANS.md", "ROADMAP.md"}
 PUBLIC_HYGIENE_ALLOWED_URL_PREFIXES = (
@@ -579,6 +606,41 @@ class SemanticReview:
     seams: tuple[SemanticReviewSeam, ...]
     context_notes: tuple[SemanticReviewContextNote, ...]
     findings: tuple[SemanticReviewFinding, ...]
+    overall_outcome: str
+    next_step_markdown: str
+
+
+@dataclass(frozen=True)
+class ShadowReviewMapEntry:
+    technique_id: str
+    technique_path: str
+    current_role: str
+    current_shadow_seam: str
+
+
+@dataclass(frozen=True)
+class ShadowReviewSeam:
+    heading: str
+    question: str
+    analysis_markdown: str
+    outcome: str
+
+
+@dataclass(frozen=True)
+class ShadowReviewFinding:
+    text: str
+
+
+@dataclass(frozen=True)
+class ShadowReview:
+    review_id: str
+    review_path: str
+    title: str
+    intro_markdown: str
+    map_heading: str
+    map_entries: tuple[ShadowReviewMapEntry, ...]
+    seams: tuple[ShadowReviewSeam, ...]
+    findings: tuple[ShadowReviewFinding, ...]
     overall_outcome: str
     next_step_markdown: str
 
@@ -2046,6 +2108,225 @@ def parse_semantic_reviews(repo_root: Path) -> tuple[SemanticReview, ...]:
     return tuple(parse_semantic_review_file(path, repo_root) for path in review_paths)
 
 
+def shadow_review_id_from_path(review_path: Path) -> str:
+    stem = review_path.stem
+    suffix = "_SHADOW_REVIEW"
+    if not stem.endswith(suffix):
+        fail(f"{review_path}: shadow review filename must end with '{suffix}.md'")
+    review_id = stem[: -len(suffix)].lower()
+    if not review_id:
+        fail(f"{review_path}: shadow review filename must include a non-empty review id")
+    return review_id
+
+
+def parse_shadow_review_map_entries(
+    review_path: Path, repo_root: Path, map_markdown: str
+) -> tuple[ShadowReviewMapEntry, ...]:
+    lines = [line.rstrip() for line in map_markdown.splitlines() if line.strip()]
+    if len(lines) < 3:
+        fail(f"{review_path}: shadow review map must include a header, divider, and one row")
+    if lines[0] != SHADOW_REVIEW_MAP_HEADER:
+        fail(
+            f"{review_path}: shadow review map must start with exact header "
+            f"'{SHADOW_REVIEW_MAP_HEADER}'"
+        )
+    if lines[1] != SHADOW_REVIEW_MAP_DIVIDER:
+        fail(
+            f"{review_path}: shadow review map must use exact divider "
+            f"'{SHADOW_REVIEW_MAP_DIVIDER}'"
+        )
+
+    entries: list[ShadowReviewMapEntry] = []
+    row_re = re.compile(r"^\| \[([A-Za-z0-9-]+)\]\(([^)]+)\) \| (.+) \| (.+) \|$")
+    for row_order, line in enumerate(lines[2:], start=1):
+        match = row_re.fullmatch(line)
+        if match is None:
+            fail(f"{review_path}: shadow review map row {row_order} is malformed")
+        technique_id = match.group(1).strip()
+        target = match.group(2).strip()
+        current_role = match.group(3).strip()
+        current_shadow_seam = match.group(4).strip()
+        if not current_role:
+            fail(f"{review_path}: shadow review map row {row_order} must include current role")
+        if not current_shadow_seam:
+            fail(
+                f"{review_path}: shadow review map row {row_order} must include current shadow seam"
+            )
+
+        resolved_target = review_path.parent.joinpath(*PurePosixPath(target).parts).resolve()
+        try:
+            technique_path = resolved_target.relative_to(repo_root.resolve()).as_posix()
+        except ValueError:
+            fail(
+                f"{review_path}: shadow review map row {row_order} points outside the repo: "
+                f"'{target}'"
+            )
+        if not resolved_target.is_file():
+            fail(
+                f"{review_path}: shadow review map row {row_order} points to missing file "
+                f"'{target}'"
+            )
+
+        entries.append(
+            ShadowReviewMapEntry(
+                technique_id=technique_id,
+                technique_path=technique_path,
+                current_role=current_role,
+                current_shadow_seam=current_shadow_seam,
+            )
+        )
+
+    return tuple(entries)
+
+
+def parse_shadow_review_seams(
+    review_path: Path, seam_markdown: str
+) -> tuple[ShadowReviewSeam, ...]:
+    matches = list(SUBSECTION_RE.finditer(seam_markdown))
+    if not matches:
+        fail(f"{review_path}: shadow review '## Seam Review' must include '### ' subsections")
+
+    intro = normalize_section_markdown(seam_markdown[: matches[0].start()])
+    if intro:
+        fail(f"{review_path}: shadow review '## Seam Review' must not include prose before seams")
+
+    seams: list[ShadowReviewSeam] = []
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(seam_markdown)
+        heading = match.group(1).strip()
+        body_markdown = normalize_section_markdown(seam_markdown[start:end])
+        if not body_markdown:
+            fail(f"{review_path}: shadow review seam '{heading}' must not be empty")
+
+        lines = body_markdown.splitlines()
+        nonblank_indexes = [line_index for line_index, line in enumerate(lines) if line.strip()]
+        if not nonblank_indexes:
+            fail(f"{review_path}: shadow review seam '{heading}' must contain a question")
+        question_index = nonblank_indexes[0]
+        question_line = lines[question_index].strip()
+        if not question_line.startswith(SHADOW_REVIEW_QUESTION_PREFIX):
+            fail(
+                f"{review_path}: shadow review seam '{heading}' must start with "
+                f"'{SHADOW_REVIEW_QUESTION_PREFIX}'"
+            )
+        question = question_line[len(SHADOW_REVIEW_QUESTION_PREFIX) :].strip()
+        if not question:
+            fail(f"{review_path}: shadow review seam '{heading}' question must not be empty")
+
+        analysis_markdown = normalize_section_markdown("\n".join(lines[question_index + 1 :]))
+        if not analysis_markdown:
+            fail(f"{review_path}: shadow review seam '{heading}' must include analysis markdown")
+        outcome = extract_last_outcome(analysis_markdown)
+        if outcome is None:
+            fail(
+                f"{review_path}: shadow review seam '{heading}' must include an "
+                f"'{SHADOW_REVIEW_OUTCOME_MARKER}' marker"
+            )
+
+        seams.append(
+            ShadowReviewSeam(
+                heading=heading,
+                question=question,
+                analysis_markdown=analysis_markdown,
+                outcome=outcome,
+            )
+        )
+
+    return tuple(seams)
+
+
+def parse_shadow_review_findings(
+    review_path: Path, findings_markdown: str
+) -> tuple[tuple[ShadowReviewFinding, ...], str]:
+    lines = findings_markdown.splitlines()
+    top_level_indexes = top_level_meaningful_indexes(lines)
+    if len(top_level_indexes) < 2:
+        fail(
+            f"{review_path}: shadow review '## Findings' must include bullet findings and "
+            f"'{SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX}'"
+        )
+
+    last_index = top_level_indexes[-1]
+    overall_line = lines[last_index].strip()
+    if not overall_line.startswith(SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX):
+        fail(
+            f"{review_path}: shadow review '## Findings' must end with "
+            f"'{SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX}'"
+        )
+    overall_outcome = overall_line[len(SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX) :].strip()
+    if not overall_outcome:
+        fail(f"{review_path}: shadow review overall outcome must not be empty")
+
+    findings: list[ShadowReviewFinding] = []
+    item_indexes = top_level_indexes[:-1]
+    for order, start_index in enumerate(item_indexes, start=1):
+        line = lines[start_index]
+        if not line.startswith("- "):
+            fail(
+                f"{review_path}: shadow review findings must use top-level '- ' bullets before "
+                f"the overall outcome"
+            )
+        end_index = item_indexes[order] if order < len(item_indexes) else last_index
+        chunk_lines = lines[start_index:end_index]
+        text = item_text_markdown(chunk_lines[0][2:].strip(), chunk_lines[1:])
+        if not text:
+            fail(f"{review_path}: shadow review finding {order} must not be empty")
+        findings.append(ShadowReviewFinding(text=text))
+
+    return tuple(findings), overall_outcome
+
+
+def parse_shadow_review_file(review_path: Path, repo_root: Path) -> ShadowReview:
+    title, lines, title_index = parse_titled_markdown_file(review_path, "shadow review")
+    review_id = shadow_review_id_from_path(review_path)
+    review_path_str = review_path.relative_to(repo_root).as_posix()
+    body = "\n".join(lines[title_index + 1 :])
+
+    intro_markdown, sections = split_semantic_review_body(review_path, body)
+    if len(sections) != 4:
+        fail(
+            f"{review_path}: shadow review doc must include exactly map, seam review, findings, "
+            f"and next step sections"
+        )
+
+    headings = [section.heading for section in sections]
+    if not headings[0].endswith(" Map"):
+        fail(f"{review_path}: first shadow review section must end with ' Map'")
+    if headings[1] != "Seam Review":
+        fail(f"{review_path}: second shadow review section must be '## Seam Review'")
+    if headings[2] != "Findings":
+        fail(f"{review_path}: third shadow review section must be '## Findings'")
+    if headings[3] != "Next Step":
+        fail(f"{review_path}: final shadow review section must be '## Next Step'")
+
+    map_section, seam_section, findings_section, next_step_section = sections
+    map_entries = parse_shadow_review_map_entries(review_path, repo_root, map_section.markdown)
+    seams = parse_shadow_review_seams(review_path, seam_section.markdown)
+    findings, overall_outcome = parse_shadow_review_findings(review_path, findings_section.markdown)
+
+    return ShadowReview(
+        review_id=review_id,
+        review_path=review_path_str,
+        title=title,
+        intro_markdown=intro_markdown,
+        map_heading=map_section.heading,
+        map_entries=map_entries,
+        seams=seams,
+        findings=findings,
+        overall_outcome=overall_outcome,
+        next_step_markdown=next_step_section.markdown,
+    )
+
+
+def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
+    review_paths = sorted(
+        (repo_root / "docs").glob("*_SHADOW_REVIEW.md"),
+        key=lambda path: path.relative_to(repo_root).as_posix(),
+    )
+    return tuple(parse_shadow_review_file(path, repo_root) for path in review_paths)
+
+
 def validate_selection_working_set_specs(repo_root: Path) -> None:
     reviews_by_path = {
         review.review_path: review for review in parse_semantic_reviews(repo_root)
@@ -2070,34 +2351,44 @@ def validate_selection_working_set_specs(repo_root: Path) -> None:
 
 def validate_shadow_working_set_specs(records: list[TechniqueRecord], repo_root: Path) -> None:
     records_by_id = {record.id: record for record in records}
+    reviews_by_path = {
+        review.review_path: review for review in parse_shadow_reviews(repo_root)
+    }
 
     for spec in SHADOW_WORKING_SET_SPECS:
-        review_doc = repo_root / spec["review_doc"]
-        if not review_doc.is_file():
+        review_doc = spec["review_doc"]
+        if review_doc not in reviews_by_path:
             fail(
-                f"{repo_root}: shadow working set '{spec['title']}' points to missing review doc "
-                f"'{spec['review_doc']}'"
+                f"{Path(review_doc).name}: review-backed shadow working set '{spec['title']}' points "
+                f"to a missing shadow review doc"
             )
 
         technique_ids = tuple(spec["technique_ids"])
         if not technique_ids:
-            fail(f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' must not be empty")
+            fail(f"{Path(review_doc).name}: shadow working set '{spec['title']}' must not be empty")
+
+        actual_ids = tuple(entry.technique_id for entry in reviews_by_path[review_doc].map_entries)
+        if actual_ids != technique_ids:
+            fail(
+                f"{Path(review_doc).name}: shadow working set '{spec['title']}' must match shadow "
+                f"review map entry order {technique_ids}, found {actual_ids}"
+            )
 
         for technique_id in technique_ids:
             record = records_by_id.get(technique_id)
             if record is None:
                 fail(
-                    f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' "
+                    f"{Path(review_doc).name}: shadow working set '{spec['title']}' "
                     f"references unknown technique '{technique_id}'"
                 )
             if record.status != "canonical":
                 fail(
-                    f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' "
+                    f"{Path(review_doc).name}: shadow working set '{spec['title']}' "
                     f"must stay canonical-only, found '{technique_id}' with status '{record.status}'"
                 )
             if "adverse_effects_review" not in {note.kind for note in record.notes}:
                 fail(
-                    f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' "
+                    f"{Path(review_doc).name}: shadow working set '{spec['title']}' "
                     f"requires typed adverse-effects reviews for '{technique_id}'"
                 )
 
@@ -2996,6 +3287,28 @@ def semantic_review_scope_payload() -> dict[str, Any]:
     }
 
 
+def shadow_review_scope_payload() -> dict[str, Any]:
+    return {
+        "map": {
+            "first_section_suffix": "Map",
+            "table_header": ["technique", "current role", "current shadow seam"],
+        },
+        "seams": {
+            "section_heading": "Seam Review",
+            "subsection_level": "###",
+            "question_prefix": SHADOW_REVIEW_QUESTION_PREFIX,
+            "outcome_marker": SHADOW_REVIEW_OUTCOME_MARKER,
+        },
+        "findings": {
+            "section_heading": "Findings",
+            "overall_outcome_prefix": SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX,
+        },
+        "next_step": {
+            "section_heading": "Next Step",
+        },
+    }
+
+
 def full_semantic_review_manifest_entry(review: SemanticReview) -> dict[str, Any]:
     return {
         "review_id": review.review_id,
@@ -3030,6 +3343,45 @@ def full_semantic_review_manifest_entry(review: SemanticReview) -> dict[str, Any
                 "outcome": note.outcome,
             }
             for order, note in enumerate(review.context_notes, start=1)
+        ],
+        "findings": [
+            {
+                "order": order,
+                "text": finding.text,
+            }
+            for order, finding in enumerate(review.findings, start=1)
+        ],
+        "overall_outcome": review.overall_outcome,
+        "next_step_markdown": review.next_step_markdown,
+    }
+
+
+def full_shadow_review_manifest_entry(review: ShadowReview) -> dict[str, Any]:
+    return {
+        "review_id": review.review_id,
+        "review_path": review.review_path,
+        "title": review.title,
+        "intro_markdown": review.intro_markdown,
+        "map_heading": review.map_heading,
+        "map_entries": [
+            {
+                "order": order,
+                "technique_id": entry.technique_id,
+                "technique_path": entry.technique_path,
+                "current_role": entry.current_role,
+                "current_shadow_seam": entry.current_shadow_seam,
+            }
+            for order, entry in enumerate(review.map_entries, start=1)
+        ],
+        "seams": [
+            {
+                "heading": seam.heading,
+                "order": order,
+                "question": seam.question,
+                "analysis_markdown": seam.analysis_markdown,
+                "outcome": seam.outcome,
+            }
+            for order, seam in enumerate(review.seams, start=1)
         ],
         "findings": [
             {
@@ -3080,6 +3432,44 @@ def project_min_semantic_review_manifest(full_manifest: dict[str, Any]) -> dict[
                         **({"outcome": note["outcome"]} if note["outcome"] is not None else {}),
                     }
                     for note in review["context_notes"]
+                ],
+                "finding_count": len(review["findings"]),
+                "overall_outcome": review["overall_outcome"],
+                "next_step_present": review["next_step_markdown"] != "",
+            }
+            for review in full_manifest["reviews"]
+        ],
+    }
+
+
+def project_min_shadow_review_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "review_scope": full_manifest["review_scope"],
+        "reviews": [
+            {
+                "review_id": review["review_id"],
+                "review_path": review["review_path"],
+                "title": review["title"],
+                "intro_present": review["intro_markdown"] != "",
+                "map_heading": review["map_heading"],
+                "map_entries": [
+                    {
+                        "order": entry["order"],
+                        "technique_id": entry["technique_id"],
+                        "technique_path": entry["technique_path"],
+                    }
+                    for entry in review["map_entries"]
+                ],
+                "seams": [
+                    {
+                        "heading": seam["heading"],
+                        "order": seam["order"],
+                        "question_present": seam["question"] != "",
+                        "outcome": seam["outcome"],
+                    }
+                    for seam in review["seams"]
                 ],
                 "finding_count": len(review["findings"]),
                 "overall_outcome": review["overall_outcome"],
@@ -3194,6 +3584,19 @@ def build_semantic_review_manifest_payloads(
         "reviews": [full_semantic_review_manifest_entry(review) for review in reviews],
     }
     return full_manifest, project_min_semantic_review_manifest(full_manifest)
+
+
+def build_shadow_review_manifest_payloads(
+    repo_root: Path,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    reviews = parse_shadow_reviews(repo_root)
+    full_manifest = {
+        "manifest_version": SHADOW_REVIEW_MANIFEST_VERSION,
+        "source_of_truth": SHADOW_REVIEW_MANIFEST_SOURCE_OF_TRUTH,
+        "review_scope": shadow_review_scope_payload(),
+        "reviews": [full_shadow_review_manifest_entry(review) for review in reviews],
+    }
+    return full_manifest, project_min_shadow_review_manifest(full_manifest)
 
 
 def selection_technique_link(entry: dict[str, Any]) -> str:
@@ -3376,6 +3779,7 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
 
 def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
     records_by_id = {record.id: record for record in records}
+    review_doc_names = [Path(spec["review_doc"]).name for spec in SHADOW_WORKING_SET_SPECS]
 
     lines = [
         "# Shadow Patterns",
@@ -3385,14 +3789,14 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
         "",
         "Use this surface when the main question is not which technique to choose, but where a canonical technique can quietly make the system worse and which watch seam to inspect first.",
         "",
-        "This surface is canonical-only. It stays bounded to authored markdown, typed adverse-effects notes, one working set, and validator-backed prompts. It does not do scoring, policy routing, or generated caution metadata.",
+        "This surface is canonical-only. It stays bounded to authored markdown, typed adverse-effects notes, review-backed working sets, and validator-backed prompts. It does not do scoring, policy routing, or generated caution metadata.",
         "",
         "See also:",
         "- [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)",
         "- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)",
-        "- [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)",
+        *[f"- [{name}]({name})" for name in review_doc_names],
         "",
-        "## Working Set",
+        "## Working Sets",
         "",
     ]
 
@@ -3777,6 +4181,30 @@ def validate_semantic_review_manifests(repo_root: Path) -> None:
         fail(f"{min_path}: min semantic review manifest must stay a projection of the full manifest")
 
 
+def validate_shadow_review_manifests(repo_root: Path) -> None:
+    full_path = repo_root / "generated" / "shadow_review_manifest.json"
+    min_path = repo_root / "generated" / "shadow_review_manifest.min.json"
+
+    expected_full, expected_min = build_shadow_review_manifest_payloads(repo_root)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated shadow review manifest is out of date; "
+            f"run 'python scripts/build_shadow_review_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated shadow review min manifest is out of date; "
+            f"run 'python scripts/build_shadow_review_manifest.py'"
+        )
+
+    projected_min = project_min_shadow_review_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min shadow review manifest must stay a projection of the full manifest")
+
+
 def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -3826,6 +4254,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_evidence_note_manifests(repo_root, records)
     validate_github_review_template_manifests(repo_root)
     validate_semantic_review_manifests(repo_root)
+    validate_shadow_review_manifests(repo_root)
     validate_selection_surface(repo_root, records)
     validate_public_hygiene(repo_root)
 
@@ -3847,6 +4276,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated evidence note manifest parity")
     print("[ok] validated generated GitHub review template manifest parity")
     print("[ok] validated generated semantic review manifest parity")
+    print("[ok] validated generated shadow review manifest parity")
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated selection navigation specs, review-backed working sets, shadow specs, and bounded public hygiene")
 
