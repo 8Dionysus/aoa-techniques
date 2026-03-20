@@ -1097,20 +1097,23 @@ def truncate_capsule_text(text: str, max_words: int) -> str:
 
 def capsule_compare_text(text: str) -> str:
     comparable = normalize_plain_text(text.replace("...", "").rstrip("."))
-    for prefix in (
-        "Intent: ",
-        "Use when ",
-        "Avoid when ",
-        "Needs ",
-        "Produces ",
-        "Core contract: ",
-        "Main risk: ",
-        "Validate by checking ",
-    ):
+    for prefix in DERIVED_CAPSULE_PREFIXES:
         if comparable.startswith(prefix):
             comparable = comparable[len(prefix) :]
             break
     return normalize_plain_text(comparable)
+
+
+DERIVED_CAPSULE_PREFIXES = (
+    "Intent: ",
+    "Use when ",
+    "Avoid when ",
+    "Needs ",
+    "Produces ",
+    "Core contract: ",
+    "Main risk: ",
+    "Validate by checking ",
+)
 
 
 def ensure_derived_capsule_text(candidate: str, source_markdown: str, max_words: int) -> str:
@@ -1125,6 +1128,11 @@ def ensure_derived_capsule_text(candidate: str, source_markdown: str, max_words:
         return candidate
 
     forced_budget = max(1, min(max_words, len(source_words) - 1))
+    for prefix in DERIVED_CAPSULE_PREFIXES:
+        if candidate.startswith(prefix):
+            prefix_word_count = len(prefix.rstrip(": ").split())
+            source_budget = max(1, forced_budget - prefix_word_count)
+            return f"{prefix}{truncate_capsule_text(source_plain, source_budget)}"
     return truncate_capsule_text(source_plain, forced_budget)
 
 

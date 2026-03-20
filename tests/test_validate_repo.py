@@ -890,6 +890,54 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
         )
 
+    def test_short_capsule_fallback_preserves_prefixes(self) -> None:
+        self.assertTrue(
+            validate_repo.summarize_capsule_use_when("triage drift").startswith("Use when ")
+        )
+        self.assertTrue(
+            validate_repo.summarize_capsule_do_not_use("strict gate").startswith("Avoid when ")
+        )
+        self.assertTrue(
+            validate_repo.summarize_capsule_inputs("- clean logs").startswith("Needs ")
+        )
+        self.assertTrue(
+            validate_repo.summarize_capsule_outputs("- bounded report").startswith("Produces ")
+        )
+        self.assertTrue(
+            validate_repo.summarize_capsule_contract("- keep scope narrow").startswith(
+                "Core contract: "
+            )
+        )
+        self.assertTrue(
+            validate_repo.summarize_capsule_risk(
+                """### Failure modes
+
+- silent drift
+
+### Negative effects
+
+- extra noise
+
+### Misuse patterns
+
+- widened gate
+
+### Detection signals
+
+- review mismatch
+
+### Mitigations
+
+- narrow contract
+"""
+            ).startswith("Main risk: ")
+        )
+        self.assertTrue(
+            validate_repo.summarize_capsule_validation("- one clean check").startswith(
+                "Validate by checking "
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
