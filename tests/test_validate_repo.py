@@ -525,6 +525,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("evidence-note-provenance-lift", docs_readme)
         self.assertIn("bounded-relation-lift-for-kag", docs_readme)
         self.assertIn("risk-and-negative-effect-lift", docs_readme)
+        self.assertIn("technique_capsules.json", docs_readme)
         self.assertIn("markdown-technique-section-lift", kag_source_guide)
         self.assertIn("risk-and-negative-effect-lift", kag_source_guide)
         self.assertIn("risk-and-negative-effect-lift", shadow_guide)
@@ -573,6 +574,164 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             scope["section_scope"],
         )
         self.assertEqual(10, adverse_note_count)
+
+    def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
+        technique_dir = REPO_ROOT / "techniques" / "demo"
+        technique_path = technique_dir / "TECHNIQUE.md"
+        record = validate_repo.TechniqueRecord(
+            technique_dir=technique_dir,
+            technique_path=technique_path,
+            id="AOA-T-9999",
+            name="demo-technique",
+            domain="docs",
+            status="promoted",
+            summary="Short demo summary.",
+            frontmatter={},
+            body="",
+            sections=(validate_repo.TechniqueSection(heading="Intent", markdown="Keep the workflow reviewable."),),
+            checklists=(),
+            examples=(),
+            notes=(),
+        )
+
+        with self.assertRaises(validate_repo.ValidationError):
+            validate_repo.full_capsule_entry(REPO_ROOT, record)
+
+    def test_full_capsule_entry_derives_bounded_runtime_card_fields(self) -> None:
+        technique_dir = REPO_ROOT / "techniques" / "demo"
+        technique_path = technique_dir / "TECHNIQUE.md"
+        record = validate_repo.TechniqueRecord(
+            technique_dir=technique_dir,
+            technique_path=technique_path,
+            id="AOA-T-9999",
+            name="demo-technique",
+            domain="docs",
+            status="promoted",
+            summary="Short demo summary.",
+            frontmatter={},
+            body="",
+            sections=(
+                validate_repo.TechniqueSection(
+                    heading="Intent",
+                    markdown="Keep changes reviewable and explicit through every applied step while avoiding silent drift.",
+                ),
+                validate_repo.TechniqueSection(
+                    heading="When to use",
+                    markdown="- repositories with repeated workflow churn\n- teams that need a compact operational card",
+                ),
+                validate_repo.TechniqueSection(
+                    heading="When not to use",
+                    markdown="- one-off notes with no reusable workflow\n- cases where the bundle should be read in full first",
+                ),
+                validate_repo.TechniqueSection(
+                    heading="Inputs",
+                    markdown="- a bounded change request\n- touched surfaces\n- a named verification plan",
+                ),
+                validate_repo.TechniqueSection(
+                    heading="Outputs",
+                    markdown="- one stable runtime card\n- a smaller next-read hint\n- a bounded validation reminder",
+                ),
+                validate_repo.TechniqueSection(
+                    heading="Contracts",
+                    markdown="- the card stays derived from source markdown\n- the short form does not replace the bundle",
+                ),
+                validate_repo.TechniqueSection(
+                    heading="Risks",
+                    markdown="""### Failure modes
+
+- teams trust the card more than the source bundle
+
+### Negative effects
+
+- shorthand can flatten nuance
+
+### Misuse patterns
+
+- contributors hand-edit the card
+
+### Detection signals
+
+- the card keeps drifting from the authored sections
+
+### Mitigations
+
+- regenerate after source edits
+""",
+                ),
+                validate_repo.TechniqueSection(
+                    heading="Validation",
+                    markdown="Verify the technique by confirming that:\n- the card stays short\n- the card stays derived\n- readers can still route back to the full bundle",
+                ),
+            ),
+            checklists=(),
+            examples=(),
+            notes=(),
+        )
+
+        capsule = validate_repo.full_capsule_entry(REPO_ROOT, record)
+
+        self.assertEqual("Short demo summary.", capsule["summary"])
+        self.assertEqual("techniques/demo/TECHNIQUE.md", capsule["technique_path"])
+        self.assertFalse(capsule["one_line_intent"].startswith("Intent: "))
+        self.assertTrue(capsule["use_when_short"].startswith("Use when "))
+        self.assertTrue(capsule["do_not_use_short"].startswith("Avoid when "))
+        self.assertTrue(capsule["inputs_short"].startswith("Needs "))
+        self.assertTrue(capsule["outputs_short"].startswith("Produces "))
+        self.assertTrue(capsule["core_contract_short"].startswith("Core contract: "))
+        self.assertTrue(capsule["validation_short"].startswith("Validate by checking "))
+        self.assertNotEqual(
+            "Keep changes reviewable and explicit through every applied step while avoiding silent drift.",
+            capsule["one_line_intent"],
+        )
+        self.assertNotEqual(
+            "- repositories with repeated workflow churn\n- teams that need a compact operational card",
+            capsule["use_when_short"],
+        )
+        self.assertNotEqual(
+            """### Failure modes
+
+- teams trust the card more than the source bundle
+
+### Negative effects
+
+- shorthand can flatten nuance
+
+### Misuse patterns
+
+- contributors hand-edit the card
+
+### Detection signals
+
+- the card keeps drifting from the authored sections
+
+### Mitigations
+
+- regenerate after source edits
+""".strip(),
+            capsule["main_risk_short"],
+        )
+
+    def test_capsule_payload_is_deterministic_and_matches_generated_file(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+
+        forward_payload = validate_repo.build_capsule_payload(REPO_ROOT, records)
+        reverse_payload = validate_repo.build_capsule_payload(REPO_ROOT, list(reversed(records)))
+        generated_payload = validate_repo.read_json(REPO_ROOT / "generated" / "technique_capsules.json")
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+
+        self.assertEqual(forward_payload, reverse_payload)
+        self.assertEqual(forward_payload, generated_payload)
+        self.assertEqual(
+            [
+                (entry["id"], entry["name"], entry["summary"], entry["technique_path"])
+                for entry in generated_payload["techniques"]
+            ],
+            [
+                (entry["id"], entry["name"], entry["summary"], entry["technique_path"])
+                for entry in catalog["techniques"]
+            ],
+        )
 
 
 if __name__ == "__main__":

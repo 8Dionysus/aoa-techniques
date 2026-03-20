@@ -24,6 +24,7 @@ A release should make it easy to answer:
 3. Run local validation:
    - `python -m unittest discover -s tests`
    - `python scripts/validate_repo.py`
+   - `python scripts/build_capsules.py`
    - `python scripts/build_section_manifest.py`
    - `python scripts/build_checklist_manifest.py`
    - `python scripts/build_example_manifest.py`

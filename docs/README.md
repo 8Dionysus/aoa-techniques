@@ -11,6 +11,8 @@ Choose the path that matches your question:
 - I need to pick a technique now:
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
+- I need a small local runtime card for one technique:
+  - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
 - I need to understand status, review posture, or canonical promotion:
   - [Canonical Rubric](CANONICAL_RUBRIC.md)
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
@@ -49,6 +51,13 @@ These are reader-facing navigation artifacts derived from authoritative markdown
   - use when you need one bounded choice by domain, status, validation strength, or nearby relations
 - [Selection Patterns](SELECTION_PATTERNS.md)
   - use when direct adjacency is not enough and you want validator-backed starting points, common next moves, or review-backed working sets
+
+### Local runtime cards
+
+These are small local derived cards for runtime lookup. They stay subordinate to the authored bundles and do not replace section-level manifests.
+
+- [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
+  - use when one bounded technique card is enough for local lookup, dispatch, or runtime orientation
 
 ### Authored review and governance guides
 
