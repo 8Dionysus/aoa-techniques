@@ -22,12 +22,19 @@ See also:
 |---|---|---|---|
 | Minimal Change Flow | `present` | `techniques/agent-workflows/plan-diff-apply-verify-report/examples/minimal-change-flow.md` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
 
-### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`promoted`)
+### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Non-UI Intent Chain | `present` | `techniques/agent-workflows/intent-plan-dry-run-contract-chain/examples/concrete-non-ui-intent-chain.md` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 | Minimal Intent Chain | `present` | `techniques/agent-workflows/intent-plan-dry-run-contract-chain/examples/minimal-intent-chain.md` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+
+### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Application Handler Slice | `present` | `techniques/agent-workflows/tdd-slice/examples/concrete-application-handler-slice.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
+| Minimal TDD Slice | `present` | `techniques/agent-workflows/tdd-slice/examples/minimal-tdd-slice.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
@@ -35,13 +42,6 @@ See also:
 |---|---|---|---|
 | Concrete Non-UI Intent Rollout | `present` | `techniques/agent-workflows/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/agent-workflows/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Application Handler Slice | `present` | `techniques/agent-workflows/tdd-slice/examples/concrete-application-handler-slice.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
-| Minimal TDD Slice | `present` | `techniques/agent-workflows/tdd-slice/examples/minimal-tdd-slice.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 
 ## `docs`
 
@@ -151,7 +151,7 @@ See also:
 | minimal-required-vs-optional-rendering | `present` | `techniques/evaluation/required-vs-optional-source-rendering/examples/minimal-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | non-ui-required-vs-optional-rendering | `present` | `techniques/evaluation/required-vs-optional-source-rendering/examples/non-ui-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
-### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`promoted`)
+### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|

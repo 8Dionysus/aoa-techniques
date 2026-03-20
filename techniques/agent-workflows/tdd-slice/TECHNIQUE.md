@@ -2,7 +2,7 @@
 id: AOA-T-0014
 name: tdd-slice
 domain: agent-workflows
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: planning-layer
@@ -15,12 +15,12 @@ tags:
   - bounded-change
   - agent-friendly
 summary: Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-18
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: complements
@@ -30,25 +30,31 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # tdd-slice
 
 ## Intent
 
-Reduce ambiguity and regression risk by expressing a bounded behavior change as tests before implementation, then keeping both implementation and refactor inside that slice.
+Reduce ambiguity and regression risk by expressing one bounded behavior slice as tests before implementation, then keeping the implementation and any refactor inside that slice.
 
 ## When to use
 
 - small or medium feature slices with clearly describable behavior
 - logic changes that benefit from explicit behavioral framing
 - refactors where a bounded test surface should constrain change
-- agent-assisted implementation where the task needs a compact executable specification
+- agent-assisted implementation where the main risk is scope drift inside one already understood behavior slice
+- work that needs a compact executable specification for the slice itself, not a wider boundary or contract redesign
 
 ## When not to use
 
 - exploratory work where the behavior is still too vague to test meaningfully
 - large structural rewrites where test-first on one slice would hide the real scope
+- boundary-definition work where the primary question is contract shape rather than slice execution
 - purely mechanical or wording-only changes with no meaningful behavior surface
 
 ## Inputs
@@ -79,6 +85,7 @@ Reduce ambiguity and regression risk by expressing a bounded behavior change as 
 - tests should express behavior rather than incidental implementation detail
 - the implementation should stay bounded to the declared slice
 - unrelated cleanup should not be smuggled into the change
+- boundary or contract questions should stay out of the slice unless the slice itself is the contract surface
 - the final result should make future regressions easier to detect
 
 ## Risks
@@ -133,6 +140,8 @@ What should stay invariant:
 - bounded slice discipline
 - minimal implementation before refactor expansion
 - visible verification at the end
+- clear separation from `AOA-T-0015 contract-test-design`, which starts from a consumer-visible boundary contract rather than from one bounded implementation slice
+- tests used as execution discipline for the slice, not as a substitute for defining the contract surface itself
 
 ## Public sanitization notes
 
@@ -151,6 +160,7 @@ See `checks/tdd-slice-checklist.md` for a minimal review pass covering bounded s
 
 - shaped from recurring bounded-testing needs observed around `atm10-agent`
 - extracted into first public reusable form in `aoa-techniques` on 2026-03-18
+- promoted to canonical after second-context validation, semantic separation from contract-design techniques, and a fresh public-safety recheck on 2026-03-20
 
 ## Future evolution
 

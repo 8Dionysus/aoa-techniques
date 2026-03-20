@@ -34,9 +34,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `1` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `1` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `1` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -53,7 +53,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `1` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `1` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `When to use`
@@ -61,9 +61,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `2` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `2` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `2` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -80,7 +80,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `2` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `2` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `When not to use`
@@ -88,9 +88,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `3` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `3` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `3` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -107,7 +107,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `3` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `3` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `Inputs`
@@ -115,9 +115,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `4` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `4` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `4` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -134,7 +134,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `4` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `4` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `Outputs`
@@ -142,9 +142,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `5` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `5` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `5` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -161,7 +161,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `5` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `5` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `Core procedure`
@@ -169,9 +169,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `6` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `6` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `6` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -188,7 +188,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `6` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `6` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `Contracts`
@@ -196,9 +196,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `7` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `7` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `7` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -215,7 +215,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `7` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `7` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `Risks`
@@ -223,9 +223,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `8` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `8` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `8` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -242,7 +242,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `8` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `8` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `Validation`
@@ -250,9 +250,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `9` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `9` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `9` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -269,7 +269,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `9` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `9` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## `Adaptation notes`
@@ -277,9 +277,9 @@ See also:
 | technique | domain | status | section order | source |
 |---|---|---|---|---|
 | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report | `agent-workflows` | `canonical` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
-| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `promoted` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain | `agent-workflows` | `canonical` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `canonical` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice | `agent-workflows` | `promoted` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `10` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `10` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `10` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -296,7 +296,7 @@ See also:
 | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `promoted` | `10` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `promoted` | `10` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ## Boundaries

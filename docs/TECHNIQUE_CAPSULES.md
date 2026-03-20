@@ -28,7 +28,7 @@ See also:
 - Validate by: a concrete plan exists before apply; the diff stays inside the declared scope; at least one explicit validation method...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 
-### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`promoted`)
+### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
 - Summary: Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists.
 - Intent: Turn high-level intent into a traceable, reviewable, dry-run-only chain that emits explicit artifacts and...
@@ -41,23 +41,10 @@ See also:
 - Validate by: the intent payload is accepted or rejected by explicit normalization rules; the normalized plan is written as an artifact...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md)
 
-### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
-
-- Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
-- Intent: Add a new intent_type to an existing intent -> plan -> dry-run -> contract-check...
-- Use when: an automation chain already exists and supports dry-run validation or new intent types need a repeatable onboarding path.
-- Avoid when: there is no stable intent-chain contract yet or the rollout path performs real side effects before dry-run validation.
-- Needs: an existing intent-chain workflow with normalization, dry-run, and contract-check steps; a canonical fixture location for new intent...
-- Produces: one canonical fixture for the new intent; one dedicated smoke path for the new intent rollout; one...
-- Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.
-- Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
-- Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
-
-### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`promoted`)
+### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
 
 - Summary: Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits.
-- Intent: Reduce ambiguity and regression risk by expressing a bounded behavior change as tests before...
+- Intent: Reduce ambiguity and regression risk by expressing one bounded behavior slice as tests before...
 - Use when: small or medium feature slices with clearly describable behavior or logic changes that benefit from explicit behavioral framing.
 - Avoid when: exploratory work where the behavior is still too vague to test meaningfully or large structural rewrites where test-first...
 - Needs: desired behavior or rule change; bounded module or slice under change; constraints and non-goals.
@@ -66,6 +53,19 @@ See also:
 - Main risk: tests mirror the implementation instead of constraining it.
 - Validate by: tests were added or updated before implementation when the task was suitable for TDD; the implementation stayed inside the...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md)
+
+### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+
+- Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
+- Intent: Extend an existing intent -> plan -> dry-run -> contract-check pipeline with one new...
+- Use when: an automation chain already exists and the rollout is extending that shared chain, not redesigning it or one...
+- Avoid when: there is no stable intent-chain contract yet or the rollout path performs real side effects before dry-run validation.
+- Needs: an existing intent-chain workflow with normalization, dry-run, and contract-check steps already in place; a canonical fixture location...
+- Produces: one canonical fixture for the new intent; one dedicated smoke path for the new intent rollout; one...
+- Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.
+- Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
+- Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
 
 ## `docs`
 
@@ -123,7 +123,7 @@ See also:
 
 ### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`promoted`)
 
-- Summary: Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible.
+- Summary: Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work.
 - Intent: Reduce semantic confusion and misplaced changes by naming bounded contexts, clarifying their responsibilities, and...
 - Use when: repositories with several domains, services, or subsystems that can blur together or situations where naming is overloaded or...
 - Avoid when: tiny repositories with no meaningful subsystem ambiguity or changes that are fully local and already clearly bounded.
@@ -279,7 +279,7 @@ See also:
 - Validate by: required missing sources and optional missing sources are reported separately; missing required sources fail the strict smoke or contract...
 - Source: [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md)
 
-### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`promoted`)
+### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 
 - Summary: Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals.
 - Intent: Reduce breakage at boundaries by expressing the expected interface behavior explicitly and verifying it...

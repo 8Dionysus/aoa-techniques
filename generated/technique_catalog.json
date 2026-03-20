@@ -165,7 +165,7 @@
       "id": "AOA-T-0004",
       "name": "intent-plan-dry-run-contract-chain",
       "domain": "agent-workflows",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists.",
       "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
       "origin": {
@@ -182,12 +182,12 @@
         "dry-run",
         "traceability"
       ],
-      "maturity_score": 4,
+      "maturity_score": 5,
       "rigor_level": "strict",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-15",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -211,6 +211,14 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -240,7 +248,7 @@
       "reversibility": "easy",
       "review_required": true,
       "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-15",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -258,8 +266,16 @@
           "path": "notes/origin-evidence.md"
         },
         {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
           "kind": "support_note",
           "path": "notes/rollout-failure-triage.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },
@@ -697,7 +713,7 @@
       "reversibility": "moderate",
       "review_required": true,
       "validation_strength": "cross_context",
-      "public_safety_reviewed_at": "2026-03-15",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -717,6 +733,10 @@
         {
           "kind": "external_review",
           "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },
@@ -724,7 +744,7 @@
       "id": "AOA-T-0014",
       "name": "tdd-slice",
       "domain": "agent-workflows",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits.",
       "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
       "origin": {
@@ -741,12 +761,12 @@
         "bounded-change",
         "agent-friendly"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-18",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -762,6 +782,14 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -769,7 +797,7 @@
       "id": "AOA-T-0015",
       "name": "contract-test-design",
       "domain": "evaluation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals.",
       "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
       "origin": {
@@ -786,12 +814,12 @@
         "boundaries",
         "agent-friendly"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-18",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -811,6 +839,14 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -819,7 +855,7 @@
       "name": "bounded-context-map",
       "domain": "docs",
       "status": "promoted",
-      "summary": "Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible.",
+      "summary": "Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work.",
       "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
       "origin": {
         "project": "atm10-agent",
@@ -840,7 +876,7 @@
       "reversibility": "easy",
       "review_required": true,
       "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-18",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -860,6 +896,10 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },
@@ -889,7 +929,7 @@
       "reversibility": "easy",
       "review_required": true,
       "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-18",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -909,6 +949,10 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
         }
       ]
     },

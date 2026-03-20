@@ -21,7 +21,7 @@ rigor_level: bounded
 reversibility: moderate
 review_required: true
 validation_strength: cross_context
-public_safety_reviewed_at: 2026-03-15
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: complements
@@ -33,6 +33,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: external_review
     path: notes/external-import-review.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # single-source-rule-distribution
@@ -47,6 +49,7 @@ Reduce drift and duplicated maintenance by keeping one canonical rule source and
 - projects that already feel the cost of copying the same guidance into `AGENTS.md`, `CLAUDE.md`, or similar files
 - teams that can regenerate or re-apply instruction targets from one canonical rule source
 - repositories that want target surfaces to stay consistent without making every output file canonical
+- cases where the same shared rule core is proven to survive re-application across multiple managed targets, not just a repo-local adaptation sketch
 
 ## When not to use
 
@@ -85,6 +88,7 @@ Reduce drift and duplicated maintenance by keeping one canonical rule source and
 - the same source update can be propagated repeatedly without introducing duplication drift
 - target-specific wrappers or formatting must not change the shared rule intent
 - manual edits to target files are either forbidden or clearly subordinate to the canonical source
+- canonical review should stay defer-first until the contract is exercised in a live multi-target reuse context beyond the current repo-local sketch
 
 Relationship to adjacent techniques: unlike `AOA-T-0002 source-of-truth-layout`, this technique is about one rule source fanning out to many target surfaces rather than assigning canonical roles to many document classes inside one repository. Unlike `AOA-T-0012 deterministic-context-composition`, this technique is about one canonical source propagating to multiple target instruction files rather than composing many fragments into one generated artifact.
 
@@ -173,6 +177,7 @@ See `checks/single-source-rule-distribution-checklist.md`.
 - adapted from open-source `ruler`
 - imported into `aoa-techniques` on 2026-03-15 as the second bounded external-import draft with explicit exclusions around MCP, skills, nested loading, and other product-width behavior
 - passed first external-import review on 2026-03-18; keep the technique `promoted` until stronger live multi-target reuse exists beyond the current repo-local adaptation sketch
+- current canon-strengthening wave: defer canonical promotion until a live multi-target reuse context proves the shared rule core still propagates cleanly across managed targets
 
 ## Future evolution
 
