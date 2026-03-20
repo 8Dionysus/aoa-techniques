@@ -22,6 +22,10 @@ If you are new to this repository, follow this short path:
 See also: `WALKTHROUGH.md` for a short example of how one real practice became a published technique and then proved reusable in a second context.
 See also: `docs/TECHNIQUE_SELECTION.md` for the generated chooser by domain, status, validation strength, and direct relation hints.
 See also: `docs/SELECTION_PATTERNS.md` for the generated navigation surface built from direct relations, validator-backed navigation specs, and review-backed working sets.
+See also: `docs/TECHNIQUE_CAPSULES.md` for the generated human reader surface over local runtime capsule cards.
+See also: `generated/technique_capsules.json` for the full local runtime capsule payload derived from `summary` plus bounded markdown sections.
+See also: `generated/technique_capsules.min.json` for the strict projection of that capsule payload when only the smallest runtime card fields are needed.
+See also: `docs/TECHNIQUE_CAPSULE_GUIDE.md` for the capsule source contract and the runtime-only boundaries of that family.
 See also: `docs/SHADOW_PATTERNS.md` for the generated canonical-only shadow watch surface over current adverse-effects review notes.
 See also: `docs/REPO_DOC_SURFACES.md` for the generated router over the 10 authoritative public docs/status files.
 See also: `generated/repo_doc_surface_manifest.json` for the derived docs/status source-lift manifest over that same bounded source set.

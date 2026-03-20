@@ -6,6 +6,7 @@ Releases should stay small, explicit, and easy to verify.
 
 See also:
 - [Documentation Map](README.md)
+- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [CHANGELOG](../CHANGELOG.md)
 
 ## Release goals
@@ -37,6 +38,8 @@ A release should make it easy to answer:
    - `git diff --exit-code`
 4. Confirm `TECHNIQUE_INDEX.md` matches the current published catalog.
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
+   - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULES.md`.
+   - Use `TECHNIQUE_CAPSULE_GUIDE.md` as the authored contract reference when checking that the runtime card family stayed bounded.
 6. Review public-safety hygiene:
    - no secrets
    - no internal-only URLs

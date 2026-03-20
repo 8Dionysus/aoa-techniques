@@ -767,6 +767,29 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
 
+    def test_capsule_surfaces_are_discoverable_from_docs_root_readme_changelog_and_release_docs(
+        self,
+    ) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        releasing = (REPO_ROOT / "docs" / "RELEASING.md").read_text(encoding="utf-8")
+
+        self.assertIn("TECHNIQUE_CAPSULES.md", docs_readme)
+        self.assertIn("TECHNIQUE_CAPSULE_GUIDE.md", docs_readme)
+        self.assertIn("technique_capsules.json", docs_readme)
+        self.assertIn("technique_capsules.min.json", docs_readme)
+        self.assertIn("docs/TECHNIQUE_CAPSULES.md", readme)
+        self.assertIn("docs/TECHNIQUE_CAPSULE_GUIDE.md", readme)
+        self.assertIn("generated/technique_capsules.json", readme)
+        self.assertIn("generated/technique_capsules.min.json", readme)
+        self.assertIn("TECHNIQUE_CAPSULES.md", changelog)
+        self.assertIn("TECHNIQUE_CAPSULE_GUIDE.md", changelog)
+        self.assertIn("technique_capsules.min.json", changelog)
+        self.assertIn("python scripts/build_capsules.py", releasing)
+        self.assertIn("generated/technique_capsules.min.json", releasing)
+        self.assertIn("docs/TECHNIQUE_CAPSULES.md", releasing)
+
     def test_docs_readme_and_guides_link_to_reusable_lift_family(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(
@@ -1008,11 +1031,17 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         forward_payload = validate_repo.build_capsule_payload(REPO_ROOT, records)
         reverse_payload = validate_repo.build_capsule_payload(REPO_ROOT, list(reversed(records)))
+        expected_full, expected_min = validate_repo.build_capsule_payloads(REPO_ROOT, records)
         generated_payload = validate_repo.read_json(REPO_ROOT / "generated" / "technique_capsules.json")
+        generated_min_payload = validate_repo.read_json(
+            REPO_ROOT / "generated" / "technique_capsules.min.json"
+        )
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
 
         self.assertEqual(forward_payload, reverse_payload)
+        self.assertEqual(forward_payload, expected_full)
         self.assertEqual(forward_payload, generated_payload)
+        self.assertEqual(expected_min, generated_min_payload)
         self.assertEqual(
             [
                 (entry["id"], entry["name"], entry["summary"], entry["technique_path"])
@@ -1023,6 +1052,60 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 for entry in catalog["techniques"]
             ],
         )
+
+    def test_capsule_min_payload_stays_exact_projection_of_full_payload(self) -> None:
+        full_payload = validate_repo.read_json(REPO_ROOT / "generated" / "technique_capsules.json")
+        min_payload = validate_repo.read_json(REPO_ROOT / "generated" / "technique_capsules.min.json")
+
+        self.assertEqual(validate_repo.project_min_capsule_payload(full_payload), min_payload)
+        self.assertEqual(full_payload["capsule_version"], min_payload["capsule_version"])
+        self.assertEqual(full_payload["source_of_truth"], min_payload["source_of_truth"])
+
+        expected_keys = list(validate_repo.CAPSULE_MIN_FIELDS)
+        for entry in min_payload["techniques"]:
+            self.assertEqual(expected_keys, list(entry.keys()))
+
+    def test_capsule_reader_surface_matches_generated_file_and_respects_ordering(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        rendered = validate_repo.build_capsule_markdown(REPO_ROOT, records)
+        generated = (REPO_ROOT / "docs" / "TECHNIQUE_CAPSULES.md").read_text(encoding="utf-8")
+
+        self.assertEqual(rendered, generated)
+
+        domain_positions = [rendered.index(f"## `{domain}`") for domain in validate_repo.DOMAIN_ORDER]
+        self.assertEqual(sorted(domain_positions), domain_positions)
+
+        for index, domain in enumerate(validate_repo.DOMAIN_ORDER):
+            start = rendered.index(f"## `{domain}`")
+            if index + 1 < len(validate_repo.DOMAIN_ORDER):
+                end = rendered.index(f"## `{validate_repo.DOMAIN_ORDER[index + 1]}`")
+                domain_block = rendered[start:end]
+            else:
+                domain_block = rendered[start:]
+
+            actual_ids = [
+                line.split("[", 1)[1].split("]", 1)[0]
+                for line in domain_block.splitlines()
+                if line.startswith("### [AOA-T-")
+            ]
+            expected_ids = [
+                record.id
+                for record in sorted(
+                    (record for record in records if record.domain == domain),
+                    key=lambda record: (
+                        validate_repo.capsule_status_rank(record.status),
+                        record.status,
+                        record.id,
+                    ),
+                )
+            ]
+
+            self.assertEqual(expected_ids, actual_ids)
+
+        self.assertIn("This surface is not selection, scoring, or policy routing.", rendered)
+        self.assertIn("Technique Capsule Guide", rendered)
+        self.assertNotIn("KAG Source Lift Guide", rendered)
 
     def test_short_capsule_fallback_preserves_prefixes(self) -> None:
         self.assertTrue(
