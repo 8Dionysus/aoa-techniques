@@ -99,14 +99,14 @@ Keep machine-readable summaries easy to discover for consumers while also preser
 
 ### Failure modes
 
-- the latest alias and nested history copy drift because only one path is updated or one write quietly fails
+- the latest alias looks healthy while nested history parity or reader precedence is already drifting, so accumulation trust is lost behind a clean current view
 - collectors silently double-count runs when they treat the latest alias and nested history rows as separate accumulation inputs
 - ad hoc migration or backfill corrupts accumulation windows by mixing older single-write runs with dual-write history without an explicit cutoff
 
 ### Negative effects
 
 - the dual-write layout adds storage and reader-policy complexity even when the summary payload itself stays simple
-- teams can spend more time preserving path shape than checking whether accumulated history is still trustworthy
+- storage variants and migration exceptions can start multiplying faster than teams re-check whether accumulated history is still trustworthy
 - a clean latest alias can create false-success by making the newest run look healthy while historical accumulation is already broken
 
 ### Misuse patterns

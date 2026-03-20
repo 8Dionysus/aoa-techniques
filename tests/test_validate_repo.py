@@ -149,6 +149,35 @@ relations:
 
         validate_repo.validate_selection_navigation_specs(records, REPO_ROOT)
 
+    def test_shadow_specs_are_structurally_valid(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        records_by_id = {record.id: record for record in records}
+        shadow_targets = {
+            technique_id
+            for spec in validate_repo.SHADOW_WORKING_SET_SPECS
+            for technique_id in spec["technique_ids"]
+        }
+
+        validate_repo.validate_shadow_working_set_specs(records, REPO_ROOT)
+        validate_repo.validate_shadow_question_specs(records)
+
+        for spec in validate_repo.SHADOW_WORKING_SET_SPECS:
+            self.assertTrue(spec["technique_ids"])
+            self.assertTrue((REPO_ROOT / spec["review_doc"]).is_file())
+            for technique_id in spec["technique_ids"]:
+                record = records_by_id[technique_id]
+                self.assertEqual("canonical", record.status)
+                self.assertIn(
+                    "adverse_effects_review",
+                    {note.kind for note in record.notes},
+                )
+
+        for spec in validate_repo.SHADOW_COMMON_QUESTION_SPECS:
+            record = records_by_id[spec["target_id"]]
+            self.assertEqual("canonical", record.status)
+            self.assertIn(spec["target_id"], shadow_targets)
+
     def test_validate_risks_markdown_accepts_fixed_subsection_order(self) -> None:
         validate_repo.validate_risks_markdown(
             """### Failure modes
@@ -499,6 +528,51 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             selection_patterns,
         )
 
+    def test_shadow_patterns_generated_surface_matches_builder_and_stays_canonical_only(
+        self,
+    ) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        shadow_patterns = (REPO_ROOT / "docs" / "SHADOW_PATTERNS.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertEqual(
+            validate_repo.build_shadow_patterns_markdown(REPO_ROOT, records),
+            shadow_patterns,
+        )
+        self.assertIn("Published-summary shadow cluster", shadow_patterns)
+        self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", shadow_patterns)
+        self.assertIn("validator-backed prompts", shadow_patterns)
+        self.assertIn("AOA-T-0006", shadow_patterns)
+        self.assertIn("AOA-T-0008", shadow_patterns)
+        self.assertIn("AOA-T-0010", shadow_patterns)
+        self.assertIn("AOA-T-0011", shadow_patterns)
+        self.assertNotIn("AOA-T-0014", shadow_patterns)
+        self.assertNotIn("AOA-T-0022", shadow_patterns)
+
+    def test_shadow_patterns_describes_current_shadow_questions(self) -> None:
+        shadow_patterns = (REPO_ROOT / "docs" / "SHADOW_PATTERNS.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn(
+            "| I need to check whether the latest summary looks clean while history trust is already broken | [AOA-T-0006]",
+            shadow_patterns,
+        )
+        self.assertIn(
+            "| I need to stop remediation output from drifting into integrity or rendering policy | [AOA-T-0008]",
+            shadow_patterns,
+        )
+        self.assertIn(
+            "| I need to keep a diagnostic helper from turning into an implicit enforcement gate | [AOA-T-0010]",
+            shadow_patterns,
+        )
+        self.assertIn(
+            "| I need optional-source warnings to stay visible without becoming noisy or package-shaped | [AOA-T-0011]",
+            shadow_patterns,
+        )
+
     def test_docs_readme_and_guides_link_to_reusable_lift_family(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(
@@ -526,6 +600,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("bounded-relation-lift-for-kag", docs_readme)
         self.assertIn("risk-and-negative-effect-lift", docs_readme)
         self.assertIn("technique_capsules.json", docs_readme)
+        self.assertIn("SHADOW_PATTERNS.md", docs_readme)
+        self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", docs_readme)
         self.assertIn("markdown-technique-section-lift", kag_source_guide)
         self.assertIn("risk-and-negative-effect-lift", kag_source_guide)
         self.assertIn("risk-and-negative-effect-lift", shadow_guide)
@@ -534,6 +610,18 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("evidence-note-provenance-lift", provenance_guide)
         self.assertIn("adverse_effects_review", provenance_guide)
         self.assertIn("bounded-relation-lift-for-kag", relation_guide)
+
+    def test_shadow_surface_is_discoverable_from_root_docs_and_changelog(self) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Shadow Patterns", docs_readme)
+        self.assertIn("Published-Summary Shadow Review", docs_readme)
+        self.assertIn("docs/SHADOW_PATTERNS.md", readme)
+        self.assertIn("docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md", readme)
+        self.assertIn("docs/SHADOW_PATTERNS.md", changelog)
+        self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", changelog)
 
     def test_shadow_wave_bundle_is_present_in_index_catalog_and_selection_surface(self) -> None:
         technique_index = (REPO_ROOT / "TECHNIQUE_INDEX.md").read_text(encoding="utf-8")

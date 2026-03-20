@@ -79,6 +79,7 @@ REQUIRED_STAGE1_FILES = (
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
     "docs/SELECTION_PATTERNS.md",
+    "docs/SHADOW_PATTERNS.md",
 )
 SELECTION_REVIEW_DOCS = {
     "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
@@ -196,6 +197,39 @@ COMMON_MOVE_SPECS = (
         "basis_type": COMMON_MOVE_BASIS_DIRECT_RELATION,
         "anchor_ids": ("AOA-T-0002",),
         "note": "Inspect alongside `AOA-T-0002` when entrypoint docs start duplicating operational detail.",
+    },
+)
+SHADOW_REVIEW_DOCS = {
+    "published_summary": "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+}
+SHADOW_WORKING_SET_SPECS = (
+    {
+        "title": "Published-summary shadow cluster",
+        "technique_ids": ("AOA-T-0006", "AOA-T-0008", "AOA-T-0010", "AOA-T-0011"),
+        "review_doc": SHADOW_REVIEW_DOCS["published_summary"],
+        "note": "Canonical storage, remediation, integrity, and rendering techniques whose caution language now shares one bounded shadow watch surface.",
+    },
+)
+SHADOW_COMMON_QUESTION_SPECS = (
+    {
+        "prompt": "I need to check whether the latest summary looks clean while history trust is already broken",
+        "target_id": "AOA-T-0006",
+        "note": "Start with the latest-plus-history storage contract and its alias/history false-confidence seam.",
+    },
+    {
+        "prompt": "I need to stop remediation output from drifting into integrity or rendering policy",
+        "target_id": "AOA-T-0008",
+        "note": "Inspect the bounded remediation rollup before widening backlog language into trust verdicts or renderer instructions.",
+    },
+    {
+        "prompt": "I need to keep a diagnostic helper from turning into an implicit enforcement gate",
+        "target_id": "AOA-T-0010",
+        "note": "Inspect the diagnostic-only trust layer and its optional-check noise seam before any stricter rollout decision.",
+    },
+    {
+        "prompt": "I need optional-source warnings to stay visible without becoming noisy or package-shaped",
+        "target_id": "AOA-T-0011",
+        "note": "Inspect the required-versus-optional rendering policy and its warning-fatigue plus package-appendix seam.",
     },
 )
 
@@ -2034,6 +2068,62 @@ def validate_selection_working_set_specs(repo_root: Path) -> None:
             )
 
 
+def validate_shadow_working_set_specs(records: list[TechniqueRecord], repo_root: Path) -> None:
+    records_by_id = {record.id: record for record in records}
+
+    for spec in SHADOW_WORKING_SET_SPECS:
+        review_doc = repo_root / spec["review_doc"]
+        if not review_doc.is_file():
+            fail(
+                f"{repo_root}: shadow working set '{spec['title']}' points to missing review doc "
+                f"'{spec['review_doc']}'"
+            )
+
+        technique_ids = tuple(spec["technique_ids"])
+        if not technique_ids:
+            fail(f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' must not be empty")
+
+        for technique_id in technique_ids:
+            record = records_by_id.get(technique_id)
+            if record is None:
+                fail(
+                    f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' "
+                    f"references unknown technique '{technique_id}'"
+                )
+            if record.status != "canonical":
+                fail(
+                    f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' "
+                    f"must stay canonical-only, found '{technique_id}' with status '{record.status}'"
+                )
+            if "adverse_effects_review" not in {note.kind for note in record.notes}:
+                fail(
+                    f"{Path(spec['review_doc']).name}: shadow working set '{spec['title']}' "
+                    f"requires typed adverse-effects reviews for '{technique_id}'"
+                )
+
+
+def validate_shadow_question_specs(records: list[TechniqueRecord]) -> None:
+    records_by_id = {record.id: record for record in records}
+    shadow_targets = {
+        technique_id
+        for spec in SHADOW_WORKING_SET_SPECS
+        for technique_id in spec["technique_ids"]
+    }
+
+    for spec in SHADOW_COMMON_QUESTION_SPECS:
+        target_id = spec["target_id"]
+        record = records_by_id.get(target_id)
+        if record is None:
+            fail(f"SHADOW_COMMON_QUESTION_SPECS: unknown target_id '{target_id}'")
+        if record.status != "canonical":
+            fail(f"SHADOW_COMMON_QUESTION_SPECS: target_id '{target_id}' must be canonical")
+        if target_id not in shadow_targets:
+            fail(
+                f"SHADOW_COMMON_QUESTION_SPECS[{target_id}]: target must belong to a declared "
+                "shadow working set"
+            )
+
+
 def validate_selection_navigation_specs(records: list[TechniqueRecord], repo_root: Path) -> None:
     records_by_id = {record.id: record for record in records}
     reviews_by_path = {
@@ -3110,6 +3200,11 @@ def selection_technique_link(entry: dict[str, Any]) -> str:
     return f"[{entry['id']}](../{entry['technique_path']})"
 
 
+def record_technique_link(repo_root: Path, record: TechniqueRecord) -> str:
+    technique_path = record.technique_path.relative_to(repo_root).as_posix()
+    return f"[{record.id}](../{technique_path})"
+
+
 def escape_markdown_table_cell(value: str) -> str:
     flattened = re.sub(r"\s*\r?\n\s*", " ", value).strip()
     return flattened.replace("|", r"\|")
@@ -3130,6 +3225,41 @@ def relation_summary(entry: dict[str, Any], entries_by_id: dict[str, dict[str, A
         if targets:
             parts.append(f"`{relation_type}` " + ", ".join(targets))
     return "; ".join(parts) if parts else "none"
+
+
+def note_by_kind(record: TechniqueRecord, kind: str) -> TechniqueNote:
+    for note in record.notes:
+        if note.kind == kind:
+            return note
+    fail(f"{record.technique_path}: missing required note kind '{kind}'")
+
+
+def note_section_by_heading(note: TechniqueNote, heading: str) -> EvidenceNoteSection:
+    for section in note.sections:
+        if section.heading == heading:
+            return section
+    fail(f"{note.note_path}: missing required section '{heading}'")
+
+
+def note_field_value(section: EvidenceNoteSection, key: str, note_path: str) -> str:
+    for field in section.fields:
+        if field.key == key:
+            return field.value_markdown
+    fail(f"{note_path}: section '{section.heading}' must include field '{key}'")
+
+
+def shadow_note_summary(record: TechniqueRecord) -> dict[str, str]:
+    note = note_by_kind(record, "adverse_effects_review")
+    review_focus = note_section_by_heading(note, "Review focus")
+    failure_modes = note_section_by_heading(note, "Failure modes")
+    if not failure_modes.items:
+        fail(f"{note.note_path}: section 'Failure modes' must include at least one bullet")
+    return {
+        "current_role": note_field_value(review_focus, "current role", note.note_path),
+        "watch_seam": note_field_value(review_focus, "current watch seam", note.note_path),
+        "main_failure_mode": failure_modes.items[0].text,
+        "note_path": note.note_path,
+    }
 
 
 def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
@@ -3237,6 +3367,94 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
             "- For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.",
             "- Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.",
             "- A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.",
+            "",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
+def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
+    records_by_id = {record.id: record for record in records}
+
+    lines = [
+        "# Shadow Patterns",
+        "",
+        "This file is generated from authoritative `TECHNIQUE.md` bundles plus typed canonical `adverse_effects_review` notes.",
+        "Do not edit it by hand; run `python scripts/build_catalog.py`.",
+        "",
+        "Use this surface when the main question is not which technique to choose, but where a canonical technique can quietly make the system worse and which watch seam to inspect first.",
+        "",
+        "This surface is canonical-only. It stays bounded to authored markdown, typed adverse-effects notes, one working set, and validator-backed prompts. It does not do scoring, policy routing, or generated caution metadata.",
+        "",
+        "See also:",
+        "- [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)",
+        "- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)",
+        "- [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)",
+        "",
+        "## Working Set",
+        "",
+    ]
+
+    for spec in SHADOW_WORKING_SET_SPECS:
+        linked_techniques = ", ".join(
+            record_technique_link(repo_root, records_by_id[technique_id])
+            for technique_id in spec["technique_ids"]
+        )
+        review_doc_name = Path(spec["review_doc"]).name
+        lines.extend(
+            [
+                f"### {spec['title']}",
+                "",
+                f"- Techniques: {linked_techniques}",
+                f"- Review: [{review_doc_name}]({review_doc_name})",
+                f"- Why grouped: {spec['note']}",
+                "",
+                "| technique | current role | watch seam | main failure mode | note |",
+                "|---|---|---|---|---|",
+            ]
+        )
+
+        for technique_id in spec["technique_ids"]:
+            record = records_by_id[technique_id]
+            summary = shadow_note_summary(record)
+            lines.append(
+                "| "
+                f"{record_technique_link(repo_root, record)} | "
+                f"{escape_markdown_table_cell(summary['current_role'])} | "
+                f"{escape_markdown_table_cell(summary['watch_seam'])} | "
+                f"{escape_markdown_table_cell(summary['main_failure_mode'])} | "
+                f"[Adverse Effects Review](../{summary['note_path']}) |"
+            )
+
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Common Shadow Questions",
+            "",
+            "| question | inspect first | why |",
+            "|---|---|---|",
+        ]
+    )
+
+    for spec in SHADOW_COMMON_QUESTION_SPECS:
+        record = records_by_id[spec["target_id"]]
+        lines.append(
+            "| "
+            f"{escape_markdown_table_cell(spec['prompt'])} | "
+            f"{record_technique_link(repo_root, record)} | "
+            f"{escape_markdown_table_cell(spec['note'])} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Boundaries",
+            "",
+            "- The source of meaning stays in the full technique bundle and its typed adverse-effects review note.",
+            "- This surface is a bounded lookup aid for canonical watch seams, not a permission to skip `TECHNIQUE.md`.",
+            "- If a question needs scoring, policy tiers, or machine-readable caution exports, that is a later wave.",
             "",
         ]
     )
@@ -3559,18 +3777,23 @@ def validate_semantic_review_manifests(repo_root: Path) -> None:
         fail(f"{min_path}: min semantic review manifest must stay a projection of the full manifest")
 
 
-def validate_selection_surface(repo_root: Path) -> None:
+def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
+    shadow_path = repo_root / "docs" / "SHADOW_PATTERNS.md"
     full_path = repo_root / "generated" / "technique_catalog.json"
 
     validate_selection_working_set_specs(repo_root)
+    validate_shadow_working_set_specs(records, repo_root)
+    validate_shadow_question_specs(records)
 
     full_catalog = read_json(full_path)
     expected = build_selection_surface_markdown(full_catalog)
     expected_patterns = build_selection_patterns_markdown(full_catalog)
+    expected_shadow = build_shadow_patterns_markdown(repo_root, records)
     actual = read_text(selection_path)
     actual_patterns = read_text(patterns_path)
+    actual_shadow = read_text(shadow_path)
 
     if actual != expected:
         fail(
@@ -3579,6 +3802,10 @@ def validate_selection_surface(repo_root: Path) -> None:
     if actual_patterns != expected_patterns:
         fail(
             f"{patterns_path}: generated selection patterns surface is out of date; run 'python scripts/build_catalog.py'"
+        )
+    if actual_shadow != expected_shadow:
+        fail(
+            f"{shadow_path}: generated shadow patterns surface is out of date; run 'python scripts/build_catalog.py'"
         )
 
 
@@ -3599,7 +3826,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_evidence_note_manifests(repo_root, records)
     validate_github_review_template_manifests(repo_root)
     validate_semantic_review_manifests(repo_root)
-    validate_selection_surface(repo_root)
+    validate_selection_surface(repo_root, records)
     validate_public_hygiene(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -3620,8 +3847,8 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated evidence note manifest parity")
     print("[ok] validated generated GitHub review template manifest parity")
     print("[ok] validated generated semantic review manifest parity")
-    print("[ok] validated generated selection surface parity")
-    print("[ok] validated selection navigation specs, review-backed working sets, and bounded public hygiene")
+    print("[ok] validated generated selection and shadow surface parity")
+    print("[ok] validated selection navigation specs, review-backed working sets, shadow specs, and bounded public hygiene")
 
 
 def main() -> int:

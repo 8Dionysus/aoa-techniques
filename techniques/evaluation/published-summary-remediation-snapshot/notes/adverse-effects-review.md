@@ -6,27 +6,30 @@
 
 ## Review focus
 - current role: canonical downstream remediation rollup over latest published summaries
-- current watch seam: keep remediation follow-up distinct from integrity verdicts and rendering policy inside the published-summary cluster
+- current watch seam: keep remediation follow-up distinct from integrity verdicts and rendering policy while holding bucket policy to one bounded reviewable surface
 
 ## Failure modes
+- remediation output starts reading like an integrity verdict or rendering instruction
 - missing or stale sources are hidden and the backlog looks healthier than reality
 - history replay slips back in and turns the snapshot into a second evaluator
 
 ## Negative effects
 - bucket policy can grow ad hoc until the snapshot stops being reviewable as one bounded surface
 - unstable grouping or truncation policy can make remediation output harder to compare over time
+- reason text can drift into trust or rendering semantics even when the helper stays read-only
 
 ## Misuse patterns
 - widening the bucket set casually instead of versioning a fixed bounded policy
-- treating the snapshot as a place to recompute history, trend state, or trust verdicts
+- treating the snapshot as a place to recompute history, trust verdicts, or rendering policy
 
 ## Detection signals
 - new buckets appear without a clearly documented policy change
-- remediation items stop pointing back to source summaries or start reading like integrity conclusions
+- remediation items stop pointing back to source summaries
+- bucket names or reason text start reading like integrity conclusions or renderer instructions
 
 ## Mitigations
 - keep bucket policy fixed per snapshot version and preserve latest-only inputs plus explicit source references
 - route trust questions back to integrity review and rendering questions back to consumer policy instead of widening the remediation surface
 
 ## Recommendation
-- keep current `canonical` status and use this note as the watch surface for remediation drift into integrity or rendering semantics
+- keep current `canonical` status and use this note as the watch surface for remediation drift into integrity or rendering semantics plus bucket-policy sprawl

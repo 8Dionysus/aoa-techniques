@@ -104,6 +104,7 @@ Create one reviewable remediation snapshot from already-published latest summari
 
 ### Failure modes
 
+- remediation output starts reading like an integrity verdict or rendering instruction, so operators infer more than the backlog actually knows
 - missing or stale sources are hidden, making the backlog look healthier than reality
 - history replay slips back in and turns the snapshot into a second evaluator
 - source references disappear and make remediation items harder to audit or verify
@@ -112,21 +113,24 @@ Create one reviewable remediation snapshot from already-published latest summari
 
 - the bucket policy can grow ad hoc until the snapshot stops being reviewable as one bounded surface
 - remediation output becomes harder to compare over time when grouping and truncation stop being stable
+- bucket or reason language can drift into trust-verdict or rendering-policy semantics even when the helper remains formally read-only
 
 ### Misuse patterns
 
 - widening the bucket set or candidate policy casually instead of versioning a fixed bounded policy
-- treating the snapshot as a place to recompute history, trend state, or upstream judgments
+- treating the snapshot as a place to recompute history, trust verdicts, or rendering policy
 
 ### Detection signals
 
 - new buckets keep appearing without a clearly documented policy change
 - remediation items no longer point back to their source summaries or stale-source reporting goes missing
+- bucket names or reason text start reading like integrity conclusions or renderer instructions instead of bounded follow-up labels
 
 ### Mitigations
 
 - keep the bucket set and candidate cap fixed for each snapshot version and document policy changes explicitly
 - preserve latest-only input rules, explicit stale-source reporting, and source references for every emitted item
+- route trust questions back to integrity review and rendering questions back to consumer policy instead of widening the remediation surface
 
 ## Validation
 

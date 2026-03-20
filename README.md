@@ -22,9 +22,11 @@ If you are new to this repository, follow this short path:
 See also: `WALKTHROUGH.md` for a short example of how one real practice became a published technique and then proved reusable in a second context.
 See also: `docs/TECHNIQUE_SELECTION.md` for the generated chooser by domain, status, validation strength, and direct relation hints.
 See also: `docs/SELECTION_PATTERNS.md` for the generated navigation surface built from direct relations, validator-backed navigation specs, and review-backed working sets.
+See also: `docs/SHADOW_PATTERNS.md` for the generated canonical-only shadow watch surface over current adverse-effects review notes.
 See also: the first public KAG/source-lift quartet in `techniques/docs/` for reusable section, metadata, provenance, and direct-relation lift patterns without opening a new `kag` domain.
 See also: `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md` for the first reusable markdown-first caution lift pattern over the same corpus.
 See also: canonical bundles now carry `notes/adverse-effects-review.md` as a bounded shadow-review supplement over authored `Risks`.
+See also: `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md` for the first cluster-level shadow review over the canonical published-summary package.
 See also: `docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md` for the first bounded semantic review pilot over a tightly related canonical cluster.
 See also: `docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md` for the second bounded semantic review pilot over the upstream evaluation-chain pair.
 See also: `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` for the third bounded semantic review pilot over the docs layout-versus-snapshot pair.
