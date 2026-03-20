@@ -20,7 +20,7 @@ rigor_level: bounded
 reversibility: easy
 review_required: true
 validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-15
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: requires
@@ -30,20 +30,24 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
   - kind: support_note
     path: notes/rollout-failure-triage.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # new-intent-rollout-checklist
 
 ## Intent
 
-Add a new `intent_type` to an existing `intent -> plan -> dry-run -> contract-check` pipeline without losing traceability, artifact consistency, or dry-run safety.
+Extend an existing `intent -> plan -> dry-run -> contract-check` pipeline with one new `intent_type` without losing traceability, artifact consistency, or dry-run safety.
 
 ## When to use
 
-- an automation chain already exists and supports dry-run validation
-- new intent types need a repeatable onboarding path
+- an automation chain already exists and the rollout is extending that shared chain, not redesigning it
+- one new intent type needs a repeatable onboarding path
 - CI or operator review depends on machine-readable summaries
 - the team wants extension work to stay bounded and reviewable
 
@@ -53,28 +57,29 @@ Add a new `intent_type` to an existing `intent -> plan -> dry-run -> contract-ch
 - the rollout path performs real side effects before dry-run validation
 - the system does not use fixtures, artifacts, or regression checks
 - the team is trying to redesign the whole chain instead of extending an existing one safely
+- the work is really about a new chain, a new execution mode, or broader workflow redesign rather than one bounded new intent
 
 ## Inputs
 
-- an existing intent-chain workflow with normalization, dry-run, and contract-check steps
+- an existing intent-chain workflow with normalization, dry-run, and contract-check steps already in place
 - a canonical fixture location for new intent payloads
 - a contract-check step that can assert expected routing
 - CI or another review surface that publishes artifacts
-- at least one regression surface that can prove the new intent uses the existing chain rather than a shortcut path
+- at least one regression surface that can prove the new intent uses the shared chain rather than a shortcut path
 
 ## Outputs
 
 - one canonical fixture for the new intent
 - one dedicated smoke path for the new intent rollout
 - one machine-readable contract summary for the new intent path
-- one published review surface that exposes the new intent path
+- one published review surface that exposes the new intent path alongside existing intent paths
 - at least one regression test covering the dry-run chain
 
 ## Core procedure
 
 1. Add one canonical fixture for the new intent rollout.
 2. Ensure the fixture includes traceability fields such as `intent_id` and `trace_id` when policy requires them.
-3. Add a dedicated chain smoke step that runs the new fixture through the existing intent-to-plan-to-dry-run path.
+3. Add a dedicated chain smoke step that runs the new fixture through the existing shared intent-to-plan-to-dry-run path.
 4. Add a strict contract-check step with explicit `expected_intent_type`.
 5. Publish the resulting contract summary and review row in the same surface humans and agents already use for the existing chain.
 6. Add at least one regression test that exercises the dry-run chain for the new intent.
@@ -83,7 +88,7 @@ Add a new `intent_type` to an existing `intent -> plan -> dry-run -> contract-ch
 
 - one canonical fixture exists for each new intent rollout
 - the rollout path stays dry-run only
-- the rollout reuses the existing intent-chain path rather than introducing a parallel shortcut
+- the rollout reuses the existing intent-chain path rather than introducing a parallel shortcut or a new chain
 - contract-check validates expected intent routing
 - machine-readable summary output is published
 - artifact paths match between smoke and check steps
@@ -142,6 +147,7 @@ What can vary across projects:
 - whether `trace_id` and `intent_id` are optional or required
 - CI systems and artifact publishing surfaces
 - whether the review surface is fully automated CI, operator review, or a mixed approval loop
+- whether the same published review surface is CI-only or also includes a compact operator handoff
 
 Project-shaped details that should not be treated as invariant:
 - exact fixture naming patterns such as `intent_<new_intent_type>.json`
@@ -152,7 +158,7 @@ Project-shaped details that should not be treated as invariant:
 
 What should stay invariant:
 - each new intent rollout has one canonical fixture
-- rollout uses the existing dry-run chain rather than a parallel shortcut path
+- rollout uses the existing shared dry-run chain rather than a parallel shortcut path or replacement chain
 - contract-check asserts the expected routing explicitly
 - rollout produces machine-readable output suitable for review
 - rollout updates the same review surface and regression layer that existing intents already use

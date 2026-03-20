@@ -20,7 +20,7 @@ rigor_level: bounded
 reversibility: easy
 review_required: true
 validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-18
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: complements
@@ -32,6 +32,8 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # property-invariants
@@ -46,12 +48,14 @@ Reduce weak example-only validation by expressing stable system or domain truths
 - situations where example-based tests feel too narrow
 - systems with conservation, monotonicity, idempotency, structural, or safety invariants
 - agent-assisted validation work where the invariant can act as a compact spec
+- cases where the main problem is broader coverage around one known domain truth rather than making a consumer-visible boundary explicit
 
 ## When not to use
 
 - presentation-only behavior where concrete examples are clearer
 - situations where no meaningful invariant is yet understood
 - systems where the main problem is unknown requirements rather than coverage breadth
+- named API, file, or summary boundaries where `AOA-T-0015 contract-test-design` is the clearer fit
 
 ## Inputs
 
@@ -135,6 +139,10 @@ What should stay invariant:
 - broader coverage than handpicked examples alone
 - explicit generator or input assumptions
 - honest statement of what the property proves
+
+Relationship to adjacent techniques:
+- unlike `AOA-T-0015 contract-test-design`, this technique is about constraining one meaningful invariant across many cases after the boundary is already understood, not about defining a consumer-visible contract
+- unlike `AOA-T-0007 signal-first-gate-promotion`, this technique strengthens the check surface itself rather than governing how an observed signal becomes strict
 
 ## Public sanitization notes
 

@@ -22,23 +22,23 @@ See also:
 |---|---|---|---|---|
 | Review Checklist | `present` | `6` | `techniques/agent-workflows/plan-diff-apply-verify-report/checks/review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
 
-### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`promoted`)
+### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Chain Contract Checklist | `present` | `10` | `techniques/agent-workflows/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+
+### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| TDD Slice Checklist | `present` | `8` | `techniques/agent-workflows/tdd-slice/checks/tdd-slice-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/agent-workflows/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| TDD Slice Checklist | `present` | `8` | `techniques/agent-workflows/tdd-slice/checks/tdd-slice-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 
 ## `docs`
 
@@ -140,7 +140,7 @@ See also:
 |---|---|---|---|---|
 | required-vs-optional-rendering-checklist | `absent` | `8` | `techniques/evaluation/required-vs-optional-source-rendering/checks/required-vs-optional-rendering-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
-### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`promoted`)
+### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|

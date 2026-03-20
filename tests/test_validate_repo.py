@@ -368,8 +368,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
 
         self.assertEqual({"agent-workflows", "docs", "evaluation"}, domain_values)
-        self.assertEqual(10, status_counts["canonical"])
-        self.assertEqual(12, status_counts["promoted"])
+        self.assertEqual(13, status_counts["canonical"])
+        self.assertEqual(9, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -470,7 +470,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         canonical_records = [record for record in records if record.status == "canonical"]
         promoted_records = [record for record in records if record.status == "promoted"]
 
-        self.assertEqual(10, len(canonical_records))
+        self.assertEqual(13, len(canonical_records))
 
         for record in canonical_records:
             self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
@@ -1104,7 +1104,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
             scope["section_scope"],
         )
-        self.assertEqual(10, adverse_note_count)
+        self.assertEqual(13, adverse_note_count)
 
     def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
         technique_dir = REPO_ROOT / "techniques" / "demo"

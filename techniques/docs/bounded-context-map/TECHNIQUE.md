@@ -14,13 +14,13 @@ tags:
   - ddd-lite
   - contexts
   - vocabulary
-summary: Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible.
+summary: Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work.
 maturity_score: 3
 rigor_level: bounded
 reversibility: easy
 review_required: true
 validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-18
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: complements
@@ -32,19 +32,21 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # bounded-context-map
 
 ## Intent
 
-Reduce semantic confusion and misplaced changes by naming bounded contexts, clarifying their responsibilities, and making the interfaces between them visible.
+Reduce semantic confusion and misplaced changes by naming bounded contexts, clarifying their responsibilities, and making the handoff interfaces between them visible.
 
 ## When to use
 
 - repositories with several domains, services, or subsystems that can blur together
 - situations where naming is overloaded or ambiguous
-- architecture discussions that need a compact context boundary map before coding safely
+- docs or scoping work that needs a compact boundary map before implementation widens the wrong area
 - agent-assisted work where semantic confusion would widen the context unnecessarily
 
 ## When not to use
@@ -52,6 +54,7 @@ Reduce semantic confusion and misplaced changes by naming bounded contexts, clar
 - tiny repositories with no meaningful subsystem ambiguity
 - changes that are fully local and already clearly bounded
 - situations where drawing context labels would only add ceremony without reducing confusion
+- broad architecture redesigns where the real need is deeper design work, not a bounded context map
 
 ## Inputs
 
@@ -81,7 +84,7 @@ Reduce semantic confusion and misplaced changes by naming bounded contexts, clar
 - context boundaries should reduce semantic confusion rather than create taxonomy for its own sake
 - neighboring contexts should be named explicitly when they matter
 - handoff or translation points should be visible
-- the result should help a future reviewer scope work more safely
+- the result should help a future reviewer scope docs or implementation work more safely
 
 ## Risks
 
@@ -95,24 +98,28 @@ Reduce semantic confusion and misplaced changes by naming bounded contexts, clar
 
 - over-structuring can slow small projects if no real confusion exists
 - premature context formalization can freeze evolving vocabulary too early
+- the map can become generic architecture formalism if it stops being tied to one concrete scoping problem
 
 ### Misuse patterns
 
 - using context mapping as a substitute for real interface cleanup
 - declaring a DDD-style map without changing how reviews or changes are scoped
 - treating every folder boundary as a bounded context automatically
+- using the technique to justify architecture theater instead of one bounded ambiguity reduction pass
 
 ### Detection signals
 
 - contributors still confuse neighboring areas after the map is written
 - the context names overlap or feel interchangeable
 - handoff points are still implicit or undocumented
+- reviewers start discussing taxonomy or diagram shape more than the actual scope boundary being protected
 
 ### Mitigations
 
 - collapse weak or ceremonial contexts
 - tighten the vocabulary around observable responsibilities
 - add or clarify the interface notes between contexts
+- re-anchor the map in one concrete scoping decision instead of a broader architecture program
 
 ## Validation
 
@@ -120,7 +127,7 @@ Verify the technique by confirming that:
 - the main ambiguity or vocabulary drift was reduced
 - contexts or subsystems were named with clearer responsibility boundaries
 - handoff or interface points were made visible
-- the result would help a future change stay better scoped
+- the result would help a future docs or implementation change stay better scoped
 
 ## Adaptation notes
 
@@ -134,7 +141,7 @@ What should stay invariant:
 - visible responsibility boundaries
 - reduction of semantic confusion
 - explicit handoff or interface notes where relevant
-- usefulness for future change scoping
+- usefulness for future docs or change scoping
 
 ## Public sanitization notes
 

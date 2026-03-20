@@ -2,7 +2,7 @@
 id: AOA-T-0015
 name: contract-test-design
 domain: evaluation
-status: promoted
+status: canonical
 origin:
   project: abyss-stack
   path: planning-layer
@@ -15,12 +15,12 @@ tags:
   - boundaries
   - agent-friendly
 summary: Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-18
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: complements
@@ -32,6 +32,10 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # contract-test-design
@@ -46,12 +50,14 @@ Reduce breakage at boundaries by expressing the expected interface behavior expl
 - smoke paths that should emit stable summaries or structured output
 - interface changes where downstream drift is a risk
 - refactors that keep internals moving while the boundary must remain stable
+- situations where the consumer-visible contract should stay the primary verification surface even as implementation details change
 
 ## When not to use
 
 - purely local logic with no meaningful boundary
 - situations where the real problem is that the boundary itself is still undefined
 - very small changes where a boundary contract would add ceremony without value
+- cases where the main validation need is broad invariant coverage rather than a consumer-facing contract
 
 ## Inputs
 
@@ -121,6 +127,7 @@ Verify the technique by confirming that:
 - tests or checks target observable contract behavior
 - downstream impact was considered where relevant
 - the result states what the contract guarantees and what it does not
+- the contract surface remains narrower than invariant-oriented coverage techniques such as `AOA-T-0017`
 
 ## Adaptation notes
 
@@ -157,3 +164,4 @@ See `checks/contract-test-design-checklist.md` for a minimal review pass coverin
 
 - connect more explicitly to structured smoke-summary techniques
 - strengthen guidance on keeping contracts narrow
+- keep the boundary-contract role distinct from invariant-broadening patterns

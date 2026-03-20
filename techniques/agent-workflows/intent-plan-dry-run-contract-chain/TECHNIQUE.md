@@ -2,7 +2,7 @@
 id: AOA-T-0004
 name: intent-plan-dry-run-contract-chain
 domain: agent-workflows
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: docs/RUNBOOK.md
@@ -15,12 +15,12 @@ tags:
   - dry-run
   - traceability
 summary: Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists.
-maturity_score: 4
+maturity_score: 5
 rigor_level: strict
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-15
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: complements
@@ -34,13 +34,17 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # intent-plan-dry-run-contract-chain
 
 ## Intent
 
-Turn high-level intent into a traceable, reviewable, dry-run-only chain that emits explicit artifacts and a contract verdict before any real execution path is allowed.
+Turn high-level intent into a traceable, reviewable, dry-run-only chain that emits explicit artifacts and a contract verdict before any real execution path is allowed. This is the default underlying contract when a workflow must prove its plan before any real execution path is allowed.
 
 ## When to use
 
@@ -48,12 +52,14 @@ Turn high-level intent into a traceable, reviewable, dry-run-only chain that emi
 - agent workflows that need a reviewable planning layer before execution
 - teams that want dry-run-first automation with explicit artifacts
 - systems where traceability matters across adapter, planner, and validator steps
+- the default underlying contract when a workflow must normalize intent into a plan artifact before any real execution path is allowed
 
 ## When not to use
 
 - simple scripts that do not need an intent abstraction
 - systems that already execute real actions directly without a dry-run safety layer
 - workflows where no stable artifacts or contract checks are required
+- cases where a lighter pattern can stop at planning or validation without needing the full artifact chain
 
 ## Inputs
 
@@ -157,7 +163,7 @@ What should stay invariant:
 
 Relationship to adjacent techniques:
 - `AOA-T-0001 plan-diff-apply-verify-report` governs how changes to this chain should be planned, verified, and reported safely.
-- `AOA-T-0005 new-intent-rollout-checklist` extends this technique when one new intent is added to an existing chain without bypassing its contracts.
+- `AOA-T-0005 new-intent-rollout-checklist` extends this technique only after this base chain already exists and one new intent must be added without bypassing its contracts.
 
 ## Public sanitization notes
 

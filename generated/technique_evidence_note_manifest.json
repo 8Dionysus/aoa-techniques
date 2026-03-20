@@ -1397,11 +1397,277 @@
       "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0004"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "intent-plan-dry-run-contract-chain"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default underlying contract for intent-driven dry-run chains"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep traceability and contract-check discipline subordinate to the artifact-first chain, and keep the chain from collapsing back into generic caution guidance"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the chain emits artifacts that look complete even though the plan step never actually constrained execution"
+                },
+                {
+                  "order": 2,
+                  "text": "traceability metadata drifts between intent, plan, and contract-check layers until routing or validation breaks"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "overfitting the chain to one project's artifact names or CI layout makes the pattern harder to reuse"
+                },
+                {
+                  "order": 2,
+                  "text": "the workflow can become ceremony-heavy if every small intent is forced through the full chain even when a lighter contract would be enough"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating dry-run completeness as proof that real execution would be safe"
+                },
+                {
+                  "order": 2,
+                  "text": "using the technique as a generic \"be careful\" wrapper instead of an artifact-first contract with explicit failure behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers start relying on logs again because the artifacts no longer carry enough routing or traceability detail"
+                },
+                {
+                  "order": 2,
+                  "text": "example text and rollout notes talk mostly about file names or table layout instead of the intent-plan-contract invariant"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the contract anchored to plan-first artifacts, dry-run-only execution, and explicit contract verdicts"
+                },
+                {
+                  "order": 2,
+                  "text": "re-check the chain in a second context whenever the wording starts to center one project's filenames or execution surface"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the canonical bundle and use this note as the watch surface for artifact-chain drift, traceability drift, or accidental fallback to log-scraping habits"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/bounded-transfer.md",
           "kind": "support_note",
           "title": "Bounded Transfer",
           "note_shape": "opaque_body",
           "body_markdown": "This note explains what transfers cleanly from the ATM10 origin and what should not be mistaken for the core of `AOA-T-0004`.\n\n## What transfers cleanly\n\n- a stable intent payload is normalized into a plan artifact before any execution layer runs\n- the execution layer is dry-run only and emits explicit artifacts rather than relying on logs\n- a contract-check reads those artifacts and produces a machine-readable verdict\n- routing and traceability data can be surfaced in the contract summary when policy requires it\n- the contract result is the stop signal that prevents premature progression to real execution\n\n## What is not the core technique\n\n- exact ATM10 script names such as `intent_to_automation_plan.py` or `automation_intent_chain_smoke.py`\n- exact artifact names such as `automation_plan.json`, `chain_summary.json`, or `contract_summary.json`\n- exact CI workflow layout, summary-table labels, or artifact-upload conventions\n- exact thresholds such as minimum action count or minimum step count\n- UI-automation specifics, keyboard actions, or other donor-specific payload shapes\n\n## Minimum portability bar\n\nA project can reasonably claim this technique only if all of the following hold:\n\n- the plan artifact is written before dry-run execution\n- the dry-run path is side-effect free in the same sense that the project documents and enforces\n- the contract-check reads artifacts directly and returns an explicit pass or fail verdict\n- routing expectations are checked explicitly instead of being inferred from human log review\n- failing the contract blocks progression to any real execution path\n\n## Misreadings to avoid\n\n- adding an adapter with side effects is not this technique\n- emitting logs without stable artifacts is not this technique\n- carrying trace IDs without checking or publishing them when policy requires them is not this technique\n- copying ATM10 filenames or commands without preserving the artifact-first contract misses the transferable core\n\n## Source backing\n\nThe transfer boundary comes from the ATM10 sequence around `M6.3`, `M6.4`, `M6.6`, and the 2026-02-24 traceability hardening: the durable pattern is the artifact-first chain plus explicit contract verdict, not the donor repository's exact script or CI layout."
+        },
+        {
+          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0004"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "intent-plan-dry-run-contract-chain"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` records the chain as a real artifact-first automation workflow where intent is normalized into a plan, the plan is validated through dry-run, and contract checks gate the next step"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "the origin notes show stable artifact families, explicit traceability metadata, and machine-readable contract output rather than log-only validation"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`aoa-skills` reuses the same preview-first contract in a narrower skill surface, which confirms the invariant chain survives a different downstream form without collapsing into donor-specific implementation detail"
+                },
+                {
+                  "order": 4,
+                  "key": "bounded transfer",
+                  "value_markdown": "the portability note states the minimum bar clearly and keeps the reusable contract centered on plan-first artifacts, dry-run-only execution, and explicit contract failure"
+                },
+                {
+                  "order": 5,
+                  "key": "validation strength",
+                  "value_markdown": "the technique now has origin evidence, a bounded transfer note, a second-context adaptation note, examples, a checklist, and a semantic review that keeps it distinct from the extension checklist in `AOA-T-0005`"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the default underlying contract when an intent-driven workflow must prove its plan before any real execution path is allowed"
+                },
+                {
+                  "order": 2,
+                  "text": "it stays narrower than `AOA-T-0001`, which governs how repository changes are planned and reported, because `AOA-T-0004` is about the artifact-first execution chain itself"
+                },
+                {
+                  "order": 3,
+                  "text": "`AOA-T-0005` remains a follow-on extension technique for adding one new intent to an already existing chain, not for defining the base contract"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps only the reusable intent-to-plan-to-dry-run contract and removes ATM10-specific command names, filenames, UI coordinates, and workflow wiring"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the bundle remains understandable without origin-project access and does not depend on hidden operational surfaces to explain the contract"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a third live context would widen the proof surface further, but it is not required before a first canonical review of this bounded contract"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0004` for `promoted -> canonical`; the current support surfaces now make it read as the natural default underlying contract for intent-driven dry-run chains within its bounded scope"
+                }
+              ]
+            }
+          ]
         },
         {
           "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/origin-evidence.md",
@@ -1642,6 +1908,142 @@
       "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0005"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "new-intent-rollout-checklist"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` documents the rollout policy as a bounded checklist for adding one new `intent_type` to an existing dry-run chain with canonical fixtures, strict routing assertions, and regression coverage"
+                },
+                {
+                  "order": 2,
+                  "key": "origin reinforcement",
+                  "value_markdown": "the origin notes describe the same extension path across fixture hardening, strict `expected_intent_type` checks, summary publication, and end-to-end regression proof for a new intent rollout"
+                },
+                {
+                  "order": 3,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now shows the same contract in a public-safe repo-local adaptation with one generic rollout example, one concrete non-UI example, and a checklist that keeps fixture, smoke, contract-check, and artifact alignment explicit"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle has strong checklist and example surfaces plus a rollout-failure triage note, but it still lacks a second live reuse context beyond the origin and this repo-local adaptation sketch"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right checklist when a shared intent chain already exists and one new intent type needs to be added without bypassing the chain or inventing a shortcut path"
+                },
+                {
+                  "order": 2,
+                  "text": "it stays narrower than the underlying chain contract in `AOA-T-0004`, and narrower than rollout planning in `AOA-T-0001`"
+                },
+                {
+                  "order": 3,
+                  "text": "it is still not the default canonical choice because the current second-context evidence is a bounded public sketch rather than a second live reuse context with stronger operating proof"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the public technique keeps the reusable rollout checklist and removes donor-specific workflow names, payloads, and private operational detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the repo-local examples and triage note are understandable without origin-project access, but they do not yet prove enough live second-context reuse for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle still needs stronger live reuse evidence outside the origin project and this repository-local adaptation sketch before canonical promotion would be justified"
+                },
+                {
+                  "order": 2,
+                  "text": "a future second live context should show the same checklist succeeding in practice, not only in public-safe example form"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer `AOA-T-0005` for canonical promotion in this wave; keep it `promoted`, keep the checklist bounded, and revisit once stronger live second-context reuse exists"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
@@ -1728,6 +2130,151 @@
           "title": "Rollout Failure Triage",
           "note_shape": "opaque_body",
           "body_markdown": "This note generalizes the rollout-debugging path behind `AOA-T-0005` so a new intent can be repaired without widening scope or bypassing the shared chain.\n\n## Triage order\n\nCheck failures in this order:\n\n1. canonical fixture\n2. smoke path\n3. contract-check\n4. artifact publishing\n5. regression coverage\n\nThat order keeps the diagnosis close to the source of truth and avoids debugging summary surfaces before the underlying rollout path is valid.\n\n## 1. Fixture problems\n\nLook here first when:\n\n- the new intent never appears in the smoke run\n- the contract summary shows the wrong `intent_type`\n- required `trace_id` or `intent_id` fields are missing from the observed data\n\nTypical fix:\n\n- repair the canonical fixture before touching CI or summary wiring\n\n## 2. Smoke path problems\n\nLook here when:\n\n- the fixture exists but the run directory or expected artifacts are missing\n- the rollout path uses a one-off helper instead of the shared intent-chain flow\n- the smoke step fails before any contract summary is produced\n\nTypical fix:\n\n- reproduce the dry-run smoke locally against the canonical fixture and confirm it writes the same artifact family expected by existing intent paths\n\n## 3. Contract-check problems\n\nLook here when:\n\n- `expected_intent_type` does not match the new route\n- summary `violations` show missing artifact, routing mismatch, or missing traceability fields\n- the smoke run succeeds but the contract verdict is failing\n\nTypical fix:\n\n- adjust the strict routing or traceability assertions so they match the intended contract of the new rollout, not the previous intent path\n\n## 4. Artifact publishing problems\n\nLook here when:\n\n- `contract_summary.json` exists locally but is absent from the main review surface\n- the new intent path runs, but there is no summary row or stable artifact path for reviewers\n- humans can only discover the result by opening raw logs\n\nTypical fix:\n\n- wire the new summary and artifact path into the same surface already used for existing intents\n\n## 5. Regression coverage problems\n\nLook here when:\n\n- the rollout appears green in smoke and contract checks, but there is no targeted regression proof\n- future refactors can silently remove the new intent path without an obvious failure signal\n\nTypical fix:\n\n- add at least one automated test that exercises the new intent through normalization, dry-run, and contract-check\n\n## Source backing\n\nThis triage shape is generalized from the ATM10 material around `M6.8` troubleshooting guidance, `M6.19` rollout policy, the 2026-02-24 traceability hardening, and the 2026-03-03 `open_world_map` rollout."
+        },
+        {
+          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0005"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "new-intent-rollout-checklist"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique canon with markdown-first contracts, generated selection surfaces, and explicit repo-local examples and checks"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository where the rollout checklist survives as a bounded extension pattern even without the origin project\u2019s live automation chain"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "adaptation path",
+                  "value_markdown": "the origin rollout policy is reused here as a public checklist for adding one new intent type to an already-existing dry-run chain, rather than as a donor-specific CI script or workflow rewrite"
+                },
+                {
+                  "order": 2,
+                  "key": "downstream surface",
+                  "value_markdown": "the visible reuse point is the technique bundle, its checklist, examples, and rollout-failure triage note instead of a full operational automation implementation"
+                },
+                {
+                  "order": 3,
+                  "key": "linkage form",
+                  "value_markdown": "the repo-local example and checklist keep the shared-chain contract explicit, with `AOA-T-0004` as the underlying chain and `AOA-T-0001` as the change workflow for editing the rollout itself"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "extension boundary",
+                  "value_markdown": "one new intent type is added to an existing shared chain, not to a new one-off path"
+                },
+                {
+                  "order": 2,
+                  "key": "safety discipline",
+                  "value_markdown": "dry-run remains the gate before any real action path"
+                },
+                {
+                  "order": 3,
+                  "key": "review discipline",
+                  "value_markdown": "the new intent must stay visible on the same artifact and review surfaces as the existing intent set"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the repo-local example can look like proof of live reuse even though it is still a bounded sketch rather than a second production context"
+                },
+                {
+                  "order": 2,
+                  "text": "the checklist can drift toward generic rollout advice if it stops naming fixtures, routing checks, and artifact alignment explicitly"
+                },
+                {
+                  "order": 3,
+                  "text": "future readers could mistake a readable public example for the stronger evidence needed for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`examples/minimal-intent-rollout.md` shows the checklist as a generic bounded rollout for one new intent path, including fixture, smoke, contract-check, review surface, and regression discipline."
+                },
+                {
+                  "order": 2,
+                  "text": "`examples/concrete-non-ui-intent-rollout.md` grounds the same contract in a public-safe non-UI example, `refresh_skill_index`, which keeps the reusable shape but not the origin project\u2019s exact automation details."
+                },
+                {
+                  "order": 3,
+                  "text": "`checks/intent-rollout-checklist.md` keeps the bounded review shape explicit by checking fixture, smoke, contract-check, artifact, and regression coverage in one list."
+                },
+                {
+                  "order": 4,
+                  "text": "`notes/rollout-failure-triage.md` shows that the checklist remains tied to concrete failure repair paths rather than general rollout philosophy."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a bounded repo-local second context for the public checklist shape, but it is still not enough on its own to justify canonical promotion"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5515,6 +6062,146 @@
       "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/single-source-rule-distribution/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0013"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-source-rule-distribution"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique already has a clean bounded donor contract and explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the repo-local adaptation note shows the contract clearly enough to remain reusable, but it still reads as a sketch rather than a live multi-target reuse proof"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the current bundle has a checklist, two public-safe examples, and clear separation from `AOA-T-0012`, but it still lacks a live multi-target reuse context outside the current repository narrative"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this remains the right default when one canonical rule source must fan out to multiple managed instruction targets without turning those targets into canonical homes"
+                },
+                {
+                  "order": 2,
+                  "text": "it is still narrower than `AOA-T-0012`, which composes many fragments into one generated artifact rather than distributing one shared rule core to multiple targets"
+                },
+                {
+                  "order": 3,
+                  "text": "the current wording is strong enough for reuse, but not yet strong enough to justify canonical default status without evidence that the shared core survives real multi-target re-application"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable one-source-to-many-target pattern and excludes donor-specific orchestration behavior"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the current bundle remains understandable without donor-repo access or hidden local automation"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the main missing proof is live multi-target reuse beyond the current repo-local sketch"
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should be based on a real managed target flow where one source update propagates cleanly to multiple instruction surfaces more than once"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0013` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until the technique proves itself in a live multi-target reuse context beyond the current repo-local adaptation sketch"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/single-source-rule-distribution/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
@@ -5937,6 +6624,291 @@
       "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/agent-workflows/tdd-slice/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0014"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "tdd-slice"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default bounded execution discipline for one small behavior slice"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep slice execution discipline distinct from consumer-visible contract design and from generic \"always test first\" ritual"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the tests describe implementation details instead of the observable slice behavior"
+                },
+                {
+                  "order": 2,
+                  "text": "the slice grows until it hides a broader boundary or architectural rewrite"
+                },
+                {
+                  "order": 3,
+                  "text": "the behavior target is too vague, so the test-first flow never becomes a useful spec"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "ritualized TDD can slow work when the slice is already well understood and the real task is just execution"
+                },
+                {
+                  "order": 2,
+                  "text": "narrow tests can create false confidence if the slice was chosen poorly"
+                },
+                {
+                  "order": 3,
+                  "text": "the technique can distract from contract design if people use it for boundary definition work"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "writing tests after code and still describing the work as tests-first"
+                },
+                {
+                  "order": 2,
+                  "text": "forcing the technique onto glue code or one-off scripts with no stable behavioral core"
+                },
+                {
+                  "order": 3,
+                  "text": "using the slice discipline as a proxy for `AOA-T-0015 contract-test-design`"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "tests mention internal helper structure more than behavior"
+                },
+                {
+                  "order": 2,
+                  "text": "the diff widens beyond the declared slice"
+                },
+                {
+                  "order": 3,
+                  "text": "the final report cannot state both the covered behavior and what remains out of scope"
+                },
+                {
+                  "order": 4,
+                  "text": "reviewers start asking contract questions that the slice technique cannot answer"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "narrow the slice before continuing"
+                },
+                {
+                  "order": 2,
+                  "text": "rewrite tests around behavior and observable outcomes"
+                },
+                {
+                  "order": 3,
+                  "text": "hand boundary questions to `AOA-T-0015` instead of stretching this technique into contract design"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for slice discipline drifting into generic TDD ritual or boundary-contract semantics"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/tdd-slice/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0014"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "tdd-slice"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the origin note already shows the recurring need for one bounded behavior slice, a tests-first start where appropriate, and a smallest-passing-change implementation path"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the public adaptation keeps the same bounded slice contract in a repository-agnostic form with a checklist, two examples, and reviewable out-of-scope boundaries"
+                },
+                {
+                  "order": 3,
+                  "key": "semantic separation",
+                  "value_markdown": "the later semantic review keeps `AOA-T-0014` distinct from `AOA-T-0015` by drawing the line between execution discipline for one slice and contract design at a consumer-visible boundary"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle already has an origin note, a second-context note, a checklist, and two concrete examples, which is stronger than the initial promotion floor"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the default when the main problem is how to execute one already understood behavior slice safely, not how to define a consumer-visible boundary contract"
+                },
+                {
+                  "order": 2,
+                  "text": "it is narrower than `AOA-T-0015 contract-test-design`, which should be preferred when the question is boundary shape, consumer expectations, or contract guarantees"
+                },
+                {
+                  "order": 3,
+                  "text": "it complements `AOA-T-0001` because that technique governs the reviewable change process, while this one governs the test-first execution discipline inside one bounded slice"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique remains free of private URLs, secrets, and project-specific operational details"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the checklist, examples, and adaptation note remain understandable without origin-project access"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would widen the proof surface further, but it is not required for a first canonical review of this bounded execution discipline"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0014` for `promoted -> canonical` in this wave; the bundle now reads as the default bounded execution discipline for small behavior slices without collapsing into boundary-contract semantics"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/agent-workflows/tdd-slice/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
@@ -6171,6 +7143,283 @@
       "id": "AOA-T-0015",
       "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/evaluation/contract-test-design/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0015"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-test-design"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default boundary-contract evaluation discipline for consumer-visible interfaces"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the contract narrow enough that it does not collapse into either hidden internals or broad invariant coverage"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the contract is too vague to constrain behavior"
+                },
+                {
+                  "order": 2,
+                  "text": "validation ends up covering a summary artifact while the real consumer boundary remains untested"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream compatibility assumptions stay implicit until a later break forces the issue"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "an oversized contract can freeze useful internal evolution unnecessarily"
+                },
+                {
+                  "order": 2,
+                  "text": "weak contract definitions can create false confidence that the real boundary is protected"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "calling any smoke test a contract test without boundary discipline"
+                },
+                {
+                  "order": 2,
+                  "text": "encoding internal implementation details into the boundary contract"
+                },
+                {
+                  "order": 3,
+                  "text": "widening the contract surface simply because a tool makes it easy"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the supposed contract mostly references internals rather than observable inputs or outputs"
+                },
+                {
+                  "order": 2,
+                  "text": "downstream consumers are still surprised after the contract change"
+                },
+                {
+                  "order": 3,
+                  "text": "the validation surface does not actually exercise the real boundary"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "narrow the contract to what the consumer really observes"
+                },
+                {
+                  "order": 2,
+                  "text": "separate internal correctness tests from boundary stability tests"
+                },
+                {
+                  "order": 3,
+                  "text": "add downstream impact notes before changing the boundary"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the canonical bundle and use this note as the watch surface for boundary drift, while keeping `AOA-T-0017` as the separate home for invariant-broadening validation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/contract-test-design/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0015"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contract-test-design"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approved for canonical promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the source notes describe a repeated boundary-validation need where consumer-visible contracts mattered more than hidden implementation details"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the public adaptation keeps the same boundary-first contract while rewriting project-shaped service and workflow edges into repo-agnostic contract framing"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle already has a checklist, two concrete examples, a semantic review, and clear adaptation notes that keep the consumer boundary explicit"
+                },
+                {
+                  "order": 4,
+                  "key": "semantic separation",
+                  "value_markdown": "the `Skill-Support Semantic Review` keeps `AOA-T-0015` distinct from `AOA-T-0017`, which helps confirm that contract design is not just broader invariant coverage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this reads as the default when a team needs to make one consumer-visible boundary explicit and reviewable without freezing unrelated internals"
+                },
+                {
+                  "order": 2,
+                  "text": "it stays narrower than `AOA-T-0017`, which is the better choice when the main problem is broadening coverage with stable invariants rather than designing the boundary contract itself"
+                },
+                {
+                  "order": 3,
+                  "text": "it also remains narrower than `AOA-T-0003`, which focuses on runnable smoke summary production rather than contract framing at the consumer boundary"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the public bundle removes project-specific endpoints, service names, and local operational topology while keeping the reusable boundary-design pattern"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without origin-project access"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a future third live context would add more proof surface, but it is not required before canonical promotion for this bounded evaluation discipline"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approve `AOA-T-0015` for `promoted -> canonical` in this wave; it now reads as the default boundary-contract evaluation discipline within its bounded scope"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/evaluation/contract-test-design/notes/origin-evidence.md",
           "kind": "origin_evidence",
@@ -6407,6 +7656,133 @@
       "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/bounded-context-map/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0016"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-context-map"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the origin note shows the pattern reused to keep agent and human work semantically scoped when neighboring subsystems or concepts blurred together"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the public adaptation note shows the same contract surviving in `aoa-techniques` as a docs and scoping pattern rather than as generic architecture formalism"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the technique has a bounded checklist, a minimal example, and a semantic review that still keeps the watch seam on architecture-formalism drift"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this reads as the default docs and scoping pattern when the immediate problem is semantic confusion around neighboring responsibilities and handoff points"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than broader architecture work because it should help a future change stay inside one intended scope rather than justify a general design taxonomy"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable boundary-mapping pattern and strips project-specific naming, local layout, and private operational detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the bundle remains understandable without origin-project access and does not rely on hidden architecture context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the current proof surface is still mostly one origin plus one public adaptation, so the technique is reusable but not yet strong enough to read as the default canonical choice"
+                },
+                {
+                  "order": 2,
+                  "text": "a second live context with different neighboring ambiguity would strengthen the claim that this stays a docs and scoping technique rather than a broader architecture formalism"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0016` in `promoted` for now; the bundle is bounded and public-safe, but the smallest remaining gap is broader reuse evidence rather than wording alone"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/bounded-context-map/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
@@ -6641,6 +8017,134 @@
       "id": "AOA-T-0017",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/evaluation/property-invariants/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0017"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "property-invariants"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`atm10-agent` already shows repeated need for invariant-oriented checks where broader behavioral coverage mattered more than a few fixed examples"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "the public adaptation note keeps the technique distinct inside `aoa-techniques` as an invariant-first validation pattern rather than generic \"stronger tests\" language"
+                },
+                {
+                  "order": 3,
+                  "key": "semantic reinforcement",
+                  "value_markdown": "`docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md` keeps `AOA-T-0015` versus `AOA-T-0017` readable as contract-surface validation versus invariant-oriented coverage broadening, while also naming that seam as the main watch point"
+                },
+                {
+                  "order": 4,
+                  "key": "support surfaces",
+                  "value_markdown": "the bundle already has a checklist plus two public-safe examples that keep the center of gravity on invariant strength, bounded input assumptions, and honest reporting"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right bounded choice when the main validation problem is broader coverage around one known domain truth that should hold across many cases"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than adjacent techniques: `AOA-T-0015` is still the clearer default when a consumer-visible boundary must be defined explicitly, and `AOA-T-0007` still governs staged promotion of an already-observed signal rather than invariant design"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-20"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published bundle keeps the reusable invariant-first pattern and does not depend on ATM10-specific data shapes, tool choices, or hidden operational context"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the current examples, checklist, and adaptation notes remain understandable without origin-project access and stay bounded to technique-level meaning"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the main remaining gap is stronger live reuse evidence that the technique becomes the natural default across more than one bounded validation domain without drifting back toward generic contract-testing language"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0017` as `promoted` in this wave; the technique is strong and distinct, but one more reinforcement step around live default-use evidence would make a later `promoted -> canonical` decision easier and cleaner"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/evaluation/property-invariants/notes/origin-evidence.md",
           "kind": "origin_evidence",
