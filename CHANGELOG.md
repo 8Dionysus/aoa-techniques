@@ -28,6 +28,8 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - new generated `docs/REPO_DOC_SURFACES.md` now routes the authoritative public docs/status layer by bounded roles instead of filesystem guessing
 - new generated `generated/repo_doc_surface_manifest.json` now lifts the 10 authoritative repo docs/status files into derived docs/status routing knowledge only
 - new authored `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md` now defines the bounded source contract and explicit exclusions for that docs/status layer
+- new generated `docs/TECHNIQUE_SECTIONS.md`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, and `docs/EVIDENCE_NOTE_SURFACES.md` now provide reader-facing routing surfaces for the existing section, checklist, example, and evidence-note manifest families
+- new authored `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, and `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md` now define the bounded contracts for those source classes, and `EVIDENCE_NOTE_PROVENANCE_GUIDE.md` now covers the evidence-note reader companion explicitly
 - new generated `docs/SHADOW_PATTERNS.md` now provides one canonical-only shadow operating surface over typed `adverse_effects_review` notes
 - new generated `generated/shadow_review_manifest.json` now lifts authored shadow-review docs into derived review knowledge without turning caution into policy metadata
 - `EVALUATION_CHAIN_SHADOW_REVIEW.md` now adds the second canonical shadow-review pilot for `AOA-T-0003` and `AOA-T-0007`

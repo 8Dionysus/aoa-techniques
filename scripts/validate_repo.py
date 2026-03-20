@@ -88,6 +88,12 @@ REQUIRED_SELECTION_FILES = (
     "docs/SELECTION_PATTERNS.md",
     "docs/SHADOW_PATTERNS.md",
 )
+REQUIRED_KAG_SOURCE_READER_FILES = (
+    "docs/TECHNIQUE_SECTIONS.md",
+    "docs/TECHNIQUE_CHECKLISTS.md",
+    "docs/TECHNIQUE_EXAMPLES.md",
+    "docs/EVIDENCE_NOTE_SURFACES.md",
+)
 REQUIRED_CAPSULE_SURFACE_FILES = ("docs/TECHNIQUE_CAPSULES.md",)
 REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
 SELECTION_REVIEW_DOCS = {
@@ -2842,6 +2848,13 @@ def validate_selection_files(repo_root: Path) -> None:
             fail(f"{repo_root}: missing required selection file '{relative_path}'")
 
 
+def validate_kag_source_reader_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_KAG_SOURCE_READER_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required KAG source reader file '{relative_path}'")
+
+
 def validate_capsule_surface_files(repo_root: Path) -> None:
     for relative_path in REQUIRED_CAPSULE_SURFACE_FILES:
         target = repo_root / relative_path
@@ -3975,6 +3988,14 @@ def escape_markdown_table_cell(value: str) -> str:
     return flattened.replace("|", r"\|")
 
 
+def record_sort_key(record: TechniqueRecord) -> tuple[int, int, str, str]:
+    if record.domain in DOMAIN_ORDER:
+        domain_rank = DOMAIN_ORDER.index(record.domain)
+    else:
+        domain_rank = len(DOMAIN_ORDER)
+    return (domain_rank, capsule_status_rank(record.status), record.status, record.id)
+
+
 def docs_relative_link(target_path: str) -> str:
     target = PurePosixPath(target_path)
     if target.parts[:1] == ("docs",):
@@ -4036,6 +4057,338 @@ def shadow_note_summary(record: TechniqueRecord) -> dict[str, str]:
         "main_failure_mode": failure_modes.items[0].text,
         "note_path": note.note_path,
     }
+
+
+def technique_source_link(repo_root: Path, record: TechniqueRecord) -> str:
+    return f"[TECHNIQUE.md]({docs_relative_link(record.technique_path.relative_to(repo_root).as_posix())})"
+
+
+def note_kind_title(kind: str) -> str:
+    if kind in TYPED_NOTE_TITLES:
+        return TYPED_NOTE_TITLES[kind]
+    if kind == "support_note":
+        return "Support Note"
+    return kind.replace("_", " ").title()
+
+
+def typed_note_scope_signal(kind: str) -> str:
+    headings = TYPED_NOTE_SECTION_SCOPES[kind]
+    heading_list = ", ".join(f"`{heading}`" for heading in headings)
+    return f"`{len(headings)}` fixed sections: {heading_list}"
+
+
+def note_routing_signal(note: TechniqueNote) -> str:
+    if note.note_shape == NOTE_SHAPE_TYPED:
+        return f"`{len(note.sections)}` typed sections"
+    return "`body_markdown` only"
+
+
+def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
+    sorted_records = sorted(records, key=record_sort_key)
+    lines = [
+        "# Technique Sections",
+        "",
+        "This file is generated from authoritative `TECHNIQUE.md` bundles plus the current section manifest payload.",
+        "Do not edit it by hand; run `python scripts/build_section_manifest.py`.",
+        "",
+        "Use this surface when you need one bounded answer to which techniques expose a given lifted section heading without opening every bundle first.",
+        "",
+        "This surface is heading-first. It stays bounded to exactly `SECTION_LIFT_HEADINGS`, preserves their fixed order, and only exposes technique, section order, and source routing. It does not dump section markdown, invent section IDs, or act like search or graph behavior.",
+        "",
+        "See also:",
+        "- [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)",
+        "- [Full section manifest](../generated/technique_section_manifest.json)",
+        "- [Min section manifest](../generated/technique_section_manifest.min.json)",
+        "- [Documentation Map](README.md)",
+        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        "",
+        "## Section Scope",
+        "",
+        "| order | heading | bounded role |",
+        "|---|---|---|",
+    ]
+
+    for order, heading in enumerate(SECTION_LIFT_HEADINGS, start=1):
+        lines.append(
+            f"| `{order}` | `{heading}` | Lift the authored `{heading}` section into heading-first routing only. |"
+        )
+
+    lines.append("")
+
+    for heading in SECTION_LIFT_HEADINGS:
+        lines.extend(
+            [
+                f"## `{heading}`",
+                "",
+                "| technique | domain | status | section order | source |",
+                "|---|---|---|---|---|",
+            ]
+        )
+
+        for record in sorted_records:
+            section_order = next(
+                (order for order, section in enumerate(record.sections, start=1) if section.heading == heading),
+                None,
+            )
+            if section_order is None:
+                fail(f"{record.technique_path}: missing required lifted section '{heading}'")
+
+            lines.append(
+                "| "
+                f"{record_technique_link(repo_root, record)} - {escape_markdown_table_cell(record.name)} | "
+                f"`{record.domain}` | "
+                f"`{record.status}` | "
+                f"`{section_order}` | "
+                f"{technique_source_link(repo_root, record)} |"
+            )
+
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            "- The meaning remains in the authored `TECHNIQUE.md` bundles.",
+            "- This surface is for section routing and lookup only.",
+            "- This surface does not become section scoring, a section-ID layer, or search or graph behavior.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def build_checklist_reader_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
+    lines = [
+        "# Technique Checklists",
+        "",
+        "This file is generated from authoritative `TECHNIQUE.md` bundles plus the current checklist manifest payload.",
+        "Do not edit it by hand; run `python scripts/build_checklist_manifest.py`.",
+        "",
+        "Use this surface when you want a bounded checklist inventory by domain and technique without opening each bundle first.",
+        "",
+        "This surface stays domain-first and technique-first. It preserves checklist title, intro-presence, item count, check path, and source routing, including techniques that publish more than one checklist.",
+        "",
+        "See also:",
+        "- [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)",
+        "- [Full checklist manifest](../generated/technique_checklist_manifest.json)",
+        "- [Min checklist manifest](../generated/technique_checklist_manifest.min.json)",
+        "- [Documentation Map](README.md)",
+        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        "",
+    ]
+
+    for domain in DOMAIN_ORDER:
+        domain_records = sorted(
+            [record for record in records if record.domain == domain],
+            key=record_sort_key,
+        )
+        if not domain_records:
+            continue
+
+        lines.extend([f"## `{domain}`", ""])
+        for record in domain_records:
+            lines.extend(
+                [
+                    f"### {record_technique_link(repo_root, record)} - {record.name} (`{record.status}`)",
+                    "",
+                ]
+            )
+
+            if not record.checklists:
+                lines.extend(["_No checklists currently published._", ""])
+                continue
+
+            lines.extend(
+                [
+                    "| checklist | intro | items | check path | source |",
+                    "|---|---|---|---|---|",
+                ]
+            )
+            for checklist in record.checklists:
+                intro_signal = "present" if checklist.intro_markdown else "absent"
+                lines.append(
+                    "| "
+                    f"{escape_markdown_table_cell(checklist.title)} | "
+                    f"`{intro_signal}` | "
+                    f"`{len(checklist.items)}` | "
+                    f"`{checklist.check_path}` | "
+                    f"{technique_source_link(repo_root, record)} |"
+                )
+
+            lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            "- The meaning remains in the authored checklist files and source bundles.",
+            "- This surface is derived validation knowledge only.",
+            "- This surface does not become executable policy, hard-gate semantics, or scoring.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def build_example_reader_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
+    lines = [
+        "# Technique Examples",
+        "",
+        "This file is generated from authoritative `TECHNIQUE.md` bundles plus the current example manifest payload.",
+        "Do not edit it by hand; run `python scripts/build_example_manifest.py`.",
+        "",
+        "Use this surface when you want a bounded example inventory by domain and technique without opening every example body first.",
+        "",
+        "This surface preserves example title, example path, body-presence, and source routing only. It does not inline full example bodies into the generated reader surface.",
+        "",
+        "See also:",
+        "- [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)",
+        "- [Full example manifest](../generated/technique_example_manifest.json)",
+        "- [Min example manifest](../generated/technique_example_manifest.min.json)",
+        "- [Documentation Map](README.md)",
+        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        "",
+    ]
+
+    for domain in DOMAIN_ORDER:
+        domain_records = sorted(
+            [record for record in records if record.domain == domain],
+            key=record_sort_key,
+        )
+        if not domain_records:
+            continue
+
+        lines.extend([f"## `{domain}`", ""])
+        for record in domain_records:
+            lines.extend(
+                [
+                    f"### {record_technique_link(repo_root, record)} - {record.name} (`{record.status}`)",
+                    "",
+                ]
+            )
+
+            if not record.examples:
+                lines.extend(["_No examples currently published._", ""])
+                continue
+
+            lines.extend(
+                [
+                    "| example | body | example path | source |",
+                    "|---|---|---|---|",
+                ]
+            )
+            for example in record.examples:
+                body_signal = "present" if example.body_markdown else "absent"
+                lines.append(
+                    "| "
+                    f"{escape_markdown_table_cell(example.title)} | "
+                    f"`{body_signal}` | "
+                    f"`{example.example_path}` | "
+                    f"{technique_source_link(repo_root, record)} |"
+                )
+
+            lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            "- The meaning remains in the authored example files and source bundles.",
+            "- This surface is derived example knowledge only.",
+            "- This surface does not become scenario graphs, executable tests, or richer step extraction.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def build_evidence_note_reader_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
+    notes_by_kind: dict[str, list[tuple[TechniqueRecord, TechniqueNote]]] = {}
+    for record in sorted(records, key=record_sort_key):
+        for note in record.notes:
+            notes_by_kind.setdefault(note.kind, []).append((record, note))
+
+    known_kind_order = list(TYPED_NOTE_KIND_ORDER) + ["support_note"]
+    ordered_kinds = [kind for kind in known_kind_order if kind in notes_by_kind]
+    ordered_kinds.extend(sorted(kind for kind in notes_by_kind if kind not in known_kind_order))
+
+    lines = [
+        "# Evidence Note Surfaces",
+        "",
+        "This file is generated from authoritative evidence-note markdown plus the current evidence note manifest payload.",
+        "Do not edit it by hand; run `python scripts/build_evidence_note_manifest.py`.",
+        "",
+        "Use this surface when you need note-kind routing, note-shape awareness, or a bounded inventory of supporting note surfaces without flattening note prose into one reader layer.",
+        "",
+        "This surface is note-scope first. It only exposes note kind, title, note path, note shape, owning technique, and bounded routing signals such as fixed section scopes or opaque-body handling. It does not flatten note prose, review arguments, or caution language into the reader.",
+        "",
+        "See also:",
+        "- [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)",
+        "- [Full evidence note manifest](../generated/technique_evidence_note_manifest.json)",
+        "- [Min evidence note manifest](../generated/technique_evidence_note_manifest.min.json)",
+        "- [Documentation Map](README.md)",
+        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        "",
+        "## Note Scope",
+        "",
+        "| note kind | title | note shape | routing signal | entries |",
+        "|---|---|---|---|---|",
+    ]
+
+    for kind in ordered_kinds:
+        if kind in TYPED_NOTE_SECTION_SCOPES:
+            note_shape = NOTE_SHAPE_TYPED
+            routing_signal = typed_note_scope_signal(kind)
+        else:
+            note_shape = NOTE_SHAPE_OPAQUE
+            routing_signal = "opaque note body only"
+
+        lines.append(
+            "| "
+            f"`{kind}` | "
+            f"{escape_markdown_table_cell(note_kind_title(kind))} | "
+            f"`{note_shape}` | "
+            f"{escape_markdown_table_cell(routing_signal)} | "
+            f"`{len(notes_by_kind[kind])}` |"
+        )
+
+    lines.append("")
+
+    for kind in ordered_kinds:
+        lines.extend(
+            [
+                f"## `{kind}` - {note_kind_title(kind)}",
+                "",
+                "| title | note shape | routing signal | owning technique | note path | source |",
+                "|---|---|---|---|---|---|",
+            ]
+        )
+
+        for record, note in notes_by_kind[kind]:
+            lines.append(
+                "| "
+                f"{escape_markdown_table_cell(note.title)} | "
+                f"`{note.note_shape}` | "
+                f"{escape_markdown_table_cell(note_routing_signal(note))} | "
+                f"{record_technique_link(repo_root, record)} | "
+                f"`{note.note_path}` | "
+                f"[Note]({docs_relative_link(note.note_path)}) |"
+            )
+
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            "- The meaning remains in the authored note markdown.",
+            "- This surface is derived provenance and routing knowledge only.",
+            "- `adverse_effects_review` stays a typed note role, not generated caution policy or a machine-readable caution verdict engine.",
+            "- This surface does not flatten note prose, review arguments, or support-note bodies into one merged reader layer.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
 
 
 def build_capsule_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
@@ -4581,10 +4934,13 @@ def validate_capsules(repo_root: Path, records: list[TechniqueRecord]) -> None:
 def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_section_manifest.json"
     min_path = repo_root / "generated" / "technique_section_manifest.min.json"
+    reader_path = repo_root / "docs" / "TECHNIQUE_SECTIONS.md"
 
     expected_full, expected_min = build_section_manifest_payloads(repo_root, records)
+    expected_reader = build_section_reader_markdown(repo_root, records)
     actual_full = read_json(full_path)
     actual_min = read_json(min_path)
+    actual_reader = read_text(reader_path)
 
     if actual_full != expected_full:
         fail(
@@ -4596,6 +4952,11 @@ def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) 
             f"{min_path}: generated section min manifest is out of date; "
             f"run 'python scripts/build_section_manifest.py'"
         )
+    if actual_reader != expected_reader:
+        fail(
+            f"{reader_path}: generated section reader surface is out of date; "
+            "run 'python scripts/build_section_manifest.py'"
+        )
 
     projected_min = project_min_section_manifest(actual_full)
     if projected_min != actual_min:
@@ -4605,10 +4966,13 @@ def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) 
 def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_checklist_manifest.json"
     min_path = repo_root / "generated" / "technique_checklist_manifest.min.json"
+    reader_path = repo_root / "docs" / "TECHNIQUE_CHECKLISTS.md"
 
     expected_full, expected_min = build_checklist_manifest_payloads(repo_root, records)
+    expected_reader = build_checklist_reader_markdown(repo_root, records)
     actual_full = read_json(full_path)
     actual_min = read_json(min_path)
+    actual_reader = read_text(reader_path)
 
     if actual_full != expected_full:
         fail(
@@ -4620,6 +4984,11 @@ def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]
             f"{min_path}: generated checklist min manifest is out of date; "
             f"run 'python scripts/build_checklist_manifest.py'"
         )
+    if actual_reader != expected_reader:
+        fail(
+            f"{reader_path}: generated checklist reader surface is out of date; "
+            "run 'python scripts/build_checklist_manifest.py'"
+        )
 
     projected_min = project_min_checklist_manifest(actual_full)
     if projected_min != actual_min:
@@ -4629,10 +4998,13 @@ def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]
 def validate_example_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_example_manifest.json"
     min_path = repo_root / "generated" / "technique_example_manifest.min.json"
+    reader_path = repo_root / "docs" / "TECHNIQUE_EXAMPLES.md"
 
     expected_full, expected_min = build_example_manifest_payloads(repo_root, records)
+    expected_reader = build_example_reader_markdown(repo_root, records)
     actual_full = read_json(full_path)
     actual_min = read_json(min_path)
+    actual_reader = read_text(reader_path)
 
     if actual_full != expected_full:
         fail(
@@ -4644,6 +5016,11 @@ def validate_example_manifests(repo_root: Path, records: list[TechniqueRecord]) 
             f"{min_path}: generated example min manifest is out of date; "
             f"run 'python scripts/build_example_manifest.py'"
         )
+    if actual_reader != expected_reader:
+        fail(
+            f"{reader_path}: generated example reader surface is out of date; "
+            "run 'python scripts/build_example_manifest.py'"
+        )
 
     projected_min = project_min_example_manifest(actual_full)
     if projected_min != actual_min:
@@ -4653,10 +5030,13 @@ def validate_example_manifests(repo_root: Path, records: list[TechniqueRecord]) 
 def validate_evidence_note_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_evidence_note_manifest.json"
     min_path = repo_root / "generated" / "technique_evidence_note_manifest.min.json"
+    reader_path = repo_root / "docs" / "EVIDENCE_NOTE_SURFACES.md"
 
     expected_full, expected_min = build_evidence_note_manifest_payloads(repo_root, records)
+    expected_reader = build_evidence_note_reader_markdown(repo_root, records)
     actual_full = read_json(full_path)
     actual_min = read_json(min_path)
+    actual_reader = read_text(reader_path)
 
     if actual_full != expected_full:
         fail(
@@ -4667,6 +5047,11 @@ def validate_evidence_note_manifests(repo_root: Path, records: list[TechniqueRec
         fail(
             f"{min_path}: generated evidence note min manifest is out of date; "
             f"run 'python scripts/build_evidence_note_manifest.py'"
+        )
+    if actual_reader != expected_reader:
+        fail(
+            f"{reader_path}: generated evidence note reader surface is out of date; "
+            "run 'python scripts/build_evidence_note_manifest.py'"
         )
 
     projected_min = project_min_evidence_note_manifest(actual_full)
@@ -4819,6 +5204,7 @@ def validate_repo_doc_surface_reader(repo_root: Path) -> None:
 def validate_repo(repo_root: Path) -> None:
     validate_stage1_files(repo_root)
     validate_selection_files(repo_root)
+    validate_kag_source_reader_files(repo_root)
     validate_capsule_surface_files(repo_root)
     validate_repo_doc_surface_files(repo_root)
     schema_store = load_schema_store(repo_root)
@@ -4854,10 +5240,10 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
     print("[ok] validated generated capsule parity and reader surface")
-    print("[ok] validated generated section manifest parity")
-    print("[ok] validated generated checklist manifest parity")
-    print("[ok] validated generated example manifest parity")
-    print("[ok] validated generated evidence note manifest parity")
+    print("[ok] validated generated section manifest parity and reader surface")
+    print("[ok] validated generated checklist manifest parity and reader surface")
+    print("[ok] validated generated example manifest parity and reader surface")
+    print("[ok] validated generated evidence note manifest parity and reader surface")
     print("[ok] validated generated GitHub review template manifest parity")
     print("[ok] validated generated semantic review manifest parity")
     print("[ok] validated generated shadow review manifest parity")

@@ -4,11 +4,12 @@ This guide defines the bounded contract for `evidence-note-provenance-lift`.
 
 Use it when the repository already has typed evidence notes and explicit note paths, but the next question is how those notes can serve as provenance handles for later KAG-oriented layers without pretending they already form a merged note graph.
 
-This guide is provenance-first. It allows one bounded generated evidence-note manifest while still avoiding note IDs, schema fields, or cross-note graph semantics.
+This guide is provenance-first. It allows one bounded generated evidence-note manifest family plus one reader companion while still avoiding note IDs, schema fields, or cross-note graph semantics.
 
 See also:
 - [Documentation Map](README.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+- [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
 - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
 
 ## Current Note Roles
@@ -100,6 +101,7 @@ The first implementation-oriented lift now stays equally bounded:
 
 - `generated/technique_evidence_note_manifest.json`
 - `generated/technique_evidence_note_manifest.min.json`
+- `docs/EVIDENCE_NOTE_SURFACES.md`
 
 Those files stay derived from authoritative note markdown.
 
@@ -112,6 +114,8 @@ They only do three bounded things:
 That now includes the canonical-only `adverse_effects_review` note role as a typed review surface in the manifest, while still keeping caution meaning in authored markdown.
 
 They do not flatten note meaning into one top-level machine schema.
+
+`EVIDENCE_NOTE_SURFACES.md` is the human reader companion for that same source class. It stays kind-first and routing-first. It only exposes note kind, title, note path, note shape, owning technique, and bounded routing signals such as fixed section scopes or opaque-body handling.
 
 ## What Evidence Notes Are Not
 
@@ -136,3 +140,5 @@ Not part of this wave:
 - no bundle or generated catalog changes beyond the bounded evidence note manifest
 
 The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context across origin, transfer, readiness, external review, and canonical adverse-effects review notes.
+
+This guide remains the authoritative contract doc for both the evidence-note manifest family and `EVIDENCE_NOTE_SURFACES.md`.
