@@ -82,7 +82,7 @@
       "inputs_short": "Needs one machine-readable summary payload; one stable latest alias path; one per-run directory.",
       "outputs_short": "Produces stable latest alias for the newest summary; nested history copy under run_dir; path metadata linking both outputs...",
       "core_contract_short": "Core contract: the latest alias path is stable and consumer-facing; the history copy lives under run_dir.",
-      "main_risk_short": "Main risk: the latest alias and nested history copy drift because only one path is updated or one write quietly...",
+      "main_risk_short": "Main risk: the latest alias looks healthy while nested history parity or reader precedence is already drifting, so accumulation trust...",
       "validation_short": "Validate by checking the latest alias exists at the stable expected path; the history copy exists under run_dir; the history copy differs...",
       "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md"
     },
@@ -110,7 +110,7 @@
       "inputs_short": "Needs a fixed set of latest published summary aliases; one deterministic bucket policy; one explicit candidate cap policy.",
       "outputs_short": "Produces one remediation snapshot; one bounded bucketed backlog of candidate items; explicit references to the source summaries used...",
       "core_contract_short": "Core contract: the helper reads latest published summaries only; the helper does not replay history or recompute trend state.",
-      "main_risk_short": "Main risk: missing or stale sources are hidden, making the backlog look healthier than reality.",
+      "main_risk_short": "Main risk: remediation output starts reading like an integrity verdict or rendering instruction, so operators infer more than the backlog...",
       "validation_short": "Validate by checking only latest published summary aliases are read; no history replay or trend recomputation is required; the bucket set is...",
       "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md"
     },
@@ -138,7 +138,7 @@
       "inputs_short": "Needs a fixed set of latest published summaries; required and optional source classification; telemetry counters or mismatch counters...",
       "outputs_short": "Produces one integrity snapshot; one explicit integrity decision such as clean or attention; reason codes for broken invariants.",
       "core_contract_short": "Core contract: the helper reads latest published summaries only; the helper is read-only with respect to upstream summaries and runtime...",
-      "main_risk_short": "Main risk: schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions.",
+      "main_risk_short": "Main risk: optional consistency noise starts crowding out required-source health, so the snapshot stops pointing attention at the bounded contract...",
       "validation_short": "Validate by checking required source presence and schema health are checked explicitly; telemetry counters or mismatch counters are surfaced in the snapshot...",
       "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md"
     },
@@ -152,7 +152,7 @@
       "inputs_short": "Needs a fixed set of required summary sources; a fixed set of optional summary sources; source loading rules...",
       "outputs_short": "Produces explicit required_missing_sources; explicit optional_missing_sources; stable rendering behavior for missing or invalid optional sources.",
       "core_contract_short": "Core contract: required and optional source sets are explicit; required-source failure can trigger smoke or strict contract failure.",
-      "main_risk_short": "Main risk: an actually critical source is misclassified as optional.",
+      "main_risk_short": "Main risk: an actually critical source is misclassified as optional and stays there long enough to distort operator interpretation.",
       "validation_short": "Validate by checking required missing sources and optional missing sources are reported separately; missing required sources fail the strict smoke or contract...",
       "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md"
     },

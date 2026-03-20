@@ -1772,7 +1772,7 @@
                 {
                   "order": 2,
                   "key": "current watch seam",
-                  "value_markdown": "keep downstream remediation and integrity consumers subordinate to storage invariants rather than letting them redefine the contract"
+                  "value_markdown": "keep a clean latest alias from masking history-trust drift, and keep storage complexity subordinate to one stable latest-plus-history contract"
                 }
               ]
             },
@@ -1783,11 +1783,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "latest alias and nested history drift because only one write path updates or one write quietly fails"
+                  "text": "the latest alias looks healthy while nested history parity or reader precedence is already drifting"
                 },
                 {
                   "order": 2,
                   "text": "collectors double-count runs by mixing top-level alias data with nested history rows"
+                },
+                {
+                  "order": 3,
+                  "text": "migration or backfill logic quietly crosses the first dual-write boundary and corrupts accumulation trust"
                 }
               ]
             },
@@ -1802,6 +1806,10 @@
                 },
                 {
                   "order": 2,
+                  "text": "storage variants and migration exceptions can multiply faster than teams re-check historical trust"
+                },
+                {
+                  "order": 3,
                   "text": "a clean latest alias can create false confidence while historical accumulation is already broken"
                 }
               ]
@@ -1817,7 +1825,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "adding extra alias layers or unofficial scan paths instead of enforcing one stable reader precedence"
+                  "text": "adding extra alias layers, unofficial scan paths, or retrospective backfill instead of enforcing one stable reader precedence"
                 }
               ]
             },
@@ -1833,6 +1841,10 @@
                 {
                   "order": 2,
                   "text": "trend outputs jump unexpectedly after migration even though recent run summaries still look normal"
+                },
+                {
+                  "order": 3,
+                  "text": "incident review keeps finding the newest summary quickly, but recent totals or streaks stop reconciling with it"
                 }
               ]
             },
@@ -1858,7 +1870,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for storage complexity or downstream-consumer language crowding out alias/history invariants"
+                  "text": "keep current `canonical` status and use this note as the watch surface for alias/history false confidence or storage-complexity drift crowding out the bounded contract"
                 }
               ]
             }
@@ -2794,7 +2806,7 @@
                 {
                   "order": 2,
                   "key": "current watch seam",
-                  "value_markdown": "keep remediation follow-up distinct from integrity verdicts and rendering policy inside the published-summary cluster"
+                  "value_markdown": "keep remediation follow-up distinct from integrity verdicts and rendering policy while holding bucket policy to one bounded reviewable surface"
                 }
               ]
             },
@@ -2805,10 +2817,14 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "missing or stale sources are hidden and the backlog looks healthier than reality"
+                  "text": "remediation output starts reading like an integrity verdict or rendering instruction"
                 },
                 {
                   "order": 2,
+                  "text": "missing or stale sources are hidden and the backlog looks healthier than reality"
+                },
+                {
+                  "order": 3,
                   "text": "history replay slips back in and turns the snapshot into a second evaluator"
                 }
               ]
@@ -2825,6 +2841,10 @@
                 {
                   "order": 2,
                   "text": "unstable grouping or truncation policy can make remediation output harder to compare over time"
+                },
+                {
+                  "order": 3,
+                  "text": "reason text can drift into trust or rendering semantics even when the helper stays read-only"
                 }
               ]
             },
@@ -2839,7 +2859,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "treating the snapshot as a place to recompute history, trend state, or trust verdicts"
+                  "text": "treating the snapshot as a place to recompute history, trust verdicts, or rendering policy"
                 }
               ]
             },
@@ -2854,7 +2874,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "remediation items stop pointing back to source summaries or start reading like integrity conclusions"
+                  "text": "remediation items stop pointing back to source summaries"
+                },
+                {
+                  "order": 3,
+                  "text": "bucket names or reason text start reading like integrity conclusions or renderer instructions"
                 }
               ]
             },
@@ -2880,7 +2904,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for remediation drift into integrity or rendering semantics"
+                  "text": "keep current `canonical` status and use this note as the watch surface for remediation drift into integrity or rendering semantics plus bucket-policy sprawl"
                 }
               ]
             }
@@ -3799,7 +3823,7 @@
                 {
                   "order": 2,
                   "key": "current watch seam",
-                  "value_markdown": "preserve the helper's diagnostic-only role and keep it separate from remediation backlog or rendering-policy semantics"
+                  "value_markdown": "preserve the helper's diagnostic-only role, keep optional checks subordinate to required-source health, and keep stricter enforcement as a separate rollout decision"
                 }
               ]
             },
@@ -3810,11 +3834,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions"
+                  "text": "optional consistency noise starts crowding out required-source health and dual-write coherence"
                 },
                 {
                   "order": 2,
-                  "text": "the helper is treated as a replacement for fixing broken producers instead of a diagnostic signal"
+                  "text": "the helper is treated as a replacement for fixing broken producers or as a de facto gate instead of a diagnostic signal"
+                },
+                {
+                  "order": 3,
+                  "text": "schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions"
                 }
               ]
             },
@@ -3829,7 +3857,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "implicit hard-gate promotion can make enforcement brittle while still claiming to be read-only"
+                  "text": "the helper can start reading like a pre-gate even while it still claims to be read-only"
                 }
               ]
             },
@@ -3840,7 +3868,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "using the helper as a default enforcement gate instead of a diagnostic surface"
+                  "text": "using the helper as a default enforcement gate or merge-block proxy instead of a diagnostic surface"
                 },
                 {
                   "order": 2,
@@ -3855,11 +3883,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response"
+                  "text": "integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response or block signal"
                 },
                 {
                   "order": 2,
                   "text": "optional-source consistency checks dominate the snapshot more than required health or anti-double-count issues"
+                },
+                {
+                  "order": 3,
+                  "text": "operators or CI language start talking about `attention` as if it already means \"block by default\""
                 }
               ]
             },
@@ -3874,7 +3906,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "make any hard-gate promotion a separate rollout decision instead of an implicit property of the helper"
+                  "text": "make any hard-gate or block-semantics promotion a separate rollout decision instead of an implicit property of the helper"
                 }
               ]
             },
@@ -3885,7 +3917,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for diagnostic-helper drift toward hard enforcement or overlap with neighboring downstream consumers"
+                  "text": "keep current `canonical` status and use this note as the watch surface for diagnostic-helper drift toward implicit enforcement or optional-check noise"
                 }
               ]
             }
@@ -4326,7 +4358,7 @@
                 {
                   "order": 2,
                   "key": "current watch seam",
-                  "value_markdown": "keep the policy general enough that it does not collapse back into the published-summary package that currently supplies its clearest examples"
+                  "value_markdown": "keep the policy reusable and readable enough that warning traffic does not become ambient noise and the bundle does not collapse into a published-summary appendix"
                 }
               ]
             },
@@ -4337,10 +4369,14 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "an actually critical source is misclassified as optional"
+                  "text": "an actually critical source is misclassified as optional and stays there long enough to distort interpretation"
                 },
                 {
                   "order": 2,
+                  "text": "warning traffic becomes ambient enough that missing optional signals stop influencing review"
+                },
+                {
+                  "order": 3,
                   "text": "optional-source absence is hidden instead of being surfaced explicitly and read-only"
                 }
               ]
@@ -4357,6 +4393,10 @@
                 {
                   "order": 2,
                   "text": "the renderer can drift away from its bounded summary role and become harder to trust"
+                },
+                {
+                  "order": 3,
+                  "text": "the technique can start reading like a package-specific appendix instead of a reusable consumer policy"
                 }
               ]
             },
@@ -4371,7 +4411,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "expanding the rendering surface so it performs repair or retry actions instead of staying read-only"
+                  "text": "expanding the rendering surface so it performs repair or retry actions, or so it reads like a package appendix, instead of staying read-only"
                 }
               ]
             },
@@ -4401,7 +4441,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "keep warnings bounded, visible, and read-only so missing optional data stays observable without turning the surface into an action layer"
+                  "text": "keep warnings bounded, visible, sorted, and read-only so missing optional data stays observable without turning the surface into an action layer"
+                },
+                {
+                  "order": 3,
+                  "text": "keep remediation and integrity examples subordinate to the general required-versus-optional contract"
                 }
               ]
             },
@@ -4412,7 +4456,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for the documented `AOA-T-0011` rendering-policy seam inside the published-summary cluster"
+                  "text": "keep current `canonical` status and use this note as the watch surface for warning fatigue, bad optional classification, and package-appendix drift inside the published-summary cluster"
                 }
               ]
             }

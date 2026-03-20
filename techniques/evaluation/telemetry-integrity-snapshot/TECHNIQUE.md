@@ -104,28 +104,30 @@ Provide one machine-readable diagnostic verdict over published summary invariant
 
 ### Failure modes
 
+- optional consistency noise starts crowding out required-source health, so the snapshot stops pointing attention at the bounded contract it claims to protect
+- teams treat the integrity snapshot as a replacement for fixing broken producers or as a de facto gate instead of a diagnostic signal
 - schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions
-- teams treat the integrity snapshot as a replacement for fixing broken producers instead of a diagnostic signal
 
 ### Negative effects
 
 - checking too many optional invariants turns a focused diagnostic layer into noise
-- promoting an integrity helper into a hard gate without an explicit rollout decision can make enforcement brittle
+- a diagnostic helper can start reading like a pre-gate even before any explicit rollout decision exists
 
 ### Misuse patterns
 
-- using the helper as a default enforcement gate even though the technique defines a diagnostic, read-only surface
+- using the helper as a default enforcement gate or merge-block proxy even though the technique defines a diagnostic, read-only surface
 - expanding optional guardrail or consistency checks until they overshadow required source health and dual-write invariants
 
 ### Detection signals
 
-- integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response
+- integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response or block signal
 - optional-source or low-value consistency checks dominate the snapshot more than required health, dual-write, or anti-double-count issues
+- operators or CI language start talking about `attention` as if it already means "block by default"
 
 ### Mitigations
 
 - keep the snapshot focused on required source health, telemetry invariants, dual-write coherence, and anti-double-count checks
-- make any hard-gate promotion a separate explicit rollout decision rather than an implicit property of the helper
+- make any hard-gate or block-semantics promotion a separate explicit rollout decision rather than an implicit property of the helper
 
 ## Validation
 

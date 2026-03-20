@@ -98,28 +98,32 @@ Keep summary-driven surfaces resilient by enforcing strict behavior for required
 
 ### Failure modes
 
-- an actually critical source is misclassified as optional
+- an actually critical source is misclassified as optional and stays there long enough to distort operator interpretation
+- warning traffic becomes ambient enough that missing optional signals stop influencing review
 - optional-source absence is hidden completely instead of being surfaced explicitly
 
 ### Negative effects
 
 - optional-source warnings can accumulate until the surface becomes noisy
 - the rendering surface can drift away from its bounded summary role and become harder to trust
+- the technique can start reading like a package-specific appendix to remediation and integrity instead of a reusable consumer policy
 
 ### Misuse patterns
 
 - treating `optional` as meaning "never operationally important" rather than "visible but non-fatal for this contract"
-- expanding the rendering surface so it performs actions rather than staying read-only
+- expanding the rendering surface so it performs actions or reads like a published-summary package appendix instead of staying a general read-only policy
 
 ### Detection signals
 
 - operators stop noticing missing-source signals because the warning stream is constant and unsorted
 - the renderer starts adding retry, repair, or other mutating behavior to compensate for absent summaries
+- future wording starts reading like a bundle-specific appendix to remediation or integrity instead of a general consumer policy
 
 ### Mitigations
 
 - review required-versus-optional classification explicitly and promote sources when the contract changes
-- keep warnings bounded, visible, and read-only so missing optional data stays observable without turning the surface into an action layer
+- keep warnings bounded, visible, sorted, and read-only so missing optional data stays observable without turning the surface into an action layer
+- keep remediation and integrity examples as examples only, not as the ownership boundary for the rendering policy
 
 ## Validation
 

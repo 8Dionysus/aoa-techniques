@@ -17,8 +17,10 @@ Choose the path that matches your question:
   - [Canonical Rubric](CANONICAL_RUBRIC.md)
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - I need to understand the repo's markdown-first caution discipline:
+  - [Shadow Patterns](SHADOW_PATTERNS.md)
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
   - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+  - [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
   - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
   - one canonical bundle plus its `notes/adverse-effects-review.md`
 - I need to understand KAG-oriented lift boundaries:
@@ -51,6 +53,8 @@ These are reader-facing navigation artifacts derived from authoritative markdown
   - use when you need one bounded choice by domain, status, validation strength, or nearby relations
 - [Selection Patterns](SELECTION_PATTERNS.md)
   - use when direct adjacency is not enough and you want validator-backed starting points, common next moves, or review-backed working sets
+- [Shadow Patterns](SHADOW_PATTERNS.md)
+  - use when you need one bounded answer to where a canonical technique can quietly make the system worse and which watch seam to inspect first
 
 ### Local runtime cards
 
@@ -67,6 +71,12 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
 - [Releasing `aoa-techniques`](RELEASING.md)
+
+### Shadow-review pilots
+
+These review-only docs inspect where caution language is most likely to blur neighboring canonical techniques or create false confidence.
+
+- [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
 
 ### KAG-oriented boundary guides
 
@@ -117,8 +127,9 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 
 1. [Canonical Rubric](CANONICAL_RUBRIC.md)
 2. [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-3. one technique bundle plus its `notes/`; for `canonical` bundles include `canonical-readiness.md` and `adverse-effects-review.md`
-4. a relevant semantic-review pilot if the technique sits inside a reviewed cluster
+3. [Shadow Patterns](SHADOW_PATTERNS.md) when the question is about caution seams rather than technique choice
+4. one technique bundle plus its `notes/`; for `canonical` bundles include `canonical-readiness.md` and `adverse-effects-review.md`
+5. a relevant semantic-review or shadow-review pilot if the technique sits inside a reviewed cluster
 
 ### KAG / lift path
 
@@ -143,5 +154,6 @@ These are outside `docs/` but matter when navigating the repo:
 ## Notes
 
 - Prefer generated reader surfaces when the question is "what should I inspect next?"
+- Prefer `SHADOW_PATTERNS.md` when the question is "where can this canonical technique fail quietly or create false confidence?"
 - Prefer authored guides when the question is "what does this repo mean by this rule or boundary?"
 - Prefer semantic-review pilots when the question is "are these nearby techniques still meaningfully distinct?"
