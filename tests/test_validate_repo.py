@@ -633,6 +633,140 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             reviews_by_path["docs/EVALUATION_CHAIN_SHADOW_REVIEW.md"].overall_outcome,
         )
 
+    def test_repo_doc_surface_specs_are_bounded_and_structurally_valid(self) -> None:
+        validate_repo.validate_repo_doc_surface_specs(REPO_ROOT)
+        validate_repo.validate_repo_doc_navigation_specs(REPO_ROOT)
+        surfaces = validate_repo.parse_repo_doc_surfaces(REPO_ROOT)
+        source_paths = {surface.doc_path for surface in surfaces}
+
+        self.assertEqual(10, len(surfaces))
+        self.assertEqual(
+            {spec["doc_path"] for spec in validate_repo.REPO_DOC_SURFACE_SPECS},
+            source_paths,
+        )
+        self.assertEqual(
+            set(validate_repo.REPO_DOC_SURFACE_GROUP_ORDER),
+            {surface.surface_group for surface in surfaces},
+        )
+        self.assertTrue(
+            {
+                "TODO.md",
+                "PLANS.md",
+                "ROADMAP.md",
+                "docs/KAG_SOURCE_LIFT_GUIDE.md",
+                "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
+                "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+            }.isdisjoint(source_paths)
+        )
+        for surface in surfaces:
+            self.assertTrue(surface.top_level_sections)
+
+    def test_repo_doc_surface_top_level_sections_are_stable(self) -> None:
+        surfaces_by_path = {
+            surface.doc_path: surface for surface in validate_repo.parse_repo_doc_surfaces(REPO_ROOT)
+        }
+
+        self.assertEqual(
+            (
+                "Start here",
+                "What belongs here",
+                "Core principles",
+                "Maturity model",
+                "Repository structure",
+                "Intended users",
+                "What a good technique includes",
+                "Contribution model",
+                "License",
+            ),
+            surfaces_by_path["README.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
+                "Start Here",
+                "Surface Types",
+                "Recommended Reading Paths",
+                "Companion Repository Surfaces",
+                "Notes",
+            ),
+            surfaces_by_path["docs/README.md"].top_level_sections,
+        )
+        self.assertEqual(
+            ("[Unreleased]", "[0.1.0] - 2026-03-17"),
+            surfaces_by_path["CHANGELOG.md"].top_level_sections,
+        )
+
+    def test_repo_doc_surface_manifest_generated_surface_matches_builder(self) -> None:
+        validate_repo.validate_repo_doc_surface_manifests(REPO_ROOT)
+        expected_full, expected_min = validate_repo.build_repo_doc_surface_manifest_payloads(
+            REPO_ROOT
+        )
+        actual_full = validate_repo.read_json(
+            REPO_ROOT / "generated" / "repo_doc_surface_manifest.json"
+        )
+        actual_min = validate_repo.read_json(
+            REPO_ROOT / "generated" / "repo_doc_surface_manifest.min.json"
+        )
+
+        self.assertEqual(expected_full, actual_full)
+        self.assertEqual(expected_min, actual_min)
+        self.assertEqual(
+            validate_repo.project_min_repo_doc_surface_manifest(actual_full),
+            actual_min,
+        )
+        self.assertEqual(
+            list(validate_repo.REPO_DOC_SURFACE_GROUP_ORDER),
+            [group["group"] for group in actual_full["surface_groups"]],
+        )
+        self.assertEqual(10, len(actual_full["docs"]))
+
+    def test_repo_doc_surfaces_generated_reader_matches_builder_and_stays_bounded(self) -> None:
+        validate_repo.validate_repo_doc_surface_reader(REPO_ROOT)
+        repo_doc_surfaces = (REPO_ROOT / "docs" / "REPO_DOC_SURFACES.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertEqual(
+            validate_repo.build_repo_doc_surfaces_markdown(REPO_ROOT),
+            repo_doc_surfaces,
+        )
+        self.assertIn("Entrypoint / Map", repo_doc_surfaces)
+        self.assertIn("Contribution / Policy", repo_doc_surfaces)
+        self.assertIn("Walkthrough / Context", repo_doc_surfaces)
+        self.assertIn("Status / Release", repo_doc_surfaces)
+        self.assertIn("README.md", repo_doc_surfaces)
+        self.assertIn("docs/RELEASING.md", repo_doc_surfaces)
+        self.assertIn("repo_doc_surface_manifest.json", repo_doc_surfaces)
+        self.assertNotIn("](../TODO.md)", repo_doc_surfaces)
+        self.assertNotIn("](../PLANS.md)", repo_doc_surfaces)
+        self.assertNotIn("](../ROADMAP.md)", repo_doc_surfaces)
+        self.assertNotIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", repo_doc_surfaces)
+
+    def test_repo_doc_surfaces_are_discoverable_from_docs_root_changelog_kag_and_release_docs(
+        self,
+    ) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+        releasing = (REPO_ROOT / "docs" / "RELEASING.md").read_text(encoding="utf-8")
+
+        self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
+        self.assertIn("repo_doc_surface_manifest.json", docs_readme)
+        self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
+        self.assertIn("docs/REPO_DOC_SURFACES.md", readme)
+        self.assertIn("generated/repo_doc_surface_manifest.json", readme)
+        self.assertIn("docs/REPO_DOC_SURFACE_LIFT_GUIDE.md", readme)
+        self.assertIn("REPO_DOC_SURFACES.md", changelog)
+        self.assertIn("repo_doc_surface_manifest.json", changelog)
+        self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", changelog)
+        self.assertIn("repo_doc_surface_manifest.json", kag_source_guide)
+        self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", kag_source_guide)
+        self.assertIn("REPO_DOC_SURFACES.md", kag_source_guide)
+        self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
+        self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
+
     def test_docs_readme_and_guides_link_to_reusable_lift_family(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(

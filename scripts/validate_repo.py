@@ -61,6 +61,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_github_review_template_manifest.py",
     "scripts/build_semantic_review_manifest.py",
     "scripts/build_shadow_review_manifest.py",
+    "scripts/build_repo_doc_surface_manifest.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_capsules.json",
@@ -78,12 +79,15 @@ REQUIRED_STAGE1_FILES = (
     "generated/semantic_review_manifest.min.json",
     "generated/shadow_review_manifest.json",
     "generated/shadow_review_manifest.min.json",
+    "generated/repo_doc_surface_manifest.json",
+    "generated/repo_doc_surface_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION.md",
     "docs/SELECTION_PATTERNS.md",
     "docs/SHADOW_PATTERNS.md",
 )
+REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
 SELECTION_REVIEW_DOCS = {
     "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
     "evaluation_chain": "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
@@ -252,6 +256,118 @@ SHADOW_COMMON_QUESTION_SPECS = (
         "note": "Inspect the staged-promotion pattern and its shallow-history plus strict-surface leakage seam before adding more rollout telemetry.",
     },
 )
+REPO_DOC_SURFACE_GROUP_ORDER = (
+    "entrypoint/map",
+    "contribution/policy",
+    "walkthrough/context",
+    "status/release",
+)
+REPO_DOC_SURFACE_GROUP_SPECS = (
+    {
+        "group": "entrypoint/map",
+        "heading": "Entrypoint / Map",
+        "note": "Open these first when the question is where to start or which public repo map should anchor the next read.",
+    },
+    {
+        "group": "contribution/policy",
+        "heading": "Contribution / Policy",
+        "note": "Use these when the question is how to contribute safely, publicly, and within the repo's current review posture.",
+    },
+    {
+        "group": "walkthrough/context",
+        "heading": "Walkthrough / Context",
+        "note": "Use this when you need one concrete end-to-end example of how a real practice became a published technique here.",
+    },
+    {
+        "group": "status/release",
+        "heading": "Status / Release",
+        "note": "Use these when the question is what changed, what is currently unreleased, and how the public release path is validated.",
+    },
+)
+REPO_DOC_NAVIGATION_SPECS = (
+    {
+        "question": "Where should I start if I am new to the repository?",
+        "doc_ids": ("readme", "docs_readme", "technique_index"),
+        "note": "Start with the root README, then use the docs map and technique index for bounded navigation.",
+    },
+    {
+        "question": "Where do contribution rules and PR boundaries live?",
+        "doc_ids": ("contributing", "agents"),
+        "note": "Use CONTRIBUTING for the public PR path and AGENTS for the repo's public-safe PLAN -> DIFF -> VERIFY -> REPORT doctrine.",
+    },
+    {
+        "question": "Where do public-safety expectations and contributor conduct live?",
+        "doc_ids": ("security", "agents", "code_of_conduct"),
+        "note": "Use SECURITY for disclosure and hygiene, AGENTS for public-repo authoring discipline, and the Code of Conduct for collaboration expectations.",
+    },
+    {
+        "question": "Where do release flow and status history live?",
+        "doc_ids": ("changelog", "docs_releasing"),
+        "note": "Use CHANGELOG for current history and RELEASING for the bounded validation path behind public corpus updates.",
+    },
+)
+REPO_DOC_SURFACE_SPECS = (
+    {
+        "doc_id": "readme",
+        "doc_path": "README.md",
+        "surface_group": "entrypoint/map",
+        "bounded_role": "root entrypoint for repository purpose, scope, and first-read routing",
+    },
+    {
+        "doc_id": "technique_index",
+        "doc_path": "TECHNIQUE_INDEX.md",
+        "surface_group": "entrypoint/map",
+        "bounded_role": "public corpus map by status, technique id, and domain",
+    },
+    {
+        "doc_id": "docs_readme",
+        "doc_path": "docs/README.md",
+        "surface_group": "entrypoint/map",
+        "bounded_role": "docs-layer entrypoint for generated surfaces, guides, and recommended reading paths",
+    },
+    {
+        "doc_id": "agents",
+        "doc_path": "AGENTS.md",
+        "surface_group": "contribution/policy",
+        "bounded_role": "contributor doctrine for public-safe planning, focused diffs, verification, and reporting",
+    },
+    {
+        "doc_id": "contributing",
+        "doc_path": "CONTRIBUTING.md",
+        "surface_group": "contribution/policy",
+        "bounded_role": "public contribution path, review criteria, and status-transition rules",
+    },
+    {
+        "doc_id": "security",
+        "doc_path": "SECURITY.md",
+        "surface_group": "contribution/policy",
+        "bounded_role": "private reporting route and public-hygiene security expectations",
+    },
+    {
+        "doc_id": "code_of_conduct",
+        "doc_path": "CODE_OF_CONDUCT.md",
+        "surface_group": "contribution/policy",
+        "bounded_role": "public collaboration and enforcement expectations for contributors",
+    },
+    {
+        "doc_id": "walkthrough",
+        "doc_path": "WALKTHROUGH.md",
+        "surface_group": "walkthrough/context",
+        "bounded_role": "one end-to-end example of origin practice, publication, reuse, and why the repo stores techniques this way",
+    },
+    {
+        "doc_id": "changelog",
+        "doc_path": "CHANGELOG.md",
+        "surface_group": "status/release",
+        "bounded_role": "release and unreleased status history for the public corpus",
+    },
+    {
+        "doc_id": "docs_releasing",
+        "doc_path": "docs/RELEASING.md",
+        "surface_group": "status/release",
+        "bounded_role": "bounded release flow and validation path for public docs and technique updates",
+    },
+)
 
 SECTION_STATUS = {
     "Canonical techniques": "canonical",
@@ -307,6 +423,8 @@ SEMANTIC_REVIEW_MANIFEST_VERSION = 1
 SEMANTIC_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-semantic-reviews-v1"
 SHADOW_REVIEW_MANIFEST_VERSION = 1
 SHADOW_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-shadow-reviews-v1"
+REPO_DOC_SURFACE_MANIFEST_VERSION = 1
+REPO_DOC_SURFACE_MANIFEST_SOURCE_OF_TRUTH = "markdown-repo-doc-surfaces-v1"
 NOTE_SHAPE_TYPED = "typed_sections"
 NOTE_SHAPE_OPAQUE = "opaque_body"
 NOTE_PAYLOAD_FIELDS = "fields"
@@ -643,6 +761,16 @@ class ShadowReview:
     findings: tuple[ShadowReviewFinding, ...]
     overall_outcome: str
     next_step_markdown: str
+
+
+@dataclass(frozen=True)
+class RepoDocSurface:
+    doc_id: str
+    doc_path: str
+    title: str
+    surface_group: str
+    bounded_role: str
+    top_level_sections: tuple[str, ...]
 
 
 @dataclass(frozen=True)
@@ -1459,6 +1587,19 @@ def parse_titled_markdown_file(markdown_path: Path, kind_label: str) -> tuple[st
         fail(f"{markdown_path}: {kind_label} title must not be empty")
 
     return title, lines, title_index
+
+
+def extract_top_level_section_headings(
+    markdown_path: Path, lines: list[str], title_index: int
+) -> tuple[str, ...]:
+    top_level_sections = tuple(
+        line[3:].strip() for line in lines[title_index + 1 :] if line.startswith("## ")
+    )
+    if not top_level_sections:
+        fail(
+            f"{markdown_path}: repo-doc source must include at least one top-level '## ' heading"
+        )
+    return top_level_sections
 
 
 def split_typed_note_body(note_path: Path, body: str) -> tuple[str, tuple[TechniqueSection, ...]]:
@@ -2335,6 +2476,93 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
     return tuple(parse_shadow_review_file(path, repo_root) for path in review_paths)
 
 
+def validate_repo_doc_surface_specs(repo_root: Path) -> None:
+    if len(REPO_DOC_SURFACE_SPECS) != 10:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 10 authoritative docs/status files")
+    if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
+        fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
+
+    seen_groups: set[str] = set()
+    for spec in REPO_DOC_SURFACE_GROUP_SPECS:
+        group = spec["group"]
+        if group not in REPO_DOC_SURFACE_GROUP_ORDER:
+            fail(f"REPO_DOC_SURFACE_GROUP_SPECS: unsupported group '{group}'")
+        if group in seen_groups:
+            fail(f"REPO_DOC_SURFACE_GROUP_SPECS: duplicate group '{group}'")
+        seen_groups.add(group)
+        if not spec["heading"].strip():
+            fail(f"REPO_DOC_SURFACE_GROUP_SPECS[{group}]: heading must not be empty")
+        if not spec["note"].strip():
+            fail(f"REPO_DOC_SURFACE_GROUP_SPECS[{group}]: note must not be empty")
+
+    if tuple(spec["group"] for spec in REPO_DOC_SURFACE_GROUP_SPECS) != REPO_DOC_SURFACE_GROUP_ORDER:
+        fail("REPO_DOC_SURFACE_GROUP_SPECS must follow REPO_DOC_SURFACE_GROUP_ORDER")
+
+    seen_doc_ids: set[str] = set()
+    seen_doc_paths: set[str] = set()
+    doc_ids = {spec["doc_id"] for spec in REPO_DOC_SURFACE_SPECS}
+
+    for spec in REPO_DOC_SURFACE_SPECS:
+        doc_id = spec["doc_id"]
+        doc_path = spec["doc_path"]
+        surface_group = spec["surface_group"]
+        bounded_role = spec["bounded_role"]
+
+        if doc_id in seen_doc_ids:
+            fail(f"REPO_DOC_SURFACE_SPECS: duplicate doc_id '{doc_id}'")
+        if doc_path in seen_doc_paths:
+            fail(f"REPO_DOC_SURFACE_SPECS: duplicate doc_path '{doc_path}'")
+        seen_doc_ids.add(doc_id)
+        seen_doc_paths.add(doc_path)
+
+        if surface_group not in seen_groups:
+            fail(
+                f"REPO_DOC_SURFACE_SPECS[{doc_id}]: surface_group '{surface_group}' must be declared in REPO_DOC_SURFACE_GROUP_SPECS"
+            )
+        if not bounded_role.strip():
+            fail(f"REPO_DOC_SURFACE_SPECS[{doc_id}]: bounded_role must not be empty")
+
+        target = repo_root / doc_path
+        if not target.is_file():
+            fail(f"REPO_DOC_SURFACE_SPECS[{doc_id}]: missing source doc '{doc_path}'")
+
+    seen_questions: set[str] = set()
+    for spec in REPO_DOC_NAVIGATION_SPECS:
+        question = spec["question"]
+        if question in seen_questions:
+            fail(f"REPO_DOC_NAVIGATION_SPECS: duplicate question '{question}'")
+        seen_questions.add(question)
+        if not question.strip():
+            fail("REPO_DOC_NAVIGATION_SPECS: question must not be empty")
+
+        doc_id_list = tuple(spec["doc_ids"])
+        if not doc_id_list:
+            fail(f"REPO_DOC_NAVIGATION_SPECS[{question}]: doc_ids must not be empty")
+        for doc_id in doc_id_list:
+            if doc_id not in doc_ids:
+                fail(f"REPO_DOC_NAVIGATION_SPECS[{question}]: unknown doc_id '{doc_id}'")
+        if not spec["note"].strip():
+            fail(f"REPO_DOC_NAVIGATION_SPECS[{question}]: note must not be empty")
+
+
+def parse_repo_doc_surface_file(repo_root: Path, spec: dict[str, str]) -> RepoDocSurface:
+    doc_path = repo_root / spec["doc_path"]
+    title, lines, title_index = parse_titled_markdown_file(doc_path, "repo doc surface")
+    return RepoDocSurface(
+        doc_id=spec["doc_id"],
+        doc_path=spec["doc_path"],
+        title=title,
+        surface_group=spec["surface_group"],
+        bounded_role=spec["bounded_role"],
+        top_level_sections=extract_top_level_section_headings(doc_path, lines, title_index),
+    )
+
+
+def parse_repo_doc_surfaces(repo_root: Path) -> tuple[RepoDocSurface, ...]:
+    validate_repo_doc_surface_specs(repo_root)
+    return tuple(parse_repo_doc_surface_file(repo_root, spec) for spec in REPO_DOC_SURFACE_SPECS)
+
+
 def validate_selection_working_set_specs(repo_root: Path) -> None:
     reviews_by_path = {
         review.review_path: review for review in parse_semantic_reviews(repo_root)
@@ -2421,6 +2649,20 @@ def validate_shadow_question_specs(records: list[TechniqueRecord]) -> None:
                 f"SHADOW_COMMON_QUESTION_SPECS[{target_id}]: target must belong to a declared "
                 "shadow working set"
             )
+
+
+def validate_repo_doc_navigation_specs(repo_root: Path) -> None:
+    validate_repo_doc_surface_specs(repo_root)
+    surfaces_by_id = {
+        surface.doc_id: surface for surface in parse_repo_doc_surfaces(repo_root)
+    }
+
+    for spec in REPO_DOC_NAVIGATION_SPECS:
+        for doc_id in spec["doc_ids"]:
+            if doc_id not in surfaces_by_id:
+                fail(
+                    f"REPO_DOC_NAVIGATION_SPECS[{spec['question']}]: doc_id '{doc_id}' is not present in parsed repo doc surfaces"
+                )
 
 
 def validate_selection_navigation_specs(records: list[TechniqueRecord], repo_root: Path) -> None:
@@ -2584,6 +2826,13 @@ def validate_selection_files(repo_root: Path) -> None:
         target = repo_root / relative_path
         if not target.exists():
             fail(f"{repo_root}: missing required selection file '{relative_path}'")
+
+
+def validate_repo_doc_surface_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_REPO_DOC_SURFACE_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required repo doc surface file '{relative_path}'")
 
 
 def validate_technique_bundle(
@@ -3317,6 +3566,17 @@ def shadow_review_scope_payload() -> dict[str, Any]:
     }
 
 
+def repo_doc_surface_groups_payload() -> list[dict[str, str]]:
+    return [
+        {
+            "group": spec["group"],
+            "heading": spec["heading"],
+            "note": spec["note"],
+        }
+        for spec in REPO_DOC_SURFACE_GROUP_SPECS
+    ]
+
+
 def full_semantic_review_manifest_entry(review: SemanticReview) -> dict[str, Any]:
     return {
         "review_id": review.review_id,
@@ -3488,6 +3748,35 @@ def project_min_shadow_review_manifest(full_manifest: dict[str, Any]) -> dict[st
     }
 
 
+def full_repo_doc_surface_manifest_entry(surface: RepoDocSurface) -> dict[str, Any]:
+    return {
+        "doc_id": surface.doc_id,
+        "doc_path": surface.doc_path,
+        "title": surface.title,
+        "surface_group": surface.surface_group,
+        "bounded_role": surface.bounded_role,
+        "top_level_sections": list(surface.top_level_sections),
+    }
+
+
+def project_min_repo_doc_surface_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "docs": [
+            {
+                "doc_id": doc["doc_id"],
+                "doc_path": doc["doc_path"],
+                "title": doc["title"],
+                "surface_group": doc["surface_group"],
+                "bounded_role": doc["bounded_role"],
+                "top_level_sections": doc["top_level_sections"],
+            }
+            for doc in full_manifest["docs"]
+        ],
+    }
+
+
 def build_catalog_payloads(
     repo_root: Path, records: list[TechniqueRecord]
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -3607,6 +3896,19 @@ def build_shadow_review_manifest_payloads(
     return full_manifest, project_min_shadow_review_manifest(full_manifest)
 
 
+def build_repo_doc_surface_manifest_payloads(
+    repo_root: Path,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    surfaces = parse_repo_doc_surfaces(repo_root)
+    full_manifest = {
+        "manifest_version": REPO_DOC_SURFACE_MANIFEST_VERSION,
+        "source_of_truth": REPO_DOC_SURFACE_MANIFEST_SOURCE_OF_TRUTH,
+        "surface_groups": repo_doc_surface_groups_payload(),
+        "docs": [full_repo_doc_surface_manifest_entry(surface) for surface in surfaces],
+    }
+    return full_manifest, project_min_repo_doc_surface_manifest(full_manifest)
+
+
 def selection_technique_link(entry: dict[str, Any]) -> str:
     return f"[{entry['id']}](../{entry['technique_path']})"
 
@@ -3619,6 +3921,17 @@ def record_technique_link(repo_root: Path, record: TechniqueRecord) -> str:
 def escape_markdown_table_cell(value: str) -> str:
     flattened = re.sub(r"\s*\r?\n\s*", " ", value).strip()
     return flattened.replace("|", r"\|")
+
+
+def docs_relative_link(target_path: str) -> str:
+    target = PurePosixPath(target_path)
+    if target.parts[:1] == ("docs",):
+        return PurePosixPath(*target.parts[1:]).as_posix()
+    return PurePosixPath("..", *target.parts).as_posix()
+
+
+def repo_doc_surface_link(surface: RepoDocSurface) -> str:
+    return f"[{surface.title}]({docs_relative_link(surface.doc_path)}) (`{surface.doc_path}`)"
 
 
 def relation_summary(entry: dict[str, Any], entries_by_id: dict[str, dict[str, Any]]) -> str:
@@ -3867,6 +4180,91 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
             "- The source of meaning stays in the full technique bundle and its typed adverse-effects review note.",
             "- This surface is a bounded lookup aid for canonical watch seams, not a permission to skip `TECHNIQUE.md`.",
             "- If a question needs scoring, policy tiers, or machine-readable caution exports, that is a later wave.",
+            "",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
+def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
+    surfaces = parse_repo_doc_surfaces(repo_root)
+    surfaces_by_id = {surface.doc_id: surface for surface in surfaces}
+    surfaces_by_group: dict[str, list[RepoDocSurface]] = {
+        group: [] for group in REPO_DOC_SURFACE_GROUP_ORDER
+    }
+
+    for surface in surfaces:
+        surfaces_by_group[surface.surface_group].append(surface)
+
+    group_specs = {spec["group"]: spec for spec in REPO_DOC_SURFACE_GROUP_SPECS}
+
+    lines = [
+        "# Repo Doc Surfaces",
+        "",
+        "This file is generated from the authoritative public docs/status layer only.",
+        "Do not edit it by hand; run `python scripts/build_repo_doc_surface_manifest.py`.",
+        "",
+        "Use this surface when the main question is which public repo doc to open next for orientation, contribution rules, public-safety expectations, or release/status context.",
+        "",
+        "It stays bounded to the current authored docs/status source set. It excludes local planning files such as `TODO.md`, `PLANS.md`, and `ROADMAP.md`, plus deeper guide/review docs that belong to later waves.",
+        "",
+        "See also:",
+        "- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)",
+        "- [Full repo doc surface manifest](../generated/repo_doc_surface_manifest.json)",
+        "- [Documentation Map](README.md)",
+        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        "",
+        "## Quick Navigation",
+        "",
+        "| question | open | why |",
+        "|---|---|---|",
+    ]
+
+    for spec in REPO_DOC_NAVIGATION_SPECS:
+        open_docs = ", ".join(
+            repo_doc_surface_link(surfaces_by_id[doc_id]) for doc_id in spec["doc_ids"]
+        )
+        lines.append(
+            "| "
+            f"{escape_markdown_table_cell(spec['question'])} | "
+            f"{open_docs} | "
+            f"{escape_markdown_table_cell(spec['note'])} |"
+        )
+
+    lines.append("")
+
+    for group in REPO_DOC_SURFACE_GROUP_ORDER:
+        group_spec = group_specs[group]
+        lines.extend(
+            [
+                f"## {group_spec['heading']}",
+                "",
+                group_spec["note"],
+                "",
+                "| doc | bounded role | top-level sections |",
+                "|---|---|---|",
+            ]
+        )
+
+        for surface in surfaces_by_group[group]:
+            sections_markdown = ", ".join(f"`{heading}`" for heading in surface.top_level_sections)
+            lines.append(
+                "| "
+                f"{repo_doc_surface_link(surface)} | "
+                f"{escape_markdown_table_cell(surface.bounded_role)} | "
+                f"{escape_markdown_table_cell(sections_markdown)} |"
+            )
+
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            "- The source of meaning stays in the authored docs themselves.",
+            "- The bounded source set is exactly the 10 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
+            "- This surface and its manifest are routing aids only. They do not become a new source of truth or a status-policy engine.",
             "",
         ]
     )
@@ -4213,6 +4611,30 @@ def validate_shadow_review_manifests(repo_root: Path) -> None:
         fail(f"{min_path}: min shadow review manifest must stay a projection of the full manifest")
 
 
+def validate_repo_doc_surface_manifests(repo_root: Path) -> None:
+    full_path = repo_root / "generated" / "repo_doc_surface_manifest.json"
+    min_path = repo_root / "generated" / "repo_doc_surface_manifest.min.json"
+
+    expected_full, expected_min = build_repo_doc_surface_manifest_payloads(repo_root)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated repo doc surface manifest is out of date; "
+            f"run 'python scripts/build_repo_doc_surface_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated repo doc surface min manifest is out of date; "
+            f"run 'python scripts/build_repo_doc_surface_manifest.py'"
+        )
+
+    projected_min = project_min_repo_doc_surface_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min repo doc surface manifest must stay a projection of the full manifest")
+
+
 def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -4245,12 +4667,26 @@ def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) 
         )
 
 
+def validate_repo_doc_surface_reader(repo_root: Path) -> None:
+    reader_path = repo_root / "docs" / "REPO_DOC_SURFACES.md"
+    expected = build_repo_doc_surfaces_markdown(repo_root)
+    actual = read_text(reader_path)
+
+    if actual != expected:
+        fail(
+            f"{reader_path}: generated repo doc surface is out of date; run "
+            "'python scripts/build_repo_doc_surface_manifest.py'"
+        )
+
+
 def validate_repo(repo_root: Path) -> None:
     validate_stage1_files(repo_root)
     validate_selection_files(repo_root)
+    validate_repo_doc_surface_files(repo_root)
     schema_store = load_schema_store(repo_root)
     records = collect_techniques(repo_root, schema_store)
     validate_selection_navigation_specs(records, repo_root)
+    validate_repo_doc_navigation_specs(repo_root)
     validate_index(repo_root, records)
     validate_evidence(records)
     validate_relations(records)
@@ -4263,7 +4699,9 @@ def validate_repo(repo_root: Path) -> None:
     validate_github_review_template_manifests(repo_root)
     validate_semantic_review_manifests(repo_root)
     validate_shadow_review_manifests(repo_root)
+    validate_repo_doc_surface_manifests(repo_root)
     validate_selection_surface(repo_root, records)
+    validate_repo_doc_surface_reader(repo_root)
     validate_public_hygiene(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -4285,8 +4723,10 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated GitHub review template manifest parity")
     print("[ok] validated generated semantic review manifest parity")
     print("[ok] validated generated shadow review manifest parity")
+    print("[ok] validated generated repo doc surface manifest parity")
     print("[ok] validated generated selection and shadow surface parity")
-    print("[ok] validated selection navigation specs, review-backed working sets, shadow specs, and bounded public hygiene")
+    print("[ok] validated generated repo doc surface parity")
+    print("[ok] validated selection navigation specs, repo doc routing specs, review-backed working sets, shadow specs, and bounded public hygiene")
 
 
 def main() -> int:

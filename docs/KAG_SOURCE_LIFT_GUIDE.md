@@ -13,6 +13,7 @@ See also:
 - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
 - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
 
 ## What Already Exists
 
@@ -89,6 +90,15 @@ The next implementation-oriented source-class pilot after semantic review docs n
 
 Those files lift authored repo-level shadow review docs into derived caution-review knowledge only. They do not replace the markdown review surfaces, infer caution policy, or turn shadow seams into generated metadata.
 
+The next implementation-oriented source-class pilot after shadow review docs now stays equally bounded:
+
+- `generated/repo_doc_surface_manifest.json`
+- `generated/repo_doc_surface_manifest.min.json`
+
+Those files lift the authoritative public docs/status layer into derived routing knowledge only. They stay bounded to `README.md`, `TECHNIQUE_INDEX.md`, `AGENTS.md`, `CONTRIBUTING.md`, `SECURITY.md`, `WALKTHROUGH.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`, `docs/README.md`, and `docs/RELEASING.md`.
+
+Their human reader companion is `docs/REPO_DOC_SURFACES.md`, and the source-class contract lives in `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`. This still does not create a status-policy engine, broaden the source set to local planning docs, or pull deeper guide/review docs into the same manifest.
+
 ## Stable Source Surfaces
 
 For the first source-lift wave, treat these surfaces as stable:
@@ -135,8 +145,8 @@ Not part of this first wave:
 - no bundle-level section IDs
 - no schema or frontmatter expansion
 - no `build_kag` or similar script
-- no generated KAG artifacts beyond the bounded section, checklist, example, evidence note, GitHub review template, semantic review, and shadow review manifests
+- no generated KAG artifacts beyond the bounded section, checklist, example, evidence note, GitHub review template, semantic review, shadow review, and repo doc surface manifests
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, semantic and shadow review manifests as derived review knowledge only, and markdown-first caution lift without metadata or generated caution outputs.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, semantic and shadow review manifests as derived review knowledge only, repo-doc/status surfaces as derived routing knowledge only, and markdown-first caution lift without metadata or generated caution outputs.

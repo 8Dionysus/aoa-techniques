@@ -1,0 +1,67 @@
+# Repo Doc Surfaces
+
+This file is generated from the authoritative public docs/status layer only.
+Do not edit it by hand; run `python scripts/build_repo_doc_surface_manifest.py`.
+
+Use this surface when the main question is which public repo doc to open next for orientation, contribution rules, public-safety expectations, or release/status context.
+
+It stays bounded to the current authored docs/status source set. It excludes local planning files such as `TODO.md`, `PLANS.md`, and `ROADMAP.md`, plus deeper guide/review docs that belong to later waves.
+
+See also:
+- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
+- [Full repo doc surface manifest](../generated/repo_doc_surface_manifest.json)
+- [Documentation Map](README.md)
+- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+
+## Quick Navigation
+
+| question | open | why |
+|---|---|---|
+| Where should I start if I am new to the repository? | [aoa-techniques](../README.md) (`README.md`), [Documentation Map](README.md) (`docs/README.md`), [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | Start with the root README, then use the docs map and technique index for bounded navigation. |
+| Where do contribution rules and PR boundaries live? | [Contributing to aoa-techniques](../CONTRIBUTING.md) (`CONTRIBUTING.md`), [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | Use CONTRIBUTING for the public PR path and AGENTS for the repo's public-safe PLAN -> DIFF -> VERIFY -> REPORT doctrine. |
+| Where do public-safety expectations and contributor conduct live? | [SECURITY.md](../SECURITY.md) (`SECURITY.md`), [AGENTS.md](../AGENTS.md) (`AGENTS.md`), [Code of Conduct](../CODE_OF_CONDUCT.md) (`CODE_OF_CONDUCT.md`) | Use SECURITY for disclosure and hygiene, AGENTS for public-repo authoring discipline, and the Code of Conduct for collaboration expectations. |
+| Where do release flow and status history live? | [Changelog](../CHANGELOG.md) (`CHANGELOG.md`), [Releasing `aoa-techniques`](RELEASING.md) (`docs/RELEASING.md`) | Use CHANGELOG for current history and RELEASING for the bounded validation path behind public corpus updates. |
+
+## Entrypoint / Map
+
+Open these first when the question is where to start or which public repo map should anchor the next read.
+
+| doc | bounded role | top-level sections |
+|---|---|---|
+| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `Start here`, `What belongs here`, `Core principles`, `Maturity model`, `Repository structure`, `Intended users`, `What a good technique includes`, `Contribution model`, `License` |
+| [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | public corpus map by status, technique id, and domain | `Canonical techniques`, `Promoted techniques`, `Deprecated techniques`, `Notes` |
+| [Documentation Map](README.md) (`docs/README.md`) | docs-layer entrypoint for generated surfaces, guides, and recommended reading paths | `Start Here`, `Surface Types`, `Recommended Reading Paths`, `Companion Repository Surfaces`, `Notes` |
+
+## Contribution / Policy
+
+Use these when the question is how to contribute safely, publicly, and within the repo's current review posture.
+
+| doc | bounded role | top-level sections |
+|---|---|---|
+| [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | contributor doctrine for public-safe planning, focused diffs, verification, and reporting | `Purpose`, `Core rule`, `Hard NO`, `Required for every technique`, `Public hygiene`, `Contribution doctrine`, `Promotion rule`, `Preferred PR shape`, `Quality bar` |
+| [Contributing to aoa-techniques](../CONTRIBUTING.md) (`CONTRIBUTING.md`) | public contribution path, review criteria, and status-transition rules | `What belongs here`, `Before opening a PR`, `External provenance`, `GitHub intake surfaces`, `Preferred PR scope`, `Recommended PR title format`, `Review criteria`, `Status transitions`, `Security` |
+| [SECURITY.md](../SECURITY.md) (`SECURITY.md`) | private reporting route and public-hygiene security expectations | `Purpose`, `Report privately if you find`, `Do not post publicly`, `Security expectations for contributors`, `Public hygiene checklist` |
+| [Code of Conduct](../CODE_OF_CONDUCT.md) (`CODE_OF_CONDUCT.md`) | public collaboration and enforcement expectations for contributors | `Our standard`, `Enforcement` |
+
+## Walkthrough / Context
+
+Use this when you need one concrete end-to-end example of how a real practice became a published technique here.
+
+| doc | bounded role | top-level sections |
+|---|---|---|
+| [Walkthrough: AOA-T-0001](../WALKTHROUGH.md) (`WALKTHROUGH.md`) | one end-to-end example of origin practice, publication, reuse, and why the repo stores techniques this way | `1. Origin practice`, `2. Published technique`, `3. Reuse evidence`, `4. Second-context adaptation`, `5. Why this matters here` |
+
+## Status / Release
+
+Use these when the question is what changed, what is currently unreleased, and how the public release path is validated.
+
+| doc | bounded role | top-level sections |
+|---|---|---|
+| [Changelog](../CHANGELOG.md) (`CHANGELOG.md`) | release and unreleased status history for the public corpus | `[Unreleased]`, `[0.1.0] - 2026-03-17` |
+| [Releasing `aoa-techniques`](RELEASING.md) (`docs/RELEASING.md`) | bounded release flow and validation path for public docs and technique updates | `Release goals`, `Recommended release flow`, `Release note shape`, `Versioning guidance`, `What not to optimize yet`, `Current stance` |
+
+## Boundaries
+
+- The source of meaning stays in the authored docs themselves.
+- The bounded source set is exactly the 10 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.
+- This surface and its manifest are routing aids only. They do not become a new source of truth or a status-policy engine.
