@@ -38,7 +38,7 @@ Use these when the question is how to contribute safely, publicly, and within th
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | contributor doctrine for public-safe planning, focused diffs, verification, and reporting | `Purpose`, `Core rule`, `Hard NO`, `Required for every technique`, `Public hygiene`, `Contribution doctrine`, `Promotion rule`, `Preferred PR shape`, `Quality bar` |
+| [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | contributor doctrine for public-safe planning, focused diffs, verification, and reporting | `Purpose`, `Owns`, `Does not own`, `Core rule`, `Read this first`, `Primary objects`, `Allowed changes`, `Changes requiring extra care`, `Hard NO`, `Public hygiene`, `Contribution doctrine`, `Validation`, `Cross-repo neighbors`, `Output expectations`, `Default editing posture` |
 | [Contributing to aoa-techniques](../CONTRIBUTING.md) (`CONTRIBUTING.md`) | public contribution path, review criteria, and status-transition rules | `What belongs here`, `Before opening a PR`, `External provenance`, `GitHub intake surfaces`, `Preferred PR scope`, `Recommended PR title format`, `Review criteria`, `Status transitions`, `Security` |
 | [SECURITY.md](../SECURITY.md) (`SECURITY.md`) | private reporting route and public-hygiene security expectations | `Purpose`, `Report privately if you find`, `Do not post publicly`, `Security expectations for contributors`, `Public hygiene checklist` |
 | [Code of Conduct](../CODE_OF_CONDUCT.md) (`CODE_OF_CONDUCT.md`) | public collaboration and enforcement expectations for contributors | `Our standard`, `Enforcement` |
