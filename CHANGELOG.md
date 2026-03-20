@@ -23,6 +23,9 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 - `SELECTION_PATTERNS.md` working sets are now validator-checked against their linked semantic review maps
 - new generated `docs/SHADOW_PATTERNS.md` now provides one canonical-only shadow operating surface over typed `adverse_effects_review` notes
+- new generated `generated/shadow_review_manifest.json` now lifts authored shadow-review docs into derived review knowledge without turning caution into policy metadata
+- `EVALUATION_CHAIN_SHADOW_REVIEW.md` now adds the second canonical shadow-review pilot for `AOA-T-0003` and `AOA-T-0007`
+- `docs/SHADOW_PATTERNS.md` now exposes both published-summary and evaluation-chain review-backed shadow working sets plus new evaluation-chain shadow questions
 - the published-summary cluster now has an authored `PUBLISHED_SUMMARY_SHADOW_REVIEW.md` plus sharper caution wording across `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011`
 - all published techniques now use the same richer `## Risks` subsection contract
 - all `canonical` techniques now carry a typed `adverse_effects_review` note, and the evidence-note manifest exposes that canonical-only caution supplement without adding generated caution outputs
@@ -37,6 +40,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - `python -m unittest discover -s tests`
 - `python scripts/validate_repo.py`
 - `python scripts/build_catalog.py`
+- `python scripts/build_shadow_review_manifest.py`
 - `python scripts/build_capsules.py`
 - `python scripts/build_section_manifest.py`
 - `python scripts/build_evidence_note_manifest.py`

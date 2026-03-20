@@ -82,6 +82,13 @@ The next implementation-oriented source-class pilot after GitHub review template
 
 Those files lift authored repo-level semantic review docs into derived review knowledge only. They do not replace the markdown review surfaces, infer verdict policy, or turn semantic review into a graph engine.
 
+The next implementation-oriented source-class pilot after semantic review docs now stays equally bounded:
+
+- `generated/shadow_review_manifest.json`
+- `generated/shadow_review_manifest.min.json`
+
+Those files lift authored repo-level shadow review docs into derived caution-review knowledge only. They do not replace the markdown review surfaces, infer caution policy, or turn shadow seams into generated metadata.
+
 ## Stable Source Surfaces
 
 For the first source-lift wave, treat these surfaces as stable:
@@ -128,8 +135,8 @@ Not part of this first wave:
 - no bundle-level section IDs
 - no schema or frontmatter expansion
 - no `build_kag` or similar script
-- no generated KAG artifacts beyond the bounded section, checklist, example, evidence note, GitHub review template, and semantic review manifests
+- no generated KAG artifacts beyond the bounded section, checklist, example, evidence note, GitHub review template, semantic review, and shadow review manifests
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, and markdown-first caution lift without metadata or generated caution outputs.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, semantic and shadow review manifests as derived review knowledge only, and markdown-first caution lift without metadata or generated caution outputs.
