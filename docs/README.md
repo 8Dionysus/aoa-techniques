@@ -19,6 +19,7 @@ Choose the path that matches your question:
 - I need to understand status, review posture, or canonical promotion:
   - [Canonical Rubric](CANONICAL_RUBRIC.md)
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
+  - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
 - I need to understand the repo's markdown-first caution discipline:
   - [Shadow Patterns](SHADOW_PATTERNS.md)
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
@@ -141,6 +142,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
+- [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
 - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
@@ -183,7 +185,7 @@ These are reusable technique bundles extracted from the repo's current generated
 
 ### KAG/source-lift family review
 
-This review-only doc keeps the five reusable KAG/source-lift techniques distinct while staying subordinate to authored markdown, with one canonical metadata spine plus four promoted companions.
+This review-only doc keeps the five reusable KAG/source-lift techniques distinct while staying subordinate to authored markdown, with two canonical anchors plus three promoted companions.
 
 - [KAG Source Lift Semantic Review](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
   - use when the family seams between section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift need one bounded review surface

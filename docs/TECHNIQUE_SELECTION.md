@@ -28,14 +28,15 @@ See also:
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) | `cross_context` | Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface. |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | `cross_context` | Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures. |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `cross_context` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
+| [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `cross_context` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
 
 ### What are the current canonical defaults by domain?
 
 | domain | canonical defaults |
 |---|---|
 | `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
-| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md), [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md), [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) |
-| `evaluation` | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md), [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md), [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md), [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
+| `evaluation` | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md), [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md), [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 
 ### If I choose one technique, what nearby techniques usually go with it?
 
@@ -85,7 +86,7 @@ See also:
 | [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
 | [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs. |
 | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
-| [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
+| [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
 | [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
 
 ### `evaluation`
@@ -99,7 +100,7 @@ See also:
 | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface. |
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | `canonical` | `cross_context` | `strict` | Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures. |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
-| [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
+| [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
 
 ## Current Catalog Audit
 

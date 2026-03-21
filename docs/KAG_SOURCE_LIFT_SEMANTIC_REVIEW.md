@@ -4,7 +4,7 @@ This review-only pilot checks whether the first reusable KAG/source-lift family 
 
 Why this family was chosen now:
 
-- the family now has one `canonical` metadata spine plus four `promoted` companions
+- the family now has two `canonical` anchors plus three `promoted` companions
 - the family now spans section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift
 - the main question is semantic clarity across the family boundaries, not missing structure
 - `AOA-T-0022` is a caution-oriented companion and should stay outside shadow-policy semantics
@@ -58,7 +58,8 @@ Question: where does markdown-first caution lift stop and shadow-policy semantic
 - `AOA-T-0021` is semantically distinct as the bounded relation lift.
 - `AOA-T-0022` is semantically distinct as the markdown-first caution lift, and it should remain outside shadow-policy semantics.
 - Live donor posture is now uneven but useful across the family: `AOA-T-0019` is strongest because three sibling repos already rely on the metadata spine for shared routing and review posture, and that proof is now strong enough for canonical default-use.
-- `AOA-T-0020` and `AOA-T-0021` now have strong live donor evidence through `aoa-evals`, but both still stay bounded and should not be over-read as graph semantics.
+- `AOA-T-0021` now has strong live donor evidence through `aoa-evals` plus a committed `aoa-routing` one-hop relation-hint surface, which is enough for bounded canonical default-use while still staying outside graph semantics.
+- `AOA-T-0020` still has strong live donor evidence through `aoa-evals`, but it should stay promoted until another non-eval markdown-first corpus proves the same typed provenance split.
 - `AOA-T-0018` is now bridge-backed through `aoa-skills`, which is enough to strengthen the section-lift case without making it the dominant family donor.
 - `AOA-T-0022` remains caution-specific and still under-evidenced as a live donor because adjacent caution language in sibling repos does not reproduce the same five-part `Risks` contract.
 - Current `relations` are helpful and still bounded. No cleanup is justified in this pilot.
@@ -70,4 +71,4 @@ Overall outcome: `clear`
 
 No immediate remediation wave is justified for this family from this pilot alone.
 
-The next step is to keep `AOA-T-0019` narrow as the canonical metadata spine while `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0021`, and `AOA-T-0022` keep accumulating bounded live evidence without collapsing into a broader graph, metadata, or shadow-policy package.
+The next step is to keep `AOA-T-0019` narrow as the canonical metadata spine and `AOA-T-0021` narrow as the canonical direct-relation hint companion while `AOA-T-0018`, `AOA-T-0020`, and `AOA-T-0022` keep accumulating bounded live evidence without collapsing into a broader graph, metadata, or shadow-policy package.

@@ -2,7 +2,7 @@
 id: AOA-T-0017
 name: property-invariants
 domain: evaluation
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: planning-layer
@@ -15,11 +15,11 @@ tags:
   - invariants
   - agent-friendly
 summary: Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
+validation_strength: cross_context
 public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
@@ -34,6 +34,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # property-invariants

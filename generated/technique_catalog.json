@@ -911,7 +911,7 @@
       "id": "AOA-T-0017",
       "name": "property-invariants",
       "domain": "evaluation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set.",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "origin": {
@@ -928,11 +928,11 @@
         "invariants",
         "agent-friendly"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
+      "validation_strength": "cross_context",
       "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
@@ -957,6 +957,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -1126,7 +1130,7 @@
       "id": "AOA-T-0021",
       "name": "bounded-relation-lift-for-kag",
       "domain": "docs",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics.",
       "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "origin": {
@@ -1144,12 +1148,12 @@
         "edges",
         "navigation"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-19",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -1169,6 +1173,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

@@ -2,7 +2,7 @@
 id: AOA-T-0021
 name: bounded-relation-lift-for-kag
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: docs/SELECTION_PATTERNS.md
@@ -16,12 +16,12 @@ tags:
   - edges
   - navigation
 summary: Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-19
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: requires
@@ -33,6 +33,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # bounded-relation-lift-for-kag

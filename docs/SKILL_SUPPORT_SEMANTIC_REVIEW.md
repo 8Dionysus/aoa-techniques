@@ -4,7 +4,7 @@ This review-only pilot checks whether the current skill-support cluster still re
 
 Why this cluster was chosen now:
 
-- the cluster now mixes three `canonical` defaults with one still-`promoted` companion
+- the cluster now mixes four `canonical` defaults across execution, evaluation, and scoping support
 - the main remaining question is semantic separation and bounded default-use posture, not missing repo structure
 - the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit
 - the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism
@@ -65,4 +65,4 @@ Overall outcome: `clear with two watch seams`
 
 No immediate semantic-remediation wave is justified for this cluster from this pilot alone.
 
-Second-context evidence strengthening and one downstream consumer now justify `AOA-T-0016` as `canonical`, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism.
+`AOA-T-0017` now joins `AOA-T-0016` as `canonical` after a second committed downstream consumer proved that invariant-oriented coverage is selected as a natural first-class move rather than only as a supporting dependency, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism.

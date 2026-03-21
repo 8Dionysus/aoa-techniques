@@ -72,6 +72,12 @@ See also:
 |---|---|---|---|---|
 | Metadata Spine Checklist | `present` | `5` | `techniques/docs/frontmatter-metadata-spine/checks/metadata-spine-checklist.md` | [TECHNIQUE.md](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) |
 
+### [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Relation Lift Checklist | `present` | `5` | `techniques/docs/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
+
 ### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -89,12 +95,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Evidence Note Provenance Checklist | `present` | `5` | `techniques/docs/evidence-note-provenance-lift/checks/evidence-note-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) |
-
-### [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Relation Lift Checklist | `present` | `5` | `techniques/docs/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
 ### [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) - risk-and-negative-effect-lift (`promoted`)
 
@@ -146,7 +146,7 @@ See also:
 |---|---|---|---|---|
 | Contract Test Design Checklist | `present` | `8` | `techniques/evaluation/contract-test-design/checks/contract-test-design-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 
-### [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants (`promoted`)
+### [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
