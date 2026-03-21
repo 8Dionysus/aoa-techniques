@@ -37,8 +37,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 ## Current Corpus Posture
 
 - current split: `17 canonical`, `5 promoted`
-- current evidence-prep promoted techniques: `AOA-T-0018`, `AOA-T-0020`
-- current long-gap promoted techniques: `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0022`
+- current evidence-prep promoted techniques: `AOA-T-0018`
+- current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`
 
 ## Repo-Only Operating Contract

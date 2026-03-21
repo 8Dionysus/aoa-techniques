@@ -25,6 +25,81 @@
   },
   "reviews": [
     {
+      "review_id": "agent_workflows_core",
+      "review_path": "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md",
+      "title": "Agent-Workflows Core Semantic Review",
+      "intro_markdown": "This review-only surface checks whether the current canonical agent-workflows core still reads as three distinct techniques rather than one blurred \"good workflow hygiene\" package.\n\nWhy this cluster was chosen now:\n\n- all three techniques are already `canonical`, so the main risk is default-use blur rather than missing evidence\n- the cluster sits in one domain, but the techniques still do different jobs in the same operating path\n- the main remaining gap from the audit was review coverage, not bundle quality\n- this review should absorb canonical-core pressure so [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md) can stay focused on its own cross-domain seams\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "map_heading": "Cluster Map",
+      "map_entries": [
+        {
+          "order": 1,
+          "technique_id": "AOA-T-0001",
+          "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+          "current_role": "canonical workflow backbone for bounded repository changes"
+        },
+        {
+          "order": 2,
+          "technique_id": "AOA-T-0004",
+          "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+          "current_role": "intent-chain specialization for artifact-first normalization and dry-run checking"
+        },
+        {
+          "order": 3,
+          "technique_id": "AOA-T-0014",
+          "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+          "current_role": "bounded execution and test slice discipline inside one implementation change"
+        }
+      ],
+      "seams": [
+        {
+          "heading": "`AOA-T-0001` vs `AOA-T-0004`",
+          "order": 1,
+          "question": "where does the general workflow backbone stop and the intent-chain specialization begin?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) owns the generic execution contract of plan, bounded diff, verification, and explicit reporting for repository work. [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) begins when the main problem is not generic execution hygiene, but stabilizing an intent-shaped artifact chain before real execution exists.\n- Default-use trigger: use `0001` when the change needs a bounded workflow backbone across planning, implementation, verification, and reporting. Use `0004` when the workflow must first normalize intent into artifacts, plans, and dry-run checks before any real execution path should be trusted.\n- Relation check: `0004` still reads like a narrower specialization on top of `0001`, not a replacement for the base workflow contract. The pair reads as backbone plus intent-chain specialization rather than duplicate workflow prose. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0001` vs `AOA-T-0014`",
+          "order": 2,
+          "question": "where does the general workflow backbone stop and the bounded test-first slice discipline begin?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) owns the overall work loop. [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) begins when the main risk is a single behavior slice widening during implementation and the safer move is to keep execution and verification pinned to one bounded slice.\n- Default-use trigger: use `0001` when the whole repository change needs a minimal but complete execution contract. Use `0014` when the main problem inside that workflow is keeping one behavior slice small, test-first where appropriate, and resistant to spillover.\n- Evidence check: `0001` remains workflow-backbone centric in its checklist and example, while `0014` stays slice centric in its example, checklist, and caution note. The bundles do not currently collapse into one generic \"do careful work\" doctrine. Outcome: `clear`.",
+          "outcome": "`clear`."
+        },
+        {
+          "heading": "`AOA-T-0004` vs `AOA-T-0014`",
+          "order": 3,
+          "question": "where does intent-chain specialization stop and bounded execution slicing begin?",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) owns artifact-first intent normalization and dry-run contract checking before the live path is trusted. [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) owns the execution discipline for one bounded implementation slice after the target path is already clear enough to work on directly.\n- Default-use trigger: use `0004` when the system first needs the intent-chain artifact layer or one new path still has to be normalized through dry-run-first checks. Use `0014` when the target path is already known and the main issue is keeping one implementation slice small and reviewable.\n- Watch point: both techniques can appear in the same end-to-end change, because an intent-chain system can still be implemented or extended through bounded slices. The seam stays healthy as long as `0004` keeps chain artifacts at the center of gravity and `0014` keeps one behavior slice at the center. Outcome: `clear`.",
+          "outcome": "`clear`."
+        }
+      ],
+      "context_notes": [],
+      "findings": [
+        {
+          "order": 1,
+          "text": "`AOA-T-0001` is semantically distinct as the canonical workflow backbone for bounded repository changes."
+        },
+        {
+          "order": 2,
+          "text": "`AOA-T-0004` is semantically distinct as the intent-chain specialization that adds artifact-first normalization and dry-run contract checks."
+        },
+        {
+          "order": 3,
+          "text": "`AOA-T-0014` is semantically distinct as bounded execution and test slicing inside one implementation change."
+        },
+        {
+          "order": 4,
+          "text": "The main cluster risk was missing review coverage, not bundle blur or missing evidence."
+        },
+        {
+          "order": 5,
+          "text": "No relation cleanup, bundle-local rewrite, or new shadow-review family is justified from this review alone."
+        }
+      ],
+      "overall_outcome": "`clear`",
+      "next_step_markdown": "No immediate semantic-remediation wave is justified for this canonical core from this review alone.\n\nThe next step should keep this review as the canonical-core anchor, leave [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md) focused on `AOA-T-0004` vs `AOA-T-0005`, and keep bundle-local notes responsible for promotion and caution posture."
+    },
+    {
       "review_id": "docs_boundary",
       "review_path": "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
       "title": "Docs Boundary Semantic Review",
@@ -190,7 +265,7 @@
         }
       ],
       "overall_outcome": "`clear with one watch seam`",
-      "next_step_markdown": "No immediate semantic-remediation wave is justified for this pair from this pilot alone.\n\nConcrete example strengthening has already landed for both techniques, so the next step should move to stronger live multi-target reuse evidence for `AOA-T-0013` rather than more example-only reinforcement."
+      "next_step_markdown": "No immediate semantic-remediation wave is justified for this pair from this pilot alone.\n\nConcrete example strengthening has already landed for both techniques, and `aoa-skills` now provides the first live multi-target donor for `AOA-T-0013`, so the next step should move to one more independent instruction-distribution context rather than more example-only reinforcement."
     },
     {
       "review_id": "intent_chain",
@@ -245,7 +320,7 @@
         }
       ],
       "overall_outcome": "`clear`",
-      "next_step_markdown": "No immediate semantic-remediation wave is justified for this pair from this pilot alone.\n\nThe next step should move to second-context evidence strengthening for `AOA-T-0004` and `AOA-T-0005`, rather than directly to canonical review or broader restructuring."
+      "next_step_markdown": "No immediate semantic-remediation wave is justified for this pair from this pilot alone.\n\nThe next step should keep `AOA-T-0005` in bounded defer until one non-origin live second context lands; merged `atm10-agent` rollout records now strengthen the origin side of the pattern, but they do not yet close the second-context gap beyond the repo-local adaptation."
     },
     {
       "review_id": "kag_source_lift",
@@ -348,7 +423,7 @@
         },
         {
           "order": 10,
-          "text": "`AOA-T-0022` remains caution-specific and still under-evidenced as a live donor because adjacent caution language in sibling repos does not reproduce the same five-part `Risks` contract."
+          "text": "`AOA-T-0022` now has a first exact-contract donor in committed `aoa-skills`, but it should stay promoted until another independent corpus proves the same five-part `Risks` split outside that first skill-local caution surface."
         },
         {
           "order": 11,
@@ -360,7 +435,7 @@
         }
       ],
       "overall_outcome": "`clear`",
-      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is to keep `AOA-T-0019` narrow as the canonical metadata spine and `AOA-T-0021` narrow as the canonical direct-relation hint companion while `AOA-T-0018`, `AOA-T-0020`, and `AOA-T-0022` keep accumulating bounded live evidence without collapsing into a broader graph, metadata, or shadow-policy package."
+      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is to keep `AOA-T-0019` narrow as the canonical metadata spine and `AOA-T-0021` narrow as the canonical direct-relation hint companion while `AOA-T-0018` and `AOA-T-0020` keep accumulating bounded live evidence and `AOA-T-0022` gets one more independent exact-contract donor without collapsing into a broader graph, metadata, or shadow-policy package."
     },
     {
       "review_id": "published_summary",
@@ -447,29 +522,23 @@
       "review_id": "skill_support",
       "review_path": "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
       "title": "Skill-Support Semantic Review",
-      "intro_markdown": "This review-only pilot checks whether the current skill-support cluster still reads as four distinct techniques rather than one blurred \"agent-friendly testing and scoping\" package.\n\nWhy this cluster was chosen now:\n\n- the cluster now mixes four `canonical` defaults across execution, evaluation, and scoping support\n- the main remaining question is semantic separation and bounded default-use posture, not missing repo structure\n- the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit\n- the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "intro_markdown": "This review-only surface checks whether the current skill-support cluster still reads as three distinct techniques rather than one blurred \"stronger testing and scoping\" package.\n\nWhy this cluster remains useful now:\n\n- the agent-workflows canonical core now has its own dedicated review surface, so this cluster can stay focused on the remaining cross-domain support seams\n- the main remaining question is still semantic separation and bounded default-use posture, not missing repo structure\n- the cluster still crosses `evaluation` and `docs`, so drift would be costly if left implicit\n- the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
       "map_heading": "Cluster Map",
       "map_entries": [
         {
           "order": 1,
-          "technique_id": "AOA-T-0014",
-          "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
-          "current_role": "bounded test-first implementation slice"
-        },
-        {
-          "order": 2,
           "technique_id": "AOA-T-0015",
           "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
           "current_role": "boundary-contract evaluation discipline"
         },
         {
-          "order": 3,
+          "order": 2,
           "technique_id": "AOA-T-0017",
           "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
           "current_role": "invariant-oriented coverage broadening"
         },
         {
-          "order": 4,
+          "order": 3,
           "technique_id": "AOA-T-0016",
           "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
           "current_role": "semantic scoping and handoff map"
@@ -477,24 +546,17 @@
       ],
       "seams": [
         {
-          "heading": "`AOA-T-0014` vs `AOA-T-0015`",
-          "order": 1,
-          "question": "where does bounded test-first slice discipline stop and explicit boundary-contract discipline begin?",
-          "analysis_markdown": "- Invariant boundary: [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) owns the workflow of stating one bounded behavior slice, expressing it in tests first where appropriate, implementing the smallest passing change, and keeping refactor pressure inside that slice. [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) begins when the main problem is not slice discipline itself, but making a consumer-visible boundary explicit and reviewable.\n- Default-use trigger: use `0014` when the change needs a compact execution discipline that keeps one behavior slice from widening. Use `0015` when the key risk is interface drift at an observable boundary such as an API, summary artifact, or service wrapper.\n- Evidence check: `0014` checklist and example stay implementation-slice centric, focusing on behavior-first tests, minimal diff, and bounded refactor. `0015` checklist and example stay boundary centric, focusing on observable contract guarantees, downstream assumptions, and refactor freedom behind the contract. The support surfaces reinforce separation rather than blur it.\n- Relation check: both currently point to `AOA-T-0001`, but for different reasons. `0014` reads as execution discipline close to plan-diff-apply-verify-report, while `0015` reads as evaluation discipline over a boundary surface. That shared adjacency does not collapse them. Outcome: `clear`.",
-          "outcome": "`clear`."
-        },
-        {
           "heading": "`AOA-T-0015` vs `AOA-T-0017`",
-          "order": 2,
+          "order": 1,
           "question": "where does contract-surface validation stop and invariant-oriented broad coverage begin?",
           "analysis_markdown": "- Invariant boundary: [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) defines what a consumer-visible boundary promises through explicit inputs, outputs, and failure behavior. [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) defines stable truths that should hold across many cases, even when there is no single consumer-facing contract shape to anchor the check.\n- Default-use trigger: use `0015` when a named boundary and its consumers must stay stable through refactor or interface change. Use `0017` when the main problem is that example coverage is too narrow and the stronger reusable move is to express one meaningful invariant across a wider input or state space.\n- Evidence check: `0015` example and checklist remain contract-surface oriented. `0017` example and checklist remain invariant-strength and bounded generator oriented. The current support surfaces still separate boundary design from coverage broadening.\n- Watch point: both techniques can appear in the same validation path, and both use testing language. Future wording drift could make `0017` sound like \"better contract tests\" or make `0015` sound like a generic broad-coverage pattern if later examples stop centering the consumer-visible boundary. Outcome: `watch`.",
           "outcome": "`watch`."
         },
         {
-          "heading": "`AOA-T-0016` vs `AOA-T-0014` / `AOA-T-0015` / `AOA-T-0017`",
-          "order": 3,
+          "heading": "`AOA-T-0016` vs `AOA-T-0015` / `AOA-T-0017`",
+          "order": 2,
           "question": "where does semantic scoping, vocabulary, and handoff mapping stop and implementation or evaluation technique begin?",
-          "analysis_markdown": "- Invariant boundary: [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) owns the naming and scoping layer: clarify contexts, visible handoffs, and overloaded terms before work widens into the wrong area. It does not prescribe how implementation should be test-driven, how boundaries should be validated, or how broad invariants should be checked once the target area is already clear.\n- Default-use trigger: use `0016` when contributors or agents are confused about what belongs inside the target area at all. Use `0014`, `0015`, or `0017` only after the semantic target is already clear enough that implementation or evaluation discipline becomes the main problem.\n- Evidence check: `0016` checklist and example stay vocabulary-and-handoff centric rather than architectural-platform centric. The newer testing-oriented techniques stay rooted in execution or validation behavior, not repository mapping.\n- Watch point: because `0016` uses words like \"bounded context,\" future examples could drift into generic architecture formalism. If that happens, it could stop reading like a practical docs/scoping pattern and start looking like a broader domain-model technique. Outcome: `watch`.",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) owns the naming and scoping layer: clarify contexts, visible handoffs, and overloaded terms before work widens into the wrong area. It does not prescribe how implementation should be test-driven, how boundaries should be validated, or how broad invariants should be checked once the target area is already clear.\n- Default-use trigger: use `0016` when contributors or agents are confused about what belongs inside the target area at all. Use `0015` or `0017` only after the semantic target is already clear enough that evaluation discipline becomes the main problem.\n- Evidence check: `0016` checklist and example stay vocabulary-and-handoff centric rather than architectural-platform centric. The newer testing-oriented techniques stay rooted in execution or validation behavior, not repository mapping.\n- Watch point: because `0016` uses words like \"bounded context,\" future examples could drift into generic architecture formalism. If that happens, it could stop reading like a practical docs/scoping pattern and start looking like a broader domain-model technique. Outcome: `watch`.",
           "outcome": "`watch`."
         }
       ],
@@ -502,35 +564,31 @@
       "findings": [
         {
           "order": 1,
-          "text": "`AOA-T-0014` is semantically distinct as an execution discipline for one bounded behavior slice."
-        },
-        {
-          "order": 2,
           "text": "`AOA-T-0015` is semantically distinct as a boundary-contract surface, not a generic testing technique."
         },
         {
-          "order": 3,
+          "order": 2,
           "text": "`AOA-T-0017` is semantically distinct as invariant-oriented coverage broadening, not a duplicate of contract design."
         },
         {
-          "order": 4,
+          "order": 3,
           "text": "`AOA-T-0016` is semantically distinct as a docs/scoping pattern, not an architecture-domain opening and not a test technique."
         },
         {
-          "order": 5,
+          "order": 4,
           "text": "The strongest watch seam is `AOA-T-0015` vs `AOA-T-0017`, because both live in evaluation and both can sound like \"stronger tests\" if future examples lose their current center of gravity."
         },
         {
-          "order": 6,
+          "order": 5,
           "text": "The second watch seam is `AOA-T-0016` drifting toward generic architecture formalism if later examples stop being scoping- and handoff-centric."
         },
         {
-          "order": 7,
+          "order": 6,
           "text": "No relation cleanup or additional narrow semantic-remediation wave is justified from this pilot alone."
         }
       ],
       "overall_outcome": "`clear with two watch seams`",
-      "next_step_markdown": "No immediate semantic-remediation wave is justified for this cluster from this pilot alone.\n\n`AOA-T-0017` now joins `AOA-T-0016` as `canonical` after a second committed downstream consumer proved that invariant-oriented coverage is selected as a natural first-class move rather than only as a supporting dependency, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism."
+      "next_step_markdown": "No immediate semantic-remediation wave is justified for this cluster from this pilot alone.\n\nThe next step should keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism, while the agent-workflows canonical core now lives in its own dedicated semantic review surface."
     }
   ]
 }

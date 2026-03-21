@@ -1938,7 +1938,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "bounded defer for now"
                 }
               ]
             },
@@ -1955,17 +1955,17 @@
                 {
                   "order": 2,
                   "key": "origin reinforcement",
-                  "value_markdown": "the origin notes describe the same extension path across fixture hardening, strict `expected_intent_type` checks, summary publication, and end-to-end regression proof for a new intent rollout"
+                  "value_markdown": "merged `ATM10-Agent@7cf55f70badbe8b1a51e2eabbe1424f35b833dd3` now records reusable `M6.19` rollout evidence across `open_quest_book`, `check_inventory_tool`, and `open_world_map` in `docs/RUNBOOK.md`, with matching summary references in `README.md`, `MANIFEST.md`, and `ROADMAP.md`"
                 },
                 {
                   "order": 3,
                   "key": "second context",
-                  "value_markdown": "`aoa-techniques` now shows the same contract in a public-safe repo-local adaptation with one generic rollout example, one concrete non-UI example, and a checklist that keeps fixture, smoke, contract-check, and artifact alignment explicit"
+                  "value_markdown": "`aoa-techniques` still shows the same contract in a public-safe repo-local adaptation with one generic rollout example, one concrete non-UI example, and a checklist that keeps fixture, smoke, contract-check, and artifact alignment explicit"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle has strong checklist and example surfaces plus a rollout-failure triage note, but it still lacks a second live reuse context beyond the origin and this repo-local rollout sketch"
+                  "value_markdown": "the bundle now has stronger origin-side operating proof plus a clear repo-local adaptation, but it still lacks a non-origin live second context beyond `atm10-agent` and this repository-local sketch"
                 }
               ]
             },
@@ -1984,7 +1984,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is still not the default canonical choice because the current second-context evidence is a bounded public sketch rather than a second live reuse context with stronger operating proof"
+                  "text": "it is still not the default canonical choice because the current proof is one strong origin record set plus one bounded public sketch, not a second live reuse context in another repository"
                 }
               ]
             },
@@ -1996,7 +1996,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-20"
+                  "value_markdown": "2026-03-21"
                 },
                 {
                   "order": 2,
@@ -2011,7 +2011,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the repo-local examples and triage note are understandable without origin-project access, but they do not yet prove enough live second-context reuse for canonical promotion"
+                  "value_markdown": "the repo-local examples and triage note are understandable without origin-project access, and the merged `atm10-agent` rollout records materially strengthen origin proof, but they still do not create a second non-origin live context for canonical promotion"
                 }
               ]
             },
@@ -2022,11 +2022,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle still needs live reuse beyond the repo-local rollout sketch before canonical promotion would be justified"
+                  "text": "the bundle still needs one non-origin live reuse context beyond `atm10-agent` and the repo-local rollout sketch before canonical promotion would be justified"
                 },
                 {
                   "order": 2,
-                  "text": "a future second live context should show the same checklist succeeding in practice, not only in public-safe example form"
+                  "text": "a future second live context should show the same checklist succeeding in practice on another shared intent chain, not only in the origin project plus a public-safe example form"
                 }
               ]
             },
@@ -2038,12 +2038,12 @@
                 {
                   "order": 1,
                   "key": "bounded defer verdict",
-                  "value_markdown": "keep `AOA-T-0005` `promoted` for now and do not advance it to `canonical` until there is live reuse beyond the repo-local rollout sketch"
+                  "value_markdown": "keep `AOA-T-0005` `promoted` for now and do not advance it to `canonical` until there is one non-origin live reuse context beyond `atm10-agent`"
                 },
                 {
                   "order": 2,
                   "key": "smallest remaining gap",
-                  "value_markdown": "one live second-context reuse outside the origin project and this repository-local adaptation, showing the same checklist succeed in practice rather than only in public-safe example form"
+                  "value_markdown": "one live second-context reuse outside the origin project and this repository-local adaptation, showing the same checklist succeed in practice rather than only in origin rollout records plus public-safe example form"
                 }
               ]
             }
@@ -2202,6 +2202,11 @@
                   "order": 3,
                   "key": "linkage form",
                   "value_markdown": "the repo-local example and checklist keep the shared-chain contract explicit, with `AOA-T-0004` as the underlying chain and `AOA-T-0001` as the change workflow for editing the rollout itself"
+                },
+                {
+                  "order": 4,
+                  "key": "donor reinforcement",
+                  "value_markdown": "merged `ATM10-Agent@7cf55f70badbe8b1a51e2eabbe1424f35b833dd3` now records reusable `M6.19` rollout records across three canonical fixtures, so the repo-local adaptation now sits beside stronger origin-side operating proof rather than a single origin example"
                 }
               ]
             },
@@ -2242,7 +2247,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "future readers could mistake a readable public example for the stronger evidence needed for canonical promotion"
+                  "text": "future readers could mistake stronger origin-side rollout records for a second context even though they still live in the same donor repository"
                 }
               ]
             },
@@ -2253,18 +2258,22 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`examples/minimal-intent-rollout.md` shows the checklist as a generic bounded rollout for one new intent path, including fixture, smoke, contract-check, review surface, and regression discipline."
+                  "text": "merged `ATM10-Agent@7cf55f70badbe8b1a51e2eabbe1424f35b833dd3` now adds `docs/RUNBOOK.md` `M6.19 rollout records`, explicitly showing the same public `intent -> plan -> dry-run` contract exercised across `open_quest_book`, `check_inventory_tool`, and `open_world_map`."
                 },
                 {
                   "order": 2,
-                  "text": "`examples/concrete-non-ui-intent-rollout.md` grounds the same contract in a public-safe non-UI example, `refresh_skill_index`, which keeps the reusable shape but not the origin project\u2019s exact automation details."
+                  "text": "`examples/minimal-intent-rollout.md` shows the checklist as a generic bounded rollout for one new intent path, including fixture, smoke, contract-check, review surface, and regression discipline."
                 },
                 {
                   "order": 3,
-                  "text": "`checks/intent-rollout-checklist.md` keeps the bounded review shape explicit by checking fixture, smoke, contract-check, artifact, and regression coverage in one list."
+                  "text": "`examples/concrete-non-ui-intent-rollout.md` grounds the same contract in a public-safe non-UI example, `refresh_skill_index`, which keeps the reusable shape but not the origin project\u2019s exact automation details."
                 },
                 {
                   "order": 4,
+                  "text": "`checks/intent-rollout-checklist.md` keeps the bounded review shape explicit by checking fixture, smoke, contract-check, artifact, and regression coverage in one list."
+                },
+                {
+                  "order": 5,
                   "text": "`notes/rollout-failure-triage.md` shows that the checklist remains tied to concrete failure repair paths rather than general rollout philosophy."
                 }
               ]
@@ -2276,7 +2285,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local rollout sketch for the public checklist shape, but it is still not enough on its own to justify canonical promotion"
+                  "text": "works as a bounded repo-local rollout sketch for the public checklist shape, now paired with stronger origin-side rollout records, but it is still not enough on its own to justify canonical promotion"
                 }
               ]
             }
@@ -6115,7 +6124,7 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the repo-local adaptation note shows the contract clearly enough to remain reusable, but it still reads as a sketch rather than a live multi-target reuse proof"
+                  "value_markdown": "merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now provides a first live one-source -> many-target donor path through `docs/BRIDGE_SPEC.md`, committed consumer skills, and explicit drift-control tooling"
                 },
                 {
                   "order": 3,
@@ -6125,7 +6134,7 @@
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle includes a checklist, two public-safe examples, and a clean separation from `AOA-T-0012`, but it still lacks live multi-target reuse beyond the current repository narrative"
+                  "value_markdown": "the bundle includes a checklist, two public-safe examples, a clean separation from `AOA-T-0012`, and one real sibling-repo donor, but it still lacks a second independent instruction-distribution context beyond `aoa-skills`"
                 }
               ]
             },
@@ -6144,7 +6153,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the current wording is strong enough for reuse, but not yet strong enough to justify canonical default status without evidence that the shared core survives real multi-target re-application"
+                  "text": "the current wording is strong enough for reuse, but not yet strong enough to justify canonical default status without evidence that the shared core survives a second independent multi-target re-application beyond the first `aoa-skills` donor"
                 }
               ]
             },
@@ -6156,7 +6165,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-20"
+                  "value_markdown": "2026-03-21"
                 },
                 {
                   "order": 2,
@@ -6182,11 +6191,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is live multi-target reuse beyond the current adaptation sketch"
+                  "text": "the smallest remaining gap is one second independent instruction-distribution context beyond the first `aoa-skills` donor"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs a real managed target flow showing one source update propagating cleanly to multiple instruction surfaces more than once"
+                  "text": "specifically, the bundle still needs another managed target flow showing one source update propagating cleanly to multiple instruction surfaces in a second repo or surface family such as `aoa-agents`"
                 }
               ]
             },
@@ -6201,7 +6210,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until a live multi-target reuse context exists beyond the current repo-local adaptation sketch"
+                  "text": "defer canonical promotion until a second live multi-target reuse context exists beyond the current `aoa-skills` donor"
                 }
               ]
             }
@@ -6505,17 +6514,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "aoa-skills"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with canonical policy docs, one agent-facing collaboration surface, and no built-in multi-agent distribution toolchain"
+                  "value_markdown": "public skill repository with authored `SKILL.md` bundles, `techniques.yaml` source refs, generated readers, and validator-backed bridge tooling"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that can describe the pattern clearly even when it does not automate the donor workflow directly"
+                  "value_markdown": "markdown-first skill corpus where one authoritative source can feed multiple committed instruction surfaces without making each target canonical"
                 }
               ]
             },
@@ -6527,22 +6536,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor uses `.ruler/` as the canonical rule hub; this adaptation presents a generic canonical rule source such as `rules/` or another docs directory"
+                  "value_markdown": "the donor contract is now grounded in live `aoa-skills` bridge surfaces, with one upstream technique source pinned in `techniques.yaml` and multiple committed target consumer surfaces in skill bundles"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "there is no local `ruler` CLI or automatic fan-out step in this repository"
+                  "value_markdown": "distribution uses bounded refresh and drift helpers, not hand-edited copy fan-out or a product-width orchestration layer"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on a clear canonical source plus managed target policy, not on Node, npm, or the donor package"
+                  "value_markdown": "the adaptation depends on pinned source refs, explicit target consumers, and validator-backed skill contracts, not on hidden runtime propagation"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "a public docs-oriented repository could keep one canonical rule source and distribute it into multiple agent-facing instruction surfaces while keeping those targets derived rather than canonical"
+                  "value_markdown": "one authoritative source can stay canonical while multiple downstream instruction surfaces remain derived, reviewable, and refreshable from it"
                 }
               ]
             },
@@ -6575,15 +6584,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "a small repository may over-abstract the pattern before it truly needs multiple target surfaces"
+                  "text": "bridge docs can overstate the pattern if only one upstream technique is ever refreshed in practice"
                 },
                 {
                   "order": 2,
-                  "text": "without an actual apply step, contributors could describe the pattern well but fail to prove synchronization discipline in practice"
+                  "text": "skill-local wording can blur source-of-truth layout with instruction distribution if the target consumer surfaces are not named explicitly"
                 },
                 {
                   "order": 3,
-                  "text": "the donor's nested-loading and broader orchestration surfaces could blur the boundary unless they stay explicitly excluded"
+                  "text": "future expansions could drift into broader orchestration if the refresh tooling stops being bounded and reviewable"
                 }
               ]
             },
@@ -6594,19 +6603,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`AOA-T-0002 source-of-truth-layout` already proves that this repository values one canonical home per information class rather than many drifting copies"
+                  "text": "merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now extends `docs/BRIDGE_SPEC.md` with a current fan-out proof: one upstream source technique, multiple committed target consumer surfaces, and explicit drift-control commands"
                 },
                 {
                   "order": 2,
-                  "text": "`AOA-T-0012 deterministic-context-composition` already proves that this repository can publish bounded docs patterns around managed derived outputs"
+                  "text": "the same merged donor change updates `skills/aoa-source-of-truth-check/SKILL.md` so one authoritative source staying aligned across multiple downstream consumer surfaces is now part of an authored runtime skill surface"
                 },
                 {
                   "order": 3,
-                  "text": "this adaptation combines those repository-native instincts into a bounded sketch for one canonical rule source that could fan out into several agent-facing instruction surfaces without making each target canonical"
+                  "text": "the consumer surfaces remain committed and reviewable instead of being generated only at runtime, which keeps the one-source -> many-target contract inspectable"
                 },
                 {
                   "order": 4,
-                  "text": "this is sufficient as repo-local adaptation evidence for a first `promoted` external-import draft, but it is not enough to argue for `canonical` status on its own"
+                  "text": "this closes the first live donor gap for `AOA-T-0013`, but it is still only one repository and one bridge style rather than a second independent instruction-distribution context"
                 }
               ]
             },
@@ -6617,7 +6626,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review"
+                  "text": "works as a first live second-context adaptation for one-source -> many-target distribution, while still needing one more independent reinforcement before any future canonical review"
                 }
               ]
             }
@@ -10561,7 +10570,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "bounded defer for now"
                 }
               ]
             },
@@ -10578,12 +10587,12 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "committed sibling repos add live donor surfaces for the caution vocabulary, including `aoa-skills/skills/aoa-safe-infra-change/SKILL.md` `Risks and anti-patterns` language and `aoa-evals/bundles/aoa-bounded-change-quality/EVAL.md` plus `aoa-evals/bundles/aoa-eval-integrity-check/EVAL.md` failure/blind-spot surfaces, but they do not reproduce the same five-part `Risks` contract, so this is contrast evidence rather than a positive analogy"
+                  "value_markdown": "merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now adds the exact five-part caution split to `skills/aoa-sanitized-share/SKILL.md`, so the contract is no longer only contrast-based inside sibling repos"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle already has a checklist, an example, and explicit markdown-first caution routing, but it still lacks another committed corpus proving the exact five-part `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, `Mitigations` split in practice"
+                  "value_markdown": "the bundle already has a checklist, an example, explicit markdown-first caution routing, and one real sibling-repo donor for the exact split, but it still lacks a second independent corpus beyond the first skill-local caution surface"
                 }
               ]
             },
@@ -10602,7 +10611,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle should stay promoted with a bounded defer reason until another committed corpus proves that the same caution split remains useful outside this public canon"
+                  "text": "the bundle should stay promoted with a bounded defer reason until another committed corpus proves that the same caution split remains useful beyond the first `aoa-skills` donor"
                 }
               ]
             },
@@ -10614,7 +10623,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-20"
+                  "value_markdown": "2026-03-21"
                 },
                 {
                   "order": 2,
@@ -10640,11 +10649,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main missing proof is live reuse of the exact five-part `Risks` contract in another committed repository"
+                  "text": "the main missing proof is one more committed reuse of the exact five-part `Risks` contract beyond the first `aoa-skills` donor"
                 },
                 {
                   "order": 2,
-                  "text": "a future canonical review should show that caution lookup survives repeated use without turning into generated policy, scoring, or metadata replacement for `Risks`"
+                  "text": "a future canonical review should show that caution lookup survives repeated use in more than one non-techniques corpus without turning into generated policy, scoring, or metadata replacement for `Risks`"
                 }
               ]
             },
@@ -10659,7 +10668,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a live reuse context that reuses the same five-part `Risks` contract, not just adjacent caution or blind-spot language"
+                  "text": "defer canonical promotion until the technique proves itself in one more live reuse context that reuses the same five-part `Risks` contract, not just the first committed `aoa-skills` donor"
                 }
               ]
             }
@@ -10778,17 +10787,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "aoa-skills"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with markdown-first technique bundles, validator-enforced Risks language, and canonical adverse-effects review notes on already-canonical bundles"
+                  "value_markdown": "public skill repository with authored `SKILL.md` bundles, generated reader surfaces, and stable markdown caution sections"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that can describe the pattern clearly even when it does not automate any caution policy layer directly"
+                  "value_markdown": "markdown-first skill corpus where caution language must stay reviewable without becoming generated policy or scoring"
                 }
               ]
             },
@@ -10800,22 +10809,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the source guide and live corpus were shaped into one bounded markdown-first caution-lift contract for reuse across review surfaces"
+                  "value_markdown": "the exact five-part caution contract is now reused inside one skill-local `Risks and anti-patterns` section instead of only inside technique bundles"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "there is no local scoring engine, caution policy service, or generated caution program in this repository"
+                  "value_markdown": "there is still no scoring engine, caution policy service, or generated caution program in the donor repo"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on authored `Risks` prose and explicit note-backed review surfaces, not on private safety tooling or metadata expansion"
+                  "value_markdown": "the adaptation depends on authored markdown sections in `SKILL.md`, not on metadata widening or generated caution outputs"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "a public docs-oriented repository can keep caution lookup bounded while still letting canonical bundles add a supplemental adverse-effects review note"
+                  "value_markdown": "a public skill repository can keep richer caution lookup bounded and review-oriented while still treating the authored skill markdown as the source of meaning"
                 }
               ]
             },
@@ -10848,15 +10857,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "a small repository may over-abstract the pattern and start treating caution lookup as a policy layer"
+                  "text": "one skill-local caution surface can look broader than it really is if readers mistake the first donor for repeated cross-repo reuse"
                 },
                 {
                   "order": 2,
-                  "text": "without the underlying markdown contract, contributors could describe the caution split well but fail to keep it reviewable"
+                  "text": "future generated reader surfaces could tempt maintainers to flatten the five-part caution split into metadata"
                 },
                 {
                   "order": 3,
-                  "text": "the presence of a canonical supplement could blur the boundary unless it stays explicitly downstream from `Risks`"
+                  "text": "the exact five-part split could drift back into generic risk prose if later skill updates stop keeping the headings explicit"
                 }
               ]
             },
@@ -10867,19 +10876,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`aoa-skills/skills/aoa-safe-infra-change/SKILL.md` shows live caution language as `Risks and anti-patterns`, including explicit risk naming and rollback thinking, but its contract stays skill-local rather than reproducing the same five-part technique `Risks` split"
+                  "text": "merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now gives `skills/aoa-sanitized-share/SKILL.md` the exact five headings `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations`"
                 },
                 {
                   "order": 2,
-                  "text": "`aoa-evals/bundles/aoa-bounded-change-quality/EVAL.md` and `aoa-evals/bundles/aoa-eval-integrity-check/EVAL.md` show live failure-mode and blind-spot surfaces for bounded review, but they remain eval surfaces rather than authored technique `Risks`"
+                  "text": "the same donor keeps the caution split inside authored skill markdown, so the contract stays reviewable and markdown-first rather than becoming generated policy"
                 },
                 {
                   "order": 3,
-                  "text": "taken together, those committed sibling repos prove that the caution vocabulary is live in adjacent donor surfaces, but they do not provide an equally strong second corpus for the exact five-part `Risks` contract"
+                  "text": "adjacent sibling-repo caution surfaces in `aoa-evals` still matter as contrast evidence, but they are no longer the only live context because `aoa-skills` now reproduces the exact five-part split directly"
                 },
                 {
                   "order": 4,
-                  "text": "this is therefore a contrast-based live evidence read, not a forced positive analogy, and it still leaves the same bounded defer reason in place for canonical review"
+                  "text": "this closes the first exact-contract donor gap, while still leaving one more independent-corpus reinforcement gap in place for canonical review"
                 }
               ]
             },
@@ -10890,7 +10899,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded contrast-based adaptation read for a first promoted draft, while still needing stronger live reuse of the exact five-part `Risks` contract before any future canonical review"
+                  "text": "works as a first live second-context adaptation for the exact five-part `Risks` contract, while still needing one more independent corpus before any future canonical review"
                 }
               ]
             }

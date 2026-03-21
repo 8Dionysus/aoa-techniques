@@ -13,6 +13,7 @@
 - adaptation path: the origin rollout policy is reused here as a public checklist for adding one new intent type to an already-existing dry-run chain, rather than as a donor-specific CI script or workflow rewrite
 - downstream surface: the visible reuse point is the technique bundle, its checklist, examples, and rollout-failure triage note instead of a full operational automation implementation
 - linkage form: the repo-local example and checklist keep the shared-chain contract explicit, with `AOA-T-0004` as the underlying chain and `AOA-T-0001` as the change workflow for editing the rollout itself
+- donor reinforcement: merged `ATM10-Agent@7cf55f70badbe8b1a51e2eabbe1424f35b833dd3` now records reusable `M6.19` rollout records across three canonical fixtures, so the repo-local adaptation now sits beside stronger origin-side operating proof rather than a single origin example
 
 ## What stayed invariant
 - extension boundary: one new intent type is added to an existing shared chain, not to a new one-off path
@@ -22,13 +23,14 @@
 ## Risks introduced by adaptation
 - the repo-local example can look like proof of live reuse even though it is still a bounded rollout sketch rather than a second production context
 - the checklist can drift toward generic rollout advice if it stops naming fixtures, routing checks, and artifact alignment explicitly
-- future readers could mistake a readable public example for the stronger evidence needed for canonical promotion
+- future readers could mistake stronger origin-side rollout records for a second context even though they still live in the same donor repository
 
 ## Evidence
+- merged `ATM10-Agent@7cf55f70badbe8b1a51e2eabbe1424f35b833dd3` now adds `docs/RUNBOOK.md` `M6.19 rollout records`, explicitly showing the same public `intent -> plan -> dry-run` contract exercised across `open_quest_book`, `check_inventory_tool`, and `open_world_map`.
 - `examples/minimal-intent-rollout.md` shows the checklist as a generic bounded rollout for one new intent path, including fixture, smoke, contract-check, review surface, and regression discipline.
 - `examples/concrete-non-ui-intent-rollout.md` grounds the same contract in a public-safe non-UI example, `refresh_skill_index`, which keeps the reusable shape but not the origin project’s exact automation details.
 - `checks/intent-rollout-checklist.md` keeps the bounded review shape explicit by checking fixture, smoke, contract-check, artifact, and regression coverage in one list.
 - `notes/rollout-failure-triage.md` shows that the checklist remains tied to concrete failure repair paths rather than general rollout philosophy.
 
 ## Result
-- works as a bounded repo-local rollout sketch for the public checklist shape, but it is still not enough on its own to justify canonical promotion
+- works as a bounded repo-local rollout sketch for the public checklist shape, now paired with stronger origin-side rollout records, but it is still not enough on its own to justify canonical promotion

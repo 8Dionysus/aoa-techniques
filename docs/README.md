@@ -60,6 +60,7 @@ Choose the path that matches your question:
   - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 - I need to inspect the semantic-review pilots:
   - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
+  - [Agent-Workflows Core Semantic Review](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
   - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
   - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
   - [Docs Boundary Semantic Review](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
@@ -207,6 +208,7 @@ This review-only doc keeps the five reusable KAG/source-lift techniques distinct
 
 These review-only docs test whether nearby techniques still read as distinct, bounded patterns rather than one blurred package.
 
+- [Agent-Workflows Core Semantic Review](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
 - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
 - [Docs Boundary Semantic Review](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)

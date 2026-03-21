@@ -43,4 +43,4 @@ Overall outcome: `clear with one watch seam`
 
 No immediate semantic-remediation wave is justified for this pair from this pilot alone.
 
-Concrete example strengthening has already landed for both techniques, so the next step should move to stronger live multi-target reuse evidence for `AOA-T-0013` rather than more example-only reinforcement.
+Concrete example strengthening has already landed for both techniques, and `aoa-skills` now provides the first live multi-target donor for `AOA-T-0013`, so the next step should move to one more independent instruction-distribution context rather than more example-only reinforcement.

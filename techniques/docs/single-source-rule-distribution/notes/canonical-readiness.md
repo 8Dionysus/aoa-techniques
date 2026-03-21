@@ -9,25 +9,25 @@
 
 ## Evidence summary
 - external origin: the imported technique has a bounded donor contract and explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior
-- second context: the repo-local adaptation note shows the contract clearly enough to remain reusable, but it still reads as a sketch rather than a live multi-target reuse proof
+- second context: merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now provides a first live one-source -> many-target donor path through `docs/BRIDGE_SPEC.md`, committed consumer skills, and explicit drift-control tooling
 - external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale
-- validation strength: the bundle includes a checklist, two public-safe examples, and a clean separation from `AOA-T-0012`, but it still lacks live multi-target reuse beyond the current repository narrative
+- validation strength: the bundle includes a checklist, two public-safe examples, a clean separation from `AOA-T-0012`, and one real sibling-repo donor, but it still lacks a second independent instruction-distribution context beyond `aoa-skills`
 
 ## Default-use rationale
 - this is the right default when one canonical rule source must fan out to multiple managed instruction targets without turning those targets into canonical homes
 - it remains narrower than `AOA-T-0012`, which composes many fragments into one generated artifact rather than distributing one shared rule core to multiple targets
-- the current wording is strong enough for reuse, but not yet strong enough to justify canonical default status without evidence that the shared core survives real multi-target re-application
+- the current wording is strong enough for reuse, but not yet strong enough to justify canonical default status without evidence that the shared core survives a second independent multi-target re-application beyond the first `aoa-skills` donor
 
 ## Fresh public-safety check
-- review date: 2026-03-20
+- review date: 2026-03-21
 - result: pass
 - sanitization still holds: the bundle keeps the reusable one-source-to-many-target pattern and excludes donor-specific orchestration behavior
 - public reuse check: the current bundle remains understandable without donor-repo access or hidden local automation
 
 ## Remaining gaps
-- the smallest remaining gap is live multi-target reuse beyond the current adaptation sketch
-- specifically, the bundle still needs a real managed target flow showing one source update propagating cleanly to multiple instruction surfaces more than once
+- the smallest remaining gap is one second independent instruction-distribution context beyond the first `aoa-skills` donor
+- specifically, the bundle still needs another managed target flow showing one source update propagating cleanly to multiple instruction surfaces in a second repo or surface family such as `aoa-agents`
 
 ## Recommendation
 - keep `AOA-T-0013` `promoted`
-- defer canonical promotion until a live multi-target reuse context exists beyond the current repo-local adaptation sketch
+- defer canonical promotion until a second live multi-target reuse context exists beyond the current `aoa-skills` donor

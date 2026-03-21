@@ -102,6 +102,7 @@ REQUIRED_KAG_SOURCE_READER_FILES = (
 REQUIRED_CAPSULE_SURFACE_FILES = ("docs/TECHNIQUE_CAPSULES.md",)
 REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
 SELECTION_REVIEW_DOCS = {
+    "agent_workflows_core": "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md",
     "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
     "evaluation_chain": "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
     "docs_boundary": "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
@@ -111,6 +112,12 @@ SELECTION_REVIEW_DOCS = {
     "kag_source_lift": "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
 }
 WORKING_SET_SPECS = (
+    {
+        "title": "Agent-workflows canonical core",
+        "technique_ids": ("AOA-T-0001", "AOA-T-0004", "AOA-T-0014"),
+        "review_doc": SELECTION_REVIEW_DOCS["agent_workflows_core"],
+        "note": "Canonical workflow backbone, intent-chain specialization, and bounded execution slicing for the current agent-workflows core.",
+    },
     {
         "title": "Published-summary cluster",
         "technique_ids": ("AOA-T-0006", "AOA-T-0008", "AOA-T-0010", "AOA-T-0011"),
@@ -143,9 +150,9 @@ WORKING_SET_SPECS = (
     },
     {
         "title": "Skill-support cluster",
-        "technique_ids": ("AOA-T-0014", "AOA-T-0015", "AOA-T-0017", "AOA-T-0016"),
+        "technique_ids": ("AOA-T-0015", "AOA-T-0017", "AOA-T-0016"),
         "review_doc": SELECTION_REVIEW_DOCS["skill_support"],
-        "note": "Bounded test-first slicing, contract-surface validation, invariant coverage broadening, and semantic scoping for recent skill-support techniques.",
+        "note": "Boundary-contract evaluation, invariant coverage broadening, and semantic scoping for the current skill-support seam cluster.",
     },
     {
         "title": "KAG/source-lift family",
@@ -158,7 +165,7 @@ DOMAIN_START_SPECS = (
     {
         "domain": "agent-workflows",
         "lead_ids": ("AOA-T-0001",),
-        "review_docs": (),
+        "review_docs": (SELECTION_REVIEW_DOCS["agent_workflows_core"],),
         "note": "Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized.",
     },
     {

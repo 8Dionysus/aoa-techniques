@@ -1,12 +1,12 @@
 # Skill-Support Semantic Review
 
-This review-only pilot checks whether the current skill-support cluster still reads as four distinct techniques rather than one blurred "agent-friendly testing and scoping" package.
+This review-only surface checks whether the current skill-support cluster still reads as three distinct techniques rather than one blurred "stronger testing and scoping" package.
 
-Why this cluster was chosen now:
+Why this cluster remains useful now:
 
-- the cluster now mixes four `canonical` defaults across execution, evaluation, and scoping support
-- the main remaining question is semantic separation and bounded default-use posture, not missing repo structure
-- the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit
+- the agent-workflows canonical core now has its own dedicated review surface, so this cluster can stay focused on the remaining cross-domain support seams
+- the main remaining question is still semantic separation and bounded default-use posture, not missing repo structure
+- the cluster still crosses `evaluation` and `docs`, so drift would be costly if left implicit
 - the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism
 
 This doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.
@@ -15,21 +15,11 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 | technique | current role |
 |---|---|
-| [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) | bounded test-first implementation slice |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | boundary-contract evaluation discipline |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | invariant-oriented coverage broadening |
 | [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) | semantic scoping and handoff map |
 
 ## Seam Review
-
-### `AOA-T-0014` vs `AOA-T-0015`
-
-Question: where does bounded test-first slice discipline stop and explicit boundary-contract discipline begin?
-
-- Invariant boundary: [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) owns the workflow of stating one bounded behavior slice, expressing it in tests first where appropriate, implementing the smallest passing change, and keeping refactor pressure inside that slice. [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) begins when the main problem is not slice discipline itself, but making a consumer-visible boundary explicit and reviewable.
-- Default-use trigger: use `0014` when the change needs a compact execution discipline that keeps one behavior slice from widening. Use `0015` when the key risk is interface drift at an observable boundary such as an API, summary artifact, or service wrapper.
-- Evidence check: `0014` checklist and example stay implementation-slice centric, focusing on behavior-first tests, minimal diff, and bounded refactor. `0015` checklist and example stay boundary centric, focusing on observable contract guarantees, downstream assumptions, and refactor freedom behind the contract. The support surfaces reinforce separation rather than blur it.
-- Relation check: both currently point to `AOA-T-0001`, but for different reasons. `0014` reads as execution discipline close to plan-diff-apply-verify-report, while `0015` reads as evaluation discipline over a boundary surface. That shared adjacency does not collapse them. Outcome: `clear`.
 
 ### `AOA-T-0015` vs `AOA-T-0017`
 
@@ -40,18 +30,17 @@ Question: where does contract-surface validation stop and invariant-oriented bro
 - Evidence check: `0015` example and checklist remain contract-surface oriented. `0017` example and checklist remain invariant-strength and bounded generator oriented. The current support surfaces still separate boundary design from coverage broadening.
 - Watch point: both techniques can appear in the same validation path, and both use testing language. Future wording drift could make `0017` sound like "better contract tests" or make `0015` sound like a generic broad-coverage pattern if later examples stop centering the consumer-visible boundary. Outcome: `watch`.
 
-### `AOA-T-0016` vs `AOA-T-0014` / `AOA-T-0015` / `AOA-T-0017`
+### `AOA-T-0016` vs `AOA-T-0015` / `AOA-T-0017`
 
 Question: where does semantic scoping, vocabulary, and handoff mapping stop and implementation or evaluation technique begin?
 
 - Invariant boundary: [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) owns the naming and scoping layer: clarify contexts, visible handoffs, and overloaded terms before work widens into the wrong area. It does not prescribe how implementation should be test-driven, how boundaries should be validated, or how broad invariants should be checked once the target area is already clear.
-- Default-use trigger: use `0016` when contributors or agents are confused about what belongs inside the target area at all. Use `0014`, `0015`, or `0017` only after the semantic target is already clear enough that implementation or evaluation discipline becomes the main problem.
+- Default-use trigger: use `0016` when contributors or agents are confused about what belongs inside the target area at all. Use `0015` or `0017` only after the semantic target is already clear enough that evaluation discipline becomes the main problem.
 - Evidence check: `0016` checklist and example stay vocabulary-and-handoff centric rather than architectural-platform centric. The newer testing-oriented techniques stay rooted in execution or validation behavior, not repository mapping.
 - Watch point: because `0016` uses words like "bounded context," future examples could drift into generic architecture formalism. If that happens, it could stop reading like a practical docs/scoping pattern and start looking like a broader domain-model technique. Outcome: `watch`.
 
 ## Findings
 
-- `AOA-T-0014` is semantically distinct as an execution discipline for one bounded behavior slice.
 - `AOA-T-0015` is semantically distinct as a boundary-contract surface, not a generic testing technique.
 - `AOA-T-0017` is semantically distinct as invariant-oriented coverage broadening, not a duplicate of contract design.
 - `AOA-T-0016` is semantically distinct as a docs/scoping pattern, not an architecture-domain opening and not a test technique.
@@ -65,4 +54,4 @@ Overall outcome: `clear with two watch seams`
 
 No immediate semantic-remediation wave is justified for this cluster from this pilot alone.
 
-`AOA-T-0017` now joins `AOA-T-0016` as `canonical` after a second committed downstream consumer proved that invariant-oriented coverage is selected as a natural first-class move rather than only as a supporting dependency, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism.
+The next step should keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism, while the agent-workflows canonical core now lives in its own dedicated semantic review surface.
