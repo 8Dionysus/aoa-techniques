@@ -1337,6 +1337,114 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0025",
+      "name": "capability-spec-versioning",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy.",
+      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "origin": {
+        "project": "agentic",
+        "path": "README.md",
+        "note": "Adapted from the open-source agentic project, which defines agent capabilities through explicit versioned specifications instead of treating them as hidden runtime behavior."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "capability",
+        "versioning",
+        "contract",
+        "agent-facing"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0013"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0026",
+      "name": "session-capture-as-repo-artifact",
+      "domain": "history",
+      "status": "promoted",
+      "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
+      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "origin": {
+        "project": "getspecstory",
+        "path": "README.md",
+        "note": "Adapted from the open-source SpecStory CLI, which saves AI coding sessions locally into project-scoped `.specstory/history/` artifacts instead of treating them as transient chat only."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "history",
+        "sessions",
+        "artifacts",
+        "local-first",
+        "transcripts"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0002"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

@@ -19,11 +19,11 @@ See also:
 | note kind | title | note shape | routing signal | entries |
 |---|---|---|---|---|
 | `origin_evidence` | Origin Evidence | `typed_sections` | `4` fixed sections: `Technique`, `Source project`, `Evidence`, `Interpretation` | `18` |
-| `second_context` | Second Context Adaptation | `typed_sections` | `7` fixed sections: `Technique`, `Target project`, `What changed`, `What stayed invariant`, `Risks introduced by adaptation`, `Evidence`, `Result` | `24` |
-| `canonical_readiness` | Canonical Readiness | `typed_sections` | `7` fixed sections: `Technique`, `Verdict`, `Evidence summary`, `Default-use rationale`, `Fresh public-safety check`, `Remaining gaps`, `Recommendation` | `24` |
+| `second_context` | Second Context Adaptation | `typed_sections` | `7` fixed sections: `Technique`, `Target project`, `What changed`, `What stayed invariant`, `Risks introduced by adaptation`, `Evidence`, `Result` | `26` |
+| `canonical_readiness` | Canonical Readiness | `typed_sections` | `7` fixed sections: `Technique`, `Verdict`, `Evidence summary`, `Default-use rationale`, `Fresh public-safety check`, `Remaining gaps`, `Recommendation` | `26` |
 | `adverse_effects_review` | Adverse Effects Review | `typed_sections` | `8` fixed sections: `Technique`, `Review focus`, `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, `Mitigations`, `Recommendation` | `17` |
-| `external_origin` | External Origin Note | `typed_sections` | `4` fixed sections: `Source`, `What changed`, `Public-safety review`, `Review notes` | `4` |
-| `external_review` | External Import Review | `typed_sections` | `8` fixed sections: `Technique`, `Verdict`, `Evidence summary`, `Boundedness check`, `Provenance readability`, `Import-path assessment`, `Remaining gaps`, `Recommendation` | `4` |
+| `external_origin` | External Origin Note | `typed_sections` | `4` fixed sections: `Source`, `What changed`, `Public-safety review`, `Review notes` | `6` |
+| `external_review` | External Import Review | `typed_sections` | `8` fixed sections: `Technique`, `Verdict`, `Evidence summary`, `Boundedness check`, `Provenance readability`, `Import-path assessment`, `Remaining gaps`, `Recommendation` | `6` |
 | `support_note` | Support Note | `opaque_body` | opaque note body only | `2` |
 
 ## `origin_evidence` - Origin Evidence
@@ -69,6 +69,7 @@ See also:
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | `techniques/docs/evidence-note-provenance-lift/notes/second-context-adaptation.md` | [Note](../techniques/docs/evidence-note-provenance-lift/notes/second-context-adaptation.md) |
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | `techniques/docs/risk-and-negative-effect-lift/notes/second-context-adaptation.md` | [Note](../techniques/docs/risk-and-negative-effect-lift/notes/second-context-adaptation.md) |
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | `techniques/docs/upstream-mirroring-with-provenance/notes/second-context-adaptation.md` | [Note](../techniques/docs/upstream-mirroring-with-provenance/notes/second-context-adaptation.md) |
+| Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `techniques/docs/capability-spec-versioning/notes/second-context-adaptation.md` | [Note](../techniques/docs/capability-spec-versioning/notes/second-context-adaptation.md) |
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | `techniques/evaluation/contract-first-smoke-summary/notes/second-context-adaptation.md` | [Note](../techniques/evaluation/contract-first-smoke-summary/notes/second-context-adaptation.md) |
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) | `techniques/evaluation/latest-alias-plus-history-copy/notes/second-context-adaptation.md` | [Note](../techniques/evaluation/latest-alias-plus-history-copy/notes/second-context-adaptation.md) |
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | `techniques/evaluation/signal-first-gate-promotion/notes/second-context-adaptation.md` | [Note](../techniques/evaluation/signal-first-gate-promotion/notes/second-context-adaptation.md) |
@@ -77,6 +78,7 @@ See also:
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | `techniques/evaluation/required-vs-optional-source-rendering/notes/second-context-adaptation.md` | [Note](../techniques/evaluation/required-vs-optional-source-rendering/notes/second-context-adaptation.md) |
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `techniques/evaluation/contract-test-design/notes/second-context-adaptation.md` | [Note](../techniques/evaluation/contract-test-design/notes/second-context-adaptation.md) |
 | Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `techniques/evaluation/property-invariants/notes/second-context-adaptation.md` | [Note](../techniques/evaluation/property-invariants/notes/second-context-adaptation.md) |
+| Second Context Adaptation | `typed_sections` | `7` typed sections | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `techniques/history/session-capture-as-repo-artifact/notes/second-context-adaptation.md` | [Note](../techniques/history/session-capture-as-repo-artifact/notes/second-context-adaptation.md) |
 
 ## `canonical_readiness` - Canonical Readiness
 
@@ -98,6 +100,7 @@ See also:
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | `techniques/docs/evidence-note-provenance-lift/notes/canonical-readiness.md` | [Note](../techniques/docs/evidence-note-provenance-lift/notes/canonical-readiness.md) |
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | `techniques/docs/risk-and-negative-effect-lift/notes/canonical-readiness.md` | [Note](../techniques/docs/risk-and-negative-effect-lift/notes/canonical-readiness.md) |
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | `techniques/docs/upstream-mirroring-with-provenance/notes/canonical-readiness.md` | [Note](../techniques/docs/upstream-mirroring-with-provenance/notes/canonical-readiness.md) |
+| Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `techniques/docs/capability-spec-versioning/notes/canonical-readiness.md` | [Note](../techniques/docs/capability-spec-versioning/notes/canonical-readiness.md) |
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | `techniques/evaluation/contract-first-smoke-summary/notes/canonical-readiness.md` | [Note](../techniques/evaluation/contract-first-smoke-summary/notes/canonical-readiness.md) |
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) | `techniques/evaluation/latest-alias-plus-history-copy/notes/canonical-readiness.md` | [Note](../techniques/evaluation/latest-alias-plus-history-copy/notes/canonical-readiness.md) |
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | `techniques/evaluation/signal-first-gate-promotion/notes/canonical-readiness.md` | [Note](../techniques/evaluation/signal-first-gate-promotion/notes/canonical-readiness.md) |
@@ -106,6 +109,7 @@ See also:
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | `techniques/evaluation/required-vs-optional-source-rendering/notes/canonical-readiness.md` | [Note](../techniques/evaluation/required-vs-optional-source-rendering/notes/canonical-readiness.md) |
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `techniques/evaluation/contract-test-design/notes/canonical-readiness.md` | [Note](../techniques/evaluation/contract-test-design/notes/canonical-readiness.md) |
 | Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `techniques/evaluation/property-invariants/notes/canonical-readiness.md` | [Note](../techniques/evaluation/property-invariants/notes/canonical-readiness.md) |
+| Canonical Readiness | `typed_sections` | `7` typed sections | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `techniques/history/session-capture-as-repo-artifact/notes/canonical-readiness.md` | [Note](../techniques/history/session-capture-as-repo-artifact/notes/canonical-readiness.md) |
 
 ## `adverse_effects_review` - Adverse Effects Review
 
@@ -137,6 +141,8 @@ See also:
 | External Origin Note | `typed_sections` | `4` typed sections | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) | `techniques/docs/deterministic-context-composition/notes/external-origin.md` | [Note](../techniques/docs/deterministic-context-composition/notes/external-origin.md) |
 | External Origin Note | `typed_sections` | `4` typed sections | [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `techniques/docs/single-source-rule-distribution/notes/external-origin.md` | [Note](../techniques/docs/single-source-rule-distribution/notes/external-origin.md) |
 | External Origin Note | `typed_sections` | `4` typed sections | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | `techniques/docs/upstream-mirroring-with-provenance/notes/external-origin.md` | [Note](../techniques/docs/upstream-mirroring-with-provenance/notes/external-origin.md) |
+| External Origin Note | `typed_sections` | `4` typed sections | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `techniques/docs/capability-spec-versioning/notes/external-origin.md` | [Note](../techniques/docs/capability-spec-versioning/notes/external-origin.md) |
+| External Origin Note | `typed_sections` | `4` typed sections | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `techniques/history/session-capture-as-repo-artifact/notes/external-origin.md` | [Note](../techniques/history/session-capture-as-repo-artifact/notes/external-origin.md) |
 
 ## `external_review` - External Import Review
 
@@ -146,6 +152,8 @@ See also:
 | External Import Review | `typed_sections` | `8` typed sections | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) | `techniques/docs/deterministic-context-composition/notes/external-import-review.md` | [Note](../techniques/docs/deterministic-context-composition/notes/external-import-review.md) |
 | External Import Review | `typed_sections` | `8` typed sections | [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `techniques/docs/single-source-rule-distribution/notes/external-import-review.md` | [Note](../techniques/docs/single-source-rule-distribution/notes/external-import-review.md) |
 | External Import Review | `typed_sections` | `8` typed sections | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | `techniques/docs/upstream-mirroring-with-provenance/notes/external-import-review.md` | [Note](../techniques/docs/upstream-mirroring-with-provenance/notes/external-import-review.md) |
+| External Import Review | `typed_sections` | `8` typed sections | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `techniques/docs/capability-spec-versioning/notes/external-import-review.md` | [Note](../techniques/docs/capability-spec-versioning/notes/external-import-review.md) |
+| External Import Review | `typed_sections` | `8` typed sections | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `techniques/history/session-capture-as-repo-artifact/notes/external-import-review.md` | [Note](../techniques/history/session-capture-as-repo-artifact/notes/external-import-review.md) |
 
 ## `support_note` - Support Note
 

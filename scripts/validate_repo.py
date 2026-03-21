@@ -186,6 +186,12 @@ DOMAIN_START_SPECS = (
         ),
         "note": "Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear.",
     },
+    {
+        "domain": "history",
+        "lead_ids": ("AOA-T-0026",),
+        "review_docs": (),
+        "note": "Start with the bounded local-first session-artifact contract in `AOA-T-0026`; this domain does not have a canonical default yet, so treat it as a promoted starter rather than a silent default.",
+    },
 )
 COMMON_MOVE_BASIS_DIRECT_RELATION = "direct_relation"
 COMMON_MOVE_BASIS_DOMAIN_START = "domain_start"
@@ -414,8 +420,8 @@ SECTION_STATUS = {
 }
 
 STATUS_SECTION = {value: key for key, value in SECTION_STATUS.items()}
-DOMAIN_VALUES = {"agent-workflows", "docs", "evaluation"}
-DOMAIN_ORDER = ("agent-workflows", "docs", "evaluation")
+DOMAIN_VALUES = {"agent-workflows", "docs", "evaluation", "history"}
+DOMAIN_ORDER = ("agent-workflows", "docs", "evaluation", "history")
 RELATION_TYPE_ORDER = (
     "requires",
     "complements",
@@ -2743,6 +2749,9 @@ def validate_selection_navigation_specs(records: list[TechniqueRecord], repo_roo
     reviews_by_path = {
         review.review_path: review for review in parse_semantic_reviews(repo_root)
     }
+    canonical_domains = {
+        record.domain for record in records if record.status == "canonical"
+    }
 
     if len(DOMAIN_START_SPECS) != len(DOMAIN_ORDER):
         fail("DOMAIN_START_SPECS must contain exactly one spec per domain")
@@ -2772,9 +2781,14 @@ def validate_selection_navigation_specs(records: list[TechniqueRecord], repo_roo
             record = records_by_id.get(technique_id)
             if record is None:
                 fail(f"DOMAIN_START_SPECS[{domain}]: unknown technique id '{technique_id}'")
-            if record.status != "canonical":
+            if domain in canonical_domains:
+                if record.status != "canonical":
+                    fail(
+                        f"DOMAIN_START_SPECS[{domain}]: lead_id '{technique_id}' must be canonical because domain '{domain}' already has canonical techniques"
+                    )
+            elif record.status not in {"canonical", "promoted"}:
                 fail(
-                    f"DOMAIN_START_SPECS[{domain}]: lead_id '{technique_id}' must be canonical"
+                    f"DOMAIN_START_SPECS[{domain}]: lead_id '{technique_id}' must be canonical or promoted"
                 )
             if record.domain != domain:
                 fail(

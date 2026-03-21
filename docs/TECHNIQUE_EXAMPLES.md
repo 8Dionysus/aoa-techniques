@@ -122,6 +122,13 @@ See also:
 | Concrete Curated Mirror With Attribution | `present` | `techniques/docs/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | Minimal Upstream Mirroring With Provenance | `present` | `techniques/docs/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Capability Upgrade With Compat Window | `present` | `techniques/docs/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
+| Minimal Capability Spec Versioning | `present` | `techniques/docs/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -178,6 +185,15 @@ See also:
 |---|---|---|---|
 | Concrete Config Invariant Check | `present` | `techniques/evaluation/property-invariants/examples/concrete-config-invariant-check.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 | Minimal Invariant Check | `present` | `techniques/evaluation/property-invariants/examples/minimal-invariant-check.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+
+## `history`
+
+### [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Local-First Session History | `present` | `techniques/history/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
+| Minimal Session Capture As Repo Artifact | `present` | `techniques/history/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## Boundaries
 

@@ -72,6 +72,7 @@ It does not reopen [AOA-T-0018](../techniques/docs/markdown-technique-section-li
 - `ruler`: `pass` as the bounded origin donor and current external-intake anchor for this technique
 - `agents-md`: `hold because overlap`; it reinforces fragment-first deterministic composition and generated `AGENTS.md` routing, but it sits too close to `AOA-T-0012` to count as a clean second proof for one-source -> many-target rule distribution
 - `n-skills`: now landed as the adjacent [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) import; its upstream mirroring with provenance and `.source.json` attribution remain useful, but they still do not match this bundle's exact live many-target contract closely enough to count as closure evidence here
+- `agentic`: now landed as the adjacent [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) import; its versioned capability-contract pattern is useful as a neighboring docs import, but it still does not match this bundle's exact live one-source -> many-target rule-distribution contract closely enough to count as closure evidence here
 
 ### Next external contract still needed
 

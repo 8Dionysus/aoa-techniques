@@ -179,6 +179,9 @@ relations:
         schema_store = validate_repo.load_schema_store(REPO_ROOT)
         records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
         records_by_id = {record.id: record for record in records}
+        canonical_domains = {
+            record.domain for record in records if record.status == "canonical"
+        }
 
         self.assertEqual(len(validate_repo.DOMAIN_ORDER), len(validate_repo.DOMAIN_START_SPECS))
         seen_domains: set[str] = set()
@@ -191,10 +194,14 @@ relations:
             self.assertTrue(lead_ids)
             for technique_id in lead_ids:
                 record = records_by_id[technique_id]
-                self.assertEqual("canonical", record.status)
+                if domain in canonical_domains:
+                    self.assertEqual("canonical", record.status)
+                else:
+                    self.assertIn(record.status, {"canonical", "promoted"})
                 self.assertEqual(domain, record.domain)
 
         self.assertEqual(set(validate_repo.DOMAIN_ORDER), seen_domains)
+        self.assertEqual("promoted", records_by_id["AOA-T-0026"].status)
 
         domain_start_targets = {
             spec["domain"]: tuple(spec["lead_ids"])[0] for spec in validate_repo.DOMAIN_START_SPECS
@@ -467,7 +474,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(24, len(technique_paths))
+        self.assertEqual(26, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -498,9 +505,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         for entry in catalog["techniques"]:
             status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
 
-        self.assertEqual({"agent-workflows", "docs", "evaluation"}, domain_values)
+        self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
         self.assertEqual(17, status_counts["canonical"])
-        self.assertEqual(7, status_counts["promoted"])
+        self.assertEqual(9, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -698,7 +705,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-evals",
             "aoa-routing",
             "17 canonical",
-            "7 promoted",
+            "9 promoted",
             "external-dependency-first promoted techniques",
             "AOA-T-0005",
             "AOA-T-0013",
@@ -707,6 +714,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0022",
             "AOA-T-0023",
             "AOA-T-0024",
+            "AOA-T-0025",
+            "AOA-T-0026",
             "python scripts/release_check.py",
         ):
             self.assertIn(target, start_here)

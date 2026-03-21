@@ -1988,6 +1988,170 @@
           "content_markdown": "- split out a dedicated marketplace-catalog sibling if curated discovery policy proves reusable without the rest of the sync contract\n- split out a dedicated derived-attribution-manifest sibling if provenance projection becomes reusable beyond mirrored content collections\n- add a stronger second live context if another public repository adopts the same upstream-mirroring and provenance contract"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0025",
+      "name": "capability-spec-versioning",
+      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep capability behavior reviewable by naming it in one versioned spec instead of letting capability meaning hide inside provider code, runtime wiring, or agent registry state."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- agent-facing systems that expose named capabilities and need contract changes to be explicit\n- repositories where capability inputs, outputs, and invariants should stay reviewable across revisions\n- workflows that need one capability source of truth without widening into orchestration or registry semantics\n- teams that want compatibility discussion to happen at the spec layer before implementation drift accumulates"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- workflows whose main problem is plan orchestration, task scheduling, or multi-agent execution order\n- systems where the real reusable object is a persistent agent registry rather than one capability contract\n- cases where version labels are cosmetic and no contract-level compatibility review is expected\n- repositories that actually need one-source fan-out to many targets instead of one versioned capability description"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one named capability with a bounded purpose\n- one explicit version marker for the current contract\n- one spec that names expected inputs, outputs, and invariants\n- one review path for compatibility notes when the contract changes\n- one implementation layer that stays subordinate to the spec"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one reviewable capability contract with explicit version identity\n- one clearer compatibility story when capability behavior changes\n- lower ambiguity around what the capability promises versus how it is currently implemented\n- a reusable source surface that can stay stable while implementations evolve underneath it"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Name one capability and its bounded purpose before expanding implementation detail.\n2. Write one explicit capability spec that states version, expected inputs, outputs, and invariant behavior.\n3. Keep the capability spec readable as the source of truth for the contract, not just as generated metadata or runtime code comments.\n4. Record compatibility expectations when a version changes so reviewers can tell whether consumers need an update.\n5. Treat implementations, providers, and runtime adapters as subordinate realizations of the capability contract.\n6. Review capability changes at the spec layer before widening registry behavior, orchestration, or persistence semantics.\n7. Split out separate techniques if registry management, orchestration, or learning behavior becomes the real reusable object."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- one capability spec stays the authoritative contract for the named capability\n- version changes are explicit and reviewable rather than implicit in runtime code drift\n- inputs, outputs, and invariants remain readable without opening implementation internals first\n- implementations and providers stay subordinate to the capability spec\n- the technique does not own plan-and-execute orchestration, persistent registries, or execution-history learning\n- the capability spec does not become routing policy, agent-role registry, or hidden runtime magic"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- a version number changes without any real contract review, so the spec stops signaling meaningful change\n- implementation detail overwhelms the spec until reviewers cannot tell what the stable capability contract actually is\n- teams treat the capability spec as a registry or orchestration object instead of a bounded contract\n\n### Negative effects\n\n- extra contract discipline can slow down fast experiments when a team really only needs a local prototype\n- versioned specs can create ceremony if the capability boundary is still unstable or poorly named\n- a strong spec surface can tempt teams to over-document implementation detail that does not belong in the reusable contract\n\n### Misuse patterns\n\n- widening the technique into agent self-assembly, capability discovery, or persistence behavior\n- treating provider implementations as interchangeable proof that the spec no longer needs explicit review\n- using spec versioning as a substitute for real compatibility thinking\n\n### Detection signals\n\n- reviewers cannot explain what changed in a new version except by reading code diffs\n- capability docs start listing runtime adapters, registries, or orchestration hooks as if they were the core contract\n- compatibility notes disappear while capability versions keep changing\n\n### Mitigations\n\n- keep one explicit capability spec with version, inputs, outputs, and invariants named in plain reviewable language\n- route orchestration, registry, and persistence concerns into separate techniques instead of widening this contract\n- require contract-level review notes when a version changes\n- treat implementation detail as subordinate unless it materially changes the reusable capability boundary"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one capability has one explicit versioned spec\n- the spec names inputs, outputs, and invariants clearly enough to review without reading implementation code first\n- contract changes are visible at the spec layer rather than hidden only in provider or runtime code\n- compatibility notes exist when version changes matter to downstream consumers\n- orchestration, persistence, and registry semantics stay outside this bounded contract\n\nSee `checks/capability-spec-versioning-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the file format of the capability spec\n- the versioning scheme\n- the names of implementations or providers\n- the review ritual used to explain compatibility changes\n\nWhat should stay invariant:\n- one capability contract stays explicit and versioned\n- the spec remains readable as the source of truth\n- implementations stay subordinate to the spec\n- the technique remains about capability contract versioning, not orchestration or registry behavior\n\nProject-shaped details that should not be treated as invariant:\n- plan-and-execute workflow design\n- persistent agent store layout\n- learning or history analysis features\n- plugin or protocol extension systems"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This import narrows the donor repository to one docs pattern: a versioned capability specification that remains reviewable as a contract. Plan orchestration, self-assembly, persistence, learning through execution history, plugin management, protocol adapters, and product-level CLI behavior were intentionally left out of the public technique contract."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-capability-spec-versioning.md` and `examples/concrete-capability-upgrade-with-compat-window.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/capability-spec-versioning-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `agentic`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for versioned capability contracts"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- split out a dedicated capability-registry technique if stored capability discovery and lifecycle management proves reusable on its own\n- split out a dedicated compatibility-matrix sibling if version-bridge policy becomes reusable beyond one capability spec\n- add a stronger second live context if another public repository uses the same versioned capability contract outside the donor repo"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0026",
+      "name": "session-capture-as-repo-artifact",
+      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Preserve AI coding sessions as explicit project-scoped history artifacts so useful reasoning, decisions, and traces stay reviewable after the session ends instead of disappearing into a transient chat window."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories that want local-first session history to remain searchable and shareable as project artifacts\n- workflows that need an inspectable record of AI-assisted development sessions across tools or terminals\n- teams that want session capture to support audit, replay, reuse, or later distillation without requiring cloud sync\n- cases where session history should be stored as versioned artifacts rather than as hidden product memory"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- systems whose main reusable object is long-term memory retrieval, recall ranking, or memory-object storage\n- workflows that want session transcripts to become the canonical source of truth for instructions or policy\n- repositories where the real need is intent/progress summaries rather than raw or near-raw session capture\n- cases where captured history cannot be sanitized or safely persisted as public-facing artifacts"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one project-scoped location for saved session artifacts\n- one capture path that writes sessions as files or equivalent repo-visible artifacts\n- one local-first retention policy\n- one review path for later summarization, reuse, or selective sharing\n- one boundary that keeps session history separate from memory or instruction authority"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one persistent session-history artifact layer inside the project\n- one more reviewable trail of AI-assisted work across sessions and tools\n- lower risk that useful session context disappears once a terminal or editor tab closes\n- a bounded history surface that can later feed summaries, audits, or reuse without becoming memory substrate"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Choose one project-scoped home for session artifacts before broadening capture behavior.\n2. Save each session into that local history area as a versioned artifact instead of leaving it only in transient UI state.\n3. Keep the capture path local-first so project history exists even without optional cloud or external indexing services.\n4. Preserve enough structure that a later reader can inspect, summarize, or share the session without reconstructing it from memory.\n5. Treat the captured session as a history artifact, not as the new source of truth for instructions, rules, or memory recall behavior.\n6. Layer summaries, insights, or sharing paths on top of the artifacts only after the artifact contract itself is stable.\n7. Split out separate techniques if memory retrieval, history-to-instructions generation, or cloud sync becomes the real reusable object."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- session history stays project-scoped and artifact-based\n- local persistence remains available without requiring cloud sync\n- captured sessions stay reviewable as history, not as hidden runtime memory\n- the artifact layer can support later audit, replay, summary, or selective sharing\n- the technique does not own memory recall semantics, vector retrieval, or universal instruction authority\n- the captured history does not become the canonical source of truth for repository policy or active instructions"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- session artifacts quietly become the de facto instruction source because no stronger authored source stays visible\n- local history capture becomes too noisy or too raw to review safely, so teams stop trusting it\n- repositories keep sensitive or over-project-shaped session data without enough sanitization discipline\n\n### Negative effects\n\n- persistent session capture can create review overhead when teams really only need short summaries or decisions\n- keeping rich transcripts locally can increase storage and hygiene burden\n- a strong history layer can tempt teams to treat session archives like memory substrate or policy logs\n\n### Misuse patterns\n\n- widening the technique into vector memory, search ranking, or recall orchestration\n- using session captures as universal instructions for future agents without distillation or review\n- equating optional cloud sync or analytics with the core reusable contract\n\n### Detection signals\n\n- project rules start pointing to session history instead of maintained authored docs\n- teams cannot explain which parts of captured history are safe to share or reuse\n- local-first history is no longer usable without cloud services or other external systems\n\n### Mitigations\n\n- keep one explicit boundary between session artifacts, authored instructions, and any later memory systems\n- sanitize or selectively share history artifacts instead of treating every raw session as portable by default\n- keep cloud sync, analytics, and history-to-instructions generation as separate layers outside this technique\n- route memory-object or recall behavior into `aoa-memo` or later sibling techniques instead of widening this contract"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- session history is saved as project-scoped artifacts\n- the local artifact path remains useful even without cloud sync\n- a reviewer can inspect or summarize the artifact later without hidden runtime state\n- the artifact layer does not replace authored instructions or decision docs\n- memory recall, retrieval, and instruction-policy behavior remain outside this bounded contract\n\nSee `checks/session-capture-as-repo-artifact-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the folder name used for history artifacts\n- the session file format\n- whether artifacts are captured from one tool or several\n- the retention, pruning, or sharing workflow\n\nWhat should stay invariant:\n- sessions are persisted as project-scoped artifacts\n- local-first history remains available without requiring cloud sync\n- history stays a reviewable artifact layer rather than memory substrate\n- the technique remains about capture and artifact discipline, not retrieval or instruction authority\n\nProject-shaped details that should not be treated as invariant:\n- cloud sync product behavior\n- search UI or web dashboards\n- history-derived skills or summaries\n- provider-specific wrapper commands"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This import narrows the donor repository to one history pattern: local-first session capture into project-scoped repo artifacts. Cloud sync, search UX, history-derived skills, history-to-instructions generation, and cross-session memory semantics were intentionally left out of the public technique contract."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-session-capture-as-repo-artifact.md` and `examples/concrete-local-first-session-history.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/session-capture-as-repo-artifact-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `getspecstory`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for local-first session history artifacts"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- split out a dedicated history-to-summary sibling if reusable summarization flows prove stable beyond raw artifact capture\n- split out a dedicated history-to-instructions sibling if distilled instruction generation becomes reusable without widening memory semantics\n- add a stronger second live context if another public repository adopts the same local-first session-artifact contract"
+        }
+      ]
     }
   ]
 }

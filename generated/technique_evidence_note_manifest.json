@@ -12009,6 +12009,1088 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0025",
+      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/capability-spec-versioning/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0025"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "capability-spec-versioning"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around plan-and-execute orchestration, persistence, execution-history learning, and registry breadth"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main problem is keeping one agent-facing capability contract explicit and versioned instead of hiding it in provider code or runtime glue"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than workflow or routing techniques because it only owns the contract surface, not execution sequencing, registry lifecycle, or dispatch policy"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable capability-spec contract and excludes donor-specific runtime, CLI, persistence, and learning detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that uses a versioned capability spec as a real agent-facing contract rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0025` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the versioned capability-contract pattern survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/capability-spec-versioning/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0025"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "capability-spec-versioning"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: one named capability remains reviewable through an explicit versioned spec rather than hiding meaning inside provider code or runtime wiring"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around plan-and-execute orchestration, self-assembly, persistence, learning through execution history, and extension-system breadth"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the same contract readable as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: named capability contract, explicit version marker, reviewable inputs and outputs, and implementation staying subordinate to the spec"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: plan-and-execute orchestration, persistent agent store behavior, execution-history learning, protocol handlers, plugin systems, and product CLI management"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce contract review and compatibility discipline without widening the technique into runtime registry or routing behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one docs pattern rather than a disguised donor feature dump or whole-product import"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live repository context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show a public repository using a versioned capability spec as an actual agent-facing contract, not only as imported review prose"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0025` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the versioned capability-contract pattern survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/capability-spec-versioning/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/codenamev/agentic`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`agentic` capability specifications and providers, where named capabilities carry explicit versioned contracts instead of living only as hidden runtime behavior"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded docs pattern: one named capability stays reviewable through an explicit versioned specification"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "named capability contracts, explicit version markers, reviewable inputs and outputs, and implementation staying subordinate to the spec"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "plan-and-execute orchestration, agent self-assembly, persistent agent store behavior, execution-history learning, extension systems, and product-level CLI commands"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local config paths, API-token setup, and storage paths were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: Ruby runtime, gem packaging, and donor-specific CLI flows were removed from the invariant core"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is semantic overreach; later sibling techniques should treat orchestration, capability registries, or execution-history learning separately instead of widening this bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "agent-facing systems often need capability contracts to stay explicit and reviewable even when implementations and providers evolve quickly"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import keeps only versioned capability-spec meaning and intentionally rejects registry, persistence, and learning-system breadth"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/capability-spec-versioning/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0025"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "capability-spec-versioning"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundle contracts, review notes, generated routing surfaces, and validator-backed markdown discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records capability-contract meaning rather than shipping the donor runtime system"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor expresses capability specs inside a Ruby framework; this adaptation presents the same contract as a portable docs pattern without depending on the donor code layout"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "provider registration, agent stores, and execution-history systems are removed from the reusable contract"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on one reviewable capability spec and explicit versioning, not on the donor runtime stack"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should read the technique as a public contract pattern for agent-facing capabilities, not as installation guidance for the donor product"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one named capability remains explicit through a versioned spec"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "inputs, outputs, and invariants stay reviewable at the spec layer before implementation drift accumulates"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "implementations stay subordinate, and the bundle does not widen into orchestration or registry semantics"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if repositories copy the idea of a versioned capability but never record meaningful compatibility notes"
+                },
+                {
+                  "order": 2,
+                  "text": "some teams may mistake a capability spec for a routing or registry object once the runtime system grows around it"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` now explicitly describes a capability system with rich specification and versioning"
+                },
+                {
+                  "order": 2,
+                  "text": "the same public README shows capability specifications, providers, composition, and retrieval as first-class concepts instead of burying capability meaning only in runtime code"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique narrows that public donor surface to one reusable contract: versioned capability specification as the reviewable capability boundary"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific orchestration, persistence, or learning breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0026",
+      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0026"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-capture-as-repo-artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around cloud sync, search UX, history-derived skills, and memory-style behavior"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main problem is making AI coding sessions persist as local project history artifacts rather than disappear into transient chat state"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than memory or instruction techniques because it only owns capture and artifact discipline, not retrieval, recall, summarization policy, or instruction authority"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable local-first session-artifact contract and excludes donor-specific cloud, search, and product-wrapper detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that uses local-first session capture as a real history-artifact layer without widening into memory substrate or instruction policy"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0026` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the local-first session-artifact contract survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0026"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-capture-as-repo-artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: AI coding sessions are saved locally as project-scoped history artifacts rather than disappearing into transient chat or widening into memory substrate"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around cloud sync, search UI, history-derived skills, and history-to-instructions behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the same contract readable as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: local-first capture, project-scoped history directory, versioned session artifacts, and later reviewable reuse"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: cloud sync, cloud search, login flows, history-derived skills, and memory or retrieval semantics"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce artifact discipline without widening the technique into memory substrate or instruction policy"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one history pattern rather than a disguised donor product or whole memory system import"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live repository context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show another repository using local-first session artifacts as a real project history layer without widening into memory or instruction policy"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0026` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the local-first session-artifact contract survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/specstoryai/getspecstory`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "Apache-2.0"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`SpecStory` local-first session capture where AI coding sessions are saved into project-scoped `.specstory/history/` artifacts across supported tools"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded history pattern: local-first session capture into project-scoped repo artifacts"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "local-first capture, project-scoped history directory, versioned session artifacts, and later review or reuse on top of those artifacts"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "cloud sync, search UI, login flows, tool installation, history-derived skills, and history-to-instructions behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific cloud endpoints, login steps, and product links were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: Homebrew install flows, provider-specific wrappers, and product-specific CLI naming were removed from the invariant core"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is boundary confusion; later sibling techniques should review history-to-instructions or memory-style behavior separately instead of widening this bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many AI-assisted repositories need session history to persist as inspectable project artifacts even before they adopt heavier memory or analytics systems"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import keeps only the local artifact contract and intentionally rejects cloud sync, memory recall, and derived-skill breadth"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0026"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-capture-as-repo-artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records local-first history technique meaning rather than shipping the donor wrapper CLI"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor uses `.specstory/history/`; this adaptation preserves that artifact idea generically without depending on the donor product wrapper"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "cloud sync, search UI, login, and cross-tool product behavior are removed from the reusable contract"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on project-scoped history artifacts and local-first persistence, not on the donor platform stack"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should read the technique as a history-artifact pattern for AI-assisted repositories, not as installation guidance for the donor product"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "sessions are persisted as project-scoped history artifacts"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "the local artifact layer remains usable even without cloud sync"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "captured history stays separate from memory recall semantics and authored instruction authority"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if repositories save sessions locally but then quietly treat them as universal instructions"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may over-associate session history with memory systems if the history boundary is not kept explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` describes a local-first workflow where supported AI coding tools save sessions into `.specstory/history/`"
+                },
+                {
+                  "order": 2,
+                  "text": "the same public README keeps cloud sync optional and presents local artifact capture as the first durable layer"
+                },
+                {
+                  "order": 3,
+                  "text": "the adjacent public `agent-skills` repository reinforces that `.specstory/history` can act as an inspectable artifact base for later summaries or organization, rather than only as hidden product state"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over cloud, search, or memory-system breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

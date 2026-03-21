@@ -114,6 +114,12 @@ See also:
 |---|---|---|---|---|
 | Upstream Mirroring With Provenance Checklist | `absent` | `7` | `techniques/docs/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Capability Spec Versioning Checklist | `absent` | `7` | `techniques/docs/capability-spec-versioning/checks/capability-spec-versioning-checklist.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -163,6 +169,14 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Property Invariants Checklist | `present` | `7` | `techniques/evaluation/property-invariants/checks/property-invariants-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+
+## `history`
+
+### [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Session Capture As Repo Artifact Checklist | `absent` | `7` | `techniques/history/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## Boundaries
 
