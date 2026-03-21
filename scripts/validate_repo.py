@@ -105,6 +105,7 @@ SELECTION_REVIEW_DOCS = {
     "intent_chain": "docs/INTENT_CHAIN_SEMANTIC_REVIEW.md",
     "instruction_surface": "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md",
     "skill_support": "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
+    "kag_source_lift": "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
 }
 WORKING_SET_SPECS = (
     {
@@ -142,6 +143,12 @@ WORKING_SET_SPECS = (
         "technique_ids": ("AOA-T-0014", "AOA-T-0015", "AOA-T-0017", "AOA-T-0016"),
         "review_doc": SELECTION_REVIEW_DOCS["skill_support"],
         "note": "Bounded test-first slicing, contract-surface validation, invariant coverage broadening, and semantic scoping for recent skill-support techniques.",
+    },
+    {
+        "title": "KAG/source-lift family",
+        "technique_ids": ("AOA-T-0018", "AOA-T-0019", "AOA-T-0020", "AOA-T-0021", "AOA-T-0022"),
+        "review_doc": SELECTION_REVIEW_DOCS["kag_source_lift"],
+        "note": "Section lift, metadata spine, provenance lift, bounded relation lift, and markdown-first caution lift for the current reusable KAG/source-lift family.",
     },
 )
 DOMAIN_START_SPECS = (
