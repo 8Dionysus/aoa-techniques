@@ -26,10 +26,10 @@
 - the presence of a canonical supplement could blur the boundary unless it stays explicitly downstream from `Risks`
 
 ## Evidence
-- `AOA-T-0022` already has the fixed five-part `Risks` shape that the caution-lift contract needs
-- `AOA-T-0022` already sits beside the canonical-only adverse-effects review note pattern, which keeps caution review bounded without introducing metadata policy
-- this adaptation combines those repository-native instincts into a bounded sketch for markdown-first caution lookup without making caution authoritative over the bundle
-- this is sufficient as repo-local adaptation evidence for a first promoted draft, but it is not enough to argue for canonical status on its own
+- `aoa-skills/skills/aoa-safe-infra-change/SKILL.md` shows live caution language as `Risks and anti-patterns`, including explicit risk naming and rollback thinking, but its contract stays skill-local rather than reproducing the same five-part technique `Risks` split
+- `aoa-evals/bundles/aoa-bounded-change-quality/EVAL.md` and `aoa-evals/bundles/aoa-eval-integrity-check/EVAL.md` show live failure-mode and blind-spot surfaces for bounded review, but they remain eval surfaces rather than authored technique `Risks`
+- taken together, those committed sibling repos prove that the caution vocabulary is live in adjacent donor surfaces, but they do not provide an equally strong second corpus for the exact five-part `Risks` contract
+- this is therefore a contrast-based live evidence read, not a forced positive analogy, and it still leaves the same bounded defer reason in place for canonical review
 
 ## Result
-- works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review
+- works as a bounded contrast-based adaptation read for a first promoted draft, while still needing stronger live reuse of the exact five-part `Risks` contract before any future canonical review

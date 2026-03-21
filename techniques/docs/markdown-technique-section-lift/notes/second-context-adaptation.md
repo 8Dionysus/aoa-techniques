@@ -25,9 +25,10 @@
 - a small stable heading set can drift into a shadow schema if consumers keep asking for more fields instead of reading the bundle
 
 ## Evidence
-- `AOA-T-0002 source-of-truth-layout` already proves that this repository prefers canonical homes for meaning instead of duplicate role copies
-- `AOA-T-0012 deterministic-context-composition` already proves that this repository can publish bounded derived doc surfaces while preserving authored source authority
-- the current section-lift bundle fits those instincts by keeping lookup derived and section meaning rooted in markdown
+- `aoa-skills/docs/BRIDGE_SPEC.md` defines the donor contract for live reuse: stable technique section names are selected from `aoa-techniques`, `use_sections` controls what is lifted, `source_ref` pins the upstream donor commit, and the refresh/drift flow keeps that bridge reviewable
+- `aoa-skills/generated/skill_catalog.json` shows the committed runtime projection of that contract, with `technique_refs` entries carrying `repo`, `path`, `source_ref`, and `use_sections` alongside the linked `technique_dependencies`
+- `AOA-T-0002 source-of-truth-layout` still supports the same direction: meaning stays in the canonical bundle while the consumer gets a bounded derived surface
+- `AOA-T-0012 deterministic-context-composition` still supports the same direction: a derived doc surface can remain subordinate to authored source authority instead of becoming the semantic home
 
 ## Result
-- works as a bounded repo-local adaptation sketch for a promoted source-lift technique, while still needing stronger live reuse evidence before any future canonical review
+- works as a bounded cross-repo adaptation grounded in a committed `aoa-skills` consumer, not just a repo-local sketch, while still leaving one gap: another live markdown-first consumer beyond the current bridge pattern

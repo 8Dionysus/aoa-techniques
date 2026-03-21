@@ -332,10 +332,26 @@
         },
         {
           "order": 6,
-          "text": "Current `relations` are helpful and still bounded. No cleanup is justified in this pilot."
+          "text": "Live donor posture is now uneven but useful across the family: `AOA-T-0019` is strongest because three sibling repos already rely on the metadata spine for shared routing and review posture."
         },
         {
           "order": 7,
+          "text": "`AOA-T-0020` and `AOA-T-0021` now have strong live donor evidence through `aoa-evals`, but both still stay bounded and should not be over-read as graph semantics."
+        },
+        {
+          "order": 8,
+          "text": "`AOA-T-0018` is now bridge-backed through `aoa-skills`, which is enough to strengthen the section-lift case without making it the dominant family donor."
+        },
+        {
+          "order": 9,
+          "text": "`AOA-T-0022` remains caution-specific and still under-evidenced as a live donor because adjacent caution language in sibling repos does not reproduce the same five-part `Risks` contract."
+        },
+        {
+          "order": 10,
+          "text": "Current `relations` are helpful and still bounded. No cleanup is justified in this pilot."
+        },
+        {
+          "order": 11,
           "text": "Current examples, checks, and review notes support the five-way family split well enough for a review-only semantic surface."
         }
       ],

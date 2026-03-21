@@ -9,13 +9,13 @@
 
 ## Evidence summary
 - origin evidence: the bundle came from relation consumers and relation-lift guidance, so it already has a bounded navigation anchor
-- second context: the adaptation note keeps the contract readable as direct typed adjacency, but it still reads as a repo-local navigation sketch rather than a live cross-repo proof
-- validation strength: the bundle has a clear relation vocabulary and current consumers, but it still lacks another markdown-first corpus proving the same bounded edge layer in practice
+- second context: the adaptation note now cites live donor surfaces in `aoa-evals` and `aoa-routing`, so the proof is no longer a repo-local sketch
+- validation strength: `aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` and `aoa-evals/generated/eval_catalog.json` verify direct typed relations as bounded edge metadata, while `aoa-routing/scripts/router_core.py` keeps `recommended_paths` dependency-driven instead of relation-traversal-driven
 
 ## Default-use rationale
 - this remains the right default when direct relations are only meant to guide nearby inspection
 - it is narrower than any graph-oriented contract because the edge meaning stops at one-step adjacency
-- the bundle should stay promoted until another repository proves that the same relation layer remains useful without becoming a rationale or traversal system
+- the bundle should stay promoted until another direct-relation consumer outside eval bundles proves that the same relation layer remains useful without becoming a rationale or traversal system
 
 ## Fresh public-safety check
 - review date: 2026-03-20
@@ -24,9 +24,9 @@
 - public reuse check: the pattern remains understandable without hidden automation or private source files
 
 ## Remaining gaps
-- the main missing proof is live reuse in another markdown-first repository
+- the smallest missing proof is a second direct-relation consumer outside eval bundles
 - a future canonical review should show that direct typed adjacency survives repeated use without turning into graph semantics or multi-hop inference
 
 ## Recommendation
 - keep `AOA-T-0021` `promoted`
-- defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch
+- defer canonical promotion until the technique proves itself in a live reuse context beyond eval bundles

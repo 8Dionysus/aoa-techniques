@@ -57,6 +57,10 @@ Question: where does markdown-first caution lift stop and shadow-policy semantic
 - `AOA-T-0020` is semantically distinct as the provenance lift.
 - `AOA-T-0021` is semantically distinct as the bounded relation lift.
 - `AOA-T-0022` is semantically distinct as the markdown-first caution lift, and it should remain outside shadow-policy semantics.
+- Live donor posture is now uneven but useful across the family: `AOA-T-0019` is strongest because three sibling repos already rely on the metadata spine for shared routing and review posture.
+- `AOA-T-0020` and `AOA-T-0021` now have strong live donor evidence through `aoa-evals`, but both still stay bounded and should not be over-read as graph semantics.
+- `AOA-T-0018` is now bridge-backed through `aoa-skills`, which is enough to strengthen the section-lift case without making it the dominant family donor.
+- `AOA-T-0022` remains caution-specific and still under-evidenced as a live donor because adjacent caution language in sibling repos does not reproduce the same five-part `Risks` contract.
 - Current `relations` are helpful and still bounded. No cleanup is justified in this pilot.
 - Current examples, checks, and review notes support the five-way family split well enough for a review-only semantic surface.
 
