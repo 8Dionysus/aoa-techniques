@@ -308,6 +308,38 @@
           "body_markdown": "This example shows how a richer `Risks` section can support bounded caution lookup without creating a new caution metadata or scoring surface.\n\n## Source bundle excerpt\n\n```md\n## Risks\n\n### Failure modes\n- the summary surface can look complete even when a source silently stopped updating\n\n### Negative effects\n- operators can trust the report too early because it still renders cleanly\n\n### Misuse patterns\n- teams start treating the pattern as a generic health score instead of one bounded check\n\n### Detection signals\n- the report keeps rendering but freshness counters stop changing\n\n### Mitigations\n- route the reader back to the source checks and tighten the bounded contract\n```\n\n## Bounded caution-lift usage\n\n```md\nReview prompt for this technique:\n- Open `## Risks` first when you need to understand hidden downside before reuse.\n- Check `Failure modes` and `Detection signals` together for false-success risk.\n- Read `Mitigations` before widening the pattern into a new environment.\n```\n\n## Anti-drift rule\n\nIf a team needs caution IDs, scores, or generated caution outputs to answer the review question, this bounded lift is no longer the right technique."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0023",
+      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/stateless-single-shot-agent/examples/confirmed-single-step-action.md",
+          "title": "Confirmed Single-Step Action",
+          "body_markdown": "Scenario: a shell operator wants to rename one generated report file.\n\n1. Frame the request as one explicit action: rename `reports/today.json` to `reports/archive/today.json`.\n2. Provide only the transient context needed for that rename.\n3. Ask for one tool-using step.\n4. Show the exact mutating command before it runs.\n5. Require explicit confirmation.\n6. Run the command once.\n7. Return the result and stop.\n\nThis stays inside the technique because the flow remains one invocation, one confirmed action, and no hidden multi-step autonomy."
+        },
+        {
+          "example_path": "techniques/agent-workflows/stateless-single-shot-agent/examples/minimal-stateless-single-shot-agent.md",
+          "title": "Minimal Stateless Single-Shot Agent",
+          "body_markdown": "Use one invocation for one narrow shell-side need.\n\n- question mode:\n  - ask one explicit question\n  - pass only the transient context needed for that answer\n  - return one answer without tool use\n- action mode:\n  - state one explicit action request\n  - allow one tool step only\n  - require confirmation before mutation\n  - stop after the result\n\nIf the task now needs several dependent actions or hidden continuity, leave this fast path and switch to a broader workflow."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0024",
+      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md",
+          "title": "Concrete Curated Mirror With Attribution",
+          "body_markdown": "Scenario: a public collection wants to mirror one externally maintained skill into a local curated directory.\n\n1. Add one source-manifest entry naming the upstream repository, upstream path, and local destination.\n2. Sync the upstream skill into the local collection.\n3. Write one adjacent provenance file that preserves origin attribution.\n4. Keep any local curation note in a separate file instead of editing the mirrored payload inline.\n5. On refresh, re-run the sync path first and only then review whether local wrapper notes still make sense.\n\nThis stays inside the technique because the local collection mirrors upstream-owned content with explicit provenance rather than turning the mirror into a new canonical source."
+        },
+        {
+          "example_path": "techniques/docs/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md",
+          "title": "Minimal Upstream Mirroring With Provenance",
+          "body_markdown": "Use one small source manifest entry plus one adjacent provenance file.\n\n- source manifest entry:\n  - names the upstream repository\n  - names the upstream source path\n  - names the local mirror destination\n- mirrored local copy:\n  - is refreshed from upstream\n  - does not become the new canonical source\n- provenance file:\n  - preserves the upstream origin\n  - stays adjacent to the mirrored copy\n\nIf the local collection now wants registry policy, installer behavior, or ranking logic, treat that as a separate technique."
+        }
+      ]
     }
   ]
 }

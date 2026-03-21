@@ -12,7 +12,7 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 
 ## What changed
 
-- what_changed: narrowed the donor repository to one bounded docs pattern: one canonical rule source distributed to multiple agent-facing instruction surfaces
+- what_changed: refreshed the donor package around the current public `ruler` contract and kept only one bounded docs pattern: one canonical rule source distributed to multiple agent-facing instruction surfaces
 - invariant core kept: one canonical rule source, repeatable propagation to multiple targets, managed target files, and anti-duplication behavior on re-apply
 - project-shaped details removed or generalized: exact supported-agent matrix, CLI flags, Node/npm assumptions, nested loading as a core contract, MCP propagation, skills propagation, `.gitignore` automation, and backup/revert behavior
 
@@ -26,5 +26,5 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 ## Review notes
 
 - why this adaptation is reusable here: repositories that support multiple coding agents often need shared guidance to reach several instruction surfaces without making each target file canonical
-- primary evidence used: `README.md` in `ruler` defines the single-source-to-many-target contract, and `tests/mixed-agents-duplication.test.ts` shows repeated application without duplicating shared instructions
-- limits or follow-up review concerns: this first draft intentionally ignores beta-preview product breadth and keeps the technique at the `docs` layer only
+- primary evidence used: the current `README.md` in `ruler` still defines a single source of truth in `.ruler/` plus automatic distribution to multiple agent-facing outputs, and `tests/mixed-agents-duplication.test.ts` still shows repeated application without duplicating shared instructions
+- limits or follow-up review concerns: the donor remains a beta research preview, so the bundle should keep importing the narrow pattern only and continue rejecting broader product-width behavior as part of this contract

@@ -23,7 +23,7 @@ If you still need repo-level orientation before following a working set or commo
 | domain | canonical defaults | start here |
 |---|---|---|
 | `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) | Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized. |
-| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md), [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md), [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | Start with the canonical document-role layout, then inspect the docs boundary pair or instruction-surface pair when generation and entrypoint discipline become the next bounded question. |
+| `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md), [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md), [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | Start with the canonical document-role layout, then inspect the docs boundary pair or instruction-surface cluster when generation, source ownership, and entrypoint discipline become the next bounded question. |
 | `evaluation` | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md), [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md), [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear. |
 
 ## Working Sets
@@ -58,11 +58,11 @@ If you still need repo-level orientation before following a working set or commo
 - Review: [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md)
 - Why grouped: Artifact-first intent normalization and dry-run contract validation plus safe rollout of one new intent type on top of that chain.
 
-### Instruction-surface pair
+### Instruction-surface cluster
 
-- Techniques: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+- Techniques: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md), [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
 - Review: [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-- Why grouped: Fragment-first composition into one generated context artifact plus single-source distribution to multiple agent-facing instruction surfaces.
+- Why grouped: Fragment-first composition into one generated context artifact plus local single-source fan-out and upstream mirroring with provenance for adjacent instruction-facing surfaces.
 
 ### Skill-support cluster
 

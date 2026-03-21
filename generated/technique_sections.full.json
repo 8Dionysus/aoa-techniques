@@ -1018,7 +1018,7 @@
         {
           "key": "when_to_use",
           "heading": "When to use",
-          "content_markdown": "- repositories that support multiple coding agents or agent-facing instruction formats\n- projects that already feel the cost of copying the same guidance into `AGENTS.md`, `CLAUDE.md`, or similar files\n- teams that can regenerate or re-apply instruction targets from one canonical rule source\n- repositories that want target surfaces to stay consistent without making every output file canonical\n- cases where the same shared rule core is proven to survive re-application across multiple managed targets, not just a repo-local adaptation sketch"
+          "content_markdown": "- repositories that support multiple coding agents or agent-facing instruction formats\n- projects that already feel the cost of copying the same guidance into `AGENTS.md`, `CLAUDE.md`, or similar files\n- teams that can regenerate or re-apply instruction targets from one canonical rule source\n- repositories that want target surfaces to stay consistent without making every output file canonical\n- cases where the same shared rule core is already anchored by one bounded external origin and at least one live managed multi-target donor, with room for another live donor later"
         },
         {
           "key": "when_not_to_use",
@@ -1043,7 +1043,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one canonical rule source owns the shared instruction content\n- target instruction files are managed or derived outputs, not canonical editable homes\n- the same source update can be propagated repeatedly without introducing duplication drift\n- target-specific wrappers or formatting must not change the shared rule intent\n- manual edits to target files are either forbidden or clearly subordinate to the canonical source\n- canonical review should stay defer-first until the contract is exercised in a live multi-target reuse context beyond the current repo-local sketch\n\nRelationship to adjacent techniques: unlike `AOA-T-0002 source-of-truth-layout`, this technique is about one rule source fanning out to many target surfaces rather than assigning canonical roles to many document classes inside one repository. Unlike `AOA-T-0012 deterministic-context-composition`, this technique is about one canonical source propagating to multiple target instruction files rather than composing many fragments into one generated artifact."
+          "content_markdown": "- one canonical rule source owns the shared instruction content\n- target instruction files are managed or derived outputs, not canonical editable homes\n- the same source update can be propagated repeatedly without introducing duplication drift\n- target-specific wrappers or formatting must not change the shared rule intent\n- manual edits to target files are either forbidden or clearly subordinate to the canonical source\n- canonical review should stay defer-first until the contract is exercised in one more live multi-target reuse context beyond the current `aoa-skills` donor and the bounded `ruler` intake package\n\nRelationship to adjacent techniques: unlike `AOA-T-0002 source-of-truth-layout`, this technique is about one rule source fanning out to many target surfaces rather than assigning canonical roles to many document classes inside one repository. Unlike `AOA-T-0012 deterministic-context-composition`, this technique is about one canonical source propagating to multiple target instruction files rather than composing many fragments into one generated artifact."
         },
         {
           "key": "risks",
@@ -1058,7 +1058,7 @@
         {
           "key": "adaptation_notes",
           "heading": "Adaptation notes",
-          "content_markdown": "What can vary across projects:\n- the canonical source directory name such as `.ruler/`, `rules/`, or another docs folder\n- the exact set of target instruction files\n- whether the distribution step is a CLI command, script, build task, or CI-enforced local check\n- the target-specific wrapper format used around shared instructions\n\nWhat should stay invariant:\n- one canonical rule source owns the shared instruction content\n- multiple agent-facing instruction surfaces can be refreshed from that source\n- target files remain derived rather than hand-maintained canonical documents\n- distribution exists to reduce drift, not to create many divergent instruction variants\n\nProject-shaped details that should not be treated as invariant:\n- the donor repository's exact supported-agent matrix\n- Node, npm, or any specific packaging/runtime assumptions\n- nested loading behavior, which may support broader systems but is not part of this first technique contract\n- MCP propagation, skills propagation, `.gitignore` automation, backup/revert flows, and other wider product behavior\n\nSee `notes/second-context-adaptation.md` for a bounded docs-repository adaptation sketch."
+          "content_markdown": "What can vary across projects:\n- the canonical source directory name such as `.ruler/`, `rules/`, or another docs folder\n- the exact set of target instruction files\n- whether the distribution step is a CLI command, script, build task, or CI-enforced local check\n- the target-specific wrapper format used around shared instructions\n\nWhat should stay invariant:\n- one canonical rule source owns the shared instruction content\n- multiple agent-facing instruction surfaces can be refreshed from that source\n- target files remain derived rather than hand-maintained canonical documents\n- distribution exists to reduce drift, not to create many divergent instruction variants\n\nProject-shaped details that should not be treated as invariant:\n- the donor repository's exact supported-agent matrix\n- Node, npm, or any specific packaging/runtime assumptions\n- nested loading behavior, which may support broader systems but is not part of this first technique contract\n- MCP propagation, skills propagation, `.gitignore` automation, backup/revert flows, and other wider product behavior\n\nSee `notes/external-origin.md` for the bounded external intake package and `notes/second-context-adaptation.md` for the current live second-context donor."
         },
         {
           "key": "public_sanitization_notes",
@@ -1078,7 +1078,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `ruler`\n- imported into `aoa-techniques` on 2026-03-15 as the second bounded external-import draft with explicit exclusions around MCP, skills, nested loading, and other product-width behavior\n- passed first external-import review on 2026-03-18; keep the technique `promoted` until stronger live multi-target reuse exists beyond the current repo-local adaptation sketch\n- current canon-strengthening wave: defer canonical promotion until a live multi-target reuse context proves the shared rule core still propagates cleanly across managed targets"
+          "content_markdown": "- adapted from open-source `ruler`\n- imported into `aoa-techniques` on 2026-03-15 as the second bounded external-import draft with explicit exclusions around MCP, skills, nested loading, and other product-width behavior\n- passed first external-import review on 2026-03-18; keep the technique `promoted` until stronger live multi-target reuse exists beyond the current repo-local adaptation sketch\n- external donor intake refresh on 2026-03-21 now reaffirms `ruler` as the bounded origin donor, records `agents-md` as an overlap hold against `AOA-T-0012`, and records `n-skills` as the adjacent `AOA-T-0024 upstream-mirroring-with-provenance` import rather than live proof for this bundle\n- current canon-strengthening wave: defer canonical promotion until a live multi-target reuse context proves the shared rule core still propagates cleanly across managed targets"
         },
         {
           "key": "future_evolution",
@@ -1822,6 +1822,170 @@
           "key": "future_evolution",
           "heading": "Future evolution",
           "content_markdown": "- strengthen second-context evidence once another markdown-first corpus reuses the same bounded caution-lift split\n- clarify when the existing canonical adverse-effects review supplement is enough and when a corpus should still stay with `Risks` alone\n- keep caution lookup bounded to review and reuse questions rather than letting it become a policy or scoring surface\n- keep shadow metadata, generated caution outputs, and scoring layers deferred unless bounded caution lookup stops being enough"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0023",
+      "name": "stateless-single-shot-agent",
+      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep quick shell-side agent work bounded to one mostly independent invocation so the fast path stays composable, inspectable, and safe to abandon instead of silently turning into a hidden long-running session."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- ad hoc shell assistance where one answer or one bounded tool-using step is enough\n- workflows that value pipes, files, or explicit terminal context more than hidden conversational memory\n- cases where command execution or file mutation should require a visible confirmation gate\n- operator flows that need a small, low-ceremony fast path before escalating to a broader repository workflow"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- multi-step repository changes that need planning, diff review, verification, and reporting across several actions\n- tasks that depend on long-lived hidden memory or an iterative autonomous loop\n- workflows where one invocation must safely coordinate many tool calls or background state transitions\n- cases where the real need is a richer intent chain or test-first implementation slice instead of a shell fast path"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one explicit question or one explicit action request\n- optional transient context such as stdin, recent commands, or a named file path\n- one bounded tool allowance for the current invocation\n- one visible confirmation step before any mutating action runs"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one answer or one confirmed action result for the current invocation\n- one shell-friendly interaction that can be repeated without hidden session coupling\n- lower risk of accidental multi-step drift during quick operator work\n- a clear handoff point when the task has outgrown the single-shot contract"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Treat the run as one bounded invocation with one explicit question or one explicit action request.\n2. Attach only the transient context needed for that invocation, such as stdin, recent terminal commands, or one named file path.\n3. Keep read-only question flows tool-free by default.\n4. If tools are needed, allow at most one bounded tool-using step for that invocation.\n5. Require an explicit confirmation gate before any file-writing or command-executing action runs.\n6. End the invocation after the answer or confirmed action result instead of stretching the same run into a hidden loop.\n7. Escalate to a broader workflow technique when the task now needs planning, multiple steps, or stronger verification."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- each invocation stays mostly independent and reproducible by default\n- transient context is an input to one run, not a hidden long-lived memory layer\n- read-only question flows stay tool-free unless the contract explicitly changes\n- tool use is optional and bounded to one step per invocation\n- mutating actions require an explicit confirmation gate\n- when the task widens beyond one step, the workflow should hand off to a broader technique such as `AOA-T-0001` instead of stretching this fast path"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- a supposedly single-shot invocation quietly expands into a multi-step loop with hidden state\n- confirmation is bypassed or phrased so weakly that mutating actions no longer feel reviewable\n- transient context grows into an implicit memory layer that changes behavior across runs\n\n### Negative effects\n\n- a strong fast path can tempt teams to keep using one-shot invocations after the task already needs a broader workflow\n- strict one-step bounds can add friction when a repository really does need a richer plan or verification loop\n- shell convenience can hide that the underlying action still carries non-trivial operational risk\n\n### Misuse patterns\n\n- treating repeated single-shot invocations as a substitute for explicit planning or diff review\n- widening the technique into a general autonomous agent loop while still calling it stateless\n- letting provider profiles, runtime integrations, or memory toggles become the real center of gravity instead of the bounded invocation contract\n\n### Detection signals\n\n- one invocation starts chaining several tools or mutating steps before reporting back\n- operators stop distinguishing between read-only question mode and confirmed action mode\n- task success now depends on hidden prior runs or implicit session context\n\n### Mitigations\n\n- re-narrow the workflow so each invocation answers one question or performs one confirmed step only\n- keep mutating actions behind an explicit confirmation gate that is easy to audit\n- route broader work into `AOA-T-0001` or another multi-step workflow instead of stretching this fast path\n- treat optional history or provider-specific features as out-of-scope adjuncts unless a later sibling technique proves them reusable"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one invocation handles one explicit question or one explicit action request\n- read-only question flows do not silently gain tool access\n- tool-using action flows require explicit confirmation before mutation\n- the invocation ends after one confirmed step instead of looping into hidden autonomy\n- the same task can be rerun with fresh transient context and without hidden session dependence\n\nSee `checks/stateless-single-shot-agent-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact shell wrapper or CLI command name\n- the source of transient context, such as stdin, recent commands, or one named file path\n- the form of the confirmation gate before mutating tools run\n- the provider/runtime behind the answer or tool call\n\nWhat should stay invariant:\n- one invocation remains mostly independent and reproducible\n- read-only question flows stay distinct from confirmed action flows\n- tool-using agent behavior stays single-step and confirmation-gated\n- the technique remains a fast path rather than a disguised multi-step loop\n\nProject-shaped details that should not be treated as invariant:\n- provider/profile matrices\n- model-selection or configuration file details\n- optional history flags\n- donor-specific ANSI formatting or install flows"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This import narrows the donor repository to one agent-workflow pattern: stateless single-shot shell assistance with explicit confirmation before mutation. Provider matrices, install steps, configuration format, optional history toggles, formatting behavior, and broader product integration details were intentionally left out of the public technique contract."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-stateless-single-shot-agent.md` and `examples/confirmed-single-step-action.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/stateless-single-shot-agent-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `qqqa`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique focused on stateless single-shot shell assistance"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- split out a dedicated read-only question-only sibling if that narrower mode proves reusable on its own\n- split out a dedicated confirmation-gated command execution sibling if tool-action posture becomes strong enough to stand without the rest of the fast-path contract\n- add a stronger second live context if another public repository adopts the same single-shot bounded invocation model"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0024",
+      "name": "upstream-mirroring-with-provenance",
+      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reuse externally maintained content in a local curated collection without losing origin ownership, attribution, or sync discipline."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories that curate externally maintained content but do not want each mirrored copy to become a new undocumented local source of truth\n- collections that need one explicit manifest showing what is mirrored, from where, and into which local destination\n- workflows that want a repeatable resync path plus adjacent provenance metadata for mirrored content\n- cases where explicit source ownership matters as much as the local reusable copy"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- repositories that need one local canonical source to fan out to several managed targets inside the same project\n- workflows where the mirrored copy is expected to become the new primary editable home\n- collections that cannot preserve adjacent attribution or source metadata\n- cases where the real need is typed note provenance or derived manifest routing rather than content mirroring"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one explicit source manifest naming the upstream repository and mirrored source path\n- one local destination for the mirrored copy\n- one adjacent provenance signal such as `.source.json` or an equivalent attribution record\n- one repeatable sync step that refreshes the local mirror from upstream\n- one local editing policy that keeps mirrored content subordinate to upstream ownership"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one local mirrored copy of upstream-owned content\n- one explicit provenance record that preserves origin attribution\n- one repeatable resync path for refreshing the mirror\n- lower ownership ambiguity around what is local curation versus what remains upstream-controlled"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Record each upstream source in one explicit source manifest before mirroring content locally.\n2. Mirror the upstream content into one bounded local destination.\n3. Preserve adjacent provenance metadata so reviewers can trace the local copy back to the upstream source.\n4. Treat the mirrored content as curated local copy, not as the new canonical upstream.\n5. Re-run the sync step when upstream changes instead of hand-maintaining a divergent local branch by default.\n6. Keep any local wrappers or curation notes visibly separate from the mirrored source payload.\n7. Review both the mirrored content and the provenance metadata so attribution and ownership remain readable after each refresh."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the upstream source remains the canonical origin of the mirrored content\n- the local copy stays subordinate to explicit upstream ownership\n- one source manifest names what is mirrored and where it came from\n- adjacent provenance metadata keeps attribution readable after sync\n- the sync path can refresh the local copy without erasing source identity\n- local curation wrappers stay visibly separate from mirrored source payloads\n- this technique does not replace `AOA-T-0013`; it starts when the source of truth is upstream and external rather than local and canonical inside the same repository"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- mirrored content drifts because local edits accumulate without a clear resync path back to upstream\n- provenance metadata goes stale or disappears, making the local copy look locally authored when it is not\n- the source manifest stops matching reality, so mirrored destinations no longer reflect their declared upstreams\n\n### Negative effects\n\n- a local mirror can create false confidence that upstream ownership no longer matters because the copy is convenient and nearby\n- frequent syncs can hide whether the local collection still adds meaningful curation or is only accumulating copied payloads\n- provenance discipline adds overhead that some teams may quietly bypass once the mirror feels familiar\n\n### Misuse patterns\n\n- treating mirrored local copies as if they were new canonical sources of truth\n- widening the technique into marketplace policy, installer behavior, or registry generation instead of keeping it focused on mirroring plus provenance\n- using a sync manifest without adjacent attribution, which keeps automation but loses readable source ownership\n\n### Detection signals\n\n- reviewers cannot tell which local content is mirrored and which content is locally authored wrapper or curation\n- local edits to mirrored files become common while upstream sync stops being the default refresh path\n- the source manifest and provenance files disagree about what was mirrored or from where\n\n### Mitigations\n\n- keep one explicit source manifest and one adjacent provenance signal for every mirrored item\n- route upstream-origin changes through resync by default instead of ad hoc local patching\n- separate mirrored payloads from local wrapper notes so ownership stays legible\n- split registry, installer, or marketplace behavior into separate techniques instead of widening this mirroring contract"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- each mirrored item is named in one explicit source manifest\n- the local mirror carries adjacent provenance or attribution metadata\n- upstream ownership remains readable after sync\n- the resync path can refresh mirrored content without hiding where it came from\n- local wrappers or curation notes remain separate from mirrored upstream payload\n\nSee `checks/upstream-mirroring-with-provenance-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the manifest file format\n- the exact provenance file name or metadata carrier\n- the sync engine or cadence\n- the local folder structure used for mirrored content\n\nWhat should stay invariant:\n- upstream ownership stays explicit\n- the local copy is mirrored through one declared source manifest\n- provenance remains adjacent and readable after sync\n- the local mirror stays subordinate to upstream rather than becoming a silent local canonical source\n\nProject-shaped details that should not be treated as invariant:\n- marketplace curation policy\n- installer or plugin registry behavior\n- daily cron scheduling\n- category taxonomies or agent compatibility matrices"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This import narrows the donor repository to one docs pattern: upstream mirroring through an explicit source manifest plus preserved provenance. Marketplace policy, daily cron specifics, installer behavior, agent compatibility breadth, category taxonomy, and broader registry generation were intentionally left out of the public technique contract."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-upstream-mirroring-with-provenance.md` and `examples/concrete-curated-mirror-with-attribution.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/upstream-mirroring-with-provenance-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `n-skills`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for source-manifest-driven mirroring with explicit provenance"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- split out a dedicated marketplace-catalog sibling if curated discovery policy proves reusable without the rest of the sync contract\n- split out a dedicated derived-attribution-manifest sibling if provenance projection becomes reusable beyond mirrored content collections\n- add a stronger second live context if another public repository adopts the same upstream-mirroring and provenance contract"
         }
       ]
     }

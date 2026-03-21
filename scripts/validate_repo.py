@@ -143,10 +143,10 @@ WORKING_SET_SPECS = (
         "note": "Artifact-first intent normalization and dry-run contract validation plus safe rollout of one new intent type on top of that chain.",
     },
     {
-        "title": "Instruction-surface pair",
-        "technique_ids": ("AOA-T-0012", "AOA-T-0013"),
+        "title": "Instruction-surface cluster",
+        "technique_ids": ("AOA-T-0012", "AOA-T-0013", "AOA-T-0024"),
         "review_doc": SELECTION_REVIEW_DOCS["instruction_surface"],
-        "note": "Fragment-first composition into one generated context artifact plus single-source distribution to multiple agent-facing instruction surfaces.",
+        "note": "Fragment-first composition into one generated context artifact plus local single-source fan-out and upstream mirroring with provenance for adjacent instruction-facing surfaces.",
     },
     {
         "title": "Skill-support cluster",
@@ -175,7 +175,7 @@ DOMAIN_START_SPECS = (
             SELECTION_REVIEW_DOCS["docs_boundary"],
             SELECTION_REVIEW_DOCS["instruction_surface"],
         ),
-        "note": "Start with the canonical document-role layout, then inspect the docs boundary pair or instruction-surface pair when generation and entrypoint discipline become the next bounded question.",
+        "note": "Start with the canonical document-role layout, then inspect the docs boundary pair or instruction-surface cluster when generation, source ownership, and entrypoint discipline become the next bounded question.",
     },
     {
         "domain": "evaluation",

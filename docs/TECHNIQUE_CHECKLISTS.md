@@ -40,6 +40,12 @@ See also:
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/agent-workflows/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 
+### [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Stateless Single-Shot Agent Checklist | `absent` | `7` | `techniques/agent-workflows/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -101,6 +107,12 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Caution Lift Checklist | `present` | `5` | `techniques/docs/risk-and-negative-effect-lift/checks/caution-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) |
+
+### [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Upstream Mirroring With Provenance Checklist | `absent` | `7` | `techniques/docs/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
 ## `evaluation`
 

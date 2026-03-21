@@ -923,6 +923,88 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0023",
+      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md",
+          "title": "Stateless Single-Shot Agent Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name one explicit question or one explicit action request for the invocation."
+            },
+            {
+              "order": 2,
+              "text": "Keep read-only question flows free of tool access unless the contract is intentionally changed."
+            },
+            {
+              "order": 3,
+              "text": "Keep tool-using action flows bounded to one step per invocation."
+            },
+            {
+              "order": 4,
+              "text": "Require an explicit confirmation gate before any mutating command or file write runs."
+            },
+            {
+              "order": 5,
+              "text": "Treat transient context as invocation input, not as hidden long-lived memory."
+            },
+            {
+              "order": 6,
+              "text": "End the invocation after one answer or one confirmed action result."
+            },
+            {
+              "order": 7,
+              "text": "Escalate to a broader workflow when the task now needs planning, multiple steps, or stronger verification."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0024",
+      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md",
+          "title": "Upstream Mirroring With Provenance Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name each mirrored item in one explicit source manifest before syncing it locally."
+            },
+            {
+              "order": 2,
+              "text": "Keep one local destination per mirrored upstream source."
+            },
+            {
+              "order": 3,
+              "text": "Preserve adjacent provenance or attribution metadata for each mirrored copy."
+            },
+            {
+              "order": 4,
+              "text": "Make upstream ownership readable after sync."
+            },
+            {
+              "order": 5,
+              "text": "Keep mirrored payloads separate from local wrapper or curation notes."
+            },
+            {
+              "order": 6,
+              "text": "Re-run sync through the declared manifest path instead of defaulting to ad hoc local patching."
+            },
+            {
+              "order": 7,
+              "text": "Review both mirrored content and provenance metadata after refresh."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
