@@ -5,9 +5,17 @@ This guide defines the bounded contract for the example source-lift family.
 Use it when the repository already has authored example files under technique bundles, but the next question is how to expose them as derived example knowledge without turning them into scenario graphs, executable tests, or richer step extraction.
 
 See also:
+- [Start Here](START_HERE.md)
 - [Technique Examples](TECHNIQUE_EXAMPLES.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
 - [Documentation Map](README.md)
+
+This family uses one stable shape:
+
+- authoritative source: authored example markdown under `examples/`
+- reader companion: `TECHNIQUE_EXAMPLES.md`
+- derived manifests: `generated/technique_example_manifest.json` and `generated/technique_example_manifest.min.json`
+- what it must not become: scenario graphs, executable tests, richer step extraction, or replacement example authorship
 
 ## Source Contract
 
@@ -18,7 +26,7 @@ The current example lift stays bundle-local and markdown-first:
 - example bodies remain authored markdown
 - the generated layer routes readers back to the example file instead of replacing it
 
-## Generated Surfaces
+## Reader Companion And Derived Manifests
 
 The generated outputs for this source class are:
 
@@ -57,5 +65,6 @@ If a reader needs the actual narrative, commands, or sample payloads, the answer
 Regenerate and verify this source class with:
 
 - `python scripts/build_example_manifest.py`
+- `python scripts/release_check.py`
 - `python -m unittest discover -s tests`
 - `python scripts/validate_repo.py`

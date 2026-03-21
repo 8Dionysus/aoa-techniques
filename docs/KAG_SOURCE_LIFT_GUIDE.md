@@ -7,6 +7,7 @@ Use it when the repository already looks strong as structured markdown, but the 
 This guide is source-first. It allows a small bounded set of generated lift surfaces while still avoiding new schema fields, graph behavior, or bundle-level section IDs.
 
 See also:
+- [Start Here](START_HERE.md)
 - [Documentation Map](README.md)
 - [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
 - [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
@@ -107,7 +108,9 @@ The next implementation-oriented source-class pilot after shadow review docs now
 - `generated/repo_doc_surface_manifest.json`
 - `generated/repo_doc_surface_manifest.min.json`
 
-Those files lift the authoritative public docs/status layer into derived routing knowledge only. They stay bounded to `README.md`, `TECHNIQUE_INDEX.md`, `AGENTS.md`, `CONTRIBUTING.md`, `SECURITY.md`, `WALKTHROUGH.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`, `docs/README.md`, and `docs/RELEASING.md`.
+Those files lift the authoritative public docs/status layer into derived routing knowledge only. They stay bounded to `README.md`, `TECHNIQUE_INDEX.md`, `AGENTS.md`, `CONTRIBUTING.md`, `SECURITY.md`, `WALKTHROUGH.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`, `docs/START_HERE.md`, `docs/README.md`, and `docs/RELEASING.md`.
+
+That keeps the repo-owned self-serve entrypoint inside the existing repo-doc family without turning repo-doc routing into a deeper-guide catch-all.
 
 Their human reader companion is `docs/REPO_DOC_SURFACES.md`, and the source-class contract lives in `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`. This still does not create a status-policy engine, broaden the source set to local planning docs, or pull deeper guide/review docs into the same manifest.
 

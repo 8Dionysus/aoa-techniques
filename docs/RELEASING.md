@@ -5,6 +5,7 @@ This repository is released as a public documentation-and-technique corpus.
 Releases should stay small, explicit, and easy to verify.
 
 See also:
+- [Start Here](START_HERE.md)
 - [Documentation Map](README.md)
 - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [CHANGELOG](../CHANGELOG.md)
@@ -22,30 +23,36 @@ A release should make it easy to answer:
 
 1. Confirm the target release scope.
 2. Update `CHANGELOG.md`.
-3. Run local validation:
-   - `python scripts/build_repo_doc_surface_manifest.py`
-   - `python scripts/build_catalog.py`
-   - `python scripts/build_capsules.py`
-   - `python scripts/build_section_manifest.py`
-   - `python scripts/build_checklist_manifest.py`
-   - `python scripts/build_example_manifest.py`
-   - `python scripts/build_evidence_note_manifest.py`
-   - `python scripts/build_github_review_template_manifest.py`
-   - `python scripts/build_semantic_review_manifest.py`
-   - `python scripts/build_shadow_review_manifest.py`
-   - `python -m unittest discover -s tests`
-   - `python scripts/validate_repo.py`
-   - `git diff --exit-code`
+3. Run local validation with one bounded command:
+   - `python scripts/release_check.py`
+   - the current script keeps the underlying source contracts explicit and runs:
+     - `python scripts/build_repo_doc_surface_manifest.py`
+     - `python scripts/build_catalog.py`
+     - `python scripts/build_capsules.py`
+     - `python scripts/build_sections.py`
+     - `python scripts/build_section_manifest.py`
+     - `python scripts/build_checklist_manifest.py`
+     - `python scripts/build_example_manifest.py`
+     - `python scripts/build_evidence_note_manifest.py`
+     - `python scripts/build_github_review_template_manifest.py`
+     - `python scripts/build_semantic_review_manifest.py`
+     - `python scripts/build_shadow_review_manifest.py`
+     - `python -m unittest discover -s tests`
+     - `python scripts/validate_repo.py`
+   - if the first pass materializes generated updates, the script reruns the same bounded sequence once and requires the second pass to leave the git-backed worktree snapshot unchanged
+   - when the repo starts clean, that same bounded drift check also confirms `git diff --exit-code`
 4. Confirm `TECHNIQUE_INDEX.md` matches the current published catalog.
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
    - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULES.md`.
    - Use `TECHNIQUE_CAPSULE_GUIDE.md` as the authored contract reference when checking that the runtime card family stayed bounded.
    - This now also includes the KAG/source-lift reader companions for sections, checklists, examples, and evidence notes:
+     - `generated/technique_sections.full.json`
      - `generated/technique_section_manifest.json` and `docs/TECHNIQUE_SECTIONS.md`
      - `generated/technique_checklist_manifest.json` and `docs/TECHNIQUE_CHECKLISTS.md`
      - `generated/technique_example_manifest.json` and `docs/TECHNIQUE_EXAMPLES.md`
      - `generated/technique_evidence_note_manifest.json` and `docs/EVIDENCE_NOTE_SURFACES.md`
    - Use `TECHNIQUE_SECTION_LIFT_GUIDE.md`, `TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `EVIDENCE_NOTE_PROVENANCE_GUIDE.md` as the authored contract references when checking that those KAG/source-lift reader families stayed bounded.
+   - This also includes the current repo-doc entrypoint family: `docs/START_HERE.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACES.md`.
 6. Review public-safety hygiene:
    - no secrets
    - no internal-only URLs
@@ -89,6 +96,7 @@ For now, avoid:
 Right now, `aoa-techniques` is best released as:
 
 - a curated public corpus
+- a self-serve repo with one bounded repo-owned entrypoint
 - a reusable technique library
 - a validated repo structure
 - a documented contribution and promotion path

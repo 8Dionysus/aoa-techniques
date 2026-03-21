@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from scripts import validate_repo
+from scripts import release_check, validate_repo
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -43,6 +43,31 @@ def build_required_section_body(
 
 
 class ValidateRepoRegressionTests(unittest.TestCase):
+    def test_release_check_sequence_matches_documented_repo_build_path(self) -> None:
+        self.assertEqual(
+            (
+                ("python", "scripts/build_repo_doc_surface_manifest.py"),
+                ("python", "scripts/build_catalog.py"),
+                ("python", "scripts/build_capsules.py"),
+                ("python", "scripts/build_sections.py"),
+                ("python", "scripts/build_section_manifest.py"),
+                ("python", "scripts/build_checklist_manifest.py"),
+                ("python", "scripts/build_example_manifest.py"),
+                ("python", "scripts/build_evidence_note_manifest.py"),
+                ("python", "scripts/build_github_review_template_manifest.py"),
+                ("python", "scripts/build_semantic_review_manifest.py"),
+                ("python", "scripts/build_shadow_review_manifest.py"),
+                ("python", "-m", "unittest", "discover", "-s", "tests"),
+                ("python", "scripts/validate_repo.py"),
+            ),
+            release_check.RELEASE_CHECK_COMMAND_SEQUENCE,
+        )
+        self.assertEqual(
+            ("git", "status", "--porcelain=v1", "--untracked-files=all"),
+            release_check.WORKTREE_SNAPSHOT_COMMAND,
+        )
+        self.assertEqual(("git", "diff", "--exit-code"), release_check.CLEAN_REPO_DIFF_COMMAND)
+
     def test_expected_evidence_kind_maps_adverse_effects_review_filename(self) -> None:
         self.assertEqual(
             "adverse_effects_review",
@@ -590,8 +615,34 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "| I need strict-vs-optional rendering policy | [AOA-T-0011]",
             selection_patterns,
         )
+        self.assertIn("START_HERE.md", selection_patterns)
         self.assertIn("KAG/source-lift family", selection_patterns)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", selection_patterns)
+
+    def test_start_here_routes_repo_only_reading_paths(self) -> None:
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
+
+        for target in (
+            "TECHNIQUE_SELECTION.md",
+            "SELECTION_PATTERNS.md",
+            "TECHNIQUE_INDEX.md",
+            "TECHNIQUE_CAPSULES.md",
+            "REPO_DOC_SURFACES.md",
+            "KAG_SOURCE_LIFT_GUIDE.md",
+            "LONG_GAP_CANON_DESIGN.md",
+            "aoa-skills",
+            "aoa-evals",
+            "aoa-routing",
+            "17 canonical",
+            "5 promoted",
+            "AOA-T-0005",
+            "AOA-T-0013",
+            "AOA-T-0018",
+            "AOA-T-0020",
+            "AOA-T-0022",
+            "python scripts/release_check.py",
+        ):
+            self.assertIn(target, start_here)
 
     def test_kag_source_lift_family_has_second_context_and_readiness_notes(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
@@ -711,7 +762,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         surfaces = validate_repo.parse_repo_doc_surfaces(REPO_ROOT)
         source_paths = {surface.doc_path for surface in surfaces}
 
-        self.assertEqual(10, len(surfaces))
+        self.assertEqual(11, len(surfaces))
         self.assertEqual(
             {spec["doc_path"] for spec in validate_repo.REPO_DOC_SURFACE_SPECS},
             source_paths,
@@ -756,6 +807,19 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         self.assertEqual(
             (
+                "What This Repo Is",
+                "If You Need One Technique Now",
+                "If You Need To Understand Maturity And Review",
+                "If You Need Derived Surfaces",
+                "Current Corpus Posture",
+                "Repo-Only Operating Contract",
+                "When To Leave This Repo",
+                "Release And Validation",
+            ),
+            surfaces_by_path["docs/START_HERE.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
                 "Start Here",
                 "Surface Types",
                 "Recommended Reading Paths",
@@ -791,7 +855,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             list(validate_repo.REPO_DOC_SURFACE_GROUP_ORDER),
             [group["group"] for group in actual_full["surface_groups"]],
         )
-        self.assertEqual(10, len(actual_full["docs"]))
+        self.assertEqual(11, len(actual_full["docs"]))
 
     def test_repo_doc_surfaces_generated_reader_matches_builder_and_stays_bounded(self) -> None:
         validate_repo.validate_repo_doc_surface_reader(REPO_ROOT)
@@ -808,6 +872,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("Walkthrough / Context", repo_doc_surfaces)
         self.assertIn("Status / Release", repo_doc_surfaces)
         self.assertIn("README.md", repo_doc_surfaces)
+        self.assertIn("docs/START_HERE.md", repo_doc_surfaces)
         self.assertIn("docs/RELEASING.md", repo_doc_surfaces)
         self.assertIn("repo_doc_surface_manifest.json", repo_doc_surfaces)
         self.assertNotIn("](../TODO.md)", repo_doc_surfaces)
@@ -826,6 +891,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         releasing = (REPO_ROOT / "docs" / "RELEASING.md").read_text(encoding="utf-8")
 
+        self.assertIn("START_HERE.md", docs_readme)
+        self.assertIn("docs/START_HERE.md", readme)
+        self.assertIn("docs/START_HERE.md", changelog)
+        self.assertIn("START_HERE.md", kag_source_guide)
+        self.assertIn("START_HERE.md", releasing)
         self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
         self.assertIn("repo_doc_surface_manifest.json", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
@@ -841,6 +911,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("repo_doc_surface_manifest.json", kag_source_guide)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", kag_source_guide)
         self.assertIn("REPO_DOC_SURFACES.md", kag_source_guide)
+        self.assertIn("python scripts/release_check.py", readme)
+        self.assertIn("python scripts/release_check.py", releasing)
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
 
@@ -1112,7 +1184,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("TECHNIQUE_CAPSULES.md", changelog)
         self.assertIn("TECHNIQUE_CAPSULE_GUIDE.md", changelog)
         self.assertIn("technique_capsules.min.json", changelog)
+        self.assertIn("TECHNIQUE_CAPSULES.md", (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8"))
         self.assertIn("python scripts/build_capsules.py", releasing)
+        self.assertIn("python scripts/release_check.py", releasing)
         self.assertIn("generated/technique_capsules.min.json", releasing)
         self.assertIn("docs/TECHNIQUE_CAPSULES.md", releasing)
 

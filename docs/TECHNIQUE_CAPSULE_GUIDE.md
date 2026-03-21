@@ -5,10 +5,18 @@ This guide defines the bounded contract behind the local runtime capsule family.
 Capsules are derived lookup cards for local runtime use. They are not KAG/source-lift surfaces, they do not replace `TECHNIQUE.md`, and they do not become a new source of truth.
 
 See also:
+- [Start Here](START_HERE.md)
 - [Technique Capsules](TECHNIQUE_CAPSULES.md)
 - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
 - [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
 - [Documentation Map](README.md)
+
+This family uses one stable shape:
+
+- authoritative source: frontmatter `summary` plus a fixed bounded section set from `TECHNIQUE.md`
+- reader companion: `TECHNIQUE_CAPSULES.md`
+- derived manifests: `generated/technique_capsules.json` and `generated/technique_capsules.min.json`
+- what it must not become: selection, scoring, policy routing, or a new KAG/source-lift family
 
 ## Source Contract
 
@@ -26,7 +34,7 @@ Every capsule stays bounded to one frontmatter field plus a fixed section set fr
 
 The generator may shorten or normalize those sections into runtime-card language, but it must stay derived from the authored bundle and route readers back to that bundle.
 
-## Runtime Surfaces
+## Reader Companion And Derived Manifests
 
 The capsule family currently exposes four bounded surfaces:
 
@@ -74,4 +82,5 @@ The runtime card fields are intentionally narrow:
 When the source bundle changes, regenerate the capsule family:
 
 - `python scripts/build_capsules.py`
+- `python scripts/release_check.py`
 - `python scripts/validate_repo.py`

@@ -63,6 +63,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_semantic_review_manifest.py",
     "scripts/build_shadow_review_manifest.py",
     "scripts/build_repo_doc_surface_manifest.py",
+    "scripts/release_check.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_capsules.json",
@@ -283,7 +284,7 @@ REPO_DOC_SURFACE_GROUP_SPECS = (
     {
         "group": "entrypoint/map",
         "heading": "Entrypoint / Map",
-        "note": "Open these first when the question is where to start or which public repo map should anchor the next read.",
+        "note": "Open these first when the question is where to start or which public repo map or self-serve entrypoint should anchor the next read.",
     },
     {
         "group": "contribution/policy",
@@ -304,8 +305,13 @@ REPO_DOC_SURFACE_GROUP_SPECS = (
 REPO_DOC_NAVIGATION_SPECS = (
     {
         "question": "Where should I start if I am new to the repository?",
-        "doc_ids": ("readme", "docs_readme", "technique_index"),
-        "note": "Start with the root README, then use the docs map and technique index for bounded navigation.",
+        "doc_ids": ("readme", "start_here", "technique_index"),
+        "note": "Start with the root README, then use Start Here and the technique index for bounded navigation.",
+    },
+    {
+        "question": "Where is the repo-only self-serve route before deeper guides split out?",
+        "doc_ids": ("start_here", "docs_readme"),
+        "note": "Use Start Here for the shortest repo-owned route, then open the docs map only when you need the deeper guide and generated-surface tree.",
     },
     {
         "question": "Where do contribution rules and PR boundaries live?",
@@ -331,6 +337,12 @@ REPO_DOC_SURFACE_SPECS = (
         "bounded_role": "root entrypoint for repository purpose, scope, and first-read routing",
     },
     {
+        "doc_id": "start_here",
+        "doc_path": "docs/START_HERE.md",
+        "surface_group": "entrypoint/map",
+        "bounded_role": "repo-owned self-serve entrypoint for route selection, corpus posture, and stay-here versus leave-here decisions",
+    },
+    {
         "doc_id": "technique_index",
         "doc_path": "TECHNIQUE_INDEX.md",
         "surface_group": "entrypoint/map",
@@ -340,7 +352,7 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_id": "docs_readme",
         "doc_path": "docs/README.md",
         "surface_group": "entrypoint/map",
-        "bounded_role": "docs-layer entrypoint for generated surfaces, guides, and recommended reading paths",
+        "bounded_role": "docs-layer map for deeper guides, generated surfaces, and recommended reading paths after the main entrypoint",
     },
     {
         "doc_id": "agents",
@@ -2515,8 +2527,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 10:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 10 authoritative docs/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 11:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 11 authoritative docs/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 
@@ -4533,10 +4545,13 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         "4. use direct `relations` as adjacency hints, not graph traversal",
         "",
         "See also:",
+        "- [Start Here](START_HERE.md)",
         "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
         "- [CANONICAL_RUBRIC](CANONICAL_RUBRIC.md)",
         "- [Full catalog JSON](../generated/technique_catalog.json)",
         "- [Min catalog JSON](../generated/technique_catalog.min.json)",
+        "",
+        "If you still need repo-level orientation before choosing a technique, open `START_HERE.md` first.",
         "",
         "## Quick Questions",
         "",
@@ -4728,6 +4743,7 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
         "It stays bounded to the current authored docs/status source set. It excludes local planning files such as `TODO.md`, `PLANS.md`, and `ROADMAP.md`, plus deeper guide/review docs that belong to later waves.",
         "",
         "See also:",
+        "- [Start Here](START_HERE.md)",
         "- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)",
         "- [Full repo doc surface manifest](../generated/repo_doc_surface_manifest.json)",
         "- [Documentation Map](README.md)",
@@ -4781,7 +4797,7 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
             "## Boundaries",
             "",
             "- The source of meaning stays in the authored docs themselves.",
-            "- The bounded source set is exactly the 10 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
+            "- The bounded source set is exactly the 11 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
             "- This surface and its manifest are routing aids only. They do not become a new source of truth or a status-policy engine.",
             "",
         ]
@@ -4812,9 +4828,12 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
         "This surface uses direct relation navigation, validator-backed starting points and common moves, and review-backed clusters only. It does not do graph search, scoring, or multi-hop reasoning.",
         "",
         "See also:",
+        "- [Start Here](START_HERE.md)",
         "- [Technique Selection](TECHNIQUE_SELECTION.md)",
         "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
         "- [Full catalog JSON](../generated/technique_catalog.json)",
+        "",
+        "If you still need repo-level orientation before following a working set or common move, open `START_HERE.md` first.",
         "",
         "## Starting Points",
         "",
