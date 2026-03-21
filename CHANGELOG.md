@@ -21,6 +21,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Changed
 
+- standalone self-serve program now adds `docs/START_HERE.md` as the repo-owned entrypoint, expands the repo-doc surface family to include it, adds `python scripts/release_check.py` as the bounded release-prep command, and aligns guide vocabulary across repo-doc, capsule, KAG reader, and shadow surface families
 - evidence-harvest wave now records live donor posture for the KAG/source-lift family in `KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md` without changing statuses or validator specs
 - hybrid canon completion program now lands committed Stage 1 donor evidence from `aoa-skills` and `aoa-routing`, promotes `AOA-T-0017 property-invariants` and `AOA-T-0021 bounded-relation-lift-for-kag` to `canonical`, adds canonical-only `adverse-effects-review` notes for both bundles, and records the long-gap donor design for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - selective KAG promotion sync now promotes `AOA-T-0019 frontmatter-metadata-spine` to `canonical`, adds a canonical-only `adverse-effects-review` note, and makes it the bounded metadata-spine default for the KAG/source-lift family
@@ -51,12 +52,14 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Validation
 
+- `python scripts/release_check.py`
 - `python -m unittest discover -s tests`
 - `python scripts/validate_repo.py`
 - `python scripts/build_repo_doc_surface_manifest.py`
 - `python scripts/build_catalog.py`
 - `python scripts/build_shadow_review_manifest.py`
 - `python scripts/build_capsules.py`
+- `python scripts/build_sections.py`
 - `python scripts/build_section_manifest.py`
 - `python scripts/build_checklist_manifest.py`
 - `python scripts/build_example_manifest.py`

@@ -10,10 +10,13 @@ Use this surface to make one bounded choice:
 4. use direct `relations` as adjacency hints, not graph traversal
 
 See also:
+- [Start Here](START_HERE.md)
 - [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
 - [CANONICAL_RUBRIC](CANONICAL_RUBRIC.md)
 - [Full catalog JSON](../generated/technique_catalog.json)
 - [Min catalog JSON](../generated/technique_catalog.min.json)
+
+If you still need repo-level orientation before choosing a technique, open `START_HERE.md` first.
 
 ## Quick Questions
 

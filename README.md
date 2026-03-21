@@ -13,14 +13,16 @@ A technique here is a minimal reproducible unit of engineering practice.
 
 If you are new to this repository, follow this short path:
 
-1. Read `TECHNIQUE_INDEX.md` to see the current technique map.
-2. Open `docs/README.md` for a human-first map of the repository docs surface and recommended reading paths.
-3. Open `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md` to see one full technique end to end.
-4. Use `templates/TECHNIQUE.template.md` as the starting point for authoring a new technique.
-5. Follow `CONTRIBUTING.md` for the contribution and PR path.
+1. Read `docs/START_HERE.md` for the one repo-owned self-serve entrypoint.
+2. Read `TECHNIQUE_INDEX.md` to see the current technique map.
+3. Open `docs/README.md` for the deeper docs map and reading paths.
+4. Open `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md` to see one full technique end to end.
+5. Use `templates/TECHNIQUE.template.md` as the starting point for authoring a new technique.
+6. Follow `CONTRIBUTING.md` for the contribution and PR path.
 
 ## Quick routes
 
+- if you want one repo-owned entrypoint before choosing any deeper surface, open `docs/START_HERE.md`
 - if you need bounded execution workflows built from techniques, go to [aoa-skills](https://github.com/8Dionysus/aoa-skills)
 - if you need portable proof surfaces for quality or boundary claims, go to [aoa-evals](https://github.com/8Dionysus/aoa-evals)
 - if you need the smallest next surface by task type, go to [aoa-routing](https://github.com/8Dionysus/aoa-routing)
@@ -28,11 +30,13 @@ If you are new to this repository, follow this short path:
 
 ## Deeper routes
 
+- for one repo-only orientation path that already routes humans and agents, open `docs/START_HERE.md`
 - for one end-to-end origin-to-public example, read `WALKTHROUGH.md`
 - for generated navigation and chooser surfaces, open `docs/TECHNIQUE_SELECTION.md`, `docs/SELECTION_PATTERNS.md`, and `docs/SHADOW_PATTERNS.md`
 - for runtime cards and capsule contracts, open `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
 - for repo-doc routing, source-lift readers and manifests, and reusable lift guides, open `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`, and the reusable lift family under `techniques/docs/`, including `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md`
 - for review and shadow surfaces, open `generated/shadow_review_manifest.json`, canonical `notes/adverse-effects-review.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md`, `docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md`, `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md`, and `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
+- for one bounded release-prep path inside this repo, read `docs/RELEASING.md` and run `python scripts/release_check.py`
 
 ## What belongs here
 

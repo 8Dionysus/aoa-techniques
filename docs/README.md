@@ -4,10 +4,14 @@ This file is the human-first entrypoint for the repository's `docs/` surface.
 
 Use it when you want to understand **which doc to open next** without guessing from filenames alone.
 
+If you want one repo-owned entrypoint before this deeper docs map, open [Start Here](START_HERE.md).
+
 ## Start Here
 
 Choose the path that matches your question:
 
+- I need one repo-only entrypoint first:
+  - [Start Here](START_HERE.md)
 - I need to pick a technique now:
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
@@ -17,6 +21,7 @@ Choose the path that matches your question:
   - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
   - [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
 - I need to understand status, review posture, or canonical promotion:
+  - [Start Here](START_HERE.md)
   - [Canonical Rubric](CANONICAL_RUBRIC.md)
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
   - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
@@ -60,6 +65,7 @@ Choose the path that matches your question:
   - [Skill-Support Semantic Review](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
   - [KAG Source Lift Semantic Review](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
 - I need release process guidance:
+  - [Start Here](START_HERE.md)
   - [Releasing `aoa-techniques`](RELEASING.md)
 
 ## Surface Types
@@ -140,6 +146,7 @@ These are derived review-knowledge surfaces for KAG/source-lift lookup. They sta
 
 These are human-authored guides that define bounded review, metadata, and documentation discipline.
 
+- [Start Here](START_HERE.md)
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
@@ -205,37 +212,40 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 
 ### New reader path
 
-1. [README](../README.md)
-2. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
-3. [Technique Selection](TECHNIQUE_SELECTION.md)
-4. one concrete `TECHNIQUE.md` bundle
+1. [Start Here](START_HERE.md)
+2. [README](../README.md)
+3. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
+4. [Technique Selection](TECHNIQUE_SELECTION.md)
+5. one concrete `TECHNIQUE.md` bundle
 
 ### Reviewer path
 
-1. [Canonical Rubric](CANONICAL_RUBRIC.md)
-2. [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-3. [Shadow Patterns](SHADOW_PATTERNS.md) when the question is about caution seams rather than technique choice
-4. one technique bundle plus its `notes/`; for `canonical` bundles include `canonical-readiness.md` and `adverse-effects-review.md`
-5. a relevant semantic-review or shadow-review pilot if the technique sits inside a reviewed cluster
+1. [Start Here](START_HERE.md)
+2. [Canonical Rubric](CANONICAL_RUBRIC.md)
+3. [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
+4. [Shadow Patterns](SHADOW_PATTERNS.md) when the question is about caution seams rather than technique choice
+5. one technique bundle plus its `notes/`; for `canonical` bundles include `canonical-readiness.md` and `adverse-effects-review.md`
+6. a relevant semantic-review or shadow-review pilot if the technique sits inside a reviewed cluster
 
 ### KAG / lift path
 
-1. [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-2. [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
-3. [Technique Sections](TECHNIQUE_SECTIONS.md)
-4. [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
-5. [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
-6. [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
-7. [Technique Examples](TECHNIQUE_EXAMPLES.md)
-8. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
-9. [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
-10. [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
-11. [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-12. [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
-13. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
-14. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-15. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
-16. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
+1. [Start Here](START_HERE.md)
+2. [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+3. [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
+4. [Technique Sections](TECHNIQUE_SECTIONS.md)
+5. [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
+6. [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
+7. [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
+8. [Technique Examples](TECHNIQUE_EXAMPLES.md)
+9. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
+10. [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
+11. [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
+12. [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
+13. [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
+14. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
+15. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+16. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
+17. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
 
 ## Companion Repository Surfaces
 
@@ -250,6 +260,7 @@ These are outside `docs/` but matter when navigating the repo:
 
 ## Notes
 
+- Prefer [Start Here](START_HERE.md) when the question is "where should I begin inside this repo before choosing a deeper surface?"
 - Prefer generated reader surfaces when the question is "what should I inspect next?"
 - Prefer `TECHNIQUE_SECTIONS.md` when the question is "which published techniques expose this lifted section heading?"
 - Prefer `../generated/technique_sections.full.json` when the question is "which exact technique section should I expand next?"

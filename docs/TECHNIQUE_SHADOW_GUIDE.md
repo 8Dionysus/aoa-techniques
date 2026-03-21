@@ -7,9 +7,19 @@ Use it when a technique already has intent, contracts, and validation, but its `
 This guide is review-first. It does not add schema fields or machine-readable shadow metadata.
 
 See also:
+- [Start Here](START_HERE.md)
+- [SHADOW_PATTERNS.md](SHADOW_PATTERNS.md)
+- [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
 - [Documentation Map](README.md)
 - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
 - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+
+This family uses one stable shape:
+
+- authoritative source: authored `Risks` sections plus canonical-only `notes/adverse-effects-review.md` where needed
+- reader companion: `SHADOW_PATTERNS.md`
+- derived manifest: `generated/shadow_review_manifest.json`
+- what it must not become: generated caution policy, scoring, or machine-readable shadow metadata
 
 ## Why `Risks` Alone Is Too Weak
 

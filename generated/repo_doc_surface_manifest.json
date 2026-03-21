@@ -5,7 +5,7 @@
     {
       "group": "entrypoint/map",
       "heading": "Entrypoint / Map",
-      "note": "Open these first when the question is where to start or which public repo map should anchor the next read."
+      "note": "Open these first when the question is where to start or which public repo map or self-serve entrypoint should anchor the next read."
     },
     {
       "group": "contribution/policy",
@@ -45,6 +45,23 @@
       ]
     },
     {
+      "doc_id": "start_here",
+      "doc_path": "docs/START_HERE.md",
+      "title": "Start Here",
+      "surface_group": "entrypoint/map",
+      "bounded_role": "repo-owned self-serve entrypoint for route selection, corpus posture, and stay-here versus leave-here decisions",
+      "top_level_sections": [
+        "What This Repo Is",
+        "If You Need One Technique Now",
+        "If You Need To Understand Maturity And Review",
+        "If You Need Derived Surfaces",
+        "Current Corpus Posture",
+        "Repo-Only Operating Contract",
+        "When To Leave This Repo",
+        "Release And Validation"
+      ]
+    },
+    {
       "doc_id": "technique_index",
       "doc_path": "TECHNIQUE_INDEX.md",
       "title": "TECHNIQUE_INDEX",
@@ -62,7 +79,7 @@
       "doc_path": "docs/README.md",
       "title": "Documentation Map",
       "surface_group": "entrypoint/map",
-      "bounded_role": "docs-layer entrypoint for generated surfaces, guides, and recommended reading paths",
+      "bounded_role": "docs-layer map for deeper guides, generated surfaces, and recommended reading paths after the main entrypoint",
       "top_level_sections": [
         "Start Here",
         "Surface Types",

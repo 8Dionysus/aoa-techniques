@@ -5,10 +5,18 @@ This guide defines the bounded contract for `markdown-technique-section-lift`.
 Use it when the repository already has stable `TECHNIQUE.md` structure, but the next question is how the first lifted sections can become a derived routing surface without turning section markdown into IDs, scoring, or graph behavior.
 
 See also:
+- [Start Here](START_HERE.md)
 - [Technique Sections](TECHNIQUE_SECTIONS.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
 - [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
 - [Documentation Map](README.md)
+
+This family uses one stable shape:
+
+- authoritative source: authored `TECHNIQUE.md` markdown with stable heading order
+- reader companion: `TECHNIQUE_SECTIONS.md`
+- derived manifests: `generated/technique_section_manifest.json` and `generated/technique_section_manifest.min.json`
+- what it must not become: section IDs, section scoring, search expansion, or graph behavior
 
 ## Source Contract
 
@@ -32,7 +40,7 @@ The current lifted heading set is:
 - `Validation`
 - `Adaptation notes`
 
-## Generated Surfaces
+## Reader Companion And Derived Manifests
 
 The generated outputs for this source class are:
 
@@ -72,5 +80,6 @@ The meaning remains in the source markdown.
 Regenerate and verify this source class with:
 
 - `python scripts/build_section_manifest.py`
+- `python scripts/release_check.py`
 - `python -m unittest discover -s tests`
 - `python scripts/validate_repo.py`
