@@ -1581,6 +1581,230 @@
           "markdown": "What can vary across projects:\n- the confirmation UI or terminal prompt\n- the shape of the proposed mutation text\n- the command runner or automation wrapper behind the action\n- the repository or tool surface being mutated\n\nWhat should stay invariant:\n- the confirmation seam stays explicit\n- read or plan and mutation remain distinct\n- a fresh confirmation is required when the action changes scope\n- the technique remains a bounded action gate, not a hidden autonomous loop\n\nProject-shaped details that should not be treated as invariant:\n- provider-specific shell behavior\n- install or onboarding scripts\n- generic approval phrasing that does not name the mutation\n- multi-step orchestration details"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0029",
+      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Load rule content through a hierarchy of layers so shared defaults, scoped overrides, and explicit precedence can coexist without turning nested layers into independent sources of truth."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- repositories or instruction trees that already organize rules into parent and nested layers\n- projects that need explicit precedence between shared defaults and scoped local additions\n- workflows where the issue is layer loading order, not broad multi-target distribution\n- cases where nested layers should remain subordinate to one canonical source of ownership"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- repositories that only need one flat instruction surface\n- workflows where the real need is one canonical rule source fanning out to multiple managed targets\n- projects that cannot keep precedence rules explicit and reviewable\n- cases where the broader need is MCP propagation, skills propagation, or other product-width orchestration"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one canonical rule source that owns shared meaning\n- one or more nested rule layers that add scoped content\n- one explicit precedence order between parent and child layers\n- one loading step that resolves the hierarchy without hand-merging every layer"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- layered rule output with deterministic precedence\n- shared defaults preserved at the canonical layer\n- scoped nested additions kept visible and subordinate\n- lower drift risk when parent rules evolve"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Author the shared rule core in one canonical source.\n2. Place nested layers only where scoped additions or overrides are needed.\n3. Define the precedence order explicitly before relying on the loaded result.\n4. Load parent rules and nested layers in the declared order rather than by implicit filesystem accident.\n5. Keep each nested layer subordinate to the canonical source of ownership.\n6. Re-run the loader whenever shared rules or precedence rules change.\n7. Review the final layered output together with the source hierarchy so ownership stays legible."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one canonical source owns the shared meaning\n- nested layers are scoped additions, not independent canonical homes\n- precedence is explicit and reviewable\n- the same hierarchy and loading rules produce the same resolved rule order\n- nested layers must not silently become the source of truth\n- this technique stays centered on hierarchical loading, not on multi-target propagation or broader orchestration\n\nRelationship to adjacent techniques: unlike `AOA-T-0013`, this technique is about hierarchical rule loading and explicit precedence inside a layered tree rather than one canonical rule source fanning out to many managed targets. It complements `AOA-T-0013` by handling the nested-layer case without widening into multi-target distribution."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- precedence becomes implicit, so nested layers override parent meaning in ways reviewers cannot predict\n- nested layers start behaving like independent canonical sources instead of scoped subordinate layers\n- the loading order drifts from the documented hierarchy and the resolved rule set no longer matches the source tree\n\n### Negative effects\n\n- hierarchical loading can hide simple rule changes behind multiple layers when the precedence contract is not obvious\n- nested overrides can make the resolved output look stable while the ownership boundary has already blurred\n- maintainers may add more layer-specific exceptions instead of narrowing the shared rule core\n\n### Misuse patterns\n\n- widening the technique into full rule distribution across unrelated targets\n- using nested loading as a substitute for explicit source ownership\n- hiding MCP, skills, or installer behavior inside the same contract\n- letting nested layers accumulate special-case policy until the hierarchy becomes unreadable\n\n### Detection signals\n\n- reviewers cannot explain why one rule wins over another without implementation details\n- a nested layer starts carrying meaning that should clearly live in the parent canonical source\n- the same hierarchy resolves differently after small unrelated edits\n- the team talks more about target behavior than about the declared precedence rules\n\n### Mitigations\n\n- keep precedence explicit and documented alongside the hierarchy\n- re-route shared meaning back into the canonical source instead of multiplying nested overrides\n- limit nested layers to scoped additions that remain easy to trace\n- split broader propagation or product behavior into separate techniques if it starts to dominate the contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one canonical source is still the owner of shared meaning\n- nested layers resolve in the documented precedence order\n- removing a nested layer only removes its scoped additions\n- nested layers remain subordinate to the canonical source\n- the resolved output is repeatable from the declared hierarchy\n\nSee `checks/nested-rule-loading-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the file layout used for parent and nested rule layers\n- the exact loader or build step that resolves the hierarchy\n- the amount of scoped override each nested layer is allowed to carry\n- the syntax used to describe precedence\n\nWhat should stay invariant:\n- one canonical source owns the shared rule meaning\n- nested layers remain subordinate and scoped\n- precedence is explicit rather than implicit\n- the technique stays about hierarchical loading, not a general propagation or orchestration system\n\nProject-shaped details that should not be treated as invariant:\n- exact directory names in the donor repository\n- CLI packaging or install flow\n- MCP propagation\n- skills propagation\n- broader product features around the loader"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0030",
+      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep agent context authored in smaller bounded fragments so source partitioning, local ownership, and modular review stay clear before any later deterministic assembly step exists."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- repositories where one large hand-maintained agent context file has become hard to review or extend\n- projects that want context ownership to stay close to local subtrees, topics, or responsibilities\n- workflows where modular authoring matters even before a generated aggregate artifact is introduced\n- cases where the main question is source partitioning rather than final output assembly"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- repositories that only need one short context file and do not benefit from fragment boundaries\n- workflows where the real reusable object is deterministic assembly into one generated artifact\n- systems that mainly need CI reporting, token-drift visibility, or validation outputs rather than fragment-first authoring\n- cases where context injection behavior or runtime loading is the real center of gravity"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one set of context fragments with bounded local scope\n- one naming or placement rule that keeps fragment ownership legible\n- one review path that treats fragments as the editable source of truth\n- one optional downstream assembly step that remains separate from this technique"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- modular context sources that are easier to review and evolve\n- clearer local ownership over context content\n- lower pressure to keep one large context document hand-maintained\n- one cleaner source layer for any later deterministic assembly or CI reporting technique"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Break the agent context into smaller fragments with bounded topical or local scope.\n2. Place each fragment near the part of the repository or responsibility it describes.\n3. Keep one explicit rule for how fragment names or locations signal their intended scope.\n4. Review and edit the fragments directly instead of treating a later aggregate artifact as the canonical source.\n5. Keep fragment boundaries stable enough that a reviewer can explain why each fragment exists and where it belongs.\n6. Add deterministic assembly or CI reporting only as separate downstream techniques when the repository actually needs them."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- fragments remain the editable source of truth for the partitioned context layer\n- each fragment carries bounded scope rather than becoming a generic dump of nearby guidance\n- fragment placement and naming make ownership legible to reviewers\n- the technique stays about modular source partitioning before assembly\n- deterministic composition into one artifact remains outside this contract\n- CI reporting, token-drift reporting, and runtime injection behavior remain outside this contract\n\nRelationship to adjacent techniques: unlike `AOA-T-0012`, this technique stops at fragment-first authoring and does not own deterministic composition into one generated artifact. It complements `AOA-T-0012` by making the fragment layer itself reviewable and bounded before assembly begins."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- fragment boundaries become arbitrary, so the context is split across files without clearer ownership\n- contributors start editing a generated aggregate instead of the fragments that are supposed to stay canonical\n- local fragments drift into duplicate or conflicting guidance because their scope is no longer legible\n\n### Negative effects\n\n- fragment-first authoring can add route friction if contributors must open too many files to understand one context area\n- local placement can make context feel tidy while actually hiding duplicate guidance across neighboring fragments\n- a repository can over-fragment the context layer and create editorial overhead without gaining clearer ownership\n\n### Misuse patterns\n\n- widening the technique into deterministic composition instead of keeping it at the source-partitioning layer\n- treating fragment discovery rules or file globs as the main reusable object\n- using fragment-first authoring as a cover for runtime injection, hidden loading, or validation behavior\n\n### Detection signals\n\n- reviewers cannot explain why a fragment belongs where it does or what scope it owns\n- a generated aggregate becomes the de facto file contributors edit first\n- several fragments repeat the same guidance with only minor wording changes\n- the repository debates assembly behavior more than the fragment boundaries themselves\n\n### Mitigations\n\n- narrow each fragment to one clear local scope and reject generic catch-all fragments\n- route edits back to canonical fragments rather than patching a generated aggregate\n- merge or remove fragments when boundaries no longer help reviewers understand ownership\n- split deterministic assembly, CI reporting, or runtime behavior into separate sibling techniques when they become the real reusable object"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the fragment set is the editable source of truth\n- each fragment has bounded scope that a reviewer can explain\n- fragment placement or naming makes local ownership legible\n- the repository can add or remove one fragment without making the rest of the layer unreadable\n- deterministic assembly, CI reporting, and runtime injection remain outside this bounded contract\n\nSee `checks/fragmented-agent-context-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the folder layout used for fragments\n- the naming convention for fragment files\n- how narrowly each fragment is scoped\n- whether a later assembly step exists at all\n\nWhat should stay invariant:\n- context is authored in bounded fragments before any aggregate output\n- fragments stay canonical and reviewable\n- fragment scope and placement remain legible\n- this technique remains about source partitioning rather than final generated output\n\nProject-shaped details that should not be treated as invariant:\n- exact file suffixes or fragment-glob patterns\n- deterministic assembly behavior\n- CI reporting details\n- runtime injection rules or hidden loading mechanics"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0031",
+      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep agent invocations composable as shell tools so one-shot runs can read from stdin, write to stdout, work with files, and fit into pipes without turning into hidden long-lived sessions."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- shell-side workflows where an agent should behave like one more composable command\n- cases where files, pipes, and explicit terminal inputs are a better boundary than hidden conversational memory\n- repositories that want agent output to slot into existing command-line workflows\n- one-shot runs where the main reusable value is shell composability rather than confirmation or multi-step orchestration"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- workflows where the real need is a visible confirmation seam before mutation\n- tasks that need multi-step planning, verification, and reporting across several dependent actions\n- repositories looking for generic shell best practices rather than one agent-specific invocation contract\n- cases where a hidden long-lived session or autonomous loop is the real execution model"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one explicit one-shot question or action request\n- one shell-visible input path such as stdin, stdout, a file path, or a pipe\n- one invocation boundary that ends after the current command finishes\n- one optional lightweight wrapper that still preserves shell composability"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one shell-friendly agent invocation that works in pipelines and file-based flows\n- lower friction when combining agent output with existing command-line tools\n- one explicit boundary between this run and the next run\n- lower pressure to turn the agent into a hidden long-running shell session"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Treat the agent run as one shell-visible invocation, not as a hidden background conversation.\n2. Pass inputs through explicit shell channels such as stdin, stdout, file paths, or pipes.\n3. Keep the invocation output composable so another shell command or review step can consume it directly.\n4. End the invocation after the current answer or action result instead of stretching it into a hidden loop.\n5. Use a different sibling technique when the real need is confirmation-gated mutation or a broader workflow backbone."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the agent run stays one-shot and shell-visible\n- stdin, stdout, files, or pipes remain the primary composition boundary\n- the technique stays focused on composability, not on generic shell guidance\n- confirmation logic may exist nearby, but it is not the core invariant here\n- the invocation does not become a hidden autonomous loop or long-lived memory layer\n- shell composability remains distinct from broader workflow orchestration\n\nRelationship to adjacent techniques: unlike `AOA-T-0023`, this technique is centered on shell composability through explicit stdin, stdout, files, and pipes rather than on the broader stateless fast-path posture. Unlike `AOA-T-0028`, it is not centered on the confirmation seam before mutation."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the invocation stops behaving like a shell tool and starts depending on hidden session state\n- output stops being easy to pipe or capture because the run accumulates interactive or product-shaped behavior\n- shell wrappers become so elaborate that the composable boundary is no longer visible\n\n### Negative effects\n\n- shell composability can make an agent feel simpler than it is, even when the underlying action still needs careful review\n- one-shot command ergonomics can tempt teams to force every task into a pipe-friendly shape\n- wrapper churn can create portability problems if the technique depends too much on one CLI surface\n\n### Misuse patterns\n\n- widening the bundle into generic shell best practices\n- treating confirmation or broader workflow safety as if shell composability alone already provides it\n- turning a composable one-shot invocation into a disguised long-lived agent session\n\n### Detection signals\n\n- reviewers can no longer explain how stdin, stdout, or files delimit the invocation\n- the command only works through hidden local state or interactive side channels\n- the output is not usable in a pipe, file handoff, or explicit shell review step\n- the team debates autonomous loop behavior more than the one-shot composition boundary\n\n### Mitigations\n\n- keep the invocation one-shot and centered on explicit shell I/O\n- route mutation safety into `AOA-T-0028` and broader workflow orchestration into `AOA-T-0001` when those become the main concern\n- narrow wrappers until the underlying composable command boundary is easy to explain\n- split out product-shaped session features instead of widening this shell contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the run behaves like one shell-visible invocation\n- inputs and outputs can move through stdin, stdout, files, or pipes\n- the invocation ends cleanly after one result\n- shell composability stays visible without relying on hidden session state\n- confirmation or broader workflow safety is not falsely implied by the shell boundary alone\n\nSee `checks/shell-composable-agent-invocation-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact wrapper command\n- whether the invocation prefers stdin, file paths, or pipes\n- the shape of the output consumed downstream\n- the shell environment around the run\n\nWhat should stay invariant:\n- the agent run is one-shot and shell-visible\n- stdin, stdout, files, or pipes define the composition boundary\n- the invocation remains composable with other shell steps\n- the technique stays distinct from confirmation logic and broader workflow orchestration\n\nProject-shaped details that should not be treated as invariant:\n- exact install flows\n- provider or profile matrices\n- product-specific formatting behavior\n- hidden session features or history toggles"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0032",
+      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Produce a bounded CI-facing report that tells reviewers how well a composed context covered its expected sources, how much token-estimate drift appeared, and whether any composition-related check needs follow-up."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- CI jobs that need one readable report about context composition health\n- repositories that want source coverage and token drift visible without opening the composition engine itself\n- checks that should observe context assembly quality while leaving remediation decisions to another surface\n- workflows where the main need is reporting on composition, not performing composition"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- when the main task is deterministic context composition itself\n- when the task is to create a remediation snapshot over published summaries\n- when the task needs provider/runtime telemetry, product-wide monitoring, or generalized observability\n- when the report would become a hidden policy engine instead of a bounded CI artifact"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one composed or assembled context artifact\n- source coverage signals or fragment inventory\n- token estimates for the composed artifact\n- one CI-facing execution point that can emit the report"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one CI-readable report describing source coverage and drift\n- one bounded view of token-estimate changes or mismatches\n- one place to see composition-related warnings without opening the composition engine\n- a clear handoff to the next review or remediation step when the report finds a problem"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Read the composed context artifact and the source list that was supposed to feed it.\n2. Compare the expected source coverage with the actual coverage.\n3. Compare expected token estimates with the observed estimate or delta.\n4. Report composition-related gaps in a read-only CI-facing format.\n5. Keep the report focused on observation and comparison rather than repair instructions.\n6. Hand off any fix decision to the appropriate follow-up technique or review surface."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the report stays read-only and CI-facing\n- source coverage is visible without exposing the composition engine as the technique\n- token-estimate drift is reported as a bounded comparison, not as a runtime optimization policy\n- the technique complements `AOA-T-0012` rather than replacing it\n- the report does not become a generic remediation snapshot doctrine\n- provider or runtime telemetry remains outside the contract\n\nRelationship to adjacent techniques: unlike `AOA-T-0012`, this technique does not compose the context itself; it reports on how well composition covered its sources and whether drift appeared. Unlike `AOA-T-0008`, it does not aggregate published summaries into a remediation snapshot; it stays tied to CI-facing context-composition reporting."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the report starts acting like a hidden remediation engine instead of a read-only CI view\n- source coverage becomes too abstract to confirm whether the composed context actually matched its inputs\n- token drift is reported without enough context to decide whether the gap matters\n\n### Negative effects\n\n- a strong report can tempt teams to treat the report itself as proof that composition was correct\n- over-reporting can make CI noisy enough that the signal gets ignored\n- a context report can drift into general observability if it starts collecting runtime telemetry or provider details\n\n### Misuse patterns\n\n- turning the report into the composition step itself\n- widening the report into remediation snapshot doctrine or generalized monitoring\n- adding provider/runtime telemetry to make the report feel more complete\n\n### Detection signals\n\n- reviewers have to read the composition engine to understand the report\n- the report begins prescribing fixes instead of describing coverage and drift\n- the CI output starts collecting broad runtime telemetry unrelated to context composition\n\n### Mitigations\n\n- keep the report read-only and limit it to source coverage, token drift, and composition-related checks\n- split any remediation guidance into a separate review or fix technique\n- keep provider/runtime telemetry outside this contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the CI output is readable without inspecting the composition engine\n- source coverage is visible and bounded\n- token-estimate drift is visible and bounded\n- the report stays read-only and does not prescribe remediation\n- the report does not become provider/runtime telemetry or a remediation snapshot\n\nSee `checks/context-report-for-ci-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the CI runner or report-emission command\n- the exact source inventory format\n- the token-estimate source\n- the surface that consumes the report\n\nWhat should stay invariant:\n- the technique stays read-only and CI-facing\n- the report describes composition quality rather than performing composition\n- source coverage and token drift remain explicit\n- the report stays subordinate to the composition technique it observes\n\nProject-shaped details that should not be treated as invariant:\n- remediation snapshot doctrine\n- provider-specific telemetry\n- runtime-wide observability\n- build-system internals"
+        }
+      ]
     }
   ]
 }

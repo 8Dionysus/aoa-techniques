@@ -404,6 +404,80 @@
           "body_markdown": "Use one read or plan step first, then pause for confirmation before mutation.\n\n- read or plan step:\n  - inspect the target file or target command\n  - state the proposed change in one sentence\n- confirmation step:\n  - ask for an explicit yes/no before any write runs\n- mutating step:\n  - perform only the confirmed bounded change\n  - stop after the confirmed action completes\n\nIf the task now needs multiple writes, diff review, or a longer verification chain, hand it off to a broader workflow technique."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0029",
+      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md",
+          "title": "Concrete Hierarchical Rule Loading",
+          "body_markdown": "This example shows one parent source with two nested layers that resolve through explicit precedence.\n\n## Parent source\n\n`rules/global-rule-set.md`\n\n```md\n# Global Rule Set\n\n- Prefer small, reviewable diffs.\n- Keep one canonical source for shared guidance.\n- Treat nested layers as scoped and subordinate.\n- Make precedence explicit before loading.\n```\n\n## Nested layers\n\n`rules/teams/team-a/rules.md`\n\n```md\n<!-- Derived output from rules/global-rule-set.md plus team-a additions. -->\n# Global Rule Set\n\n- Prefer small, reviewable diffs.\n- Keep one canonical source for shared guidance.\n- Treat nested layers as scoped and subordinate.\n- Make precedence explicit before loading.\n\n## Team A addition\n\n- Add one team-specific override for approval wording.\n```\n\n`rules/teams/team-a/feature-x/rules.md`\n\n```md\n<!-- Derived output from rules/global-rule-set.md plus team-a and feature-x additions. -->\n# Global Rule Set\n\n- Prefer small, reviewable diffs.\n- Keep one canonical source for shared guidance.\n- Treat nested layers as scoped and subordinate.\n- Make precedence explicit before loading.\n\n## Team A addition\n\n- Add one team-specific override for approval wording.\n\n## Feature X addition\n\n- Add one feature-specific override for file naming.\n```\n\n## What this proves\n\n- parent and child layers can be resolved in a declared order\n- nested additions stay visible without becoming new canonical homes\n- explicit precedence keeps the hierarchy reviewable"
+        },
+        {
+          "example_path": "techniques/docs/nested-rule-loading/examples/minimal-nested-rule-loading.md",
+          "title": "Minimal Nested Rule Loading",
+          "body_markdown": "Use one canonical parent source and one nested child layer with explicit precedence.\n\n## Canonical parent\n\n`rules/shared-rule-core.md`\n\n```md\n# Shared Rule Core\n\n- Prefer small, reviewable diffs.\n- Keep shared meaning in one canonical source.\n- Treat nested layers as subordinate additions.\n- Re-run loading when precedence rules change.\n```\n\n## Nested child layer\n\n`rules/projects/alpha/nested-rules.md`\n\n```md\n<!-- Nested output derived from rules/shared-rule-core.md plus scoped child additions. -->\n# Shared Rule Core\n\n- Prefer small, reviewable diffs.\n- Keep shared meaning in one canonical source.\n- Treat nested layers as subordinate additions.\n- Re-run loading when precedence rules change.\n\n## Project-specific addition\n\n- Allow one scoped override for alpha-only terminology.\n```\n\n## What this proves\n\n- the canonical source still owns the shared rule meaning\n- the nested layer stays subordinate and scoped\n- precedence is explicit rather than accidental"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0030",
+      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/fragmented-agent-context/examples/concrete-fragment-first-assembly.md",
+          "title": "Concrete Fragment-First Assembly",
+          "body_markdown": "Scenario: a public repository wants agent context to stay reviewable in small source fragments while still being able to publish one consolidated view.\n\n1. Write the context contract in small fragment files instead of one long hand-edited document.\n2. Give each fragment one bounded responsibility, such as intent, contracts, or review notes.\n3. Define a deterministic assembly order that combines the fragments without changing their meaning.\n4. Keep a traceability marker or equivalent mapping so each assembled section can be traced back to its source fragment.\n5. Treat the assembled view as a derived publication surface, not as the primary editable home.\n6. When meaning changes, edit the fragments and regenerate the assembled view from them.\n\nThis stays inside the technique because the fragments own the meaning and assembly stays subordinate to fragment-first authorship."
+        },
+        {
+          "example_path": "techniques/docs/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md",
+          "title": "Concrete Subtree Fragmented Context",
+          "body_markdown": "This example keeps subtree-specific guidance close to the surfaces it explains, but still stops short of deterministic assembly.\n\n## Fragment layout\n\n`frontend/agents/context.md`\n\n```md\nPrefer intentional UI changes over generic layout churn.\n```\n\n`docs/agents/context.md`\n\n```md\nKeep public-safe wording explicit and avoid internal-only URLs.\n```\n\n`tests/agents/context.md`\n\n```md\nRun focused regression checks when a change touches generated surfaces.\n```\n\n## Review behavior\n\n- each fragment sits near its local ownership boundary\n- a reviewer can explain why a fragment belongs in that subtree\n- the repository can later compose these fragments, but the authoring contract is already usable on its own"
+        },
+        {
+          "example_path": "techniques/docs/fragmented-agent-context/examples/minimal-fragmented-agent-context.md",
+          "title": "Minimal Fragmented Agent Context",
+          "body_markdown": "This example shows fragment-first authoring before any generated aggregate exists.\n\n## Fragment set\n\n`docs/agent-context/review.md`\n\n```md\nAlways summarize the intended change before editing tracked files.\n```\n\n`docs/agent-context/validation.md`\n\n```md\nState the exact validation commands you actually ran.\n```\n\n## Why this already helps\n\n- each fragment owns one narrow topic\n- contributors can update one area without reopening a giant shared context file\n- deterministic assembly can be added later, but fragment ownership is already clear"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0031",
+      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-pipe-first-agent-invocation.md",
+          "title": "Concrete Pipe-First Agent Invocation",
+          "body_markdown": "This example keeps the agent invocation composable with ordinary shell tools.\n\n```powershell\ngit diff -- README.md |\n  qa \"extract one user-facing change summary and one reviewer watch point\" |\n  Set-Content review-note.txt\n```\n\nWhy this fits the technique:\n\n- the agent run is one shell-visible invocation\n- the input comes from a pipe\n- the result is captured into an explicit file\n- the shell flow stays inspectable without depending on hidden long-lived session state"
+        },
+        {
+          "example_path": "techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md",
+          "title": "Concrete Shell Composable Agent Invocation",
+          "body_markdown": "Scenario: normalize a short task brief into a reusable text artifact.\n\n1. Write the brief to `stdin` or save it in `request.txt`.\n2. Run one shell-composable command that reads the brief and emits normalized output.\n3. Pipe the result into `stdout` or `result.txt`.\n4. Stop after the single invocation and use the output as the handoff artifact.\n\nThis stays inside the technique because the interaction remains one bounded shell step with explicit stream or file transport."
+        },
+        {
+          "example_path": "techniques/agent-workflows/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md",
+          "title": "Minimal Shell-Composable Agent Invocation",
+          "body_markdown": "Use the agent as one more command in a shell pipeline.\n\n```powershell\nGet-Content TODO.md | qa \"summarize the next three safe cleanup steps\"\n```\n\nThe important part is not the exact wrapper name.\nThe important part is that:\n\n- the input arrives through stdin\n- the output returns through stdout\n- the run ends after one result\n- the next shell step can consume the result directly"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0032",
+      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/context-report-for-ci/examples/concrete-context-composition-ci-report.md",
+          "title": "Concrete Context Composition CI Report",
+          "body_markdown": "This example shows a CI job reporting on a composed context after fragment assembly completed elsewhere.\n\n## Inputs\n\n- expected source list:\n  - `docs/agent-guidance.md`\n  - `docs/selection-rules.md`\n  - `docs/validation-notes.md`\n- observed composed artifact:\n  - one markdown context bundle emitted by the build step\n- token baseline:\n  - one previously recorded estimate for the same bundle shape\n\n## Report\n\n```md\n# Context Composition CI Report\n\n## Source coverage\n\n- expected sources: 3\n- observed sources: 3\n- missing sources: none\n\n## Token drift\n\n- baseline tokens: 1,040\n- observed tokens: 1,118\n- delta: +7.5%\n\n## Composition checks\n\n- fragment ordering: pass\n- source traceability: pass\n- provider/runtime telemetry: not included\n\n## Follow-up\n\n- review the fragment set if the drift exceeds the current CI threshold\n```\n\n## What this proves\n\n- the CI artifact is a report about composition, not the composition engine\n- source coverage and token drift stay bounded and reviewable\n- follow-up remains a separate decision outside the report surface"
+        },
+        {
+          "example_path": "techniques/evaluation/context-report-for-ci/examples/minimal-context-report-for-ci.md",
+          "title": "Minimal Context Report For CI",
+          "body_markdown": "Use one small CI report that describes source coverage and token drift without trying to fix anything.\n\n## Report\n\n```md\n# Context Composition Report\n\n- sources expected: 4\n- sources covered: 4\n- token estimate: 1,280\n- token delta from baseline: +3%\n- composition checks: pass\n- notes:\n  - no missing fragments\n  - no provider/runtime telemetry included\n```\n\n## What this proves\n\n- the report stays read-only\n- source coverage is visible\n- token drift is visible\n- the report does not become the composition engine or a remediation snapshot"
+        }
+      ]
     }
   ]
 }

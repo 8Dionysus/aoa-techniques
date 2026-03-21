@@ -61,9 +61,9 @@ If you still need repo-level orientation before following a working set or commo
 
 ### Instruction-surface cluster
 
-- Techniques: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md), [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
+- Techniques: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md), [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md), [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
 - Review: [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-- Why grouped: Fragment-first composition into one generated context artifact plus local single-source fan-out, managed-target propagation, and upstream mirroring with provenance for adjacent instruction-facing surfaces.
+- Why grouped: Fragment-first composition into one generated context artifact plus local single-source fan-out, managed-target propagation, upstream mirroring with provenance, hierarchical rule loading, and fragment-first source partitioning for adjacent instruction-facing surfaces.
 
 ### Skill-support cluster
 

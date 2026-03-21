@@ -39,6 +39,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `1` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `1` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `1` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `1` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -52,6 +53,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `1` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `1` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `1` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `1` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `1` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -60,6 +63,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `1` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `1` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `1` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `When to use`
@@ -72,6 +76,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `2` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `2` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `2` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `2` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -85,6 +90,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `2` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `2` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `2` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `2` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `2` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -93,6 +100,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `2` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `2` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `2` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `When not to use`
@@ -105,6 +113,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `3` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `3` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `3` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `3` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -118,6 +127,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `3` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `3` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `3` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `3` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `3` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -126,6 +137,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `3` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `3` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `3` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `Inputs`
@@ -138,6 +150,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `4` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `4` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `4` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `4` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -151,6 +164,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `4` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `4` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `4` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `4` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `4` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -159,6 +174,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `4` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `4` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `4` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `Outputs`
@@ -171,6 +187,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `5` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `5` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `5` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `5` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -184,6 +201,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `5` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `5` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `5` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `5` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `5` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -192,6 +211,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `5` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `5` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `5` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `Core procedure`
@@ -204,6 +224,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `6` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `6` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `6` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `6` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -217,6 +238,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `6` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `6` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `6` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `6` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `6` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -225,6 +248,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `6` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `6` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `6` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `Contracts`
@@ -237,6 +261,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `7` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `7` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `7` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `7` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -250,6 +275,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `7` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `7` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `7` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `7` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `7` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -258,6 +285,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `7` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `7` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `7` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `Risks`
@@ -270,6 +298,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `8` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `8` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `8` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `8` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -283,6 +312,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `8` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `8` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `8` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `8` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `8` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -291,6 +322,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `8` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `8` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `8` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `Validation`
@@ -303,6 +335,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `9` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `9` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `9` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `9` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -316,6 +349,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `9` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `9` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `9` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `9` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `9` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -324,6 +359,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `9` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `9` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `9` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## `Adaptation notes`
@@ -336,6 +372,7 @@ See also:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist | `agent-workflows` | `promoted` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent | `agent-workflows` | `promoted` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action | `agent-workflows` | `promoted` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation | `agent-workflows` | `promoted` | `10` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout | `docs` | `canonical` | `10` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot | `docs` | `canonical` | `10` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition | `docs` | `canonical` | `10` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
@@ -349,6 +386,8 @@ See also:
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance | `docs` | `promoted` | `10` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning | `docs` | `promoted` | `10` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation | `docs` | `promoted` | `10` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading | `docs` | `promoted` | `10` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context | `docs` | `promoted` | `10` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
@@ -357,6 +396,7 @@ See also:
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants | `evaluation` | `canonical` | `10` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci | `evaluation` | `promoted` | `10` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact | `history` | `promoted` | `10` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ## Boundaries

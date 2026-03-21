@@ -57,6 +57,14 @@ See also:
 | Concrete Confirmed Mutating Action | `present` | `techniques/agent-workflows/confirmation-gated-mutating-action/examples/concrete-confirmed-mutating-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
 | Minimal Confirmation Gated Mutating Action | `present` | `techniques/agent-workflows/confirmation-gated-mutating-action/examples/minimal-confirmation-gated-mutating-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
 
+### [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Pipe-First Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-pipe-first-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
+| Concrete Shell Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
+| Minimal Shell-Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -143,6 +151,21 @@ See also:
 | Concrete Multi-Target Skill Propagation | `present` | `techniques/docs/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
 | Minimal Cross-Agent Skill Propagation | `present` | `techniques/docs/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
 
+### [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Hierarchical Rule Loading | `present` | `techniques/docs/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+| Minimal Nested Rule Loading | `present` | `techniques/docs/nested-rule-loading/examples/minimal-nested-rule-loading.md` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+
+### [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Fragment-First Assembly | `present` | `techniques/docs/fragmented-agent-context/examples/concrete-fragment-first-assembly.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
+| Concrete Subtree Fragmented Context | `present` | `techniques/docs/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
+| Minimal Fragmented Agent Context | `present` | `techniques/docs/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -199,6 +222,13 @@ See also:
 |---|---|---|---|
 | Concrete Config Invariant Check | `present` | `techniques/evaluation/property-invariants/examples/concrete-config-invariant-check.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
 | Minimal Invariant Check | `present` | `techniques/evaluation/property-invariants/examples/minimal-invariant-check.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+
+### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Context Composition CI Report | `present` | `techniques/evaluation/context-report-for-ci/examples/concrete-context-composition-ci-report.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
+| Minimal Context Report For CI | `present` | `techniques/evaluation/context-report-for-ci/examples/minimal-context-report-for-ci.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 
 ## `history`
 

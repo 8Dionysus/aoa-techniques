@@ -1553,6 +1553,222 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0029",
+      "name": "nested-rule-loading",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
+      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "origin": {
+        "project": "ruler",
+        "path": "README.md",
+        "note": "Adapted from the open-source ruler project, which supports nested rule layers with explicit precedence while keeping source ownership one-way and canonical."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "hierarchy",
+        "precedence",
+        "rule-loading",
+        "anti-drift"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0013"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0030",
+      "name": "fragmented-agent-context",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
+      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "origin": {
+        "project": "agents-md",
+        "path": "README.md",
+        "note": "Adapted from the open-source agents-md project, which keeps agent context in smaller markdown fragments before deterministic assembly into one generated artifact."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "agent-context",
+        "fragments",
+        "modular-authoring",
+        "source-partitioning"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0012"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0031",
+      "name": "shell-composable-agent-invocation",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops.",
+      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "origin": {
+        "project": "qqqa",
+        "path": "README.md",
+        "note": "Adapted from the open-source qqqa project, which treats agent runs as shell-friendly one-shot tools that compose through stdin, stdout, files, and pipes."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "shell",
+        "composability",
+        "pipes",
+        "one-shot"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0023"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0032",
+      "name": "context-report-for-ci",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself.",
+      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "origin": {
+        "project": "agents-md",
+        "path": "README.md",
+        "note": "Adapted from the open-source agents-md project, which uses composable markdown fragments and CI-facing reports to observe context coverage and drift."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "ci",
+        "context-composition",
+        "reporting",
+        "source-coverage"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0012"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

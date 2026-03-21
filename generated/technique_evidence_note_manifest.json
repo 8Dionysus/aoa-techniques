@@ -14186,6 +14186,2196 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0029",
+      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/nested-rule-loading/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0029"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nested-rule-loading"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around MCP propagation, skills propagation, installer breadth, and other product-width detail"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when a repository needs hierarchical rule layers with explicit precedence and one-way ownership"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than `AOA-T-0013`, which keeps the broader one-canonical-rule-source-to-many-managed-targets instruction-surface distribution story in focus"
+                },
+                {
+                  "order": 3,
+                  "text": "it stays distinct from `AOA-T-0027`, which is about managed-target propagation of a shared skill or rule core rather than nested loading"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable nested-loading contract and excludes donor-specific orchestration behavior"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that uses the same nested-loading contract as a real layered rule hierarchy rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0029` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the nested-loading contract survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/nested-rule-loading/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0029"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nested-rule-loading"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: hierarchical rule layers load with explicit precedence and one-way source ownership"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around MCP propagation, skills propagation, installer breadth, and broader product-width behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: canonical parent ownership, subordinate nested layers, explicit precedence, and repeatable resolution"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: MCP propagation, skills propagation, nested-output breadth, installer behavior, and broader orchestration detail"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce hierarchical loading plus explicit precedence without widening the bundle into a distribution or registry system"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable docs pattern rather than a disguised runtime or role contract"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "this new adjacent import does not count as live closure evidence for `AOA-T-0013`, because nested hierarchical loading is a different contract from one-source-to-many-target instruction distribution"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0029` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that hierarchical rule loading survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/nested-rule-loading/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/intellectronica/ruler`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`ruler` nested rule loading behavior where layered rule sets can be loaded with explicit precedence while keeping ownership one-way"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "reduced the donor package to one bounded pattern: hierarchical rule layers loaded with explicit precedence and one-way source ownership"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "canonical parent ownership, nested subordinate layers, explicit precedence, and repeatable resolution"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "MCP propagation, skills propagation, installer breadth, `.gitignore` automation, backup/revert behavior, and other donor features outside the nested-loading contract"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths and environment conventions were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on the donor CLI packaging even though the donor repository ships a broader loader"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is scope creep, especially if nested loading drifts toward multi-target distribution or product-width orchestration"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "some repositories need layered rule files with a readable precedence order, not just one flat instruction file"
+                },
+                {
+                  "order": 2,
+                  "key": "primary evidence used",
+                  "value_markdown": "the public `ruler` source describes hierarchical rule loading as a bounded part of a broader rule system, and the layered contract can be separated from the rest of the product breadth"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "nested loading should stay distinct from multi-target propagation, and broader features such as MCP or skills propagation should remain separate sibling-technique candidates"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/nested-rule-loading/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0029"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nested-rule-loading"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the nested-loading pattern rather than shipping the donor loader itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor supports layered rule loading with explicit precedence; this adaptation presents that hierarchy as a generic public technique with one canonical source and subordinate nested layers"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no MCP propagation, installer integration, or skills propagation is required in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on declared source ownership, nested layer precedence, and repeatable loading, not on the donor CLI breadth"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should treat nested layers as scoped additions and keep local wrapper notes visibly separate"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one canonical source owns the shared meaning"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "nested layers remain subordinate to the canonical source through explicit precedence"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "local nested layers do not silently become new canonical homes"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project adds nested layers but drops the canonical source as the actual ownership authority"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may keep layered files but stop treating precedence as part of the real contract"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` describes hierarchical rule behavior with explicit precedence in the broader rule system"
+                },
+                {
+                  "order": 2,
+                  "text": "the public contract can be narrowed to nested loading without carrying over the rest of the donor breadth"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique keeps the core at hierarchy plus precedence, which is reusable across repositories that layer rule sources"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific product breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0030",
+      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/fragmented-agent-context/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0030"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "fragmented-agent-context"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around deterministic composition, CI reporting, and runtime injection breadth"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same fragment-first authoring contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the problem is fragment-first context authoring before any generated aggregate or CI report becomes the center of gravity"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains distinct from `AOA-T-0012`, which stays centered on deterministic composition into one generated artifact"
+                },
+                {
+                  "order": 3,
+                  "text": "it remains narrower than `AOA-T-0032`, which stays centered on CI-facing reporting over composition outcomes rather than on authoring the fragment layer itself"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable fragment-first authoring contract and excludes generator, report, and runtime-loading breadth"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository where fragment-first context authoring is used as a real source-layer practice rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0030` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that fragment-first authoring survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/fragmented-agent-context/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0030"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "fragmented-agent-context"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: context stays in bounded fragments before deterministic assembly"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around deterministic composition, CI reporting, token-estimate reporting, and runtime injection behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: fragment-first authoring, bounded fragment scope, locally legible ownership, and a clean separation from any later aggregate output"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: deterministic composition, CI reporting, token-drift reporting, migration helpers, and runtime injection behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce source partitioning and modular ownership without widening the bundle into a generator or validation surface"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable docs pattern rather than a disguised generator or runtime-loading system"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "this new adjacent import does not count as live closure evidence for `AOA-T-0012`, because fragment-first authoring is a source-layer contract rather than deterministic composition into a generated artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0030` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that fragment-first context authoring survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/fragmented-agent-context/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/ivawzh/agents-md`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`agents-md` fragment-first context authoring model where smaller markdown sources stay primary before any later generated aggregate is produced"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded pattern: keep agent context in smaller bounded fragments before deterministic assembly"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "fragment-first authoring, bounded fragment scope, locally legible ownership, and separation between canonical fragments and any later aggregate artifact"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "exact fragment file patterns, deterministic composition behavior, JSON reports, token-estimate reporting, migration helpers, and runtime injection behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths and filename conventions were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on one generator, one CLI, or one CI stack"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is scope creep; future siblings should treat deterministic composition, CI reporting, and runtime injection separately instead of widening this bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many repositories need context source partitioning before they need a generated aggregate, and fragment-first authoring is reusable independent of the donor toolchain"
+                },
+                {
+                  "order": 2,
+                  "key": "primary evidence used",
+                  "value_markdown": "the donor README and public feature surface both center smaller markdown fragments as the authoring layer that scales better than one large manual context file"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import intentionally stops before deterministic assembly and CI reporting so the bundle stays source-layer only"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/fragmented-agent-context/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0030"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "fragmented-agent-context"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the fragment-first authoring pattern rather than shipping the donor composition engine itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor uses smaller markdown fragments that can later compose into one generated context artifact; this adaptation keeps only the fragment-first authoring layer and presents it as a generic modular-source pattern"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no deterministic generator, JSON report command, or CI stack is required in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on bounded fragment scope, legible placement, and fragment-first editing rather than on one donor CLI"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should review fragment ownership directly and treat any later aggregate artifact as a separate downstream concern"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "context is authored in smaller bounded fragments before any aggregate output is trusted"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "fragment scope and ownership remain visible to reviewers"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "fragments stay canonical and do not silently give way to a generated aggregate as the editable source of truth"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project keeps many small files but loses the bounded scope that makes the fragments meaningful"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may over-fragment the context layer and create route friction without clearer ownership"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor README describes smaller context fragments as the scalable authoring layer"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor feature surface separates fragment authoring from composition, reporting, and migration helpers"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique narrows those behaviors into one reusable docs pattern for modular context sources before deterministic assembly"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific generator breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0031",
+      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0031"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "shell-composable-agent-invocation"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around generic shell advice, confirmation as the core invariant, and broader autonomous loop behavior"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same shell-composable invocation contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main reusable object is shell composability through stdin, stdout, files, and pipes"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains distinct from `AOA-T-0023`, which stays centered on the broader stateless single-shot fast path rather than on shell composability itself"
+                },
+                {
+                  "order": 3,
+                  "text": "it remains distinct from `AOA-T-0028`, which stays centered on the explicit confirmation seam before mutation rather than on shell-visible invocation boundaries"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable shell-composability contract and excludes generic shell advice, provider breadth, and autonomous-loop behavior"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public workflow surface where shell-composable one-shot invocation is used as a real execution pattern rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0031` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that shell-composable invocation survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0031"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "shell-composable-agent-invocation"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: agent runs stay shell-composable through explicit stdin, stdout, files, and pipes"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around generic shell advice, confirmation as the core invariant, and broader autonomous loop behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: one-shot shell-visible invocation, explicit I/O boundaries, and pipe or file composability"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: generic shell best practices, confirmation-boundary doctrine, provider-specific breadth, and broader autonomous loop behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce shell-side composability without widening the bundle into a general stateless workflow or mutation-safety system"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable workflow pattern rather than a disguised product wrapper or shell-style guide"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "this new adjacent import does not count as live closure evidence for `AOA-T-0023`, because shell composability is a narrower contract than the broader stateless fast-path posture"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0031` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that shell-composable one-shot invocation survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/iagooar/qqqa`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`qqqa`'s shell-first one-shot execution model where agent runs compose through explicit stdin, stdout, files, and pipes"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded pattern: shell-composable one-shot agent invocation"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "one-shot invocation, explicit shell-visible I/O, pipe or file composability, and a clean run boundary after the current result"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "exact wrapper commands, install flow, provider assumptions, confirmation as the core invariant, and broader autonomous loop behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths, provider profiles, and runtime-specific assumptions were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on one shell wrapper, one provider, or one package manager"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is scope creep; future siblings should treat confirmation logic and broader multi-step workflow behavior separately instead of widening this bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many repositories need agent runs that fit existing shell workflows without becoming hidden long-running sessions"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import intentionally excludes generic shell advice, confirmation-boundary doctrine, and broader autonomous-loop behavior"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0031"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "shell-composable-agent-invocation"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the shell-composable invocation pattern rather than shipping the donor CLI itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor exposes shell-friendly one-shot commands; this adaptation presents the pattern as a generic shell-visible invocation contract that can fit other repositories"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no provider profile matrix, install flow, or interactive wrapper behavior is required in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on explicit stdin, stdout, file, and pipe boundaries rather than on one donor command name"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should keep invocation inputs and outputs shell-visible and route confirmation or broader orchestration into separate sibling techniques"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one agent run stays one-shot and shell-composable"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "stdin, stdout, files, or pipes still define the observable composition boundary"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "the run ends after the current result instead of drifting into a hidden session"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project keeps one-shot commands but loses the explicit shell I/O boundaries that make the technique reviewable"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may quietly fold confirmation or long-lived session behavior into the same command and blur the contract"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor README describes shell-first one-shot invocations that compose through existing terminal flows"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor surface keeps the commands small and composable rather than requiring a hidden long-lived session"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique narrows those behaviors into one reusable agent-workflow pattern for shell-side composition"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific CLI breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0032",
+      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/evaluation/context-report-for-ci/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0032"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "context-report-for-ci"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around composition mechanics, remediation snapshot doctrine, provider/runtime telemetry, and other product-width detail"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when a CI job needs to report on context composition health without opening the composition engine itself"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than `AOA-T-0012`, which owns deterministic context composition, and narrower than `AOA-T-0008`, which owns the published-summary remediation snapshot doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the report is intentionally read-only: it observes coverage and drift, then hands off any fix decision to another surface"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable CI-facing report contract and excludes donor-specific telemetry, remediation, and composition machinery"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that uses the same CI-facing context report as a real report artifact rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0032` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the CI-facing context-report contract survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/context-report-for-ci/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0032"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "context-report-for-ci"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: a CI-facing report can track context composition, source coverage, token-estimate drift, and related composition checks without becoming the composition technique itself"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around composition mechanics, remediation snapshot doctrine, provider/runtime telemetry, and broader observability detail"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: read-only CI reporting, source coverage comparison, token-drift comparison, and a clean handoff to follow-up review"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: composition mechanics, remediation snapshot doctrine, provider/runtime telemetry, and generic observability breadth"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce reporting plus comparison without widening the bundle into a composition engine or a snapshot-policy system"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable evaluation pattern rather than a disguised composition engine or monitoring system"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "this new adjacent import does not count as live closure evidence for `AOA-T-0012`, because the report surface observes composition rather than performing it"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0032` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the CI-facing context report survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/context-report-for-ci/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/ivawzh/agents-md`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`agents-md` patterns for composable markdown fragments and CI-facing context reports that track source coverage and token estimates"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded report surface for context composition, source coverage, and token-estimate drift"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "CI-facing report output, source coverage comparison, token drift comparison, and read-only observation rather than repair"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "fragment assembly mechanics, remediation snapshot doctrine, provider/runtime telemetry, generic observability breadth, and product-specific migration paths"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths and repository-specific report destinations were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on a particular CI runner, provider runtime, or fragment-store implementation"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: future follow-on techniques should review remediation snapshots, runtime telemetry, or composition engines separately instead of widening this report contract"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "public repositories often need one bounded report surface that tells CI whether context composition still matched its expected sources"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import intentionally keeps only the report surface and excludes composition, remediation, and telemetry breadth"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/evaluation/context-report-for-ci/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0032"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "context-report-for-ci"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the reporting pattern rather than shipping the donor report engine itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor uses composable markdown fragments and CI-facing report surfaces; this adaptation presents a generic report pattern that can fit other public repositories"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no provider/runtime telemetry layer is required in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on declared source coverage, token comparison, and read-only reporting, not on the donor report scripts"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should treat the report as a bounded CI artifact and keep repair decisions in a separate follow-up surface"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "the report stays read-only and CI-facing"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "the report compares source coverage and token drift instead of executing the composition itself"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "the report stays subordinate to the composition technique and does not become a remediation engine"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project copies the report but loses the explicit link to source coverage"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may keep the report while silently letting it drift into generic telemetry or remediation guidance"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` describes composable markdown fragments plus CI reporting around context composition"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor pattern also shows the report as a companion to fragment assembly rather than the assembly engine itself"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique narrows those behaviors into one reusable docs pattern for CI-facing composition reporting"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific telemetry or remediation breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

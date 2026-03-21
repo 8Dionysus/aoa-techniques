@@ -1165,6 +1165,170 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0029",
+      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/nested-rule-loading/checks/nested-rule-loading-checklist.md",
+          "title": "Nested Rule Loading Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name one canonical source that owns shared rule meaning."
+            },
+            {
+              "order": 2,
+              "text": "Define the parent and nested layers before relying on the loaded result."
+            },
+            {
+              "order": 3,
+              "text": "State the precedence order explicitly."
+            },
+            {
+              "order": 4,
+              "text": "Verify that nested layers stay subordinate to the canonical source."
+            },
+            {
+              "order": 5,
+              "text": "Confirm that the resolved output is repeatable from the same hierarchy."
+            },
+            {
+              "order": 6,
+              "text": "Check that nested layers add scoped meaning rather than becoming new sources of truth."
+            },
+            {
+              "order": 7,
+              "text": "Keep multi-target distribution, MCP propagation, and skills propagation out of the contract."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0030",
+      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/fragmented-agent-context/checks/fragmented-agent-context-checklist.md",
+          "title": "Fragmented Agent Context Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Context is authored in smaller fragments rather than one large hand-maintained file."
+            },
+            {
+              "order": 2,
+              "text": "Each fragment has bounded local or topical scope."
+            },
+            {
+              "order": 3,
+              "text": "Fragment naming or placement makes ownership legible to reviewers."
+            },
+            {
+              "order": 4,
+              "text": "Contributors treat the fragments as the editable source of truth."
+            },
+            {
+              "order": 5,
+              "text": "Deterministic assembly, CI reporting, and runtime injection stay outside this contract."
+            },
+            {
+              "order": 6,
+              "text": "Removing one fragment removes one bounded scope rather than breaking the whole context layer."
+            },
+            {
+              "order": 7,
+              "text": "The fragment set stays readable without hidden loader behavior."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0031",
+      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md",
+          "title": "Shell-Composable Agent Invocation Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "The agent run behaves like one shell-visible invocation."
+            },
+            {
+              "order": 2,
+              "text": "Inputs and outputs move through explicit stdin, stdout, files, or pipes."
+            },
+            {
+              "order": 3,
+              "text": "The invocation ends after one answer or one action result."
+            },
+            {
+              "order": 4,
+              "text": "The shell boundary remains clear without relying on hidden session state."
+            },
+            {
+              "order": 5,
+              "text": "Confirmation logic is treated as a separate concern unless another bundle explicitly owns it."
+            },
+            {
+              "order": 6,
+              "text": "The workflow does not widen into a hidden autonomous loop."
+            },
+            {
+              "order": 7,
+              "text": "The command remains usable in a pipe, file handoff, or explicit review step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0032",
+      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/context-report-for-ci/checks/context-report-for-ci-checklist.md",
+          "title": "Context Report For CI Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Emit one read-only CI-facing report."
+            },
+            {
+              "order": 2,
+              "text": "Include source coverage for the composed context."
+            },
+            {
+              "order": 3,
+              "text": "Include token-estimate drift or mismatch."
+            },
+            {
+              "order": 4,
+              "text": "Keep the report separate from the composition engine itself."
+            },
+            {
+              "order": 5,
+              "text": "Keep remediation guidance out of the report."
+            },
+            {
+              "order": 6,
+              "text": "Keep provider/runtime telemetry out of the report."
+            },
+            {
+              "order": 7,
+              "text": "Make the handoff to follow-up review or fix work explicit."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
