@@ -8411,7 +8411,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "stronger defer, still promoted"
                 }
               ]
             },
@@ -8428,12 +8428,12 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the adaptation note shows the lift contract clearly enough to remain reusable, but it still reads as a repo-local lookup sketch rather than a live cross-repo proof"
+                  "value_markdown": "`aoa-skills` now provides live donor evidence for the same contract through `docs/BRIDGE_SPEC.md` and `generated/skill_catalog.json`, where technique selection is pinned by `source_ref` and bounded by `use_sections`"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle has stable sections, examples, and checks, but it still lacks another markdown-first corpus proving the same section-lift discipline in practice"
+                  "value_markdown": "the bundle has stable sections, examples, and checks, and the bridge flow shows the technique can survive a committed downstream consumer, but the proof set still stops at that bridge pattern"
                 }
               ]
             },
@@ -8490,7 +8490,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                  "text": "the smallest remaining gap is another live markdown-first consumer beyond the current `aoa-skills` bridge pattern"
                 },
                 {
                   "order": 2,
@@ -8509,7 +8509,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                  "text": "defer canonical promotion until the technique proves itself in a second live markdown-first context beyond the current bridge pattern"
                 }
               ]
             }
@@ -8708,15 +8708,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`AOA-T-0002 source-of-truth-layout` already proves that this repository prefers canonical homes for meaning instead of duplicate role copies"
+                  "text": "`aoa-skills/docs/BRIDGE_SPEC.md` defines the donor contract for live reuse: stable technique section names are selected from `aoa-techniques`, `use_sections` controls what is lifted, `source_ref` pins the upstream donor commit, and the refresh/drift flow keeps that bridge reviewable"
                 },
                 {
                   "order": 2,
-                  "text": "`AOA-T-0012 deterministic-context-composition` already proves that this repository can publish bounded derived doc surfaces while preserving authored source authority"
+                  "text": "`aoa-skills/generated/skill_catalog.json` shows the committed runtime projection of that contract, with `technique_refs` entries carrying `repo`, `path`, `source_ref`, and `use_sections` alongside the linked `technique_dependencies`"
                 },
                 {
                   "order": 3,
-                  "text": "the current section-lift bundle fits those instincts by keeping lookup derived and section meaning rooted in markdown"
+                  "text": "`AOA-T-0002 source-of-truth-layout` still supports the same direction: meaning stays in the canonical bundle while the consumer gets a bounded derived surface"
+                },
+                {
+                  "order": 4,
+                  "text": "`AOA-T-0012 deterministic-context-composition` still supports the same direction: a derived doc surface can remain subordinate to authored source authority instead of becoming the semantic home"
                 }
               ]
             },
@@ -8727,7 +8731,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local adaptation sketch for a promoted source-lift technique, while still needing stronger live reuse evidence before any future canonical review"
+                  "text": "works as a bounded cross-repo adaptation grounded in a committed `aoa-skills` consumer, not just a repo-local sketch, while still leaving one gap: another live markdown-first consumer beyond the current bridge pattern"
                 }
               ]
             }
@@ -8770,7 +8774,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "stronger ready, still promoted"
                 }
               ]
             },
@@ -8787,12 +8791,12 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the repo-local adaptation note shows the same contract surviving in `aoa-techniques` as a public routing layer rather than as schema expansion"
+                  "value_markdown": "`aoa-skills/generated/skill_catalog.json` provides live donor evidence for bounded `technique_refs` with `source_ref` and `use_sections`, `aoa-evals/generated/eval_catalog.json` provides bounded `evidence`, `relations`, and dependency metadata, and `aoa-routing` proves those generated min catalogs are actually ingested together"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle already has a checklist, a reusable example, and clear separation between metadata, derived catalog outputs, and markdown meaning"
+                  "value_markdown": "the bundle already has a checklist, a reusable example, and clear separation between metadata, derived catalog outputs, and markdown meaning, and the sibling repos now show the same spine surviving committed downstream consumers"
                 }
               ]
             },
@@ -8808,6 +8812,10 @@
                 {
                   "order": 2,
                   "text": "it remains narrower than section lift or provenance lift because it should help navigate the bundle, not replace the bundle's prose"
+                },
+                {
+                  "order": 3,
+                  "text": "it is now the first canonical candidate in the family because the same bounded spine is visible in committed skill, eval, and routing consumers, but the technique still belongs in `promoted` until a future wave chooses to elevate it"
                 }
               ]
             },
@@ -8845,11 +8853,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the missing proof is a second live context where the same bounded metadata spine is reused outside this repository narrative"
+                  "text": "the remaining gap is not donor existence but promotion timing: the technique is ready enough to lead the family, but this wave keeps it `promoted`"
                 },
                 {
                   "order": 2,
-                  "text": "a future canonical review should show that shallow frontmatter remains enough even when the downstream routing problem is slightly different"
+                  "text": "a future canonical review should still confirm that shallow frontmatter remains enough even when a downstream routing problem is slightly different"
                 }
               ]
             },
@@ -8864,7 +8872,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in another live reuse context and the metadata spine still stays shallow"
+                  "text": "treat `AOA-T-0019` as the first promotion candidate for canonical review in the next wave, but do not change the status in this wave"
                 }
               ]
             }
@@ -9001,22 +9009,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the origin uses a richer internal catalog spine; this adaptation keeps the same bounded routing idea but maps it onto public technique bundles and generated catalog surfaces"
+                  "value_markdown": "the origin contract is now grounded in committed sibling surfaces, with `aoa-skills/generated/skill_catalog.json` carrying bounded `technique_refs` that pair `repo`, `path`, `source_ref`, and `use_sections`, `aoa-evals/generated/eval_catalog.json` carrying bounded `evidence`, `relations`, and dependency metadata, and `aoa-routing` ingesting the generated min catalogs from all three sibling repos"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "there is no need for additional schema layers, graph behavior, or hand-authored metadata mirrors in this repository"
+                  "value_markdown": "there is no need for additional schema layers, graph behavior, or hand-authored metadata mirrors in this repository because the live donor surfaces already prove the routing spine can stay bounded"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on a small stable set of frontmatter fields plus a regenerated catalog, not on richer metadata modeling"
+                  "value_markdown": "the adaptation depends on a small stable set of frontmatter fields plus regenerated catalogs, not on richer metadata modeling or repo-local sketch logic"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "public docs can use frontmatter for identity and routing while markdown keeps the actual technique meaning"
+                  "value_markdown": "public docs can use frontmatter for identity and routing while markdown keeps the actual technique meaning, and the sibling repos already show that the downstream consumers can stay committed and reviewable"
                 }
               ]
             },
@@ -9068,15 +9076,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`AOA-T-0002 source-of-truth-layout` already proves this repository values one canonical home per information class rather than many drifting copies"
+                  "text": "`aoa-skills/generated/skill_catalog.json` shows bounded technique reuse in practice: each `technique_refs` entry can pin a donor commit through `source_ref` and constrain lift through `use_sections`, which keeps the consumer tied to specific markdown sections instead of generic provenance prose"
                 },
                 {
                   "order": 2,
-                  "text": "`AOA-T-0018 markdown-technique-section-lift` proves that the repo already supports derived lift surfaces while keeping authored markdown authoritative"
+                  "text": "`aoa-evals/generated/eval_catalog.json` shows the same bounded pattern on the proof side: `evidence` stays typed, `relations` stay explicit, and technique and skill dependency metadata remain separate from the eval text itself"
                 },
                 {
                   "order": 3,
-                  "text": "the current catalog and selection surfaces already consume `AOA-T-0019`-style metadata in a bounded, derived way rather than as a replacement for the bundle text"
+                  "text": "`aoa-routing/README.md` and `aoa-routing/scripts/build_router.py` show the routing consumer is built from generated min catalogs in `aoa-techniques`, `aoa-skills`, and `aoa-evals`, so the spine is already live in the family rather than hypothetical"
+                },
+                {
+                  "order": 4,
+                  "text": "`AOA-T-0002 source-of-truth-layout` still proves this repository values one canonical home per information class rather than many drifting copies"
+                },
+                {
+                  "order": 5,
+                  "text": "`AOA-T-0018 markdown-technique-section-lift` still proves that the repo supports derived lift surfaces while keeping authored markdown authoritative"
                 }
               ]
             },
@@ -9087,7 +9103,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger reuse evidence before any future canonical review"
+                  "text": "works as the strongest live family example for the metadata-spine contract and the first canonical promotion candidate, while still staying `promoted` in this wave because the contract remains bounded to routing and lookup rather than replacing markdown meaning"
                 }
               ]
             }
@@ -9130,7 +9146,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "defer strongly for now"
                 }
               ]
             },
@@ -9147,12 +9163,12 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the adaptation note shows the technique clearly enough to stay reusable, but it still reads as a repo-local provenance sketch rather than a live cross-repo proof"
+                  "value_markdown": "the adaptation note is now grounded in committed `aoa-evals` donor surfaces, including bundle `evidence` arrays, the generated catalog lift, and validator-enforced path existence"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle already has a checklist, an example, and explicit note-path routing, but it still lacks another markdown-first corpus proving the same note-kind contract in practice"
+                  "value_markdown": "the bundle already has a checklist, an example, and explicit note-path routing, but it still lacks a second markdown-first corpus proving the same typed note contract in practice"
                 }
               ]
             },
@@ -9171,7 +9187,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle should stay promoted until another repository proves that the same note-kind split remains useful outside this public canon"
+                  "text": "the bundle should stay promoted until a second non-eval markdown-first corpus proves that the same note-kind split remains useful outside the current donor path"
                 }
               ]
             },
@@ -9209,7 +9225,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                  "text": "the main missing proof is live reuse in a second markdown-first repository, not another eval bundle in the same donor family"
                 },
                 {
                   "order": 2,
@@ -9228,7 +9244,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                  "text": "defer canonical promotion until the technique proves itself in a second live markdown-first corpus beyond the current `aoa-evals` donor surface"
                 }
               ]
             }
@@ -9365,17 +9381,17 @@
                 {
                   "order": 1,
                   "key": "note kinds",
-                  "value_markdown": "the public form keeps typed note kinds such as origin, second-context adaptation, and canonical readiness instead of flattening all notes into one generic support bucket"
+                  "value_markdown": "the public form now mirrors a live donor pattern from `aoa-evals`, where bundle `eval.yaml` files carry typed `evidence` arrays made of `kind` plus `path` handles instead of one generic support bucket"
                 },
                 {
                   "order": 2,
                   "key": "paths",
-                  "value_markdown": "the public form keeps note paths explicit so each supporting note remains independently reachable"
+                  "value_markdown": "the public form keeps note paths explicit so each supporting note remains independently reachable, and the donor validator checks that each evidence path actually exists on disk"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on authored markdown notes plus a derived manifest, not on note IDs or cross-note graph behavior"
+                  "value_markdown": "the adaptation is grounded in committed `aoa-evals` bundle manifests, the generated `eval_catalog.json` lift, and `scripts/validate_repo.py`, not in repo-local sketch language or graph semantics"
                 },
                 {
                   "order": 4,
@@ -9413,7 +9429,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "note kinds can multiply if future bundles start splitting provenance roles too finely"
+                  "text": "note kinds can still multiply if future bundles start splitting provenance roles too finely"
                 },
                 {
                   "order": 2,
@@ -9422,6 +9438,10 @@
                 {
                   "order": 3,
                   "text": "if the note kind layer becomes too clever, maintainers may start expecting graph semantics that the technique does not claim"
+                },
+                {
+                  "order": 4,
+                  "text": "the current live donor proof is still one markdown-first eval corpus; the next reuse step has to come from a second non-eval corpus using the same typed lift"
                 }
               ]
             },
@@ -9432,15 +9452,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`AOA-T-0018 markdown-technique-section-lift` already proves this repository is comfortable with bounded derived lookup over authored markdown"
+                  "text": "`aoa-evals/bundles/aoa-bounded-change-quality/eval.yaml` and sibling bundles use `evidence` arrays with explicit `kind` and `path` pairs"
                 },
                 {
                   "order": 2,
-                  "text": "`AOA-T-0019 frontmatter-metadata-spine` already proves the repo can keep shallow metadata derived while leaving real meaning in markdown"
+                  "text": "`aoa-evals/generated/eval_catalog.json` lifts those evidence entries as typed provenance handles instead of flattening them into free-form prose"
                 },
                 {
                   "order": 3,
-                  "text": "this technique fits the same public pattern by keeping provenance handles small, explicit, and markdown-first"
+                  "text": "`aoa-evals/scripts/validate_repo.py` enforces evidence path existence and bounded evidence-kind contracts, including status-specific kinds and support-note constraints"
+                },
+                {
+                  "order": 4,
+                  "text": "`AOA-T-0018 markdown-technique-section-lift` and `AOA-T-0019 frontmatter-metadata-spine` still fit the same public pattern by keeping derived lookup shallow while leaving real meaning in markdown"
                 }
               ]
             },
@@ -9451,7 +9475,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review"
+                  "text": "works as a bounded transfer from a live `aoa-evals` donor corpus, with the remaining gap narrowed to a second markdown-first corpus proving the same typed note lift"
                 }
               ]
             }
@@ -9511,12 +9535,12 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the adaptation note keeps the contract readable as direct typed adjacency, but it still reads as a repo-local navigation sketch rather than a live cross-repo proof"
+                  "value_markdown": "the adaptation note now cites live donor surfaces in `aoa-evals` and `aoa-routing`, so the proof is no longer a repo-local sketch"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle has a clear relation vocabulary and current consumers, but it still lacks another markdown-first corpus proving the same bounded edge layer in practice"
+                  "value_markdown": "`aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` and `aoa-evals/generated/eval_catalog.json` verify direct typed relations as bounded edge metadata, while `aoa-routing/scripts/router_core.py` keeps `recommended_paths` dependency-driven instead of relation-traversal-driven"
                 }
               ]
             },
@@ -9535,7 +9559,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle should stay promoted until another repository proves that the same relation layer remains useful without becoming a rationale or traversal system"
+                  "text": "the bundle should stay promoted until another direct-relation consumer outside eval bundles proves that the same relation layer remains useful without becoming a rationale or traversal system"
                 }
               ]
             },
@@ -9573,7 +9597,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                  "text": "the smallest missing proof is a second direct-relation consumer outside eval bundles"
                 },
                 {
                   "order": 2,
@@ -9592,7 +9616,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond eval bundles"
                 }
               ]
             }
@@ -9729,7 +9753,7 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the relation layer is surfaced through `docs/SELECTION_PATTERNS.md` and the generated catalog, not through a graph subsystem"
+                  "value_markdown": "the relation layer is surfaced through committed sibling repos, not through a graph subsystem"
                 },
                 {
                   "order": 2,
@@ -9791,15 +9815,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`AOA-T-0019 frontmatter-metadata-spine` already proves that this repository can keep routing metadata shallow while meaning stays in markdown"
+                  "text": "`aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` carries direct typed `relations` alongside explicit `technique_dependencies` and `skill_dependencies`, keeping the edge layer small and inspectable"
                 },
                 {
                   "order": 2,
-                  "text": "`AOA-T-0018 markdown-technique-section-lift` already proves that derived lookup surfaces can remain bounded and subordinate to authored bundles"
+                  "text": "`aoa-evals/generated/eval_catalog.json` lifts those relations into generated catalog entries as bounded direct-edge metadata, not as a traversal graph"
                 },
                 {
                   "order": 3,
-                  "text": "the current `SELECTION_PATTERNS.md` surface already consumes direct relations as nearby-hint navigation rather than as graph traversal"
+                  "text": "`aoa-routing/scripts/router_core.py` builds `recommended_paths` from `technique_dependencies` and `skill_dependencies`, and the hop construction is dependency-driven rather than relation-hint-driven"
+                },
+                {
+                  "order": 4,
+                  "text": "`AOA-T-0019 frontmatter-metadata-spine` still proves that this repository can keep routing metadata shallow while meaning stays in markdown"
+                },
+                {
+                  "order": 5,
+                  "text": "`AOA-T-0018 markdown-technique-section-lift` still proves that derived lookup surfaces can remain bounded and subordinate to authored bundles"
                 }
               ]
             },
@@ -9810,7 +9842,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local adaptation sketch for direct typed relation hints, while still needing stronger live reuse evidence before any future canonical review"
+                  "text": "works as a bounded cross-repo adaptation with live donor evidence from `aoa-evals` and `aoa-routing`, while still needing one more direct-relation consumer outside eval bundles before canonical readiness"
                 }
               ]
             }
@@ -9870,12 +9902,12 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the adaptation note shows the contract clearly enough to stay reusable, but it still reads as a repo-local caution sketch rather than a live cross-repo proof"
+                  "value_markdown": "committed sibling repos add live donor surfaces for the caution vocabulary, including `aoa-skills/skills/aoa-safe-infra-change/SKILL.md` `Risks and anti-patterns` language and `aoa-evals/bundles/aoa-bounded-change-quality/EVAL.md` plus `aoa-evals/bundles/aoa-eval-integrity-check/EVAL.md` failure/blind-spot surfaces, but they do not reproduce the same five-part `Risks` contract, so this is contrast evidence rather than a positive analogy"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle already has a checklist, an example, and explicit markdown-first caution routing, but it still lacks another markdown-first corpus proving the same caution-lift split in practice"
+                  "value_markdown": "the bundle already has a checklist, an example, and explicit markdown-first caution routing, but it still lacks another committed corpus proving the exact five-part `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, `Mitigations` split in practice"
                 }
               ]
             },
@@ -9894,7 +9926,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle should stay promoted until another corpus proves that the same caution split remains useful outside this public canon"
+                  "text": "the bundle should stay promoted with a bounded defer reason until another committed corpus proves that the same caution split remains useful outside this public canon"
                 }
               ]
             },
@@ -9932,7 +9964,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main missing proof is live reuse in another markdown-first repository"
+                  "text": "the main missing proof is live reuse of the exact five-part `Risks` contract in another committed repository"
                 },
                 {
                   "order": 2,
@@ -9951,7 +9983,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond the current repo-local sketch"
+                  "text": "defer canonical promotion until the technique proves itself in a live reuse context that reuses the same five-part `Risks` contract, not just adjacent caution or blind-spot language"
                 }
               ]
             }
@@ -10159,19 +10191,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "`AOA-T-0022` already has the fixed five-part `Risks` shape that the caution-lift contract needs"
+                  "text": "`aoa-skills/skills/aoa-safe-infra-change/SKILL.md` shows live caution language as `Risks and anti-patterns`, including explicit risk naming and rollback thinking, but its contract stays skill-local rather than reproducing the same five-part technique `Risks` split"
                 },
                 {
                   "order": 2,
-                  "text": "`AOA-T-0022` already sits beside the canonical-only adverse-effects review note pattern, which keeps caution review bounded without introducing metadata policy"
+                  "text": "`aoa-evals/bundles/aoa-bounded-change-quality/EVAL.md` and `aoa-evals/bundles/aoa-eval-integrity-check/EVAL.md` show live failure-mode and blind-spot surfaces for bounded review, but they remain eval surfaces rather than authored technique `Risks`"
                 },
                 {
                   "order": 3,
-                  "text": "this adaptation combines those repository-native instincts into a bounded sketch for markdown-first caution lookup without making caution authoritative over the bundle"
+                  "text": "taken together, those committed sibling repos prove that the caution vocabulary is live in adjacent donor surfaces, but they do not provide an equally strong second corpus for the exact five-part `Risks` contract"
                 },
                 {
                   "order": 4,
-                  "text": "this is sufficient as repo-local adaptation evidence for a first promoted draft, but it is not enough to argue for canonical status on its own"
+                  "text": "this is therefore a contrast-based live evidence read, not a forced positive analogy, and it still leaves the same bounded defer reason in place for canonical review"
                 }
               ]
             },
@@ -10182,7 +10214,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review"
+                  "text": "works as a bounded contrast-based adaptation read for a first promoted draft, while still needing stronger live reuse of the exact five-part `Risks` contract before any future canonical review"
                 }
               ]
             }
