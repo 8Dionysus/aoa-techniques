@@ -7,7 +7,7 @@
 ## Target project
 - name: aoa-techniques
 - environment: public technique canon with markdown-first contracts, generated selection surfaces, and explicit repo-local examples and checks
-- runtime: documentation-first repository where the rollout checklist survives as a bounded extension pattern even without the origin project’s live automation chain
+- runtime: documentation-first repository where the rollout checklist survives as a bounded extension pattern even without a live second reuse context yet
 
 ## What changed
 - adaptation path: the origin rollout policy is reused here as a public checklist for adding one new intent type to an already-existing dry-run chain, rather than as a donor-specific CI script or workflow rewrite
@@ -20,7 +20,7 @@
 - review discipline: the new intent must stay visible on the same artifact and review surfaces as the existing intent set
 
 ## Risks introduced by adaptation
-- the repo-local example can look like proof of live reuse even though it is still a bounded sketch rather than a second production context
+- the repo-local example can look like proof of live reuse even though it is still a bounded rollout sketch rather than a second production context
 - the checklist can drift toward generic rollout advice if it stops naming fixtures, routing checks, and artifact alignment explicitly
 - future readers could mistake a readable public example for the stronger evidence needed for canonical promotion
 
@@ -31,4 +31,4 @@
 - `notes/rollout-failure-triage.md` shows that the checklist remains tied to concrete failure repair paths rather than general rollout philosophy.
 
 ## Result
-- works as a bounded repo-local second context for the public checklist shape, but it is still not enough on its own to justify canonical promotion
+- works as a bounded repo-local rollout sketch for the public checklist shape, but it is still not enough on its own to justify canonical promotion

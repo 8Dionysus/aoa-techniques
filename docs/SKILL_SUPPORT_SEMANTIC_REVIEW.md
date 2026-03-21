@@ -1,13 +1,13 @@
 # Skill-Support Semantic Review
 
-This review-only pilot checks whether the recent skill-support cluster still reads as four distinct techniques rather than one blurred "agent-friendly testing and scoping" package.
+This review-only pilot checks whether the current skill-support cluster still reads as four distinct techniques rather than one blurred "agent-friendly testing and scoping" package.
 
 Why this cluster was chosen now:
 
-- all four techniques were just promoted from the same superseded landing wave
-- the main remaining question is semantic separation, not missing repo structure
+- the cluster now mixes three `canonical` defaults with one still-`promoted` companion
+- the main remaining question is semantic separation and bounded default-use posture, not missing repo structure
 - the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit
-- this is the highest-value review pass before any second-context evidence strengthening
+- the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism
 
 This doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.
 
@@ -57,7 +57,7 @@ Question: where does semantic scoping, vocabulary, and handoff mapping stop and 
 - `AOA-T-0016` is semantically distinct as a docs/scoping pattern, not an architecture-domain opening and not a test technique.
 - The strongest watch seam is `AOA-T-0015` vs `AOA-T-0017`, because both live in evaluation and both can sound like "stronger tests" if future examples lose their current center of gravity.
 - The second watch seam is `AOA-T-0016` drifting toward generic architecture formalism if later examples stop being scoping- and handoff-centric.
-- No relation cleanup, status change, or narrow remediation wave is justified from this pilot alone.
+- No relation cleanup or additional narrow semantic-remediation wave is justified from this pilot alone.
 
 Overall outcome: `clear with two watch seams`
 
@@ -65,4 +65,4 @@ Overall outcome: `clear with two watch seams`
 
 No immediate semantic-remediation wave is justified for this cluster from this pilot alone.
 
-Second-context evidence strengthening has already landed for `AOA-T-0014` and `AOA-T-0015`, so the next step should focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and `AOA-T-0016` drift toward generic architecture formalism.
+Second-context evidence strengthening and one downstream consumer now justify `AOA-T-0016` as `canonical`, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism.

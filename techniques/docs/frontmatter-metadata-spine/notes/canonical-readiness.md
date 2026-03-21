@@ -5,7 +5,7 @@
 - name: frontmatter-metadata-spine
 
 ## Verdict
-- stronger ready, still promoted
+- approve for canonical promotion
 
 ## Evidence summary
 - origin evidence: the current catalog layer already projects bounded frontmatter into derived routing outputs, so the metadata spine is real and not hypothetical
@@ -14,8 +14,8 @@
 
 ## Default-use rationale
 - this is the right default when a repository needs small routing fields for lookup, review posture, and direct adjacency without turning frontmatter into the technique's primary knowledge source
+- it is the canonical bundle-level metadata entrypoint for the KAG/source-lift family when the next question is routing or lookup rather than section lift, provenance lift, relation lift, or caution review
 - it remains narrower than section lift or provenance lift because it should help navigate the bundle, not replace the bundle's prose
-- it is now the first canonical candidate in the family because the same bounded spine is visible in committed skill, eval, and routing consumers, but the technique still belongs in `promoted` until a future wave chooses to elevate it
 
 ## Fresh public-safety check
 - review date: 2026-03-20
@@ -24,9 +24,9 @@
 - public reuse check: the current wording remains understandable without hidden repository context or a richer schema contract
 
 ## Remaining gaps
-- the remaining gap is not donor existence but promotion timing: the technique is ready enough to lead the family, but this wave keeps it `promoted`
-- a future canonical review should still confirm that shallow frontmatter remains enough even when a downstream routing problem is slightly different
+- no blocking gap remains for canonical use as long as the technique stays bounded to shallow metadata routing and does not widen into schema growth or markdown replacement
+- future review should keep watching for catalog-overread and schema creep, but those are ongoing watch seams rather than promotion blockers
 
 ## Recommendation
-- keep `AOA-T-0019` `promoted`
-- treat `AOA-T-0019` as the first promotion candidate for canonical review in the next wave, but do not change the status in this wave
+- promote `AOA-T-0019` to `canonical`
+- use `AOA-T-0019` as the default metadata-spine entrypoint for the KAG/source-lift family while keeping its contract bounded to routing and lookup

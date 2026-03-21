@@ -31,4 +31,5 @@
 - `AOA-T-0012 deterministic-context-composition` still supports the same direction: a derived doc surface can remain subordinate to authored source authority instead of becoming the semantic home
 
 ## Result
-- works as a bounded cross-repo adaptation grounded in a committed `aoa-skills` consumer, not just a repo-local sketch, while still leaving one gap: another live markdown-first consumer beyond the current bridge pattern
+- works as a bounded cross-repo adaptation grounded in a committed `aoa-skills` consumer, not just a repo-local sketch
+- the committed bridge pattern is still not equivalent to a second independent markdown-first consumer, so the reuse proof remains bounded to one bridge-backed downstream context

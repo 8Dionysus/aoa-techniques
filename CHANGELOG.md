@@ -10,7 +10,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Added
 
-- `AOA-T-0014` through `AOA-T-0022`, bringing the published corpus to 22 techniques (`13` canonical, `9` promoted)
+- `AOA-T-0014` through `AOA-T-0022`, bringing the published corpus to 22 techniques (`15` canonical, `7` promoted)
 - the first public five-technique KAG/source-lift family inside the existing `docs` domain:
   - `AOA-T-0018 markdown-technique-section-lift`
   - `AOA-T-0019 frontmatter-metadata-spine`
@@ -21,6 +21,8 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 ### Changed
 
 - evidence-harvest wave now records live donor posture for the KAG/source-lift family in `KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md` without changing statuses or validator specs
+- selective KAG promotion sync now promotes `AOA-T-0019 frontmatter-metadata-spine` to `canonical`, adds a canonical-only `adverse-effects-review` note, and makes it the bounded metadata-spine default for the KAG/source-lift family
+- promoted backlog closure wave now gives every remaining promoted target an explicit final verdict, promotes `AOA-T-0016 bounded-context-map` to `canonical`, adds its canonical-only `adverse-effects-review` note, and leaves `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0017`, `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0021`, and `AOA-T-0022` as bounded-defer `promoted` techniques
 - canon-strengthening wave now records explicit `canonical-readiness` outcomes across the non-KAG promoted target set, promotes `AOA-T-0004`, `AOA-T-0014`, and `AOA-T-0015` to `canonical`, and adds canonical-only `adverse-effects-review` notes for those newly promoted bundles
 - KAG family maturity wave now adds `second-context-adaptation` plus `canonical-readiness` notes to `AOA-T-0018` through `AOA-T-0022`, keeps all five `promoted`, and adds `KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md` as the shared family review surface
 - `SELECTION_PATTERNS.md` working sets are now validator-checked against their linked semantic review maps

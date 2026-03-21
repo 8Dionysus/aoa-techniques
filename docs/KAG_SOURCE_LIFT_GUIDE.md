@@ -28,6 +28,8 @@ The current repository is already strong enough for `technique-as-node` KAG beca
 
 That is enough to treat the repo as a strong upstream source. It is not yet a finished `section-level` KAG schema.
 
+Within the current reusable family, [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) is now the canonical bundle-level metadata entrypoint. [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md), and [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) remain narrower promoted companions.
+
 ## First Bounded Family Member
 
 The first KAG-oriented family member should be `markdown-technique-section-lift`.
@@ -115,7 +117,7 @@ For the first source-lift wave, treat these surfaces as stable:
 
 | source surface | bounded role |
 |---|---|
-| frontmatter | metadata spine for bundle identity, status, bounded review posture, and direct relations |
+| frontmatter | canonical metadata spine for bundle identity, status, bounded review posture, and direct relations |
 | `TECHNIQUE.md` section headings | stable human-authored content boundaries for later section-level extraction |
 | `relations` | direct typed edges only, without rationale expansion or multi-hop inference |
 | `evidence.kind` and `evidence.path` | provenance handles that point to supporting note surfaces without pulling them into one merged graph yet |

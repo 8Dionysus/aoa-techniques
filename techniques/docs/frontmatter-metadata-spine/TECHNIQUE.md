@@ -2,7 +2,7 @@
 id: AOA-T-0019
 name: frontmatter-metadata-spine
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: scripts/build_catalog.py
@@ -16,12 +16,12 @@ tags:
   - frontmatter
   - catalog
 summary: Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-19
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
   - type: complements
@@ -37,13 +37,15 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # frontmatter-metadata-spine
 
 ## Intent
 
-Use shallow frontmatter and derived catalog outputs as a stable metadata spine for bundle identity, routing, and review posture without pretending that frontmatter already contains the technique's full knowledge.
+Use shallow frontmatter and derived catalog outputs as a stable metadata spine for bundle identity, routing, and review posture without pretending that frontmatter already contains the technique's full knowledge. Within the KAG/source-lift family, use this as the default bundle-level metadata entrypoint when the next question is routing or lookup rather than section lift, note provenance, relation lift, or caution review.
 
 ## When to use
 
