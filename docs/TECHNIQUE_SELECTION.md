@@ -11,6 +11,7 @@ Use this surface to make one bounded choice:
 
 See also:
 - [Start Here](START_HERE.md)
+- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
 - [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
 - [CANONICAL_RUBRIC](CANONICAL_RUBRIC.md)
 - [Full catalog JSON](../generated/technique_catalog.json)

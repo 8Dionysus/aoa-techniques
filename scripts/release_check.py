@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import subprocess
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 
@@ -21,7 +22,16 @@ RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/validate_repo.py"),
 )
 WORKTREE_SNAPSHOT_COMMAND = ("git", "status", "--porcelain=v1", "--untracked-files=all")
+TRACKED_DIFF_SNAPSHOT_COMMAND = ("git", "diff", "--binary", "--no-ext-diff")
+CACHED_DIFF_SNAPSHOT_COMMAND = ("git", "diff", "--cached", "--binary", "--no-ext-diff")
 CLEAN_REPO_DIFF_COMMAND = ("git", "diff", "--exit-code")
+
+
+@dataclass(frozen=True)
+class RepoStateSnapshot:
+    worktree_status: str
+    tracked_diff: str
+    cached_diff: str
 
 
 def resolve_command(command: tuple[str, ...]) -> tuple[str, ...]:
@@ -35,9 +45,9 @@ def run_command(command: tuple[str, ...], repo_root: Path) -> None:
     subprocess.run(resolve_command(command), cwd=repo_root, check=True)
 
 
-def capture_worktree_snapshot(repo_root: Path) -> str:
+def capture_command_output(command: tuple[str, ...], repo_root: Path) -> str:
     result = subprocess.run(
-        WORKTREE_SNAPSHOT_COMMAND,
+        command,
         cwd=repo_root,
         check=True,
         capture_output=True,
@@ -46,30 +56,41 @@ def capture_worktree_snapshot(repo_root: Path) -> str:
     return result.stdout
 
 
+def capture_repo_state(repo_root: Path) -> RepoStateSnapshot:
+    return RepoStateSnapshot(
+        worktree_status=capture_command_output(WORKTREE_SNAPSHOT_COMMAND, repo_root),
+        tracked_diff=capture_command_output(TRACKED_DIFF_SNAPSHOT_COMMAND, repo_root),
+        cached_diff=capture_command_output(CACHED_DIFF_SNAPSHOT_COMMAND, repo_root),
+    )
+
+
+def repo_state_changed(before: RepoStateSnapshot, after: RepoStateSnapshot) -> bool:
+    return before != after
+
+
 def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
-    before_snapshot = capture_worktree_snapshot(repo_root)
+    before_state = capture_repo_state(repo_root)
 
     for command in RELEASE_CHECK_COMMAND_SEQUENCE:
         run_command(command, repo_root)
 
-    after_snapshot = capture_worktree_snapshot(repo_root)
-    if after_snapshot != before_snapshot:
+    after_state = capture_repo_state(repo_root)
+    if repo_state_changed(before_state, after_state):
         print("[info] worktree changed during release check; rerunning once to confirm stable outputs")
         for command in RELEASE_CHECK_COMMAND_SEQUENCE:
             run_command(command, repo_root)
 
-        stabilized_snapshot = capture_worktree_snapshot(repo_root)
-        if stabilized_snapshot != after_snapshot:
+        stabilized_state = capture_repo_state(repo_root)
+        if repo_state_changed(after_state, stabilized_state):
             print("[error] release check did not stabilize the worktree snapshot", file=sys.stderr)
             print("[after first pass]", file=sys.stderr)
-            print(after_snapshot or "<clean>", file=sys.stderr)
+            print(after_state, file=sys.stderr)
             print("[after second pass]", file=sys.stderr)
-            print(stabilized_snapshot or "<clean>", file=sys.stderr)
+            print(stabilized_state, file=sys.stderr)
             return 1
-        after_snapshot = stabilized_snapshot
 
-    if not before_snapshot.strip():
+    if not before_state.worktree_status.strip():
         run_command(CLEAN_REPO_DIFF_COMMAND, repo_root)
 
     print("[ok] release check completed")

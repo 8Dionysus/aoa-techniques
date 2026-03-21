@@ -32,7 +32,10 @@ Please make sure:
 - maturity status is set correctly
 - origin is stated clearly
 
-Before opening a PR, run `python -m unittest discover -s tests` and `python scripts/validate_repo.py` to check regression coverage, technique-bundle structure, and `TECHNIQUE_INDEX.md` parity locally.
+Before opening a PR, run `python scripts/release_check.py` as the bounded repo-wide validation path.
+
+That command is the public release-check entrypoint for this repository.
+If you need the transparent lower-level breakdown, it runs the current build path and ends with `python -m unittest discover -s tests` plus `python scripts/validate_repo.py`.
 
 See `docs/TECHNIQUE_SHADOW_GUIDE.md` for the repo-level shadow-discipline guidance behind the `## Risks` section.
 

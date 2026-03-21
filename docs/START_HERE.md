@@ -12,6 +12,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## If You Need One Technique Now
 
+- open [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md) when the question is how the selection family stays bounded before you trust any chooser surface
 - open [Technique Selection](TECHNIQUE_SELECTION.md) for one bounded pick by domain and current defaults
 - open [Selection Patterns](SELECTION_PATTERNS.md) when adjacency, working sets, or common next moves matter more than a flat list
 - open [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) when you want the whole corpus map first
@@ -22,6 +23,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Canonical Rubric](CANONICAL_RUBRIC.md) for the current frontmatter review fields and evidence kinds
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
 - open [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md) when the question is why a remaining `promoted` technique still needs an external donor path
+- open [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md) when the question is which repo-only hardening, review refresh, or external evidence wave should open next
 - use [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) as the live corpus split
 
 ## If You Need Derived Surfaces
@@ -30,6 +32,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Technique Capsules](TECHNIQUE_CAPSULES.md) when one small runtime card is enough
 - open [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md) when you need section, checklist, example, evidence-note, or bounded relation lift surfaces
 - open [SHADOW_PATTERNS.md](SHADOW_PATTERNS.md) and the semantic review docs when the question is about caution seams or boundary drift rather than first-pick selection
+- open [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md) when the question is how authored review docs relate to working sets and the semantic-review manifest without becoming policy
 
 ## Current Corpus Posture
 
