@@ -372,6 +372,38 @@
           "body_markdown": "Use one project-scoped history directory for saved AI coding sessions.\n\n```text\n.specstory/\n  history/\n    2026-03-21-architecture-review.md\n    2026-03-21-bugfix-session.md\n```\n\nContract:\n- each session is saved locally as a project artifact\n- the history remains usable without cloud sync\n- later tools may summarize or organize the files, but the artifact layer stays primary\n- the captured sessions do not become the canonical instruction source for the repository"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0027",
+      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md",
+          "title": "Concrete Multi-Target Skill Propagation",
+          "body_markdown": "This example shows one canonical shared rule core moving cleanly into several managed agent-facing targets.\n\n## Canonical source\n\n`rules/shared-agent-skill.md`\n\n```md\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-skill.md. -->\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-skill.md. -->\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n`GEMINI.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-skill.md. -->\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n## What this proves\n\n- one canonical source can keep several agent-facing targets synchronized\n- the targets remain derived outputs instead of competing sources of truth\n- the technique stays bounded to propagation, not to role generation, MCP propagation, or marketplace policy"
+        },
+        {
+          "example_path": "techniques/docs/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md",
+          "title": "Minimal Cross-Agent Skill Propagation",
+          "body_markdown": "Use one canonical rule source and propagate the same shared core to several managed agent-facing targets.\n\n## Canonical source\n\n`rules/shared-agent-guidance.md`\n\n```md\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat agent-facing target files as managed outputs.\n- Route shared instruction changes through the canonical source first.\n- Re-apply propagation after editing the source.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat agent-facing target files as managed outputs.\n- Route shared instruction changes through the canonical source first.\n- Re-apply propagation after editing the source.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat agent-facing target files as managed outputs.\n- Route shared instruction changes through the canonical source first.\n- Re-apply propagation after editing the source.\n```\n\n## What this proves\n\n- one canonical skill or rule source can fan out to multiple agent-facing targets\n- managed targets can stay aligned without copy-paste maintenance\n- the shared core remains readable even when wrapper text is destination-specific"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0028",
+      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/confirmation-gated-mutating-action/examples/concrete-confirmed-mutating-action.md",
+          "title": "Concrete Confirmed Mutating Action",
+          "body_markdown": "Scenario: an agent has identified one file that needs a small text update.\n\n1. Read the file and describe the exact line-level change in plain language.\n2. Ask for a visible confirmation before changing the file.\n3. After confirmation, apply only that one bounded edit.\n4. Report the result and stop instead of chaining more edits into the same run.\n\nThis stays inside the technique because the confirmation seam is explicit and the mutating action remains bounded to one named change."
+        },
+        {
+          "example_path": "techniques/agent-workflows/confirmation-gated-mutating-action/examples/minimal-confirmation-gated-mutating-action.md",
+          "title": "Minimal Confirmation Gated Mutating Action",
+          "body_markdown": "Use one read or plan step first, then pause for confirmation before mutation.\n\n- read or plan step:\n  - inspect the target file or target command\n  - state the proposed change in one sentence\n- confirmation step:\n  - ask for an explicit yes/no before any write runs\n- mutating step:\n  - perform only the confirmed bounded change\n  - stop after the confirmed action completes\n\nIf the task now needs multiple writes, diff review, or a longer verification chain, hand it off to a broader workflow technique."
+        }
+      ]
     }
   ]
 }

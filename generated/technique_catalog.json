@@ -1445,6 +1445,114 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0027",
+      "name": "cross-agent-skill-propagation",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
+      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "origin": {
+        "project": "ruler",
+        "path": "README.md",
+        "note": "Adapted from the open-source ruler project, which keeps one canonical rule source and fans it out to multiple agent-facing targets without turning the targets into new sources of truth."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "propagation",
+        "distribution",
+        "agent-instructions",
+        "anti-drift"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0013"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0028",
+      "name": "confirmation-gated-mutating-action",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop.",
+      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "origin": {
+        "project": "qqqa",
+        "path": "README.md",
+        "note": "Adapted from the open-source qqqa project, which separates read-only shell-side work from one explicit confirmed mutating step."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "confirmation",
+        "mutation",
+        "shell",
+        "bounded"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-21",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0023"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

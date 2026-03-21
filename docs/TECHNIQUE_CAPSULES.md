@@ -80,6 +80,19 @@ See also:
 - Validate by: one invocation handles one explicit question or one explicit action request; read-only question flows do not silently gain tool...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
 
+### [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`promoted`)
+
+- Summary: Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop.
+- Intent: Keep the boundary between read or plan work and mutating work explicit so a...
+- Use when: a read or plan flow is enough until one specific mutating step is ready or a mutating step...
+- Avoid when: the task is already a full multi-step workflow that needs planning, diff review, validation, and reporting or the...
+- Needs: one explicit read or plan result; one proposed mutating action; one visible confirmation decision.
+- Produces: one confirmed mutation or one explicit refusal; one auditable checkpoint between read or plan and write; one...
+- Core contract: read or plan work stays distinct from mutating work; the confirmation seam is the center of the contract.
+- Main risk: the confirmation step becomes so weak that it no longer feels like a real gate.
+- Validate by: a read or plan flow can pause before mutation; the mutation is named explicitly before it runs; the confirmation...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -237,6 +250,19 @@ See also:
 - Main risk: a version number changes without any real contract review, so the spec stops signaling meaningful change.
 - Validate by: one capability has one explicit versioned spec; the spec names inputs, outputs, and invariants clearly enough to review without...
 - Source: [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
+
+### [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
+
+- Summary: Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.
+- Intent: Keep one canonical skill or rule source and propagate it to multiple agent-facing targets...
+- Use when: repositories that need one shared skill or rule core to reach several agent-facing targets or projects where managed...
+- Avoid when: repositories that only need one instruction surface or projects where each target must carry materially different meaning.
+- Needs: one canonical skill or rule source; two or more agent-facing targets that should share the same core...
+- Produces: synchronized agent-facing targets; one retained canonical source of shared meaning; lower drift risk across agent-facing outputs.
+- Core contract: one canonical skill or rule source owns the shared meaning; target files are managed or derived outputs, not...
+- Main risk: target surfaces drift because local edits are applied without flowing back through the canonical source.
+- Validate by: one canonical skill or rule source is named explicitly; at least two agent-facing targets receive the same shared core...
+- Source: [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
 
 ## `evaluation`
 

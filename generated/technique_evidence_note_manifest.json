@@ -13091,6 +13091,1101 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0027",
+      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/cross-agent-skill-propagation/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0027"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "cross-agent-skill-propagation"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around marketplace curation, runtime role semantics, MCP propagation, nested loading, and other product-width detail"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when one shared skill or rule core must reach multiple agent-facing targets without turning each target into a canonical home"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than `AOA-T-0013`, which keeps the broader one-canonical-rule-source-to-many-managed-targets instruction-surface distribution story in focus"
+                },
+                {
+                  "order": 3,
+                  "text": "it also stays distinct from `AOA-T-0024`, which is about upstream mirroring with provenance rather than local skill or rule propagation"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable propagation contract and excludes donor-specific orchestration behavior"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that uses the same shared-skill propagation contract as a real managed-target fan-out rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0027` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the shared-skill propagation contract survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/cross-agent-skill-propagation/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0027"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "cross-agent-skill-propagation"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: one canonical skill or rule source can propagate to multiple agent-facing targets without turning those targets into canonical homes"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around marketplace curation, runtime role semantics, MCP propagation, nested loading, and broader orchestration detail"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: one canonical source, repeatable propagation, adjacent managed targets, and targets that remain subordinate to the source"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: marketplace curation policy, runtime role semantics, MCP propagation, nested loading, and broader product-width behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce propagation plus managed targets without widening the bundle into a marketplace, registry, or orchestration system"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable docs pattern rather than a disguised runtime or role contract"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "this new adjacent import does not count as live closure evidence for `AOA-T-0013`, because one-source-to-many-target instruction distribution is a different contract from cross-agent skill or rule propagation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0027` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the shared-skill propagation contract survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/cross-agent-skill-propagation/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/intellectronica/ruler`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`ruler` single-source rule model where one canonical skill or rule source is applied to multiple agent-facing targets"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "refreshed the donor package around the current public `ruler` contract and kept only one bounded pattern: one canonical skill or rule source fans out to multiple agent-facing targets"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "one canonical source, repeatable propagation to multiple targets, managed target files, and anti-duplication behavior on re-apply"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "exact supported-agent matrix, CLI flags, Node/npm assumptions, nested loading as a core contract, MCP propagation, skills propagation, `.gitignore` automation, and backup/revert behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths, environment conventions, and generated target layouts were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on `npm`, `npx`, or a particular local runtime even though the donor repository ships a Node-based CLI"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is scope creep rather than security leakage; later sibling techniques should review nested loading, MCP propagation, or skills propagation separately instead of widening this bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "repositories that support multiple coding agents often need shared guidance to reach several agent-facing surfaces without making each target file canonical"
+                },
+                {
+                  "order": 2,
+                  "key": "primary evidence used",
+                  "value_markdown": "the current `README.md` in `ruler` still defines a single source of truth plus automatic distribution to multiple agent-facing outputs, and the public tests still show repeated application without duplicating shared instructions"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "the donor remains a beta research preview, so the bundle should keep importing the narrow pattern only and continue rejecting broader product-width behavior as part of this contract"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/cross-agent-skill-propagation/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0027"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "cross-agent-skill-propagation"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the propagation pattern rather than shipping the donor distribution engine itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor uses one canonical source directory plus managed agent-facing targets; this adaptation presents a generic source-to-target propagation pattern that can fit other curated collections"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no MCP propagation, installer integration, or registry generator is required in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on declared source ownership, repeatable propagation, and adjacent managed targets, not on the donor CLI"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should treat managed targets as derived outputs and keep local wrapper notes visibly separate"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one canonical skill or rule source declares the shared meaning"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "managed targets remain traceable to that source through repeatable propagation"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "local copies stay subordinate to the canonical source and do not silently become new canonical homes"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project copies managed targets but drops the canonical source as the actual propagation authority"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may keep target files but stop treating the source as the real contract owner"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` describes one canonical source plus automatic distribution to multiple agent-facing outputs"
+                },
+                {
+                  "order": 2,
+                  "text": "the public tests show repeated application without duplicating shared instructions in managed targets"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique narrows those behaviors into one reusable docs pattern for skill or rule propagation with managed outputs"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific product breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0028",
+      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0028"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "confirmation-gated-mutating-action"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around stateless-shell invariants, generic caution prose, and broader orchestration breadth"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when a workflow must cross from read or plan into mutation only after one explicit confirmation seam"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains distinct from `AOA-T-0023`, which stays centered on a stateless single-shot shell fast path rather than the confirmation boundary itself"
+                },
+                {
+                  "order": 3,
+                  "text": "it remains narrower than `AOA-T-0001`, which stays the default workflow backbone for multi-step repository work that needs planning, verification, and reporting across more than one step"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable confirmation boundary and excludes donor-specific configuration, shell fast-path breadth, and broader workflow ceremony"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public workflow surface where the same confirmation-gated mutation boundary is used as a real fast path rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0028` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the confirmation-gated mutation boundary survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0028"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "confirmation-gated-mutating-action"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one checklist, and two examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: read or plan work crosses into mutation only after one explicit confirmation seam"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around stateless-shell invariants, generic caution prose, and broader orchestration"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: a visible confirmation gate, one bounded mutation target, and a clear stop point after the confirmed action"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: stateless shell invocation as a required invariant, implicit approvals, generic caution prose, and multi-step workflow ceremony"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce the confirmation boundary without widening it into a hidden autonomous loop"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable workflow pattern rather than a disguised donor product dump"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show the same confirmation-gated mutation boundary in another public repository or workflow surface rather than another import-only note set"
+                },
+                {
+                  "order": 3,
+                  "text": "this new adjacent import does not count as live closure evidence for `AOA-T-0023`, because a confirmation seam is a narrower contract than the broader stateless single-shot shell fast path"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0028` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the confirmation-gated mutation boundary survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/iagooar/qqqa`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`qqqa`'s split between read-only shell-side work and one explicit confirmed mutating step"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded pattern: a visible confirmation seam before a mutating action"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "read or plan work stays distinct from mutation, the confirmation is explicit, and the action stays bounded to the named target"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "stateless-shell framing, provider/runtime assumptions, generic caution prose, and broad orchestration breadth"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths and runtime-specific assumptions were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on a particular shell wrapper, provider, or CLI stack"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risk is scope creep, not data leakage; future siblings should treat broader multi-step workflow behavior separately"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many repositories need a small, visible gate between advice and mutation so the action stays reviewable and bounded"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import intentionally excludes stateless-shell posture, generic caution prose, and broader autonomous loops"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0028"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "confirmation-gated-mutating-action"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with reusable technique bundles, generated catalog surfaces, and documentation-first validation"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the confirmation boundary rather than shipping the donor CLI itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor uses a shell-side fast path; this adaptation presents a generic confirmation-gated mutation pattern without depending on the donor's invocation model"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "provider profiles and wider CLI orchestration are removed from the reusable contract"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on a visible confirmation seam, not on stateless-shell behavior as an invariant"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should read the technique as a workflow contract for crossing from read or plan into mutation, not as a shell convenience wrapper"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one explicit confirmation is required before a bounded mutation runs"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "read or plan work and mutation stay distinct, and the workflow should stop after the confirmed action"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "the confirmation must name the mutation clearly and should not collapse into a weak or implicit approval"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project keeps the confirmation wording but does not name the actual mutation"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may turn the confirmation gate into generic caution prose instead of a real action boundary"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` describes `qqqa` as a stateless shell tool where `qq` answers a single question and `qa` performs one tool-using step with confirmation"
+                },
+                {
+                  "order": 2,
+                  "text": "this imported technique narrows that behavior into one reusable mutation-gating contract and makes confirmation the center of the pattern"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific shell fast-path breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1469,6 +1469,118 @@
           "markdown": "What can vary across projects:\n- the folder name used for history artifacts\n- the session file format\n- whether artifacts are captured from one tool or several\n- the retention, pruning, or sharing workflow\n\nWhat should stay invariant:\n- sessions are persisted as project-scoped artifacts\n- local-first history remains available without requiring cloud sync\n- history stays a reviewable artifact layer rather than memory substrate\n- the technique remains about capture and artifact discipline, not retrieval or instruction authority\n\nProject-shaped details that should not be treated as invariant:\n- cloud sync product behavior\n- search UI or web dashboards\n- history-derived skills or summaries\n- provider-specific wrapper commands"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0027",
+      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets so shared guidance stays synchronized without making every target a separate source of truth."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- repositories that need one shared skill or rule core to reach several agent-facing targets\n- projects where managed outputs should stay derived from one canonical source rather than hand-edited in place\n- workflows where the risk is target drift across agent-facing surfaces, not multi-step runtime orchestration\n- cases where the same shared rule core should be visible to multiple agents without widening into a marketplace, registry, or role system"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- repositories that only need one instruction surface\n- projects where each target must carry materially different meaning\n- workflows where the real need is upstream mirroring with provenance rather than local rule propagation\n- cases where the real need is runtime role semantics, MCP propagation, or broader multi-target orchestration"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one canonical skill or rule source\n- two or more agent-facing targets that should share the same core meaning\n- one managed distribution step that refreshes the targets from the canonical source\n- one explicit policy that keeps target files subordinate to the source"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- synchronized agent-facing targets\n- one retained canonical source of shared meaning\n- lower drift risk across agent-facing outputs\n- a repeatable way to re-apply the same shared skill or rule core"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Choose one canonical location for the shared skill or rule source.\n2. Name the agent-facing targets that should receive that shared core.\n3. Propagate the shared meaning into each target with only minimal destination-specific wrapper text.\n4. Keep the targets treated as managed outputs rather than canonical homes.\n5. Re-apply the distribution step whenever the canonical source changes.\n6. Review the canonical source first and use the target files only to confirm synchronized propagation.\n7. Keep the shared core narrow enough that it can survive repeated propagation without becoming target-specific policy."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one canonical skill or rule source owns the shared meaning\n- target files are managed or derived outputs, not canonical editable homes\n- the same source update can be propagated repeatedly without introducing drift\n- target-specific wrappers must not change the shared rule intent\n- manual edits to target files are either forbidden or clearly subordinate to the canonical source\n- the technique stays centered on skill or rule propagation into managed targets, not on role contracts, marketplace curation, or nested loader breadth\n\nRelationship to adjacent techniques: unlike `AOA-T-0013`, this technique keeps the center of gravity on skill or rule propagation into managed agent-facing targets rather than the broader instruction-surface distribution story. Unlike `AOA-T-0024`, it does not mirror upstream-owned content into a curated local collection; the source here is a local canonical skill or rule core that fans out to managed outputs."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- target surfaces drift because local edits are applied without flowing back through the canonical source\n- contributors start treating one of the managed targets as if it were a new source of truth\n- propagation stops being repeatable, so synchronized-looking targets hide real source drift\n\n### Negative effects\n\n- one-to-many propagation can hide divergence longer than hand-maintained files would\n- wrapper or formatting differences can make the shared meaning harder to compare across targets\n- the technique can create false confidence if all targets look updated while the canonical source has already split in meaning\n\n### Misuse patterns\n\n- widening the technique into marketplace policy or runtime role semantics\n- treating MCP propagation, nested loading, or broader orchestration as if they belong inside this contract\n- adding target-specific shadow logic until each managed output becomes a semi-canonical source in disguise\n\n### Detection signals\n\n- canonical source changes stop flowing cleanly through to every managed target\n- reviewers cannot confirm that the shared core still matches across wrappers or re-apply passes\n- managed targets accumulate local edits that are not obviously derivable from the canonical source\n\n### Mitigations\n\n- keep one explicit canonical source and make every target clearly subordinate to it\n- remove local target edits and route changes through the source before re-applying distribution\n- keep repeatability checks part of the contract so synchronized appearance does not substitute for actual parity\n- split broader propagation or loading behavior into separate techniques instead of letting target-specific shadow logic accumulate inside this one"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one canonical skill or rule source is named explicitly\n- at least two agent-facing targets receive the same shared core\n- target files are treated as managed or derived outputs rather than canonical editable files\n- re-applying distribution does not duplicate the shared meaning in target files\n- a source change routes through the canonical source first instead of through target-file edits\n\nSee `checks/cross-agent-skill-propagation-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the canonical source directory name\n- the exact set of target instruction files\n- whether propagation is a CLI command, build task, or CI-enforced check\n- the target-specific wrapper format used around shared instructions\n\nWhat should stay invariant:\n- one canonical skill or rule source owns the shared meaning\n- multiple agent-facing targets can be refreshed from that source\n- target files remain derived rather than hand-maintained canonical documents\n- propagation exists to reduce drift, not to create many divergent instruction variants\n\nProject-shaped details that should not be treated as invariant:\n- marketplace curation policy\n- runtime role semantics\n- MCP propagation\n- nested loading breadth\n- installer or plugin registry behavior"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0028",
+      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep the boundary between read or plan work and mutating work explicit so a confirmed action stays reviewable, bounded, and easy to stop before it crosses into hidden autonomy."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a read or plan flow is enough until one specific mutating step is ready\n- a mutating step should be visible, acknowledged, and easy to review before it runs\n- a repository or operator workflow needs a clear seam between advice and action\n- the task should stay bounded even when the action itself is small and routine"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the task is already a full multi-step workflow that needs planning, diff review, validation, and reporting\n- the main goal is a stateless shell fast path rather than a confirmation boundary\n- the action should happen implicitly or through a weak approval signal\n- the task depends on a broader autonomous loop or hidden continuation behavior"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one explicit read or plan result\n- one proposed mutating action\n- one visible confirmation decision\n- one bounded target for the mutation"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one confirmed mutation or one explicit refusal\n- one auditable checkpoint between read or plan and write\n- one clear handoff point when the task should widen into a broader workflow"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Read or plan only until the mutating step is concrete.\n2. State the proposed mutation in bounded terms.\n3. Require a visible confirmation before any write or execution that changes state.\n4. Execute only the confirmed mutation and keep it scoped to the stated target.\n5. Stop after the confirmed action instead of chaining an unbounded follow-on loop.\n6. Escalate to a broader workflow technique when the task now needs multiple coordinated steps."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- read or plan work stays distinct from mutating work\n- the confirmation seam is the center of the contract\n- implicit approvals do not count as confirmation\n- the technique does not depend on stateless shell invocation as an invariant\n- the technique stays bounded and reviewable even when the underlying action is simple\n- when the task widens beyond one confirmed mutation, hand off to a broader workflow technique instead of stretching this contract\n\nRelationship to adjacent techniques: unlike `AOA-T-0023`, this technique centers the explicit confirmation boundary itself rather than the broader stateless single-shot shell fast path. Unlike `AOA-T-0001`, it does not own multi-step planning, diff review, or verification across a larger repository workflow."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the confirmation step becomes so weak that it no longer feels like a real gate\n- the workflow quietly expands into a multi-step loop after the first confirmation\n- the action target gets broader than the confirmation text actually described\n\n### Negative effects\n\n- a confirmation gate can add friction to small safe actions\n- teams may overuse the technique when a fuller workflow would be more honest\n- a visible gate can still hide risk if the described mutation is too vague\n\n### Misuse patterns\n\n- treating a generic caution prompt as if it were a real confirmation gate\n- bundling several writes behind one vague approval\n- using the technique as a substitute for planning or diff review when the task is already broad\n\n### Detection signals\n\n- the workflow starts asking for approval after the mutation is already underway\n- the action text does not match the actual change being made\n- the same run begins chaining additional steps without a new explicit gate\n\n### Mitigations\n\n- keep the proposed mutation specific and visible before execution\n- require a fresh confirmation when the action changes scope\n- route broader work into `AOA-T-0001` or another multi-step technique instead of extending this one"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a read or plan flow can pause before mutation\n- the mutation is named explicitly before it runs\n- the confirmation is visible and reviewable\n- the workflow stops after the confirmed mutation instead of becoming a hidden loop\n- broader work cleanly hands off to a more complete workflow technique\n\nSee `checks/confirmation-gated-mutating-action-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the confirmation UI or terminal prompt\n- the shape of the proposed mutation text\n- the command runner or automation wrapper behind the action\n- the repository or tool surface being mutated\n\nWhat should stay invariant:\n- the confirmation seam stays explicit\n- read or plan and mutation remain distinct\n- a fresh confirmation is required when the action changes scope\n- the technique remains a bounded action gate, not a hidden autonomous loop\n\nProject-shaped details that should not be treated as invariant:\n- provider-specific shell behavior\n- install or onboarding scripts\n- generic approval phrasing that does not name the mutation\n- multi-step orchestration details"
+        }
+      ]
     }
   ]
 }

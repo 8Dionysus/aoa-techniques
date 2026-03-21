@@ -1087,6 +1087,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0027",
+      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md",
+          "title": "Cross-Agent Skill Propagation Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name one canonical skill or rule source explicitly."
+            },
+            {
+              "order": 2,
+              "text": "Make at least two agent-facing targets receive the same shared core."
+            },
+            {
+              "order": 3,
+              "text": "Treat target files as managed or derived outputs."
+            },
+            {
+              "order": 4,
+              "text": "Keep target-specific wrappers minimal and destination-focused."
+            },
+            {
+              "order": 5,
+              "text": "Re-apply propagation from the canonical source when shared meaning changes."
+            },
+            {
+              "order": 6,
+              "text": "Avoid making any managed target the new source of truth."
+            },
+            {
+              "order": 7,
+              "text": "Keep runtime role semantics, MCP propagation, nested loading, and marketplace curation out of the contract."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0028",
+      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md",
+          "title": "Confirmation Gated Mutating Action Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name the proposed mutation before any write or execution step runs."
+            },
+            {
+              "order": 2,
+              "text": "Keep read or plan work separate from the confirmed mutation."
+            },
+            {
+              "order": 3,
+              "text": "Require one visible confirmation before the mutating action starts."
+            },
+            {
+              "order": 4,
+              "text": "Make the confirmation text specific enough to match the actual change."
+            },
+            {
+              "order": 5,
+              "text": "Stop after the confirmed mutation instead of chaining a hidden follow-up loop."
+            },
+            {
+              "order": 6,
+              "text": "Escalate to a broader workflow technique when the task now needs multiple steps."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

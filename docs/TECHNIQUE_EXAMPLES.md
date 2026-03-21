@@ -50,6 +50,13 @@ See also:
 | Confirmed Single-Step Action | `present` | `techniques/agent-workflows/stateless-single-shot-agent/examples/confirmed-single-step-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 | Minimal Stateless Single-Shot Agent | `present` | `techniques/agent-workflows/stateless-single-shot-agent/examples/minimal-stateless-single-shot-agent.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 
+### [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Confirmed Mutating Action | `present` | `techniques/agent-workflows/confirmation-gated-mutating-action/examples/concrete-confirmed-mutating-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| Minimal Confirmation Gated Mutating Action | `present` | `techniques/agent-workflows/confirmation-gated-mutating-action/examples/minimal-confirmation-gated-mutating-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -128,6 +135,13 @@ See also:
 |---|---|---|---|
 | Concrete Capability Upgrade With Compat Window | `present` | `techniques/docs/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | Minimal Capability Spec Versioning | `present` | `techniques/docs/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
+
+### [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Multi-Target Skill Propagation | `present` | `techniques/docs/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| Minimal Cross-Agent Skill Propagation | `present` | `techniques/docs/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
 
 ## `evaluation`
 
