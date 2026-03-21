@@ -47,6 +47,9 @@ The selection family stays bounded to shallow bundle-routing knowledge:
 The family is allowed to help a reader choose one next technique or one nearby cluster.
 It is not allowed to replace `TECHNIQUE.md`, semantic review docs, or bundle-local notes as the source of meaning.
 
+If a domain has no canonical default yet, the validator-backed domain-start specs may point to one bounded `promoted` starter for that domain.
+That is a temporary route aid, not a silent promotion.
+
 ## Reader Companions And Derived Catalog
 
 The current selection family exposes four bounded surfaces:

@@ -10,13 +10,16 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Added
 
-- `AOA-T-0014` through `AOA-T-0024`, bringing the published corpus to 24 techniques (`17` canonical, `7` promoted)
+- `AOA-T-0014` through `AOA-T-0026`, bringing the published corpus to 26 techniques (`17` canonical, `9` promoted)
 - the first public five-technique KAG/source-lift family inside the existing `docs` domain:
   - `AOA-T-0018 markdown-technique-section-lift`
   - `AOA-T-0019 frontmatter-metadata-spine`
   - `AOA-T-0020 evidence-note-provenance-lift`
 - `AOA-T-0021 bounded-relation-lift-for-kag`
 - `AOA-T-0022 risk-and-negative-effect-lift`
+- one new bounded `history` domain for session/history artifacts that stay local-first and reviewable without widening into `aoa-memo` ownership
+- `AOA-T-0025 capability-spec-versioning`
+- `AOA-T-0026 session-capture-as-repo-artifact`
 - `docs/LONG_GAP_CANON_DESIGN.md`, which captures the current design-first donor plan for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - `docs/DEEP_AUDIT_ROADMAP.md`, which turns the current green baseline into a phase-by-phase closure roadmap for structural hardening, corpus meaning, surface usability, governance seams, and next implementation packs
 - `docs/TECHNIQUE_SELECTION_GUIDE.md` and `docs/SEMANTIC_REVIEW_GUIDE.md`, which close the missing authored family-contract layer for selection and semantic-review surfaces
@@ -26,6 +29,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - remaining closure program now lands a dedicated `AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md`, merges first donor evidence from `aoa-skills` and `ATM10-Agent`, refreshes `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022` second-context and readiness notes, and restages the remaining promoted backlog around one evidence-prep item plus four external-dependency-first items
 - external donor intake wave now refreshes `AOA-T-0013` around the bounded `ruler` origin package, records `agents-md` as an overlap hold against `AOA-T-0012`, records `n-skills` as a landed adjacent provenance import rather than closure proof for `AOA-T-0013`, and keeps `AOA-T-0005` plus `AOA-T-0022` frozen until exact-fit external donors exist
 - new external seed intake now adds `AOA-T-0023 stateless-single-shot-agent` from `qqqa`, adds `AOA-T-0024 upstream-mirroring-with-provenance` from `n-skills`, and widens the instruction-surface review from a pair into a three-technique cluster
+- mixed external seed growth wave now adds `AOA-T-0025 capability-spec-versioning` from `agentic`, adds `AOA-T-0026 session-capture-as-repo-artifact` from `getspecstory`, introduces the bounded `history` domain, records `OpenMemory-Code` as a hold because memory-boundary overlap, and records `agentwise` as an explicit future-import candidate rather than a vague seed
 - review coverage refresh wave now adds `docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md`, narrows `docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md` to the remaining skill-support seam cluster, and makes the new canonical-core review discoverable from the semantic-review guide and docs map
 - repo-only hardening wave now aligns `README.md`, `docs/README.md`, and `CONTRIBUTING.md` around `docs/START_HERE.md`, the bounded `python scripts/release_check.py` path, and the current deep-audit closure roadmap
 - `scripts/release_check.py` now compares composite repo state across worktree status, tracked diff, and cached diff so dirty tracked files cannot hide unstable generated drift

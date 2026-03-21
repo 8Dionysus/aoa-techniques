@@ -37,7 +37,8 @@
       "enum": [
         "agent-workflows",
         "docs",
-        "evaluation"
+        "evaluation",
+        "history"
       ]
     },
     "status": {

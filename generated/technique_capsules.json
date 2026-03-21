@@ -337,6 +337,34 @@
       "main_risk_short": "Main risk: mirrored content drifts because local edits accumulate without a clear resync path back to upstream.",
       "validation_short": "Validate by checking each mirrored item is named in one explicit source manifest; the local mirror carries adjacent provenance or attribution metadata...",
       "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0025",
+      "name": "capability-spec-versioning",
+      "summary": "Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy.",
+      "one_line_intent": "Keep capability behavior reviewable by naming it in one versioned spec instead of letting...",
+      "use_when_short": "Use when agent-facing systems that expose named capabilities and need contract changes to be explicit or repositories where capability inputs...",
+      "do_not_use_short": "Avoid when workflows whose main problem is plan orchestration, task scheduling, or multi-agent execution order or systems where the real...",
+      "inputs_short": "Needs one named capability with a bounded purpose; one explicit version marker for the current contract; one spec...",
+      "outputs_short": "Produces one reviewable capability contract with explicit version identity; one clearer compatibility story when capability behavior changes; lower...",
+      "core_contract_short": "Core contract: one capability spec stays the authoritative contract for the named capability; version changes are explicit and reviewable rather...",
+      "main_risk_short": "Main risk: a version number changes without any real contract review, so the spec stops signaling meaningful change.",
+      "validation_short": "Validate by checking one capability has one explicit versioned spec; the spec names inputs, outputs, and invariants clearly enough to review without...",
+      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0026",
+      "name": "session-capture-as-repo-artifact",
+      "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
+      "one_line_intent": "Preserve AI coding sessions as explicit project-scoped history artifacts so useful reasoning, decisions, and...",
+      "use_when_short": "Use when repositories that want local-first session history to remain searchable and shareable as project artifacts or workflows that need...",
+      "do_not_use_short": "Avoid when systems whose main reusable object is long-term memory retrieval, recall ranking, or memory-object storage or workflows that want...",
+      "inputs_short": "Needs one project-scoped location for saved session artifacts; one capture path that writes sessions as files or equivalent...",
+      "outputs_short": "Produces one persistent session-history artifact layer inside the project; one more reviewable trail of AI-assisted work across sessions...",
+      "core_contract_short": "Core contract: session history stays project-scoped and artifact-based; local persistence remains available without requiring cloud sync.",
+      "main_risk_short": "Main risk: session artifacts quietly become the de facto instruction source because no stronger authored source stays visible.",
+      "validation_short": "Validate by checking session history is saved as project-scoped artifacts; the local artifact path remains useful even without cloud sync; a reviewer...",
+      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md"
     }
   ]
 }

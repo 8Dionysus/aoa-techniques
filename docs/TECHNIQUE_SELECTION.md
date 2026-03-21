@@ -41,6 +41,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | `docs` | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md), [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md), [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 | `evaluation` | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md), [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md), [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| `history` | - |
 
 ### If I choose one technique, what nearby techniques usually go with it?
 
@@ -68,6 +69,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md): `complements` [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
 - [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md): `complements` [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 - [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+- [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+- [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -96,6 +99,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
 | [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source. |
+| [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
 
 ### `evaluation`
 
@@ -110,9 +114,15 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
 
+### `history`
+
+| technique | status | validation | rigor | summary |
+|---|---|---|---|---|
+| [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy. |
+
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 24/24 techniques.
+- `export_ready` is currently `true` for 26/26 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

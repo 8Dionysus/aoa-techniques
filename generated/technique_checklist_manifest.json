@@ -1005,6 +1005,88 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0025",
+      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/capability-spec-versioning/checks/capability-spec-versioning-checklist.md",
+          "title": "Capability Spec Versioning Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name one bounded capability rather than a whole orchestration system."
+            },
+            {
+              "order": 2,
+              "text": "Record one explicit spec version for the capability contract."
+            },
+            {
+              "order": 3,
+              "text": "State expected inputs, outputs, and invariants in the spec."
+            },
+            {
+              "order": 4,
+              "text": "Keep implementations and providers subordinate to the spec."
+            },
+            {
+              "order": 5,
+              "text": "Record compatibility notes when the capability version changes in a consumer-relevant way."
+            },
+            {
+              "order": 6,
+              "text": "Keep persistent registry, plan orchestration, and history-learning behavior out of this technique."
+            },
+            {
+              "order": 7,
+              "text": "Make it possible to review a capability change without reading runtime code first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0026",
+      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/history/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md",
+          "title": "Session Capture As Repo Artifact Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Save sessions into one project-scoped artifact location."
+            },
+            {
+              "order": 2,
+              "text": "Keep local persistence available even when cloud sync is absent."
+            },
+            {
+              "order": 3,
+              "text": "Preserve enough structure that sessions can be inspected or summarized later."
+            },
+            {
+              "order": 4,
+              "text": "Keep captured history separate from authored instructions and decision docs."
+            },
+            {
+              "order": 5,
+              "text": "Do not widen the contract into memory recall, vector retrieval, or policy routing."
+            },
+            {
+              "order": 6,
+              "text": "Sanitize or review session artifacts before treating them as portable or shareable."
+            },
+            {
+              "order": 7,
+              "text": "Keep search, analytics, and history-derived skills as separate layers outside this technique."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

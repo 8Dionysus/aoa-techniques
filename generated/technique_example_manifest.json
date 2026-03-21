@@ -340,6 +340,38 @@
           "body_markdown": "Use one small source manifest entry plus one adjacent provenance file.\n\n- source manifest entry:\n  - names the upstream repository\n  - names the upstream source path\n  - names the local mirror destination\n- mirrored local copy:\n  - is refreshed from upstream\n  - does not become the new canonical source\n- provenance file:\n  - preserves the upstream origin\n  - stays adjacent to the mirrored copy\n\nIf the local collection now wants registry policy, installer behavior, or ranking logic, treat that as a separate technique."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0025",
+      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md",
+          "title": "Concrete Capability Upgrade With Compat Window",
+          "body_markdown": "Scenario: a repository exposes a `render_release_report` capability to several agent-facing surfaces.\n\n1. Keep one capability spec as the source of truth.\n2. Version the contract from `2.0.0` to `2.1.0` when a new optional `include_warnings` input is added.\n3. Write a short compatibility note saying existing consumers can stay on the old call shape during one review window.\n4. Update providers only after the spec change is reviewed.\n5. Keep orchestration, provider registration, and routing policy outside the capability spec.\n\nThis keeps the capability boundary explicit instead of burying contract change inside provider code or runtime glue."
+        },
+        {
+          "example_path": "techniques/docs/capability-spec-versioning/examples/minimal-capability-spec-versioning.md",
+          "title": "Minimal Capability Spec Versioning",
+          "body_markdown": "Use one small spec as the contract for one named capability.\n\n```yaml\ncapability:\n  name: summarize_history\n  version: 1.1.0\n  purpose: Produce a short project-history summary from versioned session artifacts.\n  inputs:\n    - history_path\n    - max_entries\n  outputs:\n    - summary_markdown\n  invariants:\n    - input artifacts remain read-only\n    - summary does not rewrite source history\n  compatibility:\n    changed_from: 1.0.0\n    note: version 1.1.0 adds max_entries but keeps existing summary shape\n```\n\nProvider code can change later, but the spec remains the first review surface for what the capability means now."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0026",
+      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/history/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md",
+          "title": "Concrete Local-First Session History",
+          "body_markdown": "Scenario: a repository wants its CLI agent sessions to stay inspectable after each terminal run.\n\n1. Launch the coding agent through one wrapper that saves each session locally.\n2. Write each session to `.specstory/history/` with a stable project-scoped path.\n3. Keep the saved session readable as a versioned artifact even when optional cloud sync is disabled.\n4. Run summaries or organization tools on top of that history later, instead of treating those tools as the source of truth.\n5. Keep repository instructions and decisions in authored docs, not in the captured transcript itself.\n\nThis preserves session knowledge as history without widening into memory substrate or instruction policy."
+        },
+        {
+          "example_path": "techniques/history/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md",
+          "title": "Minimal Session Capture As Repo Artifact",
+          "body_markdown": "Use one project-scoped history directory for saved AI coding sessions.\n\n```text\n.specstory/\n  history/\n    2026-03-21-architecture-review.md\n    2026-03-21-bugfix-session.md\n```\n\nContract:\n- each session is saved locally as a project artifact\n- the history remains usable without cloud sync\n- later tools may summarize or organize the files, but the artifact layer stays primary\n- the captured sessions do not become the canonical instruction source for the repository"
+        }
+      ]
     }
   ]
 }
