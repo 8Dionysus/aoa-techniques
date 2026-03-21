@@ -66,7 +66,29 @@ class ValidateRepoRegressionTests(unittest.TestCase):
             ("git", "status", "--porcelain=v1", "--untracked-files=all"),
             release_check.WORKTREE_SNAPSHOT_COMMAND,
         )
+        self.assertEqual(
+            ("git", "diff", "--binary", "--no-ext-diff"),
+            release_check.TRACKED_DIFF_SNAPSHOT_COMMAND,
+        )
+        self.assertEqual(
+            ("git", "diff", "--cached", "--binary", "--no-ext-diff"),
+            release_check.CACHED_DIFF_SNAPSHOT_COMMAND,
+        )
         self.assertEqual(("git", "diff", "--exit-code"), release_check.CLEAN_REPO_DIFF_COMMAND)
+
+    def test_release_check_repo_state_detects_tracked_diff_changes_without_status_drift(self) -> None:
+        before = release_check.RepoStateSnapshot(
+            worktree_status=" M docs/TECHNIQUE_SELECTION.md\n",
+            tracked_diff="diff --git a/docs/TECHNIQUE_SELECTION.md b/docs/TECHNIQUE_SELECTION.md\n-old\n+new\n",
+            cached_diff="",
+        )
+        after = release_check.RepoStateSnapshot(
+            worktree_status=" M docs/TECHNIQUE_SELECTION.md\n",
+            tracked_diff="diff --git a/docs/TECHNIQUE_SELECTION.md b/docs/TECHNIQUE_SELECTION.md\n-older\n+newer\n",
+            cached_diff="",
+        )
+
+        self.assertTrue(release_check.repo_state_changed(before, after))
 
     def test_expected_evidence_kind_maps_adverse_effects_review_filename(self) -> None:
         self.assertEqual(
@@ -364,6 +386,43 @@ relations:
                     with self.assertRaises(validate_repo.ValidationError):
                         validate_repo.validate_public_hygiene(repo_root)
 
+    def test_public_hygiene_rejects_internal_host_suffix_urls(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            docs_dir = repo_root / "docs"
+            docs_dir.mkdir(parents=True)
+            (docs_dir / "public.md").write_text(
+                "See https://grafana.internal/dashboard for details.\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaises(validate_repo.ValidationError):
+                validate_repo.validate_public_hygiene(repo_root)
+
+    def test_public_hygiene_rejects_rfc1918_urls(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            docs_dir = repo_root / "docs"
+            docs_dir.mkdir(parents=True)
+            (docs_dir / "public.md").write_text(
+                "See https://10.0.0.5/status for details.\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaises(validate_repo.ValidationError):
+                validate_repo.validate_public_hygiene(repo_root)
+
+    def test_public_hygiene_scans_root_non_markdown_files(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            (repo_root / "PUBLIC.txt").write_text(
+                "See https://router.corp/status for details.\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaises(validate_repo.ValidationError):
+                validate_repo.validate_public_hygiene(repo_root)
+
     def test_validate_sections_rejects_reordered_required_sections(self) -> None:
         reordered_headings = list(validate_repo.REQUIRED_SECTIONS)
         reordered_headings[0], reordered_headings[1] = reordered_headings[1], reordered_headings[0]
@@ -623,12 +682,14 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
 
         for target in (
+            "TECHNIQUE_SELECTION_GUIDE.md",
             "TECHNIQUE_SELECTION.md",
             "SELECTION_PATTERNS.md",
             "TECHNIQUE_INDEX.md",
             "TECHNIQUE_CAPSULES.md",
             "REPO_DOC_SURFACES.md",
             "KAG_SOURCE_LIFT_GUIDE.md",
+            "SEMANTIC_REVIEW_GUIDE.md",
             "LONG_GAP_CANON_DESIGN.md",
             "aoa-skills",
             "aoa-evals",
@@ -898,6 +959,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("START_HERE.md", releasing)
         self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
         self.assertIn("repo_doc_surface_manifest.json", docs_readme)
+        self.assertIn("11 authoritative repo docs/status files", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", readme)
@@ -915,6 +977,34 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("python scripts/release_check.py", releasing)
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
+
+    def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        selection = (REPO_ROOT / "docs" / "TECHNIQUE_SELECTION.md").read_text(encoding="utf-8")
+        patterns = (REPO_ROOT / "docs" / "SELECTION_PATTERNS.md").read_text(encoding="utf-8")
+
+        self.assertIn("docs/TECHNIQUE_SELECTION_GUIDE.md", validate_repo.REQUIRED_SELECTION_FILES)
+        self.assertIn(
+            "docs/SEMANTIC_REVIEW_GUIDE.md",
+            validate_repo.REQUIRED_SEMANTIC_REVIEW_GUIDE_FILES,
+        )
+        self.assertIn("TECHNIQUE_SELECTION_GUIDE.md", docs_readme)
+        self.assertIn("SEMANTIC_REVIEW_GUIDE.md", docs_readme)
+        self.assertIn("Technique Selection Guide", selection)
+        self.assertIn("Technique Selection Guide", patterns)
+        self.assertIn("Semantic Review Guide", patterns)
+
+    def test_docs_readme_reader_paths_match_current_entrypoint_contract(self) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+
+        self.assertIn(
+            "1. [README](../README.md)\n2. [Start Here](START_HERE.md)\n3. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)\n4. [Technique Selection](TECHNIQUE_SELECTION.md)",
+            docs_readme,
+        )
+        self.assertIn("11 authoritative repo docs/status files", docs_readme)
+        self.assertIn("one family guide such as", docs_readme)
+        self.assertIn("one reader or manifest such as", docs_readme)
+        self.assertIn("one reusable lift bundle in `../techniques/docs/`", docs_readme)
 
     def test_section_reader_generated_surface_matches_builder_and_preserves_scope_order(
         self,
@@ -1216,6 +1306,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("evidence-note-provenance-lift", docs_readme)
         self.assertIn("bounded-relation-lift-for-kag", docs_readme)
         self.assertIn("risk-and-negative-effect-lift", docs_readme)
+        self.assertIn("TECHNIQUE_SELECTION_GUIDE.md", docs_readme)
+        self.assertIn("SEMANTIC_REVIEW_GUIDE.md", docs_readme)
         self.assertIn("technique_capsules.json", docs_readme)
         self.assertIn("shadow_review_manifest.json", docs_readme)
         self.assertIn("SHADOW_PATTERNS.md", docs_readme)

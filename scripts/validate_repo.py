@@ -87,10 +87,12 @@ REQUIRED_STAGE1_FILES = (
     "generated/repo_doc_surface_manifest.min.json",
 )
 REQUIRED_SELECTION_FILES = (
+    "docs/TECHNIQUE_SELECTION_GUIDE.md",
     "docs/TECHNIQUE_SELECTION.md",
     "docs/SELECTION_PATTERNS.md",
     "docs/SHADOW_PATTERNS.md",
 )
+REQUIRED_SEMANTIC_REVIEW_GUIDE_FILES = ("docs/SEMANTIC_REVIEW_GUIDE.md",)
 REQUIRED_KAG_SOURCE_READER_FILES = (
     "docs/TECHNIQUE_SECTIONS.md",
     "docs/TECHNIQUE_CHECKLISTS.md",
@@ -525,6 +527,20 @@ PUBLIC_HYGIENE_BLOCKED_PATTERNS = (
     ("absolute /home/ path", re.compile(r"(?<![A-Za-z0-9])/home/")),
     ("localhost reference", re.compile(r"\blocalhost\b", re.IGNORECASE)),
     ("loopback address", re.compile(r"\b127\.0\.0\.1\b")),
+    (
+        "RFC1918 URL",
+        re.compile(
+            r"https?://(?:10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3})(?::\d+)?(?:[/?#][^\s]*)?",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "internal host suffix URL",
+        re.compile(
+            r"https?://[A-Za-z0-9.-]+\.(?:internal|corp|lan|local|localdomain|home\.arpa)(?::\d+)?(?:[/?#][^\s]*)?",
+            re.IGNORECASE,
+        ),
+    ),
     ("GitHub personal access token marker", re.compile(r"\bghp_[A-Za-z0-9]+\b")),
     ("GitHub OAuth token marker", re.compile(r"\bgho_[A-Za-z0-9]+\b")),
     ("AWS access key marker", re.compile(r"\bAKIA[0-9A-Z]*\b")),
@@ -2836,7 +2852,6 @@ def iter_public_hygiene_paths(repo_root: Path) -> tuple[Path, ...]:
         path
         for path in repo_root.iterdir()
         if path.is_file()
-        and path.suffix == ".md"
         and path.name not in PUBLIC_HYGIENE_EXCLUDED_ROOT_FILES
     )
     paths.extend(root_files)
@@ -2876,6 +2891,13 @@ def validate_selection_files(repo_root: Path) -> None:
         target = repo_root / relative_path
         if not target.exists():
             fail(f"{repo_root}: missing required selection file '{relative_path}'")
+
+
+def validate_semantic_review_guide_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_SEMANTIC_REVIEW_GUIDE_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required semantic review guide '{relative_path}'")
 
 
 def validate_kag_source_reader_files(repo_root: Path) -> None:
@@ -4546,6 +4568,7 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         "",
         "See also:",
         "- [Start Here](START_HERE.md)",
+        "- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)",
         "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
         "- [CANONICAL_RUBRIC](CANONICAL_RUBRIC.md)",
         "- [Full catalog JSON](../generated/technique_catalog.json)",
@@ -4829,6 +4852,8 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
         "",
         "See also:",
         "- [Start Here](START_HERE.md)",
+        "- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)",
+        "- [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)",
         "- [Technique Selection](TECHNIQUE_SELECTION.md)",
         "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
         "- [Full catalog JSON](../generated/technique_catalog.json)",
@@ -5319,6 +5344,7 @@ def validate_repo_doc_surface_reader(repo_root: Path) -> None:
 def validate_repo(repo_root: Path) -> None:
     validate_stage1_files(repo_root)
     validate_selection_files(repo_root)
+    validate_semantic_review_guide_files(repo_root)
     validate_kag_source_reader_files(repo_root)
     validate_capsule_surface_files(repo_root)
     validate_repo_doc_surface_files(repo_root)

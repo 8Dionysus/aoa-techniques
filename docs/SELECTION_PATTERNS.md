@@ -10,6 +10,8 @@ This surface uses direct relation navigation, validator-backed starting points a
 
 See also:
 - [Start Here](START_HERE.md)
+- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
+- [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
 - [Technique Selection](TECHNIQUE_SELECTION.md)
 - [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
 - [Full catalog JSON](../generated/technique_catalog.json)

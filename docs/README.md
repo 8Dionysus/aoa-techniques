@@ -13,6 +13,7 @@ Choose the path that matches your question:
 - I need one repo-only entrypoint first:
   - [Start Here](START_HERE.md)
 - I need to pick a technique now:
+  - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
 - I need a small local runtime card for one technique:
@@ -25,6 +26,7 @@ Choose the path that matches your question:
   - [Canonical Rubric](CANONICAL_RUBRIC.md)
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
   - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
+  - [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
 - I need to understand the repo's markdown-first caution discipline:
   - [Shadow Patterns](SHADOW_PATTERNS.md)
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
@@ -57,6 +59,7 @@ Choose the path that matches your question:
   - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
   - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 - I need to inspect the semantic-review pilots:
+  - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
   - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
   - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
   - [Docs Boundary Semantic Review](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
@@ -129,7 +132,7 @@ These are small local derived cards for runtime lookup. They stay subordinate to
 These are derived docs/status source-lift surfaces. They stay subordinate to the authored public docs and do not replace those docs as the source of truth.
 
 - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-  - use when the 10 authoritative repo docs/status files should be lifted into bounded routing knowledge only
+  - use when the 11 authoritative repo docs/status files should be lifted into bounded routing knowledge only
 
 ### Generated review manifests
 
@@ -150,6 +153,9 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
+- [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
+- [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
 - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
@@ -212,8 +218,8 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 
 ### New reader path
 
-1. [Start Here](START_HERE.md)
-2. [README](../README.md)
+1. [README](../README.md)
+2. [Start Here](START_HERE.md)
 3. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
 4. [Technique Selection](TECHNIQUE_SELECTION.md)
 5. one concrete `TECHNIQUE.md` bundle
@@ -231,21 +237,9 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 
 1. [Start Here](START_HERE.md)
 2. [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-3. [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
-4. [Technique Sections](TECHNIQUE_SECTIONS.md)
-5. [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
-6. [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
-7. [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
-8. [Technique Examples](TECHNIQUE_EXAMPLES.md)
-9. [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
-10. [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
-11. [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
-12. [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-13. [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
-14. [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
-15. [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-16. [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
-17. one of the reusable lift bundles in `../techniques/docs/` that matches the concrete question, including `risk-and-negative-effect-lift` for markdown-first caution lookup
+3. one family guide such as [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md), [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md), [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md), [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md), or [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
+4. one reader or manifest such as [Technique Sections](TECHNIQUE_SECTIONS.md), [Technique Checklists](TECHNIQUE_CHECKLISTS.md), [Technique Examples](TECHNIQUE_EXAMPLES.md), [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md), or [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
+5. one reusable lift bundle in `../techniques/docs/` if the concrete question still needs it
 
 ## Companion Repository Surfaces
 

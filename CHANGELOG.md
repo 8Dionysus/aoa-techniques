@@ -18,9 +18,14 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - `AOA-T-0021 bounded-relation-lift-for-kag`
 - `AOA-T-0022 risk-and-negative-effect-lift`
 - `docs/LONG_GAP_CANON_DESIGN.md`, which captures the current design-first donor plan for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
+- `docs/DEEP_AUDIT_ROADMAP.md`, which turns the current green baseline into a phase-by-phase closure roadmap for structural hardening, corpus meaning, surface usability, governance seams, and next implementation packs
+- `docs/TECHNIQUE_SELECTION_GUIDE.md` and `docs/SEMANTIC_REVIEW_GUIDE.md`, which close the missing authored family-contract layer for selection and semantic-review surfaces
 
 ### Changed
 
+- repo-only hardening wave now aligns `README.md`, `docs/README.md`, and `CONTRIBUTING.md` around `docs/START_HERE.md`, the bounded `python scripts/release_check.py` path, and the current deep-audit closure roadmap
+- `scripts/release_check.py` now compares composite repo state across worktree status, tracked diff, and cached diff so dirty tracked files cannot hide unstable generated drift
+- `scripts/validate_repo.py` now treats selection and semantic-review guides as validator-backed family surfaces, widens public-hygiene root scanning beyond root markdown only, and blocks RFC1918 plus internal-suffix URLs on public surfaces
 - standalone self-serve program now adds `docs/START_HERE.md` as the repo-owned entrypoint, expands the repo-doc surface family to include it, adds `python scripts/release_check.py` as the bounded release-prep command, and aligns guide vocabulary across repo-doc, capsule, KAG reader, and shadow surface families
 - evidence-harvest wave now records live donor posture for the KAG/source-lift family in `KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md` without changing statuses or validator specs
 - hybrid canon completion program now lands committed Stage 1 donor evidence from `aoa-skills` and `aoa-routing`, promotes `AOA-T-0017 property-invariants` and `AOA-T-0021 bounded-relation-lift-for-kag` to `canonical`, adds canonical-only `adverse-effects-review` notes for both bundles, and records the long-gap donor design for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
@@ -33,7 +38,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - new generated `generated/technique_capsules.min.json` now keeps the capsule family on a strict min projection without replacing the full runtime payload
 - new authored `docs/TECHNIQUE_CAPSULE_GUIDE.md` now defines the capsule source contract and runtime-only boundaries outside the KAG/source-lift family
 - new generated `docs/REPO_DOC_SURFACES.md` now routes the authoritative public docs/status layer by bounded roles instead of filesystem guessing
-- new generated `generated/repo_doc_surface_manifest.json` now lifts the 10 authoritative repo docs/status files into derived docs/status routing knowledge only
+- new generated `generated/repo_doc_surface_manifest.json` now lifts the 11 authoritative repo docs/status files into derived docs/status routing knowledge only
 - new authored `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md` now defines the bounded source contract and explicit exclusions for that docs/status layer
 - new generated `docs/TECHNIQUE_SECTIONS.md`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, and `docs/EVIDENCE_NOTE_SURFACES.md` now provide reader-facing routing surfaces for the existing section, checklist, example, and evidence-note manifest families
 - new authored `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, and `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md` now define the bounded contracts for those source classes, and `EVIDENCE_NOTE_PROVENANCE_GUIDE.md` now covers the evidence-note reader companion explicitly
