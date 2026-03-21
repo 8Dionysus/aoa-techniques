@@ -28,7 +28,7 @@ The current repository is already strong enough for `technique-as-node` KAG beca
 
 That is enough to treat the repo as a strong upstream source. It is not yet a finished `section-level` KAG schema.
 
-Within the current reusable family, [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) is now the canonical bundle-level metadata entrypoint. [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md), and [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) remain narrower promoted companions.
+Within the current reusable family, [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) is now the canonical bundle-level metadata entrypoint and [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) is now the canonical direct-relation hint companion. [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), and [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) remain narrower promoted companions.
 
 ## First Bounded Family Member
 

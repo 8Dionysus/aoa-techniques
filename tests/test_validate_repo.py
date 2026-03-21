@@ -389,14 +389,14 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
             validate_repo.validate_sections(body, technique_path)
 
-    def test_kag_source_lift_family_lands_as_one_canonical_spine_plus_promoted_companions(self) -> None:
+    def test_kag_source_lift_family_status_split_stays_bounded(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         entries_by_id = {entry["id"]: entry for entry in catalog["techniques"]}
         expected_statuses = {
             "AOA-T-0018": "promoted",
             "AOA-T-0019": "canonical",
             "AOA-T-0020": "promoted",
-            "AOA-T-0021": "promoted",
+            "AOA-T-0021": "canonical",
             "AOA-T-0022": "promoted",
         }
 
@@ -415,8 +415,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
 
         self.assertEqual({"agent-workflows", "docs", "evaluation"}, domain_values)
-        self.assertEqual(15, status_counts["canonical"])
-        self.assertEqual(7, status_counts["promoted"])
+        self.assertEqual(17, status_counts["canonical"])
+        self.assertEqual(5, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -517,7 +517,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         canonical_records = [record for record in records if record.status == "canonical"]
         promoted_records = [record for record in records if record.status == "promoted"]
 
-        self.assertEqual(15, len(canonical_records))
+        self.assertEqual(17, len(canonical_records))
 
         for record in canonical_records:
             self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
@@ -1213,7 +1213,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
             scope["section_scope"],
         )
-        self.assertEqual(15, adverse_note_count)
+        self.assertEqual(17, adverse_note_count)
 
     def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
         technique_dir = REPO_ROOT / "techniques" / "demo"

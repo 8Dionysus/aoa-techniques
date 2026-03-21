@@ -27,9 +27,11 @@
 ## Evidence
 - `aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` carries direct typed `relations` alongside explicit `technique_dependencies` and `skill_dependencies`, keeping the edge layer small and inspectable
 - `aoa-evals/generated/eval_catalog.json` lifts those relations into generated catalog entries as bounded direct-edge metadata, not as a traversal graph
-- `aoa-routing/scripts/router_core.py` builds `recommended_paths` from `technique_dependencies` and `skill_dependencies`, and the hop construction is dependency-driven rather than relation-hint-driven
+- committed `aoa-routing@0f8f22f34c04eea8a2ef9bda892154a913d335c4` now adds `generated/kag_source_lift_relation_hints.min.json`, which consumes the KAG/source-lift family's direct typed relations as one-hop hints while keeping `recommended_paths` dependency-driven
+- `aoa-routing/scripts/router_core.py`, `scripts/build_router.py`, and `tests/test_build_router.py` now prove that the relation consumer stays bounded to one-hop direct hints, family scope, and zero graph traversal
 - `AOA-T-0019 frontmatter-metadata-spine` still proves that this repository can keep routing metadata shallow while meaning stays in markdown
 - `AOA-T-0018 markdown-technique-section-lift` still proves that derived lookup surfaces can remain bounded and subordinate to authored bundles
 
 ## Result
-- works as a bounded cross-repo adaptation with live donor evidence from `aoa-evals` and `aoa-routing`, while still needing one more direct-relation consumer outside eval bundles before canonical readiness
+- works as a bounded cross-repo adaptation with live donor evidence from `aoa-evals` and the committed `aoa-routing` relation-hint surface
+- the new routing consumer closes the second-consumer gap for canonical review while keeping the edge layer one-step, direct, and family-scoped

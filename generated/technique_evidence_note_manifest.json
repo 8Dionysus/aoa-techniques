@@ -8190,6 +8190,167 @@
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/evaluation/property-invariants/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0017"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "property-invariants"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for invariant-oriented coverage when one stable truth should constrain behavior across many cases"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the technique centered on meaningful invariant design rather than generic \"stronger tests\" language, generator theater, or contract-boundary drift"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the chosen invariant is too weak to constrain real behavior"
+                },
+                {
+                  "order": 2,
+                  "text": "generator or input assumptions become too broad or opaque to review"
+                },
+                {
+                  "order": 3,
+                  "text": "the technique is applied where the real question is a consumer-visible contract, not invariant breadth"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "overly abstract invariant language can hide domain confusion behind polished testing vocabulary"
+                },
+                {
+                  "order": 2,
+                  "text": "complex generators can slow debugging without increasing real confidence"
+                },
+                {
+                  "order": 3,
+                  "text": "teams can skip a few clearer examples because the invariant framing sounds more sophisticated"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "writing properties like \"should not fail\" and calling them invariants"
+                },
+                {
+                  "order": 2,
+                  "text": "treating random or wide input generation as proof by itself"
+                },
+                {
+                  "order": 3,
+                  "text": "using `AOA-T-0017` as a substitute for `AOA-T-0015 contract-test-design`"
+                },
+                {
+                  "order": 4,
+                  "text": "forcing invariant coverage onto presentation-only or narrow snapshot behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot explain why the invariant matters to the domain"
+                },
+                {
+                  "order": 2,
+                  "text": "the generated or repeated input space grows, but the actual constraint on behavior stays weak"
+                },
+                {
+                  "order": 3,
+                  "text": "boundary-stability questions keep appearing even though the bundle is framed as invariant coverage"
+                },
+                {
+                  "order": 4,
+                  "text": "failing cases are noisy, but the report cannot say what stable truth was violated"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "rewrite the check around one stronger domain truth"
+                },
+                {
+                  "order": 2,
+                  "text": "narrow the input strategy to meaningful ranges first"
+                },
+                {
+                  "order": 3,
+                  "text": "pair the invariant with a few clear examples when readability is the limiting factor"
+                },
+                {
+                  "order": 4,
+                  "text": "route boundary-definition questions back to `AOA-T-0015` instead of stretching this technique"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for weak invariants, opaque generator assumptions, and contract-boundary drift"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/evaluation/property-invariants/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -8220,7 +8381,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `promoted`; defer canonical promotion"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -8232,22 +8393,22 @@
                 {
                   "order": 1,
                   "key": "consumer evidence",
-                  "value_markdown": "`aoa-skills/skills/aoa-property-invariants/SKILL.md` and its committed `techniques.yaml` both wire `AOA-T-0017` into a real, evaluated consumer surface rather than a hypothetical fit"
+                  "value_markdown": "`aoa-skills/skills/aoa-property-invariants/SKILL.md` remains a real, evaluated invariant-first consumer, and committed `aoa-skills@7cad0dbf73b3a447ce46fea7fb74e545b8aa5f6f` now adds `skills/aoa-invariant-coverage-audit/SKILL.md` as a second focused consumer whose singular pinned dependency is `AOA-T-0017`"
                 },
                 {
                   "order": 2,
                   "key": "reuse shape",
-                  "value_markdown": "the skill frames `AOA-T-0017` as a core, explicit-preferred technique for broad invariant-oriented checks, and its committed example stays centered on bounded invariant coverage instead of generic exploratory testing"
+                  "value_markdown": "the first skill executes invariant-oriented checks directly, while the new audit skill reviews whether an existing validation surface really constrains the stable invariant instead of only repeating examples"
                 },
                 {
                   "order": 3,
-                  "key": "boundary separation",
-                  "value_markdown": "the consumer surface keeps `AOA-T-0017` distinct from `AOA-T-0007`, which supports the invariant-vs-signal-promotion split but does not by itself prove default-use status"
+                  "key": "validation strength",
+                  "value_markdown": "the second consumer is supported by a committed review record at `aoa-skills/docs/reviews/status-promotions/aoa-invariant-coverage-audit.md`, an example, and evaluation fixtures, so the technique now has two bounded downstream consumers rather than one"
                 },
                 {
                   "order": 4,
-                  "key": "consumer-side review signal",
-                  "value_markdown": "the committed promotion review in `aoa-skills` still says `canonical` is deferred because this pass does not establish the technique as the default public reference for property-oriented testing"
+                  "key": "boundary separation",
+                  "value_markdown": "the two consumers still keep `AOA-T-0017` distinct from `AOA-T-0015` boundary-contract design and from `AOA-T-0007` signal-promotion discipline"
                 }
               ]
             },
@@ -8258,7 +8419,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this remains the right bounded choice when the main validation problem is broader coverage around one known domain truth that should hold across many cases"
+                  "text": "this is now the default bounded choice when the main validation problem is broader coverage around one stable domain truth that should hold across many cases"
                 },
                 {
                   "order": 2,
@@ -8266,7 +8427,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the evidence is enough to justify reuse and explicit skill wiring, but not enough to call this the default public reference across validation domains"
+                  "text": "the two committed downstream consumers now show that invariant-oriented coverage is not just publishable, but selected as a natural first-class move in more than one bounded validation workflow"
                 }
               ]
             },
@@ -8293,7 +8454,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the current examples, checklist, and adaptation notes remain understandable without origin-project access and stay bounded to technique-level meaning"
+                  "value_markdown": "the current examples, checklist, adaptation notes, and committed skill consumers remain understandable without origin-project access and stay bounded to technique-level meaning"
                 }
               ]
             },
@@ -8304,11 +8465,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is a second committed consumer surface that treats this technique as the natural first choice for property-oriented coverage, not just a supported dependency"
+                  "text": "no blocking gap remains for canonical use as long as the technique stays centered on meaningful invariants rather than broad generic \"stronger tests\" language"
                 },
                 {
                   "order": 2,
-                  "text": "until that appears, the bundle should stay promoted rather than claim canonical default-use approval"
+                  "text": "future reuse in another non-skill corpus would strengthen breadth further, but the current cross-context evidence is already enough for default-use approval"
                 }
               ]
             },
@@ -8319,7 +8480,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0017` as `promoted` in this wave; the technique is strong, distinct, and reusable, but the committed consumer evidence still falls short of canonical default-use approval"
+                  "text": "promote `AOA-T-0017` to `canonical`"
+                },
+                {
+                  "order": 2,
+                  "text": "use it as the default invariant-oriented coverage technique while keeping contract-boundary work and staged signal-promotion work routed back to their narrower companions"
                 }
               ]
             }
@@ -9825,6 +9990,167 @@
       "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0021"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-relation-lift-for-kag"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for direct typed one-hop relation hints in the KAG/source-lift family"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the edge layer bounded to family-scoped adjacency hints instead of letting it drift into graph traversal, ranking, or rationale storage"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the relation surface widens beyond one-hop direct hints and starts implying multi-step navigation"
+                },
+                {
+                  "order": 2,
+                  "text": "new consumers treat typed edges as ranking or transitive truth"
+                },
+                {
+                  "order": 3,
+                  "text": "relation vocabulary grows to patch unclear bundle boundaries instead of improving the source docs"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a useful edge surface can make the repository feel more graph-ready than it really is"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors can start opening relation consumers before reading the underlying bundle or review docs"
+                },
+                {
+                  "order": 3,
+                  "text": "same-kind relation hints can duplicate semantic-review work if they start answering \"why\" instead of just \"what is adjacent\""
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "feeding direct relation hints into graph-style traversal or scoring logic"
+                },
+                {
+                  "order": 2,
+                  "text": "adding new relation types because one consumer wants richer semantics"
+                },
+                {
+                  "order": 3,
+                  "text": "using relation hints as a substitute for semantic review or markdown rationale"
+                },
+                {
+                  "order": 4,
+                  "text": "widening the family-scoped surface into open-ended same-kind exploration"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "proposals ask for multi-hop expansion, ranking, or weighted edges"
+                },
+                {
+                  "order": 2,
+                  "text": "relation consumers start surfacing techniques outside the bounded KAG/source-lift family without a new source contract"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers ask \"why does this edge exist?\" and the answer only lives in generated routing output"
+                },
+                {
+                  "order": 4,
+                  "text": "`recommended_paths` pressure starts pushing toward same-kind traversal instead of staying dependency-driven"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the relation-hint surface family-scoped and one-hop only"
+                },
+                {
+                  "order": 2,
+                  "text": "preserve `recommended_paths` as dependency-driven and separate from relation hints"
+                },
+                {
+                  "order": 3,
+                  "text": "route edge rationale back to authored markdown and semantic-review docs"
+                },
+                {
+                  "order": 4,
+                  "text": "remove noisy edges before considering any vocabulary growth"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for graph creep, relation-vocabulary widening, and source-meaning overread"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -9855,7 +10181,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -9872,12 +10198,17 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the adaptation note now cites live donor surfaces in `aoa-evals` and `aoa-routing`, so the proof is no longer a repo-local sketch"
+                  "value_markdown": "the adaptation note now cites live donor surfaces in `aoa-evals` plus committed `aoa-routing@0f8f22f34c04eea8a2ef9bda892154a913d335c4`, where `generated/kag_source_lift_relation_hints.min.json` consumes the KAG/source-lift family's direct relations as one-hop hints"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "`aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` and `aoa-evals/generated/eval_catalog.json` verify direct typed relations as bounded edge metadata, while `aoa-routing/scripts/router_core.py` keeps `recommended_paths` dependency-driven instead of relation-traversal-driven"
+                  "value_markdown": "`aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` and `aoa-evals/generated/eval_catalog.json` verify direct typed relations as bounded edge metadata, while the new `aoa-routing` surface proves a second non-eval consumer can reuse those direct relations without changing `recommended_paths` semantics"
+                },
+                {
+                  "order": 4,
+                  "key": "boundedness check",
+                  "value_markdown": "the routing consumer stays family-scoped, one-hop only, and explicitly avoids graph traversal, rationale layers, multi-hop inference, or same-kind exploration growth"
                 }
               ]
             },
@@ -9888,15 +10219,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this remains the right default when direct relations are only meant to guide nearby inspection"
+                  "text": "this is now the right default when direct relations should only guide nearby inspection through one-step adjacency hints"
                 },
                 {
                   "order": 2,
-                  "text": "it is narrower than any graph-oriented contract because the edge meaning stops at one-step adjacency"
+                  "text": "it remains narrower than any graph-oriented contract because the edge meaning stops at direct typed adjacency, not rationale or traversal policy"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle should stay promoted until another direct-relation consumer outside eval bundles proves that the same relation layer remains useful without becoming a rationale or traversal system"
+                  "text": "the committed routing consumer now proves that the same relation layer remains useful outside eval bundles without becoming a rationale or traversal system"
                 }
               ]
             },
@@ -9923,7 +10254,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the pattern remains understandable without hidden automation or private source files"
+                  "value_markdown": "the pattern remains understandable without hidden automation or private source files, and the new routing surface still routes back to source-owned technique bundles rather than copying their meaning"
                 }
               ]
             },
@@ -9934,11 +10265,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest missing proof is a second direct-relation consumer outside eval bundles"
+                  "text": "no blocking gap remains for canonical use as long as the relation layer stays family-scoped, one-hop only, and review-backed"
                 },
                 {
                   "order": 2,
-                  "text": "a future canonical review should show that direct typed adjacency survives repeated use without turning into graph semantics or multi-hop inference"
+                  "text": "future review should keep watching for graph creep, but that is now an ongoing watch seam rather than a promotion blocker"
                 }
               ]
             },
@@ -9949,11 +10280,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0021` `promoted`"
+                  "text": "promote `AOA-T-0021` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a live reuse context beyond eval bundles"
+                  "text": "use it as the default bounded direct-relation hint technique while keeping rationale, graph semantics, and multi-hop traversal deferred"
                 }
               ]
             }
@@ -10160,14 +10491,18 @@
                 },
                 {
                   "order": 3,
-                  "text": "`aoa-routing/scripts/router_core.py` builds `recommended_paths` from `technique_dependencies` and `skill_dependencies`, and the hop construction is dependency-driven rather than relation-hint-driven"
+                  "text": "committed `aoa-routing@0f8f22f34c04eea8a2ef9bda892154a913d335c4` now adds `generated/kag_source_lift_relation_hints.min.json`, which consumes the KAG/source-lift family's direct typed relations as one-hop hints while keeping `recommended_paths` dependency-driven"
                 },
                 {
                   "order": 4,
-                  "text": "`AOA-T-0019 frontmatter-metadata-spine` still proves that this repository can keep routing metadata shallow while meaning stays in markdown"
+                  "text": "`aoa-routing/scripts/router_core.py`, `scripts/build_router.py`, and `tests/test_build_router.py` now prove that the relation consumer stays bounded to one-hop direct hints, family scope, and zero graph traversal"
                 },
                 {
                   "order": 5,
+                  "text": "`AOA-T-0019 frontmatter-metadata-spine` still proves that this repository can keep routing metadata shallow while meaning stays in markdown"
+                },
+                {
+                  "order": 6,
                   "text": "`AOA-T-0018 markdown-technique-section-lift` still proves that derived lookup surfaces can remain bounded and subordinate to authored bundles"
                 }
               ]
@@ -10179,7 +10514,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded cross-repo adaptation with live donor evidence from `aoa-evals` and `aoa-routing`, while still needing one more direct-relation consumer outside eval bundles before canonical readiness"
+                  "text": "works as a bounded cross-repo adaptation with live donor evidence from `aoa-evals` and the committed `aoa-routing` relation-hint surface"
+                },
+                {
+                  "order": 2,
+                  "text": "the new routing consumer closes the second-consumer gap for canonical review while keeping the edge layer one-step, direct, and family-scoped"
                 }
               ]
             }

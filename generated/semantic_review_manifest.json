@@ -251,7 +251,7 @@
       "review_id": "kag_source_lift",
       "review_path": "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
       "title": "KAG Source Lift Semantic Review",
-      "intro_markdown": "This review-only pilot checks whether the first reusable KAG/source-lift family still reads as five distinct techniques rather than one blurred \"lift everything from markdown\" package.\n\nWhy this family was chosen now:\n\n- the family now has one `canonical` metadata spine plus four `promoted` companions\n- the family now spans section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift\n- the main question is semantic clarity across the family boundaries, not missing structure\n- `AOA-T-0022` is a caution-oriented companion and should stay outside shadow-policy semantics\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "intro_markdown": "This review-only pilot checks whether the first reusable KAG/source-lift family still reads as five distinct techniques rather than one blurred \"lift everything from markdown\" package.\n\nWhy this family was chosen now:\n\n- the family now has two `canonical` anchors plus three `promoted` companions\n- the family now spans section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift\n- the main question is semantic clarity across the family boundaries, not missing structure\n- `AOA-T-0022` is a caution-oriented companion and should stay outside shadow-policy semantics\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
       "map_heading": "Family Map",
       "map_entries": [
         {
@@ -336,27 +336,31 @@
         },
         {
           "order": 7,
-          "text": "`AOA-T-0020` and `AOA-T-0021` now have strong live donor evidence through `aoa-evals`, but both still stay bounded and should not be over-read as graph semantics."
+          "text": "`AOA-T-0021` now has strong live donor evidence through `aoa-evals` plus a committed `aoa-routing` one-hop relation-hint surface, which is enough for bounded canonical default-use while still staying outside graph semantics."
         },
         {
           "order": 8,
-          "text": "`AOA-T-0018` is now bridge-backed through `aoa-skills`, which is enough to strengthen the section-lift case without making it the dominant family donor."
+          "text": "`AOA-T-0020` still has strong live donor evidence through `aoa-evals`, but it should stay promoted until another non-eval markdown-first corpus proves the same typed provenance split."
         },
         {
           "order": 9,
-          "text": "`AOA-T-0022` remains caution-specific and still under-evidenced as a live donor because adjacent caution language in sibling repos does not reproduce the same five-part `Risks` contract."
+          "text": "`AOA-T-0018` is now bridge-backed through `aoa-skills`, which is enough to strengthen the section-lift case without making it the dominant family donor."
         },
         {
           "order": 10,
-          "text": "Current `relations` are helpful and still bounded. No cleanup is justified in this pilot."
+          "text": "`AOA-T-0022` remains caution-specific and still under-evidenced as a live donor because adjacent caution language in sibling repos does not reproduce the same five-part `Risks` contract."
         },
         {
           "order": 11,
+          "text": "Current `relations` are helpful and still bounded. No cleanup is justified in this pilot."
+        },
+        {
+          "order": 12,
           "text": "Current examples, checks, and review notes support the five-way family split well enough for a review-only semantic surface."
         }
       ],
       "overall_outcome": "`clear`",
-      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is to keep `AOA-T-0019` narrow as the canonical metadata spine while `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0021`, and `AOA-T-0022` keep accumulating bounded live evidence without collapsing into a broader graph, metadata, or shadow-policy package."
+      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is to keep `AOA-T-0019` narrow as the canonical metadata spine and `AOA-T-0021` narrow as the canonical direct-relation hint companion while `AOA-T-0018`, `AOA-T-0020`, and `AOA-T-0022` keep accumulating bounded live evidence without collapsing into a broader graph, metadata, or shadow-policy package."
     },
     {
       "review_id": "published_summary",
@@ -443,7 +447,7 @@
       "review_id": "skill_support",
       "review_path": "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
       "title": "Skill-Support Semantic Review",
-      "intro_markdown": "This review-only pilot checks whether the current skill-support cluster still reads as four distinct techniques rather than one blurred \"agent-friendly testing and scoping\" package.\n\nWhy this cluster was chosen now:\n\n- the cluster now mixes three `canonical` defaults with one still-`promoted` companion\n- the main remaining question is semantic separation and bounded default-use posture, not missing repo structure\n- the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit\n- the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "intro_markdown": "This review-only pilot checks whether the current skill-support cluster still reads as four distinct techniques rather than one blurred \"agent-friendly testing and scoping\" package.\n\nWhy this cluster was chosen now:\n\n- the cluster now mixes four `canonical` defaults across execution, evaluation, and scoping support\n- the main remaining question is semantic separation and bounded default-use posture, not missing repo structure\n- the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit\n- the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
       "map_heading": "Cluster Map",
       "map_entries": [
         {
@@ -526,7 +530,7 @@
         }
       ],
       "overall_outcome": "`clear with two watch seams`",
-      "next_step_markdown": "No immediate semantic-remediation wave is justified for this cluster from this pilot alone.\n\nSecond-context evidence strengthening and one downstream consumer now justify `AOA-T-0016` as `canonical`, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism."
+      "next_step_markdown": "No immediate semantic-remediation wave is justified for this cluster from this pilot alone.\n\n`AOA-T-0017` now joins `AOA-T-0016` as `canonical` after a second committed downstream consumer proved that invariant-oriented coverage is selected as a natural first-class move rather than only as a supporting dependency, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism."
     }
   ]
 }

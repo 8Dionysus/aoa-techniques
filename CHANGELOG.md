@@ -10,17 +10,19 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Added
 
-- `AOA-T-0014` through `AOA-T-0022`, bringing the published corpus to 22 techniques (`15` canonical, `7` promoted)
+- `AOA-T-0014` through `AOA-T-0022`, bringing the published corpus to 22 techniques (`17` canonical, `5` promoted)
 - the first public five-technique KAG/source-lift family inside the existing `docs` domain:
   - `AOA-T-0018 markdown-technique-section-lift`
   - `AOA-T-0019 frontmatter-metadata-spine`
   - `AOA-T-0020 evidence-note-provenance-lift`
-  - `AOA-T-0021 bounded-relation-lift-for-kag`
-  - `AOA-T-0022 risk-and-negative-effect-lift`
+- `AOA-T-0021 bounded-relation-lift-for-kag`
+- `AOA-T-0022 risk-and-negative-effect-lift`
+- `docs/LONG_GAP_CANON_DESIGN.md`, which captures the current design-first donor plan for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 
 ### Changed
 
 - evidence-harvest wave now records live donor posture for the KAG/source-lift family in `KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md` without changing statuses or validator specs
+- hybrid canon completion program now lands committed Stage 1 donor evidence from `aoa-skills` and `aoa-routing`, promotes `AOA-T-0017 property-invariants` and `AOA-T-0021 bounded-relation-lift-for-kag` to `canonical`, adds canonical-only `adverse-effects-review` notes for both bundles, and records the long-gap donor design for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - selective KAG promotion sync now promotes `AOA-T-0019 frontmatter-metadata-spine` to `canonical`, adds a canonical-only `adverse-effects-review` note, and makes it the bounded metadata-spine default for the KAG/source-lift family
 - promoted backlog closure wave now gives every remaining promoted target an explicit final verdict, promotes `AOA-T-0016 bounded-context-map` to `canonical`, adds its canonical-only `adverse-effects-review` note, and leaves `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0017`, `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0021`, and `AOA-T-0022` as bounded-defer `promoted` techniques
 - canon-strengthening wave now records explicit `canonical-readiness` outcomes across the non-KAG promoted target set, promotes `AOA-T-0004`, `AOA-T-0014`, and `AOA-T-0015` to `canonical`, and adds canonical-only `adverse-effects-review` notes for those newly promoted bundles

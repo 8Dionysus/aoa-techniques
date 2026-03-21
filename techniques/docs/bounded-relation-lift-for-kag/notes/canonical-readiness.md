@@ -5,28 +5,29 @@
 - name: bounded-relation-lift-for-kag
 
 ## Verdict
-- defer for now
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence: the bundle came from relation consumers and relation-lift guidance, so it already has a bounded navigation anchor
-- second context: the adaptation note now cites live donor surfaces in `aoa-evals` and `aoa-routing`, so the proof is no longer a repo-local sketch
-- validation strength: `aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` and `aoa-evals/generated/eval_catalog.json` verify direct typed relations as bounded edge metadata, while `aoa-routing/scripts/router_core.py` keeps `recommended_paths` dependency-driven instead of relation-traversal-driven
+- second context: the adaptation note now cites live donor surfaces in `aoa-evals` plus committed `aoa-routing@0f8f22f34c04eea8a2ef9bda892154a913d335c4`, where `generated/kag_source_lift_relation_hints.min.json` consumes the KAG/source-lift family's direct relations as one-hop hints
+- validation strength: `aoa-evals/bundles/aoa-eval-integrity-check/eval.yaml` and `aoa-evals/generated/eval_catalog.json` verify direct typed relations as bounded edge metadata, while the new `aoa-routing` surface proves a second non-eval consumer can reuse those direct relations without changing `recommended_paths` semantics
+- boundedness check: the routing consumer stays family-scoped, one-hop only, and explicitly avoids graph traversal, rationale layers, multi-hop inference, or same-kind exploration growth
 
 ## Default-use rationale
-- this remains the right default when direct relations are only meant to guide nearby inspection
-- it is narrower than any graph-oriented contract because the edge meaning stops at one-step adjacency
-- the bundle should stay promoted until another direct-relation consumer outside eval bundles proves that the same relation layer remains useful without becoming a rationale or traversal system
+- this is now the right default when direct relations should only guide nearby inspection through one-step adjacency hints
+- it remains narrower than any graph-oriented contract because the edge meaning stops at direct typed adjacency, not rationale or traversal policy
+- the committed routing consumer now proves that the same relation layer remains useful outside eval bundles without becoming a rationale or traversal system
 
 ## Fresh public-safety check
 - review date: 2026-03-20
 - result: pass
 - sanitization still holds: the bundle keeps the reusable direct-edge contract and avoids repo-local implementation trivia
-- public reuse check: the pattern remains understandable without hidden automation or private source files
+- public reuse check: the pattern remains understandable without hidden automation or private source files, and the new routing surface still routes back to source-owned technique bundles rather than copying their meaning
 
 ## Remaining gaps
-- the smallest missing proof is a second direct-relation consumer outside eval bundles
-- a future canonical review should show that direct typed adjacency survives repeated use without turning into graph semantics or multi-hop inference
+- no blocking gap remains for canonical use as long as the relation layer stays family-scoped, one-hop only, and review-backed
+- future review should keep watching for graph creep, but that is now an ongoing watch seam rather than a promotion blocker
 
 ## Recommendation
-- keep `AOA-T-0021` `promoted`
-- defer canonical promotion until the technique proves itself in a live reuse context beyond eval bundles
+- promote `AOA-T-0021` to `canonical`
+- use it as the default bounded direct-relation hint technique while keeping rationale, graph semantics, and multi-hop traversal deferred

@@ -77,6 +77,12 @@ See also:
 |---|---|---|---|
 | Frontmatter To Catalog Entry | `present` | `techniques/docs/frontmatter-metadata-spine/examples/frontmatter-to-catalog-entry.md` | [TECHNIQUE.md](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) |
 
+### [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Direct Relation To Selection Hint | `present` | `techniques/docs/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
+
 ### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`promoted`)
 
 | example | body | example path | source |
@@ -95,12 +101,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Evidence Note To Manifest | `present` | `techniques/docs/evidence-note-provenance-lift/examples/evidence-note-to-manifest.md` | [TECHNIQUE.md](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) |
-
-### [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Direct Relation To Selection Hint | `present` | `techniques/docs/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
 ### [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) - risk-and-negative-effect-lift (`promoted`)
 
@@ -158,7 +158,7 @@ See also:
 | Concrete API Contract Boundary | `present` | `techniques/evaluation/contract-test-design/examples/concrete-api-contract-boundary.md` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 | Minimal Contract Boundary | `present` | `techniques/evaluation/contract-test-design/examples/minimal-contract-boundary.md` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
 
-### [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants (`promoted`)
+### [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
