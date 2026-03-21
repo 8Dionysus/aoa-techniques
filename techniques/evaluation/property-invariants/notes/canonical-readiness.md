@@ -8,7 +8,7 @@
 - approved for canonical promotion
 
 ## Evidence summary
-- consumer evidence: `aoa-skills/skills/aoa-property-invariants/SKILL.md` remains a real, evaluated invariant-first consumer, and committed `aoa-skills@7cad0dbf73b3a447ce46fea7fb74e545b8aa5f6f` now adds `skills/aoa-invariant-coverage-audit/SKILL.md` as a second focused consumer whose singular pinned dependency is `AOA-T-0017`
+- consumer evidence: `aoa-skills/skills/aoa-property-invariants/SKILL.md` remains a real, evaluated invariant-first consumer, and committed `aoa-skills@ad60e3c` now carries `skills/aoa-invariant-coverage-audit/SKILL.md` as a second focused consumer whose singular pinned dependency is `AOA-T-0017`
 - reuse shape: the first skill executes invariant-oriented checks directly, while the new audit skill reviews whether an existing validation surface really constrains the stable invariant instead of only repeating examples
 - validation strength: the second consumer is supported by a committed review record at `aoa-skills/docs/reviews/status-promotions/aoa-invariant-coverage-audit.md`, an example, and evaluation fixtures, so the technique now has two bounded downstream consumers rather than one
 - boundary separation: the two consumers still keep `AOA-T-0017` distinct from `AOA-T-0015` boundary-contract design and from `AOA-T-0007` signal-promotion discipline

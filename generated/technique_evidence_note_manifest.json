@@ -8393,7 +8393,7 @@
                 {
                   "order": 1,
                   "key": "consumer evidence",
-                  "value_markdown": "`aoa-skills/skills/aoa-property-invariants/SKILL.md` remains a real, evaluated invariant-first consumer, and committed `aoa-skills@7cad0dbf73b3a447ce46fea7fb74e545b8aa5f6f` now adds `skills/aoa-invariant-coverage-audit/SKILL.md` as a second focused consumer whose singular pinned dependency is `AOA-T-0017`"
+                  "value_markdown": "`aoa-skills/skills/aoa-property-invariants/SKILL.md` remains a real, evaluated invariant-first consumer, and committed `aoa-skills@ad60e3c` now carries `skills/aoa-invariant-coverage-audit/SKILL.md` as a second focused consumer whose singular pinned dependency is `AOA-T-0017`"
                 },
                 {
                   "order": 2,
