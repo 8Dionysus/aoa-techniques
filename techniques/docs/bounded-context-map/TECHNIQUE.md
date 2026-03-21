@@ -2,7 +2,7 @@
 id: AOA-T-0016
 name: bounded-context-map
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: atm10-agent
   path: planning-layer
@@ -15,11 +15,11 @@ tags:
   - contexts
   - vocabulary
 summary: Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
+validation_strength: cross_context
 public_safety_reviewed_at: 2026-03-20
 export_ready: true
 relations:
@@ -34,6 +34,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # bounded-context-map
@@ -128,6 +130,7 @@ Verify the technique by confirming that:
 - contexts or subsystems were named with clearer responsibility boundaries
 - handoff or interface points were made visible
 - the result would help a future docs or implementation change stay better scoped
+- the same bounded contract is already consumable from the committed `aoa-bounded-context-map` skill manifest and example
 
 ## Adaptation notes
 

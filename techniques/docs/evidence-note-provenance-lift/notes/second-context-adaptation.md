@@ -10,7 +10,7 @@
 - runtime: markdown-first repository where provenance lookup must stay readable to humans and agents
 
 ## What changed
-- note kinds: the public form now mirrors a live donor pattern from `aoa-evals`, where bundle `eval.yaml` files carry typed `evidence` arrays made of `kind` plus `path` handles instead of one generic support bucket
+- note kinds: the public form now mirrors a live donor pattern from committed `aoa-evals` surfaces, where bundle `eval.yaml` files carry typed `evidence` arrays made of `kind` plus `path` handles instead of one generic support bucket
 - paths: the public form keeps note paths explicit so each supporting note remains independently reachable, and the donor validator checks that each evidence path actually exists on disk
 - dependencies: the adaptation is grounded in committed `aoa-evals` bundle manifests, the generated `eval_catalog.json` lift, and `scripts/validate_repo.py`, not in repo-local sketch language or graph semantics
 - operating assumptions: a public repository can expose provenance handles for note lookup while still leaving the note body as the place where interpretation lives
@@ -24,7 +24,7 @@
 - note kinds can still multiply if future bundles start splitting provenance roles too finely
 - a derived manifest can look complete even when the supporting note text still carries the real judgment
 - if the note kind layer becomes too clever, maintainers may start expecting graph semantics that the technique does not claim
-- the current live donor proof is still one markdown-first eval corpus; the next reuse step has to come from a second non-eval corpus using the same typed lift
+- the current live donor proof is still one markdown-first eval corpus; the next reuse step has to come from a second non-eval markdown-first corpus using the same typed lift
 
 ## Evidence
 - `aoa-evals/bundles/aoa-bounded-change-quality/eval.yaml` and sibling bundles use `evidence` arrays with explicit `kind` and `path` pairs
@@ -33,4 +33,4 @@
 - `AOA-T-0018 markdown-technique-section-lift` and `AOA-T-0019 frontmatter-metadata-spine` still fit the same public pattern by keeping derived lookup shallow while leaving real meaning in markdown
 
 ## Result
-- works as a bounded transfer from a live `aoa-evals` donor corpus, with the remaining gap narrowed to a second markdown-first corpus proving the same typed note lift
+- works as a bounded transfer from a live `aoa-evals` donor corpus, with the remaining gap narrowed to a second non-eval markdown-first corpus proving the same typed note lift

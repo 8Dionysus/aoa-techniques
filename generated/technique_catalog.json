@@ -854,7 +854,7 @@
       "id": "AOA-T-0016",
       "name": "bounded-context-map",
       "domain": "docs",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work.",
       "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
       "origin": {
@@ -871,11 +871,11 @@
         "contexts",
         "vocabulary"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
+      "validation_strength": "cross_context",
       "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
@@ -900,6 +900,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -1010,7 +1014,7 @@
       "id": "AOA-T-0019",
       "name": "frontmatter-metadata-spine",
       "domain": "docs",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs.",
       "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
       "origin": {
@@ -1028,12 +1032,12 @@
         "frontmatter",
         "catalog"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-19",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-20",
       "export_ready": true,
       "relations": [
         {
@@ -1061,6 +1065,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

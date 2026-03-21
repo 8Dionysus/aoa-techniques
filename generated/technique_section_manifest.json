@@ -901,7 +901,7 @@
         {
           "heading": "Validation",
           "order": 9,
-          "markdown": "Verify the technique by confirming that:\n- the main ambiguity or vocabulary drift was reduced\n- contexts or subsystems were named with clearer responsibility boundaries\n- handoff or interface points were made visible\n- the result would help a future docs or implementation change stay better scoped"
+          "markdown": "Verify the technique by confirming that:\n- the main ambiguity or vocabulary drift was reduced\n- contexts or subsystems were named with clearer responsibility boundaries\n- handoff or interface points were made visible\n- the result would help a future docs or implementation change stay better scoped\n- the same bounded contract is already consumable from the committed `aoa-bounded-context-map` skill manifest and example"
         },
         {
           "heading": "Adaptation notes",
@@ -1029,7 +1029,7 @@
         {
           "heading": "Intent",
           "order": 1,
-          "markdown": "Use shallow frontmatter and derived catalog outputs as a stable metadata spine for bundle identity, routing, and review posture without pretending that frontmatter already contains the technique's full knowledge."
+          "markdown": "Use shallow frontmatter and derived catalog outputs as a stable metadata spine for bundle identity, routing, and review posture without pretending that frontmatter already contains the technique's full knowledge. Within the KAG/source-lift family, use this as the default bundle-level metadata entrypoint when the next question is routing or lookup rather than section lift, note provenance, relation lift, or caution review."
         },
         {
           "heading": "When to use",

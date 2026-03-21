@@ -1965,7 +1965,7 @@
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle has strong checklist and example surfaces plus a rollout-failure triage note, but it still lacks a second live reuse context beyond the origin and this repo-local adaptation sketch"
+                  "value_markdown": "the bundle has strong checklist and example surfaces plus a rollout-failure triage note, but it still lacks a second live reuse context beyond the origin and this repo-local rollout sketch"
                 }
               ]
             },
@@ -2022,7 +2022,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle still needs stronger live reuse evidence outside the origin project and this repository-local adaptation sketch before canonical promotion would be justified"
+                  "text": "the bundle still needs live reuse beyond the repo-local rollout sketch before canonical promotion would be justified"
                 },
                 {
                   "order": 2,
@@ -2033,11 +2033,17 @@
             {
               "heading": "Recommendation",
               "order": 7,
-              "payload_type": "items",
-              "items": [
+              "payload_type": "fields",
+              "fields": [
                 {
                   "order": 1,
-                  "text": "defer `AOA-T-0005` for canonical promotion in this wave; keep it `promoted`, keep the checklist bounded, and revisit once stronger live second-context reuse exists"
+                  "key": "bounded defer verdict",
+                  "value_markdown": "keep `AOA-T-0005` `promoted` for now and do not advance it to `canonical` until there is live reuse beyond the repo-local rollout sketch"
+                },
+                {
+                  "order": 2,
+                  "key": "smallest remaining gap",
+                  "value_markdown": "one live second-context reuse outside the origin project and this repository-local adaptation, showing the same checklist succeed in practice rather than only in public-safe example form"
                 }
               ]
             }
@@ -2173,7 +2179,7 @@
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository where the rollout checklist survives as a bounded extension pattern even without the origin project\u2019s live automation chain"
+                  "value_markdown": "documentation-first repository where the rollout checklist survives as a bounded extension pattern even without a live second reuse context yet"
                 }
               ]
             },
@@ -2228,7 +2234,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the repo-local example can look like proof of live reuse even though it is still a bounded sketch rather than a second production context"
+                  "text": "the repo-local example can look like proof of live reuse even though it is still a bounded rollout sketch rather than a second production context"
                 },
                 {
                   "order": 2,
@@ -2270,7 +2276,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded repo-local second context for the public checklist shape, but it is still not enough on its own to justify canonical promotion"
+                  "text": "works as a bounded repo-local rollout sketch for the public checklist shape, but it is still not enough on its own to justify canonical promotion"
                 }
               ]
             }
@@ -6092,7 +6098,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "bounded defer for now"
                 }
               ]
             },
@@ -6104,7 +6110,7 @@
                 {
                   "order": 1,
                   "key": "external origin",
-                  "value_markdown": "the imported technique already has a clean bounded donor contract and explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior"
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior"
                 },
                 {
                   "order": 2,
@@ -6119,7 +6125,7 @@
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the current bundle has a checklist, two public-safe examples, and clear separation from `AOA-T-0012`, but it still lacks a live multi-target reuse context outside the current repository narrative"
+                  "value_markdown": "the bundle includes a checklist, two public-safe examples, and a clean separation from `AOA-T-0012`, but it still lacks live multi-target reuse beyond the current repository narrative"
                 }
               ]
             },
@@ -6130,11 +6136,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this remains the right default when one canonical rule source must fan out to multiple managed instruction targets without turning those targets into canonical homes"
+                  "text": "this is the right default when one canonical rule source must fan out to multiple managed instruction targets without turning those targets into canonical homes"
                 },
                 {
                   "order": 2,
-                  "text": "it is still narrower than `AOA-T-0012`, which composes many fragments into one generated artifact rather than distributing one shared rule core to multiple targets"
+                  "text": "it remains narrower than `AOA-T-0012`, which composes many fragments into one generated artifact rather than distributing one shared rule core to multiple targets"
                 },
                 {
                   "order": 3,
@@ -6176,11 +6182,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main missing proof is live multi-target reuse beyond the current repo-local sketch"
+                  "text": "the smallest remaining gap is live multi-target reuse beyond the current adaptation sketch"
                 },
                 {
                   "order": 2,
-                  "text": "a future canonical review should be based on a real managed target flow where one source update propagates cleanly to multiple instruction surfaces more than once"
+                  "text": "specifically, the bundle still needs a real managed target flow showing one source update propagating cleanly to multiple instruction surfaces more than once"
                 }
               ]
             },
@@ -6195,7 +6201,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a live multi-target reuse context beyond the current repo-local adaptation sketch"
+                  "text": "defer canonical promotion until a live multi-target reuse context exists beyond the current repo-local adaptation sketch"
                 }
               ]
             }
@@ -7656,6 +7662,167 @@
       "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/bounded-context-map/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0016"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "bounded-context-map"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "default docs and scoping pattern for naming neighboring responsibilities and visible handoff surfaces"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the technique tied to real semantic ambiguity instead of letting it drift into generic architecture formalism or ceremony"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "too many contexts are invented for a small problem"
+                },
+                {
+                  "order": 2,
+                  "text": "the map renames concepts without reducing ambiguity"
+                },
+                {
+                  "order": 3,
+                  "text": "interfaces remain muddy even after the map is drawn"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "over-structuring can slow small projects if no real confusion exists"
+                },
+                {
+                  "order": 2,
+                  "text": "premature context formalization can freeze evolving vocabulary too early"
+                },
+                {
+                  "order": 3,
+                  "text": "the map can become generic architecture formalism if it stops being tied to one concrete scoping problem"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using context mapping as a substitute for real interface cleanup"
+                },
+                {
+                  "order": 2,
+                  "text": "declaring a DDD-style map without changing how reviews or changes are scoped"
+                },
+                {
+                  "order": 3,
+                  "text": "treating every folder boundary as a bounded context automatically"
+                },
+                {
+                  "order": 4,
+                  "text": "using the technique to justify architecture theater instead of one bounded ambiguity reduction pass"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "contributors still confuse neighboring areas after the map is written"
+                },
+                {
+                  "order": 2,
+                  "text": "the context names overlap or feel interchangeable"
+                },
+                {
+                  "order": 3,
+                  "text": "handoff points are still implicit or undocumented"
+                },
+                {
+                  "order": 4,
+                  "text": "reviewers start discussing taxonomy or diagram shape more than the actual scope boundary being protected"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "collapse weak or ceremonial contexts"
+                },
+                {
+                  "order": 2,
+                  "text": "tighten the vocabulary around observable responsibilities"
+                },
+                {
+                  "order": 3,
+                  "text": "add or clarify the interface notes between contexts"
+                },
+                {
+                  "order": 4,
+                  "text": "re-anchor the map in one concrete scoping decision instead of a broader architecture program"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for over-structuring, vocabulary freeze, and architecture-formalism drift"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/bounded-context-map/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -7686,7 +7853,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -7698,17 +7865,22 @@
                 {
                   "order": 1,
                   "key": "origin evidence",
-                  "value_markdown": "the origin note shows the pattern reused to keep agent and human work semantically scoped when neighboring subsystems or concepts blurred together"
+                  "value_markdown": "the origin repeatedly needed a compact way to keep agent and human work semantically scoped when neighboring subsystems or concepts blurred together"
                 },
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the public adaptation note shows the same contract surviving in `aoa-techniques` as a docs and scoping pattern rather than as generic architecture formalism"
+                  "value_markdown": "the public `aoa-techniques` adaptation preserved the contract as a docs and scoping pattern rather than letting it drift into generic architecture formalism"
                 },
                 {
                   "order": 3,
+                  "key": "consumer evidence",
+                  "value_markdown": "the committed `aoa-bounded-context-map` skill wires `AOA-T-0016` through `techniques.yaml`, exposes the same contract in `SKILL.md`, and includes a concrete example with overloaded terminology and named handoff notes"
+                },
+                {
+                  "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the technique has a bounded checklist, a minimal example, and a semantic review that still keeps the watch seam on architecture-formalism drift"
+                  "value_markdown": "the bundle now has origin evidence, a public second-context adaptation, and a committed downstream consumer with explicit section-level traceability"
                 }
               ]
             },
@@ -7719,11 +7891,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this reads as the default docs and scoping pattern when the immediate problem is semantic confusion around neighboring responsibilities and handoff points"
+                  "text": "this is the default docs and scoping pattern when a repository needs to name neighboring responsibilities before changes widen into the wrong area"
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than broader architecture work because it should help a future change stay inside one intended scope rather than justify a general design taxonomy"
+                  "text": "the committed skill consumer shows the same contract is not just publishable but actually selected as a bounded default in another repo, which is enough for default-use approval"
                 }
               ]
             },
@@ -7745,12 +7917,12 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the reusable boundary-mapping pattern and strips project-specific naming, local layout, and private operational detail"
+                  "value_markdown": "the published technique keeps only reusable boundary-mapping guidance and strips project-specific naming, local layout, and private operational detail"
                 },
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the bundle remains understandable without origin-project access and does not rely on hidden architecture context"
+                  "value_markdown": "the bundle and committed skill consumer are understandable without origin-project access and do not rely on hidden architecture context"
                 }
               ]
             },
@@ -7761,11 +7933,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the current proof surface is still mostly one origin plus one public adaptation, so the technique is reusable but not yet strong enough to read as the default canonical choice"
+                  "text": "a second independent consumer beyond `aoa-skills` would further strengthen breadth"
                 },
                 {
                   "order": 2,
-                  "text": "a second live context with different neighboring ambiguity would strengthen the claim that this stays a docs and scoping technique rather than a broader architecture formalism"
+                  "text": "the technique still needs judgment to avoid use where no real ambiguity exists"
                 }
               ]
             },
@@ -7776,7 +7948,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0016` in `promoted` for now; the bundle is bounded and public-safe, but the smallest remaining gap is broader reuse evidence rather than wording alone"
+                  "text": "approve `AOA-T-0016` for `promoted -> canonical` in this wave; the cross-context consumer evidence is strong enough for default-use approval, and the remaining risk is misuse scope rather than lack of reuse proof"
                 }
               ]
             }
@@ -8048,7 +8220,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "keep `promoted`; defer canonical promotion"
                 }
               ]
             },
@@ -8059,23 +8231,23 @@
               "fields": [
                 {
                   "order": 1,
-                  "key": "origin evidence",
-                  "value_markdown": "`atm10-agent` already shows repeated need for invariant-oriented checks where broader behavioral coverage mattered more than a few fixed examples"
+                  "key": "consumer evidence",
+                  "value_markdown": "`aoa-skills/skills/aoa-property-invariants/SKILL.md` and its committed `techniques.yaml` both wire `AOA-T-0017` into a real, evaluated consumer surface rather than a hypothetical fit"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "the public adaptation note keeps the technique distinct inside `aoa-techniques` as an invariant-first validation pattern rather than generic \"stronger tests\" language"
+                  "key": "reuse shape",
+                  "value_markdown": "the skill frames `AOA-T-0017` as a core, explicit-preferred technique for broad invariant-oriented checks, and its committed example stays centered on bounded invariant coverage instead of generic exploratory testing"
                 },
                 {
                   "order": 3,
-                  "key": "semantic reinforcement",
-                  "value_markdown": "`docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md` keeps `AOA-T-0015` versus `AOA-T-0017` readable as contract-surface validation versus invariant-oriented coverage broadening, while also naming that seam as the main watch point"
+                  "key": "boundary separation",
+                  "value_markdown": "the consumer surface keeps `AOA-T-0017` distinct from `AOA-T-0007`, which supports the invariant-vs-signal-promotion split but does not by itself prove default-use status"
                 },
                 {
                   "order": 4,
-                  "key": "support surfaces",
-                  "value_markdown": "the bundle already has a checklist plus two public-safe examples that keep the center of gravity on invariant strength, bounded input assumptions, and honest reporting"
+                  "key": "consumer-side review signal",
+                  "value_markdown": "the committed promotion review in `aoa-skills` still says `canonical` is deferred because this pass does not establish the technique as the default public reference for property-oriented testing"
                 }
               ]
             },
@@ -8086,11 +8258,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right bounded choice when the main validation problem is broader coverage around one known domain truth that should hold across many cases"
+                  "text": "this remains the right bounded choice when the main validation problem is broader coverage around one known domain truth that should hold across many cases"
                 },
                 {
                   "order": 2,
                   "text": "it remains narrower than adjacent techniques: `AOA-T-0015` is still the clearer default when a consumer-visible boundary must be defined explicitly, and `AOA-T-0007` still governs staged promotion of an already-observed signal rather than invariant design"
+                },
+                {
+                  "order": 3,
+                  "text": "the evidence is enough to justify reuse and explicit skill wiring, but not enough to call this the default public reference across validation domains"
                 }
               ]
             },
@@ -8128,7 +8304,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main remaining gap is stronger live reuse evidence that the technique becomes the natural default across more than one bounded validation domain without drifting back toward generic contract-testing language"
+                  "text": "the smallest remaining gap is a second committed consumer surface that treats this technique as the natural first choice for property-oriented coverage, not just a supported dependency"
+                },
+                {
+                  "order": 2,
+                  "text": "until that appears, the bundle should stay promoted rather than claim canonical default-use approval"
                 }
               ]
             },
@@ -8139,7 +8319,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0017` as `promoted` in this wave; the technique is strong and distinct, but one more reinforcement step around live default-use evidence would make a later `promoted -> canonical` decision easier and cleaner"
+                  "text": "keep `AOA-T-0017` as `promoted` in this wave; the technique is strong, distinct, and reusable, but the committed consumer evidence still falls short of canonical default-use approval"
                 }
               ]
             }
@@ -8433,7 +8613,7 @@
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle has stable sections, examples, and checks, and the bridge flow shows the technique can survive a committed downstream consumer, but the proof set still stops at that bridge pattern"
+                  "value_markdown": "the bundle has stable sections, examples, and checks, and the bridge flow shows the technique can survive a committed downstream consumer, but the proof set still stops at that bridge pattern rather than a second markdown-first consumer"
                 }
               ]
             },
@@ -8490,7 +8670,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is another live markdown-first consumer beyond the current `aoa-skills` bridge pattern"
+                  "text": "the smallest remaining gap is a second live markdown-first consumer that is independent of the current `aoa-skills` bridge pattern"
                 },
                 {
                   "order": 2,
@@ -8731,7 +8911,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded cross-repo adaptation grounded in a committed `aoa-skills` consumer, not just a repo-local sketch, while still leaving one gap: another live markdown-first consumer beyond the current bridge pattern"
+                  "text": "works as a bounded cross-repo adaptation grounded in a committed `aoa-skills` consumer, not just a repo-local sketch"
+                },
+                {
+                  "order": 2,
+                  "text": "the committed bridge pattern is still not equivalent to a second independent markdown-first consumer, so the reuse proof remains bounded to one bridge-backed downstream context"
                 }
               ]
             }
@@ -8743,6 +8927,155 @@
       "id": "AOA-T-0019",
       "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0019"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "frontmatter-metadata-spine"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default metadata spine for bundle-level routing and lookup in the KAG/source-lift family"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the spine bounded to shallow frontmatter and derived catalog outputs without letting metadata replace markdown meaning"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "frontmatter widens until it starts carrying section meaning, rationale, or policy semantics that belong in markdown"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors edit generated catalog files directly and break source-to-derived parity"
+                },
+                {
+                  "order": 3,
+                  "text": "routing consumers start treating the metadata spine as a graph layer instead of a bounded lookup surface"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a successful catalog can create false confidence that the corpus is machine-readable end to end when key meaning still lives only in authored markdown"
+                },
+                {
+                  "order": 2,
+                  "text": "schema creep can raise maintenance cost faster than it improves routing"
+                },
+                {
+                  "order": 3,
+                  "text": "metadata-first habits can make downstream consumers skip the bundle and evidence notes that still hold the real contract"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "adding fields because a future KAG layer might want them instead of because a current routing problem requires them"
+                },
+                {
+                  "order": 2,
+                  "text": "fixing generated catalog entries by hand instead of editing frontmatter and regenerating"
+                },
+                {
+                  "order": 3,
+                  "text": "using the metadata spine as a substitute for `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0021`, or `AOA-T-0022`"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "proposed metadata changes mostly duplicate section prose or note content"
+                },
+                {
+                  "order": 2,
+                  "text": "review comments focus on generated files instead of source frontmatter"
+                },
+                {
+                  "order": 3,
+                  "text": "consumers stop opening `TECHNIQUE.md` even when the question is about meaning, caution, or provenance"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep metadata additions tied to one concrete routing problem at a time"
+                },
+                {
+                  "order": 2,
+                  "text": "regenerate and validate the catalog instead of editing derived outputs by hand"
+                },
+                {
+                  "order": 3,
+                  "text": "route section meaning, provenance argument, direct relations, and caution review back to the companion markdown-first techniques"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for schema creep, catalog overread, direct generated-file editing, or metadata replacing markdown authority"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/docs/frontmatter-metadata-spine/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -8774,7 +9107,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "stronger ready, still promoted"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -8811,11 +9144,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than section lift or provenance lift because it should help navigate the bundle, not replace the bundle's prose"
+                  "text": "it is the canonical bundle-level metadata entrypoint for the KAG/source-lift family when the next question is routing or lookup rather than section lift, provenance lift, relation lift, or caution review"
                 },
                 {
                   "order": 3,
-                  "text": "it is now the first canonical candidate in the family because the same bounded spine is visible in committed skill, eval, and routing consumers, but the technique still belongs in `promoted` until a future wave chooses to elevate it"
+                  "text": "it remains narrower than section lift or provenance lift because it should help navigate the bundle, not replace the bundle's prose"
                 }
               ]
             },
@@ -8853,11 +9186,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the remaining gap is not donor existence but promotion timing: the technique is ready enough to lead the family, but this wave keeps it `promoted`"
+                  "text": "no blocking gap remains for canonical use as long as the technique stays bounded to shallow metadata routing and does not widen into schema growth or markdown replacement"
                 },
                 {
                   "order": 2,
-                  "text": "a future canonical review should still confirm that shallow frontmatter remains enough even when a downstream routing problem is slightly different"
+                  "text": "future review should keep watching for catalog-overread and schema creep, but those are ongoing watch seams rather than promotion blockers"
                 }
               ]
             },
@@ -8868,11 +9201,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0019` `promoted`"
+                  "text": "promote `AOA-T-0019` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "treat `AOA-T-0019` as the first promotion candidate for canonical review in the next wave, but do not change the status in this wave"
+                  "text": "use `AOA-T-0019` as the default metadata-spine entrypoint for the KAG/source-lift family while keeping its contract bounded to routing and lookup"
                 }
               ]
             }
@@ -9163,12 +9496,12 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "the adaptation note is now grounded in committed `aoa-evals` donor surfaces, including bundle `evidence` arrays, the generated catalog lift, and validator-enforced path existence"
+                  "value_markdown": "the adaptation note is grounded in committed `aoa-evals` donor evidence, including bundle `evidence` arrays, the generated catalog lift, and validator-enforced path existence"
                 },
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle already has a checklist, an example, and explicit note-path routing, but it still lacks a second markdown-first corpus proving the same typed note contract in practice"
+                  "value_markdown": "the bundle already has a checklist, an example, and explicit note-path routing, but it still lacks a second non-eval markdown-first corpus proving the same typed note contract in practice"
                 }
               ]
             },
@@ -9188,6 +9521,10 @@
                 {
                   "order": 3,
                   "text": "the bundle should stay promoted until a second non-eval markdown-first corpus proves that the same note-kind split remains useful outside the current donor path"
+                },
+                {
+                  "order": 4,
+                  "text": "this is an explicit bounded defer: preserve promoted status now, and gate canonical promotion on a second markdown-first corpus that reuses the same typed note lift"
                 }
               ]
             },
@@ -9225,7 +9562,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the main missing proof is live reuse in a second markdown-first repository, not another eval bundle in the same donor family"
+                  "text": "the main missing proof is live reuse in a second markdown-first corpus, not another eval bundle in the same donor family"
                 },
                 {
                   "order": 2,
@@ -9381,7 +9718,7 @@
                 {
                   "order": 1,
                   "key": "note kinds",
-                  "value_markdown": "the public form now mirrors a live donor pattern from `aoa-evals`, where bundle `eval.yaml` files carry typed `evidence` arrays made of `kind` plus `path` handles instead of one generic support bucket"
+                  "value_markdown": "the public form now mirrors a live donor pattern from committed `aoa-evals` surfaces, where bundle `eval.yaml` files carry typed `evidence` arrays made of `kind` plus `path` handles instead of one generic support bucket"
                 },
                 {
                   "order": 2,
@@ -9441,7 +9778,7 @@
                 },
                 {
                   "order": 4,
-                  "text": "the current live donor proof is still one markdown-first eval corpus; the next reuse step has to come from a second non-eval corpus using the same typed lift"
+                  "text": "the current live donor proof is still one markdown-first eval corpus; the next reuse step has to come from a second non-eval markdown-first corpus using the same typed lift"
                 }
               ]
             },
@@ -9475,7 +9812,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded transfer from a live `aoa-evals` donor corpus, with the remaining gap narrowed to a second markdown-first corpus proving the same typed note lift"
+                  "text": "works as a bounded transfer from a live `aoa-evals` donor corpus, with the remaining gap narrowed to a second non-eval markdown-first corpus proving the same typed note lift"
                 }
               ]
             }

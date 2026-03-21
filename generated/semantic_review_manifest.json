@@ -251,7 +251,7 @@
       "review_id": "kag_source_lift",
       "review_path": "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
       "title": "KAG Source Lift Semantic Review",
-      "intro_markdown": "This review-only pilot checks whether the first reusable KAG/source-lift family still reads as five distinct techniques rather than one blurred \"lift everything from markdown\" package.\n\nWhy this family was chosen now:\n\n- all five techniques are already `promoted`\n- the family now spans section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift\n- the main question is semantic clarity across the family boundaries, not missing structure\n- `AOA-T-0022` is a caution-oriented companion and should stay outside shadow-policy semantics\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "intro_markdown": "This review-only pilot checks whether the first reusable KAG/source-lift family still reads as five distinct techniques rather than one blurred \"lift everything from markdown\" package.\n\nWhy this family was chosen now:\n\n- the family now has one `canonical` metadata spine plus four `promoted` companions\n- the family now spans section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift\n- the main question is semantic clarity across the family boundaries, not missing structure\n- `AOA-T-0022` is a caution-oriented companion and should stay outside shadow-policy semantics\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
       "map_heading": "Family Map",
       "map_entries": [
         {
@@ -316,7 +316,7 @@
         },
         {
           "order": 2,
-          "text": "`AOA-T-0019` is semantically distinct as the metadata spine."
+          "text": "`AOA-T-0019` is semantically distinct as the canonical metadata spine."
         },
         {
           "order": 3,
@@ -332,7 +332,7 @@
         },
         {
           "order": 6,
-          "text": "Live donor posture is now uneven but useful across the family: `AOA-T-0019` is strongest because three sibling repos already rely on the metadata spine for shared routing and review posture."
+          "text": "Live donor posture is now uneven but useful across the family: `AOA-T-0019` is strongest because three sibling repos already rely on the metadata spine for shared routing and review posture, and that proof is now strong enough for canonical default-use."
         },
         {
           "order": 7,
@@ -356,7 +356,7 @@
         }
       ],
       "overall_outcome": "`clear`",
-      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is only to keep the shared family boundaries readable and open a new pilot later if one of the seams starts collapsing into a broader graph, metadata, or shadow-policy package."
+      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is to keep `AOA-T-0019` narrow as the canonical metadata spine while `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0021`, and `AOA-T-0022` keep accumulating bounded live evidence without collapsing into a broader graph, metadata, or shadow-policy package."
     },
     {
       "review_id": "published_summary",
@@ -443,7 +443,7 @@
       "review_id": "skill_support",
       "review_path": "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
       "title": "Skill-Support Semantic Review",
-      "intro_markdown": "This review-only pilot checks whether the recent skill-support cluster still reads as four distinct techniques rather than one blurred \"agent-friendly testing and scoping\" package.\n\nWhy this cluster was chosen now:\n\n- all four techniques were just promoted from the same superseded landing wave\n- the main remaining question is semantic separation, not missing repo structure\n- the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit\n- this is the highest-value review pass before any second-context evidence strengthening\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "intro_markdown": "This review-only pilot checks whether the current skill-support cluster still reads as four distinct techniques rather than one blurred \"agent-friendly testing and scoping\" package.\n\nWhy this cluster was chosen now:\n\n- the cluster now mixes three `canonical` defaults with one still-`promoted` companion\n- the main remaining question is semantic separation and bounded default-use posture, not missing repo structure\n- the cluster crosses `agent-workflows`, `evaluation`, and `docs`, so drift would be costly if left implicit\n- the highest-risk seams are still `0015` vs `0017` and `0016` drifting toward generic architecture formalism\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
       "map_heading": "Cluster Map",
       "map_entries": [
         {
@@ -522,11 +522,11 @@
         },
         {
           "order": 7,
-          "text": "No relation cleanup, status change, or narrow remediation wave is justified from this pilot alone."
+          "text": "No relation cleanup or additional narrow semantic-remediation wave is justified from this pilot alone."
         }
       ],
       "overall_outcome": "`clear with two watch seams`",
-      "next_step_markdown": "No immediate semantic-remediation wave is justified for this cluster from this pilot alone.\n\nSecond-context evidence strengthening has already landed for `AOA-T-0014` and `AOA-T-0015`, so the next step should focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and `AOA-T-0016` drift toward generic architecture formalism."
+      "next_step_markdown": "No immediate semantic-remediation wave is justified for this cluster from this pilot alone.\n\nSecond-context evidence strengthening and one downstream consumer now justify `AOA-T-0016` as `canonical`, but the next step should still focus on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism."
     }
   ]
 }
