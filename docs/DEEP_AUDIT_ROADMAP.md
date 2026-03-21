@@ -48,7 +48,8 @@ Historical note:
   - `OpenMemory-Code` is a `hold because memory-boundary overlap` with `aoa-memo`
   - `agentwise` is a `future import candidate` with orchestration overlap and license caution, not an automatic intake
   - no exact-fit seeded external donor currently displaces the open donor slots for `AOA-T-0005` or `AOA-T-0022`
-- the remaining `20` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `incubate elsewhere, then distill here`, or `substrate or architecture pattern, not yet a technique`
+- external donor intake now follows one canonical-home rule: other `aoa-*` repos may incubate or prove a pattern, but once a reusable bounded technique is extracted, it belongs in `aoa-techniques`
+- the remaining `20` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
 - the remaining promoted backlog is now staged as:
   - `evidence-prep now`: `AOA-T-0018`
   - `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0026`

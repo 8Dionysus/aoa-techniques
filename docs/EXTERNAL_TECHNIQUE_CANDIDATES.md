@@ -29,6 +29,17 @@ It does not change technique status, create a new bundle, or authorize import by
   - `agentic`
   - `SpecStory`
 
+## Doctrine Seam
+
+- if something is already a reusable, bounded, public-safe technique, its canonical home is `aoa-techniques`
+- neighboring `aoa-*` repos may incubate the pattern, prove it in live use, or consume the resulting technique, but they do not become the long-term owner of the technique canon
+- these verdicts therefore do **not** mean "another repo should own the technique instead"
+- they mean one of four narrower things:
+  - the technique is ready to extract here now
+  - the technique still needs one more narrowing pass before extraction here
+  - the candidate still overlaps an already-landed technique here
+  - the source pattern is still layer-owned behavior or substrate and is not yet technique-shaped
+
 ## How To Read The Verdicts
 
 - `ready to distill here`
@@ -37,8 +48,8 @@ It does not change technique status, create a new bundle, or authorize import by
   - the pattern looks like a good next-wave candidate for `aoa-techniques`, but still needs one more narrowing pass before drafting
 - `hold because overlap`
   - the pattern is real, but current separability from an existing landed technique is not sharp enough yet
-- `incubate elsewhere, then distill here`
-  - the pattern still needs one more stable contract pass in a home repo before it can be extracted into `aoa-techniques`
+- `needs layer incubation before distillation here`
+  - the pattern still needs one more stable contract pass in a layer repo before it can be extracted into `aoa-techniques`
 - `substrate or architecture pattern, not yet a technique`
   - the current seed idea is still too infra-shaped, role-shaped, or optimization-shaped to behave like one bounded technique bundle
 
@@ -47,7 +58,7 @@ It does not change technique status, create a new bundle, or authorize import by
 - `0` ready to distill here
 - `8` future import here
 - `4` hold because overlap
-- `5` incubate elsewhere, then distill here
+- `5` needs layer incubation before distillation here
 - `3` substrate or architecture pattern, not yet a technique
 
 Most recent landings from this backlog:
@@ -81,7 +92,7 @@ None right now. The current strict-safe lane has already been landed into [AOA-T
 | `context_injection_for_coding_agents` | `agents-md` | `bounded-context-injection-for-coding-agents` | `docs` | currently overlaps both [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | reopen only if injection itself becomes the distinct contract rather than composition or one-shot execution |
 | `single_step_agent` | `qqqa` | `single-step-confirmed-agent-action` | `agent-workflows` | currently too close to [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | reopen only if the true center becomes the one-step mutating boundary, not generic stateless invocation |
 
-## Incubate Elsewhere, Then Distill Here
+## Needs Layer Incubation Before Distillation Here
 
 | seed candidate | donor | suggested technique name | tentative domain if later imported | why it still needs incubation | next move |
 |---|---|---|---|---|---|
@@ -116,5 +127,5 @@ Then revisit the overlap and incubation lanes only after one of their missing bo
 ## Notes
 
 - these are candidate techniques, not commitments to import
-- a candidate can still be a valid AoA technique even if it currently needs incubation outside this repo before extraction
-- this doc deliberately separates `wrong home right now` from `not a technique at all`
+- a candidate can still be a valid AoA technique even if it currently needs one more extraction pass before it can land here cleanly
+- this doc deliberately separates `not yet extracted into a technique` from `not a technique at all`
