@@ -43,6 +43,13 @@ See also:
 | Concrete Non-UI Intent Rollout | `present` | `techniques/agent-workflows/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/agent-workflows/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 
+### [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Confirmed Single-Step Action | `present` | `techniques/agent-workflows/stateless-single-shot-agent/examples/confirmed-single-step-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
+| Minimal Stateless Single-Shot Agent | `present` | `techniques/agent-workflows/stateless-single-shot-agent/examples/minimal-stateless-single-shot-agent.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -107,6 +114,13 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Risk And Negative-Effect Lift | `present` | `techniques/docs/risk-and-negative-effect-lift/examples/minimal-risk-and-negative-effect-lift.md` | [TECHNIQUE.md](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) |
+
+### [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Curated Mirror With Attribution | `present` | `techniques/docs/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
+| Minimal Upstream Mirroring With Provenance | `present` | `techniques/docs/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
 ## `evaluation`
 

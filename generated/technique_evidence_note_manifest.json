@@ -6119,7 +6119,7 @@
                 {
                   "order": 1,
                   "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior"
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior, and that donor still reads cleanly against the current `ruler` public surface"
                 },
                 {
                   "order": 2,
@@ -6133,8 +6133,13 @@
                 },
                 {
                   "order": 4,
+                  "key": "donor intake refinement",
+                  "value_markdown": "current seeded donor review now records `agents-md` as an overlap hold against `AOA-T-0012` and `n-skills` as the adjacent `AOA-T-0024 upstream-mirroring-with-provenance` import rather than synthetic proof for this bundle"
+                },
+                {
+                  "order": 5,
                   "key": "validation strength",
-                  "value_markdown": "the bundle includes a checklist, two public-safe examples, a clean separation from `AOA-T-0012`, and one real sibling-repo donor, but it still lacks a second independent instruction-distribution context beyond `aoa-skills`"
+                  "value_markdown": "the bundle includes a checklist, two public-safe examples, a clean separation from `AOA-T-0012`, one bounded external origin, and one real sibling-repo donor, but it still lacks a second independent live instruction-distribution context beyond `aoa-skills`"
                 }
               ]
             },
@@ -6191,11 +6196,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is one second independent instruction-distribution context beyond the first `aoa-skills` donor"
+                  "text": "the smallest remaining gap is still one second independent live instruction-distribution context beyond the first `aoa-skills` donor"
                 },
                 {
                   "order": 2,
                   "text": "specifically, the bundle still needs another managed target flow showing one source update propagating cleanly to multiple instruction surfaces in a second repo or surface family such as `aoa-agents`"
+                },
+                {
+                  "order": 3,
+                  "text": "another external-import-only review, overlap-heavy composition tool, or provenance-mirroring tool does not satisfy that remaining live-evidence gap on its own"
                 }
               ]
             },
@@ -6251,7 +6260,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "review date: 2026-03-18"
+                  "text": "review date: 2026-03-21"
                 }
               ]
             },
@@ -6270,11 +6279,15 @@
                 },
                 {
                   "order": 3,
-                  "text": "the provenance note records the donor source plus explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior"
+                  "text": "the provenance note records the donor source plus explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior, and that bounded donor package still reads cleanly against the current `ruler` README and duplication test surface"
                 },
                 {
                   "order": 4,
-                  "text": "the second-context note keeps the adaptation honest by saying the current repo-local projection is readable and useful, but not yet strong enough for canonical promotion on its own"
+                  "text": "the second-context note now anchors the first live donor in `aoa-skills`, so the remaining gap is no longer \"another import review\", but another live many-target context beyond that first sibling-repo proof"
+                },
+                {
+                  "order": 5,
+                  "text": "current seeded donor evaluation also records `agents-md` as an overlap hold against `AOA-T-0012` and `n-skills` as the adjacent `AOA-T-0024 upstream-mirroring-with-provenance` import rather than treating either as synthetic evidence for this bundle"
                 }
               ]
             },
@@ -6339,11 +6352,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "the current repo-local second context is still not strong enough to argue for canonical promotion, because the repository does not yet exercise a live one-source multi-target instruction distribution workflow in practice"
+                  "text": "the current external intake path is strong enough to stay as the origin anchor, but it is no longer the missing closure item for this technique"
                 },
                 {
                   "order": 4,
-                  "text": "the bundle should therefore stop at import-strengthening in this wave instead of pretending canonical symmetry with `AOA-T-0012`"
+                  "text": "the bundle should therefore stop at intake-strengthening in this wave instead of pretending that another import-only review can substitute for a second live one-source multi-target context"
                 }
               ]
             },
@@ -6354,11 +6367,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the technique still needs stronger live reuse evidence across multiple agent-facing outputs before any canonical review"
+                  "text": "the smallest remaining gap is still one more live reuse context across multiple agent-facing outputs beyond the first `aoa-skills` donor"
                 },
                 {
                   "order": 2,
-                  "text": "a future stronger second context should show an actual managed multi-target instruction flow, not just a readable adaptation sketch"
+                  "text": "a future stronger context should show an actual managed multi-target instruction flow, not just another readable external-import package or overlap-heavy composition tool"
                 }
               ]
             },
@@ -6373,7 +6386,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "accept this as a successful bounded external-import review wave and defer any canonical-readiness path until stronger live multi-target reuse exists"
+                  "text": "accept this as a successful bounded external-intake refresh and defer any canonical-readiness path until stronger live multi-target reuse exists"
                 }
               ]
             }
@@ -6421,7 +6434,7 @@
                 {
                   "order": 1,
                   "key": "what_changed",
-                  "value_markdown": "narrowed the donor repository to one bounded docs pattern: one canonical rule source distributed to multiple agent-facing instruction surfaces"
+                  "value_markdown": "refreshed the donor package around the current public `ruler` contract and kept only one bounded docs pattern: one canonical rule source distributed to multiple agent-facing instruction surfaces"
                 },
                 {
                   "order": 2,
@@ -6471,12 +6484,12 @@
                 {
                   "order": 2,
                   "key": "primary evidence used",
-                  "value_markdown": "`README.md` in `ruler` defines the single-source-to-many-target contract, and `tests/mixed-agents-duplication.test.ts` shows repeated application without duplicating shared instructions"
+                  "value_markdown": "the current `README.md` in `ruler` still defines a single source of truth in `.ruler/` plus automatic distribution to multiple agent-facing outputs, and `tests/mixed-agents-duplication.test.ts` still shows repeated application without duplicating shared instructions"
                 },
                 {
                   "order": 3,
                   "key": "limits or follow-up review concerns",
-                  "value_markdown": "this first draft intentionally ignores beta-preview product breadth and keeps the technique at the `docs` layer only"
+                  "value_markdown": "the donor remains a beta research preview, so the bundle should keep importing the narrow pattern only and continue rejecting broader product-width behavior as part of this contract"
                 }
               ]
             }
@@ -6615,6 +6628,10 @@
                 },
                 {
                   "order": 4,
+                  "text": "the bundle now sits on top of two distinct support lanes: a bounded external origin in `ruler` and this first live sibling-repo donor in `aoa-skills`; only the latter counts as the current live reinforcement baseline for canonical review"
+                },
+                {
+                  "order": 5,
                   "text": "this closes the first live donor gap for `AOA-T-0013`, but it is still only one repository and one bridge style rather than a second independent instruction-distribution context"
                 }
               ]
@@ -6626,7 +6643,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a first live second-context adaptation for one-source -> many-target distribution, while still needing one more independent reinforcement before any future canonical review"
+                  "text": "works as a first live second-context adaptation for one-source -> many-target distribution; the next honest step is one more live managed multi-target context, not another import-only review"
                 }
               ]
             }
@@ -10900,6 +10917,1092 @@
                 {
                   "order": 1,
                   "text": "works as a first live second-context adaptation for the exact five-part `Risks` contract, while still needing one more independent corpus before any future canonical review"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0023",
+      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0023"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "stateless-single-shot-agent"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around provider-profile breadth, history toggles, and other product-width behavior"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when shell-side agent work should stay mostly stateless, low-ceremony, and confirmation-gated instead of widening into a hidden multi-step session"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than `AOA-T-0001`, which stays the default workflow backbone for non-trivial repository changes that need planning, verification, and reporting across more than one step"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable single-shot invocation contract and excludes donor-specific configuration, provider, and install detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public workflow surface where the same stateless single-shot contract is used as a real fast path rather than only as imported documentation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0023` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the single-shot, confirmation-gated fast path survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0023"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "stateless-single-shot-agent"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: shell-side agent work stays mostly stateless, tool use stays single-step, and mutating actions require explicit confirmation"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around provider matrices, history toggles, formatting behavior, and other product-width details"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: mostly independent invocations, optional transient context, single-step tool use, and confirmation before mutation"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: provider/profile behavior, install/runtime setup, config files, optional history toggles, ANSI formatting, and broader product integrations"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce the fast-path contract without widening it into a hidden multi-step loop or a provider-specific CLI package"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable agent-workflow pattern rather than a disguised donor product dump"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show the same stateless single-shot fast path in another public repository or workflow surface rather than another import-only note set"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0023` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the single-shot, confirmation-gated contract survives outside the donor repo"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/iagooar/qqqa`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "MIT"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`qqqa`'s stateless shell model where `qq` stays read-only and `qa` performs at most one confirmed tool-using step per invocation"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded pattern: mostly independent shell invocations with a clear split between read-only question mode and one confirmed tool-using action mode"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "stateless-by-default invocations, optional transient context, one-step agent behavior, and an explicit confirmation gate before mutating actions"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "provider/profile matrix, install flows, config format, optional history toggles, ANSI formatting, and product-specific integrations"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local configuration paths and provider-specific environment assumptions were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: OpenRouter, OpenAI, Codex CLI, Claude CLI, and other runtime choices were removed from the invariant core"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: future follow-on techniques should review optional history or provider-profile behavior separately rather than widening this fast-path contract"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many repositories need a small shell-side fast path that stays bounded and confirmation-gated before broader workflows or hidden multi-step loops begin"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import intentionally keeps only the single-shot invocation contract and excludes broader product behavior, provider routing, and optional continuity features"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0023"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "stateless-single-shot-agent"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with reusable technique bundles, generated catalog surfaces, and documentation-first validation"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the fast-path workflow rather than shipping the donor CLI itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor exposes `qq` and `qa`; this adaptation presents a generic shell-side fast-path pattern without depending on exact binary names"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "provider profiles, HTTP clients, and CLI integrations are removed from the reusable contract"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on bounded single-shot invocation and confirmation posture, not on the donor runtime stack"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should read the technique as a workflow contract for shell-side agent work, not as an installation guide for the donor tool"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one invocation stays mostly independent, tool use stays single-step, and mutation stays confirmation-gated"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "read-only and tool-using modes stay distinct, and the fast path should end after one invocation instead of becoming a hidden loop"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "transient context remains input-only and mutating actions require explicit confirmation"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project copies the \"stateless\" label but quietly adds hidden continuity or multi-step autonomy"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may keep the shell fast path but drop the explicit confirmation gate before mutating commands"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` describes `qqqa` as a stateless shell tool where `qq` answers a single question and `qa` performs one tool-using step with confirmation"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor philosophy section keeps runs mostly independent, shell-friendly, and safe by default instead of relying on long hidden sessions"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique narrows those behaviors into one reusable fast-path contract for shell-side agent work"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific runtime breadth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0024",
+      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/upstream-mirroring-with-provenance/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0024"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "upstream-mirroring-with-provenance"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around marketplace policy, registry generation, installer behavior, and other product-width detail"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when a local collection wants to mirror upstream-owned content with explicit provenance instead of silently claiming the mirrored copy as a new canonical source"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than `AOA-T-0013`, which starts when the canonical source is already local and the main problem is fan-out to many managed instruction targets"
+                },
+                {
+                  "order": 3,
+                  "text": "it also remains distinct from `AOA-T-0020`, which is about typed note-kind provenance in derived manifests rather than mirrored content plus adjacent attribution"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-21"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable mirroring-plus-provenance contract and excludes marketplace, installer, and registry detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the public examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or collection proving that manifest-driven upstream mirroring plus adjacent provenance works outside the donor repo"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0024` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the mirroring-plus-provenance contract survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/upstream-mirroring-with-provenance/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0024"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "upstream-mirroring-with-provenance"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-21"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and two public-safe examples"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: upstream-owned content can be mirrored locally through one explicit source manifest while adjacent provenance keeps origin ownership readable"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor source plus explicit exclusions around marketplace policy, registry generation, installer behavior, and other product-width details"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note shows the same contract surviving as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: explicit source manifest, repeatable sync, adjacent provenance, and local copies that stay subordinate to upstream ownership"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: marketplace curation policy, registry generation, installer integration, category taxonomy, daily cron specifics, and agent compatibility breadth"
+                },
+                {
+                  "order": 4,
+                  "text": "the examples reinforce mirroring plus provenance without widening the bundle into a marketplace or policy system"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor repository to public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one reusable docs pattern rather than a disguised skill-market product dump"
+                },
+                {
+                  "order": 4,
+                  "text": "the current import path is public-safe and reviewable at the present repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "this new adjacent import does not count as live closure evidence for `AOA-T-0013`, because provenance-first mirroring is a different contract from one-source -> many-target rule distribution"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0024` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that manifest-driven mirroring plus adjacent provenance survives outside the donor repository"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/upstream-mirroring-with-provenance/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/numman-ali/n-skills`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "Apache-2.0"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "`n-skills` auto-sync model where `sources.yaml` names upstream skill mirrors and adjacent `.source.json` metadata preserves attribution for synced copies"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor repository to one bounded pattern: mirror upstream-owned content through an explicit source manifest and preserve adjacent provenance so the local copy stays subordinate to the upstream source"
+                },
+                {
+                  "order": 2,
+                  "key": "invariant core kept",
+                  "value_markdown": "declared source manifest, repeatable sync path, preserved attribution, and readable upstream ownership"
+                },
+                {
+                  "order": 3,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "marketplace policy, installer behavior, registry generation, category taxonomy, daily cron specifics, and agent compatibility breadth"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surface used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: donor-specific local paths and marketplace-specific operational assumptions were generalized away"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: GitHub Actions scheduling, installer integration, and agent-specific plugin conventions were removed from the invariant core"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: future follow-on techniques should review registry generation or marketplace policy separately rather than widening this mirroring contract"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many public collections need to reuse upstream-owned content locally without hiding attribution or silently claiming the mirror as the new source of truth"
+                },
+                {
+                  "order": 2,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this first import intentionally keeps only source-manifest mirroring plus provenance and excludes installer, registry, and marketplace policy layers"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/upstream-mirroring-with-provenance/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0024"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "upstream-mirroring-with-provenance"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first repository that records the mirroring pattern rather than shipping the donor sync engine itself"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the donor uses `sources.yaml` plus mirrored skill folders; this adaptation presents a generic source-manifest pattern that can fit other curated local collections"
+                },
+                {
+                  "order": 2,
+                  "key": "services",
+                  "value_markdown": "no GitHub Actions cron, installer integration, or registry generator is required in this repository"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the adaptation depends on declared source ownership, repeatable mirroring, and adjacent provenance, not on the donor sync scripts"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "contributors should treat mirrored copies as subordinate to upstream ownership and keep local wrapper notes visibly separate"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "contract",
+                  "value_markdown": "one explicit source manifest declares what is mirrored and from where"
+                },
+                {
+                  "order": 2,
+                  "key": "validation logic",
+                  "value_markdown": "mirrored content remains traceable to upstream through adjacent provenance metadata"
+                },
+                {
+                  "order": 3,
+                  "key": "safety rules",
+                  "value_markdown": "local copies stay subordinate to upstream ownership and do not silently become new canonical sources"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern can become vague if a project copies mirrored content but drops the adjacent provenance signal"
+                },
+                {
+                  "order": 2,
+                  "text": "some repositories may keep provenance files but stop using the manifest as the actual sync authority"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor `README.md` describes `sources.yaml` as the upstream external skill manifest and `.source.json` as the preserved attribution marker for synced skills"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor auto-sync section keeps upstream ownership explicit by naming the source repo, mirrored copy, and repeated refresh path"
+                },
+                {
+                  "order": 3,
+                  "text": "this imported technique narrows those behaviors into one reusable docs pattern for manifest-driven mirroring with provenance"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific marketplace or registry breadth"
                 }
               ]
             }

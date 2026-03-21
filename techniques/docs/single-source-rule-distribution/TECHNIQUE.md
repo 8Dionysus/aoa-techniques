@@ -49,7 +49,7 @@ Reduce drift and duplicated maintenance by keeping one canonical rule source and
 - projects that already feel the cost of copying the same guidance into `AGENTS.md`, `CLAUDE.md`, or similar files
 - teams that can regenerate or re-apply instruction targets from one canonical rule source
 - repositories that want target surfaces to stay consistent without making every output file canonical
-- cases where the same shared rule core is proven to survive re-application across multiple managed targets, not just a repo-local adaptation sketch
+- cases where the same shared rule core is already anchored by one bounded external origin and at least one live managed multi-target donor, with room for another live donor later
 
 ## When not to use
 
@@ -88,7 +88,7 @@ Reduce drift and duplicated maintenance by keeping one canonical rule source and
 - the same source update can be propagated repeatedly without introducing duplication drift
 - target-specific wrappers or formatting must not change the shared rule intent
 - manual edits to target files are either forbidden or clearly subordinate to the canonical source
-- canonical review should stay defer-first until the contract is exercised in a live multi-target reuse context beyond the current repo-local sketch
+- canonical review should stay defer-first until the contract is exercised in one more live multi-target reuse context beyond the current `aoa-skills` donor and the bounded `ruler` intake package
 
 Relationship to adjacent techniques: unlike `AOA-T-0002 source-of-truth-layout`, this technique is about one rule source fanning out to many target surfaces rather than assigning canonical roles to many document classes inside one repository. Unlike `AOA-T-0012 deterministic-context-composition`, this technique is about one canonical source propagating to multiple target instruction files rather than composing many fragments into one generated artifact.
 
@@ -158,7 +158,7 @@ Project-shaped details that should not be treated as invariant:
 - nested loading behavior, which may support broader systems but is not part of this first technique contract
 - MCP propagation, skills propagation, `.gitignore` automation, backup/revert flows, and other wider product behavior
 
-See `notes/second-context-adaptation.md` for a bounded docs-repository adaptation sketch.
+See `notes/external-origin.md` for the bounded external intake package and `notes/second-context-adaptation.md` for the current live second-context donor.
 
 ## Public sanitization notes
 
@@ -177,6 +177,7 @@ See `checks/single-source-rule-distribution-checklist.md`.
 - adapted from open-source `ruler`
 - imported into `aoa-techniques` on 2026-03-15 as the second bounded external-import draft with explicit exclusions around MCP, skills, nested loading, and other product-width behavior
 - passed first external-import review on 2026-03-18; keep the technique `promoted` until stronger live multi-target reuse exists beyond the current repo-local adaptation sketch
+- external donor intake refresh on 2026-03-21 now reaffirms `ruler` as the bounded origin donor, records `agents-md` as an overlap hold against `AOA-T-0012`, and records `n-skills` as the adjacent `AOA-T-0024 upstream-mirroring-with-provenance` import rather than live proof for this bundle
 - current canon-strengthening wave: defer canonical promotion until a live multi-target reuse context proves the shared rule core still propagates cleanly across managed targets
 
 ## Future evolution

@@ -467,7 +467,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(22, len(technique_paths))
+        self.assertEqual(24, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -500,7 +500,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual({"agent-workflows", "docs", "evaluation"}, domain_values)
         self.assertEqual(17, status_counts["canonical"])
-        self.assertEqual(5, status_counts["promoted"])
+        self.assertEqual(7, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -635,7 +635,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md": "keep this review as the canonical-core anchor",
             "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md": "open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package",
             "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
-            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "first live multi-target donor for `AOA-T-0013`",
+            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "n-skills` now lands as the adjacent provenance-mirroring import `AOA-T-0024`",
             "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017`",
             "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md": "keep `AOA-T-0019` narrow as the canonical metadata spine",
         }
@@ -698,13 +698,15 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-evals",
             "aoa-routing",
             "17 canonical",
-            "5 promoted",
+            "7 promoted",
             "external-dependency-first promoted techniques",
             "AOA-T-0005",
             "AOA-T-0013",
             "AOA-T-0018",
             "AOA-T-0020",
             "AOA-T-0022",
+            "AOA-T-0023",
+            "AOA-T-0024",
             "python scripts/release_check.py",
         ):
             self.assertIn(target, start_here)

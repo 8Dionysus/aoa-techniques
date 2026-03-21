@@ -14,12 +14,14 @@ Historical note:
 ## Baseline
 
 - baseline verification path: `python -m unittest discover -s tests` and `python scripts/validate_repo.py`
-- current corpus split: `22` bundles, `17 canonical`, `5 promoted`
+- current corpus split: `24` bundles, `17 canonical`, `7 promoted`
 - current promoted backlog:
   - [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+  - [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
   - [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
   - [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
   - [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+  - [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
   - [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 - audit stance: if no structural red flag appears, prioritize semantic quality, surface coherence, governance consistency, and external dependency closure over new infrastructure
 
@@ -30,9 +32,15 @@ Historical note:
 - the first external donor wave is landed:
   - `ATM10-Agent@7cf55f70badbe8b1a51e2eabbe1424f35b833dd3` strengthens `AOA-T-0005`
   - `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` strengthens `AOA-T-0013` and `AOA-T-0022`
+- seeded external donor intake is now explicit:
+  - `ruler` is a bounded `pass` as the origin donor for `AOA-T-0013`
+  - `agents-md` is a `hold because overlap` against `AOA-T-0012`
+  - `n-skills` now lands the adjacent [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) import, but it still does not count as live closure evidence for `AOA-T-0013`
+  - `qqqa` now lands the adjacent [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) import as a bounded shell-side fast-path technique rather than as backlog-closure evidence for an existing promoted bundle
+  - no exact-fit seeded external donor currently displaces the open donor slots for `AOA-T-0005` or `AOA-T-0022`
 - the remaining promoted backlog is now staged as:
   - `evidence-prep now`: `AOA-T-0018`
-  - `external dependency first`: `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`
+  - `external dependency first`: `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0023`, `AOA-T-0024`
 
 ## Finding Classes
 
@@ -122,7 +130,7 @@ Bundle-level result:
 | technique | current smallest gap | repo-local vs external gap | phase placement | next honest promotion trigger |
 |---|---|---|---|---|
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | one non-origin live second-context reuse beyond `atm10-agent` and the repo-local rollout sketch | external | `external dependency first` | one public second rollout record in another repo that proves the same checklist on a real new-intent extension path |
-| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | one second independent instruction-distribution context beyond the first `aoa-skills` donor | external | `external dependency first` | reinforcement in `aoa-agents` or another instruction-heavy repo that keeps one-source -> many-target distribution validator-backed or generated |
+| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | one second independent live instruction-distribution context beyond the first `aoa-skills` donor; the bounded `ruler` origin package no longer counts as the missing reinforcement | external | `external dependency first` | reinforcement in `aoa-agents` or another instruction-heavy repo that keeps one-source -> many-target distribution validator-backed or generated |
 | [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | one second independent markdown-first consumer beyond the current bridge pattern | mostly external evidence, contract already stable here | `evidence-prep now` | a second committed markdown-first consumer outside the current `aoa-skills` bridge shape |
 | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | one second non-eval markdown-first corpus using typed note kind and path lift | external | `external dependency first` | a committed non-eval corpus that reuses typed note-kind and note-path provenance without note-graph widening |
 | [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | one more committed corpus beyond the first `aoa-skills` donor using the exact five-part `Risks` split | external | `external dependency first` | a committed authored bundle or corpus in another repo that reuses `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations` as the same contract |
@@ -262,7 +270,7 @@ The queue below is now historical and shipped:
 | target technique | external repo | exact proof surface needed | what must not be faked by wording |
 |---|---|---|---|
 | `AOA-T-0005` | open donor slot beyond `atm10-agent` | one non-origin public-safe authored new-intent rollout record over an existing intent chain | another repo-local sketch or another origin-only rollout restatement |
-| `AOA-T-0013` | `aoa-agents` or another instruction-heavy repo | one-source -> many-target managed instruction flow with validator-backed or generated drift control in a second context | single-target sync or hand-edited copied rule blocks |
+| `AOA-T-0013` | `aoa-agents` or another instruction-heavy repo | one-source -> many-target managed instruction flow with validator-backed or generated drift control in a second live context; seeded donor intake now fixes `ruler` as origin, keeps `agents-md` as overlap, and lands `n-skills` as adjacent import rather than closure proof | single-target sync, hand-edited copied rule blocks, or another import-only donor note |
 | `AOA-T-0018` | open donor slot | one second committed markdown-first consumer outside the current bridge pattern | metadata-spine evidence relabeled as section-lift proof |
 | `AOA-T-0020` | open donor slot, but not `aoa-evals` again | one second non-eval markdown-first corpus using typed note kind and path lift | note-graph behavior, note IDs, or another near-identical eval donor |
 | `AOA-T-0022` | open donor slot beyond the first `aoa-skills` bundle | one more committed authored bundle or corpus using the exact five-part `Risks` contract | adjacent caution prose, blind-spot language, or generated caution outputs |

@@ -29,9 +29,11 @@ This file is the repository-wide map of public techniques.
 | id | name | domain | status | summary |
 |---|---|---|---|---|
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
+| AOA-T-0023 | stateless-single-shot-agent | agent-workflows | promoted | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. |
 | AOA-T-0013 | single-source-rule-distribution | docs | promoted | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
 | AOA-T-0018 | markdown-technique-section-lift | docs | promoted | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
 | AOA-T-0020 | evidence-note-provenance-lift | docs | promoted | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
+| AOA-T-0024 | upstream-mirroring-with-provenance | docs | promoted | Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source. |
 | AOA-T-0022 | risk-and-negative-effect-lift | docs | promoted | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
 
 ## Deprecated techniques
