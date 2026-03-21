@@ -43,4 +43,4 @@ Overall outcome: `clear`
 
 No immediate semantic-remediation wave is justified for this pair from this pilot alone.
 
-The next step should move to second-context evidence strengthening for `AOA-T-0004` and `AOA-T-0005`, rather than directly to canonical review or broader restructuring.
+The next step should keep `AOA-T-0005` in bounded defer until one non-origin live second context lands; merged `atm10-agent` rollout records now strengthen the origin side of the pattern, but they do not yet close the second-context gap beyond the repo-local adaptation.

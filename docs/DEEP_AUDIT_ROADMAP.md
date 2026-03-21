@@ -6,6 +6,11 @@ Use it when the question is not "which technique should I open?", but "which rep
 
 It is an audit and closure-roadmap surface. It does not change technique status, generated contracts, or validator behavior by itself.
 
+Historical note:
+
+- the Phase 1 and Phase 3 repo-only findings below record the baseline that drove the already-landed hardening wave
+- use the `Current Closure State`, remaining promoted backlog sections, and Phase 5 synthesis as the live roadmap for what is still open now
+
 ## Baseline
 
 - baseline verification path: `python -m unittest discover -s tests` and `python scripts/validate_repo.py`
@@ -17,6 +22,17 @@ It is an audit and closure-roadmap surface. It does not change technique status,
   - [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
   - [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 - audit stance: if no structural red flag appears, prioritize semantic quality, surface coherence, governance consistency, and external dependency closure over new infrastructure
+
+## Current Closure State
+
+- `repo-only hardening` is landed: selection and semantic-review guides exist, release and hygiene hardening are in place, and the self-serve route is aligned around `START_HERE`
+- `review refresh` is landed: [AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md) now covers `AOA-T-0001`, `AOA-T-0004`, and `AOA-T-0014`, and [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md) is now narrowed to `AOA-T-0015`, `AOA-T-0016`, and `AOA-T-0017`
+- the first external donor wave is landed:
+  - `ATM10-Agent@7cf55f70badbe8b1a51e2eabbe1424f35b833dd3` strengthens `AOA-T-0005`
+  - `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` strengthens `AOA-T-0013` and `AOA-T-0022`
+- the remaining promoted backlog is now staged as:
+  - `evidence-prep now`: `AOA-T-0018`
+  - `external dependency first`: `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`
 
 ## Finding Classes
 
@@ -98,24 +114,23 @@ Bundle-level result:
 
 - `clear`: `AOA-T-0001`, `AOA-T-0002`, `AOA-T-0003`, `AOA-T-0004`, `AOA-T-0006`, `AOA-T-0007`, `AOA-T-0008`, `AOA-T-0009`, `AOA-T-0010`, `AOA-T-0012`, `AOA-T-0014`, `AOA-T-0016`, `AOA-T-0017`, `AOA-T-0019`, `AOA-T-0021`
 - `tighten wording watch`: `AOA-T-0011`, `AOA-T-0015`
-- `needs semantic review refresh`: no canonical bundle requires immediate bundle-local refresh, but the agent-workflows canonical core lacks a dedicated review surface
+- `needs semantic review refresh`: none
 - `candidate for bounded demotion watch`: none right now
 
 ### Wave 2B - Remaining Promoted Backlog Audit
 
 | technique | current smallest gap | repo-local vs external gap | phase placement | next honest promotion trigger |
 |---|---|---|---|---|
-| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | one live second-context reuse beyond the repo-local rollout sketch | external | `long-gap design only` | one public second rollout record in `atm10-agent` that proves the same checklist on a real new-intent extension path |
-| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | one real one-source -> many-target managed instruction flow | external | `long-gap design only` | validator-backed or generated one-source -> many-target distribution in `aoa-skills`, then later reinforcement in `aoa-agents` |
+| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | one non-origin live second-context reuse beyond `atm10-agent` and the repo-local rollout sketch | external | `external dependency first` | one public second rollout record in another repo that proves the same checklist on a real new-intent extension path |
+| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | one second independent instruction-distribution context beyond the first `aoa-skills` donor | external | `external dependency first` | reinforcement in `aoa-agents` or another instruction-heavy repo that keeps one-source -> many-target distribution validator-backed or generated |
 | [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | one second independent markdown-first consumer beyond the current bridge pattern | mostly external evidence, contract already stable here | `evidence-prep now` | a second committed markdown-first consumer outside the current `aoa-skills` bridge shape |
 | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | one second non-eval markdown-first corpus using typed note kind and path lift | external | `external dependency first` | a committed non-eval corpus that reuses typed note-kind and note-path provenance without note-graph widening |
-| [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | one second committed corpus using the exact five-part `Risks` split | external | `long-gap design only` | a committed authored bundle in another repo that reuses `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations` as the same contract |
+| [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | one more committed corpus beyond the first `aoa-skills` donor using the exact five-part `Risks` split | external | `external dependency first` | a committed authored bundle or corpus in another repo that reuses `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations` as the same contract |
 
 Backlog verdict:
 
 - `evidence-prep now`: `AOA-T-0018`
-- `external dependency first`: `AOA-T-0020`
-- `long-gap design only`: `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0022`
+- `external dependency first`: `AOA-T-0005`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`
 
 No promoted bundle is vague anymore. The backlog is now staged by the kind of proof it still needs.
 
@@ -123,9 +138,9 @@ No promoted bundle is vague anymore. The backlog is now staged by the kind of pr
 
 Semantic review verdicts:
 
-- `keep`: [PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md), [EVALUATION_CHAIN_SEMANTIC_REVIEW.md](EVALUATION_CHAIN_SEMANTIC_REVIEW.md), [DOCS_BOUNDARY_SEMANTIC_REVIEW.md](DOCS_BOUNDARY_SEMANTIC_REVIEW.md), [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md), [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md), [KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
-- `refresh later`: [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md) should remain the skill-support cluster anchor, but it now carries most of the cross-domain pressure and is the first candidate for a future wording refresh if `0015` vs `0017` or `0016` examples drift
-- `expand`: the main non-reviewed collision zone is the agent-workflows canonical core around `AOA-T-0001`, `AOA-T-0004`, and `AOA-T-0014`
+- `keep`: [AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md), [PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md), [EVALUATION_CHAIN_SEMANTIC_REVIEW.md](EVALUATION_CHAIN_SEMANTIC_REVIEW.md), [DOCS_BOUNDARY_SEMANTIC_REVIEW.md](DOCS_BOUNDARY_SEMANTIC_REVIEW.md), [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md), [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md), [KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+- `refresh later`: [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md) should remain the skill-support cluster anchor, but it is still the first candidate for a future wording refresh if `0015` vs `0017` or `0016` examples drift
+- `expand`: none right now
 
 Shadow review verdicts:
 
@@ -188,23 +203,23 @@ Overall verdict: `coherent with a small docs-path cleanup queue`
 
 | seam | audit verdict | note |
 |---|---|---|
-| `aoa-skills` | `healthy boundary` | The repo uses `aoa-skills` as evidence and consumer context for `AOA-T-0016`, `AOA-T-0017`, and `AOA-T-0018`, but technique meaning still stays here. |
+| `aoa-skills` | `healthy boundary` | The repo uses `aoa-skills` as evidence and consumer context for `AOA-T-0013`, `AOA-T-0016`, `AOA-T-0017`, `AOA-T-0018`, and `AOA-T-0022`, but technique meaning still stays here. |
 | `aoa-evals` | `healthy boundary` | `aoa-evals` is still a donor for proof surfaces and direct relation consumption, especially for `AOA-T-0020` and `AOA-T-0021`, without shifting ownership of the technique contracts. |
 | `aoa-routing` | `dependency watch` | The current `AOA-T-0021` consumer is still one-hop and bounded, but future routing work must keep relation hints away from graph or traversal creep. |
-| `atm10-agent` | `future donor wave required` | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) still needs a real second rollout record here before another honest canonical review makes sense. |
+| `atm10-agent` | `dependency watch` | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) now has a landed public donor wave here, but it still needs one non-origin live context before another honest canonical review makes sense. |
 
 No current repo-owned doc appears to overclaim ownership of skills, evals, or routing behavior, but the promoted backlog still depends on those seams for closure.
 
 ### Wave 4C - Long-Gap Backlog Design Audit
 
-Verdict on [LONG_GAP_CANON_DESIGN.md](LONG_GAP_CANON_DESIGN.md): `decision-complete for the current three-technique long-gap set`
+Verdict on [LONG_GAP_CANON_DESIGN.md](LONG_GAP_CANON_DESIGN.md): `still decision-complete, now with the first donor wave landed for the current three-technique set`
 
 Why:
 
 - donor choice is explicit for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - each target has one exact external contract to look for
 - each target has shortcuts-to-reject written down
-- each target has a clear future donor wave trigger
+- each target now has one landed donor plus one clear next reinforcement trigger
 
 No missing fields were found that would justify reopening the long-gap design doc before the next external donor wave.
 
@@ -212,7 +227,9 @@ No missing fields were found that would justify reopening the long-gap design do
 
 ### Wave 5A - Immediate Repo-Only Fix Queue
 
-Open this queue in strict order:
+Status: `completed`
+
+The queue below is now historical and shipped:
 
 1. `docs/governance wording hardening`
    - target surfaces:
@@ -244,15 +261,17 @@ Open this queue in strict order:
 
 | target technique | external repo | exact proof surface needed | what must not be faked by wording |
 |---|---|---|---|
-| `AOA-T-0005` | `atm10-agent` | one second public-safe authored new-intent rollout record over an existing intent chain | another repo-local sketch or private rollout note |
-| `AOA-T-0013` | `aoa-skills`, then `aoa-agents` | one-source -> many-target managed instruction flow with validator-backed or generated drift control | single-target sync or hand-edited copied rule blocks |
+| `AOA-T-0005` | open donor slot beyond `atm10-agent` | one non-origin public-safe authored new-intent rollout record over an existing intent chain | another repo-local sketch or another origin-only rollout restatement |
+| `AOA-T-0013` | `aoa-agents` or another instruction-heavy repo | one-source -> many-target managed instruction flow with validator-backed or generated drift control in a second context | single-target sync or hand-edited copied rule blocks |
 | `AOA-T-0018` | open donor slot | one second committed markdown-first consumer outside the current bridge pattern | metadata-spine evidence relabeled as section-lift proof |
 | `AOA-T-0020` | open donor slot, but not `aoa-evals` again | one second non-eval markdown-first corpus using typed note kind and path lift | note-graph behavior, note IDs, or another near-identical eval donor |
-| `AOA-T-0022` | `aoa-skills` | one committed authored bundle using the exact five-part `Risks` contract | adjacent caution prose, blind-spot language, or generated caution outputs |
+| `AOA-T-0022` | open donor slot beyond the first `aoa-skills` bundle | one more committed authored bundle or corpus using the exact five-part `Risks` contract | adjacent caution prose, blind-spot language, or generated caution outputs |
 
 ### Wave 5C - Next Implementation Wave Pack
 
 #### Repo-Only Hardening Pack
+
+Status: `completed`
 
 - goal:
   - close route drift, governance wording drift, and validator hygiene blind spots without touching technique statuses
@@ -282,15 +301,17 @@ Open this queue in strict order:
 
 #### Review Coverage Refresh Pack
 
+Status: `completed`
+
 - goal:
-  - refresh review coverage where current canonical defaults or cross-domain seams are still only implied
+  - refresh review coverage where current canonical defaults or cross-domain seams were still only implied
 - constraints:
   - review docs only
   - no status flips
   - no shadow-family expansion unless a new caution-density case is proven
 - target surfaces:
-  - new agent-workflows canonical-core semantic review for `AOA-T-0001`, `AOA-T-0004`, and `AOA-T-0014`
-  - optional wording refresh for [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+  - landed agent-workflows canonical-core semantic review for `AOA-T-0001`, `AOA-T-0004`, and `AOA-T-0014`
+  - landed wording refresh for [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 - tests and validation:
   - `python scripts/build_semantic_review_manifest.py` if a new review doc is added
   - `python -m unittest discover -s tests`
@@ -306,8 +327,10 @@ Open this queue in strict order:
 
 #### External Evidence Pack
 
+Status: `partially executed`
+
 - goal:
-  - reopen only the promoted techniques whose next honest step requires new donor proof
+  - reopen only the promoted techniques whose next honest step requires new donor proof, then restage the remaining backlog honestly
 - constraints:
   - do not fake closure with wording-only notes
   - do not widen contracts just to manufacture evidence

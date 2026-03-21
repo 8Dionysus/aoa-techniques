@@ -5,15 +5,15 @@
 - name: single-source-rule-distribution
 
 ## Target project
-- name: aoa-techniques
-- environment: public library repository with canonical policy docs, one agent-facing collaboration surface, and no built-in multi-agent distribution toolchain
-- runtime: documentation-first repository that can describe the pattern clearly even when it does not automate the donor workflow directly
+- name: aoa-skills
+- environment: public skill repository with authored `SKILL.md` bundles, `techniques.yaml` source refs, generated readers, and validator-backed bridge tooling
+- runtime: markdown-first skill corpus where one authoritative source can feed multiple committed instruction surfaces without making each target canonical
 
 ## What changed
-- paths: the donor uses `.ruler/` as the canonical rule hub; this adaptation presents a generic canonical rule source such as `rules/` or another docs directory
-- services: there is no local `ruler` CLI or automatic fan-out step in this repository
-- dependencies: the adaptation depends on a clear canonical source plus managed target policy, not on Node, npm, or the donor package
-- operating assumptions: a public docs-oriented repository could keep one canonical rule source and distribute it into multiple agent-facing instruction surfaces while keeping those targets derived rather than canonical
+- paths: the donor contract is now grounded in live `aoa-skills` bridge surfaces, with one upstream technique source pinned in `techniques.yaml` and multiple committed target consumer surfaces in skill bundles
+- services: distribution uses bounded refresh and drift helpers, not hand-edited copy fan-out or a product-width orchestration layer
+- dependencies: the adaptation depends on pinned source refs, explicit target consumers, and validator-backed skill contracts, not on hidden runtime propagation
+- operating assumptions: one authoritative source can stay canonical while multiple downstream instruction surfaces remain derived, reviewable, and refreshable from it
 
 ## What stayed invariant
 - contract: one canonical rule source fans out to multiple agent-facing instruction surfaces
@@ -21,15 +21,15 @@
 - safety rules: managed targets should not become hand-maintained source-of-truth files
 
 ## Risks introduced by adaptation
-- a small repository may over-abstract the pattern before it truly needs multiple target surfaces
-- without an actual apply step, contributors could describe the pattern well but fail to prove synchronization discipline in practice
-- the donor's nested-loading and broader orchestration surfaces could blur the boundary unless they stay explicitly excluded
+- bridge docs can overstate the pattern if only one upstream technique is ever refreshed in practice
+- skill-local wording can blur source-of-truth layout with instruction distribution if the target consumer surfaces are not named explicitly
+- future expansions could drift into broader orchestration if the refresh tooling stops being bounded and reviewable
 
 ## Evidence
-- `AOA-T-0002 source-of-truth-layout` already proves that this repository values one canonical home per information class rather than many drifting copies
-- `AOA-T-0012 deterministic-context-composition` already proves that this repository can publish bounded docs patterns around managed derived outputs
-- this adaptation combines those repository-native instincts into a bounded sketch for one canonical rule source that could fan out into several agent-facing instruction surfaces without making each target canonical
-- this is sufficient as repo-local adaptation evidence for a first `promoted` external-import draft, but it is not enough to argue for `canonical` status on its own
+- merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now extends `docs/BRIDGE_SPEC.md` with a current fan-out proof: one upstream source technique, multiple committed target consumer surfaces, and explicit drift-control commands
+- the same merged donor change updates `skills/aoa-source-of-truth-check/SKILL.md` so one authoritative source staying aligned across multiple downstream consumer surfaces is now part of an authored runtime skill surface
+- the consumer surfaces remain committed and reviewable instead of being generated only at runtime, which keeps the one-source -> many-target contract inspectable
+- this closes the first live donor gap for `AOA-T-0013`, but it is still only one repository and one bridge style rather than a second independent instruction-distribution context
 
 ## Result
-- works as a bounded repo-local adaptation sketch for a first promoted draft, while still needing stronger live reuse evidence before any future canonical review
+- works as a first live second-context adaptation for one-source -> many-target distribution, while still needing one more independent reinforcement before any future canonical review

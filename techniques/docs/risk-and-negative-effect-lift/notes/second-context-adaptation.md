@@ -5,15 +5,15 @@
 - name: risk-and-negative-effect-lift
 
 ## Target project
-- name: aoa-techniques
-- environment: public library repository with markdown-first technique bundles, validator-enforced Risks language, and canonical adverse-effects review notes on already-canonical bundles
-- runtime: documentation-first repository that can describe the pattern clearly even when it does not automate any caution policy layer directly
+- name: aoa-skills
+- environment: public skill repository with authored `SKILL.md` bundles, generated reader surfaces, and stable markdown caution sections
+- runtime: markdown-first skill corpus where caution language must stay reviewable without becoming generated policy or scoring
 
 ## What changed
-- paths: the source guide and live corpus were shaped into one bounded markdown-first caution-lift contract for reuse across review surfaces
-- services: there is no local scoring engine, caution policy service, or generated caution program in this repository
-- dependencies: the adaptation depends on authored `Risks` prose and explicit note-backed review surfaces, not on private safety tooling or metadata expansion
-- operating assumptions: a public docs-oriented repository can keep caution lookup bounded while still letting canonical bundles add a supplemental adverse-effects review note
+- paths: the exact five-part caution contract is now reused inside one skill-local `Risks and anti-patterns` section instead of only inside technique bundles
+- services: there is still no scoring engine, caution policy service, or generated caution program in the donor repo
+- dependencies: the adaptation depends on authored markdown sections in `SKILL.md`, not on metadata widening or generated caution outputs
+- operating assumptions: a public skill repository can keep richer caution lookup bounded and review-oriented while still treating the authored skill markdown as the source of meaning
 
 ## What stayed invariant
 - contract: `Risks` remains the primary caution source for the bundle
@@ -21,15 +21,15 @@
 - safety rules: bounded caution lookup must not become metadata, scoring, or generated policy
 
 ## Risks introduced by adaptation
-- a small repository may over-abstract the pattern and start treating caution lookup as a policy layer
-- without the underlying markdown contract, contributors could describe the caution split well but fail to keep it reviewable
-- the presence of a canonical supplement could blur the boundary unless it stays explicitly downstream from `Risks`
+- one skill-local caution surface can look broader than it really is if readers mistake the first donor for repeated cross-repo reuse
+- future generated reader surfaces could tempt maintainers to flatten the five-part caution split into metadata
+- the exact five-part split could drift back into generic risk prose if later skill updates stop keeping the headings explicit
 
 ## Evidence
-- `aoa-skills/skills/aoa-safe-infra-change/SKILL.md` shows live caution language as `Risks and anti-patterns`, including explicit risk naming and rollback thinking, but its contract stays skill-local rather than reproducing the same five-part technique `Risks` split
-- `aoa-evals/bundles/aoa-bounded-change-quality/EVAL.md` and `aoa-evals/bundles/aoa-eval-integrity-check/EVAL.md` show live failure-mode and blind-spot surfaces for bounded review, but they remain eval surfaces rather than authored technique `Risks`
-- taken together, those committed sibling repos prove that the caution vocabulary is live in adjacent donor surfaces, but they do not provide an equally strong second corpus for the exact five-part `Risks` contract
-- this is therefore a contrast-based live evidence read, not a forced positive analogy, and it still leaves the same bounded defer reason in place for canonical review
+- merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now gives `skills/aoa-sanitized-share/SKILL.md` the exact five headings `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations`
+- the same donor keeps the caution split inside authored skill markdown, so the contract stays reviewable and markdown-first rather than becoming generated policy
+- adjacent sibling-repo caution surfaces in `aoa-evals` still matter as contrast evidence, but they are no longer the only live context because `aoa-skills` now reproduces the exact five-part split directly
+- this closes the first exact-contract donor gap, while still leaving one more independent-corpus reinforcement gap in place for canonical review
 
 ## Result
-- works as a bounded contrast-based adaptation read for a first promoted draft, while still needing stronger live reuse of the exact five-part `Risks` contract before any future canonical review
+- works as a first live second-context adaptation for the exact five-part `Risks` contract, while still needing one more independent corpus before any future canonical review

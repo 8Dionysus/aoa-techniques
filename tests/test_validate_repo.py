@@ -632,10 +632,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_semantic_review_next_steps_match_generated_manifest(self) -> None:
         expected_phrases = {
+            "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md": "keep this review as the canonical-core anchor",
             "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md": "open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package",
             "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
-            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "stronger live multi-target reuse evidence for `AOA-T-0013`",
-            "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017` and keeping `AOA-T-0016` from drifting into generic architecture formalism",
+            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "first live multi-target donor for `AOA-T-0013`",
+            "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017`",
             "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md": "keep `AOA-T-0019` narrow as the canonical metadata spine",
         }
         manifest = validate_repo.read_json(REPO_ROOT / "generated" / "semantic_review_manifest.json")
@@ -675,6 +676,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             selection_patterns,
         )
         self.assertIn("START_HERE.md", selection_patterns)
+        self.assertIn("Agent-workflows canonical core", selection_patterns)
+        self.assertIn("AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md", selection_patterns)
         self.assertIn("KAG/source-lift family", selection_patterns)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", selection_patterns)
 
@@ -696,6 +699,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-routing",
             "17 canonical",
             "5 promoted",
+            "external-dependency-first promoted techniques",
             "AOA-T-0005",
             "AOA-T-0013",
             "AOA-T-0018",
@@ -1308,6 +1312,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("risk-and-negative-effect-lift", docs_readme)
         self.assertIn("TECHNIQUE_SELECTION_GUIDE.md", docs_readme)
         self.assertIn("SEMANTIC_REVIEW_GUIDE.md", docs_readme)
+        self.assertIn("AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md", docs_readme)
         self.assertIn("technique_capsules.json", docs_readme)
         self.assertIn("shadow_review_manifest.json", docs_readme)
         self.assertIn("SHADOW_PATTERNS.md", docs_readme)

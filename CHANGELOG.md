@@ -23,6 +23,8 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Changed
 
+- remaining closure program now lands a dedicated `AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md`, merges first donor evidence from `aoa-skills` and `ATM10-Agent`, refreshes `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022` second-context and readiness notes, and restages the remaining promoted backlog around one evidence-prep item plus four external-dependency-first items
+- review coverage refresh wave now adds `docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md`, narrows `docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md` to the remaining skill-support seam cluster, and makes the new canonical-core review discoverable from the semantic-review guide and docs map
 - repo-only hardening wave now aligns `README.md`, `docs/README.md`, and `CONTRIBUTING.md` around `docs/START_HERE.md`, the bounded `python scripts/release_check.py` path, and the current deep-audit closure roadmap
 - `scripts/release_check.py` now compares composite repo state across worktree status, tracked diff, and cached diff so dirty tracked files cannot hide unstable generated drift
 - `scripts/validate_repo.py` now treats selection and semantic-review guides as validator-backed family surfaces, widens public-hygiene root scanning beyond root markdown only, and blocks RFC1918 plus internal-suffix URLs on public surfaces
