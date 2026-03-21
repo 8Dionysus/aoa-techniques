@@ -10,6 +10,8 @@ It stores reusable, sanitized, reviewable engineering techniques that can later 
 
 Use this repository for technique meaning, not for project-specific operations.
 
+Neighboring `aoa-*` repositories may incubate, prove, or consume techniques, but they do not replace this repository as the canonical home once a reusable technique has been cleanly extracted.
+
 ## Owns
 
 This repository is the source of truth for:
@@ -45,6 +47,8 @@ Only contribute techniques that are:
 - verifiable
 
 If adjacent meaning already has a canonical home, do not recreate it here. Route to it.
+
+Do not confuse "this pattern is still attached to a layer-owned object" with "this can never become a technique here." If a reusable, bounded contract can be extracted cleanly, the technique still belongs in `aoa-techniques`.
 
 ## Read this first
 
