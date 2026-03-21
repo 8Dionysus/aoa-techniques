@@ -144,9 +144,9 @@ WORKING_SET_SPECS = (
     },
     {
         "title": "Instruction-surface cluster",
-        "technique_ids": ("AOA-T-0012", "AOA-T-0013", "AOA-T-0024"),
+        "technique_ids": ("AOA-T-0012", "AOA-T-0013", "AOA-T-0027", "AOA-T-0024"),
         "review_doc": SELECTION_REVIEW_DOCS["instruction_surface"],
-        "note": "Fragment-first composition into one generated context artifact plus local single-source fan-out and upstream mirroring with provenance for adjacent instruction-facing surfaces.",
+        "note": "Fragment-first composition into one generated context artifact plus local single-source fan-out, managed-target propagation, and upstream mirroring with provenance for adjacent instruction-facing surfaces.",
     },
     {
         "title": "Skill-support cluster",

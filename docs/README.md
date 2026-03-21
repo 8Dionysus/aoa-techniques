@@ -27,6 +27,7 @@ Choose the path that matches your question:
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
   - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
   - [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+  - [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md)
 - I need to understand the repo's markdown-first caution discipline:
   - [Shadow Patterns](SHADOW_PATTERNS.md)
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
@@ -155,6 +156,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
 - [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+- [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md)
 - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
 - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
 - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)

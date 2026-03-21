@@ -71,6 +71,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
 - [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
 - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
+- [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+- [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md): `complements` [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -83,6 +85,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
 | [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. |
+| [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop. |
 
 ### `docs`
 
@@ -100,6 +103,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source. |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
+| [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth. |
 
 ### `evaluation`
 
@@ -122,7 +126,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 26/26 techniques.
+- `export_ready` is currently `true` for 28/28 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

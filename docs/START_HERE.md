@@ -24,6 +24,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
 - open [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md) when the question is why a remaining `promoted` technique still needs an external donor path
 - open [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md) when the question is which repo-only hardening, review refresh, or external evidence wave should open next
+- open [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md) when the question is which remaining external seed idea is actually worth distilling into a future bundle
 - use [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) as the live corpus split
 
 ## If You Need Derived Surfaces
@@ -36,9 +37,9 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## Current Corpus Posture
 
-- current split: `17 canonical`, `9 promoted`
+- current split: `17 canonical`, `11 promoted`
 - current evidence-prep promoted techniques: `AOA-T-0018`
-- current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0026`
+- current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0026`
 - current bounded `history` domain covers session/history artifacts only; memory objects and recall surfaces still stay outside this repo's ownership boundary
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`
 

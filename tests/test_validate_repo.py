@@ -202,6 +202,8 @@ relations:
 
         self.assertEqual(set(validate_repo.DOMAIN_ORDER), seen_domains)
         self.assertEqual("promoted", records_by_id["AOA-T-0026"].status)
+        self.assertEqual("promoted", records_by_id["AOA-T-0027"].status)
+        self.assertEqual("promoted", records_by_id["AOA-T-0028"].status)
 
         domain_start_targets = {
             spec["domain"]: tuple(spec["lead_ids"])[0] for spec in validate_repo.DOMAIN_START_SPECS
@@ -474,7 +476,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(26, len(technique_paths))
+        self.assertEqual(28, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -507,7 +509,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
         self.assertEqual(17, status_counts["canonical"])
-        self.assertEqual(9, status_counts["promoted"])
+        self.assertEqual(11, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -642,7 +644,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md": "keep this review as the canonical-core anchor",
             "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md": "open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package",
             "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
-            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "n-skills` now lands as the adjacent provenance-mirroring import `AOA-T-0024`",
+            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "one future live managed-target propagation context for `AOA-T-0027`",
             "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017`",
             "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md": "keep `AOA-T-0019` narrow as the canonical metadata spine",
         }
@@ -705,7 +707,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-evals",
             "aoa-routing",
             "17 canonical",
-            "9 promoted",
+            "11 promoted",
             "external-dependency-first promoted techniques",
             "AOA-T-0005",
             "AOA-T-0013",
@@ -713,6 +715,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0020",
             "AOA-T-0022",
             "AOA-T-0023",
+            "AOA-T-0028",
+            "AOA-T-0027",
             "AOA-T-0024",
             "AOA-T-0025",
             "AOA-T-0026",
