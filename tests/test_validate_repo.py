@@ -11,6 +11,37 @@ from scripts import validate_repo
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
+def build_required_section_body(
+    headings: tuple[str, ...] = validate_repo.REQUIRED_SECTIONS,
+) -> str:
+    chunks: list[str] = []
+    for heading in headings:
+        if heading == "Risks":
+            markdown = """### Failure modes
+
+- misses the main failure
+
+### Negative effects
+
+- adds avoidable friction
+
+### Misuse patterns
+
+- expands the pattern casually
+
+### Detection signals
+
+- drift shows up in review
+
+### Mitigations
+
+- narrow the contract again"""
+        else:
+            markdown = f"Bounded content for {heading.lower()}."
+        chunks.append(f"## {heading}\n\n{markdown}")
+    return "\n\n".join(chunks)
+
+
 class ValidateRepoRegressionTests(unittest.TestCase):
     def test_expected_evidence_kind_maps_adverse_effects_review_filename(self) -> None:
         self.assertEqual(
@@ -307,6 +338,21 @@ relations:
 
                     with self.assertRaises(validate_repo.ValidationError):
                         validate_repo.validate_public_hygiene(repo_root)
+
+    def test_validate_sections_rejects_reordered_required_sections(self) -> None:
+        reordered_headings = list(validate_repo.REQUIRED_SECTIONS)
+        reordered_headings[0], reordered_headings[1] = reordered_headings[1], reordered_headings[0]
+        body = build_required_section_body(tuple(reordered_headings))
+
+        with self.assertRaises(validate_repo.ValidationError):
+            validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
+
+    def test_validate_sections_rejects_duplicate_required_section(self) -> None:
+        duplicated_headings = validate_repo.REQUIRED_SECTIONS + ("Intent",)
+        body = build_required_section_body(duplicated_headings)
+
+        with self.assertRaises(validate_repo.ValidationError):
+            validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
 
 
 class TechniqueContentSmokeTests(unittest.TestCase):
@@ -817,6 +863,41 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             rendered,
         )
         self.assertNotIn("## `Public sanitization notes`", rendered)
+
+    def test_full_section_surface_matches_builder_and_stays_aligned(self) -> None:
+        schema_store = validate_repo.load_schema_store(REPO_ROOT)
+        records = validate_repo.collect_techniques(REPO_ROOT, schema_store)
+        actual = validate_repo.read_json(REPO_ROOT / "generated" / "technique_sections.full.json")
+        expected = validate_repo.build_section_surface_payload(REPO_ROOT, records)
+
+        validate_repo.validate_section_surfaces(REPO_ROOT, records)
+        self.assertEqual(expected, actual)
+        self.assertEqual(1, actual["section_version"])
+        self.assertEqual(
+            list(validate_repo.REQUIRED_SECTIONS),
+            actual["source_of_truth"]["sections"],
+        )
+        first_entry = actual["techniques"][0]
+        self.assertEqual(
+            tuple(validate_repo.SECTION_KEY_BY_HEADING[heading] for heading in validate_repo.REQUIRED_SECTIONS),
+            tuple(section["key"] for section in first_entry["sections"]),
+        )
+
+    def test_section_manifest_remains_map_while_full_section_surface_carries_payload(self) -> None:
+        manifest = validate_repo.read_json(REPO_ROOT / "generated" / "technique_section_manifest.json")
+        full_sections = validate_repo.read_json(REPO_ROOT / "generated" / "technique_sections.full.json")
+
+        self.assertEqual(list(validate_repo.SECTION_LIFT_HEADINGS), manifest["section_scope"])
+        self.assertEqual(10, len(manifest["techniques"][0]["sections"]))
+        self.assertEqual(len(validate_repo.REQUIRED_SECTIONS), len(full_sections["techniques"][0]["sections"]))
+        self.assertEqual(
+            {"heading", "order", "markdown"},
+            set(manifest["techniques"][0]["sections"][0]),
+        )
+        self.assertEqual(
+            {"key", "heading", "content_markdown"},
+            set(full_sections["techniques"][0]["sections"][0]),
+        )
 
     def test_checklist_reader_generated_surface_matches_builder_and_stays_ordered(self) -> None:
         schema_store = validate_repo.load_schema_store(REPO_ROOT)

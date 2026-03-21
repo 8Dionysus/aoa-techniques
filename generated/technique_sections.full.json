@@ -1,0 +1,1829 @@
+{
+  "section_version": 1,
+  "source_of_truth": {
+    "technique_markdown": "techniques/*/*/TECHNIQUE.md",
+    "sections": [
+      "Intent",
+      "When to use",
+      "When not to use",
+      "Inputs",
+      "Outputs",
+      "Core procedure",
+      "Contracts",
+      "Risks",
+      "Validation",
+      "Adaptation notes",
+      "Public sanitization notes",
+      "Example",
+      "Checks",
+      "Promotion history",
+      "Future evolution"
+    ]
+  },
+  "techniques": [
+    {
+      "id": "AOA-T-0001",
+      "name": "plan-diff-apply-verify-report",
+      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reduce unsafe, opaque, or non-reviewable agent changes by requiring a visible workflow before and after apply."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- agent-assisted code changes\n- infrastructure or configuration edits\n- documentation changes with operational impact\n- cross-repo adaptations that need clear review boundaries"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- trivial wording fixes with no meaningful operational consequence\n- urgent manual intervention where immediate human action matters more than formal workflow ceremony"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- target goal\n- touched files or operational surfaces\n- intended validation method\n- rollback idea or recovery path"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- explicit plan\n- scoped diff\n- applied change\n- validation result\n- short final report"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. `PLAN`\n   - define the goal\n   - name the surfaces that will change\n   - identify the main risk\n   - think through rollback before applying\n2. `DIFF`\n   - prepare the smallest reviewable change that solves the goal\n   - avoid unrelated refactors or opportunistic cleanup\n3. `APPLY`\n   - apply only after the plan is clear enough to review\n   - keep the implementation consistent with the stated scope\n4. `VERIFY`\n   - run checks, smoke tests, or operational validation\n   - record what was actually validated and what was not\n5. `REPORT`\n   - summarize what changed\n   - summarize validation results\n   - state rollback or recovery considerations"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- changes must stay reviewable by another human or agent\n- validation must be named explicitly, not implied\n- higher-risk changes require stronger reporting discipline\n- rollback should be thinkable before apply, even if not fully automated"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- weak or symbolic validation creates a false sense of safety around the applied change\n- teams use the workflow on trivial edits and lose the bounded judgment about when lighter handling is enough\n\n### Negative effects\n\n- extra ceremony can slow down simple work that does not need a full plan-and-report loop\n- reporting overhead can crowd out the clearer review surface that should still come from the diff itself\n\n### Misuse patterns\n\n- treating the report as a substitute for a readable diff\n- naming a validation step without running a meaningful check or explicitly documenting why it was skipped\n\n### Detection signals\n\n- trivial wording or formatting edits are going through the same ceremony as higher-impact changes\n- final reports describe success in general terms but do not name concrete validation results\n\n### Mitigations\n\n- use a lighter workflow when the change has no meaningful operational consequence\n- keep the diff reviewable on its own and make the validation step concrete, explicit, and scoped"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- a concrete plan exists before apply\n- the diff stays inside the declared scope\n- at least one explicit validation method is run or intentionally skipped with explanation\n- the final report includes both outcome and rollback thinking\n\nSee `checks/review-checklist.md`.\nFor second-context evidence and canonical-readiness review, see `notes/second-context-adaptation.md` and `notes/canonical-readiness.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- validation depth and tool choice\n- risk classification language\n- runtime, deployment, or review-surface assumptions\n- repository layout and ownership expectations\n- whether verification is a runtime smoke test, a checklist, or a document consistency review\n\nProject-shaped details that should not be treated as invariant:\n- CI job names or review tool names\n- deployment approval gates or release holds\n- owner or team labels\n- patch transport or execution tooling\n\nWhat should stay invariant:\n- explicit plan before apply\n- scoped diff\n- named verification\n- concise outcome reporting\n\nSee `notes/second-context-adaptation.md` for a public second-context example."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "Original project-specific infrastructure details, private paths, and environment-specific assumptions were removed. The workflow was generalized into a repository-agnostic change protocol."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-change-flow.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/review-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `abyss-stack`\n- validated as a reusable agent workflow outside the original project context\n- promoted to `aoa-techniques` on 2026-03-13\n- approved as `canonical` in `aoa-techniques` on 2026-03-14 after fresh public-safety review and default-use confirmation"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add clearer risk tiers for lightweight versus high-impact changes\n- capture a third context with stronger runtime validation\n- add optional machine-readable check metadata if the repository later needs it"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0002",
+      "name": "source-of-truth-layout",
+      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reduce documentation drift by giving each recurring kind of project information one canonical document home and one clear update route."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- multi-document repositories that mix planning, execution, history, and operations\n- solo+AI or human+agent projects where many edits happen quickly\n- long-running repositories where status, commands, and decisions tend to spread across multiple files\n- repositories that want lightweight entrypoint docs without losing detailed history"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- very small repositories where one short `README` is enough\n- projects that already use an external system as the single authoritative home for plans, runbooks, and decisions\n- repositories that are unwilling to maintain an explicit document-role map"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- current repository document set\n- recurring information classes such as status, plans, run history, decisions, and commands\n- update events that should route to one primary document"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- explicit document role map\n- update-routing rules\n- lightweight entrypoint docs\n- lower risk of duplicated or contradictory status"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Inventory the recurring information classes in the repository.\n2. Assign one primary document to each class of information.\n3. Keep entrypoint documents short and link outward instead of duplicating detail.\n4. Define update-routing rules so each meaningful change lands in one primary document first.\n5. Review the document map regularly and remove accidental duplication.\n\nRecommended role map:\n\n| Document | Primary role |\n|---|---|\n| `README` | Short human-facing entrypoint |\n| `MANIFEST` | Short machine/human snapshot |\n| `TODO` | Active execution plan |\n| `PLANS` | Goals, milestones, DoD, and risks |\n| `SESSION_*` | Long history, runs, experiments, and artifacts |\n| `DECISIONS` | Architecture and policy changes |\n| `RUNBOOK` | Runnable commands and operating procedures |\n| `ARCHIVED_TRACKS` | Recoverable or paused directions |\n\nRecommended update-routing rules:\n\n- architecture or policy change -> `DECISIONS`\n- command, setup, or operator procedure change -> `RUNBOOK`\n- active work item or current focus change -> `TODO`\n- goals, milestones, or DoD change -> `PLANS`\n- completed run, experiment, or detailed chronology -> `SESSION_*`\n- lightweight status summary -> `README` or `MANIFEST`"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- each recurring information class has one canonical home\n- each meaningful change routes to exactly one primary document first\n- `README` and `MANIFEST` stay lightweight and mostly link outward\n- long run history does not live in `README` or `TODO`\n- decisions do not hide inside session logs or runbooks"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the role map drifts after repo evolution, so real updates no longer route to one canonical home\n- contributors keep bypassing the routing rules and duplicate active status or decisions across multiple documents\n\n### Negative effects\n\n- over-structuring a repository that is too small to need the full layout can add maintenance cost without reducing drift\n- the repository can look orderly while change friction quietly rises because every small update now feels like document choreography\n\n### Misuse patterns\n\n- treating the recommended role map as a mandatory full-size layout instead of narrowing it for a smaller repository\n- using the technique as a reason to add more docs even when the real need is to simplify or merge existing roles\n\n### Detection signals\n\n- the same status or policy change routinely appears in more than one primary document\n- contributors start asking where a recurring update belongs because the routing rules no longer feel obvious\n- `README`, `TODO`, or session/history docs begin to accumulate duplicate summary prose that should already have a canonical home\n- the repo looks well-organized at a glance, but a sample change no longer routes cleanly to one primary document first\n\n### Mitigations\n\n- shrink the role map for smaller repositories instead of preserving a larger operational layout by habit\n- refresh the canonical-home table and routing rules whenever new recurring information classes appear\n- collapse or remove underused document roles when they stop preventing drift\n- treat repeated duplicate-summary relapse as a sign to simplify the layout, not to add another coordinating document"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- each major document has an explicit role\n- a sample change can be routed to one primary document without ambiguity\n- active status is not duplicated across multiple documents\n- long history and artifact detail stay out of lightweight entrypoint docs\n\nSee `checks/doc-role-checklist.md`.\nFor second-context evidence and canonical-readiness review, see `notes/second-context-adaptation.md` and `notes/canonical-readiness.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- `MANIFEST` can be omitted in smaller repositories\n- `SESSION_*` can be daily, weekly, or milestone-based\n- `ARCHIVED_TRACKS` is optional if the project has no recoverable sidelines\n- active work and goal tracking can live in repository files or an external system\n- filenames can vary as long as the role map stays explicit\n\nProject-shaped details that should not be treated as invariant:\n- exact filenames used by the origin repository\n- whether `MANIFEST` or `SESSION_*` exists at all\n- whether `TODO`, `PLANS`, and `RUNBOOK` live in the repository or are delegated elsewhere\n- the size of the role map in a compact public repository versus an operational one\n\nWhat should stay invariant:\n- one canonical home per recurring information class\n- explicit update-routing rules\n- lightweight entrypoint docs\n- deliberate separation between active work, long history, decisions, and runnable operations\n\nSee `notes/second-context-adaptation.md` for a compact public-repository variant."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "Project-specific milestone names, metrics, run IDs, nightly workflow details, local paths, and environment-specific operational details were removed. The published version keeps only the reusable document-role pattern and update-routing logic."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-doc-routing.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/doc-role-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through active use across `README`, `MANIFEST`, `TODO`, `PLANS`, `DECISIONS`, `RUNBOOK`, and `SESSION_*` documents\n- promoted to `aoa-techniques` on 2026-03-13\n- approved as `canonical` in `aoa-techniques` on 2026-03-14 after fresh public-safety review and default-use confirmation"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add guidance for repositories that keep active work outside the repo\n- capture a third context with issue-tracker-backed planning or external runbooks\n- add an optional machine-readable role-map format if the repository later needs automated checks"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0003",
+      "name": "contract-first-smoke-summary",
+      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Make smoke checks reviewable, automatable, and reusable by treating the machine-readable summary as the default producer-layer contract instead of relying on console text alone."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories with runnable smoke scripts or operational probes\n- CI pipelines that need stable pass or fail signals\n- local operator tools or dashboards that consume validation results\n- agent workflows that need structured outputs instead of log scraping\n- cases where one bounded smoke or probe path should publish the same acceptance surface for CI, operators, and agents before any storage/history or gate-promotion layer is added"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- one-off manual checks with no need for repeatability\n- cases where a full test suite already provides the only required contract surface\n- checks that cannot produce any stable artifact or status signal"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- a runnable smoke entrypoint\n- expected output artifacts\n- explicit success and failure conditions\n- one stable summary output path or `--summary-json` surface"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- smoke run artifacts\n- one machine-readable summary file\n- explicit `ok` or `error` status\n- enough observed fields to support basic diagnosis"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Define the smoke entrypoint and the scenario it is meant to validate.\n2. Define the expected artifacts the smoke run should create.\n3. Emit a stable machine-readable summary file such as `summary.json`, `smoke_summary.json`, or `contract_summary.json`.\n4. Make exit behavior explicit:\n   - return `0` when the summary contract is satisfied\n   - return non-zero when the contract fails\n5. Wire the same summary into CI reports, artifact uploads, local dashboards, or agent surfaces.\n6. Preserve summary writing on failure whenever possible so diagnosis does not depend on raw logs alone."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- each smoke path produces one machine-readable summary\n- the summary contains an explicit success or error status\n- the summary contains enough observed data to diagnose basic failures\n- the summary path is stable, either by convention or via a stable `--summary-json` flag\n- exit code aligns with summary status\n- console output may help humans, but it is not the primary contract surface\n- this technique owns the producer contract only; storage/history, staged enforcement, and downstream rollups remain separate adjacent techniques"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- summaries collapse to a bare `error` signal without enough observed context to diagnose what failed\n- summary shape changes too often and breaks downstream consumers that expect a stable contract\n\n### Negative effects\n\n- over-minimal summaries push humans back toward manual debugging even when the machine-readable path exists\n- pressure-driven fallback to raw logs can become sticky and weaken the producer contract over time\n\n### Misuse patterns\n\n- treating summary generation as optional and falling back to log parsing under pressure\n- changing filenames, fields, or status semantics without a bounded compatibility plan\n\n### Detection signals\n\n- downstream consumers start scraping console logs again instead of reading the summary artifact\n- repeated failures show `error` with too little observed data to explain the problem quickly\n\n### Mitigations\n\n- keep one stable machine-readable summary path and evolve schema deliberately rather than casually\n- require summary generation on every run path possible, including failure paths whenever the process can still write output"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the summary file is always written on success and is written on failure whenever possible\n- the summary is valid machine-readable JSON\n- status in the summary matches the process exit behavior\n- a downstream consumer can read the summary without scraping console logs\n\nSee `checks/summary-contract-checklist.md`.\nFor source-backed origin evidence and bounded second-context reinforcement, see `notes/origin-evidence.md` and `notes/second-context-adaptation.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- summary filenames\n- run directory layout\n- domain-specific observed fields\n- additional contract-check layers\n- downstream consumers such as CI, dashboards, local tools, or agents\n\nProject-shaped details that should not be treated as invariant:\n- exact smoke family names such as phase, retrieval, gateway, or Streamlit\n- whether some smoke paths publish `smoke_summary.json` while others publish `contract_summary.json`\n- exact artifact upload grouping or step-summary presentation in CI\n- exact schema names or observed fields used by one repository\n\nWhat should stay invariant:\n- one machine-readable summary per smoke path\n- explicit status and outcome semantics\n- stable summary discovery\n- no dependence on raw logs as the only source of truth\n\nRelationship to adjacent techniques: this technique produces the machine-readable summaries that `latest-alias-plus-history-copy` later stabilizes for history consumers and that `signal-first-gate-promotion` later uses for staged enforcement."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "Project-specific workflow names, run directory conventions, threshold values, and ATM10-specific scenarios were removed. The published version keeps the reusable pattern: runnable smoke entrypoints, structured summaries, and explicit contract-based pass or fail behavior."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-smoke-summary-flow.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/summary-contract-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated across multiple smoke paths that publish structured summary artifacts for CI and operator use\n- promoted to `aoa-techniques` on 2026-03-13\n- approved for `canonical` in `aoa-techniques` on 2026-03-16 after stronger multi-family producer evidence, bounded second-context reinforcement, and a fresh public-safety recheck"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add an adaptation example from a non-Python repository\n- add optional guidance for backward-compatible summary evolution\n- add a variant for long-running smoke families that publish richer diagnostic envelopes"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0004",
+      "name": "intent-plan-dry-run-contract-chain",
+      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Turn high-level intent into a traceable, reviewable, dry-run-only chain that emits explicit artifacts and a contract verdict before any real execution path is allowed. This is the default underlying contract when a workflow must prove its plan before any real execution path is allowed."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- automation systems that start from intent-like inputs\n- agent workflows that need a reviewable planning layer before execution\n- teams that want dry-run-first automation with explicit artifacts\n- systems where traceability matters across adapter, planner, and validator steps\n- the default underlying contract when a workflow must normalize intent into a plan artifact before any real execution path is allowed"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- simple scripts that do not need an intent abstraction\n- systems that already execute real actions directly without a dry-run safety layer\n- workflows where no stable artifacts or contract checks are required\n- cases where a lighter pattern can stop at planning or validation without needing the full artifact chain"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- a stable intent payload\n- an adapter or normalizer that turns intent into a plan artifact\n- a dry-run-only executor\n- a contract-check step that reads produced artifacts and emits a machine-readable verdict"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- normalized plan artifact with routing metadata\n- dry-run execution artifacts\n- chain summary or equivalent linking intent, plan, and dry-run artifacts\n- machine-readable contract summary suitable for CI or operator review"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Define a stable intent payload that expresses what should happen at a high level.\n2. Normalize the intent into a plan and attach planning metadata such as intent type, schema version, adapter identity, and optional traceability IDs.\n3. Persist the normalized plan as an artifact before any dry-run execution happens.\n4. Run a dry-run-only executor against the normalized plan and preserve the resulting artifacts.\n5. Emit explicit chain artifacts such as `run.json`, plan output, and chain summary so the path can be reviewed without log scraping.\n6. Run a contract-check over those artifacts and publish a machine-readable summary before any real execution path is considered."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the adapter does not perform real input events or equivalent side effects\n- the planning step emits a plan artifact before dry-run execution begins\n- the normalized plan carries workflow metadata such as intent type, schema version, adapter identity, and optional traceability IDs\n- the execution step remains dry-run only\n- chain artifacts are explicit enough for downstream checks to read them directly\n- contract-check validates expected intent type or equivalent routing plus minimum structural completeness\n- contract summary exposes an explicit pass or fail verdict and observed routing or traceability data when available\n- failure behavior is explicit and stops progression to any real execution path"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- dry-run artifacts look complete but do not reflect real execution constraints, creating false confidence\n- metadata drifts between intent, normalized plan, and contract-check layers until routing or traceability breaks\n\n### Negative effects\n\n- overfitting the chain to one project's payload shape or artifact naming reduces portability\n- teams can spend more time preserving one CI table layout or threshold set than preserving the chain contract itself\n\n### Misuse patterns\n\n- treating dry-run completeness as proof that real execution would be safe without further validation\n- defining the technique in terms of one repository's artifact names, table layout, or exact thresholds\n\n### Detection signals\n\n- contract checks stay green while hand review finds mismatched routing metadata or incomplete traceability\n- examples and rollout notes talk more about one project-specific presentation layer than about intent-plan-contract invariants\n\n### Mitigations\n\n- keep contract checks anchored to routing, traceability, and no-side-effect guarantees rather than presentation details\n- re-check the chain in a second context with renamed payloads or artifact paths to confirm the invariant contract still holds"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the intent payload is accepted or rejected by explicit normalization rules\n- the normalized plan is written as an artifact before dry-run validation\n- the dry-run step performs no real side effects\n- chain artifacts can be traced across adapter, dry-run, and contract-check stages\n- contract-check output is machine-readable and can fail the workflow on structural or routing violations\n- required traceability fields are surfaced or rejected explicitly according to policy\n\nSee `checks/chain-contract-checklist.md`.\nFor source-backed origin evidence, transfer boundaries, and second-context adaptation, see `notes/origin-evidence.md`, `notes/bounded-transfer.md`, and `notes/second-context-adaptation.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- intent schema names\n- plan schema names\n- artifact filenames\n- whether trace or intent IDs are optional or required\n- dry-run engines and downstream validators\n- whether the review surface is CI, an operator dashboard, or a local approval loop\n\nProject-shaped details that should not be treated as invariant:\n- exact ATM10 commands, scripts, and workflow filenames\n- exact artifact filenames such as `chain_summary.json` or `automation_plan.json`\n- exact thresholds such as minimum action count or minimum step count\n- whether traceability IDs are optional metadata or strict required fields\n- whether the dry-run chain targets UI automation, API orchestration, or another domain\n- exact CI summary tables or artifact-upload conventions around the chain\n\nWhat should stay invariant:\n- intent is normalized before execution\n- the plan artifact exists before dry-run execution\n- dry-run happens before any real action path\n- chain artifacts are explicit\n- contract-check validates the produced artifacts rather than relying on logs alone\n- a failing contract result blocks progression to real execution\n\nRelationship to adjacent techniques:\n- `AOA-T-0001 plan-diff-apply-verify-report` governs how changes to this chain should be planned, verified, and reported safely.\n- `AOA-T-0005 new-intent-rollout-checklist` extends this technique only after this base chain already exists and one new intent must be added without bypassing its contracts."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific intent names, UI coordinates, fixture payload details, exact workflow wiring, and project run naming were removed. The published version preserves only the reusable chain pattern: intent input, normalized plan artifact, dry-run artifacts, and contract validation."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-intent-chain.md` for a small generic flow where one intent is normalized, validated through dry-run, and checked by an explicit contract summary.\nSee `examples/concrete-non-ui-intent-chain.md` for a more concrete public-safe non-UI maintenance flow where `refresh_skill_index` stays artifact-first and dry-run only before any real write path is considered."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/chain-contract-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through adapter, dry-run chain, contract-check, and regression-test layers\n- promoted to `aoa-techniques` on 2026-03-13"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add guidance for partial rollout where some intents still use legacy validation paths\n- add optional guidance for compatibility evolution across intent and plan schemas"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0005",
+      "name": "new-intent-rollout-checklist",
+      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Extend an existing `intent -> plan -> dry-run -> contract-check` pipeline with one new `intent_type` without losing traceability, artifact consistency, or dry-run safety."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- an automation chain already exists and the rollout is extending that shared chain, not redesigning it\n- one new intent type needs a repeatable onboarding path\n- CI or operator review depends on machine-readable summaries\n- the team wants extension work to stay bounded and reviewable"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- there is no stable intent-chain contract yet\n- the rollout path performs real side effects before dry-run validation\n- the system does not use fixtures, artifacts, or regression checks\n- the team is trying to redesign the whole chain instead of extending an existing one safely\n- the work is really about a new chain, a new execution mode, or broader workflow redesign rather than one bounded new intent"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- an existing intent-chain workflow with normalization, dry-run, and contract-check steps already in place\n- a canonical fixture location for new intent payloads\n- a contract-check step that can assert expected routing\n- CI or another review surface that publishes artifacts\n- at least one regression surface that can prove the new intent uses the shared chain rather than a shortcut path"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one canonical fixture for the new intent\n- one dedicated smoke path for the new intent rollout\n- one machine-readable contract summary for the new intent path\n- one published review surface that exposes the new intent path alongside existing intent paths\n- at least one regression test covering the dry-run chain"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Add one canonical fixture for the new intent rollout.\n2. Ensure the fixture includes traceability fields such as `intent_id` and `trace_id` when policy requires them.\n3. Add a dedicated chain smoke step that runs the new fixture through the existing shared intent-to-plan-to-dry-run path.\n4. Add a strict contract-check step with explicit `expected_intent_type`.\n5. Publish the resulting contract summary and review row in the same surface humans and agents already use for the existing chain.\n6. Add at least one regression test that exercises the dry-run chain for the new intent."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- one canonical fixture exists for each new intent rollout\n- the rollout path stays dry-run only\n- the rollout reuses the existing intent-chain path rather than introducing a parallel shortcut or a new chain\n- contract-check validates expected intent routing\n- machine-readable summary output is published\n- artifact paths match between smoke and check steps\n- traceability metadata is preserved when required by policy\n- regression coverage proves the new intent works through the same chain contracts\n- exit behavior is explicit on contract failure"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- fixture drift makes the rollout look green while real inputs have already diverged\n- intent routing regresses silently when contract checks stop asserting the expected type\n- traceability fields disappear during normalization when the checklist is applied only partially\n- artifact wiring drifts so the new intent runs correctly but disappears from the main review surface\n\n### Negative effects\n\n- a rollout can look complete on paper while operators still cannot see the new intent path in the published review surface\n- one-off intent logic can fragment the shared chain and raise maintenance cost even before obvious failures appear\n\n### Misuse patterns\n\n- applying only the happy-path parts of the checklist and skipping fixture, traceability, or surface checks\n- adding special-case intent logic that bypasses the shared chain while still labeling the rollout complete\n\n### Detection signals\n\n- canonical fixtures stop resembling the current intent contract or are not updated when intent shape changes\n- the smoke path is green, but the main published review surface no longer shows the new intent artifacts\n\n### Mitigations\n\n- keep the canonical fixture current and preserve explicit type and traceability assertions in the contract checks\n- require the new intent to stay on the shared chain and to appear on the same review surfaces and regression paths as existing intents"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the canonical fixture exists and matches the new intent contract\n- the smoke path runs the new intent through the full dry-run chain\n- contract-check produces a machine-readable summary and fails on routing drift\n- artifact paths used by the smoke step and check step stay aligned\n- the published review surface exposes the new intent path without log scraping\n- at least one regression test covers the new intent rollout\n\nSee `checks/intent-rollout-checklist.md`.\nFor source-backed origin evidence and generalized triage guidance, see `notes/origin-evidence.md` and `notes/rollout-failure-triage.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- fixture locations and naming conventions\n- minimum action or step thresholds\n- summary filenames\n- whether `trace_id` and `intent_id` are optional or required\n- CI systems and artifact publishing surfaces\n- whether the review surface is fully automated CI, operator review, or a mixed approval loop\n- whether the same published review surface is CI-only or also includes a compact operator handoff\n\nProject-shaped details that should not be treated as invariant:\n- exact fixture naming patterns such as `intent_<new_intent_type>.json`\n- exact script names or workflow job names\n- exact thresholds such as minimum action count or minimum step count\n- exact CI summary-table names or artifact-upload labels\n- whether one rollout example uses keyboard-only, pointer, API, or other dry-run actions\n\nWhat should stay invariant:\n- each new intent rollout has one canonical fixture\n- rollout uses the existing shared dry-run chain rather than a parallel shortcut path or replacement chain\n- contract-check asserts the expected routing explicitly\n- rollout produces machine-readable output suitable for review\n- rollout updates the same review surface and regression layer that existing intents already use\n\nRelationship to adjacent techniques:\n- `AOA-T-0004 intent-plan-dry-run-contract-chain` defines the underlying chain this checklist extends.\n- `AOA-T-0001 plan-diff-apply-verify-report` governs how the rollout change itself should be planned, verified, and reported."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific intent names, fixture payload details, UI-specific behavior, workflow job names, and project run directory naming were removed. The public version keeps only the reusable rollout checklist and placeholder pattern such as `<new_intent_type>`."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-intent-rollout.md` for a small checklist-shaped rollout where one new intent path is added to an existing dry-run chain.\nSee `examples/concrete-non-ui-intent-rollout.md` for a more concrete public-safe rollout of `refresh_skill_index`, including one canonical fixture, one dedicated smoke path, one strict contract-check, one published review surface, and one regression proof."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/intent-rollout-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through canonical fixtures, dry-run smoke, contract-checks, and regression tests\n- promoted to `aoa-techniques` on 2026-03-13"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a variant for non-CI operator approval workflows\n- add cross-version guidance for evolving intent schemas safely\n- add a second source project note once this rollout checklist is observed outside ATM10-shaped automation"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0006",
+      "name": "latest-alias-plus-history-copy",
+      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep machine-readable summaries easy to discover for consumers while also preserving a trustworthy run-by-run history that scanners can accumulate without double-counting."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- summary-producing checks need one stable consumer-facing path\n- history collectors or trend scanners need per-run rows\n- review surfaces need both latest state and historical accumulation\n- the project is introducing history retention without breaking existing consumers"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- summaries are purely ephemeral and no latest or history contract is needed\n- consumers already address immutable per-run objects directly and do not need an alias\n- the project cannot keep reader behavior explicit when both alias and history are present"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one machine-readable summary payload\n- one stable latest alias path\n- one per-run directory\n- reader logic that scans history for accumulation"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- stable latest alias for the newest summary\n- nested history copy under `run_dir`\n- path metadata linking both outputs when producers emit paths\n- reader behavior that avoids alias plus history double-counting"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Define one stable latest alias path for the current summary.\n2. Create a per-run directory for each execution.\n3. Write the same summary payload to the latest alias and to a history copy under `run_dir`.\n4. Expose both paths in artifact metadata when the producer emits path fields such as `summary_json` and `history_summary_json`.\n5. Make collectors scan nested history copies first when building accumulation or trends.\n6. Allow fallback to the top-level latest alias only for legacy layouts where no history rows exist yet.\n7. If the pattern is introduced as a hotfix, start valid accumulation from the first dual-write run instead of inventing backfill."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the latest alias path is stable and consumer-facing\n- the history copy lives under `run_dir`\n- the history copy path differs from the latest alias path\n- schema and status match between latest alias and history copy\n- readers avoid double-counting by preferring nested history rows\n- fallback behavior is explicit and limited to legacy layouts without history rows\n- if path metadata is emitted, it matches the actual file layout"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the latest alias looks healthy while nested history parity or reader precedence is already drifting, so accumulation trust is lost behind a clean current view\n- collectors silently double-count runs when they treat the latest alias and nested history rows as separate accumulation inputs\n- ad hoc migration or backfill corrupts accumulation windows by mixing older single-write runs with dual-write history without an explicit cutoff\n\n### Negative effects\n\n- the dual-write layout adds storage and reader-policy complexity even when the summary payload itself stays simple\n- storage variants and migration exceptions can start multiplying faster than teams re-check whether accumulated history is still trustworthy\n- a clean latest alias can create false-success by making the newest run look healthy while historical accumulation is already broken\n\n### Misuse patterns\n\n- treating the technique as a generic archival strategy instead of a bounded latest-plus-history contract for machine-readable summaries\n- adding more alias layers, mirrors, or backfill passes instead of keeping one stable consumer path and one nested history copy\n- assuming every reader may choose its own scan path instead of enforcing nested-history-first behavior explicitly\n\n### Detection signals\n\n- the latest alias and history copy disagree on schema, status, or reported paths\n- trend or accumulation outputs jump unexpectedly after a migration even though recent run summaries look normal\n- readers or review surfaces start reading both top-level alias data and nested history rows in the same accumulation path\n- incident review keeps finding the newest summary quickly, but cannot reconcile it with recent historical totals or streaks\n\n### Mitigations\n\n- narrow the contract back to one stable alias path and one nested history copy, removing extra mirrors or unofficial scan targets\n- make reader precedence explicit so nested history rows win whenever they exist and alias fallback stays limited to legacy layouts\n- gate migrations with a clear first dual-write boundary instead of inventing retrospective backfill across incompatible eras\n- stop expanding storage complexity when accumulation trust is unclear; re-establish alias/history parity before adding retention or archive variants"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the latest alias exists at the stable expected path\n- the history copy exists under `run_dir`\n- the history copy differs from the latest alias\n- emitted `summary_json` and `history_summary_json` fields match real files when present\n- schema and status match between the alias and history copy\n- collectors ignore the alias when nested history rows are available\n- fallback to latest alias happens only when no nested rows exist\n\nSee `checks/dual-write-history-checklist.md`.\nFor source-backed origin evidence, see `notes/origin-evidence.md`.\nFor bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.\nFor canonical-prep readiness, see `notes/canonical-readiness.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- summary filenames\n- run directory naming conventions\n- whether `run.json` is emitted alongside the summary\n- local filesystem, object-store, or equivalent alias and history layouts\n- explicit backfill policies for migrations\n\nProject-shaped details that should not be treated as invariant:\n- exact run-directory naming patterns and timestamp formats\n- whether producers emit both `summary_json` and `history_summary_json` path fields\n- whether the first adopter is a nightly checker, a smoke helper, or another summary producer\n- the exact retention window or cache wiring around the latest and history layout\n\nWhat should stay invariant:\n- one stable latest alias exists for consumers\n- one nested history copy exists for accumulation\n- readers prefer nested history rows\n- fallback behavior is explicit instead of accidental\n\nRelationship to adjacent techniques: this technique stores the summaries produced by `contract-first-smoke-summary` in a latest-plus-history layout that `signal-first-gate-promotion` can accumulate without double-counting.\nWithin the published-summary package, it is also the storage contract that `AOA-T-0008` and `AOA-T-0010` assume when they read stable latest aliases without turning the alias itself into history."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific gateway names, nightly workflow names, UTC guardrail details, and repo-specific run roots were removed. The public version keeps only the reusable dual-write and anti-double-count pattern for machine-readable summaries."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-latest-history-layout.md` and `examples/object-store-latest-history-layout.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/dual-write-history-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through dual-write summary producers, nested-history-first collectors, and integrity checks over alias and history invariants\n- promoted to `aoa-techniques` on 2026-03-13\n- approved as `canonical` in `aoa-techniques` on 2026-03-15 after fresh public-safety review and default-use confirmation"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add guidance for safe migration from single-write to dual-write history\n- add retention-policy examples for teams that expire history rows aggressively"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0007",
+      "name": "signal-first-gate-promotion",
+      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Turn an observed validation signal into the default staged path toward a hard gate, so the team can collect evidence, preserve diagnostics, and choose a narrow enforcement surface before fail-fast behavior becomes operational."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a machine-readable check already exists and can emit stable summaries\n- the team wants to observe regressions before converting them into hard failures\n- different execution surfaces need different risk levels\n- promotion to strict mode should be justified by history rather than one bad or good run\n- an already-summary-producing signal should become enforceable gradually instead of jumping straight from observation to broad hard gating"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the check is too immature to produce stable summary output\n- the project needs immediate hard blocking and does not need a staged rollout\n- there is no place to retain history or publish diagnostics across runs"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one summary-producing validation check\n- an observational mode such as `signal_only`\n- a stricter enforcement mode such as `fail_nightly`\n- history over repeated runs\n- decision telemetry layers that evaluate promotion readiness"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- stable summaries from both observational and strict runs\n- evidence-based readiness and governance decisions\n- progress telemetry that shows remaining gap to promotion\n- one explicitly chosen strict enforcement surface\n- preserved diagnostics even when the strict surface fails"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Start with one stable summary-producing check in `signal_only` mode.\n2. Keep artifacts and summaries published even when the signal is bad.\n3. Add a readiness layer that measures whether the signal is stable enough for stricter enforcement.\n4. Add a governance layer that turns readiness history into explicit `go` or `hold`.\n5. Add a progress layer that reports the remaining gap to promotion.\n6. Add a transition layer that records promotion telemetry while strict enforcement is activated only on the chosen narrow surface.\n7. Keep other surfaces in signal mode until an explicit promotion decision exists.\n8. Preserve diagnostics with always-published summaries even after strict failures."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the same underlying summary contract is used in both `signal_only` and strict modes\n- `signal_only` returns success for valid snapshots even when the signal is bad\n- strict mode returns non-zero only on the explicitly chosen enforcement surface\n- promotion is evidence-based through history, not implicit drift\n- readiness, governance, progress, and transition remain decision telemetry rather than hidden runtime logic\n- diagnostics remain published even when the strict surface goes red\n- non-promoted surfaces do not silently inherit strict behavior\n- this technique owns the staged enforcement rollout only; summary production and latest/history storage remain separate prerequisite contracts"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- promotion happens from a shallow or noisy history window, so strict mode is enabled before the signal is actually stable\n- strict behavior leaks from the chosen enforcement surface into unrelated paths that were supposed to stay observational\n- diagnostic summaries stop publishing exactly when strict mode starts failing, removing the evidence needed to understand regressions\n- decision telemetry and runtime gating get mixed together until nobody can explain which layer is reporting, holding, or enforcing\n\n### Negative effects\n\n- long staged rollouts can slow response to real regressions when immediate hard blocking would have been the healthier contract\n- extra readiness, governance, progress, and transition layers can make the rollout feel controlled while actual gate state becomes harder to explain\n- a telemetry-rich rollout can create false-success by looking well-instrumented even when the team still has no clear narrow enforcement decision\n\n### Misuse patterns\n\n- keeping the technique in endless `signal_only` observation instead of choosing whether the signal deserves one strict surface at all\n- spreading staged-promotion telemetry across many surfaces until the technique becomes a generic governance stack\n- using the technique when the real need is an immediate hard gate, not a cautious rollout over existing summary contracts\n\n### Detection signals\n\n- operators cannot state which single surface is strict, which ones remain observational, and why that boundary exists\n- summaries publish readiness or progress signals, but promotion decisions keep stalling without a clear `go` or `hold` interpretation\n- a formerly narrow strict rule starts appearing in additional workflows, schedules, or review paths without an explicit promotion decision\n- strict failures appear without the diagnostic artifacts that were supposed to remain visible after rollout\n\n### Mitigations\n\n- re-narrow strict enforcement to one explicitly chosen surface and move all other paths back to observational mode until the boundary is clear again\n- keep summary publication mandatory across both observational and strict runs before adding more telemetry layers\n- collapse or remove decision layers that no longer help explain the rollout, instead of treating more telemetry as automatic progress\n- stop using the technique for a bounded context when the right answer is immediate hard blocking rather than staged promotion"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the observational mode always publishes machine-readable output\n- the same summary contract is still readable after strict mode is introduced\n- readiness uses history rather than a single run\n- governance makes `go` or `hold` explicit\n- progress reports the remaining gap to promotion\n- diagnostics still publish when the strict surface fails\n- non-promoted surfaces remain observational\n\nSee `checks/gate-promotion-checklist.md`.\nFor source-backed origin evidence and bounded second-context reinforcement, see `notes/origin-evidence.md` and `notes/second-context-adaptation.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- signal names and severity models\n- readiness windows and thresholds\n- history limits and streak rules\n- enforcement surfaces such as nightly jobs, scheduled workflows, release trains, or dedicated ops runs\n- manual override policy when it is explicit and auditable\n\nProject-shaped details that should not be treated as invariant:\n- exact policy names such as `signal_only`, `fail_nightly`, or `report_only`\n- the specific telemetry-layer names used by one repository\n- exact readiness windows, streak thresholds, or reason-code vocabularies\n- whether the narrow strict surface is a nightly workflow, a release train, or another scheduled path\n\nWhat should stay invariant:\n- promotion is staged rather than immediate\n- one narrow surface is chosen for strict enforcement\n- observational surfaces continue publishing diagnostics\n- evidence and decision layers stay explicit\n\nRelationship to adjacent techniques: this technique assumes a stable summary producer from `contract-first-smoke-summary` and a trustworthy latest/history layout from `latest-alias-plus-history-copy` before promotion from observation to strict enforcement."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific gateway names, exact thresholds, workflow names, and project-specific nightly paths were removed. The public version preserves only the reusable staged-promotion pattern and the distinction between observation surfaces and strict surfaces."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-signal-first-rollout.md` for the generic pattern and `examples/concrete-repo-validation-rollout.md` for one more concrete public-safe rollout scenario."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/gate-promotion-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through summary contracts, history-based readiness, explicit `go|hold` governance, progress telemetry, and a narrow strict enforcement surface\n- promoted to `aoa-techniques` on 2026-03-13\n- approved for `canonical` in `aoa-techniques` on 2026-03-17 after stronger bounded second-context reinforcement, a concrete beyond-origin rollout example, and a fresh public-safety recheck"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a variant for multi-surface promotion across release trains\n- add guidance for demotion back to signal mode after unstable strict rollout\n- add an example where promotion intentionally stays report-only for a long-lived warning signal"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0008",
+      "name": "published-summary-remediation-snapshot",
+      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Create one reviewable remediation snapshot from already-published latest summaries, so operators, dashboards, and agents can see what needs follow-up without rerunning upstream checks or rebuilding historical state."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- nightly or scheduled checks already publish stable machine-readable latest summaries\n- several stable published summaries feed more than one downstream triage consumer\n- operators need a compact remediation backlog instead of reading many separate summaries\n- one published backlog should serve operators, reports, and agent handoff from the same read-only source\n- the project wants deterministic follow-up buckets with explicit caps\n- the project needs a read-only helper that can support humans, UIs, and agents from the same published artifacts"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- source checks do not publish stable latest summaries yet\n- the source set is still small enough that every consumer can read each summary directly without duplicated triage logic\n- the workflow must actively execute remediation instead of producing a review surface\n- historical replay is required to answer the question, rather than the latest published state\n- the bucket policy is still unstable enough that snapshot output would drift from run to run"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- a fixed set of latest published summary aliases\n- one deterministic bucket policy\n- one explicit candidate cap policy\n- optional freshness rules for stale or missing source summaries"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one remediation snapshot\n- one bounded bucketed backlog of candidate items\n- explicit references to the source summaries used for each candidate\n- explicit reporting for missing, stale, or truncated inputs"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Define the small fixed set of latest published summary aliases the snapshot is allowed to read.\n2. Read only those latest aliases and do not scan historical runs.\n3. Apply one deterministic bucket policy to the observed latest state.\n4. Place candidate items into a fixed bucket set such as `failing_now`, `stale_inputs`, and `follow_up_needed`.\n5. Apply the explicit candidate cap or truncation policy so the remediation surface stays reviewable.\n6. Preserve source references for every emitted candidate item.\n7. Report missing or stale sources explicitly in the snapshot instead of silently skipping them.\n8. Publish the remediation snapshot as a read-only downstream view over existing summaries."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the helper reads latest published summaries only\n- the helper does not replay history or recompute trend state\n- the bucket set is fixed and deterministic for a given snapshot version\n- the candidate cap or truncation policy is explicit rather than incidental\n- candidate ordering and truncation policy are explicit rather than incidental\n- missing or stale source summaries are surfaced explicitly\n- emitted items retain traceable references to their source summary paths\n- source summaries and upstream runtime behavior are not mutated by snapshot generation\n- this technique consumes published summary patterns such as `AOA-T-0006` and can support promoted gate outputs such as `AOA-T-0007`, but it is neither a dual-write layout pattern nor a gate-promotion pattern itself"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- remediation output starts reading like an integrity verdict or rendering instruction, so operators infer more than the backlog actually knows\n- missing or stale sources are hidden, making the backlog look healthier than reality\n- history replay slips back in and turns the snapshot into a second evaluator\n- source references disappear and make remediation items harder to audit or verify\n\n### Negative effects\n\n- the bucket policy can grow ad hoc until the snapshot stops being reviewable as one bounded surface\n- remediation output becomes harder to compare over time when grouping and truncation stop being stable\n- bucket or reason language can drift into trust-verdict or rendering-policy semantics even when the helper remains formally read-only\n\n### Misuse patterns\n\n- widening the bucket set or candidate policy casually instead of versioning a fixed bounded policy\n- treating the snapshot as a place to recompute history, trust verdicts, or rendering policy\n\n### Detection signals\n\n- new buckets keep appearing without a clearly documented policy change\n- remediation items no longer point back to their source summaries or stale-source reporting goes missing\n- bucket names or reason text start reading like integrity conclusions or renderer instructions instead of bounded follow-up labels\n\n### Mitigations\n\n- keep the bucket set and candidate cap fixed for each snapshot version and document policy changes explicitly\n- preserve latest-only input rules, explicit stale-source reporting, and source references for every emitted item\n- route trust questions back to integrity review and rendering questions back to consumer policy instead of widening the remediation surface"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- only latest published summary aliases are read\n- no history replay or trend recomputation is required\n- the bucket set is fixed and documented\n- the candidate cap policy is documented\n- missing or stale sources are reported explicitly\n- emitted candidates retain source references\n- snapshot generation is read-only with respect to source artifacts\n\nSee `checks/remediation-snapshot-checklist.md`.\nFor source-backed origin proof, see `notes/origin-evidence.md`.\nFor bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.\nFor canonical-prep readiness, see `notes/canonical-readiness.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- summary filenames and alias paths\n- whether latest aliases are local files or object-store keys\n- bucket names and ordering rules\n- freshness windows for stale inputs\n- whether the candidate cap applies per snapshot, per bucket, or by priority band\n- candidate ranking fields inside each bucket\n- output format details such as plain JSON, artifact bundles, or UI adapters\n\nProject-shaped details that should not be treated as invariant:\n- the exact G2 bucket names used by `atm10-agent`\n- the specific nightly workflow or operator panel that consumes the snapshot\n- the exact latest alias path layout used by the origin project\n- the exact follow-up reason codes published for one operational loop\n\nWhat should stay invariant:\n- the helper reads latest published summaries rather than historical runs\n- the bucket set is deterministic\n- the candidate cap policy is explicit\n- source references stay attached to emitted candidates\n- the snapshot remains a read-only downstream view\n\nWithin the G2 published-summary package, this technique is the bounded remediation rollup over the published latest-alias contract from `AOA-T-0006`. `AOA-T-0010` checks whether those published summaries and remediation inputs are trustworthy, and `AOA-T-0011` defines how optional remediation surfaces should render.\nWithin its natural scope, this becomes the default downstream rollup when several published summaries feed several bounded consumers and direct per-source reading stops being reviewable across each consumer separately."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific gateway names, workflow names, thresholds, run roots, and remediation scripts were removed. The public version keeps only the reusable pattern: bounded read-only aggregation from latest published summaries into a deterministic remediation snapshot."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-remediation-snapshot.md` and `examples/object-store-remediation-snapshot.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/remediation-snapshot-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through a nightly remediation helper that consumed already-published summaries and emitted a bounded review surface\n- promoted to `aoa-techniques` on 2026-03-14\n- approved as `canonical` in `aoa-techniques` on 2026-03-16 after fresh public-safety review and default-use confirmation"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add guidance for versioning bucket policy without breaking snapshot consumers\n- add a variant for hierarchical buckets that still preserves fixed candidate caps"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0009",
+      "name": "lightweight-status-snapshot",
+      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep repository entrypoint status easy to scan by turning top-level status docs into short snapshots that summarize the current state and link to canonical detail instead of duplicating long chronology."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- the repository already has a source-of-truth layout for plans, runbooks, decisions, and history\n- `README` needs to stay readable for humans landing on the repo\n- a compact machine or human snapshot such as `MANIFEST` is useful for fast orientation\n- long-running projects keep accumulating metrics, run IDs, or session details that would otherwise spread into entrypoint docs"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the repository is small enough that one short `README` is already sufficient\n- there is no canonical home for detailed status, history, or operator detail\n- the team expects the top-level docs to hold full chronology rather than serve as snapshots"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one source-of-truth document map such as `AOA-T-0002`\n- one short human-facing entrypoint doc\n- one short machine or mixed snapshot doc when the repository needs it\n- canonical detailed docs for active work, goals, decisions, runbooks, and history"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- a concise `README` that points to canonical docs\n- a concise `MANIFEST` or equivalent repository snapshot\n- reduced duplication of run history and changing status counters\n- clearer separation between summary state and detailed operational truth"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Choose which top-level docs should stay lightweight, typically `README` and optionally `MANIFEST`.\n2. Keep those docs focused on current orientation: purpose, quick links, active capabilities, and short status bullets.\n3. Move detailed execution state to `TODO`, goals to `PLANS`, commands to `RUNBOOK`, decisions to `DECISIONS`, and long chronology to `SESSION_*`.\n4. Replace copied detail with short references to the canonical documents that already hold it.\n5. Treat CI and the latest session snapshot as the source of detailed current-state evidence rather than copying counters into every top-level doc.\n6. Re-trim entrypoint docs whenever they begin to accumulate long run lists, metric history, or duplicated troubleshooting notes."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- `README` stays a short human-facing entrypoint\n- `MANIFEST`, when present, stays a short machine or mixed snapshot\n- long run IDs, long metric history, and detailed chronology do not live in snapshot docs\n- detailed current-state evidence lives in CI and the latest session or equivalent canonical history doc\n- snapshot docs link outward instead of restating canonical detail\n- this technique complements `AOA-T-0002` by constraining how summary docs stay lightweight; it does not replace the broader document-role layout"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the snapshot becomes so thin that it no longer gives enough orientation to send readers to the right canonical detail\n- outward links go stale after the canonical doc map evolves, so the snapshot keeps pointing to the wrong current-state surfaces\n\n### Negative effects\n\n- excessive trimming can make operational truth harder to find even while the entrypoint docs look cleaner\n- the snapshot can hide active gaps in status hygiene by removing detail faster than the repository learns where that detail should live\n\n### Misuse patterns\n\n- using the technique as a reason to delete detail instead of routing it to canonical homes\n- treating `README` or `MANIFEST` cleanliness as the goal by itself, even when navigability and current-state orientation get worse\n\n### Detection signals\n\n- new readers can tell that the entrypoint docs are short, but still cannot find the current detailed status quickly\n- links from the snapshot stop resolving to the latest `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, or session detail\n- teams keep re-adding summary prose to `README` or `MANIFEST` because the snapshot no longer feels sufficient for orientation\n- the entrypoint docs look clean, but operators still need to ask around to learn where real operational truth now lives\n\n### Mitigations\n\n- restore just enough orientation context to make the snapshot navigable before adding back long chronology\n- fix or rotate canonical links whenever the doc map changes\n- move removed detail into explicit canonical homes instead of dropping it entirely\n- treat repeated confusion about where current truth lives as a signal to strengthen routing, not to turn the snapshot back into a log"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- `README` remains short and human-facing\n- `MANIFEST`, when used, remains a compact snapshot rather than a long log\n- detailed run history and changing counters are absent from snapshot docs\n- canonical links point to the current `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, and latest session detail\n- a reader can understand the current state quickly and then navigate to the right detailed document\n\nSee `checks/lightweight-snapshot-checklist.md`.\nFor source-backed evidence, see `notes/origin-evidence.md` and `notes/second-context-adaptation.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- whether a separate `MANIFEST` exists\n- the exact snapshot sections such as current status, active capabilities, or quick links\n- whether the detailed history doc is daily, weekly, or milestone-based\n- whether CI links are explicit URLs or just canonical doc references\n- whether one snapshot doc is enough or both `README` and `MANIFEST` stay lightweight\n\nWhat should stay invariant:\n- snapshot docs stay short\n- canonical detail is linked rather than duplicated\n- current-state evidence is anchored in one detailed location\n- top-level docs remain orientation surfaces rather than archives\n\nProject-shaped details that should not be treated as invariant:\n- the exact status bullets shown in the snapshot\n- whether capabilities are listed in `README`, `MANIFEST`, or both\n- the exact session file date linked from the current snapshot\n- whether current-state evidence comes from CI, session docs, or a similar published summary surface\n\nSee `notes/second-context-adaptation.md` for a compact public-repository variant."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific capabilities, workflow names, local paths, and session-specific status numbers were removed. The public version keeps only the reusable snapshot discipline: short top-level status docs with outward links to canonical detail."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-lightweight-snapshot.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/lightweight-snapshot-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through a doc-hygiene transition where `README.md` and `MANIFEST.md` were trimmed to snapshot form while detailed state stayed in `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, and `SESSION_*`\n- promoted to `aoa-techniques` on 2026-03-14\n- approved for `canonical` in `aoa-techniques` on 2026-03-16 after cross-context evidence, a clean docs-boundary semantic review, and a fresh public-safety recheck"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a companion example for repositories without `MANIFEST`\n- add optional guidance for snapshot freshness checks"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0010",
+      "name": "telemetry-integrity-snapshot",
+      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Provide one machine-readable diagnostic verdict over published summary invariants, so operators can quickly tell whether telemetry and artifact layout are trustworthy before acting on downstream rollups or remediation backlogs."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- several latest published summaries already exist for one operational decision path\n- several published summaries or downstream rollups are interpreted by more than one consumer\n- the project needs to validate telemetry counters and artifact-layout invariants across those summaries\n- dual-write latest plus history patterns are already in use\n- the team wants a diagnostic integrity layer without turning it into a new hard gate by default"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- source summaries are not stable enough to serve as inputs yet\n- the project needs direct enforcement instead of a diagnostic verdict\n- there is no explicit artifact layout or counter policy to verify\n- one source alone is sufficient and cross-summary integrity checks add no value\n- each consumer can still inspect source trust directly without duplicating integrity logic across surfaces"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- a fixed set of latest published summaries\n- required and optional source classification\n- telemetry counters or mismatch counters emitted by those summaries\n- dual-write metadata such as `summary_json`, `history_summary_json`, and `run_dir`\n- optional guardrail consistency inputs when a project exposes them"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one integrity snapshot\n- one explicit integrity decision such as `clean` or `attention`\n- reason codes for broken invariants\n- per-invariant observed fields that explain the verdict"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Define the small fixed set of latest published summaries that the integrity helper is allowed to read.\n2. Classify which of those sources are required and which are optional for extra consistency checks.\n3. Validate required source health first: presence, schema compatibility, and usable status.\n4. Check telemetry counters that should remain at zero or otherwise stay within invariant expectations.\n5. Check dual-write invariants over latest alias plus history copy metadata.\n6. Check anti-double-count invariants so nested history remains the canonical accumulation path.\n7. If an optional guardrail source is present, validate its internal consistency and surface warnings or attention when it disagrees with itself.\n8. Emit one read-only integrity snapshot with a concise decision and supporting reason codes."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the helper reads latest published summaries only\n- the helper is read-only with respect to upstream summaries and runtime behavior\n- required source health is validated explicitly before deeper invariant checks\n- telemetry counters are checked as invariants rather than silently ignored\n- dual-write invariants confirm that latest alias and history copy are both present and coherent\n- anti-double-count invariants confirm that history remains the canonical nested accumulation path\n- optional guardrail consistency may affect the verdict, but absence of the optional source is surfaced explicitly instead of treated as silent success\n- the helper produces a diagnostic verdict such as `clean` or `attention`; it does not itself define a new hard enforcement surface\n- this technique consumes summary patterns such as `AOA-T-0006`, can inspect promoted gate outputs such as `AOA-T-0007`, and can validate remediation surfaces such as `AOA-T-0008`, but it is distinct from each of those techniques"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- optional consistency noise starts crowding out required-source health, so the snapshot stops pointing attention at the bounded contract it claims to protect\n- teams treat the integrity snapshot as a replacement for fixing broken producers or as a de facto gate instead of a diagnostic signal\n- schema drift between latest alias and history copies goes undetected and corrupts integrity conclusions\n\n### Negative effects\n\n- checking too many optional invariants turns a focused diagnostic layer into noise\n- a diagnostic helper can start reading like a pre-gate even before any explicit rollout decision exists\n\n### Misuse patterns\n\n- using the helper as a default enforcement gate or merge-block proxy even though the technique defines a diagnostic, read-only surface\n- expanding optional guardrail or consistency checks until they overshadow required source health and dual-write invariants\n\n### Detection signals\n\n- integrity findings repeat across runs without upstream producer fixes, but the helper keeps being treated as the main response or block signal\n- optional-source or low-value consistency checks dominate the snapshot more than required health, dual-write, or anti-double-count issues\n- operators or CI language start talking about `attention` as if it already means \"block by default\"\n\n### Mitigations\n\n- keep the snapshot focused on required source health, telemetry invariants, dual-write coherence, and anti-double-count checks\n- make any hard-gate or block-semantics promotion a separate explicit rollout decision rather than an implicit property of the helper"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- required source presence and schema health are checked explicitly\n- telemetry counters or mismatch counters are surfaced in the snapshot\n- dual-write invariants verify both latest alias and nested history copy\n- anti-double-count invariants verify that the history path differs from the latest alias and remains canonical for collectors\n- optional guardrail consistency is reported as `ok`, `attention`, or `not_available` rather than guessed\n- the final decision remains diagnostic and read-only\n\nSee `checks/telemetry-integrity-checklist.md`.\nFor source-backed origin proof, see `notes/origin-evidence.md`.\nFor bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.\nFor canonical-prep readiness, see `notes/canonical-readiness.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- source names and schema versions\n- whether published summaries are local files or object-store keys\n- the exact telemetry or mismatch counters\n- the optional guardrail or cadence source\n- decision labels such as `clean`, `attention`, `warn`, or `needs_repair`\n- whether the snapshot is consumed by CI, nightly summaries, dashboards, or local operator tools\n\nProject-shaped details that should not be treated as invariant:\n- the exact G2 source set used by `atm10-agent`\n- the specific telemetry counter names emitted by one producer family\n- the exact optional cadence or guardrail source checked by the origin project\n- the exact verdict labels or summary section names used in one workflow\n\nWhat should stay invariant:\n- latest published summaries are the only inputs\n- required source health is explicit\n- dual-write and anti-double-count checks stay first-class\n- optional consistency checks remain explicit rather than implicit\n- the helper stays diagnostic unless a separate rollout chooses otherwise\n\nWithin the G2 published-summary package, this technique is the diagnostic trust layer over the published-summary contract from `AOA-T-0006` and the downstream remediation output from `AOA-T-0008`. `AOA-T-0011` governs how optional integrity and remediation surfaces render to operators, smoke checks, or other summary consumers.\nWithin its natural scope, this becomes the default trust layer when several published summaries or downstream rollups are consumed in more than one place and each consumer should not re-implement the same integrity checks independently."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific gateway names, nightly workflow names, thresholds, UTC policy details, and repo-specific run roots were removed. The public version keeps the reusable pattern: a read-only integrity snapshot over published summaries and artifact-layout invariants."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-telemetry-integrity-snapshot.md` and `examples/object-store-telemetry-integrity-snapshot.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/telemetry-integrity-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through nightly integrity summaries and tests covering telemetry counter violations, dual-write mismatches, anti-double-count breakage, and optional guardrail inconsistency\n- promoted to `aoa-techniques` on 2026-03-14\n- approved as `canonical` in `aoa-techniques` on 2026-03-16 after fresh public-safety review and default-use confirmation"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add guidance for rolling out an integrity verdict into stricter enforcement\n- add a companion technique for operator-facing triage when integrity is not clean"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0011",
+      "name": "required-vs-optional-source-rendering",
+      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep summary-driven surfaces resilient by enforcing strict behavior for required sources while letting optional enrichments render as `not available yet` or warnings instead of taking down the whole surface."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a UI, dashboard, CLI report, or smoke check reads multiple published summary artifacts\n- some sources are mandatory for the base contract, while others are supporting enrichments\n- the surface should stay useful even when supporting summaries are unpublished or temporarily invalid\n- smoke or regression checks need to distinguish hard failure from observability noise"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- every source is equally required for the surface to be meaningful\n- the surface is only for manual debugging and does not need a formal contract\n- optional-source tolerance would hide genuinely unsafe behavior\n- there is no summary contract or source classification to anchor the rendering policy"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- a fixed set of required summary sources\n- a fixed set of optional summary sources\n- source loading rules that can detect missing files, parse failures, and schema mismatch\n- one summary surface, report consumer, or smoke check"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- explicit `required_missing_sources`\n- explicit `optional_missing_sources`\n- stable rendering behavior for missing or invalid optional sources\n- strict failure only when required-source or other hard-contract conditions are violated"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Define which sources are required for the minimum useful surface.\n2. Define which sources are optional enrichments.\n3. Load required sources first and fail the strict contract if they are missing or unusable.\n4. Load optional sources separately and track their status without promoting them to hard failure.\n5. Render missing optional sources as `not available yet`.\n6. Render invalid optional sources as warnings while keeping the main surface available.\n7. Keep optional-source paths visible through fields such as `optional_missing_sources` so the absence is observable.\n8. Treat soft-info artifacts such as companion markdown briefs separately from required JSON summaries so their absence does not escalate into warning or error by default."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- required and optional source sets are explicit\n- required-source failure can trigger smoke or strict contract failure\n- optional-source absence is observable but does not by itself fail the surface\n- invalid optional sources produce warnings rather than silent omission\n- backward-compatible fields such as `missing_sources` may alias required missing sources only\n- soft-info artifacts such as `brief_md` are optional unless explicitly promoted to required\n- the surface reads published summaries only and does not trigger new operational work as part of rendering\n- this technique applies to summary-driven operator surfaces, CLI reports, and smoke policies; it is not a general UI style guideline"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- an actually critical source is misclassified as optional and stays there long enough to distort operator interpretation\n- warning traffic becomes ambient enough that missing optional signals stop influencing review\n- optional-source absence is hidden completely instead of being surfaced explicitly\n\n### Negative effects\n\n- optional-source warnings can accumulate until the surface becomes noisy\n- the rendering surface can drift away from its bounded summary role and become harder to trust\n- the technique can start reading like a package-specific appendix to remediation and integrity instead of a reusable consumer policy\n\n### Misuse patterns\n\n- treating `optional` as meaning \"never operationally important\" rather than \"visible but non-fatal for this contract\"\n- expanding the rendering surface so it performs actions or reads like a published-summary package appendix instead of staying a general read-only policy\n\n### Detection signals\n\n- operators stop noticing missing-source signals because the warning stream is constant and unsorted\n- the renderer starts adding retry, repair, or other mutating behavior to compensate for absent summaries\n- future wording starts reading like a bundle-specific appendix to remediation or integrity instead of a general consumer policy\n\n### Mitigations\n\n- review required-versus-optional classification explicitly and promote sources when the contract changes\n- keep warnings bounded, visible, sorted, and read-only so missing optional data stays observable without turning the surface into an action layer\n- keep remediation and integrity examples as examples only, not as the ownership boundary for the rendering policy"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- required missing sources and optional missing sources are reported separately\n- missing required sources fail the strict smoke or contract path\n- missing optional sources render as `not available yet`\n- invalid optional sources surface warnings without taking down the whole surface\n- optional soft-info artifacts remain non-blocking\n- the surface still exposes source references so operators can navigate to the published artifact when available\n\nSee `checks/required-vs-optional-rendering-checklist.md`.\nFor source-backed origin proof, see `notes/origin-evidence.md`.\nFor bounded second-context adaptation guidance, see `notes/second-context-adaptation.md`.\nFor canonical-prep readiness, see `notes/canonical-readiness.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact required and optional source lists\n- the wording of empty or warning states\n- whether warnings are in logs, JSON summary fields, CLI sections, UI badges, or all four\n- which soft-info artifacts are attached to a primary summary\n\nProject-shaped details that should not be treated as invariant:\n- the specific `Latest Metrics` panel structure used by `atm10-agent`\n- the exact optional published sources such as remediation, integrity, or operating-cycle summaries\n- the exact alias field names kept for backward compatibility\n- the exact non-blocking soft-info artifact name such as `brief_md`\n\nWhat should stay invariant:\n- required and optional sources remain separate policy classes\n- optional-source absence is visible but non-fatal\n- invalid optional data yields warnings\n- promotion from optional to required stays explicit and staged rather than silent\n- read-only rendering does not expand into action execution\n\nWithin the G2 published-summary package, this technique is the rendering and contract policy for required versus optional published sources across operator panels, CLI reports, and smoke summaries. `AOA-T-0008` supplies one optional remediation surface, and `AOA-T-0010` supplies one optional diagnostic trust surface."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "ATM10-specific Streamlit tab names, gateway summary names, local paths, and UI wording were generalized. The public version keeps the reusable rendering contract: required sources fail strictly, optional sources degrade gracefully, and soft-info artifacts stay non-blocking."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-required-vs-optional-rendering.md` and `examples/non-ui-required-vs-optional-rendering.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/required-vs-optional-rendering-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `atm10-agent`\n- validated through operator-panel loading rules and smoke tests that separated `required_missing_sources` from `optional_missing_sources` and preserved non-blocking handling for optional summaries and `brief_md`\n- promoted to `aoa-techniques` on 2026-03-14\n- approved as `canonical` in `aoa-techniques` on 2026-03-15 after fresh public-safety review and default-use confirmation"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a companion technique for operator-facing artifact link panels\n- add policy examples for multi-consumer staged promotion from optional to required"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0012",
+      "name": "deterministic-context-composition",
+      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep agent context scalable by composing it from smaller source fragments into a stable generated artifact whose ordering and source boundaries remain explicit."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories where one hand-written `AGENTS.md` no longer scales\n- projects that want fragment-first authoring with one generated context surface\n- teams that need deterministic ordering rather than manual copy-paste merges\n- agent documentation flows where source traceability matters during review"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- very small repositories where one short hand-maintained context file is enough\n- systems that depend on runtime code execution or network lookups during composition\n- workflows where generated outputs cannot be regenerated reliably from source fragments"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- source fragments that hold the real context content\n- deterministic ordering rules such as priority plus stable path fallback\n- one target artifact path such as `AGENTS.md`\n- explicit source-traceability strategy such as annotations or equivalent metadata"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- generated context artifact\n- repeatable composition order\n- explicit traceability from output back to source fragments\n- reviewable fragment set that remains the source of truth"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep agent context in smaller source fragments instead of hand-editing one large generated file.\n2. Define how fragments route to the target artifact and how composition order is resolved.\n3. Compose fragments with deterministic ordering, usually explicit priority first and stable path order second.\n4. Preserve traceability by annotating or otherwise recording which fragment produced each output section.\n5. Regenerate the target artifact from fragments whenever sources change.\n6. Review and edit the fragment set, not the generated artifact, as the canonical source of truth."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- source fragments remain the canonical editable inputs\n- the output artifact is generated and should not become the hand-edited source of truth\n- the same fragment set and ordering rules produce the same output ordering\n- the output stays traceable back to source fragments\n- composition does not require runtime code execution or network access to explain the core pattern"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- ordering and priority rules become implicit, so the generated artifact changes in ways contributors cannot predict from the fragment set alone\n- contributors edit the generated artifact directly and break the fragment-first source-of-truth contract\n- source annotations or equivalent metadata erode until output sections can no longer be traced back to the fragments that produced them\n\n### Negative effects\n\n- deterministic composition can add hidden review overhead when maintainers must mentally reconstruct precedence instead of reading one obvious source path\n- fragment-first authoring can make context feel cleaner while actually making routing and responsibility harder for new contributors to understand\n- a generated artifact can create false-success by looking stable and ordered even when only a small set of maintainers can explain why it rendered that way\n\n### Misuse patterns\n\n- widening the technique into a general documentation build system instead of keeping it bounded to many fragments composing into one generated context artifact\n- adding more precedence rules, fallback layers, or special-case routing instead of simplifying composition order\n- treating traceability annotations as optional decoration rather than part of the bounded review contract\n\n### Detection signals\n\n- reviewers cannot explain output ordering without consulting tribal knowledge or implementation details outside the fragment set\n- generated artifact edits appear in normal maintenance diffs instead of source-fragment changes driving regeneration\n- contributors know the output changed, but cannot quickly identify which fragment or precedence rule caused the change\n- the output still looks deterministic, but repeated review comments reveal confusion about fragment authority, ordering, or ownership boundaries\n\n### Mitigations\n\n- simplify the ordering contract so precedence is explainable from the fragment set and one small set of deterministic rules\n- reassert fragment-first authority by rejecting direct edits to the generated artifact and routing fixes back to canonical fragments\n- restore explicit traceability from output sections to source fragments before adding more composition features or target variants\n- narrow the technique back to one generated context surface when additional routing rules start making source-of-truth boundaries opaque"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the generated artifact can be recreated from source fragments without manual merge steps\n- higher-priority fragments surface earlier and stable fallback ordering is predictable\n- output sections can be traced back to source fragments\n- removing or changing one fragment updates the generated artifact in a predictable way\n- contributors can identify the source of truth without ambiguity\n\nSee `checks/deterministic-context-composition-checklist.md`.\nFor external provenance, second-context adaptation, the first import-review outcome, and canonical-readiness review, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, `notes/external-import-review.md`, and `notes/canonical-readiness.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- fragment discovery rules\n- whether the target artifact is `AGENTS.md` or another generated context file\n- routing behavior such as root-only or nearest-target composition\n- annotation syntax or companion metadata used for source traceability\n\nProject-shaped details that should not be treated as invariant:\n- exact CLI commands such as `npx agents-md compose`\n- runtime or package-manager assumptions such as Bun, Node, or `npx`\n- report, watch, truncate, size-limit, and migration features around the composition core\n- exact source filename patterns such as `*.agents.md`\n\nWhat should stay invariant:\n- context is authored in smaller fragments\n- composition order is deterministic\n- the generated context artifact is derived rather than hand-maintained\n- output remains traceable back to sources"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This imported technique narrows the donor repository to one bounded pattern: deterministic composition from fragments into a stable generated context artifact. CLI packaging details, token-estimate reporting, watch mode, migration helpers, and other product-shaped features were intentionally left out."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-deterministic-context-composition.md` for the smallest bounded composition flow and `examples/concrete-skill-doc-composition.md` for a public-safe `AGENTS.md`-style composition example with deterministic ordering and explicit source annotations."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/deterministic-context-composition-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `agents-md`\n- imported into `aoa-techniques` on 2026-03-14 as the first external-import pilot with explicit provenance and bounded adaptation review\n- passed first external-import review on 2026-03-15; keep the technique `promoted` while preparing second-donor evaluation rather than widening this bundle\n- approved for `canonical` in `aoa-techniques` on 2026-03-18 after explicit canonical-readiness review, clear instruction-surface boundary review, and stronger public example coverage"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- split out a broader `fragmented-agent-context` sibling technique if context partitioning deserves its own canonical surface\n- add a follow-on technique for reporting or CI checks over generated context outputs\n- capture a second external adaptation context beyond a documentation-first repository"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0013",
+      "name": "single-source-rule-distribution",
+      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reduce drift and duplicated maintenance by keeping one canonical rule source and propagating it to multiple agent-facing instruction surfaces instead of hand-editing each target separately."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories that support multiple coding agents or agent-facing instruction formats\n- projects that already feel the cost of copying the same guidance into `AGENTS.md`, `CLAUDE.md`, or similar files\n- teams that can regenerate or re-apply instruction targets from one canonical rule source\n- repositories that want target surfaces to stay consistent without making every output file canonical\n- cases where the same shared rule core is proven to survive re-application across multiple managed targets, not just a repo-local adaptation sketch"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- repositories that only need one instruction surface\n- projects that are unwilling to treat target files as managed or derived outputs\n- workflows where each target must hold materially different guidance rather than a shared core rule set\n- cases where the real need is MCP propagation, skills propagation, or broader orchestration rather than instruction distribution"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one canonical rule source location such as `.ruler/`, `rules/`, or an equivalent docs directory\n- one distribution step that applies the same core rules to multiple target surfaces\n- explicit target instruction surfaces such as `AGENTS.md`, `CLAUDE.md`, or other agent-facing files\n- one managed/generated policy that makes clear which files are canonical inputs and which are derived targets"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- multiple synchronized agent-facing instruction surfaces\n- one retained canonical rule source\n- lower risk of copy-paste drift across target files\n- repeatable update path when rules change"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Choose one canonical location where the shared rule set will be authored and reviewed.\n2. Define which agent-facing instruction surfaces should receive that shared rule set.\n3. Apply the shared rules to each target surface with only the minimum target-specific formatting needed for the destination file.\n4. Mark target files as managed or otherwise derived so contributors do not treat them as the editable source of truth.\n5. Re-run the distribution step whenever the canonical rules change.\n6. Review diffs at the canonical source first and only use target-file diffs to confirm distribution stayed synchronized."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- one canonical rule source owns the shared instruction content\n- target instruction files are managed or derived outputs, not canonical editable homes\n- the same source update can be propagated repeatedly without introducing duplication drift\n- target-specific wrappers or formatting must not change the shared rule intent\n- manual edits to target files are either forbidden or clearly subordinate to the canonical source\n- canonical review should stay defer-first until the contract is exercised in a live multi-target reuse context beyond the current repo-local sketch\n\nRelationship to adjacent techniques: unlike `AOA-T-0002 source-of-truth-layout`, this technique is about one rule source fanning out to many target surfaces rather than assigning canonical roles to many document classes inside one repository. Unlike `AOA-T-0012 deterministic-context-composition`, this technique is about one canonical source propagating to multiple target instruction files rather than composing many fragments into one generated artifact."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- target instruction surfaces drift away from the canonical rule source because local edits or wrapper changes are applied without flowing back through the source\n- contributors edit target files directly and quietly reintroduce duplicated authority across files that were supposed to stay managed\n- re-apply behavior stops being repeatable, so distribution looks successful while shared rules are duplicated, dropped, or reshaped across targets\n\n### Negative effects\n\n- one-to-many distribution can hide target-specific divergence longer than hand-maintained files would, because synchronized-looking outputs feel safer than they are\n- wrapper or formatting differences can make shared rule intent harder to compare across targets even while every file appears up to date\n- the technique can create false-success by making all targets look freshly synchronized even after the canonical rule meaning has already split in practice\n\n### Misuse patterns\n\n- widening the technique into per-agent product behavior instead of keeping one shared rule core with minimal target-specific formatting\n- treating nested loading, MCP propagation, skills propagation, or other broader orchestration features as if they belong inside this same bounded contract\n- adding target-specific shadow logic until each managed surface becomes a semi-canonical source in disguise\n\n### Detection signals\n\n- canonical rule changes stop flowing cleanly through one source and instead require hand-fixes or exceptions in multiple target files\n- targets look synchronized at a glance, but reviewers cannot confirm that the shared rule intent still matches across wrappers or re-apply passes\n- managed targets accumulate local edits that are not obviously derivable from the canonical source\n- the team starts discussing target-specific behavior more than the shared core rule set that was supposed to own the content\n\n### Mitigations\n\n- re-narrow the contract so one canonical rule source owns the shared content and target files keep only the minimum destination-specific wrapper\n- remove local target edits and route every shared-rule change back through the canonical source before re-applying distribution\n- treat repeatability checks as part of the distribution contract so synchronized appearance does not substitute for actual source-to-target parity\n- split broader propagation or loading behavior into separate techniques instead of letting target-specific shadow logic accumulate inside this one"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one canonical rule source is named explicitly\n- at least two target instruction surfaces receive the same shared rule core\n- target files are treated as managed or derived outputs rather than canonical editable files\n- re-applying distribution does not duplicate the shared rules in target files\n- a source change routes through the canonical rule source first instead of through target-file edits\n\nSee `checks/single-source-rule-distribution-checklist.md`.\nFor external provenance, bounded repo-local adaptation, and the first external-import review outcome, see `notes/external-origin.md`, `notes/second-context-adaptation.md`, and `notes/external-import-review.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the canonical source directory name such as `.ruler/`, `rules/`, or another docs folder\n- the exact set of target instruction files\n- whether the distribution step is a CLI command, script, build task, or CI-enforced local check\n- the target-specific wrapper format used around shared instructions\n\nWhat should stay invariant:\n- one canonical rule source owns the shared instruction content\n- multiple agent-facing instruction surfaces can be refreshed from that source\n- target files remain derived rather than hand-maintained canonical documents\n- distribution exists to reduce drift, not to create many divergent instruction variants\n\nProject-shaped details that should not be treated as invariant:\n- the donor repository's exact supported-agent matrix\n- Node, npm, or any specific packaging/runtime assumptions\n- nested loading behavior, which may support broader systems but is not part of this first technique contract\n- MCP propagation, skills propagation, `.gitignore` automation, backup/revert flows, and other wider product behavior\n\nSee `notes/second-context-adaptation.md` for a bounded docs-repository adaptation sketch."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This imported technique narrows the donor repository to one docs pattern: one canonical rule source distributed to multiple agent-facing instruction surfaces. MCP propagation, skills propagation, nested-loading semantics, `.gitignore` automation, backup/revert behavior, beta-preview breadth, and the donor's full product matrix were intentionally left out of the public technique contract."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-single-source-rule-distribution.md` for the smallest bounded distribution flow and `examples/concrete-multi-agent-rule-sync.md` for a concrete multi-target sync example with one canonical rule source and minimal managed wrappers."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/single-source-rule-distribution-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `ruler`\n- imported into `aoa-techniques` on 2026-03-15 as the second bounded external-import draft with explicit exclusions around MCP, skills, nested loading, and other product-width behavior\n- passed first external-import review on 2026-03-18; keep the technique `promoted` until stronger live multi-target reuse exists beyond the current repo-local adaptation sketch\n- current canon-strengthening wave: defer canonical promotion until a live multi-target reuse context proves the shared rule core still propagates cleanly across managed targets"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- split out `nested-rule-loading` as a separate sibling technique if experimental multi-directory layering proves reusable on its own\n- split out `instruction-surface-mcp-propagation` as a separate sibling technique if MCP distribution deserves its own bounded contract\n- add stronger second-context evidence once a live repository uses one canonical rule source across multiple agent-facing outputs"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0014",
+      "name": "tdd-slice",
+      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reduce ambiguity and regression risk by expressing one bounded behavior slice as tests before implementation, then keeping the implementation and any refactor inside that slice."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- small or medium feature slices with clearly describable behavior\n- logic changes that benefit from explicit behavioral framing\n- refactors where a bounded test surface should constrain change\n- agent-assisted implementation where the main risk is scope drift inside one already understood behavior slice\n- work that needs a compact executable specification for the slice itself, not a wider boundary or contract redesign"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- exploratory work where the behavior is still too vague to test meaningfully\n- large structural rewrites where test-first on one slice would hide the real scope\n- boundary-definition work where the primary question is contract shape rather than slice execution\n- purely mechanical or wording-only changes with no meaningful behavior surface"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- desired behavior or rule change\n- bounded module or slice under change\n- constraints and non-goals\n- available test surface"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- new or updated tests\n- minimal implementation satisfying the tests\n- bounded refactor if needed\n- concise validation result"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. state the behavior in bounded, reviewable language\n2. write or update tests before implementation where the task shape allows it\n3. make the smallest implementation change that satisfies the tests\n4. refactor only inside the declared slice\n5. run the relevant tests and record the result\n6. report what behavior is now specified and what remains out of scope"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- tests should express behavior rather than incidental implementation detail\n- the implementation should stay bounded to the declared slice\n- unrelated cleanup should not be smuggled into the change\n- boundary or contract questions should stay out of the slice unless the slice itself is the contract surface\n- the final result should make future regressions easier to detect"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- tests mirror the implementation instead of constraining it\n- the slice is too broad and hides an architectural rewrite\n- the chosen test surface is too weak to catch real regressions\n\n### Negative effects\n\n- ritualized TDD can slow work when the problem is still undefined\n- narrow tests can create false confidence if the slice was chosen poorly\n\n### Misuse patterns\n\n- writing tests after the code and labeling it test-first\n- forcing TDD on glue code or one-off scripts with no stable behavioral core\n- using the test suite as permission to widen scope without naming it\n\n### Detection signals\n\n- tests mention internal implementation details more than behavior\n- the diff grows far beyond the declared slice\n- the post-change explanation cannot clearly state what behavior is now specified\n\n### Mitigations\n\n- narrow the slice before continuing\n- rewrite tests around behavior and observable outcomes\n- split architectural cleanup into a separate change"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- tests were added or updated before implementation when the task was suitable for TDD\n- the implementation stayed inside the declared slice\n- the relevant test surface passed after the change\n- the final report names both the covered behavior and the remaining out-of-scope behavior"
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- testing framework and command surface\n- module boundaries\n- naming for behavior slices versus acceptance slices\n- whether the tests are unit, contract, or smoke tests\n\nWhat should stay invariant:\n- explicit behavior framing before implementation\n- bounded slice discipline\n- minimal implementation before refactor expansion\n- visible verification at the end\n- clear separation from `AOA-T-0015 contract-test-design`, which starts from a consumer-visible boundary contract rather than from one bounded implementation slice\n- tests used as execution discipline for the slice, not as a substitute for defining the contract surface itself"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This first public version generalizes the technique into a repository-agnostic bounded TDD workflow and strips project-specific tool commands and local paths."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-tdd-slice.md` for a small bounded flow where one behavior rule is expressed first in tests and then implemented with a minimal diff.\nSee `examples/concrete-application-handler-slice.md` for a more concrete public-safe application-handler change where one observable behavior slice is fixed tests-first without widening into boundary redesign."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/tdd-slice-checklist.md` for a minimal review pass covering bounded scope, behavior-shaped tests, and explicit final verification."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped from recurring bounded-testing needs observed around `atm10-agent`\n- extracted into first public reusable form in `aoa-techniques` on 2026-03-18\n- promoted to canonical after second-context validation, semantic separation from contract-design techniques, and a fresh public-safety recheck on 2026-03-20"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a stronger note on when not to use TDD ritualistically\n- connect to skill-level guidance in `aoa-skills`"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0015",
+      "name": "contract-test-design",
+      "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reduce breakage at boundaries by expressing the expected interface behavior explicitly and verifying it at the contract surface rather than only through internal tests."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- service or module boundaries with downstream consumers\n- smoke paths that should emit stable summaries or structured output\n- interface changes where downstream drift is a risk\n- refactors that keep internals moving while the boundary must remain stable\n- situations where the consumer-visible contract should stay the primary verification surface even as implementation details change"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- purely local logic with no meaningful boundary\n- situations where the real problem is that the boundary itself is still undefined\n- very small changes where a boundary contract would add ceremony without value\n- cases where the main validation need is broad invariant coverage rather than a consumer-facing contract"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- boundary under review\n- expected inputs and outputs\n- known downstream expectations\n- current validation surface"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- explicit contract assumptions\n- contract-oriented tests or checks\n- downstream impact notes\n- concise validation result"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. identify the boundary and its consumers\n2. describe the expected inputs, outputs, and failure behavior in bounded terms\n3. express the contract through tests, smoke summaries, or structured checks\n4. avoid overfitting to internals that consumers never observe\n5. run the contract checks and record what they do and do not prove\n6. report the contract surface that is now explicit and any remaining weak edges"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the contract should be visible and reviewable by another human or agent\n- validation should target the boundary surface, not only hidden internals\n- downstream assumptions should be named when they matter\n- interface changes should not be smuggled in without explicit note"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the contract is too vague to constrain behavior\n- validation covers a summary artifact but not the real consumer boundary\n- downstream compatibility assumptions remain implicit\n\n### Negative effects\n\n- an oversized contract can freeze useful internal evolution unnecessarily\n- weak contract definitions can create false confidence\n\n### Misuse patterns\n\n- calling any smoke test a contract test without boundary discipline\n- encoding internal implementation details into the boundary contract\n- widening the contract surface simply because a tool makes it easy\n\n### Detection signals\n\n- the supposed contract mostly references internals rather than observable inputs/outputs\n- downstream consumers are still surprised after the contract change\n- the validation surface does not actually exercise the real boundary\n\n### Mitigations\n\n- narrow the contract to what the consumer really observes\n- separate internal correctness tests from boundary stability tests\n- add downstream impact notes before changing the boundary"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the boundary and consumers were named explicitly\n- tests or checks target observable contract behavior\n- downstream impact was considered where relevant\n- the result states what the contract guarantees and what it does not\n- the contract surface remains narrower than invariant-oriented coverage techniques such as `AOA-T-0017`"
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the shape of the boundary (API, file contract, summary artifact, message queue, service wrapper)\n- the validation mechanism (unit, smoke, structured summary, contract suite)\n- how downstream consumers are documented\n\nWhat should stay invariant:\n- explicit contract framing\n- boundary-first validation discipline\n- visibility of downstream assumptions when relevant\n- concise statement of what is guaranteed"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version removes project-specific endpoints, service names, and operational topology while keeping the reusable boundary-design pattern."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-contract-boundary.md` for a small flow where one boundary contract is made explicit before refactor work proceeds.\nSee `examples/concrete-api-contract-boundary.md` for a more concrete public-safe API boundary example where consumer-visible payload guarantees stay stable through internal refactor."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/contract-test-design-checklist.md` for a minimal review pass covering real boundary visibility, downstream assumptions, and explicit contract guarantees."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped from boundary-validation needs around `abyss-stack`\n- extracted into first public reusable form in `aoa-techniques` on 2026-03-18"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- connect more explicitly to structured smoke-summary techniques\n- strengthen guidance on keeping contracts narrow\n- keep the boundary-contract role distinct from invariant-broadening patterns"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0016",
+      "name": "bounded-context-map",
+      "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reduce semantic confusion and misplaced changes by naming bounded contexts, clarifying their responsibilities, and making the handoff interfaces between them visible."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories with several domains, services, or subsystems that can blur together\n- situations where naming is overloaded or ambiguous\n- docs or scoping work that needs a compact boundary map before implementation widens the wrong area\n- agent-assisted work where semantic confusion would widen the context unnecessarily"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- tiny repositories with no meaningful subsystem ambiguity\n- changes that are fully local and already clearly bounded\n- situations where drawing context labels would only add ceremony without reducing confusion\n- broad architecture redesigns where the real need is deeper design work, not a bounded context map"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- target area, subsystem, or domain surface\n- current vocabulary and responsibilities\n- neighboring areas likely to be confused with the target\n- known ambiguous or overloaded terms"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- named bounded contexts or subsystem groupings\n- rough responsibility map\n- visible handoff or interface notes\n- ambiguity notes and recommended vocabulary"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. identify the target area and the words currently used to describe it\n2. separate responsibilities into bounded contexts or subsystem groupings\n3. name what belongs inside each context and what stays outside\n4. describe the handoff points, interfaces, or translation surfaces between contexts\n5. surface ambiguous terms and propose clearer language\n6. report how the map should constrain future changes or reviews"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- context boundaries should reduce semantic confusion rather than create taxonomy for its own sake\n- neighboring contexts should be named explicitly when they matter\n- handoff or translation points should be visible\n- the result should help a future reviewer scope docs or implementation work more safely"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- too many contexts are invented for a small problem\n- the map renames concepts without reducing ambiguity\n- interfaces remain muddy even after the map is drawn\n\n### Negative effects\n\n- over-structuring can slow small projects if no real confusion exists\n- premature context formalization can freeze evolving vocabulary too early\n- the map can become generic architecture formalism if it stops being tied to one concrete scoping problem\n\n### Misuse patterns\n\n- using context mapping as a substitute for real interface cleanup\n- declaring a DDD-style map without changing how reviews or changes are scoped\n- treating every folder boundary as a bounded context automatically\n- using the technique to justify architecture theater instead of one bounded ambiguity reduction pass\n\n### Detection signals\n\n- contributors still confuse neighboring areas after the map is written\n- the context names overlap or feel interchangeable\n- handoff points are still implicit or undocumented\n- reviewers start discussing taxonomy or diagram shape more than the actual scope boundary being protected\n\n### Mitigations\n\n- collapse weak or ceremonial contexts\n- tighten the vocabulary around observable responsibilities\n- add or clarify the interface notes between contexts\n- re-anchor the map in one concrete scoping decision instead of a broader architecture program"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the main ambiguity or vocabulary drift was reduced\n- contexts or subsystems were named with clearer responsibility boundaries\n- handoff or interface points were made visible\n- the result would help a future docs or implementation change stay better scoped"
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- whether the units are called bounded contexts, subsystems, domains, or responsibility zones\n- how formal the map needs to be\n- how vocabulary is recorded\n- where the interface notes live\n\nWhat should stay invariant:\n- visible responsibility boundaries\n- reduction of semantic confusion\n- explicit handoff or interface notes where relevant\n- usefulness for future docs or change scoping"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version strips project-specific naming and local architecture layout while preserving the bounded-context mapping pattern in a reusable form."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-context-boundary-map.md` for a small example where two neighboring contexts are separated and their handoff is named explicitly.\nSee `examples/concrete-infra-context-map.md` for a more concrete public-safe infra-repository example where scoping and handoff naming reduce drift without turning into generic architecture taxonomy."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/bounded-context-map-checklist.md` for a minimal review pass covering responsibility clarity, ambiguity reduction, and visible handoff notes."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped from semantic-boundary needs around `atm10-agent`\n- extracted into first public reusable form in `aoa-techniques` on 2026-03-18"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- connect more explicitly to ubiquitous-language guidance\n- record stronger examples of handoff notes"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0017",
+      "name": "property-invariants",
+      "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Reduce weak example-only validation by expressing stable system or domain truths as invariant-oriented checks that should hold across many cases."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- rules that should hold across a wide input or state space\n- situations where example-based tests feel too narrow\n- systems with conservation, monotonicity, idempotency, structural, or safety invariants\n- agent-assisted validation work where the invariant can act as a compact spec\n- cases where the main problem is broader coverage around one known domain truth rather than making a consumer-visible boundary explicit"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- presentation-only behavior where concrete examples are clearer\n- situations where no meaningful invariant is yet understood\n- systems where the main problem is unknown requirements rather than coverage breadth\n- named API, file, or summary boundaries where `AOA-T-0015 contract-test-design` is the clearer fit"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- target rule or system truth\n- current examples or tests\n- candidate input space or generators\n- known edge cases"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- explicit invariant statements\n- property-oriented tests or checks\n- notes on assumptions behind the generators or input space\n- concise validation result"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. identify what must remain true across many cases\n2. separate strong invariants from weak hopes or vague expectations\n3. express those invariants as property-oriented tests or repeated checks\n4. keep the generator or input strategy bounded and reviewable\n5. run the checks and record what properties now constrain behavior\n6. report what the properties do and do not prove"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- each property should express a meaningful invariant\n- the technique should broaden coverage beyond a tiny fixed example set\n- generator assumptions should remain understandable\n- the resulting checks should help future regressions surface earlier"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the property is too weak to constrain real behavior\n- the generator range never reaches meaningful stress points\n- the checks are random-looking but semantically shallow\n\n### Negative effects\n\n- overly complex generator logic can hide rather than clarify the domain truth\n- large noisy failing cases can make debugging slower if the invariant was poorly chosen\n\n### Misuse patterns\n\n- writing vague properties like \u201cshould not fail\u201d and calling them invariants\n- confusing random data generation with meaningful property testing\n- using property checks where a few concrete examples would communicate better\n\n### Detection signals\n\n- the property could pass for many broken implementations\n- no one can explain why the invariant matters to the domain\n- the generated space is large but the signal gained is small\n\n### Mitigations\n\n- rewrite the property around a stronger domain truth\n- narrow the generator to meaningful ranges first\n- combine property checks with a few clear examples for readability"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the property expresses a meaningful invariant rather than a vague expectation\n- the resulting check broadens coverage beyond a small fixed example set\n- generator or input assumptions are understandable enough to review\n- the final report states what the invariant actually constrains"
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- test framework and generator tooling\n- the shape of the input space\n- whether the invariant is implemented as a formal property test or a repeated structured check\n- the strength of shrinking or failure reporting tools\n\nWhat should stay invariant:\n- meaningful invariant framing\n- broader coverage than handpicked examples alone\n- explicit generator or input assumptions\n- honest statement of what the property proves\n\nRelationship to adjacent techniques:\n- unlike `AOA-T-0015 contract-test-design`, this technique is about constraining one meaningful invariant across many cases after the boundary is already understood, not about defining a consumer-visible contract\n- unlike `AOA-T-0007 signal-first-gate-promotion`, this technique strengthens the check surface itself rather than governing how an observed signal becomes strict"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version removes project-specific data shapes and tool details while preserving the reusable invariant-oriented validation pattern."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-invariant-check.md` for a small flow where one stable rule is expressed as an invariant instead of a tiny fixed example list.\nSee `examples/concrete-config-invariant-check.md` for a more concrete public-safe config-validation example where one meaningful invariant is checked across bounded configuration cases."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/property-invariants-checklist.md` for a minimal review pass covering invariant strength, bounded input assumptions, and honest reporting."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped from invariant-driven testing needs around `atm10-agent`\n- extracted into first public reusable form in `aoa-techniques` on 2026-03-18"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen guidance on choosing strong invariants\n- connect more explicitly to signal-first promotion of checks"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0018",
+      "name": "markdown-technique-section-lift",
+      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surface so retrieval and review can target one bounded section while the authored bundle remains the source of meaning."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories with stable technique or pattern documents that already use recurring top-level headings\n- generated knowledge or retrieval layers that need section-level routing without inventing new authored section files\n- documentation systems where another human or agent should be able to jump directly to `Intent`, `Contracts`, `Risks`, or `Validation`\n- KAG-oriented work that needs bounded section lookup before any graph or section-ID program exists\n- cases where a derived section surface should stay subordinate to the bundle's authored prose instead of becoming a metadata-spine replacement for it"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- repos where section headings are still unstable or heavily experimental\n- systems that want section-level authorship to move out of the markdown bundle into separate files or metadata\n- cases where the real need is graph semantics, ranking, or multi-hop reasoning rather than bounded section lift\n- workflows that would treat the manifest as the new editable source of truth\n- situations where frontmatter metadata already answers the question and the section lift would only duplicate that routing layer"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one authoritative `TECHNIQUE.md` bundle\n- a small stable set of top-level section headings worth lifting\n- one derived output surface such as a section manifest\n- a rebuild path that can regenerate the derived output from markdown\n- an explicit decision to keep meaning in the markdown bundle rather than in metadata or section IDs"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- derived section-level units with preserved order\n- explicit section headings that remain traceable to the source bundle\n- section lookup surface for review or retrieval\n- preserved markdown authority over section meaning\n- bounded derived lookup that does not change the bundle into a metadata-first contract"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep the technique bundle as the only authored source for section meaning.\n2. Decide which recurring top-level sections are stable enough to lift.\n3. Extract only those sections into a derived manifest or equivalent lookup surface.\n4. Preserve the original section order and heading text instead of inventing a second parallel structure.\n5. Rebuild the derived output whenever the source bundle changes.\n6. Route readers or tooling back to the source markdown path when they need the full meaning of a lifted section.\n7. Treat any metadata or catalog projection as routing help only, not as the place where section meaning now lives."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the markdown bundle remains the authoritative source of section meaning\n- lifted sections stay bounded to an explicit stable scope rather than every possible heading\n- derived output preserves section order instead of reinterpreting the document as an unordered field set\n- consumers can map a lifted section back to the source bundle and heading\n- the technique does not require section IDs, graph edges, or authored section files to work\n- the technique does not collapse into metadata-spine semantics or replace markdown authority with catalog fields"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- unstable or project-shaped headings are lifted too early, so the derived surface changes shape faster than consumers can trust it\n- maintainers start editing the derived manifest instead of the bundle markdown and break source-of-truth boundaries\n- the lift scope silently widens until the derived output looks like a shadow schema rather than a bounded retrieval surface\n\n### Negative effects\n\n- section-level retrieval can create false confidence that the full technique is understood when a reader has only consumed one bounded section\n- a derived manifest can make documents feel more structured while hiding that some meaning still depends on surrounding prose\n- teams can over-invest in extraction polish before proving that section-level lookup materially improves review or reuse\n\n### Misuse patterns\n\n- treating section lift as a reason to create a new `kag` domain or a larger graph program\n- lifting headings that are too local, temporary, or donor-shaped to be reusable\n- flattening full section meaning into metadata or machine-first fields because a manifest already exists\n\n### Detection signals\n\n- reviewers fix the manifest directly instead of fixing `TECHNIQUE.md`\n- consumers rely on section snippets but cannot explain how those sections fit into the full bundle contract\n- new headings keep appearing only to satisfy extraction rather than to improve the authored document\n- the lift starts demanding section IDs, graph semantics, or schema expansion to stay usable\n\n### Mitigations\n\n- keep the lift scope narrow and explicit around stable recurring headings only\n- route all meaning changes back through the source bundle and regenerate derived outputs afterward\n- drop weak or unstable section targets before adding new derived behavior\n- stop at bounded lookup when the next request would require graph behavior rather than better markdown structure"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- lifted sections come from one authoritative `TECHNIQUE.md` bundle\n- the derived output preserves the expected section order\n- the selected headings are stable and explicitly bounded\n- consumers can route back from the lifted output to the source bundle and heading\n- no new authored source of truth was introduced beyond markdown plus derived artifacts\n\nSee `checks/section-lift-checklist.md` and `examples/minimal-section-lift.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact stable heading set\n- the derived output filename or manifest format\n- whether lifted sections are consumed by retrieval, review tooling, or human navigation surfaces\n- the rebuild command used to regenerate the derived output\n- how much metadata support is useful before the lift starts duplicating the catalog layer\n\nWhat should stay invariant:\n- markdown remains authoritative\n- section lift stays derived-only\n- lift scope is explicit and bounded\n- consumers can still route back to the source bundle\n- metadata can support lookup, but it should not become the semantic home for section meaning\n\nThis technique does not require a new `kag` domain. Keep it inside the existing domain that already owns the markdown source vocabulary.\nThe derived surface may sit beside a metadata spine, but it should never absorb that spine's job or turn the bundle into a frontmatter-first contract."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps the reusable lift contract and strips repo-specific implementation trivia such as exact helper names, local scripts, or any implication that a graph engine already exists. The point is bounded section lift from markdown, not a new platform."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-section-lift.md` for a small `TECHNIQUE.md` excerpt and the corresponding derived section-manifest output."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/section-lift-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while the section-manifest layer was introduced as a derived source-lift surface\n- extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen second-context evidence once another markdown-first repository uses the same bounded section-lift discipline\n- keep the current derived lookup subordinate to authored prose even when the catalog or selection layer becomes more convenient\n- add review guidance for when a section is too unstable to keep in the lifted scope\n- keep section IDs and richer graph semantics deferred unless bounded lookup stops being enough"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0019",
+      "name": "frontmatter-metadata-spine",
+      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Use shallow frontmatter and derived catalog outputs as a stable metadata spine for bundle identity, routing, and review posture without pretending that frontmatter already contains the technique's full knowledge."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- markdown-first repositories that need a small machine-readable layer for lookup or routing\n- corpora where domain, status, summary, evidence handles, and direct relations should be visible without opening every bundle first\n- generated catalog or selection surfaces that must stay derived from authoritative markdown\n- KAG-oriented work that needs bundle-level metadata handles before section or provenance consumers go deeper"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- systems that want full section meaning, rationale, or caution language to live in metadata\n- repos where frontmatter is still unstable or overloaded with project-local details\n- cases where the next step is graph behavior, section IDs, schema expansion, or a metadata-first source of truth rather than bounded routing metadata\n- workflows that would hand-edit the derived catalog instead of regenerating it"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- bounded frontmatter on each authoritative bundle\n- a validator or generator that can project frontmatter into a derived catalog\n- current routing questions such as lookup by status, domain, review posture, or direct adjacency\n- explicit agreement that markdown sections still hold the real technique meaning"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- stable bundle-level metadata handles\n- derived catalog entries for lookup and navigation\n- explicit separation between metadata and section meaning\n- reusable routing surface for later bounded consumers"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep only bundle identity, review posture, summary, evidence handles, and direct adjacency in frontmatter.\n2. Generate a catalog from that frontmatter rather than maintaining a second hand-authored metadata source.\n3. Use the catalog for bundle lookup, status routing, or direct-edge hints.\n4. Route any question about section meaning, caution language, or provenance argument back to markdown sections and note files.\n5. Add new metadata only when the routing problem cannot be solved by the current bounded spine and markdown authority still remains primary.\n6. Rebuild the catalog whenever source frontmatter changes."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- frontmatter stays shallow and bounded\n- the catalog remains fully derived from authoritative markdown-frontmatter\n- metadata supports routing and lookup, not full knowledge replacement\n- caution language, section meaning, and provenance interpretation remain in markdown\n- the technique does not require schema expansion, a new `kag` domain, or a replacement for markdown authority"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- frontmatter widens until it starts carrying section meaning or policy semantics that belong in markdown\n- maintainers edit the derived catalog directly and break metadata-source parity\n- routing questions pile up faster than the spine can answer, but the response is to add fields instead of narrowing the metadata problem\n\n### Negative effects\n\n- a clean catalog can create false confidence that the corpus is fully machine-readable when important meaning still lives only in authored markdown\n- teams can start optimizing metadata shape before proving that the current catalog actually helps navigation or review\n- shallow metadata can hide ambiguity if consumers forget to read the underlying technique or evidence notes\n\n### Misuse patterns\n\n- treating the catalog as a replacement for reading `TECHNIQUE.md`\n- adding new fields because a future KAG layer might want them, rather than because current bounded routing needs them\n- moving caution, relation rationale, or section payloads into frontmatter for convenience\n\n### Detection signals\n\n- proposed metadata additions mostly duplicate section prose or note content\n- contributors ask to fix generated catalog data without touching source frontmatter\n- the same routing question still requires opening markdown, but the response is more metadata churn rather than a better bundle or guide\n- consumers interpret the metadata spine as a graph or policy surface instead of a bounded routing layer\n\n### Mitigations\n\n- keep metadata changes tied to one concrete routing problem at a time\n- regenerate and validate derived catalog outputs instead of editing them by hand\n- move meaning questions back to markdown bundles and notes before adding fields\n- stop widening the spine when the next request is really for section lift, provenance lift, or relation review"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- bundle identity and routing fields are visible in frontmatter\n- derived catalog entries match source frontmatter\n- the catalog helps answer bounded routing questions such as status, domain, or direct adjacency\n- questions about deeper meaning still route back to markdown sections or notes\n- no schema or frontmatter widening was needed beyond the bounded metadata spine\n\nSee `checks/metadata-spine-checklist.md` and `examples/frontmatter-to-catalog-entry.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact bounded field set used for routing\n- the catalog filename or projection format\n- which repo-level navigation surfaces consume the metadata spine\n- how often the catalog is rebuilt\n\nWhat should stay invariant:\n- metadata remains shallow\n- the catalog is derived, not hand-maintained\n- markdown sections still hold the real technique meaning\n- the spine is justified by current routing value, not by future graph ambition\n\nDo not widen the technique into richer schema just because later KAG work exists. The point is a bounded metadata spine, not metadata-first authorship or a replacement for markdown authority."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version generalizes the current metadata-spine contract and strips repo-specific implementation details that do not affect the reusable pattern. It does not claim that a graph platform or richer schema already exists."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/frontmatter-to-catalog-entry.md` for a small frontmatter block and the corresponding derived catalog entry."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/metadata-spine-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while the markdown-frontmatter-v2 catalog layer became the repo's metadata spine\n- extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen second-context evidence once another markdown-first corpus adopts the same bounded metadata spine\n- clarify when a routing problem should move to section lift or provenance lift instead of widening frontmatter\n- keep schema/frontmatter expansion deferred until shallow metadata stops being enough"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0020",
+      "name": "evidence-note-provenance-lift",
+      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Lift typed evidence notes into a bounded provenance surface so readers and tooling can find supporting origin, transfer, or review context through explicit note kind and note path handles without collapsing notes into one merged graph."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories where technique bundles already point to typed supporting notes\n- provenance questions such as origin proof, second-context evidence, readiness review, canonical adverse-effects review, or external import review\n- generated entrypoints that should expose note kinds and paths without replacing the note body\n- KAG-oriented work that needs note-level handles before any cross-note graph program exists"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- systems that have no stable note kinds or no explicit note paths\n- cases where the real need is note IDs, cross-note graph semantics, or machine-extracted proof objects\n- repositories that want to flatten all provenance meaning into frontmatter\n- workflows where maintainers would rather edit generated note manifests than update the notes themselves"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- typed evidence handles such as `evidence.kind` and `evidence.path`\n- bounded note files under `notes/`\n- recurring note shapes where they already exist\n- one derived provenance surface such as an evidence-note manifest"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- bounded provenance handles for supporting notes\n- derived note manifest entries\n- preserved note-level authorship and context\n- reusable note-kind map for origin, transfer, readiness, or import review surfaces"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep the supporting notes as authored markdown under `notes/`.\n2. Point to those notes from bundle metadata through typed evidence handles.\n3. Lift the note layer into a derived manifest that preserves note kind, path, and bounded content shape.\n4. Keep opaque notes opaque when they do not share a reusable typed structure.\n5. Use the derived manifest for provenance lookup, not for replacing the note body.\n6. Route interpretation and public-safety reasoning back to the underlying note when meaning matters."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- note paths and note kinds remain explicit\n- note meaning stays in authored markdown\n- derived provenance output preserves note-level context rather than flattening all notes into one schema\n- supporting notes stay bounded to reviewable kinds such as origin, second context, readiness, canonical adverse-effects review, or external review\n- the technique does not require note IDs, graph semantics, or a new source of truth"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- note kinds drift until the manifest can no longer tell which provenance kind a note is meant to play\n- flattening pressure strips interpretation or review nuance out of the note body\n- contributors start treating the manifest entry as the note itself\n\n### Negative effects\n\n- a clean provenance surface can hide how much judgment still lives in the authored note text\n- repeated typed notes can tempt maintainers into premature rigidity or over-schemafication\n- provenance lookup can feel complete even when only one origin note exists and second-context evidence is still absent\n\n### Misuse patterns\n\n- turning note kinds into graph nodes with stable IDs before the note layer proves it needs them\n- extracting verdicts, scoring, or relation rationale from notes just because a manifest exists\n- using opaque support notes as a reason to widen note metadata instead of narrowing the review question\n\n### Detection signals\n\n- contributors ask for note-meaning changes by editing the manifest rather than the note body\n- note kinds multiply faster than reviewers can explain their distinct purposes\n- flattened manifest fields lose the argument or interpretation that made the note trustworthy\n- provenance questions now depend on cross-note graph logic rather than on bounded note lookup\n\n### Mitigations\n\n- keep note kinds small and review-shaped\n- preserve authored note text as the place where interpretation and public-safety reasoning live\n- add new note kinds only when one current kind is clearly overloaded\n- stop at bounded provenance handles when the next request is really for a graph or scoring layer"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- bundles point to supporting notes through explicit `evidence.kind` and `evidence.path`\n- note kinds remain understandable and bounded\n- the derived provenance surface can be rebuilt from note markdown\n- readers can use the manifest to find the right supporting note without losing note-level context\n- note meaning still routes back to authored markdown instead of flattened metadata\n\nSee `checks/evidence-note-provenance-checklist.md` and `examples/evidence-note-to-manifest.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- which note kinds are present\n- whether some notes are fully typed or intentionally opaque\n- the manifest format used for provenance lookup\n- the exact note filename conventions\n\nWhat should stay invariant:\n- note kinds remain explicit\n- notes remain authored markdown\n- manifest output stays derived and bounded\n- provenance lift does not become a note graph or proof-object system\n\nThis technique sits downstream from a bounded metadata spine. If note lookup stops being enough and the next request is graph behavior, that is a different wave."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps the reusable provenance split and removes any implication that note manifests already provide a full trust engine. The pattern is about bounded lookup into supporting markdown notes."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/evidence-note-to-manifest.md` for a small evidence array plus supporting note surface and the corresponding derived manifest excerpt."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/evidence-note-provenance-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while the evidence-note manifest layer was introduced as a bounded provenance surface\n- extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen second-context evidence once the same bounded provenance pattern appears in another markdown-first corpus\n- clarify when a new note kind is warranted versus when an existing kind should stay broader\n- keep note IDs, cross-note graphs, and flattened trust semantics deferred"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0021",
+      "name": "bounded-relation-lift-for-kag",
+      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Use a small typed set of direct bundle relations as bounded edge hints for generated consumers without pretending that those edges already carry rationale, weighting, or multi-hop graph truth."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- corpora that already have explicit direct relations between bundles\n- navigation or retrieval surfaces that need one-step adjacency hints\n- KAG-oriented work that wants future edge inputs without jumping straight to graph behavior\n- review paths where relation vocabulary should stay small and human-readable\n- generated readers that only need direct typed hints, not explanation layers or inferred traversal"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- systems that need relation rationale, weighted edges, or multi-hop traversal policy right now\n- repositories where direct relations are still too noisy or unstable to trust as bounded adjacency hints\n- cases where the real problem is semantic ambiguity between techniques, which should be handled by review rather than by more edges\n- workflows that would use current relations as transitive truth or graph-engine inputs by default\n- consumers that want a rationale layer, graph semantics, or multi-hop inference from the relation field itself"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- bounded typed `relations` in frontmatter\n- direct target technique IDs\n- one or more current relation consumers such as catalog or selection surfaces\n- explicit agreement that relation explanation, if needed, still lives in markdown and review docs rather than in the relation field"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- bounded direct-edge hints\n- derived consumers that can show nearby techniques\n- reusable small relation vocabulary\n- future-ready edge surface that remains human-reviewable\n- no implied rationale, weighting, or transitive graph behavior"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep the relation vocabulary intentionally small and direct.\n2. Record only immediate adjacency that helps navigation or bounded review.\n3. Project those edges into derived consumers such as catalogs or selection surfaces.\n4. Use relations for one-step inspection hints rather than multi-hop inference or graph traversal.\n5. Keep the explanation for why an edge exists in markdown bundles or review docs, not inside the relation field.\n6. Refuse to widen the edge layer unless current direct-edge use has clearly stopped being enough."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- relations stay direct and typed\n- edge meaning is bounded to one-step adjacency hints\n- relation rationale remains outside frontmatter and outside the relation field\n- derived consumers remain navigation aids rather than graph engines\n- the technique does not require new relation types, weighting, or a new `kag` domain"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- relations multiply until the signal-to-noise ratio drops and adjacency hints stop helping\n- consumers infer transitive truth or ranking from edges that were only meant as direct hints\n- teams widen relation vocabulary to patch unclear technique boundaries instead of fixing the underlying docs\n\n### Negative effects\n\n- even a bounded edge layer can make the repository feel more graph-ready than it really is\n- relation consumers can pull attention away from reading the bundle itself\n- small relation vocabularies can over-simplify why two techniques are near each other\n\n### Misuse patterns\n\n- treating `relations` as a substitute for semantic review\n- adding rationale, scoring, or traversal rules because one navigation surface is already helpful\n- using direct edges as a reason to open graph/export programs before current use is proven\n\n### Detection signals\n\n- contributors debate relation semantics more than they improve the underlying bundle boundaries\n- one-step edges are no longer enough and consumers keep asking for inferred hops or ranking\n- relation explanations are missing from markdown, but people still trust the edge layer to answer \"why\"\n- new relation types appear mainly to patch wording drift or bundle overlap\n\n### Mitigations\n\n- keep the relation set small and review-shaped\n- move \"why does this edge exist?\" questions back to markdown bundles and semantic review docs\n- remove weak or noisy edges before adding new types\n- stop at bounded adjacency when the next request is really for a separate graph or review layer"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- each relation points to a real direct target\n- current consumers use the edges for one-step navigation rather than inference\n- the relation vocabulary remains small and bounded\n- reviewers can still find edge rationale in markdown or review surfaces\n- no new graph behavior was needed to make the relation layer useful\n\nSee `checks/relation-lift-checklist.md` and `examples/direct-relation-to-selection-hint.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact set of direct relation consumers\n- how adjacency is displayed in generated surfaces\n- which small relation vocabulary best fits the corpus\n- how often relations are reviewed for noise or drift\n\nWhat should stay invariant:\n- edges remain direct\n- relation types remain bounded\n- rationale stays in markdown or review docs\n- the edge layer does not become graph semantics by accident\n- no multi-hop inference is introduced by the derived consumer\n- the relation field never becomes a rationale store\n\nThis technique sits downstream from a bounded metadata spine. If the next need is graph traversal, relation weighting, exports, or a rationale layer, that is a later platform wave, not this technique."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps the direct-edge contract and removes any implication that the repository already has a graph platform. The useful pattern is bounded adjacency, not graph theater."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/direct-relation-to-selection-hint.md` for a small relation block and the derived adjacency shown in a selection surface."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/relation-lift-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while direct relation consumers became useful through catalog and selection surfaces\n- extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen second-context evidence once another markdown-first corpus uses the same bounded relation layer\n- add clearer relation-review guidance before widening the vocabulary\n- keep relation rationale, weighting, graph semantics, and multi-hop behavior deferred"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0022",
+      "name": "risk-and-negative-effect-lift",
+      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Lift richer `Risks` language into bounded caution-oriented lookup and reuse so reviewers and later derived surfaces can find failure, harm, misuse, detection, and mitigation signals without turning caution into metadata, scoring, generated policy, or a new source of truth."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories where `TECHNIQUE.md` already uses the fixed five-part `Risks` shape\n- review or reuse flows that need to inspect how a technique can fail, mislead, or quietly make a system worse\n- markdown-first source-lift work that wants bounded caution lookup without widening schema\n- cases where caution should stay attached to the technique bundle instead of becoming a separate policy program\n- corpus-level review paths where a canonical adverse-effects review note can supplement the same markdown-first caution source without replacing it"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- systems that need a threat model, incident taxonomy, or policy-scoring framework rather than bounded technique caution\n- repos that do not yet have stable `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations` language in markdown\n- workflows that want shadow metadata, caution IDs, generated caution outputs, or a new `kag` domain\n- workflows that expect the lifted caution surface to become authoritative over the bundle's authored `Risks`\n- cases where reviewers would treat a lifted caution view as more authoritative than the underlying `TECHNIQUE.md`"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one authoritative `TECHNIQUE.md` bundle with a richer `## Risks` section\n- a bounded caution question such as failure review, misuse review, or early-stop review\n- a human or generated reader surface that can point back to the source markdown\n- explicit agreement that caution meaning still lives in authored markdown"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- bounded caution lookup by technique\n- clearer review access to the five shadow-language distinctions\n- preserved markdown authority over caution meaning\n- reusable source-lift pattern for later derived consumers that still stay bounded\n- canonical-only adverse-effects review notes when one repo needs a separate caution watch surface for its default techniques\n- no generated caution policy layer, scoring surface, or metadata-only replacement for `Risks`"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep authored `## Risks` as the primary caution source for the bundle.\n2. Preserve the fixed five-part split between `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations`.\n3. Use those subsection names for bounded caution lookup, review prompts, or later derived read surfaces.\n4. Route interpretation and policy judgment back to the full markdown section when meaning matters.\n5. Keep any derived caution usage rebuildable from the markdown bundle rather than hand-maintained elsewhere.\n6. Stop and narrow the request if the next step starts asking for shadow metadata, scoring, or generated caution outputs.\n7. Treat any canonical adverse-effects review note as a supplement to `Risks`, not as a new policy source."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- `TECHNIQUE.md` `Risks` remains the primary caution source\n- the five shadow-language distinctions stay explicit and bounded\n- caution lift stays derived and source-lift oriented rather than metadata-first\n- the technique does not require shadow metadata, caution IDs, generated caution outputs, or a new `kag` domain\n- no new source of truth is introduced beyond markdown bundles and derived artifacts\n- any canonical-only adverse-effects review note remains a supplement over the same markdown-first caution source\n- the technique does not turn caution into scoring, generated policy, or a metadata replacement for `Risks`"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- reviewers can mistake the presence of five caution subsections for proof that the technique's shadow is already fully understood\n- a bounded caution view can drift into a pseudo-schema if teams start optimizing the lifted representation instead of the markdown source\n- the technique can fail if later consumers treat caution lookup as a permission to skip the rest of the bundle contract\n\n### Negative effects\n\n- richer caution language can make techniques feel heavier to author even when only a small bounded warning set is needed\n- a reusable lift pattern can attract premature requests for scoring, policy, or machine-readable caution metadata\n- caution lookup can over-focus readers on risk language and hide the need to re-check intent, contracts, or validation around it\n\n### Misuse patterns\n\n- treating the technique as a reason to add shadow metadata, caution IDs, or generated caution outputs now\n- using the five caution labels as a generic policy template instead of as bounded markdown review language\n- widening the pattern into a new domain or graph program because later KAG work exists elsewhere in the repo\n\n### Detection signals\n\n- contributors propose caution fields in frontmatter or new generated caution artifacts instead of improving `TECHNIQUE.md`\n- a review request asks for scores, enforcement tiers, or policy routing rather than bounded lookup into authored caution language\n- the lifted caution usage no longer points readers back to the source markdown\n- the same caution question cannot be answered without inventing metadata that the current markdown-first contract never claimed to provide\n\n### Mitigations\n\n- keep the five-part caution split tied to authored markdown and rebuild any derived use from that source\n- reject requests that would turn caution into scoring, IDs, or policy metadata in this wave\n- route deeper interpretation back to the full technique bundle and its validation context\n- open a later wave only when markdown-first caution lookup clearly stops being enough"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the source bundle keeps `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, and `Mitigations` inside `## Risks`\n- caution lookup still routes back to the authored markdown section\n- no shadow metadata, caution IDs, generated caution outputs, or new domain were required\n- the caution lift remains bounded to technique-level review and reuse questions\n- the source bundle stays authoritative even when a derived caution-oriented read surface exists\n\nSee `checks/caution-lift-checklist.md` and `examples/minimal-risk-and-negative-effect-lift.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- which technique families most need explicit caution lookup\n- whether the bounded consumer is a review checklist, retrieval layer, or another reader-facing aid\n- how much prose each caution subsection needs\n- which downstream source-lift surfaces later point readers back to `Risks`\n\nWhat should stay invariant:\n- markdown stays authoritative\n- the five caution distinctions remain explicit\n- caution lift stays bounded and review-shaped\n- the pattern does not turn into a machine-readable caution program\n\nThis technique is a markdown-first lift over existing `Risks`, not a new shadow platform. A canonical-only adverse-effects review note can supplement the same contract for already-canonical bundles, but generated caution outputs, policy scoring, and metadata layers remain deferred."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps the reusable caution-lift contract while stripping repo-local implementation trivia and any suggestion that a scoring or policy engine already exists. It is not a generated caution-output contract, not a metadata program, and not a new domain."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-risk-and-negative-effect-lift.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/caution-lift-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while the repo's richer `Risks` contract, shadow guides, and validator enforcement converged into a stable markdown-first caution layer\n- extracted into first public reusable form on 2026-03-19 as the first bounded shadow/caution technique in the existing `docs` domain"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen second-context evidence once another markdown-first corpus reuses the same bounded caution-lift split\n- clarify when the existing canonical adverse-effects review supplement is enough and when a corpus should still stay with `Risks` alone\n- keep caution lookup bounded to review and reuse questions rather than letting it become a policy or scoring surface\n- keep shadow metadata, generated caution outputs, and scoring layers deferred unless bounded caution lookup stops being enough"
+        }
+      ]
+    }
+  ]
+}

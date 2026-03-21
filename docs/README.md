@@ -34,6 +34,7 @@ Choose the path that matches your question:
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
   - [Technique Sections](TECHNIQUE_SECTIONS.md)
+  - [`../generated/technique_sections.full.json`](../generated/technique_sections.full.json)
   - [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
   - [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
   - [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
@@ -81,6 +82,8 @@ These are reader-facing navigation artifacts derived from the current KAG/source
 
 - [Technique Sections](TECHNIQUE_SECTIONS.md)
   - use when you need one heading-first router over the first 10 lifted `TECHNIQUE.md` sections
+- [`../generated/technique_sections.full.json`](../generated/technique_sections.full.json)
+  - use when a local runtime needs exact source-owned section payloads for bounded expand-time reads
 - [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
   - use when you need one bounded checklist inventory by domain and technique
 - [Technique Examples](TECHNIQUE_EXAMPLES.md)
@@ -247,6 +250,7 @@ These are outside `docs/` but matter when navigating the repo:
 
 - Prefer generated reader surfaces when the question is "what should I inspect next?"
 - Prefer `TECHNIQUE_SECTIONS.md` when the question is "which published techniques expose this lifted section heading?"
+- Prefer `../generated/technique_sections.full.json` when the question is "which exact technique section should I expand next?"
 - Prefer `TECHNIQUE_CHECKLISTS.md` when the question is "which technique already publishes a reusable checklist?"
 - Prefer `TECHNIQUE_EXAMPLES.md` when the question is "which technique already has a reusable example surface?"
 - Prefer `EVIDENCE_NOTE_SURFACES.md` when the question is "which note kind or note shape should I inspect next?"
@@ -254,3 +258,7 @@ These are outside `docs/` but matter when navigating the repo:
 - Prefer `SHADOW_PATTERNS.md` when the question is "where can this canonical technique fail quietly or create false confidence?"
 - Prefer authored guides when the question is "what does this repo mean by this rule or boundary?"
 - Prefer semantic-review pilots when the question is "are these nearby techniques still meaningfully distinct?"
+
+The current runtime path is:
+
+`pick -> inspect -> expand -> object use`

@@ -54,6 +54,7 @@ REQUIRED_STAGE1_FILES = (
     "schemas/index-entry.schema.json",
     "scripts/build_catalog.py",
     "scripts/build_capsules.py",
+    "scripts/build_sections.py",
     "scripts/build_section_manifest.py",
     "scripts/build_checklist_manifest.py",
     "scripts/build_example_manifest.py",
@@ -66,6 +67,7 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_catalog.min.json",
     "generated/technique_capsules.json",
     "generated/technique_capsules.min.json",
+    "generated/technique_sections.full.json",
     "generated/technique_section_manifest.json",
     "generated/technique_section_manifest.min.json",
     "generated/technique_checklist_manifest.json",
@@ -424,6 +426,28 @@ EVIDENCE_KIND_BY_NAME = {
 ADVERSE_EFFECTS_REVIEW_PATH = "notes/adverse-effects-review.md"
 SECTION_MANIFEST_VERSION = 1
 SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
+SECTION_SURFACE_VERSION = 1
+SECTION_SURFACE_SOURCE_OF_TRUTH = {
+    "technique_markdown": "techniques/*/*/TECHNIQUE.md",
+    "sections": list(REQUIRED_SECTIONS),
+}
+SECTION_KEY_BY_HEADING = {
+    "Intent": "intent",
+    "When to use": "when_to_use",
+    "When not to use": "when_not_to_use",
+    "Inputs": "inputs",
+    "Outputs": "outputs",
+    "Core procedure": "core_procedure",
+    "Contracts": "contracts",
+    "Risks": "risks",
+    "Validation": "validation",
+    "Adaptation notes": "adaptation_notes",
+    "Public sanitization notes": "public_sanitization_notes",
+    "Example": "example",
+    "Checks": "checks",
+    "Promotion history": "promotion_history",
+    "Future evolution": "future_evolution",
+}
 CAPSULE_VERSION = 1
 CAPSULE_SOURCE_OF_TRUTH = "frontmatter-summary+markdown-technique-capsules-v1"
 CAPSULE_MIN_FIELDS = (
@@ -1426,35 +1450,22 @@ def validate_sections(body: str, technique_path: Path) -> tuple[TechniqueSection
     sections = parse_sections(body)
     present_sections = [section.heading for section in sections]
     for required_section in REQUIRED_SECTIONS:
-        if required_section not in present_sections:
+        occurrence_count = present_sections.count(required_section)
+        if occurrence_count == 0:
             fail(f"{technique_path}: missing required section '## {required_section}'")
+        if occurrence_count > 1:
+            fail(f"{technique_path}: required section '## {required_section}' must appear exactly once")
 
-    lift_positions: list[int] = []
-    for heading in SECTION_LIFT_HEADINGS:
-        matches = [index for index, section in enumerate(sections) if section.heading == heading]
-        if len(matches) != 1:
-            fail(
-                f"{technique_path}: lift section '## {heading}' must appear exactly once"
-            )
-        lift_positions.extend(matches)
+    unexpected_sections = [heading for heading in present_sections if heading not in REQUIRED_SECTIONS]
+    if unexpected_sections:
+        unexpected = ", ".join(f"'## {heading}'" for heading in unexpected_sections)
+        fail(f"{technique_path}: unexpected top-level sections found [{unexpected}]")
 
-    if lift_positions != sorted(lift_positions):
-        actual_lift_order = [
-            section.heading for section in sections if section.heading in SECTION_LIFT_HEADINGS
-        ]
-        expected = ", ".join(f"'## {heading}'" for heading in SECTION_LIFT_HEADINGS)
-        actual = ", ".join(f"'## {heading}'" for heading in actual_lift_order)
+    if tuple(present_sections) != REQUIRED_SECTIONS:
+        expected = ", ".join(f"'## {heading}'" for heading in REQUIRED_SECTIONS)
+        actual = ", ".join(f"'## {heading}'" for heading in present_sections) or "(none)"
         fail(
-            f"{technique_path}: lift sections must stay in standard order [{expected}], "
-            f"found [{actual}]"
-        )
-
-    actual_lift_order = [sections[index].heading for index in lift_positions]
-    if tuple(actual_lift_order) != SECTION_LIFT_HEADINGS:
-        expected = ", ".join(f"'## {heading}'" for heading in SECTION_LIFT_HEADINGS)
-        actual = ", ".join(f"'## {heading}'" for heading in actual_lift_order)
-        fail(
-            f"{technique_path}: lift sections must stay in standard order [{expected}], "
+            f"{technique_path}: top-level sections must stay in standard order [{expected}], "
             f"found [{actual}]"
         )
 
@@ -3200,6 +3211,23 @@ def full_section_manifest_entry(repo_root: Path, record: TechniqueRecord) -> dic
     }
 
 
+def full_section_surface_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any]:
+    sections_by_heading = {section.heading: section for section in record.sections}
+    return {
+        "id": record.id,
+        "name": record.name,
+        "technique_path": record.technique_path.relative_to(repo_root).as_posix(),
+        "sections": [
+            {
+                "key": SECTION_KEY_BY_HEADING[heading],
+                "heading": heading,
+                "content_markdown": sections_by_heading[heading].markdown,
+            }
+            for heading in REQUIRED_SECTIONS
+        ],
+    }
+
+
 def project_min_section_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
     return {
         "manifest_version": full_manifest["manifest_version"],
@@ -3872,6 +3900,15 @@ def build_section_manifest_payloads(
         "techniques": [full_section_manifest_entry(repo_root, record) for record in sorted_records],
     }
     return full_manifest, project_min_section_manifest(full_manifest)
+
+
+def build_section_surface_payload(repo_root: Path, records: list[TechniqueRecord]) -> dict[str, Any]:
+    sorted_records = sorted(records, key=lambda record: record.id)
+    return {
+        "section_version": SECTION_SURFACE_VERSION,
+        "source_of_truth": SECTION_SURFACE_SOURCE_OF_TRUTH,
+        "techniques": [full_section_surface_entry(repo_root, record) for record in sorted_records],
+    }
 
 
 def build_checklist_manifest_payloads(
@@ -4970,6 +5007,58 @@ def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) 
         fail(f"{min_path}: min section manifest must stay a projection of the full manifest")
 
 
+def validate_section_surfaces(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    path = repo_root / "generated" / "technique_sections.full.json"
+    expected = build_section_surface_payload(repo_root, records)
+    actual = read_json(path)
+
+    if actual != expected:
+        fail(f"{path}: generated full sections are out of date; run 'python scripts/build_sections.py'")
+
+    catalog = read_json(repo_root / "generated" / "technique_catalog.json")
+    capsules = read_json(repo_root / "generated" / "technique_capsules.json")
+    manifest = read_json(repo_root / "generated" / "technique_section_manifest.json")
+
+    section_alignment = [
+        (entry["id"], entry["name"], entry["technique_path"])
+        for entry in actual["techniques"]
+    ]
+    catalog_alignment = [
+        (entry["id"], entry["name"], entry["technique_path"])
+        for entry in catalog["techniques"]
+    ]
+    capsule_alignment = [
+        (entry["id"], entry["name"], entry["technique_path"])
+        for entry in capsules["techniques"]
+    ]
+    if section_alignment != catalog_alignment:
+        fail(f"{path}: section entries must stay 1:1 aligned with generated/technique_catalog.json")
+    if section_alignment != capsule_alignment:
+        fail(f"{path}: section entries must stay 1:1 aligned with generated/technique_capsules.json")
+
+    manifest_alignment = [
+        (
+            entry["id"],
+            entry["technique_path"],
+            tuple(section["heading"] for section in entry["sections"]),
+        )
+        for entry in manifest["techniques"]
+    ]
+    surface_alignment = [
+        (
+            entry["id"],
+            entry["technique_path"],
+            tuple(section["heading"] for section in entry["sections"][: len(SECTION_LIFT_HEADINGS)]),
+        )
+        for entry in actual["techniques"]
+    ]
+    if surface_alignment != manifest_alignment:
+        fail(
+            f"{path}: full section surface must preserve the lifted section-map scope from "
+            "generated/technique_section_manifest.json"
+        )
+
+
 def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_checklist_manifest.json"
     min_path = repo_root / "generated" / "technique_checklist_manifest.min.json"
@@ -5223,6 +5312,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_relations(records)
     validate_catalogs(repo_root, records, schema_store)
     validate_capsules(repo_root, records)
+    validate_section_surfaces(repo_root, records)
     validate_section_manifests(repo_root, records)
     validate_checklist_manifests(repo_root, records)
     validate_example_manifests(repo_root, records)
@@ -5247,6 +5337,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
     print("[ok] validated generated capsule parity and reader surface")
+    print("[ok] validated generated full section surface parity")
     print("[ok] validated generated section manifest parity and reader surface")
     print("[ok] validated generated checklist manifest parity and reader surface")
     print("[ok] validated generated example manifest parity and reader surface")
