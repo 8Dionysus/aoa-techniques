@@ -1,11 +1,11 @@
 # Instruction-Surface Semantic Review
 
-This review-only pilot checks whether the current instruction-surface cluster still reads as four distinct techniques rather than one blurred "managed generated agent docs" package.
+This review-only pilot checks whether the current instruction-surface cluster still reads as six distinct techniques rather than one blurred "managed generated agent docs" package.
 
 Why this cluster was chosen now:
 
-- the cluster now mixes one canonical composition technique with three promoted adjacent imports, so semantic clarity matters before any future status review
-- all four techniques govern generated or managed instruction-facing documentation surfaces, which makes seam drift easy to miss if left implicit
+- the cluster now mixes one canonical composition technique with five promoted adjacent imports, so semantic clarity matters before any future status review
+- all six techniques govern generated or managed instruction-facing documentation surfaces, which makes seam drift easy to miss if left implicit
 - the main remaining question is boundary clarity between source cardinality, source ownership, and output shape, not missing repo structure
 - this is the highest-value review pass before any concrete example strengthening or future closure work for the cluster
 
@@ -19,6 +19,8 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 | [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | one canonical rule source distributed to multiple agent-facing instruction surfaces |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | one canonical skill or rule source propagated into multiple managed agent-facing targets |
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | upstream-owned content mirrored into a curated local collection with explicit source manifest and adjacent provenance |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) | one canonical rule hierarchy loaded through explicit precedence and subordinate nested layers |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | bounded fragment-first context authoring before deterministic assembly |
 
 ## Seam Review
 
@@ -63,20 +65,38 @@ Question: where does managed target propagation from one local canonical skill o
 - Default-use trigger: use `0027` when source ownership is already local and the problem is keeping managed targets synchronized. Use `0024` when source ownership stays upstream and the local question is how to mirror that source without hiding origin ownership.
 - Evidence check: `0027` examples stay managed-target and anti-drift centric, while `0024` examples stay manifest, attribution, and resync centric. Outcome: `clear`.
 
+### `AOA-T-0012` vs `AOA-T-0030`
+
+Question: where does many-fragment composition into one generated artifact stop and fragment-first authoring before assembly begin?
+
+- Invariant boundary: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) owns many source fragments composing into one generated context artifact with deterministic ordering and traceable fragment authority. [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) begins earlier, when the main problem is keeping the fragment layer itself bounded, locally legible, and reviewable before any generated aggregate becomes the center of gravity.
+- Default-use trigger: use `0012` when the system needs deterministic assembly into one stable output. Use `0030` when the system first needs fragment-first authoring and source partitioning before deciding whether a generated output should even exist.
+- Evidence check: `0030` examples stay source-layer and ownership centric, while `0012` examples stay generated-artifact and ordering centric. The pair stays distinct so long as `0030` does not widen into composition mechanics and `0012` does not collapse back into generic fragment hygiene. Outcome: `clear`.
+
+### `AOA-T-0013` vs `AOA-T-0029`
+
+Question: where does one local canonical rule source fanning out to many managed targets stop and hierarchical loading with explicit precedence begin?
+
+- Invariant boundary: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) owns one local canonical rule source fanning out across multiple managed instruction surfaces. [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) begins when one canonical rule hierarchy already exists and the main problem is explicit precedence among parent and nested layers rather than multi-target distribution.
+- Default-use trigger: use `0013` when one local source must refresh several agent-facing targets. Use `0029` when one layered source tree must resolve parent and nested rule layers in a repeatable precedence order without turning nested layers into independent canonical homes.
+- Evidence check: `0013` examples stay fan-out and managed-target centric, while `0029` examples stay hierarchical-loading and precedence centric. The pair stays distinct so long as `0029` does not widen into target propagation and `0013` does not absorb nested precedence as if it were the same contract. Outcome: `clear`.
+
 ## Findings
 
 - `AOA-T-0012` is semantically distinct as one-output deterministic composition.
 - `AOA-T-0013` is semantically distinct as one-source multi-target rule distribution.
 - `AOA-T-0027` is semantically distinct as local managed-target skill or rule propagation.
 - `AOA-T-0024` is semantically distinct as upstream mirroring with explicit provenance and subordinate local ownership.
+- `AOA-T-0029` is semantically distinct as hierarchical rule loading with explicit precedence under one canonical source of ownership.
+- `AOA-T-0030` is semantically distinct as bounded fragment-first context authoring before deterministic assembly.
 - The current relation set does not justify cleanup in this wave.
-- The strongest watch seam is that future wording must keep source cardinality, source ownership, output shape, and managed-target scope explicit so the cluster does not blur into generic "managed generated agent docs."
+- The strongest watch seams are that future wording must keep source cardinality, source ownership, output shape, hierarchy-vs-fan-out, and source-layer-vs-generated-output scope explicit so the cluster does not blur into generic "managed generated agent docs."
 - No status change, relation cleanup, or narrow remediation wave is justified from this pilot alone.
 
-Overall outcome: `clear with one watch seam`
+Overall outcome: `clear with two watch seams`
 
 ## Next Step
 
 No immediate semantic-remediation wave is justified for this cluster from this pilot alone.
 
-Concrete example strengthening has already landed for all four techniques, `ruler` is now explicitly locked both as the bounded external origin for `AOA-T-0013` and as the narrower adjacent import origin for `AOA-T-0027`, and `n-skills` now lands as the adjacent provenance-mirroring import `AOA-T-0024`. The next step should therefore move to one more independent live instruction-distribution context for `AOA-T-0013` and one future live managed-target propagation context for `AOA-T-0027` rather than more example-only reinforcement or another import-only review.
+Concrete example strengthening has already landed for all six techniques, `ruler` is now explicitly locked both as the bounded external origin for `AOA-T-0013` and as the adjacent import origin for `AOA-T-0027` plus `AOA-T-0029`, while `agents-md` now lands as the adjacent import origin for `AOA-T-0030`. The next step should therefore move to one more independent live instruction-distribution context for `AOA-T-0013`, one future live managed-target propagation context for `AOA-T-0027`, and later live second contexts for `AOA-T-0029` plus `AOA-T-0030` rather than more example-only reinforcement or another import-only review.

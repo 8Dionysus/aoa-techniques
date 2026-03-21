@@ -9,7 +9,7 @@ It does not change technique status, create a new bundle, or authorize import by
 
 ## Scope
 
-- this doc tracks the remaining `20` external donor-derived candidates
+- this doc tracks the remaining `16` external donor-derived candidates
 - it excludes the already-landed external imports:
   - [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
   - [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
@@ -56,15 +56,23 @@ It does not change technique status, create a new bundle, or authorize import by
 ## Current Summary
 
 - `0` ready to distill here
-- `8` future import here
+- `4` future import here
 - `4` hold because overlap
 - `5` needs layer incubation before distillation here
 - `3` substrate or architecture pattern, not yet a technique
 
 Most recent landings from this backlog:
 
+- [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md)
+- [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
+- [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
+- [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
 - [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
 - [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+
+Current history watch:
+
+- keep `versionable_agent_transcripts` and `project_memory_bootstrap` out of the immediate next wave until the seam around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) is sharper
 
 ## Ready To Distill Here
 
@@ -75,12 +83,8 @@ None right now. The current strict-safe lane has already been landed into [AOA-T
 | seed candidate | donor | suggested technique name | tentative domain | working contract | next move |
 |---|---|---|---|---|---|
 | `skill_marketplace_curation` | `n-skills` | `skill-marketplace-curation` | `docs` | curate a local discoverability layer over upstream-owned skill sources without pretending to own them | keep it editorial and discovery-focused rather than registry or governance heavy |
-| `fragmented_agent_context` | `agents-md` | `fragmented-agent-context` | `docs` | keep agent context in bounded fragments before deterministic assembly | center source partitioning and modular authoring rather than the final generated artifact already covered by [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
-| `context_report_for_ci` | `agents-md` | `context-report-for-ci` | `evaluation` | emit CI-facing reports for context composition, source coverage, or token-estimate drift | import it as a validation or report surface, not as a second docs-composition technique |
-| `nested_rule_loading` | `ruler` | `nested-rule-loading` | `docs` | load hierarchical rule layers while preserving one-way source ownership and explicit precedence | isolate the nested loading contract from the wider `ruler` product surface |
 | `one-command_service_lifecycle` | `OpenMemory-Code` | `one-command-service-lifecycle` | `agent-workflows` | start and stop a bounded local service stack for agent work through one explicit lifecycle command | keep it to local lifecycle discipline and avoid broad project-launcher semantics |
 | `versionable_agent_transcripts` | `SpecStory` | `versionable-session-transcripts` | `history` | keep AI session transcripts as versioned repo artifacts for later audit and distillation | keep it artifact-first and avoid memory recall, retrieval, or instruction-policy widening |
-| `shell_composability` | `qqqa` | `shell-composable-agent-invocation` | `agent-workflows` | make agent runs composable as shell tools through explicit files, pipes, and one-shot calls | keep the shell boundary explicit and avoid drifting into generic shell best practices |
 | `phase_sync_for_agents` | `agentwise` | `phase-synchronized-agent-handoff` | `agent-workflows` | synchronize multi-agent work through explicit phase checkpoints and bounded handoff seams | distill only the checkpoint and handoff contract, not the whole orchestration stack |
 
 ## Hold Because Overlap
@@ -114,13 +118,10 @@ None right now. The current strict-safe lane has already been landed into [AOA-T
 
 If the goal is to grow the corpus without widening repo boundaries, the strongest current order is:
 
-1. `nested_rule_loading`
-2. `fragmented_agent_context`
-3. `shell_composability`
-4. `context_report_for_ci`
-5. `versionable_agent_transcripts`
-6. `phase_sync_for_agents`
-7. `skill_marketplace_curation`
+1. `phase_sync_for_agents`
+2. `skill_marketplace_curation`
+3. `one-command_service_lifecycle`
+4. `versionable_agent_transcripts` after one cleaner history seam around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 
 Then revisit the overlap and incubation lanes only after one of their missing boundaries becomes explicit.
 

@@ -204,6 +204,10 @@ relations:
         self.assertEqual("promoted", records_by_id["AOA-T-0026"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0027"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0028"].status)
+        self.assertEqual("promoted", records_by_id["AOA-T-0029"].status)
+        self.assertEqual("promoted", records_by_id["AOA-T-0030"].status)
+        self.assertEqual("promoted", records_by_id["AOA-T-0031"].status)
+        self.assertEqual("promoted", records_by_id["AOA-T-0032"].status)
 
         domain_start_targets = {
             spec["domain"]: tuple(spec["lead_ids"])[0] for spec in validate_repo.DOMAIN_START_SPECS
@@ -476,7 +480,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(28, len(technique_paths))
+        self.assertEqual(32, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -509,7 +513,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
         self.assertEqual(17, status_counts["canonical"])
-        self.assertEqual(11, status_counts["promoted"])
+        self.assertEqual(15, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -707,7 +711,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-evals",
             "aoa-routing",
             "17 canonical",
-            "11 promoted",
+            "15 promoted",
             "external-dependency-first promoted techniques",
             "AOA-T-0005",
             "AOA-T-0013",
@@ -716,13 +720,31 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0022",
             "AOA-T-0023",
             "AOA-T-0028",
+            "AOA-T-0031",
             "AOA-T-0027",
             "AOA-T-0024",
             "AOA-T-0025",
+            "AOA-T-0029",
+            "AOA-T-0030",
+            "AOA-T-0032",
             "AOA-T-0026",
             "python scripts/release_check.py",
         ):
             self.assertIn(target, start_here)
+
+    def test_external_candidates_doc_tracks_clean_top4_wave_backlog(self) -> None:
+        candidates = (REPO_ROOT / "docs" / "EXTERNAL_TECHNIQUE_CANDIDATES.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("remaining `16` external donor-derived candidates", candidates)
+        self.assertIn("`4` future import here", candidates)
+        self.assertIn("AOA-T-0029", candidates)
+        self.assertIn("AOA-T-0030", candidates)
+        self.assertIn("AOA-T-0031", candidates)
+        self.assertIn("AOA-T-0032", candidates)
+        self.assertIn("versionable_agent_transcripts", candidates)
+        self.assertIn("project_memory_bootstrap", candidates)
 
     def test_kag_source_lift_family_has_second_context_and_readiness_notes(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")

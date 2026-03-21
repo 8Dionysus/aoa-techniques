@@ -52,6 +52,12 @@ See also:
 |---|---|---|---|---|
 | Confirmation Gated Mutating Action Checklist | `absent` | `6` | `techniques/agent-workflows/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
 
+### [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Shell-Composable Agent Invocation Checklist | `absent` | `7` | `techniques/agent-workflows/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -132,6 +138,18 @@ See also:
 |---|---|---|---|---|
 | Cross-Agent Skill Propagation Checklist | `absent` | `7` | `techniques/docs/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
 
+### [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Nested Rule Loading Checklist | `absent` | `7` | `techniques/docs/nested-rule-loading/checks/nested-rule-loading-checklist.md` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
+
+### [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Fragmented Agent Context Checklist | `absent` | `7` | `techniques/docs/fragmented-agent-context/checks/fragmented-agent-context-checklist.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -181,6 +199,12 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Property Invariants Checklist | `present` | `7` | `techniques/evaluation/property-invariants/checks/property-invariants-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+
+### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Context Report For CI Checklist | `absent` | `7` | `techniques/evaluation/context-report-for-ci/checks/context-report-for-ci-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 
 ## `history`
 

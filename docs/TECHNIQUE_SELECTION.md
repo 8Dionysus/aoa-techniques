@@ -73,6 +73,10 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
 - [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
 - [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md): `complements` [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+- [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+- [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md): `complements` [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
+- [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md): `complements` [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+- [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md): `complements` [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -86,6 +90,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop. |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops. |
 
 ### `docs`
 
@@ -104,6 +109,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source. |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth. |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership. |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact. |
 
 ### `evaluation`
 
@@ -117,6 +124,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | `canonical` | `cross_context` | `strict` | Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures. |
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. |
 
 ### `history`
 
@@ -126,7 +134,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 28/28 techniques.
+- `export_ready` is currently `true` for 32/32 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

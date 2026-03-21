@@ -14,11 +14,12 @@ Historical note:
 ## Baseline
 
 - baseline verification path: `python -m unittest discover -s tests` and `python scripts/validate_repo.py`
-- current corpus split: `28` bundles, `17 canonical`, `11 promoted`
+- current corpus split: `32` bundles, `17 canonical`, `15 promoted`
 - current promoted backlog:
   - [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
   - [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
   - [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+  - [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
   - [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
   - [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
   - [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
@@ -26,6 +27,9 @@ Historical note:
   - [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
   - [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
   - [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
+  - [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md)
+  - [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
+  - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
   - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 - audit stance: if no structural red flag appears, prioritize semantic quality, surface coherence, governance consistency, and external dependency closure over new infrastructure
 
@@ -49,10 +53,16 @@ Historical note:
   - `agentwise` is a `future import candidate` with orchestration overlap and license caution, not an automatic intake
   - no exact-fit seeded external donor currently displaces the open donor slots for `AOA-T-0005` or `AOA-T-0022`
 - external donor intake now follows one canonical-home rule: other `aoa-*` repos may incubate or prove a pattern, but once a reusable bounded technique is extracted, it belongs in `aoa-techniques`
-- the remaining `20` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+- clean top-4 expansion wave is now landed:
+  - `ruler` now also lands the adjacent [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) import as a bounded hierarchical-loading technique rather than as proof for `AOA-T-0013`
+  - `agents-md` now also lands the adjacent [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) import as a bounded fragment-authoring technique rather than as proof for `AOA-T-0012`
+  - `qqqa` now also lands the adjacent [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) import as a bounded shell-composability technique rather than as proof for `AOA-T-0023`
+  - `agents-md` now also lands the adjacent [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) import as a bounded CI-facing report technique rather than as proof for `AOA-T-0012`
+  - `versionable_agent_transcripts` and `project_memory_bootstrap` remain outside the immediate wave as history-overlap watch around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- the remaining `16` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
 - the remaining promoted backlog is now staged as:
   - `evidence-prep now`: `AOA-T-0018`
-  - `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0026`
+  - `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 
 ## Finding Classes
 
@@ -144,6 +154,7 @@ Bundle-level result:
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | one non-origin live second-context reuse beyond `atm10-agent` and the repo-local rollout sketch | external | `external dependency first` | one public second rollout record in another repo that proves the same checklist on a real new-intent extension path |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public workflow surface that uses the same stateless, confirmation-gated single-shot fast path as real operator practice |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public workflow surface that uses the same explicit confirmation seam before mutation as a real bounded fast path |
+| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public workflow surface that keeps one-shot agent work shell-composable through explicit stdin, stdout, files, or pipes without widening into a hidden long-lived session |
 | [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | one second independent live instruction-distribution context beyond the first `aoa-skills` donor; the bounded `ruler` origin package no longer counts as the missing reinforcement | external | `external dependency first` | reinforcement in `aoa-agents` or another instruction-heavy repo that keeps one-source -> many-target distribution validator-backed or generated |
 | [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | one second independent markdown-first consumer beyond the current bridge pattern | mostly external evidence, contract already stable here | `evidence-prep now` | a second committed markdown-first consumer outside the current `aoa-skills` bridge shape |
 | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | one second non-eval markdown-first corpus using typed note kind and path lift | external | `external dependency first` | a committed non-eval corpus that reuses typed note-kind and note-path provenance without note-graph widening |
@@ -151,12 +162,15 @@ Bundle-level result:
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public repository or surface family that keeps one canonical skill or rule source fanning out to multiple managed agent-facing targets without turning targets into new sources of truth |
 | [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public curated collection that mirrors upstream-owned content with explicit manifest plus adjacent provenance without claiming local source ownership |
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public agent-facing surface that uses a versioned capability spec as a real contract rather than only as imported documentation |
+| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public repository or surface family that keeps hierarchical rule layers under explicit precedence while preserving one-way source ownership |
+| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public repository that keeps agent context in bounded fragments as the real source layer before any later deterministic assembly |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public CI surface that reports context composition coverage or token-drift signals without widening into the composition engine or a remediation snapshot |
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public repository or surface family that persists local-first session history as a real project artifact layer without widening into memory substrate or instruction policy |
 
 Backlog verdict:
 
 - `evidence-prep now`: `AOA-T-0018`
-- `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0026`
+- `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 
 No promoted bundle is vague anymore. The backlog is now staged by the kind of proof it still needs.
 
@@ -368,7 +382,7 @@ Status: `partially executed`
   - do not widen contracts just to manufacture evidence
   - keep `aoa-techniques` as the source of meaning
 - target surfaces:
-  - `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0026`
+  - `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
   - donor repos named in [LONG_GAP_CANON_DESIGN.md](LONG_GAP_CANON_DESIGN.md) or the open evidence-prep slots above
 - tests and validation:
   - donor-repo native validation first
