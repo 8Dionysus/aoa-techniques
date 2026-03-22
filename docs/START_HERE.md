@@ -22,6 +22,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 - open [Canonical Rubric](CANONICAL_RUBRIC.md) for the current frontmatter review fields and evidence kinds
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
+- open [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md) when the question is what can be extracted from an external donor without importing foreign doctrine
 - open [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md) when the question is why a remaining `promoted` technique still needs an external donor path
 - open [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md) when the question is which repo-only hardening, review refresh, or external evidence wave should open next
 - open [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md) when the question is which remaining external seed idea is actually worth distilling into a future bundle
