@@ -77,6 +77,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md): `complements` [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
 - [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md): `complements` [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
 - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md): `complements` [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
+- [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md): none
+- [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md): none
 
 ## Browse By Domain
 
@@ -111,6 +113,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth. |
 | [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership. |
 | [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact. |
+| [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
+| [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. |
 
 ### `evaluation`
 
@@ -134,7 +138,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 32/32 techniques.
+- `export_ready` is currently `true` for 34/34 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

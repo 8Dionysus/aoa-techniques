@@ -303,6 +303,32 @@ See also:
 - Validate by: the fragment set is the editable source of truth; each fragment has bounded scope that a reviewer can explain...
 - Source: [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
 
+### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
+
+- Summary: Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.
+- Intent: Record one meaningful decision in a compact, reviewable note that preserves context, options, rationale...
+- Use when: a real choice has been made and the reason needs to stay reviewable or multiple viable options were...
+- Avoid when: trivial obvious edits that do not deserve a decision note or tasks whose real need is source-of-truth clarification.
+- Needs: one bounded decision subject; the viable options considered; the constraints that shaped the choice.
+- Produces: one concise decision note; an explicit decision statement; the context that led to the decision.
+- Core contract: the note must preserve context, options, rationale, and consequences; the note must stay bounded to one decision rather...
+- Main risk: the note captures a summary but not the actual decision tradeoff.
+- Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the note does not drift...
+- Source: [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md)
+
+### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`promoted`)
+
+- Summary: Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.
+- Intent: Convert potentially sensitive technical material into a shareable artifact that keeps the lesson while...
+- Use when: logs, configs, diagnostics, reports, or examples contain sensitive details or a result needs to be shared with a...
+- Avoid when: the material is already clearly public-safe and minimal or the real question is whether sharing is allowed at...
+- Needs: the material to share; the intended audience; known sensitive surfaces.
+- Produces: a sanitized shareable artifact; a short note on what was removed or generalized; any remaining sensitivity warning...
+- Core contract: the shared artifact does not leak secrets or private infrastructure detail; sanitization preserves meaning where possible.
+- Main risk: over-sanitizing until the artifact stops being useful.
+- Validate by: obvious sensitive surfaces were checked deliberately; the resulting artifact is still understandable; the sanitization level matches the intended audience.
+- Source: [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

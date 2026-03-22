@@ -10,7 +10,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Added
 
-- `AOA-T-0014` through `AOA-T-0032`, bringing the published corpus to 32 techniques (`17` canonical, `15` promoted)
+- `AOA-T-0014` through `AOA-T-0034`, bringing the published corpus to 34 techniques (`17` canonical, `17` promoted)
 - the first public five-technique KAG/source-lift family inside the existing `docs` domain:
   - `AOA-T-0018 markdown-technique-section-lift`
   - `AOA-T-0019 frontmatter-metadata-spine`
@@ -26,6 +26,8 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - `AOA-T-0030 fragmented-agent-context`
 - `AOA-T-0031 shell-composable-agent-invocation`
 - `AOA-T-0032 context-report-for-ci`
+- `AOA-T-0033 decision-rationale-recording`
+- `AOA-T-0034 public-safe-artifact-sanitization`
 - `docs/LONG_GAP_CANON_DESIGN.md`, which captures the current design-first donor plan for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - `docs/DEEP_AUDIT_ROADMAP.md`, which turns the current green baseline into a phase-by-phase closure roadmap for structural hardening, corpus meaning, surface usability, governance seams, and next implementation packs
 - `docs/EXTERNAL_TECHNIQUE_CANDIDATES.md`, which stages the remaining `22` external donor-derived seed ideas by readiness to distill, overlap, incubation need, or substrate status

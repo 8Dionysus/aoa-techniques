@@ -41,6 +41,8 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0025 | capability-spec-versioning | docs | promoted | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
 | AOA-T-0029 | nested-rule-loading | docs | promoted | Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership. |
 | AOA-T-0030 | fragmented-agent-context | docs | promoted | Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact. |
+| AOA-T-0033 | decision-rationale-recording | docs | promoted | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
+| AOA-T-0034 | public-safe-artifact-sanitization | docs | promoted | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. |
 | AOA-T-0032 | context-report-for-ci | evaluation | promoted | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. |
 | AOA-T-0026 | session-capture-as-repo-artifact | history | promoted | Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy. |
 

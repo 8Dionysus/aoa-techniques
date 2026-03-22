@@ -1769,6 +1769,95 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0033",
+      "name": "decision-rationale-recording",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
+      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-adr-write/SKILL.md",
+        "note": "Extracted from a bounded decision-recording practice that keeps meaningful choices reviewable without expanding into source-of-truth governance or architecture taxonomy."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "decision",
+        "rationale",
+        "reviewable"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-22",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0034",
+      "name": "public-safe-artifact-sanitization",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.",
+      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-sanitized-share/SKILL.md",
+        "note": "Extracted from the bounded public-safe share-prep workflow surface and sanitized into a reusable docs technique."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "sanitization",
+        "sharing",
+        "public-safe",
+        "bounded"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-22",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

@@ -1329,6 +1329,116 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0033",
+      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/decision-rationale-recording/checks/decision-rationale-recording-checklist.md",
+          "title": "Decision Rationale Recording Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One real decision is named explicitly."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The context explains why the choice existed."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The viable options or alternatives are visible."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The chosen option and rationale are clear."
+            },
+            {
+              "order": 5,
+              "text": "[ ] The consequences, tradeoffs, or follow-up commitments are recorded."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The note stays bounded to one decision."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The note does not drift into source-of-truth governance, boundary mapping, or architecture taxonomy."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The content is public-safe, sanitized, and reviewable."
+            },
+            {
+              "order": 9,
+              "text": "[ ] Trivial obvious edits are rejected as out of scope."
+            },
+            {
+              "order": 10,
+              "text": "[ ] A future reviewer could understand the tradeoff without reopening the whole discussion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0034",
+      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md",
+          "title": "Public Safe Artifact Sanitization Checklist",
+          "intro_markdown": "Use this checklist when reviewing a shareable artifact that claims to have removed or generalized sensitive technical detail.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] Secrets, tokens, private paths, topology clues, and unsafe operational details were checked deliberately."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The shared artifact preserves the technical lesson."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The sanitization level matches the intended audience."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Raw sensitive detail was not left behind by accident."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Remaining uncertainty or limits of sanitization are named clearly."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The artifact is still understandable after redaction or generalization."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The note does not turn into approval gating or execution planning."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The material is not already clearly public-safe and minimal."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The main question is not whether the action is allowed."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The main question is not how to preview or execute the underlying operational change."
+            },
+            {
+              "order": 11,
+              "text": "[ ] The work is not really incident response that belongs in a response workflow instead of share-prep."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

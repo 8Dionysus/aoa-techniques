@@ -1805,6 +1805,118 @@
           "markdown": "What can vary across projects:\n- the CI runner or report-emission command\n- the exact source inventory format\n- the token-estimate source\n- the surface that consumes the report\n\nWhat should stay invariant:\n- the technique stays read-only and CI-facing\n- the report describes composition quality rather than performing composition\n- source coverage and token drift remain explicit\n- the report stays subordinate to the composition technique it observes\n\nProject-shaped details that should not be treated as invariant:\n- remediation snapshot doctrine\n- provider-specific telemetry\n- runtime-wide observability\n- build-system internals"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0033",
+      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Record one meaningful decision in a compact, reviewable note that preserves context, options, rationale, and consequences without widening into source-of-truth governance or architecture taxonomy."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a real choice has been made and the reason needs to stay reviewable\n- multiple viable options were considered and the tradeoff matters\n- the decision should be understandable without recreating the full discussion\n- the note needs to be public-safe, bounded, and easy to audit later"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- trivial obvious edits that do not deserve a decision note\n- tasks whose real need is source-of-truth clarification\n- boundary mapping, document-role assignment, or architecture taxonomy work\n- cases where no decision exists yet and the next step is still discovery\n- changes that only need a short status update or implementation comment"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one bounded decision subject\n- the viable options considered\n- the constraints that shaped the choice\n- the intended consequence or follow-up of the chosen path\n- any context that future reviewers would need to understand the rationale"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one concise decision note\n- an explicit decision statement\n- the context that led to the decision\n- the alternatives considered and why they were not chosen\n- the consequences, tradeoffs, or guardrails that follow from the decision"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Name the decision in one sentence before expanding into detail.\n2. Capture the minimum context needed to understand why the choice was necessary.\n3. List the real alternatives that were considered.\n4. State the chosen option and the rationale for selecting it.\n5. Record the expected consequences, follow-up work, or limits of the decision.\n6. Sanitize the note so it stays public-safe and does not expose private detail.\n7. Keep the note focused on one decision; split the content if it contains several unrelated choices."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the note must preserve context, options, rationale, and consequences\n- the note must stay bounded to one decision rather than a broader policy or taxonomy map\n- the note must reject trivial obvious edits that do not need durable rationale\n- the note must not turn into source-of-truth governance, boundary mapping, or architecture classification\n- the note must remain readable as a decision record even when the reviewer does not know the origin project"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the note captures a summary but not the actual decision tradeoff\n- the write-up drifts into governance language instead of decision rationale\n- several unrelated choices get merged into one oversized record\n\n### Negative effects\n\n- extra documentation can slow very small changes if the decision was not actually meaningful\n- over-recording every edit can bury the few decisions that matter\n- too much taxonomy can obscure the practical reason the decision existed\n\n### Misuse patterns\n\n- using the technique for tiny obvious edits that do not need a rationale note\n- using it to decide where truth should live instead of recording the decision itself\n- turning the note into boundary mapping, schema design, or architecture classification\n- writing a generic changelog entry and calling it a decision record\n\n### Detection signals\n\n- the note does not make clear why one option won\n- reviewers still cannot tell what changed after reading the record\n- the content starts naming canonical homes or repository roles instead of the decision\n- the note reads like a taxonomy exercise instead of a bounded rationale\n\n### Mitigations\n\n- require an explicit decision statement near the top of the note\n- keep options and consequences visible in plain language\n- split unrelated choices into separate records\n- route source-of-truth and boundary questions to a different technique"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one real decision is named clearly\n- context, options, rationale, and consequences are all visible\n- the note does not drift into source-of-truth clarification or boundary mapping\n- trivial obvious edits are rejected as out of scope\n- a reviewer could understand the tradeoff without reopening the entire discussion\n\nSee `checks/decision-rationale-recording-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact note format\n- whether consequences are framed as risks, follow-ups, or commitments\n- the amount of context needed for a future reviewer\n- whether the decision is documented in a dedicated file or a section of a larger review surface\n\nWhat should stay invariant:\n- one meaningful decision is captured per record\n- context, options, rationale, and consequences stay explicit\n- the note remains bounded and reviewable\n- the technique stays out of source-of-truth governance and architecture taxonomy"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0034",
+      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Convert potentially sensitive technical material into a shareable artifact that keeps the lesson while removing or generalizing what should not leave the local context."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- logs, configs, diagnostics, reports, or examples contain sensitive details\n- a result needs to be shared with a broader audience\n- the goal is to preserve the technical lesson without preserving unsafe detail\n- the artifact should remain useful after paths, identifiers, or topology are generalized"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the material is already clearly public-safe and minimal\n- the real question is whether sharing is allowed at all; use `aoa-approval-gate-check` first\n- the real question is whether to preview or execute the change; use `aoa-dry-run-first` or `aoa-safe-infra-change` first\n- the task is incident handling or operational response rather than preparing a shareable artifact"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- the material to share\n- the intended audience\n- known sensitive surfaces\n- the minimum useful detail needed for the audience"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- a sanitized shareable artifact\n- a short note on what was removed or generalized\n- any remaining sensitivity warning that still matters\n- a result that stays understandable without exposing unsafe context"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Inspect the material for secrets, tokens, private paths, topology, or unsafe operational detail.\n2. Remove, redact, or generalize the sensitive parts.\n3. Preserve the technical lesson or signal.\n4. Note what kind of sanitization was applied when that matters for interpretation.\n5. Verify that the final artifact still teaches the intended point."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the shared artifact does not leak secrets or private infrastructure detail\n- sanitization preserves meaning where possible\n- generalization does not silently change the core lesson beyond recognition\n- uncertainty about sensitivity leans toward caution\n- the technique does not own approval classification, dry-run planning, or incident response"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- over-sanitizing until the artifact stops being useful\n- under-sanitizing because a value looked harmless in isolation\n- confusing share-prep work with approval or execution work\n\n### Negative effects\n\n- the shared artifact becomes hard to reuse or verify\n- sensitive topology or naming still leaks through\n- the technique can become a proxy for decision-making if its boundary is not respected\n\n### Misuse patterns\n\n- sharing raw excerpts when a bounded summary would be safer\n- treating a sanitized artifact as proof that the underlying action is allowed\n- using the technique to preview or carry out the operational change itself\n\n### Detection signals\n\n- the sanitized output still points too directly to private topology or naming\n- a reviewer cannot tell what was generalized or removed\n- the artifact no longer communicates the lesson it was meant to preserve\n\n### Mitigations\n\n- generalize paths, hostnames, and private identifiers when needed\n- name the sanitization level and remaining uncertainty\n- verify the shared result remains useful without preserving the sensitive surface\n- route approval or execution questions to the narrower workflow techniques first"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- obvious sensitive surfaces were checked deliberately\n- the resulting artifact is still understandable\n- the sanitization level matches the intended audience\n- raw sensitive detail was not preserved by accident\n- the technique stays distinct from approval gating, dry-run planning, and infra-change execution\n\nSee `checks/public-safe-artifact-sanitization-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the shareable artifact format\n- the redaction style\n- the amount of detail that can stay visible\n- the review ritual for public or broad internal circulation\n\nWhat should stay invariant:\n- sensitive surfaces are checked before sharing\n- the lesson remains useful after sanitization\n- the result stays bounded and reviewable\n- approval and execution decisions stay outside this technique\n\nProject-shaped details that should not be treated as invariant:\n- exact hostnames or paths\n- internal ticket references\n- runtime tooling names\n- incident-response or deployment workflows"
+        }
+      ]
     }
   ]
 }

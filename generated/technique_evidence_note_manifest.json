@@ -16376,6 +16376,733 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0033",
+      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/decision-rationale-recording/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0033"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-rationale-recording"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the practice bounded and public-safe"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle is still a narrow docs pattern rather than a broadly proven default across multiple independent consumers"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when a meaningful decision needs a reviewable rationale record"
+                },
+                {
+                  "order": 2,
+                  "text": "it is not yet proven as the default docs pattern for a wider ecosystem"
+                },
+                {
+                  "order": 3,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-22"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps only the reusable decision-recording contract and strips origin-project identifiers, local discussion detail, and private context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique may still need a dedicated sibling if multi-decision records become a separate reusable pattern"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0033` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after a second live consumer proves the pattern beyond the current origin-shaped use case"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/decision-rationale-recording/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0033"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-rationale-recording"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-adr-write/SKILL.md`\n- `skills/aoa-adr-write/examples/meaningful-decision.md`\n- `docs/reviews/status-promotions/aoa-adr-write.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the source skill already defines the practice as recording one meaningful decision rather than documenting every small edit"
+                },
+                {
+                  "order": 2,
+                  "text": "the source skill already keeps the boundary narrow by excluding trivial obvious edits, source-of-truth clarification, and document-role classification work"
+                },
+                {
+                  "order": 3,
+                  "text": "the source skill already requires context, alternatives, rationale, and consequences to remain visible in one reviewable note"
+                },
+                {
+                  "order": 4,
+                  "text": "the source example and promotion review show that the reusable object is the bounded decision record itself, not a broader governance or taxonomy layer"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable pattern already exists as a live bounded skill and can be lifted into a public docs technique without changing its core contract"
+                },
+                {
+                  "order": 2,
+                  "text": "the public bundle keeps the decision-rationale pattern while stripping origin-project identifiers and private discussion detail"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/decision-rationale-recording/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0033"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-rationale-recording"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over reviewable repository changes"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin practice was rewritten as a reusable docs technique instead of a local skill instruction"
+                },
+                {
+                  "order": 2,
+                  "text": "the note format was generalized from origin-project phrasing into public-safe decision language"
+                },
+                {
+                  "order": 3,
+                  "text": "the support surfaces were reduced to one technique doc, one checklist, one example, and three evidence notes"
+                },
+                {
+                  "order": 4,
+                  "text": "the result keeps the bounded rationale pattern while dropping private context and origin-specific detail"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one meaningful decision is still the unit of record"
+                },
+                {
+                  "order": 2,
+                  "text": "context, options, rationale, and consequences are still required"
+                },
+                {
+                  "order": 3,
+                  "text": "the technique still rejects trivial edits and non-decision tasks"
+                },
+                {
+                  "order": 4,
+                  "text": "the technique still avoids source-of-truth governance and architecture taxonomy"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the note can drift into generic meeting minutes if the explicit decision statement is lost"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique can become too broad if every explanation is treated as a decision record"
+                },
+                {
+                  "order": 3,
+                  "text": "public vocabulary can invite taxonomy-heavy writing if the boundary is not restated clearly"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "The public docs framing keeps the practice in `docs` as a reviewable decision-recording pattern."
+                },
+                {
+                  "order": 2,
+                  "text": "Existing sibling docs techniques in `aoa-techniques` already show how reusable docs guidance can stay bounded without turning into generic architecture theory."
+                },
+                {
+                  "order": 3,
+                  "text": "The technique contract still centers practical reviewability rather than a larger governance model."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a docs technique for decision rationale recording"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0034",
+      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/public-safe-artifact-sanitization/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0034"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "public-safe-artifact-sanitization"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `promoted`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "the source skill already defines a bounded sanitization contract with a review checklist and public-safe example"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now carries the same contract as a public docs technique with a checklist and example"
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the technique has a bounded contract, explicit example, and reviewer-facing checklist"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is a good default when material is useful but not safe to share raw"
+                },
+                {
+                  "order": 2,
+                  "text": "it stays narrower than approval gating, dry-run planning, and safe infra change"
+                },
+                {
+                  "order": 3,
+                  "text": "it helps future reviewers without turning the repository into a sharing-policy engine"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-22"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the public bundle keeps only the reusable share-prep contract and excludes source-specific incident detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the example and checklist remain understandable without source-repo access"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one live second consumer beyond the source skill would strengthen the case for canonical promotion"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique still needs judgment to avoid over-sanitizing already-safe material"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0034` promoted"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live consumer confirms the contract outside the source skill surface"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/public-safe-artifact-sanitization/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0034"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "public-safe-artifact-sanitization"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-sanitized-share/SKILL.md`\n- `skills/aoa-sanitized-share/examples/runtime.md`\n- `skills/aoa-sanitized-share/checks/review.md`\n- `docs/reviews/status-promotions/aoa-sanitized-share.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the source skill already separates share-prep work from approval gating and execution preview"
+                },
+                {
+                  "order": 2,
+                  "text": "the source skill already requires removal, redaction, or generalization of sensitive detail before sharing"
+                },
+                {
+                  "order": 3,
+                  "text": "the source review checklist already asks reviewers to confirm sensitive surfaces, retained usefulness, and remaining uncertainty"
+                },
+                {
+                  "order": 4,
+                  "text": "the promotion review already treats the practice as a bounded public-safe share-prep contract rather than an incident or permissioning workflow"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable pattern already exists as a live bounded skill and can be lifted into a public docs technique without widening into approval, execution, or incident handling"
+                },
+                {
+                  "order": 2,
+                  "text": "the public bundle keeps the share-prep contract while removing source-specific operational detail and private topology"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/public-safe-artifact-sanitization/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0034"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "public-safe-artifact-sanitization"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundles, selection surfaces, and generated catalogs"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records a reusable share-prep contract instead of shipping the source skill manifest"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "paths",
+                  "value_markdown": "the source lived in `aoa-skills/skills/aoa-sanitized-share`; this adaptation packages the same bounded contract as a standalone docs technique"
+                },
+                {
+                  "order": 2,
+                  "key": "artifacts",
+                  "value_markdown": "the technique now owns its own example, checklist, and compact public notes"
+                },
+                {
+                  "order": 3,
+                  "key": "dependencies",
+                  "value_markdown": "the reusable contract stands on redaction, generalization, and useful sharing, not on authority or execution tooling"
+                },
+                {
+                  "order": 4,
+                  "key": "operating assumptions",
+                  "value_markdown": "the resulting artifact should stay understandable after sanitization and safe for the intended audience"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the shared artifact must not leak sensitive technical detail"
+                },
+                {
+                  "order": 2,
+                  "text": "the lesson must survive redaction or generalization"
+                },
+                {
+                  "order": 3,
+                  "text": "the contract stays bounded and reviewable"
+                },
+                {
+                  "order": 4,
+                  "text": "the technique stays out of approval classification and operational execution"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can be overused on already-safe material"
+                },
+                {
+                  "order": 2,
+                  "text": "the result can become too abstract to be useful"
+                },
+                {
+                  "order": 3,
+                  "text": "a reviewer can mistake the technique for a permissioning workflow"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the source skill already has a public-safe runtime example and a review checklist"
+                },
+                {
+                  "order": 2,
+                  "text": "the source skill already calls out approval-gate and execution-path boundaries"
+                },
+                {
+                  "order": 3,
+                  "text": "the source skill remains focused on share-prep, not on allowing the underlying action"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "markdown",
+              "markdown": "The same sanitization contract survives a public docs-technique adaptation without carrying over source-specific incident detail or execution semantics."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

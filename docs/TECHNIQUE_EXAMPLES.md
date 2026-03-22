@@ -166,6 +166,18 @@ See also:
 | Concrete Subtree Fragmented Context | `present` | `techniques/docs/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 | Minimal Fragmented Agent Context | `present` | `techniques/docs/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
 
+### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Decision Rationale Note | `present` | `techniques/docs/decision-rationale-recording/examples/minimal-decision-rationale-note.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
+
+### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Scenario | `present` | `techniques/docs/public-safe-artifact-sanitization/examples/minimal-public-safe-artifact-sanitization.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

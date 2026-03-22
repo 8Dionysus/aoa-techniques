@@ -14,7 +14,7 @@ Historical note:
 ## Baseline
 
 - baseline verification path: `python -m unittest discover -s tests` and `python scripts/validate_repo.py`
-- current corpus split: `32` bundles, `17 canonical`, `15 promoted`
+- current corpus split: `34` bundles, `17 canonical`, `17 promoted`
 - current promoted backlog:
   - [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
   - [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
@@ -29,6 +29,8 @@ Historical note:
   - [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
   - [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md)
   - [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
+  - [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md)
+  - [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
   - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
   - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 - audit stance: if no structural red flag appears, prioritize semantic quality, surface coherence, governance consistency, and external dependency closure over new infrastructure
@@ -62,6 +64,7 @@ Historical note:
 - the remaining `16` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
 - the remaining promoted backlog is now staged as:
   - `evidence-prep now`: `AOA-T-0018`
+  - `internal-origin review path`: `AOA-T-0033`, `AOA-T-0034`
   - `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 
 ## Finding Classes
