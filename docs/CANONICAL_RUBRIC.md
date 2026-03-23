@@ -8,6 +8,7 @@ Markdown stays authoritative.
 See also:
 - [Documentation Map](README.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
+- [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
 
 ## Metadata And Canonical Review
 
@@ -17,6 +18,7 @@ Stage 1 metadata can inform selection and canonical review, but it does not repl
 - the same bounded frontmatter layer can also serve as a metadata spine for later generated KAG entrypoints, while markdown sections remain authoritative and section-level lift stays separate
 - they do not auto-promote a technique to `canonical`
 - `promoted -> canonical` decisions should follow the bounded review contract in [CANONICAL_REVIEW_GUIDE.md](CANONICAL_REVIEW_GUIDE.md)
+- if the open question is whether a bundle is even ready to enter canonical review yet, use [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md) before treating the metadata as a go signal
 
 ## Field meanings
 

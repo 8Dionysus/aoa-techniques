@@ -8926,7 +8926,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "stronger defer, still promoted"
+                  "text": "stronger defer after cross-context reinforcement, still promoted"
                 }
               ]
             },
@@ -8942,13 +8942,23 @@
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-skills` now provides live donor evidence for the same contract through `docs/BRIDGE_SPEC.md` and `generated/skill_catalog.json`, where technique selection is pinned by `source_ref` and bounded by `use_sections`"
+                  "key": "first downstream consumer",
+                  "value_markdown": "`aoa-skills` provides live donor evidence for the same contract through `docs/BRIDGE_SPEC.md` and `generated/skill_catalog.json`, where technique selection is pinned by `source_ref` and bounded by `use_sections`"
                 },
                 {
                   "order": 3,
+                  "key": "second markdown-first consumer",
+                  "value_markdown": "`aoa-evals/docs/README.md` and `generated/eval_sections.full.json` now show the same source-owned section-lift discipline in a second bundle family, with bounded section expansion over authored eval markdown"
+                },
+                {
+                  "order": 4,
+                  "key": "routing reinforcement",
+                  "value_markdown": "`aoa-routing/README.md` now points expand actions at `aoa-techniques/generated/technique_sections.full.json`, `aoa-skills/generated/skill_sections.full.json`, and `aoa-evals/generated/eval_sections.full.json`, proving that the section surfaces are real cross-repo expand-time targets rather than one local helper"
+                },
+                {
+                  "order": 5,
                   "key": "validation strength",
-                  "value_markdown": "the bundle has stable sections, examples, and checks, the bridge flow shows the technique can survive a committed downstream consumer, and the current family guidance now makes it clearer where section lift should stop rather than absorb metadata or provenance work"
+                  "value_markdown": "the bundle now has stable sections, examples, checks, one bridge-style downstream consumer, one second markdown-first bundle-family consumer, and one thin-router consumer that keeps section lift in the `pick -> inspect -> expand` path without collapsing into metadata or provenance work"
                 }
               ]
             },
@@ -8971,7 +8981,7 @@
                 },
                 {
                   "order": 4,
-                  "text": "the bundle should stay promoted until another repository proves that the same lift remains useful outside this public canon"
+                  "text": "the new evidence now shows that the same lift remains useful outside this public canon, but this first evidence wave still stops short of a status flip while the current technique-named scope is rechecked against the broader bundle-family reuse"
                 }
               ]
             },
@@ -8983,7 +8993,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-20"
+                  "value_markdown": "2026-03-23"
                 },
                 {
                   "order": 2,
@@ -9009,15 +9019,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is a second live markdown-first consumer that is independent of the current `aoa-skills` bridge pattern"
+                  "text": "the second live markdown-first consumer now exists, so the remaining gap is no longer cross-context evidence breadth"
                 },
                 {
                   "order": 2,
-                  "text": "the future canonical case should show that section lift keeps solving an expand-time routing problem rather than absorbing metadata-spine or provenance-lift work as the family grows"
+                  "text": "the next honest question is whether the current technique-named contract should stay narrow around `TECHNIQUE.md`-shaped section authority or whether the evidence now points to a later generic bundle-section sibling"
                 },
                 {
                   "order": 3,
-                  "text": "a future canonical review should show that stable heading lift survives repeated use without turning into metadata-spine semantics"
+                  "text": "a future canonical decision should still show that section lift remains an expand-time routing surface and does not drift into metadata-spine semantics, provenance lift, or a generic graph-facing bundle program"
                 }
               ]
             },
@@ -9032,7 +9042,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until the technique proves itself in a second live markdown-first context beyond the current bridge pattern"
+                  "text": "keep the status unchanged in this Wave A pass, but treat the bundle as materially strengthened and reopen the next canonical decision from the new cross-context baseline rather than from the old single-bridge baseline"
                 }
               ]
             }
@@ -9239,10 +9249,18 @@
                 },
                 {
                   "order": 3,
-                  "text": "`AOA-T-0002 source-of-truth-layout` still supports the same direction: meaning stays in the canonical bundle while the consumer gets a bounded derived surface"
+                  "text": "`aoa-evals/docs/README.md` now defines `generated/eval_sections.full.json` as a source-owned section payload surface for bounded expand-time reads, showing the same derived section-lift discipline in a second markdown-first bundle family"
                 },
                 {
                   "order": 4,
+                  "text": "`aoa-routing/README.md` now routes expand actions to `aoa-techniques/generated/technique_sections.full.json`, `aoa-skills/generated/skill_sections.full.json`, and `aoa-evals/generated/eval_sections.full.json`, reinforcing that section lift remains a source-owned expand-time surface rather than a repo-local helper"
+                },
+                {
+                  "order": 5,
+                  "text": "`AOA-T-0002 source-of-truth-layout` still supports the same direction: meaning stays in the canonical bundle while the consumer gets a bounded derived surface"
+                },
+                {
+                  "order": 6,
                   "text": "`AOA-T-0012 deterministic-context-composition` still supports the same direction: a derived doc surface can remain subordinate to authored source authority instead of becoming the semantic home"
                 }
               ]
@@ -9254,11 +9272,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a bounded cross-repo adaptation grounded in a committed `aoa-skills` consumer, not just a repo-local sketch"
+                  "text": "works as a bounded cross-repo adaptation grounded in two committed downstream consumers, not just one bridge-backed sketch"
                 },
                 {
                   "order": 2,
-                  "text": "the committed bridge pattern is still not equivalent to a second independent markdown-first consumer, so the reuse proof remains bounded to one bridge-backed downstream context"
+                  "text": "`aoa-skills` still proves the bridge-style section selection contract, while `aoa-evals` now proves that a second markdown-first bundle family can keep section payloads source-owned and expand-time readable without collapsing into metadata or provenance lift"
+                },
+                {
+                  "order": 3,
+                  "text": "`aoa-routing` reinforces that the lifted section surfaces remain real cross-repo expand targets rather than implementation trivia hidden inside one source repo"
+                },
+                {
+                  "order": 4,
+                  "text": "the remaining review question is no longer whether a second markdown-first consumer exists, but whether the current technique-named section specialist should become canonical without widening into a generic bundle-section lift"
                 }
               ]
             }

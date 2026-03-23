@@ -9,6 +9,14 @@ This guide is review-first. It does not auto-promote techniques from frontmatter
 See also:
 - [Documentation Map](README.md)
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
+- [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
+- [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
+
+If the question is still which `promoted` bundle is honestly closest to review, or what proof is still missing before `approve for canonical promotion` becomes real, start with [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md) instead.
+
+If the question is how to run the current evidence-prep swarm without widening bundle meaning or faking closure, start with [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md) instead.
+
+This guide starts after one bundle is already under a real `approve now` versus `defer for now` decision.
 
 ## Outcomes
 

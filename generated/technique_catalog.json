@@ -986,12 +986,12 @@
         "sections",
         "manifests"
       ],
-      "maturity_score": 3,
+      "maturity_score": 4,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-19",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-23",
       "export_ready": true,
       "relations": [
         {
