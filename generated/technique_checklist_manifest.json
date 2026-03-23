@@ -1459,6 +1459,585 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0035",
+      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/profile-preset-composition/checks/profile-preset-composition-checklist.md",
+          "title": "Profile Preset Composition Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] Atomic runtime units are defined separately from profiles and presets."
+            },
+            {
+              "order": 2,
+              "text": "[ ] Each profile is an ordered list of modules or equivalent atomic units."
+            },
+            {
+              "order": 3,
+              "text": "[ ] Each preset is an ordered list of profile names."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Preset-expanded profiles resolve before direct profile additions."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Duplicate profiles are kept only once, at first appearance."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Duplicate modules are kept only once, at first appearance."
+            },
+            {
+              "order": 7,
+              "text": "[ ] Profile and preset definitions stay small, plain, and reviewable."
+            },
+            {
+              "order": 8,
+              "text": "[ ] Missing profile or module references fail fast instead of degrading silently."
+            },
+            {
+              "order": 9,
+              "text": "[ ] A read-only inspection path exists before launch."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The technique does not drift into rendered runtime truth, readiness checks, or lifecycle control."
+            },
+            {
+              "order": 11,
+              "text": "[ ] Presets do not become a hiding place for unrelated capability bundles."
+            },
+            {
+              "order": 12,
+              "text": "[ ] The example and wording remain public-safe and portable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0036",
+      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/render-truth-before-startup/checks/render-truth-before-startup-checklist.md",
+          "title": "Render Truth Before Startup Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The runtime selection can be rendered before startup."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The render step shows the actual composed runtime view rather than only declared profiles or modules."
+            },
+            {
+              "order": 3,
+              "text": "[ ] A lightweight service-list render exists."
+            },
+            {
+              "order": 4,
+              "text": "[ ] A deeper full-config render exists when deeper local review is needed."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Full rendered config is treated as potentially secret-bearing local material."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The render step is clearly read-only."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The workflow reviews rendered truth before `up`, `wait`, or similar startup steps."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The technique does not drift into host-readiness checks."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The technique does not drift into smoke, probe, or lifecycle control."
+            },
+            {
+              "order": 10,
+              "text": "[ ] Rendered config is not treated as a public artifact or new canonical source of truth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0037",
+      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/contextual-host-doctor/checks/contextual-host-doctor-checklist.md",
+          "title": "Contextual Host Doctor Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The diagnostic runs before startup."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The selected runtime changes which checks are relevant."
+            },
+            {
+              "order": 3,
+              "text": "[ ] Item-level `ok`, `warn`, and `fail` signals remain visible."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Context-specific checks do not appear when the selected runtime does not make them relevant."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Hard blockers remain distinct from advisory warnings."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Strict mode behavior is explicit rather than implicit."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The technique stays diagnostic and read-only."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The bundle does not drift into rendered runtime truth."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The bundle does not drift into smoke, health, or internal probes."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The bundle does not widen into generic monitoring or lifecycle control."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0038",
+      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md",
+          "title": "One-Command Service Lifecycle Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One explicit operator-facing entrypoint starts the bounded local stack."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The lifecycle entrypoint owns the dependent services instead of requiring several manual terminal commands."
+            },
+            {
+              "order": 3,
+              "text": "[ ] Prerequisite or build checks fail early or report the blocker clearly before startup continues."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Startup output names what is running and how to stop it."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Interrupt or a companion stop helper shuts down the started services together."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Leftover child processes are treated as a lifecycle defect, not as normal operator cleanup."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The technique stays local and bounded rather than drifting into deployment orchestration or platform-launcher doctrine."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The technique does not drift into profile composition, rendered truth, or readiness verdict ownership."
+            },
+            {
+              "order": 9,
+              "text": "[ ] Logging extras, dashboard helpers, or integration side programs are not treated as the core contract."
+            },
+            {
+              "order": 10,
+              "text": "[ ] Project bootstrap or install flows remain separate from the lifecycle bundle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0039",
+      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md",
+          "title": "Baseline First Additive Profile Benchmarks Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The baseline profile runs first."
+            },
+            {
+              "order": 2,
+              "text": "[ ] Additive profiles are compared only after the baseline result exists."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The same measurement surface is used for the baseline and additive runs."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The same artifact shape is produced for the baseline and additive runs."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Additive prework stays isolated from the default path."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The result reports comparison discipline rather than product scoring."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The benchmark does not claim ownership of suite governance or promotion policy."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The benchmark does not drift into rolling historical baseline logic."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The benchmark stays separate from profile composition, render review, host diagnosis, and lifecycle control."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The public wording remains portable and does not depend on donor-specific service names."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0040",
+      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md",
+          "title": "Skill Vs Command Boundary Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One reusable skill artifact is named separately from one user-facing command artifact."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The skill still makes sense without reading a specific command first."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The command owns invocation name, arguments, numbered steps, or structured output."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The command references or invokes the skill instead of copying its full meaning."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Another agent or command can reuse the same skill without changing its core contract."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Command-specific constraints do not silently redefine the skill boundary."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The draft includes one explicit overlap sentence against `AOA-T-0013` and `AOA-T-0027`."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The draft stays out of upstream mirroring, marketplace curation, routing policy, and shell-command doctrine."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The wording remains public-safe and does not depend on donor-specific plugin mechanics."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0041",
+      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md",
+          "title": "Skill Marketplace Curation Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The local marketplace or catalog is clearly a curated discovery layer rather than the canonical source of the underlying skills."
+            },
+            {
+              "order": 2,
+              "text": "[ ] Upstream ownership remains visible for curated entries."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The curated layer adds editorial value beyond plain mirroring."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Category, summary, or selection guidance stays readable without becoming registry or installer policy."
+            },
+            {
+              "order": 5,
+              "text": "[ ] The draft includes one explicit seam sentence against `AOA-T-0024 upstream-mirroring-with-provenance`."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The draft includes one explicit seam sentence against `AOA-T-0040 skill-vs-command-boundary`."
+            },
+            {
+              "order": 7,
+              "text": "[ ] Sync, provenance, installer, and health-check substrate concerns stay outside the center of the technique."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The example emphasizes discoverability and curation rather than install or sync mechanics."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The wording remains public-safe and portable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0042",
+      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/evaluation/upstream-skill-health-checking/checks/upstream-skill-health-checking-checklist.md",
+          "title": "Upstream Skill Health Checking Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The check runs before the source is surfaced in a selector, catalog, or marketplace."
+            },
+            {
+              "order": 2,
+              "text": "[ ] Source availability is checked explicitly."
+            },
+            {
+              "order": 3,
+              "text": "[ ] Manifest or metadata readiness is checked explicitly."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The bundle distinguishes `ready`, `review`, and `blocked` states."
+            },
+            {
+              "order": 5,
+              "text": "[ ] An unreachable source stays distinct from a malformed but reachable source."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The verdict stays tied to one source entry rather than becoming a global registry score."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The technique does not drift into `AOA-T-0024` mirroring or provenance behavior."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The technique does not drift into `AOA-T-0041` editorial discovery or category curation."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The technique does not widen into generic monitoring, registry governance, routing policy, or security scanning."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The example still reads as a bounded pre-surface readiness pass rather than a full registry platform."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0043",
+      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md",
+          "title": "multi-source-primary-input-provenance Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The bridge or combined docs surface names one primary input."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The supporting inputs are named explicitly and remain secondary to the primary input."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The surface makes clear what the `primary` label authorizes and what it does not authorize."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Supporting inputs are contextual or corroborating inputs, not silent co-primary anchors."
+            },
+            {
+              "order": 5,
+              "text": "[ ] The priority order is visible in authored markdown."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Downstream readers can preserve the order without needing graph semantics."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The bundle does not rely on note provenance handles to explain source priority."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The bundle does not widen into retrieval ranking or traversal policy."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The bundle does not become broad bridge architecture doctrine."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The example still makes the primary-versus-supporting split obvious at a glance."
+            },
+            {
+              "order": 11,
+              "text": "[ ] If a supporting input conflicts with the primary input, the surface flags review instead of silently overriding or re-ranking authority."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0044",
+      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/history/versionable-session-transcripts/checks/versionable-session-transcripts-checklist.md",
+          "title": "Versionable Session Transcripts Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The transcript package starts from already-saved session artifacts rather than from first-save capture."
+            },
+            {
+              "order": 2,
+              "text": "[ ] One bounded review or handoff unit selects one conversation or one intentional group of conversations."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The exported transcript stays readable as Markdown or an equivalently versionable text artifact."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Timestamps, metadata, or naming make the transcript package stable enough for commit, comparison, or citation."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Review, edit, annotation, or redaction can happen before wider sharing without changing the artifact into a summary or rule file."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The technique stays distinct from [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md) and does not re-own capture or persistence."
+            },
+            {
+              "order": 7,
+              "text": "[ ] Hosted share links, cloud search, login flows, and sync status are not treated as the core contract."
+            },
+            {
+              "order": 8,
+              "text": "[ ] History-to-instructions, derived-rules, and memory recall semantics remain outside the bundle."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The exported transcript does not become the canonical source of truth for repository instructions or policy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0045",
+      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/history/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md",
+          "title": "Witness Trace As Reviewable Artifact Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] The artifact names one bounded run, goal, and review scope."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The trace remains an export artifact rather than a memory object or taxonomy addition."
+            },
+            {
+              "order": 3,
+              "text": "[ ] Ordered steps remain visible, and tool visibility is preserved when present."
+            },
+            {
+              "order": 4,
+              "text": "[ ] State deltas are recorded when an external effect occurred."
+            },
+            {
+              "order": 5,
+              "text": "[ ] One compact human-readable summary explains what happened and what should be inspected next."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Redaction-first handling removes secret-bearing payloads and hidden chain-of-thought detail."
+            },
+            {
+              "order": 7,
+              "text": "[ ] Failure-path or review-flag preservation remains visible when the run did not go cleanly."
+            },
+            {
+              "order": 8,
+              "text": "[ ] Memory writeback, compost promotion, eval anchors, and role choreography stay outside the core contract."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The bundle stays distinct from [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md) and [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md)."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

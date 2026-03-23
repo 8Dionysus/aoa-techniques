@@ -1858,6 +1858,580 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0035",
+      "name": "profile-preset-composition",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Compose small reusable profiles into named presets so runtime posture stays reviewable without flattening composition into one opaque config or launcher doctrine.",
+      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "origin": {
+        "project": "abyss-stack",
+        "path": "docs/PROFILES.md",
+        "note": "Extracted from a layered runtime-composition practice that keeps modules, profiles, and presets reviewable without flattening operating modes into one opaque launcher surface."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "runtime-composition",
+        "profiles",
+        "presets",
+        "reviewable"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-22",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0012"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0036",
+      "name": "render-truth-before-startup",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.",
+      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "origin": {
+        "project": "abyss-stack",
+        "path": "docs/RENDER_TRUTH.md",
+        "note": "Extracted from a local runtime workflow that renders the actual composed service and config view before startup so operators can review what Compose really sees."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "runtime-truth",
+        "preflight",
+        "render",
+        "reviewable"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-22",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0035"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0037",
+      "name": "contextual-host-doctor",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
+      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "origin": {
+        "project": "abyss-stack",
+        "path": "docs/DOCTOR.md",
+        "note": "Extracted from a selector-aware preflight check that changes its verdicts based on the chosen runtime shape instead of treating every host warning as universally relevant."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "preflight",
+        "readiness",
+        "diagnostic",
+        "profile-aware"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-22",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0036"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0038",
+      "name": "one-command-service-lifecycle",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.",
+      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "origin": {
+        "project": "OpenMemory-Code",
+        "path": "README.md",
+        "note": "Adapted from the OpenMemory-Code startup manager and companion stop surfaces, which collapse local multi-service startup into one explicit operator entrypoint without forcing manual per-service coordination."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "lifecycle",
+        "startup",
+        "shutdown",
+        "local-stack"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0036"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0037"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0039",
+      "name": "baseline-first-additive-profile-benchmarks",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.",
+      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "origin": {
+        "project": "atm10-agent",
+        "path": "README.md",
+        "note": "Extracted from a baseline-first cross-service benchmark path where the baseline profile stays default and richer profiles run as additive comparisons on the same normalized measurement surface."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "baseline",
+        "additive",
+        "profile"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0035"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0040",
+      "name": "skill-vs-command-boundary",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy.",
+      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "origin": {
+        "project": "agentic-dev-team",
+        "path": "docs/skills.md",
+        "note": "Extracted from a plugin structure that keeps reusable skills as capability artifacts while slash commands stay user-facing workflow entrypoints with their own invocation syntax."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "skills",
+        "commands",
+        "boundaries",
+        "capability"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0027"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0041",
+      "name": "skill-marketplace-curation",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy.",
+      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
+      "origin": {
+        "project": "n-skills",
+        "path": "README.md",
+        "note": "Adapted from the open-source n-skills repository, which presents a curated marketplace layer over upstream-owned skills while keeping sync plumbing and installer behavior separate from the discoverability surface."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "skills",
+        "marketplace",
+        "discovery",
+        "curation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0024"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0042",
+      "name": "upstream-skill-health-checking",
+      "domain": "evaluation",
+      "status": "promoted",
+      "summary": "Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine.",
+      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+      "origin": {
+        "project": "n-skills + MCP Gateway Registry",
+        "path": "README.md",
+        "note": "Distilled from external skill-source flows that combine declared upstream manifests with pre-surface URL and metadata checks so broken or malformed sources do not silently reach discovery surfaces."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "evaluation",
+        "upstream",
+        "skills",
+        "health",
+        "manifest"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0041"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0043",
+      "name": "multi-source-primary-input-provenance",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine.",
+      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-kag + Tree-of-Sophia bridge contracts",
+        "path": "docs/README.md",
+        "note": "Distilled from bridge-style source surfaces that need to mark which inputs are primary versus supporting before downstream readers or synthesis depend on them."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "provenance",
+        "input-ordering",
+        "bridge-contracts",
+        "source-priority"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0020"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0021"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0044",
+      "name": "versionable-session-transcripts",
+      "domain": "history",
+      "status": "promoted",
+      "summary": "Package already-saved AI session transcripts as readable, versionable Markdown artifacts so review, handoff, and selective sharing stay possible without reopening capture semantics or turning transcript history into memory or instruction authority.",
+      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "origin": {
+        "project": "SpecStory",
+        "path": "specstory/quickstart",
+        "note": "Adapted from the public SpecStory docs where already-saved AI conversations can be selected, combined, reviewed, edited, and exported as Markdown transcript artifacts for code review or sharing rather than left only in raw capture storage."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "history",
+        "transcripts",
+        "markdown",
+        "export",
+        "review"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0026"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0045",
+      "name": "witness-trace-as-reviewable-artifact",
+      "domain": "history",
+      "status": "promoted",
+      "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
+      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-memo + aoa-playbooks",
+        "path": "docs/WITNESS_TRACE_CONTRACT.md + playbooks/witness-to-compost-pilot/PLAYBOOK.md",
+        "note": "Extracted from the witness/compost pilot where a nontrivial run leaves behind a structured witness trace and human-readable summary before any memo writeback or compost promotion happens."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "history",
+        "witness",
+        "trace",
+        "review",
+        "provenance"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-23",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0026"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0044"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

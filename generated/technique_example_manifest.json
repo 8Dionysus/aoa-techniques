@@ -500,6 +500,127 @@
           "body_markdown": "A support summary needs to share a command failure, but the raw output includes hostnames, private paths, and internal IDs.\n\n## Raw excerpt\n\n```text\nssh admin@ops-int.internal\ncat /srv/private/customer-a/run-4821/error.log\njob_id=INT-4821 service=payments-shadow-eu-west\n```\n\n## Shareable version\n\n```text\nssh <redacted-user>@<generalized-host>\ncat /srv/<generalized-path>/error.log\njob_id=<generalized-id> service=<generalized-service>\n```\n\n## Sanitization note\n\n- user, hostname, path segment, job ID, and service name were generalized\n- the lesson preserved is that the failure surfaced through remote shell plus log inspection\n- this artifact is safe to review as a sharing example only; it does not authorize the underlying action\n\n## Boundary notes\n\n- if the material is already public-safe, do not add unnecessary redaction\n- if the main task is deciding whether the underlying action should proceed, use the approval-gate workflow first\n- if the main task is to preview or execute the action, use the preview or safe-change workflow first"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0035",
+      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/profile-preset-composition/examples/minimal-profile-preset-composition.md",
+          "title": "Minimal Profile Preset Composition",
+          "body_markdown": "## Layout\n\n```text\ncompose/modules/10-core.yml\ncompose/modules/20-api.yml\ncompose/modules/50-observability.yml\n\ncompose/profiles/app.txt\ncompose/profiles/ops.txt\n\ncompose/presets/app-full.txt\n```\n\n## Profile Definitions\n\n```text\n# compose/profiles/app.txt\n10-core.yml\n20-api.yml\n```\n\n```text\n# compose/profiles/ops.txt\n50-observability.yml\n```\n\n## Preset Definition\n\n```text\n# compose/presets/app-full.txt\napp\nops\n```\n\n## Inspection-First Use\n\n```bash\nstack-preset-profiles --preset app-full --paths\nstack-profile-modules --preset app-full --paths\nstack-profile-endpoints --preset app-full\n```\n\n## What The Contract Shows\n\n- `app-full` expands to `app` and then `ops`\n- the resolved module order becomes `10-core.yml`, `20-api.yml`, `50-observability.yml`\n- if a direct `--profile debug` is added later, it should append after preset expansion rather than rewriting the preset\n- duplicate profiles or modules should be kept only once, at first appearance"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0036",
+      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/render-truth-before-startup/examples/minimal-render-truth-before-startup.md",
+          "title": "Minimal Render Truth Before Startup",
+          "body_markdown": "Use a layered runtime selection, but render what the engine actually resolves before launch.\n\n```bash\nstack-profile-modules --profile app --profile ops --paths\nstack-profile-endpoints --profile app --profile ops\nstack-render-services --profile app --profile ops\nstack-render-config --profile app --profile ops --write /tmp/app-ops.rendered.yml\n```\n\nReview questions before startup:\n\n- which services are actually present in the composed runtime view\n- did the additive profile introduce the services you expected\n- did any overlay or merged setting change the final result in a surprising way\n- should the local rendered config file be deleted after inspection because it may contain sensitive values\n\nOnly after that review step:\n\n```bash\nstack-up --profile app --profile ops\n```"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0037",
+      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/contextual-host-doctor/examples/minimal-contextual-host-doctor.md",
+          "title": "Minimal Contextual Host Doctor",
+          "body_markdown": "Run a pre-start readiness check against the selected runtime rather than against one generic host checklist.\n\n```bash\nstack-doctor --preset accel-full\n```\n\nExample result:\n\n```text\nok   platform linux\nok   cmd  container-engine\nok   compose backend available\nwarn gpu device missing for selected accelerated runtime\nwarn internal-only layers selected; run deeper internal checks after startup\ndoctor check passed\nwarnings: 2\n```\n\nThe important behavior is contextual:\n\n- the GPU-device warning matters because the selected runtime includes acceleration\n- the internal-only reminder matters because the selected runtime includes layers that need deeper post-start checks\n- a different preset without acceleration should not raise the same hardware warning\n- this verdict helps decide whether startup is sensible, but it does not replace render review or smoke checks"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0038",
+      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md",
+          "title": "Minimal One-Command Service Lifecycle",
+          "body_markdown": "Start a bounded local stack through one visible lifecycle entrypoint instead of asking the operator to coordinate several terminals.\n\n```bash\ndev-stack start --preset local-dev\n```\n\nExample result:\n\n```text\nchecking prerequisites...\nok   runtime engine available\nok   selected preset local-dev\nok   context service built\nstarting bounded local stack...\nrunning:\n- core service\n- context service\nstop with Ctrl+C\n```\n\nAfter the operator interrupts the run:\n\n```text\nshutting down bounded local stack...\nok   core service stopped\nok   context service stopped\nshutdown complete\n```\n\nThe important behavior is lifecycle ownership:\n\n- one visible entrypoint owns startup for the bounded local stack\n- the operator does not need a second terminal just to launch dependent services\n- startup output says what is now running and how to stop it\n- shutdown is part of the same contract, not a separate cleanup ritual\n- render review and readiness checks should already have happened through sibling techniques before this lifecycle step starts"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0039",
+      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/examples/minimal-baseline-first-additive-profile-benchmarks.md",
+          "title": "Minimal Baseline First Additive Profile Benchmarks",
+          "body_markdown": "Run one stable baseline profile first, then run the additive profile against the same summary shape.\n\n```bash\nbench-suite --profile baseline_first --summary-json runs/baseline/summary.json\nbench-suite --profile additive --summary-json runs/additive/summary.json\n```\n\nExample comparison:\n\n```text\nbaseline:  profile=baseline_first  surface=local  status=ok\nadditive:  profile=additive        surface=local  status=ok\nshape:     summary schema matched for both runs\ndelta:     additive profile remained comparable on the same measurement surface\n```\n\nThe important behavior is the ordering and the shape:\n\n- baseline first\n- same measurement surface\n- same artifact shape\n- additive setup stays separate from the default path\n- the report stays about comparison, not about ranking"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0040",
+      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md",
+          "title": "Minimal Skill Vs Command Boundary",
+          "body_markdown": "Keep reusable capability meaning in a skill file and keep user-facing invocation in a command file.\n\n## Reusable skill\n\n`skills/contract-test.md`\n\n```md\n# Contract Test\n\n## Guidelines\n\n- name the boundary first\n- state expected inputs and outputs\n- prefer contract-first checks over internal detail\n```\n\n## Agent-facing reuse\n\n`agents/backend-reviewer.md`\n\n```md\n## Skills\n\n- [Contract Test](../skills/contract-test.md) - invoke when reviewing interface changes\n```\n\n## User-facing command\n\n`commands/review-contract.md`\n\n```md\n---\nname: review-contract\nargument-hint: \" <path>\"\nuser-invocable: true\n---\n\n# Review Contract\n\n1. Parse the target path from the user request.\n2. Load the `contract-test` skill.\n3. Apply that skill to the selected boundary.\n4. Return structured findings for the named path.\n```\n\n## What The Contract Shows\n\n- the skill defines reusable review meaning\n- the command defines user entrypoint, argument shape, and structured workflow\n- the same skill can be used by an agent and by a command without rewriting it"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0041",
+      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md",
+          "title": "Minimal Skill Marketplace Curation",
+          "body_markdown": "Use one small local discovery surface over upstream-owned skills.\n\n```text\nskills/\n  workflow/\n    orchestration/\n      SKILL.md\n  tools/\n    dev-browser/\n      SKILL.md\n\ndocs/skill-marketplace.md\n```\n\n```md\n## Workflow\n- `orchestration`\n  - summary: multi-agent task coordination\n  - source: upstream-owned skill\n\n## Tools\n- `dev-browser`\n  - summary: browser automation with persistent page state\n  - source: upstream-owned skill\n```\n\nWhat the contract shows:\n\n- the local surface groups and summarizes skills for discovery\n- upstream ownership stays visible\n- sync or provenance artifacts may exist elsewhere, but they are not the center of this curated surface\n- installer, registry, and command syntax details stay outside the example"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0042",
+      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/evaluation/upstream-skill-health-checking/examples/minimal-upstream-skill-health-checking.md",
+          "title": "Minimal Upstream Skill Health Checking",
+          "body_markdown": "Check upstream-backed skill entries before they appear in a local selector.\n\n```bash\nskills-source-check sources.yaml --before-selector\n```\n\nExample result:\n\n```text\nready   github/team/skill-a      SKILL.md reachable and minimally parseable\nreview  github/team/skill-b      source reachable; metadata shape needs manual review\nblocked github/team/skill-c      declared manifest missing at source path\n```\n\nThe important behavior is bounded:\n\n- `ready` means the source is reachable and minimally shaped enough to surface for inspection or selection\n- `review` means the source is present but ambiguous enough that a human should look before it is surfaced\n- `blocked` means the source should stay out of the selector until the declared path or manifest is fixed\n- this step does not mirror the source, curate categories, assign trust scores, or run security scans"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0043",
+      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md",
+          "title": "Minimal Multi-Source Primary Input Provenance",
+          "body_markdown": "When combining inputs from multiple sources, name the one that should lead.\n\n```md\n# Bridge Notes\n\n- primary source: `source-a`\n- supporting source: `source-b`\n- supporting source: `source-c`\n\nThe summary below should preserve `source-a` as the primary input when readers cite or synthesize this bridge.\n\nIf `source-b` conflicts with `source-a`, keep the conflict visible and mark it for review instead of silently re-ranking the sources.\n```\n\nThe important behavior is bounded:\n\n- the primary input stays visible\n- supporting inputs stay visible\n- supporting inputs can add context or challenge the reading without quietly replacing the primary anchor\n- downstream readers do not need graph semantics to preserve the order\n- this step does not rank sources, infer trust, silently override the primary input, or turn the bridge into a graph"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0044",
+      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/history/versionable-session-transcripts/examples/minimal-versionable-session-transcripts.md",
+          "title": "Minimal Versionable Session Transcripts",
+          "body_markdown": "Start from an already-saved session artifact and package only the transcript needed for one review thread.\n\nExisting saved history:\n\n```text\n.specstory/history/2026-03-23-codex-fix-session.md\n.specstory/history/2026-03-23-codex-followup-session.md\n```\n\nCurated export for one PR:\n\n```text\ndocs/review-transcripts/pr-118-auth-flow-transcript.md\n```\n\nExample transcript header:\n\n```md\n# PR 118 Transcript\n\n- source_sessions:\n  - 2026-03-23-codex-fix-session\n  - 2026-03-23-codex-followup-session\n- exported_at: 2026-03-23T18:40:00Z\n- purpose: review and handoff\n\n## Context\n\nThis transcript packages the two saved sessions that led to the auth-flow change.\nIrrelevant shell noise was removed, and one reviewer note was added before commit.\n```\n\nThe important behavior is post-capture transcript packaging:\n\n- the source sessions were already saved before this technique began\n- one review unit intentionally combines the two relevant conversations\n- the exported transcript carries stable metadata for commit and comparison\n- a reviewer can trim or annotate before sharing\n- repository rules and decisions still stay in authored docs instead of moving into the transcript"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0045",
+      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/history/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md",
+          "title": "Minimal Witness Trace As Reviewable Artifact",
+          "body_markdown": "Use one structured trace plus one compact summary to preserve a nontrivial run before any downstream writeback.\n\nExample witness artifact:\n\n```json\n{\n  \"run_id\": \"run-2026-03-23-auth-fix\",\n  \"goal\": \"repair auth callback flow without losing provider fallback\",\n  \"bounded_status\": \"completed_with_review_flags\",\n  \"time_window\": \"2026-03-23T17:10:00Z/2026-03-23T17:42:00Z\",\n  \"steps\": [\n    {\n      \"index\": 1,\n      \"step_kind\": \"inspect\",\n      \"intent\": \"trace current callback handling\",\n      \"tool_visibility\": \"repo read\",\n      \"observation\": \"fallback branch skips nonce reset\",\n      \"state_delta\": null\n    },\n    {\n      \"index\": 2,\n      \"step_kind\": \"edit\",\n      \"intent\": \"restore nonce reset in fallback branch\",\n      \"tool_visibility\": \"file patch\",\n      \"observation\": \"callback path updated\",\n      \"state_delta\": \"auth callback logic changed\"\n    }\n  ],\n  \"review_notes\": [\n    \"manual provider fallback test still needed\"\n  ]\n}\n```\n\nExample summary:\n\n```md\n# Witness Summary\n\n- run goal: repair auth callback flow without losing provider fallback\n- main result: fallback branch now restores nonce reset\n- review flags: manual fallback test still needed\n- inspect next: callback path plus fallback provider behavior\n```\n\nThe important behavior is artifact-first review posture:\n\n- the trace preserves ordered steps, tool visibility, and state deltas\n- the summary tells a reviewer what to inspect next\n- the artifact survives before any memory writeback or promotion route\n- this is not a new memory object and not just a transcript export"
+        }
+      ]
     }
   ]
 }

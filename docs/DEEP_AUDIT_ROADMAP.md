@@ -45,14 +45,16 @@ Historical note:
 - seeded external donor intake is now explicit:
   - `ruler` is a bounded `pass` as the origin donor for `AOA-T-0013`
   - `agents-md` is a `hold because overlap` against `AOA-T-0012`
-  - `n-skills` now lands the adjacent [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) import, but it still does not count as live closure evidence for `AOA-T-0013`
+  - `n-skills` now lands the adjacent [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) and [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) imports, but it still does not count as live closure evidence for `AOA-T-0013`
   - `qqqa` now lands the adjacent [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) import as a bounded shell-side fast-path technique rather than as backlog-closure evidence for an existing promoted bundle
   - `qqqa` now also lands the adjacent [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) import as a bounded confirmation-boundary technique rather than as proof for `AOA-T-0023`
   - `agentic` now lands the adjacent [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) import as a bounded capability-contract technique rather than as proof for any current promoted backlog item
   - `getspecstory` now lands [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) and the bounded `history` domain as a local-first session-artifact contract rather than a memory-system import
   - `ruler` now also lands the adjacent [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) import as a bounded managed-target propagation technique rather than as proof for `AOA-T-0013`
-  - `OpenMemory-Code` is a `hold because memory-boundary overlap` with `aoa-memo`
+  - `n-skills` plus MCP Gateway Registry now land the adjacent [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) import as a bounded pre-surface source-readiness technique rather than as registry governance or security-scanning doctrine
+  - `OpenMemory-Code` no longer stays fully blocked by memory-boundary overlap: [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) now lands one bounded local-lifecycle import, while memory-substrate candidates remain held or incubating against `aoa-memo`
   - `agentwise` is a `future import candidate` with orchestration overlap and license caution, not an automatic intake
+  - the latest public `agentwise` read exposes `phase-based synchronization across all agents` and `Phase Controller`, but those signals still sit inside a broader orchestration package with `Smart Model Router`, `Dynamic Task Distributor`, `SharedContextServer`, context coordination, and monitoring, so the `phase-synchronized-agent-handoff` lane remains active but not bundle-ready
   - no exact-fit seeded external donor currently displaces the open donor slots for `AOA-T-0005` or `AOA-T-0022`
 - external donor intake now follows one canonical-home rule: other `aoa-*` repos may incubate or prove a pattern, but once a reusable bounded technique is extracted, it belongs in `aoa-techniques`
 - clean top-4 expansion wave is now landed:
@@ -60,9 +62,18 @@ Historical note:
   - `agents-md` now also lands the adjacent [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) import as a bounded fragment-authoring technique rather than as proof for `AOA-T-0012`
   - `qqqa` now also lands the adjacent [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) import as a bounded shell-composability technique rather than as proof for `AOA-T-0023`
   - `agents-md` now also lands the adjacent [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) import as a bounded CI-facing report technique rather than as proof for `AOA-T-0012`
-  - `versionable_agent_transcripts` and `project_memory_bootstrap` remain outside the immediate wave as history-overlap watch around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-- the remaining `16` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+  - [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now land the post-capture history-artifact pair around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md), while `project_memory_bootstrap` remains outside the immediate wave as a history-overlap watch
+- the remaining `13` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
 - the `24` cross-layer candidates pulled from the Dionysus donor note are now staged in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as `already staged elsewhere`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+- the current `future import here` lane is now staged as a wave program rather than a flat queue:
+  - Wave A: runtime truth and local lifecycle, now fully landed across [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md), and [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md), with exact candidate membership split across the external and cross-layer intake surfaces and bounded to profile composition, rendered truth, profile-scoped preflight, additive comparison discipline, and local lifecycle
+  - Wave B: curated input surfaces and capability boundaries, now fully landed across [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md), with exact candidate membership split across the external and cross-layer intake surfaces and bounded to curated discoverability, artifact boundaries, upstream shape and availability checks, and primary-vs-supporting provenance ordering
+  - Wave C: history as reviewable artifact is now fully landed across [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), both kept artifact-first and out of memory substrate or hidden-instruction behavior
+  - active narrowing lane: `phase-synchronized-agent-handoff` stays outside the wave packs until the handoff contract can name the phase boundary, handoff packet, continuation permission, and explicit stop, return, or escalation rules without widening into orchestration doctrine
+- per-technique import rules remain narrow inside the wave program:
+  - one technique per PR
+  - external donors use the normal bounded external-import package
+  - cross-layer or internal-origin candidates use donor-appropriate origin and adaptation notes without forcing external-import note names
 - the remaining promoted backlog is now staged as:
   - `evidence-prep now`: `AOA-T-0018`
   - `internal-origin review path`: `AOA-T-0033`, `AOA-T-0034`
@@ -399,6 +410,47 @@ Status: `partially executed`
   - no schema or frontmatter expansion
   - no graph inference or policy routing creep
   - no status changes without explicit new evidence and review
+
+#### Future Import Wave Program
+
+Status: `active`
+
+- goal:
+  - turn the current `future import here` intake lane into one coherent wave program without reopening overlap, incubation, or substrate lanes
+  - close Wave A as fully landed now that [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md), and [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) have landed, then close Wave B as fully landed through [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md)
+- swarm layout:
+  - main agent owns wave boundaries, final wording, intake/roadmap sync, shared generated surfaces, and `python scripts/release_check.py`
+  - each worker owns one candidate bundle at a time, plus only its `notes/`, `checks/`, and `examples/`
+  - shared catalog, index, and other generated surfaces are synchronized only after a merge-ready bundle draft exists
+- wave order:
+  - Wave A: `profile-preset-composition`, `render-truth-before-startup`, `contextual-host-doctor`, `one-command-service-lifecycle`, `baseline-first-additive-profile-benchmarks`
+  - Wave B: `skill-vs-command-boundary`, `skill-marketplace-curation`, `upstream-skill-health-checking`, `multi-source-primary-input-provenance`
+  - keep `phase-synchronized-agent-handoff` as the active narrowing lane in parallel, but do not promote it into a wave yet
+  - Wave C is now fully landed through [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), both kept behind the same seam around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- wave-specific sequencing:
+  - Wave A starts with `profile-preset-composition`, then `render-truth-before-startup`, then `contextual-host-doctor`, then `one-command-service-lifecycle`, and ends with `baseline-first-additive-profile-benchmarks`
+  - Wave A is now fully landed as [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md), and [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md); keep Wave A closed while later sequencing stays on the narrowing lane
+  - Wave B starts with `skill-vs-command-boundary`, then `skill-marketplace-curation`, then `upstream-skill-health-checking`, and ends with `multi-source-primary-input-provenance`
+  - Wave B first step is now landed as [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), its external curation anchor now lands as [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md), its source-readiness sibling now lands as [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and its provenance-ordering close-out now lands as [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md); keep the next sequencing on the narrowing lane instead of widening Wave B into propagation, marketplace doctrine, monitoring, or bridge architecture
+  - Wave C begins with `versionable-session-transcripts`, landed as [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md), and closes with `witness-trace-as-reviewable-artifact`, landed as [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), both kept behind the export/review-only seam rather than widening into witness runtime or memory behavior
+  - if any candidate starts needing launcher, registry, routing, or graph doctrine to explain its value, it moves out of the current wave instead of widening the wave
+- gating rules:
+  - Wave C must stay artifact-first and must not widen into memory substrate, recall, or hidden instruction authority
+  - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) keeps ownership of session capture, project-scoped persistence, and local-first artifact availability itself
+  - [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns the post-capture transcript-shaping sibling because the donor shows selected conversations saved into one Markdown document, review or edit before saving, and timestamped transcript artifacts ready for code review or knowledge sharing
+  - any future transcript-history sibling still fails the seam if its value proposition is merely `save sessions locally` instead of shaping or packaging an already-saved transcript for review
+  - [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns export/review/citation discipline for one structured witness trace plus summary without becoming a new memory-object kind
+  - any future witness-history sibling still fails the seam if it needs runtime witness generation, memory writeback, or future-instruction derivation to explain its value
+  - the narrowing lane must not move forward until the handoff contract can name the phase boundary, handoff packet, continuation permission, and stop, return, or escalation rule explicitly
+  - donor evidence refresh checked on `2026-03-23` still reaches only a partial phase-boundary signal: the public GitHub README and `agentwise-docs.vercel.app` home keep foregrounding orchestration, routing, context sharing, and monitoring rather than one bounded handoff contract
+  - public GitHub README and docs home still do not expose `checkpoint`, `handoff`, or `packet`, so the packet shape, continuation permission, and stop/return/escalation rule remain implicit inside the larger `agentwise` orchestration package and the lane stays closed for drafting
+  - `phase-synchronized-agent-handoff` stays out of Wave A and Wave B until those readiness criteria are met
+- narrowing-lane readiness fields:
+  - minimum packet shape: `phase/checkpoint`, `done`, `blocked`, `next action`, `next owner`, `entry/exit condition`, and `stop/return/escalation`
+- what must stay unchanged:
+  - verdict classes and unrelated hold, incubation, and substrate placements in the intake surfaces
+  - one-technique-per-PR import discipline
+  - existing overlap, incubation, and substrate holds
 
 ## Audit Exit Criteria
 

@@ -600,7 +600,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(34, len(technique_paths))
+        self.assertEqual(45, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -633,7 +633,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
         self.assertEqual(17, status_counts["canonical"])
-        self.assertEqual(17, status_counts["promoted"])
+        self.assertEqual(28, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -870,13 +870,18 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             encoding="utf-8"
         )
 
-        self.assertIn("remaining `16` external donor-derived candidates", candidates)
-        self.assertIn("`4` future import here", candidates)
+        self.assertIn("remaining `13` external donor-derived candidates", candidates)
+        self.assertIn("`1` future import here", candidates)
+        self.assertIn("AOA-T-0038", candidates)
+        self.assertIn("AOA-T-0041", candidates)
+        self.assertIn("AOA-T-0042", candidates)
+        self.assertIn("AOA-T-0043", candidates)
+        self.assertIn("AOA-T-0044", candidates)
+        self.assertIn("AOA-T-0045", candidates)
         self.assertIn("AOA-T-0029", candidates)
         self.assertIn("AOA-T-0030", candidates)
         self.assertIn("AOA-T-0031", candidates)
         self.assertIn("AOA-T-0032", candidates)
-        self.assertIn("versionable_agent_transcripts", candidates)
         self.assertIn("project_memory_bootstrap", candidates)
 
     def test_cross_layer_candidates_doc_accounts_for_full_seed_donor_matrix(self) -> None:
@@ -885,8 +890,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         ).read_text(encoding="utf-8")
 
         self.assertIn("full `24` technique-shaped candidate names", candidates)
-        self.assertIn("`8` already staged elsewhere", candidates)
-        self.assertIn("`8` future import here", candidates)
+        self.assertIn("`6` already staged elsewhere", candidates)
+        self.assertIn("`10` landed from this wave map", candidates)
+        self.assertIn("`0` future import here", candidates)
         self.assertIn("`2` hold because overlap", candidates)
         self.assertIn("`3` needs layer incubation before distillation here", candidates)
         self.assertIn("`3` substrate or architecture pattern, not yet a technique", candidates)
@@ -894,6 +900,12 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         rows = re.findall(r"^\| `([^`]+)` \|", candidates, flags=re.MULTILINE)
         self.assertEqual(24, len(rows))
         self.assertEqual(24, len(set(rows)))
+        self.assertIn("AOA-T-0040", candidates)
+        self.assertIn("AOA-T-0041", candidates)
+        self.assertIn("AOA-T-0042", candidates)
+        self.assertIn("AOA-T-0043", candidates)
+        self.assertIn("AOA-T-0044", candidates)
+        self.assertIn("AOA-T-0045", candidates)
 
         for target in (
             "skill-marketplace-curation",
@@ -931,7 +943,17 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         for target in (
             "## Current Narrowing Slice: `phase_sync_for_agents`",
             "`phase-synchronized-agent-handoff`",
+            "### Current donor read stays no-go",
+            "public evidence refresh checked on `2026-03-23` across the GitHub README and `agentwise-docs.vercel.app` home",
             "one explicit handoff artifact or status packet",
+            "public donor signals currently visible are `phase-based synchronization across all agents` and `Phase Controller`",
+            "`Smart Model Router`",
+            "`SharedContextServer`",
+            "named phase boundary: partial only",
+            "handoff packet: missing",
+            "continuation permission: missing",
+            "stop, return, or escalation rule: missing",
+            "`checkpoint`, `handoff`, and `packet` still do not appear in the public GitHub README or docs home",
             "model routing",
             "shared context server or token optimization",
             "AOA-T-0001",
@@ -941,6 +963,75 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "`notes/external-import-review.md`",
         ):
             self.assertIn(target, candidates)
+
+    def test_external_candidates_doc_describes_swarm_execution_roles(self) -> None:
+        candidates = (REPO_ROOT / "docs" / "EXTERNAL_TECHNIQUE_CANDIDATES.md").read_text(
+            encoding="utf-8"
+        )
+
+        for target in (
+            "the main agent owns wave boundaries, final wording, the cross-doc sequence, shared generated-surface sync, and `python scripts/release_check.py`",
+            "execution role: keep [AOA-T-0038]",
+            "execution role: keep [AOA-T-0041]",
+            "[AOA-T-0043]",
+            "[AOA-T-0044]",
+            "[AOA-T-0045]",
+            "execution role: keep [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor",
+            "Shared generated surfaces should be synchronized only after the bundle draft is merge-ready, and only by the main agent.",
+        ):
+            self.assertIn(target, candidates)
+
+    def test_cross_layer_candidates_doc_describes_exact_wave_execution_order(self) -> None:
+        candidates = (
+            REPO_ROOT / "docs" / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+        ).read_text(encoding="utf-8")
+
+        for target in (
+            "1. `profile-preset-composition`",
+            "2. `render-truth-before-startup`",
+            "3. `contextual-host-doctor`",
+            "4. `one-command-service-lifecycle`",
+            "5. `baseline-first-additive-profile-benchmarks`",
+            "1. `skill-vs-command-boundary`",
+            "2. `skill-marketplace-curation`",
+            "3. `upstream-skill-health-checking`",
+            "4. `multi-source-primary-input-provenance`",
+            "if `multi-source-primary-input-provenance` starts sounding like bridge architecture or retrieval ranking",
+            "1. `versionable-session-transcripts` (landed as [AOA-T-0044]",
+            "2. `witness-trace-as-reviewable-artifact` (landed as [AOA-T-0045]",
+            "`AOA-T-0026` keeps ownership of whether sessions are captured",
+            "[AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns transcript versionability, readable packaging, redactable export, and comparison-ready transcript shaping over an already-saved artifact",
+            "[AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns witness export, citation, and review-packet discipline over an already-saved artifact instead of witness runtime behavior or memory writeback",
+            "if a draft still needs `save sessions locally` or `derive future instructions` to explain its value",
+            "Wave C is now fully landed across the external and cross-layer intake surfaces",
+        ):
+            self.assertIn(target, candidates)
+
+    def test_deep_audit_roadmap_describes_swarm_future_import_execution_pack(self) -> None:
+        roadmap = (REPO_ROOT / "docs" / "DEEP_AUDIT_ROADMAP.md").read_text(
+            encoding="utf-8"
+        )
+
+        for target in (
+            "main agent owns wave boundaries, final wording, intake/roadmap sync, shared generated surfaces, and `python scripts/release_check.py`",
+            "Wave A: `profile-preset-composition`, `render-truth-before-startup`, `contextual-host-doctor`, `one-command-service-lifecycle`, `baseline-first-additive-profile-benchmarks`",
+            "Wave B: `skill-vs-command-boundary`, `skill-marketplace-curation`, `upstream-skill-health-checking`, `multi-source-primary-input-provenance`",
+            "[AOA-T-0041]",
+            "[AOA-T-0042]",
+            "[AOA-T-0043]",
+            "[AOA-T-0044]",
+            "[AOA-T-0045]",
+            "minimum packet shape: `phase/checkpoint`, `done`, `blocked`, `next action`, `next owner`, `entry/exit condition`, and `stop/return/escalation`",
+            "[AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) keeps ownership of session capture, project-scoped persistence, and local-first artifact availability itself",
+            "selected conversations saved into one Markdown document, review or edit before saving, and timestamped transcript artifacts ready for code review or knowledge sharing",
+            "any future transcript-history sibling still fails the seam if its value proposition is merely `save sessions locally` instead of shaping or packaging an already-saved transcript for review",
+            "[AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns export/review/citation discipline for one structured witness trace plus summary without becoming a new memory-object kind",
+            "any future witness-history sibling still fails the seam if it needs runtime witness generation, memory writeback, or future-instruction derivation to explain its value",
+            "the latest public `agentwise` read exposes `phase-based synchronization across all agents` and `Phase Controller`",
+            "donor evidence refresh checked on `2026-03-23` still reaches only a partial phase-boundary signal",
+            "public GitHub README and docs home still do not expose `checkpoint`, `handoff`, or `packet`",
+        ):
+            self.assertIn(target, roadmap)
 
     def test_kag_source_lift_family_has_second_context_and_readiness_notes(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")

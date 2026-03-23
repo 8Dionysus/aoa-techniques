@@ -2808,6 +2808,908 @@
           "content_markdown": "- add a sibling for redaction policy review if the review step becomes reusable on its own\n- add a sibling for incident-summary preparation if incident share-prep proves distinct from general sanitization\n- add a sibling for sanitized example generation if example transformation becomes a recurring reusable object"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0035",
+      "name": "profile-preset-composition",
+      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep runtime posture reviewable by separating atomic modules, ordered profiles, and named presets into explicit layers instead of hiding common operating modes inside one large merged configuration."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a stack has several reusable runtime pieces that need legible grouping\n- optional layers should compose onto a base runtime path without one giant config file\n- common multi-profile operating modes need stable names\n- operators should inspect resolved profiles and modules before launch\n- the reusable object is the composition contract itself rather than render, startup, or health-check behavior"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- one small static stack does not need profile or preset layers\n- the main need is pre-start rendered truth for the exact active runtime\n- the main need is profile-scoped readiness checks or one-command lifecycle control\n- profile and preset names would only hide a simpler direct module list\n- the composition scheme depends on implicit discovery instead of explicit bounded lists"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- atomic runtime units such as modules or equivalent small building blocks\n- named profiles that list modules in activation order\n- named presets that list profiles in activation order\n- one explicit resolution rule for ordering and duplicate handling\n- one read-only inspection path that shows the resolved result before launch"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- explicit ownership for the module, profile, and preset layers\n- reviewable profile and preset definitions\n- repeatable resolved profile and module order\n- stable names for common runtime postures\n- an inspection-first composition surface before launch"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Define the smallest reusable runtime pieces as modules or equivalent atomic units.\n2. Group those units into small named profiles that list modules in activation order.\n3. Group common multi-profile operating modes into presets that list profile names in activation order.\n4. Resolve preset-expanded profiles first and append directly selected profiles afterward.\n5. Keep duplicate profiles and duplicate modules only once, at first appearance.\n6. Store profile and preset definitions in simple diff-friendly lists rather than in one opaque merged config.\n7. Expose read-only inspection surfaces that show resolved presets, profiles, modules, paths, or expected endpoints before launch.\n8. Fail fast when a referenced profile or module is missing instead of silently degrading the resolved stack."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the module, profile, and preset layers each have explicit ownership\n- profiles own ordered module lists; presets own ordered profile lists\n- preset expansion happens before direct profile additions\n- duplicate profiles and modules are kept once, at first appearance\n- composition stays reviewable as simple bounded definitions rather than one giant merged launcher surface\n- the technique owns layered runtime posture composition, not render, startup, smoke, doctor, or lifecycle actions\n- inspection-before-run is part of the contract, but live environment truth and readiness verdicts remain separate sibling techniques\n\nRelationship to adjacent techniques: unlike `AOA-T-0012`, this technique stops at layered runtime composition and read-only inspection rather than deterministic generation of one rendered artifact."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- unrelated concerns get stuffed into one oversized profile or preset\n- preset names become convenient labels for combinations whose real layer ownership is no longer clear\n- missing references or implicit dependencies survive until launch time because the composition contract is not checked early\n- teams use preset names without any reliable way to inspect the resolved profile and module order first\n\n### Negative effects\n\n- extra composition layers can add ceremony for small stacks that do not need them\n- stable preset names can make a runtime posture look simpler than it really is\n- reviewable lists can still create false confidence if contributors can recite preset names but cannot explain what expands underneath them\n- too many weak profiles or presets can turn a clean layering contract into naming clutter\n\n### Misuse patterns\n\n- treating the technique as a generic launcher or platform doctrine\n- letting presets become the only place new capability enters instead of adding capability module-first\n- widening the bundle into rendered config review, startup flows, or lifecycle wrappers\n- encoding secret-bearing host detail or donor-specific deployment roots into what should be portable composition definitions\n\n### Detection signals\n\n- reviewers cannot say why a capability belongs at the module, profile, or preset layer\n- the same preset label is used repeatedly while its underlying profile expansion remains implicit\n- contributors talk about startup, waiting, smoke, or doctor commands more than the composition contract itself\n- composition definitions are no longer small or diff-friendly enough to review as bounded lists\n\n### Mitigations\n\n- require module-first inclusion before adding profile or preset membership\n- collapse weak profiles or presets whose names do not protect a real reusable posture\n- keep one visible inspection path for resolved presets, profiles, and modules before launch\n- fail fast on missing references and ambiguous ownership\n- split render, readiness, and lifecycle behavior into sibling techniques instead of widening this bundle"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- module, profile, and preset ownership are all explicit\n- preset-expanded profiles resolve before direct profile additions\n- duplicate profiles and modules are deduped at first appearance\n- profile and preset definitions stay small and reviewable\n- a read-only inspection path exists before launch\n- the bundle does not drift into rendered runtime truth, doctor-style readiness, or lifecycle control\n\nSee `checks/profile-preset-composition-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the names of modules, profiles, and presets\n- whether selectors are repeated flags, comma-separated lists, or another explicit syntax\n- the exact storage format for the lists\n- the names of the inspection commands or scripts\n\nWhat should stay invariant:\n- module, profile, and preset ownership remains explicit\n- preset-expanded profiles resolve before direct profile additions\n- duplicate profiles and modules are kept once, at first appearance\n- inspection happens before launch rather than only after failure\n\nProject-shaped details that should not be treated as invariant:\n- exact ports, hostnames, or deployment roots\n- provider-specific compose tooling\n- donor-specific profile names such as `agentic` or `intel`\n- render, startup, health-check, or lifecycle commands that live outside this composition contract"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable layer contract: modules compose into profiles, profiles compose into presets, and the resolved posture stays inspectable before launch. Donor-specific ports, host paths, compose roots, service names, and lifecycle commands were reduced or generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-profile-preset-composition.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/profile-preset-composition-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- extracted from `abyss-stack`\n- promoted to `aoa-techniques` on 2026-03-22 as a bounded docs technique for layered runtime composition"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep `render-truth-before-startup` as the rendered-runtime sibling rather than widening this bundle into pre-start render review\n- keep `contextual-host-doctor` as the readiness sibling rather than turning composition into health-check policy\n- keep `one-command-service-lifecycle` as the lifecycle sibling rather than absorbing launch or control doctrine"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0036",
+      "name": "render-truth-before-startup",
+      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Expose the actual composed runtime truth before startup so operators can review the effective service set and rendered config instead of inferring final behavior from declared profiles or module lists alone."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- layered profiles or presets can change the final runtime view in ways that are hard to infer from declarations alone\n- overlays or additive runtime layers may add, replace, or reshape services before startup\n- operators need one read-only pre-start review seam before a local runtime is launched\n- a workflow should catch surprising service composition before containers or processes start\n- the real reusable value is the pre-start rendered truth step, not lifecycle control or post-start validation"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the main need is profile and preset composition itself rather than the final composed view\n- the main need is host readiness or environment preflight checks\n- the main need is startup, waiting, smoke, or internal probes after the runtime is already live\n- the rendered output cannot be handled locally with appropriate care for secret-bearing material\n- the workflow would turn the render step into a generic config export or publication surface"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one selected profile, preset, or equivalent bounded runtime selection\n- one composition engine that can render the final service or config view before startup\n- one local review path for service-list output or full rendered config\n- one local handling rule for secret-bearing rendered material"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one pre-start view of the actual effective service set\n- one optional full rendered config for deeper local review\n- earlier visibility into overlays, merges, or surprising service activation\n- one clear handoff from review into later startup or readiness steps"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Resolve the selected profile, preset, or equivalent runtime choice through the existing composition layer.\n2. Render the effective service list from the actual composed runtime view before any startup step runs.\n3. Render the full composed config locally when deeper inspection is needed.\n4. Treat the full rendered config as potentially secret-bearing and keep it in a local controlled path.\n5. Review the rendered service set or config for unexpected merges, overlays, missing services, or surprising additions.\n6. Use the render output to answer \"what will actually start\" before answering \"is the host ready\" or \"did startup succeed\".\n7. Hand off to startup, wait, smoke, or doctor-style checks only after the rendered truth has been reviewed."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the render step shows the actual composed runtime view rather than only declared module, profile, or preset intent\n- the render step happens before startup\n- the technique stays read-only and review-oriented\n- the service-list render is the lightweight default, while the full rendered config is optional and more sensitive\n- full rendered config is treated as potentially secret-bearing local material rather than a shareable artifact\n- composition ownership remains with `AOA-T-0035`; readiness, smoke, and lifecycle ownership remain with sibling techniques\n- the technique does not widen into generic config publication, deployment orchestration, or startup control\n\nRelationship to adjacent techniques: unlike `AOA-T-0035`, this technique owns the actual composed runtime view after selection resolves, not the module-profile-preset composition contract itself. Unlike `AOA-T-0032`, it is a local pre-start review step rather than a CI-facing report."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- teams inspect declared profiles and skip the actual rendered view even when overlays can change the final result\n- rendered config gets treated like a harmless debug artifact and leaks local sensitive values\n- the render step becomes a token gesture that no one reviews before startup\n- operators mistake rendered truth for proof that the host is ready or that the runtime will be healthy after launch\n\n### Negative effects\n\n- a render step adds extra friction to very small runtime changes\n- full rendered config can overwhelm reviewers when the service-list view would have been enough\n- local rendered files can linger longer than intended and become accidental sensitive artifacts\n- the rendered output can create false confidence that the runtime is safe to start even when readiness and health remain unchecked\n\n### Misuse patterns\n\n- committing or publishing full rendered config\n- widening the technique into doctor checks, smoke checks, or lifecycle wrappers\n- using rendered output as the new canonical source of truth instead of as a pre-start inspection seam\n- forcing full config rendering every time when a service-list render would have answered the real question\n\n### Detection signals\n\n- startup surprises keep happening even though a render step supposedly exists\n- rendered files begin showing up in version control or share-prep flows\n- contributors talk about `up`, `wait`, or `smoke` more than about what the render actually exposed\n- the service list and full config render are both available, but reviewers still cannot answer what the final runtime will start\n\n### Mitigations\n\n- make the pre-start review question explicit: what does the runtime actually resolve to right now\n- use service-list rendering as the first pass and reserve full config rendering for deeper local review\n- keep rendered config local, controlled, and ephemeral where possible\n- route readiness, smoke, and lifecycle concerns into sibling techniques instead of stretching this one\n- treat repeated startup surprise after a render step as evidence that the render output is not actually being reviewed"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the selected runtime can be rendered before startup\n- the effective service list comes from the actual composed runtime view rather than from docs or module narration alone\n- a full rendered config path exists for deeper local review when needed\n- the bundle states that full rendered config may be secret-bearing\n- the workflow hands off to startup or readiness checks rather than pretending the render step replaced them\n\nSee `checks/render-truth-before-startup-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the names of the render commands\n- whether the render surface exposes services, full config, or both\n- the local file path used for deeper rendered-config review\n- the composition engine behind the render step\n\nWhat should stay invariant:\n- the rendered view comes from the actual composed runtime\n- the render happens before startup\n- the step stays read-only and review-oriented\n- secret-bearing rendered config stays local and controlled\n\nProject-shaped details that should not be treated as invariant:\n- exact compose tooling\n- exact profile or preset names\n- systemd, wrapper, or deployment path assumptions\n- post-start doctor, smoke, probe, or lifecycle commands"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable pre-start render-review contract. Donor-specific service names, ports, deployed paths, and local secret material handling were generalized so the technique stays portable and public-safe."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-render-truth-before-startup.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/render-truth-before-startup-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- extracted from `abyss-stack`\n- promoted to `aoa-techniques` on 2026-03-22 as a bounded agent-workflow technique for pre-start rendered runtime review"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep `contextual-host-doctor` as the readiness sibling rather than turning render review into host-preflight doctrine\n- keep `one-command-service-lifecycle` as the lifecycle sibling rather than absorbing startup control into this technique\n- add a second live context if another runtime stack uses the same pre-start rendered-truth seam"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0037",
+      "name": "contextual-host-doctor",
+      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Expose whether the current host is shaped enough for the selected runtime before startup by running selector-aware readiness checks that distinguish relevant warnings from real preflight blockers."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- startup success depends on host-side conditions that vary by the selected profile, preset, or runtime path\n- different runtime selections make different readiness signals relevant\n- operators need one bounded pre-start readiness verdict before launch\n- environment drift should become visible before time is spent on startup failure triage\n- the reusable object is a contextual preflight diagnostic, not startup control or post-start health verification"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the main need is layered runtime composition or rendered startup truth\n- the main need is smoke, health, or internal probe verification after services are running\n- the check surface is really fleet monitoring, incident response, or continuous observability\n- every warning should always be a hard failure regardless of context\n- the tool would become a bootstrap installer, secret manager, or lifecycle wrapper instead of a readiness verdict"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one selected profile, preset, or equivalent runtime choice\n- one known set of host-side prerequisites and optional signals\n- one context rule that says which checks matter for the selected runtime\n- one pre-start execution point for the diagnostic\n- one optional strict mode that can promote warnings into failure"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one selector-aware readiness verdict before startup\n- explicit `ok`, `warn`, or `fail` signals for checked items\n- earlier visibility into environment drift that matters for the chosen runtime\n- one clear handoff into render, launch, or post-start checks after preflight review"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Resolve the selected profile, preset, or equivalent runtime choice through the same selector logic used by adjacent runtime tools.\n2. Print the selected runtime summary so the verdict is visibly tied to one concrete runtime choice.\n3. Check the small set of host prerequisites that always matter, such as core commands, basic runtime backend availability, or baseline platform expectations.\n4. Add contextual checks only when the selected runtime makes them relevant.\n5. Emit explicit `ok`, `warn`, or `fail` results for each checked item rather than one opaque pass or fail outcome.\n6. Keep optional or context-specific issues visible as warnings unless the chosen strictness policy promotes them.\n7. Stop at the readiness verdict and hand off to render, launch, smoke, or internal probes as separate steps."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the doctor verdict is selector-aware rather than one global readiness score\n- the same selection inputs used by nearby runtime tools must determine which checks are relevant here\n- the technique stays pre-start and diagnostic\n- explicit `ok`, `warn`, and `fail` signals remain visible item by item\n- strict mode may harden warning handling, but the default contract keeps contextual warnings distinct from hard blockers\n- the technique does not own composition, rendered truth, startup, smoke, internal probes, or monitoring programs\n- the doctor result should help an operator decide whether to proceed, but it is not proof that startup or post-start health will succeed\n\nRelationship to adjacent techniques: unlike `AOA-T-0036`, this technique answers whether the host is ready enough for the selected runtime, not what the final composed runtime resolves to. Unlike `AOA-T-0003`, it is a pre-start diagnostic verdict rather than a post-start smoke summary contract."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- a warning becomes ambient and stops influencing real preflight decisions\n- the check list grows until the doctor behaves like a generic monitoring suite\n- the selected runtime changes but the relevant checks do not change with it\n- operators treat a passing doctor result as proof that startup and post-start health are guaranteed\n\n### Negative effects\n\n- preflight checks can add friction to small local runs\n- warning-heavy output can create alert fatigue if severity is not kept honest\n- strict mode can make optional drift feel like a hard blocker in contexts where it should remain advisory\n- a concise preflight verdict can create false confidence when it is mistaken for broader runtime validation\n\n### Misuse patterns\n\n- turning selector-aware preflight into a generic host inventory or monitoring program\n- adding post-start health or internal probe checks to make the doctor feel more complete\n- using the doctor as a substitute for render review, smoke, or lifecycle control\n- hard-coding donor-specific paths or device assumptions as universal requirements\n\n### Detection signals\n\n- the doctor output is mostly the same no matter which runtime selection is used\n- contributors start discussing dashboards, incidents, or continuous polling instead of pre-start readiness\n- the doctor begins naming running-service health rather than host-side preconditions\n- operators still hit the same startup blockers even though the doctor supposedly covered them\n\n### Mitigations\n\n- keep the check set small and tied to concrete pre-start blockers or warnings\n- require selection-aware branching whenever a check matters only for some runtime paths\n- keep item-level severity explicit and review whether warnings are still genuinely advisory\n- route render, smoke, and lifecycle concerns into sibling techniques instead of widening the doctor\n- treat repeated uncaught startup blockers as evidence that the preflight contract needs sharpening"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the readiness verdict changes when a different runtime selection changes what should matter\n- item-level `ok`, `warn`, and `fail` signals are visible\n- context-specific checks appear only when the selected runtime makes them relevant\n- strict mode behavior is explicit rather than implicit\n- the bundle stays pre-start and diagnostic rather than drifting into startup, smoke, or monitoring\n\nSee `checks/contextual-host-doctor-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact host prerequisites\n- the selector names and runtime-path vocabulary\n- the strictness policy for warnings\n- the command or UI surface that presents the readiness verdict\n\nWhat should stay invariant:\n- readiness checks are contextual to the selected runtime\n- item-level severity remains explicit\n- the diagnostic runs before startup\n- the result stays diagnostic rather than mutating or continuously monitoring\n\nProject-shaped details that should not be treated as invariant:\n- exact device paths such as `/dev/dri`\n- exact runtime roots such as `/srv/...`\n- exact command names such as `podman` or `systemctl`\n- donor-specific internal-only layer names or vault mount points"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable selector-aware preflight contract. Donor-specific device paths, runtime roots, command names, and internal service names were generalized so the technique stays portable and public-safe."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-contextual-host-doctor.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/contextual-host-doctor-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- extracted from `abyss-stack`\n- promoted to `aoa-techniques` on 2026-03-22 as a bounded evaluation technique for selector-aware host readiness"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep `one-command-service-lifecycle` as the lifecycle sibling rather than widening this bundle into launch control\n- keep `baseline-first-additive-profile-benchmarks` as the comparison sibling rather than turning readiness into performance judgment\n- add a second live context if another runtime stack adopts the same selector-aware preflight verdict"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0038",
+      "name": "one-command-service-lifecycle",
+      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep a bounded local service stack startable and stoppable through one explicit lifecycle entrypoint so operators do not have to coordinate multiple terminals, hidden child processes, or ad hoc cleanup steps by hand."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- local agent-supporting stacks need more than one service, but operators still want one visible entrypoint\n- prerequisite checks, auto-build steps, or startup messages should happen in one bounded place before the stack goes live\n- the local runtime should tell the operator what started and how to stop it\n- clean shutdown matters because orphaned child processes or half-running sidecars create repeated drift\n- the reusable object is local lifecycle ownership, not composition, render review, readiness verdicts, or deployment orchestration"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the main need is profile or preset composition rather than lifecycle control\n- the main need is pre-start rendered runtime truth or selector-aware readiness checks\n- the real target is remote deployment, fleet orchestration, or always-on background service management\n- the entrypoint would become a generic project bootstrap or install wizard instead of a bounded runtime lifecycle surface\n- the stack cannot name one clear stop path for every service it starts"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one explicit operator-facing lifecycle entrypoint\n- one bounded local service stack with named dependent services\n- one prerequisite or build policy for what must exist before startup may proceed\n- one visible stop path such as terminal interrupt or a paired stop helper\n- one concise status surface that can name what is running after startup"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one predictable local start surface for the bounded stack\n- lower operator friction compared with manual multi-terminal startup\n- visible runtime status and stop instructions after launch\n- one explicit cleanup path that reduces orphaned local processes\n- a clear handoff from composition, render review, and readiness into actual local runtime control"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Pick one operator-facing entrypoint that owns startup for the bounded local stack.\n2. Run prerequisite checks or required build steps there, and fail early if the stack cannot be started safely enough.\n3. Start the root service or manager that owns any dependent local services instead of requiring the operator to coordinate each service manually.\n4. Print a concise status summary that names the running services or roles and the stop path.\n5. Keep the lifecycle attached to the initiating terminal or another equally explicit stop surface rather than hiding it behind ambient background state.\n6. On interrupt or stop, terminate the services started by the entrypoint together and report leftover cleanup if any child process does not exit cleanly.\n7. Leave profile composition, rendered truth, readiness verdicts, project initialization, and integration setup to sibling techniques or docs."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- one explicit operator-facing entrypoint owns local stack startup\n- prerequisite and build checks may sit inside that entrypoint, but remain subordinate to lifecycle ownership\n- dependent services start and stop as one bounded local stack rather than as scattered manual commands\n- the operator can see what started and how to stop it\n- shutdown is explicit and tries to prevent orphaned local processes or half-running local services\n- the technique stays local, bounded, and operator-triggered rather than widening into deployment orchestration, platform doctrine, or generic launcher behavior\n- composition ownership remains with `AOA-T-0035`, rendered truth remains with `AOA-T-0036`, and readiness verdict ownership remains with `AOA-T-0037`\n\nRelationship to adjacent techniques: unlike `AOA-T-0036`, this technique owns starting and stopping the bounded local stack after review rather than rendering the pre-start runtime view. Unlike `AOA-T-0037`, it owns lifecycle control rather than a selector-aware readiness verdict."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the supposed one-command entrypoint still depends on hidden manual prep in other terminals\n- startup messages look reassuring, but the operator still cannot tell what is actually running or how to stop it\n- shutdown only kills the parent process and leaves child services behind\n- the lifecycle script accumulates unrelated install, configuration, or platform policy until the bounded contract disappears\n\n### Negative effects\n\n- a unified entrypoint can hide useful detail if the status surface is too vague\n- automated prerequisite checks can slow small local runs when they are not kept proportional\n- a convenience lifecycle wrapper can create false confidence that render review or readiness checks already happened\n- contributors may start treating the entrypoint as the place to put every local operation\n\n### Misuse patterns\n\n- widening the bundle into generic project bootstrap, installer, or environment-doctor doctrine\n- using one-command lifecycle as a substitute for render review, readiness, smoke, or deployment workflows\n- silently backgrounding services so the operator loses the real stop path\n- mixing unrelated logging, registry, OAuth, or memory-system breadth into what should stay a bounded local stack lifecycle\n\n### Detection signals\n\n- operators still need a setup note with several manual terminal commands before the lifecycle entrypoint works\n- reviewers cannot list which services the entrypoint owns\n- stop instructions are missing, unreliable, or known to leave leftovers\n- discussions about the bundle drift toward platform integration, remote deployment, or global install behavior\n\n### Mitigations\n\n- keep the entrypoint narrow and lifecycle-centered\n- print a short runtime summary and stop path every time the stack starts\n- treat leftover child processes as a lifecycle defect instead of normal operator cleanup\n- route composition, rendered truth, readiness, smoke, and installation concerns into sibling techniques or separate docs\n- split out donor-specific platform extensions instead of widening the core lifecycle contract"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one explicit operator-facing entrypoint starts the bounded local stack\n- prerequisite or build checks fail early or are reported clearly before startup continues\n- the startup output identifies what is running and how to stop it\n- interrupt or a paired stop surface shuts down the started services together\n- the bundle stays distinct from composition, rendered truth, readiness verdicts, project bootstrap, and deployment orchestration\n\nSee `checks/one-command-service-lifecycle-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the command name or wrapper script\n- whether the lifecycle surface supports a development and production mode\n- the exact prerequisite or build checks\n- the exact number of dependent services in the bounded stack\n- whether stop happens through terminal interrupt, a companion stop helper, or both\n\nWhat should stay invariant:\n- one explicit entrypoint owns local stack startup\n- the started services form one bounded local lifecycle surface\n- the operator can see what started and how to stop it\n- shutdown is treated as part of the contract rather than as manual cleanup\n\nProject-shaped details that should not be treated as invariant:\n- exact ports, host paths, or log locations\n- global install locations or desktop shortcut flows\n- logging API, OAuth connector, or dashboard side programs\n- donor-specific memory, enforcement, registry, or compliance systems"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable local-lifecycle contract: one explicit entrypoint starts a bounded stack, prints a visible runtime summary, and owns clean shutdown. Donor-specific ports, global-install paths, desktop integration, logging extras, OAuth surfaces, and memory-system behavior were intentionally removed or generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-one-command-service-lifecycle.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/one-command-service-lifecycle-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `OpenMemory-Code`\n- promoted into `aoa-techniques` on 2026-03-23 as a bounded external-import technique for local service lifecycle ownership"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep `AOA-T-0035` as the composition sibling rather than widening this bundle into profile or preset doctrine\n- keep `AOA-T-0036` as the rendered-truth sibling rather than absorbing pre-start review into startup control\n- keep `AOA-T-0037` as the readiness sibling rather than making launch control look like a health verdict\n- keep `baseline-first-additive-profile-benchmarks` as the comparison sibling rather than turning local lifecycle convenience into performance scoring"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0039",
+      "name": "baseline-first-additive-profile-benchmarks",
+      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep comparison discipline honest by running one stable baseline profile first, then comparing additive profiles against the same measurement surface and the same artifact shape."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a baseline profile should anchor the benchmark before any richer profile is compared\n- additive profiles need to stay secondary rather than becoming the default path\n- comparison results should stay like-for-like across the same summary shape\n- additive prework needs to be isolated so it does not blur the baseline measurement\n- the reusable object is comparison discipline, not benchmark-suite ownership or product scoring"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the main need is profile composition, runtime rendering, host diagnosis, or service lifecycle control\n- you want benchmark-suite governance, promotion policy, or a rolling historical baseline system\n- there is no stable baseline profile yet\n- additive profiles are still experimental enough that their setup would change the default path\n- the result would be used to rank products rather than compare bounded profile shapes"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one stable baseline profile\n- one or more additive profiles to compare later\n- one normalized measurement surface\n- one artifact shape that stays consistent across runs\n- one isolated place for additive prework when a richer profile needs extra setup"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one baseline result on the canonical measurement surface\n- one or more additive comparison results on the same surface and artifact shape\n- explicit deltas that can be read without translating between formats\n- a clear note about whether the additive path stayed off the default route"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Pick the stable baseline profile and run it first.\n2. Confirm the benchmark writes the expected normalized artifact shape.\n3. Freeze the measurement surface so additive runs are compared against the same contract.\n4. Prepare additive profile prework in an isolated path if richer setup is needed.\n5. Run the additive profile against the same surface and same artifact shape.\n6. Compare only like-for-like fields and keep the baseline as the reference point.\n7. Report the comparison as a bounded benchmark result, not as a ranking or promotion decision."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the baseline profile runs before any additive comparison\n- additive profiles reuse the same measurement surface and artifact shape as the baseline\n- additive setup stays isolated from the default path\n- the benchmark reports comparison discipline, not product scoring\n- the technique stays separate from benchmark-suite ownership, promotion policy, and rolling baseline governance\n- the contract is about stable comparison, not about profile composition or runtime execution control"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the additive path quietly becomes the new default path\n- the measurement surface drifts so baseline and additive runs are no longer comparable\n- a rolling historical baseline sneaks in and replaces the stable baseline-first contract\n- benchmark results start reading like product scores instead of bounded comparisons\n\n### Negative effects\n\n- additive prework can create setup overhead if it is not kept separate from the baseline path\n- a single shared summary shape can hide mismatched assumptions if the surface is not frozen carefully\n- comparison language can overreach into governance or promotion decisions\n\n### Misuse patterns\n\n- using the technique to choose a winner instead of to compare bounded profiles\n- letting additive setup mutate the default runtime path\n- treating benchmark ownership as if it included promotion policy or suite-wide governance\n- widening the technique into render review, host readiness, or lifecycle control\n\n### Detection signals\n\n- the default benchmark path now depends on additive-only setup\n- baseline and additive runs no longer produce the same artifact shape\n- result discussions use ranking or product-scoring language\n- people begin to ask whether the benchmark owns policy decisions beyond comparison\n\n### Mitigations\n\n- keep the baseline profile as the first and default comparison point\n- require the same normalized measurement surface for both baseline and additive runs\n- isolate additive prework in a separate path or step\n- reject any wording that turns the technique into suite governance or product ranking"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the baseline run happens before any additive run\n- the additive run uses the same measurement surface and artifact shape as the baseline\n- additive prework is isolated when extra setup is needed\n- the report states comparison results without implying promotion or product ranking\n- the benchmark remains readable as a bounded comparison contract\n\nSee `checks/baseline-first-additive-profile-benchmarks-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the benchmark command or harness name\n- the exact profile labels\n- the normalized artifact filename\n- the underlying service or dataset family being compared\n- whether additive prework lives in a script, workflow step, or operator note\n\nWhat should stay invariant:\n- baseline first, additive second\n- the same measurement surface for all compared runs\n- the same artifact shape for all compared runs\n- additive paths remain secondary and isolated\n- the result is a comparison discipline, not a policy surface\n\nRelationship to adjacent techniques:\n- unlike `AOA-T-0035 profile-preset-composition`, this technique does not define how profiles are composed\n- unlike `AOA-T-0036 render-truth-before-startup`, it does not inspect rendered runtime truth\n- unlike `AOA-T-0037 contextual-host-doctor`, it does not diagnose readiness or host drift\n- unlike `AOA-T-0038 one-command-service-lifecycle`, it does not start or stop the runtime stack"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "The public bundle keeps only the reusable benchmark contract: stable baseline first, additive comparison second, same measurement surface, same artifact shape. Donor-specific service names, workflow paths, and private benchmark labels were generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-baseline-first-additive-profile-benchmarks.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/baseline-first-additive-profile-benchmarks-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped from a baseline-first benchmark path in `atm10-agent`\n- reinforced by a profile-composition posture in `abyss-stack`\n- promoted to `aoa-techniques` on 2026-03-23 as a bounded evaluation technique for stable baseline-plus-additive comparisons"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a second donor lineage that uses the same baseline-first comparison rule\n- add an example with a non-service benchmark family\n- add a note on how to keep additive prework isolated when the richer profile has extra setup"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0040",
+      "name": "skill-vs-command-boundary",
+      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep reusable capability meaning in a skill artifact and keep user-facing invocation behavior in a command artifact so shared knowledge does not collapse into command syntax, argument parsing, or command-local workflow steps."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- the same capability should survive outside any one user-facing command\n- a repository has both reusable skills and explicit command entrypoints\n- commands need their own arguments, numbered steps, or structured output\n- agents or several commands should be able to reuse the same skill without rewriting it\n- the reusable object is the skill-command ownership split rather than distribution, routing, or marketplace policy"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- one local command is the whole feature and no reusable capability survives outside it\n- the real need is one canonical source propagated to many managed targets\n- the real need is upstream mirroring with provenance rather than local capability ownership\n- the real need is shell composability, slash-command product design, or routing policy\n- the command and skill artifacts would only duplicate each other with no meaningful reuse boundary"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one reusable skill artifact that names patterns, guidelines, or procedure\n- one user-facing command artifact that names invocation syntax, arguments, steps, or structured output\n- one explicit rule for how the command references or invokes the skill\n- one review path that can catch copied or redefined skill meaning inside commands\n- one reason the skill should remain meaningful outside the current command wrapper"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- clearer ownership of reusable capability meaning\n- a command surface that stays bounded to invocation and workflow entry\n- lower drift between shared capability and command wrappers\n- easier reuse of the same skill across agents or multiple commands\n- a cleaner test for whether a new artifact should be a skill, a command, or neither"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Identify the part of the capability that should remain reusable outside any one command entrypoint.\n2. Write that reusable meaning as a skill artifact with patterns, guidelines, or procedure.\n3. Write the user-facing entrypoint as a command artifact that owns invocation name, arguments, numbered steps, and output shape.\n4. Let agents or commands reference the skill for how-to knowledge instead of copying its body.\n5. Keep command-specific wrappers, guardrails, and output formatting inside the command artifact.\n6. If the capability cannot survive without one command's argument shape or workflow, keep it command-local instead of inventing a fake skill.\n7. Split propagation, marketplace, routing, and shell-composability concerns into separate sibling techniques when they become the real reusable object."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the skill owns reusable capability meaning\n- the command owns invocation syntax, arguments, workflow steps, and output format\n- the same skill can be reused by more than one agent or command without rewriting its core meaning\n- a command may invoke or reference a skill without becoming the canonical home of that skill\n- command-specific constraints must not silently redefine the base skill boundary\n- the technique stays about skill-command artifact ownership, not distribution, marketplace curation, routing policy, or shell-command design\n\nRelationship to adjacent techniques: unlike `AOA-T-0013 single-source-rule-distribution`, this technique does not fan one canonical source out to several managed instruction targets. Unlike `AOA-T-0027 cross-agent-skill-propagation`, it does not govern propagation into multiple targets at all; it decides what should remain a reusable skill before any propagation story begins. Unlike `AOA-T-0024 upstream-mirroring-with-provenance`, it does not mirror upstream-owned content. Unlike `AOA-T-0031 shell-composable-agent-invocation`, it does not define shell I/O boundaries for one-shot command execution."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- command files become the only place where reusable capability meaning actually lives\n- skills degrade into thin aliases for commands with no independent reuse value\n- the same guidance is copied into both skill and command artifacts and drifts over time\n- command-specific constraints quietly redefine what the skill is supposed to mean\n\n### Negative effects\n\n- one extra artifact boundary can add authoring overhead for small systems\n- narrowly scoped skills can feel abstract if they have no second consumer yet\n- teams can over-split capabilities and create too many tiny skills with little reuse value\n\n### Misuse patterns\n\n- using the technique to justify slash-command taxonomy, routing policy, or marketplace design\n- widening the technique into cross-target propagation, installer behavior, or registry semantics\n- forcing every workflow command to have a matching skill even when no reusable meaning survives outside the command\n- treating shell composability or orchestrator routing as if they were the same boundary problem\n\n### Detection signals\n\n- reviewers cannot explain what the skill owns versus what the command owns\n- command docs restate the full skill body instead of referencing it\n- a second agent or command cannot use the skill without rewriting its meaning\n- discussion focuses on command names and arguments while the reusable capability remains undefined\n\n### Mitigations\n\n- require one short ownership sentence that says what lives in the skill and what lives in the command\n- keep invocation syntax, numbered steps, and structured output in the command only\n- keep reusable patterns, guidelines, and procedure in the skill only\n- decline a separate skill artifact when the capability is truly command-local\n- split propagation, routing, marketplace, and shell concerns into separate sibling techniques instead of widening this one"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one skill artifact and one command artifact are named separately\n- the skill still makes sense without reading a specific command first\n- the command owns arguments, steps, or structured output that do not belong in the skill\n- the command references or invokes the skill without copying its full meaning wholesale\n- another agent or command can reuse the same skill without changing its core contract\n- the bundle does not drift into distribution, propagation, routing, or shell-command doctrine\n\nSee `checks/skill-vs-command-boundary-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact skill file format\n- the exact command file format\n- whether the command surface is a slash command, subcommand, menu action, or another explicit user-facing entrypoint\n- how agents annotate when or why they use a skill\n- whether commands invoke skills directly or route through an intermediate orchestrator\n\nWhat should stay invariant:\n- the skill remains the reusable capability artifact\n- the command remains the invocation artifact\n- commands do not become the canonical home of reusable skill meaning\n- the same skill can survive reuse across more than one command or agent\n\nProject-shaped details that should not be treated as invariant:\n- slash prefixes such as `/`\n- plugin marketplace install flows\n- model-routing tables and orchestrator roles\n- donor-specific frontmatter keys such as `user-invocable`\n- review-agent rosters or inline review pipelines"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable boundary: skill artifacts hold reusable capability meaning, while command artifacts hold user-facing invocation structure. Donor-specific plugin install steps, orchestrator behavior, model routing tables, review-agent catalogs, and command rosters were intentionally left out."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-skill-vs-command-boundary.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/skill-vs-command-boundary-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped from `agentic-dev-team`\n- adapted with local second-context evidence from `aoa-skills` and `aoa-routing`\n- promoted to `aoa-techniques` on 2026-03-23 as a bounded docs technique for separating reusable skill meaning from command invocation surfaces"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep `skill-marketplace-curation` as the discovery sibling rather than widening this bundle into catalog policy\n- keep `upstream-skill-health-checking` as the upstream-availability sibling rather than turning command surfaces into source-health doctrine\n- add another live donor that keeps the same skill-command split outside the current plugin-oriented lineage"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0041",
+      "name": "skill-marketplace-curation",
+      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep a local skill marketplace or catalog reviewable as a curated discovery layer over upstream-owned skills instead of letting it collapse into raw mirroring, installer behavior, or registry policy."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a repository wants a local discovery surface for upstream-owned skills\n- selection quality, grouping, and short descriptions matter as much as raw source availability\n- the local layer should add editorial value without claiming upstream skill ownership\n- users need one bounded place to browse skill options before reading a specific skill\n- the reusable object is curated discoverability rather than sync, health checks, or capability contracts"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the real need is manifest-driven mirroring plus provenance\n- the real need is a boundary between reusable skill meaning and command invocation\n- the real need is registry generation, installer behavior, or routing policy\n- the local collection adds no editorial or discovery value beyond copying upstream entries\n- the local layer would become the canonical source of the underlying skills"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one bounded set of upstream-owned skills or skill entries\n- one local curation surface such as a catalog, marketplace page, or discovery file\n- one explicit rule that upstream ownership remains visible\n- one editorial policy for summaries, grouping, or inclusion quality\n- one review path that can distinguish curation from raw sync plumbing"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- a local discovery layer that helps users browse or inspect upstream-owned skills\n- explicit editorial grouping or summaries over the available skill set\n- preserved visibility of upstream ownership\n- lower pressure to treat the marketplace layer as installer, registry, or sync doctrine\n- a clearer boundary between curation and adjacent substrate concerns"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Choose the bounded local discovery surface that will present the skill collection.\n2. Make upstream ownership readable for every curated entry.\n3. Add editorial value through category placement, short summaries, or selection guidance.\n4. Keep mirrored payloads, sync manifests, or provenance files outside the center of the curated surface.\n5. Keep installer, registry, and command syntax details subordinate to the discovery purpose.\n6. Review the collection as an editorial layer: what is included, how it is grouped, and why it is discoverable.\n7. If a neighboring concern becomes dominant, split it into a separate technique instead of widening the marketplace layer."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the local marketplace or catalog is a discoverability layer, not the canonical source of the skills\n- upstream ownership remains visible for curated entries\n- curation adds editorial value beyond plain mirroring\n- category, summary, or selection guidance stays readable without dragging in installer or registry policy\n- sync plumbing, provenance substrate, and health checking remain separate sibling concerns\n- the technique stays distinct from command-boundary, propagation, routing, and capability-spec ownership\n\nRelationship to adjacent techniques: unlike `AOA-T-0024 upstream-mirroring-with-provenance`, this technique starts after upstream ownership and sync posture are already legible and owns only editorial discoverability. Unlike `AOA-T-0040 skill-vs-command-boundary`, it does not decide where reusable skill meaning stops and command invocation begins. Unlike `AOA-T-0027 cross-agent-skill-propagation`, it does not propagate one source into managed targets. Unlike `AOA-T-0025 capability-spec-versioning`, it does not become the canonical capability-contract surface."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the curated layer quietly becomes a disguised sync engine or registry\n- editorial summaries drift until they misrepresent the upstream skills they are surfacing\n- users start treating the marketplace page as if it owns the underlying skill meaning\n- categories or featured placement become opaque enough that discovery loses reviewability\n\n### Negative effects\n\n- a curated layer adds maintenance overhead beyond plain mirroring\n- editorial selection can create false confidence that omitted skills are lower quality for reasons the surface never explains\n- category structures can become stale faster than the underlying skill sources\n\n### Misuse patterns\n\n- widening the bundle into installer behavior, registry generation, or plugin lifecycle semantics\n- treating command wrappers as the main curated object instead of the underlying skills\n- collapsing curation into raw sync plumbing with no added editorial value\n- turning the discovery layer into routing or ranking doctrine\n\n### Detection signals\n\n- the local surface spends more space on install or sync mechanics than on discoverability\n- reviewers cannot explain what editorial value the curated layer adds beyond mirroring\n- the marketplace page starts reading like the canonical source of capability meaning\n- health checks, registry rules, or routing decisions dominate the curation surface\n\n### Mitigations\n\n- keep one explicit sentence that the layer is curated and not canonical\n- require visible editorial value such as grouping, summaries, or inclusion rationale\n- move sync, provenance, installer, and health details into separate sibling techniques\n- review category and summary language whenever the curated entry set changes"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- curated entries still show upstream ownership clearly\n- the local surface adds editorial discoverability beyond plain mirroring\n- installer, sync, registry, and health-check concerns stay outside the main contract\n- the curated layer can be reviewed without treating it as the canonical home of skill meaning\n- the bundle does not drift into command-boundary, propagation, routing, or capability-spec ownership\n\nSee `checks/skill-marketplace-curation-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact discovery surface format\n- whether curation uses categories, tags, featured rows, or short selection blurbs\n- the number of curated entries\n- how upstream source links are displayed\n\nWhat should stay invariant:\n- the curated layer remains local and editorial\n- upstream ownership stays visible\n- discoverability stays separate from sync and installer substrate\n- the catalog does not become the canonical source of the underlying skills\n\nProject-shaped details that should not be treated as invariant:\n- plugin installer commands\n- registry payload formats\n- sync schedules or GitHub Actions wiring\n- exact category taxonomy names\n- command or slash-command syntax"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This import keeps only the reusable curation contract: a local marketplace or catalog adds editorial discoverability over upstream-owned skills. Installer flows, registry generation, sync automation, daily schedules, and command syntax details were intentionally left out of the public technique contract."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-skill-marketplace-curation.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/skill-marketplace-curation-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `n-skills`\n- promoted into `aoa-techniques` on 2026-03-23 as a bounded external-import technique for curated local discoverability over upstream-owned skills"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep `upstream-skill-health-checking` as the source-readiness sibling rather than widening this bundle into health doctrine\n- keep `AOA-T-0024` as the mirroring and provenance sibling rather than turning curation into sync substrate\n- add another live context if a second public collection shows the same editorial marketplace boundary without collapsing into registry or installer behavior"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0042",
+      "name": "upstream-skill-health-checking",
+      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Expose whether an upstream-owned skill source is selectable enough before it reaches a catalog or selector by checking source availability and manifest-readiness through one bounded pre-surface readiness pass."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a catalog, marketplace, or selector depends on upstream-owned skill sources that can disappear, move, or degrade\n- reviewers need one bounded readiness verdict before a source is surfaced as selectable input\n- the source contract depends on a declared manifest, card, or metadata file being reachable and minimally parseable\n- you need to distinguish unreachable sources from malformed source declarations without widening into a broader registry program\n- the reusable object is source-readiness checking, not mirroring, curation, or security scanning"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the main need is upstream mirroring plus provenance preservation\n- the main need is editorial discovery and category curation over already-readable skills\n- the real need is generic uptime monitoring, alerting, or continuous observability\n- the real need is registry governance, access control, or routing policy\n- the real need is vulnerability scanning, trust scoring, or broader supply-chain review"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one upstream source entry that names the skill location\n- one expected manifest or metadata shape such as `SKILL.md`, frontmatter, or an equivalent card\n- one bounded fetch or read path that can confirm whether the source is reachable\n- one minimal readiness rule that distinguishes selectable, review-needed, and blocked states\n- one pre-surface checkpoint where the result can be reviewed before catalog or selector publication"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one source-readiness verdict for the upstream entry before it is surfaced\n- explicit visibility into whether the source is unreachable, malformed, or ready enough to inspect\n- lower pressure to let broken upstream entries silently appear in curated discovery surfaces\n- one bounded handoff into curation, mirroring, or manual review after the source-readiness check"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Resolve the upstream source entry that is supposed to feed the local catalog, registry, or selector.\n2. Check that the source location is reachable through the same public path the local surface would depend on.\n3. Confirm that the expected manifest or metadata file exists at the declared location.\n4. Parse only the minimal shape needed to decide whether the source can be surfaced for inspection or selection.\n5. Emit an explicit readiness verdict such as `ready`, `review`, or `blocked` so broken entries do not fail silently.\n6. Keep the result tied to one source entry rather than turning it into a global registry score.\n7. Hand off curation, mirroring, security review, or deeper policy decisions to separate sibling techniques."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the check stays upstream-source-facing and runs before catalog or selector surfacing\n- source availability and manifest-readiness remain the center of the verdict\n- the technique keeps unreachable, malformed, and ready-enough states distinct\n- one broken source does not require the bundle to become a full registry-governance or monitoring program\n- the result can block or flag one source entry without becoming a quality ranking system\n- the technique does not own mirroring, provenance, editorial curation, capability contracts, routing policy, or security scanning doctrine\n\nRelationship to adjacent techniques: unlike `AOA-T-0024 upstream-mirroring-with-provenance`, this technique does not mirror upstream content or preserve provenance metadata; it stops at source readiness before any sync or local copy exists. Unlike `AOA-T-0041 skill-marketplace-curation`, it does not decide how readable or well-grouped a surfaced skill collection should be; it decides only whether one upstream source is selectable enough to reach that curation layer. Unlike `AOA-T-0032 context-report-for-ci`, it is not a broad CI-facing composition report; it stays attached to one upstream source entry and one bounded readiness decision. Unlike the broader MCP Gateway Registry platform, it does not own registry governance, access control, federation policy, or security scanning."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- transient network issues get mistaken for permanent source invalidity\n- the check surface grows until it behaves like a generic monitoring suite\n- manifest validation drifts from minimal readiness into policy enforcement or quality scoring\n- teams assume a ready source is trustworthy or high quality simply because it is reachable and parseable\n\n### Negative effects\n\n- pre-surface checks add gating friction for upstream-source additions\n- a strict blocked verdict can temporarily hide otherwise useful sources during short outages\n- minimal readiness checks can give false confidence if reviewers forget they only test availability and shape\n- maintaining a readiness surface adds upkeep beyond plain catalog ingestion\n\n### Misuse patterns\n\n- widening the check into generic monitoring, incidents, or uptime dashboards\n- widening the check into registry policy, permissions, or federation governance\n- bundling in vulnerability scanning or broader security doctrine to make the verdict feel more complete\n- turning readiness into a ranking or trust score for upstream sources\n\n### Detection signals\n\n- the output starts reading like a monitoring dashboard instead of a bounded pre-surface verdict\n- contributors discuss policy gates, registry modes, or permissions more than source reachability and manifest shape\n- vulnerability scans or compliance labels appear in the same verdict that is supposed to stay readiness-only\n- selectors still surface broken sources even though the readiness pass exists\n\n### Mitigations\n\n- keep the readiness rule minimal and limited to source availability plus manifest-readiness\n- separate transient `review` states from hard `blocked` states whenever the evidence is ambiguous\n- route security scanning, governance, and curation into sibling techniques instead of widening this bundle\n- review the minimal manifest requirements whenever upstream source formats change"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- an unreachable source is distinguishable from a malformed but reachable source\n- the verdict stays tied to source availability and manifest-readiness rather than broader policy\n- broken upstream entries are visible before they reach catalog or selector surfaces\n- the bundle does not drift into mirroring, curation, monitoring, registry governance, or security scanning\n- reviewers can explain why a source is `ready`, `review`, or `blocked`\n\nSee `checks/upstream-skill-health-checking-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the source location format\n- the exact manifest or metadata carrier\n- whether the check runs in CI, a publish step, or a manual review command\n- the exact wording of the readiness states\n\nWhat should stay invariant:\n- the verdict runs before selector or catalog surfacing\n- source availability remains explicit\n- minimal manifest-readiness remains explicit\n- the bundle stays bounded to source-readiness rather than broader governance or monitoring\n\nProject-shaped details that should not be treated as invariant:\n- daily sync schedules\n- registry UI modes\n- security-scanner products\n- authentication or access-control flows\n- semantic-search or ranking behavior"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable source-readiness contract: check that an upstream skill source is reachable and minimally parseable before it is surfaced locally. Registry governance, security scanning, identity systems, sync automation, and donor-specific URLs were intentionally left out of the public technique contract."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-upstream-skill-health-checking.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/upstream-skill-health-checking-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped from `n-skills` source-manifest posture and MCP Gateway Registry skills-source checks\n- promoted to `aoa-techniques` on 2026-03-23 as a bounded evaluation technique for pre-surface upstream source readiness"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep `AOA-T-0041` as the curated discovery sibling rather than widening this bundle into editorial marketplace policy\n- keep `AOA-T-0024` as the mirroring and provenance sibling rather than turning readiness into sync doctrine\n- add a second live context that uses the same readiness boundary without dragging in security or governance control planes"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0043",
+      "name": "multi-source-primary-input-provenance",
+      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep the order of source inputs explicit when one bridge or docs surface combines multiple source materials so reviewers can tell which input is primary and which inputs are supporting before the downstream surface depends on them."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a docs surface combines more than one upstream source and the reader needs to know which one is primary\n- multiple source inputs feed one bridge-style artifact, summary, or synthesis step\n- provenance priority matters more than equal treatment of all inputs\n- the useful contract is source ordering, not graph traversal or ranking\n- the reusable object is the primary-versus-supporting input split rather than the bridge architecture itself"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the only problem is note-level provenance handles such as `evidence.kind` and `evidence.path`\n- the real need is direct relation hints between bundles\n- the surface wants multi-hop graph semantics, ranking, or retrieval policy\n- the bridge would become a general architecture program instead of one bounded ordering contract\n- the inputs are already obvious enough that no priority label adds review value"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one docs surface or bridge artifact that consumes multiple source inputs\n- one explicit rule that names the primary input\n- one bounded set of supporting inputs\n- one reviewer-visible place where priority can be stated\n- one downstream consumer that should preserve that priority"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one primary input named explicitly\n- one or more supporting inputs named explicitly\n- a readable priority order for downstream readers or synthesis\n- lower chance that a multi-source surface quietly flattens all inputs into equal status"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Name the source inputs that are feeding the bridge or combined docs surface.\n2. Mark exactly one input as primary for the current contract.\n3. Mark the remaining inputs as supporting, not equal owners of the combined meaning.\n4. Keep the priority order visible in the authored surface, not only in generated metadata.\n5. Preserve the ordering when the bridge feeds a reader, summary, or synthesis step.\n6. If the next request is for traversal, inference, or ranking, stop and split that into a different technique."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- one source input is primary and the rest are supporting when the bridge needs a priority order\n- the priority order stays visible in authored markdown\n- the technique stays about input provenance ordering, not note provenance handles\n- the technique does not become graph semantics, traversal policy, retrieval ranking, or bridge architecture doctrine\n- downstream readers can preserve the priority order without inventing a new graph layer\n\nRelationship to adjacent techniques: unlike `AOA-T-0020`, this technique does not type note kinds or note paths; it marks which source input should be treated as primary when multiple source surfaces are combined. Unlike `AOA-T-0021`, it does not define direct relation hints or one-step edges. Unlike broader bridge contracts, it stops at priority visibility and does not own traversal, synthesis policy, or graph behavior."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- all source inputs get flattened into equal status and the primary signal disappears\n- supporting inputs start acting like hidden primary inputs without review\n- the technique drifts into graph or ranking language because multiple sources are involved\n- readers cannot tell which source should be treated as the primary anchor\n\n### Negative effects\n\n- explicit priority labels can make a combined surface feel less neutral than a plain list\n- writers may over-label inputs when only one priority distinction is actually useful\n- a clear ordering rule can be misread as ranking doctrine if the boundary is not restated\n\n### Misuse patterns\n\n- using the technique to encode retrieval ranking or trust scoring\n- treating note provenance handles as if they already solve multi-source input ordering\n- widening the bridge into graph semantics or multi-hop inference\n- labeling every input as primary/supporting even when the combined surface does not need that distinction\n\n### Detection signals\n\n- reviewers cannot answer which source is primary after reading the bridge surface\n- downstream consumers silently reorder or flatten inputs\n- discussions shift toward ranking, traversal, or graph exports instead of source ordering\n- the bridge starts depending on relation semantics to explain priority\n\n### Mitigations\n\n- keep one explicit primary input and name supporting inputs clearly\n- restate that the contract is ordering, not graph semantics\n- route ranking, traversal, and graph exports into separate sibling techniques\n- use the technique only when provenance priority is actually meaningful to the combined surface"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the bridge surface names one primary input and at least one supporting input when multiple sources are combined\n- the priority order is visible in authored markdown\n- downstream readers can preserve the order without inventing graph semantics\n- the bundle does not depend on note provenance handles to explain source priority\n- the bundle stays distinct from relation lift, retrieval ranking, and broad bridge architecture\n\nSee `checks/multi-source-primary-input-provenance-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- how the bridge surface is written\n- how many supporting inputs are present\n- where the priority order is shown\n- whether synthesis happens manually or through a downstream reader\n\nWhat should stay invariant:\n- one input is primary when the bridge needs a priority order\n- supporting inputs remain explicitly secondary to that primary input\n- the ordering stays readable in markdown\n- the technique does not expand into graph semantics or ranking policy\n\nProject-shaped details that should not be treated as invariant:\n- graph traversal layers\n- retrieval scoring systems\n- note-ID graphs\n- provenance manifests for note bodies\n- bridge export pipelines"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps only the reusable ordering contract: when multiple source surfaces feed one bridge-style docs artifact, the primary input and supporting inputs stay visibly distinct. Graph semantics, retrieval ranking, export pipelines, and note-ID graphs were intentionally left out."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-multi-source-primary-input-provenance.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/multi-source-primary-input-provenance-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- distilled from bridge-style docs work in `aoa-kag` and Tree-of-Sophia-adjacent source surfaces\n- promoted into `aoa-techniques` on 2026-03-23 as a bounded docs technique for explicit primary-versus-supporting source ordering"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a second live context if another public bridge surface uses the same primary-versus-supporting ordering rule\n- keep `AOA-T-0020` as the note-provenance sibling rather than widening this bundle into note metadata\n- keep `AOA-T-0021` as the direct-edge sibling rather than widening this bundle into relation or graph semantics"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0044",
+      "name": "versionable-session-transcripts",
+      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Turn already-saved AI session history into readable, versionable transcript artifacts so teams can review, compare, cite, hand off, or selectively share transcript context without collapsing back into first-save capture, memory recall, or hidden instruction policy."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- session history is already being captured, but reviewers need a cleaner transcript artifact than the raw saved layer alone\n- one task, PR, or review thread needs selected conversations packaged into one readable Markdown transcript\n- teams want transcript files with stable timestamps, metadata, or naming so the history layer becomes easier to diff, commit, or cite\n- a reviewer should be able to edit, redact, or annotate the transcript package before committing or sharing it\n- the reusable object is post-capture transcript shaping and export, not session capture itself"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the main need is still to capture or persist sessions locally in the first place\n- the transcript is being treated as the canonical source of truth for instructions, rules, or repository policy\n- the real need is a summary, decision record, or distilled note rather than a transcript artifact\n- the contract would depend on cloud sync, search UI, login flows, or a hosted sharing service\n- the draft only says `save sessions locally` and cannot explain what transcript shaping or export adds after capture"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one already-saved session artifact layer\n- one selection or grouping rule for which conversations belong in the transcript package\n- one readable transcript format, usually Markdown\n- one naming, timestamp, or metadata convention that keeps exported transcripts versionable\n- one review, edit, or redaction path before wider sharing or commit"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one readable transcript package over already-saved session history\n- lower review friction compared with digging through raw per-session capture files or volatile chat state\n- clearer handoff, citation, or PR context around why a change happened\n- a versionable history layer that can be committed, compared, or selectively shared without becoming memory substrate"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Start from an existing saved session artifact rather than from transient chat or a new capture path.\n2. Select one conversation or one bounded set of conversations that belong in the same review or handoff unit.\n3. Export or package the selected material as a readable transcript artifact with stable timestamps, metadata, or naming.\n4. Combine or split transcript files intentionally so one artifact matches one reviewable workstream instead of becoming an undifferentiated history dump.\n5. Review, edit, or redact the packaged transcript before commit or sharing when the raw saved session is too noisy or too project-shaped.\n6. Commit, cite, or share the transcript artifact as history context while keeping authored rules, summaries, and decisions in their own canonical homes.\n7. Leave capture, cloud search, hosted sharing flows, history-to-instructions derivation, and memory behavior to sibling techniques or other layers."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the technique begins after capture and does not own whether sessions get saved at all\n- one transcript artifact may package one or more already-saved conversations into a readable review unit\n- exported transcripts stay versionable through stable Markdown, timestamps, metadata, or equivalent artifact cues\n- review, edit, annotation, or redaction may happen before commit or wider sharing, but remains subordinate to transcript artifact ownership\n- the transcript artifact supports review, citation, or handoff without becoming hidden memory or instruction authority\n- hosted sharing, search, sync, rule derivation, and memory recall remain optional adjacent layers rather than the invariant core\n- [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md) remains the capture and persistence sibling rather than being reopened through this export layer\n\nRelationship to adjacent techniques: unlike [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md), this technique assumes session artifacts already exist and only owns transcript shaping, packaging, and export for later review. It should also stay narrower than summary or decision-record techniques because it preserves transcript history instead of distilling it into a smaller authored object."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the supposed transcript-export technique quietly re-owns capture because teams cannot explain what happens after the first save\n- transcript packages become giant unreviewable dumps because selection and grouping are never bounded\n- editors modify transcripts so heavily that the artifact stops behaving like a transcript and starts behaving like a summary or policy note\n- hosted sharing or rule-derivation features get mistaken for the reusable core and widen the contract\n\n### Negative effects\n\n- maintaining curated transcript packages adds review overhead when a short summary would have been enough\n- transcript versioning can create noisy diffs if naming, grouping, or redaction discipline stays inconsistent\n- easy sharing can tempt teams to publish transcript artifacts before sanitization or boundary review\n- rich transcript history can pull teams toward hidden-instruction or memory-style reuse if the seam is not kept visible\n\n### Misuse patterns\n\n- relabeling raw autosave or sync behavior as the full technique\n- turning transcript exports into canonical repository instructions or rule files\n- widening the bundle into search UI, cloud sync, hosted account flows, or chat analytics\n- treating transcript packaging as a substitute for distilled decisions, summaries, or release notes\n\n### Detection signals\n\n- reviewers cannot explain what the transcript export adds beyond `save sessions locally`\n- exported files are too large or too unstructured to support review, diffing, or citation\n- transcript artifacts start appearing in places where authored rules or decision docs should live\n- conversations about the bundle drift toward cloud products, sync status, or automatic rule derivation instead of transcript shaping\n\n### Mitigations\n\n- keep one explicit seam between capture and post-capture transcript packaging\n- package transcripts around one bounded task, PR, or review thread instead of dumping every saved session together\n- redact or annotate before wider sharing when the raw transcript is not public-safe enough\n- keep summaries, decisions, rules, and memory behavior in sibling techniques or other repos\n- split out hosted sharing or history-to-instructions behaviors if they become the real reusable object"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the transcript package starts from already-saved session artifacts\n- one readable export or bundle exists for a bounded review or handoff unit\n- timestamps, metadata, or naming keep the transcript artifact versionable enough for commit or comparison\n- review, edit, or redaction can happen without changing the contract into summary writing or rule authorship\n- the bundle stays distinct from capture, memory recall, and instruction authority\n\nSee `checks/versionable-session-transcripts-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the transcript folder path or export destination\n- the exact timestamp, frontmatter, or filename convention\n- whether one export contains one conversation or several related conversations\n- whether the artifact is committed privately, attached to review, or shared externally after sanitization\n\nWhat should stay invariant:\n- transcript packaging starts after capture\n- the exported artifact stays readable and versionable\n- the review unit is intentionally bounded\n- transcript export remains history context, not memory or instruction authority\n\nProject-shaped details that should not be treated as invariant:\n- the donor command names or editor palette actions\n- hosted share URLs, login flows, or account requirements\n- cloud search and organization features\n- automatic rule derivation from transcript history"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable post-capture transcript layer: select saved conversations, package them as readable Markdown, review or redact them, and preserve them as versionable history artifacts. Donor-specific autosave toggles, hosted share services, login flows, cloud search, and rule-derivation behavior were intentionally removed or generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-versionable-session-transcripts.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/versionable-session-transcripts-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from public `SpecStory` documentation\n- promoted into `aoa-techniques` on 2026-03-23 as a bounded external-import technique for post-capture transcript packaging and export"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md) as the capture sibling rather than reopening first-save artifact persistence here\n- split out a narrower share-and-annotation sibling only if hosted review publication becomes reusable without dragging in product-account behavior\n- split out a separate history-to-summary or history-to-instructions sibling only if those distillation contracts become stable without hidden instruction authority"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0045",
+      "name": "witness-trace-as-reviewable-artifact",
+      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Preserve a nontrivial run as one reviewable witness trace artifact so humans can inspect what the run tried to do, what it actually did, where risk or failure appeared, and what should be examined next before any downstream writeback, compost promotion, or canon lift happens."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a run is substantial enough that one reviewable trace should survive it\n- reviewers need more structured visibility than a raw transcript provides, especially around step order, tool visibility, or state deltas\n- the route may later feed memory writeback, compost, or canon decisions, but first needs one bounded review artifact\n- failure paths or risky transitions must stay inspectable instead of disappearing into a summary-only surface\n- the reusable object is the reviewable witness artifact itself, not the whole witness runtime or playbook"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the main need is still session capture or transcript packaging rather than a structured witness trace\n- the route mainly needs memory-object writeback, principle promotion, or canon routing logic\n- the artifact would introduce a new memory-object family instead of staying a trace export\n- the run is too trivial to justify a bounded witness artifact\n- the draft cannot explain what the witness trace adds beyond `save sessions locally` or a plain transcript export"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one bounded run identity and goal\n- one ordered step sequence for the witnessed run\n- one redaction posture for tool inputs, outputs, and state-delta notes\n- one human-readable summary format\n- one review path before any writeback or promotion"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one reviewable witness trace artifact for the run\n- one compact human-readable summary that tells a reviewer what matters most\n- clearer inspection of tool use, state deltas, and failure paths than a raw transcript alone\n- one explicit pre-writeback artifact that can support later memo or canon decisions without becoming memory substrate"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Bound the run tightly enough to name its identity, goal, and review scope.\n2. Record one run-level witness trace with bounded status, time window, ordered steps, and review notes.\n3. Preserve step-level visibility for intent, observation, tool use when present, and state delta when an external effect occurred.\n4. Produce one compact human-readable summary that states what the run tried to do, what it did, where risk or review flags appeared, what survived as the main result, and what a human should inspect next.\n5. Redact secret-bearing payloads or hidden chain-of-thought detail before treating the trace as shareable or reusable.\n6. Preserve the witness trace as the reviewable source artifact before mapping any surviving pieces into memory objects, compost notes, or canon bundles.\n7. Leave writeback, promotion, eval anchors, and role choreography to sibling layers instead of widening the trace artifact contract."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- `WitnessTrace` remains a trace export contract rather than a memory object\n- the witness trace is the reviewable source artifact for the bounded run until other layers decide what survives beyond it\n- run-level identity, goal, bounded status, time window, and ordered steps remain visible\n- tool visibility and state-delta visibility stay visible when they matter for review\n- failure-path preservation and redaction-first posture remain part of the invariant core\n- one human-readable summary travels with the trace so a reviewer can inspect the route without parsing the whole step log first\n- the technique does not own runtime witness generation, memory writeback, compost promotion, canon routing, or eval policy\n- [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md) remains the capture sibling, and [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md) remains the transcript-packaging sibling\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md), this technique preserves structured run-level and step-level trace semantics with state deltas and review flags rather than packaging selected conversations into Markdown transcripts. Unlike [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md), it does not own whether history is captured or persisted in the first place."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the witness artifact quietly becomes a new memory-object kind because writeback mapping is not kept separate\n- the trace drops tool visibility or state deltas, leaving reviewers with a record that sounds structured but hides the important parts\n- the summary gets treated as proof of correctness instead of a guide to what should be inspected next\n- the bundle widens into full witness runtime choreography, role contracts, or compost routing\n\n### Negative effects\n\n- structured traces add review overhead compared with smaller transcript or summary artifacts\n- preserving every witnessed step can create noise when the run was not actually substantial enough\n- state-delta visibility can become burdensome if redaction posture is weak\n- a strong witness artifact can tempt teams to treat the trace like durable memory authority\n\n### Misuse patterns\n\n- relabeling runtime witness capture or full playbook behavior as the technique\n- using the witness trace as the canonical repository policy or instruction surface\n- widening the bundle into memory-object writeback or compost-promotion doctrine\n- keeping raw secret-bearing payloads or hidden chain-of-thought dumps in the trace\n\n### Detection signals\n\n- contributors talk about `episode`, `decision`, or other memo objects as if they were still the same artifact as the witness trace\n- trace artifacts arrive without visible tool use, state deltas, or failure-path detail\n- reviewers cannot tell what should be inspected next from the summary\n- route discussions drift toward agent roles, deep recall, or eval enforcement rather than reviewable trace export\n\n### Mitigations\n\n- keep one explicit seam between witness trace export and every later writeback or promotion layer\n- require visible run identity, ordered steps, and summary posture before calling the artifact a witness trace\n- apply redaction-first discipline before sharing or publication\n- use transcript packaging, summaries, or decision notes when those are the true smaller objects\n- split out route choreography, eval anchors, or writeback policy instead of widening this artifact contract"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the artifact names the bounded run and its goal\n- step order, tool visibility, and state deltas remain visible where they matter\n- one compact human-readable summary tells a reviewer what happened and what to inspect next\n- redaction-first handling removes secret-bearing payloads and hidden chain-of-thought detail\n- the bundle stays distinct from capture, transcript packaging, memory objects, and promotion routes\n\nSee `checks/witness-trace-as-reviewable-artifact-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact artifact format such as JSON plus Markdown or another paired export\n- the level of step granularity\n- the naming convention for witness files\n- whether the trace is committed directly or attached to a review surface first\n\nWhat should stay invariant:\n- the artifact remains a trace export, not a memory object\n- the run stays bounded and reviewable\n- human-readable summary travels with the trace\n- later writeback or promotion layers remain separate\n\nProject-shaped details that should not be treated as invariant:\n- donor role names such as `architect`, `coder`, `reviewer`, or `memory-keeper`\n- specific eval anchor names\n- memo taxonomy mapping details beyond the fact that writeback is separate\n- exact pilot artifact names such as `compost_note` or `canon_bundle`"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable reviewable-trace contract: run identity, bounded steps, tool visibility, state deltas, review notes, and compact summary survive as one artifact before any later writeback. Donor-specific role choreography, deep-recall posture, eval anchors, and compost promotion behavior were intentionally removed or generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-witness-trace-as-reviewable-artifact.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/witness-trace-as-reviewable-artifact-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- extracted from `aoa-memo` and `aoa-playbooks`\n- promoted to `aoa-techniques` on 2026-03-23 as a bounded history technique for reviewable witness trace export"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md) as the transcript sibling rather than widening this bundle into generic transcript packaging\n- keep memory writeback policy in `aoa-memo` rather than reopening a memory-object seam here\n- add a second live context if another route family uses the same reviewable witness artifact without the full witness/compost pilot"
+        }
+      ]
     }
   ]
 }
