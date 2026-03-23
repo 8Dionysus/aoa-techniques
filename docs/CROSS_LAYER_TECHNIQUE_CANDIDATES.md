@@ -11,7 +11,7 @@ It does not change technique status, create a new bundle, or authorize import by
 
 - this doc accounts for the full `24` technique-shaped candidate names explicitly proposed in the donor note
 - it treats `seed_donors_inside.md` as origin commentary and donor soil, not as a canonical Dionysus wave seed
-- it includes `7` candidates that are already staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) so the full donor-note universe stays visible in one place
+- it includes `6` candidates that are already staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) so the full donor-note universe stays visible in one place
 - it classifies the remaining `17` candidates here as landed wave imports, new future imports, overlap holds, layer-incubation lanes, or not-yet-technique-shaped architecture
 
 ## Doctrine Seam

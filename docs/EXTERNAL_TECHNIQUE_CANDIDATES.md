@@ -181,8 +181,6 @@ If the goal is to grow the corpus without widening repo boundaries, the stronges
 1. keep `phase_sync_for_agents` active as a narrowing lane in parallel, but do not promote it into a bundle wave yet
 2. revisit the overlap and incubation lanes only after one of their missing boundaries becomes explicit
 
-Then revisit the overlap and incubation lanes only after one of their missing boundaries becomes explicit.
-
 ## Current Narrowing Slice: `phase_sync_for_agents`
 
 Treat `phase_sync_for_agents` as the active seed-refinement lane because it is already the top recommended next expansion object and the reusable center looks smaller than the broader `agentwise` orchestration package.
