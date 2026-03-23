@@ -8896,6 +8896,163 @@
       "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/markdown-technique-section-lift/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0018"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "markdown-technique-section-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default section-lift entrypoint for bounded expand-time inspection after bundle-level routing in the KAG/source-lift family"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep section lift bounded to source-owned stable `TECHNIQUE.md` sections without widening into a generic bundle-section program or replacing metadata, provenance, relation, or caution companions"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "unstable or donor-shaped headings get lifted as if they were long-lived section anchors, so consumers start depending on sections that should still be rewritten freely"
+                },
+                {
+                  "order": 2,
+                  "text": "readers or tools treat the lifted section surface as a substitute for the bundle and stop routing back to the authored markdown when the surrounding contract matters"
+                },
+                {
+                  "order": 3,
+                  "text": "canonical pressure widens section lift into section IDs, graph behavior, or all-bundle section authority instead of keeping the current technique-specific contract explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "section snippets can create false confidence that one bounded section is enough to understand the whole technique"
+                },
+                {
+                  "order": 2,
+                  "text": "an easy expand-time surface can make metadata, provenance, or caution questions drift into the section layer even when those questions belong to sibling techniques"
+                },
+                {
+                  "order": 3,
+                  "text": "a successful canonical default can attract requests to widen the lift faster than the authored bundles can keep stable headings meaningful"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using `AOA-T-0018` as a substitute for `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, or `AOA-T-0022`"
+                },
+                {
+                  "order": 2,
+                  "text": "adding or renaming headings mainly to satisfy extraction consumers rather than to improve the authored bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "fixing generated section surfaces directly instead of updating `TECHNIQUE.md` and regenerating"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "proposals start asking for section IDs, weighted routing, or graph semantics to keep the lift usable"
+                },
+                {
+                  "order": 2,
+                  "text": "readers cite lifted sections but cannot explain how those sections fit into the full bundle contract"
+                },
+                {
+                  "order": 3,
+                  "text": "section lift starts being chosen for bundle identity, provenance, adjacency, or caution questions that should stop at the sibling surfaces"
+                },
+                {
+                  "order": 4,
+                  "text": "review comments focus on generated section output instead of the source markdown headings and prose"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the stable heading set explicit and drop weak section targets before widening the lift"
+                },
+                {
+                  "order": 2,
+                  "text": "route bundle identity to `AOA-T-0019`, note provenance to `AOA-T-0020`, direct adjacency to `AOA-T-0021`, and caution lookup to `AOA-T-0022`"
+                },
+                {
+                  "order": 3,
+                  "text": "regenerate derived section outputs from markdown instead of hand-editing them"
+                },
+                {
+                  "order": 4,
+                  "text": "treat any broader bundle-section request as a candidate sibling technique rather than silently widening `AOA-T-0018`"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for generic bundle-section creep, manifest overread, and section lift replacing source markdown authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/markdown-technique-section-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -8926,7 +9083,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "stronger defer after cross-context reinforcement, still promoted"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -8958,7 +9115,7 @@
                 {
                   "order": 5,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now has stable sections, examples, checks, one bridge-style downstream consumer, one second markdown-first bundle-family consumer, and one thin-router consumer that keeps section lift in the `pick -> inspect -> expand` path without collapsing into metadata or provenance work"
+                  "value_markdown": "the bundle now has stable sections, examples, checks, one bridge-style downstream consumer, one second markdown-first bundle-family consumer, one thin-router consumer that keeps section lift in the `pick -> inspect -> expand` path, and a follow-up canonical review that confirms the technique-named scope can stay bounded while becoming the default"
                 }
               ]
             },
@@ -8969,19 +9126,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this remains the right default when bundle-level routing is no longer enough and section lookup still needs to stay derived from markdown rather than from a metadata-first store"
+                  "text": "this is now the right default when bundle-level routing has already selected the bundle and the next need is bounded section lookup that stays derived from authored markdown rather than from a metadata-first store"
                 },
                 {
                   "order": 2,
-                  "text": "it is narrower than any metadata-spine technique because the core contract is still section meaning, not routing fields"
+                  "text": "it remains narrower than any metadata-spine technique because the core contract is still section meaning and section inspection, not bundle identity or routing fields"
                 },
                 {
                   "order": 3,
-                  "text": "it is narrower than provenance and relation lift because its job is still \"which section should I inspect next?\" rather than \"why is this technique trusted?\" or \"what sits next to it?\""
+                  "text": "it remains narrower than provenance, relation, and caution lift because its job is still \"which section should I inspect next?\" rather than \"why is this technique trusted?\", \"what sits next to it?\", or \"what caution language should I inspect?\""
                 },
                 {
                   "order": 4,
-                  "text": "the new evidence now shows that the same lift remains useful outside this public canon, but this first evidence wave still stops short of a status flip while the current technique-named scope is rechecked against the broader bundle-family reuse"
+                  "text": "the broader question of a future generic bundle-section sibling is now future-evolution work, not a blocker to using the current `TECHNIQUE.md`-section contract as the canonical default inside this family"
                 }
               ]
             },
@@ -9019,15 +9176,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the second live markdown-first consumer now exists, so the remaining gap is no longer cross-context evidence breadth"
+                  "text": "no blocking gap remains for canonical use as long as the technique stays bounded to stable section lift over authored `TECHNIQUE.md` bundles"
                 },
                 {
                   "order": 2,
-                  "text": "the next honest question is whether the current technique-named contract should stay narrow around `TECHNIQUE.md`-shaped section authority or whether the evidence now points to a later generic bundle-section sibling"
+                  "text": "future review should keep watching for generic bundle-section pressure, manifest overread, and sibling-boundary drift into metadata, provenance, relation, or caution work"
                 },
                 {
                   "order": 3,
-                  "text": "a future canonical decision should still show that section lift remains an expand-time routing surface and does not drift into metadata-spine semantics, provenance lift, or a generic graph-facing bundle program"
+                  "text": "section lift should remain an expand-time routing surface and should not drift into metadata-spine semantics, provenance lift, or a generic graph-facing bundle program"
                 }
               ]
             },
@@ -9038,11 +9195,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0018` `promoted`"
+                  "text": "promote `AOA-T-0018` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "keep the status unchanged in this Wave A pass, but treat the bundle as materially strengthened and reopen the next canonical decision from the new cross-context baseline rather than from the old single-bridge baseline"
+                  "text": "use `AOA-T-0018` as the default section-lift entrypoint for the KAG/source-lift family once bundle-level routing has already selected the bundle and the next need is bounded section inspection"
                 }
               ]
             }

@@ -40,6 +40,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Changed
 
+- section-lift follow-up canon wave now promotes `AOA-T-0018 markdown-technique-section-lift` to `canonical`, adds its canonical-only `adverse-effects-review` note, and graduates it out of the active Wave A promotion-readiness queue
 - remaining closure program now lands a dedicated `AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md`, merges first donor evidence from `aoa-skills` and `ATM10-Agent`, refreshes `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022` second-context and readiness notes, and restages the remaining promoted backlog around one evidence-prep item plus four external-dependency-first items
 - external donor intake wave now refreshes `AOA-T-0013` around the bounded `ruler` origin package, records `agents-md` as an overlap hold against `AOA-T-0012`, records `n-skills` as a landed adjacent provenance import rather than closure proof for `AOA-T-0013`, and keeps `AOA-T-0005` plus `AOA-T-0022` frozen until exact-fit external donors exist
 - new external seed intake now adds `AOA-T-0023 stateless-single-shot-agent` from `qqqa`, adds `AOA-T-0024 upstream-mirroring-with-provenance` from `n-skills`, and widens the instruction-surface review from a pair into a three-technique cluster

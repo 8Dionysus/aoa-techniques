@@ -2,7 +2,7 @@
 id: AOA-T-0018
 name: markdown-technique-section-lift
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: scripts/build_section_manifest.py
@@ -16,7 +16,7 @@ tags:
   - sections
   - manifests
 summary: Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative.
-maturity_score: 4
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
@@ -33,6 +33,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # markdown-technique-section-lift
@@ -181,10 +183,11 @@ See `checks/section-lift-checklist.md`.
 - shaped inside `aoa-techniques` while the section-manifest layer was introduced as a derived source-lift surface
 - extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave
 - reinforcement wave on 2026-03-23 now records `aoa-evals` as a second markdown-first section-surface consumer and `aoa-routing` as an expand-time router over source-owned section surfaces
+- promoted to `canonical` on 2026-03-23 after follow-up review from the strengthened cross-context baseline
 
 ## Future evolution
 
-- keep the technique-named contract explicit now that the same bounded section-lift discipline also appears in another markdown-first bundle family
+- keep the canonical technique-named contract explicit unless a later sibling technique intentionally owns broader bundle-section authority
 - keep the current derived lookup subordinate to authored prose even when the catalog or selection layer becomes more convenient
 - add review guidance for when a section is too unstable to keep in the lifted scope
 - keep section lift as the first expand-time stop rather than letting it absorb metadata-spine or provenance-lift work

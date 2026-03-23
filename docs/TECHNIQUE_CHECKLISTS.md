@@ -96,6 +96,12 @@ See also:
 |---|---|---|---|---|
 | Bounded Context Map Checklist | `present` | `7` | `techniques/docs/bounded-context-map/checks/bounded-context-map-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
 
+### [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Section Lift Checklist | `present` | `6` | `techniques/docs/markdown-technique-section-lift/checks/section-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
+
 ### [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) - frontmatter-metadata-spine (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -113,12 +119,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Single-Source Rule Distribution Checklist | `present` | `7` | `techniques/docs/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
-
-### [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Section Lift Checklist | `present` | `6` | `techniques/docs/markdown-technique-section-lift/checks/section-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 

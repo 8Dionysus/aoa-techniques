@@ -1488,12 +1488,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- shaped inside `aoa-techniques` while the section-manifest layer was introduced as a derived source-lift surface\n- extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave\n- reinforcement wave on 2026-03-23 now records `aoa-evals` as a second markdown-first section-surface consumer and `aoa-routing` as an expand-time router over source-owned section surfaces"
+          "content_markdown": "- shaped inside `aoa-techniques` while the section-manifest layer was introduced as a derived source-lift surface\n- extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave\n- reinforcement wave on 2026-03-23 now records `aoa-evals` as a second markdown-first section-surface consumer and `aoa-routing` as an expand-time router over source-owned section surfaces\n- promoted to `canonical` on 2026-03-23 after follow-up review from the strengthened cross-context baseline"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep the technique-named contract explicit now that the same bounded section-lift discipline also appears in another markdown-first bundle family\n- keep the current derived lookup subordinate to authored prose even when the catalog or selection layer becomes more convenient\n- add review guidance for when a section is too unstable to keep in the lifted scope\n- keep section lift as the first expand-time stop rather than letting it absorb metadata-spine or provenance-lift work\n- keep section IDs and richer graph semantics deferred unless bounded lookup stops being enough"
+          "content_markdown": "- keep the canonical technique-named contract explicit unless a later sibling technique intentionally owns broader bundle-section authority\n- keep the current derived lookup subordinate to authored prose even when the catalog or selection layer becomes more convenient\n- add review guidance for when a section is too unstable to keep in the lifted scope\n- keep section lift as the first expand-time stop rather than letting it absorb metadata-spine or provenance-lift work\n- keep section IDs and richer graph semantics deferred unless bounded lookup stops being enough"
         }
       ]
     },

@@ -968,7 +968,7 @@
       "id": "AOA-T-0018",
       "name": "markdown-technique-section-lift",
       "domain": "docs",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative.",
       "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
       "origin": {
@@ -986,7 +986,7 @@
         "sections",
         "manifests"
       ],
-      "maturity_score": 4,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
@@ -1011,6 +1011,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
