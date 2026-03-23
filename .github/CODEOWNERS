@@ -1,0 +1,5 @@
+# Narrow ownership map for the repo's governance-critical surfaces.
+/.github/ @8Dionysus
+/scripts/ @8Dionysus
+/docs/ @8Dionysus
+/techniques/ @8Dionysus

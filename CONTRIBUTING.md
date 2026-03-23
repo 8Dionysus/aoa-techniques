@@ -48,6 +48,8 @@ It should record `source_repo`, `source_license`, `inspired_by` or `adapted_from
 
 External imports must still be sanitized, reusable, and bounded.
 The provenance note complements the technique document; it does not replace the canonical `TECHNIQUE.md`.
+Use `docs/EXTERNAL_IMPORT_RUNBOOK.md` for the maintainer-facing donor triage -> draft -> review -> merge path.
+Starter note templates for origin evidence, adaptation, promotion, adverse-effects review, external-origin provenance, and external review now live under `templates/`.
 
 ## GitHub intake surfaces
 
@@ -57,13 +59,19 @@ Use the GitHub templates for the first public intake layer:
 - external import review
 
 Use the pull request template when opening a PR so the summary, validation, and public-safety checks stay explicit and reviewable.
+For new techniques or external imports, explicitly name:
+- the nearest existing technique or overlap watch
+- what stays out of the donor or proposal
+- expected evidence notes
+- expected generated surfaces
+- downstream repo impact, if any
 
 These issue and PR templates remain the authoritative human-first intake surfaces.
 Any later generated manifest over them is derived only and must not replace the authored templates themselves.
 
 Do not use public issues for leaks, secrets, credentials, or infrastructure-sensitive details; follow `SECURITY.md` instead.
 
-`CODEOWNERS` is intentionally deferred until the intake path proves stable.
+The repo now carries one narrow `CODEOWNERS` map for `.github/`, `scripts/`, `docs/`, and `techniques/` so governance-critical surfaces keep an explicit review owner without widening ownership policy further.
 
 ## Preferred PR scope
 

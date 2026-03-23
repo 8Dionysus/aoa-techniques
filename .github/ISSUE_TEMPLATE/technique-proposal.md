@@ -13,12 +13,15 @@ Describe the proposed technique in 2-4 sentences.
 - problem it solves:
 - who can reuse it:
 - why it is more than a project-specific workaround:
+- nearest existing technique or overlap watch:
+- what stays out of scope:
 
 ## Evidence and validation
 
 - origin project or origin practice:
 - reuse evidence beyond the origin, if any:
 - example, checklist, smoke, or validation path:
+- expected evidence notes:
 
 ## Public safety
 
@@ -31,3 +34,5 @@ Describe the proposed technique in 2-4 sentences.
 - canonical `TECHNIQUE.md`:
 - supporting `examples/`, `checks/`, or `notes/`:
 - current maturity target:
+- expected generated surfaces:
+- downstream repo impact:
