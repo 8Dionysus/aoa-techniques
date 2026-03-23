@@ -92,12 +92,14 @@ Record one meaningful decision in a compact, reviewable note that preserves cont
 ### Failure modes
 
 - the note captures a summary but not the actual decision tradeoff
+- the note looks complete even though it never records the rejected option or the cost of the chosen path
 - the write-up drifts into governance language instead of decision rationale
 - several unrelated choices get merged into one oversized record
 
 ### Negative effects
 
 - extra documentation can slow very small changes if the decision was not actually meaningful
+- polished note structure can create false confidence that the decision was well-framed even when the real boundary or rejected option stayed implicit
 - over-recording every edit can bury the few decisions that matter
 - too much taxonomy can obscure the practical reason the decision existed
 
@@ -111,6 +113,7 @@ Record one meaningful decision in a compact, reviewable note that preserves cont
 ### Detection signals
 
 - the note does not make clear why one option won
+- reviewers can repeat the chosen path but still cannot say what was rejected or what cost was accepted
 - reviewers still cannot tell what changed after reading the record
 - the content starts naming canonical homes or repository roles instead of the decision
 - the note reads like a taxonomy exercise instead of a bounded rationale
@@ -118,6 +121,7 @@ Record one meaningful decision in a compact, reviewable note that preserves cont
 ### Mitigations
 
 - require an explicit decision statement near the top of the note
+- require one visible rejected option and one visible consequence of the chosen path
 - keep options and consequences visible in plain language
 - split unrelated choices into separate records
 - route source-of-truth and boundary questions to a different technique
@@ -127,6 +131,7 @@ Record one meaningful decision in a compact, reviewable note that preserves cont
 Verify the technique by confirming that:
 - one real decision is named clearly
 - context, options, rationale, and consequences are all visible
+- the not-chosen option and the accepted consequence are both explicit enough to catch a false-success summary
 - the note does not drift into source-of-truth clarification or boundary mapping
 - trivial obvious edits are rejected as out of scope
 - a reviewer could understand the tradeoff without reopening the entire discussion

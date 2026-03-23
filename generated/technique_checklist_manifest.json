@@ -774,18 +774,22 @@
             },
             {
               "order": 2,
-              "text": "The lifted scope is explicit and limited to stable recurring headings."
+              "text": "The question actually needs section-level routing rather than bundle-level metadata alone."
             },
             {
               "order": 3,
-              "text": "Section order in the derived output matches the source markdown order."
+              "text": "The lifted scope is explicit and limited to stable recurring headings."
             },
             {
               "order": 4,
-              "text": "Consumers can route from the lifted output back to the source bundle and heading."
+              "text": "Section order in the derived output matches the source markdown order."
             },
             {
               "order": 5,
+              "text": "Consumers can route from the lifted output back to the source bundle and heading."
+            },
+            {
+              "order": 6,
               "text": "The workflow does not need section IDs, a new `kag` domain, or graph semantics to stay useful."
             }
           ]
@@ -1353,30 +1357,38 @@
             },
             {
               "order": 4,
-              "text": "[ ] The chosen option and rationale are clear."
+              "text": "[ ] The rejected option is still visible instead of being implied only by the chosen path."
             },
             {
               "order": 5,
-              "text": "[ ] The consequences, tradeoffs, or follow-up commitments are recorded."
+              "text": "[ ] The chosen option and rationale are clear."
             },
             {
               "order": 6,
-              "text": "[ ] The note stays bounded to one decision."
+              "text": "[ ] The consequences, tradeoffs, or follow-up commitments are recorded."
             },
             {
               "order": 7,
-              "text": "[ ] The note does not drift into source-of-truth governance, boundary mapping, or architecture taxonomy."
+              "text": "[ ] The note is not falsely \"complete\" while hiding the cost or limit of the chosen path."
             },
             {
               "order": 8,
-              "text": "[ ] The content is public-safe, sanitized, and reviewable."
+              "text": "[ ] The note stays bounded to one decision."
             },
             {
               "order": 9,
-              "text": "[ ] Trivial obvious edits are rejected as out of scope."
+              "text": "[ ] The note does not drift into source-of-truth governance, boundary mapping, or architecture taxonomy."
             },
             {
               "order": 10,
+              "text": "[ ] The content is public-safe, sanitized, and reviewable."
+            },
+            {
+              "order": 11,
+              "text": "[ ] Trivial obvious edits are rejected as out of scope."
+            },
+            {
+              "order": 12,
               "text": "[ ] A future reviewer could understand the tradeoff without reopening the whole discussion."
             }
           ]
@@ -1418,22 +1430,30 @@
             },
             {
               "order": 7,
-              "text": "[ ] The note does not turn into approval gating or execution planning."
+              "text": "[ ] A reviewer can tell what was generalized or omitted without reading the raw source."
             },
             {
               "order": 8,
-              "text": "[ ] The material is not already clearly public-safe and minimal."
+              "text": "[ ] The note does not turn into approval gating or execution planning."
             },
             {
               "order": 9,
-              "text": "[ ] The main question is not whether the action is allowed."
+              "text": "[ ] The sanitized artifact is not being used as proof that the underlying action is allowed or safe."
             },
             {
               "order": 10,
-              "text": "[ ] The main question is not how to preview or execute the underlying operational change."
+              "text": "[ ] The material is not already clearly public-safe and minimal."
             },
             {
               "order": 11,
+              "text": "[ ] The main question is not whether the action is allowed."
+            },
+            {
+              "order": 12,
+              "text": "[ ] The main question is not how to preview or execute the underlying operational change."
+            },
+            {
+              "order": 13,
               "text": "[ ] The work is not really incident response that belongs in a response workflow instead of share-prep."
             }
           ]

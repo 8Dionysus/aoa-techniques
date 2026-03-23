@@ -10,10 +10,11 @@
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
 - the second context adaptation kept the practice bounded and public-safe
-- the bundle is still a narrow docs pattern rather than a broadly proven default across multiple independent consumers
+- the bundle now has a clearer example and checklist for catching false-success summaries, but it is still a narrow docs pattern rather than a broadly proven default across multiple independent consumers
 
 ## Default-use rationale
 - this is useful when a meaningful decision needs a reviewable rationale record
+- it is strongest when the missing object is the decision tradeoff itself, not a source-of-truth map or a generic changelog entry
 - it is not yet proven as the default docs pattern for a wider ecosystem
 - the current evidence supports promotion, but not canonical status
 

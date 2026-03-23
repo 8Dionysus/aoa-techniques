@@ -39,7 +39,7 @@ evidence:
 
 ## Intent
 
-Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surface so retrieval and review can target one bounded section while the authored bundle remains the source of meaning.
+Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surface so retrieval and review can target one bounded section while the authored bundle remains the source of meaning. Within the current KAG/source-lift family, use section lift as the first expand-time stop once bundle-level metadata is no longer enough but a full graph or section-ID layer would be premature.
 
 ## When to use
 
@@ -48,14 +48,16 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 - documentation systems where another human or agent should be able to jump directly to `Intent`, `Contracts`, `Risks`, or `Validation`
 - KAG-oriented work that needs bounded section lookup before any graph or section-ID program exists
 - cases where a derived section surface should stay subordinate to the bundle's authored prose instead of becoming a metadata-spine replacement for it
+- cases where bundle-level routing has already narrowed the question and the next need is "which section should I inspect next?"
 
 ## When not to use
 
 - repos where section headings are still unstable or heavily experimental
 - systems that want section-level authorship to move out of the markdown bundle into separate files or metadata
+- cases where bundle-level metadata already answers the routing question without opening section lift
 - cases where the real need is graph semantics, ranking, or multi-hop reasoning rather than bounded section lift
 - workflows that would treat the manifest as the new editable source of truth
-- situations where frontmatter metadata already answers the question and the section lift would only duplicate that routing layer
+- situations where note provenance, direct relations, or caution review are the real next surface and section lift would only duplicate them
 
 ## Inputs
 
@@ -72,6 +74,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 - section lookup surface for review or retrieval
 - preserved markdown authority over section meaning
 - bounded derived lookup that does not change the bundle into a metadata-first contract
+- first expand-time routing surface that still stops short of graph behavior
 
 ## Core procedure
 
@@ -116,6 +119,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 
 - reviewers fix the manifest directly instead of fixing `TECHNIQUE.md`
 - consumers rely on section snippets but cannot explain how those sections fit into the full bundle contract
+- section lift starts answering bundle-level routing questions that should have stopped at the metadata spine
 - new headings keep appearing only to satisfy extraction rather than to improve the authored document
 - the lift starts demanding section IDs, graph semantics, or schema expansion to stay usable
 
@@ -123,6 +127,7 @@ Lift stable `TECHNIQUE.md` section boundaries into a derived section-level surfa
 
 - keep the lift scope narrow and explicit around stable recurring headings only
 - route all meaning changes back through the source bundle and regenerate derived outputs afterward
+- stop at bundle-level metadata when section lift does not answer a narrower question than the catalog already did
 - drop weak or unstable section targets before adding new derived behavior
 - stop at bounded lookup when the next request would require graph behavior rather than better markdown structure
 
@@ -133,6 +138,7 @@ Verify the technique by confirming that:
 - the derived output preserves the expected section order
 - the selected headings are stable and explicitly bounded
 - consumers can route back from the lifted output to the source bundle and heading
+- section lift is solving a section-routing problem rather than a bundle-routing or provenance problem
 - no new authored source of truth was introduced beyond markdown plus derived artifacts
 
 See `checks/section-lift-checklist.md` and `examples/minimal-section-lift.md`.
@@ -150,6 +156,7 @@ What can vary across projects:
 What should stay invariant:
 - markdown remains authoritative
 - section lift stays derived-only
+- section lift opens only after bounded metadata routing has already narrowed the bundle choice
 - lift scope is explicit and bounded
 - consumers can still route back to the source bundle
 - metadata can support lookup, but it should not become the semantic home for section meaning
@@ -179,4 +186,5 @@ See `checks/section-lift-checklist.md`.
 - strengthen second-context evidence once another markdown-first repository uses the same bounded section-lift discipline
 - keep the current derived lookup subordinate to authored prose even when the catalog or selection layer becomes more convenient
 - add review guidance for when a section is too unstable to keep in the lifted scope
+- keep section lift as the first expand-time stop rather than letting it absorb metadata-spine or provenance-lift work
 - keep section IDs and richer graph semantics deferred unless bounded lookup stops being enough

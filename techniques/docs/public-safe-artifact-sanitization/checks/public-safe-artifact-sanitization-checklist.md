@@ -8,7 +8,9 @@ Use this checklist when reviewing a shareable artifact that claims to have remov
 - [ ] Raw sensitive detail was not left behind by accident.
 - [ ] Remaining uncertainty or limits of sanitization are named clearly.
 - [ ] The artifact is still understandable after redaction or generalization.
+- [ ] A reviewer can tell what was generalized or omitted without reading the raw source.
 - [ ] The note does not turn into approval gating or execution planning.
+- [ ] The sanitized artifact is not being used as proof that the underlying action is allowed or safe.
 - [ ] The material is not already clearly public-safe and minimal.
 - [ ] The main question is not whether the action is allowed.
 - [ ] The main question is not how to preview or execute the underlying operational change.

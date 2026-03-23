@@ -101,28 +101,32 @@ Reduce unsafe, opaque, or non-reviewable agent changes by requiring a visible wo
 
 ### Failure modes
 
-- weak or symbolic validation creates a false sense of safety around the applied change
-- teams use the workflow on trivial edits and lose the bounded judgment about when lighter handling is enough
+- `VERIFY` is named, the report looks complete, and review passes even though the validation was symbolic or never exercised the changed surface in a way that could fail
+- teams use the workflow on trivial edits so often that the bounded judgment about when lighter handling is enough quietly disappears
 
 ### Negative effects
 
 - extra ceremony can slow down simple work that does not need a full plan-and-report loop
 - reporting overhead can crowd out the clearer review surface that should still come from the diff itself
+- a polished workflow can create false confidence that the change was meaningfully checked when the real evidence is still thin
 
 ### Misuse patterns
 
 - treating the report as a substitute for a readable diff
 - naming a validation step without running a meaningful check or explicitly documenting why it was skipped
+- preserving the full ceremony on edits with no real operational consequence because the workflow now feels mandatory by default
 
 ### Detection signals
 
 - trivial wording or formatting edits are going through the same ceremony as higher-impact changes
 - final reports describe success in general terms but do not name concrete validation results
+- reviewers can repeat the workflow steps from memory but still cannot say what concrete surface was actually verified
 
 ### Mitigations
 
 - use a lighter workflow when the change has no meaningful operational consequence
 - keep the diff reviewable on its own and make the validation step concrete, explicit, and scoped
+- treat unnamed or symbolic validation as an incomplete run rather than as a successful `VERIFY`
 
 ## Validation
 

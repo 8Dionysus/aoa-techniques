@@ -93,16 +93,19 @@ Keep repository entrypoint status easy to scan by turning top-level status docs 
 
 - the snapshot becomes so thin that it no longer gives enough orientation to send readers to the right canonical detail
 - outward links go stale after the canonical doc map evolves, so the snapshot keeps pointing to the wrong current-state surfaces
+- the top-level docs stay short and tidy, but they quietly stop acting as reliable entrypoints because the routing aliases no longer reflect where current truth actually lives
 
 ### Negative effects
 
 - excessive trimming can make operational truth harder to find even while the entrypoint docs look cleaner
 - the snapshot can hide active gaps in status hygiene by removing detail faster than the repository learns where that detail should live
+- false cleanliness can make a repo feel better maintained than it is while new readers still cannot find the active state without asking around
 
 ### Misuse patterns
 
 - using the technique as a reason to delete detail instead of routing it to canonical homes
 - treating `README` or `MANIFEST` cleanliness as the goal by itself, even when navigability and current-state orientation get worse
+- preserving stale outward links or summary aliases because the entrypoint still "looks short enough"
 
 ### Detection signals
 
@@ -110,6 +113,7 @@ Keep repository entrypoint status easy to scan by turning top-level status docs 
 - links from the snapshot stop resolving to the latest `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, or session detail
 - teams keep re-adding summary prose to `README` or `MANIFEST` because the snapshot no longer feels sufficient for orientation
 - the entrypoint docs look clean, but operators still need to ask around to learn where real operational truth now lives
+- a repo review praises top-level neatness even though the first question from a newcomer is still "where is the real current state?"
 
 ### Mitigations
 
@@ -117,6 +121,7 @@ Keep repository entrypoint status easy to scan by turning top-level status docs 
 - fix or rotate canonical links whenever the doc map changes
 - move removed detail into explicit canonical homes instead of dropping it entirely
 - treat repeated confusion about where current truth lives as a signal to strengthen routing, not to turn the snapshot back into a log
+- treat stale routing aliases as a breakage in the entrypoint contract, not as cosmetic drift
 
 ## Validation
 

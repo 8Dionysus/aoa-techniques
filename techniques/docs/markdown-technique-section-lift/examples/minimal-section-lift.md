@@ -28,7 +28,8 @@ Keep the pattern bounded and reviewable.
 
 ```json
 {
-  "technique_id": "AOA-T-0018",
+  "id": "AOA-T-0018",
+  "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
   "sections": [
     {
       "heading": "Intent",
@@ -50,6 +51,9 @@ Keep the pattern bounded and reviewable.
 }
 ```
 
+This excerpt is intentionally routing-first. A full manifest may preserve more payload, but a reader-facing or review-facing projection should still route back to the authored bundle instead of becoming the place where section meaning is edited.
+
 ## Anti-drift rule
 
 If maintainers need to edit the manifest directly to correct section meaning, the lift has stopped being markdown-first.
+If bundle-level metadata already answered the question, section lift should not have been opened in the first place.

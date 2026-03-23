@@ -99,26 +99,31 @@ Make smoke checks reviewable, automatable, and reusable by treating the machine-
 
 - summaries collapse to a bare `error` signal without enough observed context to diagnose what failed
 - summary shape changes too often and breaks downstream consumers that expect a stable contract
+- the producer still emits a machine-readable summary, but it is too thin to explain failure, so the pipeline looks contract-driven while humans still have to reconstruct the story from raw logs
 
 ### Negative effects
 
 - over-minimal summaries push humans back toward manual debugging even when the machine-readable path exists
 - pressure-driven fallback to raw logs can become sticky and weaken the producer contract over time
+- a green-looking summary path can hide that the diagnostic contract has already degraded into "artifact exists, explanation missing"
 
 ### Misuse patterns
 
 - treating summary generation as optional and falling back to log parsing under pressure
 - changing filenames, fields, or status semantics without a bounded compatibility plan
+- preserving the summary artifact only as a pass or fail token while the meaningful observed context drifts back into console text
 
 ### Detection signals
 
 - downstream consumers start scraping console logs again instead of reading the summary artifact
 - repeated failures show `error` with too little observed data to explain the problem quickly
+- the summary file is still present in every run, but operators open logs first because the artifact no longer answers the first diagnostic question
 
 ### Mitigations
 
 - keep one stable machine-readable summary path and evolve schema deliberately rather than casually
 - require summary generation on every run path possible, including failure paths whenever the process can still write output
+- treat "artifact exists but diagnosis still depends on logs" as contract drift and widen observed fields before adding more downstream consumers
 
 ## Validation
 

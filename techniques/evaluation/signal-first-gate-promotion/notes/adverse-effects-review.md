@@ -15,6 +15,7 @@
 ## Negative effects
 - long staged rollouts can slow response to real regressions when immediate blocking would be healthier
 - telemetry-rich rollout language can make control look stronger than the actual enforcement decision
+- a rollout can look highly instrumented and disciplined while nobody can still state one narrow enforcement boundary in plain language
 
 ## Misuse patterns
 - keeping the technique in endless `signal_only` observation instead of deciding whether the signal deserves a strict surface
@@ -23,6 +24,7 @@
 ## Detection signals
 - operators cannot state which single surface is strict, which surfaces are observational, and why that boundary exists
 - strict failures appear without the diagnostic artifacts that were supposed to remain visible after rollout
+- rollout dashboards look richer over time, but the answer to "what exactly is strict right now?" keeps getting harder rather than easier
 
 ## Mitigations
 - re-narrow strict enforcement to one explicit surface and keep all other paths observational until the boundary is clear again

@@ -27,11 +27,13 @@
 - proposed metadata changes mostly duplicate section prose or note content
 - review comments focus on generated files instead of source frontmatter
 - consumers stop opening `TECHNIQUE.md` even when the question is about meaning, caution, or provenance
+- the metadata spine keeps answering "which bundle?" successfully, but reviewers still cannot tell which section or note should be opened next
 
 ## Mitigations
 - keep metadata additions tied to one concrete routing problem at a time
 - regenerate and validate the catalog instead of editing derived outputs by hand
 - route section meaning, provenance argument, direct relations, and caution review back to the companion markdown-first techniques
+- stop at the metadata spine only for bundle-level routing; escalate to section or provenance lift only when the question has clearly narrowed
 
 ## Recommendation
 - keep current `canonical` status and use this note as the watch surface for schema creep, catalog overread, direct generated-file editing, or metadata replacing markdown authority
