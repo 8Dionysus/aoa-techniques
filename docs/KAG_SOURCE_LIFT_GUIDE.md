@@ -15,6 +15,7 @@ See also:
 - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
+- [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 
 ## What Already Exists
 
@@ -24,12 +25,15 @@ The current repository is already strong enough for `technique-as-node` KAG beca
 - canonical section headings in `TECHNIQUE.md`
 - small typed `relations`
 - explicit evidence-note kinds and paths
+- recurring authored note bodies across origin, transfer, readiness, adverse-effects, external provenance, and external review notes
 - generated catalog outputs that stay derived from authoritative markdown
 - a companion family review surface that keeps the reusable source-lift techniques distinct
 
 That is enough to treat the repo as a strong upstream source. It is not yet a finished `section-level` KAG schema.
 
 Within the current reusable family, [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) is now the canonical bundle-level metadata entrypoint and [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) is now the canonical direct-relation hint companion. [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), and [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) remain narrower promoted companions.
+
+The current note templates now reinforce that same family boundary at the authored-note layer: origin, adaptation, promotion, caution, external-origin provenance, and external review notes stay bounded, path-addressable, and reviewable without becoming a new note schema.
 
 ## First Bounded Family Member
 
@@ -42,6 +46,7 @@ Its job is narrow:
 - preserve the current markdown authority instead of replacing it
 
 This is a source-lift discipline, not a graph engine.
+It is also the clearest current family anchor because later checklist, example, and note lifts still depend on the same markdown-first section authority staying legible.
 
 The first implementation-oriented extraction pilot now stays equally narrow:
 
@@ -79,6 +84,8 @@ The next implementation-oriented source-class pilot after examples now stays equ
 Those files lift authored evidence notes into derived provenance knowledge only, and their reader companion stays kind-first and routing-first. They do not add note IDs, note-graph behavior, relation rationale, or flattened note semantics.
 
 They now include the canonical-only `adverse_effects_review` note role as one more typed note scope, but that still does not make caution machine-readable policy or generated caution output.
+
+For current family maintenance, keep the authored note shapes stable before asking for richer provenance behavior. Fix note-body drift, guide drift, or bundle examples first; only add a new source class when those authored surfaces stop being enough.
 
 The five reusable lift techniques now have a companion review surface in `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`, which keeps the section, metadata, provenance, relation, and caution seams separate without turning the family into a graph or policy program.
 

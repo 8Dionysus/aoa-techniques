@@ -11,6 +11,12 @@ See also:
 - [Documentation Map](README.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
 - [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
+- [`../templates/ORIGIN_EVIDENCE.template.md`](../templates/ORIGIN_EVIDENCE.template.md)
+- [`../templates/ADAPTATION_NOTE.template.md`](../templates/ADAPTATION_NOTE.template.md)
+- [`../templates/PROMOTION_NOTE.template.md`](../templates/PROMOTION_NOTE.template.md)
+- [`../templates/ADVERSE_EFFECTS_REVIEW.template.md`](../templates/ADVERSE_EFFECTS_REVIEW.template.md)
+- [`../templates/EXTERNAL_ORIGIN.template.md`](../templates/EXTERNAL_ORIGIN.template.md)
+- [`../templates/EXTERNAL_REVIEW.template.md`](../templates/EXTERNAL_REVIEW.template.md)
 - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
 
 This family uses one stable shape:
@@ -47,9 +53,20 @@ For the current provenance layer, treat these handles as stable:
 
 The path plus kind pairing is the current provenance contract. It lets bundle metadata point to the right supporting note without collapsing all note content into frontmatter.
 
+## Current Authoring Aids
+
+Use the current templates to keep note shapes reviewable and predictable without turning them into machine-first forms:
+
+- `origin_evidence` -> `../templates/ORIGIN_EVIDENCE.template.md`
+- `second_context` -> `../templates/ADAPTATION_NOTE.template.md`
+- `canonical_readiness` -> `../templates/PROMOTION_NOTE.template.md`
+- `adverse_effects_review` -> `../templates/ADVERSE_EFFECTS_REVIEW.template.md`
+- `external_origin` -> `../templates/EXTERNAL_ORIGIN.template.md`
+- `external_review` -> `../templates/EXTERNAL_REVIEW.template.md`
+
 ## Recurring Note Shapes
 
-Many evidence notes already use review-shaped recurring section patterns.
+Many evidence notes already use recurring authored section patterns.
 
 Common examples today:
 
@@ -83,13 +100,36 @@ Common examples today:
   - `Detection signals`
   - `Mitigations`
   - `Recommendation`
-- external provenance and review notes:
-  - donor/source identity
-  - what changed
-  - public-safety review
-  - bounded verdict or recommendation
+- external-origin provenance notes:
+  - `Source`
+  - `What changed`
+  - `Public-safety review`
+  - `Review notes`
+- external-review notes:
+  - `Technique`
+  - `Verdict`
+  - `Evidence summary`
+  - `Boundedness check`
+  - `Provenance readability`
+  - `Remaining gaps`
+  - `Recommendation`
 
 These recurring shapes are useful because they keep provenance reviewable and legible without turning notes into rigid machine-first forms.
+
+For the current normalization pass, keep the section titles stable and sharpen the content inside them.
+Do not invent richer note metadata just because a note body still needs clearer wording.
+If one note kind starts drifting, fix the authored shape first, then regenerate the manifest.
+
+Starter markdown templates for the main recurring note kinds now live under `templates/`:
+
+- `ORIGIN_EVIDENCE.template.md`
+- `ADAPTATION_NOTE.template.md`
+- `PROMOTION_NOTE.template.md`
+- `ADVERSE_EFFECTS_REVIEW.template.md`
+- `EXTERNAL_ORIGIN.template.md`
+- `EXTERNAL_REVIEW.template.md`
+
+Use them as maintainers' starting shapes only. They do not replace existing authored notes as the source of truth.
 
 ## Bounded Use
 
@@ -147,7 +187,7 @@ Not part of this wave:
 - no flattened top-level note semantics like `verdict`, `source_project`, or note scoring
 - no bundle or generated catalog changes beyond the bounded evidence note manifest
 
-The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context across origin, transfer, readiness, external review, and canonical adverse-effects review notes.
+The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context across origin, transfer, readiness, external provenance, external review, and canonical adverse-effects review notes.
 
 This guide remains the authoritative contract doc for both the evidence-note manifest family and `EVIDENCE_NOTE_SURFACES.md`.
 

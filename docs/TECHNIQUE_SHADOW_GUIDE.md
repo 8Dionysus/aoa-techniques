@@ -42,7 +42,7 @@ Use these distinctions inside `## Risks`:
 | `Negative effects` | What does the technique worsen even in a nominally working path? |
 | `Misuse patterns` | Where will teams over-apply or misapply the technique? |
 | `Detection signals` | How do we tell that drift, harm, or false-success has started? |
-| `Mitigations` | How do we contain, roll back, or narrow the damage? |
+| `Mitigations` | How do we contain, roll back, or narrow the damage before the false-success hardens? |
 
 Keep the language bounded. This is not a request for a long threat-model essay.
 
@@ -59,6 +59,16 @@ When reviewing a technique's shadow, ask:
 - When should the technique be banned for a bounded context instead of patched again?
 
 These prompts are especially important when the technique affects defaults, summaries, memory, rules, or operator-facing review surfaces.
+
+## Minimum Useful Specificity
+
+Good shadow language should make three things reviewable without turning the note into a long essay:
+
+- one plausible "successful failure", where the technique still looks healthy while important meaning is already drifting
+- one early stop or watch signal that a reviewer can observe before the hard failure fully lands
+- one first containment or rollback move that narrows the damage before the technique widens again
+
+If a `Risks` section sounds safe only because it is vague, rewrite it until a reviewer can tell what would look deceptively fine, what should trigger a stop, and what should be rolled back or narrowed first.
 
 ## Current Authoring Shape
 

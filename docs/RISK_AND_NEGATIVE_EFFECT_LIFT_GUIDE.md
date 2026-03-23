@@ -43,6 +43,14 @@ That lift surface is useful for:
 - keeping early-stop and containment signals attached to the same bounded technique contract
 - later section-level caution extraction without widening metadata first
 
+The minimum useful caution language here is still markdown-first:
+
+- name one plausible successful failure
+- name one early stop or watch signal
+- name one first containment or rollback move
+
+If that language is missing, strengthen the authored `Risks` section before asking for more lift behavior.
+
 This is a source-lift opportunity, not a reason to turn caution into a score or policy engine.
 
 ## What The Caution Layer Is Not
