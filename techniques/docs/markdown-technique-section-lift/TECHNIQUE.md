@@ -16,12 +16,12 @@ tags:
   - sections
   - manifests
 summary: Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative.
-maturity_score: 3
+maturity_score: 4
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-19
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-23
 export_ready: true
 relations:
   - type: complements
@@ -180,10 +180,11 @@ See `checks/section-lift-checklist.md`.
 
 - shaped inside `aoa-techniques` while the section-manifest layer was introduced as a derived source-lift surface
 - extracted into first public reusable form on 2026-03-19 as part of the initial KAG/source-lift family wave
+- reinforcement wave on 2026-03-23 now records `aoa-evals` as a second markdown-first section-surface consumer and `aoa-routing` as an expand-time router over source-owned section surfaces
 
 ## Future evolution
 
-- strengthen second-context evidence once another markdown-first repository uses the same bounded section-lift discipline
+- keep the technique-named contract explicit now that the same bounded section-lift discipline also appears in another markdown-first bundle family
 - keep the current derived lookup subordinate to authored prose even when the catalog or selection layer becomes more convenient
 - add review guidance for when a section is too unstable to keep in the lifted scope
 - keep section lift as the first expand-time stop rather than letting it absorb metadata-spine or provenance-lift work

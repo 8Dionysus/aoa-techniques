@@ -22,6 +22,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 - open [Canonical Rubric](CANONICAL_RUBRIC.md) for the current frontmatter review fields and evidence kinds
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
+- open [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md) when the question is which `promoted` bundle can be honestly strengthened next and what proof is still missing
+- open [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
 - open [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md) when the question is what can be extracted from an external donor without importing foreign doctrine
 - open [External Import Runbook](EXTERNAL_IMPORT_RUNBOOK.md) when the question is how to take one bounded donor from triage to merge without inventing a new maintainer path
 - open [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md) when the question is why a remaining `promoted` technique still needs an external donor path
@@ -40,9 +42,10 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## Current Corpus Posture
 
-- current split: `17 canonical`, `17 promoted`
+- current split: `17 canonical`, `31 promoted`
 - current evidence-prep promoted techniques: `AOA-T-0018`
-- current internal-origin promoted techniques: `AOA-T-0033`, `AOA-T-0034`
+- current internal-origin promoted techniques: `AOA-T-0033`, `AOA-T-0034`, `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
+- current future-import-wave promoted techniques: `AOA-T-0035`, `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0042`, `AOA-T-0043`, `AOA-T-0044`, `AOA-T-0045`
 - current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 - current bounded `history` domain covers session/history artifacts only; memory objects and recall surfaces still stay outside this repo's ownership boundary
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`

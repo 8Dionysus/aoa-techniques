@@ -93,29 +93,33 @@ Reduce breakage at boundaries by expressing the expected interface behavior expl
 
 ### Failure modes
 
-- the contract is too vague to constrain behavior
-- validation covers a summary artifact but not the real consumer boundary
+- the contract is too vague or fixture-shaped to constrain the actual consumer-visible boundary
+- validation stays green against a summary artifact, helper wrapper, or fixture while the real consumer boundary quietly drifts
 - downstream compatibility assumptions remain implicit
 
 ### Negative effects
 
-- an oversized contract can freeze useful internal evolution unnecessarily
-- weak contract definitions can create false confidence
+- an oversized contract can freeze useful internal evolution around details the consumer never observes
+- a surrogate contract can create false confidence because the suite still passes on the wrong surface
+- teams can spend review energy on contract ceremony while the real boundary remains unnamed or weakly scoped
 
 ### Misuse patterns
 
 - calling any smoke test a contract test without boundary discipline
 - encoding internal implementation details into the boundary contract
 - widening the contract surface simply because a tool makes it easy
+- treating a helper artifact or fixture format as if it were the live consumer boundary
 
 ### Detection signals
 
-- the supposed contract mostly references internals rather than observable inputs/outputs
+- the supposed contract mostly references helpers, summaries, or internals rather than the live observable inputs and outputs
 - downstream consumers are still surprised after the contract change
-- the validation surface does not actually exercise the real boundary
+- the suite stays green through refactor, but reviewers still cannot say which consumer promise it protects
+- boundary drift bugs keep surfacing first in downstream or integration contexts instead of inside the contract checks
 
 ### Mitigations
 
+- replace surrogate assertions with at least one check on the real consumer-visible boundary
 - narrow the contract to what the consumer really observes
 - separate internal correctness tests from boundary stability tests
 - add downstream impact notes before changing the boundary
@@ -125,6 +129,7 @@ Reduce breakage at boundaries by expressing the expected interface behavior expl
 Verify the technique by confirming that:
 - the boundary and consumers were named explicitly
 - tests or checks target observable contract behavior
+- at least one check exercises the live consumer-visible boundary rather than only a summary artifact or helper layer
 - downstream impact was considered where relevant
 - the result states what the contract guarantees and what it does not
 - the contract surface remains narrower than invariant-oriented coverage techniques such as `AOA-T-0017`

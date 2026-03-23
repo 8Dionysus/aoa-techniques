@@ -208,8 +208,8 @@
       "inputs_short": "Needs boundary under review; expected inputs and outputs; known downstream expectations.",
       "outputs_short": "Produces explicit contract assumptions; contract-oriented tests or checks; downstream impact notes.",
       "core_contract_short": "Core contract: the contract should be visible and reviewable by another human or agent; validation should target the boundary surface...",
-      "main_risk_short": "Main risk: the contract is too vague to constrain behavior.",
-      "validation_short": "Validate by checking the boundary and consumers were named explicitly; tests or checks target observable contract behavior; downstream impact was considered where...",
+      "main_risk_short": "Main risk: the contract is too vague or fixture-shaped to constrain the actual consumer-visible boundary.",
+      "validation_short": "Validate by checking the boundary and consumers were named explicitly; tests or checks target observable contract behavior; at least one check exercises...",
       "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md"
     },
     {
@@ -236,7 +236,7 @@
       "inputs_short": "Needs target rule or system truth; current examples or tests; candidate input space or generators.",
       "outputs_short": "Produces explicit invariant statements; property-oriented tests or checks; notes on assumptions behind the generators or input space.",
       "core_contract_short": "Core contract: each property should express a meaningful invariant; the technique should broaden coverage beyond a tiny fixed example set.",
-      "main_risk_short": "Main risk: the property is too weak to constrain real behavior.",
+      "main_risk_short": "Main risk: the chosen invariant is too weak or too generic to constrain real behavior.",
       "validation_short": "Validate by checking the property expresses a meaningful invariant rather than a vague expectation; the resulting check broadens coverage beyond a small...",
       "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md"
     },
@@ -631,6 +631,48 @@
       "main_risk_short": "Main risk: the witness artifact quietly becomes a new memory-object kind because writeback mapping is not kept separate.",
       "validation_short": "Validate by checking the artifact names the bounded run and its goal; step order, tool visibility, and state deltas remain visible where...",
       "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0046",
+      "name": "repo-doc-surface-lift",
+      "summary": "Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.",
+      "one_line_intent": "Lift the repository's bounded public docs/status layer into derived routing knowledge so readers and...",
+      "use_when_short": "Use when the question is about which public repo doc should anchor navigation, contribution, safety, or release/status lookup or the...",
+      "do_not_use_short": "Avoid when local planning docs such as TODO.md, PLANS.md, or ROADMAP.md or deeper guide docs beyond the bounded repo-doc source...",
+      "inputs_short": "Needs one bounded set of authored public repo docs and status files; a reader surface or manifest projection...",
+      "outputs_short": "Produces bounded routing knowledge for public repo docs/status; a reader-facing surface that points to the right authored doc...",
+      "core_contract_short": "Core contract: the authored docs remain the source of meaning; the derived surface stays bounded to the explicit public docs/status...",
+      "main_risk_short": "Main risk: the bounded docs/status set widens until the surface stops being a clear routing aid.",
+      "validation_short": "Validate by checking the docs/status source set is bounded and explicit; the derived surface points back to the authored repo docs; local...",
+      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0047",
+      "name": "github-review-template-lift",
+      "summary": "Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring.",
+      "one_line_intent": "Lift authored GitHub issue and pull-request review templates into a bounded derived intake surface...",
+      "use_when_short": "Use when repositories that keep review prompts in authored GitHub issue or pull-request templates or intake paths where proposal, import...",
+      "do_not_use_short": "Avoid when cases that need workflow automation, approval policy, triage, or state transitions instead of bounded prompt lookup or repos...",
+      "inputs_short": "Needs authored .github/ISSUE_TEMPLATE/.md and .github/PULL_REQUEST_TEMPLATE.md files; a current template manifest or generator that can project template scope from...",
+      "outputs_short": "Produces bounded template inventory for intake lookup; derived section scopes for review prompts; preserved template authority over review...",
+      "core_contract_short": "Core contract: authored GitHub templates remain the source of review prompt meaning; the derived manifest stays bounded to prompt shape...",
+      "main_risk_short": "Main risk: template scopes drift from the authored .github files and the manifest stops matching the real intake shape.",
+      "validation_short": "Validate by checking the derived surface matches the authored GitHub templates; the template scopes stay bounded to prompt shape and section inventory...",
+      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0048",
+      "name": "semantic-review-surface-lift",
+      "summary": "Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.",
+      "one_line_intent": "Lift authored _SEMANTIC_REVIEW.md docs into one derived boundary-review surface so readers and tooling can...",
+      "use_when_short": "Use when repositories that already have authored semantic-review docs and review-backed working sets or review flows where the question is...",
+      "do_not_use_short": "Avoid when repos without authored semantic-review docs or workflows that want semantic scoring, automated verdicts, or status transitions.",
+      "inputs_short": "Needs one or more authored _SEMANTIC_REVIEW.md docs; a review-backed working set or cluster definition; a derived manifest that...",
+      "outputs_short": "Produces bounded cluster-level review lookup; review path and cluster map entries that remain traceable to authored review docs...",
+      "core_contract_short": "Core contract: authored semantic-review docs remain the source of review meaning; the derived surface stays cluster-bounded and review-shaped.",
+      "main_risk_short": "Main risk: clusters expand until the derived surface stops reflecting one real bounded seam.",
+      "validation_short": "Validate by checking the authored semantic-review doc exists and stays readable as the source of review meaning; the derived surface can be...",
+      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md"
     }
   ]
 }

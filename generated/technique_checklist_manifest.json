@@ -2038,6 +2038,125 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0046",
+      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md",
+          "title": "Repo Doc Surface Lift Checklist",
+          "intro_markdown": "Use this checklist to confirm the repo-doc surface still behaves like bounded routing knowledge.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The source set is explicitly bounded to the public docs/status files."
+            },
+            {
+              "order": 2,
+              "text": "`TODO.md`, `PLANS.md`, and `ROADMAP.md` stay out of the source class."
+            },
+            {
+              "order": 3,
+              "text": "Deeper guide docs and review docs stay out unless they belong to a separate source class."
+            },
+            {
+              "order": 4,
+              "text": "The reader surface points to authored docs rather than replacing them."
+            },
+            {
+              "order": 5,
+              "text": "The surface answers \"which doc should I open?\" instead of trying to explain the full content of the doc."
+            },
+            {
+              "order": 6,
+              "text": "The derived surface can be rebuilt from markdown source."
+            },
+            {
+              "order": 7,
+              "text": "No status-policy engine or catch-all docs taxonomy was introduced."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0047",
+      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/github-review-template-lift/checks/github-review-template-lift-checklist.md",
+          "title": "GitHub Review Template Lift Checklist",
+          "intro_markdown": "Use this checklist to confirm that GitHub review templates still behave like a derived intake surface rather than a decision engine.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The lifted template scopes come from authored `.github` markdown files."
+            },
+            {
+              "order": 2,
+              "text": "The derived surface matches the current template inventory."
+            },
+            {
+              "order": 3,
+              "text": "The manifest answers \"which review prompt should I open?\" rather than \"what should the outcome be?\""
+            },
+            {
+              "order": 4,
+              "text": "Template meaning still lives in the authored markdown files."
+            },
+            {
+              "order": 5,
+              "text": "No approval policy, triage engine, or review-state registry was needed."
+            },
+            {
+              "order": 6,
+              "text": "The surface stays bounded to issue and pull-request review intake."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0048",
+      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md",
+          "title": "Semantic Review Surface Lift Checklist",
+          "intro_markdown": "Use this checklist to confirm that the review surface still behaves like a derived markdown lookup aid rather than a new decision engine.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The authored semantic-review doc is still the source of review meaning."
+            },
+            {
+              "order": 2,
+              "text": "The derived surface can be regenerated from authored markdown."
+            },
+            {
+              "order": 3,
+              "text": "The lifted output preserves the cluster map, seam review, findings, and next-step summary."
+            },
+            {
+              "order": 4,
+              "text": "Consumers can route from the derived surface back to the authored review doc."
+            },
+            {
+              "order": 5,
+              "text": "The lift stays cluster-bounded instead of becoming a catch-all review bucket."
+            },
+            {
+              "order": 6,
+              "text": "The technique does not require scoring, status automation, or graph semantics to stay useful."
+            },
+            {
+              "order": 7,
+              "text": "Semantic review remains distinct from shadow review and from bundle-local adverse-effects notes."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

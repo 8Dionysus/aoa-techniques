@@ -14,6 +14,9 @@ See also:
 - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
 - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [`repo-doc-surface-lift`](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
+- [`github-review-template-lift`](../techniques/docs/github-review-template-lift/TECHNIQUE.md)
+- [`semantic-review-surface-lift`](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
 - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 
@@ -87,7 +90,9 @@ They now include the canonical-only `adverse_effects_review` note role as one mo
 
 For current family maintenance, keep the authored note shapes stable before asking for richer provenance behavior. Fix note-body drift, guide drift, or bundle examples first; only add a new source class when those authored surfaces stop being enough.
 
-The five reusable lift techniques now have a companion review surface in `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`, which keeps the section, metadata, provenance, relation, and caution seams separate without turning the family into a graph or policy program.
+The first five reusable lift techniques now have a companion review surface in `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`, which keeps the section, metadata, provenance, relation, and caution seams separate without turning the family into a graph or policy program.
+
+Later repo-surface, intake-surface, and review-surface lifts can reuse the same source-first posture without automatically widening that family review. Refresh the family review only when those later lifts develop a real shared seam worth reviewing together.
 
 The next implementation-oriented source-class pilot after evidence notes now stays equally bounded:
 
@@ -171,4 +176,4 @@ Not part of this first wave:
 - no relation-rationale layer
 - no graph inference, scoring, or selector-engine behavior
 
-The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, semantic and shadow review manifests as derived review knowledge only, repo-doc/status surfaces as derived routing knowledge only, markdown-first caution lift without metadata or generated caution outputs, and a companion family review surface that keeps the five techniques readable as one bounded source-lift family.
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, repo-doc/status routing, GitHub review-template intake lift, semantic-review lift, semantic and shadow review manifests as derived review knowledge only, markdown-first caution lift without metadata or generated caution outputs, and a companion family review surface that keeps the first five core techniques readable without forcing every later source class into the same review document.

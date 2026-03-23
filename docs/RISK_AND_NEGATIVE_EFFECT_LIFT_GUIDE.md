@@ -51,6 +51,13 @@ The minimum useful caution language here is still markdown-first:
 
 If that language is missing, strengthen the authored `Risks` section before asking for more lift behavior.
 
+When deciding whether to widen caution work, keep the escalation path narrow:
+
+- strengthen one bundle's `Risks` first
+- use one canonical `adverse-effects-review.md` note when the watch seam is still bundle-local
+- open a new repo-level shadow review only when several canonical bundles share one caution-dense seam that genuinely needs cluster-level lookup
+- otherwise keep the lift family unchanged and improve the local markdown source instead
+
 This is a source-lift opportunity, not a reason to turn caution into a score or policy engine.
 
 ## What The Caution Layer Is Not

@@ -28,6 +28,9 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - `AOA-T-0032 context-report-for-ci`
 - `AOA-T-0033 decision-rationale-recording`
 - `AOA-T-0034 public-safe-artifact-sanitization`
+- `AOA-T-0046 repo-doc-surface-lift`
+- `AOA-T-0047 github-review-template-lift`
+- `AOA-T-0048 semantic-review-surface-lift`
 - `docs/LONG_GAP_CANON_DESIGN.md`, which captures the current design-first donor plan for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - `docs/DEEP_AUDIT_ROADMAP.md`, which turns the current green baseline into a phase-by-phase closure roadmap for structural hardening, corpus meaning, surface usability, governance seams, and next implementation packs
 - `docs/EXTERNAL_TECHNIQUE_CANDIDATES.md`, which stages the remaining `22` external donor-derived seed ideas by readiness to distill, overlap, incubation need, or substrate status
@@ -76,6 +79,8 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - `DOCS_BOUNDARY_SEMANTIC_REVIEW.md` and semantic review manifests now reflect that a richer relation consumer has already landed
 - KAG-oriented repo guides now link directly to the corresponding reusable technique bundles for section lift, metadata spine, provenance lift, and bounded relation lift
 - shadow/caution repo guides now point to `risk-and-negative-effect-lift` as the current reusable markdown-first caution implementation surface
+- local planning docs now treat the markdown-first shadow layer as landed baseline, record the explicit `Risks -> bundle-local adverse-effects-review -> repo-level shadow review only for a real caution-dense canonical cluster` escalation path, and point the next calm KAG/source-lift wave toward runbooks, broader canonical docs beyond repo-doc/status, and status snapshots
+- public docs routing now exposes `repo-doc-surface-lift`, `github-review-template-lift`, and `semantic-review-surface-lift` as the second bounded docs-domain source-lift trio without adding new generated family types or a new `kag` domain
 - local validation no longer dirties `git status` with Python cache artifacts
 
 ### Validation

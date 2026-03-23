@@ -214,6 +214,24 @@ See also:
 |---|---|---|---|
 | Minimal Multi-Source Primary Input Provenance | `present` | `techniques/docs/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Repo Doc Surface Lift | `present` | `techniques/docs/repo-doc-surface-lift/examples/minimal-repo-doc-surface-lift.md` | [TECHNIQUE.md](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) |
+
+### [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal GitHub Review Template Lift | `present` | `techniques/docs/github-review-template-lift/examples/minimal-github-review-template-lift.md` | [TECHNIQUE.md](../techniques/docs/github-review-template-lift/TECHNIQUE.md) |
+
+### [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Semantic Review Surface Lift | `present` | `techniques/docs/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md` | [TECHNIQUE.md](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

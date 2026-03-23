@@ -93,32 +93,36 @@ Reduce weak example-only validation by expressing stable system or domain truths
 
 ### Failure modes
 
-- the property is too weak to constrain real behavior
-- the generator range never reaches meaningful stress points
-- the checks are random-looking but semantically shallow
+- the chosen invariant is too weak or too generic to constrain real behavior
+- the generator range never reaches meaningful stress points or becomes too broad to review honestly
+- the checks look sophisticated and wide, but the protected domain truth is still underspecified
 
 ### Negative effects
 
-- overly complex generator logic can hide rather than clarify the domain truth
+- overly complex generator logic can hide the domain truth behind tooling complexity
 - large noisy failing cases can make debugging slower if the invariant was poorly chosen
+- a polished property suite can create false confidence while teams still cannot explain what stable truth is being protected
 
 ### Misuse patterns
 
 - writing vague properties like “should not fail” and calling them invariants
 - confusing random data generation with meaningful property testing
 - using property checks where a few concrete examples would communicate better
+- using invariant language to avoid defining the actual boundary or rule that matters
 
 ### Detection signals
 
 - the property could pass for many broken implementations
-- no one can explain why the invariant matters to the domain
-- the generated space is large but the signal gained is small
+- reviewers can explain the generator or harness more easily than why the invariant matters to the domain
+- the generated space grows, but the signal gained is small or obvious boundary regressions still surface elsewhere first
+- failing cases are noisy, but the report cannot say which stable truth was violated
 
 ### Mitigations
 
 - rewrite the property around a stronger domain truth
 - narrow the generator to meaningful ranges first
 - combine property checks with a few clear examples for readability
+- route consumer-boundary questions back to `AOA-T-0015` instead of stretching this technique
 
 ## Validation
 
@@ -127,6 +131,7 @@ Verify the technique by confirming that:
 - the resulting check broadens coverage beyond a small fixed example set
 - generator or input assumptions are understandable enough to review
 - the final report states what the invariant actually constrains
+- the final report can name which stable truth was violated or protected, not only that generated inputs produced a failure
 
 ## Adaptation notes
 
