@@ -923,6 +923,25 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         ):
             self.assertIn(target, rows)
 
+    def test_phase_sync_seed_has_bounded_narrowing_slice(self) -> None:
+        candidates = (REPO_ROOT / "docs" / "EXTERNAL_TECHNIQUE_CANDIDATES.md").read_text(
+            encoding="utf-8"
+        )
+
+        for target in (
+            "## Current Narrowing Slice: `phase_sync_for_agents`",
+            "`phase-synchronized-agent-handoff`",
+            "one explicit handoff artifact or status packet",
+            "model routing",
+            "shared context server or token optimization",
+            "AOA-T-0001",
+            "AOA-T-0023",
+            "bounded-specialist-generation",
+            "`notes/external-origin.md`",
+            "`notes/external-import-review.md`",
+        ):
+            self.assertIn(target, candidates)
+
     def test_kag_source_lift_family_has_second_context_and_readiness_notes(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         entries_by_id = {entry["id"]: entry for entry in catalog["techniques"]}

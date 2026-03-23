@@ -85,7 +85,7 @@ None right now. The current strict-safe lane has already been landed into [AOA-T
 | `skill_marketplace_curation` | `n-skills` | `skill-marketplace-curation` | `docs` | curate a local discoverability layer over upstream-owned skill sources without pretending to own them | keep it editorial and discovery-focused rather than registry or governance heavy |
 | `one-command_service_lifecycle` | `OpenMemory-Code` | `one-command-service-lifecycle` | `agent-workflows` | start and stop a bounded local service stack for agent work through one explicit lifecycle command | keep it to local lifecycle discipline and avoid broad project-launcher semantics |
 | `versionable_agent_transcripts` | `SpecStory` | `versionable-session-transcripts` | `history` | keep AI session transcripts as versioned repo artifacts for later audit and distillation | keep it artifact-first and avoid memory recall, retrieval, or instruction-policy widening |
-| `phase_sync_for_agents` | `agentwise` | `phase-synchronized-agent-handoff` | `agent-workflows` | synchronize multi-agent work through explicit phase checkpoints and bounded handoff seams | distill only the checkpoint and handoff contract, not the whole orchestration stack |
+| `phase_sync_for_agents` | `agentwise` | `phase-synchronized-agent-handoff` | `agent-workflows` | synchronize multi-agent work through explicit phase checkpoints and bounded handoff seams | narrow it through the current `phase_sync_for_agents` slice below and keep only the checkpoint and handoff contract, not the whole orchestration stack |
 
 ## Hold Because Overlap
 
@@ -124,6 +124,56 @@ If the goal is to grow the corpus without widening repo boundaries, the stronges
 4. `versionable_agent_transcripts` after one cleaner history seam around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 
 Then revisit the overlap and incubation lanes only after one of their missing boundaries becomes explicit.
+
+## Current Narrowing Slice: `phase_sync_for_agents`
+
+Treat `phase_sync_for_agents` as the active seed-refinement lane because it is already the top recommended next expansion object and the reusable center looks smaller than the broader `agentwise` orchestration package.
+
+### Working extraction target
+
+- public technique name: `phase-synchronized-agent-handoff`
+- tentative domain: `agent-workflows`
+- narrow contract: coordinate multi-agent work through explicit named phases where each handoff happens only at one declared checkpoint with a visible status summary, one explicit handoff artifact or status packet, and one clear next owner
+
+### What stays in scope
+
+- one explicit phase or checkpoint name for the current handoff
+- one visible entry or exit condition for crossing that phase boundary
+- one reviewable handoff packet that tells the receiving agent what is done, what remains blocked, and what should happen next
+- one explicit stop, return, or escalation rule when the packet is incomplete or the phase boundary is no longer valid
+
+### What stays out of the donor
+
+- model routing
+- shared context server or token optimization
+- dynamic specialist generation
+- persistent agent registry or execution-history learning
+- dashboard, analytics, or live monitoring
+- generic parallel-execution doctrine without an explicit checkpoint and handoff contract
+
+### Nearest overlap watch
+
+- [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) remains the broader multi-step change workflow; this seed should own cross-agent checkpoint and handoff seams, not the whole plan/verify/report loop
+- [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) remains the single-shot fast path; it may be a source or sink of a handoff, but it is not the handoff contract itself
+- `bounded-specialist-generation` remains an adjacent incubation lane and must stay out of scope until specialist creation can be separated cleanly from handoff discipline
+
+### Honest reopen trigger
+
+Reopen this seed as a real bundle only when the draft can say, in plain language:
+
+- what phase boundary is being crossed
+- what artifact or status packet is handed off
+- what makes the receiving agent allowed to continue
+- what forces a stop, return, or escalation instead of silent continuation
+
+### Expected first import package
+
+- one `TECHNIQUE.md`
+- one `notes/external-origin.md`
+- one `notes/external-import-review.md`
+- one `notes/second-context-adaptation.md`
+- one checklist
+- one minimal example
 
 ## Notes
 
