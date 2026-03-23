@@ -621,6 +621,39 @@
           "body_markdown": "Use one structured trace plus one compact summary to preserve a nontrivial run before any downstream writeback.\n\nExample witness artifact:\n\n```json\n{\n  \"run_id\": \"run-2026-03-23-auth-fix\",\n  \"goal\": \"repair auth callback flow without losing provider fallback\",\n  \"bounded_status\": \"completed_with_review_flags\",\n  \"time_window\": \"2026-03-23T17:10:00Z/2026-03-23T17:42:00Z\",\n  \"steps\": [\n    {\n      \"index\": 1,\n      \"step_kind\": \"inspect\",\n      \"intent\": \"trace current callback handling\",\n      \"tool_visibility\": \"repo read\",\n      \"observation\": \"fallback branch skips nonce reset\",\n      \"state_delta\": null\n    },\n    {\n      \"index\": 2,\n      \"step_kind\": \"edit\",\n      \"intent\": \"restore nonce reset in fallback branch\",\n      \"tool_visibility\": \"file patch\",\n      \"observation\": \"callback path updated\",\n      \"state_delta\": \"auth callback logic changed\"\n    }\n  ],\n  \"review_notes\": [\n    \"manual provider fallback test still needed\"\n  ]\n}\n```\n\nExample summary:\n\n```md\n# Witness Summary\n\n- run goal: repair auth callback flow without losing provider fallback\n- main result: fallback branch now restores nonce reset\n- review flags: manual fallback test still needed\n- inspect next: callback path plus fallback provider behavior\n```\n\nThe important behavior is artifact-first review posture:\n\n- the trace preserves ordered steps, tool visibility, and state deltas\n- the summary tells a reviewer what to inspect next\n- the artifact survives before any memory writeback or promotion route\n- this is not a new memory object and not just a transcript export"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0046",
+      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/repo-doc-surface-lift/examples/minimal-repo-doc-surface-lift.md",
+          "title": "Minimal Repo Doc Surface Lift",
+          "body_markdown": "This example shows how a bounded public repo-doc set can become a derived routing surface without replacing the authored docs.\n\n## Bounded source set\n\n- `README.md`\n- `docs/START_HERE.md`\n- `TECHNIQUE_INDEX.md`\n- `AGENTS.md`\n- `CONTRIBUTING.md`\n- `SECURITY.md`\n- `WALKTHROUGH.md`\n- `CODE_OF_CONDUCT.md`\n- `CHANGELOG.md`\n- `docs/README.md`\n- `docs/RELEASING.md`\n\n## Example routing\n\n- A new contributor asks where to begin: open `README.md` or `docs/START_HERE.md`.\n- Someone wants to understand how to contribute: open `CONTRIBUTING.md`.\n- A safety question comes up: open `SECURITY.md`.\n- A release question comes up: open `docs/RELEASING.md`.\n- Someone wants the public history of changes: open `CHANGELOG.md`.\n- A deeper planning question appears: do not route it through this surface; keep it in `TODO.md`, `PLANS.md`, or `ROADMAP.md` outside the source class.\n\n## Anti-drift rule\n\nIf the surface starts pulling in planning docs or deeper review guides, it is no longer bounded repo-doc routing.\nIf a question needs the full meaning of a doc, the reader surface should point back to the authored markdown instead of trying to answer everything itself."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0047",
+      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/github-review-template-lift/examples/minimal-github-review-template-lift.md",
+          "title": "Minimal GitHub Review Template Lift",
+          "body_markdown": "This example shows how authored GitHub review templates can become a bounded derived intake surface without turning the manifest into workflow policy.\n\n## Source template excerpt\n\n```md\n## Review Contract\n\n- proposed outcome: approve for canonical promotion or defer for now\n- bounded scope where this would be the default:\n\n## Public-Safety Recheck\n\n- sanitization still holds:\n- private paths, URLs, or operational details removed:\n- remaining public-safety concerns:\n```\n\n## Derived manifest excerpt\n\n```json\n{\n  \"template_id\": \"canonical-promotion\",\n  \"template_type\": \"issue_template\",\n  \"section_scope\": [\n    \"Technique\",\n    \"Review Contract\",\n    \"Default-Use Rationale\",\n    \"Reuse Beyond Origin\",\n    \"Stronger Validation Than Initial Promotion Baseline\",\n    \"Adaptation Boundary Check\",\n    \"Public-Safety Recheck\",\n    \"Recommendation\"\n  ]\n}\n```\n\nThe same pattern can cover pull-request templates and external-import review templates, but the derived surface should stay inventory-first. If the manifest needs to decide the outcome, the technique has crossed into workflow policy."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0048",
+      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md",
+          "title": "Minimal Semantic Review Surface Lift",
+          "body_markdown": "This example shows how an authored semantic-review doc can be surfaced as a bounded derived lookup aid without making the derived view the source of review meaning.\n\n## Source review excerpt\n\n```md\n## Cluster Map\n\n| technique | current role |\n|---|---|\n| [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |\n| [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |\n\n## Seam Review\n\n### `AOA-T-0002` vs `AOA-T-0009`\n\nQuestion: where does the broader document-role layout stop and the narrower snapshot discipline begin?\n\n- Invariant boundary: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map.\n- Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class.\n```\n\n## Derived lookup excerpt\n\n```json\n{\n  \"review_id\": \"docs_boundary\",\n  \"review_path\": \"docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md\",\n  \"title\": \"Docs Boundary Semantic Review\",\n  \"findings\": [\n    \"`AOA-T-0002` is semantically distinct as the broader source-of-truth layout pattern.\",\n    \"`AOA-T-0009` is semantically distinct as a lighter snapshot discipline layered on top of a broader document map.\"\n  ],\n  \"overall_outcome\": \"`clear`\"\n}\n```\n\nThe derived excerpt is intentionally routing-first. It helps a reader find the right authored review doc, but the meaning of the review still lives in that authored markdown.\n\n## Anti-Drift Rule\n\nIf maintainers need to edit the manifest directly to correct review meaning, the lift has stopped being markdown-first.\nIf the next question is scoring, status changes, or relation cleanup, this technique has been asked to do too much."
+        }
+      ]
     }
   ]
 }

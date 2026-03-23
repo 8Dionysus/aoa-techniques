@@ -198,6 +198,24 @@ See also:
 |---|---|---|---|---|
 | multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/docs/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Repo Doc Surface Lift Checklist | `present` | `7` | `techniques/docs/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) |
+
+### [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| GitHub Review Template Lift Checklist | `present` | `6` | `techniques/docs/github-review-template-lift/checks/github-review-template-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/github-review-template-lift/TECHNIQUE.md) |
+
+### [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/docs/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

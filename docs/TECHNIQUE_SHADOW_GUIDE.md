@@ -97,6 +97,17 @@ This is the current markdown-first authoring contract across the published corpu
 
 The same shadow-language contract is also the current upstream for bounded caution/source-lift work. The first reusable implementation surface for that lift now lives in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles now pair it with one typed `notes/adverse-effects-review.md` supplement when the repo needs a bounded shadow watch surface beyond the main `Risks` section.
 
+## Choosing The Right Shadow Surface
+
+Use the smallest surface that makes the caution question reviewable:
+
+- start by sharpening the bundle's authored `## Risks`; do not open a new shadow family when the current caution language is still vague
+- use one canonical `notes/adverse-effects-review.md` when the main need is a tighter bundle-local watch seam around one technique's successful failure, early stop signal, or first containment move
+- open a repo-level shadow-review doc only when several canonical techniques share one caution-dense seam and reviewers need one bounded lookup surface across that cluster
+- if the question can still be answered by strengthening one bundle plus its note, keep the work bundle-local
+
+More notes alone are not enough to justify another repo-level shadow family. Repo-level shadow reviews stay exceptional, cluster-shaped lookup surfaces rather than the default home for every caution refinement.
+
 ## Explicitly Deferred
 
 Still intentionally deferred:

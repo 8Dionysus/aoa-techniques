@@ -1212,12 +1212,12 @@
         {
           "key": "risks",
           "heading": "Risks",
-          "content_markdown": "### Failure modes\n\n- the contract is too vague to constrain behavior\n- validation covers a summary artifact but not the real consumer boundary\n- downstream compatibility assumptions remain implicit\n\n### Negative effects\n\n- an oversized contract can freeze useful internal evolution unnecessarily\n- weak contract definitions can create false confidence\n\n### Misuse patterns\n\n- calling any smoke test a contract test without boundary discipline\n- encoding internal implementation details into the boundary contract\n- widening the contract surface simply because a tool makes it easy\n\n### Detection signals\n\n- the supposed contract mostly references internals rather than observable inputs/outputs\n- downstream consumers are still surprised after the contract change\n- the validation surface does not actually exercise the real boundary\n\n### Mitigations\n\n- narrow the contract to what the consumer really observes\n- separate internal correctness tests from boundary stability tests\n- add downstream impact notes before changing the boundary"
+          "content_markdown": "### Failure modes\n\n- the contract is too vague or fixture-shaped to constrain the actual consumer-visible boundary\n- validation stays green against a summary artifact, helper wrapper, or fixture while the real consumer boundary quietly drifts\n- downstream compatibility assumptions remain implicit\n\n### Negative effects\n\n- an oversized contract can freeze useful internal evolution around details the consumer never observes\n- a surrogate contract can create false confidence because the suite still passes on the wrong surface\n- teams can spend review energy on contract ceremony while the real boundary remains unnamed or weakly scoped\n\n### Misuse patterns\n\n- calling any smoke test a contract test without boundary discipline\n- encoding internal implementation details into the boundary contract\n- widening the contract surface simply because a tool makes it easy\n- treating a helper artifact or fixture format as if it were the live consumer boundary\n\n### Detection signals\n\n- the supposed contract mostly references helpers, summaries, or internals rather than the live observable inputs and outputs\n- downstream consumers are still surprised after the contract change\n- the suite stays green through refactor, but reviewers still cannot say which consumer promise it protects\n- boundary drift bugs keep surfacing first in downstream or integration contexts instead of inside the contract checks\n\n### Mitigations\n\n- replace surrogate assertions with at least one check on the real consumer-visible boundary\n- narrow the contract to what the consumer really observes\n- separate internal correctness tests from boundary stability tests\n- add downstream impact notes before changing the boundary"
         },
         {
           "key": "validation",
           "heading": "Validation",
-          "content_markdown": "Verify the technique by confirming that:\n- the boundary and consumers were named explicitly\n- tests or checks target observable contract behavior\n- downstream impact was considered where relevant\n- the result states what the contract guarantees and what it does not\n- the contract surface remains narrower than invariant-oriented coverage techniques such as `AOA-T-0017`"
+          "content_markdown": "Verify the technique by confirming that:\n- the boundary and consumers were named explicitly\n- tests or checks target observable contract behavior\n- at least one check exercises the live consumer-visible boundary rather than only a summary artifact or helper layer\n- downstream impact was considered where relevant\n- the result states what the contract guarantees and what it does not\n- the contract surface remains narrower than invariant-oriented coverage techniques such as `AOA-T-0017`"
         },
         {
           "key": "adaptation_notes",
@@ -1294,12 +1294,12 @@
         {
           "key": "risks",
           "heading": "Risks",
-          "content_markdown": "### Failure modes\n\n- too many contexts are invented for a small problem\n- the map renames concepts without reducing ambiguity\n- interfaces remain muddy even after the map is drawn\n\n### Negative effects\n\n- over-structuring can slow small projects if no real confusion exists\n- premature context formalization can freeze evolving vocabulary too early\n- the map can become generic architecture formalism if it stops being tied to one concrete scoping problem\n\n### Misuse patterns\n\n- using context mapping as a substitute for real interface cleanup\n- declaring a DDD-style map without changing how reviews or changes are scoped\n- treating every folder boundary as a bounded context automatically\n- using the technique to justify architecture theater instead of one bounded ambiguity reduction pass\n\n### Detection signals\n\n- contributors still confuse neighboring areas after the map is written\n- the context names overlap or feel interchangeable\n- handoff points are still implicit or undocumented\n- reviewers start discussing taxonomy or diagram shape more than the actual scope boundary being protected\n\n### Mitigations\n\n- collapse weak or ceremonial contexts\n- tighten the vocabulary around observable responsibilities\n- add or clarify the interface notes between contexts\n- re-anchor the map in one concrete scoping decision instead of a broader architecture program"
+          "content_markdown": "### Failure modes\n\n- too many contexts are invented for a small problem\n- the map renames concepts without reducing ambiguity or scoping the next change more safely\n- interfaces remain muddy even after the map is drawn, so the artifact looks cleaner than the work actually feels\n\n### Negative effects\n\n- over-structuring can slow small projects if no real confusion exists\n- premature context formalization can freeze evolving vocabulary too early\n- a polished map can create false architectural confidence even while handoffs, ownership, or translation points remain implicit\n- the map can become generic architecture formalism if it stops being tied to one concrete scoping problem\n\n### Misuse patterns\n\n- using context mapping as a substitute for real interface cleanup\n- declaring a DDD-style map without changing how reviews or changes are scoped\n- treating every folder boundary as a bounded context automatically\n- using the technique to justify architecture theater instead of one bounded ambiguity reduction pass\n- using context mapping as a durable architecture program when the real need is one immediate scoping decision\n\n### Detection signals\n\n- contributors still confuse neighboring areas after the map is written\n- the context names overlap, feel interchangeable, or only repeat folder names\n- handoff points are still implicit or undocumented\n- reviewers start discussing taxonomy or diagram shape more than the actual scope boundary being protected\n- the first question after reading the map is still \"what stays out of scope for this change?\"\n\n### Mitigations\n\n- collapse weak or ceremonial contexts\n- tighten the vocabulary around observable responsibilities\n- add or clarify the interface notes between contexts\n- re-anchor the map in one concrete scoping decision instead of a broader architecture program\n- delete or reduce the map when one sharper scoping note would do more work than a permanent taxonomy surface"
         },
         {
           "key": "validation",
           "heading": "Validation",
-          "content_markdown": "Verify the technique by confirming that:\n- the main ambiguity or vocabulary drift was reduced\n- contexts or subsystems were named with clearer responsibility boundaries\n- handoff or interface points were made visible\n- the result would help a future docs or implementation change stay better scoped\n- the same bounded contract is already consumable from the committed `aoa-bounded-context-map` skill manifest and example"
+          "content_markdown": "Verify the technique by confirming that:\n- the main ambiguity or vocabulary drift was reduced\n- contexts or subsystems were named with clearer responsibility boundaries\n- handoff or interface points were made visible\n- the result would help a future docs or implementation change stay better scoped\n- a future change could use the map to decide what stays out of scope, not just to rename the areas already in scope\n- the same bounded contract is already consumable from the committed `aoa-bounded-context-map` skill manifest and example"
         },
         {
           "key": "adaptation_notes",
@@ -1376,12 +1376,12 @@
         {
           "key": "risks",
           "heading": "Risks",
-          "content_markdown": "### Failure modes\n\n- the property is too weak to constrain real behavior\n- the generator range never reaches meaningful stress points\n- the checks are random-looking but semantically shallow\n\n### Negative effects\n\n- overly complex generator logic can hide rather than clarify the domain truth\n- large noisy failing cases can make debugging slower if the invariant was poorly chosen\n\n### Misuse patterns\n\n- writing vague properties like \u201cshould not fail\u201d and calling them invariants\n- confusing random data generation with meaningful property testing\n- using property checks where a few concrete examples would communicate better\n\n### Detection signals\n\n- the property could pass for many broken implementations\n- no one can explain why the invariant matters to the domain\n- the generated space is large but the signal gained is small\n\n### Mitigations\n\n- rewrite the property around a stronger domain truth\n- narrow the generator to meaningful ranges first\n- combine property checks with a few clear examples for readability"
+          "content_markdown": "### Failure modes\n\n- the chosen invariant is too weak or too generic to constrain real behavior\n- the generator range never reaches meaningful stress points or becomes too broad to review honestly\n- the checks look sophisticated and wide, but the protected domain truth is still underspecified\n\n### Negative effects\n\n- overly complex generator logic can hide the domain truth behind tooling complexity\n- large noisy failing cases can make debugging slower if the invariant was poorly chosen\n- a polished property suite can create false confidence while teams still cannot explain what stable truth is being protected\n\n### Misuse patterns\n\n- writing vague properties like \u201cshould not fail\u201d and calling them invariants\n- confusing random data generation with meaningful property testing\n- using property checks where a few concrete examples would communicate better\n- using invariant language to avoid defining the actual boundary or rule that matters\n\n### Detection signals\n\n- the property could pass for many broken implementations\n- reviewers can explain the generator or harness more easily than why the invariant matters to the domain\n- the generated space grows, but the signal gained is small or obvious boundary regressions still surface elsewhere first\n- failing cases are noisy, but the report cannot say which stable truth was violated\n\n### Mitigations\n\n- rewrite the property around a stronger domain truth\n- narrow the generator to meaningful ranges first\n- combine property checks with a few clear examples for readability\n- route consumer-boundary questions back to `AOA-T-0015` instead of stretching this technique"
         },
         {
           "key": "validation",
           "heading": "Validation",
-          "content_markdown": "Verify the technique by confirming that:\n- the property expresses a meaningful invariant rather than a vague expectation\n- the resulting check broadens coverage beyond a small fixed example set\n- generator or input assumptions are understandable enough to review\n- the final report states what the invariant actually constrains"
+          "content_markdown": "Verify the technique by confirming that:\n- the property expresses a meaningful invariant rather than a vague expectation\n- the resulting check broadens coverage beyond a small fixed example set\n- generator or input assumptions are understandable enough to review\n- the final report states what the invariant actually constrains\n- the final report can name which stable truth was violated or protected, not only that generated inputs produced a failure"
         },
         {
           "key": "adaptation_notes",
@@ -3708,6 +3708,252 @@
           "key": "future_evolution",
           "heading": "Future evolution",
           "content_markdown": "- keep [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md) as the transcript sibling rather than widening this bundle into generic transcript packaging\n- keep memory writeback policy in `aoa-memo` rather than reopening a memory-object seam here\n- add a second live context if another route family uses the same reviewable witness artifact without the full witness/compost pilot"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0046",
+      "name": "repo-doc-surface-lift",
+      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Lift the repository's bounded public docs/status layer into derived routing knowledge so readers and tooling can answer \"which authored repo doc should anchor this question?\" without replacing the authored docs themselves."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- the question is about which public repo doc should anchor navigation, contribution, safety, or release/status lookup\n- the repository already has a bounded authoritative docs/status set with stable public entrypoints\n- a generated routing surface is helpful, but the meaning must still live in authored markdown\n- the next step is repo-doc routing, not deeper guide exploration or general documentation taxonomy"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- local planning docs such as `TODO.md`, `PLANS.md`, or `ROADMAP.md`\n- deeper guide docs beyond the bounded repo-doc source set\n- semantic-review or shadow-review docs\n- questions about bundle meaning, caution language, or selection beyond the public docs/status layer\n- cases where the real need is filesystem-wide doc discovery rather than a bounded repo-doc surface"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one bounded set of authored public repo docs and status files\n- a reader surface or manifest projection that stays derived from those docs\n- an explicit repo-doc routing question\n- agreement that the docs themselves remain authoritative"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- bounded routing knowledge for public repo docs/status\n- a reader-facing surface that points to the right authored doc\n- a stable source set that can be regenerated from markdown\n- clear separation between repo-doc routing and deeper docs or planning surfaces"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Identify the bounded public docs/status set that is actually in scope.\n2. Project only that set into a derived routing surface.\n3. Keep the meaning in the authored docs and keep the reader surface subordinate.\n4. Route questions about status, contribution, safety, and release back to the right authored document.\n5. Exclude local planning, deeper guides, and review surfaces from this route.\n6. Regenerate the derived surface from markdown whenever the source set changes.\n7. Stop widening the surface when the next question needs a broader docs taxonomy or a policy engine."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the authored docs remain the source of meaning\n- the derived surface stays bounded to the explicit public docs/status set\n- repo-doc routing does not become a status-policy engine or a release-policy engine\n- local planning docs and deeper guides stay outside this source class\n- the technique does not require new schema fields, new frontmatter, or a new `kag` domain"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the bounded docs/status set widens until the surface stops being a clear routing aid\n- maintainers start editing the derived surface instead of the authored docs\n- the route becomes a catch-all index that pulls in local planning or deeper guides by habit\n\n### Negative effects\n\n- a clean routing surface can create false confidence that the docs layer is more complete than it is\n- over-broad doc routing can make the repository feel more systematized than the underlying docs actually are\n- the surface can hide that deeper meaning still lives only in authored markdown\n\n### Misuse patterns\n\n- adding `TODO.md`, `PLANS.md`, or `ROADMAP.md` to the public docs/status source set\n- using the surface as a status-policy or release-policy engine\n- treating the repo-doc surface as a substitute for reading the underlying docs\n\n### Detection signals\n\n- route questions begin requiring unrelated docs to answer\n- the derived surface starts listing local planning or review docs\n- edits to the generated surface are used to fix meaning instead of regenerating from source markdown\n- the surface starts behaving like a general documentation taxonomy rather than a bounded routing layer\n\n### Mitigations\n\n- keep the source set explicit and limited to the public docs/status layer\n- route meaning questions back to the authored docs immediately\n- exclude local planning and deeper guides from this family\n- regenerate the derived surface instead of editing it by hand\n- split out a new source class only if a genuinely different docs layer emerges"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the docs/status source set is bounded and explicit\n- the derived surface points back to the authored repo docs\n- local planning docs and deeper guide docs stay outside the source class\n- the routing surface answers \"which doc should I open?\" rather than \"what is the full meaning?\"\n- no policy engine, taxonomy engine, or filesystem-wide doc discovery behavior is needed\n\nSee `checks/repo-doc-surface-lift-checklist.md` and `examples/minimal-repo-doc-surface-lift.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact public docs/status files that belong in the bounded source set\n- the shape of the reader surface or manifest projection\n- the specific repo-doc routing questions the surface should answer\n\nWhat should stay invariant:\n- meaning stays in authored docs\n- the surface stays derived and bounded\n- local planning docs stay out of this source class\n- deeper guide docs stay out unless they become part of a separate bounded source set\n- the surface should help navigation, not replace the docs it routes to\n\nThis technique stays repo-surface-first. If the next need is deeper guide selection, review semantics, or a general docs taxonomy, that is a different technique family."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps the bounded repo-doc routing contract and removes any project-specific implementation detail beyond the current public docs/status set."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-repo-doc-surface-lift.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/repo-doc-surface-lift-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while the repo-doc routing surface and manifest stabilized as a bounded reader companion\n- extracted into first public reusable form on 2026-03-23 as a docs-domain source-lift technique"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- clarify when a new public docs/status file should enter the bounded source set\n- strengthen second-context evidence once another markdown-first repository reuses the same repo-doc routing pattern\n- keep the source set bounded if deeper guides or planning docs start asking for their own route surface"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0047",
+      "name": "github-review-template-lift",
+      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Lift authored GitHub issue and pull-request review templates into a bounded derived intake surface so reviewers and tooling can find the right prompt shape without turning templates into workflow automation, approval policy, triage logic, or review-state storage. Within the current KAG/source-lift family, use this when the next question is \"which review template should anchor the intake?\" rather than \"how should the review be decided?\""
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories that keep review prompts in authored GitHub issue or pull-request templates\n- intake paths where proposal, import, promotion, or PR review prompts need one bounded lookup surface\n- generated readers that should expose template shape without replacing the template body\n- KAG-oriented work that needs template-level intake handles before any workflow registry or policy engine exists\n- cases where the review prompt itself is the source of meaning, but the current question is routing to the right prompt"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- cases that need workflow automation, approval policy, triage, or state transitions instead of bounded prompt lookup\n- repos where templates are unstable, ad hoc, or mostly incidental to the intake path\n- situations where a manifest would become the editable source of truth instead of a derived surface\n- workflows that would use the template layer to infer review decisions, not just review shape\n- requests for a review-state registry or a decision engine"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- authored `.github/ISSUE_TEMPLATE/*.md` and `.github/PULL_REQUEST_TEMPLATE.md` files\n- a current template manifest or generator that can project template scope from those authored files\n- review-intake questions such as promotion, external import, proposal, or pull-request review\n- explicit agreement that template meaning still lives in the authored markdown files"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- bounded template inventory for intake lookup\n- derived section scopes for review prompts\n- preserved template authority over review wording and fields\n- reusable intake surface for later bounded consumers\n- no implied workflow automation, approval logic, or review-state registry"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep the authored GitHub templates as the primary review prompt source.\n2. Project the template shapes into a derived manifest or reader surface.\n3. Use the derived surface to locate the right review prompt without editing the prompt through the manifest.\n4. Keep the template types and section scopes explicit so intake stays bounded and reviewable.\n5. Route questions about actual review decisions, policy, or state back to the owning workflow or technique.\n6. Rebuild the derived surface whenever the authored templates change."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- authored GitHub templates remain the source of review prompt meaning\n- the derived manifest stays bounded to prompt shape, section scope, and template inventory\n- template lookup supports intake and review routing, not approval policy or triage behavior\n- the technique does not require a workflow engine, a state registry, or a new `kag` domain\n- prompt meaning still routes back to the authored `.github` files"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- template scopes drift from the authored `.github` files and the manifest stops matching the real intake shape\n- the derived surface becomes the thing people edit instead of the templates themselves\n- review intake starts asking for decisions or state transitions that the template layer was never meant to answer\n\n### Negative effects\n\n- a tidy template inventory can create false confidence that review routing is fully governed when the actual decision logic still lives elsewhere\n- a derived manifest can make intake feel more formal than it is\n- template lookup can hide the fact that different review flows still need different human judgment\n\n### Misuse patterns\n\n- treating the template manifest as a workflow policy engine\n- adding approval rules or triage state because the intake template surface is already useful\n- using review templates as a substitute for a real bounded review contract\n\n### Detection signals\n\n- contributors ask the manifest to decide outcomes instead of just locating the right review prompt\n- template section scopes need constant hand edits that are not reflected in the authored markdown\n- review routing questions start requiring generated state rather than the template body\n\n### Mitigations\n\n- keep the manifest inventory-only and regenerate from authored templates\n- route decision policy and triage behavior back to the workflow or review technique that owns them\n- add or change template fields only when the intake prompt itself needs to change\n- stop widening the surface when the next request is really for state tracking or policy logic"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the derived surface matches the authored GitHub templates\n- the template scopes stay bounded to prompt shape and section inventory\n- reviewers can find the right intake prompt without editing the manifest\n- template meaning still lives in `.github` markdown files\n- no workflow automation or review-state registry was needed to make the surface useful\n\nSee `checks/github-review-template-lift-checklist.md` and `examples/minimal-github-review-template-lift.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact set of review templates\n- whether templates are issue-only, pull-request-only, or both\n- the derived manifest format or reader surface\n- how many intake paths share the same template inventory\n\nWhat should stay invariant:\n- templates remain human-first\n- the manifest stays derived\n- prompt meaning remains in authored markdown\n- intake lookup stays bounded to template shape\n- the technique does not become workflow automation or state policy\n\nThis technique sits beside the metadata spine, but it should not absorb that spine's job or become a registry for review outcomes. If the next question is policy, triage, or approval state, that is a different surface."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps the reusable intake-lift contract and strips repo-specific implementation trivia, local file paths beyond the canonical `.github` template area, and any implication that review decisions are already automated."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-github-review-template-lift.md` for a small GitHub review template excerpt and the corresponding derived intake manifest excerpt."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/github-review-template-lift-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while the GitHub review template manifest and authored templates became the repo's intake surface\n- extracted into first public reusable form on 2026-03-23 as part of the initial KAG/source-lift family wave"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen second-context evidence once another markdown-first corpus uses the same bounded template-intake pattern\n- clarify when a template question should move to a workflow contract instead of widening the template manifest\n- keep workflow automation, approval policy, triage logic, and review-state storage deferred"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0048",
+      "name": "semantic-review-surface-lift",
+      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Lift authored `*_SEMANTIC_REVIEW.md` docs into one derived boundary-review surface so readers and tooling can find the current cluster map, seam review, findings, and next-step summary without turning semantic review into a scoring system, a status driver, or a graph engine.\n\nWithin the current KAG/source-lift family, this technique is the cluster-level counterpart to section lift and metadata lift: it keeps the review meaning in authored markdown while making the review surface easier to navigate."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- repositories that already have authored semantic-review docs and review-backed working sets\n- review flows where the question is whether nearby techniques still read as distinct\n- lookup surfaces that need one bounded place to inspect a cluster map, seam review, and next-step summary\n- KAG-oriented work that needs review-cluster lookup before any broader automation exists\n- cases where the review doc itself should remain the place where semantic meaning is argued"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- repos without authored semantic-review docs\n- workflows that want semantic scoring, automated verdicts, or status transitions\n- cases where the real problem is bundle-local caution, not cluster-level review\n- situations where the next need is relation cleanup or graph behavior rather than bounded review lookup\n- workflows that would treat the derived manifest as a replacement for the authored review doc"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one or more authored `*_SEMANTIC_REVIEW.md` docs\n- a review-backed working set or cluster definition\n- a derived manifest that can expose review path, reviewed techniques, cluster title, and next-step summary\n- explicit agreement that review meaning still lives in authored markdown"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- bounded cluster-level review lookup\n- review path and cluster map entries that remain traceable to authored review docs\n- preserved human-authored review meaning\n- a derived surface that can point readers back to the review doc when they need the full argument\n- no automatic semantic verdicts, ranking, or status changes"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Keep the authored semantic-review doc as the only source of review meaning.\n2. Identify the cluster scope that is actually being reviewed.\n3. Lift the cluster map, seam review, findings, and next-step summary into a derived manifest or reader surface.\n4. Preserve the review order and the review doc's own wording instead of rewriting it into a new policy language.\n5. Rebuild the derived output whenever the authored review doc changes.\n6. Route disagreements about meaning, boundaries, or watch seams back to the authored review doc.\n7. Stop when the next request is really for scoring, automation, or a new status engine."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- authored semantic-review docs remain the source of review meaning\n- the derived surface stays cluster-bounded and review-shaped\n- the manifest can help navigation, but it does not become the review authority\n- the technique does not require scores, verdict IDs, or automatic status changes\n- review meaning stays distinct from bundle-local notes and from shadow-review surfaces\n- the technique does not collapse into relation cleanup, semantic adjudication, or graph semantics"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- clusters expand until the derived surface stops reflecting one real bounded seam\n- maintainers edit the derived manifest instead of the review doc and break source-of-truth boundaries\n- the review surface starts acting like a policy engine because the manifest is easier to read than the authored argument\n\n### Negative effects\n\n- review lookup can create false confidence that the cluster has already been fully settled\n- a clean derived surface can hide how much judgment still lives in the authored review text\n- review aggregation can feel more complete while making it easier to skip the underlying review doc\n\n### Misuse patterns\n\n- treating the semantic-review surface as a scoring engine or ranking layer\n- using the manifest to drive status changes instead of to support bounded review lookup\n- widening a cluster just because another nearby technique is available\n- folding shadow-caution questions into semantic review or using semantic review to replace bundle-local notes\n\n### Detection signals\n\n- people ask for scores, promotion logic, or automated decisions from the review surface\n- the manifest has to be edited directly to fix review meaning\n- a cluster no longer has a single clear watch seam and starts reading like a catch-all review bucket\n- consumers stop opening the authored review doc and rely only on the derived lookup\n\n### Mitigations\n\n- keep clusters narrow and seam-shaped\n- route meaning changes back to the authored review doc and regenerate outputs afterward\n- reject requests that turn review lookup into automated verdict logic\n- open a new cluster only when the current seam is truly ambiguous and still bounded"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the authored semantic-review doc exists and stays readable as the source of review meaning\n- the derived surface can be regenerated from authored markdown\n- the review lookup preserves the cluster map, seam review, findings, and next-step summary\n- consumers can route from the derived surface back to the authored review doc\n- the technique remains review-shaped and does not require scoring, status automation, or graph semantics\n- semantic-review lookup stays distinct from shadow-review lookup and from bundle-local adverse-effects notes\n\nSee `checks/semantic-review-surface-lift-checklist.md` and `examples/minimal-semantic-review-surface-lift.md`.\nFor repo-grounded origin evidence, see `notes/origin-evidence.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the cluster size and review doc naming pattern\n- the derived manifest filename or reader companion\n- how many sections are lifted from the authored review doc\n- whether the downstream consumer is a navigation surface or a bounded review aid\n\nWhat should stay invariant:\n- authored review docs remain authoritative\n- derived review lookup stays bounded and cluster-shaped\n- review meaning stays in markdown\n- the technique does not become a policy or scoring system\n- consumers can still route back to the review doc\n\nThis technique sits beside other KAG/source-lift surfaces, but it does not become a new `kag` domain or a semantic automation layer. It is a bounded review lift, not a machine judge."
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public version keeps the reusable review-lift contract and removes any implication that semantic review already drives automatic decisions. The point is bounded lookup over authored review docs, not a replacement for review judgment."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-semantic-review-surface-lift.md` for a small semantic-review doc excerpt and the corresponding derived lookup excerpt."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/semantic-review-surface-lift-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- shaped inside `aoa-techniques` while authored semantic-review docs and review-backed working sets became useful as a bounded lookup surface\n- extracted into first public reusable form on 2026-03-23 as part of the docs review-surface lift wave"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- strengthen second-context evidence once another markdown-first corpus reuses the same review-lift split\n- clarify when a review cluster should be split rather than expanded\n- keep scoring, status automation, and relation-cleanup semantics deferred unless the current bounded lookup stops being enough"
         }
       ]
     }

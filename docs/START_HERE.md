@@ -40,9 +40,10 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## Current Corpus Posture
 
-- current split: `17 canonical`, `17 promoted`
+- current split: `17 canonical`, `31 promoted`
 - current evidence-prep promoted techniques: `AOA-T-0018`
-- current internal-origin promoted techniques: `AOA-T-0033`, `AOA-T-0034`
+- current internal-origin promoted techniques: `AOA-T-0033`, `AOA-T-0034`, `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
+- current future-import-wave promoted techniques: `AOA-T-0035`, `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0042`, `AOA-T-0043`, `AOA-T-0044`, `AOA-T-0045`
 - current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 - current bounded `history` domain covers session/history artifacts only; memory objects and recall surfaces still stay outside this repo's ownership boundary
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`

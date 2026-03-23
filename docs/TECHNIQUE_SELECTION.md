@@ -90,6 +90,9 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md): `complements` [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md): `complements` [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 - [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md): `complements` [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md), [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
+- [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md): `complements` [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md)
+- [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md): `complements` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+- [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md): `complements` [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -132,6 +135,9 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy. |
 | [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy. |
 | [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine. |
+| [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy. |
+| [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring. |
+| [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts. |
 
 ### `evaluation`
 
@@ -160,7 +166,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 45/45 techniques.
+- `export_ready` is currently `true` for 48/48 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

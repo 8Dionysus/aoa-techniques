@@ -56,12 +56,15 @@ Choose the path that matches your question:
   - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
   - [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
   - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
-- I need the first reusable KAG/source-lift techniques:
+- I need the current reusable KAG/source-lift techniques:
   - [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
   - [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
   - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
   - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
   - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+  - [`repo-doc-surface-lift`](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
+  - [`github-review-template-lift`](../techniques/docs/github-review-template-lift/TECHNIQUE.md)
+  - [`semantic-review-surface-lift`](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
 - I need to inspect the semantic-review pilots:
   - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
   - [Agent-Workflows Core Semantic Review](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
@@ -204,13 +207,21 @@ These are reusable technique bundles extracted from the repo's current generated
   - use when direct relations should power bounded adjacency hints without graph semantics
 - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
   - use when richer `Risks` language should act as bounded caution lookup without becoming metadata or scoring
+- [`repo-doc-surface-lift`](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
+  - use when the authoritative public repo docs/status layer should become one bounded derived routing surface
+- [`github-review-template-lift`](../techniques/docs/github-review-template-lift/TECHNIQUE.md)
+  - use when authored GitHub issue and pull-request templates should become one bounded intake lookup surface
+- [`semantic-review-surface-lift`](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+  - use when authored semantic-review docs should become one bounded review-knowledge lookup surface without automation
 
 ### KAG/source-lift family review
 
-This review-only doc keeps the five reusable KAG/source-lift techniques distinct while staying subordinate to authored markdown, with two canonical anchors plus three promoted companions.
+This review-only doc currently keeps the first five core KAG/source-lift techniques distinct while staying subordinate to authored markdown, with two canonical anchors plus three promoted companions.
 
 - [KAG Source Lift Semantic Review](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
   - use when the family seams between section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift need one bounded review surface
+
+Later repo-surface, intake-surface, and review-surface lifts stay outside that family review until a wider family seam justifies refreshing it.
 
 ### Semantic-review pilots
 
