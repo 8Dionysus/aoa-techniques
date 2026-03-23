@@ -33,6 +33,8 @@ If you are new to this repository, follow this short path:
 - for one repo-only orientation path that already routes humans and agents, open `docs/START_HERE.md`
 - for one end-to-end origin-to-public example, read `WALKTHROUGH.md`
 - for source-first donor intake and refinement posture, open `docs/DONOR_REFINERY_RUBRIC.md`
+- for the maintainer-facing donor-to-merge path, open `docs/EXTERNAL_IMPORT_RUNBOOK.md`
+- for the cross-layer donor-note intake surface beyond the external-only backlog, open `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
 - for generated navigation and chooser surfaces, open `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
 - for runtime cards and capsule contracts, open `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
 - for repo-doc routing and authoritative docs/status manifests, open `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`

@@ -43,6 +43,17 @@ def build_required_section_body(
 
 
 class ValidateRepoRegressionTests(unittest.TestCase):
+    def test_repo_validation_workflow_uses_bounded_release_entrypoint(self) -> None:
+        workflow = (REPO_ROOT / ".github" / "workflows" / "repo-validation.yml").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("python scripts/release_check.py", workflow)
+        self.assertNotIn("python -m unittest discover -s tests", workflow)
+        self.assertNotIn("python scripts/validate_repo.py", workflow)
+        self.assertNotIn("python scripts/build_catalog.py", workflow)
+        self.assertNotIn("python scripts/build_shadow_review_manifest.py", workflow)
+
     def test_release_check_sequence_matches_documented_repo_build_path(self) -> None:
         self.assertEqual(
             (
@@ -453,6 +464,115 @@ relations:
 
 
 class TechniqueContentSmokeTests(unittest.TestCase):
+    def test_external_import_runbook_is_discoverable_and_operator_complete(self) -> None:
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        contributing = (REPO_ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
+        root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        runbook = (REPO_ROOT / "docs" / "EXTERNAL_IMPORT_RUNBOOK.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("External Import Runbook", start_here)
+        self.assertIn("External Import Runbook", docs_readme)
+        self.assertIn("docs/EXTERNAL_IMPORT_RUNBOOK.md", contributing)
+        self.assertIn("docs/EXTERNAL_IMPORT_RUNBOOK.md", root_readme)
+        for target in (
+            "nearest existing technique or overlap watch",
+            "what stays out of the donor",
+            "expected evidence notes",
+            "expected generated surfaces",
+            "downstream repo impact",
+            "python scripts/release_check.py",
+            "protect `main`",
+            "templates/ORIGIN_EVIDENCE.template.md",
+            "templates/ADAPTATION_NOTE.template.md",
+            "templates/EXTERNAL_REVIEW.template.md",
+        ):
+            self.assertIn(target, runbook)
+
+    def test_evidence_note_templates_are_discoverable_from_contributing_and_provenance_guide(
+        self,
+    ) -> None:
+        contributing = (REPO_ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
+        evidence_guide = (
+            REPO_ROOT / "docs" / "EVIDENCE_NOTE_PROVENANCE_GUIDE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("templates/", contributing)
+        for template_name in (
+            "ORIGIN_EVIDENCE.template.md",
+            "ADAPTATION_NOTE.template.md",
+            "PROMOTION_NOTE.template.md",
+            "ADVERSE_EFFECTS_REVIEW.template.md",
+            "EXTERNAL_ORIGIN.template.md",
+            "EXTERNAL_REVIEW.template.md",
+        ):
+            self.assertIn(template_name, evidence_guide)
+
+    def test_codeowners_is_present_and_scoped_narrowly(self) -> None:
+        codeowners = (REPO_ROOT / ".github" / "CODEOWNERS").read_text(encoding="utf-8")
+        contributing = (REPO_ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
+
+        for target in (
+            "/.github/ @8Dionysus",
+            "/scripts/ @8Dionysus",
+            "/docs/ @8Dionysus",
+            "/techniques/ @8Dionysus",
+        ):
+            self.assertIn(target, codeowners)
+
+        self.assertIn("CODEOWNERS", contributing)
+
+    def test_external_import_and_pr_templates_capture_overlap_and_generated_surface_fields(
+        self,
+    ) -> None:
+        external_import = (
+            REPO_ROOT / ".github" / "ISSUE_TEMPLATE" / "external-import-review.md"
+        ).read_text(encoding="utf-8")
+        technique_proposal = (
+            REPO_ROOT / ".github" / "ISSUE_TEMPLATE" / "technique-proposal.md"
+        ).read_text(encoding="utf-8")
+        pr_template = (REPO_ROOT / ".github" / "PULL_REQUEST_TEMPLATE.md").read_text(
+            encoding="utf-8"
+        )
+        external_origin = (REPO_ROOT / "templates" / "EXTERNAL_ORIGIN.template.md").read_text(
+            encoding="utf-8"
+        )
+
+        for text in (
+            external_import,
+            technique_proposal,
+            pr_template,
+        ):
+            self.assertIn("generated surfaces", text)
+            self.assertIn("downstream repo impact", text)
+
+        self.assertIn("nearest existing technique or overlap watch", external_import)
+        self.assertIn("what stays out of the donor", external_import)
+        self.assertIn("nearest existing technique or overlap watch", technique_proposal)
+        self.assertIn("what stays out of scope", technique_proposal)
+        self.assertIn("what stays out of the donor", pr_template)
+        self.assertIn("overlap", pr_template)
+        self.assertIn("reusable object extracted", external_origin)
+        self.assertIn("what stays out of the donor", external_origin)
+
+    def test_evidence_note_guide_references_current_note_templates(self) -> None:
+        guide = (REPO_ROOT / "docs" / "EVIDENCE_NOTE_PROVENANCE_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+
+        for target in (
+            "ORIGIN_EVIDENCE.template.md",
+            "ADAPTATION_NOTE.template.md",
+            "PROMOTION_NOTE.template.md",
+            "ADVERSE_EFFECTS_REVIEW.template.md",
+            "EXTERNAL_ORIGIN.template.md",
+            "EXTERNAL_REVIEW.template.md",
+        ):
+            self.assertIn(target, guide)
+            self.assertTrue((REPO_ROOT / "templates" / target).is_file())
+
     def test_shadow_and_caution_guides_match_current_enforced_contract(self) -> None:
         shadow_guide = (REPO_ROOT / "docs" / "TECHNIQUE_SHADOW_GUIDE.md").read_text(
             encoding="utf-8"
@@ -707,6 +827,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "KAG_SOURCE_LIFT_GUIDE.md",
             "SEMANTIC_REVIEW_GUIDE.md",
             "LONG_GAP_CANON_DESIGN.md",
+            "CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
             "aoa-skills",
             "aoa-evals",
             "aoa-routing",
@@ -735,6 +856,15 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         ):
             self.assertIn(target, start_here)
 
+    def test_cross_layer_candidates_surface_is_discoverable_from_repo_entrypoints(self) -> None:
+        root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
+        roadmap = (REPO_ROOT / "docs" / "DEEP_AUDIT_ROADMAP.md").read_text(encoding="utf-8")
+
+        for content in (root_readme, docs_readme, start_here, roadmap):
+            self.assertIn("CROSS_LAYER_TECHNIQUE_CANDIDATES.md", content)
+
     def test_external_candidates_doc_tracks_clean_top4_wave_backlog(self) -> None:
         candidates = (REPO_ROOT / "docs" / "EXTERNAL_TECHNIQUE_CANDIDATES.md").read_text(
             encoding="utf-8"
@@ -748,6 +878,50 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("AOA-T-0032", candidates)
         self.assertIn("versionable_agent_transcripts", candidates)
         self.assertIn("project_memory_bootstrap", candidates)
+
+    def test_cross_layer_candidates_doc_accounts_for_full_seed_donor_matrix(self) -> None:
+        candidates = (
+            REPO_ROOT / "docs" / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("full `24` technique-shaped candidate names", candidates)
+        self.assertIn("`8` already staged elsewhere", candidates)
+        self.assertIn("`8` future import here", candidates)
+        self.assertIn("`2` hold because overlap", candidates)
+        self.assertIn("`3` needs layer incubation before distillation here", candidates)
+        self.assertIn("`3` substrate or architecture pattern, not yet a technique", candidates)
+
+        rows = re.findall(r"^\| `([^`]+)` \|", candidates, flags=re.MULTILINE)
+        self.assertEqual(24, len(rows))
+        self.assertEqual(24, len(set(rows)))
+
+        for target in (
+            "skill-marketplace-curation",
+            "versionable-session-transcripts",
+            "review-gated-history-derived-instructions",
+            "phase-synchronized-agent-handoff",
+            "versioned-agent-registry-contract",
+            "bounded-specialist-generation",
+            "review-gated-execution-history-distillation",
+            "one-command-service-lifecycle",
+            "upstream-skill-health-checking",
+            "skill-vs-command-boundary",
+            "witness-trace-as-reviewable-artifact",
+            "profile-preset-composition",
+            "render-truth-before-startup",
+            "contextual-host-doctor",
+            "baseline-first-additive-profile-benchmarks",
+            "multi-source-primary-input-provenance",
+            "progressive-skill-discovery",
+            "bounded-counterpart-edge-projection",
+            "temperature-gated-writeback",
+            "checkpoint-cohort-rollout",
+            "witness-to-compost-promotion",
+            "model-tier-state-machine",
+            "cross-service-sla-normalization",
+            "bridge-ready-retrieval-axis",
+        ):
+            self.assertIn(target, rows)
 
     def test_kag_source_lift_family_has_second_context_and_readiness_notes(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
