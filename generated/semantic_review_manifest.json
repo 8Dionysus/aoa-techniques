@@ -408,7 +408,7 @@
       "review_id": "kag_source_lift",
       "review_path": "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
       "title": "KAG Source Lift Semantic Review",
-      "intro_markdown": "This review-only pilot checks whether the first reusable KAG/source-lift family still reads as five distinct techniques rather than one blurred \"lift everything from markdown\" package.\n\nWhy this family was chosen now:\n\n- the family now has two `canonical` anchors plus three `promoted` companions\n- the family now spans section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift\n- the main question is semantic clarity across the family boundaries, not missing structure\n- `AOA-T-0022` is a caution-oriented companion and should stay outside shadow-policy semantics\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
+      "intro_markdown": "This review-only pilot checks whether the first reusable KAG/source-lift family still reads as five distinct techniques rather than one blurred \"lift everything from markdown\" package.\n\nWhy this family was chosen now:\n\n- the family now has three `canonical` anchors plus two `promoted` companions\n- the family now spans section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift\n- the main question is semantic clarity across the family boundaries, not missing structure\n- `AOA-T-0022` is a caution-oriented companion and should stay outside shadow-policy semantics\n\nThis doc is a human review surface. It does not change statuses, frontmatter, validator behavior, or bundle contracts by itself.",
       "map_heading": "Family Map",
       "map_entries": [
         {
@@ -501,7 +501,7 @@
         },
         {
           "order": 9,
-          "text": "`AOA-T-0018` is now bridge-backed through `aoa-skills`, which is enough to strengthen the section-lift case without making it the dominant family donor."
+          "text": "`AOA-T-0018` now has strong live evidence through `aoa-skills`, `aoa-evals`, and `aoa-routing`, which is enough for bounded canonical default-use while keeping it narrower than any generic bundle-section program."
         },
         {
           "order": 10,
@@ -517,7 +517,7 @@
         }
       ],
       "overall_outcome": "`clear`",
-      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is to keep `AOA-T-0019` narrow as the canonical metadata spine and `AOA-T-0021` narrow as the canonical direct-relation hint companion while `AOA-T-0018` and `AOA-T-0020` keep accumulating bounded live evidence and `AOA-T-0022` gets one more independent exact-contract donor without collapsing into a broader graph, metadata, or shadow-policy package."
+      "next_step_markdown": "No immediate remediation wave is justified for this family from this pilot alone.\n\nThe next step is to keep `AOA-T-0018` narrow as the canonical section-lift default, keep `AOA-T-0019` narrow as the canonical metadata spine, and keep `AOA-T-0021` narrow as the canonical direct-relation hint companion while `AOA-T-0020` keeps accumulating bounded live evidence and `AOA-T-0022` gets one more independent exact-contract donor without collapsing into a broader graph, metadata, or shadow-policy package."
     },
     {
       "review_id": "published_summary",

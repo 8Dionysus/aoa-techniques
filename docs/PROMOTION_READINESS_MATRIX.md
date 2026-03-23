@@ -10,10 +10,10 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `31` techniques
+- current promoted corpus: `30` techniques
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md), because it already carries `maturity_score: 4` and `validation_strength: cross_context`, but it still lacks one second independent live multi-target reuse context
-- current review-refresh watch: [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) is now strengthened by a second markdown-first consumer in `aoa-evals` plus expand-time routing reinforcement in `aoa-routing`, so its next honest step is a fresh canonical decision rather than another second-corpus search
+- latest graduation: [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the strengthened cross-context baseline
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md), and [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) are earlier than the rest and still need second-context plus canonical-readiness scaffolding before canonical discussion is honest
 
@@ -33,13 +33,14 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 This snapshot is about the current local sweep only.
 It narrows the next search space and closes false-positive local lanes, but it does not replace later donor searches where those still remain honest.
+`AOA-T-0018` has since exited this matrix through a separate follow-up canonical review.
 
 ## Readiness Lanes
 
 | lane | count | meaning |
 |---|---:|---|
 | `long-gap donor lane` | `3` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
-| `cross-context review-refresh lane` | `1` | Cross-context reinforcement now exists. The next step is a fresh canonical decision against the current bounded contract, not another donor search. |
+| `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
 | `external live-adopter lane` | `13` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `10` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
@@ -114,11 +115,10 @@ Shared blocker: each bundle needs another live consumer so the family stays edit
 
 ### Pack 6 - KAG / Source-Lift Evidence Prep
 
-Shared blocker: this family needs more live markdown-first reuse, not more abstraction inside `aoa-techniques`.
+Shared blocker: the remaining promoted family members still need more live markdown-first reuse, not more abstraction inside `aoa-techniques`.
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | Now strengthened by `aoa-evals` as a second markdown-first bundle-family consumer plus `aoa-routing` as a source-owned expand-time router. | Reopen the canonical decision from the stronger cross-context baseline and confirm whether the current technique-named section specialist should stay narrow or advance without widening into a generic bundle-section lift. |
 | [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | Exact note-kind and note-path lift is still donor-family-shaped. | One second live markdown-first corpus beyond the current `aoa-evals` donor surface. |
 | [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) | Fresh extraction with origin evidence only. | First second-context adaptation plus canonical-readiness review after one non-origin repo-doc routing consumer exists. |
 | [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md) | Fresh extraction with origin evidence only. | First second-context adaptation plus canonical-readiness review after one non-origin template-intake consumer exists. |
@@ -146,7 +146,7 @@ Shared blocker: each bundle is internally strong, but still needs another live c
 ## Suggested Wave Order
 
 1. `Wave A - evidence-prep leaders`
-   - `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0034`, `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
+   - `AOA-T-0013`, `AOA-T-0034`, `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
    - goal: close the smallest honest blocker for the strongest current candidates without flipping status yet
 2. `Wave B - pack proof waves`
    - shell-agent fast path

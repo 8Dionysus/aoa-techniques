@@ -105,6 +105,12 @@ See also:
 | Concrete Infra Context Map | `present` | `techniques/docs/bounded-context-map/examples/concrete-infra-context-map.md` | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
 | Minimal Context Boundary Map | `present` | `techniques/docs/bounded-context-map/examples/minimal-context-boundary-map.md` | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
 
+### [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Section Lift | `present` | `techniques/docs/markdown-technique-section-lift/examples/minimal-section-lift.md` | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
+
 ### [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) - frontmatter-metadata-spine (`canonical`)
 
 | example | body | example path | source |
@@ -123,12 +129,6 @@ See also:
 |---|---|---|---|
 | Concrete Multi-Agent Rule Sync | `present` | `techniques/docs/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
 | Minimal Single-Source Rule Distribution | `present` | `techniques/docs/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
-
-### [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Section Lift | `present` | `techniques/docs/markdown-technique-section-lift/examples/minimal-section-lift.md` | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
