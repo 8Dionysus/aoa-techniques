@@ -1,4 +1,8 @@
-# Adaptation Note
+# Second Context Adaptation
+
+## Technique
+- id:
+- name:
 
 ## Target project
 - name:
@@ -18,6 +22,10 @@
 
 ## Risks introduced by adaptation
 -
+
+## Evidence
+- source paths:
+- review surface or generated output touched:
 
 ## Result
 - works

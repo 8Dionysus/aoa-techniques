@@ -13,13 +13,13 @@
 
 - origin evidence: the source skill already defines a bounded sanitization contract with a review checklist and public-safe example
 - second context: `aoa-techniques` now carries the same contract as a public docs technique with a checklist and example
-- validation strength: the technique has a bounded contract, explicit example, and reviewer-facing checklist
+- validation strength: the technique has a bounded contract, an explicit before/after example, and a reviewer-facing checklist that now makes false-success sanitization easier to catch
 
 ## Default-use rationale
 
 - this is a good default when material is useful but not safe to share raw
 - it stays narrower than approval gating, dry-run planning, and safe infra change
-- it helps future reviewers without turning the repository into a sharing-policy engine
+- it helps future reviewers without turning the repository into a sharing-policy engine or pretending that share-prep authorizes the underlying action
 
 ## Fresh public-safety check
 

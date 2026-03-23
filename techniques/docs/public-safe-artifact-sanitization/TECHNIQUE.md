@@ -89,12 +89,14 @@ Convert potentially sensitive technical material into a shareable artifact that 
 
 - over-sanitizing until the artifact stops being useful
 - under-sanitizing because a value looked harmless in isolation
+- the artifact looks "safe enough" after obvious redaction even though topology, approval assumptions, or sensitive deltas still leak through
 - confusing share-prep work with approval or execution work
 
 ### Negative effects
 
 - the shared artifact becomes hard to reuse or verify
 - sensitive topology or naming still leaks through
+- a cleaned-up artifact can create false confidence that the underlying action or system is approved or safe, even though only the shareable surface was reviewed
 - the technique can become a proxy for decision-making if its boundary is not respected
 
 ### Misuse patterns
@@ -106,6 +108,7 @@ Convert potentially sensitive technical material into a shareable artifact that 
 ### Detection signals
 
 - the sanitized output still points too directly to private topology or naming
+- reviewers say the artifact "looks safe" but still cannot tell what was generalized, what was omitted, or what remains uncertain
 - a reviewer cannot tell what was generalized or removed
 - the artifact no longer communicates the lesson it was meant to preserve
 
@@ -113,6 +116,7 @@ Convert potentially sensitive technical material into a shareable artifact that 
 
 - generalize paths, hostnames, and private identifiers when needed
 - name the sanitization level and remaining uncertainty
+- separate "safe to share" from "safe to approve or execute" in the final note
 - verify the shared result remains useful without preserving the sensitive surface
 - route approval or execution questions to the narrower workflow techniques first
 
@@ -123,6 +127,7 @@ Verify the technique by confirming that:
 - the resulting artifact is still understandable
 - the sanitization level matches the intended audience
 - raw sensitive detail was not preserved by accident
+- the shared result does not pretend to authorize the underlying action or prove the underlying system is safe
 - the technique stays distinct from approval gating, dry-run planning, and infra-change execution
 
 See `checks/public-safe-artifact-sanitization-checklist.md`.

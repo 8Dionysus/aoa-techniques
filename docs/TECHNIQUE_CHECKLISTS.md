@@ -106,7 +106,7 @@ See also:
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Section Lift Checklist | `present` | `5` | `techniques/docs/markdown-technique-section-lift/checks/section-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
+| Section Lift Checklist | `present` | `6` | `techniques/docs/markdown-technique-section-lift/checks/section-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
@@ -154,13 +154,13 @@ See also:
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Decision Rationale Recording Checklist | `absent` | `10` | `techniques/docs/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
+| Decision Rationale Recording Checklist | `absent` | `12` | `techniques/docs/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
 
 ### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Public Safe Artifact Sanitization Checklist | `present` | `11` | `techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
+| Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
 ## `evaluation`
 

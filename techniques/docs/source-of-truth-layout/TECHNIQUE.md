@@ -110,16 +110,19 @@ Recommended update-routing rules:
 
 - the role map drifts after repo evolution, so real updates no longer route to one canonical home
 - contributors keep bypassing the routing rules and duplicate active status or decisions across multiple documents
+- the repo keeps its named role map, but a sample change still requires coordination across several "primary" docs before anyone is confident the update is complete
 
 ### Negative effects
 
 - over-structuring a repository that is too small to need the full layout can add maintenance cost without reducing drift
 - the repository can look orderly while change friction quietly rises because every small update now feels like document choreography
+- a tidy docs surface can hide that contributors still need tribal coordination to know which canonical home actually wins
 
 ### Misuse patterns
 
 - treating the recommended role map as a mandatory full-size layout instead of narrowing it for a smaller repository
 - using the technique as a reason to add more docs even when the real need is to simplify or merge existing roles
+- responding to duplicate-summary relapse by adding another coordination doc instead of collapsing roles or clarifying routing
 
 ### Detection signals
 
@@ -127,6 +130,7 @@ Recommended update-routing rules:
 - contributors start asking where a recurring update belongs because the routing rules no longer feel obvious
 - `README`, `TODO`, or session/history docs begin to accumulate duplicate summary prose that should already have a canonical home
 - the repo looks well-organized at a glance, but a sample change no longer routes cleanly to one primary document first
+- contributors can name the document map, but still negotiate update ownership in chat before landing routine changes
 
 ### Mitigations
 
@@ -134,6 +138,7 @@ Recommended update-routing rules:
 - refresh the canonical-home table and routing rules whenever new recurring information classes appear
 - collapse or remove underused document roles when they stop preventing drift
 - treat repeated duplicate-summary relapse as a sign to simplify the layout, not to add another coordinating document
+- prefer one sharper routing rule over one more document whenever the current map looks tidy but still feels hard to use
 
 ## Validation
 

@@ -13,8 +13,11 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 ## What changed
 
 - what_changed:
+- reusable object extracted:
 - invariant core kept:
 - project-shaped details removed or generalized:
+- nearest existing technique or overlap watch:
+- what stays out of the donor:
 
 ## Public-safety review
 
@@ -26,4 +29,5 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 ## Review notes
 
 - why this adaptation is reusable here:
+- downstream repo impact:
 - limits or follow-up review concerns:

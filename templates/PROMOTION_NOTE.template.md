@@ -1,12 +1,15 @@
-# Promotion Note
+# Canonical Readiness
 
 ## Technique
 - id:
 - name:
 - current status:
-- proposed status:
 
-## Origin and reuse evidence
+## Verdict
+- approve for canonical promotion
+- defer for now
+
+## Evidence summary
 - origin project:
 - original context:
 - second context or reuse evidence:
@@ -16,21 +19,15 @@
 - why this should be the default:
 - when a non-default alternative is better:
 
-## Validation strength
-- origin proof:
-- stronger validation added for this promotion:
-- examples/checks reviewed:
+## Fresh public-safety check
+- review date:
+- result:
+- sanitization still holds:
 
-## Adaptation quality
-- invariant core:
-- project-shaped details removed:
-- adaptation note paths:
+## Remaining gaps
+- if deferred:
+- next honest promotion trigger:
 
-## Public sanitization
-- removed secrets:
-- removed private paths or URLs:
-- generalized assumptions:
-- remaining public-safety concerns:
-
-## Reviewer notes
--
+## Recommendation
+- keep current status or promote:
+- supporting rationale:

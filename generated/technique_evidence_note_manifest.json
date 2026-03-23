@@ -129,6 +129,10 @@
                 {
                   "order": 2,
                   "text": "the plan and report stay present even when the real diff no longer proves the stated scope"
+                },
+                {
+                  "order": 3,
+                  "text": "`VERIFY` stays in the ritual while the changed surface was never actually exercised in a way that could fail"
                 }
               ]
             },
@@ -144,6 +148,10 @@
                 {
                   "order": 2,
                   "text": "reporting overhead can crowd out direct diff readability if the summary becomes the main review surface"
+                },
+                {
+                  "order": 3,
+                  "text": "the workflow can look disciplined and complete while quietly teaching reviewers to trust ceremony more than concrete evidence"
                 }
               ]
             },
@@ -159,6 +167,10 @@
                 {
                   "order": 2,
                   "text": "treating the final report as a substitute for a readable diff and named validation evidence"
+                },
+                {
+                  "order": 3,
+                  "text": "normalizing generic \"validation passed\" language even when the real check was skipped, symbolic, or too weak for the risk"
                 }
               ]
             },
@@ -174,6 +186,10 @@
                 {
                   "order": 2,
                   "text": "contributors invoke the full workflow for edits with no meaningful operational consequence"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers approve because the workflow looks complete, but cannot explain what specific failure would have been caught during `VERIFY`"
                 }
               ]
             },
@@ -189,6 +205,10 @@
                 {
                   "order": 2,
                   "text": "require validation lines to name what ran and what result was observed before the change is treated as complete"
+                },
+                {
+                  "order": 3,
+                  "text": "stop the full workflow when the best available validation is still symbolic and either narrow the claim or choose a different verification path first"
                 }
               ]
             },
@@ -199,7 +219,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for ceremony creep or symbolic `VERIFY` language"
+                  "text": "keep current `canonical` status and use this note as the watch surface for ceremony creep, symbolic `VERIFY` language, and green-looking reports that still lack real evidence"
                 }
               ]
             }
@@ -529,6 +549,10 @@
                 {
                   "order": 2,
                   "text": "contributors bypass the layout and duplicate the same status or policy across multiple primary documents"
+                },
+                {
+                  "order": 3,
+                  "text": "a repository keeps its named role map but still needs manual coordination before ordinary updates feel safe to land"
                 }
               ]
             },
@@ -544,6 +568,10 @@
                 {
                   "order": 2,
                   "text": "a repository can look orderly while change friction quietly rises"
+                },
+                {
+                  "order": 3,
+                  "text": "a tidy-looking docs surface can create false order while duplicate summaries and routing ambiguity keep returning underneath it"
                 }
               ]
             },
@@ -559,6 +587,10 @@
                 {
                   "order": 2,
                   "text": "adding more docs instead of simplifying or collapsing roles that no longer prevent drift"
+                },
+                {
+                  "order": 3,
+                  "text": "responding to routing confusion by introducing another coordination surface instead of removing competing canonical homes"
                 }
               ]
             },
@@ -574,6 +606,10 @@
                 {
                   "order": 2,
                   "text": "contributors repeatedly ask where a recurring update belongs because the routing rule is no longer obvious"
+                },
+                {
+                  "order": 3,
+                  "text": "a sample update still requires side-channel negotiation even though the repository looks clean and fully mapped"
                 }
               ]
             },
@@ -589,6 +625,10 @@
                 {
                   "order": 2,
                   "text": "refresh or simplify canonical-home rules whenever duplicate-summary relapse appears"
+                },
+                {
+                  "order": 3,
+                  "text": "collapse roles or remove low-value docs before adding another structure layer to explain the same routing problem"
                 }
               ]
             },
@@ -599,7 +639,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for duplicate-summary relapse or layout growth without routing value"
+                  "text": "keep current `canonical` status and use this note as the watch surface for false order, duplicate-summary relapse, and layout growth that adds coordination cost without routing value"
                 }
               ]
             }
@@ -946,6 +986,10 @@
                 {
                   "order": 2,
                   "text": "summary shape drifts often enough to break downstream consumers that expect one stable contract"
+                },
+                {
+                  "order": 3,
+                  "text": "the producer still emits a summary artifact, but the artifact is too thin to explain failure and only gives the illusion of a healthy contract surface"
                 }
               ]
             },
@@ -961,6 +1005,10 @@
                 {
                   "order": 2,
                   "text": "pressure-driven fallback to raw logs can become sticky and weaken the producer contract over time"
+                },
+                {
+                  "order": 3,
+                  "text": "the smoke path can look automation-friendly while the real operator experience is still \"summary first, logs immediately after\""
                 }
               ]
             },
@@ -976,6 +1024,10 @@
                 {
                   "order": 2,
                   "text": "changing filenames, fields, or status semantics without a bounded compatibility plan"
+                },
+                {
+                  "order": 3,
+                  "text": "preserving the summary only as a pass/fail token while richer explanation quietly migrates back to console text"
                 }
               ]
             },
@@ -991,6 +1043,10 @@
                 {
                   "order": 2,
                   "text": "repeated failures show `error` with too little observed data to explain the problem quickly"
+                },
+                {
+                  "order": 3,
+                  "text": "the summary is still published on every run, but operators no longer trust it as the first place to diagnose a failure"
                 }
               ]
             },
@@ -1006,6 +1062,10 @@
                 {
                   "order": 2,
                   "text": "evolve summary shape deliberately and keep rollout or storage detail outside the producer contract"
+                },
+                {
+                  "order": 3,
+                  "text": "treat log-scraping relapse as a stop signal and widen observed summary context before layering on more downstream consumers"
                 }
               ]
             },
@@ -1016,7 +1076,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for producer drift into storage-layout or staged-enforcement language"
+                  "text": "keep current `canonical` status and use this note as the watch surface for green-looking producer contracts that still degrade into log-scraping diagnosis"
                 }
               ]
             }
@@ -2875,6 +2935,10 @@
                 {
                   "order": 2,
                   "text": "telemetry-rich rollout language can make control look stronger than the actual enforcement decision"
+                },
+                {
+                  "order": 3,
+                  "text": "a rollout can look highly instrumented and disciplined while nobody can still state one narrow enforcement boundary in plain language"
                 }
               ]
             },
@@ -2905,6 +2969,10 @@
                 {
                   "order": 2,
                   "text": "strict failures appear without the diagnostic artifacts that were supposed to remain visible after rollout"
+                },
+                {
+                  "order": 3,
+                  "text": "rollout dashboards look richer over time, but the answer to \"what exactly is strict right now?\" keeps getting harder rather than easier"
                 }
               ]
             },
@@ -3915,6 +3983,10 @@
                 {
                   "order": 2,
                   "text": "outward links go stale after the doc map evolves"
+                },
+                {
+                  "order": 3,
+                  "text": "the top-level docs stay short and polished while their routing aliases no longer reflect where current truth actually moved"
                 }
               ]
             },
@@ -3930,6 +4002,10 @@
                 {
                   "order": 2,
                   "text": "cleanup can hide unresolved routing gaps by removing detail faster than the repo learns where that detail belongs"
+                },
+                {
+                  "order": 3,
+                  "text": "the repo can project false cleanliness while newcomers still cannot orient themselves without side-channel help"
                 }
               ]
             },
@@ -3945,6 +4021,10 @@
                 {
                   "order": 2,
                   "text": "treating short `README` or `MANIFEST` files as the goal even when navigability gets worse"
+                },
+                {
+                  "order": 3,
+                  "text": "leaving stale snapshot links in place because the entrypoint still appears neat and lightweight"
                 }
               ]
             },
@@ -3960,6 +4040,10 @@
                 {
                   "order": 2,
                   "text": "teams keep re-adding summary prose because the snapshot no longer feels sufficient for orientation"
+                },
+                {
+                  "order": 3,
+                  "text": "the top-level docs are praised for neatness while review comments still ask where active truth now lives"
                 }
               ]
             },
@@ -3975,6 +4059,10 @@
                 {
                   "order": 2,
                   "text": "fix canonical links and routing first instead of letting cleanliness stand in for usability"
+                },
+                {
+                  "order": 3,
+                  "text": "treat stale aliases or broken routing as entrypoint failures and repair them before cutting more prose"
                 }
               ]
             },
@@ -3985,7 +4073,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for navigability loss disguised as entrypoint cleanliness"
+                  "text": "keep current `canonical` status and use this note as the watch surface for navigability loss, stale routing aliases, and false cleanliness disguised as entrypoint discipline"
                 }
               ]
             }
@@ -5446,6 +5534,10 @@
                 {
                   "order": 2,
                   "text": "contributors edit the generated artifact directly and break the fragment-first source-of-truth contract"
+                },
+                {
+                  "order": 3,
+                  "text": "the output stays stable enough to look authoritative even after precedence becomes too opaque for normal contributors to reason about"
                 }
               ]
             },
@@ -5461,6 +5553,10 @@
                 {
                   "order": 2,
                   "text": "a stable generated artifact can create false confidence even while fragment authority and ownership become harder to explain"
+                },
+                {
+                  "order": 3,
+                  "text": "once the output looks settled, teams can delay simplifying the precedence model because determinism starts to masquerade as clarity"
                 }
               ]
             },
@@ -5476,6 +5572,10 @@
                 {
                   "order": 2,
                   "text": "adding more precedence or routing layers instead of simplifying fragment authority"
+                },
+                {
+                  "order": 3,
+                  "text": "letting a one-output composition technique drift toward multi-target management because the generated artifact already looks like a control surface"
                 }
               ]
             },
@@ -5491,6 +5591,10 @@
                 {
                   "order": 2,
                   "text": "direct generated-artifact edits start showing up in normal maintenance diffs"
+                },
+                {
+                  "order": 3,
+                  "text": "the output looks stable, but contributors still cannot say why this precedence model should remain the current default"
                 }
               ]
             },
@@ -5506,6 +5610,10 @@
                 {
                   "order": 2,
                   "text": "reassert fragment-first authority by routing fixes back through source fragments and regeneration"
+                },
+                {
+                  "order": 3,
+                  "text": "stop the current pattern at one generated output and route multi-target propagation needs to a narrower sibling technique instead of widening this one"
                 }
               ]
             },
@@ -5516,7 +5624,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep current `canonical` status and use this note as the watch surface for source-cardinality drift or opaque precedence in the current `AOA-T-0012` / `AOA-T-0013` seam"
+                  "text": "keep current `canonical` status and use this note as the watch surface for false determinism, opaque precedence, and drift from one-output composition into multi-target management"
                 }
               ]
             }
@@ -8804,7 +8912,7 @@
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the bundle has stable sections, examples, and checks, and the bridge flow shows the technique can survive a committed downstream consumer, but the proof set still stops at that bridge pattern rather than a second markdown-first consumer"
+                  "value_markdown": "the bundle has stable sections, examples, and checks, the bridge flow shows the technique can survive a committed downstream consumer, and the current family guidance now makes it clearer where section lift should stop rather than absorb metadata or provenance work"
                 }
               ]
             },
@@ -8815,7 +8923,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this remains the right default when section lookup needs to stay derived from markdown rather than from a metadata-first store"
+                  "text": "this remains the right default when bundle-level routing is no longer enough and section lookup still needs to stay derived from markdown rather than from a metadata-first store"
                 },
                 {
                   "order": 2,
@@ -8823,6 +8931,10 @@
                 },
                 {
                   "order": 3,
+                  "text": "it is narrower than provenance and relation lift because its job is still \"which section should I inspect next?\" rather than \"why is this technique trusted?\" or \"what sits next to it?\""
+                },
+                {
+                  "order": 4,
                   "text": "the bundle should stay promoted until another repository proves that the same lift remains useful outside this public canon"
                 }
               ]
@@ -8865,6 +8977,10 @@
                 },
                 {
                   "order": 2,
+                  "text": "the future canonical case should show that section lift keeps solving an expand-time routing problem rather than absorbing metadata-spine or provenance-lift work as the family grows"
+                },
+                {
+                  "order": 3,
                   "text": "a future canonical review should show that stable heading lift survives repeated use without turning into metadata-spine semantics"
                 }
               ]
@@ -9232,6 +9348,10 @@
                 {
                   "order": 3,
                   "text": "consumers stop opening `TECHNIQUE.md` even when the question is about meaning, caution, or provenance"
+                },
+                {
+                  "order": 4,
+                  "text": "the metadata spine keeps answering \"which bundle?\" successfully, but reviewers still cannot tell which section or note should be opened next"
                 }
               ]
             },
@@ -9251,6 +9371,10 @@
                 {
                   "order": 3,
                   "text": "route section meaning, provenance argument, direct relations, and caution review back to the companion markdown-first techniques"
+                },
+                {
+                  "order": 4,
+                  "text": "stop at the metadata spine only for bundle-level routing; escalate to section or provenance lift only when the question has clearly narrowed"
                 }
               ]
             },
@@ -10137,6 +10261,10 @@
                 {
                   "order": 4,
                   "text": "`recommended_paths` pressure starts pushing toward same-kind traversal instead of staying dependency-driven"
+                },
+                {
+                  "order": 5,
+                  "text": "relation hints keep feeling useful, but maintainers still cannot point to the bundle or review surface that justifies the edge"
                 }
               ]
             },
@@ -10159,6 +10287,10 @@
                 },
                 {
                   "order": 4,
+                  "text": "force consumers back to the owning bundle or review doc before widening same-kind exploration"
+                },
+                {
+                  "order": 5,
                   "text": "remove noisy edges before considering any vocabulary growth"
                 }
               ]
@@ -16431,7 +16563,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle is still a narrow docs pattern rather than a broadly proven default across multiple independent consumers"
+                  "text": "the bundle now has a clearer example and checklist for catching false-success summaries, but it is still a narrow docs pattern rather than a broadly proven default across multiple independent consumers"
                 }
               ]
             },
@@ -16446,10 +16578,14 @@
                 },
                 {
                   "order": 2,
-                  "text": "it is not yet proven as the default docs pattern for a wider ecosystem"
+                  "text": "it is strongest when the missing object is the decision tradeoff itself, not a source-of-truth map or a generic changelog entry"
                 },
                 {
                   "order": 3,
+                  "text": "it is not yet proven as the default docs pattern for a wider ecosystem"
+                },
+                {
+                  "order": 4,
                   "text": "the current evidence supports promotion, but not canonical status"
                 }
               ]
@@ -16797,7 +16933,7 @@
                 {
                   "order": 3,
                   "key": "validation strength",
-                  "value_markdown": "the technique has a bounded contract, explicit example, and reviewer-facing checklist"
+                  "value_markdown": "the technique has a bounded contract, an explicit before/after example, and a reviewer-facing checklist that now makes false-success sanitization easier to catch"
                 }
               ]
             },
@@ -16816,7 +16952,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "it helps future reviewers without turning the repository into a sharing-policy engine"
+                  "text": "it helps future reviewers without turning the repository into a sharing-policy engine or pretending that share-prep authorizes the underlying action"
                 }
               ]
             },

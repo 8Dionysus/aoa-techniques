@@ -29,11 +29,13 @@
 - relation consumers start surfacing techniques outside the bounded KAG/source-lift family without a new source contract
 - reviewers ask "why does this edge exist?" and the answer only lives in generated routing output
 - `recommended_paths` pressure starts pushing toward same-kind traversal instead of staying dependency-driven
+- relation hints keep feeling useful, but maintainers still cannot point to the bundle or review surface that justifies the edge
 
 ## Mitigations
 - keep the relation-hint surface family-scoped and one-hop only
 - preserve `recommended_paths` as dependency-driven and separate from relation hints
 - route edge rationale back to authored markdown and semantic-review docs
+- force consumers back to the owning bundle or review doc before widening same-kind exploration
 - remove noisy edges before considering any vocabulary growth
 
 ## Recommendation

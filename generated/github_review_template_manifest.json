@@ -253,11 +253,16 @@
             },
             {
               "order": 3,
-              "key": "linked `TECHNIQUE.md`, if drafted",
+              "key": "nearest existing technique or overlap watch",
               "value_markdown": ""
             },
             {
               "order": 4,
+              "key": "linked `TECHNIQUE.md`, if drafted",
+              "value_markdown": ""
+            },
+            {
+              "order": 5,
               "key": "linked `EXTERNAL_ORIGIN` note, if drafted",
               "value_markdown": ""
             }
@@ -282,6 +287,11 @@
               "order": 3,
               "key": "project-shaped details removed or generalized",
               "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "what stays out of the donor",
+              "value_markdown": ""
             }
           ]
         },
@@ -302,6 +312,21 @@
             },
             {
               "order": 3,
+              "key": "expected evidence notes and paths",
+              "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "expected generated surfaces",
+              "value_markdown": ""
+            },
+            {
+              "order": 5,
+              "key": "downstream repo impact",
+              "value_markdown": ""
+            },
+            {
+              "order": 6,
               "key": "remaining adaptation risks",
               "value_markdown": ""
             }
@@ -371,6 +396,16 @@
               "order": 3,
               "key": "why it is more than a project-specific workaround",
               "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "nearest existing technique or overlap watch",
+              "value_markdown": ""
+            },
+            {
+              "order": 5,
+              "key": "what stays out of scope",
+              "value_markdown": ""
             }
           ]
         },
@@ -392,6 +427,11 @@
             {
               "order": 3,
               "key": "example, checklist, smoke, or validation path",
+              "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "expected evidence notes",
               "value_markdown": ""
             }
           ]
@@ -436,6 +476,16 @@
             {
               "order": 3,
               "key": "current maturity target",
+              "value_markdown": ""
+            },
+            {
+              "order": 4,
+              "key": "expected generated surfaces",
+              "value_markdown": ""
+            },
+            {
+              "order": 5,
+              "key": "downstream repo impact",
               "value_markdown": ""
             }
           ]
@@ -494,6 +544,22 @@
             {
               "order": 2,
               "text": "related note or template included, if needed:"
+            },
+            {
+              "order": 3,
+              "text": "nearest existing technique or overlap watch, if this adds or imports a technique:"
+            },
+            {
+              "order": 4,
+              "text": "what stays out of the donor or out of scope, if applicable:"
+            },
+            {
+              "order": 5,
+              "text": "expected generated surfaces:"
+            },
+            {
+              "order": 6,
+              "text": "downstream repo impact, if any:"
             }
           ]
         },
@@ -524,11 +590,16 @@
             },
             {
               "order": 5,
-              "text": "Relevant supporting notes or templates are included when needed, such as promotion, adaptation, or external-origin evidence.",
+              "text": "Relevant supporting notes or templates are included when needed, such as promotion, adaptation, or external-origin provenance.",
               "checked": false
             },
             {
               "order": 6,
+              "text": "Technique-boundary overlap and donor exclusions are named when the change adds or imports a technique.",
+              "checked": false
+            },
+            {
+              "order": 7,
               "text": "No security-sensitive material is being disclosed publicly.",
               "checked": false
             }

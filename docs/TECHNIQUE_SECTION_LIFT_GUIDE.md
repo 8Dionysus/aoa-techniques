@@ -23,6 +23,7 @@ This family uses one stable shape:
 The current section-lift contract is intentionally narrow:
 
 - one authored `TECHNIQUE.md` bundle remains the source of truth
+- section lift is the next bounded stop only after bundle-level metadata is no longer enough
 - only the first 10 lifted headings are in scope
 - lifted headings stay in fixed order
 - the generated surface routes readers back to the source bundle instead of replacing it
@@ -67,6 +68,7 @@ It does not dump full lifted section markdown into the generated reader surface.
 
 Not part of this wave:
 
+- using section lift when bundle-level routing metadata already answers the question
 - section IDs
 - section scoring
 - search expansion

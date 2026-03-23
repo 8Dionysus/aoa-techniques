@@ -24,7 +24,7 @@ See also:
 - Needs: target goal; touched files or operational surfaces; intended validation method.
 - Produces: explicit plan; scoped diff; applied change.
 - Core contract: changes must stay reviewable by another human or agent; validation must be named explicitly, not implied.
-- Main risk: weak or symbolic validation creates a false sense of safety around the applied change.
+- Main risk: VERIFY is named, the report looks complete, and review passes even though the validation was symbolic or never...
 - Validate by: a concrete plan exists before apply; the diff stays inside the declared scope; at least one explicit validation method...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 
@@ -313,7 +313,7 @@ See also:
 - Produces: one concise decision note; an explicit decision statement; the context that led to the decision.
 - Core contract: the note must preserve context, options, rationale, and consequences; the note must stay bounded to one decision rather...
 - Main risk: the note captures a summary but not the actual decision tradeoff.
-- Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the note does not drift...
+- Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the not-chosen option and the...
 - Source: [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md)
 
 ### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`promoted`)

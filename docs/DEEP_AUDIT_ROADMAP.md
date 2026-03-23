@@ -62,6 +62,7 @@ Historical note:
   - `agents-md` now also lands the adjacent [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) import as a bounded CI-facing report technique rather than as proof for `AOA-T-0012`
   - `versionable_agent_transcripts` and `project_memory_bootstrap` remain outside the immediate wave as history-overlap watch around [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 - the remaining `16` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+- the `24` cross-layer candidates pulled from the Dionysus donor note are now staged in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as `already staged elsewhere`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
 - the remaining promoted backlog is now staged as:
   - `evidence-prep now`: `AOA-T-0018`
   - `internal-origin review path`: `AOA-T-0033`, `AOA-T-0034`

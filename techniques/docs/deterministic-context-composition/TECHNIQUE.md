@@ -94,18 +94,21 @@ Keep agent context scalable by composing it from smaller source fragments into a
 - ordering and priority rules become implicit, so the generated artifact changes in ways contributors cannot predict from the fragment set alone
 - contributors edit the generated artifact directly and break the fragment-first source-of-truth contract
 - source annotations or equivalent metadata erode until output sections can no longer be traced back to the fragments that produced them
+- the output remains stable and deterministic at a glance, but only a small set of maintainers can still explain why that precedence order exists
 
 ### Negative effects
 
 - deterministic composition can add hidden review overhead when maintainers must mentally reconstruct precedence instead of reading one obvious source path
 - fragment-first authoring can make context feel cleaner while actually making routing and responsibility harder for new contributors to understand
 - a generated artifact can create false-success by looking stable and ordered even when only a small set of maintainers can explain why it rendered that way
+- once the output looks authoritative, teams can postpone simplifying precedence because determinism itself starts to masquerade as clarity
 
 ### Misuse patterns
 
 - widening the technique into a general documentation build system instead of keeping it bounded to many fragments composing into one generated context artifact
 - adding more precedence rules, fallback layers, or special-case routing instead of simplifying composition order
 - treating traceability annotations as optional decoration rather than part of the bounded review contract
+- using the stable output as a reason to drift toward multi-target management or propagation behavior that belongs in a different technique
 
 ### Detection signals
 
@@ -113,6 +116,7 @@ Keep agent context scalable by composing it from smaller source fragments into a
 - generated artifact edits appear in normal maintenance diffs instead of source-fragment changes driving regeneration
 - contributors know the output changed, but cannot quickly identify which fragment or precedence rule caused the change
 - the output still looks deterministic, but repeated review comments reveal confusion about fragment authority, ordering, or ownership boundaries
+- maintainers defend the current ordering because it is stable, but cannot explain why the next contributor should prefer that precedence over a simpler one
 
 ### Mitigations
 
@@ -120,6 +124,7 @@ Keep agent context scalable by composing it from smaller source fragments into a
 - reassert fragment-first authority by rejecting direct edits to the generated artifact and routing fixes back to canonical fragments
 - restore explicit traceability from output sections to source fragments before adding more composition features or target variants
 - narrow the technique back to one generated context surface when additional routing rules start making source-of-truth boundaries opaque
+- stop the expansion when the next requested improvement really needs multi-target propagation or another technique family rather than one-output composition
 
 ## Validation
 

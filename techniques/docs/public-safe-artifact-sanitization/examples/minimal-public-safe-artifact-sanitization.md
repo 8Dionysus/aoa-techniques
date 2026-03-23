@@ -2,34 +2,30 @@
 
 A support summary needs to share a command failure, but the raw output includes hostnames, private paths, and internal IDs.
 
-## Why this technique fits
+## Raw excerpt
 
-- the material is useful, but not safe to share raw
-- the goal is to preserve the lesson while removing unsafe detail
-- the result should remain reviewable without exposing the private context
+```text
+ssh admin@ops-int.internal
+cat /srv/private/customer-a/run-4821/error.log
+job_id=INT-4821 service=payments-shadow-eu-west
+```
 
-## Expected inputs
+## Shareable version
 
-- the raw material to share
-- the intended audience
-- known sensitive surfaces
-- the minimum detail needed to preserve the point
+```text
+ssh <redacted-user>@<generalized-host>
+cat /srv/<generalized-path>/error.log
+job_id=<generalized-id> service=<generalized-service>
+```
 
-## Expected outputs
+## Sanitization note
 
-- a sanitized shareable version of the material
-- a short note on what was removed or generalized
-- any remaining sensitivity warning that still matters
+- user, hostname, path segment, job ID, and service name were generalized
+- the lesson preserved is that the failure surfaced through remote shell plus log inspection
+- this artifact is safe to review as a sharing example only; it does not authorize the underlying action
 
 ## Boundary notes
 
 - if the material is already public-safe, do not add unnecessary redaction
 - if the main task is deciding whether the underlying action should proceed, use the approval-gate workflow first
 - if the main task is to preview or execute the action, use the preview or safe-change workflow first
-
-## Verification notes
-
-- confirm sensitive surfaces were checked deliberately
-- confirm the result still teaches the intended lesson
-- confirm raw paths, tokens, and private identifiers were not preserved by accident
-- confirm any remaining uncertainty was stated plainly

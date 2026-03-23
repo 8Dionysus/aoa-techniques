@@ -31,6 +31,8 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - `docs/LONG_GAP_CANON_DESIGN.md`, which captures the current design-first donor plan for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - `docs/DEEP_AUDIT_ROADMAP.md`, which turns the current green baseline into a phase-by-phase closure roadmap for structural hardening, corpus meaning, surface usability, governance seams, and next implementation packs
 - `docs/EXTERNAL_TECHNIQUE_CANDIDATES.md`, which stages the remaining `22` external donor-derived seed ideas by readiness to distill, overlap, incubation need, or substrate status
+- `docs/EXTERNAL_IMPORT_RUNBOOK.md`, which turns bounded donor triage, draft, review, and merge work into one maintainer-facing import path
+- `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, which records the full `seed_donors_inside.md` candidate set without widening the external-only donor backlog
 - `docs/TECHNIQUE_SELECTION_GUIDE.md` and `docs/SEMANTIC_REVIEW_GUIDE.md`, which close the missing authored family-contract layer for selection and semantic-review surfaces
 
 ### Changed
@@ -43,9 +45,11 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 - clean top-4 expansion wave now adds `AOA-T-0029 nested-rule-loading` from `ruler`, `AOA-T-0030 fragmented-agent-context` from `agents-md`, `AOA-T-0031 shell-composable-agent-invocation` from `qqqa`, and `AOA-T-0032 context-report-for-ci` from `agents-md`, narrows the remaining external candidate backlog from `20` to `16`, and intentionally keeps `versionable_agent_transcripts` plus `project_memory_bootstrap` out of the immediate wave as history-overlap watch around `AOA-T-0026`
 - review coverage refresh wave now adds `docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md`, narrows `docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md` to the remaining skill-support seam cluster, and makes the new canonical-core review discoverable from the semantic-review guide and docs map
 - repo-only hardening wave now aligns `README.md`, `docs/README.md`, and `CONTRIBUTING.md` around `docs/START_HERE.md`, the bounded `python scripts/release_check.py` path, and the current deep-audit closure roadmap
+- governance and intake hardening wave now adds a narrow `CODEOWNERS` map, sharpens GitHub issue and PR templates around overlap watches, donor exclusions, generated surfaces, and downstream impact, and makes note-template authoring aids discoverable from the docs and contribution path
 - `scripts/release_check.py` now compares composite repo state across worktree status, tracked diff, and cached diff so dirty tracked files cannot hide unstable generated drift
 - `scripts/validate_repo.py` now treats selection and semantic-review guides as validator-backed family surfaces, widens public-hygiene root scanning beyond root markdown only, and blocks RFC1918 plus internal-suffix URLs on public surfaces
 - standalone self-serve program now adds `docs/START_HERE.md` as the repo-owned entrypoint, expands the repo-doc surface family to include it, adds `python scripts/release_check.py` as the bounded release-prep command, and aligns guide vocabulary across repo-doc, capsule, KAG reader, and shadow surface families
+- cross-layer intake wave now adds `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, links it from repo-owned entrypoints, and adds regression coverage so the full 24-name donor-note universe stays discoverable and count-stable
 - evidence-harvest wave now records live donor posture for the KAG/source-lift family in `KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md` without changing statuses or validator specs
 - hybrid canon completion program now lands committed Stage 1 donor evidence from `aoa-skills` and `aoa-routing`, promotes `AOA-T-0017 property-invariants` and `AOA-T-0021 bounded-relation-lift-for-kag` to `canonical`, adds canonical-only `adverse-effects-review` notes for both bundles, and records the long-gap donor design for `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022`
 - selective KAG promotion sync now promotes `AOA-T-0019 frontmatter-metadata-spine` to `canonical`, adds a canonical-only `adverse-effects-review` note, and makes it the bounded metadata-spine default for the KAG/source-lift family

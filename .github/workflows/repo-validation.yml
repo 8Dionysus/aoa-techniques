@@ -18,23 +18,5 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run unit tests
-        run: python -m unittest discover -s tests
-
-      - name: Run repo validator
-        run: python scripts/validate_repo.py
-
-      - name: Run generator entrypoints
-        run: |
-          python scripts/build_capsules.py
-          python scripts/build_sections.py
-          python scripts/build_section_manifest.py
-          python scripts/build_checklist_manifest.py
-          python scripts/build_example_manifest.py
-          python scripts/build_evidence_note_manifest.py
-          python scripts/build_github_review_template_manifest.py
-          python scripts/build_semantic_review_manifest.py
-          python scripts/build_catalog.py
-
-      - name: Confirm generator runs are idempotent
-        run: git diff --exit-code
+      - name: Run bounded release check
+        run: python scripts/release_check.py
