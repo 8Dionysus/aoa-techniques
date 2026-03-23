@@ -58,6 +58,18 @@ See also:
 |---|---|---|---|---|
 | Shell-Composable Agent Invocation Checklist | `absent` | `7` | `techniques/agent-workflows/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 
+### [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Render Truth Before Startup Checklist | `absent` | `10` | `techniques/agent-workflows/render-truth-before-startup/checks/render-truth-before-startup-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) |
+
+### [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/agent-workflows/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -162,6 +174,30 @@ See also:
 |---|---|---|---|---|
 | Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
+### [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Profile Preset Composition Checklist | `absent` | `12` | `techniques/docs/profile-preset-composition/checks/profile-preset-composition-checklist.md` | [TECHNIQUE.md](../techniques/docs/profile-preset-composition/TECHNIQUE.md) |
+
+### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Skill Vs Command Boundary Checklist | `absent` | `9` | `techniques/docs/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md` | [TECHNIQUE.md](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) |
+
+### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Skill Marketplace Curation Checklist | `absent` | `9` | `techniques/docs/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md` | [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) |
+
+### [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/docs/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -218,6 +254,24 @@ See also:
 |---|---|---|---|---|
 | Context Report For CI Checklist | `absent` | `7` | `techniques/evaluation/context-report-for-ci/checks/context-report-for-ci-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 
+### [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Contextual Host Doctor Checklist | `absent` | `10` | `techniques/evaluation/contextual-host-doctor/checks/contextual-host-doctor-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) |
+
+### [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Baseline First Additive Profile Benchmarks Checklist | `absent` | `10` | `techniques/evaluation/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
+
+### [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Upstream Skill Health Checking Checklist | `absent` | `10` | `techniques/evaluation/upstream-skill-health-checking/checks/upstream-skill-health-checking-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) |
+
 ## `history`
 
 ### [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
@@ -225,6 +279,18 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Session Capture As Repo Artifact Checklist | `absent` | `7` | `techniques/history/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Versionable Session Transcripts Checklist | `absent` | `9` | `techniques/history/versionable-session-transcripts/checks/versionable-session-transcripts-checklist.md` | [TECHNIQUE.md](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) |
+
+### [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Witness Trace As Reviewable Artifact Checklist | `absent` | `9` | `techniques/history/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 
 ## Boundaries
 

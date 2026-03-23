@@ -65,6 +65,18 @@ See also:
 | Concrete Shell Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | Minimal Shell-Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 
+### [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Render Truth Before Startup | `present` | `techniques/agent-workflows/render-truth-before-startup/examples/minimal-render-truth-before-startup.md` | [TECHNIQUE.md](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) |
+
+### [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal One-Command Service Lifecycle | `present` | `techniques/agent-workflows/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md` | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -178,6 +190,30 @@ See also:
 |---|---|---|---|
 | Scenario | `present` | `techniques/docs/public-safe-artifact-sanitization/examples/minimal-public-safe-artifact-sanitization.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
+### [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Profile Preset Composition | `present` | `techniques/docs/profile-preset-composition/examples/minimal-profile-preset-composition.md` | [TECHNIQUE.md](../techniques/docs/profile-preset-composition/TECHNIQUE.md) |
+
+### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Skill Vs Command Boundary | `present` | `techniques/docs/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md` | [TECHNIQUE.md](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) |
+
+### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Skill Marketplace Curation | `present` | `techniques/docs/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md` | [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) |
+
+### [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Multi-Source Primary Input Provenance | `present` | `techniques/docs/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -242,6 +278,24 @@ See also:
 | Concrete Context Composition CI Report | `present` | `techniques/evaluation/context-report-for-ci/examples/concrete-context-composition-ci-report.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 | Minimal Context Report For CI | `present` | `techniques/evaluation/context-report-for-ci/examples/minimal-context-report-for-ci.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
 
+### [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Contextual Host Doctor | `present` | `techniques/evaluation/contextual-host-doctor/examples/minimal-contextual-host-doctor.md` | [TECHNIQUE.md](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) |
+
+### [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Baseline First Additive Profile Benchmarks | `present` | `techniques/evaluation/baseline-first-additive-profile-benchmarks/examples/minimal-baseline-first-additive-profile-benchmarks.md` | [TECHNIQUE.md](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
+
+### [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Upstream Skill Health Checking | `present` | `techniques/evaluation/upstream-skill-health-checking/examples/minimal-upstream-skill-health-checking.md` | [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) |
+
 ## `history`
 
 ### [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
@@ -250,6 +304,18 @@ See also:
 |---|---|---|---|
 | Concrete Local-First Session History | `present` | `techniques/history/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
 | Minimal Session Capture As Repo Artifact | `present` | `techniques/history/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Versionable Session Transcripts | `present` | `techniques/history/versionable-session-transcripts/examples/minimal-versionable-session-transcripts.md` | [TECHNIQUE.md](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) |
+
+### [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Witness Trace As Reviewable Artifact | `present` | `techniques/history/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md` | [TECHNIQUE.md](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 
 ## Boundaries
 

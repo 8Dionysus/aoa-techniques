@@ -79,6 +79,17 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md): `complements` [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
 - [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md): none
 - [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md): none
+- [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md): `complements` [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
+- [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md): `complements` [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md)
+- [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md): `complements` [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+- [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md): `complements` [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md)
+- [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md): `complements` [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md)
+- [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md): `complements` [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
+- [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md): `complements` [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
+- [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md): `complements` [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
+- [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md): `complements` [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md): `complements` [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md): `complements` [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md), [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -93,6 +104,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop. |
 | [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops. |
+| [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. |
+| [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine. |
 
 ### `docs`
 
@@ -115,6 +128,10 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact. |
 | [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
 | [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. |
+| [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Compose small reusable profiles into named presets so runtime posture stays reviewable without flattening composition into one opaque config or launcher doctrine. |
+| [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy. |
+| [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy. |
+| [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine. |
 
 ### `evaluation`
 
@@ -129,16 +146,21 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
 | [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `canonical` | `cross_context` | `bounded` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
 | [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. |
+| [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control. |
+| [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path. |
+| [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine. |
 
 ### `history`
 
 | technique | status | validation | rigor | summary |
 |---|---|---|---|---|
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy. |
+| [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Package already-saved AI session transcripts as readable, versionable Markdown artifacts so review, handoff, and selective sharing stay possible without reopening capture semantics or turning transcript history into memory or instruction authority. |
+| [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind. |
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 34/34 techniques.
+- `export_ready` is currently `true` for 45/45 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.
