@@ -40,6 +40,7 @@ Mainline corpus growth and validator hardening after `v0.1.0`.
 
 ### Changed
 
+- share-prep follow-up canon wave now promotes `AOA-T-0034 public-safe-artifact-sanitization` to `canonical`, adds its canonical-only `adverse-effects-review` note, refreshes its second-context and readiness notes around `Truth-Zeeker-AI-Public`, and graduates it out of the remaining Wave A queue
 - instruction-distribution follow-up canon wave now promotes `AOA-T-0013 single-source-rule-distribution` to `canonical`, adds its canonical-only `adverse-effects-review` note, refreshes its second-context and readiness notes around `dyoshikawa/rulesync` plus `EmberAGI/arbitrum-vibekit`, and graduates it out of the remaining Wave A queue
 - section-lift follow-up canon wave now promotes `AOA-T-0018 markdown-technique-section-lift` to `canonical`, adds its canonical-only `adverse-effects-review` note, and graduates it out of the active Wave A promotion-readiness queue
 - remaining closure program now lands a dedicated `AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md`, merges first donor evidence from `aoa-skills` and `ATM10-Agent`, refreshes `AOA-T-0005`, `AOA-T-0013`, and `AOA-T-0022` second-context and readiness notes, and restages the remaining promoted backlog around one evidence-prep item plus four external-dependency-first items

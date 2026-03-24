@@ -2800,7 +2800,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- extracted from the `aoa-sanitized-share` skill surface in `aoa-skills`\n- promoted into `aoa-techniques` on 2026-03-22 as a bounded public-safe sharing technique"
+          "content_markdown": "- extracted from the `aoa-sanitized-share` skill surface in `aoa-skills`\n- promoted into `aoa-techniques` on 2026-03-22 as a bounded public-safe sharing technique\n- local Wave A follow-up on 2026-03-23 closes `aoa-playbooks`, `aoa-evals`, `aoa-agents`, `aoa-routing`, and `aoa-skills` overlay branches as adjacent or same-lineage lanes rather than a second live consumer\n- external follow-up on 2026-03-23 identifies `dr-rakshith-truth-zeeker/Truth-Zeeker-AI-Public` as an exact-fit sanitized-share consumer, while broader public-release/export surfaces such as `brunoclz/br-acc` and `trevin-creator/Tiny-Lab` remain adjacent rather than canonical-closure evidence\n- canonical review on 2026-03-23 approves `AOA-T-0034` as the default bounded share-prep technique when sensitive technical material must be made shareable without turning the workflow into approval policy or execution planning"
         },
         {
           "key": "future_evolution",

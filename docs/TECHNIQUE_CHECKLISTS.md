@@ -120,6 +120,12 @@ See also:
 |---|---|---|---|---|
 | Relation Lift Checklist | `present` | `5` | `techniques/docs/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
+### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -167,12 +173,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Decision Rationale Recording Checklist | `absent` | `12` | `techniques/docs/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
-
-### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
 ### [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 
