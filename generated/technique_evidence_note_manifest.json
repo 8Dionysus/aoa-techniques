@@ -6185,6 +6185,163 @@
       "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/single-source-rule-distribution/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0013"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-source-rule-distribution"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for one local canonical rule source fanning out to multiple managed agent-facing instruction targets"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle narrow as local-source instruction fan-out without widening into fragment composition, skill propagation, nested loading, provenance mirroring, or general agent-config orchestration"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams start hand-editing target instruction files anyway, so the canonical source still exists on paper while real authority quietly splits across outputs"
+                },
+                {
+                  "order": 2,
+                  "text": "canonical pressure widens the technique into all agent configuration propagation, including skills, MCP, or nested loading, instead of keeping the current instruction-surface contract explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "synchronized-looking outputs hide wrapper drift or target-specific shadow logic until the shared rule core no longer means the same thing across targets"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a clean fan-out path can create false confidence that every target still carries the same rule intent even when wrappers or exclusions already diverged"
+                },
+                {
+                  "order": 2,
+                  "text": "making this the default can encourage teams to add managed distribution where they only have one target or no clear source-of-truth discipline yet"
+                },
+                {
+                  "order": 3,
+                  "text": "successful multi-target refresh tooling can pull review attention away from the canonical source and toward generated outputs"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using `AOA-T-0013` for one-source -> one-target sync or for generic generated-context composition that belongs to `AOA-T-0012`"
+                },
+                {
+                  "order": 2,
+                  "text": "treating cross-agent skill propagation, nested rule loading, or upstream mirroring as if they are the same contract instead of routing to `AOA-T-0027`, `AOA-T-0029`, or `AOA-T-0024`"
+                },
+                {
+                  "order": 3,
+                  "text": "letting target-specific wrappers, overrides, or exceptions accumulate until each managed file becomes a semi-canonical source in disguise"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers spend more time explaining target-specific differences than verifying one shared canonical rule source"
+                },
+                {
+                  "order": 2,
+                  "text": "source updates no longer re-apply cleanly and start requiring hand-fixes across multiple managed targets"
+                },
+                {
+                  "order": 3,
+                  "text": "pull requests edit generated target files directly without routing the change back through the canonical source"
+                },
+                {
+                  "order": 4,
+                  "text": "consumers cite target files as the rule authority instead of the local source that is supposed to own the shared content"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the canonical source explicit, keep managed targets marked as derived, and route every shared-rule change back through the source before re-applying distribution"
+                },
+                {
+                  "order": 2,
+                  "text": "split adjacent behavior into sibling techniques instead of letting skills propagation, nested loading, provenance mirroring, or fragment composition accumulate inside this bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "keep parity or diff review focused on proving source-to-target synchronization, not on treating generated targets as the primary review surface"
+                },
+                {
+                  "order": 4,
+                  "text": "revisit canonical status if the bundle starts being used mainly for one-target sync, product-width orchestration, or wrapper-heavy target customization"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for target drift, wrapper creep, and sibling-boundary widening around the instruction-surface cluster"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/single-source-rule-distribution/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -6215,7 +6372,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -6227,27 +6384,27 @@
                 {
                   "order": 1,
                   "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior, and that donor still reads cleanly against the current `ruler` public surface"
+                  "value_markdown": "the imported technique keeps `ruler` as a bounded origin donor with explicit exclusions around nested loading, MCP propagation, skills propagation, and other product-width behavior"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now provides a first live one-source -> many-target donor path through `docs/BRIDGE_SPEC.md`, committed consumer skills, and explicit drift-control tooling"
+                  "key": "first live downstream context",
+                  "value_markdown": "merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` provides a first live one-source -> many-target donor path through `docs/BRIDGE_SPEC.md`, committed consumer skills, and explicit drift-control tooling"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "key": "independent public reinforcement",
+                  "value_markdown": "`dyoshikawa/rulesync` exposes a bounded unified-rule-source -> many-target instruction-generation path, and `EmberAGI/arbitrum-vibekit` uses `.rulesync/` as a committed source-of-truth layer for generated `.claude/` and `.cursor/` instruction surfaces"
                 },
                 {
                   "order": 4,
-                  "key": "donor intake refinement",
-                  "value_markdown": "current seeded donor review now records `agents-md` as an overlap hold against `AOA-T-0012` and `n-skills` as the adjacent `AOA-T-0024 upstream-mirroring-with-provenance` import rather than synthetic proof for this bundle"
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and the bounded external-intake package still reads cleanly"
                 },
                 {
                   "order": 5,
                   "key": "validation strength",
-                  "value_markdown": "the bundle includes a checklist, two public-safe examples, a clean separation from `AOA-T-0012`, one bounded external origin, and one real sibling-repo donor, but it still lacks a second independent live instruction-distribution context beyond `aoa-skills`"
+                  "value_markdown": "the bundle now has a checklist, two public-safe examples, a clean separation from `AOA-T-0012`, one bounded external origin, one live sibling-repo donor in `aoa-skills`, and one independent public instruction-distribution path through `rulesync` plus a live `.rulesync` consumer, so the contract now reads as repeated one-source -> many-target reuse rather than one donor lineage"
                 }
               ]
             },
@@ -6266,7 +6423,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "the current wording is strong enough for reuse, but not yet strong enough to justify canonical default status without evidence that the shared core survives a second independent multi-target re-application beyond the first `aoa-skills` donor"
+                  "text": "it also remains narrower than `AOA-T-0027`, `AOA-T-0029`, and `AOA-T-0024`, which own managed skill propagation, hierarchical rule precedence, and upstream mirroring with provenance rather than local canonical-source fan-out"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence now shows that the shared rule core survives beyond the first `aoa-skills` bridge lineage, so the bundle reads as the natural default for local-source -> many-target instruction distribution inside the instruction-surface cluster"
                 }
               ]
             },
@@ -6278,7 +6439,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-03-23"
                 },
                 {
                   "order": 2,
@@ -6304,15 +6465,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one second independent live instruction-distribution context beyond the first `aoa-skills` donor"
+                  "text": "no blocking promotion gap remains as long as the bundle stays bounded to one local canonical rule source fanning out to multiple managed instruction targets"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another managed target flow showing one source update propagating cleanly to multiple instruction surfaces in a second repo or surface family such as `aoa-agents`"
+                  "text": "future review should keep watching for drift into `AOA-T-0012` fragment composition, `AOA-T-0027` managed skill propagation, `AOA-T-0029` nested loading, or `AOA-T-0024` upstream mirroring"
                 },
                 {
                   "order": 3,
-                  "text": "another external-import-only review, overlap-heavy composition tool, or provenance-mirroring tool does not satisfy that remaining live-evidence gap on its own"
+                  "text": "canonical use still assumes at least two real managed targets, explicit derived-target ownership, and reviewable source-to-target parity rather than manual copied rule blocks"
                 }
               ]
             },
@@ -6323,11 +6484,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0013` `promoted`"
+                  "text": "promote `AOA-T-0013` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until a second live multi-target reuse context exists beyond the current `aoa-skills` donor"
+                  "text": "use `AOA-T-0013` as the default instruction-surface technique when one canonical local rule source must refresh multiple managed agent-facing instruction targets without turning those targets into canonical homes"
                 }
               ]
             }
@@ -6740,7 +6901,11 @@
                 },
                 {
                   "order": 5,
-                  "text": "this closes the first live donor gap for `AOA-T-0013`, but it is still only one repository and one bridge style rather than a second independent instruction-distribution context"
+                  "text": "later public reinforcement now also includes `dyoshikawa/rulesync`, which generates multiple assistant-facing rule files from unified `.rulesync/` sources, and `EmberAGI/arbitrum-vibekit`, which uses `.rulesync/` as the source of truth for generated `.claude/` and `.cursor/` instruction surfaces"
+                },
+                {
+                  "order": 6,
+                  "text": "together those later public surfaces confirm that the `aoa-skills` bridge pattern was not a one-off donor lineage and that the same bounded one-source -> many-target contract survives in an independent public tool plus live consumer stack"
                 }
               ]
             },
@@ -6751,7 +6916,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a first live second-context adaptation for one-source -> many-target distribution; the next honest step is one more live managed multi-target context, not another import-only review"
+                  "text": "remains the first live sibling-repo second-context adaptation for one-source -> many-target distribution, and later public reinforcement from `dyoshikawa/rulesync` plus `EmberAGI/arbitrum-vibekit` now closes the previously open second independent live-context gap for canonical review"
                 }
               ]
             }

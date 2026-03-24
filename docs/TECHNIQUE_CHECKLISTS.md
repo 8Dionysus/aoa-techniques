@@ -90,6 +90,12 @@ See also:
 |---|---|---|---|---|
 | Deterministic Context Composition Checklist | `present` | `7` | `techniques/docs/deterministic-context-composition/checks/deterministic-context-composition-checklist.md` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
 
+### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Single-Source Rule Distribution Checklist | `present` | `7` | `techniques/docs/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
+
 ### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -113,12 +119,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Relation Lift Checklist | `present` | `5` | `techniques/docs/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
-
-### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Single-Source Rule Distribution Checklist | `present` | `7` | `techniques/docs/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
 
 ### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 

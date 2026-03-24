@@ -2,7 +2,7 @@
 id: AOA-T-0013
 name: single-source-rule-distribution
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: ruler
   path: README.md
@@ -16,12 +16,12 @@ tags:
   - agent-instructions
   - anti-drift
 summary: Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth.
-maturity_score: 4
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
 validation_strength: cross_context
-public_safety_reviewed_at: 2026-03-20
+public_safety_reviewed_at: 2026-03-23
 export_ready: true
 relations:
   - type: complements
@@ -35,6 +35,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # single-source-rule-distribution
@@ -179,6 +181,9 @@ See `checks/single-source-rule-distribution-checklist.md`.
 - passed first external-import review on 2026-03-18; keep the technique `promoted` until stronger live multi-target reuse exists beyond the current repo-local adaptation sketch
 - external donor intake refresh on 2026-03-21 now reaffirms `ruler` as the bounded origin donor, records `agents-md` as an overlap hold against `AOA-T-0012`, and records `n-skills` as the adjacent `AOA-T-0024 upstream-mirroring-with-provenance` import rather than live proof for this bundle
 - current canon-strengthening wave: defer canonical promotion until a live multi-target reuse context proves the shared rule core still propagates cleanly across managed targets
+- local Wave A refinement on 2026-03-23 closes `aoa-agents`, `aoa-routing`, `aoa-playbooks`, and `aoa-skills` overlay branches as adjacent or same-lineage lanes rather than a second independent live instruction-distribution context
+- independent public reinforcement on 2026-03-23 now adds `dyoshikawa/rulesync` as a bounded one-source -> many-target rule-distribution tool and `EmberAGI/arbitrum-vibekit` as a live `.rulesync` consumer, closing the second independent instruction-distribution gap beyond `aoa-skills`
+- canonical review on 2026-03-23 approves `AOA-T-0013` as the default one-source -> many-target instruction-distribution technique inside the instruction-surface cluster
 
 ## Future evolution
 

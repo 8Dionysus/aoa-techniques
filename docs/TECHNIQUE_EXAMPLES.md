@@ -98,6 +98,13 @@ See also:
 | Concrete Skill Doc Composition | `present` | `techniques/docs/deterministic-context-composition/examples/concrete-skill-doc-composition.md` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
 | Minimal Deterministic Context Composition | `present` | `techniques/docs/deterministic-context-composition/examples/minimal-deterministic-context-composition.md` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
 
+### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Multi-Agent Rule Sync | `present` | `techniques/docs/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
+| Minimal Single-Source Rule Distribution | `present` | `techniques/docs/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
+
 ### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
 | example | body | example path | source |
@@ -122,13 +129,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Direct Relation To Selection Hint | `present` | `techniques/docs/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
-
-### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Multi-Agent Rule Sync | `present` | `techniques/docs/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
-| Minimal Single-Source Rule Distribution | `present` | `techniques/docs/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
 
 ### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 

@@ -632,8 +632,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
 
         self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
-        self.assertEqual(18, status_counts["canonical"])
-        self.assertEqual(30, status_counts["promoted"])
+        self.assertEqual(19, status_counts["canonical"])
+        self.assertEqual(29, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -734,7 +734,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         canonical_records = [record for record in records if record.status == "canonical"]
         promoted_records = [record for record in records if record.status == "promoted"]
 
-        self.assertEqual(18, len(canonical_records))
+        self.assertEqual(19, len(canonical_records))
 
         for record in canonical_records:
             self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
@@ -831,14 +831,14 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-skills",
             "aoa-evals",
             "aoa-routing",
-            "18 canonical",
-            "30 promoted",
+            "19 canonical",
+            "29 promoted",
             "external-dependency-first promoted techniques",
             "future-import-wave promoted techniques",
             "internal-origin promoted techniques",
             "AOA-T-0005",
-            "AOA-T-0013",
-            "AOA-T-0018",
+            "latest canonical promotion: `AOA-T-0013`",
+            "current closest promoted queue item: `AOA-T-0034`",
             "AOA-T-0020",
             "AOA-T-0022",
             "AOA-T-0023",
@@ -1723,7 +1723,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
             scope["section_scope"],
         )
-        self.assertEqual(18, adverse_note_count)
+        self.assertEqual(19, adverse_note_count)
 
     def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
         technique_dir = REPO_ROOT / "techniques" / "demo"
