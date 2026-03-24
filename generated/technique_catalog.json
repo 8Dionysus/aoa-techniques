@@ -1242,7 +1242,7 @@
       "id": "AOA-T-0023",
       "name": "stateless-single-shot-agent",
       "domain": "agent-workflows",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default.",
       "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
       "origin": {
@@ -1260,12 +1260,12 @@
         "single-shot",
         "confirmation"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-23",
       "export_ready": true,
       "relations": [
         {
@@ -1289,6 +1289,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

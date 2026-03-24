@@ -10,10 +10,10 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `28` techniques
+- current promoted corpus: `27` techniques
 - current approve-now queue: none
-- closest current queue item: [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md), because it now leads the remaining Wave A pack and has the clearest fast-path contract among the still-promoted bundles
-- latest graduation: [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the strengthened `aoa-skills` origin plus `Truth-Zeeker-AI-Public` second-consumer evidence
+- closest current queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
+- latest graduation: [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the bounded `qqqa` origin plus GitHub Copilot CLI's programmatic fast path as a second public shell-side context
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md), and [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) are earlier than the rest and still need second-context plus canonical-readiness scaffolding before canonical discussion is honest
 
@@ -36,6 +36,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 `AOA-T-0018` has since exited this matrix through a separate follow-up canonical review.
 `AOA-T-0013` has since exited this matrix through a separate follow-up canonical review after independent public reinforcement from `dyoshikawa/rulesync` and `EmberAGI/arbitrum-vibekit`.
 `AOA-T-0034` has since exited this matrix through a separate follow-up canonical review after an exact-fit second-consumer pass around `Truth-Zeeker-AI-Public`.
+`AOA-T-0023` has since exited this matrix through a separate follow-up canonical review after GitHub Copilot CLI's programmatic one-prompt path closed the missing external fast-path gap.
 
 ## Readiness Lanes
 
@@ -44,7 +45,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `13` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `12` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
 
@@ -72,7 +73,6 @@ Shared blocker: one live adopter beyond donor plus documentation-first adaptatio
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | Lead candidate for the pack and the clearest fast-path contract. | One public workflow surface using the same single-shot fast path as a real operator contract. |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | Boundary sibling that keeps mutation behind one explicit confirmation seam. | One public workflow surface where the confirmation seam really gates mutation in practice. |
 | [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | Composability sibling focused on stdin, stdout, files, and pipes. | One public workflow surface where one-shot invocation stays pipe/file/stdin-first in real use. |
 
@@ -146,7 +146,7 @@ Shared blocker: each bundle is internally strong, but still needs another live c
 ## Suggested Wave Order
 
 1. `Wave A - evidence-prep leaders`
-   - `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
+   - `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
    - goal: close the smallest honest blocker for the strongest current candidates without flipping status yet
 2. `Wave B - pack proof waves`
    - shell-agent fast path

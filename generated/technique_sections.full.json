@@ -1898,12 +1898,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `qqqa`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique focused on stateless single-shot shell assistance"
+          "content_markdown": "- adapted from open-source `qqqa`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique focused on stateless single-shot shell assistance\n- local `aoa-*` search lanes later closed as adjacent-only evidence around routing, checkpoint, and dry-run surfaces rather than a second exact-fit consumer\n- strengthened by GitHub Copilot CLI programmatic mode as an independent public shell-side fast path where one prompt exits after completion and tool-using commands stay approval-gated by default\n- promoted to `canonical` on 2026-03-23 after second-context review confirmed that the bounded single-shot contract survives beyond the donor lineage"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- split out a dedicated read-only question-only sibling if that narrower mode proves reusable on its own\n- split out a dedicated confirmation-gated command execution sibling if tool-action posture becomes strong enough to stand without the rest of the fast-path contract\n- add a stronger second live context if another public repository adopts the same single-shot bounded invocation model"
+          "content_markdown": "- split out a dedicated read-only question-only sibling if that narrower mode proves reusable on its own\n- split out a dedicated confirmation-gated command execution sibling if tool-action posture becomes strong enough to stand without the rest of the fast-path contract\n- keep interactive-session guidance, approval-policy breadth, and broader automation posture out of this bundle unless they later prove to be narrower sibling techniques"
         }
       ]
     },

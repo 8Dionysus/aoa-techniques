@@ -9,6 +9,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0001 | plan-diff-apply-verify-report | agent-workflows | canonical | Safe workflow for agent-driven changes using explicit planning, scoped diffs, explicit validation, and concise reporting. |
 | AOA-T-0004 | intent-plan-dry-run-contract-chain | agent-workflows | canonical | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists. |
 | AOA-T-0014 | tdd-slice | agent-workflows | canonical | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. |
+| AOA-T-0023 | stateless-single-shot-agent | agent-workflows | canonical | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. |
 | AOA-T-0002 | source-of-truth-layout | docs | canonical | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. |
 | AOA-T-0009 | lightweight-status-snapshot | docs | canonical | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
 | AOA-T-0012 | deterministic-context-composition | docs | canonical | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
@@ -32,7 +33,6 @@ This file is the repository-wide map of public techniques.
 | id | name | domain | status | summary |
 |---|---|---|---|---|
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
-| AOA-T-0023 | stateless-single-shot-agent | agent-workflows | promoted | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. |
 | AOA-T-0028 | confirmation-gated-mutating-action | agent-workflows | promoted | Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop. |
 | AOA-T-0031 | shell-composable-agent-invocation | agent-workflows | promoted | Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops. |
 | AOA-T-0036 | render-truth-before-startup | agent-workflows | promoted | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. |
