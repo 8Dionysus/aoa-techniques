@@ -7,13 +7,12 @@ Use it when the question is not "which promoted bundle is generally closest to c
 This runbook is separate from the already-landed future-import `Wave A`, `Wave B`, and `Wave C` recorded in [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md).
 Those waves landed new techniques.
 This runbook is about strengthening existing `promoted` bundles without flipping status early.
-`AOA-T-0018` has since exited this runbook through a separate follow-up canonical review, so the active roster below now tracks the six remaining promoted candidates from the original Wave A pack.
+`AOA-T-0018` and `AOA-T-0013` have since exited this runbook through separate follow-up canonical reviews, so the active roster below now tracks the five remaining promoted candidates from the original Wave A pack.
 
 ## Wave Goal
 
-Close the smallest honest blocker for the six remaining strongest current `promoted` candidates:
+Close the smallest honest blocker for the five remaining strongest current `promoted` candidates:
 
-- [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
 - [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
 - [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
 - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
@@ -75,7 +74,6 @@ If evidence lands, the preferred local update path is:
 
 | technique | why now | smallest blocker | evidence that counts | not enough | likely local files |
 |---|---|---|---|---|---|
-| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | Closest current queue item; already `maturity_score: 4` and `validation_strength: cross_context`. | One second independent live multi-target instruction-distribution context beyond `aoa-skills`. | One second repo or surface family where one canonical rule source propagates to multiple managed instruction targets with explicit drift control. | Another external-import-only review, an overlap-heavy composition tool, or a provenance-mirroring surface. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe `TECHNIQUE.md` frontmatter if evidence strength truly changes. |
 | [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | Strongest current internal-origin docs candidate. | One live second consumer beyond the source skill surface. | A public-safe share-prep workflow that uses the same bounded sanitize-for-sharing contract without becoming approval gating or publishing policy. | Generic redaction advice, already-safe content cleanup, or a workflow that authorizes the underlying action rather than preparing the artifact. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the new consumer reveals a clearer misuse watch. |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | Lead candidate for the shell-agent fast-path pack. | One live second context beyond donor plus documentation-first adaptation. | A public workflow surface where the same stateless, confirmation-gated, single-shot agent contract is used as a real fast path. | Generic shell convenience docs, one-step advice without the same confirmation boundary, or a hidden multi-step session. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the new fast path clarifies the invariant. |
 | [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Clean companion to canonical `AOA-T-0012`. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family where the same CI-facing context report exists as a real read-only artifact over composition health. | Composition-engine docs, remediation logic, provider telemetry, or a report that owns fixes rather than reporting drift. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact shape becomes clearer. |
@@ -86,35 +84,21 @@ If evidence lands, the preferred local update path is:
 
 Run the wave in this order:
 
-1. [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
-2. [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
-3. [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
-4. [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
-5. [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-6. [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+1. [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
+2. [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+3. [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+4. [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+5. [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 
 Why this order:
 
-- `0013` is the closest current queue item and has the clearest next donor target
-- `0034` is now the strongest remaining non-long-gap docs candidate after `0018` graduated
+- `0034` is now the strongest remaining docs candidate after `0018` and `0013` graduated
 - `0023`, `0032`, and `0026` each lead a wider pack and can unlock later clustered proof waves
 - `0036` remains strong, but its second-consumer search is slightly more open-ended than the first five
 
 ## Worker Briefs
 
-### Worker 1 - `AOA-T-0013`
-
-Question to answer:
-
-- can one second repo or surface family, ideally `aoa-agents` or another instruction-heavy consumer, prove one-source -> many-target rule distribution with explicit drift control beyond `aoa-skills`?
-
-Reject if:
-
-- the candidate really belongs to `AOA-T-0012`
-- the candidate is only mirroring or provenance, not managed fan-out
-- the candidate shows only one target
-
-### Worker 2 - `AOA-T-0034`
+### Worker 1 - `AOA-T-0034`
 
 Question to answer:
 
@@ -126,7 +110,7 @@ Reject if:
 - the surface authorizes the underlying action
 - the surface is already public-safe and does not need a sanitization seam
 
-### Worker 3 - `AOA-T-0023`
+### Worker 2 - `AOA-T-0023`
 
 Question to answer:
 
@@ -138,7 +122,7 @@ Reject if:
 - the surface allows hidden multi-step continuation
 - the confirmation seam is optional or missing
 
-### Worker 4 - `AOA-T-0032`
+### Worker 3 - `AOA-T-0032`
 
 Question to answer:
 
@@ -150,7 +134,7 @@ Reject if:
 - the surface is really the composition engine
 - the surface is only diagnostics prose with no report artifact shape
 
-### Worker 5 - `AOA-T-0026`
+### Worker 4 - `AOA-T-0026`
 
 Question to answer:
 
@@ -162,7 +146,7 @@ Reject if:
 - the surface starts from post-capture packaging only
 - the history is cloud-wrapped or product-shaped rather than repo-local artifact discipline
 
-### Worker 6 - `AOA-T-0036`
+### Worker 5 - `AOA-T-0036`
 
 Question to answer:
 
@@ -197,7 +181,7 @@ The goal is to reduce uncertainty and tighten evidence quality, not to force a c
 
 | technique | pass 1 result | note |
 |---|---|---|
-| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-agents`, `aoa-routing`, and `aoa-playbooks` show projection and validation discipline, but not one-source -> many-managed-target instruction distribution. |
+| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-agents`, `aoa-routing`, and `aoa-playbooks` show projection and validation discipline, while `aoa-skills` overlay branches stay same-lineage, but none of them prove one-source -> many-managed-target instruction distribution in a second independent context. |
 | [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `exact-fit evidence found` | `aoa-routing` confirms section surfaces as real `expand` targets beyond the already-strengthened `aoa-skills` and `aoa-evals` evidence. |
 | [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-playbooks` and `aoa-skills` keep sanitization as a prerequisite or origin-lineage surface, not as a second exact-fit live consumer. |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `adjacent but insufficient` | checkpointed or swarm-governed flows exist, but not the same shell-side single-shot fast path. |
@@ -207,8 +191,9 @@ The goal is to reduce uncertainty and tighten evidence quality, not to force a c
 
 Current implication:
 
-- `AOA-T-0018` has since exited Wave A through a separate follow-up canonical review and is now `canonical`
-- reopen non-local or later-lane donor searches for `AOA-T-0013`, `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0034`, `AOA-T-0026`, and `AOA-T-0036`
+- `AOA-T-0018` and `AOA-T-0013` have since exited Wave A through separate follow-up canonical reviews and are now `canonical`
+- `AOA-T-0034` is now the closest remaining promoted queue item
+- reopen non-local or later-lane donor searches for `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0034`, `AOA-T-0026`, and `AOA-T-0036`
 
 ## Validation And Merge Discipline
 

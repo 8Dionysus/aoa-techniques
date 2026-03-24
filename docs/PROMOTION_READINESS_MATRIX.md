@@ -10,10 +10,10 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `30` techniques
+- current promoted corpus: `29` techniques
 - current approve-now queue: none
-- closest current queue item: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md), because it already carries `maturity_score: 4` and `validation_strength: cross_context`, but it still lacks one second independent live multi-target reuse context
-- latest graduation: [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the strengthened cross-context baseline
+- closest current queue item: [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md), because it is now the strongest remaining internal-origin docs candidate and only needs one live second consumer beyond the source skill surface
+- latest graduation: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the strengthened `aoa-skills`, `rulesync`, and live `.rulesync` consumer evidence
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md), and [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) are earlier than the rest and still need second-context plus canonical-readiness scaffolding before canonical discussion is honest
 
@@ -34,12 +34,13 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 This snapshot is about the current local sweep only.
 It narrows the next search space and closes false-positive local lanes, but it does not replace later donor searches where those still remain honest.
 `AOA-T-0018` has since exited this matrix through a separate follow-up canonical review.
+`AOA-T-0013` has since exited this matrix through a separate follow-up canonical review after independent public reinforcement from `dyoshikawa/rulesync` and `EmberAGI/arbitrum-vibekit`.
 
 ## Readiness Lanes
 
 | lane | count | meaning |
 |---|---:|---|
-| `long-gap donor lane` | `3` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
+| `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
 | `external live-adopter lane` | `13` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
@@ -62,7 +63,6 @@ Shared blocker: each bundle still needs a specific new live proof surface, and a
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | Strong companion checklist to canonical [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), but still origin-heavy. | One non-origin shared intent-chain rollout record showing the checklist used to add a new intent in practice. |
-| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | Closest current queue item, but still missing a second independent live managed-target context. | One second repo or surface family showing one-source -> many-target managed instruction distribution with explicit drift control. |
 | [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | Exact five-part `Risks` contract has one strong donor, not repeated reuse. | One second committed corpus reusing the same five-part `Risks` split without widening into generated policy or scoring. |
 
 ### Pack 2 - Shell-Agent Fast Path
@@ -98,7 +98,7 @@ Shared blocker: the cluster already reads coherently beside canonical [AOA-T-001
 | [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | Fragment-authoring sibling to canonical composition. | One second repo where fragment-first authoring is a real source-layer practice. |
 | [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Report-only sibling to canonical composition, not the composition engine itself. | One second repo or surface family using the same CI-facing context report as a real artifact. |
 
-`AOA-T-0013` stays adjacent to this cluster, but remains in Pack 1 because its blocker is stricter and already called out as a long-gap donor lane.
+`AOA-T-0013` now anchors the canonical local-source fan-out default for this cluster, while the promoted siblings below keep their narrower blockers.
 
 ### Pack 5 - Skill Ecosystem And Curated Inputs
 
@@ -146,7 +146,7 @@ Shared blocker: each bundle is internally strong, but still needs another live c
 ## Suggested Wave Order
 
 1. `Wave A - evidence-prep leaders`
-   - `AOA-T-0013`, `AOA-T-0034`, `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
+   - `AOA-T-0034`, `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
    - goal: close the smallest honest blocker for the strongest current candidates without flipping status yet
 2. `Wave B - pack proof waves`
    - shell-agent fast path

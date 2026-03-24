@@ -1,13 +1,13 @@
 # Long-Gap Canon Design
 
-This design-first doc captures the current long-gap promotion backlog after the hybrid canon completion program reopened the fast evidence paths.
+This design-first doc captures the current long-gap promotion backlog after `AOA-T-0013` graduated and the hybrid canon completion program reopened the remaining fast evidence paths.
 
 Use it when the question is not "which promoted bundle can we close now?", but "which remaining promoted bundle needs a new external product surface before another honest canonical review makes sense?"
 
 These are not fast-promotion candidates.
 They need new live consumers or new authored source contracts outside `aoa-techniques`, not another wording-only pass inside this repository.
 
-The first donor wave has now landed for all three targets.
+The first donor wave has now landed for the remaining targets.
 What remains is not donor selection, but one more independent reinforcement beyond those first landed proofs.
 
 ## Scope
@@ -15,10 +15,9 @@ What remains is not donor selection, but one more independent reinforcement beyo
 This design wave covers:
 
 - [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
-- [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
 - [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 
-It does not reopen [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), because that bundle has now graduated through follow-up canonical review, or [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), because that remains an evidence-prep question rather than a long-gap design problem.
+It does not reopen [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) or [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), because those bundles have now graduated through follow-up canonical review, or [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), because that remains an evidence-prep question rather than a long-gap design problem.
 
 ## `AOA-T-0005` - New Intent Rollout Checklist
 
@@ -52,40 +51,11 @@ It does not reopen [AOA-T-0018](../techniques/docs/markdown-technique-section-li
 
 ## `AOA-T-0013` - Single-Source Rule Distribution
 
-### Natural donor repos
+Closed on 2026-03-23:
 
-- first donor: `aoa-skills`
-- second donor after that: `aoa-agents`
-
-### Why these donors fit
-
-- `aoa-skills` already has one-source technique meaning, multiple agent-facing `skills/*/agents/openai.yaml` targets, and schema-backed validation
-- `aoa-agents` is the semantic home for later role-surface or handoff-rule distribution, but it is still too bootstrap-shaped to be the first proof source
-
-### Landed donor evidence
-
-- merged `aoa-skills@b1b3fc7b330f2fecc5412c0444bc108b4aecc67c` now extends `docs/BRIDGE_SPEC.md` with one-source -> many-target fan-out proof and explicit drift-control commands
-- the same donor change updates `skills/aoa-source-of-truth-check/SKILL.md` so one authoritative source staying aligned across multiple downstream consumer surfaces is now part of an authored runtime skill surface
-
-### External OSS donor intake
-
-- `ruler`: `pass` as the bounded origin donor and current external-intake anchor for this technique
-- `agents-md`: `hold because overlap`; it reinforces fragment-first deterministic composition and generated `AGENTS.md` routing, but it sits too close to `AOA-T-0012` to count as a clean second proof for one-source -> many-target rule distribution
-- `n-skills`: now landed as the adjacent [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) import; its upstream mirroring with provenance and `.source.json` attribution remain useful, but they still do not match this bundle's exact live many-target contract closely enough to count as closure evidence here
-- `agentic`: now landed as the adjacent [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) import; its versioned capability-contract pattern is useful as a neighboring docs import, but it still does not match this bundle's exact live one-source -> many-target rule-distribution contract closely enough to count as closure evidence here
-
-### Next external contract still needed
-
-- one more canonical rule source should distribute to multiple agent-facing instruction targets in a second repo or surface family, ideally `aoa-agents`
-- the flow still has to be one-source -> many-target on committed authored surfaces, not one-source -> one-target or copy edits across several files
-- the donor change should preserve source ownership, name the synchronized targets explicitly, and show how rule drift is prevented without turning every target into a hand-maintained source of truth
-- external-intake-only reinforcement is no longer enough by itself; the next honest step must be another live managed multi-target context
-
-### Shortcuts to reject
-
-- another adaptation-only note in `aoa-techniques`
-- a single-target sync path that never proves many-target distribution
-- hand-edited copied rule blocks without validator-backed or generated parity
+- `AOA-T-0013` is no longer part of the current long-gap backlog
+- follow-up canonical review now uses `aoa-skills` as the first live donor plus independent public reinforcement from `dyoshikawa/rulesync` and `EmberAGI/arbitrum-vibekit`
+- the previously open question of one more live many-target instruction-distribution surface is now closed for this bundle
 
 ## `AOA-T-0022` - Risk And Negative-Effect Lift
 
@@ -127,7 +97,6 @@ It does not reopen [AOA-T-0018](../techniques/docs/markdown-technique-section-li
 Open a future external evidence wave only after one of these paths is ready:
 
 1. `AOA-T-0005`: a non-origin public-safe new-intent rollout record exists beyond `atm10-agent`
-2. `AOA-T-0013`: a second instruction-heavy repo such as `aoa-agents` lands one-source -> many-target distribution with explicit drift control; `ruler` now stays the bounded origin donor, not the missing live reinforcement
-3. `AOA-T-0022`: a second committed corpus lands the exact five-part caution contract beyond the first `aoa-skills` donor
+2. `AOA-T-0022`: a second committed corpus lands the exact five-part caution contract beyond the first `aoa-skills` donor
 
 Until then, these techniques should remain explicitly bounded `promoted` techniques rather than being pushed toward canonical by wording alone.

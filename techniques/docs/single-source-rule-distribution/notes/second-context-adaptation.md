@@ -30,7 +30,8 @@
 - the same merged donor change updates `skills/aoa-source-of-truth-check/SKILL.md` so one authoritative source staying aligned across multiple downstream consumer surfaces is now part of an authored runtime skill surface
 - the consumer surfaces remain committed and reviewable instead of being generated only at runtime, which keeps the one-source -> many-target contract inspectable
 - the bundle now sits on top of two distinct support lanes: a bounded external origin in `ruler` and this first live sibling-repo donor in `aoa-skills`; only the latter counts as the current live reinforcement baseline for canonical review
-- this closes the first live donor gap for `AOA-T-0013`, but it is still only one repository and one bridge style rather than a second independent instruction-distribution context
+- later public reinforcement now also includes `dyoshikawa/rulesync`, which generates multiple assistant-facing rule files from unified `.rulesync/` sources, and `EmberAGI/arbitrum-vibekit`, which uses `.rulesync/` as the source of truth for generated `.claude/` and `.cursor/` instruction surfaces
+- together those later public surfaces confirm that the `aoa-skills` bridge pattern was not a one-off donor lineage and that the same bounded one-source -> many-target contract survives in an independent public tool plus live consumer stack
 
 ## Result
-- works as a first live second-context adaptation for one-source -> many-target distribution; the next honest step is one more live managed multi-target context, not another import-only review
+- remains the first live sibling-repo second-context adaptation for one-source -> many-target distribution, and later public reinforcement from `dyoshikawa/rulesync` plus `EmberAGI/arbitrum-vibekit` now closes the previously open second independent live-context gap for canonical review
