@@ -34,17 +34,17 @@ See also:
 |---|---|---|---|---|
 | TDD Slice Checklist | `present` | `8` | `techniques/agent-workflows/tdd-slice/checks/tdd-slice-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 
+### [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Stateless Single-Shot Agent Checklist | `absent` | `7` | `techniques/agent-workflows/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/agent-workflows/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Stateless Single-Shot Agent Checklist | `absent` | `7` | `techniques/agent-workflows/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
 
 ### [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`promoted`)
 

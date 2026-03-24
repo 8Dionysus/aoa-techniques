@@ -2,7 +2,7 @@
 id: AOA-T-0023
 name: stateless-single-shot-agent
 domain: agent-workflows
-status: promoted
+status: canonical
 origin:
   project: qqqa
   path: README.md
@@ -16,12 +16,12 @@ tags:
   - single-shot
   - confirmation
 summary: Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-21
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-23
 export_ready: true
 relations:
   - type: complements
@@ -35,6 +35,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # stateless-single-shot-agent
@@ -170,9 +172,12 @@ See `checks/stateless-single-shot-agent-checklist.md`.
 
 - adapted from open-source `qqqa`
 - promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique focused on stateless single-shot shell assistance
+- local `aoa-*` search lanes later closed as adjacent-only evidence around routing, checkpoint, and dry-run surfaces rather than a second exact-fit consumer
+- strengthened by GitHub Copilot CLI programmatic mode as an independent public shell-side fast path where one prompt exits after completion and tool-using commands stay approval-gated by default
+- promoted to `canonical` on 2026-03-23 after second-context review confirmed that the bounded single-shot contract survives beyond the donor lineage
 
 ## Future evolution
 
 - split out a dedicated read-only question-only sibling if that narrower mode proves reusable on its own
 - split out a dedicated confirmation-gated command execution sibling if tool-action posture becomes strong enough to stand without the rest of the fast-path contract
-- add a stronger second live context if another public repository adopts the same single-shot bounded invocation model
+- keep interactive-session guidance, approval-policy breadth, and broader automation posture out of this bundle unless they later prove to be narrower sibling techniques

@@ -5,29 +5,31 @@
 - name: stateless-single-shot-agent
 
 ## Target project
-- name: aoa-techniques
-- environment: public library repository with reusable technique bundles, generated catalog surfaces, and documentation-first validation
-- runtime: documentation-first repository that records the fast-path workflow rather than shipping the donor CLI itself
+- name: GitHub Copilot CLI programmatic mode
+- environment: official terminal-agent documentation for a CLI that supports both interactive sessions and one-prompt programmatic invocations
+- runtime: shell-side single-prompt invocation path where the CLI completes the task and exits, with explicit tool approval or allow/deny flags around mutating or command-executing tools
 
 ## What changed
-- paths: the donor exposes `qq` and `qa`; this adaptation presents a generic shell-side fast-path pattern without depending on exact binary names
-- services: provider profiles, HTTP clients, and CLI integrations are removed from the reusable contract
-- dependencies: the adaptation depends on bounded single-shot invocation and confirmation posture, not on the donor runtime stack
-- operating assumptions: contributors should read the technique as a workflow contract for shell-side agent work, not as an installation guide for the donor tool
+- paths: the donor exposes `qq` and `qa`, while this second context uses `copilot -p` and approval flags rather than donor-specific command names
+- services: the target family exposes broader interactive features and product integration, but this adaptation narrows to the programmatic one-prompt path only
+- dependencies: the confirmation seam moves from donor command split to per-tool approval prompts plus explicit allow/deny flags
+- operating assumptions: operators use the single-prompt path for quick terminal work and widen into interactive mode only when the task has clearly outgrown the bounded fast path
 
 ## What stayed invariant
-- contract: one invocation stays mostly independent, tool use stays single-step, and mutation stays confirmation-gated
-- validation logic: read-only and tool-using modes stay distinct, and the fast path should end after one invocation instead of becoming a hidden loop
-- safety rules: transient context remains input-only and mutating actions require explicit confirmation
+- contract: one shell-side invocation stays mostly independent and exits after handling one prompt
+- validation logic: quick question flows remain distinct from confirmed tool-using action flows, and the fast path does not require hidden continuity across runs
+- safety rules: mutating or command-executing tools stay behind explicit approval unless the operator deliberately widens permissions
 
 ## Risks introduced by adaptation
-- the pattern can become vague if a project copies the "stateless" label but quietly adds hidden continuity or multi-step autonomy
-- some repositories may keep the shell fast path but drop the explicit confirmation gate before mutating commands
+- broad auto-approval flags can widen the surface beyond the bounded confirmation seam that makes the fast path reviewable
+- interactive continuation can blur the line between a one-prompt fast path and a longer-lived session contract
+- tool allowlists scoped too broadly can weaken the practical discipline of one confirmed shell-side step
 
 ## Evidence
-- the donor `README.md` describes `qqqa` as a stateless shell tool where `qq` answers a single question and `qa` performs one tool-using step with confirmation
-- the donor philosophy section keeps runs mostly independent, shell-friendly, and safe by default instead of relying on long hidden sessions
-- this imported technique narrows those behaviors into one reusable fast-path contract for shell-side agent work
+- the official Copilot CLI docs say the CLI has interactive and programmatic interfaces, and the programmatic interface lets an operator pass a single prompt directly on the command line
+- the same docs say the CLI completes the task and then exits in that programmatic path, which preserves the mostly stateless one-invocation contract
+- the security and approval docs say tools that could modify files or execute commands ask for approval by default, and one approval option allows a particular command this time only
+- the docs also keep the boundary visible by warning that broader automatic approval flags widen risk and should be used deliberately
 
 ## Result
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific runtime breadth
+The same shell-side fast path survives in an independent public terminal-agent family: one prompt, one invocation, explicit approval before mutating tool use, and a clear boundary from broader interactive sessions.
