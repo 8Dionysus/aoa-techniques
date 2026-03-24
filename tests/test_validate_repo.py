@@ -1213,7 +1213,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         surfaces = validate_repo.parse_repo_doc_surfaces(REPO_ROOT)
         source_paths = {surface.doc_path for surface in surfaces}
 
-        self.assertEqual(11, len(surfaces))
+        self.assertEqual(12, len(surfaces))
         self.assertEqual(
             {spec["doc_path"] for spec in validate_repo.REPO_DOC_SURFACE_SPECS},
             source_paths,
@@ -1271,6 +1271,15 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         self.assertEqual(
             (
+                "Why This Repo Exists",
+                "Ontology Spine Inheritance",
+                "Method And Neighboring Layers",
+                "Boundary Reminder",
+            ),
+            surfaces_by_path["docs/ECOSYSTEM_CONTEXT.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
                 "Start Here",
                 "Surface Types",
                 "Recommended Reading Paths",
@@ -1306,7 +1315,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             list(validate_repo.REPO_DOC_SURFACE_GROUP_ORDER),
             [group["group"] for group in actual_full["surface_groups"]],
         )
-        self.assertEqual(11, len(actual_full["docs"]))
+        self.assertEqual(12, len(actual_full["docs"]))
 
     def test_repo_doc_surfaces_generated_reader_matches_builder_and_stays_bounded(self) -> None:
         validate_repo.validate_repo_doc_surface_reader(REPO_ROOT)
@@ -1343,13 +1352,15 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         releasing = (REPO_ROOT / "docs" / "RELEASING.md").read_text(encoding="utf-8")
 
         self.assertIn("START_HERE.md", docs_readme)
+        self.assertIn("ECOSYSTEM_CONTEXT.md", docs_readme)
         self.assertIn("docs/START_HERE.md", readme)
+        self.assertIn("docs/ECOSYSTEM_CONTEXT.md", readme)
         self.assertIn("docs/START_HERE.md", changelog)
         self.assertIn("START_HERE.md", kag_source_guide)
         self.assertIn("START_HERE.md", releasing)
         self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
         self.assertIn("repo_doc_surface_manifest.json", docs_readme)
-        self.assertIn("11 authoritative repo docs/status files", docs_readme)
+        self.assertIn("12 authoritative repo docs/status files", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", readme)
@@ -1391,7 +1402,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "1. [README](../README.md)\n2. [Start Here](START_HERE.md)\n3. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)\n4. [Technique Selection](TECHNIQUE_SELECTION.md)",
             docs_readme,
         )
-        self.assertIn("11 authoritative repo docs/status files", docs_readme)
+        self.assertIn("12 authoritative repo docs/status files", docs_readme)
         self.assertIn("one family guide such as", docs_readme)
         self.assertIn("one reader or manifest such as", docs_readme)
         self.assertIn("one reusable lift bundle in `../techniques/docs/`", docs_readme)
