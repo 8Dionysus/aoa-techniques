@@ -238,6 +238,19 @@ See also:
 - Validate by: each relation points to a real direct target; current consumers use the edges for one-step navigation rather than inference...
 - Source: [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
 
+### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
+
+- Summary: Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.
+- Intent: Convert potentially sensitive technical material into a shareable artifact that keeps the lesson while...
+- Use when: logs, configs, diagnostics, reports, or examples contain sensitive details or a result needs to be shared with a...
+- Avoid when: the material is already clearly public-safe and minimal or the real question is whether sharing is allowed at...
+- Needs: the material to share; the intended audience; known sensitive surfaces.
+- Produces: a sanitized shareable artifact; a short note on what was removed or generalized; any remaining sensitivity warning...
+- Core contract: the shared artifact does not leak secrets or private infrastructure detail; sanitization preserves meaning where possible.
+- Main risk: over-sanitizing until the artifact stops being useful.
+- Validate by: obvious sensitive surfaces were checked deliberately; the resulting artifact is still understandable; the sanitization level matches the intended audience.
+- Source: [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
+
 ### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 - Summary: Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph.
@@ -341,19 +354,6 @@ See also:
 - Main risk: the note captures a summary but not the actual decision tradeoff.
 - Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the not-chosen option and the...
 - Source: [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md)
-
-### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`promoted`)
-
-- Summary: Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.
-- Intent: Convert potentially sensitive technical material into a shareable artifact that keeps the lesson while...
-- Use when: logs, configs, diagnostics, reports, or examples contain sensitive details or a result needs to be shared with a...
-- Avoid when: the material is already clearly public-safe and minimal or the real question is whether sharing is allowed at...
-- Needs: the material to share; the intended audience; known sensitive surfaces.
-- Produces: a sanitized shareable artifact; a short note on what was removed or generalized; any remaining sensitivity warning...
-- Core contract: the shared artifact does not leak secrets or private infrastructure detail; sanitization preserves meaning where possible.
-- Main risk: over-sanitizing until the artifact stops being useful.
-- Validate by: obvious sensitive surfaces were checked deliberately; the resulting artifact is still understandable; the sanitization level matches the intended audience.
-- Source: [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
 
 ### [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 

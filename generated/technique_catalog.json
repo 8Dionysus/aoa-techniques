@@ -1826,7 +1826,7 @@
       "id": "AOA-T-0034",
       "name": "public-safe-artifact-sanitization",
       "domain": "docs",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.",
       "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
       "origin": {
@@ -1844,12 +1844,12 @@
         "public-safe",
         "bounded"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-22",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-23",
       "export_ready": true,
       "relations": [],
       "evidence": [
@@ -1864,6 +1864,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

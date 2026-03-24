@@ -2,7 +2,7 @@
 id: AOA-T-0034
 name: public-safe-artifact-sanitization
 domain: docs
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-sanitized-share/SKILL.md
@@ -16,12 +16,12 @@ tags:
   - public-safe
   - bounded
 summary: Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-22
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-23
 export_ready: true
 relations: []
 evidence:
@@ -31,6 +31,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # public-safe-artifact-sanitization
@@ -168,6 +170,9 @@ See `checks/public-safe-artifact-sanitization-checklist.md`.
 
 - extracted from the `aoa-sanitized-share` skill surface in `aoa-skills`
 - promoted into `aoa-techniques` on 2026-03-22 as a bounded public-safe sharing technique
+- local Wave A follow-up on 2026-03-23 closes `aoa-playbooks`, `aoa-evals`, `aoa-agents`, `aoa-routing`, and `aoa-skills` overlay branches as adjacent or same-lineage lanes rather than a second live consumer
+- external follow-up on 2026-03-23 identifies `dr-rakshith-truth-zeeker/Truth-Zeeker-AI-Public` as an exact-fit sanitized-share consumer, while broader public-release/export surfaces such as `brunoclz/br-acc` and `trevin-creator/Tiny-Lab` remain adjacent rather than canonical-closure evidence
+- canonical review on 2026-03-23 approves `AOA-T-0034` as the default bounded share-prep technique when sensitive technical material must be made shareable without turning the workflow into approval policy or execution planning
 
 ## Future evolution
 

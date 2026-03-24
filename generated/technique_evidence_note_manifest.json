@@ -17265,6 +17265,163 @@
       "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/docs/public-safe-artifact-sanitization/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0034"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "public-safe-artifact-sanitization"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for bounded sanitize-for-sharing work over technical artifacts that are useful but not safe to circulate raw"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on preparing a shareable artifact without widening into approval classification, incident response, public-release governance, or generic privacy tooling"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams over-sanitize until the artifact keeps almost none of the lesson it was meant to preserve"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers treat a sanitized artifact as proof that the underlying action, system, or publication decision is approved"
+                },
+                {
+                  "order": 3,
+                  "text": "canonical pressure widens the technique into full public-release policy, disclosure workflow, or incident-summary governance instead of bounded share-prep"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a successful sanitization pass can create false confidence that all important context is still represented when key caveats were generalized away"
+                },
+                {
+                  "order": 2,
+                  "text": "making this the default can encourage ritual sanitization even for already-safe material, adding friction without reducing real exposure"
+                },
+                {
+                  "order": 3,
+                  "text": "a strong share-prep pattern can cause teams to postpone harder boundary questions by polishing the artifact instead of deciding whether it should be shared at all"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using `AOA-T-0034` as a substitute for approval gating, dry-run planning, or safe infra-change technique selection"
+                },
+                {
+                  "order": 2,
+                  "text": "treating generalized placeholders, pseudonyms, or doc-net replacements as if they automatically preserve the original lesson"
+                },
+                {
+                  "order": 3,
+                  "text": "widening the technique into repo-release bootstrap, legal/privacy gatekeeping, or incident communication choreography"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "sanitized outputs read cleanly but reviewers still cannot say what was generalized, omitted, or left uncertain"
+                },
+                {
+                  "order": 2,
+                  "text": "pull requests start debating publication policy or execution safety inside a share-prep artifact review"
+                },
+                {
+                  "order": 3,
+                  "text": "artifacts keep losing the operational or technical lesson they were supposed to preserve after redaction"
+                },
+                {
+                  "order": 4,
+                  "text": "teams cite the sanitized artifact itself as authorization instead of as a bounded sharing surface"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require one short note about what changed, what remained approximate, and what lesson should still survive the sanitization pass"
+                },
+                {
+                  "order": 2,
+                  "text": "route approval, publication, incident, and execution questions to their narrower sibling surfaces instead of letting them accumulate here"
+                },
+                {
+                  "order": 3,
+                  "text": "prefer generalization that preserves structure and signal over blanket deletion when the lesson would otherwise disappear"
+                },
+                {
+                  "order": 4,
+                  "text": "revisit canonical status if the bundle starts being used mainly for release governance, classification policy, or privacy-engineering programs rather than bounded share-prep"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for over-sanitization, false authorization, and public-release-governance creep"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/docs/public-safe-artifact-sanitization/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -17295,7 +17452,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `promoted`"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -17307,17 +17464,22 @@
                 {
                   "order": 1,
                   "key": "origin evidence",
-                  "value_markdown": "the source skill already defines a bounded sanitization contract with a review checklist and public-safe example"
+                  "value_markdown": "the source skill already defines a bounded sanitization contract with a review checklist, explicit approval/execution exclusions, and a public-safe example"
                 },
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "`aoa-techniques` now carries the same contract as a public docs technique with a checklist and example"
+                  "value_markdown": "`Truth-Zeeker-AI-Public` publishes a sanitized public snapshot with pseudonymized captures and outputs, documentation-reserved replacements, change-summary notes, and verification language that keeps the artifact useful for research readers"
                 },
                 {
                   "order": 3,
+                  "key": "local and external boundary sweep",
+                  "value_markdown": "`aoa-playbooks`, `aoa-evals`, `aoa-agents`, `aoa-routing`, and `aoa-skills` overlay branches stayed adjacent or same-lineage rather than becoming a second consumer, while broader public-release/export surfaces such as `br-acc` and `Tiny-Lab` stayed useful adjacent evidence but not exact-fit share-prep closure"
+                },
+                {
+                  "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the technique has a bounded contract, an explicit before/after example, and a reviewer-facing checklist that now makes false-success sanitization easier to catch"
+                  "value_markdown": "the bundle now has a bounded contract, an explicit example, a reviewer-facing checklist, a real external second consumer, and a clearer map of nearby false-positive surfaces"
                 }
               ]
             },
@@ -17336,6 +17498,10 @@
                 },
                 {
                   "order": 3,
+                  "text": "it stays narrower than public-release governance or privacy-engineering programs because the center of gravity is still one bounded artifact made shareable without losing the lesson"
+                },
+                {
+                  "order": 4,
                   "text": "it helps future reviewers without turning the repository into a sharing-policy engine or pretending that share-prep authorizes the underlying action"
                 }
               ]
@@ -17348,7 +17514,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-22"
+                  "value_markdown": "2026-03-23"
                 },
                 {
                   "order": 2,
@@ -17358,7 +17524,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the public bundle keeps only the reusable share-prep contract and excludes source-specific incident detail"
+                  "value_markdown": "the public bundle keeps only the reusable share-prep contract and excludes source-specific incident detail, release choreography, and broader policy logic"
                 },
                 {
                   "order": 4,
@@ -17374,11 +17540,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "one live second consumer beyond the source skill would strengthen the case for canonical promotion"
+                  "text": "no blocking gap remains for canonical use as long as the technique stays bounded to sanitize-for-sharing work over one artifact or artifact set"
                 },
                 {
                   "order": 2,
-                  "text": "the technique still needs judgment to avoid over-sanitizing already-safe material"
+                  "text": "future review should keep watching for over-sanitizing already-safe material, false authorization drift, and widening into public-release governance or generic privacy tooling"
                 }
               ]
             },
@@ -17389,11 +17555,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0034` promoted"
+                  "text": "promote `AOA-T-0034` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live consumer confirms the contract outside the source skill surface"
+                  "text": "use `AOA-T-0034` as the default bounded share-prep technique when sensitive technical material must be made shareable without turning the workflow into approval policy or execution planning"
                 }
               ]
             }
@@ -17512,17 +17678,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "Truth-Zeeker-AI-Public"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public technique repository with authored bundles, selection surfaces, and generated catalogs"
+                  "value_markdown": "public security-research repository that publishes a sanitized snapshot of a Zeek-plus-ML pipeline, sample artifacts, and supporting docs"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first corpus that records a reusable share-prep contract instead of shipping the source skill manifest"
+                  "value_markdown": "repo-owned public release surface where captures, outputs, and technical context are pseudonymized or generalized before broader sharing"
                 }
               ]
             },
@@ -17534,22 +17700,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the source lived in `aoa-skills/skills/aoa-sanitized-share`; this adaptation packages the same bounded contract as a standalone docs technique"
+                  "value_markdown": "the source skill sanitizes one bounded local artifact for sharing, while this second context sanitizes a broader repo surface through `samples_sanitized/`, `sanitized_outputs/`, pseudonymization utilities, and a README-level release explanation"
                 },
                 {
                   "order": 2,
                   "key": "artifacts",
-                  "value_markdown": "the technique now owns its own example, checklist, and compact public notes"
+                  "value_markdown": "instead of one skill output, the target project publishes sanitized packet captures, pseudonymized CSV and chart outputs, and a change summary that names what was removed or generalized"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the reusable contract stands on redaction, generalization, and useful sharing, not on authority or execution tooling"
+                  "value_markdown": "the second context depends on pseudonymization scripts, documentation-reserved IP ranges, and release verification notes rather than on approval or execution tooling"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "the resulting artifact should stay understandable after sanitization and safe for the intended audience"
+                  "value_markdown": "the public-facing result should preserve the technical lesson for research readers while preventing raw captures, real topology, or live identifiers from leaking into the shared branch"
                 }
               ]
             },
@@ -17583,15 +17749,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the technique can be overused on already-safe material"
+                  "text": "release-oriented repo structure can tempt the technique to widen into public-release governance instead of staying with artifact sanitization"
                 },
                 {
                   "order": 2,
-                  "text": "the result can become too abstract to be useful"
+                  "text": "pseudonymized samples can create false confidence if reviewers assume that every surrounding surface is now equally safe"
                 },
                 {
                   "order": 3,
-                  "text": "a reviewer can mistake the technique for a permissioning workflow"
+                  "text": "a polished public snapshot can still lose the lesson if generalization outpaces explanation"
                 }
               ]
             },
@@ -17602,15 +17768,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the source skill already has a public-safe runtime example and a review checklist"
+                  "text": "the public README explicitly frames the repo as a `fully sanitized version` and says captures, logs, and model artifacts are `pseudonymized for safe public reference`"
                 },
                 {
                   "order": 2,
-                  "text": "the source skill already calls out approval-gate and execution-path boundaries"
+                  "text": "the same README keeps the technical lesson intact by still describing the Zeek-plus-ML pipeline, sample artifacts, and intended research use instead of stripping the repository down to a generic placeholder"
                 },
                 {
                   "order": 3,
-                  "text": "the source skill remains focused on share-prep, not on allowing the underlying action"
+                  "text": "the published change summary names concrete sanitization moves such as replacing private addresses with documentation-reserved ranges, removing raw captures, and adding sanitized samples"
+                },
+                {
+                  "order": 4,
+                  "text": "the repo's verification section keeps the share-prep contract reviewable by calling the branch a `verified public-safe build` and pointing readers to reproducible sanity-check scripts"
                 }
               ]
             },
@@ -17618,7 +17788,7 @@
               "heading": "Result",
               "order": 7,
               "payload_type": "markdown",
-              "markdown": "The same sanitization contract survives a public docs-technique adaptation without carrying over source-specific incident detail or execution semantics."
+              "markdown": "The same sanitization contract survives in an independent public repo that prepares sensitive technical material for broader sharing without collapsing into approval workflow, execution planning, or generic privacy policy."
             }
           ]
         }

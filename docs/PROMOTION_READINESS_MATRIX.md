@@ -10,10 +10,10 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `29` techniques
+- current promoted corpus: `28` techniques
 - current approve-now queue: none
-- closest current queue item: [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md), because it is now the strongest remaining internal-origin docs candidate and only needs one live second consumer beyond the source skill surface
-- latest graduation: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the strengthened `aoa-skills`, `rulesync`, and live `.rulesync` consumer evidence
+- closest current queue item: [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md), because it now leads the remaining Wave A pack and has the clearest fast-path contract among the still-promoted bundles
+- latest graduation: [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the strengthened `aoa-skills` origin plus `Truth-Zeeker-AI-Public` second-consumer evidence
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md), and [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) are earlier than the rest and still need second-context plus canonical-readiness scaffolding before canonical discussion is honest
 
@@ -35,6 +35,7 @@ This snapshot is about the current local sweep only.
 It narrows the next search space and closes false-positive local lanes, but it does not replace later donor searches where those still remain honest.
 `AOA-T-0018` has since exited this matrix through a separate follow-up canonical review.
 `AOA-T-0013` has since exited this matrix through a separate follow-up canonical review after independent public reinforcement from `dyoshikawa/rulesync` and `EmberAGI/arbitrum-vibekit`.
+`AOA-T-0034` has since exited this matrix through a separate follow-up canonical review after an exact-fit second-consumer pass around `Truth-Zeeker-AI-Public`.
 
 ## Readiness Lanes
 
@@ -44,7 +45,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
 | `external live-adopter lane` | `13` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
-| `internal-origin second-consumer lane` | `10` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
+| `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
 
 ## Swarm Rule
@@ -134,19 +135,18 @@ Shared blocker: the family is coherent, but still needs one more live artifact-f
 | [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) | Post-capture transcript-packaging sibling. | One second repo or surface family treating transcript packaging as a reviewable artifact layer. |
 | [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging. | One second downstream consumer outside the current witness/compost pilot lineage. |
 
-### Pack 8 - Internal Docs Practice Pair
+### Pack 8 - Internal Docs Practice
 
 Shared blocker: each bundle is internally strong, but still needs another live consumer so it reads as a default pattern rather than one good local practice.
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | Single-decision note contract is bounded and useful, but still narrow. | One second live consumer proving the same one-decision record pattern in practice. |
-| [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | Strongest internal-origin docs candidate right now. | One second live consumer outside the source skill surface. |
 
 ## Suggested Wave Order
 
 1. `Wave A - evidence-prep leaders`
-   - `AOA-T-0034`, `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
+   - `AOA-T-0023`, `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
    - goal: close the smallest honest blocker for the strongest current candidates without flipping status yet
 2. `Wave B - pack proof waves`
    - shell-agent fast path
