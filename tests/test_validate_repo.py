@@ -781,10 +781,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 self.assertIn(expected_phrase, review_content)
                 self.assertIn(expected_phrase, reviews_by_path[review_path]["next_step_markdown"])
 
-    def test_changelog_tracks_unreleased_without_losing_v010_entry(self) -> None:
+    def test_changelog_tracks_unreleased_without_losing_v020_and_v010_entries(self) -> None:
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("## [Unreleased]", changelog)
+        self.assertIn("## [0.2.0] - 2026-03-23", changelog)
         self.assertIn("## [0.1.0] - 2026-03-17", changelog)
 
     def test_selection_patterns_describes_validator_backed_navigation(self) -> None:
@@ -1279,7 +1280,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             surfaces_by_path["docs/README.md"].top_level_sections,
         )
         self.assertEqual(
-            ("[Unreleased]", "[0.1.0] - 2026-03-17"),
+            ("[Unreleased]", "[0.2.0] - 2026-03-23", "[0.1.0] - 2026-03-17"),
             surfaces_by_path["CHANGELOG.md"].top_level_sections,
         )
 
