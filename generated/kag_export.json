@@ -1,0 +1,41 @@
+{
+  "owner_repo": "aoa-techniques",
+  "kind": "technique",
+  "object_id": "AOA-T-0043",
+  "primary_question": "How should one bridge keep primary and supporting source inputs explicit without widening into graph semantics?",
+  "summary_50": "Source-owned tiny export for explicit primary and supporting provenance.",
+  "summary_200": "Source-owned tiny export capsule for a technique that keeps multi-source input ordering visible so downstream KAG and bridge readers preserve provenance priority without replacing the authored bundle.",
+  "source_inputs": [
+    {
+      "repo": "aoa-techniques",
+      "source_class": "technique_bundle",
+      "role": "primary"
+    }
+  ],
+  "entry_surface": {
+    "repo": "aoa-techniques",
+    "path": "generated/technique_capsules.json",
+    "match_key": "id",
+    "match_value": "AOA-T-0043"
+  },
+  "section_handles": [
+    "intent",
+    "inputs",
+    "outputs",
+    "contracts",
+    "risks",
+    "validation"
+  ],
+  "direct_relations": [
+    {
+      "relation_type": "complements",
+      "target_ref": "aoa-techniques/techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md"
+    },
+    {
+      "relation_type": "complements",
+      "target_ref": "aoa-techniques/techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md"
+    }
+  ],
+  "provenance_note": "Guide to source, not source replacement, built from source-owned technique surfaces.",
+  "non_identity_boundary": "Derived export capsule for KAG consumers; authored technique meaning remains in aoa-techniques markdown."
+}
