@@ -827,6 +827,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "KAG_SOURCE_LIFT_GUIDE.md",
             "SEMANTIC_REVIEW_GUIDE.md",
             "LONG_GAP_CANON_DESIGN.md",
+            "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md",
+            "EXTERNAL_EVIDENCE_LEDGER.md",
             "CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
             "aoa-skills",
             "aoa-evals",
@@ -870,6 +872,50 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "python scripts/release_check.py",
         ):
             self.assertIn(target, start_here)
+
+    def test_external_evidence_surfaces_are_discoverable_and_operator_complete(self) -> None:
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        roadmap = (REPO_ROOT / "docs" / "DEEP_AUDIT_ROADMAP.md").read_text(encoding="utf-8")
+        runbook = (REPO_ROOT / "docs" / "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md").read_text(
+            encoding="utf-8"
+        )
+        ledger = (REPO_ROOT / "docs" / "EXTERNAL_EVIDENCE_LEDGER.md").read_text(
+            encoding="utf-8"
+        )
+
+        for content in (start_here, docs_readme, roadmap):
+            self.assertIn("EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md", content)
+            self.assertIn("EXTERNAL_EVIDENCE_LEDGER.md", content)
+
+        self.assertIn("docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md", root_readme)
+        self.assertIn("docs/EXTERNAL_EVIDENCE_LEDGER.md", root_readme)
+
+        for target in (
+            "AOA-T-0032",
+            "AOA-T-0026",
+            "AOA-T-0036",
+            "one technique bundle at a time",
+            "do not rerun a false-positive lane unless a new public signal exists",
+            "python scripts/release_check.py",
+            "External Evidence Ledger",
+        ):
+            self.assertIn(target, runbook)
+
+        for target in (
+            "AOA-T-0018",
+            "AOA-T-0013",
+            "AOA-T-0034",
+            "AOA-T-0023",
+            "AOA-T-0032",
+            "AOA-T-0026",
+            "AOA-T-0036",
+            "OpenAI Codex issue `#2765`",
+            "OpenDAX",
+            "Promotion Readiness Matrix",
+        ):
+            self.assertIn(target, ledger)
 
     def test_cross_layer_candidates_surface_is_discoverable_from_repo_entrypoints(self) -> None:
         root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")

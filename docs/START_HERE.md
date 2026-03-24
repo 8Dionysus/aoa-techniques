@@ -24,6 +24,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
 - open [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md) when the question is which `promoted` bundle can be honestly strengthened next and what proof is still missing
 - open [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
+- open [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md) when the question is how to run the live external-proof search over the remaining `promoted` queue without repeating stale lanes
+- open [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md) when the question is which external lanes have already been searched, rejected as adjacent, or honestly closed
 - open [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md) when the question is what can be extracted from an external donor without importing foreign doctrine
 - open [External Import Runbook](EXTERNAL_IMPORT_RUNBOOK.md) when the question is how to take one bounded donor from triage to merge without inventing a new maintainer path
 - open [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md) when the question is why a remaining `promoted` technique still needs an external donor path
