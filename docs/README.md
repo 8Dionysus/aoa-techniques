@@ -27,6 +27,8 @@ Choose the path that matches your question:
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
   - [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
   - [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
+  - [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
+  - [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
   - [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md)
   - [External Import Runbook](EXTERNAL_IMPORT_RUNBOOK.md)
   - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
@@ -164,6 +166,8 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
 - [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
+- [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
+- [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
 - [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md)
 - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
 - [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
@@ -257,6 +261,15 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 4. [Shadow Patterns](SHADOW_PATTERNS.md) when the question is about caution seams rather than technique choice
 5. one technique bundle plus its `notes/`; for `canonical` bundles include `canonical-readiness.md` and `adverse-effects-review.md`
 6. a relevant semantic-review or shadow-review pilot if the technique sits inside a reviewed cluster
+
+### Promotion operations path
+
+1. [Start Here](START_HERE.md)
+2. [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
+3. [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
+4. [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
+5. [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
+6. [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
 
 ### KAG / lift path
 

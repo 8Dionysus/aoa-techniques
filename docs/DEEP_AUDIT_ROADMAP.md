@@ -9,7 +9,32 @@ It is an audit and closure-roadmap surface. It does not change technique status,
 Historical note:
 
 - the Phase 1 and Phase 3 repo-only findings below record the baseline that drove the already-landed hardening wave
-- use the `Current Closure State`, remaining promoted backlog sections, and Phase 5 synthesis as the live roadmap for what is still open now
+- the detailed phase findings below remain historical audit record unless a later live snapshot says otherwise
+- use the `Current Live Closure Snapshot`, [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md), [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md), [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md), and [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md) as the live roadmap for what is still open now
+
+## Current Live Closure Snapshot
+
+- current verification path: `python scripts/release_check.py`
+- current corpus split: `48` bundles, `21 canonical`, `27 promoted`
+- repo-only hardening is largely landed; the main open work is now external-evidence execution rather than missing internal infrastructure
+- recent canonical closures since the baseline below:
+  - [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+  - [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+  - [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
+  - [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+- live promotion and evidence operating surfaces now are:
+  - [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
+  - [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
+  - [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
+  - [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
+- current closest promoted queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+- current external-evidence lead sprint:
+  - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+  - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+  - [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+- current long-gap holds remain:
+  - [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+  - [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 ## Baseline
 
