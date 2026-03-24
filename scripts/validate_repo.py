@@ -63,6 +63,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_semantic_review_manifest.py",
     "scripts/build_shadow_review_manifest.py",
     "scripts/build_repo_doc_surface_manifest.py",
+    "scripts/build_kag_export.py",
     "scripts/release_check.py",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
@@ -85,6 +86,8 @@ REQUIRED_STAGE1_FILES = (
     "generated/shadow_review_manifest.min.json",
     "generated/repo_doc_surface_manifest.json",
     "generated/repo_doc_surface_manifest.min.json",
+    "generated/kag_export.json",
+    "generated/kag_export.min.json",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/TECHNIQUE_SELECTION_GUIDE.md",
@@ -101,6 +104,36 @@ REQUIRED_KAG_SOURCE_READER_FILES = (
 )
 REQUIRED_CAPSULE_SURFACE_FILES = ("docs/TECHNIQUE_CAPSULES.md",)
 REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
+REQUIRED_KAG_EXPORT_FILES = ("docs/KAG_EXPORT.md",)
+KAG_EXPORT_TECHNIQUE_ID = "AOA-T-0043"
+KAG_EXPORT_SECTION_HANDLES = (
+    "intent",
+    "inputs",
+    "outputs",
+    "contracts",
+    "risks",
+    "validation",
+)
+KAG_EXPORT_PRIMARY_QUESTION = (
+    "How should one bridge keep primary and supporting source inputs explicit "
+    "without widening into graph semantics?"
+)
+KAG_EXPORT_SUMMARY_50 = (
+    "Source-owned tiny export for explicit primary and supporting provenance."
+)
+KAG_EXPORT_SUMMARY_200 = (
+    "Source-owned tiny export capsule for a technique that keeps multi-source "
+    "input ordering visible so downstream KAG and bridge readers preserve "
+    "provenance priority without replacing the authored bundle."
+)
+KAG_EXPORT_PROVENANCE_NOTE = (
+    "Guide to source, not source replacement, built from source-owned "
+    "technique surfaces."
+)
+KAG_EXPORT_NON_IDENTITY_BOUNDARY = (
+    "Derived export capsule for KAG consumers; authored technique meaning "
+    "remains in aoa-techniques markdown."
+)
 SELECTION_REVIEW_DOCS = {
     "agent_workflows_core": "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md",
     "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
@@ -2953,6 +2986,13 @@ def validate_repo_doc_surface_files(repo_root: Path) -> None:
             fail(f"{repo_root}: missing required repo doc surface file '{relative_path}'")
 
 
+def validate_kag_export_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_KAG_EXPORT_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required KAG export file '{relative_path}'")
+
+
 def validate_technique_bundle(
     repo_root: Path, technique_dir: Path, expected_domain: str, schema_store: dict[str, Any]
 ) -> TechniqueRecord:
@@ -3953,6 +3993,80 @@ def build_capsule_payloads(
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     full_payload = build_capsule_payload(repo_root, records)
     return full_payload, project_min_capsule_payload(full_payload)
+
+
+def build_kag_export_payloads(
+    repo_root: Path, records: list[TechniqueRecord]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    records_by_id = {record.id: record for record in records}
+    record = records_by_id.get(KAG_EXPORT_TECHNIQUE_ID)
+    if record is None:
+        fail(f"{repo_root}: missing required KAG export technique '{KAG_EXPORT_TECHNIQUE_ID}'")
+
+    section_headings = {section.heading for section in record.sections}
+    expected_headings = {
+        "Intent",
+        "Inputs",
+        "Outputs",
+        "Contracts",
+        "Risks",
+        "Validation",
+    }
+    if not expected_headings.issubset(section_headings):
+        fail(
+            f"{record.technique_path}: missing required headings for KAG export "
+            f"{sorted(expected_headings - section_headings)}"
+        )
+
+    raw_relations = record.frontmatter.get("relations")
+    if not isinstance(raw_relations, list) or not raw_relations:
+        fail(f"{record.technique_path}: KAG export technique must keep non-empty relations")
+    direct_relations: list[dict[str, str]] = []
+    for relation in raw_relations:
+        if not isinstance(relation, dict):
+            fail(f"{record.technique_path}: KAG export relation entries must be objects")
+        relation_type = relation.get("type")
+        target_id = relation.get("target")
+        if not isinstance(relation_type, str) or not relation_type:
+            fail(f"{record.technique_path}: KAG export relation type must be a non-empty string")
+        if not isinstance(target_id, str) or not target_id:
+            fail(f"{record.technique_path}: KAG export relation target must be a non-empty string")
+        target_record = records_by_id.get(target_id)
+        if target_record is None:
+            fail(f"{record.technique_path}: KAG export relation target '{target_id}' is missing")
+        direct_relations.append(
+            {
+                "relation_type": relation_type,
+                "target_ref": f"aoa-techniques/{target_record.technique_path.relative_to(repo_root).as_posix()}",
+            }
+        )
+
+    payload = {
+        "owner_repo": "aoa-techniques",
+        "kind": "technique",
+        "object_id": record.id,
+        "primary_question": KAG_EXPORT_PRIMARY_QUESTION,
+        "summary_50": KAG_EXPORT_SUMMARY_50,
+        "summary_200": KAG_EXPORT_SUMMARY_200,
+        "source_inputs": [
+            {
+                "repo": "aoa-techniques",
+                "source_class": "technique_bundle",
+                "role": "primary",
+            }
+        ],
+        "entry_surface": {
+            "repo": "aoa-techniques",
+            "path": "generated/technique_capsules.json",
+            "match_key": "id",
+            "match_value": record.id,
+        },
+        "section_handles": list(KAG_EXPORT_SECTION_HANDLES),
+        "direct_relations": direct_relations,
+        "provenance_note": KAG_EXPORT_PROVENANCE_NOTE,
+        "non_identity_boundary": KAG_EXPORT_NON_IDENTITY_BOUNDARY,
+    }
+    return payload, payload
 
 
 def build_section_manifest_payloads(
@@ -5373,6 +5487,28 @@ def validate_repo_doc_surface_reader(repo_root: Path) -> None:
         )
 
 
+def validate_kag_export(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    full_path = repo_root / "generated" / "kag_export.json"
+    min_path = repo_root / "generated" / "kag_export.min.json"
+
+    expected_full, expected_min = build_kag_export_payloads(repo_root, records)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated KAG export is out of date; "
+            "run 'python scripts/build_kag_export.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated compact KAG export is out of date; "
+            "run 'python scripts/build_kag_export.py'"
+        )
+    if actual_full != actual_min:
+        fail(f"{min_path}: compact KAG export must stay identical to the bounded full export")
+
+
 def validate_repo(repo_root: Path) -> None:
     validate_stage1_files(repo_root)
     validate_selection_files(repo_root)
@@ -5380,6 +5516,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_kag_source_reader_files(repo_root)
     validate_capsule_surface_files(repo_root)
     validate_repo_doc_surface_files(repo_root)
+    validate_kag_export_files(repo_root)
     schema_store = load_schema_store(repo_root)
     records = collect_techniques(repo_root, schema_store)
     validate_selection_navigation_specs(records, repo_root)
@@ -5400,6 +5537,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_repo_doc_surface_manifests(repo_root)
     validate_selection_surface(repo_root, records)
     validate_repo_doc_surface_reader(repo_root)
+    validate_kag_export(repo_root, records)
     validate_public_hygiene(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -5425,6 +5563,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated repo doc surface manifest parity")
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated generated repo doc surface parity")
+    print("[ok] validated generated source-owned KAG export parity")
     print("[ok] validated selection navigation specs, repo doc routing specs, review-backed working sets, shadow specs, and bounded public hygiene")
 
 
