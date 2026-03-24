@@ -23,6 +23,7 @@ If you are new to this repository, follow this short path:
 ## Quick routes
 
 - if you want one repo-owned entrypoint before choosing any deeper surface, open `docs/START_HERE.md`
+- if you need the shortest explanation of where this repo sits in the AoA layer map, open `docs/ECOSYSTEM_CONTEXT.md`
 - if you need bounded execution workflows built from techniques, go to [aoa-skills](https://github.com/8Dionysus/aoa-skills)
 - if you need portable proof surfaces for quality or boundary claims, go to [aoa-evals](https://github.com/8Dionysus/aoa-evals)
 - if you need the smallest next surface by task type, go to [aoa-routing](https://github.com/8Dionysus/aoa-routing)
@@ -31,6 +32,7 @@ If you are new to this repository, follow this short path:
 ## Deeper routes
 
 - for one repo-only orientation path that already routes humans and agents, open `docs/START_HERE.md`
+- for the repo-owned layer-position note that explains ontology inheritance and why scenario method stays in `aoa-playbooks`, open `docs/ECOSYSTEM_CONTEXT.md`
 - for one end-to-end origin-to-public example, read `WALKTHROUGH.md`
 - for source-first donor intake and refinement posture, open `docs/DONOR_REFINERY_RUBRIC.md`
 - for the maintainer-facing donor-to-merge path, open `docs/EXTERNAL_IMPORT_RUNBOOK.md`

@@ -27,6 +27,7 @@ For this first docs/status wave, the authoritative source set is exactly:
 
 - `README.md`
 - `docs/START_HERE.md`
+- `docs/ECOSYSTEM_CONTEXT.md`
 - `TECHNIQUE_INDEX.md`
 - `AGENTS.md`
 - `CONTRIBUTING.md`

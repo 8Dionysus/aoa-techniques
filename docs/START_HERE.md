@@ -9,6 +9,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - the public practice canon of AoA
 - the source of truth for technique meaning, IDs, bounded contracts, adaptation notes, and generated technique surfaces built from those authored sources
 - a repository for reusable techniques, not for bounded execution workflows, verdict logic, routing policy, or private project operations
+- the technique-layer home inside the AoA ontology spine; open [Ecosystem Context](ECOSYSTEM_CONTEXT.md) when the question is why this layer exists separately from skills, playbooks, evals, or runtime repos
 
 ## If You Need One Technique Now
 

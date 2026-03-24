@@ -12,6 +12,7 @@ Choose the path that matches your question:
 
 - I need one repo-only entrypoint first:
   - [Start Here](START_HERE.md)
+  - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
 - I need to pick a technique now:
   - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
   - [Technique Selection](TECHNIQUE_SELECTION.md)
@@ -23,6 +24,7 @@ Choose the path that matches your question:
   - [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
 - I need to understand status, review posture, or canonical promotion:
   - [Start Here](START_HERE.md)
+  - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
   - [Canonical Rubric](CANONICAL_RUBRIC.md)
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
   - [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
@@ -144,7 +146,7 @@ These are small local derived cards for runtime lookup. They stay subordinate to
 These are derived docs/status source-lift surfaces. They stay subordinate to the authored public docs and do not replace those docs as the source of truth.
 
 - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-  - use when the 11 authoritative repo docs/status files should be lifted into bounded routing knowledge only
+  - use when the 12 authoritative repo docs/status files should be lifted into bounded routing knowledge only
 
 ### Generated review manifests
 
@@ -162,6 +164,7 @@ These are derived review-knowledge surfaces for KAG/source-lift lookup. They sta
 These are human-authored guides that define bounded review, metadata, and documentation discipline.
 
 - [Start Here](START_HERE.md)
+- [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)

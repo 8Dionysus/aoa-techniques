@@ -329,6 +329,11 @@ REPO_DOC_NAVIGATION_SPECS = (
         "note": "Use Start Here for the shortest repo-owned route, then open the docs map only when you need the deeper guide and generated-surface tree.",
     },
     {
+        "question": "Where is this repository positioned inside the AoA layer map?",
+        "doc_ids": ("ecosystem_context", "start_here"),
+        "note": "Use Ecosystem Context for the repo-owned layer-position note, then Start Here when you want the shortest bounded route through the rest of the public surface.",
+    },
+    {
         "question": "Where do contribution rules and PR boundaries live?",
         "doc_ids": ("contributing", "agents"),
         "note": "Use CONTRIBUTING for the public PR path and AGENTS for the repo's public-safe PLAN -> DIFF -> VERIFY -> REPORT doctrine.",
@@ -356,6 +361,12 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_path": "docs/START_HERE.md",
         "surface_group": "entrypoint/map",
         "bounded_role": "repo-owned self-serve entrypoint for route selection, corpus posture, and stay-here versus leave-here decisions",
+    },
+    {
+        "doc_id": "ecosystem_context",
+        "doc_path": "docs/ECOSYSTEM_CONTEXT.md",
+        "surface_group": "walkthrough/context",
+        "bounded_role": "repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks",
     },
     {
         "doc_id": "technique_index",
@@ -2556,8 +2567,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 11:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 11 authoritative docs/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 12:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 12 authoritative docs/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 
@@ -4841,7 +4852,7 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
             "## Boundaries",
             "",
             "- The source of meaning stays in the authored docs themselves.",
-            "- The bounded source set is exactly the 11 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
+            "- The bounded source set is exactly the 12 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
             "- This surface and its manifest are routing aids only. They do not become a new source of truth or a status-policy engine.",
             "",
         ]

@@ -20,6 +20,7 @@ See also:
 |---|---|---|
 | Where should I start if I am new to the repository? | [aoa-techniques](../README.md) (`README.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`), [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | Start with the root README, then use Start Here and the technique index for bounded navigation. |
 | Where is the repo-only self-serve route before deeper guides split out? | [Start Here](START_HERE.md) (`docs/START_HERE.md`), [Documentation Map](README.md) (`docs/README.md`) | Use Start Here for the shortest repo-owned route, then open the docs map only when you need the deeper guide and generated-surface tree. |
+| Where is this repository positioned inside the AoA layer map? | [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`) | Use Ecosystem Context for the repo-owned layer-position note, then Start Here when you want the shortest bounded route through the rest of the public surface. |
 | Where do contribution rules and PR boundaries live? | [Contributing to aoa-techniques](../CONTRIBUTING.md) (`CONTRIBUTING.md`), [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | Use CONTRIBUTING for the public PR path and AGENTS for the repo's public-safe PLAN -> DIFF -> VERIFY -> REPORT doctrine. |
 | Where do public-safety expectations and contributor conduct live? | [SECURITY.md](../SECURITY.md) (`SECURITY.md`), [AGENTS.md](../AGENTS.md) (`AGENTS.md`), [Code of Conduct](../CODE_OF_CONDUCT.md) (`CODE_OF_CONDUCT.md`) | Use SECURITY for disclosure and hygiene, AGENTS for public-repo authoring discipline, and the Code of Conduct for collaboration expectations. |
 | Where do release flow and status history live? | [Changelog](../CHANGELOG.md) (`CHANGELOG.md`), [Releasing `aoa-techniques`](RELEASING.md) (`docs/RELEASING.md`) | Use CHANGELOG for current history and RELEASING for the bounded validation path behind public corpus updates. |
@@ -52,6 +53,7 @@ Use this when you need one concrete end-to-end example of how a real practice be
 
 | doc | bounded role | top-level sections |
 |---|---|---|
+| [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`) | repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks | `Why This Repo Exists`, `Ontology Spine Inheritance`, `Method And Neighboring Layers`, `Boundary Reminder` |
 | [Walkthrough: AOA-T-0001](../WALKTHROUGH.md) (`WALKTHROUGH.md`) | one end-to-end example of origin practice, publication, reuse, and why the repo stores techniques this way | `1. Origin practice`, `2. Published technique`, `3. Reuse evidence`, `4. Second-context adaptation`, `5. Why this matters here` |
 
 ## Status / Release
@@ -66,5 +68,5 @@ Use these when the question is what changed, what is currently unreleased, and h
 ## Boundaries
 
 - The source of meaning stays in the authored docs themselves.
-- The bounded source set is exactly the 11 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.
+- The bounded source set is exactly the 12 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.
 - This surface and its manifest are routing aids only. They do not become a new source of truth or a status-policy engine.

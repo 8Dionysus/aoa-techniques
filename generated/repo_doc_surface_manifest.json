@@ -62,6 +62,19 @@
       ]
     },
     {
+      "doc_id": "ecosystem_context",
+      "doc_path": "docs/ECOSYSTEM_CONTEXT.md",
+      "title": "Ecosystem Context",
+      "surface_group": "walkthrough/context",
+      "bounded_role": "repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks",
+      "top_level_sections": [
+        "Why This Repo Exists",
+        "Ontology Spine Inheritance",
+        "Method And Neighboring Layers",
+        "Boundary Reminder"
+      ]
+    },
+    {
       "doc_id": "technique_index",
       "doc_path": "TECHNIQUE_INDEX.md",
       "title": "TECHNIQUE_INDEX",
