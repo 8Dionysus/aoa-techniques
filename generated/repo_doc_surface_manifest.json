@@ -177,6 +177,7 @@
       "bounded_role": "release and unreleased status history for the public corpus",
       "top_level_sections": [
         "[Unreleased]",
+        "[0.2.0] - 2026-03-23",
         "[0.1.0] - 2026-03-17"
       ]
     },
