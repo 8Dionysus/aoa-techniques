@@ -38,6 +38,7 @@ A release should make it easy to answer:
      - `python scripts/build_semantic_review_manifest.py`
      - `python scripts/build_shadow_review_manifest.py`
      - `python -m unittest discover -s tests`
+     - `python scripts/validate_nested_agents.py`
      - `python scripts/validate_repo.py`
    - if the first pass materializes generated updates, the script reruns the same bounded sequence once and requires the second pass to leave the git-backed worktree snapshot unchanged
    - when the repo starts clean, that same bounded drift check also confirms `git diff --exit-code`

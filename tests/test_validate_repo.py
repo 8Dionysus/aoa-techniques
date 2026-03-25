@@ -53,6 +53,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
         self.assertNotIn("python scripts/validate_repo.py", workflow)
         self.assertNotIn("python scripts/build_catalog.py", workflow)
         self.assertNotIn("python scripts/build_shadow_review_manifest.py", workflow)
+        self.assertNotIn("python scripts/validate_nested_agents.py", workflow)
 
     def test_release_check_sequence_matches_documented_repo_build_path(self) -> None:
         self.assertEqual(
@@ -69,6 +70,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_semantic_review_manifest.py"),
                 ("python", "scripts/build_shadow_review_manifest.py"),
                 ("python", "-m", "unittest", "discover", "-s", "tests"),
+                ("python", "scripts/validate_nested_agents.py"),
                 ("python", "scripts/validate_repo.py"),
             ),
             release_check.RELEASE_CHECK_COMMAND_SEQUENCE,

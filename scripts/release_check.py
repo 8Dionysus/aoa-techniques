@@ -19,6 +19,7 @@ RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/build_semantic_review_manifest.py"),
     ("python", "scripts/build_shadow_review_manifest.py"),
     ("python", "-m", "unittest", "discover", "-s", "tests"),
+    ("python", "scripts/validate_nested_agents.py"),
     ("python", "scripts/validate_repo.py"),
 )
 WORKTREE_SNAPSHOT_COMMAND = ("git", "status", "--porcelain=v1", "--untracked-files=all")
