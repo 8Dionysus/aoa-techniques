@@ -33,6 +33,7 @@ Open these first when the question is where to start or which public repo map or
 |---|---|---|
 | [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `Start here`, `Quick routes`, `Deeper routes`, `What belongs here`, `Core principles`, `Maturity model`, `Repository structure`, `Intended users`, `What a good technique includes`, `Contribution model`, `License` |
 | [Start Here](START_HERE.md) (`docs/START_HERE.md`) | repo-owned self-serve entrypoint for route selection, corpus posture, and stay-here versus leave-here decisions | `What This Repo Is`, `If You Need One Technique Now`, `If You Need To Understand Maturity And Review`, `If You Need Derived Surfaces`, `Current Corpus Posture`, `Repo-Only Operating Contract`, `When To Leave This Repo`, `Release And Validation` |
+| [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`) | repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks | `Why This Repo Exists`, `Ontology Spine Inheritance`, `Method And Neighboring Layers`, `Boundary Reminder` |
 | [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | public corpus map by status, technique id, and domain | `Canonical techniques`, `Promoted techniques`, `Deprecated techniques`, `Notes` |
 | [Documentation Map](README.md) (`docs/README.md`) | docs-layer map for deeper guides, generated surfaces, and recommended reading paths after the main entrypoint | `Start Here`, `Surface Types`, `Recommended Reading Paths`, `Companion Repository Surfaces`, `Notes` |
 
@@ -53,7 +54,6 @@ Use this when you need one concrete end-to-end example of how a real practice be
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`) | repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks | `Why This Repo Exists`, `Ontology Spine Inheritance`, `Method And Neighboring Layers`, `Boundary Reminder` |
 | [Walkthrough: AOA-T-0001](../WALKTHROUGH.md) (`WALKTHROUGH.md`) | one end-to-end example of origin practice, publication, reuse, and why the repo stores techniques this way | `1. Origin practice`, `2. Published technique`, `3. Reuse evidence`, `4. Second-context adaptation`, `5. Why this matters here` |
 
 ## Status / Release
