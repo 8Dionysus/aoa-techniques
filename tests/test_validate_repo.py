@@ -1318,6 +1318,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             [group["group"] for group in actual_full["surface_groups"]],
         )
         self.assertEqual(12, len(actual_full["docs"]))
+        docs_by_id = {doc["doc_id"]: doc for doc in actual_full["docs"]}
+        self.assertEqual(
+            "entrypoint/map",
+            docs_by_id["ecosystem_context"]["surface_group"],
+        )
 
     def test_repo_doc_surfaces_generated_reader_matches_builder_and_stays_bounded(self) -> None:
         validate_repo.validate_repo_doc_surface_reader(REPO_ROOT)

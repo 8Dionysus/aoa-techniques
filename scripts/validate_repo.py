@@ -398,7 +398,7 @@ REPO_DOC_SURFACE_SPECS = (
     {
         "doc_id": "ecosystem_context",
         "doc_path": "docs/ECOSYSTEM_CONTEXT.md",
-        "surface_group": "walkthrough/context",
+        "surface_group": "entrypoint/map",
         "bounded_role": "repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks",
     },
     {
