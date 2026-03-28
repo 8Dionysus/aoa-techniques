@@ -178,6 +178,24 @@ See also:
 |---|---|---|---|---|
 | template-backed-field-extraction-after-ocr checklist | `absent` | `6` | `techniques/agent-workflows/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
 
+### [AOA-T-0072](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| perceptual-media-dedupe-with-threshold-review checklist | `absent` | `6` | `techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) |
+
+### [AOA-T-0073](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| semantic-media-bucketing-with-vision-plus-ocr checklist | `absent` | `6` | `techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) |
+
+### [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| telegram-export-normalization-to-local-store checklist | `absent` | `6` | `techniques/agent-workflows/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

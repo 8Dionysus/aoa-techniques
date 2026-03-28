@@ -82,6 +82,9 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0066 | transcript-replay-artifact | history | promoted | Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine. |
 | AOA-T-0067 | transcript-linked-code-lineage | history | promoted | Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine. |
 | AOA-T-0071 | template-backed-field-extraction-after-ocr | agent-workflows | promoted | Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser. |
+| AOA-T-0072 | perceptual-media-dedupe-with-threshold-review | agent-workflows | promoted | Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma. |
+| AOA-T-0073 | semantic-media-bucketing-with-vision-plus-ocr | agent-workflows | promoted | Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation. |
+| AOA-T-0074 | telegram-export-normalization-to-local-store | agent-workflows | promoted | Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract. |
 
 ## Deprecated techniques
 

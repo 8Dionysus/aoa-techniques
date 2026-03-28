@@ -3817,6 +3817,153 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0072",
+      "name": "perceptual-media-dedupe-with-threshold-review",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
+      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "origin": {
+        "project": "imagededup + imgdupes",
+        "path": "README.md",
+        "note": "Adapted from open-source image deduplication tools that expose perceptual similarity, candidate duplicate groups, and threshold tuning, while this bundle keeps only the bounded reviewable grouping contract."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "media",
+        "dedupe",
+        "perceptual-similarity",
+        "review"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0073",
+      "name": "semantic-media-bucketing-with-vision-plus-ocr",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.",
+      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "origin": {
+        "project": "CLIP + PaddleOCR",
+        "path": "README.md",
+        "note": "Adapted from open-source multimodal classification and OCR projects that expose image-text semantic matching plus OCR-derived text, while this bundle keeps only the bounded media-bucketing contract."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "media",
+        "taxonomy",
+        "vision",
+        "ocr"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0074",
+      "name": "telegram-export-normalization-to-local-store",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.",
+      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "origin": {
+        "project": "Telethon + TDLib + opentele + Chatistics + tg-archive + telegram-mcp",
+        "path": "README.md",
+        "note": "Adapted from open-source Telegram client, archive, analytics, and MCP surfaces that expose message retrieval, export, media references, and local persistence, while this bundle keeps only the bounded normalization contract."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "telegram",
+        "normalization",
+        "local-store",
+        "provenance"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

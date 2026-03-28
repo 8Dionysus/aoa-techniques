@@ -6,9 +6,10 @@ This root is the repo-native staging wave for the personal-ingest donor family i
 
 - activation state: `active`
 - launch verdict: `go`
-- current wave split: `2 landed / 3 staged / 1 incubation hold`
-- next separate landing candidate: `perceptual-media-dedupe-with-threshold-review`
+- current wave split: `5 landed / 0 staged / 1 incubation hold`
+- next separate landing candidate: none; the first-pass landing queue is exhausted
 - immediate exclusion from the landing lane: `telegram-account-auth-and-session-bridge`
+- one incubation-hold candidate with a current memo
 
 This wave does **not** assume merge authority.
 It does **not** claim these candidates are already canonical.
@@ -30,12 +31,13 @@ This wave follows that posture instead of pretending the candidates are already 
 - landed from this wave:
   - `AOA-T-0070 two-stage-document-ocr-pipeline`
   - `AOA-T-0071 template-backed-field-extraction-after-ocr`
+  - `AOA-T-0072 perceptual-media-dedupe-with-threshold-review`
+  - `AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr`
+  - `AOA-T-0074 telegram-export-normalization-to-local-store`
 - still staged in this wave:
-  - `perceptual-media-dedupe-with-threshold-review`
-  - `semantic-media-bucketing-with-vision-plus-ocr`
-  - `telegram-export-normalization-to-local-store`
+  - none; all first-pass landing candidates are now landed
 - incubation hold outside the landing lane:
-  - `telegram-account-auth-and-session-bridge`
+  - `telegram-account-auth-and-session-bridge` with a current memo in `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
 
 ## Main surfaces
 

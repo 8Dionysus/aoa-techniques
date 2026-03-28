@@ -37,13 +37,13 @@
       "idealo/imagededup",
       "knjcode/imgdupes"
     ],
-    "status_lane": "staged",
-    "recommended_action": "open-next-landing-pr",
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "semantic-media-bucketing-with-vision-plus-ocr",
     "tentative_domain": "agent-workflows",
     "seed_bundle_present": true,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "landed"
   },
   {
     "candidate_slug": "semantic-media-bucketing-with-vision-plus-ocr",
@@ -52,13 +52,13 @@
       "openai/CLIP",
       "PaddlePaddle/PaddleOCR"
     ],
-    "status_lane": "staged",
-    "recommended_action": "keep-staged-after-dedupe-boundary-pass",
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "perceptual-media-dedupe-with-threshold-review",
     "tentative_domain": "agent-workflows",
     "seed_bundle_present": true,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "landed"
   },
   {
     "candidate_slug": "telegram-export-normalization-to-local-store",
@@ -71,13 +71,13 @@
       "knadh/tg-archive",
       "chaindead/telegram-mcp"
     ],
-    "status_lane": "staged",
-    "recommended_action": "keep-staged-for-high-sensitivity-late-wave-pass",
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0026 session-capture-as-repo-artifact + telegram-account-auth-and-session-bridge",
     "tentative_domain": "agent-workflows",
     "seed_bundle_present": true,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "landed"
   },
   {
     "candidate_slug": "telegram-account-auth-and-session-bridge",
@@ -88,7 +88,7 @@
       "chaindead/telegram-mcp"
     ],
     "status_lane": "incubation-hold",
-    "recommended_action": "hold-outside-immediate-wave",
+    "recommended_action": "keep-narrowing-memo-open",
     "nearest_overlap_watch": "telegram-export-normalization-to-local-store + auth/runtime control-plane doctrine",
     "tentative_domain": "agent-workflows",
     "seed_bundle_present": false,

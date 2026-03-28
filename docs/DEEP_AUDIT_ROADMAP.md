@@ -15,7 +15,7 @@ Historical note:
 ## Current Live Closure Snapshot
 
 - current verification path: `python scripts/release_check.py`
-- current corpus split: `71` bundles, `21 canonical`, `50 promoted`
+- current corpus split: `74` bundles, `21 canonical`, `53 promoted`
 - repo-only hardening is largely landed; the main open work is now external-evidence execution rather than missing internal infrastructure
 - recent canonical closures since the baseline below:
   - [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)

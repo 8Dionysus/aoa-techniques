@@ -3176,6 +3176,117 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0072",
+      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md",
+          "title": "perceptual-media-dedupe-with-threshold-review checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the workflow groups near-duplicates without owning deletion or archive policy"
+            },
+            {
+              "order": 2,
+              "text": "[ ] high-confidence groups and uncertain groups are visibly separated"
+            },
+            {
+              "order": 3,
+              "text": "[ ] thresholds remain explicit and tunable"
+            },
+            {
+              "order": 4,
+              "text": "[ ] group membership stays explainable enough for review"
+            },
+            {
+              "order": 5,
+              "text": "[ ] semantic labeling and quality ranking stay out of scope"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the contract still makes sense across screenshots, memes, or photo variants without one-threshold dogma"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0073",
+      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md",
+          "title": "semantic-media-bucketing-with-vision-plus-ocr checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the taxonomy is explicit, bounded, and small enough to review"
+            },
+            {
+              "order": 2,
+              "text": "[ ] visual semantics remain primary and OCR stays a side-channel"
+            },
+            {
+              "order": 3,
+              "text": "[ ] low-confidence or conflicting items route into review"
+            },
+            {
+              "order": 4,
+              "text": "[ ] duplicate grouping, OCR extraction, and downstream action policy stay out of scope"
+            },
+            {
+              "order": 5,
+              "text": "[ ] moderation, identity inference, and destructive automation remain outside the contract"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the bundle still makes sense across screenshots, memes, receipts, and `other` without turning into a catch-all media ontology"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0074",
+      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md",
+          "title": "telegram-export-normalization-to-local-store checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] normalized message objects preserve ids, timestamps, sender data, reply edges, and media references"
+            },
+            {
+              "order": 2,
+              "text": "[ ] source provenance stays explicit for export chunks, API batches, or source files"
+            },
+            {
+              "order": 3,
+              "text": "[ ] resume behavior is bounded and reviewable"
+            },
+            {
+              "order": 4,
+              "text": "[ ] auth, session conversion, and secret storage stay out of scope"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the local store is not treated as memory or canon by default"
+            },
+            {
+              "order": 6,
+              "text": "[ ] downstream routing or curation policy remains outside the normalization contract"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

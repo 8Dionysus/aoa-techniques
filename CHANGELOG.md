@@ -31,6 +31,9 @@ The format is intentionally simple and human-first.
 - `AOA-T-0069` `approval-bound-durable-jobs`, a promoted `agent-workflows` technique adapted from `Clyra-AI/gait` for durable jobs that pause and resume across an explicit approval seam
 - `AOA-T-0070` `two-stage-document-ocr-pipeline`, a promoted `agent-workflows` technique adapted from `PaddleOCR` and `docTR` for staged OCR handoff before later extraction or review
 - `AOA-T-0071` `template-backed-field-extraction-after-ocr`, a promoted `agent-workflows` technique adapted from `invoice2data`, `receiptparser`, and `receipt-parser-legacy` for bounded post-OCR field extraction through explicit templates, heuristics, and review fallback
+- `AOA-T-0072` `perceptual-media-dedupe-with-threshold-review`, a promoted `agent-workflows` technique adapted from `imagededup` and `imgdupes` for reviewable near-duplicate media grouping before later cleanup actions
+- `AOA-T-0073` `semantic-media-bucketing-with-vision-plus-ocr`, a promoted `agent-workflows` technique adapted from `CLIP` and `PaddleOCR` for confidence-aware mixed-media bucketing through bounded taxonomy and OCR side text
+- `AOA-T-0074` `telegram-export-normalization-to-local-store`, a promoted `agent-workflows` technique adapted from `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp` for resumable Telegram-source normalization into a provenance-preserving local store
 
 ## [0.2.0] - 2026-03-23
 

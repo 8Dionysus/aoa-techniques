@@ -185,6 +185,24 @@ See also:
 |---|---|---|---|
 | minimal-template-backed-field-extraction-after-ocr | `present` | `techniques/agent-workflows/template-backed-field-extraction-after-ocr/examples/minimal-template-backed-field-extraction-after-ocr.md` | [TECHNIQUE.md](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
 
+### [AOA-T-0072](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-perceptual-media-dedupe-with-threshold-review | `present` | `techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/examples/minimal-perceptual-media-dedupe-with-threshold-review.md` | [TECHNIQUE.md](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) |
+
+### [AOA-T-0073](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-semantic-media-bucketing-with-vision-plus-ocr | `present` | `techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/examples/minimal-semantic-media-bucketing-with-vision-plus-ocr.md` | [TECHNIQUE.md](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) |
+
+### [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-telegram-export-normalization-to-local-store | `present` | `techniques/agent-workflows/telegram-export-normalization-to-local-store/examples/minimal-telegram-export-normalization-to-local-store.md` | [TECHNIQUE.md](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
