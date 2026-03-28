@@ -6,6 +6,30 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Added
+
+- `AOA-T-0049` `dependency-aware-task-graph`, a promoted `agent-workflows` technique adapted from `steveyegge/beads` for explicit blocker graphs and derived ready work
+- `AOA-T-0050` `ready-work-from-blocker-graph`, a promoted `agent-workflows` technique adapted from `steveyegge/beads` for blocker-aware ready-frontier derivation
+- `AOA-T-0051` `commit-triggered-background-review`, a promoted `agent-workflows` technique adapted from `roborev-dev/roborev` for post-commit asynchronous review artifacts
+- `AOA-T-0052` `review-findings-compaction`, a promoted `agent-workflows` technique adapted from `roborev-dev/roborev` for findings verification and consolidation against current code
+- `AOA-T-0053` `local-first-session-index`, a promoted `history` technique adapted from `wesm/agentsview` for local searchable lookup over already-saved session artifacts
+- `AOA-T-0054` `compaction-resilient-skill-loading`, a promoted `agent-workflows` technique adapted from `joshuadavidthomas/opencode-agent-skills` for bounded post-compaction skill-availability recovery
+- `AOA-T-0055` `requirements-design-tasks-ladder`, a promoted `agent-workflows` technique adapted from `gotalab/cc-sdd` for a bounded requirement -> design -> task planning ladder
+- `AOA-T-0056` `channelized-agent-mailbox`, a promoted `agent-workflows` technique adapted from `agentralabs/agentic-comm` for durable named-channel communication with replay and explicit acknowledgment
+- `AOA-T-0057` `structured-handoff-before-compaction`, a promoted `agent-workflows` technique adapted from `thebasedcapital/nightcrawler` with supporting checkpoint framing from `yan5xu/code-relay` for explicit continuation packets before context compaction or rollover
+- `AOA-T-0058` `receipt-confirmed-handoff-packet`, a promoted `agent-workflows` technique adapted from `jeremiah-k/agor` with supporting explicit-acceptance surfaces from `ax-platform/ax-platform-mcp` for visible handoff receipt before continuation
+- `AOA-T-0059` `git-verified-handoff-claims`, a promoted `agent-workflows` technique adapted from `thebasedcapital/nightcrawler` with supporting snapshot-verification posture from `jeremiah-k/agor` for repo-backed verification of handoff claims before continuation
+- `AOA-T-0060` `session-opening-ritual-before-work`, a promoted `agent-workflows` technique adapted from `thebasedcapital/nightcrawler` for explicit pre-mutation session-start reading and baseline verification before resumed work begins
+- `AOA-T-0061` `cross-repo-resource-map-bootstrap`, a promoted `agent-workflows` technique adapted from `yan5xu/code-relay` for task-bounded cross-repo startup maps that name which repos and surfaces matter before continuation
+- `AOA-T-0062` `episode-bounded-agent-loop`, a promoted `agent-workflows` technique adapted from `thebasedcapital/nightcrawler` for checkpointed multi-episode continuation with explicit continue, stop, or escalate decisions
+- `AOA-T-0063` `versioned-agent-registry-contract`, a promoted `docs` technique adapted from `agntcy/dir` for named versioned registry-entry contracts with explicit references and bounded metadata
+- `AOA-T-0064` `capability-discovery`, a promoted `docs` technique adapted from `agntcy/dir` for bounded discovery-query contracts over already-published capability records
+- `AOA-T-0065` `mcp-gateway-proxy`, a promoted `agent-workflows` technique adapted from `lasso-security/mcp-gateway` for one reviewable proxy seam in front of configured MCP servers
+- `AOA-T-0066` `transcript-replay-artifact`, a promoted `history` technique adapted from `es617/claude-replay` with supporting context from `wesm/agentsview` for post-capture replay artifacts over saved sessions
+- `AOA-T-0067` `transcript-linked-code-lineage`, a promoted `history` technique adapted from `git-ai-project/git-ai` for bounded code-to-session provenance links
+- `AOA-T-0068` `fail-closed-evidence-gate`, a promoted `agent-workflows` technique adapted from `Clyra-AI/gait` for fail-closed execution gating with reviewable evidence output
+- `AOA-T-0069` `approval-bound-durable-jobs`, a promoted `agent-workflows` technique adapted from `Clyra-AI/gait` for durable jobs that pause and resume across an explicit approval seam
+
 ## [0.2.0] - 2026-03-23
 
 Second public corpus release.

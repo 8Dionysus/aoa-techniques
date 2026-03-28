@@ -2157,6 +2157,951 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0049",
+      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/dependency-aware-task-graph/checks/dependency-aware-task-graph-checklist.md",
+          "title": "dependency-aware-task-graph checklist",
+          "intro_markdown": "Use this checklist when reviewing whether a dependency-aware task graph is still a bounded working surface instead of a drifting tracker or memory layer.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] each node maps to one reviewable work slice rather than a vague project theme"
+            },
+            {
+              "order": 2,
+              "text": "[ ] dependency edges describe real blockers instead of narrative ordering preferences"
+            },
+            {
+              "order": 3,
+              "text": "[ ] blocked tasks name the unmet prerequisite that keeps them closed"
+            },
+            {
+              "order": 4,
+              "text": "[ ] ready work is derived from the current graph state rather than guessed from chat history"
+            },
+            {
+              "order": 5,
+              "text": "[ ] node state is updated when real work completes or blocker state changes"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the graph stays smaller than a full project-management system or memory substrate"
+            },
+            {
+              "order": 7,
+              "text": "[ ] implementation review, validation, and release checks still live outside the graph"
+            },
+            {
+              "order": 8,
+              "text": "[ ] at least one example shows the ready frontier changing when a blocker is cleared"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0050",
+      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md",
+          "title": "ready-work-from-blocker-graph checklist",
+          "intro_markdown": "Use this checklist when reviewing whether a ready-work frontier still reflects blocker truth instead of slipping into hidden overrides or broad prioritization policy.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] queue derivation depends on blocker-free graph state"
+            },
+            {
+              "order": 2,
+              "text": "[ ] blocked tasks keep visible reasons for exclusion"
+            },
+            {
+              "order": 3,
+              "text": "[ ] open-but-blocked work does not appear in the ready queue"
+            },
+            {
+              "order": 4,
+              "text": "[ ] any secondary ordering happens only after readiness is established"
+            },
+            {
+              "order": 5,
+              "text": "[ ] manual overrides, if any, stay explicit rather than hidden"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the queue remains explainable from visible inputs"
+            },
+            {
+              "order": 7,
+              "text": "[ ] graph authoring and broader PM policy stay outside this technique"
+            },
+            {
+              "order": 8,
+              "text": "[ ] at least one example shows the frontier changing after a blocker clears"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0051",
+      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md",
+          "title": "commit-triggered-background-review checklist",
+          "intro_markdown": "Use this checklist when reviewing whether a post-commit review loop still behaves like a bounded artifact-producing review surface instead of drifting into remediation or CI governance.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the triggering commit or diff is explicit"
+            },
+            {
+              "order": 2,
+              "text": "[ ] review output remains a read-only artifact"
+            },
+            {
+              "order": 3,
+              "text": "[ ] findings can be tied back to the reviewed commit or scope"
+            },
+            {
+              "order": 4,
+              "text": "[ ] no auto-merge or auto-rewrite behavior is implied"
+            },
+            {
+              "order": 5,
+              "text": "[ ] review and remediation are separate surfaces"
+            },
+            {
+              "order": 6,
+              "text": "[ ] stale findings can be detected and rerun later"
+            },
+            {
+              "order": 7,
+              "text": "[ ] background execution stays smaller than full CI governance"
+            },
+            {
+              "order": 8,
+              "text": "[ ] at least one example shows the artifact fields needed for inspection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0052",
+      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/review-findings-compaction/checks/review-findings-compaction-checklist.md",
+          "title": "review-findings-compaction checklist",
+          "intro_markdown": "Use this checklist when reviewing whether a findings compaction pass still behaves like a bounded verification-and-consolidation surface instead of drifting into issue management or remediation policy.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] duplicate grouping stays reviewable and explainable"
+            },
+            {
+              "order": 2,
+              "text": "[ ] findings are revalidated against current code before they survive"
+            },
+            {
+              "order": 3,
+              "text": "[ ] stale findings are removed or marked explicitly"
+            },
+            {
+              "order": 4,
+              "text": "[ ] representative findings keep traceability back to source findings"
+            },
+            {
+              "order": 5,
+              "text": "[ ] merged findings still cite live code locations"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the compacted artifact stays smaller than generic issue-management doctrine"
+            },
+            {
+              "order": 7,
+              "text": "[ ] compaction remains separate from remediation and prioritization"
+            },
+            {
+              "order": 8,
+              "text": "[ ] at least one example shows both dedupe and stale-finding handling"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0053",
+      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/history/local-first-session-index/checks/local-first-session-index-checklist.md",
+          "title": "local-first-session-index checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] source session artifacts already exist before indexing starts"
+            },
+            {
+              "order": 2,
+              "text": "[ ] index entries keep stable references back to the source artifact"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the index can be rebuilt from local sources without hidden memory or recall state"
+            },
+            {
+              "order": 4,
+              "text": "[ ] capture behavior stays outside the technique"
+            },
+            {
+              "order": 5,
+              "text": "[ ] transcript packaging or export stays outside the technique"
+            },
+            {
+              "order": 6,
+              "text": "[ ] hosted dashboards, analytics, and remote sync stay outside the technique"
+            },
+            {
+              "order": 7,
+              "text": "[ ] query or browse results remain derivative and do not replace source authority"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the example uses public-safe metadata and paths only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0054",
+      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md",
+          "title": "compaction-resilient-skill-loading checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the compaction boundary is explicit"
+            },
+            {
+              "order": 2,
+              "text": "[ ] canonical skill sources remain named and authoritative"
+            },
+            {
+              "order": 3,
+              "text": "[ ] post-compaction recovery restores a bounded availability surface rather than full prompt history"
+            },
+            {
+              "order": 4,
+              "text": "[ ] needed skills can still be reloaded from canonical sources after compaction"
+            },
+            {
+              "order": 5,
+              "text": "[ ] restored capability state is visible enough to review"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the bundle stays smaller than deterministic context composition"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the bundle stays out of marketplace, install, and memory doctrine"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the example keeps the recovery path public-safe and concrete"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0055",
+      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md",
+          "title": "requirements-design-tasks-ladder checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the requirement, design, and task layers stay visibly distinct"
+            },
+            {
+              "order": 2,
+              "text": "[ ] design answers a visible requirement"
+            },
+            {
+              "order": 3,
+              "text": "[ ] tasks are derived from visible design choices"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the ladder stays smaller than a full methodology import"
+            },
+            {
+              "order": 5,
+              "text": "[ ] no template ecosystem or command suite is required to explain the core pattern"
+            },
+            {
+              "order": 6,
+              "text": "[ ] later execution still needs its own separate workflow technique"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the example keeps the layer transitions concrete and public-safe"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the bundle stays out of governance, research, and project-memory doctrine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0056",
+      "technique_path": "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/channelized-agent-mailbox/checks/channelized-agent-mailbox-checklist.md",
+          "title": "channelized-agent-mailbox checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] channel identity is explicit and bounded to one coordination lane"
+            },
+            {
+              "order": 2,
+              "text": "[ ] messages can be replayed from a visible cursor, offset, or last-seen marker"
+            },
+            {
+              "order": 3,
+              "text": "[ ] acknowledgment is explicit rather than implied by silence"
+            },
+            {
+              "order": 4,
+              "text": "[ ] mailbox transport stays distinct from handoff authorization or stop/escalation rules"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the bundle stays smaller than a full messaging platform or orchestration product"
+            },
+            {
+              "order": 6,
+              "text": "[ ] transcript packaging, history indexing, and witness export remain outside the contract"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the example keeps replay and ack concrete without donor-specific platform details"
+            },
+            {
+              "order": 8,
+              "text": "[ ] channel purpose remains narrow enough that unrelated workflows do not share one mailbox"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0057",
+      "technique_path": "techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/structured-handoff-before-compaction/checks/structured-handoff-before-compaction-checklist.md",
+          "title": "structured-handoff-before-compaction checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] a real compaction, rollover, or episode boundary is named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the handoff artifact is written before context loss rather than after it"
+            },
+            {
+              "order": 3,
+              "text": "[ ] completed work, in-progress or blocked work, and the next step are explicit"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the packet includes concrete continuation references such as files, commits, or artifacts"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than transcript packaging, witness export, or mailbox transport"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the technique does not rely on hidden memory, launchd behavior, or one orchestrator runtime"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the bundle stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0058",
+      "technique_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/checks/receipt-confirmed-handoff-packet-checklist.md",
+          "title": "receipt-confirmed-handoff-packet checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] a handoff packet exists before receipt is requested"
+            },
+            {
+              "order": 2,
+              "text": "[ ] packet and receipt are visibly separate concepts"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the receipt identifies the packet and receiver explicitly"
+            },
+            {
+              "order": 4,
+              "text": "[ ] continuation waits on receipt rather than delivery, assignment, or silence"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than mailbox transport, queue platforms, or approval workflow doctrine"
+            },
+            {
+              "order": 6,
+              "text": "[ ] no specific messaging stack or task platform is required to understand the contract"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the bundle stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0059",
+      "technique_path": "techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md",
+          "title": "git-verified-handoff-claims checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the handoff contains at least one concrete claim with file, commit, or diff anchors"
+            },
+            {
+              "order": 2,
+              "text": "[ ] visible git evidence is checked before continuation trusts the handoff"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the verification output names the exact evidence used"
+            },
+            {
+              "order": 4,
+              "text": "[ ] mismatches and unverifiable claims stay explicit"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than generic code review, witness artifacts, or provenance doctrine"
+            },
+            {
+              "order": 6,
+              "text": "[ ] no specific orchestrator, branch policy, or snapshot system is required to understand the contract"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the bundle stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0060",
+      "technique_path": "techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/session-opening-ritual-before-work/checks/session-opening-ritual-before-work-checklist.md",
+          "title": "session-opening-ritual-before-work checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the ritual happens before the first mutation in a resumed or handed-off session"
+            },
+            {
+              "order": 2,
+              "text": "[ ] at least one current context surface is read explicitly"
+            },
+            {
+              "order": 3,
+              "text": "[ ] at least one visible baseline check is performed against current state"
+            },
+            {
+              "order": 4,
+              "text": "[ ] any mismatch between expected and actual state is named explicitly"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the first honest move can be explained from the verified baseline"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example stays smaller than handoff authoring, git-claim verification, task picking, or startup governance doctrine"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the bundle does not depend on one orchestrator runtime, state-file family, or launchd-style supervision"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0061",
+      "technique_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/checks/cross-repo-resource-map-bootstrap-checklist.md",
+          "title": "cross-repo-resource-map-bootstrap checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the map is tied to one current cross-repo task or handoff"
+            },
+            {
+              "order": 2,
+              "text": "[ ] every listed repo has an explicit role"
+            },
+            {
+              "order": 3,
+              "text": "[ ] every listed resource or surface has a stated reason to be in the map"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the map shows where the next reader should look first"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the map stays small enough to inspect quickly"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example stays smaller than bounded-context mapping, architecture inventory, or workspace-platform doctrine"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the bundle does not depend on one global orchestrator path, project board, or collaboration mode"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0062",
+      "technique_path": "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/episode-bounded-agent-loop/checks/episode-bounded-agent-loop-checklist.md",
+          "title": "episode-bounded-agent-loop checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] each episode has a bounded goal"
+            },
+            {
+              "order": 2,
+              "text": "[ ] each episode reaches a visible checkpoint or stop condition"
+            },
+            {
+              "order": 3,
+              "text": "[ ] continue, stop, or escalate remains an explicit decision"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the next episode can explain its start from the checkpointed state"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than orchestration platforms, supervision stacks, or total autonomous-agent doctrine"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the bundle does not depend on one runtime, budget cap, task-tracker contract, or launchd-style supervisor"
+            },
+            {
+              "order": 7,
+              "text": "[ ] checkpoint artifacts remain reviewable enough for another reader to follow"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0063",
+      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md",
+          "title": "versioned-agent-registry-contract checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the entry identity includes an explicit name, version, and stable record reference"
+            },
+            {
+              "order": 2,
+              "text": "[ ] schema version or equivalent bounded metadata is visible"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the entry contract is distinguishable from the underlying record payload"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the example stays smaller than discovery queries, marketplace curation, or registry-product doctrine"
+            },
+            {
+              "order": 5,
+              "text": "[ ] annotations or metadata fields stay bounded and reviewable"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the bundle does not depend on one search API, trust pipeline, or distributed runtime"
+            },
+            {
+              "order": 7,
+              "text": "[ ] version changes can be reviewed at the entry-contract layer"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0064",
+      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/capability-discovery/checks/capability-discovery-checklist.md",
+          "title": "capability-discovery checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] discovery operates over already-published entries or records"
+            },
+            {
+              "order": 2,
+              "text": "[ ] query fields are explicit and bounded"
+            },
+            {
+              "order": 3,
+              "text": "[ ] match behavior is readable and does not depend on hidden runtime logic"
+            },
+            {
+              "order": 4,
+              "text": "[ ] result shape is explicit about whether it returns identifiers, records, or both"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than ranking, marketplace curation, trust policy, or registry-product doctrine"
+            },
+            {
+              "order": 6,
+              "text": "[ ] query fields do not smuggle in graph semantics or governance policy"
+            },
+            {
+              "order": 7,
+              "text": "[ ] changes to discovery fields or response semantics can be reviewed at the contract layer"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0065",
+      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md",
+          "title": "mcp-gateway-proxy checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] more than one upstream MCP server or tool surface is actually being fronted through the gateway seam"
+            },
+            {
+              "order": 2,
+              "text": "[ ] callers use one explicit proxy surface instead of binding directly to every upstream server"
+            },
+            {
+              "order": 3,
+              "text": "[ ] metadata or capability lookup is visible enough to inspect what the proxy fronts"
+            },
+            {
+              "order": 4,
+              "text": "[ ] tool calls route through the gateway rather than bypassing it"
+            },
+            {
+              "order": 5,
+              "text": "[ ] argument or result sanitization stays at the proxy boundary when sanitization is claimed"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example stays smaller than local lifecycle, registry publication, or security-scanner doctrine"
+            },
+            {
+              "order": 7,
+              "text": "[ ] dashboards, trust scores, and enterprise policy layers are not treated as the invariant core"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0066",
+      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/history/transcript-replay-artifact/checks/transcript-replay-artifact-checklist.md",
+          "title": "transcript-replay-artifact checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] replay starts from an already-saved session or transcript artifact"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the replay package preserves bounded flow cues such as message order or timeline position"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the artifact keeps a stable reference back to the saved source session"
+            },
+            {
+              "order": 4,
+              "text": "[ ] replay stays derivative rather than becoming the authoritative history layer"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than transcript packaging, witness tracing, or hosted replay products"
+            },
+            {
+              "order": 6,
+              "text": "[ ] publish flows, dashboards, and live monitoring are not treated as the invariant core"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the wording does not reopen capture or memory doctrine"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0067",
+      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/history/transcript-linked-code-lineage/checks/transcript-linked-code-lineage-checklist.md",
+          "title": "transcript-linked-code-lineage checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the lineage surface starts from already-saved evidence artifacts"
+            },
+            {
+              "order": 2,
+              "text": "[ ] code anchors such as files, line ranges, or commits point back to stable evidence references"
+            },
+            {
+              "order": 3,
+              "text": "[ ] another reviewer can reopen the saved evidence from the lineage surface"
+            },
+            {
+              "order": 4,
+              "text": "[ ] saved evidence remains authoritative rather than being replaced by the lineage pointer"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than repo analytics, scorecards, or hosted search platforms"
+            },
+            {
+              "order": 6,
+              "text": "[ ] handoff verification, productivity telemetry, and free-form Q and A are not treated as the invariant core"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the wording does not collapse lineage into memory or generic retrieval doctrine"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0068",
+      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md",
+          "title": "fail-closed-evidence-gate checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the gate sits directly before a real mutating or side-effect boundary"
+            },
+            {
+              "order": 2,
+              "text": "[ ] non-allow verdicts actually block side effects rather than only warning"
+            },
+            {
+              "order": 3,
+              "text": "[ ] explicit allow is required before execution continues"
+            },
+            {
+              "order": 4,
+              "text": "[ ] one evidence artifact survives the verdict with enough context for later review"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than a full policy platform, durable-job system, or witness-trace stack"
+            },
+            {
+              "order": 6,
+              "text": "[ ] human confirmation, trace signing, and broader governance semantics stay outside the invariant core"
+            },
+            {
+              "order": 7,
+              "text": "[ ] ambiguous verdicts are not treated as allow by default"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0069",
+      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md",
+          "title": "approval-bound-durable-jobs checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the job keeps a stable identity across pause and resume"
+            },
+            {
+              "order": 2,
+              "text": "[ ] checkpoint or status state survives the approval seam"
+            },
+            {
+              "order": 3,
+              "text": "[ ] continuation does not happen until approval is explicit"
+            },
+            {
+              "order": 4,
+              "text": "[ ] resume depends on durable state rather than hidden memory"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the example stays smaller than a scheduler, queue product, or orchestration platform"
+            },
+            {
+              "order": 6,
+              "text": "[ ] one-shot boundary gates, packet receipt, and broader governance stacks stay outside the invariant core"
+            },
+            {
+              "order": 7,
+              "text": "[ ] a reviewer can tell whether the job is running, paused, waiting for approval, or completed"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording remains reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

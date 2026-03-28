@@ -1,0 +1,27 @@
+{
+  "wave_id": "chat-wave-2-graph-review-mailbox",
+  "title": "Chat Wave 2 - Graph Review Mailbox",
+  "source_pack": "aoa-techniques-wave1-to-wave3-codex-pack.zip::wave-2-graph-review-mailbox",
+  "activation_state": "active",
+  "candidate_count": 11,
+  "candidate_slugs": [
+    "dependency-aware-task-graph",
+    "ready-work-from-blocker-graph",
+    "commit-triggered-background-review",
+    "review-findings-compaction",
+    "local-first-session-index",
+    "compaction-resilient-skill-loading",
+    "requirements-design-tasks-ladder",
+    "channelized-agent-mailbox",
+    "markdown-definition-of-done-defaults",
+    "shadow-epic-federation",
+    "typed-governance-obligation-ledger"
+  ],
+  "notes": [
+    "Repo-native active wave for the graph, review, session-index, skill-loading, and mailbox candidates from chat wave 2.",
+    "No draft-now seed candidates remain after the first landing pass; the remaining active work is the narrowing-only lane.",
+    "dependency-aware-task-graph, ready-work-from-blocker-graph, commit-triggered-background-review, review-findings-compaction, local-first-session-index, compaction-resilient-skill-loading, requirements-design-tasks-ladder, and channelized-agent-mailbox have already landed as AOA-T-0049, AOA-T-0050, AOA-T-0051, AOA-T-0052, AOA-T-0053, AOA-T-0054, AOA-T-0055, and AOA-T-0056 and now exit the active seed lane.",
+    "markdown-definition-of-done-defaults now has a narrowing memo and remains intentionally outside the seed-bundle lane.",
+    "phase-synchronized-agent-handoff remains in the live external narrowing lane outside this wave root."
+  ]
+}

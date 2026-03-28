@@ -1,0 +1,115 @@
+[
+  {
+    "candidate_slug": "mcp-gateway-proxy",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "lasso-security/mcp-gateway"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0038 one-command-service-lifecycle",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "lifecycle-managed-tool-proxy",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "lasso-security/mcp-gateway"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0038 one-command-service-lifecycle",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "preflight-reputation-check",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "lasso-security/mcp-gateway"
+    ],
+    "status_lane": "narrow-first",
+    "recommended_action": "keep-narrowing-memo-open",
+    "nearest_overlap_watch": "AOA-T-0042 upstream-skill-health-checking",
+    "tentative_domain": "evaluation",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  },
+  {
+    "candidate_slug": "isolated-stateful-agent-runtime",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "kubernetes-sigs/agent-sandbox",
+      "stakpak/agent"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0038 one-command-service-lifecycle",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "bounded-single-step-agent",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "iagooar/qqqa"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0023 stateless-single-shot-agent",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-7",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "confirm-before-tool-execution",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "iagooar/qqqa"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0028 confirmation-gated-mutating-action",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-7",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "review-gated-multi-agent-orchestration",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "dsifry/metaswarm"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "broad orchestration doctrine",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-7",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "recursive-orchestrator-pattern",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "dsifry/metaswarm"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "architecture-shaped orchestration cluster",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-7",
+    "activation_state": "explicit-exclusion"
+  }
+]

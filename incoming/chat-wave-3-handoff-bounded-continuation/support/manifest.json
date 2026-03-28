@@ -1,0 +1,21 @@
+{
+  "wave_id": "chat-wave-3-handoff-bounded-continuation",
+  "title": "Chat Wave 3 - Handoff Bounded Continuation",
+  "source_pack": "aoa-techniques-wave1-to-wave3-codex-pack.zip::wave-3-handoff-bounded-continuation",
+  "activation_state": "active",
+  "candidate_count": 7,
+  "candidate_slugs": [
+    "structured-handoff-before-compaction",
+    "receipt-confirmed-handoff-packet",
+    "session-opening-ritual-before-work",
+    "git-verified-handoff-claims",
+    "cross-repo-resource-map-bootstrap",
+    "episode-bounded-agent-loop",
+    "governed-action-surfaces"
+  ],
+  "notes": [
+    "Repo-native active wave for handoff and bounded continuation candidates from chat wave 3.",
+    "structured-handoff-before-compaction, receipt-confirmed-handoff-packet, git-verified-handoff-claims, session-opening-ritual-before-work, cross-repo-resource-map-bootstrap, and episode-bounded-agent-loop have already landed as AOA-T-0057, AOA-T-0058, AOA-T-0059, AOA-T-0060, AOA-T-0061, and AOA-T-0062; no draft-now candidates remain on the first pass.",
+    "Generic phase synchronization stays in the live external narrowing lane, and governed action surfaces stay out of this wave."
+  ]
+}

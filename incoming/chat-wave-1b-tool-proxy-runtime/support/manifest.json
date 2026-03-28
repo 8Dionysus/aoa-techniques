@@ -1,0 +1,24 @@
+{
+  "wave_id": "chat-wave-1b-tool-proxy-runtime",
+  "title": "Chat Wave 1B - Tool Proxy Runtime",
+  "source_pack": "aoa-techniques-wave1-to-wave3-codex-pack.zip::wave-1-open-license-donor-sweep",
+  "activation_state": "active",
+  "candidate_count": 8,
+  "candidate_slugs": [
+    "mcp-gateway-proxy",
+    "lifecycle-managed-tool-proxy",
+    "preflight-reputation-check",
+    "isolated-stateful-agent-runtime",
+    "bounded-single-step-agent",
+    "confirm-before-tool-execution",
+    "review-gated-multi-agent-orchestration",
+    "recursive-orchestrator-pattern"
+  ],
+  "notes": [
+    "Repo-native staging shard for tool proxy and bounded runtime candidates from chat wave 1.",
+    "mcp-gateway-proxy has landed as AOA-T-0065 while preflight-reputation-check now stays narrowing-only on the first pass.",
+    "First pass is registry-first and does not create seed bundles.",
+    "lifecycle-managed-tool-proxy and isolated-stateful-agent-runtime are now explicit exclusions rather than staged candidates.",
+    "Landed lifecycle and confirmation-boundary techniques remain authoritative."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "wave_id": "chat-wave-1a-registry-discovery",
+  "title": "Chat Wave 1A - Registry Discovery",
+  "source_pack": "aoa-techniques-wave1-to-wave3-codex-pack.zip::wave-1-open-license-donor-sweep",
+  "activation_state": "active",
+  "candidate_count": 8,
+  "candidate_slugs": [
+    "versioned-agent-registry-contract",
+    "capability-discovery",
+    "semantic-linkage-records",
+    "well-known-skill-discovery",
+    "versioned-skill-package-manifest",
+    "source-manifest-sync",
+    "universal-skill-loader",
+    "progressive-skill-loading"
+  ],
+  "notes": [
+    "Repo-native staging shard for registry and discovery candidates from chat wave 1.",
+    "versioned-agent-registry-contract and capability-discovery have already landed as AOA-T-0063 and AOA-T-0064 while semantic-linkage-records stays narrowing-only on the first pass.",
+    "First pass is registry-first and does not create seed bundles.",
+    "semantic-linkage-records now has a narrowing memo instead of a bundle landing.",
+    "Already-landed skill curation and mirroring families remain authoritative."
+  ]
+}
