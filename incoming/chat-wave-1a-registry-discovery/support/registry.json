@@ -1,0 +1,117 @@
+[
+  {
+    "candidate_slug": "versioned-agent-registry-contract",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "agntcy/dir"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0025 capability-spec-versioning + AOA-T-0041 skill-marketplace-curation",
+    "tentative_domain": "docs",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "capability-discovery",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "agntcy/dir"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0063 versioned-agent-registry-contract + AOA-T-0041 skill-marketplace-curation",
+    "tentative_domain": "docs",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "semantic-linkage-records",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "agntcy/dir"
+    ],
+    "status_lane": "narrow-first",
+    "recommended_action": "keep-narrowing-memo-open",
+    "nearest_overlap_watch": "AOA-T-0021 bounded-relation-lift-for-kag + AOA-T-0063 versioned-agent-registry-contract",
+    "tentative_domain": "docs",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  },
+  {
+    "candidate_slug": "well-known-skill-discovery",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "vercel-labs/skills-handler",
+      "agentskills/agentskills"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0041 skill-marketplace-curation",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-6",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "versioned-skill-package-manifest",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "vercel-labs/skills-handler",
+      "agentskills/agentskills"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0025 capability-spec-versioning",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-6",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "source-manifest-sync",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "numman-ali/n-skills",
+      "numman-ali/openskills"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0024 upstream-mirroring-with-provenance",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-6",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "universal-skill-loader",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "numman-ali/openskills"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0027 cross-agent-skill-propagation",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-6",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "progressive-skill-loading",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "numman-ali/openskills"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0029 nested-rule-loading",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "worker-6",
+    "activation_state": "explicit-exclusion"
+  }
+]

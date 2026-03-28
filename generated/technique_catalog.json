@@ -2578,6 +2578,1147 @@
           "path": "notes/origin-evidence.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0049",
+      "name": "dependency-aware-task-graph",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
+      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "origin": {
+        "project": "steveyegge/beads",
+        "path": "README.md",
+        "note": "Adapted from the open-source Beads project, which exposes blocker-aware ready work over an explicit dependency graph for agent task coordination."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "dependency-graph",
+        "blockers",
+        "ready-work",
+        "coordination"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-27",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0050",
+      "name": "ready-work-from-blocker-graph",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
+      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "origin": {
+        "project": "steveyegge/beads",
+        "path": "cmd/bd/ready.go",
+        "note": "Adapted from the open-source Beads project, which derives ready work from blocker-aware graph state instead of treating open work as automatically claimable."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "ready-work",
+        "blockers",
+        "queue",
+        "frontier"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-27",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0049"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0051",
+      "name": "commit-triggered-background-review",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.",
+      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "origin": {
+        "project": "roborev-dev/roborev",
+        "path": "cmd/roborev/postcommit.go",
+        "note": "Adapted from the open-source roborev project, which enqueues a background review after a visible commit boundary and keeps findings inspectable before any later fix loop."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "review",
+        "commit",
+        "background",
+        "findings"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-27",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0052",
+      "name": "review-findings-compaction",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.",
+      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "origin": {
+        "project": "roborev-dev/roborev",
+        "path": "cmd/roborev/compact.go",
+        "note": "Adapted from the open-source roborev project, which verifies and consolidates open review findings against the current codebase before later fix loops act on them."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "review",
+        "findings",
+        "compaction",
+        "revalidation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-27",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0051"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0053",
+      "name": "local-first-session-index",
+      "domain": "history",
+      "status": "promoted",
+      "summary": "Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.",
+      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "origin": {
+        "project": "wesm/agentsview",
+        "path": "README.md + internal/db/search.go + internal/db/sessions.go",
+        "note": "Adapted from the open-source agentsview project, which discovers already-saved AI session artifacts locally, syncs them into a local SQLite index, and exposes searchable lookup without turning that index into memory or hosted-dashboard authority."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "history",
+        "sessions",
+        "index",
+        "search",
+        "local-first"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0026"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0044"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0054",
+      "name": "compaction-resilient-skill-loading",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
+      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "origin": {
+        "project": "joshuadavidthomas/opencode-agent-skills",
+        "path": "README.md + src/plugin.ts + src/skills.ts + .opencode/command/test-compaction.md",
+        "note": "Adapted from the open-source opencode-agent-skills plugin, which listens for session compaction and re-injects a bounded skills-availability surface so agents can rediscover and reload skills from canonical sources."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "skills",
+        "compaction",
+        "recovery",
+        "context"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0040"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0055",
+      "name": "requirements-design-tasks-ladder",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
+      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "origin": {
+        "project": "gotalab/cc-sdd",
+        "path": "README.md + .kiro/specs/photo-albums-en/requirements.md + .kiro/specs/photo-albums-en/design.md + .kiro/specs/photo-albums-en/tasks.md",
+        "note": "Adapted from the open-source cc-sdd project, which keeps requirements, design, and tasks as explicit successive spec artifacts before implementation."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "planning",
+        "requirements",
+        "design",
+        "tasks"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0056",
+      "name": "channelized-agent-mailbox",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack.",
+      "technique_path": "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
+      "origin": {
+        "project": "agentralabs/agentic-comm",
+        "path": "README.md + GUIDE.md + crates/agentic-comm/src/channel.rs + docs/public/SCENARIOS-AGENTIC-COMM.md",
+        "note": "Adapted from the open-source AgenticComm project, which uses persistent named channels, ordered messages, replay, and explicit acknowledgment to keep multi-agent communication inspectable without requiring a hosted messaging stack."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "communication",
+        "mailbox",
+        "channel",
+        "replay"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0057",
+      "name": "structured-handoff-before-compaction",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.",
+      "technique_path": "techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md",
+      "origin": {
+        "project": "thebasedcapital/nightcrawler + yan5xu/code-relay",
+        "path": "README.md + skills/nightcrawler-episode.md + README.md",
+        "note": "Adapted from Nightcrawler's per-episode handoff protocol, reinforced by Code Relay's checkpoint-before-compression framing, to keep continuation state explicit before context loss."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "handoff",
+        "compaction",
+        "checkpoint",
+        "continuation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0054"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0058",
+      "name": "receipt-confirmed-handoff-packet",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Require an explicit receipt state for a handoff packet before the receiving side continues so ownership transfer stays reviewable instead of being inferred from delivery or silence.",
+      "technique_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md",
+      "origin": {
+        "project": "jeremiah-k/agor + ax-platform/ax-platform-mcp",
+        "path": "docs/snapshots.md + docs/features.md + docs/examples.md",
+        "note": "Adapted from AGOR's snapshot receipt-confirmation step, reinforced by aX Platform's explicit assignment, reply, and wait surfaces, to keep handoff acceptance visible before continuation."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "handoff",
+        "receipt",
+        "acknowledgment",
+        "continuation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0057"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0059",
+      "name": "git-verified-handoff-claims",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone.",
+      "technique_path": "techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md",
+      "origin": {
+        "project": "thebasedcapital/nightcrawler + jeremiah-k/agor",
+        "path": "README.md + skills/nightcrawler-episode.md + docs/snapshots.md",
+        "note": "Adapted from Nightcrawler's mandatory git cross-check before continuing from handoff, reinforced by AGOR's snapshot-receiver verification posture, to keep handoff trust anchored to visible repo state."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "handoff",
+        "git",
+        "verification",
+        "continuation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0057"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0060",
+      "name": "session-opening-ritual-before-work",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.",
+      "technique_path": "techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md",
+      "origin": {
+        "project": "thebasedcapital/nightcrawler",
+        "path": "README.md + skills/nightcrawler-episode.md",
+        "note": "Adapted from Nightcrawler's mandatory session-opening ritual to keep pre-mutation state reading and baseline verification explicit without importing the donor's mission loop, task picking, or runtime orchestration."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "session-start",
+        "handoff",
+        "baseline",
+        "verification"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0057"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0061",
+      "name": "cross-repo-resource-map-bootstrap",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Bootstrap cross-repo work from one explicit resource map so the next session can see which repos and surfaces matter before deeper continuation begins.",
+      "technique_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "origin": {
+        "project": "yan5xu/code-relay",
+        "path": "README.md + local/orchestrator/ALWAYS/RESOURCE-MAP.yml + github/orchestrator/ALWAYS/RESOURCE-MAP.yml",
+        "note": "Adapted from Code Relay's global RESOURCE-MAP bootstrap surface to keep cross-repo startup context explicit without importing the donor's whole boot sequence, infrastructure inventory, or collaboration-mode stack."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "cross-repo",
+        "bootstrap",
+        "resource-map",
+        "handoff"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0016"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0062",
+      "name": "episode-bounded-agent-loop",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.",
+      "technique_path": "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
+      "origin": {
+        "project": "thebasedcapital/nightcrawler",
+        "path": "README.md + skills/nightcrawler-episode.md",
+        "note": "Adapted from Nightcrawler's episode-based mission loop to keep bounded work slices, checkpoints, and explicit continue-or-stop decisions visible without importing the donor's orchestration runtime, budgets, or supervision stack."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "episodes",
+        "checkpoints",
+        "continuation",
+        "stop-rules"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0057"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0063",
+      "name": "versioned-agent-registry-contract",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.",
+      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md",
+      "origin": {
+        "project": "agntcy/dir",
+        "path": "README.md + proto/agntcy/dir/core/v1/record.proto",
+        "note": "Adapted from Directory's named and versioned record contract so registry-facing capability publication stays reviewable without importing discovery queries, signature systems, or registry product semantics."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "registry",
+        "capability",
+        "versioning",
+        "contract"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0025"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0064",
+      "name": "capability-discovery",
+      "domain": "docs",
+      "status": "promoted",
+      "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
+      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md",
+      "origin": {
+        "project": "agntcy/dir",
+        "path": "README.md + proto/agntcy/dir/search/v1/record_query.proto + proto/agntcy/dir/search/v1/search_service.proto",
+        "note": "Adapted from Directory's explicit discovery-query and search-service surfaces so capability lookup stays reviewable without importing ranking policy, trust pipelines, or registry product semantics."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "docs",
+        "discovery",
+        "registry",
+        "capability",
+        "query"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0063"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0065",
+      "name": "mcp-gateway-proxy",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.",
+      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "origin": {
+        "project": "lasso-security/mcp-gateway",
+        "path": "README.md + mcp_gateway/gateway.py + mcp_gateway/server.py",
+        "note": "Adapted from the open-source MCP Gateway project, which fronts configured MCP servers through one explicit proxy surface with metadata lookup and request/response sanitization rather than exposing every upstream server directly to callers."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "mcp",
+        "gateway",
+        "proxy",
+        "tools"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0038"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0066",
+      "name": "transcript-replay-artifact",
+      "domain": "history",
+      "status": "promoted",
+      "summary": "Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine.",
+      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "origin": {
+        "project": "es617/claude-replay + wesm/agentsview",
+        "path": "README.md from es617/claude-replay + README.md from wesm/agentsview",
+        "note": "Adapted from the open-source claude-replay project, with supporting second context from agentsview, to keep post-capture session history replayable as a bounded review artifact without importing the donor replay products or hosted viewer semantics."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "history",
+        "transcript",
+        "replay",
+        "review",
+        "sessions"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0044"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0053"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0067",
+      "name": "transcript-linked-code-lineage",
+      "domain": "history",
+      "status": "promoted",
+      "summary": "Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine.",
+      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "origin": {
+        "project": "git-ai-project/git-ai",
+        "path": "README.md + specs/git_ai_standard_v3.0.0.md + skills/ask/SKILL.md",
+        "note": "Adapted from the open-source git-ai project, which links AI-written code back to session evidence so reviewers can reopen the originating conversation or rationale instead of treating code provenance as invisible."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "history",
+        "lineage",
+        "transcripts",
+        "code",
+        "provenance"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0045"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0068",
+      "name": "fail-closed-evidence-gate",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.",
+      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "origin": {
+        "project": "Clyra-AI/gait",
+        "path": "README.md + docs/agent_integration_boundary.md + docs/mcp_capability_matrix.md",
+        "note": "Adapted from the open-source gait project, which places a verdict service directly in front of tool execution so non-allow outcomes block side effects and still emit reviewable evidence."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "gate",
+        "fail-closed",
+        "evidence",
+        "approval"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0028"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0069",
+      "name": "approval-bound-durable-jobs",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
+      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "origin": {
+        "project": "Clyra-AI/gait",
+        "path": "docs/durable_jobs.md + README.md",
+        "note": "Adapted from the open-source gait project, which keeps longer-running work durable across pause, checkpoint, approval, and resume boundaries without collapsing the whole contract into a generic scheduler platform."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "durable-jobs",
+        "approval",
+        "checkpoint",
+        "resume"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0062"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

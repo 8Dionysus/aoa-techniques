@@ -2701,6 +2701,1182 @@
           "markdown": "What can vary across projects:\n- the cluster size and review doc naming pattern\n- the derived manifest filename or reader companion\n- how many sections are lifted from the authored review doc\n- whether the downstream consumer is a navigation surface or a bounded review aid\n\nWhat should stay invariant:\n- authored review docs remain authoritative\n- derived review lookup stays bounded and cluster-shaped\n- review meaning stays in markdown\n- the technique does not become a policy or scoring system\n- consumers can still route back to the review doc\n\nThis technique sits beside other KAG/source-lift surfaces, but it does not become a new `kag` domain or a semantic automation layer. It is a bounded review lift, not a machine judge."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0049",
+      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Represent multi-step coding work as an explicit dependency graph so blocked state, ready state, and ordering decisions stay visible instead of disappearing into chat memory or ad hoc operator intuition."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- several bounded tasks depend on one another\n- the next safe slice should come from real prerequisite state, not from memory\n- humans or agents need one durable working surface for ready versus blocked work\n- the workflow needs coordination structure without becoming a full project-management system"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- one bounded task can be handled without dependency modeling\n- the real need is a full tracker with scheduling, estimation, staffing, or reporting policy\n- the graph is being used as a memory substrate or knowledge graph rather than a work-coordination surface\n- the ready view would be invented theater rather than a reflection of real execution constraints"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- task nodes that describe reviewable work slices\n- explicit dependency edges between those nodes\n- current task state\n- optional owner or label hints that do not replace the dependency contract"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- a reviewable task graph\n- a ready frontier derived from satisfied prerequisites\n- explicit blocked reasons for work that cannot start yet\n- a durable coordination surface that can be updated as state changes"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. List the smallest real task nodes that matter for the current bounded workflow.\n2. Record explicit dependency edges between nodes that truly block one another.\n3. Derive ready work from the nodes whose prerequisites are satisfied.\n4. Choose the next bounded step from that ready frontier instead of guessing from memory.\n5. Update node state when real work completes or blocker state changes.\n6. Recompute the ready frontier after each meaningful state change.\n7. Keep the graph subordinate to implementation review, validation, and reporting rather than treating the graph itself as the final proof surface."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- dependency edges are explicit\n- ready work is derived from graph state, not guessed from memory or inferred from narrative alone\n- blocked work includes a named unmet prerequisite\n- node granularity stays tied to reviewable execution steps rather than broad project themes\n- the graph remains a working surface, not a memory substrate, dashboard product, or full project-management system\n- implementation review and validation still happen in their own canonical surfaces\n\nRelationship to adjacent techniques: unlike `AOA-T-0001`, this technique does not own the full change protocol of plan, diff, verify, and report. It complements that workflow by making dependency order and ready work visible before or between bounded execution slices."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- stale edges keep work blocked after the blocker is gone\n- hidden cycles make the ready frontier misleading\n- node scopes become so large that the graph stops helping with execution order\n\n### Negative effects\n\n- over-modeling can slow down simple work\n- the graph can create false precision when completion signals are weak\n- teams can spend more time curating the graph than finishing the bounded tasks it is supposed to coordinate\n\n### Misuse patterns\n\n- using the graph as a substitute for implementation review or release validation\n- widening the graph into a full project-management doctrine\n- treating knowledge links, memory features, or staffing policy as part of this bounded contract\n\n### Detection signals\n\n- many nodes have no clear completion signal\n- the ready set does not match actual execution constraints\n- people update the graph after the fact instead of using it to make next-step choices\n- blocked tasks cannot name the specific unmet prerequisite that keeps them closed\n\n### Mitigations\n\n- keep node granularity small and reviewable\n- name blockers explicitly instead of implying them\n- re-check the ready frontier after every real state change\n- split out reporting, memory, or platform features instead of widening this graph contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a known blocked node becomes ready only when its prerequisite flips\n- blocked tasks can point to a real unmet prerequisite\n- the ready frontier can be recomputed from the graph without relying on hidden session memory\n- the graph remains smaller than a full project-management system\n- implementation review and release validation still live outside the graph itself\n\nSee `checks/dependency-aware-task-graph-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- node schema\n- edge labels\n- state vocabulary\n- storage shape, UI, or CLI surface\n- optional ownership fields\n\nWhat should stay invariant:\n- dependencies are explicit\n- ready work is derived from current graph state\n- blocked work names the unmet prerequisite\n- the graph stays bounded to work coordination rather than broad platform behavior\n\nProject-shaped details that should not be treated as invariant:\n- one database or storage engine\n- one task ID format or hierarchy style\n- donor-specific molecule, epic, or claim semantics\n- product dashboards, notifications, or dispatch features"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0050",
+      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn an existing blocker graph into a bounded next-work queue so the next step comes from visible dependency truth rather than from memory, narrative, or broad prioritization debate."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- you already have explicit dependency or blocker state\n- multiple possible next tasks compete for attention\n- you want ready work to be derived rather than narrated\n- the workflow needs a stable frontier for the next bounded step without bringing in a full tracker policy stack"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the graph itself is missing, stale, or untrusted\n- the real need is broad prioritization, scheduling, staffing, or backlog policy\n- the work has no meaningful blocker structure\n- the main gap is graph authoring rather than ready-frontier derivation"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- an explicit dependency or blocker graph\n- current task state\n- blocker relationships\n- optional bounded ordering hints that remain subordinate to blocker truth"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- a ready work queue or frontier\n- explicit reasons why excluded tasks are still blocked\n- a stable next-step surface derived from visible graph state\n- a narrower decision seam between dependency truth and later prioritization choices"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Inspect the current blocker graph and the current task state.\n2. Select only the nodes whose prerequisites are satisfied and whose state still makes them eligible.\n3. Keep blocked tasks out of the ready queue instead of treating all open tasks as equally claimable.\n4. Surface why each excluded task is still waiting.\n5. Apply any secondary ordering hints only after blocker-free eligibility is established.\n6. Refresh the ready queue after each real graph or state change.\n7. Hand off to a broader execution workflow once the next bounded task has been chosen."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- ready work depends on blocker-free state\n- blocked tasks are not silently promoted into the queue\n- the queue remains explainable from visible graph inputs\n- any secondary ordering hints come after dependency truth and do not replace it\n- the technique stays smaller than full prioritization policy or project-management doctrine\n- the technique assumes a graph exists, but it does not own graph authoring itself\n\nRelationship to adjacent techniques: unlike `AOA-T-0049`, this technique does not own the explicit graph as the working surface; it owns the derived ready queue that sits on top of an existing blocker graph. Unlike `AOA-T-0001`, it does not own planning, diff review, verification, or reporting after a task has been selected."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- stale blocker state yields a wrong ready queue\n- hidden manual overrides bypass the graph without being visible\n- secondary sort rules quietly replace dependency truth\n\n### Negative effects\n\n- operators may trust an outdated queue too much\n- narrow queue derivation can look like full prioritization even when it is not\n- teams may debate ordering policy inside a surface that should stay blocker-first\n\n### Misuse patterns\n\n- mixing blocker-free derivation with broad PM ranking doctrine\n- letting every queue tweak become implicit manual policy\n- using this queue as if it were the graph-authoring technique itself\n\n### Detection signals\n\n- blocked tasks appear in the ready queue without explanation\n- queue order cannot be explained from visible inputs\n- open tasks are treated as ready even when blockers still exist\n- teams argue about ranking policy more than blocker truth\n\n### Mitigations\n\n- recompute the frontier after each state change\n- keep blockers and overrides explicit\n- separate dependency truth from later prioritization or staffing policy\n- route graph authoring concerns back to `AOA-T-0049` instead of widening this queue contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- only blocker-free eligible nodes appear in the queue\n- blocked reasons remain visible for excluded tasks\n- queue updates track graph changes\n- open-but-blocked work does not leak into the frontier\n- any secondary ordering remains explainable after blocker-free eligibility is established\n\nSee `checks/ready-work-from-blocker-graph-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- frontier ordering rules\n- queue display format\n- task state vocabulary\n- storage shape or query surface\n- optional priority hints once readiness is already established\n\nWhat should stay invariant:\n- ready work is derived from blocker-free state\n- blocked tasks stay out of the queue until their prerequisites are satisfied\n- excluded tasks keep visible blocked reasons\n- dependency truth remains separate from later prioritization policy\n\nProject-shaped details that should not be treated as invariant:\n- one CLI or dashboard view\n- donor-specific molecule or claim semantics\n- one database or query engine\n- broad ranking, triage, or staffing behavior"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0051",
+      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Launch a bounded review pass after a visible commit boundary and preserve the result as a review artifact so findings can be inspected before any later remediation, merge, or policy action."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- commits are the cleanest review trigger in the workflow\n- review should happen asynchronously from the commit itself\n- findings need to remain inspectable before any follow-up action\n- the workflow wants commit-bound review coverage without turning the review surface into full CI governance"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the workflow expects interactive pair review rather than artifact output\n- the system would auto-apply code changes, auto-merge, or auto-close policy state in the same technique\n- the trigger needs to cover every repository event rather than a commit boundary\n- the main reusable object is findings compaction or remediation rather than the commit-bound review run"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one visible commit or diff target\n- one bounded review scope\n- one background runner or queue surface\n- optional severity or policy hints that do not replace human inspection"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one background review artifact tied to the triggering commit\n- findings with code references or equivalent review handles\n- one explicit signal that review ran after the commit boundary\n- one separation between review production and any later remediation path"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Detect a new commit boundary.\n2. Enqueue or launch a bounded background review against that commit or its delta.\n3. Preserve the resulting findings as a read-only review artifact tied to the triggering commit.\n4. Surface enough commit identity and scope information for later reviewers to understand what was reviewed.\n5. Keep follow-up actions such as fixing, merging, or policy changes outside the review run itself.\n6. Revalidate or rerun review later if the code has moved beyond the triggering commit.\n7. Stop widening the technique when the workflow starts needing remediation loops, queue compaction, or full CI governance."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- review runs after a visible commit boundary\n- findings remain inspectable artifacts rather than hidden transient output\n- the artifact can be tied back to the commit or diff that triggered it\n- the technique does not merge, rewrite, or close state automatically\n- background execution stays smaller than full CI governance\n- remediation and compaction remain separate sibling concerns\n\nRelationship to adjacent techniques: unlike `AOA-T-0001`, this technique does not own the broader change protocol around planning, diff review, verification, and reporting. It owns one asynchronous post-commit review trigger plus an inspectable findings artifact."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- stale findings outlive the code they reviewed\n- background timing hides the relation to the triggering commit\n- the review artifact becomes detached from its scope or commit identity\n\n### Negative effects\n\n- operators can confuse a review artifact with final truth\n- asynchronous review can create lag between commit and inspection\n- teams can overtrust the background loop and neglect explicit follow-up review\n\n### Misuse patterns\n\n- attaching auto-fix, auto-merge, or auto-rewrite behavior to the same technique\n- widening the trigger to every repository event\n- treating one background review run as if it were already CI governance or policy enforcement\n\n### Detection signals\n\n- findings cannot be tied back to a commit or diff\n- review output mutates code or policy state directly\n- reviewers cannot tell whether the artifact reflects current code or an older commit\n- queue behavior becomes more important than the bounded review artifact itself\n\n### Mitigations\n\n- keep commit references in the artifact\n- separate review from remediation and merge actions\n- revalidate findings before acting on them\n- split queue, compaction, and policy surfaces into narrower sibling techniques"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the review artifact names the triggering commit or diff\n- findings survive as read-only output\n- no automatic merge or rewrite path is implied\n- a reviewer can tell what scope was reviewed\n- stale findings are detectable and can be rerun or revalidated later\n\nSee `checks/commit-triggered-background-review-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- commit source\n- background runner choice\n- findings severity format\n- artifact retention path\n- how the artifact is surfaced to later reviewers\n\nWhat should stay invariant:\n- the trigger is a visible commit boundary\n- review happens asynchronously from the commit itself\n- findings survive as an inspectable artifact\n- remediation stays separate from the review run\n\nProject-shaped details that should not be treated as invariant:\n- one daemon or queue implementation\n- one TUI or dashboard surface\n- one fix-loop or refine-loop workflow\n- provider-specific prompt or agent wiring"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0052",
+      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn a noisy or repeated findings set into a smaller current review surface by deduping, merging, and revalidating findings against the latest code instead of treating every historical finding as still current."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- repeated review runs produce overlapping findings\n- stale findings need to be filtered out before acting on them\n- reviewers need one tighter current view instead of several partially duplicated review artifacts\n- the workflow wants a quality layer between review production and remediation"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the main problem is issue triage or backlog policy rather than review findings\n- findings must remain fully expanded for legal, audit, or forensics reasons\n- there is no way to revalidate against current code\n- the real reusable object is the post-commit trigger rather than the consolidation pass"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- findings from one or more review passes\n- current code or diff target\n- original review references\n- optional severity or confidence signals that do not replace revalidation"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one compacted findings set\n- stale findings removed or explicitly marked\n- one current review artifact with less duplication\n- one cleaner handoff surface for later remediation or human review"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Collect the current findings set from one or more review artifacts.\n2. Group likely duplicates or closely related findings.\n3. Revalidate each group against the current code state.\n4. Keep one current representative where the issue still holds.\n5. Drop or mark findings that no longer reproduce against the current code.\n6. Preserve enough original references for a reviewer to understand where grouped findings came from.\n7. Stop widening the technique when the workflow starts needing backlog policy, remediation automation, or generic issue management."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- compaction never invents new findings\n- current code is checked before a finding survives as current truth\n- stale findings do not silently persist as current truth\n- duplicate grouping stays explainable and reviewable\n- original finding references remain traceable even after grouping\n- the technique stays smaller than generic issue management or remediation workflow design\n\nRelationship to adjacent techniques: unlike `AOA-T-0051`, this technique does not own the commit-triggered background review run that produced the findings. It owns the later verification-and-consolidation pass that reduces duplicate or stale findings before human action or remediation."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- real distinct findings are merged incorrectly\n- stale findings survive because revalidation is weak\n- important nuance disappears in over-aggressive grouping\n\n### Negative effects\n\n- reviewers can lose context if compaction becomes too aggressive\n- trust drops when a compacted surface still carries stale findings\n- the compacted artifact can look more authoritative than the revalidation process really was\n\n### Misuse patterns\n\n- using compaction to hide uncomfortable findings\n- widening the technique into issue backlog policy\n- treating compaction as if it were already remediation or policy enforcement\n\n### Detection signals\n\n- compacted artifacts still contain many exact duplicates\n- merged findings cite mismatched code locations\n- reviewers cannot trace a representative finding back to its source findings\n- grouped findings mix issues that do not share one underlying defect\n\n### Mitigations\n\n- keep original references during grouping\n- re-check code locations before carrying findings forward\n- separate compaction from prioritization and remediation\n- keep false-positive or stale markers explicit when a finding drops out"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- duplicate findings collapse into one representative\n- invalidated findings are removed or marked stale\n- current references still point to live code\n- grouped findings remain traceable back to their source findings\n- the compacted artifact stays a review surface, not a remediation or issue-management system\n\nSee `checks/review-findings-compaction-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- duplicate grouping rules\n- revalidation method\n- artifact output shape\n- severity preservation\n- stale-finding marker format\n\nWhat should stay invariant:\n- revalidation happens against current code before a finding survives\n- compaction reduces duplication rather than inventing new findings\n- stale findings are removed or marked explicitly\n- traceability back to original findings remains possible\n\nProject-shaped details that should not be treated as invariant:\n- one daemon or queue implementation\n- one synthesis prompt or model\n- one review dashboard or comment format\n- backlog or issue-triage behavior"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0053",
+      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Build a local searchable index over already-saved session artifacts so operators can find and reopen useful history quickly while keeping the saved artifacts, not the index, as the authoritative source."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- session artifacts are already being saved locally\n- the history layer has become large enough that browse and search matter\n- operators need a faster lookup surface that still points back to original artifacts\n- the reusable object is a local-first index over saved history, not capture, export, or hosted analytics"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real problem is still capturing or persisting session history in the first place\n- the workflow mainly needs transcript packaging, redaction, or export for review\n- the index would become cloud memory, recall ranking, or instruction authority\n- the contract depends on a hosted dashboard, multi-machine sync, or remote database service"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one already-saved session artifact layer\n- one local discovery or refresh path over those artifacts\n- one bounded metadata set such as session ID, source path, timestamps, agent name, or display title\n- one local index store or equivalent lookup surface\n- one query or browse path that can return references back to source artifacts"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one local searchable or browsable index over saved session artifacts\n- faster lookup by text, metadata, or bounded filters\n- one stable reference back to the original saved artifact for every useful hit\n- one clearer separation between history lookup and any later memory, dashboard, or transcript-export layer"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from already-saved local session artifacts rather than from transient chat state.\n2. Extract a bounded metadata and searchable-content slice into one local index.\n3. Keep stable references from each index entry back to the source artifact path or identity.\n4. Refresh the index from local artifacts instead of treating the index as the place where history originates.\n5. Use the index to locate relevant sessions, then reopen the source artifact when review or reuse matters.\n6. Keep transcript export, analytics, hosted sync, and memory recall as sibling layers outside the core contract.\n7. Split out a different technique if hosted dashboards, central databases, or instruction recall become the true reusable object."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the index remains derivative and rebuildable from local source artifacts\n- source artifacts stay authoritative even when the index is easier to search\n- results keep stable references back to the saved artifact they summarize or match\n- local-first storage remains the default posture\n- the technique does not own capture, transcript packaging, memory recall, or hosted dashboard doctrine\n- searchable lookup stays smaller than analytics, publishing, or multi-machine sync systems\n\nRelationship to adjacent techniques: unlike [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md), this technique assumes session artifacts already exist and only owns read-only indexing and lookup over them. Unlike [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md), it helps find artifacts but does not package selected history into a new transcript artifact. Unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not add step-level witness or state-delta semantics."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the index drifts away from current source artifacts\n- search hits cannot reliably reopen the original artifact\n- a fast lookup surface gets mistaken for the authoritative history layer\n- the bundle widens into dashboard, analytics, or remote-sync product behavior\n\n### Negative effects\n\n- operators may skim the index instead of opening the source artifact when nuance matters\n- indexed metadata can flatten session context too aggressively\n- an index database can look more authoritative than the files it was derived from\n\n### Misuse patterns\n\n- mixing capture, indexing, and transcript export into one technique\n- turning the index into memory recall, ranking, or instruction policy\n- treating hosted dashboards, PostgreSQL sync, or publish flows as part of the invariant core\n\n### Detection signals\n\n- results no longer include stable source paths or session IDs\n- the index cannot be rebuilt from the local artifact layer alone\n- design discussion drifts toward analytics dashboards, central sync, or memory features\n- users act on index summaries without reopening the underlying artifact\n\n### Mitigations\n\n- keep stable source references in every useful hit\n- make rebuild-from-local-artifacts part of the validation story\n- preserve an explicit habit of reopening source artifacts for real review\n- split hosted analytics, remote sync, and recall behavior into narrower sibling techniques"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- session artifacts already exist before indexing starts\n- the index can be rebuilt from local artifacts without hidden memory state\n- search results or browse hits point back to the original saved artifact\n- the source artifact remains readable and authoritative after lookup\n- the explanation does not require capture, hosted sync, or memory doctrine to make sense\n\nSee `checks/local-first-session-index-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the artifact format such as JSONL, Markdown, or another saved-session shape\n- the local index backend such as SQLite, a flat manifest, or another local search store\n- which fields get indexed or exposed for filtering\n- refresh cadence and how index rebuilds are triggered\n- whether the lookup surface is CLI, TUI, or web UI\n\nWhat should stay invariant:\n- indexing starts from already-saved local artifacts\n- the index stays derivative and rebuildable\n- results keep references back to source artifacts\n- local-first posture stays intact\n\nProject-shaped details that should not be treated as invariant:\n- one specific web dashboard or desktop shell\n- analytics heatmaps, usage metrics, or live SSE updates\n- PostgreSQL push sync or shared-team viewer features\n- export, publish, or reverse-proxy configuration flows"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0054",
+      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Restore a bounded skill-availability surface after context compaction so the session can rediscover and reload needed skills from canonical sources instead of losing capability context or silently rebuilding the whole prompt state."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- long-running sessions are expected to compact older context\n- skills are real capability artifacts with canonical sources\n- post-compaction sessions still need a visible path to reload needed skills\n- the reusable object is compaction-bound skill recovery, not general context composition or memory recall"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real problem is how skills or context are authored before runtime\n- the workflow needs deterministic multi-fragment context composition across the whole repo\n- the system would silently replay arbitrary prompt history or hidden state after compaction\n- exact restoration of all previously loaded content is required rather than bounded rediscovery and reload\n- skills are not actually canonical capability sources"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one canonical skill source or discoverable skill set\n- one explicit compaction event or reduced-context boundary\n- one bounded post-compaction bootstrap surface such as an available-skills list or equivalent reminder\n- one reload path that can pull specific needed skills from canonical sources\n- optional baseline bootstrap skills that must survive as part of the narrow contract"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one refreshed post-compaction skill-availability surface\n- one explicit path for reloading needed skills from canonical sources\n- lower risk that compaction erases capability discoverability\n- one bounded recovery seam that stays smaller than full context reconstruction"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Name the compaction boundary explicitly instead of treating context loss as invisible background behavior.\n2. Rediscover or re-read the canonical skill set after compaction.\n3. Re-inject a small post-compaction bootstrap surface that tells the session which skills are available and how to reload them.\n4. Reload only the skills that are still needed from canonical sources rather than replaying all prior prompt state.\n5. Reset or drop any ephemeral loaded-skill bookkeeping that no longer matches the compacted session state.\n6. Keep the recovered surface visible enough that reviewers can tell what capability context was restored.\n7. Split broader context composition, memory recall, marketplace discovery, or installation behavior into sibling techniques when they become the real object."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- canonical skill sources remain authoritative\n- compaction recovery is explicit rather than hidden\n- the recovered surface restores discoverability or bounded bootstrap context, not arbitrary full session state\n- needed skills can be reloaded from canonical sources after compaction\n- post-compaction capability state remains more reviewable than silent prompt stuffing\n- the technique stays smaller than full context reconstruction, memory recall, or product-width skill management\n\nRelationship to adjacent techniques: unlike [AOA-T-0012](../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../docs/fragmented-agent-context/TECHNIQUE.md), this technique does not own how context or skill files are authored and composed before runtime. Unlike [AOA-T-0027](../../docs/cross-agent-skill-propagation/TECHNIQUE.md), it does not fan one canonical skill source out to many managed targets. Unlike [AOA-T-0040](../../docs/skill-vs-command-boundary/TECHNIQUE.md), it does not define what a skill is; it assumes bounded skill artifacts already exist and keeps them reloadable after compaction."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the wrong skill list is reintroduced after compaction\n- compaction recovery silently replays more prompt state than intended\n- post-compaction sessions cannot tell which skills are actually available again\n- recovery logic depends on stale in-memory bookkeeping rather than canonical sources\n\n### Negative effects\n\n- operators may assume every previously loaded skill body was preserved when only discoverability was restored\n- compaction recovery can feel magical if the injected bootstrap surface is too hidden\n- skill recovery can drift into general prompt-restoration doctrine if its boundary is not kept tight\n\n### Misuse patterns\n\n- treating any repeated prompt text as a skill worth replaying after compaction\n- rebuilding the whole session context instead of a bounded skill-availability surface\n- widening the technique into plugin installation, marketplace discovery, or general memory behavior\n\n### Detection signals\n\n- restored skills cannot be traced back to canonical sources\n- reviewers cannot tell whether a post-compaction skill came from a bootstrap surface or stale hidden state\n- the recovery path keeps growing beyond a short availability reminder plus explicit reload path\n- discussions drift toward context composition, memory recall, or product setup rather than compaction recovery\n\n### Mitigations\n\n- keep canonical source paths explicit\n- reintroduce only an availability surface or baseline bootstrap, not the whole prompt history\n- make post-compaction recovery visible in session artifacts or equivalent review surfaces\n- split composition, discovery, installation, and memory concerns into narrower sibling techniques"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a compaction event can happen without permanently losing skill discoverability\n- post-compaction sessions can still identify or reload needed skills from canonical sources\n- the recovered surface remains smaller than full context reconstruction\n- restored skills or skill reminders trace back to a canonical source or manifest\n- the explanation does not require marketplace, install, or memory doctrine to make sense\n\nSee `checks/compaction-resilient-skill-loading-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact compaction event or trigger\n- the source locations used for skill discovery\n- whether the bootstrap surface is an available-skills list, a baseline reminder, or another bounded capability summary\n- how explicit reload is invoked after compaction\n- whether baseline bootstrap skills accompany the availability surface\n\nWhat should stay invariant:\n- compaction is named explicitly\n- canonical skill sources remain authoritative\n- post-compaction recovery stays bounded and reviewable\n- capability rediscovery remains possible after compaction\n\nProject-shaped details that should not be treated as invariant:\n- one plugin runtime or SDK\n- semantic-similarity matching or embeddings\n- one Superpowers bootstrap mode\n- marketplace cache layout or install commands\n- hidden synthetic-message implementation details beyond the fact that recovery is explicit"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0055",
+      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep requirements, design, and tasks as visibly separate planning layers so work can move from problem statement to solution shape to execution slices without collapsing all three into one planning blob."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a feature or change needs more than a one-line plan\n- the next execution slice depends on a visible design seam\n- tasks should be traceable back to stated requirements and design choices\n- the workflow needs a small pre-execution ladder without importing a full methodology stack"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the work is one tiny change with no real design question\n- the main need is a full methodology, template suite, or governance process\n- the workflow needs intent normalization, dry-run, or contract artifacts before any action\n- the ladder would become ceremony with no real boundary between layers"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one bounded requirement statement\n- one design response to that requirement\n- one bounded task set derived from the design\n- optional review or approval seams that do not replace the ladder itself"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one visible requirement layer\n- one visible design layer\n- one bounded task layer for later implementation\n- clearer traceability from execution slices back to the reasoning that produced them"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. State the requirement in plain, bounded language before discussing implementation.\n2. Write the smallest design response that explains how the requirement will be met.\n3. Derive bounded tasks from that design instead of inventing tasks in isolation.\n4. Keep transitions between requirement, design, and tasks explicit and reviewable.\n5. Let each layer constrain the next one without silently replacing it.\n6. Keep tasks small enough that later execution can happen slice by slice.\n7. Stop widening the bundle when templates, approvals, research lanes, or methodology branding become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- requirements, design, and tasks remain distinct layers\n- design responds to a visible requirement instead of standing alone\n- tasks are derived from visible design choices rather than invented in isolation\n- each layer may constrain the next layer, but should not silently replace it\n- the ladder stays smaller than a full methodology, template ecosystem, or governance process\n- implementation, validation, and runtime coordination remain outside this bounded planning contract\n\nRelationship to adjacent techniques: unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), this technique stops before apply, verify, and report. Unlike [AOA-T-0004](../intent-plan-dry-run-contract-chain/TECHNIQUE.md), it does not normalize intent into dry-run and contract artifacts. Unlike [AOA-T-0049](../dependency-aware-task-graph/TECHNIQUE.md), it does not coordinate task dependencies through a graph; it only keeps the requirement-to-design-to-task ladder explicit before execution begins."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- design stays too vague to produce bounded tasks\n- tasks are written before requirement or design is clear\n- one layer quietly absorbs another and the ladder becomes decorative rather than operative\n- methodology language overwhelms the reusable core\n\n### Negative effects\n\n- the ladder can become paperwork theater when the change is too small\n- over-detailed design can delay execution unnecessarily\n- teams may mistake the existence of documents for real planning clarity\n\n### Misuse patterns\n\n- importing a whole template system into the technique\n- treating task lists as a substitute for design\n- using requirements language as a disguise for process mandates unrelated to the change\n\n### Detection signals\n\n- task items have no visible design source\n- design sections do not clearly answer any requirement\n- contributors discuss template compliance more than the layer transitions themselves\n- the planning surface grows faster than the bounded work it is supposed to enable\n\n### Mitigations\n\n- keep each layer short and bounded\n- require an explicit transition from requirement to design to tasks\n- trim methodology or template language that does not support the core ladder\n- stop and split the work when the ladder cannot stay smaller than the wider planning framework"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- tasks can be traced back to a visible design choice\n- design responds to a visible requirement\n- the three layers remain distinct in wording and purpose\n- the ladder stays smaller than a full methodology import\n- later execution still needs its own separate workflow surface\n\nSee `checks/requirements-design-tasks-ladder-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the document format used for each layer\n- layer naming conventions\n- how much detail lives in the design layer\n- task slice granularity\n- whether approvals happen between layers\n\nWhat should stay invariant:\n- requirements stay distinct from design\n- design stays distinct from tasks\n- tasks are derived from visible design\n- the ladder remains a bounded pre-execution planning surface\n\nProject-shaped details that should not be treated as invariant:\n- one command suite or slash-command taxonomy\n- one template pack or rules directory\n- one agent roster or parallel-execution system\n- donor-specific research, steering, or project-memory surfaces\n- methodology branding such as SDD or AI-DLC"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0056",
+      "technique_path": "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so teams can coordinate across session gaps without turning the mailbox into full platform doctrine, transcript history, or handoff authorization."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- agents need one durable communication surface that survives beyond a single transient session\n- messages should be replayed in visible order rather than recovered from memory or ad hoc logs\n- receivers need explicit acknowledgment state instead of implicit assumptions that a message was handled\n- the reusable object is one bounded mailbox transport surface, not a full orchestration or messaging product"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real need is a handoff contract that decides when the next agent is allowed to continue\n- the main artifact should be transcript packaging, history indexing, or witness export after the conversation is over\n- the design would require full pub/sub governance, federation, analytics, or messaging-platform policy to make sense\n- replay order and acknowledgment are not real requirements for the workflow"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one named channel identifier\n- one bounded message payload or payload reference\n- one sender and one intended reader or reader set\n- optional replay cursor or last-seen marker\n- optional acknowledgment signal that stays visible after receipt"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one durable mailbox channel with ordered messages\n- one replayable message sequence for that channel\n- one explicit acknowledgment state per handled message or cursor\n- one inspectable communication surface that stays separate from later handoff or policy layers"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Create or select one named channel for the bounded coordination lane.\n2. Append messages to that channel in visible sequence order instead of scattering them across transient logs.\n3. Let receivers replay messages from a named cursor or last-seen position when they reconnect or resume work.\n4. Record acknowledgment explicitly when a receiver has handled a message or advanced the mailbox cursor.\n5. Keep channel purpose narrow enough that replay order and ack semantics remain understandable in review.\n6. Route handoff permission, stop rules, escalation, analytics, and broader messaging-platform behavior to sibling surfaces instead of widening the mailbox contract.\n7. Reopen a different technique when topics, federation, routing policy, or workflow governance become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- channels are named explicitly and remain stable enough for replay\n- message order is reviewable through a visible sequence or cursor surface\n- replay starts from an explicit cursor, offset, or equivalent last-seen marker rather than hidden memory\n- acknowledgment is explicit and inspectable instead of being implied by silence\n- mailbox transport stays smaller than a full messaging platform, orchestration stack, or handoff-governance contract\n- transcript packaging, history indexing, and handoff authorization remain separate sibling concerns\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique owns live mailbox transport with replay and acknowledgment rather than post-capture transcript packaging. Unlike [AOA-T-0053](../../history/local-first-session-index/TECHNIQUE.md), it keeps active channel traffic inspectable but does not build a derived search index over saved history. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide when a receiving agent is permitted to continue, stop, return, or escalate."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- ack state drifts away from what receivers actually handled\n- replay cursors skip or repeat messages because the cursor is hidden or ambiguous\n- unrelated workflows share one channel and destroy the bounded review surface\n- platform breadth leaks in until the mailbox stops being one small transport contract\n\n### Negative effects\n\n- durable mailboxes can create more communication ceremony than a small task actually needs\n- operators may overtrust an ack bit and stop checking what the receiver truly did\n- long-lived channels can accumulate noise if retention and channel purpose stay vague\n\n### Misuse patterns\n\n- treating every agent handoff as if mailbox delivery already granted permission to continue work\n- widening the bundle into pub/sub governance, federation, analytics, or chat-product semantics\n- using channel history as a substitute for transcript packaging, witness export, or project memory\n\n### Detection signals\n\n- messages cannot be replayed from a stable cursor or sequence position\n- reviewers cannot tell whether a message was acknowledged, merely read, or never handled\n- channel names drift toward catch-all buckets like `general` or `everything`\n- design discussions focus more on broker features, fan-out policy, or dashboards than on one bounded mailbox seam\n\n### Mitigations\n\n- keep channel names tied to one bounded coordination lane\n- keep replay cursors and ack state explicit in the surface or artifact\n- split handoff authorization, transcript export, and analytics into sibling techniques\n- reset or split channels when message purpose stops being reviewable"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a receiver can replay messages from a visible last-seen cursor or equivalent sequence marker\n- acknowledgment state is explicit and distinguishable from unread or unhandled messages\n- channel naming is bounded enough that unrelated work does not collapse into one mailbox\n- the example still makes sense without platform-specific messaging features\n- the bundle stays smaller than handoff governance, transcript history, and full messaging-platform doctrine\n\nSee `checks/channelized-agent-mailbox-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- channel naming conventions\n- message schema or payload-reference shape\n- replay cursor format\n- acknowledgment granularity\n- whether the mailbox surface is CLI, file-backed, or another local transport shell\n\nWhat should stay invariant:\n- named channels remain the mailbox unit\n- replay order stays visible\n- acknowledgment stays explicit\n- the mailbox remains a bounded transport surface rather than workflow governance\n\nProject-shaped details that should not be treated as invariant:\n- one `.acomm` file format or one storage backend\n- one MCP server, CLI, or SDK package\n- pub/sub wildcard matching, federation, encryption, or affect semantics\n- dashboard, metrics, or productized multi-agent coordination features"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0057",
+      "technique_path": "techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Write one structured handoff artifact before compaction or session rollover so the next session can resume from an explicit continuation packet instead of hidden memory, vague summary prose, or full transcript replay."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a real compaction, rollover, or episode boundary may drop useful working context\n- unfinished work must survive to a later session or another agent without re-deriving state from memory\n- the next session should review one bounded continuation artifact before resuming\n- the reusable object is the pre-compaction handoff packet itself, not mailbox transport or transcript packaging"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- there is no real context-loss boundary and a normal status note is enough\n- the main artifact should be transcript packaging, history indexing, or witness export after the run\n- mailbox delivery, replay, or acknowledgment are the real coordination needs\n- the workflow needs general continuation permission, stop rules, or orchestration governance to make sense"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- the current work state at the compaction or rollover boundary\n- explicit done, in-progress, blocked, and next-step information\n- key file paths, commits, artifacts, or other continuation references\n- one trigger that says the current context is about to be reduced or handed off"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one structured handoff artifact written before context loss\n- one explicit continuation packet with status, blockers, next work, and key references\n- lower risk that the next session restarts from hidden memory or replays the whole transcript"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Detect the compaction, rollover, or episode boundary before context is actually dropped.\n2. Freeze the current work state into one structured handoff artifact instead of relying on hidden memory or a late summary.\n3. Record the minimum continuation fields: summary, work completed, work in progress or blocked, next step, and key file, commit, or artifact references.\n4. Write the handoff artifact to a stable, reviewable location before context loss.\n5. Require the next session to read the handoff artifact before resuming work.\n6. Keep the artifact narrow enough that it remains a continuation packet rather than a transcript export, witness trace, mailbox protocol, or orchestration framework.\n7. Route receipt semantics, git verification, transcript packaging, and broader continuation governance to sibling techniques when they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the handoff artifact exists before compaction or rollover completes\n- the artifact distinguishes completed work, in-progress or blocked work, and the next intended step\n- the artifact includes enough concrete references that continuation does not depend on hidden memory\n- the next session is expected to read the artifact before continuing\n- the technique stays smaller than transcript packaging, mailbox transport, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique does not package an already-saved transcript into a readable history artifact. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller witness trace for later audit. Unlike [AOA-T-0054](../compaction-resilient-skill-loading/TECHNIQUE.md), it records pre-compaction continuation state rather than reloading skills after compaction. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own delivery, replay, or acknowledgment semantics for the handoff packet. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules across a general phase system."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the handoff artifact is written too late and context is already lost\n- the artifact omits a blocker, stale assumption, or concrete next step\n- the artifact claims work was completed without enough references to verify it\n\n### Negative effects\n\n- the workflow can gain extra ceremony when the boundary is small enough that a full handoff packet is unnecessary\n- teams may overtrust the handoff and stop checking source files or git state\n- a supposedly small packet can drift toward a verbose transcript substitute\n\n### Misuse patterns\n\n- treating any freeform summary as if it already satisfies the handoff contract\n- using the handoff artifact as a substitute for transcript packaging, witness export, or history indexing\n- widening the bundle into generic orchestration, phase control, or continuation-governance doctrine\n\n### Detection signals\n\n- no handoff artifact exists before a known compaction or rollover boundary\n- the next session cannot tell what is blocked or what should happen next\n- handoff claims mention changed work but cite no files, commits, or artifacts\n- the handoff keeps growing until it reads like a full transcript or runbook\n\n### Mitigations\n\n- trigger handoff creation before compaction rather than after memory loss\n- keep completed, blocked, and next fields explicit\n- include concrete file, commit, or artifact references in the packet\n- pair the handoff with a separate verification or receipt technique when those concerns become real"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a handoff artifact is written before the boundary that would reduce context\n- the artifact names completed work, in-progress or blocked work, and the next step explicitly\n- the artifact includes concrete continuation references such as files, commits, or artifacts\n- the next session can explain its first honest move from the handoff artifact alone\n- the explanation still makes sense without mailbox transport, transcript packaging, or broad orchestration doctrine\n\nSee `checks/structured-handoff-before-compaction-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the filename or storage location of the handoff artifact\n- the exact section headings or field names\n- whether the packet is written for same-user compaction recovery or cross-agent continuation\n- whether references point to files, commits, task IDs, or other project artifacts\n- whether the handoff is markdown, YAML, or another small structured format\n\nWhat should stay invariant:\n- the handoff is written before context loss\n- the continuation packet stays explicit and reviewable\n- completed work, blocked work, and next work remain visible\n- the next session reads the packet before continuing\n\nProject-shaped details that should not be treated as invariant:\n- one `HANDOFF.md` path under a particular home directory\n- episode numbering or overnight mission framing\n- `STATE.json`, `tasks.json`, or any immutable task-tracker contract\n- launchd, worktree, or orchestrator runtime behavior\n- multi-repo boot or checkpoint stacks beyond the bounded handoff packet itself"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0058",
+      "technique_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Require the receiving side to record explicit receipt of a handoff packet before continuing work so transfer of responsibility is visible and reviewable instead of being inferred from delivery, assignment, or silence."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a handoff packet already exists and continuation should wait for visible acceptance\n- work crosses a session, agent, or owner boundary where simple delivery is not enough\n- the receiver should acknowledge that the packet was reviewed before acting on it\n- the reusable object is the receipt-confirmed handoff seam, not mailbox transport or packet authoring"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real need is to create the handoff packet itself before compaction\n- message delivery, replay, or durable channel management are the main coordination concerns\n- assignment alone is good enough and no separate receipt state is needed\n- the workflow requires broader continuation governance, rejection policy, or phase control to make sense"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one existing handoff packet or stable handoff reference\n- one intended receiver or next owner\n- one visible surface where receipt can be recorded\n- one continuation boundary that should stay closed until receipt appears"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit receipt state linked to the handoff packet\n- one visible indication that the receiver reviewed or accepted the handoff\n- one clearer continuation gate between packet delivery and work resumption"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Create or identify the handoff packet before asking the receiving side to continue.\n2. Present the packet to the intended receiver through a visible coordination surface.\n3. Require an explicit receipt record that identifies the packet and the receiver instead of inferring acceptance from delivery, assignment, or silence.\n4. Keep the receipt state separate from the packet body so reviewers can tell what was handed off and what was accepted.\n5. Allow continuation only after the receipt is visible.\n6. Keep the receipt contract narrow enough that it remains one acceptance seam rather than a full mailbox, queue, or workflow-governance platform.\n7. Route packet creation, transport, verification, rejection policy, and broader continuation governance to sibling techniques when they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the handoff packet exists before receipt is recorded\n- receipt links to a specific packet and a specific receiver or next owner\n- receipt is explicit and visible rather than implied by message delivery or task assignment\n- continuation remains gated until receipt is present\n- the technique stays smaller than mailbox transport, task or queue platforms, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not define how to author the handoff packet; it adds visible receipt semantics after the packet exists. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own message transport, replay, or channel-level acknowledgment. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules beyond the bounded receipt gate."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the receiver records receipt without actually reviewing the packet\n- continuation starts after delivery or assignment but before receipt is visible\n- the receipt exists but does not clearly identify which packet was accepted\n\n### Negative effects\n\n- the workflow gains extra ceremony when the handoff is small enough that explicit receipt adds little value\n- teams may overtrust the receipt and skip source verification or follow-up review\n- the receipt surface can become noisy if every trivial transfer requires a formal acceptance record\n\n### Misuse patterns\n\n- treating any reply, emoji, or generic acknowledgment as if it were a valid handoff receipt\n- treating assignment or message delivery as if acceptance were already proven\n- widening the bundle into task-routing policy, queue governance, or full approval workflow doctrine\n\n### Detection signals\n\n- the receiving side starts work before any visible receipt exists\n- reviewers cannot tell which handoff packet the receipt refers to\n- the same surface mixes packet body, delivery details, and receipt state until acceptance becomes ambiguous\n- design discussion drifts toward queue management or platform breadth rather than one bounded handoff-acceptance seam\n\n### Mitigations\n\n- require the receipt to reference the packet explicitly\n- keep packet body and receipt state visibly separate\n- keep continuation conditional on explicit receipt instead of delivery\n- pair the handoff with separate verification or governance techniques when truth checking or rejection policy becomes real"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a handoff packet exists before receipt is recorded\n- receipt state is visible and separate from delivery or assignment state\n- the receipt identifies the packet and receiving side clearly enough for review\n- continuation stays blocked until receipt is present\n- the explanation still makes sense without mailbox-platform doctrine or broad workflow governance\n\nSee `checks/receipt-confirmed-handoff-packet-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- whether the receipt lives in a message thread, task note, log entry, or lightweight state file\n- the exact receipt states such as `accepted`, `reviewed`, `ready`, or `declined`\n- whether the receiver is another agent, a later session, or a human operator\n- whether the receipt includes the first intended next step\n- whether retries or reassignments exist around the basic acceptance seam\n\nWhat should stay invariant:\n- the packet exists before receipt\n- receipt stays explicit and reviewable\n- receipt and delivery stay distinguishable\n- continuation waits on receipt rather than on assumption\n\nProject-shaped details that should not be treated as invariant:\n- one task system, chat platform, or queue implementation\n- one thread-reply format or mention syntax\n- one coordination log path such as `.agor/agentconvo.md`\n- auto-assignment algorithms, team balancing, or platform presence features\n- rejection escalations, stop rules, or broader approval workflow policy"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0059",
+      "technique_path": "techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Verify concrete handoff claims against visible git state before continuation so the next session trusts reviewable repo evidence rather than memory, optimism, or summary prose alone."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a handoff packet claims that code, files, or commits changed and the next session will rely on that claim\n- the receiving side can inspect local git evidence such as recent commits, diffs, or branch state\n- continuation should start from what the repo actually shows rather than what the handoff merely says\n- the reusable object is one bounded handoff-verification seam, not general code review or provenance infrastructure"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- there is no git-backed worktree or the relevant change is not represented in visible repo state\n- the handoff is purely conceptual and makes no concrete code or commit claims\n- the workflow needs a fuller witness artifact, review loop, or provenance framework rather than one handoff check\n- packet authoring or receipt confirmation are the real missing seams"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one handoff packet with concrete claims, references, or file anchors\n- one visible local git state such as recent commits, current diff, or branch head\n- one continuation boundary where trust in the handoff should be checked before work resumes"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit verification result for the concrete handoff claims\n- one visible set of matches, mismatches, or unverifiable claims anchored to git evidence\n- lower risk that the next session continues from hallucinated or stale progress claims"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Read the handoff packet and isolate the claims that describe concrete repo changes or current code state.\n2. Inspect visible git evidence such as recent commits, current diff, branch head, or file status relevant to those claims.\n3. Compare each concrete claim against the repo evidence instead of trusting the handoff summary on its own.\n4. Record which claims are verified, which mismatch the repo, and which remain unverifiable from the available git state.\n5. Continue from the verified repo-backed understanding rather than from the original handoff wording alone.\n6. Keep the verification seam narrow enough that it remains one handoff-truth check rather than a full review workflow, witness trace, or provenance framework.\n7. Route packet authoring, receipt semantics, baseline testing, and broader review policy to sibling techniques when they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- concrete handoff claims are checked against visible git evidence before continuation\n- the verification output distinguishes verified, mismatched, and unverifiable claims explicitly\n- the git evidence used for the check stays reviewable enough that another reader can understand the verdict\n- continuation trusts repo-backed state over handoff narration when they diverge\n- the technique stays smaller than generic code review, witness artifacts, and broad provenance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not create the handoff packet; it verifies packet claims after the packet already exists. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record that a receiver accepted the handoff; it checks whether the handoff's concrete repo claims are true. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state deltas. It also stays smaller than a generic code-review workflow because it only verifies handoff claims that matter for immediate continuation."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- stale local git state produces a false sense of verification\n- the handoff claims are too vague to compare meaningfully against repo evidence\n- verification checks only one commit or file and misses the claim that actually matters\n\n### Negative effects\n\n- the workflow can gain extra ceremony when the handoff is simple enough that direct file inspection would suffice\n- teams may overtrust the verification note and skip broader testing or review that the change still needs\n- the seam can drift toward a generic review workflow if every code change is routed through it\n\n### Misuse patterns\n\n- treating git verification as a substitute for writing a real handoff packet\n- treating any recent commit activity as proof that the specific handoff claim is true\n- widening the bundle into generic code review, provenance logging, or full review-policy doctrine\n\n### Detection signals\n\n- handoff claims mention progress but do not name files, commits, or other repo anchors\n- the verification output cannot say which git evidence was checked\n- mismatches are silently ignored and continuation still follows the original handoff narrative\n- discussions shift toward total review coverage instead of the bounded trust check before continuation\n\n### Mitigations\n\n- require concrete file, commit, or diff anchors in claims that need verification\n- record the exact git evidence used for each verdict\n- keep mismatches and unverifiable claims explicit\n- separate this seam from packet authoring, receipt confirmation, baseline testing, and broader review policy"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- at least one concrete handoff claim can be tied to visible git evidence\n- the verification result names the evidence used and the verdict reached\n- mismatches or unverifiable claims remain explicit instead of being silently treated as true\n- continuation can be explained from the verification output without appealing to hidden memory\n- the explanation still makes sense without a full review framework or witness-artifact doctrine\n\nSee `checks/git-verified-handoff-claims-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- which git evidence is primary, such as `git log`, `git diff`, status, or file-by-file inspection\n- how many recent commits or diffs are checked\n- whether the verification result is appended to the handoff, written separately, or logged in another reviewable surface\n- whether unverifiable claims block continuation or simply stay flagged\n- whether the same agent or a later agent performs the check\n\nWhat should stay invariant:\n- the check happens before continuation trusts the handoff claims\n- concrete claims are compared against visible repo state\n- mismatches and unverifiable claims stay explicit\n- verified understanding is anchored to the repo, not to memory\n\nProject-shaped details that should not be treated as invariant:\n- one fixed command like `git log --oneline -5`\n- one handoff file path or orchestrator runtime\n- one snapshot log such as `.agor/agentconvo.md`\n- one branch naming scheme, review queue, or CI gate\n- broader provenance tracking or review-policy layers"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0060",
+      "technique_path": "techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions, optimistic memory, or inherited momentum."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- work is resuming after a session boundary, handoff, or context gap\n- a new operator or agent needs to align with current repo state before editing\n- the next step depends on whether the expected baseline still matches visible reality\n- the reusable object is one bounded pre-work ritual, not a total mission boot stack"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- work is continuing inside one uninterrupted session and the current state is already in view\n- there is no meaningful handoff, baseline, or state surface to re-read\n- the main missing seam is concrete git-backed claim verification, packet authoring, task selection, or a full baseline test gate\n- the pattern only makes sense when bundled with a whole orchestrator, runtime, or project-methodology stack"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one current handoff, recent summary, or other session-start context surface\n- one visible repo-state surface such as status, target files, or current branch state\n- one upcoming work item that should not start until the baseline is trusted"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit starting baseline for the resumed session\n- one visible note of any mismatch between expected and actual state\n- one decision to proceed, restage, or re-scope before editing"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Before the first mutation, read the current handoff, summary, or equivalent session-start surface.\n2. Inspect one visible baseline surface such as working-tree status, target files, or another current-state signal that matters to the next step.\n3. Compare the expected starting point against what the repo or artifact surface actually shows.\n4. Record any mismatch explicitly instead of carrying the inherited narrative forward unchanged.\n5. Start work only after the baseline is trusted enough to explain the first honest move.\n6. Keep the ritual narrow enough that it remains one pre-work read-and-verify seam rather than a task router, test suite, handoff packet template, or orchestration framework.\n7. Route packet authoring, claim-by-claim git verification, task prioritization, and broader startup or mission doctrine to sibling techniques when they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the resumed session includes a visible read step before the first mutation\n- at least one current-state surface is checked before continuation trusts the inherited baseline\n- mismatches between expected and actual state stay explicit\n- the first real move can be explained from the verified starting baseline\n- the technique stays smaller than handoff authoring, git-backed claim verification, task selection, test-gating doctrine, and full project boot stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not write the handoff packet; it consumes whatever starting context already exists. Unlike [AOA-T-0059](../git-verified-handoff-claims/TECHNIQUE.md), it does not perform a claim-by-claim git verdict on concrete handoff assertions; it owns the broader pre-mutation ritual that says a session must visibly re-read and re-check baseline state before acting. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it does not own the full change loop through apply, verify, and report. It also stays smaller than total startup doctrine because it does not choose tasks, manage budgets, run orchestration loops, or define a general mission protocol."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the ritual becomes a symbolic checklist and no real baseline is actually checked\n- the inherited summary is read but not compared against current repo state\n- the baseline stays too vague to catch a real mismatch before edits begin\n\n### Negative effects\n\n- the workflow can gain ceremony when the work is small enough that no real session gap exists\n- contributors may overtrust the opening ritual and skip deeper verification that a particular claim still needs\n- the seam can drift into a total startup framework if every pre-work concern gets folded into it\n\n### Misuse patterns\n\n- treating any opening checklist as equivalent even when no real state verification happens\n- widening the technique into task picking, baseline test mandates, or mission-governance doctrine\n- using the ritual as a substitute for writing a real handoff packet or for verifying concrete git claims\n\n### Detection signals\n\n- edits begin before any visible read or state check occurs\n- the operator cannot name what current-state surface was checked\n- a mismatch is discovered later even though the opening ritual supposedly completed\n- the bundle starts accreting task routing, test commands, or orchestration rules unrelated to the narrow session-start seam\n\n### Mitigations\n\n- require one visible read step and one visible current-state check before mutation\n- keep mismatch notes explicit and carry them into the revised starting plan\n- route detailed git verification, packet authoring, and broader startup policy to sibling bundles\n- use a lighter path when there is no real cross-session gap to recover from"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the opening ritual happens before the first mutation\n- at least one explicit current-state surface is checked, not just reread from memory\n- mismatches can be named and can stop or redirect work\n- the first honest move can be explained from the verified baseline\n- the technique still makes sense without task-routing doctrine, baseline test suites, or a full orchestrator stack\n\nSee `checks/session-opening-ritual-before-work-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- which starting context surfaces are read first, such as a handoff note, issue summary, task sheet, or state file\n- which baseline check is used, such as `git status`, target-file inspection, branch comparison, or another visible state signal\n- where mismatch notes are recorded\n- whether the ritual is for same-user session recovery or cross-agent continuation\n- how much evidence is enough before the session may proceed\n\nWhat should stay invariant:\n- the read-and-verify step happens before mutation\n- the session start trusts visible current state over inherited assumptions\n- mismatches remain explicit\n- the ritual stays short enough to remain a bounded opening seam\n\nProject-shaped details that should not be treated as invariant:\n- one `STATE.json`, `MISSION.md`, or `tasks.json` contract\n- launchd supervision, overnight mission framing, or budget caps\n- one mandatory test or lint suite at session start\n- one task-priority policy or autonomous planning loop\n- one orchestrator runtime, CLI wrapper, or collaboration mode"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0061",
+      "technique_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Bootstrap cross-repo work from one explicit resource map so the next session can see which repositories and surfaces matter before deeper continuation begins."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- the next step spans more than one repository\n- a receiving operator or agent needs one compact cross-repo starting surface\n- the main risk is not semantic context confusion inside one repo, but not knowing where to look first across several repos\n- the reusable object is one bounded startup map, not a whole architecture inventory or workspace platform"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the work is truly single-repo and a normal local starting surface is enough\n- the main need is a semantic context map, ownership model, or general architecture explanation\n- the map would become a standing encyclopedia of every repo and infrastructure surface\n- the workflow only makes sense when bundled with a full boot sequence, collaboration mode, or orchestrator stack"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one current cross-repo task, handoff, or continuation goal\n- one list of repositories that materially affect that goal\n- one small set of resource paths or surfaces per repo that the next step depends on"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit cross-repo resource map\n- one named role for each listed repo\n- one visible first-look path across repo boundaries before deeper work begins"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Name the repositories that materially affect the current cross-repo task or handoff.\n2. For each repo, list the smallest useful set of resources or surfaces the next step depends on.\n3. State why each repo and resource matters to the current goal instead of leaving the relationship implicit.\n4. Mark the first repo or surface the next session should inspect so startup order is visible.\n5. Keep the map small enough to review quickly before deeper work begins.\n6. Hand off the map as a bounded startup object rather than as a long-lived system encyclopedia.\n7. Route semantic domain modeling, broad architecture diagrams, full infrastructure inventories, and total workspace boot doctrine to sibling techniques when they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the map names real repositories and real resource surfaces\n- each listed repo has an explicit role tied to the current task or handoff\n- the next session can identify where to look first across repo boundaries\n- the map stays task-bounded instead of expanding into a general architecture inventory\n- the technique stays smaller than semantic context mapping, platform-wide topology docs, and full startup or orchestration stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md), this technique does not define conceptual bounded contexts or handoff interfaces across a system; it names only the repositories and concrete resource surfaces needed to start a specific cross-repo task safely. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not define the generic pre-mutation ritual for every resumed session; it owns the cross-repo map object used when one session-start surface must span multiple repos. Unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), it does not write the full continuation packet; it only gives the next session a bounded cross-repo index for where to look first."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the map includes too much inventory and the real first-look path disappears\n- an actually relevant repo or resource surface is omitted\n- repo roles are listed without explaining why they matter to the current task\n\n### Negative effects\n\n- the map can become ceremony when the cross-repo relationship is obvious and tiny\n- contributors may mistake the map for a durable architecture document and stop pruning it\n- infrastructure detail can crowd out the bounded startup purpose if every adjacent system gets listed\n\n### Misuse patterns\n\n- treating the map as a permanent workspace encyclopedia\n- widening the bundle into topology diagrams, domain models, or deployment inventories\n- hiding task assumptions inside unlabeled repo references or generic repo names\n\n### Detection signals\n\n- the map cannot be reviewed quickly before the next session starts work\n- a reader still cannot tell which repo or surface to inspect first\n- listed resources feel interchangeable or disconnected from the current task\n- the artifact grows faster than the bounded cross-repo work it is supposed to enable\n\n### Mitigations\n\n- keep the repo list tied to one current task or handoff\n- require one explicit reason for each listed repo and resource\n- mark a first-look surface rather than only enumerating everything\n- trim infrastructure or architecture detail that does not help the next bounded step"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- every listed repo or resource has a stated role in the current task\n- a reader can tell where to look first across repo boundaries\n- the map stays small enough to inspect quickly\n- the map still makes sense without a full workspace platform or architecture program\n- the artifact remains smaller than a semantic context map or infrastructure inventory\n\nSee `checks/cross-repo-resource-map-bootstrap-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- whether the map is written as Markdown, YAML, JSON, or another small reviewable format\n- how repos are named or grouped\n- how fine-grained the listed resources are\n- whether infrastructure surfaces are included when they directly affect the next step\n- whether the map is attached to a handoff, task sheet, or standalone startup note\n\nWhat should stay invariant:\n- the map is bounded to one current cross-repo task or continuation goal\n- repo roles and resource roles remain explicit\n- the next reader can tell where to start\n- the artifact stays smaller than a broader system model\n\nProject-shaped details that should not be treated as invariant:\n- one `RESOURCE-MAP.yml` path under a global orchestrator directory\n- GitHub board metadata, organization URLs, or worktree naming conventions\n- one local versus GitHub collaboration mode split\n- full infrastructure inventories for databases, caches, and deploy providers\n- a whole boot-sequence stack or workspace management platform"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0062",
+      "technique_path": "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- the work is too large or risky for one bounded pass\n- checkpoints are needed between slices of progress\n- stop or escalation decisions matter as much as progress itself\n- the reusable object is one bounded episode loop, not a whole autonomous agent platform"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- one bounded single-shot pass is enough\n- the main missing seam is just handoff writing, startup ritual, or a generic change workflow\n- the workflow only makes sense when bundled with budgets, supervision, task trackers, or a total orchestration runtime\n- there is no meaningful checkpoint where a continue-or-stop decision could be reviewed"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one current episode goal\n- one checkpoint artifact or checkpoint criterion\n- one visible rule for continue, stop, or escalate"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one bounded episode result\n- one explicit checkpoint artifact or checkpoint state\n- one visible decision to continue, stop, or escalate before a new episode begins"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Define one bounded goal for the current episode rather than treating the entire mission as one uninterrupted run.\n2. Work only until the checkpoint condition or stop rule is reached.\n3. Produce one checkpoint artifact or equivalent visible checkpoint state before the episode ends.\n4. Decide explicitly whether the next move is continue, stop, or escalate instead of letting the loop drift onward by default.\n5. Open a later episode only from that visible checkpoint rather than from hidden memory or an implicit assumption of progress.\n6. Keep the episode seam narrow enough that it remains a bounded loop contract rather than a full orchestrator, scheduler, or autonomous platform.\n7. Route startup rituals, handoff packet structure, git-claim verification, budgets, task integrity systems, and runtime supervision to sibling techniques when they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- each episode has one bounded goal\n- each episode reaches a visible checkpoint or stop condition before the next episode opens\n- continue, stop, or escalate decisions remain explicit\n- continuation reads from the checkpointed state rather than from hidden memory\n- the technique stays smaller than autonomous agent doctrine, orchestration runtimes, and total workflow governance\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not define the shape of the handoff artifact itself; it defines the bounded loop that says work proceeds in episodes separated by checkpoints. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not own the pre-mutation ritual at the start of an episode; it owns the fact that long work is broken into reviewable slices with explicit stop and continue decisions. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it does not define the internal workflow of each episode's change application; it constrains how longer work is segmented over time."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- episodes are too large to review safely\n- checkpoint criteria are too vague to stop the loop honestly\n- continuation happens by inertia even when the checkpoint says the work should stop or escalate\n\n### Negative effects\n\n- the workflow can gain ceremony if the work was already small enough for one bounded pass\n- teams may mistake the presence of episodes for proof that the work is well-governed\n- the seam can drift into a full autonomy framework if budgets, supervision, and runtime policy start accumulating inside it\n\n### Misuse patterns\n\n- treating any long task as permission for indefinite continuation\n- skipping checkpoint review to preserve momentum\n- widening the technique into task-tracker policy, process supervision, or whole-agent mission doctrine\n\n### Detection signals\n\n- episodes have no clear end condition\n- continuation happens without a visible checkpoint artifact or checkpoint state\n- stop or escalation rules are named vaguely enough that they never really fire\n- the bundle starts accreting budgets, watchdogs, task integrity rules, or runtime-management logic unrelated to the bounded episode seam\n\n### Mitigations\n\n- keep episode goals short and explicit\n- require one visible checkpoint before the next episode opens\n- keep continue, stop, and escalate as explicit outcomes\n- route supervision, budgeting, task integrity, and runtime policy to sibling layers"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- each episode has a bounded goal\n- every episode ends at a checkpoint or stop condition\n- the continue, stop, or escalate decision is explicit\n- the next episode can explain its starting point from the checkpoint alone\n- the technique still makes sense without an orchestrator runtime, budget stack, or autonomous platform doctrine\n\nSee `checks/episode-bounded-agent-loop-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- episode length\n- how checkpoint artifacts are represented\n- whether escalation goes to a human, another agent, or a later planning surface\n- whether the decision is recorded in markdown, YAML, JSON, or another reviewable format\n- how strict the stop threshold is\n\nWhat should stay invariant:\n- longer work is segmented into explicit episodes\n- episodes end at checkpoints or stop conditions\n- the continue, stop, or escalate decision stays visible\n- later work starts from the checkpoint rather than from hidden memory\n\nProject-shaped details that should not be treated as invariant:\n- one `STATE.json`, `tasks.json`, or mission-template contract\n- one maximum-episode count, budget cap, or cooldown timer\n- launchd supervision, crash-recovery stacks, or notification systems\n- one CLI harness or pipe-mode runtime\n- a whole autonomous mission platform"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0063",
+      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep registry-facing capability publication reviewable by expressing entries as named versioned records with explicit references and metadata instead of hiding registry meaning inside runtime state, search implementations, or marketplace surfaces."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a capability, agent, or similar object must be published into a directory or registry as a reviewable entry\n- the main reusable object is the registry-facing entry contract rather than the capability spec alone\n- downstream readers need explicit entry identity such as name, version, reference, and schema metadata\n- the workflow needs one publication contract without widening into discovery ranking, curation, or registry product doctrine"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real need is a single versioned capability spec with no registry-entry surface\n- the real need is discovery query behavior, selector policy, or search ranking\n- the real need is marketplace curation over upstream-owned entries\n- the contract only makes sense when bundled with distributed routing, signing infrastructure, or registry implementation details"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one named record or capability object\n- one explicit version identifier for the published entry\n- one stable record reference such as a content ID or equivalent immutable locator\n- one metadata layer that names schema version, timestamps, or bounded annotations"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one reviewable registry-entry contract for a versioned record\n- one clearer publication story for how a capability record is named and referenced\n- lower ambiguity between the record itself, its registry-facing entry, and adjacent discovery or curation layers\n- a reusable contract surface that can stay stable while discovery, trust, or runtime behavior evolves separately"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Define one registry-facing entry for the published object before discussing discovery behavior or runtime implementation.\n2. Make the entry identity explicit with a name, version, and stable record reference.\n3. Keep metadata such as schema version, annotations, and creation time readable as part of the contract rather than implicit in storage internals.\n4. Treat the registry entry as a reviewable publication surface distinct from the underlying record payload.\n5. Review entry changes at the contract layer when names, versions, references, or metadata meaning change.\n6. Keep discovery queries, signature systems, and routing semantics subordinate to the entry contract rather than letting them redefine it.\n7. Split out separate techniques if discovery policy, semantic linkage, or registry implementation becomes the real reusable object."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one registry-facing entry has explicit identity through name, version, and record reference\n- metadata needed to interpret the entry remains reviewable without opening runtime code first\n- the entry contract stays distinct from the underlying payload, discovery queries, and marketplace presentation\n- version changes are visible at the entry-contract layer rather than only through implementation drift\n- the technique does not own discovery ranking, registry governance, runtime synchronization, or signature-verification policy\n- the registry entry does not become a disguised marketplace page, search policy, or graph semantics surface\n\nRelationship to adjacent techniques: unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), this technique does not own the full internal capability contract; it owns the directory-facing entry that publishes a versioned record into a registry surface. Unlike [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md), it does not curate discovery or editorial grouping; it only makes the published entry contract explicit. Unlike [AOA-T-0021](../bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn entry metadata into graph semantics or typed relation doctrine."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- entry versions change without any contract review, so the entry surface stops signaling meaningful publication changes\n- the entry contract collapses into storage or runtime implementation detail\n- metadata becomes so loose that another reader cannot tell what the published record actually is\n\n### Negative effects\n\n- an explicit entry contract can add ceremony if the workflow only needed a local capability spec and never truly needed registry publication\n- teams may over-document entry metadata that belongs in adjacent trust or runtime layers\n- a strong publication contract can create false confidence that discovery or trust semantics are already solved\n\n### Misuse patterns\n\n- widening the bundle into search behavior, selector policy, or marketplace curation\n- treating a registry entry as if it already owns capability meaning, discovery ranking, and trust verification at once\n- using entry annotations as a backdoor for graph semantics or registry governance rules\n\n### Detection signals\n\n- reviewers cannot explain what changed in the published entry except by reading runtime code or storage internals\n- the entry surface starts listing search filters, ranking rules, or curation policy as core contract fields\n- metadata fields multiply mainly to patch adjacent discovery or governance concerns\n\n### Mitigations\n\n- keep name, version, reference, and bounded metadata explicit and reviewable\n- route discovery, trust, and curation concerns into separate sibling techniques\n- require contract-level review when entry identity or metadata meaning changes\n- trim annotations or metadata that do not support the bounded publication contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one registry entry has explicit name, version, and record reference\n- schema version and other bounded metadata remain readable without opening implementation code first\n- the published entry can be distinguished clearly from discovery queries and marketplace surfaces\n- contract changes are visible at the entry layer rather than only in runtime or storage code\n- discovery policy, trust policy, and graph semantics remain outside this bounded contract\n\nSee `checks/versioned-agent-registry-contract-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the format of the registry entry\n- the versioning scheme\n- the kind of stable record reference used\n- which bounded metadata fields are required\n- how compatibility notes are recorded when the entry changes\n\nWhat should stay invariant:\n- registry-facing entry identity remains explicit\n- name, version, and record reference stay reviewable\n- metadata stays bounded and interpretable\n- the entry contract remains separate from discovery and curation layers\n\nProject-shaped details that should not be treated as invariant:\n- one distributed peer-to-peer network or DHT implementation\n- one cryptographic signing system or trust pipeline\n- one search API or query language\n- one marketplace UI or selection surface\n- one registry product or runtime deployment stack"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0064",
+      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep capability discovery reviewable by expressing lookup as one explicit bounded query contract over already-published registry entries instead of hiding discovery meaning inside registry product semantics, marketplace curation, or runtime resolution logic."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a directory, registry, or catalog needs one reviewable lookup surface for published capability records\n- the reusable object is the discovery query contract rather than the capability spec or entry-publication contract\n- reviewers need visible search fields, bounded pattern rules, and explicit result shape\n- a workflow must separate lookup from ranking, editorial curation, or trust-verdict policy"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the main need is the versioned capability contract itself rather than how records are discovered\n- the main need is the registry-entry publication contract for named versioned records\n- the main need is editorial grouping, featured placement, or marketplace curation\n- discovery only works when bundled with graph semantics, runtime routing, or signature-verification policy"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one set of already-published registry entries or records\n- one bounded query surface with explicit field types\n- one small matching rule set such as exact or wildcard matching\n- one explicit result shape such as record identifiers or full records\n- one review path for changes to query fields, limits, or response scope"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one reviewable discovery contract for locating published capability records\n- lower ambiguity between record publication, lookup behavior, and downstream selection layers\n- a bounded lookup surface that can evolve without redefining capability meaning or registry runtime doctrine\n- clearer separation between discovery, ranking, trust, and marketplace presentation"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from already-published registry entries and make discovery subordinate to that publication surface rather than letting lookup redefine the entry contract.\n2. Name one bounded set of queryable fields that map to visible record attributes such as name, version, capability facets, or locator hints.\n3. Keep matching behavior explicit and small enough to review, such as exact, wildcard, or similarly bounded field patterns.\n4. Keep limits, offsets, and the difference between identifier-only lookup versus full-record return visible at the contract layer.\n5. Review discovery changes when query fields, match rules, or result shape change, instead of hiding the changes inside server internals.\n6. Keep ranking, marketplace editorial policy, semantic linkage, and trust-verdict semantics outside the bounded lookup contract.\n7. Split out separate sibling techniques if discovery grows into registry governance, graph semantics, or runtime capability resolution."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- discovery works over already-published entries or records rather than hidden runtime state\n- query fields and match rules remain explicit and reviewable\n- result shape stays bounded to record identifiers and/or records, not execution or routing behavior\n- lookup semantics stay distinct from ranking, editorial curation, trust policy, and registry product doctrine\n- the technique does not own capability meaning, record publication, marketplace curation, graph semantics, or runtime resolution\n- discovery does not become a disguised policy engine for selection, reputation, or governance\n\nRelationship to adjacent techniques: unlike [AOA-T-0063](../versioned-agent-registry-contract/TECHNIQUE.md), this technique does not publish the registry-facing entry contract; it owns lookup over entries that are already published. Unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), it does not define the capability contract itself; it only defines how published records are queried. Unlike [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md), it does not add editorial grouping or featured discovery; it keeps lookup smaller than marketplace curation. Unlike [AOA-T-0021](../bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn discovery metadata into graph semantics."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- query behavior changes without contract review, so discovery semantics drift silently\n- lookup fields multiply until the discovery surface quietly becomes ranking, governance, or trust policy\n- result shape becomes ambiguous, so callers cannot tell whether discovery returns identifiers, hydrated records, or product-specific payloads\n\n### Negative effects\n\n- an explicit discovery contract adds ceremony for very small local systems that only need manual lookup\n- teams may overfit query fields to one donor platform and reduce portability\n- a strong lookup surface can create false confidence that selection quality or trustworthiness is already solved\n\n### Misuse patterns\n\n- widening the bundle into marketplace ranking, featured placement, or recommendation logic\n- treating discovery filters as a backdoor for trust, reputation, or governance policy\n- collapsing query behavior into graph semantics or runtime routing doctrine\n\n### Detection signals\n\n- reviewers can no longer explain what discovery does without reading server code\n- new query fields mainly exist to smuggle in policy, ranking, or graph meaning\n- the response payload starts including editorial, routing, or execution-planning semantics that do not belong to bounded lookup\n\n### Mitigations\n\n- keep query fields, match rules, and response shape explicit and small\n- route curation, trust, and graph concerns into sibling techniques\n- require review when lookup fields or response semantics change\n- trim fields that exist mainly to patch downstream policy rather than bounded discovery"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- discovery uses one explicit bounded query surface over published entries\n- query fields and match behavior are readable without opening runtime code first\n- the result shape is explicit and reviewable\n- lookup stays separate from ranking, curation, trust, and graph semantics\n- discovery remains smaller than registry product doctrine and does not redefine capability meaning\n\nSee `checks/capability-discovery-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact query schema or file format\n- which record fields are queryable\n- whether results return only identifiers, full records, or both\n- the wildcard or pattern syntax\n- how pagination or limits are represented\n\nWhat should stay invariant:\n- discovery stays explicit as a bounded lookup contract\n- lookup operates over already-published entries or records\n- query fields and result shape remain reviewable\n- discovery stays separate from ranking, curation, trust, and runtime resolution\n\nProject-shaped details that should not be treated as invariant:\n- one search API transport such as gRPC or HTTP\n- one peer-to-peer network or DHT\n- one signature or verification subsystem\n- one marketplace UI or recommendation layer\n- one runtime watcher or capability resolver"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0065",
+      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Front multiple configured MCP servers through one bounded gateway proxy so callers can use one reviewable tool surface with explicit metadata and sanitized boundaries instead of coupling themselves directly to each upstream server."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- more than one MCP server or tool provider must be exposed behind one caller-facing surface\n- callers should discover proxied capabilities through one explicit gateway rather than through ad hoc direct bindings\n- the proxy should normalize metadata lookup or capability inspection before tool calls happen\n- request and response sanitization should sit at the intermediary boundary instead of being reimplemented by every caller\n- the reusable object is one gateway proxy seam, not a whole security, registry, or lifecycle platform"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- one direct MCP server is enough and a gateway adds only ceremony\n- the main need is local stack startup and shutdown rather than proxy mediation\n- the real center of gravity is trust scoring, reputation scanning, or broader perimeter-security doctrine\n- the workflow needs registry publication, capability search policy, or marketplace curation rather than runtime proxying\n- the design would only make sense as a full proxy product with dashboards, tenancy, or enterprise policy layers"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one configured set of upstream MCP servers or equivalent tool providers\n- one gateway-owned caller-facing endpoint\n- one bounded metadata or capability lookup surface for proxied tools\n- one sanitization posture for tool arguments, results, or both\n- optional per-upstream config that remains subordinate to the gateway seam"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one unified caller-facing proxy surface over the configured upstream tools\n- one explicit place to inspect proxied metadata before or alongside tool calls\n- lower direct coupling between callers and the upstream server set\n- one reviewable boundary where sanitization and upstream mediation happen"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Choose the bounded set of upstream MCP servers or tool providers that the gateway will front.\n2. Configure one gateway-owned caller-facing surface instead of exposing each upstream directly to every caller.\n3. Let the gateway surface proxied tool identity or metadata through one explicit lookup path.\n4. Route tool calls through the gateway so request and response handling stays mediated at one boundary.\n5. Sanitize arguments, results, or both at the proxy layer before returning data to callers.\n6. Keep upstream-specific lifecycle, reputation scanning, tenancy, and broader security posture outside the invariant core.\n7. Split out sibling techniques if the real reusable object becomes local stack lifecycle, registry doctrine, or security scanning rather than the proxy seam itself."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the gateway is an explicit intermediary rather than an invisible pass-through\n- callers interact with one bounded proxy surface instead of binding directly to each upstream server\n- proxied metadata or capability lookup remains visible enough for review\n- request or response sanitization happens at the gateway boundary when sanitization is part of the contract\n- the technique stays smaller than local stack lifecycle, registry publication, capability discovery policy, and security-scanner doctrine\n- upstream servers remain upstream; the gateway does not absorb their whole runtime or product semantics\n\nRelationship to adjacent techniques: unlike [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md), this technique does not own starting and stopping a local service stack; it owns the mediation seam once a proxy surface exists. Unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), it does not score or preflight external sources before surfacing them; it fronts configured upstream servers at runtime. Unlike [AOA-T-0064](../../docs/capability-discovery/TECHNIQUE.md), it does not define publication-time discovery queries over registry entries; it exposes a runtime proxy surface over already-configured upstream tools."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the gateway quietly becomes a full security platform instead of one bounded proxy seam\n- callers still depend on upstream-specific behavior, so the proxy is not a meaningful mediation layer\n- sanitization is claimed but not actually enforced at the proxy boundary\n- lifecycle, scan, or dashboard features crowd out the proxy contract\n\n### Negative effects\n\n- a gateway layer adds operational complexity compared with direct upstream access\n- a single proxy surface can hide useful upstream detail if metadata is too thin\n- teams may overtrust gateway mediation and skip deeper review of risky upstream servers\n\n### Misuse patterns\n\n- relabeling a full perimeter-security or trust platform as if it were only a gateway proxy\n- widening the bundle into tenancy, policy management, or enterprise governance\n- treating local lifecycle ownership as part of the same technique by default\n- using the proxy surface as a replacement for registry publication or curation\n\n### Detection signals\n\n- reviewers cannot explain which part of the system is the proxy seam and which part is a wider product surface\n- metadata lookup disappears and callers still need upstream-specific manual knowledge before every call\n- scan reports, trust scores, or policy modes dominate the bundle description\n- startup and shutdown mechanics sound more central than proxy mediation itself\n\n### Mitigations\n\n- keep the caller-facing gateway surface explicit and bounded\n- make proxy metadata and mediation visible enough that reviewers can inspect what is being fronted\n- treat scanning, trust, lifecycle, and registry concerns as sibling techniques unless they stay truly subordinate\n- split out broader platform behavior instead of widening the proxy contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- more than one upstream server or tool surface can be fronted through one gateway seam\n- callers can inspect proxied metadata or capability shape without binding directly to every upstream server\n- tool calls pass through the gateway rather than bypassing it\n- sanitization, when claimed, is visible at the gateway boundary\n- the explanation still makes sense without lifecycle doctrine, trust scoring, or registry-platform semantics\n\nSee `checks/mcp-gateway-proxy-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the number and type of upstream MCP servers or tool providers\n- whether the gateway exposes metadata, capability inspection, or both\n- the exact sanitization rules applied at the boundary\n- whether the gateway is local-only or network-facing\n- the exact config carrier for upstream definitions\n\nWhat should stay invariant:\n- one explicit proxy surface fronts the configured upstreams\n- callers use the proxy seam instead of direct per-upstream bindings\n- proxy mediation remains reviewable\n- lifecycle, scanning, and registry concerns stay separate unless they are truly subordinate\n\nProject-shaped details that should not be treated as invariant:\n- one CLI flag such as `--scan`\n- one config filename\n- enterprise trust posture, marketplace feeds, or reputation services\n- dashboards, tenancy features, or product packaging"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0066",
+      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- session artifacts already exist and reviewers need more temporal flow than a plain transcript file conveys\n- demos, bug reports, audits, or teaching flows benefit from replaying the sequence of a saved session\n- one bounded artifact should preserve the order and pace of a session without requiring the original runtime\n- the reusable object is post-capture replay, not first-save capture, indexing, or hosted viewer product semantics"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real problem is still saving session history in the first place\n- a plain readable transcript is enough and replay adds no real value\n- the artifact would become a hosted collaboration product, editor, or dashboard\n- the workflow really needs witness-level state deltas, review flags, or broader run forensics\n- replay semantics depend on product accounts, cloud sync, or a persistent hosted viewer"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one already-saved session or transcript artifact\n- one replay renderer or equivalent transformation path\n- one bounded time or message-order surface that should survive into replay\n- optional redaction or sanitization posture before sharing\n- one review or presentation context where replay is actually useful"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one replayable artifact over saved session history\n- preserved message order and flow cues that are easier to inspect than raw saved files alone\n- one post-capture review or demo object that remains derivative from the saved source artifacts\n- one explicit separation between replay and broader hosted viewer product semantics"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from an already-saved session artifact rather than from live capture.\n2. Transform that saved session into one replayable artifact or replay package.\n3. Preserve message order and other bounded flow cues that make the session reviewable as a replay.\n4. Keep references back to the underlying saved artifact or source session identity.\n5. Redact or sanitize the replay package before wider sharing when the saved session is too project-shaped.\n6. Treat replay as a derivative post-capture review surface rather than as the new authoritative history layer.\n7. Split out transcript packaging, history indexing, witness tracing, or hosted viewer semantics when those become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- replay begins after session capture and does not own first-save persistence\n- one replayable artifact is derivative from one or more already-saved session artifacts\n- message order and bounded flow cues survive into the replay surface\n- saved source artifacts remain authoritative even when replay is easier to consume\n- the technique stays smaller than transcript packaging, witness trace export, local indexing, and hosted replay products\n- replay does not become memory substrate, instruction authority, or collaboration-platform doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md), this technique preserves replayable flow rather than packaging saved sessions into readable Markdown transcripts. Unlike [AOA-T-0053](../local-first-session-index/TECHNIQUE.md), it does not build a searchable lookup layer over many sessions; it turns a saved session into a replay object. Unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not add state deltas, review flags, or broader run-forensics semantics."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the replay artifact quietly re-owns capture because the saved source seam disappears\n- replay becomes a hosted product surface with accounts, publish flows, or shared dashboards\n- reviewers confuse replay with stronger witness or proof artifacts\n- the replay package drops stable links back to the saved source artifact\n\n### Negative effects\n\n- replay can add packaging work when a simple transcript would have been enough\n- visual replay surfaces can tempt teams to prioritize polish over reviewable history\n- a replay artifact can overstate fidelity if important context was removed during sanitization\n\n### Misuse patterns\n\n- relabeling a hosted viewer or editor product as the whole technique\n- treating replay artifacts as the canonical source of truth for repo decisions or instructions\n- widening the bundle into search, publishing, analytics, or hosted collaboration\n- using replay where witness artifacts or plain transcripts are the actually smaller objects\n\n### Detection signals\n\n- the replay package cannot identify the saved source artifact it came from\n- product sharing, viewer accounts, or publishing modes dominate the explanation\n- reviewers expect state-delta or policy-proof semantics that the replay object does not actually provide\n- teams cannot explain what replay adds beyond plain transcript text\n\n### Mitigations\n\n- keep one explicit seam between saved source artifacts and replay derivatives\n- preserve source references in the replay package\n- use transcript packaging or witness tracing when those are the real reusable objects\n- split out hosted viewer or publishing behaviors instead of widening the replay contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- replay starts from an already-saved session artifact\n- message order or equivalent flow cues survive into the replay surface\n- the replay artifact keeps stable references back to the saved source artifact\n- the explanation still makes sense without hosted sharing, dashboards, or editor semantics\n- the bundle stays distinct from transcript packaging, history indexing, and witness trace export\n\nSee `checks/transcript-replay-artifact-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the replay container format such as HTML, JSON plus assets, or another self-contained artifact\n- whether timing cues are preserved exactly or as bounded step order only\n- how much UI chrome is present around the replay\n- whether the replay is shared locally, attached to review, or kept internal\n\nWhat should stay invariant:\n- replay begins after capture\n- replay remains derivative from saved source artifacts\n- flow cues survive well enough to make the artifact replayable\n- hosted platform doctrine stays outside the invariant core\n\nProject-shaped details that should not be treated as invariant:\n- one viewer implementation\n- one publish command or shared URL flow\n- embedded editors, dashboards, or analytics panes\n- product-specific replay controls beyond the fact that replay remains inspectable"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0067",
+      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics, repository mining, or memory doctrine."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- saved agent sessions or transcript evidence already exist alongside code changes\n- reviewers need to trace which saved session or conversation produced a code change\n- one code-review or blame surface should reopen bounded provenance instead of relying on memory\n- the reusable object is a code-to-session lineage seam, not a broad analytics or search platform"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- there is no saved session evidence to link back to\n- the main need is generic git analytics, productivity scoring, or repository mining\n- the workflow wants a full retrieval or Q and A product rather than a lineage link\n- the bundle would become authorship governance, policy enforcement, or memory substrate\n- one witness trace or one handoff check is the actually smaller object"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one saved session, transcript, or equivalent evidence artifact\n- one code anchor such as file, line range, diff hunk, or commit\n- one stable reference that links the code anchor back to the saved evidence\n- one review or blame surface that can expose the link"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit lineage record from code history back to saved session evidence\n- one reviewable path to reopen the originating transcript or rationale\n- lower pressure to treat provenance as hidden memory or oral history\n- one bounded seam between code review and deeper retrieval or analytics systems"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from saved session evidence that is already stable enough to reference.\n2. Choose the code anchor that needs provenance, such as a file, line range, diff hunk, or commit.\n3. Record one stable link from that code anchor back to the saved evidence artifact.\n4. Surface the link in one blame, review, or inspection path so a later reader can reopen the evidence.\n5. Keep the lineage surface bounded to provenance lookup rather than broad analytics or interactive retrieval products.\n6. Preserve the saved evidence artifact as the authoritative source for what the session said or did.\n7. Split out telemetry, retrieval UX, or governance layers if they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- code anchors link back to already-saved evidence artifacts\n- the lineage link is stable enough that another reviewer can reopen the source evidence later\n- saved session evidence stays authoritative when lineage is inspected\n- the technique stays smaller than generic repo analytics, hosted search, or memory-product doctrine\n- the technique does not own performance telemetry, authorship scoring, or free-form Q and A products\n\nRelationship to adjacent techniques: unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), this technique does not preserve a fuller run artifact with ordered steps and state deltas; it links code anchors back to evidence that already exists. Unlike [AOA-T-0059](../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md), it does not verify present-tense handoff claims against git state; it preserves lineage from code history back to prior evidence. It also stays smaller than generic blame analytics because the center of gravity is the stable code-to-evidence link itself."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- lineage links break because code anchors or evidence references are unstable\n- reviewers treat the lineage pointer as if it were the evidence itself\n- the bundle widens into productivity telemetry or generic code analytics\n- provenance links quietly become a memory or retrieval platform without bounded review surfaces\n\n### Negative effects\n\n- maintaining lineage links adds overhead compared with plain code review\n- line-range granularity can be brittle if refactors are frequent\n- provenance cues can be overtrusted even when the saved evidence is incomplete or noisy\n\n### Misuse patterns\n\n- treating code lineage as a scorecard for agent quality or contributor ranking\n- widening the bundle into hosted search, dashboards, or repository mining\n- using lineage links as a substitute for keeping the saved evidence artifact readable and accessible\n- collapsing lineage into generic why-search or Q and A product behavior\n\n### Detection signals\n\n- reviewers cannot reopen the saved evidence from the lineage surface\n- dashboards or ranking metrics become more prominent than the provenance link\n- saved evidence artifacts become harder to inspect than the lineage pointers themselves\n- teams talk about repository intelligence or analytics more than one bounded code-to-evidence seam\n\n### Mitigations\n\n- keep the lineage link stable and reviewable\n- preserve saved evidence artifacts as the authoritative source layer\n- split telemetry, ranking, or retrieval UX into sibling techniques instead of widening this contract\n- use broader witness or transcript artifacts when the actual need is fuller run context rather than lineage lookup"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- code anchors can be linked back to already-saved evidence artifacts\n- another reviewer can reopen the source evidence from the lineage surface\n- the explanation still makes sense without analytics dashboards or retrieval-product features\n- the saved evidence remains authoritative after the link is created\n- the bundle stays distinct from handoff verification, telemetry, and hosted search platforms\n\nSee `checks/transcript-linked-code-lineage-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the code anchor type such as file, line range, commit, or diff hunk\n- where the lineage record lives\n- whether lineage is surfaced through blame, review comments, or another bounded inspection path\n- how evidence artifacts are named or stored\n\nWhat should stay invariant:\n- lineage begins from already-saved evidence artifacts\n- code anchors keep stable pointers back to source evidence\n- provenance lookup remains the center of gravity\n- analytics, dashboards, and free-form retrieval stay outside the invariant core\n\nProject-shaped details that should not be treated as invariant:\n- one blame command or CLI name\n- one Git Notes layout or storage backend\n- repo-wide analytics dashboards or deployment metrics\n- interactive assistant commands beyond the bounded lineage lookup seam"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0068",
+      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings, advisory logs, or silent fallthrough."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- tool execution or another mutating boundary should not continue on ambiguous or non-allow outcomes\n- the gate should leave behind one reviewable evidence artifact instead of only printing warnings\n- callers need a clear distinction between allowed execution and blocked execution\n- the reusable object is one fail-closed evidence gate, not a whole security constitution or policy platform"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the path is read-only and no real side effects are at stake\n- the real gap is still human confirmation rather than a gate verdict surface\n- the system needs a full policy engine, governance stack, or trust platform to make sense\n- durable background jobs or long-running approval flows are the real center of gravity\n- the gate would degrade into advisory linting that still lets side effects through"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one candidate mutating action or tool call\n- one explicit gate surface that can issue an allow or non-allow verdict\n- one evidence artifact path or equivalent review surface\n- one execution boundary that can actually block side effects when verdicts are non-allow"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit allow or non-allow verdict before side effects continue\n- one evidence artifact that records the verdict and the basis for it\n- lower risk that warnings or soft failures still allow real mutation\n- one reviewable seam between candidate execution and actual side effects"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Intercept the candidate mutating action before side effects happen.\n2. Send the action through one explicit verdict surface that can return allow or non-allow.\n3. Treat every non-allow outcome as a real block on execution rather than as advisory output.\n4. Emit one evidence artifact that records the verdict and the bounded context needed for later review.\n5. Continue only on explicit allow rather than on silence, partial success, or ambiguous policy output.\n6. Keep the evidence gate smaller than a full governance platform, durable job system, or trust constitution.\n7. Split out approval-bound continuation, trace signing, or broader policy stacks if they become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the gate sits directly in front of mutating execution\n- non-allow verdicts block side effects rather than merely warning\n- one evidence artifact survives the verdict for later review\n- explicit allow is required for execution to continue\n- the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics\n- the evidence artifact supports review but does not itself become the whole trace or governance system\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the gate says non-allow but side effects still happen\n- evidence artifacts are too thin to explain why execution was blocked\n- ambiguous verdicts are treated like allow by convenience\n- the bundle widens into total policy-platform doctrine\n\n### Negative effects\n\n- fail-closed gates can add friction to fast local workflows\n- a strong gate can create false confidence if the evidence artifact is shallow or misleading\n- teams may over-route work through the gate when a simpler confirmation seam would have been enough\n\n### Misuse patterns\n\n- treating warning-level output as if it were already fail-closed\n- widening the bundle into broad policy governance, trust stacks, or product constitutions\n- expecting the evidence artifact to replace fuller witness traces or durable job history\n- using the gate as a general code-review substitute\n\n### Detection signals\n\n- reviewers cannot prove that non-allow really blocks side effects\n- evidence artifacts do not identify the blocked action or the verdict basis\n- discussions drift toward total platform governance rather than one bounded execution seam\n- long-running pause, checkpoint, and resume behavior starts creeping into the gate contract\n\n### Mitigations\n\n- keep the execution boundary explicit and test that non-allow truly blocks mutation\n- make evidence artifacts concrete enough for later review\n- treat ambiguous outcomes as blocked until made explicit\n- split durable jobs, signed traces, and broader governance systems into sibling techniques instead of widening this bundle"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the gate sits before a real mutating boundary\n- non-allow outcomes actually block side effects\n- one evidence artifact records the verdict and the bounded context for review\n- explicit allow is required before execution proceeds\n- the explanation still makes sense without a full security or governance platform\n\nSee `checks/fail-closed-evidence-gate-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the verdict carrier such as CLI, service, library call, or MCP surface\n- the evidence artifact format\n- whether the gate sits in front of one tool call or a small bounded action batch\n- the exact non-allow labels used by the project\n\nWhat should stay invariant:\n- the gate is execution-boundary-adjacent\n- non-allow blocks side effects\n- one evidence artifact survives the verdict\n- allow must be explicit\n\nProject-shaped details that should not be treated as invariant:\n- one command name or protocol\n- donor pack formats or enforcement runtime names\n- broader policy-authoring stacks\n- total trust, PKI, or compliance frameworks"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0069",
+      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler, fleet manager, or generic orchestration platform."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- work can span longer than one immediate interactive step\n- execution must pause at a visible approval seam before continuing\n- job state should survive across pause, checkpoint, and resume\n- the reusable object is one approval-bound durable job contract, not a whole workflow engine or queue platform"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the work is short enough that a simple fail-closed gate or confirmation seam is enough\n- the main need is a generic background task queue, cron system, or scheduler platform\n- the workflow needs broad orchestration policy, retries, and fleet governance to make sense\n- the durable object would become a general project-management or mission-control product\n- no explicit approval seam actually exists in the job lifecycle"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one job identity that can survive beyond one immediate interactive step\n- one durable checkpoint or persisted state surface\n- one explicit approval seam that must be crossed before continuation\n- one bounded resume path after approval\n- optional pause, stop, cancel, or inspect actions that remain subordinate to the durable job contract"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one durable job record that survives across pause and resume\n- one explicit approval checkpoint before continuation\n- one reviewable path to inspect status or checkpoint state\n- lower pressure to treat longer-running work as hidden background autonomy"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Create one durable job identity for work that may outlive the current immediate step.\n2. Persist enough checkpoint or status state that the job can later be inspected or resumed.\n3. Run until the first explicit approval seam and stop there instead of continuing implicitly.\n4. Expose the pending state so a reviewer can tell the job is waiting on approval rather than silently progressing.\n5. Resume only after approval is explicit and the job can continue from durable state rather than from hidden memory.\n6. Keep pause, inspect, stop, and resume semantics reviewable and attached to the same bounded job identity.\n7. Split out broad scheduling, fleet orchestration, or policy-platform behavior if those become the real center of gravity."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the job has a stable identity across pause and resume\n- checkpoint or status state survives the approval seam\n- continuation does not happen until approval is explicit\n- resume depends on durable state rather than on hidden memory or silent background continuity\n- the technique stays smaller than scheduler platforms, queue products, and broad orchestration doctrine\n- the durable job surface remains reviewable enough that another reader can tell whether it is running, paused, waiting for approval, or completed\n\nRelationship to adjacent techniques: unlike `fail-closed-evidence-gate`, this technique does not own the immediate execution verdict at one side-effect boundary; it owns longer-running continuity across an approval seam. Unlike [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md), it does not divide work into narrative episodes with continue, stop, or escalate decisions; it keeps one durable job identity stable across pause and resume. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record receipt of a handoff packet; it preserves durable work state until approval allows continuation."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- job state is not durable enough to support safe resume\n- approval is ambiguous and jobs continue anyway\n- pause and resume semantics grow until they require a full orchestration platform\n- review surfaces cannot explain whether the job is blocked, paused, or failed\n\n### Negative effects\n\n- durable jobs add state-management overhead compared with short-lived actions\n- explicit approval seams can slow legitimate longer-running work\n- contributors may overgeneralize the pattern into a total background-work doctrine\n\n### Misuse patterns\n\n- relabeling a generic task queue or scheduler platform as if it were one bounded durable-job technique\n- treating pause and resume as implicit background behavior instead of visible state transitions\n- widening the bundle into orchestration policy, fleet coordination, or mission-control semantics\n- using durable jobs where the actual need is only one boundary gate or one episode checkpoint\n\n### Detection signals\n\n- a reviewer cannot tell where the approval seam sits in the job lifecycle\n- resuming the job depends on reconstructing context from memory rather than durable state\n- dashboards or orchestration controls dominate the bundle explanation\n- the same durable-job contract starts absorbing unrelated scheduling or governance semantics\n\n### Mitigations\n\n- keep job identity and checkpoint state explicit\n- make approval waiting state visible before continuation\n- keep resume tied to durable state rather than narration\n- split out scheduler, queue, and orchestration semantics instead of widening this contract"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a stable job identity survives across pause and resume\n- checkpoint or status state remains inspectable at the approval seam\n- continuation does not happen until approval is explicit\n- resume can happen from durable state rather than from hidden memory\n- the explanation still makes sense without a scheduler or orchestration platform\n\nSee `checks/approval-bound-durable-jobs-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the job status model\n- the checkpoint storage mechanism\n- whether pause, inspect, stop, or cancel surfaces are all present\n- how approval is recorded\n- how resume is triggered after approval\n\nWhat should stay invariant:\n- job identity is durable\n- approval is explicit before continuation\n- resume depends on durable state\n- scheduler and orchestration platform breadth stay outside the invariant core\n\nProject-shaped details that should not be treated as invariant:\n- one CLI or MCP command family\n- donor runtime names\n- queue brokers, fleet managers, or deployment-specific job systems\n- broader mission-control, trust, or governance stacks"
+        }
+      ]
     }
   ]
 }

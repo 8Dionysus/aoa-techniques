@@ -1,0 +1,104 @@
+[
+  {
+    "candidate_slug": "structured-handoff-before-compaction",
+    "source_pack_wave": "wave-3-handoff-bounded-continuation",
+    "donor_repos": [
+      "yan5xu/code-relay",
+      "thebasedcapital/nightcrawler"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0044 versionable-session-transcripts + AOA-T-0056 channelized-agent-mailbox",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "receipt-confirmed-handoff-packet",
+    "source_pack_wave": "wave-3-handoff-bounded-continuation",
+    "donor_repos": [
+      "jeremiah-k/agor",
+      "ax-platform/ax-platform-mcp"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0057 structured-handoff-before-compaction + AOA-T-0056 channelized-agent-mailbox",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "session-opening-ritual-before-work",
+    "source_pack_wave": "wave-3-handoff-bounded-continuation",
+    "donor_repos": [
+      "thebasedcapital/nightcrawler"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0001 plan-diff-apply-verify-report + AOA-T-0059 git-verified-handoff-claims",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "git-verified-handoff-claims",
+    "source_pack_wave": "wave-3-handoff-bounded-continuation",
+    "donor_repos": [
+      "thebasedcapital/nightcrawler"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0057 structured-handoff-before-compaction + AOA-T-0045 witness-trace-as-reviewable-artifact",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "cross-repo-resource-map-bootstrap",
+    "source_pack_wave": "wave-3-handoff-bounded-continuation",
+    "donor_repos": [
+      "yan5xu/code-relay"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0016 bounded-context-map + AOA-T-0060 session-opening-ritual-before-work",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "episode-bounded-agent-loop",
+    "source_pack_wave": "wave-3-handoff-bounded-continuation",
+    "donor_repos": [
+      "thebasedcapital/nightcrawler"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0001 plan-diff-apply-verify-report + AOA-T-0057 structured-handoff-before-compaction",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "governed-action-surfaces",
+    "source_pack_wave": "wave-3-handoff-bounded-continuation",
+    "donor_repos": [
+      "Clyra-AI/gait",
+      "coproduct-opensource/nucleus",
+      "ClawCoat/*"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "future governed-action family",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "explicit-exclusion"
+  }
+]

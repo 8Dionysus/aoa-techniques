@@ -1,0 +1,115 @@
+[
+  {
+    "candidate_slug": "transcript-replay-artifact",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "es617/claude-replay",
+      "wesm/agentsview"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0044 versionable-session-transcripts",
+    "tentative_domain": "history",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "cross-agent-session-browser",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "wesm/agentsview"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0053 local-first-session-index",
+    "tentative_domain": "history",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "transcript-linked-code-lineage",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "git-ai-project/git-ai"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0045 witness-trace-as-reviewable-artifact",
+    "tentative_domain": "history",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "why-retrieval-from-code",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "git-ai-project/git-ai"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "AOA-T-0033 decision-rationale-recording",
+    "tentative_domain": "history",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "agent-readiness-telemetry",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "git-ai-project/git-ai"
+    ],
+    "status_lane": "narrow-first",
+    "recommended_action": "keep-narrowing-memo-open",
+    "nearest_overlap_watch": "AOA-T-0032 context-report-for-ci",
+    "tentative_domain": "evaluation",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  },
+  {
+    "candidate_slug": "fail-closed-evidence-gate",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "Clyra-AI/gait"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0028 confirmation-gated-mutating-action",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "approval-bound-durable-jobs",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "Clyra-AI/gait"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0028 confirmation-gated-mutating-action",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "signed-trace-artifacts",
+    "source_pack_wave": "wave-1-open-license-donor-sweep",
+    "donor_repos": [
+      "Clyra-AI/gait"
+    ],
+    "status_lane": "narrow-first",
+    "recommended_action": "keep-narrowing-memo-open",
+    "nearest_overlap_watch": "AOA-T-0045 witness-trace-as-reviewable-artifact",
+    "tentative_domain": "history",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  }
+]

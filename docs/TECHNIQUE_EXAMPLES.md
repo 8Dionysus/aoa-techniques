@@ -77,6 +77,102 @@ See also:
 |---|---|---|---|
 | Minimal One-Command Service Lifecycle | `present` | `techniques/agent-workflows/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md` | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
 
+### [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal dependency-aware-task-graph example | `present` | `techniques/agent-workflows/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md` | [TECHNIQUE.md](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) |
+
+### [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal ready-work-from-blocker-graph example | `present` | `techniques/agent-workflows/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md` | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
+
+### [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal commit-triggered-background-review example | `present` | `techniques/agent-workflows/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md` | [TECHNIQUE.md](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) |
+
+### [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal review-findings-compaction example | `present` | `techniques/agent-workflows/review-findings-compaction/examples/minimal-review-findings-compaction.md` | [TECHNIQUE.md](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) |
+
+### [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal compaction-resilient skill loading | `present` | `techniques/agent-workflows/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md` | [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) |
+
+### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal requirements-design-tasks ladder | `present` | `techniques/agent-workflows/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md` | [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) |
+
+### [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal channelized-agent-mailbox | `present` | `techniques/agent-workflows/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md` | [TECHNIQUE.md](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) |
+
+### [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal structured handoff before compaction | `present` | `techniques/agent-workflows/structured-handoff-before-compaction/examples/minimal-structured-handoff-before-compaction.md` | [TECHNIQUE.md](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) |
+
+### [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal receipt-confirmed handoff packet | `present` | `techniques/agent-workflows/receipt-confirmed-handoff-packet/examples/minimal-receipt-confirmed-handoff-packet.md` | [TECHNIQUE.md](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) |
+
+### [AOA-T-0059](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal git-verified handoff claims | `present` | `techniques/agent-workflows/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) |
+
+### [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal session-opening ritual before work | `present` | `techniques/agent-workflows/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) |
+
+### [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal cross-repo resource-map bootstrap | `present` | `techniques/agent-workflows/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md` | [TECHNIQUE.md](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
+
+### [AOA-T-0062](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal episode-bounded agent loop | `present` | `techniques/agent-workflows/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md` | [TECHNIQUE.md](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) |
+
+### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal mcp-gateway-proxy | `present` | `techniques/agent-workflows/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md` | [TECHNIQUE.md](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) |
+
+### [AOA-T-0068](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal fail-closed-evidence-gate | `present` | `techniques/agent-workflows/fail-closed-evidence-gate/examples/minimal-fail-closed-evidence-gate.md` | [TECHNIQUE.md](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) |
+
+### [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal approval-bound-durable-jobs | `present` | `techniques/agent-workflows/approval-bound-durable-jobs/examples/minimal-approval-bound-durable-jobs.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -232,6 +328,18 @@ See also:
 |---|---|---|---|
 | Minimal Semantic Review Surface Lift | `present` | `techniques/docs/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md` | [TECHNIQUE.md](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) |
 
+### [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal versioned agent-registry contract | `present` | `techniques/docs/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md` | [TECHNIQUE.md](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) |
+
+### [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal capability discovery | `present` | `techniques/docs/capability-discovery/examples/minimal-capability-discovery.md` | [TECHNIQUE.md](../techniques/docs/capability-discovery/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -334,6 +442,24 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Witness Trace As Reviewable Artifact | `present` | `techniques/history/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md` | [TECHNIQUE.md](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal local-first session index | `present` | `techniques/history/local-first-session-index/examples/minimal-local-first-session-index.md` | [TECHNIQUE.md](../techniques/history/local-first-session-index/TECHNIQUE.md) |
+
+### [AOA-T-0066](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal transcript-replay-artifact | `present` | `techniques/history/transcript-replay-artifact/examples/minimal-transcript-replay-artifact.md` | [TECHNIQUE.md](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0067](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal transcript-linked-code-lineage | `present` | `techniques/history/transcript-linked-code-lineage/examples/minimal-transcript-linked-code-lineage.md` | [TECHNIQUE.md](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## Boundaries
 

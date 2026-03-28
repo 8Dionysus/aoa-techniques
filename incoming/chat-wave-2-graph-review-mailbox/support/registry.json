@@ -1,0 +1,156 @@
+[
+  {
+    "candidate_slug": "dependency-aware-task-graph",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "steveyegge/beads"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "no landed exact match; watch bounded working-surface scope",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "ready-work-from-blocker-graph",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "steveyegge/beads"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "dependency-aware-task-graph",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "commit-triggered-background-review",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "roborev-dev/roborev"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "bounded review-loop artifact surface",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "review-findings-compaction",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "roborev-dev/roborev"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "commit-triggered-background-review",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "local-first-session-index",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "wesm/agentsview"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0026 session-capture-as-repo-artifact + AOA-T-0044 versionable-session-transcripts",
+    "tentative_domain": "history",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "compaction-resilient-skill-loading",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "joshuadavidthomas/opencode-agent-skills"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0030 fragmented-agent-context + AOA-T-0012 deterministic-context-composition",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "requirements-design-tasks-ladder",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "gotalab/cc-sdd"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "AOA-T-0004 intent-plan-dry-run-contract-chain + AOA-T-0049 dependency-aware-task-graph",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "channelized-agent-mailbox",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "agentralabs/agentic-comm"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "phase-synchronized-agent-handoff narrowing lane + history artifact siblings",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "markdown-definition-of-done-defaults",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "MrLesk/Backlog.md"
+    ],
+    "status_lane": "narrow-first",
+    "recommended_action": "keep-narrowing-memo-open",
+    "nearest_overlap_watch": "requirements-design-tasks-ladder",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  },
+  {
+    "candidate_slug": "shadow-epic-federation",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "thrashr888/AllBeads"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "system-shaped federation doctrine",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "explicit-exclusion"
+  },
+  {
+    "candidate_slug": "typed-governance-obligation-ledger",
+    "source_pack_wave": "wave-2-graph-review-mailbox",
+    "donor_repos": [
+      "agentralabs/agentic-contract"
+    ],
+    "status_lane": "explicit-exclusion",
+    "recommended_action": "exclude-and-route",
+    "nearest_overlap_watch": "governance-architecture ledger cluster",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "explicit-exclusion"
+  }
+]

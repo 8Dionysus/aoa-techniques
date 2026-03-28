@@ -70,6 +70,102 @@ See also:
 |---|---|---|---|---|
 | One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/agent-workflows/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
 
+### [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| dependency-aware-task-graph checklist | `present` | `8` | `techniques/agent-workflows/dependency-aware-task-graph/checks/dependency-aware-task-graph-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) |
+
+### [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| ready-work-from-blocker-graph checklist | `present` | `8` | `techniques/agent-workflows/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
+
+### [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| commit-triggered-background-review checklist | `present` | `8` | `techniques/agent-workflows/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) |
+
+### [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| review-findings-compaction checklist | `present` | `8` | `techniques/agent-workflows/review-findings-compaction/checks/review-findings-compaction-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) |
+
+### [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| compaction-resilient-skill-loading checklist | `absent` | `8` | `techniques/agent-workflows/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) |
+
+### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| requirements-design-tasks-ladder checklist | `absent` | `8` | `techniques/agent-workflows/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) |
+
+### [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| channelized-agent-mailbox checklist | `absent` | `8` | `techniques/agent-workflows/channelized-agent-mailbox/checks/channelized-agent-mailbox-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) |
+
+### [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| structured-handoff-before-compaction checklist | `absent` | `8` | `techniques/agent-workflows/structured-handoff-before-compaction/checks/structured-handoff-before-compaction-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) |
+
+### [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| receipt-confirmed-handoff-packet checklist | `absent` | `8` | `techniques/agent-workflows/receipt-confirmed-handoff-packet/checks/receipt-confirmed-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) |
+
+### [AOA-T-0059](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| git-verified-handoff-claims checklist | `absent` | `8` | `techniques/agent-workflows/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) |
+
+### [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| session-opening-ritual-before-work checklist | `absent` | `8` | `techniques/agent-workflows/session-opening-ritual-before-work/checks/session-opening-ritual-before-work-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) |
+
+### [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| cross-repo-resource-map-bootstrap checklist | `absent` | `8` | `techniques/agent-workflows/cross-repo-resource-map-bootstrap/checks/cross-repo-resource-map-bootstrap-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
+
+### [AOA-T-0062](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| episode-bounded-agent-loop checklist | `absent` | `8` | `techniques/agent-workflows/episode-bounded-agent-loop/checks/episode-bounded-agent-loop-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) |
+
+### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| mcp-gateway-proxy checklist | `absent` | `8` | `techniques/agent-workflows/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) |
+
+### [AOA-T-0068](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| fail-closed-evidence-gate checklist | `absent` | `8` | `techniques/agent-workflows/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) |
+
+### [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| approval-bound-durable-jobs checklist | `absent` | `8` | `techniques/agent-workflows/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
@@ -216,6 +312,18 @@ See also:
 |---|---|---|---|---|
 | Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/docs/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) |
 
+### [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| versioned-agent-registry-contract checklist | `absent` | `8` | `techniques/docs/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md` | [TECHNIQUE.md](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) |
+
+### [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| capability-discovery checklist | `absent` | `8` | `techniques/docs/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/docs/capability-discovery/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
@@ -309,6 +417,24 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Witness Trace As Reviewable Artifact Checklist | `absent` | `9` | `techniques/history/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| local-first-session-index checklist | `absent` | `8` | `techniques/history/local-first-session-index/checks/local-first-session-index-checklist.md` | [TECHNIQUE.md](../techniques/history/local-first-session-index/TECHNIQUE.md) |
+
+### [AOA-T-0066](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| transcript-replay-artifact checklist | `absent` | `8` | `techniques/history/transcript-replay-artifact/checks/transcript-replay-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0067](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| transcript-linked-code-lineage checklist | `absent` | `8` | `techniques/history/transcript-linked-code-lineage/checks/transcript-linked-code-lineage-checklist.md` | [TECHNIQUE.md](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## Boundaries
 

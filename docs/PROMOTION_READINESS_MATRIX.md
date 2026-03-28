@@ -10,7 +10,7 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `27` techniques
+- current promoted corpus: `43` techniques
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
 - latest graduation: [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the bounded `qqqa` origin plus GitHub Copilot CLI's programmatic fast path as a second public shell-side context
@@ -45,7 +45,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `12` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `28` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
 
@@ -127,12 +127,13 @@ Shared blocker: the remaining promoted family members still need more live markd
 
 ### Pack 7 - History Artifacts
 
-Shared blocker: the family is coherent, but still needs one more live artifact-first consumer beyond donor plus repo-local adaptation.
+Shared blocker: the family is coherent across capture, transcript packaging, local indexing, and witness artifacts, but still needs one more live artifact-first consumer beyond donor plus repo-local adaptation.
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational history technique and current lead candidate for the domain. | One second repo or surface family using local-first session capture as a real history-artifact layer. |
 | [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) | Post-capture transcript-packaging sibling. | One second repo or surface family treating transcript packaging as a reviewable artifact layer. |
+| [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) | Post-capture local-index sibling that keeps searchable lookup derivative and local-first. | One second repo or surface family using a local searchable index over already-saved session artifacts without widening into dashboard, memory, or capture doctrine. |
 | [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging. | One second downstream consumer outside the current witness/compost pilot lineage. |
 
 ### Pack 8 - Internal Docs Practice
@@ -142,6 +143,152 @@ Shared blocker: each bundle is internally strong, but still needs another live c
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | Single-decision note contract is bounded and useful, but still narrow. | One second live consumer proving the same one-decision record pattern in practice. |
+
+### Pack 9 - Graph Work Coordination
+
+Shared blocker: the donor and repo-local adaptation both show the graph as a bounded coordination surface, but one more live adopter is still needed so it reads as a reusable workflow pattern rather than one tracker lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) | Explicit blocker-aware graph contract with clear exclusions around memory, tracker product breadth, and project-management doctrine. | One second public workflow surface where real task dependencies determine ready work in practice without widening into a full tracker or memory system. |
+| [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) | Frontier-derivation sibling that keeps blocker truth ahead of ranking or tracker policy. | One second public workflow surface where blocker-free state determines the next honest work queue without widening into project-management or ranking doctrine. |
+
+### Pack 10 - Background Review Loop
+
+Shared blocker: the donor and repo-local adaptation both show a clean post-commit review artifact seam, but one more live adopter is still needed so the pattern reads as reusable workflow infrastructure rather than one review product lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) | Commit-bound asynchronous review sibling with clear exclusions around fix loops, queue UI, and CI governance. | One second public workflow surface where commits trigger bounded asynchronous review artifacts without widening into remediation, merge automation, or full CI policy. |
+| [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) | Findings-hygiene sibling that verifies and consolidates current review output before action. | One second public workflow surface where repeated or stale findings are revalidated and consolidated without widening into backlog policy, remediation, or generic issue management. |
+
+### Pack 11 - Post-Compaction Skill Recovery
+
+Shared blocker: the donor and repo-local adaptation both show a bounded post-compaction recovery seam, but one more live adopter is still needed so the pattern reads as reusable workflow recovery rather than one plugin lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | Post-compaction skill-availability recovery sibling with clear exclusions around full context reconstruction, marketplace discovery, and install doctrine. | One second public workflow surface where compaction triggers bounded skill rediscovery or reload from canonical sources without widening into general context restoration, memory recall, or plugin product semantics. |
+
+### Pack 12 - Planning Ladder
+
+Shared blocker: the donor and repo-local adaptation both show a bounded requirement -> design -> tasks seam, but one more live adopter is still needed so the pattern reads as reusable planning structure rather than one methodology lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) | Pre-execution planning sibling that keeps requirements, design, and tasks visibly separate with clear exclusions around templates, steering, and full methodology doctrine. | One second public workflow surface where requirement, design, and task layers remain visibly distinct before implementation without widening into a full spec-driven methodology stack. |
+
+### Pack 13 - Channelized Mailbox
+
+Shared blocker: the donor and repo-local adaptation both show a bounded named-channel mailbox seam, but one more live adopter is still needed so the pattern reads as reusable coordination infrastructure rather than one messaging repository lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) | Durable mailbox sibling that keeps named channels, ordered replay, and explicit acknowledgment visible with clear exclusions around handoff governance and full messaging-platform doctrine. | One second public workflow surface where named channels, replay, and explicit acknowledgment survive session gaps in practice without widening into orchestration policy, transcript history, or messaging-platform breadth. |
+
+### Pack 14 - Structured Handoff Before Compaction
+
+Shared blocker: the donor pair and repo-local adaptation both show a bounded pre-compaction handoff seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one episode-orchestrator lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) | Pre-compaction handoff sibling that keeps one explicit continuation packet visible with clear exclusions around transcript packaging, mailbox delivery, and broad phase governance. | One second public workflow surface where a structured handoff packet is written and read before context loss in practice without widening into transcript doctrine, delivery protocol, or orchestration governance. |
+
+### Pack 15 - Receipt-Confirmed Handoff Packet
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded handoff-acceptance seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one snapshot-framework lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) | Handoff-acceptance sibling that keeps receipt explicit and continuation gated with clear exclusions around packet authoring, mailbox transport, and broader approval workflow doctrine. | One second public workflow surface where a receiving side explicitly records acceptance of a handoff packet before continuation without widening into queue governance, mailbox platforms, or broad approval policy. |
+
+### Pack 16 - Git-Verified Handoff Claims
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded handoff-verification seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one overnight-agent lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0059](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) | Handoff-verification sibling that keeps concrete claims anchored to visible git evidence with clear exclusions around packet authoring, witness artifacts, and generic code-review doctrine. | One second public workflow surface where handoff claims are explicitly checked against recent repo state before continuation without widening into full review workflows, provenance systems, or orchestrator doctrine. |
+
+### Pack 17 - Session Opening Ritual Before Work
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded session-opening seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one overnight-agent lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) | Session-start sibling that keeps one visible pre-mutation read-and-verify ritual explicit with clear exclusions around task picking, startup test doctrine, and full boot or orchestration stacks. | One second public workflow surface where resumed sessions visibly re-read current context and verify baseline state before the first edit without widening into task routing, startup test suites, or mission-governance doctrine. |
+
+### Pack 18 - Cross-Repo Resource Map Bootstrap
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded cross-repo startup seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one workspace-platform lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | Cross-repo bootstrap sibling that keeps one task-bounded repo-and-resource map explicit with clear exclusions around semantic context mapping, infrastructure inventory, and workspace-platform doctrine. | One second public workflow surface where multi-repo continuation begins from an explicit repo-and-resource startup map without widening into architecture inventories, topology stacks, or full workspace-platform doctrine. |
+
+### Pack 19 - Episode-Bounded Agent Loop
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded episode-loop seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one overnight-agent lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0062](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) | Episode-loop sibling that keeps longer work divided into explicit checkpointed slices with clear exclusions around startup ritual, handoff packet structure, and full autonomous-platform doctrine. | One second public workflow surface where longer work is segmented into checkpointed episodes with explicit continue, stop, or escalate decisions without widening into supervision stacks, budget systems, or total autonomous workflow governance. |
+
+### Pack 20 - Versioned Agent Registry Contract
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded registry-entry seam, but one more live adopter is still needed so the pattern reads as reusable publication infrastructure rather than one directory-platform lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) | Registry-entry sibling that keeps named versioned publication records explicit with clear exclusions around discovery policy, trust services, and registry product doctrine. | One second public workflow surface where named versioned registry entries remain explicit and reviewable without widening into marketplace curation, search policy, or directory-platform semantics. |
+
+### Pack 21 - Capability Discovery
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded discovery-query seam, but one more live adopter is still needed so the pattern reads as reusable lookup infrastructure rather than one directory-platform lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) | Discovery-query sibling that keeps capability lookup explicit through bounded fields, match rules, and result shape with clear exclusions around ranking, trust policy, and registry product doctrine. | One second public workflow surface where published capability records are discovered through explicit bounded queries without widening into marketplace curation, graph semantics, or directory-platform semantics. |
+
+### Pack 22 - MCP Gateway Proxy
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded runtime proxy seam, but one more live adopter is still needed so the pattern reads as reusable gateway mediation rather than one gateway-product lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) | Runtime-proxy sibling that keeps one explicit gateway seam in front of configured MCP servers with clear exclusions around scanner modes, lifecycle doctrine, and registry or product semantics. | One second public workflow surface where several configured tool servers are fronted through one explicit proxy seam with visible metadata and mediated calls, without widening into enterprise security or runtime-platform doctrine. |
+
+### Pack 23 - Transcript Replay Artifact
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded post-capture replay seam, but one more live adopter is still needed so the pattern reads as reusable session-history replay rather than one viewer-product lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0066](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) | Replay-artifact sibling that keeps post-capture session replay explicit with clear exclusions around transcript packaging, witness export, and hosted viewer-platform doctrine. | One second public workflow surface where already-saved sessions are replayed as bounded review artifacts without widening into hosted sharing, dashboard products, or replay-platform semantics. |
+
+### Pack 24 - Transcript-Linked Code Lineage
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded code-to-evidence provenance seam, but one more live adopter is still needed so the pattern reads as reusable lineage infrastructure rather than one analytics-product lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0067](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) | Provenance-link sibling that keeps code anchors tied to saved session evidence with clear exclusions around dashboards, scorecards, and retrieval-product doctrine. | One second public workflow surface where code review or blame can reopen saved session evidence through stable code-to-evidence links without widening into analytics dashboards or hosted search product behavior. |
+
+### Pack 25 - Fail-Closed Evidence Gate
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded execution-boundary gate seam, but one more live adopter is still needed so the pattern reads as reusable fail-closed control rather than one policy-platform lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0068](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) | Execution-gate sibling that keeps explicit allow versus blocked side effects plus reviewable evidence with clear exclusions around human confirmation, durable-job orchestration, and total policy-platform doctrine. | One second public workflow surface where non-allow outcomes truly block side effects and leave reviewable evidence without widening into full governance, trust, or platform-policy semantics. |
+
+### Pack 26 - Approval-Bound Durable Jobs
+
+Shared blocker: the donor family and repo-local adaptation both show a bounded durable-job seam, but one more live adopter is still needed so the pattern reads as reusable approval-bound continuity rather than one orchestration-platform lineage plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) | Durable-job sibling that keeps checkpoint, pause, approval, and resume explicit with clear exclusions around scheduler products, queue platforms, and broad orchestration doctrine. | One second public workflow surface where longer-running work survives across an explicit approval seam and resumes from durable state without widening into scheduler platforms or orchestration-product semantics. |
 
 ## Suggested Wave Order
 

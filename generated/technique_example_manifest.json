@@ -654,6 +654,237 @@
           "body_markdown": "This example shows how an authored semantic-review doc can be surfaced as a bounded derived lookup aid without making the derived view the source of review meaning.\n\n## Source review excerpt\n\n```md\n## Cluster Map\n\n| technique | current role |\n|---|---|\n| [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |\n| [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |\n\n## Seam Review\n\n### `AOA-T-0002` vs `AOA-T-0009`\n\nQuestion: where does the broader document-role layout stop and the narrower snapshot discipline begin?\n\n- Invariant boundary: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map.\n- Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class.\n```\n\n## Derived lookup excerpt\n\n```json\n{\n  \"review_id\": \"docs_boundary\",\n  \"review_path\": \"docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md\",\n  \"title\": \"Docs Boundary Semantic Review\",\n  \"findings\": [\n    \"`AOA-T-0002` is semantically distinct as the broader source-of-truth layout pattern.\",\n    \"`AOA-T-0009` is semantically distinct as a lighter snapshot discipline layered on top of a broader document map.\"\n  ],\n  \"overall_outcome\": \"`clear`\"\n}\n```\n\nThe derived excerpt is intentionally routing-first. It helps a reader find the right authored review doc, but the meaning of the review still lives in that authored markdown.\n\n## Anti-Drift Rule\n\nIf maintainers need to edit the manifest directly to correct review meaning, the lift has stopped being markdown-first.\nIf the next question is scoring, status changes, or relation cleanup, this technique has been asked to do too much."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0049",
+      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md",
+          "title": "Minimal dependency-aware-task-graph example",
+          "body_markdown": "Suppose a landing workflow has four bounded tasks:\n\n- `review-overlap`\n- `draft-bundle`\n- `sync-shared-surfaces`\n- `run-release-check`\n\nDependencies:\n\n- `draft-bundle` depends on `review-overlap`\n- `sync-shared-surfaces` depends on `draft-bundle`\n- `run-release-check` depends on `sync-shared-surfaces`\n\nCurrent state:\n\n- `review-overlap`: open\n- `draft-bundle`: open\n- `sync-shared-surfaces`: open\n- `run-release-check`: open\n\nDerived ready frontier:\n\n- `review-overlap`\n\nAfter `review-overlap` completes, the graph changes:\n\n- `review-overlap`: done\n- `draft-bundle`: open\n- `sync-shared-surfaces`: open\n- `run-release-check`: open\n\nNew derived ready frontier:\n\n- `draft-bundle`\n\nThe point of the example is that the next safe step comes from explicit dependency state, not from whoever remembers the workflow best."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0050",
+      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md",
+          "title": "Minimal ready-work-from-blocker-graph example",
+          "body_markdown": "Suppose a landing queue is derived from this current state:\n\n- `review-overlap`: done\n- `draft-technique`: open and blocker-free\n- `sync-shared-docs`: open but blocked by `draft-technique`\n- `run-release-check`: open but blocked by `sync-shared-docs`\n\nDerived ready queue:\n\n- `draft-technique`\n\nBlocked exclusions:\n\n- `sync-shared-docs` because `draft-technique` is not done\n- `run-release-check` because `sync-shared-docs` is not done\n\nAfter `draft-technique` completes, the derived frontier changes:\n\n- `sync-shared-docs`\n\nThe point of the example is that the queue stays explainable from blocker state instead of being rebuilt from memory or open-task sprawl."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0051",
+      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md",
+          "title": "Minimal commit-triggered-background-review example",
+          "body_markdown": "Trigger:\n\n- commit `abc1234`\n\nReview artifact fields:\n\n- `commit_ref`\n- `review_scope`\n- `findings[]`\n- `generated_at`\n\nMinimal contract:\n\n- the commit boundary is visible\n- the review runs after that boundary\n- findings remain read-only output\n- any later fix step is separate from this artifact\n\nThe point of the example is that the review output is an artifact tied to a visible commit boundary, not an automatic rewrite or merge loop."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0052",
+      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/review-findings-compaction/examples/minimal-review-findings-compaction.md",
+          "title": "Minimal review-findings-compaction example",
+          "body_markdown": "Input findings:\n\n- `unused import in app.ts`\n- `app.ts has dead import`\n- `stale line reference in old diff`\n\nCompacted output:\n\n- one current finding for the dead import\n- one stale marker for the old diff reference\n\nWhy this works:\n\n- the first two findings point to the same underlying issue and can be represented once\n- the third finding no longer matches live code and should not survive as current truth\n\nThe point of the example is that compaction preserves the real issue while dropping invalidated duplicates."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0053",
+      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/history/local-first-session-index/examples/minimal-local-first-session-index.md",
+          "title": "Minimal local-first session index",
+          "body_markdown": "Saved artifacts:\n\n- `.history/sessions/2026-03-28T10-15-00_codex.jsonl`\n- `.history/sessions/2026-03-28T11-02-14_claude.jsonl`\n\nLocal index entry:\n\n- `session_id: 2026-03-28T10-15-00_codex`\n- `source_path: .history/sessions/2026-03-28T10-15-00_codex.jsonl`\n- `agent: codex`\n- `started_at: 2026-03-28T10:15:00Z`\n- `display_name: release check follow-up`\n- `keywords: [release_check, technique_index, validation]`\n\nQuery:\n\n- search for `release_check`\n\nResult:\n\n- one hit for `release check follow-up`\n- one snippet or metadata preview from the index\n- one link back to `.history/sessions/2026-03-28T10-15-00_codex.jsonl`\n\nThe index accelerates lookup, but the saved artifact remains the reviewable source of truth."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0054",
+      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md",
+          "title": "Minimal compaction-resilient skill loading",
+          "body_markdown": "Before compaction:\n\n- the session has already seen an `<available-skills>` block listing `checks` and `release-notes`\n- the agent previously loaded `checks`\n\nAfter compaction:\n\n- older injected context is no longer safe to assume\n- the session receives a fresh `<available-skills>` block derived from canonical skill sources\n\nRecovery step:\n\n- the agent re-evaluates which skills are needed\n- the agent reloads `checks` from its canonical skill source\n\nThe recovery surface is intentionally smaller than replaying the whole prior prompt history."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0055",
+      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md",
+          "title": "Minimal requirements-design-tasks ladder",
+          "body_markdown": "Requirement:\n\n- keep review findings searchable after the review run\n\nDesign:\n\n- store findings in one bounded artifact with stable references and a small query surface\n\nTasks:\n\n- define artifact fields\n- write one artifact example\n- validate stale-finding handling\n\nEach layer constrains the next one without collapsing requirement, design, and tasks into one planning blob."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0056",
+      "technique_path": "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md",
+          "title": "Minimal channelized-agent-mailbox",
+          "body_markdown": "Channel:\n\n- `review/findings`\n\nMessages:\n\n- `sequence=14`, `sender=review-agent`, `payload_ref=review-2026-03-28.md`\n- `sequence=15`, `sender=review-agent`, `payload_ref=review-2026-03-28-followup.md`\n\nReplay:\n\n- `fix-agent` reconnects with `last_seen=13`\n- it replays messages `14` and `15` in order\n\nAcknowledgment:\n\n- after handling both messages, `fix-agent` records `acked_through=15`\n\nThe mailbox contract is the visible named channel, ordered replay, and explicit ack state. It does not decide whether a later handoff is approved or what remediation policy follows."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0057",
+      "technique_path": "techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/structured-handoff-before-compaction/examples/minimal-structured-handoff-before-compaction.md",
+          "title": "minimal structured handoff before compaction",
+          "body_markdown": "Compaction boundary:\n- the current session is about to summarize older context and continue with a reduced window\n\nHandoff artifact:\n\n```markdown\n# Handoff\n\n## Summary\nFinished the parser refactor and isolated the remaining failure to one serializer branch.\n\n## Work Completed\n- Refactored `src/parser.ts` to use the new node walker\n- Updated parser tests for the new branch names\n\n## In-Progress Or Blocked\n- `src/serializer.ts` still fails on nested arrays\n- The failure appears in `tests/serializer.test.ts`\n\n## Next Step\n- Fix nested-array emission in `src/serializer.ts`\n- Re-run `npm test -- serializer`\n\n## References\n- files: `src/parser.ts`, `src/serializer.ts`, `tests/serializer.test.ts`\n- commit: `abc1234`\n```\n\nWhy this example stays bounded:\n- the packet is written before compaction\n- continuation does not depend on hidden memory\n- the artifact does not try to become a transcript, witness trace, or mailbox protocol"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0058",
+      "technique_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/examples/minimal-receipt-confirmed-handoff-packet.md",
+          "title": "minimal receipt-confirmed handoff packet",
+          "body_markdown": "Handoff packet:\n\n```markdown\n# Handoff Packet\n- id: handoff-serializer-fix\n- summary: Parser refactor is done; serializer still fails on nested arrays\n- next_step: Fix nested-array emission in `src/serializer.ts`\n- references:\n  - `src/serializer.ts`\n  - `tests/serializer.test.ts`\n  - commit `abc1234`\n```\n\nReceipt record:\n\n```markdown\n# Handoff Receipt\n- handoff_id: handoff-serializer-fix\n- receiver: @review-agent\n- state: accepted\n- reviewed_at: 2026-03-28T18:10:00Z\n- first_next_step: Reproduce the nested-array failure in `tests/serializer.test.ts`\n```\n\nContinuation rule:\n- do not continue the serializer work until the receipt record exists\n\nWhy this example stays bounded:\n- the packet exists before receipt\n- receipt is not confused with delivery\n- the contract does not become a mailbox platform, queue system, or broad approval workflow"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0059",
+      "technique_path": "techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md",
+          "title": "minimal git-verified handoff claims",
+          "body_markdown": "Handoff claim:\n\n```markdown\n# Handoff\n- summary: The parser refactor is finished and `src/parser.ts` was updated in commit `abc1234`\n- next_step: Continue in `src/serializer.ts`\n```\n\nGit evidence checked:\n- `git log --oneline -5 -- src/parser.ts`\n- `git diff -- src/parser.ts`\n\nVerification result:\n\n```markdown\n# Handoff Claim Verification\n- claim: `src/parser.ts` was updated in the refactor\n- evidence:\n  - `git log --oneline -5 -- src/parser.ts`\n  - `git diff -- src/parser.ts`\n- verdict: verified\n\n- claim: serializer work already landed\n- evidence:\n  - `git diff -- src/serializer.ts`\n- verdict: mismatch\n```\n\nContinuation rule:\n- continue from the verified repo-backed view, not from the mismatched serializer claim\n\nWhy this example stays bounded:\n- it checks only the handoff claims that matter for immediate continuation\n- it does not become a full review report or witness trace\n- trust is anchored to visible git evidence rather than memory"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0060",
+      "technique_path": "techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md",
+          "title": "minimal session-opening ritual before work",
+          "body_markdown": "Before the first edit:\n\n- read the current handoff note or recent session summary\n- check `git status --short`\n- open the file or files named as the next work surface\n\nVisible opening note:\n\n```markdown\n# Opening Check\n- handoff_read: yes\n- baseline_checked: `git status --short` plus `src/parser.ts`\n- mismatch: handoff said the parser cleanup was complete, but `src/parser.ts` still has the unresolved normalization TODO\n- decision: restage the first task before editing\n```\n\nWhy this example stays bounded:\n\n- it uses one read step and one visible baseline check before mutation\n- it does not become a full git-verification report for every claim\n- it does not pick tasks, run a full startup test suite, or import an orchestrator protocol"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0061",
+      "technique_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md",
+          "title": "minimal cross-repo resource-map bootstrap",
+          "body_markdown": "```markdown\n# Cross-Repo Resource Map\n\n- repo: `frontend`\n  role: consumes the changed API route\n  first_lookup: `src/app/routes.ts`\n\n- repo: `backend`\n  role: owns the request contract\n  resources:\n    - `api/openapi.yaml`\n    - `src/routes/widgets.ts`\n\n- repo: `docs`\n  role: holds the operator rollout note that the change must match\n  resources:\n    - `docs/DEPLOYMENT_FLOW.md`\n```\n\nWhy this example stays bounded:\n\n- it names only the repos and surfaces needed for the current cross-repo step\n- it shows where to look first without becoming a full architecture map\n- it does not import global workspace inventory, infrastructure catalogs, or a whole boot-sequence protocol"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0062",
+      "technique_path": "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md",
+          "title": "minimal episode-bounded agent loop",
+          "body_markdown": "Episode goal:\n\n- draft one bounded seed bundle and record the remaining overlap question\n\nCheckpoint artifact:\n\n```markdown\n# Episode Checkpoint\n- completed: drafted the seed bundle skeleton\n- blocker: overlap with `AOA-T-0001` still needs boundary review\n- next_decision: `escalate`\n```\n\nWhy this example stays bounded:\n\n- the episode ends at one visible checkpoint instead of running indefinitely\n- the next move is explicit: continue, stop, or escalate\n- it does not import budgets, task trackers, launchd supervision, or a full autonomous mission runtime"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0063",
+      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md",
+          "title": "minimal versioned agent-registry contract",
+          "body_markdown": "```yaml\nnamed_record_ref:\n  name: weather-agent\n  version: v1.2.0\n  cid: bafybeigdyrztl6examplecidweatheragentv120\n\nrecord_meta:\n  schema_version: 1.0.0\n  created_at: 2026-03-28T14:00:00Z\n  annotations:\n    capability_family: weather\n    surface: public-registry\n```\n\nWhy this example stays bounded:\n\n- it makes the published entry identity explicit without redefining the capability contract itself\n- it does not become a discovery query, marketplace page, or trust policy surface\n- it keeps record reference and metadata reviewable without importing registry runtime semantics"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0064",
+      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/capability-discovery/examples/minimal-capability-discovery.md",
+          "title": "minimal capability discovery",
+          "body_markdown": "```yaml\nsearch_request:\n  queries:\n    - type: name\n      value: \"weather-*\"\n    - type: skill_name\n      value: \"*forecast*\"\n  limit: 10\n  offset: 0\n\nsearch_response:\n  record_cids:\n    - bafybeigdyrztl6examplecidweatheragentv120\n    - bafybeih2examplecidforecasthelperv110\n```\n\nWhy this example stays bounded:\n\n- it makes the discovery fields and result shape explicit without redefining the capability contract itself\n- it keeps lookup smaller than marketplace ranking, recommendation, or editorial curation\n- it does not import trust policy, graph semantics, or registry runtime behavior"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0065",
+      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md",
+          "title": "minimal mcp-gateway-proxy",
+          "body_markdown": "Configured upstreams:\n\n- `git-tools`\n- `docs-reader`\n\nGateway surface:\n\n- caller endpoint: `gateway`\n- metadata tool: `get_metadata`\n\nProxy behavior:\n\n```text\ncaller -> gateway.call_tool(\"git_status\", {})\ncaller -> gateway.call_tool(\"read_doc\", {\"path\": \"README.md\"})\n```\n\nVisible metadata:\n\n```json\n{\n  \"upstreams\": [\"git-tools\", \"docs-reader\"],\n  \"proxied_tools\": [\"git_status\", \"read_doc\"]\n}\n```\n\nWhy this example stays bounded:\n\n- the caller talks to one gateway surface\n- metadata and tool mediation are explicit\n- the example does not depend on scanner modes, lifecycle doctrine, or registry product behavior"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0066",
+      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/history/transcript-replay-artifact/examples/minimal-transcript-replay-artifact.md",
+          "title": "minimal transcript-replay-artifact",
+          "body_markdown": "Saved source artifact:\n\n```text\nsessions/2026-03-28-parser-fix.jsonl\n```\n\nReplay artifact:\n\n```text\ndocs/replays/parser-fix-session.html\n```\n\nBounded replay metadata:\n\n```json\n{\n  \"source_session\": \"2026-03-28-parser-fix\",\n  \"message_count\": 42,\n  \"replay_format\": \"html\",\n  \"redacted\": true\n}\n```\n\nWhy this example stays bounded:\n\n- the replay starts from an already-saved session file\n- the replay artifact remains a derivative review object\n- the example does not depend on hosted sharing, live collaboration, or dashboard product behavior"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0067",
+      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/history/transcript-linked-code-lineage/examples/minimal-transcript-linked-code-lineage.md",
+          "title": "minimal transcript-linked-code-lineage",
+          "body_markdown": "Saved evidence artifact:\n\n```text\nsessions/2026-03-28-parser-refactor.md\n```\n\nCode anchor:\n\n```text\nsrc/parser.ts:120-168\n```\n\nLineage record:\n\n```json\n{\n  \"code_anchor\": \"src/parser.ts:120-168\",\n  \"evidence_ref\": \"sessions/2026-03-28-parser-refactor.md\",\n  \"session_id\": \"parser-refactor-2026-03-28\"\n}\n```\n\nWhy this example stays bounded:\n\n- the code anchor points back to one saved evidence artifact\n- reviewers can reopen provenance without a dashboard or analytics stack\n- the example does not turn lineage into search product or scorecard doctrine"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0068",
+      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/fail-closed-evidence-gate/examples/minimal-fail-closed-evidence-gate.md",
+          "title": "minimal fail-closed-evidence-gate",
+          "body_markdown": "Candidate action:\n\n- `delete temp cache directory`\n\nVerdict:\n\n```json\n{\n  \"status\": \"blocked\",\n  \"reason\": \"path policy not satisfied\",\n  \"evidence_ref\": \"artifacts/gate/delete-cache-verdict.json\"\n}\n```\n\nExecution behavior:\n\n- no deletion runs because the verdict is not `allow`\n\nWhy this example stays bounded:\n\n- the gate sits before the side effect\n- blocked execution still leaves reviewable evidence\n- the example does not depend on a full policy platform or durable job system"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0069",
+      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/approval-bound-durable-jobs/examples/minimal-approval-bound-durable-jobs.md",
+          "title": "minimal approval-bound-durable-jobs",
+          "body_markdown": "Durable job:\n\n```json\n{\n  \"job_id\": \"review-pack-42\",\n  \"status\": \"waiting_for_approval\",\n  \"checkpoint_ref\": \"jobs/review-pack-42/checkpoint.json\"\n}\n```\n\nApproval seam:\n\n- the job finished collection work and now waits for explicit approval before resume\n\nResume behavior:\n\n- after approval is recorded, the job resumes from `checkpoint_ref` instead of reconstructing state from memory\n\nWhy this example stays bounded:\n\n- one durable job identity survives the pause\n- continuation waits on explicit approval\n- the example does not require a scheduler platform or orchestration dashboard"
+        }
+      ]
     }
   ]
 }

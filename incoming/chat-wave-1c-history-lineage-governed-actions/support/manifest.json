@@ -1,0 +1,24 @@
+{
+  "wave_id": "chat-wave-1c-history-lineage-governed-actions",
+  "title": "Chat Wave 1C - History Lineage Governed Actions",
+  "source_pack": "aoa-techniques-wave1-to-wave3-codex-pack.zip::wave-1-open-license-donor-sweep",
+  "activation_state": "active",
+  "candidate_count": 8,
+  "candidate_slugs": [
+    "transcript-replay-artifact",
+    "cross-agent-session-browser",
+    "transcript-linked-code-lineage",
+    "why-retrieval-from-code",
+    "agent-readiness-telemetry",
+    "fail-closed-evidence-gate",
+    "approval-bound-durable-jobs",
+    "signed-trace-artifacts"
+  ],
+  "notes": [
+    "Repo-native staging shard for history, lineage, telemetry, and governed-action candidates from chat wave 1.",
+    "transcript-replay-artifact, transcript-linked-code-lineage, fail-closed-evidence-gate, and approval-bound-durable-jobs have now landed as AOA-T-0066 through AOA-T-0069.",
+    "First pass is registry-first and does not create seed bundles.",
+    "agent-readiness-telemetry and signed-trace-artifacts now stay narrowing-only with explicit memos.",
+    "Landed history artifact family and confirmation-boundary techniques remain authoritative."
+  ]
+}

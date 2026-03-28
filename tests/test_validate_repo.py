@@ -602,7 +602,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(48, len(technique_paths))
+        self.assertEqual(69, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -635,7 +635,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
         self.assertEqual(21, status_counts["canonical"])
-        self.assertEqual(27, status_counts["promoted"])
+        self.assertEqual(48, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -837,9 +837,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-evals",
             "aoa-routing",
             "21 canonical",
-            "27 promoted",
+            "48 promoted",
             "external-dependency-first promoted techniques",
             "future-import-wave promoted techniques",
+            "chat-wave promoted techniques",
             "internal-origin promoted techniques",
             "AOA-T-0005",
             "latest canonical promotion: `AOA-T-0023`",
@@ -870,6 +871,27 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0046",
             "AOA-T-0047",
             "AOA-T-0048",
+            "AOA-T-0049",
+            "AOA-T-0050",
+            "AOA-T-0051",
+            "AOA-T-0052",
+            "AOA-T-0053",
+            "AOA-T-0054",
+            "AOA-T-0055",
+            "AOA-T-0056",
+            "AOA-T-0057",
+            "AOA-T-0058",
+            "AOA-T-0059",
+            "AOA-T-0060",
+            "AOA-T-0061",
+            "AOA-T-0062",
+            "AOA-T-0063",
+            "AOA-T-0064",
+            "AOA-T-0065",
+            "AOA-T-0066",
+            "AOA-T-0067",
+            "AOA-T-0068",
+            "AOA-T-0069",
             "AOA-T-0032",
             "AOA-T-0026",
             "python scripts/release_check.py",
