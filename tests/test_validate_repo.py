@@ -216,10 +216,10 @@ relations:
         self.assertEqual(set(validate_repo.DOMAIN_ORDER), seen_domains)
         self.assertEqual("promoted", records_by_id["AOA-T-0026"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0027"].status)
-        self.assertEqual("promoted", records_by_id["AOA-T-0028"].status)
+        self.assertEqual("canonical", records_by_id["AOA-T-0028"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0029"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0030"].status)
-        self.assertEqual("promoted", records_by_id["AOA-T-0031"].status)
+        self.assertEqual("canonical", records_by_id["AOA-T-0031"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0032"].status)
 
         domain_start_targets = {
@@ -634,8 +634,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
 
         self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
-        self.assertEqual(21, status_counts["canonical"])
-        self.assertEqual(53, status_counts["promoted"])
+        self.assertEqual(25, status_counts["canonical"])
+        self.assertEqual(49, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -736,7 +736,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         canonical_records = [record for record in records if record.status == "canonical"]
         promoted_records = [record for record in records if record.status == "promoted"]
 
-        self.assertEqual(21, len(canonical_records))
+        self.assertEqual(25, len(canonical_records))
 
         for record in canonical_records:
             self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
@@ -836,19 +836,18 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-skills",
             "aoa-evals",
             "aoa-routing",
-            "21 canonical",
-            "53 promoted",
+            "25 canonical",
+            "49 promoted",
             "external-dependency-first promoted techniques",
             "future-import-wave promoted techniques",
             "chat-wave promoted techniques",
             "personal-ingest-wave promoted techniques",
             "internal-origin promoted techniques",
             "AOA-T-0005",
-            "latest canonical promotion: `AOA-T-0023`",
+            "latest canonical promotions:",
             "current closest promoted queue item: `AOA-T-0032`",
             "AOA-T-0020",
             "AOA-T-0022",
-            "AOA-T-0023",
             "AOA-T-0028",
             "AOA-T-0031",
             "AOA-T-0027",
@@ -1816,7 +1815,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
             scope["section_scope"],
         )
-        self.assertEqual(21, adverse_note_count)
+        self.assertEqual(25, adverse_note_count)
 
     def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
         technique_dir = REPO_ROOT / "techniques" / "demo"

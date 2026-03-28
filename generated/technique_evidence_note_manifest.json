@@ -14336,6 +14336,163 @@
       "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0028"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "confirmation-gated-mutating-action"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for one explicit confirmation seam before a bounded mutating action"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on a fresh named mutation gate rather than generic caution prose, session-wide approval defaults, or broader workflow governance"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams treat any warning or trust prompt as if it were already a real confirmation gate"
+                },
+                {
+                  "order": 2,
+                  "text": "one vague approval gets reused to cover several writes or commands that should have been split"
+                },
+                {
+                  "order": 3,
+                  "text": "canonical pressure widens the bundle into full approval-policy doctrine or broader multi-step workflow control"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a strong confirmation default can add friction to small safe actions that would otherwise stay simple"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may overuse the bundle instead of escalating honestly to `AOA-T-0001` once the task becomes multi-step"
+                },
+                {
+                  "order": 3,
+                  "text": "session-wide approval conveniences can make the pattern feel safe while silently eroding the review seam that keeps it bounded"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using `AOA-T-0028` as shorthand for generic CLI permissions or trust policy rather than the bounded mutation gate itself"
+                },
+                {
+                  "order": 2,
+                  "text": "bundling several writes behind one approval that does not name the actual mutation clearly enough to review"
+                },
+                {
+                  "order": 3,
+                  "text": "collapsing `AOA-T-0028`, `AOA-T-0023`, and longer approval-bearing workflows into one generic shell-agent pattern"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approval arrives after the mutation is already underway"
+                },
+                {
+                  "order": 2,
+                  "text": "the confirmation text does not match the concrete command or write that actually runs"
+                },
+                {
+                  "order": 3,
+                  "text": "the same approval is treated as reusable for unrelated mutations"
+                },
+                {
+                  "order": 4,
+                  "text": "new guidance focuses more on session-wide allowlists or product permissions than on one explicit bounded action"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the proposed mutation specific, visible, and narrow before asking for approval"
+                },
+                {
+                  "order": 2,
+                  "text": "require a fresh confirmation whenever the action changes scope"
+                },
+                {
+                  "order": 3,
+                  "text": "route broader work into `AOA-T-0001` or a more explicit governed workflow instead of stretching this bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "revisit canonical status if the technique starts being used mainly for generic approval policy rather than explicit confirmation-before-mutation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for weak-gate drift, approval-breadth creep, and misuse of one confirmation across broader multi-step work"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -14366,7 +14523,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -14383,7 +14540,7 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                  "value_markdown": "GitHub Copilot's public coding-agent docs now provide an independent confirmation-gated mutation seam across both CLI tool approvals and agent-mode terminal-command confirmation"
                 },
                 {
                   "order": 3,
@@ -14393,7 +14550,7 @@
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one real public second context beyond the donor lineage, so the confirmation boundary is no longer proven only by imported documentation"
                 }
               ]
             },
@@ -14413,6 +14570,10 @@
                 {
                   "order": 3,
                   "text": "it remains narrower than `AOA-T-0001`, which stays the default workflow backbone for multi-step repository work that needs planning, verification, and reporting across more than one step"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence now shows that the explicit confirmation-before-mutation seam survives in an independent public coding-agent family, so the bundle reads as the natural default when mutation must stay visibly gated instead of being implied by a broader fast path or workflow"
                 }
               ]
             },
@@ -14424,7 +14585,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-03-28"
                 },
                 {
                   "order": 2,
@@ -14434,7 +14595,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable confirmation boundary and excludes donor-specific configuration, shell fast-path breadth, and broader workflow ceremony"
+                  "value_markdown": "the bundle keeps only the reusable confirmation boundary and excludes donor-specific configuration, workspace-trust policy, session-wide approval breadth, and broader workflow ceremony"
                 },
                 {
                   "order": 4,
@@ -14450,11 +14611,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on one explicit operator confirmation before a bounded mutation"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where the same confirmation-gated mutation boundary is used as a real fast path rather than only as imported documentation"
+                  "text": "future review should keep watching for drift into generic approval policy, weak caution prompts, or multi-step governed workflows that belong to sibling techniques instead"
                 }
               ]
             },
@@ -14465,11 +14626,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0028` `promoted`"
+                  "text": "promote `AOA-T-0028` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the confirmation-gated mutation boundary survives outside the donor repository"
+                  "text": "use `AOA-T-0028` as the default mutation-gating technique when read or plan work must pause behind one explicit confirmation seam before a bounded write or command execution step"
                 }
               ]
             }
@@ -14768,17 +14929,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "GitHub Copilot coding-agent approval surfaces"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with reusable technique bundles, generated catalog surfaces, and documentation-first validation"
+                  "value_markdown": "official public docs for GitHub Copilot agent mode in IDEs plus GitHub Copilot CLI tool-approval flows"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that records the confirmation boundary rather than shipping the donor CLI itself"
+                  "value_markdown": "interactive coding-agent surfaces where terminal commands or tool invocations are proposed first and only execute after explicit operator approval"
                 }
               ]
             },
@@ -14790,22 +14951,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor uses a shell-side fast path; this adaptation presents a generic confirmation-gated mutation pattern without depending on the donor's invocation model"
+                  "value_markdown": "the donor splits read-only and action paths with `qq` and `qa`, while the second context uses Copilot agent-mode terminal-command confirmation and Copilot CLI tool approvals instead of donor-specific command names"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "provider profiles and wider CLI orchestration are removed from the reusable contract"
+                  "value_markdown": "the broader Copilot product family includes planning, chat, custom agents, and approval presets, but this adaptation narrows to the one explicit confirmation seam before command or tool execution"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on a visible confirmation seam, not on stateless-shell behavior as an invariant"
+                  "value_markdown": "the adaptation depends on visible operator approval before mutation, not on the donor's stateless fast-path shell split"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should read the technique as a workflow contract for crossing from read or plan into mutation, not as a shell convenience wrapper"
+                  "value_markdown": "operators review the proposed command or tool use and either approve, reject, or redirect it before any mutating step runs"
                 }
               ]
             },
@@ -14838,11 +14999,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can become vague if a project keeps the confirmation wording but does not name the actual mutation"
+                  "text": "broad auto-approval settings can widen the operating surface beyond the bounded confirmation seam that makes the pattern reviewable"
                 },
                 {
                   "order": 2,
-                  "text": "some repositories may turn the confirmation gate into generic caution prose instead of a real action boundary"
+                  "text": "the pattern can still become vague if a tool-approval prompt exists but does not make the actual mutation clear enough to review"
+                },
+                {
+                  "order": 3,
+                  "text": "some teams may mistake workspace-trust prompts or session-wide permission toggles for the reusable core instead of the per-action gate"
                 }
               ]
             },
@@ -14853,11 +15018,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the donor `README.md` describes `qqqa` as a stateless shell tool where `qq` answers a single question and `qa` performs one tool-using step with confirmation"
+                  "text": "the GitHub Copilot IDE docs say agent mode suggests terminal commands and then asks the operator to confirm whether Copilot can run them before continuing the task"
                 },
                 {
                   "order": 2,
-                  "text": "this imported technique narrows that behavior into one reusable mutation-gating contract and makes confirmation the center of the pattern"
+                  "text": "the GitHub Copilot CLI docs say tools that could modify or execute files ask for approval before running, and rejection stops the current operation so the operator can redirect the approach"
+                },
+                {
+                  "order": 3,
+                  "text": "those public surfaces preserve the same reusable core: mutation stays behind one explicit approval seam instead of hiding inside a generic autonomous loop"
                 }
               ]
             },
@@ -14868,7 +15037,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific shell fast-path breadth"
+                  "text": "works as a real public second context and preserves the bounded core without carrying over donor-specific shell fast-path breadth"
                 }
               ]
             }
@@ -15981,6 +16150,163 @@
       "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0031"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "shell-composable-agent-invocation"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for shell-visible one-shot agent invocation through stdin, stdout, files, and pipes"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep explicit shell I/O as the center of gravity instead of letting interactive session behavior, approval policy, or broader automation doctrine swallow the bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the invocation depends on hidden prior session state even while the docs still describe it as shell-composable"
+                },
+                {
+                  "order": 2,
+                  "text": "output stops being usable in pipes or file handoffs because wrappers or product-shaped behavior become the real execution surface"
+                },
+                {
+                  "order": 3,
+                  "text": "canonical pressure widens the technique into generic CLI ergonomics, interactive continuation, or workflow automation rather than preserving the one-shot shell contract"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a strong shell-composable default can tempt teams to force every task into a pipe-friendly form even when a broader workflow would be clearer"
+                },
+                {
+                  "order": 2,
+                  "text": "file or JSONL output can create a false sense of safety if operators assume shell composability already covers mutation review and workflow discipline"
+                },
+                {
+                  "order": 3,
+                  "text": "one polished CLI surface can make the technique feel more vendor-shaped than it really is if the invariant I/O boundary is not kept explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using `AOA-T-0031` as a grab bag for generic shell best practices or CLI product features"
+                },
+                {
+                  "order": 2,
+                  "text": "collapsing `AOA-T-0031`, `AOA-T-0023`, and `AOA-T-0028` into one generic shell-agent doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "treating resume, session history, or approval presets as if they were part of the core shell-composability contract"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers can no longer explain how stdin, stdout, files, or pipes delimit the invocation"
+                },
+                {
+                  "order": 2,
+                  "text": "the command only works through hidden state, interactive side channels, or product-specific UI features"
+                },
+                {
+                  "order": 3,
+                  "text": "docs and PRs focus more on session continuation, approval presets, or wrappers than on one visible I/O boundary"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream consumers cannot trivially pipe, capture, or hand off the result without bespoke glue"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the invocation one-shot and centered on explicit shell I/O boundaries"
+                },
+                {
+                  "order": 2,
+                  "text": "route mutation review into `AOA-T-0028` and broader multi-step work into `AOA-T-0001`"
+                },
+                {
+                  "order": 3,
+                  "text": "narrow wrappers until the underlying command boundary is easy to inspect and explain"
+                },
+                {
+                  "order": 4,
+                  "text": "revisit canonical status if the technique starts being used mainly for interactive session behavior rather than shell composition"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for hidden-session creep, wrapper overgrowth, and loss of explicit shell I/O boundaries"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -16011,7 +16337,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -16028,7 +16354,7 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same shell-composable invocation contract as a documentation-first adaptation with examples and a checklist"
+                  "value_markdown": "OpenAI Codex CLI now provides an independent public one-shot execution surface where `codex exec` reads prompts from stdin, streams to stdout or JSONL, and writes final output to files for downstream shell use"
                 },
                 {
                   "order": 3,
@@ -16038,7 +16364,7 @@
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one real public second context beyond the donor lineage, so shell composability is no longer proven only by imported documentation"
                 }
               ]
             },
@@ -16058,6 +16384,10 @@
                 {
                   "order": 3,
                   "text": "it remains distinct from `AOA-T-0028`, which stays centered on the explicit confirmation seam before mutation rather than on shell-visible invocation boundaries"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence now shows that the stdin or stdout or file-first invocation seam survives in an independent public CLI family, so the bundle reads as the natural default when shell I/O composability is the main bounded contract"
                 }
               ]
             },
@@ -16069,7 +16399,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-03-28"
                 },
                 {
                   "order": 2,
@@ -16079,7 +16409,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable shell-composability contract and excludes generic shell advice, provider breadth, and autonomous-loop behavior"
+                  "value_markdown": "the bundle keeps only the reusable shell-composability contract and excludes generic shell advice, approval-policy breadth, provider breadth, and autonomous-loop behavior"
                 },
                 {
                   "order": 4,
@@ -16095,11 +16425,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on shell-visible one-shot composition through stdin, stdout, files, or pipes"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where shell-composable one-shot invocation is used as a real execution pattern rather than only as imported documentation"
+                  "text": "future review should keep watching for drift into interactive session doctrine, approval governance, or broader automation posture that belongs to sibling techniques instead"
                 }
               ]
             },
@@ -16110,11 +16440,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0031` `promoted`"
+                  "text": "promote `AOA-T-0031` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that shell-composable invocation survives outside the donor repository"
+                  "text": "use `AOA-T-0031` as the default shell-composability technique when the main reusable object is a one-shot agent run that behaves like a pipe or file-friendly command instead of a hidden session"
                 }
               ]
             }
@@ -16409,17 +16739,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "OpenAI Codex CLI `codex exec`"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                  "value_markdown": "official public CLI docs for non-interactive Codex runs, scripted execution, and CI-style shell usage"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that records the shell-composable invocation pattern rather than shipping the donor CLI itself"
+                  "value_markdown": "one-shot terminal invocation that can read prompts from stdin, stream output to stdout or JSONL, and write the final message to a file for downstream scripting"
                 }
               ]
             },
@@ -16431,22 +16761,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor exposes shell-friendly one-shot commands; this adaptation presents the pattern as a generic shell-visible invocation contract that can fit other repositories"
+                  "value_markdown": "the donor exposes shell-friendly one-shot commands, while the second context uses `codex exec` or `codex e` rather than donor-specific command names"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "no provider profile matrix, install flow, or interactive wrapper behavior is required in this repository"
+                  "value_markdown": "the wider Codex family includes interactive sessions, resume flows, and approval controls, but this adaptation narrows to the one-shot scripted run surface only"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on explicit stdin, stdout, file, and pipe boundaries rather than on one donor command name"
+                  "value_markdown": "the adaptation depends on explicit stdin, stdout, JSONL, and file output boundaries rather than on the donor CLI layout"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should keep invocation inputs and outputs shell-visible and route confirmation or broader orchestration into separate sibling techniques"
+                  "value_markdown": "operators use the non-interactive exec path when the value is shell composition, and widen into interactive sessions only when the task has clearly outgrown the bounded one-shot contract"
                 }
               ]
             },
@@ -16479,11 +16809,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can become vague if a project keeps one-shot commands but loses the explicit shell I/O boundaries that make the technique reviewable"
+                  "text": "resume and interactive continuation features can blur the line between a shell-composable one-shot run and a longer-lived session contract"
                 },
                 {
                   "order": 2,
-                  "text": "some repositories may quietly fold confirmation or long-lived session behavior into the same command and blur the contract"
+                  "text": "file-output and JSON-event options can still become vague if the shell-visible I/O boundaries stop being the thing reviewers actually rely on"
+                },
+                {
+                  "order": 3,
+                  "text": "automation flags or approval bypasses can tempt teams to treat one-shot scripting as if it already covered broader workflow safety"
                 }
               ]
             },
@@ -16494,15 +16828,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the donor README describes shell-first one-shot invocations that compose through existing terminal flows"
+                  "text": "the official Codex CLI docs say `codex exec` is for scripted or CI-style runs that should finish without human interaction"
                 },
                 {
                   "order": 2,
-                  "text": "the donor surface keeps the commands small and composable rather than requiring a hidden long-lived session"
+                  "text": "the same docs keep shell composition explicit by allowing the prompt to come from stdin, the final message to be written to a file, and JSONL events to stream to stdout"
                 },
                 {
                   "order": 3,
-                  "text": "this imported technique narrows those behaviors into one reusable agent-workflow pattern for shell-side composition"
+                  "text": "those public surfaces preserve the same reusable core: one visible shell invocation with explicit I/O boundaries, not a hidden long-lived session"
                 }
               ]
             },
@@ -16513,7 +16847,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific CLI breadth"
+                  "text": "works as a real public second context and preserves the bounded core without carrying over donor-specific CLI breadth"
                 }
               ]
             }
@@ -21636,6 +21970,163 @@
       "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/history/versionable-session-transcripts/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0044"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "versionable-session-transcripts"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for packaging already-saved session history into readable, versionable transcript artifacts"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle strictly post-capture and transcript-shaped rather than letting capture, hosted sharing, search, or instruction-authority behavior become the real center of gravity"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams relabel raw autosave or chat-history persistence as if it already satisfied the transcript-packaging contract"
+                },
+                {
+                  "order": 2,
+                  "text": "transcript packages become giant undifferentiated dumps with no bounded review unit"
+                },
+                {
+                  "order": 3,
+                  "text": "canonical pressure widens the technique into transcript dashboards, hosted sharing, or history-to-rules behavior instead of preserving the readable artifact seam"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "transcript versioning can create noisy diffs and review overhead when a smaller summary would have been enough"
+                },
+                {
+                  "order": 2,
+                  "text": "portable transcript artifacts can tempt teams to over-share raw history before sanitization or boundary review"
+                },
+                {
+                  "order": 3,
+                  "text": "easy export can make transcript artifacts feel authoritative enough to displace authored rules, summaries, or decisions"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating raw saved session files as if they were already the exported review artifact"
+                },
+                {
+                  "order": 2,
+                  "text": "using transcript packages as canonical repository instructions or policy notes"
+                },
+                {
+                  "order": 3,
+                  "text": "folding transcript search, log viewing, or witness-trace semantics into the same bundle instead of preserving sibling boundaries"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "contributors cannot explain what the transcript package adds beyond `save sessions locally`"
+                },
+                {
+                  "order": 2,
+                  "text": "exported artifacts are too large or too unstructured to support review, diffing, or citation"
+                },
+                {
+                  "order": 3,
+                  "text": "transcripts start appearing where authored rules, decisions, or summaries should have remained the canonical object"
+                },
+                {
+                  "order": 4,
+                  "text": "new guidance focuses more on viewer features or hosted sharing than on post-capture readable packaging"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep one explicit seam between capture and transcript packaging"
+                },
+                {
+                  "order": 2,
+                  "text": "package one bounded review or handoff unit at a time instead of exporting undifferentiated history dumps"
+                },
+                {
+                  "order": 3,
+                  "text": "redact or annotate before wider sharing when the raw transcript is not public-safe enough"
+                },
+                {
+                  "order": 4,
+                  "text": "keep rules, decisions, memory behavior, and witness semantics in sibling techniques or other layers"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for capture creep, transcript-as-policy misuse, and drift into hosted viewer or witness-trace breadth"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/history/versionable-session-transcripts/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -21666,7 +22157,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -21683,7 +22174,7 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same post-capture transcript-export contract as a documentation-first adaptation with one example and one checklist"
+                  "value_markdown": "`claude-code-log` now provides an independent public transcript-export surface that converts already-saved transcript JSONL files into readable Markdown artifacts with summary-bearing navigation and portable Markdown output"
                 },
                 {
                   "order": 3,
@@ -21693,7 +22184,7 @@
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor product family"
+                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one real public second context beyond the donor product family, so transcript packaging is no longer proven only by imported documentation"
                 }
               ]
             },
@@ -21709,6 +22200,10 @@
                 {
                   "order": 2,
                   "text": "it remains narrower than [AOA-T-0026](../session-capture-as-repo-artifact/TECHNIQUE.md) because it only owns post-capture transcript shaping and export, not capture and persistence"
+                },
+                {
+                  "order": 3,
+                  "text": "the current evidence now shows that post-capture Markdown transcript packaging survives in an independent public transcript-conversion family, so the bundle reads as the natural default when saved session history needs to become a portable review artifact"
                 }
               ]
             },
@@ -21720,7 +22215,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-23"
+                  "value_markdown": "2026-03-28"
                 },
                 {
                   "order": 2,
@@ -21730,7 +22225,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable transcript-export contract and excludes donor-specific share services, account flows, search UX, and automatic rule derivation"
+                  "value_markdown": "the bundle keeps only the reusable transcript-export contract and excludes donor-specific share services, account flows, transcript-viewer product semantics, and automatic rule derivation"
                 },
                 {
                   "order": 4,
@@ -21746,11 +22241,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on readable post-capture transcript packaging and does not widen into capture, search, hosted sharing, or instruction authority"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that treats already-saved transcript packaging as a real reviewable artifact layer without reopening capture or instruction authority"
+                  "text": "future review should keep watching for drift into witness-trace semantics, rule derivation, or transcript-dashboard breadth that belongs to adjacent layers instead"
                 }
               ]
             },
@@ -21761,11 +22256,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0044` `promoted`"
+                  "text": "promote `AOA-T-0044` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the post-capture transcript-export contract survives outside the donor product family"
+                  "text": "use `AOA-T-0044` as the default history technique when already-saved sessions need to become readable, versionable transcript artifacts for review, citation, or handoff"
                 }
               ]
             }
@@ -22060,17 +22555,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "claude-code-log"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                  "value_markdown": "open-source CLI tooling that converts already-saved Claude Code transcript JSONL files into readable HTML and Markdown review artifacts"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first corpus that records bounded transcript-export meaning rather than shipping the donor extension, CLI wrapper, or hosted review service"
+                  "value_markdown": "local post-capture transcript conversion and export over saved session files, with portable Markdown output, session navigation, and summary-bearing transcript views"
                 }
               ]
             },
@@ -22082,22 +22577,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor surfaces use `.specstory/history/` plus editor and CLI export flows; this adaptation keeps the already-saved-artifact idea generically without depending on one product path"
+                  "value_markdown": "the donor surfaces use `.specstory/history/` plus editor and CLI export flows, while the second context starts from saved Claude Code transcript JSONL files and converts them into Markdown or HTML"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "hosted sharing, search and organization, sign-in, support flows, and rule derivation are removed from the reusable contract"
+                  "value_markdown": "the target also offers navigation, filtering, and HTML rendering, but this adaptation narrows to the readable Markdown transcript artifact rather than viewer product breadth"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on an existing saved history layer and one readable export path, not on the donor platform stack"
+                  "value_markdown": "the adaptation depends on an existing saved transcript layer and one readable export path, not on the donor extension, hosted sharing, or account stack"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should read the technique as post-capture transcript packaging for reviewable history, not as product installation guidance"
+                  "value_markdown": "contributors should read the technique as post-capture transcript packaging for reviewable history, not as product installation or transcript-viewer doctrine"
                 }
               ]
             },
@@ -22134,7 +22629,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "teams may over-associate transcript packaging with rule derivation or hidden instruction authority because the donor product also exposes those adjacent features"
+                  "text": "teams may over-associate transcript packaging with log viewing or transcript analytics because the second context also exposes richer viewer features alongside export"
+                },
+                {
+                  "order": 3,
+                  "text": "teams may still confuse transcript packaging with witness tracing if detailed logs or summaries are mistaken for the same artifact contract"
                 }
               ]
             },
@@ -22145,15 +22644,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public `Quickstart` doc says `SpecStory: Save AI Chat History` can save curated conversations into one Markdown document and open the file immediately for review or editing before saving"
+                  "text": "the public `claude-code-log` README says the tool converts already-saved transcript JSONL files into readable HTML and Markdown"
                 },
                 {
                   "order": 2,
-                  "text": "the public `Features` doc says manual save and export can combine multiple conversations into a single Markdown file and the share flow can add extra Markdown sections and related links before publication"
+                  "text": "the same README says Markdown export is a lightweight, portable alternative to HTML with session summaries, headers, collapsible details, and code-preserving fenced blocks"
                 },
                 {
                   "order": 3,
-                  "text": "the public terminal-agent overview says transcripts land under `.specstory/history/` with timestamps and metadata ready for code review or knowledge sharing"
+                  "text": "those public surfaces preserve the same reusable core: start after capture, package transcript history into a readable Markdown review artifact, and keep the artifact portable enough for commit, handoff, or later review"
                 }
               ]
             },
@@ -22164,7 +22663,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves a bounded post-capture transcript-export contract without carrying over donor wrapper, cloud, or rule-derivation breadth"
+                  "text": "works as a real public second context and preserves a bounded post-capture transcript-export contract without carrying over donor wrapper, cloud, or transcript-viewer breadth"
                 }
               ]
             }
@@ -25001,6 +25500,163 @@
       "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/history/local-first-session-index/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0053"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "local-first-session-index"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for derivative local searchable indexing over already-saved session artifacts"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the index local, rebuildable, and subordinate to the saved artifacts instead of letting dashboard, sync, or memory behavior become the real contract"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams start treating the index as the authoritative history layer instead of a derivative lookup surface"
+                },
+                {
+                  "order": 2,
+                  "text": "results no longer point back to stable source artifacts, so review stops at snippets or metadata"
+                },
+                {
+                  "order": 3,
+                  "text": "canonical pressure widens the bundle into hosted dashboards, analytics, or remote-sync product behavior instead of preserving the local-first derivative index"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a fast index can tempt operators to act on summaries or snippets without reopening the source artifact when nuance matters"
+                },
+                {
+                  "order": 2,
+                  "text": "indexed metadata can flatten session context too aggressively and hide what the original artifact actually contained"
+                },
+                {
+                  "order": 3,
+                  "text": "a polished local database can feel more authoritative than the files it was derived from"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "mixing capture, indexing, transcript packaging, and dashboard analytics into one technique"
+                },
+                {
+                  "order": 2,
+                  "text": "using the index as memory recall, ranking policy, or instruction authority"
+                },
+                {
+                  "order": 3,
+                  "text": "treating remote sync or team-wide viewer features as if they were part of the invariant local-first contract"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "search hits no longer expose stable source paths, IDs, or equivalent references back to saved artifacts"
+                },
+                {
+                  "order": 2,
+                  "text": "the index cannot be rebuilt from local artifacts alone"
+                },
+                {
+                  "order": 3,
+                  "text": "design discussions drift toward dashboards, sync, analytics, or memory features more than toward derivative lookup"
+                },
+                {
+                  "order": 4,
+                  "text": "users act on index summaries without reopening the original artifact for real review"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep stable source references in every useful hit"
+                },
+                {
+                  "order": 2,
+                  "text": "make rebuild-from-local-artifacts part of the validation story"
+                },
+                {
+                  "order": 3,
+                  "text": "preserve the habit of reopening source artifacts when review or reuse matters"
+                },
+                {
+                  "order": 4,
+                  "text": "split dashboards, remote sync, and memory behavior into narrower sibling techniques instead of widening this one"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for index-as-authority drift, source-reference loss, and dashboard or memory creep"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/history/local-first-session-index/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -25031,7 +25687,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -25048,7 +25704,7 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same local searchable-index contract as a documentation-first adaptation with one example and one checklist"
+                  "value_markdown": "`coding-agent-search (cass)` now provides an independent public local-index surface that aggregates and searches already-saved coding-agent history into a searchable timeline while keeping provenance back to source artifacts"
                 },
                 {
                   "order": 3,
@@ -25058,7 +25714,7 @@
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor product family"
+                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one real public second context beyond the donor product family, so the local-first derivative index contract is no longer proven only by imported documentation"
                 }
               ]
             },
@@ -25078,6 +25734,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than [AOA-T-0044](../../versionable-session-transcripts/TECHNIQUE.md) because it points to existing artifacts rather than packaging selected history into a new transcript object"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence now shows that the local searchable-index contract survives in an independent public multi-agent history tool, so the bundle reads as the natural default when saved local history needs derivative lookup without becoming dashboard or memory doctrine"
                 }
               ]
             },
@@ -25115,11 +25775,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on derivative local lookup over already-saved artifacts and does not widen into capture, hosted sync, or memory recall doctrine"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that treats local searchable indexing over saved session artifacts as a real reusable layer without widening into dashboard product or memory doctrine"
+                  "text": "future review should keep watching for drift into analytics dashboards, remote sync, and ranking-heavy memory semantics that belong to adjacent layers instead"
                 }
               ]
             },
@@ -25130,11 +25790,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0053` `promoted`"
+                  "text": "promote `AOA-T-0053` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the local-first session-index contract survives outside the donor product family"
+                  "text": "use `AOA-T-0053` as the default history technique when operators need fast local lookup over already-saved session artifacts while keeping the artifacts, not the index, as the authoritative source"
                 }
               ]
             }
@@ -25429,17 +26089,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "coding-agent-search (`cass`)"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                  "value_markdown": "open-source local TUI and CLI for indexing and searching saved coding-agent session history across multiple local providers"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first corpus that records bounded local-index meaning rather than shipping the donor desktop app, local server, or search UI"
+                  "value_markdown": "derivative local search and index surfaces over already-saved session artifacts, with provenance-aware results and one searchable timeline rather than a hosted dashboard or memory product"
                 }
               ]
             },
@@ -25451,22 +26111,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor uses local session discovery plus a SQLite-backed search layer and UI; this adaptation keeps the generic existing-artifact plus local-index contract without depending on one product path"
+                  "value_markdown": "the donor uses local session discovery plus a SQLite-backed search layer and UI, while the second context aggregates saved session artifacts from several local coding-agent families into one searchable timeline"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "analytics dashboards, live updates, publish flows, PostgreSQL sync, reverse-proxy exposure, and hosted access were removed from the reusable contract"
+                  "value_markdown": "the second context also offers semantic search, export, and optional remote-source features, but this adaptation narrows to the local derivative index and source-reference contract only"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on an existing saved history layer and one local index surface, not on the donor application stack"
+                  "value_markdown": "the adaptation depends on an existing saved history layer and one local search index surface, not on a specific web UI or deployment stack"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should read the technique as post-capture lookup over saved artifacts, not as installation or product deployment guidance"
+                  "value_markdown": "contributors should read the technique as post-capture lookup over saved artifacts, not as dashboard installation, multi-machine sync, or product deployment guidance"
                 }
               ]
             },
@@ -25503,7 +26163,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "teams may over-associate indexing with transcript export or analytics because the donor product bundles those adjacent surfaces together"
+                  "text": "teams may over-associate indexing with export, semantic recall, or cross-machine aggregation because the second context bundles those adjacent surfaces together"
                 },
                 {
                   "order": 3,
@@ -25518,19 +26178,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public donor README says AI coding agents generate large volumes of session data and that `agentsview` indexes these sessions into a local SQLite database with full-text search"
+                  "text": "the public `cass` README describes the tool as a unified local TUI that indexes and searches coding-agent history from several saved-session providers into one searchable timeline"
                 },
                 {
                   "order": 2,
-                  "text": "the same README says startup discovers sessions from supported agents, syncs them into a local SQLite database with FTS5 full-text search, and then exposes a web UI"
+                  "text": "the same README says tool calls become searchable text, exports can stay local, and the system tracks provenance so operators can see where each conversation originated"
                 },
                 {
                   "order": 3,
-                  "text": "the donor `SearchResult` and `Session` structures keep session IDs, names, timestamps, snippets, and stored file paths, which shows the lookup surface stays tied back to saved source artifacts rather than replacing them"
-                },
-                {
-                  "order": 4,
-                  "text": "the donor search handler keeps the runtime query contract narrow: pass a query, run local search, and return session-level matches with snippet and cursor state"
+                  "text": "those public surfaces preserve the same reusable core: the index stays local and derivative, the searchable layer sits over already-saved session artifacts, and useful results still point back to the original history source rather than replacing it"
                 }
               ]
             },
@@ -25541,7 +26197,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves one bounded local-index contract without carrying over dashboard, export, sync, or hosted product breadth"
+                  "text": "works as a real public second context and preserves one bounded local-index contract without carrying over dashboard, export, sync, or hosted product breadth"
                 }
               ]
             }

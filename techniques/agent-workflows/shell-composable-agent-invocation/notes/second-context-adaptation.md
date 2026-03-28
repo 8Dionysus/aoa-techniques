@@ -5,16 +5,16 @@
 - name: shell-composable-agent-invocation
 
 ## Target project
-- name: aoa-techniques
-- environment: public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline
-- runtime: documentation-first repository that records the shell-composable invocation pattern rather than shipping the donor CLI itself
+- name: OpenAI Codex CLI `codex exec`
+- environment: official public CLI docs for non-interactive Codex runs, scripted execution, and CI-style shell usage
+- runtime: one-shot terminal invocation that can read prompts from stdin, stream output to stdout or JSONL, and write the final message to a file for downstream scripting
 
 ## What changed
 
-- paths: the donor exposes shell-friendly one-shot commands; this adaptation presents the pattern as a generic shell-visible invocation contract that can fit other repositories
-- services: no provider profile matrix, install flow, or interactive wrapper behavior is required in this repository
-- dependencies: the adaptation depends on explicit stdin, stdout, file, and pipe boundaries rather than on one donor command name
-- operating assumptions: contributors should keep invocation inputs and outputs shell-visible and route confirmation or broader orchestration into separate sibling techniques
+- paths: the donor exposes shell-friendly one-shot commands, while the second context uses `codex exec` or `codex e` rather than donor-specific command names
+- services: the wider Codex family includes interactive sessions, resume flows, and approval controls, but this adaptation narrows to the one-shot scripted run surface only
+- dependencies: the adaptation depends on explicit stdin, stdout, JSONL, and file output boundaries rather than on the donor CLI layout
+- operating assumptions: operators use the non-interactive exec path when the value is shell composition, and widen into interactive sessions only when the task has clearly outgrown the bounded one-shot contract
 
 ## What stayed invariant
 
@@ -24,15 +24,16 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can become vague if a project keeps one-shot commands but loses the explicit shell I/O boundaries that make the technique reviewable
-- some repositories may quietly fold confirmation or long-lived session behavior into the same command and blur the contract
+- resume and interactive continuation features can blur the line between a shell-composable one-shot run and a longer-lived session contract
+- file-output and JSON-event options can still become vague if the shell-visible I/O boundaries stop being the thing reviewers actually rely on
+- automation flags or approval bypasses can tempt teams to treat one-shot scripting as if it already covered broader workflow safety
 
 ## Evidence
 
-- the donor README describes shell-first one-shot invocations that compose through existing terminal flows
-- the donor surface keeps the commands small and composable rather than requiring a hidden long-lived session
-- this imported technique narrows those behaviors into one reusable agent-workflow pattern for shell-side composition
+- the official Codex CLI docs say `codex exec` is for scripted or CI-style runs that should finish without human interaction
+- the same docs keep shell composition explicit by allowing the prompt to come from stdin, the final message to be written to a file, and JSONL events to stream to stdout
+- those public surfaces preserve the same reusable core: one visible shell invocation with explicit I/O boundaries, not a hidden long-lived session
 
 ## Result
 
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific CLI breadth
+- works as a real public second context and preserves the bounded core without carrying over donor-specific CLI breadth

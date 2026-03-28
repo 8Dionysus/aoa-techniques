@@ -2,7 +2,7 @@
 id: AOA-T-0044
 name: versionable-session-transcripts
 domain: history
-status: promoted
+status: canonical
 origin:
   project: SpecStory
   path: specstory/quickstart
@@ -16,12 +16,12 @@ tags:
   - export
   - review
 summary: Package already-saved AI session transcripts as readable, versionable Markdown artifacts so review, handoff, and selective sharing stay possible without reopening capture semantics or turning transcript history into memory or instruction authority.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-23
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-28
 export_ready: true
 relations:
   - type: complements
@@ -35,6 +35,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # versionable-session-transcripts
@@ -181,6 +183,8 @@ See `checks/versionable-session-transcripts-checklist.md`.
 
 - adapted from public `SpecStory` documentation
 - promoted into `aoa-techniques` on 2026-03-23 as a bounded external-import technique for post-capture transcript packaging and export
+- strengthened on 2026-03-28 by `claude-code-log`, which converts already-saved transcript JSONL files into readable Markdown or HTML review artifacts with session summaries and portable Markdown output
+- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the post-capture transcript-packaging contract survives beyond the donor product family
 
 ## Future evolution
 

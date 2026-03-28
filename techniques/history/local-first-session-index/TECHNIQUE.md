@@ -2,7 +2,7 @@
 id: AOA-T-0053
 name: local-first-session-index
 domain: history
-status: promoted
+status: canonical
 origin:
   project: wesm/agentsview
   path: README.md + internal/db/search.go + internal/db/sessions.go
@@ -16,11 +16,11 @@ tags:
   - search
   - local-first
 summary: Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
+validation_strength: cross_context
 public_safety_reviewed_at: 2026-03-28
 export_ready: true
 relations:
@@ -37,6 +37,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # local-first-session-index
@@ -179,6 +181,8 @@ See `checks/local-first-session-index-checklist.md`.
 - adapted from open-source `wesm/agentsview`
 - staged through the chat wave 2 graph-review-mailbox lane inside `aoa-techniques`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for local searchable indexing over saved session artifacts
+- strengthened on 2026-03-28 by `coding-agent-search (cass)`, which indexes and searches local multi-agent session history into a searchable timeline while keeping provenance back to source artifacts
+- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the local-first derivative index contract survives beyond the donor product family
 
 ## Future evolution
 

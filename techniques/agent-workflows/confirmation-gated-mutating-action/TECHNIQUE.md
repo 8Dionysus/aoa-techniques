@@ -2,7 +2,7 @@
 id: AOA-T-0028
 name: confirmation-gated-mutating-action
 domain: agent-workflows
-status: promoted
+status: canonical
 origin:
   project: qqqa
   path: README.md
@@ -16,12 +16,12 @@ tags:
   - shell
   - bounded
 summary: Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-21
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-28
 export_ready: true
 relations:
   - type: complements
@@ -35,6 +35,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # confirmation-gated-mutating-action
@@ -169,6 +171,8 @@ See `checks/confirmation-gated-mutating-action-checklist.md`.
 
 - adapted from open-source `qqqa`
 - promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique focused on confirmation before mutation
+- strengthened on 2026-03-28 by GitHub Copilot's public coding-agent approval surfaces, which keep command or tool execution behind explicit operator confirmation in both interactive CLI and agent-mode IDE workflows
+- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the explicit confirmation-before-mutation seam survives beyond the donor lineage
 
 ## Future evolution
 

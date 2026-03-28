@@ -1516,7 +1516,7 @@
       "id": "AOA-T-0028",
       "name": "confirmation-gated-mutating-action",
       "domain": "agent-workflows",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop.",
       "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
       "origin": {
@@ -1534,12 +1534,12 @@
         "shell",
         "bounded"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-28",
       "export_ready": true,
       "relations": [
         {
@@ -1563,6 +1563,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -1678,7 +1682,7 @@
       "id": "AOA-T-0031",
       "name": "shell-composable-agent-invocation",
       "domain": "agent-workflows",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops.",
       "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
       "origin": {
@@ -1696,12 +1700,12 @@
         "pipes",
         "one-shot"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-28",
       "export_ready": true,
       "relations": [
         {
@@ -1725,6 +1729,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -2345,7 +2353,7 @@
       "id": "AOA-T-0044",
       "name": "versionable-session-transcripts",
       "domain": "history",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Package already-saved AI session transcripts as readable, versionable Markdown artifacts so review, handoff, and selective sharing stay possible without reopening capture semantics or turning transcript history into memory or instruction authority.",
       "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
       "origin": {
@@ -2363,12 +2371,12 @@
         "export",
         "review"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-23",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-03-28",
       "export_ready": true,
       "relations": [
         {
@@ -2392,6 +2400,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -2803,7 +2815,7 @@
       "id": "AOA-T-0053",
       "name": "local-first-session-index",
       "domain": "history",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.",
       "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
       "origin": {
@@ -2821,11 +2833,11 @@
         "search",
         "local-first"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
+      "validation_strength": "cross_context",
       "public_safety_reviewed_at": "2026-03-28",
       "export_ready": true,
       "relations": [
@@ -2854,6 +2866,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

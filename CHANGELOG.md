@@ -35,6 +35,14 @@ The format is intentionally simple and human-first.
 - `AOA-T-0073` `semantic-media-bucketing-with-vision-plus-ocr`, a promoted `agent-workflows` technique adapted from `CLIP` and `PaddleOCR` for confidence-aware mixed-media bucketing through bounded taxonomy and OCR side text
 - `AOA-T-0074` `telegram-export-normalization-to-local-store`, a promoted `agent-workflows` technique adapted from `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp` for resumable Telegram-source normalization into a provenance-preserving local store
 
+### Changed
+
+- promoted `AOA-T-0028` `confirmation-gated-mutating-action` to `canonical` after GitHub Copilot's public coding-agent approval surfaces confirmed the same explicit confirmation-before-mutation seam beyond the donor lineage
+- promoted `AOA-T-0031` `shell-composable-agent-invocation` to `canonical` after OpenAI Codex CLI's public `codex exec` surface confirmed the same stdin/stdout/file-first one-shot shell contract beyond the donor lineage
+- promoted `AOA-T-0044` `versionable-session-transcripts` to `canonical` after `claude-code-log` confirmed a second public post-capture Markdown transcript-export surface beyond the donor product family
+- promoted `AOA-T-0053` `local-first-session-index` to `canonical` after `coding-agent-search (cass)` confirmed a second public local-first derivative session-index surface beyond the donor product family
+- current corpus status is now `25` `canonical` techniques and `49` `promoted` techniques
+
 ## [0.2.0] - 2026-03-23
 
 Second public corpus release.
