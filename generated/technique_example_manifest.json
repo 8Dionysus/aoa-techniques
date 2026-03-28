@@ -907,6 +907,39 @@
           "body_markdown": "Input OCR handoff:\n- `merchant_line`: `Corner Market`\n- `date_line`: `2026-03-24`\n- `amount_candidates`: `TOTAL 14.20`, `VAT 1.20`\n- `currency_hint`: `USD`\n\nOutput field object:\n- `merchant`: `Corner Market`\n- `transaction_date`: `2026-03-24`\n- `total_amount`: `14.20`\n- `currency`: `USD`\n- `missing_fields[]`: none\n- `conflicts[]`: none\n- `field_evidence[]`\n  - `merchant <- merchant_line`\n  - `transaction_date <- date_line`\n  - `total_amount <- amount_candidates[0]`\n\nReview case:\n- if two amount candidates survive with similar confidence, emit both as a conflict instead of guessing one winner"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0072",
+      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/examples/minimal-perceptual-media-dedupe-with-threshold-review.md",
+          "title": "minimal-perceptual-media-dedupe-with-threshold-review",
+          "body_markdown": "Input media set:\n- `meme-original.png`\n- `meme-recompressed.jpg`\n- `meme-cropped.png`\n- `screenshot-1.png`\n- `screenshot-1-copy.png`\n\nOutput grouping surface:\n- `high_confidence_groups[]`\n  - `group_id: dupe-001`\n  - `members: [screenshot-1.png, screenshot-1-copy.png]`\n  - `confidence_band: high`\n- `review_groups[]`\n  - `group_id: review-014`\n  - `members: [meme-original.png, meme-recompressed.jpg, meme-cropped.png]`\n  - `confidence_band: borderline`\n  - `review_required: true`\n\nThe point of the example is that the technique groups candidates and exposes uncertainty.\nIt does not delete files by itself."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0073",
+      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/examples/minimal-semantic-media-bucketing-with-vision-plus-ocr.md",
+          "title": "minimal-semantic-media-bucketing-with-vision-plus-ocr",
+          "body_markdown": "Input media item:\n- `source_path: inbox/2026-03-28-001.png`\n- `visual_candidates: screenshot 0.58, receipt 0.55, meme 0.14`\n- `ocr_side_text: TOTAL 14.20 USD`\n\nOutput classification:\n- `bucket: receipt`\n- `confidence: medium`\n- `ocr_signal_present: true`\n- `review_required: true`\n- `notes: OCR side text lifted receipt over screenshot, but confidence stayed below the auto-accept band`\n\nThe point of the example is that the technique keeps taxonomy bounded and uncertainty visible.\nIt does not decide deletion, archive, or downstream routing by itself."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0074",
+      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/examples/minimal-telegram-export-normalization-to-local-store.md",
+          "title": "minimal-telegram-export-normalization-to-local-store",
+          "body_markdown": "Normalized message object:\n- `message_id: 18422`\n- `chat_id: saved_messages`\n- `timestamp: 2026-03-27T18:42:11Z`\n- `sender: self`\n- `reply_to_id: 18410`\n- `text: check the invoice screenshots later`\n- `media_refs[]`\n  - `media/2026/03/receipt-18422.jpg`\n- `source_kind: telegram_export`\n- `source_path: exports/saved-messages/messages.json`\n\nResume metadata:\n- `resume_cursor: 18422`\n- `last_sync_at: 2026-03-27T18:43:00Z`\n\nThe point of the example is that Telegram-derived data becomes one stable local object contract.\nIt does not define auth, session, or memory policy."
+        }
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `50` techniques
+- current promoted corpus: `53` techniques
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
 - latest graduation: [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the bounded `qqqa` origin plus GitHub Copilot CLI's programmatic fast path as a second public shell-side context
@@ -45,7 +45,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `35` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `38` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
 
@@ -305,6 +305,30 @@ Shared blocker: the donor parser family and repo-local adaptation both show a bo
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0071](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | Post-OCR extraction sibling that keeps one bounded field object explicit through templates or heuristics with clear exclusions around OCR-stage ownership, locale doctrine, and bookkeeping automation. | One second public workflow surface where OCR-derived text becomes a bounded field object through visible templates or heuristics with explicit missing or conflicting fields, without widening into receipt schema law, locale policy, or end-to-end document automation. |
+
+### Pack 29 - Perceptual Media Dedupe
+
+Shared blocker: the donor dedupe family and repo-local adaptation both show a bounded near-duplicate grouping seam, but one more live adopter is still needed so the pattern reads as reusable media-review infrastructure rather than one dedupe-tool family plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0072](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | Media-dedupe sibling that keeps perceptual grouping and review buckets explicit with clear exclusions around cleanup policy, semantic taxonomy, and quality-ranking doctrine. | One second public workflow surface where near-duplicate media are grouped through explicit thresholds and review buckets before later cleanup actions, without widening into semantic classification, archive policy, or bulk-delete automation. |
+
+### Pack 30 - Semantic Media Bucketing
+
+Shared blocker: the donor classification family and repo-local adaptation both show a bounded media-taxonomy seam, but one more live adopter is still needed so the pattern reads as reusable classification infrastructure rather than one multimodal donor family plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0073](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | Media-bucketing sibling that keeps bounded taxonomy, OCR side text, and review gates explicit with clear exclusions around duplicate grouping, moderation policy, identity inference, and downstream action doctrine. | One second public workflow surface where mixed media are bucketed through bounded visual semantics plus OCR side text under explicit confidence gates before later routing or cleanup actions, without widening into moderation, identity inference, or open-ended multimodal automation. |
+
+### Pack 31 - Telegram Export Normalization
+
+Shared blocker: the donor Telegram family and repo-local adaptation both show a bounded source-normalization seam, but one more live adopter is still needed so the pattern reads as reusable local-storage infrastructure rather than one Telegram tooling family plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) | Telegram-normalization sibling that keeps stable local objects, media references, provenance, and resume state explicit with clear exclusions around auth bootstrap, session conversion, and memory doctrine. | One second public workflow surface where Telegram-derived messages and media become a resumable local object store with visible provenance before later routing, recall, or memory actions, without widening into auth policy, session bridging, or archive-product doctrine. |
 
 ## Suggested Wave Order
 

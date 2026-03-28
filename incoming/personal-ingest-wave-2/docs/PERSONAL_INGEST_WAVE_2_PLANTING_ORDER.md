@@ -6,8 +6,9 @@ This note is for operator-guided planting inside `aoa-techniques`.
 
 - activation state: `active`
 - launch verdict: `go`
-- current landed bundle count: `2`
-- next separate landing PR should start with `perceptual-media-dedupe-with-threshold-review`
+- current landed bundle count: `5`
+- next separate landing PR should start with none; the first-pass landing queue is exhausted
+- current incubation-hold reopen gate: `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
 
 ## Hard rules
 
@@ -41,7 +42,7 @@ Why second:
 
 ### Stage 3
 - `perceptual-media-dedupe-with-threshold-review`
-- next active landing target for this wave
+- landed as `AOA-T-0072`
 
 Why third:
 - bounded and reviewable
@@ -50,6 +51,7 @@ Why third:
 
 ### Stage 4
 - `semantic-media-bucketing-with-vision-plus-ocr`
+- landed as `AOA-T-0073`
 
 Why fourth:
 - stronger after dedupe exists
@@ -58,6 +60,7 @@ Why fourth:
 
 ### Stage 5
 - `telegram-export-normalization-to-local-store`
+- landed as `AOA-T-0074`
 
 Why fifth:
 - richest donor pool
@@ -85,3 +88,8 @@ Require explicit operator approval before:
 - moving a seed bundle from `incoming/.../seed_bundles/` into `techniques/`
 - changing `TECHNIQUE_INDEX.md`
 - regenerating shared surfaces through the repo release path
+
+## Remaining hold
+
+- keep `telegram-account-auth-and-session-bridge` outside the landing lane
+- use `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md` as the active reopen gate

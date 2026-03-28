@@ -995,6 +995,48 @@
       "main_risk_short": "Main risk: amount, subtotal, tax, or tip lines are confused.",
       "validation_short": "Validate by checking OCR handoff is the only bounded parsing input; the extracted field set is explicit and small enough to review...",
       "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0072",
+      "name": "perceptual-media-dedupe-with-threshold-review",
+      "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
+      "one_line_intent": "Make screenshot, meme, or photo deduplication reviewable by grouping near-duplicate media through perceptual similarity...",
+      "use_when_short": "Use when an image set contains exact duplicates, crops, edits, or recompressions that still need duplicate review or the reusable...",
+      "do_not_use_short": "Avoid when exact hashes alone are enough and near-duplicate handling is unnecessary or the real reusable object is semantic bucketing...",
+      "inputs_short": "Needs one bounded media set; one perceptual similarity method or equivalent near-duplicate handle; explicit thresholds or threshold bands.",
+      "outputs_short": "Produces one set of high-confidence duplicate groups; one set of uncertain groups or candidate pairs; one review bucket...",
+      "core_contract_short": "Core contract: the technique groups and flags near-duplicates; it does not own file deletion policy; thresholds stay explicit and tunable.",
+      "main_risk_short": "Main risk: edited memes collapse into the wrong groups.",
+      "validation_short": "Validate by checking the corpus includes exact duplicates, crops, and edited variants; high-confidence groups and uncertain groups are visibly separated; thresholds can...",
+      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0073",
+      "name": "semantic-media-bucketing-with-vision-plus-ocr",
+      "summary": "Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.",
+      "one_line_intent": "Provide one bounded classification route for mixed media by combining visual semantics with OCR...",
+      "use_when_short": "Use when a media set needs coarse bucket labels before later routing or review or text-heavy images matter and OCR...",
+      "do_not_use_short": "Avoid when duplicate grouping is the real problem and taxonomy is unnecessary or the workflow needs identity inference, moderation policy...",
+      "inputs_short": "Needs one bounded media set; one explicit bucket taxonomy; one visual semantic model or equivalent scoring surface.",
+      "outputs_short": "Produces one bounded bucket label per classified item; one confidence signal for the bucket assignment; one review bucket...",
+      "core_contract_short": "Core contract: taxonomy stays bounded and explicit; OCR remains a side-channel, not hidden truth.",
+      "main_risk_short": "Main risk: memes and screenshots collide in the same bucket.",
+      "validation_short": "Validate by checking the golden set includes memes, receipts, screenshots, and an other class; bucket labels stay inside the bounded taxonomy; low-confidence...",
+      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0074",
+      "name": "telegram-export-normalization-to-local-store",
+      "summary": "Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.",
+      "one_line_intent": "Turn Telegram export or sync output into a bounded, provenance-preserving local store so later...",
+      "use_when_short": "Use when Telegram messages or Saved Messages need to become a local structured store or media references and reply edges...",
+      "do_not_use_short": "Avoid when the real problem is account auth, session conversion, or bootstrap or the workflow needs a live agent-control surface...",
+      "inputs_short": "Needs one Telegram export, API-derived message stream, or equivalent source batch; media download paths or media source references...",
+      "outputs_short": "Produces one normalized message object surface; one media reference map; one resumable local store.",
+      "core_contract_short": "Core contract: auth posture stays separate from normalization; message provenance remains visible.",
+      "main_risk_short": "Main risk: media references lose source linkage.",
+      "validation_short": "Validate by checking a sample export with replies and media retains source ids and media references; resume after interruption preserves progress without...",
+      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md"
     }
   ]
 }

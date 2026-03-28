@@ -48,10 +48,11 @@ It does **not** change technique status, create a canonical bundle, or authorize
 
 - launch verdict: `go`
 - activation state: `active`
-- `3` staged candidates with seed bundles
-- `2` landed candidates
+- `0` staged candidates with seed bundles
+- `5` landed candidates
 - `1` incubation hold outside the immediate landing lane
-- registry mapping: `AOA-T-0070 two-stage-document-ocr-pipeline` and `AOA-T-0071 template-backed-field-extraction-after-ocr` are tracked as `landed`, the three remaining `future import here` candidates are tracked as `staged` in `support/registry.json`, and `telegram-account-auth-and-session-bridge` remains an incubation hold
+- registry mapping: `AOA-T-0070 two-stage-document-ocr-pipeline`, `AOA-T-0071 template-backed-field-extraction-after-ocr`, `AOA-T-0072 perceptual-media-dedupe-with-threshold-review`, `AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr`, and `AOA-T-0074 telegram-export-normalization-to-local-store` are tracked as `landed`, and `telegram-account-auth-and-session-bridge` remains an incubation hold
+- incubation-hold reopen gate: [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md)
 
 ## Current Wave Placement
 
@@ -97,7 +98,9 @@ It does **not** change technique status, create a canonical bundle, or authorize
 
 3. `perceptual-media-dedupe-with-threshold-review`
    - tentative domain: `agent-workflows`
-   - verdict: `future import here`
+   - verdict: `landed from this wave`
+   - landed bundle:
+     - [AOA-T-0072](../../../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
    - donor spine:
      - `imagededup`
      - `imgdupes`
@@ -108,11 +111,13 @@ It does **not** change technique status, create a canonical bundle, or authorize
      - one-threshold-fits-all claims
      - ranking or quality-scoring doctrine
    - next move:
-     - land after duplicate-group contract, threshold tuning, and review bucket semantics are explicit
+     - keep Pack 29 proof work separate until a second live adopter exists beyond the donor dedupe family plus this repo-local adaptation
 
 4. `semantic-media-bucketing-with-vision-plus-ocr`
    - tentative domain: `agent-workflows`
-   - verdict: `future import here`
+   - verdict: `landed from this wave`
+   - landed bundle:
+     - [AOA-T-0073](../../../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
    - donor spine:
      - `CLIP`
      - `PaddleOCR`
@@ -123,13 +128,15 @@ It does **not** change technique status, create a canonical bundle, or authorize
      - hidden moderation policy
      - identity or face inference
    - next move:
-     - land only after bucket taxonomy, confidence gates, and no-auto-delete posture are explicit
+     - keep Pack 30 proof work separate until a second live adopter exists beyond the donor classification family plus this repo-local adaptation
 
 ### Wave 2C - Telegram export and normalization
 
 5. `telegram-export-normalization-to-local-store`
    - tentative domain: `agent-workflows`
-   - verdict: `future import here`
+   - verdict: `landed from this wave`
+   - landed bundle:
+     - [AOA-T-0074](../../../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md)
    - donor spine:
      - `Telethon`
      - `TDLib`
@@ -145,13 +152,15 @@ It does **not** change technique status, create a canonical bundle, or authorize
      - agent-control rhetoric
      - automatic memory writeback
    - next move:
-     - land after the normalized object contract is explicit: message id, timestamp, sender, reply edge, media refs, source path
+     - keep Pack 31 proof work separate until a second live adopter exists beyond the donor Telegram family plus this repo-local adaptation
 
 ### Incubation Hold
 
 6. `telegram-account-auth-and-session-bridge`
    - tentative domain: `agent-workflows` only after heavy narrowing
    - verdict: `needs layer incubation before distillation here`
+   - active narrowing memo:
+     - [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md)
    - donor spine:
      - `Telethon`
      - `opentele`
@@ -174,10 +183,14 @@ It does **not** change technique status, create a canonical bundle, or authorize
 2. `template-backed-field-extraction-after-ocr`
    - landed as `AOA-T-0071`
 3. `perceptual-media-dedupe-with-threshold-review`
+   - landed as `AOA-T-0072`
 4. `semantic-media-bucketing-with-vision-plus-ocr`
+   - landed as `AOA-T-0073`
 5. `telegram-export-normalization-to-local-store`
+   - landed as `AOA-T-0074`
 
 Keep `telegram-account-auth-and-session-bridge` out of the immediate wave.
+Use [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md) as the active reopen gate.
 
 ## Bundle Seed Coverage In This Pack
 

@@ -35516,6 +35516,1704 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0072",
+      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0072"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "perceptual-media-dedupe-with-threshold-review"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around delete policy, semantic taxonomy, ranking doctrine, and donor runtime detail"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same duplicate-grouping seam as a documentation-first adaptation with one example and one checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor dedupe family"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main problem is grouping near-duplicate media while keeping borderline matches visible and later file actions separate"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than a later semantic bucketing technique because it does not assign media taxonomy"
+                },
+                {
+                  "order": 3,
+                  "text": "it also remains narrower than cleanup automation because it stops at duplicate grouping and review signals rather than preserve or delete decisions"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-28"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable duplicate-grouping seam and excludes donor CLI behavior, delete defaults, ANN backend detail, and cleanup governance"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that keeps perceptual duplicate grouping explicit through thresholds and review buckets before later cleanup actions begin"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0072` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the reviewable duplicate-grouping contract survives outside the donor dedupe family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0072"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "perceptual-media-dedupe-with-threshold-review"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-28"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and one public-safe example"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: near-duplicate media are grouped through perceptual similarity and borderline matches are routed into review instead of silent deletion"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor family plus explicit exclusions around semantic taxonomy, delete policy, ranking, and donor-specific runtime detail"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the same duplicate-grouping seam readable as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: perceptual similarity, explicit thresholds, duplicate groups, and visible uncertain matches"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: delete prompts, preserve defaults, ANN backend detail, semantic taxonomy, and quality ranking"
+                },
+                {
+                  "order": 4,
+                  "text": "the example and checklist reinforce reviewable grouping without widening the bundle into cleanup governance or media-classification doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor dedupe READMEs to the public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one duplicate-grouping contract rather than a disguised cleanup CLI or media-management product guide"
+                },
+                {
+                  "order": 4,
+                  "text": "the import path is public-safe and reviewable at the current repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor dedupe family"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show another public workflow where near-duplicate media are grouped through explicit thresholds and review buckets before later cleanup actions"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0072` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the reviewable duplicate-grouping contract survives outside the current donor family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source or public documentation source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/idealo/imagededup` plus `https://github.com/knjcode/imgdupes`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "`Apache-2.0 + MIT` donor family"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "upstream README guidance from imagededup and imgdupes showing perceptual near-duplicate discovery, threshold tuning, group display, and optional later delete actions"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor family to one bounded media-dedupe seam: perceptual similarity forms near-duplicate groups and borderline cases remain visible through review buckets"
+                },
+                {
+                  "order": 2,
+                  "key": "reusable object extracted",
+                  "value_markdown": "one reviewable duplicate-grouping surface with high-confidence groups, uncertain groups, and explicit threshold posture"
+                },
+                {
+                  "order": 3,
+                  "key": "invariant core kept",
+                  "value_markdown": "similarity-based grouping stays explicit, thresholds remain tunable, and later file actions remain separate"
+                },
+                {
+                  "order": 4,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "donor CLI flags, delete prompts, approximate-nearest-neighbor implementation detail, container packaging, and one-threshold cleanup doctrine"
+                },
+                {
+                  "order": 5,
+                  "key": "nearest existing technique or overlap watch",
+                  "value_markdown": "`semantic-media-bucketing-with-vision-plus-ocr`"
+                },
+                {
+                  "order": 6,
+                  "key": "what stays out of the donor",
+                  "value_markdown": "semantic taxonomy, deletion or archive policy, ranking or quality-scoring doctrine, and donor-specific runtime packaging"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surfaces used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: none; the donor inputs are public upstream repositories and public README documentation"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on one hash implementation, one ANN backend, one CLI prompt model, or one storage layout"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risks are drift into automatic cleanup policy on one side and drift into semantic media taxonomy or ranking doctrine on the other"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many screenshot, meme, and photo collections need near-duplicate grouping to stay visible and reviewable before any preserve, delete, or archive decision happens"
+                },
+                {
+                  "order": 2,
+                  "key": "downstream repo impact",
+                  "value_markdown": "later action policies or cleanup workflows belong in `aoa-skills`, while this repository keeps only the reusable grouping contract"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this import still needs one second live adopter beyond the donor dedupe family and documentation-first adaptation before any canonical discussion is honest"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0072"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "perceptual-media-dedupe-with-threshold-review"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records the bounded duplicate-grouping pattern rather than shipping donor CLIs, ANN indexes, or delete prompts"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "donor dedupe tools were reduced to one portable grouping-and-review contract rather than one cleanup command-line workflow"
+                },
+                {
+                  "order": 2,
+                  "text": "delete prompts, preserve defaults, and ANN implementation details were removed from the reusable public bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "semantic classification and quality ranking were kept out so the adaptation remains about duplicate grouping only"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "perceptual similarity remains the basis for near-duplicate grouping"
+                },
+                {
+                  "order": 2,
+                  "text": "thresholds remain explicit and tunable"
+                },
+                {
+                  "order": 3,
+                  "text": "uncertain matches remain visible rather than being silently resolved"
+                },
+                {
+                  "order": 4,
+                  "text": "later file actions remain separate from grouping"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can collapse into cleanup policy if later users stop separating grouping from delete or archive actions"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may over-associate the technique with one donor hash family if the grouping contract is not kept generic"
+                },
+                {
+                  "order": 3,
+                  "text": "borderline groups can look more authoritative than they are if review evidence becomes too thin"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "imagededup's README presents near-duplicate discovery over perceptual hashing or CNN encodings and keeps duplicate output as a reviewable map rather than a fixed deletion policy"
+                },
+                {
+                  "order": 2,
+                  "text": "imgdupes' README presents thresholded perceptual-hash grouping and explicitly separates list output from optional preserve-or-delete prompts"
+                },
+                {
+                  "order": 3,
+                  "text": "both donors show why duplicate grouping can remain useful before any later cleanup action or taxonomy choice is finalized"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor CLI behavior, delete defaults, or runtime indexing detail"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0073",
+      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0073"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "semantic-media-bucketing-with-vision-plus-ocr"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around duplicate grouping, OCR extraction ownership, moderation policy, identity inference, and donor serving detail"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same media-bucketing seam as a documentation-first adaptation with one example and one checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor classification family"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main problem is assigning a small explicit media taxonomy while keeping low-confidence or conflicting items visible for review"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than [AOA-T-0072](../perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) because it does not group duplicates"
+                },
+                {
+                  "order": 3,
+                  "text": "it also remains narrower than [AOA-T-0070](../two-stage-document-ocr-pipeline/TECHNIQUE.md) because it uses OCR only as side text rather than owning OCR staging itself"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-28"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable media-bucketing seam and excludes donor model-serving detail, moderation claims, identity inference, and downstream action policy"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that keeps mixed-media bucketing explicit through bounded taxonomy and review gates before later routing or cleanup actions begin"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0073` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the confidence-aware media-bucketing contract survives outside the donor family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0073"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "semantic-media-bucketing-with-vision-plus-ocr"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-28"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and one public-safe example"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: mixed media are assigned bounded bucket labels through visual semantics plus optional OCR side text, while low-confidence cases remain reviewable"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor family plus explicit exclusions around duplicate grouping, moderation, identity inference, and donor-specific serving detail"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the same media-bucketing seam readable as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: bounded taxonomy, visual semantics, optional OCR side text, and explicit review handling"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: duplicate grouping, OCR extraction ownership, moderation policy, identity inference, delete policy, and donor model-serving doctrine"
+                },
+                {
+                  "order": 4,
+                  "text": "the example and checklist reinforce confidence-aware bucketing without widening the bundle into a media-management or multimodal-assistant stack"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor READMEs to the public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one media-bucketing contract rather than a disguised assistant, moderation, or image-understanding platform guide"
+                },
+                {
+                  "order": 4,
+                  "text": "the import path is public-safe and reviewable at the current repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor classification family"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show another public workflow where mixed media are bucketed through bounded visual semantics plus OCR side text under explicit confidence gates before later routing or cleanup actions"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0073` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the confidence-aware media-bucketing contract survives outside the current donor family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source or public documentation source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/openai/CLIP` plus `https://github.com/PaddlePaddle/PaddleOCR`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "`MIT + Apache-2.0` donor family"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "upstream README guidance from CLIP and PaddleOCR showing zero-shot image-text semantic scoring plus OCR-derived text extraction that can sharpen classification over text-bearing images"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor family to one bounded classification seam: visual semantics plus optional OCR side text produce coarse bucket labels under explicit confidence gates"
+                },
+                {
+                  "order": 2,
+                  "key": "reusable object extracted",
+                  "value_markdown": "one reviewable media-bucketing surface with bounded labels, confidence signals, and explicit review handling for low-confidence or conflicting items"
+                },
+                {
+                  "order": 3,
+                  "key": "invariant core kept",
+                  "value_markdown": "taxonomy remains explicit, OCR stays side-channel, and classification remains separate from later policy actions"
+                },
+                {
+                  "order": 4,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "open-ended multimodal assistant claims, moderation policy, identity inference, model-serving detail, prompt engineering doctrine, and donor runtime packaging"
+                },
+                {
+                  "order": 5,
+                  "key": "nearest existing technique or overlap watch",
+                  "value_markdown": "`AOA-T-0072 perceptual-media-dedupe-with-threshold-review`"
+                },
+                {
+                  "order": 6,
+                  "key": "what stays out of the donor",
+                  "value_markdown": "duplicate grouping, OCR extraction ownership, moderation, deletion or archive policy, and identity inference"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surfaces used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: none; the donor inputs are public upstream repositories and public README documentation"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on one model checkpoint, one OCR service layout, one prompt template, or one serving topology"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risks are drift into open-ended multimodal policy on one side and drift into OCR-first truth or duplicate-grouping policy on the other"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many mixed-media workflows need one bounded taxonomy seam before later review, storage, or cleanup actions happen, especially when OCR can sharpen ambiguous text-heavy images"
+                },
+                {
+                  "order": 2,
+                  "key": "downstream repo impact",
+                  "value_markdown": "later routing or cleanup workflows belong in `aoa-skills`, while this repository keeps only the reusable classification contract"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this import still needs one second live adopter beyond the donor classification family and documentation-first adaptation before any canonical discussion is honest"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0073"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "semantic-media-bucketing-with-vision-plus-ocr"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records the bounded media-bucketing pattern rather than shipping donor models, prompts, or OCR services"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "donor multimodal systems were reduced to one portable bucketing-and-review contract rather than one broad image-understanding or assistant workflow"
+                },
+                {
+                  "order": 2,
+                  "text": "moderation policy, identity inference, and serving detail were removed from the reusable public bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "OCR-stage ownership was kept out so the adaptation only uses OCR as one optional side-channel during classification"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "visual semantics remain the main classification signal"
+                },
+                {
+                  "order": 2,
+                  "text": "OCR can sharpen text-heavy items without becoming hidden truth"
+                },
+                {
+                  "order": 3,
+                  "text": "taxonomy remains explicit and bounded"
+                },
+                {
+                  "order": 4,
+                  "text": "low-confidence or conflicting items remain visible for review"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can collapse into taxonomy sprawl if later users widen the bucket set without preserving reviewability"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may over-associate the technique with one donor model or one OCR stack if the bounded contract is not kept generic"
+                },
+                {
+                  "order": 3,
+                  "text": "OCR-heavy items can look more certain than they are if the side-channel is not clearly labeled"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "CLIP's README presents zero-shot prediction over explicit image-label text pairings, which supports bounded bucket scoring without requiring fixed task-specific training"
+                },
+                {
+                  "order": 2,
+                  "text": "PaddleOCR's README presents OCR as a reusable text-extraction surface for text-bearing images"
+                },
+                {
+                  "order": 3,
+                  "text": "together they show why coarse media bucketing can remain explicit and reviewable before later action policy is decided"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor model-serving detail, moderation claims, or OCR-runtime packaging"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0074",
+      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0074"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telegram-export-normalization-to-local-store"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around auth bootstrap, session conversion, secret storage, control-plane behavior, and memory writeback"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same Telegram-normalization seam as a documentation-first adaptation with one example and one checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor Telegram family"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main problem is turning Telegram-origin data into stable local objects with visible provenance and resumable storage"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than [AOA-T-0026](../../history/session-capture-as-repo-artifact/TECHNIQUE.md) because it does not own general project history capture or publication as review artifacts"
+                },
+                {
+                  "order": 3,
+                  "text": "it also remains narrower than `telegram-account-auth-and-session-bridge` because it does not handle credentials, session conversion, or bootstrap approval"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-28"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable normalization seam and excludes auth procedures, session secrets, control-plane behavior, and memory policy"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that keeps Telegram-source normalization explicit through stable local objects and visible provenance before later routing, recall, or memory actions begin"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0074` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the source-specific normalization contract survives outside the donor family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0074"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telegram-export-normalization-to-local-store"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-28"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and one public-safe example"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: Telegram-derived messages and media become a resumable local store with visible provenance, while auth and memory doctrine stay separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor family plus explicit exclusions around auth bootstrap, session conversion, secret storage, and memory writeback"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the same Telegram-normalization seam readable as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: normalized message objects, media references, source provenance, and bounded resume behavior"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: auth bridging, secret storage, control-plane behavior, memory ingestion, and donor runtime packaging"
+                },
+                {
+                  "order": 4,
+                  "text": "the example and checklist reinforce source-specific normalization without widening the bundle into account operations, archive-product doctrine, or general history ownership"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor Telegram READMEs to the public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one local normalization contract rather than a disguised auth bridge, bot platform, or memory-ingestion guide"
+                },
+                {
+                  "order": 4,
+                  "text": "the import path is public-safe and reviewable at the current repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor Telegram family"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show another public workflow where Telegram-derived messages become a resumable local object store with visible provenance before later routing, recall, or memory actions"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0074` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the source-specific normalization contract survives outside the current donor family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source or public documentation source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/LonamiWebs/Telethon` plus `https://github.com/tdlib/td` plus `https://github.com/thedemons/opentele` plus `https://github.com/MasterScrat/Chatistics` plus `https://github.com/knadh/tg-archive` plus `https://github.com/chaindead/telegram-mcp`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "`mixed donor family: MIT + BSL-1.0`"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "upstream README guidance from Telethon, TDLib, opentele, Chatistics, tg-archive, and telegram-mcp showing message retrieval, export or sync access, media handling, archive shaping, and local persistence over Telegram data"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor family to one bounded storage seam: Telegram-source messages and media are normalized into a resumable local object store with visible provenance"
+                },
+                {
+                  "order": 2,
+                  "key": "reusable object extracted",
+                  "value_markdown": "one stable local message object contract plus media references, source references, and bounded resume state"
+                },
+                {
+                  "order": 3,
+                  "key": "invariant core kept",
+                  "value_markdown": "source provenance stays visible, reply edges and media references survive, and auth remains outside the normalized storage contract"
+                },
+                {
+                  "order": 4,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "session-secret storage, auth bootstrap procedures, bot or agent-control behavior, donor runtime packaging, and memory-writeback posture"
+                },
+                {
+                  "order": 5,
+                  "key": "nearest existing technique or overlap watch",
+                  "value_markdown": "`AOA-T-0026 session-capture-as-repo-artifact + telegram-account-auth-and-session-bridge`"
+                },
+                {
+                  "order": 6,
+                  "key": "what stays out of the donor",
+                  "value_markdown": "auth handoff, session conversion, secret storage policy, memory ingestion, live control surfaces, and broader Telegram ops doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surfaces used for this import; the public bundle intentionally excludes credential and session handling detail"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: none; the donor inputs are public upstream repositories and public README documentation"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on one Telegram client library, one local database backend, one export file layout, or one agent runtime"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risks are drift into auth or session doctrine on one side and drift into memory-ingestion or general history-capture doctrine on the other"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many workflows need Telegram-origin data to become a resumable local structured store before later search, routing, or review can happen"
+                },
+                {
+                  "order": 2,
+                  "key": "downstream repo impact",
+                  "value_markdown": "later auth, agent-control, or memory workflows belong outside `aoa-techniques`, while this repository keeps only the reusable normalization contract"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this import still needs one second live adopter beyond the donor Telegram family and documentation-first adaptation before any canonical discussion is honest"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0074"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telegram-export-normalization-to-local-store"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records the bounded Telegram-normalization pattern rather than shipping donor client libraries, session bridges, or archive apps"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "donor Telegram stacks were reduced to one portable normalization contract rather than one full client, archive, analytics, or MCP workflow"
+                },
+                {
+                  "order": 2,
+                  "text": "auth bootstrap, session conversion, and control-plane behavior were removed from the reusable public bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "memory writeback and general history-capture ownership were kept out so the adaptation stays source-specific"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "Telegram-derived messages become stable local objects"
+                },
+                {
+                  "order": 2,
+                  "text": "source provenance remains visible"
+                },
+                {
+                  "order": 3,
+                  "text": "media references and reply edges survive normalization"
+                },
+                {
+                  "order": 4,
+                  "text": "resume behavior remains bounded and explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can collapse into auth doctrine if later users stop separating session handling from normalization"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may over-associate the technique with one donor library if the local object contract is not kept generic"
+                },
+                {
+                  "order": 3,
+                  "text": "local stores can be mistaken for memory or final curation if provenance and boundary notes weaken"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "Telethon and TDLib expose programmatic message retrieval, sync, and media access over Telegram data"
+                },
+                {
+                  "order": 2,
+                  "text": "opentele shows why session conversion and auth bridging are adjacent but separate concerns"
+                },
+                {
+                  "order": 3,
+                  "text": "Chatistics, tg-archive, and telegram-mcp show Telegram-derived content being archived, analyzed, or surfaced through local structured storage and local-first tool-facing paths"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over auth procedures, session bridging, memory doctrine, or donor runtime packaging"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

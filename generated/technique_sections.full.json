@@ -5842,6 +5842,252 @@
           "content_markdown": "- keep OCR staging separate unless a narrower bridge seam proves necessary\n- split duplicate handling or receipt-family packs only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps post-OCR field extraction explicit and reviewable"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0072",
+      "name": "perceptual-media-dedupe-with-threshold-review",
+      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Make screenshot, meme, or photo deduplication reviewable by grouping near-duplicate media through perceptual similarity while keeping uncertain matches visible and file-action policy outside the technique."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- an image set contains exact duplicates, crops, edits, or recompressions that still need duplicate review\n- the reusable seam is duplicate grouping and uncertainty routing rather than semantic classification\n- thresholds may vary by media family and should stay explicit\n- a human or later policy layer will decide preserve, delete, archive, or merge actions\n- the workflow needs duplicate groups, not one opaque cleanup command"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- exact hashes alone are enough and near-duplicate handling is unnecessary\n- the real reusable object is semantic bucketing rather than duplicate grouping\n- the workflow assumes auto-delete with no review seam\n- ranking, quality scoring, or representative selection doctrine is the real center of gravity"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one bounded media set\n- one perceptual similarity method or equivalent near-duplicate handle\n- explicit thresholds or threshold bands\n- optional grouping strategy or representative-selection rule for review display"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one set of high-confidence duplicate groups\n- one set of uncertain groups or candidate pairs\n- one review bucket for borderline matches\n- optional representative references for group display, without making that representative the policy winner"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Compute perceptual similarity handles for the bounded media set.\n2. Form candidate duplicate pairs or groups from those handles.\n3. Separate clearly similar groups from borderline matches through explicit thresholds or bands.\n4. Emit uncertain groups into a review bucket instead of flattening them into the same action path as high-confidence duplicates.\n5. Preserve enough group-level evidence that reviewers can see why images were paired or grouped.\n6. Keep deletion, archival, ranking, and semantic labeling outside the invariant contract.\n7. Split out a sibling technique if the real reusable object becomes semantic taxonomy, automatic cleanup policy, or cross-media quality scoring."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the technique groups and flags near-duplicates; it does not own file deletion policy\n- thresholds stay explicit and tunable\n- uncertain matches remain visible instead of being silently resolved\n- grouping remains reviewable and explainable\n- the technique stays smaller than semantic media taxonomy, cleanup automation, or quality-ranking doctrine\n- downstream systems receive duplicate groups and review signals rather than donor CLI behavior or storage policy\n\nRelationship to adjacent techniques: unlike `semantic-media-bucketing-with-vision-plus-ocr`, this bundle does not classify media into receipt, meme, screenshot, or other semantic buckets; it only groups likely duplicates. Unlike [AOA-T-0052](../review-findings-compaction/TECHNIQUE.md), it deduplicates media artifacts rather than review findings. It also stays smaller than any delete-or-archive policy because it stops at grouping plus review."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- edited memes collapse into the wrong groups\n- cropped screenshots become false duplicates\n- threshold settings drift across media families and over-group meaningful variants\n- representative images hide why a group was formed\n\n### Negative effects\n\n- aggressive cleanup can remove variants users expected to keep\n- one threshold can become false doctrine across unrelated media families\n- duplicate groups can look authoritative even when similarity is borderline\n\n### Misuse patterns\n\n- auto-deleting all grouped images\n- treating duplicate groups as semantic labels\n- widening the technique into ranking, quality scoring, or cleanup governance\n\n### Detection signals\n\n- high duplicate counts with obvious false matches\n- users report loss of meaningful variants after cleanup\n- reviewers cannot tell why a borderline match was grouped\n\n### Mitigations\n\n- keep a review bucket for uncertain matches\n- separate action policy from grouping\n- calibrate thresholds by media family\n- preserve enough evidence to explain group membership"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the corpus includes exact duplicates, crops, and edited variants\n- high-confidence groups and uncertain groups are visibly separated\n- thresholds can be adjusted without rewriting the contract\n- grouping output stays reviewable without forcing deletion or archive actions\n- semantic labeling and cleanup policy remain outside the technique\n\nSee `checks/perceptual-media-dedupe-with-threshold-review-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the perceptual hash or similarity method\n- threshold bands by media family\n- group or pair presentation\n- representative-selection hints for review UIs\n- storage layout and later action policy\n\nWhat should stay invariant:\n- duplicate grouping remains separate from file actions\n- thresholds remain explicit\n- uncertain matches remain visible\n- the output is a reviewable grouping surface rather than a cleanup verdict\n\nProject-shaped details that should not be treated as invariant:\n- donor CLI flags\n- delete or preserve defaults\n- one-threshold-fits-all claims\n- ranking or quality-scoring doctrine"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable duplicate-grouping seam: perceptual similarity forms candidate groups, uncertainty stays visible, and later file actions remain outside the technique. Donor CLI workflow, delete defaults, approximate-nearest-neighbor implementation detail, and quality-ranking posture were intentionally removed or generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-perceptual-media-dedupe-with-threshold-review.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/perceptual-media-dedupe-with-threshold-review-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `imagededup` and `imgdupes`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for reviewable near-duplicate media grouping"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep semantic bucketing separate unless a narrower bridge seam proves reusable\n- split out duplicate manifests or deletion policy only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps perceptual dedupe explicit before later cleanup actions"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0073",
+      "name": "semantic-media-bucketing-with-vision-plus-ocr",
+      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Provide one bounded classification route for mixed media by combining visual semantics with OCR side text so screenshots, memes, receipts, and other coarse media classes stay reviewable under confidence gates instead of being treated as final truth."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a media set needs coarse bucket labels before later routing or review\n- text-heavy images matter and OCR can sharpen classification\n- the bucket taxonomy can stay small and explicit\n- confidence-aware review is acceptable for low-signal or conflicting cases\n- the reusable seam is media bucketing, not duplicate grouping, moderation, or downstream automation"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- duplicate grouping is the real problem and taxonomy is unnecessary\n- the workflow needs identity inference, moderation policy, or face recognition\n- downstream actions expect perfect labels with no review seam\n- the bucket set is too open-ended to remain bounded and reviewable"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one bounded media set\n- one explicit bucket taxonomy\n- one visual semantic model or equivalent scoring surface\n- optional OCR side text from text-bearing images\n- confidence thresholds or threshold bands"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one bounded bucket label per classified item\n- one confidence signal for the bucket assignment\n- one review bucket for low-confidence or conflicting cases\n- optional notes showing whether OCR side text influenced the final label"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Score each item against the bounded bucket taxonomy through a visual semantic surface.\n2. Extract OCR side text when text-bearing media may sharpen the classification.\n3. Combine visual and textual signals cautiously instead of letting either channel behave as hidden final truth.\n4. Assign only the explicit bounded bucket labels.\n5. Route low-confidence or conflicting items into review instead of forcing a definitive class.\n6. Keep moderation, deletion, and downstream automation outside the invariant contract.\n7. Split out a sibling technique if the real reusable object becomes duplicate grouping, OCR extraction, or one domain-specific routing stack."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- taxonomy stays bounded and explicit\n- OCR remains a side-channel, not hidden truth\n- low-confidence or conflicting cases remain reviewable\n- the technique does not own moderation, deletion, or downstream action policy\n- the bundle stays smaller than open-ended multimodal assistant behavior, media-management platforms, or identity inference\n- downstream systems receive bucket labels plus review signals rather than donor model internals\n\nRelationship to adjacent techniques: unlike [AOA-T-0072](../perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md), this bundle classifies media into coarse semantic buckets rather than grouping likely duplicates. Unlike [AOA-T-0070](../two-stage-document-ocr-pipeline/TECHNIQUE.md), it does not own OCR staging as a reusable handoff and only uses OCR as an optional side-channel for classification. Unlike [AOA-T-0071](../template-backed-field-extraction-after-ocr/TECHNIQUE.md), it does not extract structured fields from OCR text."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- memes and screenshots collide in the same bucket\n- OCR text overwhelms the visual signal\n- receipts are mis-bucketed as generic screenshots\n- vague taxonomy wording creates unstable classifications\n\n### Negative effects\n\n- taxonomy creep turns one bounded classifier into a loose media ontology\n- confidence scores can create false certainty\n- downstream systems may over-trust bucket labels as final truth\n\n### Misuse patterns\n\n- using bucket labels as final truth for destructive actions\n- letting semantic scores trigger deletion, moderation, or routing automatically\n- widening the technique into identity inference or open-ended multimodal assistance\n\n### Detection signals\n\n- bucket drift across very similar images\n- the review queue explodes because taxonomy is too vague\n- OCR-heavy items flip labels unpredictably when text changes slightly\n\n### Mitigations\n\n- keep the taxonomy small and explicit\n- use a review bucket for low-confidence or conflicting cases\n- preserve OCR as a bounded side-channel rather than final authority\n- keep destructive action policy separate from classification"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the golden set includes memes, receipts, screenshots, and an `other` class\n- bucket labels stay inside the bounded taxonomy\n- low-confidence or conflicting cases route into review\n- OCR versus no-OCR comparisons do not silently widen the contract into OCR-first truth\n- moderation, deletion, and identity inference remain outside the technique\n\nSee `checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- taxonomy wording\n- visual model choice\n- OCR usage thresholds\n- language handling\n- confidence bands and review thresholds\n\nWhat should stay invariant:\n- taxonomy remains bounded\n- visual semantics remain primary and OCR stays side-channel\n- low-confidence cases remain reviewable\n- the output is a classification surface rather than a downstream action verdict\n\nProject-shaped details that should not be treated as invariant:\n- donor prompt phrasing or zero-shot label engineering\n- moderation rules\n- face or identity inference\n- delete, archive, or auto-routing policy"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable classification seam: a bounded taxonomy is scored through visual semantics, OCR may contribute side text, uncertainty remains visible, and later actions stay outside the technique. Open-ended assistant claims, moderation policy, identity inference, and donor model-serving detail were intentionally removed or generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-semantic-media-bucketing-with-vision-plus-ocr.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `CLIP` and `PaddleOCR`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for confidence-aware mixed-media bucketing"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep duplicate grouping and OCR extraction separate unless narrower bridge seams prove reusable\n- split receipt-versus-proof or meme-family overlays only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps semantic bucketing explicit before later routing or cleanup actions"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0074",
+      "name": "telegram-export-normalization-to-local-store",
+      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Turn Telegram export or sync output into a bounded, provenance-preserving local store so later workflows can inspect, route, or distill message history without importing auth bootstrap, session conversion, or memory-writeback doctrine."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- Telegram messages or Saved Messages need to become a local structured store\n- media references and reply edges matter\n- sync or export should resume without rewriting the whole store\n- downstream workflows need message-level provenance instead of a flat text dump\n- the reusable seam is Telegram-source normalization, not auth, control-plane behavior, or memory policy"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the real problem is account auth, session conversion, or bootstrap\n- the workflow needs a live agent-control surface rather than a local normalized store\n- the intent is to auto-promote everything into memory or canon\n- one project-specific archive app or dashboard owns the whole workflow end to end"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one Telegram export, API-derived message stream, or equivalent source batch\n- media download paths or media source references\n- one local storage target\n- optional resume markers or checkpoint state"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one normalized message object surface\n- one media reference map\n- one resumable local store\n- explicit source references back to export chunks, API batches, or file paths"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Take export or synced messages as the source input.\n2. Normalize message ids, timestamps, sender identity, reply edges, and media references into one stable object shape.\n3. Preserve source references so downstream review can trace where a record came from.\n4. Write into a resumable local store that supports partial progress and later continuation.\n5. Keep auth secrets, session conversion, and bootstrap procedures outside the normalized object contract.\n6. Keep curation, summarization, memory writeback, and downstream routing outside the invariant core.\n7. Split out a sibling technique if the real reusable object becomes auth handoff, memory ingestion, or general history-artifact doctrine."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- auth posture stays separate from normalization\n- message provenance remains visible\n- the local store is resumable\n- normalized objects preserve reply edges and media references\n- the technique does not auto-promote content into memory, canon, or downstream action policy\n- downstream systems consume one stable local object contract rather than donor-specific API or export internals\n\nRelationship to adjacent techniques: unlike [AOA-T-0026](../../history/session-capture-as-repo-artifact/TECHNIQUE.md), this bundle does not claim general project-scoped history capture ownership; it owns Telegram-source normalization into a resumable local store. Unlike `telegram-account-auth-and-session-bridge`, it does not handle credentials, session conversion, or bootstrap approval. It also stays smaller than transcript packaging, recall, or memory-ingestion surfaces because it stops at normalized storage."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- media references lose source linkage\n- reply edges disappear during normalization\n- the local store collapses export and live sync semantics into one ambiguous state\n- resume markers skip or duplicate messages\n\n### Negative effects\n\n- operators can confuse storage with curation\n- session handling can leak into the normalization contract\n- normalized stores can look authoritative even when source provenance is missing\n\n### Misuse patterns\n\n- treating the local store as memory truth\n- burying secret or session files beside normalized outputs\n- widening the technique into Telegram ops doctrine or bot-control behavior\n\n### Detection signals\n\n- untraceable media files\n- messages with missing source ids or reply links\n- mixed auth or session artifacts inside the normalized store\n- resume after interruption produces duplicate or missing records\n\n### Mitigations\n\n- keep auth and session paths separate\n- preserve explicit source fields\n- define one stable local object contract\n- keep resume markers visible and bounded"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- a sample export with replies and media retains source ids and media references\n- resume after interruption preserves progress without losing or duplicating records\n- export and sync provenance remain distinguishable\n- normalized objects stay readable without donor-specific runtime code\n- auth, session, and memory doctrine remain outside the technique\n\nSee `checks/telegram-export-normalization-to-local-store-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- local store backend\n- export versus live sync route\n- media storage paths\n- message-family extensions\n- checkpoint format for resume behavior\n\nWhat should stay invariant:\n- auth remains separate\n- normalized message objects preserve provenance\n- the store remains resumable\n- downstream systems read one stable local object contract\n\nProject-shaped details that should not be treated as invariant:\n- session-secret storage policy\n- auth bootstrap procedure\n- agent-control rhetoric\n- automatic memory writeback"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable normalization seam: Telegram messages and media become stable local objects with visible provenance and resumable storage, while auth, session handling, and memory policy remain separate. Secret handling, operator auth procedure, and live-control doctrine were intentionally removed or generalized."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-telegram-export-normalization-to-local-store.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/telegram-export-normalization-to-local-store-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- adapted from open-source `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for Telegram-source normalization into a local resumable store"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep auth/session bridging separate unless a narrower approved seam proves reusable\n- split out thread reconstruction or media-routing helpers only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps Telegram normalization explicit before later routing, recall, or memory actions"
+        }
+      ]
     }
   ]
 }

@@ -14,8 +14,9 @@
   ],
   "notes": [
     "Repo-native active wave for the personal-ingest donor family staged under incoming/personal-ingest-wave-2.",
-    "Launch verdict is go: AOA-T-0070 two-stage-document-ocr-pipeline and AOA-T-0071 template-backed-field-extraction-after-ocr are now landed, the planting order remains fixed, and the next separate landing PR should start with perceptual-media-dedupe-with-threshold-review.",
-    "Three candidates remain staged with seed bundles while telegram-account-auth-and-session-bridge stays as an incubation hold outside the immediate landing lane.",
+    "Launch verdict is go: AOA-T-0070 two-stage-document-ocr-pipeline, AOA-T-0071 template-backed-field-extraction-after-ocr, AOA-T-0072 perceptual-media-dedupe-with-threshold-review, AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr, and AOA-T-0074 telegram-export-normalization-to-local-store are now landed; no first-pass seed candidates remain.",
+    "The immediate landing lane is exhausted while telegram-account-auth-and-session-bridge stays as an incubation hold outside the wave.",
+    "docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md is the active reopen gate for the remaining incubation-hold candidate.",
     "support/registry.json is the authoritative machine-readable queue surface for this wave."
   ]
 }
