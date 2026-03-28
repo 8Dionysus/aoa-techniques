@@ -53,6 +53,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0065 | mcp-gateway-proxy | agent-workflows | promoted | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. |
 | AOA-T-0068 | fail-closed-evidence-gate | agent-workflows | promoted | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. |
 | AOA-T-0069 | approval-bound-durable-jobs | agent-workflows | promoted | Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform. |
+| AOA-T-0070 | two-stage-document-ocr-pipeline | agent-workflows | promoted | Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step. |
 | AOA-T-0020 | evidence-note-provenance-lift | docs | promoted | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
 | AOA-T-0022 | risk-and-negative-effect-lift | docs | promoted | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
 | AOA-T-0027 | cross-agent-skill-propagation | docs | promoted | Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth. |
@@ -80,6 +81,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0053 | local-first-session-index | history | promoted | Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine. |
 | AOA-T-0066 | transcript-replay-artifact | history | promoted | Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine. |
 | AOA-T-0067 | transcript-linked-code-lineage | history | promoted | Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine. |
+| AOA-T-0071 | template-backed-field-extraction-after-ocr | agent-workflows | promoted | Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser. |
 
 ## Deprecated techniques
 

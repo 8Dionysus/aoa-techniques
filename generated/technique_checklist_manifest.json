@@ -3102,6 +3102,80 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0070",
+      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md",
+          "title": "two-stage-document-ocr-pipeline checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the workflow keeps OCR staging separate from downstream field extraction"
+            },
+            {
+              "order": 2,
+              "text": "[ ] region, line, or layout references remain visible in the handoff"
+            },
+            {
+              "order": 3,
+              "text": "[ ] low-confidence spans remain explicit"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the handoff can be consumed without donor-specific runtime code"
+            },
+            {
+              "order": 5,
+              "text": "[ ] engine choice can vary without changing the bounded contract"
+            },
+            {
+              "order": 6,
+              "text": "[ ] receipt-specific schema, serving posture, and benchmark doctrine stay out of scope"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0071",
+      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md",
+          "title": "template-backed-field-extraction-after-ocr checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] OCR handoff is the only bounded parsing input"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the extracted field set is explicit and reviewable"
+            },
+            {
+              "order": 3,
+              "text": "[ ] templates or heuristics remain visible and bounded"
+            },
+            {
+              "order": 4,
+              "text": "[ ] missing or conflicting fields remain explicit instead of being guessed away"
+            },
+            {
+              "order": 5,
+              "text": "[ ] field values can keep source-evidence references back to the OCR handoff when needed"
+            },
+            {
+              "order": 6,
+              "text": "[ ] locale defaults, donor parser code, and automation doctrine stay out of scope"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

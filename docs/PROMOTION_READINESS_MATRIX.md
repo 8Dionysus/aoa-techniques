@@ -10,7 +10,7 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `43` techniques
+- current promoted corpus: `50` techniques
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
 - latest graduation: [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the bounded `qqqa` origin plus GitHub Copilot CLI's programmatic fast path as a second public shell-side context
@@ -45,7 +45,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `28` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `35` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
 
@@ -83,7 +83,7 @@ Shared blocker: one more live consumer is needed so the stack reads as a portabl
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) | Docs-side runtime composition contract with clear sibling boundaries. | One second downstream consumer using reviewable profile and preset layering. |
-| [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract and current lead candidate for this pack. | One second live context proving render-review before startup as a real operator step. |
+| [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract and current lead candidate for this pack; the latest compose prestart lane remains adjacent because it proves a useful service preview before `up`, but not yet a clearly bounded render-review workflow over effective runtime truth distinct from lifecycle and readiness. | One second live context where rendered service or config truth is explicitly reviewed before startup as its own seam rather than as a helper command inside broader startup docs. |
 | [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) | Selector-aware preflight sibling. | One second live context proving preflight stays separate from render review and lifecycle control. |
 | [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | Lifecycle sibling with clear exclusions around launcher doctrine. | One second live operator surface using one-entrypoint lifecycle ownership in practice. |
 | [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | Evaluation sibling that stays additive rather than policy-shaped. | One second downstream consumer proving baseline-first additive comparison stays bounded. |
@@ -97,7 +97,7 @@ Shared blocker: the cluster already reads coherently beside canonical [AOA-T-001
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | Managed-target propagation sibling. | One second repo or surface family using shared-skill propagation as a real managed-target fan-out. |
 | [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) | Hierarchical loading sibling with bounded precedence rules. | One second repo or surface family using the same layered rule hierarchy in practice. |
 | [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | Fragment-authoring sibling to canonical composition. | One second repo where fragment-first authoring is a real source-layer practice. |
-| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Report-only sibling to canonical composition, not the composition engine itself. | One second repo or surface family using the same CI-facing context report as a real artifact. |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Report-only sibling to canonical composition, not the composition engine itself; the latest public agent-markdown CI check lane remains adjacent because it emits PR checks or repo activity reports, not the same coverage-and-drift artifact. | One second repo or surface family using the same CI-facing context report as a read-only composition coverage/drift artifact rather than PR policy checks or activity summaries. |
 
 `AOA-T-0013` now anchors the canonical local-source fan-out default for this cluster, while the promoted siblings below keep their narrower blockers.
 
@@ -131,7 +131,7 @@ Shared blocker: the family is coherent across capture, transcript packaging, loc
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational history technique and current lead candidate for the domain. | One second repo or surface family using local-first session capture as a real history-artifact layer. |
+| [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational history technique and current lead candidate for the domain; the latest public local session-store lane remains adjacent because it persists history under user-home state and powers recall features rather than project-scoped repo artifacts. | One second repo or surface family using local-first session capture as a real history-artifact layer inside a project-visible artifact path rather than a memory or home-directory session store. |
 | [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) | Post-capture transcript-packaging sibling. | One second repo or surface family treating transcript packaging as a reviewable artifact layer. |
 | [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) | Post-capture local-index sibling that keeps searchable lookup derivative and local-first. | One second repo or surface family using a local searchable index over already-saved session artifacts without widening into dashboard, memory, or capture doctrine. |
 | [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging. | One second downstream consumer outside the current witness/compost pilot lineage. |
@@ -289,6 +289,22 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded d
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) | Durable-job sibling that keeps checkpoint, pause, approval, and resume explicit with clear exclusions around scheduler products, queue platforms, and broad orchestration doctrine. | One second public workflow surface where longer-running work survives across an explicit approval seam and resumes from durable state without widening into scheduler platforms or orchestration-product semantics. |
+
+### Pack 27 - OCR Staged Handoff
+
+Shared blocker: the donor OCR pair and repo-local adaptation both show a bounded OCR staging seam, but one more live adopter is still needed so the pattern reads as reusable document-processing infrastructure rather than one donor family plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0070](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) | OCR-staging sibling that keeps detect or layout and recognize explicit before downstream extraction with clear exclusions around serving posture, benchmark doctrine, and receipt-specific field logic. | One second public workflow surface where OCR remains an explicit staged handoff with visible confidence and region references before later extraction or review without widening into a full document-understanding or automation stack. |
+
+### Pack 28 - Post-OCR Template Field Extraction
+
+Shared blocker: the donor parser family and repo-local adaptation both show a bounded post-OCR extraction seam, but one more live adopter is still needed so the pattern reads as reusable field-extraction infrastructure rather than one parser family plus one import.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0071](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | Post-OCR extraction sibling that keeps one bounded field object explicit through templates or heuristics with clear exclusions around OCR-stage ownership, locale doctrine, and bookkeeping automation. | One second public workflow surface where OCR-derived text becomes a bounded field object through visible templates or heuristics with explicit missing or conflicting fields, without widening into receipt schema law, locale policy, or end-to-end document automation. |
 
 ## Suggested Wave Order
 

@@ -3719,6 +3719,104 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0070",
+      "name": "two-stage-document-ocr-pipeline",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step.",
+      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "origin": {
+        "project": "PaddleOCR + docTR",
+        "path": "README.md",
+        "note": "Adapted from the open-source PaddleOCR and docTR projects, which keep document OCR as an explicit detect/layout plus recognize flow before downstream extraction or app-specific interpretation."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "ocr",
+        "documents",
+        "handoff",
+        "confidence"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0071",
+      "name": "template-backed-field-extraction-after-ocr",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser.",
+      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "origin": {
+        "project": "invoice2data + receiptparser + receipt-parser-legacy",
+        "path": "README.md",
+        "note": "Adapted from open-source invoice and receipt parsers that keep field extraction explicit through templates, heuristics, and bounded output objects after OCR rather than collapsing every document family into one opaque parser."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "ocr",
+        "field-extraction",
+        "templates",
+        "receipts"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-03-28",
+      "export_ready": true,
+      "relations": [],
+      "evidence": [
+        {
+          "kind": "external_origin",
+          "path": "notes/external-origin.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "external_review",
+          "path": "notes/external-import-review.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

@@ -173,6 +173,18 @@ See also:
 |---|---|---|---|
 | minimal approval-bound-durable-jobs | `present` | `techniques/agent-workflows/approval-bound-durable-jobs/examples/minimal-approval-bound-durable-jobs.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) |
 
+### [AOA-T-0070](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-two-stage-document-ocr-pipeline | `present` | `techniques/agent-workflows/two-stage-document-ocr-pipeline/examples/minimal-two-stage-document-ocr-pipeline.md` | [TECHNIQUE.md](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) |
+
+### [AOA-T-0071](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-template-backed-field-extraction-after-ocr | `present` | `techniques/agent-workflows/template-backed-field-extraction-after-ocr/examples/minimal-template-backed-field-extraction-after-ocr.md` | [TECHNIQUE.md](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

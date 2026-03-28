@@ -885,6 +885,28 @@
           "body_markdown": "Durable job:\n\n```json\n{\n  \"job_id\": \"review-pack-42\",\n  \"status\": \"waiting_for_approval\",\n  \"checkpoint_ref\": \"jobs/review-pack-42/checkpoint.json\"\n}\n```\n\nApproval seam:\n\n- the job finished collection work and now waits for explicit approval before resume\n\nResume behavior:\n\n- after approval is recorded, the job resumes from `checkpoint_ref` instead of reconstructing state from memory\n\nWhy this example stays bounded:\n\n- one durable job identity survives the pause\n- continuation waits on explicit approval\n- the example does not require a scheduler platform or orchestration dashboard"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0070",
+      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/examples/minimal-two-stage-document-ocr-pipeline.md",
+          "title": "minimal-two-stage-document-ocr-pipeline",
+          "body_markdown": "Input:\n- one screenshot, scan, or document page\n\nOutput handoff object:\n- `source_path`\n- `regions[]`\n  - `bbox`\n  - `text`\n  - `confidence`\n- `low_confidence_spans[]`\n\nThe point of the example is not one specific OCR engine.\nThe point is that OCR output stays reviewable, confidence-aware, and separate from later field extraction."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0071",
+      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/examples/minimal-template-backed-field-extraction-after-ocr.md",
+          "title": "minimal-template-backed-field-extraction-after-ocr",
+          "body_markdown": "Input OCR handoff:\n- `merchant_line`: `Corner Market`\n- `date_line`: `2026-03-24`\n- `amount_candidates`: `TOTAL 14.20`, `VAT 1.20`\n- `currency_hint`: `USD`\n\nOutput field object:\n- `merchant`: `Corner Market`\n- `transaction_date`: `2026-03-24`\n- `total_amount`: `14.20`\n- `currency`: `USD`\n- `missing_fields[]`: none\n- `conflicts[]`: none\n- `field_evidence[]`\n  - `merchant <- merchant_line`\n  - `transaction_date <- date_line`\n  - `total_amount <- amount_candidates[0]`\n\nReview case:\n- if two amount candidates survive with similar confidence, emit both as a conflict instead of guessing one winner"
+        }
+      ]
     }
   ]
 }

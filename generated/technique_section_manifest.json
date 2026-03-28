@@ -3877,6 +3877,118 @@
           "markdown": "What can vary across projects:\n- the job status model\n- the checkpoint storage mechanism\n- whether pause, inspect, stop, or cancel surfaces are all present\n- how approval is recorded\n- how resume is triggered after approval\n\nWhat should stay invariant:\n- job identity is durable\n- approval is explicit before continuation\n- resume depends on durable state\n- scheduler and orchestration platform breadth stay outside the invariant core\n\nProject-shaped details that should not be treated as invariant:\n- one CLI or MCP command family\n- donor runtime names\n- queue brokers, fleet managers, or deployment-specific job systems\n- broader mission-control, trust, or governance stacks"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0070",
+      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn screenshots, scans, or document images into a bounded OCR handoff by keeping text-region detection or layout analysis separate from text recognition before any field extraction, parsing, or application-specific logic starts."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a later stage needs OCR output as an explicit intermediate object rather than hidden inside end-to-end extraction\n- layout ambiguity matters and should stay reviewable\n- OCR engines may change over time while the downstream handoff contract should stay stable\n- low-confidence spans or region-level uncertainty need to remain visible before extraction or review\n- the reusable object is staged OCR handoff, not a full receipt parser, document-understanding stack, or app automation flow"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the source is already structured and OCR is unnecessary\n- the real reusable object is post-OCR field extraction rather than OCR staging\n- the workflow only makes sense as one end-to-end product pipeline with domain-specific business logic fused into OCR\n- the main need is model-serving, benchmarking, or framework packaging rather than one reviewable OCR contract"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one image, page, screenshot, or bounded document slice\n- optional crop, page, or region boundaries\n- optional language, script, or locale hints\n- one OCR stage that can expose region or layout handles before recognition"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one structured OCR handoff object with recognized text units\n- one bounded set of region, line, or layout handles that preserve where text came from\n- explicit low-confidence spans or segments\n- one downstream-ready surface for later extraction without donor-specific runtime code"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Detect text-bearing regions or derive a bounded layout view before treating recognition as complete.\n2. Recognize text per region, line, or equivalent bounded segment.\n3. Normalize a minimal structured handoff that preserves source references, recognized text, and confidence.\n4. Mark low-confidence spans explicitly instead of silently flattening uncertainty away.\n5. Pass only the OCR handoff forward to downstream extraction or review.\n6. Keep engine choice, serving posture, and app-specific extraction logic outside the invariant contract.\n7. Split out a sibling technique if the real reusable object becomes template extraction, semantic bucketing, or automation over the OCR results."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- OCR staging stays separate from downstream field extraction and app logic\n- region, line, or layout ambiguity remains visible enough for review\n- low-confidence spans remain explicit\n- the handoff stays small enough that OCR engines can change without rewriting the whole workflow contract\n- the technique does not widen into model-serving doctrine, benchmarking, framework packaging, or receipt-specific schema law\n- downstream systems consume one structured OCR handoff rather than donor-specific runtime internals\n\nRelationship to adjacent techniques: unlike a later template or heuristic extraction technique, this bundle stops at OCR handoff rather than asserting merchant, amount, date, or field semantics. Unlike semantic media bucketing or dedupe techniques, it stays on document text extraction rather than media taxonomy or duplicate review."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- skewed, cropped, or noisy inputs lose important text regions before recognition\n- multi-column or receipt-like layouts flatten incorrectly into one text stream\n- downstream consumers treat a clean-looking OCR result as if it were certain ground truth\n- low-confidence spans disappear during normalization\n\n### Negative effects\n\n- premature normalization can hide ambiguity that later field extraction needed to see\n- a small OCR handoff can feel less convenient than one fused end-to-end extractor\n- teams may overfit downstream logic to one donor engine if the handoff shape is not kept generic\n\n### Misuse patterns\n\n- treating OCR output as final truth instead of a bounded intermediate object\n- widening the technique into receipt parsing, invoice schema doctrine, or end-to-end document automation\n- silently deleting region or confidence metadata because downstream code prefers plain text\n\n### Detection signals\n\n- downstream amount, date, or merchant extraction fails unexpectedly after OCR looked superficially clean\n- reviewers cannot recover where a text span came from in the source image\n- engine-specific output details leak into the invariant handoff contract\n\n### Mitigations\n\n- preserve region or layout handles with the recognized text\n- keep low-confidence spans explicit in the handoff\n- treat OCR output as reviewable intermediate evidence rather than final structured truth\n- keep extraction, bucketing, and automation as separate layers"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- OCR handoff remains distinct from downstream extraction logic\n- region or layout references survive into the handoff\n- low-confidence spans remain visible\n- the handoff shape can be consumed without donor-specific runtime code\n- the description still makes sense without model-serving, benchmarking, or app-specific automation doctrine\n\nSee `checks/two-stage-document-ocr-pipeline-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the OCR engine or engine pair\n- the exact region, line, or layout representation\n- language packs or locale hints\n- storage paths for source images and OCR handoff artifacts\n- whether the downstream consumer is a template extractor, reviewer, or another bounded processor\n\nWhat should stay invariant:\n- OCR remains staged as detect/layout then recognize\n- confidence and ambiguity remain visible\n- the output is one structured OCR handoff rather than fused business logic\n- engine-specific runtime behavior stays outside the invariant core\n\nProject-shaped details that should not be treated as invariant:\n- benchmark claims\n- serving topology\n- receipt-only or invoice-only schema assumptions\n- LLM wrapper posture or agent-control rhetoric"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0071",
+      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn OCR handoff text into a bounded field object such as merchant, date, amount, and currency through explicit templates, heuristics, and fallback review instead of pretending one parser already understands every document family."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a prior OCR stage already exists and the next reusable seam is post-OCR field extraction\n- the target field set can be named explicitly ahead of time\n- receipt-like, invoice-like, or similarly bounded document families are in scope\n- template or heuristic matching is acceptable as long as uncertainty stays visible\n- downstream consumers need structured fields without inheriting donor parser code or app-specific accounting flows"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the source is already structured and no OCR-derived extraction is needed\n- the real reusable object is still OCR staging rather than field extraction\n- the document family is too open-ended for one bounded field contract\n- the workflow only makes sense as a full bookkeeping, ingestion, or app-automation product stack"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one structured OCR handoff from an earlier OCR stage\n- one explicit field set such as merchant, transaction date, total amount, and currency\n- optional template family, merchant heuristics, or locale hints\n- one review threshold for missing or conflicting fields"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one bounded field object\n- missing-field markers for absent required values\n- conflict markers when more than one candidate survives\n- optional source snippets or field-evidence references back to the OCR handoff"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Take the OCR handoff as the only parsing input for the bounded contract.\n2. Match one template or heuristic family using explicit cues from the OCR output.\n3. Extract only the named bounded field set instead of widening into every possible document attribute.\n4. Preserve field-to-source evidence references when the downstream review path needs to inspect where a value came from.\n5. Emit missing or conflicting fields explicitly instead of silently guessing a best-looking parse.\n6. Route unresolved cases into review rather than backfilling defaults as if they were certain truth.\n7. Keep locale policy, duplicate handling, bookkeeping automation, and donor parser implementation outside the invariant contract."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- OCR staging and field extraction remain separate steps\n- the target field set stays explicit and bounded\n- templates and heuristics act as reviewable aids, not as universal document law\n- missing or conflicting values remain explicit\n- field extraction stays smaller than end-to-end receipt, invoice, or accounting automation\n- downstream consumers receive a structured field object plus review signals rather than donor parser internals\n\nRelationship to adjacent techniques: unlike [AOA-T-0070](../two-stage-document-ocr-pipeline/TECHNIQUE.md), this technique starts after OCR handoff already exists and does not own text-region detection or recognition. It also stays smaller than any later semantic media bucketing or ingestion automation technique because it only extracts a bounded field object from OCR-derived text."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- amount, subtotal, tax, or tip lines are confused\n- locale-specific date formats are parsed incorrectly\n- merchant heuristics overfit one store or invoice family\n- source references disappear and reviewers cannot tell why a field was chosen\n\n### Negative effects\n\n- clean-looking structured output can hide missing evidence\n- template sprawl can quietly become doctrine\n- downstream systems may overtrust a bounded field object as final truth\n\n### Misuse patterns\n\n- treating one donor template family as universal\n- backfilling guessed values without evidence\n- widening the technique into end-to-end accounting or ingestion automation\n\n### Detection signals\n\n- extraction coverage looks high while human trust stays low\n- currency, date, or merchant values default silently too often\n- reviewers cannot trace a parsed value back to the OCR handoff\n\n### Mitigations\n\n- keep missing-field and conflict markers explicit\n- preserve field-evidence references when review matters\n- keep template assumptions visible and local to the bounded field set\n- route unresolved cases into review instead of forcing a parse"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- OCR handoff is the only bounded parsing input\n- the extracted field set is explicit and small enough to review\n- missing or conflicting fields remain visible\n- source evidence can be traced back into the OCR handoff when needed\n- locale defaults, donor parser code, and automation doctrine stay outside the contract\n\nSee `checks/template-backed-field-extraction-after-ocr-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact field set\n- template files or heuristic packs\n- locale and currency hints\n- field-evidence reference format\n- review thresholds for conflicts or missing values\n\nWhat should stay invariant:\n- OCR handoff remains upstream and separate\n- extraction targets a bounded field object\n- uncertainty stays explicit through missing or conflicting markers\n- templates and heuristics stay reviewable rather than hidden inside parser code\n\nProject-shaped details that should not be treated as invariant:\n- invoice-only schema assumptions\n- merchant-specific logic as universal law\n- donor parser internals\n- bookkeeping or ingestion automation"
+        }
+      ]
     }
   ]
 }
