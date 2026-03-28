@@ -2,7 +2,7 @@
 id: AOA-T-0031
 name: shell-composable-agent-invocation
 domain: agent-workflows
-status: promoted
+status: canonical
 origin:
   project: qqqa
   path: README.md
@@ -16,12 +16,12 @@ tags:
   - pipes
   - one-shot
 summary: Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-21
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-03-28
 export_ready: true
 relations:
   - type: complements
@@ -35,6 +35,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # shell-composable-agent-invocation
@@ -171,6 +173,8 @@ See `checks/shell-composable-agent-invocation-checklist.md`.
 
 - adapted from open-source `qqqa`
 - promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for shell-composable one-shot agent invocation
+- strengthened on 2026-03-28 by OpenAI Codex CLI's public `codex exec` surfaces, which keep one-shot runs scripted, stdin-friendly, stdout or JSONL-readable, and file-composable without requiring an interactive long-lived session
+- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the bounded shell-composable invocation contract survives beyond the donor lineage
 
 ## Future evolution
 

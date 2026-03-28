@@ -2308,7 +2308,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `qqqa`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique focused on confirmation before mutation"
+          "content_markdown": "- adapted from open-source `qqqa`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique focused on confirmation before mutation\n- strengthened on 2026-03-28 by GitHub Copilot's public coding-agent approval surfaces, which keep command or tool execution behind explicit operator confirmation in both interactive CLI and agent-mode IDE workflows\n- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the explicit confirmation-before-mutation seam survives beyond the donor lineage"
         },
         {
           "key": "future_evolution",
@@ -2554,7 +2554,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `qqqa`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for shell-composable one-shot agent invocation"
+          "content_markdown": "- adapted from open-source `qqqa`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for shell-composable one-shot agent invocation\n- strengthened on 2026-03-28 by OpenAI Codex CLI's public `codex exec` surfaces, which keep one-shot runs scripted, stdin-friendly, stdout or JSONL-readable, and file-composable without requiring an interactive long-lived session\n- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the bounded shell-composable invocation contract survives beyond the donor lineage"
         },
         {
           "key": "future_evolution",
@@ -3620,7 +3620,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from public `SpecStory` documentation\n- promoted into `aoa-techniques` on 2026-03-23 as a bounded external-import technique for post-capture transcript packaging and export"
+          "content_markdown": "- adapted from public `SpecStory` documentation\n- promoted into `aoa-techniques` on 2026-03-23 as a bounded external-import technique for post-capture transcript packaging and export\n- strengthened on 2026-03-28 by `claude-code-log`, which converts already-saved transcript JSONL files into readable Markdown or HTML review artifacts with session summaries and portable Markdown output\n- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the post-capture transcript-packaging contract survives beyond the donor product family"
         },
         {
           "key": "future_evolution",
@@ -4358,7 +4358,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `wesm/agentsview`\n- staged through the chat wave 2 graph-review-mailbox lane inside `aoa-techniques`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for local searchable indexing over saved session artifacts"
+          "content_markdown": "- adapted from open-source `wesm/agentsview`\n- staged through the chat wave 2 graph-review-mailbox lane inside `aoa-techniques`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for local searchable indexing over saved session artifacts\n- strengthened on 2026-03-28 by `coding-agent-search (cass)`, which indexes and searches local multi-agent session history into a searchable timeline while keeping provenance back to source artifacts\n- promoted to `canonical` on 2026-03-28 after second-context review confirmed that the local-first derivative index contract survives beyond the donor product family"
         },
         {
           "key": "future_evolution",

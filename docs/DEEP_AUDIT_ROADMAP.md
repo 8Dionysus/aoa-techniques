@@ -15,13 +15,17 @@ Historical note:
 ## Current Live Closure Snapshot
 
 - current verification path: `python scripts/release_check.py`
-- current corpus split: `74` bundles, `21 canonical`, `53 promoted`
+- current corpus split: `74` bundles, `25 canonical`, `49 promoted`
 - repo-only hardening is largely landed; the main open work is now external-evidence execution rather than missing internal infrastructure
 - recent canonical closures since the baseline below:
   - [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
   - [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
   - [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
   - [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+  - [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+  - [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
+  - [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
+  - [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md)
 - live promotion and evidence operating surfaces now are:
   - [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
   - [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
@@ -32,6 +36,12 @@ Historical note:
   - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
   - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
   - [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+- latest external-evidence lane closures in that sprint:
+  - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md): public prompt-eval CI surfaces remain adjacent and do not yet prove the same composition coverage or token-drift artifact
+  - [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md): public local session-browser and session-search tools remain adjacent and do not yet prove project-scoped history artifacts
+  - [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md): public render-before-apply and dry-run surfaces remain adjacent and do not yet prove a named pre-start render-review seam over effective local runtime truth
+- latest off-sprint lane closure:
+  - [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md): public transcript-log export surfaces remain adjacent and do not yet prove a structured witness trace with explicit state-delta review notes and pre-writeback summary posture
 - current long-gap holds remain:
   - [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
   - [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)

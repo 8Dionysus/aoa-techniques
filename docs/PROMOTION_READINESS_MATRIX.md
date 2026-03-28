@@ -10,10 +10,10 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `53` techniques
+- current promoted corpus: `49` techniques
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation: [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) moved to `canonical` on 2026-03-23 after follow-up review from the bounded `qqqa` origin plus GitHub Copilot CLI's programmatic fast path as a second public shell-side context
+- latest graduation wave: [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md), and [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) are earlier than the rest and still need second-context plus canonical-readiness scaffolding before canonical discussion is honest
 
@@ -45,7 +45,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `38` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `34` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
 
@@ -69,12 +69,7 @@ Shared blocker: each bundle still needs a specific new live proof surface, and a
 
 ### Pack 2 - Shell-Agent Fast Path
 
-Shared blocker: one live adopter beyond donor plus documentation-first adaptation.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | Boundary sibling that keeps mutation behind one explicit confirmation seam. | One public workflow surface where the confirmation seam really gates mutation in practice. |
-| [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | Composability sibling focused on stdin, stdout, files, and pipes. | One public workflow surface where one-shot invocation stays pipe/file/stdin-first in real use. |
+Pack 2 is now closed: [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) exited to `canonical` after GitHub Copilot's public coding-agent approval surfaces confirmed that mutation stays behind one explicit operator gate, and [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) exited to `canonical` after OpenAI Codex CLI confirmed a real stdin/stdout/file-first one-shot `codex exec` path.
 
 ### Pack 3 - Runtime Operator Stack
 
@@ -83,7 +78,7 @@ Shared blocker: one more live consumer is needed so the stack reads as a portabl
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) | Docs-side runtime composition contract with clear sibling boundaries. | One second downstream consumer using reviewable profile and preset layering. |
-| [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract and current lead candidate for this pack; the latest compose prestart lane remains adjacent because it proves a useful service preview before `up`, but not yet a clearly bounded render-review workflow over effective runtime truth distinct from lifecycle and readiness. | One second live context where rendered service or config truth is explicitly reviewed before startup as its own seam rather than as a helper command inside broader startup docs. |
+| [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract and current lead candidate for this pack; the latest compose prestart lane remains adjacent because it proves a useful service preview before `up`, and the newer render-before-apply lane remains adjacent because Docker Compose `config` or `alpha dry-run` plus Helm `template` render or simulate commands without yet establishing a clearly bounded pre-start review seam over effective local runtime truth distinct from lifecycle, readiness, or deployment templating. | One second live context where rendered service or config truth is explicitly reviewed before startup as its own seam rather than as a helper command inside broader startup docs. |
 | [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) | Selector-aware preflight sibling. | One second live context proving preflight stays separate from render review and lifecycle control. |
 | [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | Lifecycle sibling with clear exclusions around launcher doctrine. | One second live operator surface using one-entrypoint lifecycle ownership in practice. |
 | [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | Evaluation sibling that stays additive rather than policy-shaped. | One second downstream consumer proving baseline-first additive comparison stays bounded. |
@@ -97,7 +92,7 @@ Shared blocker: the cluster already reads coherently beside canonical [AOA-T-001
 | [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | Managed-target propagation sibling. | One second repo or surface family using shared-skill propagation as a real managed-target fan-out. |
 | [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) | Hierarchical loading sibling with bounded precedence rules. | One second repo or surface family using the same layered rule hierarchy in practice. |
 | [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | Fragment-authoring sibling to canonical composition. | One second repo where fragment-first authoring is a real source-layer practice. |
-| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Report-only sibling to canonical composition, not the composition engine itself; the latest public agent-markdown CI check lane remains adjacent because it emits PR checks or repo activity reports, not the same coverage-and-drift artifact. | One second repo or surface family using the same CI-facing context report as a read-only composition coverage/drift artifact rather than PR policy checks or activity summaries. |
+| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Report-only sibling to canonical composition, not the composition engine itself; the latest public agent-markdown and prompt-eval CI lanes remain adjacent because they emit PR checks, eval matrices, before or after prompt reports, or repo activity summaries rather than the same read-only composition coverage-and-drift artifact. | One second repo or surface family using the same CI-facing context report as a read-only composition coverage/drift artifact rather than PR policy checks, prompt eval reports, or activity summaries. |
 
 `AOA-T-0013` now anchors the canonical local-source fan-out default for this cluster, while the promoted siblings below keep their narrower blockers.
 
@@ -127,14 +122,12 @@ Shared blocker: the remaining promoted family members still need more live markd
 
 ### Pack 7 - History Artifacts
 
-Shared blocker: the family is coherent across capture, transcript packaging, local indexing, and witness artifacts, but still needs one more live artifact-first consumer beyond donor plus repo-local adaptation.
+Shared blocker: the remaining open history queue is now capture plus witness-trace review. Transcript packaging and local indexing already exited to `canonical`, but the capture and witness siblings still need more live artifact-first proof.
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational history technique and current lead candidate for the domain; the latest public local session-store lane remains adjacent because it persists history under user-home state and powers recall features rather than project-scoped repo artifacts. | One second repo or surface family using local-first session capture as a real history-artifact layer inside a project-visible artifact path rather than a memory or home-directory session store. |
-| [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) | Post-capture transcript-packaging sibling. | One second repo or surface family treating transcript packaging as a reviewable artifact layer. |
-| [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) | Post-capture local-index sibling that keeps searchable lookup derivative and local-first. | One second repo or surface family using a local searchable index over already-saved session artifacts without widening into dashboard, memory, or capture doctrine. |
-| [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging. | One second downstream consumer outside the current witness/compost pilot lineage. |
+| [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational history technique and current lead candidate for the domain; the latest public local session-store and session-browser/search lanes remain adjacent because they persist or index history under user-home state, workspace pointer files, or unified local search tools rather than project-scoped repo artifacts. | One second repo or surface family using local-first session capture as a real history-artifact layer inside a project-visible artifact path rather than a memory product, search UI, or home-directory session store. |
+| [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging; the latest public transcript-log export lane remains adjacent because `claude-conversation-extractor` detailed exports and `claude-code-log` preserve tool use, terminal outputs, and summaries, but still package transcript or log review rather than a bounded witness trace with explicit state-delta review notes and pre-writeback summary posture. | One second downstream consumer outside the current witness/compost pilot lineage where a bounded run emits a structured trace artifact and human-readable summary before any writeback or promotion layer. |
 
 ### Pack 8 - Internal Docs Practice
 

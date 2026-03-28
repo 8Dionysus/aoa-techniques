@@ -5,15 +5,15 @@
 - name: local-first-session-index
 
 ## Target project
-- name: aoa-techniques
-- environment: public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline
-- runtime: documentation-first corpus that records bounded local-index meaning rather than shipping the donor desktop app, local server, or search UI
+- name: coding-agent-search (`cass`)
+- environment: open-source local TUI and CLI for indexing and searching saved coding-agent session history across multiple local providers
+- runtime: derivative local search and index surfaces over already-saved session artifacts, with provenance-aware results and one searchable timeline rather than a hosted dashboard or memory product
 
 ## What changed
-- paths: the donor uses local session discovery plus a SQLite-backed search layer and UI; this adaptation keeps the generic existing-artifact plus local-index contract without depending on one product path
-- services: analytics dashboards, live updates, publish flows, PostgreSQL sync, reverse-proxy exposure, and hosted access were removed from the reusable contract
-- dependencies: the adaptation depends on an existing saved history layer and one local index surface, not on the donor application stack
-- operating assumptions: contributors should read the technique as post-capture lookup over saved artifacts, not as installation or product deployment guidance
+- paths: the donor uses local session discovery plus a SQLite-backed search layer and UI, while the second context aggregates saved session artifacts from several local coding-agent families into one searchable timeline
+- services: the second context also offers semantic search, export, and optional remote-source features, but this adaptation narrows to the local derivative index and source-reference contract only
+- dependencies: the adaptation depends on an existing saved history layer and one local search index surface, not on a specific web UI or deployment stack
+- operating assumptions: contributors should read the technique as post-capture lookup over saved artifacts, not as dashboard installation, multi-machine sync, or product deployment guidance
 
 ## What stayed invariant
 - contract: indexing begins from already-saved local session artifacts
@@ -22,14 +22,13 @@
 
 ## Risks introduced by adaptation
 - the pattern can collapse back into [AOA-T-0026](../../session-capture-as-repo-artifact/TECHNIQUE.md) if repositories cannot explain what indexing adds after capture already exists
-- teams may over-associate indexing with transcript export or analytics because the donor product bundles those adjacent surfaces together
+- teams may over-associate indexing with export, semantic recall, or cross-machine aggregation because the second context bundles those adjacent surfaces together
 - the public bundle could drift into dashboard or memory language if the source-reference boundary is not kept explicit
 
 ## Evidence
-- the public donor README says AI coding agents generate large volumes of session data and that `agentsview` indexes these sessions into a local SQLite database with full-text search
-- the same README says startup discovers sessions from supported agents, syncs them into a local SQLite database with FTS5 full-text search, and then exposes a web UI
-- the donor `SearchResult` and `Session` structures keep session IDs, names, timestamps, snippets, and stored file paths, which shows the lookup surface stays tied back to saved source artifacts rather than replacing them
-- the donor search handler keeps the runtime query contract narrow: pass a query, run local search, and return session-level matches with snippet and cursor state
+- the public `cass` README describes the tool as a unified local TUI that indexes and searches coding-agent history from several saved-session providers into one searchable timeline
+- the same README says tool calls become searchable text, exports can stay local, and the system tracks provenance so operators can see where each conversation originated
+- those public surfaces preserve the same reusable core: the index stays local and derivative, the searchable layer sits over already-saved session artifacts, and useful results still point back to the original history source rather than replacing it
 
 ## Result
-- works as a documentation-first second context and preserves one bounded local-index contract without carrying over dashboard, export, sync, or hosted product breadth
+- works as a real public second context and preserves one bounded local-index contract without carrying over dashboard, export, sync, or hosted product breadth

@@ -221,9 +221,9 @@ DOMAIN_START_SPECS = (
     },
     {
         "domain": "history",
-        "lead_ids": ("AOA-T-0026",),
+        "lead_ids": ("AOA-T-0044", "AOA-T-0053"),
         "review_docs": (),
-        "note": "Start with the bounded local-first session-artifact contract in `AOA-T-0026`; this domain does not have a canonical default yet, so treat it as a promoted starter rather than a silent default.",
+        "note": "Start with the canonical post-capture history pair: `AOA-T-0044` for readable transcript artifacts and `AOA-T-0053` for derivative local lookup over saved artifacts; widen to capture or witness layers only when those become the real bounded question.",
     },
 )
 COMMON_MOVE_BASIS_DIRECT_RELATION = "direct_relation"
