@@ -29,6 +29,8 @@ The format is intentionally simple and human-first.
 - `AOA-T-0067` `transcript-linked-code-lineage`, a promoted `history` technique adapted from `git-ai-project/git-ai` for bounded code-to-session provenance links
 - `AOA-T-0068` `fail-closed-evidence-gate`, a promoted `agent-workflows` technique adapted from `Clyra-AI/gait` for fail-closed execution gating with reviewable evidence output
 - `AOA-T-0069` `approval-bound-durable-jobs`, a promoted `agent-workflows` technique adapted from `Clyra-AI/gait` for durable jobs that pause and resume across an explicit approval seam
+- `AOA-T-0070` `two-stage-document-ocr-pipeline`, a promoted `agent-workflows` technique adapted from `PaddleOCR` and `docTR` for staged OCR handoff before later extraction or review
+- `AOA-T-0071` `template-backed-field-extraction-after-ocr`, a promoted `agent-workflows` technique adapted from `invoice2data`, `receiptparser`, and `receipt-parser-legacy` for bounded post-OCR field extraction through explicit templates, heuristics, and review fallback
 
 ## [0.2.0] - 2026-03-23
 

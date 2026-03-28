@@ -166,6 +166,18 @@ See also:
 |---|---|---|---|---|
 | approval-bound-durable-jobs checklist | `absent` | `8` | `techniques/agent-workflows/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) |
 
+### [AOA-T-0070](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| two-stage-document-ocr-pipeline checklist | `absent` | `6` | `techniques/agent-workflows/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) |
+
+### [AOA-T-0071](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| template-backed-field-extraction-after-ocr checklist | `absent` | `6` | `techniques/agent-workflows/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

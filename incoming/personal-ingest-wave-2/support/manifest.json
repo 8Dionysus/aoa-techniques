@@ -1,0 +1,21 @@
+{
+  "wave_id": "personal-ingest-wave-2",
+  "title": "Personal Ingest Wave 2",
+  "source_pack": "personal-ingest-wave-2 drop-in::wave-2-personal-ingest",
+  "activation_state": "active",
+  "candidate_count": 6,
+  "candidate_slugs": [
+    "two-stage-document-ocr-pipeline",
+    "template-backed-field-extraction-after-ocr",
+    "perceptual-media-dedupe-with-threshold-review",
+    "semantic-media-bucketing-with-vision-plus-ocr",
+    "telegram-export-normalization-to-local-store",
+    "telegram-account-auth-and-session-bridge"
+  ],
+  "notes": [
+    "Repo-native active wave for the personal-ingest donor family staged under incoming/personal-ingest-wave-2.",
+    "Launch verdict is go: AOA-T-0070 two-stage-document-ocr-pipeline and AOA-T-0071 template-backed-field-extraction-after-ocr are now landed, the planting order remains fixed, and the next separate landing PR should start with perceptual-media-dedupe-with-threshold-review.",
+    "Three candidates remain staged with seed bundles while telegram-account-auth-and-session-bridge stays as an incubation hold outside the immediate landing lane.",
+    "support/registry.json is the authoritative machine-readable queue surface for this wave."
+  ]
+}

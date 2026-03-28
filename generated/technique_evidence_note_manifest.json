@@ -34384,6 +34384,1138 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0070",
+      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0070"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "two-stage-document-ocr-pipeline"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around serving posture, benchmark claims, packaging, and document-specific extraction doctrine"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same staged OCR seam as a documentation-first adaptation with one example and one checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor OCR family"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main problem is keeping OCR output reviewable and interchangeable before later extraction or parsing begins"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than any later template-backed field extraction technique because it stops at OCR handoff rather than asserting field semantics"
+                },
+                {
+                  "order": 3,
+                  "text": "it also remains narrower than multimodal bucketing or media-review techniques because it stays on staged document text extraction rather than taxonomy or dedupe behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-28"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable staged OCR seam and excludes donor-specific serving, packaging, and business-logic detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that keeps OCR staging explicit as a structured handoff before later extraction or review"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0070` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the staged OCR handoff contract survives outside the donor OCR family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0070"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "two-stage-document-ocr-pipeline"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-28"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and one public-safe example"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: OCR stays staged as detect or layout -> recognize -> structured handoff before downstream extraction begins"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor spine plus explicit exclusions around serving, benchmarks, packaging, and downstream field semantics"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the same staged OCR seam readable as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: staged OCR, visible ambiguity, explicit low-confidence spans, and one structured handoff"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: platform packaging, benchmark claims, serving posture, and receipt-specific extraction doctrine"
+                },
+                {
+                  "order": 4,
+                  "text": "the example and checklist reinforce OCR staging without widening the bundle into a document product or automation stack"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor OCR frameworks to the public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one staged OCR contract rather than a disguised engine-comparison or product-integration guide"
+                },
+                {
+                  "order": 4,
+                  "text": "the import path is public-safe and reviewable at the current repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor OCR family"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show another public workflow where OCR staging remains an explicit handoff seam before later extraction or review"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0070` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that staged OCR handoff survives outside the current donor family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source or public documentation source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/PaddlePaddle/PaddleOCR` plus `https://github.com/mindee/doctr`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "`Apache-2.0` donor family"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "upstream `README.md` guidance from PaddleOCR and docTR showing OCR as an explicit detect or layout plus recognize flow before downstream parsing"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor family to one bounded OCR seam: detect or layout -> recognize -> structured handoff before later extraction starts"
+                },
+                {
+                  "order": 2,
+                  "key": "reusable object extracted",
+                  "value_markdown": "one confidence-aware OCR handoff that preserves region or layout references and low-confidence spans for later review or extraction"
+                },
+                {
+                  "order": 3,
+                  "key": "invariant core kept",
+                  "value_markdown": "OCR stays explicitly staged, ambiguity remains visible, and downstream consumers receive one structured handoff instead of engine-specific runtime internals"
+                },
+                {
+                  "order": 4,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "serving posture, benchmark claims, framework packaging, engine-comparison rhetoric, and receipt-specific or invoice-specific field semantics"
+                },
+                {
+                  "order": 5,
+                  "key": "nearest existing technique or overlap watch",
+                  "value_markdown": "`template-backed-field-extraction-after-ocr`"
+                },
+                {
+                  "order": 6,
+                  "key": "what stays out of the donor",
+                  "value_markdown": "downstream field extraction, document taxonomy, model-serving doctrine, benchmark theater, and app-specific automation logic"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surfaces used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: none; the donor inputs are public upstream repositories and public README documentation"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on one OCR engine package, one serving topology, or one donor-specific runtime layout"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risks are drift into field-extraction doctrine on one side and drift into OCR platform, benchmarking, or packaging doctrine on the other"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many document and screenshot workflows need OCR to remain a visible intermediate seam before later extraction, review, or normalization logic begins"
+                },
+                {
+                  "order": 2,
+                  "key": "downstream repo impact",
+                  "value_markdown": "likely follow-on imports stay in `aoa-techniques` first as bounded siblings, while later execution packaging belongs in `aoa-skills`"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this import still needs one second live adopter beyond the donor OCR family and documentation-first adaptation before any canonical discussion is honest"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0070"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "two-stage-document-ocr-pipeline"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records the staged OCR handoff pattern rather than shipping donor OCR engines or packaging"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "donor OCR frameworks were reduced to one portable staged handoff contract rather than one engine-specific implementation recipe"
+                },
+                {
+                  "order": 2,
+                  "text": "deployment, serving, and benchmark details were removed from the reusable public bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream extraction logic was kept out so the adaptation stops at OCR handoff rather than document-specific field semantics"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "OCR is treated as at least two explicit stages: detect or layout, then recognize"
+                },
+                {
+                  "order": 2,
+                  "text": "region or layout ambiguity remains visible enough for review"
+                },
+                {
+                  "order": 3,
+                  "text": "low-confidence spans stay explicit"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream consumers receive one structured OCR handoff rather than hidden runtime internals"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can become vague if later users collapse detection, recognition, and extraction back into one step"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may over-associate the technique with one donor engine if the interchangeable handoff contract is not kept explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "too much normalization can hide layout ambiguity that later extraction needed"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "donor READMEs present OCR as a staged flow where detection or layout and recognition are separable concerns"
+                },
+                {
+                  "order": 2,
+                  "text": "the same donor family makes OCR useful before any downstream document-specific logic is finalized"
+                },
+                {
+                  "order": 3,
+                  "text": "this adaptation narrows those behaviors into one reusable public technique for confidence-aware OCR handoff"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over serving posture, packaging, or donor-specific field logic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0071",
+      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0071"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "template-backed-field-extraction-after-ocr"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "external origin",
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around OCR-stage ownership, locale lock-in, bookkeeping automation, and donor parser implementation"
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`aoa-techniques` now records the same post-OCR extraction seam as a documentation-first adaptation with one example and one checklist"
+                },
+                {
+                  "order": 3,
+                  "key": "external review",
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                },
+                {
+                  "order": 4,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor parser family"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is the right promoted default when the main problem is turning OCR-derived text into a small explicit field object without hiding uncertainty inside a parser implementation"
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than [AOA-T-0070](../two-stage-document-ocr-pipeline/TECHNIQUE.md) because it starts after OCR handoff already exists"
+                },
+                {
+                  "order": 3,
+                  "text": "it also remains narrower than later ingestion or taxonomy techniques because it owns only bounded field extraction plus review fallback"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-03-28"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable post-OCR extraction seam and excludes donor parser code, locale lock-in, and bookkeeping or ingestion detail"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "specifically, the bundle still needs another public repository or surface family that keeps post-OCR field extraction explicit through templates or heuristics before later ingestion or automation begins"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0071` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer canonical promotion until another live adopter confirms that the post-OCR extraction contract survives outside the donor parser family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/notes/external-import-review.md",
+          "kind": "external_review",
+          "title": "External Import Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0071"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "template-backed-field-extraction-after-ocr"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pass"
+                },
+                {
+                  "order": 2,
+                  "text": "review date: 2026-03-28"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle includes the expected bounded external-import package: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/second-context-adaptation.md`, one public-safe checklist, and one public-safe example"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique document states one narrow contract: OCR-derived text is turned into a bounded field object through explicit templates, heuristics, and review fallback rather than opaque end-to-end parsing"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance note records the donor family plus explicit exclusions around OCR staging, locale lock-in, bookkeeping flows, and donor parser implementation"
+                },
+                {
+                  "order": 4,
+                  "text": "the second-context note keeps the same post-OCR extraction seam readable as a documentation-first adaptation inside `aoa-techniques`"
+                }
+              ]
+            },
+            {
+              "heading": "Boundedness check",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "the invariant core stays narrow: upstream OCR handoff, one explicit field set, reviewable templates or heuristics, and visible missing or conflicting values"
+                },
+                {
+                  "order": 3,
+                  "text": "excluded donor features remain explicit and out of scope: OCR-stage ownership, locale-specific doctrine, donor parser code, bookkeeping automation, and ingestion workflows"
+                },
+                {
+                  "order": 4,
+                  "text": "the example and checklist reinforce bounded field extraction without widening the bundle into a document-understanding or accounting stack"
+                }
+              ]
+            },
+            {
+              "heading": "Provenance readability",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer can trace the path from donor parser READMEs to the public technique through the external-origin note, bounded exclusions, and documentation-first adaptation without hidden internal context"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle reads as one post-OCR extraction contract rather than a disguised invoice parser or receipt-app integration guide"
+                },
+                {
+                  "order": 4,
+                  "text": "the import path is public-safe and reviewable at the current repo scale"
+                }
+              ]
+            },
+            {
+              "heading": "Import-path assessment",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "result: pass"
+                },
+                {
+                  "order": 2,
+                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                },
+                {
+                  "order": 3,
+                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor parser family"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                },
+                {
+                  "order": 2,
+                  "text": "a future stronger context should show another public workflow where OCR-derived text is turned into a bounded field object through visible templates or heuristics with explicit review fallback"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "accept `AOA-T-0071` as a bounded external import and publish it as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "defer any canonical review until another live adopter confirms that the post-OCR extraction contract survives outside the current donor parser family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/notes/external-origin.md",
+          "kind": "external_origin",
+          "title": "External Origin Note",
+          "note_shape": "typed_sections",
+          "intro_markdown": "Use this note when a technique is adapted from an external open-source or public documentation source.\nIt complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and public-safety review.",
+          "sections": [
+            {
+              "heading": "Source",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source_repo",
+                  "value_markdown": "`https://github.com/invoice-x/invoice2data` plus `https://github.com/knipknap/receiptparser` plus `https://github.com/ReceiptManager/receipt-parser-legacy`"
+                },
+                {
+                  "order": 2,
+                  "key": "source_license",
+                  "value_markdown": "`MIT + MIT + Apache-2.0` donor family"
+                },
+                {
+                  "order": 3,
+                  "key": "inspired_by",
+                  "value_markdown": "not used in this import"
+                },
+                {
+                  "order": 4,
+                  "key": "adapted_from",
+                  "value_markdown": "upstream README guidance from invoice2data, receiptparser, and receipt-parser-legacy showing OCR-derived text routed into explicit field extraction through templates, heuristics, and structured output objects"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "what_changed",
+                  "value_markdown": "narrowed the donor family to one bounded post-OCR seam: extract a small explicit field object through templates or heuristics and visible review fallbacks"
+                },
+                {
+                  "order": 2,
+                  "key": "reusable object extracted",
+                  "value_markdown": "one structured field object with missing or conflicting markers plus optional field-evidence references back to OCR output"
+                },
+                {
+                  "order": 3,
+                  "key": "invariant core kept",
+                  "value_markdown": "OCR handoff stays upstream, field targets stay explicit, templates or heuristics remain reviewable aids, and uncertainty remains visible"
+                },
+                {
+                  "order": 4,
+                  "key": "project-shaped details removed or generalized",
+                  "value_markdown": "invoice-only schema law, locale-locked merchant logic, donor parser implementation details, bookkeeping integration, and ingestion automation"
+                },
+                {
+                  "order": 5,
+                  "key": "nearest existing technique or overlap watch",
+                  "value_markdown": "`AOA-T-0070 two-stage-document-ocr-pipeline`"
+                },
+                {
+                  "order": 6,
+                  "key": "what stays out of the donor",
+                  "value_markdown": "OCR staging, document taxonomy, duplicate-handling policy, bookkeeping automation, and donor parser runtime packaging"
+                }
+              ]
+            },
+            {
+              "heading": "Public-safety review",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "secrets or tokens removed: none from the donor surfaces used for this import"
+                },
+                {
+                  "order": 2,
+                  "text": "private paths, URLs, or IDs removed: none; the donor inputs are public upstream repositories and public README documentation"
+                },
+                {
+                  "order": 3,
+                  "text": "environment-specific assumptions generalized: the public technique does not depend on one template pack, one locale bundle, or one donor parser runtime layout"
+                },
+                {
+                  "order": 4,
+                  "text": "remaining public-safety concerns: the main risks are drift into OCR-stage ownership on one side and drift into full accounting or ingestion automation on the other"
+                }
+              ]
+            },
+            {
+              "heading": "Review notes",
+              "order": 4,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "why this adaptation is reusable here",
+                  "value_markdown": "many receipt-like or invoice-like workflows need a visible post-OCR extraction seam that keeps target fields, template assumptions, and review fallbacks explicit"
+                },
+                {
+                  "order": 2,
+                  "key": "downstream repo impact",
+                  "value_markdown": "later execution packaging or ingestion workflows belong in `aoa-skills`, while this repository keeps only the reusable extraction contract"
+                },
+                {
+                  "order": 3,
+                  "key": "limits or follow-up review concerns",
+                  "value_markdown": "this import still needs one second live adopter beyond the donor parser family and documentation-first adaptation before any canonical discussion is honest"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0071"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "template-backed-field-extraction-after-ocr"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "documentation-first corpus that records the bounded post-OCR extraction pattern rather than shipping donor parser code, locale packs, or ingestion workflows"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "donor parser families were reduced to one portable post-OCR extraction contract rather than one invoice or receipt application stack"
+                },
+                {
+                  "order": 2,
+                  "text": "locale-specific rules, parser implementations, and ingestion helpers were removed from the reusable public bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "OCR-stage ownership was kept out so the adaptation starts from one upstream OCR handoff instead of raw image processing"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "OCR handoff remains the upstream input"
+                },
+                {
+                  "order": 2,
+                  "text": "field targets remain explicit and bounded"
+                },
+                {
+                  "order": 3,
+                  "text": "templates or heuristics remain reviewable aids rather than hidden parser law"
+                },
+                {
+                  "order": 4,
+                  "text": "missing or conflicting values stay visible instead of being guessed away"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique can collapse into an end-to-end parser if later users stop separating OCR staging from field extraction"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may over-associate the technique with one donor template family if interchangeable extraction rules are not kept explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "output can look cleaner than the underlying evidence if field-evidence references are dropped too early"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "invoice2data's README shows structured extraction over OCR or PDF text through YAML or JSON templates and explicit output fields"
+                },
+                {
+                  "order": 2,
+                  "text": "receiptparser's README shows configurable receipt extraction through YAML configuration and explicit structured values such as company, date, and amount"
+                },
+                {
+                  "order": 3,
+                  "text": "receipt-parser-legacy's README frames the reusable core as extracting shop, date, and total from scanned receipts after OCR-derived text exists"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over locale lock-in, donor parser code, or bookkeeping automation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

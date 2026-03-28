@@ -1,0 +1,98 @@
+[
+  {
+    "candidate_slug": "two-stage-document-ocr-pipeline",
+    "source_pack_wave": "wave-2a-ocr-and-structured-receipt-extraction",
+    "donor_repos": [
+      "PaddlePaddle/PaddleOCR",
+      "mindee/doctr"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "template-backed-field-extraction-after-ocr",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "template-backed-field-extraction-after-ocr",
+    "source_pack_wave": "wave-2a-ocr-and-structured-receipt-extraction",
+    "donor_repos": [
+      "invoice-x/invoice2data",
+      "knipknap/receiptparser",
+      "ReceiptManager/receipt-parser-legacy"
+    ],
+    "status_lane": "landed",
+    "recommended_action": "track-landed-bundle",
+    "nearest_overlap_watch": "two-stage-document-ocr-pipeline",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "landed"
+  },
+  {
+    "candidate_slug": "perceptual-media-dedupe-with-threshold-review",
+    "source_pack_wave": "wave-2b-media-clustering-and-pruning",
+    "donor_repos": [
+      "idealo/imagededup",
+      "knjcode/imgdupes"
+    ],
+    "status_lane": "staged",
+    "recommended_action": "open-next-landing-pr",
+    "nearest_overlap_watch": "semantic-media-bucketing-with-vision-plus-ocr",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  },
+  {
+    "candidate_slug": "semantic-media-bucketing-with-vision-plus-ocr",
+    "source_pack_wave": "wave-2b-media-clustering-and-pruning",
+    "donor_repos": [
+      "openai/CLIP",
+      "PaddlePaddle/PaddleOCR"
+    ],
+    "status_lane": "staged",
+    "recommended_action": "keep-staged-after-dedupe-boundary-pass",
+    "nearest_overlap_watch": "perceptual-media-dedupe-with-threshold-review",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  },
+  {
+    "candidate_slug": "telegram-export-normalization-to-local-store",
+    "source_pack_wave": "wave-2c-telegram-export-and-normalization",
+    "donor_repos": [
+      "LonamiWebs/Telethon",
+      "tdlib/td",
+      "thedemons/opentele",
+      "MasterScrat/Chatistics",
+      "knadh/tg-archive",
+      "chaindead/telegram-mcp"
+    ],
+    "status_lane": "staged",
+    "recommended_action": "keep-staged-for-high-sensitivity-late-wave-pass",
+    "nearest_overlap_watch": "AOA-T-0026 session-capture-as-repo-artifact + telegram-account-auth-and-session-bridge",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": true,
+    "owner_worker": "main-agent",
+    "activation_state": "active"
+  },
+  {
+    "candidate_slug": "telegram-account-auth-and-session-bridge",
+    "source_pack_wave": "wave-2c-telegram-export-and-normalization",
+    "donor_repos": [
+      "LonamiWebs/Telethon",
+      "thedemons/opentele",
+      "chaindead/telegram-mcp"
+    ],
+    "status_lane": "incubation-hold",
+    "recommended_action": "hold-outside-immediate-wave",
+    "nearest_overlap_watch": "telegram-export-normalization-to-local-store + auth/runtime control-plane doctrine",
+    "tentative_domain": "agent-workflows",
+    "seed_bundle_present": false,
+    "owner_worker": "main-agent",
+    "activation_state": "hold"
+  }
+]
