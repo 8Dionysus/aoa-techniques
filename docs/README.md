@@ -1,10 +1,10 @@
 # Documentation Map
 
-This file is the human-first entrypoint for the repository's `docs/` surface.
+This file serves as the human-first entrypoint for the repository's `docs/` surface.
 
-Use it when you want to understand **which doc to open next** without guessing from filenames alone.
+Use it to identify **which doc to open next** without guessing from filenames alone.
 
-If you want one repo-owned entrypoint before this deeper docs map, open [Start Here](START_HERE.md).
+If you prefer a single repo-owned entrypoint before navigating this deeper docs map, open [Start Here](START_HERE.md).
 
 ## Start Here
 
