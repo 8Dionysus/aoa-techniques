@@ -11,6 +11,11 @@ from scripts import release_check, validate_repo
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
+def write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+
+
 def build_required_section_body(
     headings: tuple[str, ...] = validate_repo.REQUIRED_SECTIONS,
 ) -> str:
@@ -2082,6 +2087,139 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 "Validate by checking "
             )
         )
+
+
+class ValidateQuestbookSurfaceTests(unittest.TestCase):
+    def write_valid_surface(self, repo_root: Path) -> None:
+        write_text(
+            repo_root / "QUESTBOOK.md",
+            "\n".join(
+                (
+                    "# QUESTBOOK.md — aoa-techniques",
+                    "",
+                    "This file tracks donor-refinery and generated/source alignment debt.",
+                    "",
+                    "## Frontier",
+                    "- `AOA-TECH-Q-0001` rollout",
+                    "- `AOA-TECH-Q-0002` donor-refinery follow-through",
+                    "",
+                    "## Near",
+                    "- `AOA-TECH-Q-0003` generated/source alignment",
+                    "",
+                    "## Latent / parked",
+                    "- `AOA-TECH-Q-0004` repeated review harvest",
+                    "",
+                    "## Harvest candidates",
+                    "- `AOA-TECH-Q-0004` repeated review harvest",
+                    "",
+                    "Keep donor-refinery work and generated/source alignment bounded here.",
+                    "",
+                )
+            ),
+        )
+        write_text(
+            repo_root / "docs" / "QUESTBOOK_TECHNIQUE_INTEGRATION.md",
+            "\n".join(
+                (
+                    "# QUESTBOOK integration — aoa-techniques",
+                    "",
+                    "This note shows how `QUESTBOOK.md` fits into `aoa-techniques` without turning the repo into a second donor backlog.",
+                    "",
+                    "- `docs/START_HERE.md` stays the repo-owned entrypoint",
+                    "- `TECHNIQUE_INDEX.md` remains the public technique surface",
+                    "- `docs/PROMOTION_READINESS_MATRIX.md` stays a stable anchor",
+                    "- `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md` stays a stable anchor",
+                    "- `docs/DONOR_REFINERY_RUBRIC.md` stays a stable anchor",
+                    "- `generated/technique_capsules.min.json` stays derived",
+                    "- `docs/KAG_EXPORT.md` stays derived-facing",
+                    "- `generated/repo_doc_surface_manifest.json` stays derived",
+                    "",
+                    "Do not mint a quest for every donor note.",
+                    "",
+                )
+            ),
+        )
+        write_text(
+            repo_root / "schemas" / "quest.schema.json",
+            (REPO_ROOT / "schemas" / "quest.schema.json").read_text(encoding="utf-8"),
+        )
+        write_text(
+            repo_root / "schemas" / "quest_dispatch.schema.json",
+            (REPO_ROOT / "schemas" / "quest_dispatch.schema.json").read_text(encoding="utf-8"),
+        )
+        for quest_id in validate_repo.QUEST_IDS:
+            write_text(
+                repo_root / "quests" / f"{quest_id}.yaml",
+                (REPO_ROOT / "quests" / f"{quest_id}.yaml").read_text(encoding="utf-8"),
+            )
+        write_text(
+            repo_root / "generated" / "quest_catalog.min.example.json",
+            (REPO_ROOT / "generated" / "quest_catalog.min.example.json").read_text(
+                encoding="utf-8"
+            ),
+        )
+        write_text(
+            repo_root / "generated" / "quest_dispatch.min.example.json",
+            (REPO_ROOT / "generated" / "quest_dispatch.min.example.json").read_text(
+                encoding="utf-8"
+            ),
+        )
+
+    def test_valid_questbook_surface_passes(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+
+            validate_repo.validate_questbook_surface(repo_root)
+
+    def test_missing_quest_file_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            (repo_root / "quests" / "AOA-TECH-Q-0003.yaml").unlink()
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "AOA-TECH-Q-0003.yaml: missing required file",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_wrong_repo_value_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            write_text(
+                repo_root / "quests" / "AOA-TECH-Q-0002.yaml",
+                (repo_root / "quests" / "AOA-TECH-Q-0002.yaml")
+                .read_text(encoding="utf-8")
+                .replace("repo: aoa-techniques", "repo: aoa-skills"),
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "repo must be 'aoa-techniques'",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_dispatch_example_drift_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            write_text(
+                repo_root / "generated" / "quest_dispatch.min.example.json",
+                (repo_root / "generated" / "quest_dispatch.min.example.json")
+                .read_text(encoding="utf-8")
+                .replace(
+                    '"source_path": "quests/AOA-TECH-Q-0004.yaml"',
+                    '"source_path": "quests/AOA-TECH-Q-9999.yaml"',
+                ),
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "dispatch entry 'AOA-TECH-Q-0004' must stay aligned",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
 
 
 if __name__ == "__main__":

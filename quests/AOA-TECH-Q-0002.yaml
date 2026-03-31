@@ -1,0 +1,53 @@
+schema_version: work_quest_v1
+id: AOA-TECH-Q-0002
+title: Track promotion-readiness and donor-refinery follow-ups without bloating technique
+  docs
+summary: Give promotion gates and donor-refinery leftovers stable IDs so they do not
+  vanish into matrix churn or technique-body inflation.
+repo: aoa-techniques
+owner_surface: promotion/donor-refinery
+theme_ref: ''
+milestone_ref: ''
+kind: followup
+state: triaged
+band: frontier
+difficulty: d2_slice
+risk: r1_repo_local
+control_mode: codex_supervised
+delegate_tier: planner
+fallback_tier: verifier
+wrapper_class: codex_primary
+write_scope: docs_only
+split_required: false
+complexity_basis:
+  scope: 1
+  ambiguity: 1
+  boundary: 1
+  verification: 1
+parent: null
+depends_on: []
+activation:
+  mode: on_review_of
+  ref: docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md
+  note: open when a deferred follow-up survives review or promotion triage
+anchor_ref:
+  artifact: promotion-readiness-matrix
+  ref: docs/PROMOTION_READINESS_MATRIX.md
+  note: current promotion and candidate surfaces
+handoff_role: technique-maintainer
+evidence:
+  - open obligations point to readiness or donor surfaces
+  - technique body stays source-owned
+  - donor-origin debts receive stable quest IDs
+harvest:
+  target: technique
+  trigger_count: 2
+  note: repeated donor or promotion debt may indicate missing canon
+opened_at: '2026-03-31'
+touched_at: '2026-03-31'
+tags:
+  - promotion
+  - donor
+  - canon
+notes: ''
+public_safe: true
