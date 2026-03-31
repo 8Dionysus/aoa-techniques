@@ -1,0 +1,52 @@
+schema_version: work_quest_v1
+id: AOA-TECH-Q-0004
+title: Harvest repeated review and evidence-note repair routes into durable technique
+  canon
+summary: When the same review or evidence-note repair keeps coming back, open a quest
+  that can promote it into technique canon.
+repo: aoa-techniques
+owner_surface: harvest/review-patterns
+theme_ref: ''
+milestone_ref: ''
+kind: harvest
+state: captured
+band: latent
+difficulty: d3_seam
+risk: r1_repo_local
+control_mode: codex_supervised
+delegate_tier: planner
+fallback_tier: verifier
+wrapper_class: codex_primary
+write_scope: docs_only
+split_required: true
+complexity_basis:
+  scope: 1
+  ambiguity: 2
+  boundary: 2
+  verification: 1
+parent: null
+depends_on: []
+activation:
+  mode: on_recurrence
+  ref: docs/SEMANTIC_REVIEW_GUIDE.md
+  note: open after the route repeats enough to deserve canon
+anchor_ref:
+  artifact: evidence-note-guide
+  ref: docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md
+handoff_role: technique-maintainer
+evidence:
+  - a recurrence threshold is named
+  - the harvest destination is explicit
+  - repeat review repair does not remain endless open noise
+harvest:
+  target: technique
+  trigger_count: 2
+  note: repeat review routes should become durable technique surfaces
+opened_at: '2026-03-31'
+touched_at: '2026-03-31'
+tags:
+  - harvest
+  - review
+  - evidence
+notes: ''
+public_safe: true

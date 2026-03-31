@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any
 
+import yaml
 
 REQUIRED_SECTIONS = (
     "Intent",
@@ -547,6 +548,74 @@ SHADOW_REVIEW_MANIFEST_VERSION = 1
 SHADOW_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-shadow-reviews-v1"
 REPO_DOC_SURFACE_MANIFEST_VERSION = 1
 REPO_DOC_SURFACE_MANIFEST_SOURCE_OF_TRUTH = "markdown-repo-doc-surfaces-v1"
+QUESTBOOK_PATH = Path("QUESTBOOK.md")
+QUESTBOOK_INTEGRATION_PATH = Path("docs") / "QUESTBOOK_TECHNIQUE_INTEGRATION.md"
+QUEST_SCHEMA_PATH = Path("schemas") / "quest.schema.json"
+QUEST_DISPATCH_SCHEMA_PATH = Path("schemas") / "quest_dispatch.schema.json"
+QUEST_CATALOG_EXAMPLE_PATH = Path("generated") / "quest_catalog.min.example.json"
+QUEST_DISPATCH_EXAMPLE_PATH = Path("generated") / "quest_dispatch.min.example.json"
+QUEST_IDS = (
+    "AOA-TECH-Q-0001",
+    "AOA-TECH-Q-0002",
+    "AOA-TECH-Q-0003",
+    "AOA-TECH-Q-0004",
+)
+QUESTBOOK_REQUIRED_INDEX_TOKENS = (
+    "AOA-TECH-Q-0001",
+    "AOA-TECH-Q-0002",
+    "AOA-TECH-Q-0003",
+    "AOA-TECH-Q-0004",
+    "donor-refinery",
+    "generated/source alignment",
+)
+QUESTBOOK_REQUIRED_INTEGRATION_TOKENS = (
+    "without turning the repo into a second donor backlog",
+    "docs/START_HERE.md",
+    "TECHNIQUE_INDEX.md",
+    "docs/PROMOTION_READINESS_MATRIX.md",
+    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "docs/DONOR_REFINERY_RUBRIC.md",
+    "generated/technique_capsules.min.json",
+    "docs/KAG_EXPORT.md",
+    "generated/repo_doc_surface_manifest.json",
+    "Do not mint a quest for every donor note.",
+)
+QUEST_SCHEMA_REQUIRED_FIELDS = (
+    "schema_version",
+    "id",
+    "title",
+    "repo",
+    "owner_surface",
+    "kind",
+    "state",
+    "band",
+    "difficulty",
+    "risk",
+    "control_mode",
+    "delegate_tier",
+    "write_scope",
+    "activation",
+    "anchor_ref",
+    "evidence",
+    "opened_at",
+    "touched_at",
+    "public_safe",
+)
+QUEST_DISPATCH_REQUIRED_FIELDS = (
+    "schema_version",
+    "id",
+    "repo",
+    "state",
+    "band",
+    "difficulty",
+    "risk",
+    "control_mode",
+    "delegate_tier",
+    "split_required",
+    "write_scope",
+    "activation_mode",
+    "public_safe",
+)
 NOTE_SHAPE_TYPED = "typed_sections"
 NOTE_SHAPE_OPAQUE = "opaque_body"
 NOTE_PAYLOAD_FIELDS = "fields"
@@ -946,6 +1015,13 @@ def read_text(path: Path) -> str:
 
 def read_json(path: Path) -> Any:
     return json.loads(read_text(path))
+
+
+def read_yaml(path: Path) -> Any:
+    try:
+        return yaml.safe_load(read_text(path))
+    except yaml.YAMLError as exc:
+        fail(f"{path}: invalid YAML: {exc}")
 
 
 def split_frontmatter(technique_path: Path) -> tuple[str, str]:
@@ -5509,6 +5585,194 @@ def validate_kag_export(repo_root: Path, records: list[TechniqueRecord]) -> None
         fail(f"{min_path}: compact KAG export must stay identical to the bounded full export")
 
 
+def questbook_relative(path: Path) -> str:
+    return path.as_posix()
+
+
+def validate_quest_schema_envelope(
+    schema_path: Path,
+    *,
+    title: str,
+    schema_version: str,
+    required_fields: tuple[str, ...],
+) -> None:
+    if not schema_path.is_file():
+        fail(f"{questbook_relative(schema_path)}: missing required file")
+    payload = read_json(schema_path)
+    if not isinstance(payload, dict):
+        fail(f"{questbook_relative(schema_path)}: schema payload must be a JSON object")
+    if payload.get("title") != title:
+        fail(f"{questbook_relative(schema_path)}: schema title must be '{title}'")
+    if payload.get("type") != "object":
+        fail(f"{questbook_relative(schema_path)}: schema type must be 'object'")
+    if payload.get("additionalProperties") is not False:
+        fail(f"{questbook_relative(schema_path)}: schema must set additionalProperties to false")
+
+    required = payload.get("required")
+    if required != list(required_fields):
+        fail(
+            f"{questbook_relative(schema_path)}: schema required fields must stay aligned with the questbook contract"
+        )
+
+    properties = payload.get("properties")
+    if not isinstance(properties, dict):
+        fail(f"{questbook_relative(schema_path)}: schema properties must be an object")
+    schema_version_entry = properties.get("schema_version")
+    if not isinstance(schema_version_entry, dict) or schema_version_entry.get("const") != schema_version:
+        fail(
+            f"{questbook_relative(schema_path)}: schema_version must stay pinned to '{schema_version}'"
+        )
+
+
+def build_expected_quest_catalog_entry(quest_id: str, payload: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": quest_id,
+        "title": payload["title"],
+        "repo": payload["repo"],
+        "theme_ref": payload.get("theme_ref", ""),
+        "milestone_ref": payload.get("milestone_ref", ""),
+        "state": payload["state"],
+        "band": payload["band"],
+        "kind": payload["kind"],
+        "difficulty": payload["difficulty"],
+        "risk": payload["risk"],
+        "owner_surface": payload["owner_surface"],
+        "source_path": f"quests/{quest_id}.yaml",
+        "public_safe": payload["public_safe"],
+    }
+
+
+def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any], actual: dict[str, Any]) -> dict[str, Any]:
+    expected = {
+        "schema_version": "quest_dispatch_v1",
+        "id": quest_id,
+        "repo": payload["repo"],
+        "state": payload["state"],
+        "band": payload["band"],
+        "difficulty": payload["difficulty"],
+        "risk": payload["risk"],
+        "control_mode": payload["control_mode"],
+        "delegate_tier": payload["delegate_tier"],
+        "split_required": payload.get("split_required", False),
+        "write_scope": payload["write_scope"],
+        "activation_mode": payload["activation"]["mode"],
+        "source_path": f"quests/{quest_id}.yaml",
+        "public_safe": payload["public_safe"],
+    }
+    if "fallback_tier" in actual:
+        expected["fallback_tier"] = payload.get("fallback_tier")
+    if "wrapper_class" in actual:
+        expected["wrapper_class"] = payload.get("wrapper_class")
+    return expected
+
+
+def validate_questbook_surface(repo_root: Path) -> None:
+    questbook_path = repo_root / QUESTBOOK_PATH
+    integration_path = repo_root / QUESTBOOK_INTEGRATION_PATH
+    catalog_path = repo_root / QUEST_CATALOG_EXAMPLE_PATH
+    dispatch_path = repo_root / QUEST_DISPATCH_EXAMPLE_PATH
+
+    for path in (
+        questbook_path,
+        integration_path,
+        repo_root / QUEST_SCHEMA_PATH,
+        repo_root / QUEST_DISPATCH_SCHEMA_PATH,
+        catalog_path,
+        dispatch_path,
+    ):
+        if not path.is_file():
+            fail(f"{questbook_relative(path.relative_to(repo_root))}: missing required file")
+
+    validate_quest_schema_envelope(
+        repo_root / QUEST_SCHEMA_PATH,
+        title="work_quest_v1",
+        schema_version="work_quest_v1",
+        required_fields=QUEST_SCHEMA_REQUIRED_FIELDS,
+    )
+    validate_quest_schema_envelope(
+        repo_root / QUEST_DISPATCH_SCHEMA_PATH,
+        title="quest_dispatch_v1",
+        schema_version="quest_dispatch_v1",
+        required_fields=QUEST_DISPATCH_REQUIRED_FIELDS,
+    )
+
+    questbook_text = read_text(questbook_path)
+    for token in QUESTBOOK_REQUIRED_INDEX_TOKENS:
+        if token not in questbook_text:
+            fail(f"{questbook_relative(QUESTBOOK_PATH)}: must mention '{token}' explicitly")
+
+    integration_text = read_text(integration_path)
+    for token in QUESTBOOK_REQUIRED_INTEGRATION_TOKENS:
+        if token not in integration_text:
+            fail(
+                f"{questbook_relative(QUESTBOOK_INTEGRATION_PATH)}: must mention '{token}' explicitly"
+            )
+
+    quest_payloads: dict[str, dict[str, Any]] = {}
+    for quest_id in QUEST_IDS:
+        quest_path = repo_root / "quests" / f"{quest_id}.yaml"
+        if not quest_path.is_file():
+            fail(f"{questbook_relative(quest_path.relative_to(repo_root))}: missing required file")
+        payload = read_yaml(quest_path)
+        if not isinstance(payload, dict):
+            fail(f"{questbook_relative(quest_path.relative_to(repo_root))}: quest payload must be a YAML mapping")
+        if payload.get("schema_version") != "work_quest_v1":
+            fail(
+                f"{questbook_relative(quest_path.relative_to(repo_root))}: schema_version must be 'work_quest_v1'"
+            )
+        if payload.get("id") != quest_id:
+            fail(f"{questbook_relative(quest_path.relative_to(repo_root))}: id must be '{quest_id}'")
+        if payload.get("repo") != "aoa-techniques":
+            fail(
+                f"{questbook_relative(quest_path.relative_to(repo_root))}: repo must be 'aoa-techniques'"
+            )
+        if payload.get("public_safe") is not True:
+            fail(
+                f"{questbook_relative(quest_path.relative_to(repo_root))}: public_safe must be true"
+            )
+        quest_payloads[quest_id] = payload
+
+    catalog_payload = read_json(catalog_path)
+    if not isinstance(catalog_payload, list):
+        fail(f"{questbook_relative(QUEST_CATALOG_EXAMPLE_PATH)}: payload must be a JSON array")
+    expected_catalog = [
+        build_expected_quest_catalog_entry(quest_id, quest_payloads[quest_id]) for quest_id in QUEST_IDS
+    ]
+    if catalog_payload != expected_catalog:
+        fail(
+            f"{questbook_relative(QUEST_CATALOG_EXAMPLE_PATH)}: example catalog must stay aligned with quests/*.yaml"
+        )
+
+    dispatch_payload = read_json(dispatch_path)
+    if not isinstance(dispatch_payload, list):
+        fail(f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: payload must be a JSON array")
+    if len(dispatch_payload) != len(QUEST_IDS):
+        fail(
+            f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: expected {len(QUEST_IDS)} dispatch examples"
+        )
+    for entry, quest_id in zip(dispatch_payload, QUEST_IDS, strict=True):
+        if not isinstance(entry, dict):
+            fail(
+                f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: dispatch entries must be JSON objects"
+            )
+        requires_artifacts = entry.get("requires_artifacts")
+        if not isinstance(requires_artifacts, list) or not requires_artifacts or not all(
+            isinstance(item, str) and item for item in requires_artifacts
+        ):
+            fail(
+                f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: dispatch entry '{quest_id}' must keep a non-empty requires_artifacts list"
+            )
+        expected_entry = build_expected_quest_dispatch_entry(quest_id, quest_payloads[quest_id], entry)
+        comparable_entry = {
+            key: entry.get(key)
+            for key in expected_entry
+        }
+        if comparable_entry != expected_entry:
+            fail(
+                f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: dispatch entry '{quest_id}' must stay aligned with quests/*.yaml"
+            )
+
+
 def validate_repo(repo_root: Path) -> None:
     validate_stage1_files(repo_root)
     validate_selection_files(repo_root)
@@ -5538,6 +5802,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_selection_surface(repo_root, records)
     validate_repo_doc_surface_reader(repo_root)
     validate_kag_export(repo_root, records)
+    validate_questbook_surface(repo_root)
     validate_public_hygiene(repo_root)
 
     canonical_count = sum(1 for record in records if record.status == "canonical")
@@ -5564,6 +5829,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated generated repo doc surface parity")
     print("[ok] validated generated source-owned KAG export parity")
+    print("[ok] validated questbook source-proof surface")
     print("[ok] validated selection navigation specs, repo doc routing specs, review-backed working sets, shadow specs, and bounded public hygiene")
 
 

@@ -1,0 +1,52 @@
+schema_version: work_quest_v1
+id: AOA-TECH-Q-0003
+title: Keep technique capsules, KAG export, and repo-doc surface manifests aligned
+  with source-owned technique sections
+summary: Generated navigation and export surfaces should stay derived from source-owned
+  technique sections instead of drifting into parallel truth.
+repo: aoa-techniques
+owner_surface: generated/source-alignment
+theme_ref: ''
+milestone_ref: ''
+kind: guardrail
+state: captured
+band: near
+difficulty: d3_seam
+risk: r2_contract
+control_mode: human_codex_copilot
+delegate_tier: planner
+fallback_tier: verifier
+wrapper_class: hybrid
+write_scope: repo_local
+split_required: true
+complexity_basis:
+  scope: 2
+  ambiguity: 1
+  boundary: 2
+  verification: 2
+parent: null
+depends_on: []
+activation:
+  mode: on_review_of
+  ref: docs/KAG_EXPORT.md
+  note: review when export or capsule shape changes
+anchor_ref:
+  artifact: source-lift-guide
+  ref: docs/KAG_SOURCE_LIFT_GUIDE.md
+handoff_role: technique-maintainer
+evidence:
+  - capsule and manifest surfaces map cleanly to source sections
+  - KAG export remains explicitly derived
+  - drift checks are named rather than assumed
+harvest:
+  target: routing
+  trigger_count: 3
+  note: if the same thin-manifest repair repeats, consider routing-layer help
+opened_at: '2026-03-31'
+touched_at: '2026-03-31'
+tags:
+  - generated
+  - kag
+  - alignment
+notes: ''
+public_safe: true
