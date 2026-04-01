@@ -24,6 +24,7 @@ A release should make it easy to answer:
 1. Confirm the target release scope.
 2. Update `CHANGELOG.md`.
 3. Run local validation with one bounded command:
+   - `python -m pip install -r requirements-dev.txt`
    - `python scripts/release_check.py`
    - the current script keeps the underlying source contracts explicit and runs:
      - `python scripts/build_repo_doc_surface_manifest.py`

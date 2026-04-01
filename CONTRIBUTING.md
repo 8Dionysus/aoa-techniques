@@ -32,10 +32,10 @@ Please make sure:
 - maturity status is set correctly
 - origin is stated clearly
 
-Before opening a PR, run `python scripts/release_check.py` as the bounded repo-wide validation path.
+Before opening a PR, run `python -m pip install -r requirements-dev.txt`, then run `python scripts/release_check.py` as the bounded repo-wide validation path.
 
 That command is the public release-check entrypoint for this repository.
-If you need the transparent lower-level breakdown, it runs the current build path and ends with `python -m unittest discover -s tests` plus `python scripts/validate_repo.py`.
+If you need the transparent lower-level breakdown, it runs the current build path and ends with `python -m unittest discover -s tests` plus `python scripts/validate_repo.py`, after the same `requirements-dev.txt` install step.
 
 See `docs/TECHNIQUE_SHADOW_GUIDE.md` for the repo-level shadow-discipline guidance behind the `## Risks` section.
 

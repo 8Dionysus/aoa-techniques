@@ -88,6 +88,7 @@ The `already staged elsewhere` candidates keep their inherited placement in [EXT
 Each technique in a wave still lands through its own PR. The wave is a family-level import program, not a multi-technique merge unit.
 
 - the main agent owns wave boundaries, final wording, shared generated surfaces, intake or roadmap sync, and `python scripts/release_check.py`
+- before that final release-check path, install local validator deps with `python -m pip install -r requirements-dev.txt`
 - each worker should own only one future bundle directory plus its `notes/`, `checks/`, and `examples/`
 - shared files such as catalog, index, and generated surfaces stay out of worker ownership until a bundle draft is merge-ready
 

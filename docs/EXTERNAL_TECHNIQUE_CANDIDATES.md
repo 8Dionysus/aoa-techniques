@@ -90,6 +90,7 @@ The goal is to keep the import path coherent by family while still landing one t
 ## Swarm Execution Layer
 
 - the main agent owns wave boundaries, final wording, the cross-doc sequence, shared generated-surface sync, and `python scripts/release_check.py` so the shared contract does not fragment across workers
+- before that final release-check path, install local validator deps with `python -m pip install -r requirements-dev.txt`
 - each worker handles one technique at a time, with one bundle draft, one evidence package, and one PR-sized scope
 - external anchors are execution seeds, not merge units: they mark which candidate opens the wave, while the rest of the family follows under the same boundary
 - execution role: keep [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) as the landed Wave A lifecycle anchor inside the now-complete runtime family after `profile-preset-composition`, `render-truth-before-startup`, `contextual-host-doctor`, and `baseline-first-additive-profile-benchmarks` fixed the sibling boundaries

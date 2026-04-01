@@ -76,6 +76,7 @@ The current selection family exposes four bounded surfaces:
 
 When selection-family sources change, regenerate and validate with:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_catalog.py`
 - `python scripts/validate_repo.py`
 - `python scripts/release_check.py`

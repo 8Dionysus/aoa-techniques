@@ -32,6 +32,7 @@ Do not:
 
 After changing a history technique, run:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/validate_nested_agents.py`
 - `python scripts/validate_repo.py`
 

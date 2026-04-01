@@ -73,5 +73,5 @@ Use it when you want one bounded answer to what to open next without guessing be
 ## Release And Validation
 
 - open [Releasing `aoa-techniques`](RELEASING.md) for the current release-prep doctrine
-- run `python scripts/release_check.py` for the repo-owned bounded release-check path
+- run `python -m pip install -r requirements-dev.txt`, then `python scripts/release_check.py` for the repo-owned bounded release-check path
 - use the individual `build_*` commands only when you are intentionally regenerating one surface family during authored edits

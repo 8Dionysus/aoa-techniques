@@ -46,6 +46,7 @@ If those checks still fail, stop and record the result in the candidate or revie
    - use the `external-import-review` issue template
    - record overlap check, donor exclusions, expected evidence notes, expected generated surfaces, and downstream repo impact
 6. Validate the repo package.
+   - run `python -m pip install -r requirements-dev.txt`
    - run `python scripts/release_check.py`
    - fix source markdown first, then regenerate derived surfaces through the release path
 7. Merge and restage.

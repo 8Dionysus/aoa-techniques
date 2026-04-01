@@ -61,6 +61,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 ## Swarm Rule
 
 - main agent owns wave boundaries, bundle-level verdict discipline, shared docs, any later `TECHNIQUE_INDEX.md` edits, generated-surface sync, and final `python scripts/release_check.py`
+- before that final release-check path, install local validator deps with `python -m pip install -r requirements-dev.txt`
 - each worker owns one technique bundle at a time and stays inside its `TECHNIQUE.md`, `notes/`, `checks/`, and `examples/`
 - workers do not edit `TECHNIQUE_INDEX.md`, generated surfaces, or repo-wide review docs while evidence-gathering is still in flight
 - a status flip only becomes eligible after the bundle's own `notes/canonical-readiness.md` can honestly move from `defer for now` to `approve for canonical promotion`

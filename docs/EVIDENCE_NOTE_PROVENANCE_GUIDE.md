@@ -193,6 +193,7 @@ This guide remains the authoritative contract doc for both the evidence-note man
 
 Regenerate and verify this source class with:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_evidence_note_manifest.py`
 - `python scripts/release_check.py`
 - `python -m unittest discover -s tests`
