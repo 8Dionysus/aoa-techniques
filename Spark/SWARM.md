@@ -83,6 +83,7 @@ Rules:
 ```text
 Use only repo-documented validation paths relevant to the touched surface.
 If the change touched the bounded release-prep path, run:
+- python -m pip install -r requirements-dev.txt
 - python scripts/release_check.py
 Otherwise:
 - identify the exact validation helper(s) documented for the touched surface
@@ -104,6 +105,7 @@ Check:
 
 ## Verify
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/release_check.py   # only when the bounded release-prep path is in scope
 # otherwise: run only the repo-documented validation helper(s) for the touched technique surface
 ```

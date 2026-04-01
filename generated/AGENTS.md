@@ -21,7 +21,7 @@ If one generated output drifts, repair the source or generator rather than patch
 
 ## Validation
 
-After changes here or to the generators that feed this directory, run the smallest covering commands. Common paths include:
+After `python -m pip install -r requirements-dev.txt`, changes here or to the generators that feed this directory should run the smallest covering commands. Common paths include:
 
 - `python scripts/build_catalog.py`
 - `python scripts/build_capsules.py`

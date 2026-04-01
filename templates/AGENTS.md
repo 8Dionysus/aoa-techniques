@@ -20,6 +20,8 @@ Do not turn a template into a finished example that hides what is supposed to be
 
 ## Validation
 
+Before validator or release-check commands here, run `python -m pip install -r requirements-dev.txt`.
+
 After changing templates, run:
 
 - `python scripts/validate_nested_agents.py`

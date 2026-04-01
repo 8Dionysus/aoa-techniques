@@ -33,6 +33,7 @@ Close the smallest honest blocker for the three remaining strongest current `pro
   - any updates to [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
   - any later `TECHNIQUE_INDEX.md` changes
   - generated-surface sync
+  - `python -m pip install -r requirements-dev.txt`
   - final `python scripts/release_check.py`
 - each worker owns:
   - one technique bundle only

@@ -31,6 +31,8 @@ Do not:
 
 ## Validation
 
+Before validator or release-check commands here, run `python -m pip install -r requirements-dev.txt`.
+
 After changing a docs technique, run:
 
 - `python scripts/validate_nested_agents.py`

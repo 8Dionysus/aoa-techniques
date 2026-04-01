@@ -66,6 +66,7 @@ Why this order:
   - updates to [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
   - updates to [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
   - any later sync to [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+  - `python -m pip install -r requirements-dev.txt`
   - final `python scripts/release_check.py`
 - each worker owns:
   - one technique bundle at a time

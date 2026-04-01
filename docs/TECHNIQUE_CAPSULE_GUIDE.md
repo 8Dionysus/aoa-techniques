@@ -81,6 +81,7 @@ The runtime card fields are intentionally narrow:
 
 When the source bundle changes, regenerate the capsule family:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_capsules.py`
 - `python scripts/release_check.py`
 - `python scripts/validate_repo.py`

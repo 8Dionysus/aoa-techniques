@@ -66,6 +66,7 @@ If a reviewer needs the actual checklist wording, the answer still lives in the 
 
 Regenerate and verify this source class with:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_checklist_manifest.py`
 - `python scripts/release_check.py`
 - `python -m unittest discover -s tests`

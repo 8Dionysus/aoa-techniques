@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import unittest
 from pathlib import Path
@@ -2244,6 +2245,54 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             with self.assertRaisesRegex(
                 validate_repo.ValidationError,
                 "quest_dispatch.min.json: dispatch entry 'AOA-TECH-Q-0004' must stay aligned",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_missing_activation_fails_with_validation_error(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            quest_path = repo_root / "quests" / "AOA-TECH-Q-0001.yaml"
+            quest_text = quest_path.read_text(encoding="utf-8")
+            write_text(
+                quest_path,
+                quest_text[: quest_text.index("activation:")]
+                + quest_text[quest_text.index("anchor_ref:") :],
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "quests/AOA-TECH-Q-0001.yaml: quest must define object field 'activation'",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_live_dispatch_optional_field_must_match_schema(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            dispatch_path = repo_root / "generated" / "quest_dispatch.min.json"
+            dispatch_payload = json.loads(dispatch_path.read_text(encoding="utf-8"))
+            dispatch_payload[0]["fallback_tier"] = None
+            write_text(dispatch_path, json.dumps(dispatch_payload, indent=2) + "\n")
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "generated/quest_dispatch.min.json\\[0\\]\\.fallback_tier: value must be a string",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_example_dispatch_optional_field_must_match_schema(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            dispatch_path = repo_root / "generated" / "quest_dispatch.min.example.json"
+            dispatch_payload = json.loads(dispatch_path.read_text(encoding="utf-8"))
+            dispatch_payload[0]["wrapper_class"] = None
+            write_text(dispatch_path, json.dumps(dispatch_payload, indent=2) + "\n")
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "generated/quest_dispatch.min.example.json\\[0\\]\\.wrapper_class: value must be a string",
             ):
                 validate_repo.validate_questbook_surface(repo_root)
 

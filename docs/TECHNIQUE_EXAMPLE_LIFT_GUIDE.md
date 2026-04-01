@@ -64,6 +64,7 @@ If a reader needs the actual narrative, commands, or sample payloads, the answer
 
 Regenerate and verify this source class with:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_example_manifest.py`
 - `python scripts/release_check.py`
 - `python -m unittest discover -s tests`

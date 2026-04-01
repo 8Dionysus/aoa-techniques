@@ -35,6 +35,7 @@ corresponding `TECHNIQUE.md` bundle.
 Use:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/build_kag_export.py
 python scripts/validate_repo.py
 ```

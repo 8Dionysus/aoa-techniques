@@ -46,7 +46,7 @@ If you are new to this repository, follow this short path:
 - for reusable lift bundles under the current docs family, open `techniques/docs/markdown-technique-section-lift/TECHNIQUE.md`, `techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md`, `techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md`, `techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md`, `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md`, `techniques/docs/repo-doc-surface-lift/TECHNIQUE.md`, `techniques/docs/github-review-template-lift/TECHNIQUE.md`, and `techniques/docs/semantic-review-surface-lift/TECHNIQUE.md`
 - for review and shadow surfaces, open `docs/SHADOW_PATTERNS.md`, `docs/SEMANTIC_REVIEW_GUIDE.md`, `generated/shadow_review_manifest.json`, canonical `notes/adverse-effects-review.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md`, `docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md`, `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md`, and `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
 - for the current repo-first closure roadmap and historical audit record, open `docs/DEEP_AUDIT_ROADMAP.md`
-- for one bounded release-prep path inside this repo, read `docs/RELEASING.md` and run `python scripts/release_check.py`
+- for one bounded release-prep path inside this repo, read `docs/RELEASING.md`, install `requirements-dev.txt`, and run `python scripts/release_check.py`
 
 ## What belongs here
 

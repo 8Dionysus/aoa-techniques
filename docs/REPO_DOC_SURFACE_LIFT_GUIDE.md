@@ -82,6 +82,7 @@ The meaning remains in the authored docs themselves.
 
 Regenerate and verify this source class with:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_repo_doc_surface_manifest.py`
 - `python scripts/release_check.py`
 - `python -m unittest discover -s tests`

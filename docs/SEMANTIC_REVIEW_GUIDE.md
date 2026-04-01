@@ -80,6 +80,7 @@ If the manifest and authored review doc disagree, fix the authored review doc or
 
 When semantic review docs change, regenerate and validate with:
 
+- `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_semantic_review_manifest.py`
 - `python scripts/build_catalog.py`
 - `python scripts/validate_repo.py`

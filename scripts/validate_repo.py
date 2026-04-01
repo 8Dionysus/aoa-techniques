@@ -5632,6 +5632,89 @@ def validate_quest_schema_envelope(
         )
 
 
+def validate_quest_payload_for_projection(quest_id: str, payload: dict[str, Any]) -> None:
+    required_scalar_fields = (
+        "title",
+        "state",
+        "band",
+        "kind",
+        "difficulty",
+        "risk",
+        "owner_surface",
+        "control_mode",
+        "delegate_tier",
+        "write_scope",
+    )
+    for field in required_scalar_fields:
+        value = payload.get(field)
+        if not isinstance(value, str) or not value:
+            fail(f"quests/{quest_id}.yaml: quest must define string field '{field}'")
+
+    activation = payload.get("activation")
+    if not isinstance(activation, dict):
+        fail(f"quests/{quest_id}.yaml: quest must define object field 'activation'")
+    activation_mode = activation.get("mode")
+    if not isinstance(activation_mode, str) or not activation_mode:
+        fail(f"quests/{quest_id}.yaml: quest must define string field 'activation.mode'")
+
+
+def validate_dispatch_entry_against_schema(
+    entry: Any,
+    *,
+    schema: dict[str, Any],
+    location: str,
+) -> None:
+    if not isinstance(entry, dict):
+        fail(f"{location}: dispatch entries must be JSON objects")
+
+    properties = schema.get("properties")
+    if not isinstance(properties, dict):
+        fail(f"{questbook_relative(QUEST_DISPATCH_SCHEMA_PATH)}: schema properties must be an object")
+
+    required = schema.get("required")
+    if not isinstance(required, list):
+        fail(f"{questbook_relative(QUEST_DISPATCH_SCHEMA_PATH)}: schema required list is missing")
+
+    missing = [field for field in required if field not in entry]
+    if missing:
+        fail(f"{location}: missing required field(s): {', '.join(missing)}")
+
+    if schema.get("additionalProperties") is False:
+        unexpected = sorted(set(entry) - set(properties))
+        if unexpected:
+            fail(f"{location}: unexpected field(s): {', '.join(unexpected)}")
+
+    for field, value in entry.items():
+        schema_entry = properties.get(field)
+        if not isinstance(schema_entry, dict):
+            continue
+        if "const" in schema_entry and value != schema_entry["const"]:
+            fail(f"{location}.{field}: value must equal '{schema_entry['const']}'")
+
+        expected_type = schema_entry.get("type")
+        if expected_type == "string":
+            if not isinstance(value, str):
+                fail(f"{location}.{field}: value must be a string")
+            pattern = schema_entry.get("pattern")
+            if isinstance(pattern, str) and re.fullmatch(pattern, value) is None:
+                fail(f"{location}.{field}: value does not match pattern '{pattern}'")
+        elif expected_type == "boolean":
+            if not isinstance(value, bool):
+                fail(f"{location}.{field}: value must be a boolean")
+        elif expected_type == "array":
+            if not isinstance(value, list):
+                fail(f"{location}.{field}: value must be an array")
+            item_schema = schema_entry.get("items")
+            if isinstance(item_schema, dict) and item_schema.get("type") == "string":
+                if not all(isinstance(item, str) for item in value):
+                    fail(f"{location}.{field}: every item must be a string")
+
+        enum_values = schema_entry.get("enum")
+        if isinstance(enum_values, list) and value not in enum_values:
+            formatted = ", ".join(str(item) for item in enum_values)
+            fail(f"{location}.{field}: value must be one of {formatted}")
+
+
 def build_expected_quest_catalog_entry(quest_id: str, payload: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": quest_id,
@@ -5651,7 +5734,8 @@ def build_expected_quest_catalog_entry(quest_id: str, payload: dict[str, Any]) -
 
 
 def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) -> dict[str, Any]:
-    return {
+    validate_quest_payload_for_projection(quest_id, payload)
+    entry = {
         "schema_version": "quest_dispatch_v1",
         "id": quest_id,
         "repo": payload["repo"],
@@ -5667,9 +5751,12 @@ def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) 
         "activation_mode": payload["activation"]["mode"],
         "source_path": f"quests/{quest_id}.yaml",
         "public_safe": payload["public_safe"],
-        "fallback_tier": payload.get("fallback_tier"),
-        "wrapper_class": payload.get("wrapper_class"),
     }
+    if "fallback_tier" in payload:
+        entry["fallback_tier"] = payload.get("fallback_tier")
+    if "wrapper_class" in payload:
+        entry["wrapper_class"] = payload.get("wrapper_class")
+    return entry
 
 
 def collect_questbook_payloads(
@@ -5756,6 +5843,9 @@ def validate_questbook_surface(repo_root: Path) -> None:
         schema_version="quest_dispatch_v1",
         required_fields=QUEST_DISPATCH_REQUIRED_FIELDS,
     )
+    dispatch_schema = read_json(repo_root / QUEST_DISPATCH_SCHEMA_PATH)
+    if not isinstance(dispatch_schema, dict):
+        fail(f"{questbook_relative(QUEST_DISPATCH_SCHEMA_PATH)}: schema payload must be a JSON object")
 
     integration_text = read_text(integration_path)
     for token in QUESTBOOK_REQUIRED_INTEGRATION_TOKENS:
@@ -5806,11 +5896,12 @@ def validate_questbook_surface(repo_root: Path) -> None:
         fail(
             f"{questbook_relative(QUEST_DISPATCH_PATH)}: expected {len(QUEST_IDS)} dispatch entries"
         )
-    for entry, quest_id in zip(live_dispatch_payload, QUEST_IDS, strict=True):
-        if not isinstance(entry, dict):
-            fail(
-                f"{questbook_relative(QUEST_DISPATCH_PATH)}: dispatch entries must be JSON objects"
-            )
+    for index, (entry, quest_id) in enumerate(zip(live_dispatch_payload, QUEST_IDS, strict=True)):
+        validate_dispatch_entry_against_schema(
+            entry,
+            schema=dispatch_schema,
+            location=f"{questbook_relative(QUEST_DISPATCH_PATH)}[{index}]",
+        )
         requires_artifacts = entry.get("requires_artifacts")
         if not isinstance(requires_artifacts, list) or not requires_artifacts or not all(
             isinstance(item, str) and item for item in requires_artifacts
@@ -5827,6 +5918,12 @@ def validate_questbook_surface(repo_root: Path) -> None:
     dispatch_payload = read_json(dispatch_path)
     if not isinstance(dispatch_payload, list):
         fail(f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: payload must be a JSON array")
+    for index, entry in enumerate(dispatch_payload):
+        validate_dispatch_entry_against_schema(
+            entry,
+            schema=dispatch_schema,
+            location=f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}[{index}]",
+        )
     if dispatch_payload != expected_dispatch:
         fail(
             f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: example dispatch must stay aligned with quests/*.yaml"
