@@ -6,6 +6,8 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from jsonschema import Draft202012Validator
+
 from scripts import release_check, validate_repo
 
 
@@ -2110,7 +2112,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             repo_root / "schemas" / "quest_dispatch.schema.json",
             (REPO_ROOT / "schemas" / "quest_dispatch.schema.json").read_text(encoding="utf-8"),
         )
-        for quest_id in validate_repo.QUEST_IDS:
+        for quest_path in sorted((REPO_ROOT / "quests").glob("AOA-TECH-Q-*.yaml")):
+            quest_id = quest_path.stem
             write_text(
                 repo_root / "quests" / f"{quest_id}.yaml",
                 (REPO_ROOT / "quests" / f"{quest_id}.yaml").read_text(encoding="utf-8"),
@@ -2146,6 +2149,21 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.write_valid_surface(repo_root)
 
             validate_repo.validate_questbook_surface(repo_root)
+
+    def test_additive_second_wave_quest_is_projected(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+
+            catalog_ids = [
+                entry["id"] for entry in validate_repo.build_quest_catalog_projection(repo_root)
+            ]
+            dispatch_ids = [
+                entry["id"] for entry in validate_repo.build_quest_dispatch_projection(repo_root)
+            ]
+
+        self.assertIn("AOA-TECH-Q-0005", catalog_ids)
+        self.assertIn("AOA-TECH-Q-0005", dispatch_ids)
 
     def test_missing_quest_file_fails(self) -> None:
         with TemporaryDirectory() as temp_dir:
@@ -2295,6 +2313,23 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 "generated/quest_dispatch.min.example.json\\[0\\]\\.wrapper_class: value must be a string",
             ):
                 validate_repo.validate_questbook_surface(repo_root)
+
+
+class TechniqueFeatSchemaTests(unittest.TestCase):
+    def test_example_payload_matches_feat_schema(self) -> None:
+        schema = json.loads(
+            (REPO_ROOT / "schemas" / "technique_feat_catalog.schema.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        payload = json.loads(
+            (REPO_ROOT / "generated" / "technique_feat_cards.min.example.json").read_text(
+                encoding="utf-8"
+            )
+        )
+
+        Draft202012Validator.check_schema(schema)
+        Draft202012Validator(schema).validate(payload)
 
 
 if __name__ == "__main__":

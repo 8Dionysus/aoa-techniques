@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://8dionysus.github.io/schemas/technique_feat_catalog_v1.schema.json",
+  "title": "aoa-techniques technique_feat_catalog_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "cards"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "technique_feat_catalog_v1"
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "feat_id",
+          "technique_id",
+          "technique_name",
+          "source_technique_ref",
+          "summary",
+          "feat_kind",
+          "source_status",
+          "mastery_posture",
+          "harvest_posture",
+          "synergy_tags",
+          "evidence_refs",
+          "public_safe"
+        ],
+        "properties": {
+          "feat_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "technique_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "technique_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_technique_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 5
+          },
+          "feat_kind": {
+            "type": "string",
+            "enum": [
+              "workflow",
+              "guardrail",
+              "lift",
+              "lens",
+              "protocol",
+              "pattern"
+            ]
+          },
+          "source_status": {
+            "type": "string",
+            "enum": [
+              "promoted",
+              "canonical",
+              "deprecated"
+            ]
+          },
+          "mastery_posture": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "min_rank",
+              "preferred_axes",
+              "transfer_scope"
+            ],
+            "properties": {
+              "min_rank": {
+                "type": "string",
+                "enum": [
+                  "initiate",
+                  "adept",
+                  "specialist",
+                  "veteran",
+                  "master"
+                ]
+              },
+              "preferred_axes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "boundary_integrity",
+                    "execution_reliability",
+                    "change_legibility",
+                    "review_sharpness",
+                    "proof_discipline",
+                    "provenance_hygiene",
+                    "deep_readiness"
+                  ]
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "transfer_scope": {
+                "type": "string",
+                "enum": [
+                  "repo_local",
+                  "cross_repo",
+                  "cross_layer"
+                ]
+              }
+            }
+          },
+          "harvest_posture": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "nomination_sources",
+              "note"
+            ],
+            "properties": {
+              "nomination_sources": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "donor_refinery",
+                    "repeated_review_route",
+                    "second_context_adaptation",
+                    "external_evidence",
+                    "generated_source_alignment"
+                  ]
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "note": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "synergy_tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "public_safe": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

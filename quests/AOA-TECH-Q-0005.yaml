@@ -1,0 +1,51 @@
+schema_version: work_quest_v1
+id: AOA-TECH-Q-0005
+title: Reflect reviewed techniques as feat cards with mastery-harvest posture
+summary: Add a bounded feat-card catalog and mastery-harvest note that derive from technique canon, donor-refinery, and readiness surfaces without replacing source meaning.
+repo: aoa-techniques
+owner_surface: techniques/feat-reflection
+theme_ref: ''
+milestone_ref: ''
+kind: support
+state: captured
+band: near
+difficulty: d3_seam
+risk: r2_contract
+control_mode: human_codex_copilot
+delegate_tier: planner
+fallback_tier: conductor
+wrapper_class: hybrid
+write_scope: repo_local
+split_required: true
+complexity_basis:
+  scope: 2
+  ambiguity: 2
+  boundary: 2
+  verification: 2
+parent: null
+depends_on:
+  - AOA-TECH-Q-0003
+  - AOA-EV-Q-0005
+activation:
+  mode: manual
+  note: open when the second-wave feat slice is ready to land after first-wave progression/proof contracts exist
+anchor_ref:
+  artifact: technique_feat_model
+  ref: docs/TECHNIQUE_FEAT_MODEL.md
+  note: feat cards must stay derived from source-first technique canon
+handoff_role: technique-layer-maintainer
+evidence:
+  - feat cards remain derived
+  - mastery harvest sources remain explicit
+  - feat reflection does not bypass canonical review
+harvest:
+  target: generated_surface
+opened_at: '2026-04-01'
+touched_at: '2026-04-01'
+tags:
+  - feats
+  - mastery
+  - technique-layer
+notes: >
+  Do not add feat doctrine to `TECHNIQUE.md` as primary meaning and do not let one feat card overclaim transfer scope beyond the evidence.
+public_safe: true

@@ -556,12 +556,13 @@ QUEST_CATALOG_PATH = Path("generated") / "quest_catalog.min.json"
 QUEST_DISPATCH_PATH = Path("generated") / "quest_dispatch.min.json"
 QUEST_CATALOG_EXAMPLE_PATH = Path("generated") / "quest_catalog.min.example.json"
 QUEST_DISPATCH_EXAMPLE_PATH = Path("generated") / "quest_dispatch.min.example.json"
-QUEST_IDS = (
+FOUNDATION_QUEST_IDS = (
     "AOA-TECH-Q-0001",
     "AOA-TECH-Q-0002",
     "AOA-TECH-Q-0003",
     "AOA-TECH-Q-0004",
 )
+QUEST_IDS = FOUNDATION_QUEST_IDS
 QUESTBOOK_REQUIRED_INDEX_TOKENS = (
     "donor-refinery",
     "generated/source alignment",
@@ -624,6 +625,35 @@ QUEST_DISPATCH_ARTIFACTS = {
     "AOA-TECH-Q-0003": ["bounded_plan", "guardrail_check", "verification_result"],
     "AOA-TECH-Q-0004": ["recurrence_evidence", "promotion_decision"],
 }
+
+
+def quest_id_sort_key(quest_id: str) -> tuple[int, str]:
+    suffix = quest_id.rsplit("-", 1)[-1]
+    try:
+        return (int(suffix), quest_id)
+    except ValueError:
+        return (sys.maxsize, quest_id)
+
+
+def discover_quest_ids(repo_root: Path) -> tuple[str, ...]:
+    quest_ids = tuple(
+        sorted(
+            (
+                path.stem
+                for path in (repo_root / "quests").glob("AOA-TECH-Q-*.yaml")
+                if path.is_file()
+            ),
+            key=quest_id_sort_key,
+        )
+    )
+    if not quest_ids:
+        return FOUNDATION_QUEST_IDS
+    return quest_ids
+
+
+def missing_foundation_quest_ids(quest_ids: tuple[str, ...]) -> tuple[str, ...]:
+    quest_id_set = set(quest_ids)
+    return tuple(quest_id for quest_id in FOUNDATION_QUEST_IDS if quest_id not in quest_id_set)
 NOTE_SHAPE_TYPED = "typed_sections"
 NOTE_SHAPE_OPAQUE = "opaque_body"
 NOTE_PAYLOAD_FIELDS = "fields"
@@ -5735,6 +5765,12 @@ def build_expected_quest_catalog_entry(quest_id: str, payload: dict[str, Any]) -
 
 def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) -> dict[str, Any]:
     validate_quest_payload_for_projection(quest_id, payload)
+    requires_artifacts = QUEST_DISPATCH_ARTIFACTS.get(quest_id)
+    if requires_artifacts is None:
+        if payload.get("kind") == "harvest":
+            requires_artifacts = ["recurrence_evidence", "promotion_decision"]
+        else:
+            requires_artifacts = ["bounded_plan", "work_result", "verification_result"]
     entry = {
         "schema_version": "quest_dispatch_v1",
         "id": quest_id,
@@ -5747,7 +5783,7 @@ def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) 
         "delegate_tier": payload["delegate_tier"],
         "split_required": payload.get("split_required", False),
         "write_scope": payload["write_scope"],
-        "requires_artifacts": QUEST_DISPATCH_ARTIFACTS[quest_id],
+        "requires_artifacts": requires_artifacts,
         "activation_mode": payload["activation"]["mode"],
         "source_path": f"quests/{quest_id}.yaml",
         "public_safe": payload["public_safe"],
@@ -5762,10 +5798,17 @@ def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) 
 def collect_questbook_payloads(
     repo_root: Path,
 ) -> tuple[dict[str, dict[str, Any]], list[str], list[str]]:
+    quest_ids = discover_quest_ids(repo_root)
+    missing_foundation_ids = missing_foundation_quest_ids(quest_ids)
+    if missing_foundation_ids:
+        missing_quest_id = missing_foundation_ids[0]
+        missing_path = Path("quests") / f"{missing_quest_id}.yaml"
+        fail(f"{questbook_relative(missing_path)}: missing required file")
+
     quest_payloads: dict[str, dict[str, Any]] = {}
     active_quest_ids: list[str] = []
     closed_quest_ids: list[str] = []
-    for quest_id in QUEST_IDS:
+    for quest_id in quest_ids:
         quest_path = repo_root / "quests" / f"{quest_id}.yaml"
         if not quest_path.is_file():
             fail(f"{questbook_relative(quest_path.relative_to(repo_root))}: missing required file")
@@ -5798,7 +5841,7 @@ def build_quest_catalog_projection(repo_root: Path) -> list[dict[str, Any]]:
     quest_payloads, _, _ = collect_questbook_payloads(repo_root)
     return [
         build_expected_quest_catalog_entry(quest_id, quest_payloads[quest_id])
-        for quest_id in QUEST_IDS
+        for quest_id in discover_quest_ids(repo_root)
     ]
 
 
@@ -5806,7 +5849,7 @@ def build_quest_dispatch_projection(repo_root: Path) -> list[dict[str, Any]]:
     quest_payloads, _, _ = collect_questbook_payloads(repo_root)
     return [
         build_expected_quest_dispatch_entry(quest_id, quest_payloads[quest_id])
-        for quest_id in QUEST_IDS
+        for quest_id in discover_quest_ids(repo_root)
     ]
 
 
@@ -5889,14 +5932,18 @@ def validate_questbook_surface(repo_root: Path) -> None:
         )
 
     expected_dispatch = build_quest_dispatch_projection(repo_root)
+    expected_dispatch_by_id = {
+        entry["id"]: entry for entry in expected_dispatch if isinstance(entry, dict) and "id" in entry
+    }
+    expected_dispatch_ids = [entry["id"] for entry in expected_dispatch if isinstance(entry, dict)]
     live_dispatch_payload = read_json(live_dispatch_path)
     if not isinstance(live_dispatch_payload, list):
         fail(f"{questbook_relative(QUEST_DISPATCH_PATH)}: payload must be a JSON array")
-    if len(live_dispatch_payload) != len(QUEST_IDS):
+    if len(live_dispatch_payload) != len(expected_dispatch):
         fail(
-            f"{questbook_relative(QUEST_DISPATCH_PATH)}: expected {len(QUEST_IDS)} dispatch entries"
+            f"{questbook_relative(QUEST_DISPATCH_PATH)}: expected {len(expected_dispatch)} dispatch entries"
         )
-    for index, (entry, quest_id) in enumerate(zip(live_dispatch_payload, QUEST_IDS, strict=True)):
+    for index, (entry, quest_id) in enumerate(zip(live_dispatch_payload, expected_dispatch_ids, strict=True)):
         validate_dispatch_entry_against_schema(
             entry,
             schema=dispatch_schema,
@@ -5909,7 +5956,7 @@ def validate_questbook_surface(repo_root: Path) -> None:
             fail(
                 f"{questbook_relative(QUEST_DISPATCH_PATH)}: dispatch entry '{quest_id}' must keep a non-empty requires_artifacts list"
             )
-        expected_entry = expected_dispatch[QUEST_IDS.index(quest_id)]
+        expected_entry = expected_dispatch_by_id[quest_id]
         if entry != expected_entry:
             fail(
                 f"{questbook_relative(QUEST_DISPATCH_PATH)}: dispatch entry '{quest_id}' must stay aligned with quests/*.yaml"
