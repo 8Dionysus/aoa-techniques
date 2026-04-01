@@ -1,0 +1,76 @@
+{
+  "schema_version": "technique_feat_catalog_v1",
+  "cards": [
+    {
+      "feat_id": "feat.AOA-T-0001",
+      "technique_id": "AOA-T-0001",
+      "technique_name": "plan-diff-apply-verify-report",
+      "source_technique_ref": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "summary": "Portable workflow feat that keeps change planning, scoping, verification, and reporting reviewable.",
+      "feat_kind": "workflow",
+      "source_status": "canonical",
+      "mastery_posture": {
+        "min_rank": "adept",
+        "preferred_axes": [
+          "boundary_integrity",
+          "execution_reliability",
+          "change_legibility"
+        ],
+        "transfer_scope": "cross_repo"
+      },
+      "harvest_posture": {
+        "nomination_sources": [
+          "second_context_adaptation",
+          "external_evidence"
+        ],
+        "note": "Portable workflow whose invariant survived origin use and second-context publication."
+      },
+      "synergy_tags": [
+        "change-protocol",
+        "reviewable-diff",
+        "verification"
+      ],
+      "evidence_refs": [
+        "WALKTHROUGH.md#AOA-T-0001",
+        "TECHNIQUE_INDEX.md#AOA-T-0001"
+      ],
+      "public_safe": true
+    },
+    {
+      "feat_id": "feat.AOA-T-0013",
+      "technique_id": "AOA-T-0013",
+      "technique_name": "single-source-rule-distribution",
+      "source_technique_ref": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "summary": "Guardrail feat that keeps one canonical rule source legible while distributing safe reader-facing copies.",
+      "feat_kind": "guardrail",
+      "source_status": "canonical",
+      "mastery_posture": {
+        "min_rank": "specialist",
+        "preferred_axes": [
+          "boundary_integrity",
+          "provenance_hygiene",
+          "proof_discipline"
+        ],
+        "transfer_scope": "cross_layer"
+      },
+      "harvest_posture": {
+        "nomination_sources": [
+          "generated_source_alignment",
+          "repeated_review_route"
+        ],
+        "note": "Useful whenever rule duplication pressure appears and traceable distribution must stay bounded."
+      },
+      "synergy_tags": [
+        "docs",
+        "rule-distribution",
+        "source-of-truth"
+      ],
+      "evidence_refs": [
+        "TECHNIQUE_INDEX.md#AOA-T-0013",
+        "docs/ECOSYSTEM_CONTEXT.md"
+      ],
+      "public_safe": true
+    }
+  ],
+  "notes": "Example only. Feat cards are derived reflections over live technique canon, readiness, and evidence surfaces."
+}

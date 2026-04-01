@@ -19,6 +19,7 @@ Do not use it for:
 
 ## Near
 - `AOA-TECH-Q-0003` — keep technique capsules, KAG export, and repo-doc surface manifests aligned with source-owned technique sections
+- `AOA-TECH-Q-0005` — reflect reviewed techniques as feat cards with mastery-harvest posture
 
 ## Latent / parked
 - `AOA-TECH-Q-0004` — harvest repeated review and evidence-note repair routes into durable technique canon

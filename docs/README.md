@@ -22,6 +22,10 @@ Choose the path that matches your question:
   - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
   - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
   - [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
+- I need one bounded feat-reader layer that stays subordinate to technique canon:
+  - [Technique Feat Model](TECHNIQUE_FEAT_MODEL.md)
+  - [Mastery Harvest Posture](MASTERY_HARVEST_POSTURE.md)
+  - [`../generated/technique_feat_cards.min.example.json`](../generated/technique_feat_cards.min.example.json)
 - I need to understand status, review posture, or canonical promotion:
   - [Start Here](START_HERE.md)
   - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)

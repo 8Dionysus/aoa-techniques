@@ -58,5 +58,20 @@
     "owner_surface": "harvest/review-patterns",
     "source_path": "quests/AOA-TECH-Q-0004.yaml",
     "public_safe": true
+  },
+  {
+    "id": "AOA-TECH-Q-0005",
+    "title": "Reflect reviewed techniques as feat cards with mastery-harvest posture",
+    "repo": "aoa-techniques",
+    "theme_ref": "",
+    "milestone_ref": "",
+    "state": "captured",
+    "band": "near",
+    "kind": "support",
+    "difficulty": "d3_seam",
+    "risk": "r2_contract",
+    "owner_surface": "techniques/feat-reflection",
+    "source_path": "quests/AOA-TECH-Q-0005.yaml",
+    "public_safe": true
   }
 ]
