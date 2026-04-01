@@ -17,6 +17,15 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md), and [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) are earlier than the rest and still need second-context plus canonical-readiness scaffolding before canonical discussion is honest
 
+## Manual-first questbook pilot lane
+
+The March 31 manual-first questbook pilot closed `AOA-TECH-Q-0002` by carrying one
+surviving donor and promotion debt forward without widening technique bodies.
+
+- The active narrowing lane stays visible in [Cross-Layer Technique Candidates](CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as `phase-synchronized-agent-handoff`, rather than being promoted into a premature technique import.
+- The proof-alignment follow-through moved outward to the sibling source/proof quests `AOA-SK-Q-0002` and `AOA-EV-Q-0002`, instead of bloating this matrix into a cross-repo backlog.
+- This matrix keeps readiness and donor signals readable, while `QUESTBOOK.md` carries only the deferred obligations that survive the bounded review.
+
 ## Wave A Pass 1 Snapshot
 
 - exact-fit reinforcement confirmed:

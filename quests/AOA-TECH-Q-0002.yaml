@@ -9,7 +9,7 @@ owner_surface: promotion/donor-refinery
 theme_ref: ''
 milestone_ref: ''
 kind: followup
-state: triaged
+state: done
 band: frontier
 difficulty: d2_slice
 risk: r1_repo_local
@@ -49,5 +49,7 @@ tags:
   - promotion
   - donor
   - canon
-notes: ''
+notes: Closed in the Phase 2 manual-first pilot after the surviving donor and
+  promotion lane was kept explicit without widening technique bodies or turning
+  this matrix into a cross-repo backlog.
 public_safe: true
