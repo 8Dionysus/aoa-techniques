@@ -2115,6 +2115,18 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 (REPO_ROOT / "quests" / f"{quest_id}.yaml").read_text(encoding="utf-8"),
             )
         write_text(
+            repo_root / "generated" / "quest_catalog.min.json",
+            (REPO_ROOT / "generated" / "quest_catalog.min.json").read_text(
+                encoding="utf-8"
+            ),
+        )
+        write_text(
+            repo_root / "generated" / "quest_dispatch.min.json",
+            (REPO_ROOT / "generated" / "quest_dispatch.min.json").read_text(
+                encoding="utf-8"
+            ),
+        )
+        write_text(
             repo_root / "generated" / "quest_catalog.min.example.json",
             (REPO_ROOT / "generated" / "quest_catalog.min.example.json").read_text(
                 encoding="utf-8"
@@ -2179,7 +2191,59 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
             with self.assertRaisesRegex(
                 validate_repo.ValidationError,
-                "dispatch entry 'AOA-TECH-Q-0004' must stay aligned",
+                "example dispatch must stay aligned",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_missing_live_catalog_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            (repo_root / "generated" / "quest_catalog.min.json").unlink()
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "quest_catalog.min.json: missing required file",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_fixture_live_catalog_drift_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            write_text(
+                repo_root / "generated" / "quest_catalog.min.example.json",
+                (repo_root / "generated" / "quest_catalog.min.example.json")
+                .read_text(encoding="utf-8")
+                .replace(
+                    '"source_path": "quests/AOA-TECH-Q-0004.yaml"',
+                    '"source_path": "quests/AOA-TECH-Q-9999.yaml"',
+                ),
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "example catalog must stay aligned",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_live_dispatch_drift_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            write_text(
+                repo_root / "generated" / "quest_dispatch.min.json",
+                (repo_root / "generated" / "quest_dispatch.min.json")
+                .read_text(encoding="utf-8")
+                .replace(
+                    '"source_path":"quests/AOA-TECH-Q-0004.yaml"',
+                    '"source_path":"quests/AOA-TECH-Q-9999.yaml"',
+                ),
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "quest_dispatch.min.json: dispatch entry 'AOA-TECH-Q-0004' must stay aligned",
             ):
                 validate_repo.validate_questbook_surface(repo_root)
 
