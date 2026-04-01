@@ -561,13 +561,13 @@ QUEST_IDS = (
     "AOA-TECH-Q-0004",
 )
 QUESTBOOK_REQUIRED_INDEX_TOKENS = (
-    "AOA-TECH-Q-0001",
-    "AOA-TECH-Q-0002",
-    "AOA-TECH-Q-0003",
-    "AOA-TECH-Q-0004",
     "donor-refinery",
     "generated/source alignment",
+    "Frontier",
+    "Near",
+    "Harvest candidates",
 )
+CLOSED_QUEST_STATES = {"done", "dropped"}
 QUESTBOOK_REQUIRED_INTEGRATION_TOKENS = (
     "without turning the repo into a second donor backlog",
     "docs/START_HERE.md",
@@ -5696,11 +5696,6 @@ def validate_questbook_surface(repo_root: Path) -> None:
         required_fields=QUEST_DISPATCH_REQUIRED_FIELDS,
     )
 
-    questbook_text = read_text(questbook_path)
-    for token in QUESTBOOK_REQUIRED_INDEX_TOKENS:
-        if token not in questbook_text:
-            fail(f"{questbook_relative(QUESTBOOK_PATH)}: must mention '{token}' explicitly")
-
     integration_text = read_text(integration_path)
     for token in QUESTBOOK_REQUIRED_INTEGRATION_TOKENS:
         if token not in integration_text:
@@ -5709,6 +5704,8 @@ def validate_questbook_surface(repo_root: Path) -> None:
             )
 
     quest_payloads: dict[str, dict[str, Any]] = {}
+    active_quest_ids: list[str] = []
+    closed_quest_ids: list[str] = []
     for quest_id in QUEST_IDS:
         quest_path = repo_root / "quests" / f"{quest_id}.yaml"
         if not quest_path.is_file():
@@ -5731,6 +5728,21 @@ def validate_questbook_surface(repo_root: Path) -> None:
                 f"{questbook_relative(quest_path.relative_to(repo_root))}: public_safe must be true"
             )
         quest_payloads[quest_id] = payload
+        if payload.get("state") in CLOSED_QUEST_STATES:
+            closed_quest_ids.append(quest_id)
+        else:
+            active_quest_ids.append(quest_id)
+
+    questbook_text = read_text(questbook_path)
+    for token in QUESTBOOK_REQUIRED_INDEX_TOKENS:
+        if token not in questbook_text:
+            fail(f"{questbook_relative(QUESTBOOK_PATH)}: must mention '{token}' explicitly")
+    for quest_id in active_quest_ids:
+        if quest_id not in questbook_text:
+            fail(f"{questbook_relative(QUESTBOOK_PATH)}: must reference active quest id '{quest_id}'")
+    for quest_id in closed_quest_ids:
+        if quest_id in questbook_text:
+            fail(f"{questbook_relative(QUESTBOOK_PATH)}: must not list closed quest id '{quest_id}'")
 
     catalog_payload = read_json(catalog_path)
     if not isinstance(catalog_payload, list):

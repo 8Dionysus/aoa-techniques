@@ -8,7 +8,7 @@ owner_surface: questbook/public-surface
 theme_ref: ''
 milestone_ref: ''
 kind: rollout
-state: ready
+state: done
 band: frontier
 difficulty: d2_slice
 risk: r1_repo_local
@@ -43,5 +43,6 @@ tags:
   - questbook
   - canon
   - donor-refinery
-notes: ''
+notes: Closed in the Phase 2 manual-first hygiene pass after the local questbook
+  surface, schemas, and example projections all landed and validated.
 public_safe: true

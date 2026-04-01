@@ -15,8 +15,7 @@ Do not use it for:
 - re-explaining technique meaning that already lives in source docs
 
 ## Frontier
-- `AOA-TECH-Q-0001` — land repo-local questbook surface for canon hardening and donor-refinery follow-ups
-- `AOA-TECH-Q-0002` — track promotion-readiness and donor-refinery follow-ups without bloating technique docs
+- none yet
 
 ## Near
 - `AOA-TECH-Q-0003` — keep technique capsules, KAG export, and repo-doc surface manifests aligned with source-owned technique sections

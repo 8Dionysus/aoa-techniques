@@ -2093,50 +2093,12 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def write_valid_surface(self, repo_root: Path) -> None:
         write_text(
             repo_root / "QUESTBOOK.md",
-            "\n".join(
-                (
-                    "# QUESTBOOK.md — aoa-techniques",
-                    "",
-                    "This file tracks donor-refinery and generated/source alignment debt.",
-                    "",
-                    "## Frontier",
-                    "- `AOA-TECH-Q-0001` rollout",
-                    "- `AOA-TECH-Q-0002` donor-refinery follow-through",
-                    "",
-                    "## Near",
-                    "- `AOA-TECH-Q-0003` generated/source alignment",
-                    "",
-                    "## Latent / parked",
-                    "- `AOA-TECH-Q-0004` repeated review harvest",
-                    "",
-                    "## Harvest candidates",
-                    "- `AOA-TECH-Q-0004` repeated review harvest",
-                    "",
-                    "Keep donor-refinery work and generated/source alignment bounded here.",
-                    "",
-                )
-            ),
+            (REPO_ROOT / "QUESTBOOK.md").read_text(encoding="utf-8"),
         )
         write_text(
             repo_root / "docs" / "QUESTBOOK_TECHNIQUE_INTEGRATION.md",
-            "\n".join(
-                (
-                    "# QUESTBOOK integration — aoa-techniques",
-                    "",
-                    "This note shows how `QUESTBOOK.md` fits into `aoa-techniques` without turning the repo into a second donor backlog.",
-                    "",
-                    "- `docs/START_HERE.md` stays the repo-owned entrypoint",
-                    "- `TECHNIQUE_INDEX.md` remains the public technique surface",
-                    "- `docs/PROMOTION_READINESS_MATRIX.md` stays a stable anchor",
-                    "- `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md` stays a stable anchor",
-                    "- `docs/DONOR_REFINERY_RUBRIC.md` stays a stable anchor",
-                    "- `generated/technique_capsules.min.json` stays derived",
-                    "- `docs/KAG_EXPORT.md` stays derived-facing",
-                    "- `generated/repo_doc_surface_manifest.json` stays derived",
-                    "",
-                    "Do not mint a quest for every donor note.",
-                    "",
-                )
+            (REPO_ROOT / "docs" / "QUESTBOOK_TECHNIQUE_INTEGRATION.md").read_text(
+                encoding="utf-8"
             ),
         )
         write_text(
