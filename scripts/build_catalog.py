@@ -7,6 +7,8 @@ from validate_repo import (
     build_selection_patterns_markdown,
     build_shadow_patterns_markdown,
     build_catalog_payloads,
+    build_quest_catalog_projection,
+    build_quest_dispatch_projection,
     collect_techniques,
     load_schema_store,
     write_json_file,
@@ -27,18 +29,32 @@ def main() -> int:
 
     full_path = generated_dir / "technique_catalog.json"
     min_path = generated_dir / "technique_catalog.min.json"
+    quest_catalog_path = generated_dir / "quest_catalog.min.json"
+    quest_dispatch_path = generated_dir / "quest_dispatch.min.json"
+    quest_catalog_example_path = generated_dir / "quest_catalog.min.example.json"
+    quest_dispatch_example_path = generated_dir / "quest_dispatch.min.example.json"
     selection_path = docs_dir / "TECHNIQUE_SELECTION.md"
     selection_patterns_path = docs_dir / "SELECTION_PATTERNS.md"
     shadow_patterns_path = docs_dir / "SHADOW_PATTERNS.md"
+    quest_catalog_payload = build_quest_catalog_projection(repo_root)
+    quest_dispatch_payload = build_quest_dispatch_projection(repo_root)
 
     write_json_file(full_path, full_catalog, compact=False)
     write_json_file(min_path, min_catalog, compact=True)
+    write_json_file(quest_catalog_path, quest_catalog_payload, compact=True)
+    write_json_file(quest_dispatch_path, quest_dispatch_payload, compact=True)
+    write_json_file(quest_catalog_example_path, quest_catalog_payload, compact=False)
+    write_json_file(quest_dispatch_example_path, quest_dispatch_payload, compact=False)
     write_text_file(selection_path, build_selection_surface_markdown(full_catalog))
     write_text_file(selection_patterns_path, build_selection_patterns_markdown(full_catalog))
     write_text_file(shadow_patterns_path, build_shadow_patterns_markdown(repo_root, records))
 
     print(f"[ok] wrote {full_path.relative_to(repo_root).as_posix()}")
     print(f"[ok] wrote {min_path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {quest_catalog_path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {quest_dispatch_path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {quest_catalog_example_path.relative_to(repo_root).as_posix()}")
+    print(f"[ok] wrote {quest_dispatch_example_path.relative_to(repo_root).as_posix()}")
     print(f"[ok] wrote {selection_path.relative_to(repo_root).as_posix()}")
     print(f"[ok] wrote {selection_patterns_path.relative_to(repo_root).as_posix()}")
     print(f"[ok] wrote {shadow_patterns_path.relative_to(repo_root).as_posix()}")
