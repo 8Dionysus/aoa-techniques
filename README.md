@@ -18,7 +18,9 @@ Use the shortest route by need:
 ## Quick routes
 
 - repo layer position and neighboring repos: `docs/ECOSYSTEM_CONTEXT.md`
-- current technique map and deeper docs map: `TECHNIQUE_INDEX.md` and `docs/README.md`
+- current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
+- feat-reader and runtime-card surfaces: `docs/TECHNIQUE_FEAT_MODEL.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
+- status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `docs/PROMOTION_READINESS_MATRIX.md`, and `docs/RELEASING.md`
 - one end-to-end example path: `WALKTHROUGH.md`
 - bounded execution and proof neighbors: [`aoa-skills`](https://github.com/8Dionysus/aoa-skills) and [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
 - navigation and ecosystem map: [`aoa-routing`](https://github.com/8Dionysus/aoa-routing) and [`Agents-of-Abyss`](https://github.com/8Dionysus/Agents-of-Abyss)
