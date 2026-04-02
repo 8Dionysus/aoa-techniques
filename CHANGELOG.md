@@ -6,6 +6,18 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-04-01
+
+Third public corpus release.
+
+This changelog entry uses the release-prep merge date.
+
+### Summary
+
+- `26` new public technique bundles since `v0.2.0`, growing the published corpus from `48` techniques to `74`
+- public corpus status is now `25` `canonical` techniques and `49` `promoted` techniques
+- this release extends the corpus across handoff and continuation patterns, capability discovery and registry contracts, transcript lineage, fail-closed and approval-bound job control, OCR and media-ingest workflows, and Telegram normalization
+
 ### Added
 
 - `AOA-T-0049` `dependency-aware-task-graph`, a promoted `agent-workflows` technique adapted from `steveyegge/beads` for explicit blocker graphs and derived ready work
@@ -34,6 +46,8 @@ The format is intentionally simple and human-first.
 - `AOA-T-0072` `perceptual-media-dedupe-with-threshold-review`, a promoted `agent-workflows` technique adapted from `imagededup` and `imgdupes` for reviewable near-duplicate media grouping before later cleanup actions
 - `AOA-T-0073` `semantic-media-bucketing-with-vision-plus-ocr`, a promoted `agent-workflows` technique adapted from `CLIP` and `PaddleOCR` for confidence-aware mixed-media bucketing through bounded taxonomy and OCR side text
 - `AOA-T-0074` `telegram-export-normalization-to-local-store`, a promoted `agent-workflows` technique adapted from `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp` for resumable Telegram-source normalization into a provenance-preserving local store
+- live questbook projection surfaces under `generated/quest_catalog.min.json`, `generated/quest_dispatch.min.json`, and matching example outputs
+- downstream technique feed contracts and feat adjunct surfaces for current consumer layers
 
 ### Changed
 
@@ -42,6 +56,19 @@ The format is intentionally simple and human-first.
 - promoted `AOA-T-0044` `versionable-session-transcripts` to `canonical` after `claude-code-log` confirmed a second public post-capture Markdown transcript-export surface beyond the donor product family
 - promoted `AOA-T-0053` `local-first-session-index` to `canonical` after `coding-agent-search (cass)` confirmed a second public local-first derivative session-index surface beyond the donor product family
 - current corpus status is now `25` `canonical` techniques and `49` `promoted` techniques
+
+### Included in this release
+
+- the current `74`-bundle technique corpus under `techniques/` plus the updated `TECHNIQUE_INDEX.md`
+- questbook projection surfaces, downstream feed contracts, capsules, sections, checklists, examples, evidence notes, semantic reviews, and shadow reviews under `generated/` and `docs/`
+
+### Validation
+
+- `python scripts/release_check.py`
+
+### Notes
+
+- this release remains a curated public corpus and validated documentation surface rather than a package or registry artifact
 
 ## [0.2.0] - 2026-03-23
 

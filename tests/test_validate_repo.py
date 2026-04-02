@@ -1326,7 +1326,12 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             surfaces_by_path["docs/README.md"].top_level_sections,
         )
         self.assertEqual(
-            ("[Unreleased]", "[0.2.0] - 2026-03-23", "[0.1.0] - 2026-03-17"),
+            (
+                "[Unreleased]",
+                "[0.3.0] - 2026-04-01",
+                "[0.2.0] - 2026-03-23",
+                "[0.1.0] - 2026-03-17",
+            ),
             surfaces_by_path["CHANGELOG.md"].top_level_sections,
         )
 
