@@ -2,56 +2,41 @@
 
 Public library of reusable techniques for coding agents and humans.
 
-`aoa-techniques` is not a snippet dump and not an “awesome list”.
-It is a curated collection of **reproducible techniques**:
-workflows, validation patterns, safety protocols, documentation layouts,
-evaluation loops, and cross-repo transfer methods.
-
-A technique here is a minimal reproducible unit of engineering practice.
+`aoa-techniques` is the public practice canon of AoA. It is not a snippet dump and not an “awesome list”. A technique here is a minimal reproducible unit of engineering practice: a workflow, validation pattern, safety protocol, documentation layout, evaluation loop, or transfer method that can travel cleanly across projects.
 
 ## Start here
 
-If you are new to this repository, follow this short path:
+Use the shortest route by need:
 
-1. Read `docs/START_HERE.md` for the one repo-owned self-serve entrypoint.
-2. Read `TECHNIQUE_INDEX.md` to see the current technique map.
-3. Open `docs/README.md` for the deeper docs map and reading paths.
-4. Open `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md` to see one full technique end to end.
-5. Use `templates/TECHNIQUE.template.md` as the starting point for authoring a new technique.
-6. Follow `CONTRIBUTING.md` for the contribution and PR path.
+- repo-owned entrypoint: `docs/START_HERE.md`
+- current technique map: `TECHNIQUE_INDEX.md`
+- deeper docs map: `docs/README.md`
+- one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
+- authoring template: `templates/TECHNIQUE.template.md`
+- contribution path: `CONTRIBUTING.md`
 
 ## Quick routes
 
-- if you want one repo-owned entrypoint before choosing any deeper surface, open `docs/START_HERE.md`
-- if you need the shortest explanation of where this repo sits in the AoA layer map, open `docs/ECOSYSTEM_CONTEXT.md`
-- if you need bounded execution workflows built from techniques, go to [aoa-skills](https://github.com/8Dionysus/aoa-skills)
-- if you need portable proof surfaces for quality or boundary claims, go to [aoa-evals](https://github.com/8Dionysus/aoa-evals)
-- if you need the smallest next surface by task type, go to [aoa-routing](https://github.com/8Dionysus/aoa-routing)
-- if you need the ecosystem layer map and federation center, go to [Agents-of-Abyss](https://github.com/8Dionysus/Agents-of-Abyss)
+- repo layer position and neighboring repos: `docs/ECOSYSTEM_CONTEXT.md`
+- current technique map and deeper docs map: `TECHNIQUE_INDEX.md` and `docs/README.md`
+- one end-to-end example path: `WALKTHROUGH.md`
+- bounded execution and proof neighbors: [`aoa-skills`](https://github.com/8Dionysus/aoa-skills) and [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
+- navigation and ecosystem map: [`aoa-routing`](https://github.com/8Dionysus/aoa-routing) and [`Agents-of-Abyss`](https://github.com/8Dionysus/Agents-of-Abyss)
 
 ## Deeper routes
 
-- for one repo-only orientation path that already routes humans and agents, open `docs/START_HERE.md`
-- for the repo-owned layer-position note that explains ontology inheritance and why scenario method stays in `aoa-playbooks`, open `docs/ECOSYSTEM_CONTEXT.md`
-- for one end-to-end origin-to-public example, read `WALKTHROUGH.md`
-- for source-first donor intake and refinement posture, open `docs/DONOR_REFINERY_RUBRIC.md`
-- for the maintainer-facing donor-to-merge path, open `docs/EXTERNAL_IMPORT_RUNBOOK.md`
-- for the cross-layer donor-note intake surface beyond the external-only backlog, open `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
-- for the live promoted-technique proof queue and active search memory, open `docs/PROMOTION_READINESS_MATRIX.md`, `docs/PROMOTION_WAVE_A_RUNBOOK.md`, `docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md`, and `docs/EXTERNAL_EVIDENCE_LEDGER.md`
-- for generated navigation and chooser surfaces, open `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
-- for runtime cards and capsule contracts, open `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
-- for one bounded feat-reader layer that stays subordinate to technique canon, open `docs/TECHNIQUE_FEAT_MODEL.md`, `docs/MASTERY_HARVEST_POSTURE.md`, and `generated/technique_feat_cards.min.example.json`
-- for the current source-owned tiny KAG export capsule, open `docs/KAG_EXPORT.md`, `generated/kag_export.json`, and `generated/kag_export.min.json`
-- for repo-doc routing and authoritative docs/status manifests, open `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
-- for KAG/source-lift readers and manifests, open `docs/KAG_SOURCE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `generated/github_review_template_manifest.json`, `generated/semantic_review_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`, and `docs/SEMANTIC_REVIEW_GUIDE.md`
-- for reusable lift bundles under the current docs family, open `techniques/docs/markdown-technique-section-lift/TECHNIQUE.md`, `techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md`, `techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md`, `techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md`, `techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md`, `techniques/docs/repo-doc-surface-lift/TECHNIQUE.md`, `techniques/docs/github-review-template-lift/TECHNIQUE.md`, and `techniques/docs/semantic-review-surface-lift/TECHNIQUE.md`
-- for review and shadow surfaces, open `docs/SHADOW_PATTERNS.md`, `docs/SEMANTIC_REVIEW_GUIDE.md`, `generated/shadow_review_manifest.json`, canonical `notes/adverse-effects-review.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md`, `docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md`, `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md`, and `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
-- for the current repo-first closure roadmap and historical audit record, open `docs/DEEP_AUDIT_ROADMAP.md`
-- for one bounded release-prep path inside this repo, read `docs/RELEASING.md`, install `requirements-dev.txt`, and run `python scripts/release_check.py`
+- donor intake, refinement, and promotion: `docs/DONOR_REFINERY_RUBRIC.md`, `docs/EXTERNAL_IMPORT_RUNBOOK.md`, `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, `docs/PROMOTION_READINESS_MATRIX.md`, `docs/PROMOTION_WAVE_A_RUNBOOK.md`, `docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md`, and `docs/EXTERNAL_EVIDENCE_LEDGER.md`
+- selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
+- runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
+- repo-doc routing and authoritative doc/status manifests: `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
+- source-lift, KAG, and section families: `docs/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json`, `docs/KAG_SOURCE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
+- review and shadow surfaces: `docs/SHADOW_PATTERNS.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
+- bounded release prep: `docs/RELEASING.md` and `python scripts/release_check.py`
 
 ## What belongs here
 
 Good candidates:
+
 - agent workflows
 - validation patterns
 - documentation structures
@@ -61,81 +46,62 @@ Good candidates:
 - cross-repo promotion and reuse patterns
 
 Bad candidates:
+
 - random snippets
 - private project hacks without adaptation notes
 - secret-bearing configs
 - raw logs
+- project-only dumps
 - undocumented scripts
-- anything that only works in one private environment and was not generalized
+- objects that belong as skills, evals, routing logic, role contracts, or playbooks
 
 ## Core principles
 
-- truth and reproducibility over legend
-- publish techniques, not accidents
-- small reversible patterns are preferred
-- human meaning, agent acceleration
-- public by design, sanitized by default
-- origin matters
-- validation matters
-- adaptation notes matter
+- public-safe reusable practice over project-local residue
+- bounded, reviewable contracts over vague lore
+- source-linked promotion over raw copying
+- linked docs and generated surfaces over oversized root inventories
 
 ## Maturity model
 
-This repository primarily stores techniques in these public states:
-
-- `promoted`
-- `canonical`
-- `deprecated`
-
-In this repository:
-
-- `promoted` means reusable and public-safe, but not yet the default choice.
-- `canonical` means recommended by default after reuse evidence, stronger validation, and a clear default-use rationale.
-- `deprecated` means historically preserved, with a replacement or caution note when possible.
-
-Earlier stages such as `seed` and `proven` may exist in source projects,
-but only curated public techniques should live here.
+This repository primarily exposes public techniques in `promoted`,
+`canonical`, and `deprecated` states. Earlier incubation may happen elsewhere,
+but the root here should point to curated public canon rather than replaying the
+full intake history.
 
 ## Repository structure
 
-- `techniques/` — published technique bundles grouped by domain
-- `techniques/<domain>/<technique>/notes/` — optional evidence notes such as second-context adaptations, canonical-readiness reviews, or canonical adverse-effects reviews
-- `templates/` — templates for technique authoring and promotion
-- `TECHNIQUE_INDEX.md` — repository-wide technique map
-- `schemas/` — optional machine-readable schemas
-- `scripts/` — repo validation helpers
+- `techniques/` for published technique bundles
+- `templates/` for technique authoring and promotion scaffolds
+- `generated/` for derived catalogs, capsules, source-lift, and review surfaces
+- `docs/` for doctrine, intake, release, selection, and shadow surfaces
+- `scripts/` and `tests/` for validation and generation helpers
 
 ## Intended users
 
 - coding agents
 - solo builders
-- infra engineers
-- product engineers
-- AI workflow designers
-- teams that want reusable operational knowledge
+- infra and product engineers
+- teams building reusable operational knowledge
 
 ## What a good technique includes
 
-A strong technique should have:
-- clear intent
-- usage boundaries
-- inputs and outputs
-- risks
+A strong technique should include:
+
+- clear intent and usage boundaries
+- explicit inputs, outputs, and risks
 - validation method
-- adaptation notes
-- maturity status
-- origin and promotion history
+- adaptation notes when portability needs them
+- enough structure to be promoted, reviewed, and reused
 
 ## Contribution model
 
-A technique is usually born in a real project, validated there,
-sanitized, documented, and then promoted into this public repository.
+`aoa-techniques` owns practice meaning, while neighboring repos own execution,
+proof, routing, role, and scenario composition. If a reusable contract can be
+extracted cleanly from a neighboring layer, it belongs here once it becomes
+public-safe, bounded, and portable.
 
-In short:
-
-`project -> validation -> sanitization -> promotion -> public canon`
-
-The current runtime path for public technique use is:
+The current runtime path for public technique use remains:
 
 `pick -> inspect -> expand -> object use`
 
