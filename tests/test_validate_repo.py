@@ -77,6 +77,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_github_review_template_manifest.py"),
                 ("python", "scripts/build_semantic_review_manifest.py"),
                 ("python", "scripts/build_shadow_review_manifest.py"),
+                ("python", "scripts/build_kag_export.py"),
                 ("python", "-m", "unittest", "discover", "-s", "tests"),
                 ("python", "scripts/validate_nested_agents.py"),
                 ("python", "scripts/validate_repo.py"),
@@ -829,6 +830,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
 
         for target in (
+            "plan-diff-apply-verify-report/TECHNIQUE.md",
             "TECHNIQUE_SELECTION_GUIDE.md",
             "TECHNIQUE_SELECTION.md",
             "SELECTION_PATTERNS.md",
@@ -907,9 +909,28 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0074",
             "AOA-T-0032",
             "AOA-T-0026",
+            "python scripts/validate_repo.py",
+            "python -m unittest discover -s tests",
             "python scripts/release_check.py",
+            "git status -sb",
         ):
             self.assertIn(target, start_here)
+
+    def test_root_readme_surfaces_concrete_bundle_and_current_verify_routes(self) -> None:
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+
+        self.assertIn(
+            "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+            readme,
+        )
+        self.assertIn("python scripts/validate_repo.py", readme)
+        self.assertIn("python -m unittest discover -s tests", readme)
+        self.assertIn("python scripts/release_check.py", readme)
+        self.assertIn("git status -sb", readme)
+        self.assertLess(
+            readme.index("techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md"),
+            readme.index("docs/README.md"),
+        )
 
     def test_external_evidence_surfaces_are_discoverable_and_operator_complete(self) -> None:
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
@@ -1422,8 +1443,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", kag_source_guide)
         self.assertIn("REPO_DOC_SURFACES.md", kag_source_guide)
         self.assertIn("python scripts/release_check.py", readme)
+        self.assertIn("python scripts/validate_repo.py", readme)
+        self.assertIn("python -m unittest discover -s tests", readme)
         self.assertIn("python scripts/release_check.py", releasing)
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
+        self.assertIn("python scripts/build_kag_export.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
 
     def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:
@@ -1647,6 +1671,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn(target, docs_readme)
 
         for target in (
+            "docs/KAG_EXPORT.md",
             "docs/TECHNIQUE_SECTIONS.md",
             "docs/TECHNIQUE_SECTION_LIFT_GUIDE.md",
             "docs/TECHNIQUE_CHECKLISTS.md",
@@ -1654,6 +1679,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "docs/TECHNIQUE_EXAMPLES.md",
             "docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md",
             "docs/EVIDENCE_NOTE_SURFACES.md",
+            "generated/kag_export.json",
+            "generated/kag_export.min.json",
             "generated/technique_section_manifest.json",
             "generated/technique_checklist_manifest.json",
             "generated/technique_example_manifest.json",
@@ -1685,6 +1712,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn(target, kag_source_guide)
 
         for target in (
+            "python scripts/build_kag_export.py",
+            "docs/KAG_EXPORT.md",
+            "generated/kag_export.json",
+            "generated/kag_export.min.json",
             "python scripts/build_section_manifest.py",
             "python scripts/build_checklist_manifest.py",
             "python scripts/build_example_manifest.py",

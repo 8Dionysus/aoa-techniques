@@ -23,7 +23,8 @@ A release should make it easy to answer:
 
 1. Confirm the target release scope.
 2. Update `CHANGELOG.md`.
-3. Run local validation with one bounded command:
+3. Run local validation with the bounded release-prep battery:
+   - if you want the read-only current-state checks first, run `python -m unittest discover -s tests` and `python scripts/validate_repo.py`
    - `python -m pip install -r requirements-dev.txt`
    - `python scripts/release_check.py`
    - the current script keeps the underlying source contracts explicit and runs:
@@ -38,11 +39,13 @@ A release should make it easy to answer:
      - `python scripts/build_github_review_template_manifest.py`
      - `python scripts/build_semantic_review_manifest.py`
      - `python scripts/build_shadow_review_manifest.py`
+     - `python scripts/build_kag_export.py`
      - `python -m unittest discover -s tests`
      - `python scripts/validate_nested_agents.py`
      - `python scripts/validate_repo.py`
    - if the first pass materializes generated updates, the script reruns the same bounded sequence once and requires the second pass to leave the git-backed worktree snapshot unchanged
    - when the repo starts clean, that same bounded drift check also confirms `git diff --exit-code`
+   - after the bounded release-prep pass, `git status -sb` is the quickest human check that the tracked worktree stayed clean
 4. Confirm `TECHNIQUE_INDEX.md` matches the current published catalog.
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
    - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULES.md`.
@@ -54,6 +57,8 @@ A release should make it easy to answer:
      - `generated/technique_example_manifest.json` and `docs/TECHNIQUE_EXAMPLES.md`
      - `generated/technique_evidence_note_manifest.json` and `docs/EVIDENCE_NOTE_SURFACES.md`
    - Use `TECHNIQUE_SECTION_LIFT_GUIDE.md`, `TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `EVIDENCE_NOTE_PROVENANCE_GUIDE.md` as the authored contract references when checking that those KAG/source-lift reader families stayed bounded.
+   - This also includes the bounded KAG export family: `generated/kag_export.json`, `generated/kag_export.min.json`, and `docs/KAG_EXPORT.md`.
+   - Use `KAG_EXPORT.md` as the authored contract reference when checking that the KAG export stayed a source-guide surface rather than a replacement for technique meaning.
    - This also includes the current repo-doc entrypoint family: `docs/START_HERE.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACES.md`.
 6. Review public-safety hygiene:
    - no secrets

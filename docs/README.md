@@ -55,6 +55,7 @@ Choose the path that matches your question:
   - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
+  - [KAG Export](KAG_EXPORT.md)
   - [Technique Sections](TECHNIQUE_SECTIONS.md)
   - [`../generated/technique_sections.full.json`](../generated/technique_sections.full.json)
   - [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)

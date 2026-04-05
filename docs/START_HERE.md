@@ -13,6 +13,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## If You Need One Technique Now
 
+- open [`plan-diff-apply-verify-report`](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
 - open [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md) when the question is how the selection family stays bounded before you trust any chooser surface
 - open [Technique Selection](TECHNIQUE_SELECTION.md) for one bounded pick by domain and current defaults
 - open [Selection Patterns](SELECTION_PATTERNS.md) when adjacency, working sets, or common next moves matter more than a flat list
@@ -72,6 +73,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## Release And Validation
 
+- run `python -m pip install -r requirements-dev.txt` once before local validation if this checkout does not already have the repo dev dependencies
+- for a read-only current-state pass, run `python scripts/validate_repo.py` and `python -m unittest discover -s tests`
 - open [Releasing `aoa-techniques`](RELEASING.md) for the current release-prep doctrine
-- run `python -m pip install -r requirements-dev.txt`, then `python scripts/release_check.py` for the repo-owned bounded release-check path
+- for the bounded release-prep parity path, run `python scripts/release_check.py`, then confirm `git status -sb` stayed clean
 - use the individual `build_*` commands only when you are intentionally regenerating one surface family during authored edits
