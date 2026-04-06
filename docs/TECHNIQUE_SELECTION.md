@@ -130,6 +130,9 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md): `complements` [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md), [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
 - [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md): `complements` [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md), [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md)
 - [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md): `complements` [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md), [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md)
+- [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md): `complements` [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md), [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md)
+- [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md): `complements` [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
+- [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md): `complements` [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -178,6 +181,9 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. |
 | [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. |
 | [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
+| [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm. |
+| [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred. |
+| [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible. |
 
 ### `docs`
 
@@ -240,7 +246,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 85/85 techniques.
+- `export_ready` is currently `true` for 88/88 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

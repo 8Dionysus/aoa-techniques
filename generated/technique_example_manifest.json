@@ -1061,6 +1061,39 @@
           "body_markdown": "```yaml\nquest_overlay:\n  base_progression_ref: progression-delta-2026-04-05.md\n  quest_residue: \"the route now supports one deeper harvest-family extraction quest\"\n  chronicle_stub: \"boundary discipline improved, but proof discipline still needs reanchor\"\n  unlock_hint: \"safe to widen one seam, not the whole family\"\n  boundary_note: owner truth and routing authority remain outside this overlay\n```\n\nWhy this example stays bounded:\n\n- it rests on an explicit underlying progression delta\n- it keeps flavor small and descriptive\n- it says plainly that authority remains elsewhere"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0086",
+      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/automation-fit-matrix/examples/minimal-automation-fit-matrix.md",
+          "title": "minimal automation-fit-matrix",
+          "body_markdown": "```yaml\nautomation_fit:\n  route: reviewed remediation closeout report\n  frequency: recurring\n  friction: checklist-fatigue\n  determinism: mostly-stable\n  input_clarity: explicit\n  output_clarity: explicit\n  proof_surface: reviewable\n  dry_run: available\n  reversibility: easy\n  secret_coupling: low\n  approval_sensitivity: low\n  verdict: seed_ready\n```\n\nWhy this example stays bounded:\n\n- it classifies one reviewed route instead of authoring the later automation artifact\n- it keeps approval sensitivity visible without turning into a checkpoint system\n- it keeps the verdict descriptive rather than sovereign"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0087",
+      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/human-loop-to-seed-lift/examples/minimal-human-loop-to-seed-lift.md",
+          "title": "minimal human-loop-to-seed-lift",
+          "body_markdown": "```yaml\nseed_lift:\n  route: reviewed session closeout loop\n  owner_layer: aoa-playbooks\n  next_artifact: playbook_seed\n  nearest_wrong_target: live_scheduler\n  schedule_hint: nightly-after-review\n```\n\nWhy this example stays bounded:\n\n- it names one first honest landing instead of implementing the automation\n- it keeps the schedule hint advisory rather than sovereign\n- it preserves one rejected wrong target so promotion pressure stays explicit"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0088",
+      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md",
+          "title": "minimal approval-sensitivity-check",
+          "body_markdown": "```yaml\napproval_sensitivity:\n  route: repo-wide remediation auto-apply sweep\n  mutation_surface: important\n  authority_posture: operator-approved-only\n  rollback_marker: required\n  health_check: required\n  checkpoint_required: true\n  next_artifact: reviewed skill proposal with checkpoint posture\n```\n\nWhy this example stays bounded:\n\n- it classifies one candidate instead of approving execution\n- it makes rollback and health-check posture visible\n- it keeps the next step smaller than a full automation implementation"
+        }
+      ]
     }
   ]
 }

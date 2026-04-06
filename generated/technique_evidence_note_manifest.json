@@ -41895,6 +41895,1095 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0086",
+      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/automation-fit-matrix/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0086"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "automation-fit-matrix"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around one explicit route-classification matrix instead of widening into automation governance or score doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA automation lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when the missing object is one explicit readiness matrix over a recurring reviewed route"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when teams need to distinguish repeatable manual work from premature automation desire"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default classification technique for every automation, routing, or ops surface"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps one small fit matrix while stripping project-local scheduler language and internal queue doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest automation lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between fit classification, first landing, and approval checkpoints should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0086` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same small route-classification boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/automation-fit-matrix/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0086"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "automation-fit-matrix"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-automation-opportunity-scan/SKILL.md`\n- `skills/aoa-automation-opportunity-scan/references/automation-fit-matrix.md`\n- `skills/aoa-automation-opportunity-scan/references/automation-opportunity-packet-schema.yaml`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-automation-opportunity-scan/automation_opportunity_scan_recurring_review_closeout_route.md`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-automation-opportunity-scan/automation_opportunity_scan_one_off_creative_strategy_thread.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the automation-opportunity skill explicitly classifies repeat signal, friction, determinism, input clarity, output clarity, proof surface, reversibility, secret coupling, and approval sensitivity before it emits `seed_ready` or `not_now`"
+                },
+                {
+                  "order": 2,
+                  "text": "the authored fit matrix reference already defines strong and weak posture for each row plus the likely consequence of weak posture"
+                },
+                {
+                  "order": 3,
+                  "text": "the packet schema keeps the result bounded around explicit route fields and a verdict instead of a hidden score engine"
+                },
+                {
+                  "order": 4,
+                  "text": "the paired positive and negative evaluation snapshots prove the same matrix distinguishes a recurring reviewed closeout route from a one-off creative thread"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one small route-classification matrix rather than a playbook, skill, or scheduler"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded to evidence-backed readiness classification without widening into routing, approval, or automation-authority doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/automation-fit-matrix/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0086"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "automation-fit-matrix"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local readiness rows were extracted into one standalone matrix technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA-specific automation targets and packet names moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one matrix still belongs to one reviewed recurring route"
+                },
+                {
+                  "order": 2,
+                  "text": "repeat signal, determinism, proof posture, reversibility, and approval sensitivity still remain visible"
+                },
+                {
+                  "order": 3,
+                  "text": "verdicts still stay descriptive rather than sovereign"
+                },
+                {
+                  "order": 4,
+                  "text": "the matrix still stays smaller than any later automation artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into abstract readiness rhetoric if one concrete route is no longer named"
+                },
+                {
+                  "order": 2,
+                  "text": "row labels can look like a generic scorecard if the evidence-backed route posture is not kept explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "the small example can understate the need to preserve unknown or weak rows honestly"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one workflow-side readiness matrix rather than a docs taxonomy or playbook"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps the seam between fit classification, first landing, and checkpoint posture explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local automation queues or runtime wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded readiness matrix for a recurring reviewed route"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0087",
+      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/human-loop-to-seed-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0087"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "human-loop-to-seed-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around one first-honest-landing decision instead of widening into roadmap or scheduler doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA automation lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when a recurring reviewed loop is real and the missing object is the first honest landing"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when teams need to distinguish bounded skills, playbook seeds, technique candidates, and honest defer outcomes"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default landing technique for every automation or workflow-intake surface"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the first-landing seam while stripping project-local scheduler ideas and repo queue doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest automation lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between landing choice, owner placement, and approval checkpoints should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0087` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same first-honest-landing boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/human-loop-to-seed-lift/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0087"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "human-loop-to-seed-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-automation-opportunity-scan/SKILL.md`\n- `skills/aoa-automation-opportunity-scan/references/playbook-seed-bridge.md`\n- `skills/aoa-automation-opportunity-scan/references/session-harvest-integration.md`\n- `skills/aoa-automation-opportunity-scan/references/automation-opportunity-packet-schema.yaml`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-automation-opportunity-scan/automation_opportunity_scan_recurring_review_closeout_route.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the automation-opportunity skill explicitly routes each recurring route toward `skill`, `playbook_seed`, `technique_candidate`, `repair_quest`, or `defer` instead of treating \"automation\" as one undifferentiated landing"
+                },
+                {
+                  "order": 2,
+                  "text": "the playbook-seed bridge already distinguishes one bounded executable workflow from one recurring multi-skill or scheduled scenario"
+                },
+                {
+                  "order": 3,
+                  "text": "the session-harvest integration note keeps automation scanning subordinate to donor harvest, fork routing, diagnosis, repair, and progression instead of letting it swallow the family"
+                },
+                {
+                  "order": 4,
+                  "text": "the recurring closeout evaluation snapshot expects an owner layer, a next artifact, and a rejected nearest wrong target while keeping `schedule_hint` advisory only"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded first-honest-landing lift from a recurring human loop into a seed-facing artifact"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded to landing choice without widening into implementation, scheduler authority, or generic roadmap doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/human-loop-to-seed-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0087"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "human-loop-to-seed-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local landing choice was extracted into one standalone lift technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA-specific owner layers and packet names moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one recurring human loop still gets one first-honest-landing verdict"
+                },
+                {
+                  "order": 2,
+                  "text": "smaller first landings still beat premature implementation"
+                },
+                {
+                  "order": 3,
+                  "text": "schedule hints still remain advisory"
+                },
+                {
+                  "order": 4,
+                  "text": "repair and defer still stay acceptable outcomes"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic prioritization language if one current manual loop is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into scheduler or roadmap doctrine if schedule hints start sounding sovereign"
+                },
+                {
+                  "order": 3,
+                  "text": "the small example can understate how important the rejected nearest wrong target is when classification pressure is high"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one workflow-side landing decision rather than a docs taxonomy or playbook itself"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps fit classification, landing choice, and checkpoint posture separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local queueing or scheduler wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded first-honest-landing lift for recurring human work"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0088",
+      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/approval-sensitivity-check/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0088"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "approval-sensitivity-check"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around one checkpoint-required classification instead of widening into approval implementation or generic governance doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA automation lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when an automation candidate may cross approval, rollback, or self-change boundaries and one explicit verdict is missing"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when teams need to distinguish low-risk read-only candidates from approval-heavy mutation paths before any seed-ready claim can stay honest"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default approval or checkpoint technique for every mutating workflow"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the approval-boundary seam while stripping local approval commands, runtime wrappers, and repo-local ops doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest automation lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between checkpoint classification, generic confirmation, and full repair checkpoints should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0088` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same automation-bound checkpoint classification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/approval-sensitivity-check/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0088"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "approval-sensitivity-check"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-automation-opportunity-scan/SKILL.md`\n- `skills/aoa-automation-opportunity-scan/references/checkpoint-boundary.md`\n- `skills/aoa-automation-opportunity-scan/references/session-harvest-integration.md`\n- `skills/aoa-session-self-diagnose/SKILL.md`\n- `skills/aoa-session-self-repair/SKILL.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the automation-opportunity skill already marks `checkpoint_required` when routes cross self-change, hidden authority, or important mutation boundaries"
+                },
+                {
+                  "order": 2,
+                  "text": "the checkpoint-boundary reference enumerates strong triggers such as important-surface mutation, shifting authority, missing rollback, missing health checks, and self-repair posture"
+                },
+                {
+                  "order": 3,
+                  "text": "the session-harvest integration note keeps blocked automation diagnosis and prerequisite repair explicit instead of letting automation desire hide the real blocker"
+                },
+                {
+                  "order": 4,
+                  "text": "the evaluation fixtures include both an approval-heavy autopatch desire that should stay `not_now` and diagnosis or repair routes that surface missing approval and rollback posture before honest automation lift"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded approval-sensitivity check over an automation candidate rather than one full repair framework or change-management system"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded to checkpoint-required classification without widening into approval implementation, scheduler policy, or generic governance doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/approval-sensitivity-check/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0088"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "approval-sensitivity-check"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local checkpoint boundary was extracted into one standalone approval-sensitivity technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA-specific approval gates, repair routes, and repo names moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one automation candidate still gets one approval-sensitivity verdict"
+                },
+                {
+                  "order": 2,
+                  "text": "hidden authority, missing rollback, and missing health checks still remain visible"
+                },
+                {
+                  "order": 3,
+                  "text": "`checkpoint_required` still stays a boundary flag rather than permission"
+                },
+                {
+                  "order": 4,
+                  "text": "low-risk read-only candidates still remain distinguishable from mutating ones"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic risk prose if one automation candidate is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into general change-management doctrine if checkpoint language starts sounding sovereign"
+                },
+                {
+                  "order": 3,
+                  "text": "the example can understate how often the right outcome is a downgrade to repair or reviewed proposal rather than a positive automation lane"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one workflow-side checkpoint classification rather than a governance repository or playbook"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps fit classification, landing choice, and approval burden separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local approval commands or runtime wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded approval-sensitivity check over an automation candidate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

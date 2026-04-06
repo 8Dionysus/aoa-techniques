@@ -3746,6 +3746,129 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0086",
+      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/automation-fit-matrix/checks/automation-fit-matrix-checklist.md",
+          "title": "automation-fit-matrix checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] one reviewed recurring route is named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] repeat signal, determinism, proof posture, reversibility, and approval sensitivity are visible"
+            },
+            {
+              "order": 3,
+              "text": "[ ] weak or unknown rows are not hidden behind a confident verdict"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the verdict stays bounded to readiness posture"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the matrix does not become a routing score or approval engine"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example stays smaller than any later seed or skill proposal"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0087",
+      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md",
+          "title": "human-loop-to-seed-lift checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] one recurring reviewed human loop is named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the first landing stays smaller than a full implementation"
+            },
+            {
+              "order": 3,
+              "text": "[ ] owner-layer and next-artifact posture are explicit"
+            },
+            {
+              "order": 4,
+              "text": "[ ] repair or defer remain available when the route is not honestly ready"
+            },
+            {
+              "order": 5,
+              "text": "[ ] schedule hints stay advisory only"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the nearest wrong target is visible when classification pressure exists"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0088",
+      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md",
+          "title": "approval-sensitivity-check checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] one automation candidate is named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] mutation, authority, rollback, and health-check posture are visible"
+            },
+            {
+              "order": 3,
+              "text": "[ ] `checkpoint_required` is explicit when the candidate is approval-heavy or self-changing"
+            },
+            {
+              "order": 4,
+              "text": "[ ] low-risk read-only candidates remain distinguishable from mutating ones"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the result stays smaller than a full repair or governance framework"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example does not imply permission to execute"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
