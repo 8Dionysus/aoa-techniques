@@ -42984,6 +42984,712 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0089",
+      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/quest-unit-promotion-review/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0089"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "quest-unit-promotion-review"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps the contract narrow around one repeated reviewed quest unit and one final verdict"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but live evidence is still concentrated in one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when one repeated unit is already isolated and the only open question is its honest promotion target"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when teams need to preserve keep-quest posture and avoid collapsing all reuse pressure into `skill`"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default promotion review surface outside the current AoA quest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-06"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the bounded verdict seam while stripping local repo-routing and runtime wrapper details"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second live context beyond the current session-harvest family"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between first owner placement and final promotion review should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0089` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same final-promotion boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/quest-unit-promotion-review/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0089"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "quest-unit-promotion-review"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-quest-harvest/SKILL.md`\n- `skills/aoa-quest-harvest/references/promotion-outcomes.md`\n- `skills/aoa-quest-harvest/references/quest-promotion-receipt-schema.yaml`\n- `skills/aoa-quest-harvest/checks/review.md`\n- `skills/aoa-quest-harvest/examples/runtime.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the quest-harvest skill is already bounded to one repeated reviewed quest unit rather than the wider session-harvest family"
+                },
+                {
+                  "order": 2,
+                  "text": "the allowed outcomes explicitly distinguish `skill`, `playbook`, `agent`, `eval`, `memo`, and keep-or-open quest posture"
+                },
+                {
+                  "order": 3,
+                  "text": "the review checklist requires the repeated unit, correct owner target, and rejected nearest-wrong target to remain visible"
+                },
+                {
+                  "order": 4,
+                  "text": "the runtime example proves the skill is a final promotion decision rather than an authoring or execution workflow"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one final promotion review over one repeated reviewed quest unit"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay focused on the verdict seam without importing repo-local authoring doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/quest-unit-promotion-review/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0089"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "quest-unit-promotion-review"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local quest verdict seam was extracted into one standalone review technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA repo names and packet wrappers moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one repeated reviewed quest unit still gets one final promotion verdict"
+                },
+                {
+                  "order": 2,
+                  "text": "keep-quest and defer still remain honest results"
+                },
+                {
+                  "order": 3,
+                  "text": "the verdict still stays smaller than the authored destination"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic prioritization language if the repeated-unit boundary is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into authoring doctrine if the next surface starts sounding like a draft request"
+                },
+                {
+                  "order": 3,
+                  "text": "the small example can understate how important keep-quest posture is for weak repetition"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded review decision over repeated work"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps donor extraction, first owner placement, and nearest-wrong-target rejection adjacent but separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local repo workflow wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded final-promotion review over one repeated quest unit"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0090",
+      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/nearest-wrong-target-rejection/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0090"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nearest-wrong-target-rejection"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle stays narrow around one adjacent-target rejection seam"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the live evidence is still concentrated in one AoA quest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when adjacent targets are easy to confuse and one verdict needs extra boundary sharpness"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when teams repeatedly drift toward the most convenient nearby surface"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default rejection helper outside the current AoA promotion lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-06"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the small rejection seam while stripping local verdict wrappers and repo policy detail"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second live context beyond the current quest-promotion family"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between nearest-wrong-target rejection and first owner placement should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0090` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same adjacent-target rejection boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/nearest-wrong-target-rejection/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0090"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nearest-wrong-target-rejection"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-quest-harvest/SKILL.md`\n- `skills/aoa-quest-harvest/references/promotion-outcomes.md`\n- `skills/aoa-quest-harvest/checks/review.md`\n- `skills/aoa-quest-harvest/examples/runtime.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the quest-harvest skill explicitly requires one reason against the nearest wrong target rather than only asserting the chosen owner"
+                },
+                {
+                  "order": 2,
+                  "text": "the review checklist treats rejected nearest-wrong target as first-class verification, not optional polish"
+                },
+                {
+                  "order": 3,
+                  "text": "the runtime example explains boundary fit by clarifying why one adjacent target is wrong"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one small rejection seam that clarifies an otherwise easy-to-confuse verdict"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded to adjacency rejection without importing the whole promotion workflow"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/nearest-wrong-target-rejection/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0090"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nearest-wrong-target-rejection"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local nearest-wrong-target step was extracted into one standalone clarification technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA repo names and verdict wrappers moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the nearest wrong target still has to be adjacent and plausible"
+                },
+                {
+                  "order": 2,
+                  "text": "the rejection reason still clarifies one real boundary"
+                },
+                {
+                  "order": 3,
+                  "text": "the seam still stays smaller than the surrounding verdict workflow"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic debate rhetoric if adjacency is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into anti-pattern doctrine if the rejection reason stops being small"
+                },
+                {
+                  "order": 3,
+                  "text": "the example can understate when `defer` is more honest than any rejection pair"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one review-side clarification move over a bounded verdict"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps verdict choice, owner placement, and rejection distinct"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local quest wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded nearest-wrong-target clarification seam"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

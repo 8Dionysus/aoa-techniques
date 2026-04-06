@@ -3869,6 +3869,88 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0089",
+      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md",
+          "title": "quest-unit-promotion-review checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] one repeated reviewed quest unit is named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the chosen owner target matches the repeat shape"
+            },
+            {
+              "order": 3,
+              "text": "[ ] keep-quest or defer remains available"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the verdict stays smaller than the authored next surface"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the source evidence is reviewed and bounded"
+            },
+            {
+              "order": 6,
+              "text": "[ ] downstream authorship is not smuggled into the verdict"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0090",
+      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md",
+          "title": "nearest-wrong-target-rejection checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the rejected target is adjacent and plausible"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the rejection reason clarifies one concrete boundary"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the chosen target becomes clearer after the rejection is added"
+            },
+            {
+              "order": 4,
+              "text": "[ ] `hold`, `quest`, or `defer` remain available when the verdict is weak"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the rejection is not a strawman or theatrical foil"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the output stays smaller than the surrounding verdict workflow"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

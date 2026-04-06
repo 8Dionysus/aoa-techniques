@@ -4941,6 +4941,118 @@
           "markdown": "What can vary across projects:\n- the names of approval classes\n- the rollback-anchor format\n- the health-check surface\n- whether the result is rendered in prose, YAML, or a small packet field\n\nWhat should stay invariant:\n- one candidate still gets one approval-sensitivity verdict\n- hidden authority and missing rollback stay visible\n- `checkpoint_required` remains boundary posture rather than permission\n- low-risk read-only candidates remain distinguishable from self-changing ones\n\nProject-shaped details that should not be treated as invariant:\n- one approval bot or command\n- one repo layout\n- one scheduler stack\n- one change-management doctrine\n\nAoA adaptation example:\n- common checkpoint triggers include important surface mutation, hidden or shifting authority, missing rollback marker, missing health check, and self-repair posture\n- common resulting artifacts include a checkpoint-aware repair route, a reviewed seed proposal, or a defer verdict"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0089",
+      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Review one repeated, reviewed quest-shaped unit and decide whether it should\nstay a quest or be promoted into the next honest owner surface."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- one repeated reviewed quest unit is already isolated from the wider session\n  family\n- the remaining question is the final promotion target rather than donor\n  extraction, automation fit, fork routing, diagnosis, or repair\n- the reviewer must distinguish leaf workflow, route, role, proof, and recall\n  shapes without collapsing them\n- the output needs one bounded verdict instead of more exploratory discussion"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the route is still active, unreviewed, or only happened once\n- the source still contains several mixed reusable units\n- the real need is already straightforward authoring in the chosen owner layer\n- the work is mainly a theme cloud with no bounded repeated unit"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one repeated reviewed quest unit\n- one reviewed harvest pack, run summary, or equivalent evidence packet\n- repeat count and repeat shape\n- current owner-layer candidates\n- known ambiguity, risk, or defer signals"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one bounded promotion verdict\n- one chosen owner repo and next surface\n- one short reason for the chosen target\n- one defer or keep-quest posture when promotion is still premature"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one repeated reviewed quest unit rather than from raw session history.\n2. Re-state what repeated: leaf workflow, route, proof pattern, recall pattern, or boundary law.\n3. Reject topic-only repetition and aesthetic similarity when no reusable unit survives.\n4. Match the repeated unit to the owner shape that fits best: `skill`, `playbook`, `agent`, `eval`, `memo`, or `quest`.\n5. Keep `quest` or `defer` when repeat signal, ownership, or boundary safety remains weak.\n6. Emit one verdict with one chosen owner repo and one next surface."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the technique starts after review and after the repeated unit is already isolated\n- one repeated unit receives one promotion verdict\n- verdicts stay bounded to owner placement, not authorship completion\n- `quest` and `defer` remain valid outputs\n- active quest state does not become canon merely because repetition exists\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), this technique starts from an already repeated quest unit and closes the final promotion verdict rather than performing a first owner-placement pass over any reusable unit. Unlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it owns the chosen promotion verdict itself rather than the explicit rejection pattern that keeps adjacent targets honest."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- a mixed or weakly repeated unit is treated as promotion-ready\n- the verdict reflects convenience or excitement rather than the honest owner shape\n- the unit is promoted before review evidence is stable\n\n### Negative effects\n\n- premature promotion can create canon debt in the wrong repo\n- repeated discussion can be mistaken for repeated work\n- quest pressure can hide the need to keep or reopen a quest\n\n### Misuse patterns\n\n- treating one strong run as enough evidence\n- using the technique before donor extraction or bounded review exists\n- promoting a scenario route into a skill because it feels executable\n- treating proof or memory posture as workflow meaning\n\n### Detection signals\n\n- the repeated unit is not named explicitly\n- reviewers cannot explain why the chosen owner fits better than staying a quest\n- the next surface is larger than the verdict requires\n- the route still needs wider session-family work before triage\n\n### Mitigations\n\n- require one isolated repeated unit\n- preserve `quest` and `defer` as honest results\n- keep the verdict smaller than the authored next surface\n- pair the verdict with explicit nearest-wrong-target rejection"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one repeated reviewed unit is named explicitly\n- the chosen owner target matches the repeat shape\n- keep-quest or defer posture remains available\n- the verdict stays smaller than the authored next surface\n- the source material was reviewed before triage\n\nSee `checks/quest-unit-promotion-review-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the names of owner layers\n- how repeat count is represented\n- whether the output is markdown, YAML, or JSON\n- whether local policy asks for extra approval before authoring\n\nWhat should stay invariant:\n- the technique starts after review\n- one repeated unit gets one verdict\n- keep-quest and defer remain available\n- the verdict stays smaller than the authored destination\n\nProject-shaped details that should not be treated as invariant:\n- one repo layout\n- one questboard vocabulary\n- one local naming scheme for packets or verdict files\n- one downstream authoring workflow\n\nAoA adaptation example:\n- leaf executable workflow usually maps to `aoa-skills`\n- recurring route usually maps to `aoa-playbooks`\n- role or actor-boundary law usually maps to `aoa-agents`\n- proof posture usually maps to `aoa-evals`\n- recall or writeback posture usually maps to `aoa-memo`\n- weak or mixed repetition can stay a quest"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0090",
+      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Make the nearest wrong target explicit when writing a bounded owner or\npromotion verdict so adjacent layers stay visibly distinct under reuse\npressure."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- one chosen owner or promotion target already looks plausible, but at least\n  one adjacent target also feels tempting\n- reviewers need to explain not only why the chosen target fits, but why the\n  closest wrong target does not\n- the workflow risks collapsing `skill`, `playbook`, `agent`, `eval`, `memo`,\n  or `quest` into one convenience surface"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- there is no meaningful adjacent target to reject\n- the real need is still donor extraction, diagnosis, or first owner placement\n- the work is so under-specified that any chosen target would be fake certainty"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one chosen owner or promotion target\n- one bounded unit that target claims to fit\n- at least one adjacent plausible target that feels tempting\n- one short boundary reason that can distinguish the chosen target from the rejected one"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicitly rejected nearest-wrong target\n- one short reason why that target is wrong\n- one clearer boundary around the chosen target"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one chosen owner or promotion verdict.\n2. Ask which adjacent target would be easiest to confuse with the chosen one.\n3. Name that target explicitly instead of leaving it implicit.\n4. Write one short reason why it is wrong for this bounded unit.\n5. Keep the rejection small, concrete, and boundary-focused rather than rhetorical.\n6. If no honest chosen target exists yet, fall back to `hold`, `quest`, or `defer` rather than inventing a fake rejection pair."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the rejection stays paired to one chosen target\n- the rejected target must be adjacent and plausible, not theatrical\n- the reason for rejection stays boundary-focused\n- the technique strengthens one verdict; it does not replace the verdict workflow\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), this technique does not decide the full placement verdict; it only strengthens that verdict by naming the nearest wrong target. Unlike [AOA-T-0089](../quest-unit-promotion-review/TECHNIQUE.md), it does not choose the final quest-promotion outcome; it makes the rejected adjacent outcome explicit once a chosen target already exists."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the rejected target is not actually the nearest wrong one\n- the rejection reason is vague and does not clarify the boundary\n- the technique is used to defend a weak verdict instead of improving it\n\n### Negative effects\n\n- forced rejection can create false certainty when the right answer is still `defer`\n- reviewers may pick a dramatic wrong target instead of the closest one\n- repeated rhetoric can replace concrete boundary reasoning\n\n### Misuse patterns\n\n- naming a strawman target no one would actually confuse with the chosen one\n- using rejection language to hide that the chosen target is also weak\n- widening the rejection into a long anti-pattern essay inside a small verdict\n\n### Detection signals\n\n- the rejected target is too distant from the chosen one to teach anything\n- the rejection reason cannot point to a boundary difference\n- reviewers still argue about the same adjacent target after reading the verdict\n\n### Mitigations\n\n- require the rejected target to be adjacent and plausible\n- keep the rejection reason short and boundary-shaped\n- fall back to `hold`, `quest`, or `defer` when no honest chosen target exists\n- use the rejection to clarify the chosen boundary, not to decorate the verdict"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the rejected target is adjacent and plausible\n- the rejection reason clarifies one concrete boundary\n- the chosen target becomes clearer after the rejection is added\n- `hold`, `quest`, or `defer` remain available when the whole verdict is weak\n\nSee `checks/nearest-wrong-target-rejection-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the set of adjacent targets in scope\n- how rejection reasons are written\n- whether the rejection appears inline or in a sidecar field\n\nWhat should stay invariant:\n- the rejected target is plausible and adjacent\n- the rejection reason clarifies a boundary\n- the technique stays smaller than the chosen verdict workflow\n\nProject-shaped details that should not be treated as invariant:\n- one owner-layer taxonomy\n- one repo naming scheme\n- one review template\n- one packet format\n\nAoA adaptation example:\n- `promote_to_playbook` may reject `promote_to_skill` when the repeated unit is route-shaped\n- `promote_to_skill` may reject `promote_to_playbook` when the repeated unit is leaf-workflow-shaped\n- `keep_quest` may reject `promote_to_skill` when repetition is still weak or mixed"
+        }
+      ]
     }
   ]
 }

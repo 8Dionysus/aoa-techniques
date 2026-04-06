@@ -133,6 +133,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md): `complements` [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md), [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md)
 - [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md): `complements` [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
 - [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md): `complements` [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md)
+- [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md): `complements` [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
+- [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md): `complements` [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -184,6 +186,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm. |
 | [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred. |
 | [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible. |
+| [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure. |
+| [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. |
 
 ### `docs`
 
@@ -246,7 +250,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 88/88 techniques.
+- `export_ready` is currently `true` for 90/90 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.
