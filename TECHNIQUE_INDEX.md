@@ -99,6 +99,8 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0086 | automation-fit-matrix | agent-workflows | promoted | Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm. |
 | AOA-T-0087 | human-loop-to-seed-lift | agent-workflows | promoted | Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred. |
 | AOA-T-0088 | approval-sensitivity-check | agent-workflows | promoted | Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible. |
+| AOA-T-0089 | quest-unit-promotion-review | agent-workflows | promoted | Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure. |
+| AOA-T-0090 | nearest-wrong-target-rejection | agent-workflows | promoted | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. |
 
 ## Deprecated techniques
 

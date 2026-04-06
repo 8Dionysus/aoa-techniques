@@ -280,6 +280,18 @@ See also:
 |---|---|---|---|---|
 | approval-sensitivity-check checklist | `absent` | `7` | `techniques/agent-workflows/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) |
 
+### [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| quest-unit-promotion-review checklist | `absent` | `7` | `techniques/agent-workflows/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) |
+
+### [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| nearest-wrong-target-rejection checklist | `absent` | `7` | `techniques/agent-workflows/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

@@ -4736,6 +4736,114 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0089",
+      "name": "quest-unit-promotion-review",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure.",
+      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-quest-harvest/SKILL.md + skills/aoa-quest-harvest/techniques.yaml + skills/aoa-quest-harvest/references/promotion-outcomes.md",
+        "note": "Extracted from the aoa-quest-harvest skill where one repeated reviewed quest unit receives one bounded promotion verdict without collapsing owner layers."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "quest",
+        "promotion",
+        "reviewed-work",
+        "boundaries"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-06",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0090"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0076"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0090",
+      "name": "nearest-wrong-target-rejection",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
+      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-quest-harvest/SKILL.md + skills/aoa-quest-harvest/references/promotion-outcomes.md + skills/aoa-quest-harvest/checks/review.md",
+        "note": "Extracted from the aoa-quest-harvest skill where the chosen owner target is paired with an explicit rejected nearest-wrong target to keep adjacent layers distinct under promotion pressure."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "boundaries",
+        "promotion",
+        "rejection",
+        "review"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-06",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0089"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0076"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

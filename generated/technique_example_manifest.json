@@ -1094,6 +1094,28 @@
           "body_markdown": "```yaml\napproval_sensitivity:\n  route: repo-wide remediation auto-apply sweep\n  mutation_surface: important\n  authority_posture: operator-approved-only\n  rollback_marker: required\n  health_check: required\n  checkpoint_required: true\n  next_artifact: reviewed skill proposal with checkpoint posture\n```\n\nWhy this example stays bounded:\n\n- it classifies one candidate instead of approving execution\n- it makes rollback and health-check posture visible\n- it keeps the next step smaller than a full automation implementation"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0089",
+      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/quest-unit-promotion-review/examples/minimal-quest-unit-promotion-review.md",
+          "title": "minimal quest-unit-promotion-review",
+          "body_markdown": "```yaml\npromotion_review:\n  repeated_unit: reviewed closeout route\n  promotion_verdict: promote_to_playbook\n  owner_repo: aoa-playbooks\n  next_surface: PLAYBOOK.md\n  defer_allowed: true\n```\n\nWhy this example stays bounded:\n\n- it names one repeated unit instead of a whole session family\n- it emits one promotion verdict without drafting the destination\n- it keeps defer posture available instead of pretending promotion is mandatory"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0090",
+      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md",
+          "title": "minimal nearest-wrong-target-rejection",
+          "body_markdown": "```yaml\ntarget_rejection:\n  chosen_target: promote_to_playbook\n  nearest_wrong_target: promote_to_skill\n  rejection_reason: repeated unit is route-shaped, not one leaf workflow\n```\n\nWhy this example stays bounded:\n\n- it rejects the closest wrong target instead of a distant strawman\n- it uses one boundary reason rather than a long essay\n- it clarifies the chosen verdict without replacing the verdict itself"
+        }
+      ]
     }
   ]
 }

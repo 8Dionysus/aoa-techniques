@@ -287,6 +287,18 @@ See also:
 |---|---|---|---|
 | minimal approval-sensitivity-check | `present` | `techniques/agent-workflows/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) |
 
+### [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal quest-unit-promotion-review | `present` | `techniques/agent-workflows/quest-unit-promotion-review/examples/minimal-quest-unit-promotion-review.md` | [TECHNIQUE.md](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) |
+
+### [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal nearest-wrong-target-rejection | `present` | `techniques/agent-workflows/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md` | [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
