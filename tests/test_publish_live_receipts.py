@@ -3,8 +3,8 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
-
-import pytest
+import tempfile
+import unittest
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -46,29 +46,37 @@ def build_receipt(event_kind: str = "technique_promotion_receipt") -> dict:
     }
 
 
-def test_publish_live_receipts_appends_once_and_skips_duplicates(tmp_path: Path) -> None:
-    module = load_module()
-    input_path = tmp_path / "receipt.json"
-    log_path = tmp_path / "technique-receipts.jsonl"
-    input_path.write_text(json.dumps(build_receipt(), indent=2) + "\n", encoding="utf-8")
+class TechniquePublishLiveReceiptsTests(unittest.TestCase):
+    def test_publish_live_receipts_appends_once_and_skips_duplicates(self) -> None:
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            tmp_path = Path(temp_dir)
+            input_path = tmp_path / "receipt.json"
+            log_path = tmp_path / "technique-receipts.jsonl"
+            input_path.write_text(json.dumps(build_receipt(), indent=2) + "\n", encoding="utf-8")
 
-    receipts = module.load_receipts([input_path])
-    appended, skipped = module.append_new_receipts(log_path=log_path, receipts=receipts)
-    assert appended == 1
-    assert skipped == 0
+            receipts = module.load_receipts([input_path])
+            appended, skipped = module.append_new_receipts(log_path=log_path, receipts=receipts)
+            self.assertEqual(appended, 1)
+            self.assertEqual(skipped, 0)
 
-    appended, skipped = module.append_new_receipts(log_path=log_path, receipts=receipts)
-    assert appended == 0
-    assert skipped == 1
+            appended, skipped = module.append_new_receipts(log_path=log_path, receipts=receipts)
+            self.assertEqual(appended, 0)
+            self.assertEqual(skipped, 1)
+
+    def test_publish_live_receipts_rejects_unsupported_event_kind(self) -> None:
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            tmp_path = Path(temp_dir)
+            input_path = tmp_path / "receipt.json"
+            input_path.write_text(
+                json.dumps(build_receipt(event_kind="memo_writeback_receipt"), indent=2) + "\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaises(module.ReceiptPublishError):
+                module.load_receipts([input_path])
 
 
-def test_publish_live_receipts_rejects_unsupported_event_kind(tmp_path: Path) -> None:
-    module = load_module()
-    input_path = tmp_path / "receipt.json"
-    input_path.write_text(
-        json.dumps(build_receipt(event_kind="memo_writeback_receipt"), indent=2) + "\n",
-        encoding="utf-8",
-    )
-
-    with pytest.raises(module.ReceiptPublishError):
-        module.load_receipts([input_path])
+if __name__ == "__main__":
+    unittest.main()
