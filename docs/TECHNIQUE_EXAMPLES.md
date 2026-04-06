@@ -215,6 +215,60 @@ See also:
 |---|---|---|---|
 | minimal owner-layer-triage | `present` | `techniques/agent-workflows/owner-layer-triage/examples/minimal-owner-layer-triage.md` | [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) |
 
+### [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal harvest-packet-contract | `present` | `techniques/agent-workflows/harvest-packet-contract/examples/minimal-harvest-packet-contract.md` | [TECHNIQUE.md](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) |
+
+### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal decision-fork-cards | `present` | `techniques/agent-workflows/decision-fork-cards/examples/minimal-decision-fork-cards.md` | [TECHNIQUE.md](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) |
+
+### [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal risk-passport-lift | `present` | `techniques/agent-workflows/risk-passport-lift/examples/minimal-risk-passport-lift.md` | [TECHNIQUE.md](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) |
+
+### [AOA-T-0080](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal session-drift-taxonomy | `present` | `techniques/agent-workflows/session-drift-taxonomy/examples/minimal-session-drift-taxonomy.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) |
+
+### [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal diagnosis-from-reviewed-evidence | `present` | `techniques/agent-workflows/diagnosis-from-reviewed-evidence/examples/minimal-diagnosis-from-reviewed-evidence.md` | [TECHNIQUE.md](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) |
+
+### [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal repair-shape-from-diagnosis | `present` | `techniques/agent-workflows/repair-shape-from-diagnosis/examples/minimal-repair-shape-from-diagnosis.md` | [TECHNIQUE.md](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) |
+
+### [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal checkpoint-bound-self-repair | `present` | `techniques/agent-workflows/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md` | [TECHNIQUE.md](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) |
+
+### [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal progression-evidence-lift | `present` | `techniques/agent-workflows/progression-evidence-lift/examples/minimal-progression-evidence-lift.md` | [TECHNIQUE.md](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) |
+
+### [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal multi-axis-quest-overlay | `present` | `techniques/agent-workflows/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md` | [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

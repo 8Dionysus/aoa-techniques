@@ -4088,6 +4088,492 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0077",
+      "name": "harvest-packet-contract",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another.",
+      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-donor-harvest/SKILL.md + skills/aoa-session-donor-harvest/references/harvest-packet-contract.md",
+        "note": "Extracted from the aoa-session-donor-harvest family where a bounded HARVEST_PACKET keeps reviewed session outputs explicit without collapsing later family seams into one catch-all packet."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "packet-contract",
+        "harvest",
+        "reviewed-session",
+        "post-session"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0075"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0076"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0078",
+      "name": "decision-fork-cards",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.",
+      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-route-forks/SKILL.md + skills/aoa-session-route-forks/techniques.yaml",
+        "note": "Extracted from the aoa-session-route-forks skill where several plausible next routes are rendered as explicit branch cards rather than one hidden recommendation."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "forks",
+        "branching",
+        "post-session",
+        "decision-support"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0079"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0077"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0079",
+      "name": "risk-passport-lift",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.",
+      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-route-forks/SKILL.md + skills/aoa-session-route-forks/checks/review.md",
+        "note": "Extracted from the aoa-session-route-forks skill where each branch carries a small route passport with difficulty, risk, control mode, delegate tier, and stop-condition posture."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "risk",
+        "passport",
+        "branching",
+        "control-mode"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0078"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0083"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0080",
+      "name": "session-drift-taxonomy",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape.",
+      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-self-diagnose/SKILL.md + skills/aoa-session-self-diagnose/techniques.yaml",
+        "note": "Extracted from the aoa-session-self-diagnose skill where repeated post-session friction is first classified into bounded drift types before a diagnosis packet names probable causes or repair shapes."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "diagnosis",
+        "taxonomy",
+        "drift",
+        "post-session"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0081"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0076"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0081",
+      "name": "diagnosis-from-reviewed-evidence",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet.",
+      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-self-diagnose/SKILL.md + skills/aoa-session-self-diagnose/techniques.yaml",
+        "note": "Extracted from the aoa-session-self-diagnose skill where reviewed friction evidence becomes a diagnosis packet with symptoms, probable causes, owner hints, and explicit unknowns."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "diagnosis",
+        "reviewed-evidence",
+        "read-only",
+        "post-session"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0080"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0082"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0082",
+      "name": "repair-shape-from-diagnosis",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout.",
+      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-self-repair/SKILL.md + skills/aoa-session-self-repair/techniques.yaml",
+        "note": "Extracted from the aoa-session-self-repair skill where a reviewed diagnosis packet is converted into the smallest honest repair packet instead of one vague self-improvement request."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "repair",
+        "diagnosis",
+        "bounded-change",
+        "post-session"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0081"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0083"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0083",
+      "name": "checkpoint-bound-self-repair",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification.",
+      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-self-repair/SKILL.md + skills/aoa-session-self-repair/references/checkpoint-bridge.md",
+        "note": "Extracted from the aoa-session-self-repair skill where repair packets must remain behind explicit checkpoint posture instead of feeling like silent self-mutation."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "checkpoint",
+        "repair",
+        "rollback",
+        "approval"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0082"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0028"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0084",
+      "name": "progression-evidence-lift",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.",
+      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-progression-lift/SKILL.md + skills/aoa-session-progression-lift/references/progression-axes.md",
+        "note": "Extracted from the aoa-session-progression-lift skill where reviewed session evidence becomes a bounded multi-axis progression delta instead of one sovereign score."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "progression",
+        "evidence",
+        "post-session",
+        "mastery"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0085"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0075"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0085",
+      "name": "multi-axis-quest-overlay",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
+      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-skills",
+        "path": "skills/aoa-session-progression-lift/SKILL.md + skills/aoa-session-donor-harvest/references/rpg-reflection-posture.md",
+        "note": "Extracted from the session-harvest family where quest-, RPG-, and chronicle-shaped reflection is allowed as adjunct reading over reviewed progression evidence without replacing owner truth."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "progression",
+        "quest",
+        "overlay",
+        "reflection"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-05",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0084"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0078"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

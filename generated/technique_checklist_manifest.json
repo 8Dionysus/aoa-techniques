@@ -3377,6 +3377,375 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0077",
+      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/harvest-packet-contract/checks/harvest-packet-contract-checklist.md",
+          "title": "harvest-packet-contract checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the packet starts from reviewed material rather than live session state"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the required packet spine is explicit and small"
+            },
+            {
+              "order": 3,
+              "text": "[ ] each extract record names one bounded reusable unit"
+            },
+            {
+              "order": 4,
+              "text": "[ ] optional family fields stay subordinate rather than becoming hidden verdicts"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the packet does not replace donor extraction, owner placement, diagnosis, repair, progression, or quest seams"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example stays readable as a bounded packet rather than a recap blob"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0078",
+      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/decision-fork-cards/checks/decision-fork-cards-checklist.md",
+          "title": "decision-fork-cards checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the source material is already reviewed"
+            },
+            {
+              "order": 2,
+              "text": "[ ] each card represents a materially different route"
+            },
+            {
+              "order": 3,
+              "text": "[ ] each route names at least one likely gain, cost, and risk"
+            },
+            {
+              "order": 4,
+              "text": "[ ] likely first owner targets are visible"
+            },
+            {
+              "order": 5,
+              "text": "[ ] risky routes include explicit stop conditions"
+            },
+            {
+              "order": 6,
+              "text": "[ ] hold, defer, or reanchor remains available when uncertainty is real"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the output stays advisory rather than becoming hidden routing policy"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0079",
+      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/risk-passport-lift/checks/risk-passport-lift-checklist.md",
+          "title": "risk-passport-lift checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] each passport belongs to one explicit route"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the field set stays small and reviewable"
+            },
+            {
+              "order": 3,
+              "text": "[ ] difficulty, risk, control mode, and stop-condition cues remain visible where needed"
+            },
+            {
+              "order": 4,
+              "text": "[ ] stop conditions exist for meaningfully risky routes"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the passport does not become hidden routing authority"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example stays smaller than the branch card it complements"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0080",
+      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/session-drift-taxonomy/checks/session-drift-taxonomy-checklist.md",
+          "title": "session-drift-taxonomy checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the source evidence is reviewed and bounded"
+            },
+            {
+              "order": 2,
+              "text": "[ ] drift labels stay bounded and reusable"
+            },
+            {
+              "order": 3,
+              "text": "[ ] symptoms, drift types, and probable causes remain distinct"
+            },
+            {
+              "order": 4,
+              "text": "[ ] mixed or uncertain classification remains possible"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the output stays smaller than a full diagnosis packet"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example does not turn taxonomy into blame or repair execution"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0081",
+      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/checks/diagnosis-from-reviewed-evidence-checklist.md",
+          "title": "diagnosis-from-reviewed-evidence checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the source evidence is reviewed and bounded"
+            },
+            {
+              "order": 2,
+              "text": "[ ] symptoms and probable causes remain distinct"
+            },
+            {
+              "order": 3,
+              "text": "[ ] meaningful claims cite evidence"
+            },
+            {
+              "order": 4,
+              "text": "[ ] owner hints remain explicit but non-sovereign"
+            },
+            {
+              "order": 5,
+              "text": "[ ] unknowns remain visible where evidence is incomplete"
+            },
+            {
+              "order": 6,
+              "text": "[ ] no hidden mutation or silent repair happened"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0082",
+      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/repair-shape-from-diagnosis/checks/repair-shape-from-diagnosis-checklist.md",
+          "title": "repair-shape-from-diagnosis checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] a reviewed diagnosis exists"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the chosen repair is the smallest honest shape"
+            },
+            {
+              "order": 3,
+              "text": "[ ] one primary owner target is explicit"
+            },
+            {
+              "order": 4,
+              "text": "[ ] a validation plan is named"
+            },
+            {
+              "order": 5,
+              "text": "[ ] escalation is preserved if the repair widens"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the output stays smaller than a scenario rollout"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0083",
+      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/checkpoint-bound-self-repair/checks/checkpoint-bound-self-repair-checklist.md",
+          "title": "checkpoint-bound-self-repair checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] a bounded repair shape exists first"
+            },
+            {
+              "order": 2,
+              "text": "[ ] checkpoint fields are explicit"
+            },
+            {
+              "order": 3,
+              "text": "[ ] rollback and health-check posture are visible"
+            },
+            {
+              "order": 4,
+              "text": "[ ] iteration limits remain bounded"
+            },
+            {
+              "order": 5,
+              "text": "[ ] improvement-log posture is explicit"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the repair does not feel like silent self-mutation"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0084",
+      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/progression-evidence-lift/checks/progression-evidence-lift-checklist.md",
+          "title": "progression-evidence-lift checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] meaningful axis claims cite reviewed evidence"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the output stays multi-axis rather than one-score"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the verdict matches the evidence"
+            },
+            {
+              "order": 4,
+              "text": "[ ] zero or negative movement remains possible"
+            },
+            {
+              "order": 5,
+              "text": "[ ] unlock hints stay small and reviewable"
+            },
+            {
+              "order": 6,
+              "text": "[ ] progression does not become routing or policy authority"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0085",
+      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md",
+          "title": "multi-axis-quest-overlay checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the overlay rests on reviewed evidence"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the underlying progression or route-reading base remains explicit"
+            },
+            {
+              "order": 3,
+              "text": "[ ] flavor remains adjunct rather than sovereign"
+            },
+            {
+              "order": 4,
+              "text": "[ ] no rank, rights, or routing authority is granted through narrative language"
+            },
+            {
+              "order": 5,
+              "text": "[ ] narrative cues stay small and reviewable"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
