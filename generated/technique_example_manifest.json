@@ -962,6 +962,105 @@
           "body_markdown": "## Candidate unit\n\n```yaml\ncandidate_unit:\n  unit_name: explicit post-session donor harvest workflow\n  reuse_kind: mechanic\n  evidence_anchors:\n    - \"the reviewed session repeatedly performs one bounded post-session operator workflow\"\n```\n\n## Placement verdict\n\n```yaml\nowner_layer_verdict:\n  primary_owner_shape: bounded_executable_workflow\n  next_artifact: SKILL.md\n  rejected_nearest_wrong_target:\n    owner_shape: reusable_practice_canon\n    reason: \"the value here depends on a bounded operator workflow rather than on one abstract rule alone\"\n```\n\nWhy this example stays bounded:\n\n- it starts from one already isolated candidate unit\n- it chooses one primary owner verdict rather than several partial owners\n- it rejects the nearest wrong target explicitly instead of leaving the boundary implicit"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0077",
+      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/harvest-packet-contract/examples/minimal-harvest-packet-contract.md",
+          "title": "minimal harvest-packet-contract",
+          "body_markdown": "```yaml\nharvest_packet:\n  session_ref: reviewed-session-2026-04-05\n  reviewed_artifacts:\n    - compaction-note-2026-04-05.md\n  extracts:\n    - title: explicit post-session donor harvest workflow\n      kind: mechanic\n      summary: keep donor extraction visible before later placement or promotion\n      evidence_refs:\n        - \"the reviewed note repeatedly turns raw recap into bounded reusable extracts\"\n      repeat_signal: repeated in the reviewed session artifact\n      owner_hint: aoa-skills\n      chosen_next_surface: SKILL.md\n      nearest_wrong_target: aoa-routing\n  fork_cards:\n    - \"optional later branch analysis\"\n  progression:\n    - \"optional later progression overlay\"\n```\n\nWhy this example stays bounded:\n\n- it keeps the required packet spine small\n- it records one bounded extract instead of one long recap\n- it treats later family fields as optional pointers rather than replacements for sibling seams"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0078",
+      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/decision-fork-cards/examples/minimal-decision-fork-cards.md",
+          "title": "minimal decision-fork-cards",
+          "body_markdown": "```yaml\nfork_cards:\n  - route: strengthen the donor nucleus first\n    likely_gain: clearer packet contract before any wider rollout\n    likely_cost: one extra focused hardening pass\n    likely_risk: delayed delivery of downstream siblings\n    first_owner_target: aoa-skills\n    stop_condition: \"stop if the nucleus changes no longer fit one bounded skill family\"\n  - route: extract the diagnosis seam next\n    likely_gain: repeated drift becomes explicit before repair\n    likely_cost: one more technique and skill pinning pass\n    likely_risk: diagnosis may outrun real usage proof\n    first_owner_target: aoa-techniques\n    stop_condition: \"stop if diagnosis starts smuggling repair work\"\n  - route: hold\n    likely_gain: avoids forced branching when evidence is still mixed\n    likely_cost: slower visible momentum\n    likely_risk: uncertainty may linger\n    first_owner_target: hold\n    stop_condition: \"reopen once reviewed evidence sharpens\"\n```\n\nWhy this example stays bounded:\n\n- each card represents a materially distinct next route\n- costs, risks, and stop conditions stay visible\n- the card set preserves choice instead of hiding one default route as policy"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0079",
+      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/risk-passport-lift/examples/minimal-risk-passport-lift.md",
+          "title": "minimal risk-passport-lift",
+          "body_markdown": "```yaml\nroute_passport:\n  route: extract the diagnosis seam next\n  difficulty: medium\n  risk: bounded-but-real\n  control_mode: explicit-review\n  delegate_tier: focused\n  stop_condition: \"stop if diagnosis starts performing repair work\"\n```\n\nWhy this example stays bounded:\n\n- it summarizes one route instead of replacing the branch card\n- it keeps posture descriptive rather than sovereign\n- it makes stop-condition posture visible without inflating into a full runbook"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0080",
+      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/session-drift-taxonomy/examples/minimal-session-drift-taxonomy.md",
+          "title": "minimal session-drift-taxonomy",
+          "body_markdown": "```yaml\nsession_drift_types:\n  - type: boundary_drift\n    evidence: \"technique language and skill language kept collapsing together\"\n  - type: proof_debt\n    evidence: \"review claims were repeated without stable proof anchors\"\n  - type: route_collapse\n    evidence: \"several possible follow-ups kept being compressed into one vague next step\"\n```\n\nWhy this example stays bounded:\n\n- it classifies drift types before claiming one probable cause\n- it keeps the output smaller than a full diagnosis packet\n- it leaves owner hints and repair shapes for later seams"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0081",
+      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/examples/minimal-diagnosis-from-reviewed-evidence.md",
+          "title": "minimal diagnosis-from-reviewed-evidence",
+          "body_markdown": "```yaml\ndiagnosis_packet:\n  symptoms:\n    - \"technique and skill language repeatedly collapsed together\"\n    - \"review claims were made without stable proof anchors\"\n  probable_causes:\n    - \"owner-layer boundaries are being treated as convenience rather than law\"\n    - \"review evidence is being compressed too early during recap\"\n  likely_owner_hints:\n    - aoa-skills\n    - aoa-evals\n  suggested_repair_shape: bounded repair packet for owner-law and proof-law separation\n  unknowns:\n    - \"unclear whether the root cause is one missing template or broader review habit drift\"\n```\n\nWhy this example stays bounded:\n\n- it keeps symptoms, causes, and unknowns separate\n- it names owner hints without treating them as final verdicts\n- it suggests a repair shape without performing the repair"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0082",
+      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/repair-shape-from-diagnosis/examples/minimal-repair-shape-from-diagnosis.md",
+          "title": "minimal repair-shape-from-diagnosis",
+          "body_markdown": "```yaml\nrepair_shape:\n  diagnosis_ref: reviewed-diagnosis-2026-04-05.md\n  primary_owner_target: aoa-skills\n  target_artifact: SKILL.md delta\n  validation_plan:\n    - rerun release check\n    - verify the route no longer collapses diagnosis into repair\n  escalation_cue: \"escalate to a playbook note if the fix needs several coordinated repo changes\"\n```\n\nWhy this example stays bounded:\n\n- it starts from diagnosis instead of aspiration\n- it chooses one owner-facing artifact\n- it keeps escalation explicit if the repair would widen"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0083",
+      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md",
+          "title": "minimal checkpoint-bound-self-repair",
+          "body_markdown": "```yaml\ncheckpoint_bound_repair:\n  repair_shape_ref: bounded-repair-shape-2026-04-05.md\n  policy_check: constitution-fit-confirmed\n  approval_gate: explicit-review-required\n  rollback_marker: pre-repair-session-harvest-family\n  health_check: release-check\n  iteration_limit: 1\n  improvement_log_stub: docs/improvement-log/session-harvest-family.md\n```\n\nWhy this example stays bounded:\n\n- it wraps an existing repair shape instead of inventing one\n- it makes rollback and health-check posture explicit\n- it prevents silent retries from masquerading as safe self-repair"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0084",
+      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/progression-evidence-lift/examples/minimal-progression-evidence-lift.md",
+          "title": "minimal progression-evidence-lift",
+          "body_markdown": "```yaml\nprogression_delta:\n  movement:\n    boundary_integrity: advance\n    review_sharpness: advance\n    proof_discipline: hold\n    deep_readiness: reanchor\n  verdict: advance-with-caution\n  unlock_hints:\n    - \"safe to widen one session-harvest seam next\"\n```\n\nWhy this example stays bounded:\n\n- it stays multi-axis instead of collapsing into one score\n- it allows mixed movement across different axes\n- it keeps unlock hints small and descriptive"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0085",
+      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md",
+          "title": "minimal multi-axis-quest-overlay",
+          "body_markdown": "```yaml\nquest_overlay:\n  base_progression_ref: progression-delta-2026-04-05.md\n  quest_residue: \"the route now supports one deeper harvest-family extraction quest\"\n  chronicle_stub: \"boundary discipline improved, but proof discipline still needs reanchor\"\n  unlock_hint: \"safe to widen one seam, not the whole family\"\n  boundary_note: owner truth and routing authority remain outside this overlay\n```\n\nWhy this example stays bounded:\n\n- it rests on an explicit underlying progression delta\n- it keeps flavor small and descriptive\n- it says plainly that authority remains elsewhere"
+        }
+      ]
     }
   ]
 }

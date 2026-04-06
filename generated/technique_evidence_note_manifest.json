@@ -38604,6 +38604,3297 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0077",
+      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/harvest-packet-contract/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0077"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "harvest-packet-contract"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around one reviewed-session packet spine instead of widening into memory or routing doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when the missing object is a bounded post-session nucleus packet rather than donor extraction or a later verdict seam"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when several later family seams should be able to read one explicit packet without collapsing into one oversized recap"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default packet contract for every post-session corpus"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable packet contract while stripping local repo detail and skill-specific wrapper behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between packet structure and later family verdicts should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0077` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded packet spine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/harvest-packet-contract/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0077"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "harvest-packet-contract"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-donor-harvest/SKILL.md`\n- `skills/aoa-session-donor-harvest/references/harvest-packet-contract.md`\n- `skills/aoa-session-donor-harvest/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-donor-harvest/session_donor_harvest_reviewed_multi_unit_session.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor-harvest skill now explicitly names `HARVEST_PACKET` as the nucleus output rather than a loose donor summary"
+                },
+                {
+                  "order": 2,
+                  "text": "the packet reference narrows the required fields to `session_ref`, `reviewed_artifacts`, and `extracts` instead of allowing an unbounded recap schema"
+                },
+                {
+                  "order": 3,
+                  "text": "the same reference keeps optional family fields such as forks, diagnosis, repair, progression, and quest hooks clearly subordinate"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed multi-unit evaluation snapshot expects one packet that still separates several reusable units cleanly before any later follow-on seam closes"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded post-session packet contract over reviewed extracts"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay narrower than donor extraction and narrower than any later family verdict while still preserving a useful nucleus packet"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/harvest-packet-contract/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0077"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "harvest-packet-contract"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local packet reference became one bounded public packet contract"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA repo naming and local packet storage detail moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the packet was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the packet still starts only after review"
+                },
+                {
+                  "order": 2,
+                  "text": "the required packet spine still stays small"
+                },
+                {
+                  "order": 3,
+                  "text": "extract records still stay bounded and evidence-backed"
+                },
+                {
+                  "order": 4,
+                  "text": "optional family fields still remain subordinate rather than sovereign"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "public wording can drift into generic recap language if the extract contract is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the packet can widen into memory or routing doctrine if optional fields start reading like authority"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate the need to keep sibling seams explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is a bounded post-session workflow contract rather than a docs taxonomy or memory surface"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between packet shape and later family verdicts"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded reviewed-session packet contract"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0078",
+      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/decision-fork-cards/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0078"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-fork-cards"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around explicit branch cards rather than hidden policy or scenario doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when several plausible next routes remain after review and the missing object is explicit choice architecture rather than one preferred answer"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when visible gains, costs, risks, and stop conditions matter more than a full playbook or routing system"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default branching technique for every planning or scenario surface"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the bounded branch-card seam while stripping local repo tables and reducing quest-board framing to adaptation notes"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between branch cards, route passports, and larger scenario design should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0078` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same explicit branch-card boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/decision-fork-cards/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0078"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-fork-cards"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-route-forks/SKILL.md`\n- `skills/aoa-session-route-forks/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-route-forks/session_route_forks_reviewed_branch_choice.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the route-forks skill explicitly starts only after review and requires several plausible next moves instead of one obvious bounded route"
+                },
+                {
+                  "order": 2,
+                  "text": "the skill procedure separates materially different branches, names likely owner targets, and requires gains, costs, risks, and stop conditions"
+                },
+                {
+                  "order": 3,
+                  "text": "the review checklist rejects hidden recommendation collapse and keeps `aoa-routing` and `aoa-kag` out of first authoring"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed branch-choice evaluation snapshot expects explicit branch cards with owner targets and visible stop conditions"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded branch-card workflow over several plausible post-session routes"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay smaller than playbook design and smaller than routing policy while still keeping next-route choice legible"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/decision-fork-cards/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0078"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-fork-cards"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local route-forks behavior became one bounded branch-card technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA repo naming and quest-board framing moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "route passports stayed separate as the sibling `risk-passport-lift` technique instead of remaining fused into one broad bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the branch cards still start only after review"
+                },
+                {
+                  "order": 2,
+                  "text": "each card still has to be materially distinct"
+                },
+                {
+                  "order": 3,
+                  "text": "gains, costs, risks, and stop conditions still stay visible"
+                },
+                {
+                  "order": 4,
+                  "text": "the output still stays advisory instead of authoritative"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "public wording can drift into generic brainstorming if material branch difference is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into routing policy if examples start hiding a preferred path as authority"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate the need for hold or defer posture"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session workflow for explicit branch analysis"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between branch cards and smaller route-passport metadata"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers or repo-local routing tables"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded branch-card workflow over reviewed next routes"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0079",
+      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/risk-passport-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0079"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "risk-passport-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around one small route passport instead of widening into hidden policy or risk scoring doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when explicit branches already exist and the missing object is a small per-route posture summary"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when route comparison needs difficulty, risk, control-mode, and stop-condition cues without a full routing system"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default risk-posture technique for every branching or planning surface"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the small route-passport seam while stripping local field conventions and routing wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between branch-card meaning, route passports, and repair checkpoints should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0079` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same small per-route posture boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/risk-passport-lift/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0079"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "risk-passport-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-route-forks/SKILL.md`\n- `skills/aoa-session-route-forks/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-route-forks/session_route_forks_reviewed_branch_choice.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the route-forks skill explicitly attaches a route passport with difficulty, risk, control mode, and delegate tier instead of hiding posture in free-form prose"
+                },
+                {
+                  "order": 2,
+                  "text": "the skill and review checklist both require visible costs, risks, and stop conditions for risky branches"
+                },
+                {
+                  "order": 3,
+                  "text": "the reviewed branch-choice evaluation snapshot expects at least one cost or risk per route plus explicit stop-condition posture"
+                },
+                {
+                  "order": 4,
+                  "text": "the skill keeps route passports smaller than branch analysis by preserving branch cards as the primary object"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one small per-route posture summary that complements branch cards"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded to route-passport metadata without widening into a planner, risk engine, or approval system"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/risk-passport-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0079"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "risk-passport-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the route-passport fields were split out of the branch-card workflow into one smaller posture technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA field names and local delegate-tier vocabulary moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one passport still belongs to one explicit route"
+                },
+                {
+                  "order": 2,
+                  "text": "the field set still stays small"
+                },
+                {
+                  "order": 3,
+                  "text": "risk posture still remains descriptive rather than sovereign"
+                },
+                {
+                  "order": 4,
+                  "text": "stop-condition posture still remains visible"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into abstract risk prose if the per-route passport seam is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into routing policy if control mode or delegate tier is treated as authority"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate the need to keep the passport smaller than the route card"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded workflow-side posture summary rather than a docs taxonomy or approval system"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between branch-card meaning and smaller posture metadata"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local routing wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded per-route posture technique"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0080",
+      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/session-drift-taxonomy/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0080"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-drift-taxonomy"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around drift classification rather than broad diagnosis or blame doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when reviewed friction needs a bounded vocabulary before probable causes or repairs are named"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when repeated post-session contradiction, proof blur, or route collapse should be classified without overclaiming a full diagnosis"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default taxonomy technique for every review or incident corpus"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable drift-taxonomy seam while stripping local blame conventions and repo-specific wording"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between taxonomy, full diagnosis, and repair planning should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0080` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded drift-taxonomy boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/session-drift-taxonomy/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0080"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-drift-taxonomy"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-self-diagnose/SKILL.md`\n- `skills/aoa-session-self-diagnose/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-self-diagnose/session_self_diagnose_reviewed_drift_pattern.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the diagnosis skill explicitly classifies drift types such as boundary drift, proof debt, role leakage, memory contamination, route collapse, compaction damage, and repeated blocker patterns"
+                },
+                {
+                  "order": 2,
+                  "text": "the skill separates taxonomy from probable cause by asking the diagnosis pass to preserve unknowns and not overclaim thin evidence"
+                },
+                {
+                  "order": 3,
+                  "text": "the review checklist requires symptoms and causes to remain separate and forbids lazy blame of one convenient owner layer"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed drift-pattern evaluation snapshot expects a diagnosis path only after repeated friction signals survive the reviewed session"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded taxonomy layer over reviewed post-session friction"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay smaller than full diagnosis while still naming a portable drift vocabulary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/session-drift-taxonomy/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0080"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-drift-taxonomy"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the diagnosis skill's drift-label layer became one smaller taxonomy technique"
+                },
+                {
+                  "order": 2,
+                  "text": "local repo blame and severity language moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "taxonomy still starts only after review"
+                },
+                {
+                  "order": 2,
+                  "text": "bounded drift labels still stay distinct from probable cause"
+                },
+                {
+                  "order": 3,
+                  "text": "uncertainty still remains available"
+                },
+                {
+                  "order": 4,
+                  "text": "the taxonomy still stays smaller than the full diagnosis pass"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "public wording can drift into generic friction vibes if the taxonomy seam is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into diagnosis doctrine if owner hints or repair shapes leak into the core"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate how weak evidence should remain uncertain"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded diagnosis-step workflow rather than a docs taxonomy or routing system"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between drift labels and later diagnosis verdicts"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded reviewed-session drift-classification technique"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0081",
+      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0081"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "diagnosis-from-reviewed-evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around read-only diagnosis rather than repair or blame doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when reviewed friction needs a diagnosis packet before any repair work begins"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when symptoms, probable causes, owner hints, and unknowns all need to stay visible and distinct"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default diagnosis technique for every review or incident surface"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable diagnosis seam while stripping local remediation details and repo-specific wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between taxonomy, diagnosis, and repair planning should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0081` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same read-only diagnosis boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0081"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "diagnosis-from-reviewed-evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-self-diagnose/SKILL.md`\n- `skills/aoa-session-self-diagnose/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-self-diagnose/session_self_diagnose_reviewed_drift_pattern.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the diagnosis skill explicitly gathers symptoms and evidence refs before naming probable causes"
+                },
+                {
+                  "order": 2,
+                  "text": "the skill requires owner hints and repair-shape suggestions while still forbidding hidden mutation"
+                },
+                {
+                  "order": 3,
+                  "text": "the review checklist keeps symptoms and causes separate, preserves unknowns, and rejects lazy blame of one convenient owner"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed drift-pattern evaluation snapshot expects a diagnosis packet rather than immediate repair or promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded read-only diagnosis pass over reviewed evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay smaller than repair planning while still producing a useful diagnosis packet"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0081"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "diagnosis-from-reviewed-evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local diagnosis packet became one public read-only diagnosis technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA repo names and local remediation habits moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "drift taxonomy stayed separate as the sibling `session-drift-taxonomy` technique instead of remaining fused into one broader bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "diagnosis still starts only after review"
+                },
+                {
+                  "order": 2,
+                  "text": "symptoms and probable causes still remain distinct"
+                },
+                {
+                  "order": 3,
+                  "text": "owner hints still remain non-sovereign"
+                },
+                {
+                  "order": 4,
+                  "text": "mutation still stays out of the diagnosis pass"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic retrospectives if evidence-backed diagnosis is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into repair doctrine if suggested repair shapes start replacing the later repair seam"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate the need for explicit unknowns"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session workflow for diagnosis"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between diagnosis, taxonomy, and repair planning"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded diagnosis-from-reviewed-evidence technique"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0082",
+      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/repair-shape-from-diagnosis/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0082"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "repair-shape-from-diagnosis"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around repair shaping rather than checkpoint or rollout doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when diagnosis already exists and the missing object is the smallest honest repair artifact"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when a repair should stay smaller than a playbook but still needs validation and escalation cues"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default repair-shaping technique for every diagnosis-driven workflow"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable repair-shaping seam while stripping local rollout and repo detail"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between diagnosis, repair shape, and checkpoint posture should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0082` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded repair-shaping boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/repair-shape-from-diagnosis/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0082"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "repair-shape-from-diagnosis"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-self-repair/SKILL.md`\n- `skills/aoa-session-self-repair/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-self-repair/session_self_repair_reviewed_diagnosis_packet.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the self-repair skill explicitly requires a reviewed diagnosis before any repair packet is a fit"
+                },
+                {
+                  "order": 2,
+                  "text": "the skill chooses the smallest honest repair shape, names the primary owner repo, and records validation plus stop conditions"
+                },
+                {
+                  "order": 3,
+                  "text": "the review checklist rejects playbook-scale rollout collapse and keeps escalation explicit if the repair widens"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed diagnosis-packet evaluation snapshot expects a bounded repair packet rather than another diagnosis pass or a vague self-improvement ask"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded repair-shaping pass that starts after diagnosis"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay smaller than checkpoint doctrine and smaller than rollout design while still producing a useful repair shape"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/repair-shape-from-diagnosis/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0082"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "repair-shape-from-diagnosis"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local repair packet became one bounded repair-shaping technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA repo names and local rollout mechanics moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "checkpoint posture stayed separate as the sibling `checkpoint-bound-self-repair` technique instead of remaining fused into one broad bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "repair shaping still starts only after diagnosis"
+                },
+                {
+                  "order": 2,
+                  "text": "the chosen repair still stays bounded"
+                },
+                {
+                  "order": 3,
+                  "text": "owner target and validation still remain explicit"
+                },
+                {
+                  "order": 4,
+                  "text": "escalation still remains available when widening is honest"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "public wording can drift into generic improvement advice if bounded repair shape is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into checkpoint doctrine if approval or rollback posture replaces the core seam"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate when escalation should happen"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session workflow for repair shaping"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between diagnosis, repair shape, and checkpoint posture"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded repair-shape-from-diagnosis technique"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0083",
+      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/checkpoint-bound-self-repair/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0083"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "checkpoint-bound-self-repair"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around self-repair checkpoint posture rather than general approval doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when bounded self-repair needs explicit checkpoint posture around approval, rollback, health checks, and retries"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when self-repair would otherwise feel automatic or unreviewable"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default checkpoint technique for every mutation workflow"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable self-repair checkpoint seam while stripping local approval commands and repo-specific wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between repair shaping, self-repair checkpoints, and general mutation confirmation should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0083` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded self-repair checkpoint boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/checkpoint-bound-self-repair/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0083"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "checkpoint-bound-self-repair"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-self-repair/SKILL.md`\n- `skills/aoa-session-self-repair/references/checkpoint-bridge.md`\n- `skills/aoa-session-self-repair/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-self-repair/session_self_repair_reviewed_diagnosis_packet.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the self-repair skill explicitly records checkpoint posture with policy fit, approval, rollback marker, health check, iteration limit, and improvement log"
+                },
+                {
+                  "order": 2,
+                  "text": "the checkpoint bridge reference makes the non-silent self-repair rule explicit and forbids hidden doctrine edits or retry loops disguised as progress"
+                },
+                {
+                  "order": 3,
+                  "text": "the review checklist requires checkpoint posture and rejects approval bypass"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed diagnosis-packet evaluation snapshot expects rollback and health-check posture as part of the repair output"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one checkpoint stack around bounded self-repair"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay narrower than general approval doctrine while still making self-repair reviewable"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/checkpoint-bound-self-repair/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0083"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "checkpoint-bound-self-repair"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local checkpoint bridge became one bounded self-repair checkpoint technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA owner-layer names and local approval commands moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "repair shaping stayed separate as the sibling `repair-shape-from-diagnosis` technique instead of remaining fused into one broad bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "self-repair still stays behind explicit checkpoint posture"
+                },
+                {
+                  "order": 2,
+                  "text": "rollback and health-check cues still remain visible"
+                },
+                {
+                  "order": 3,
+                  "text": "iteration limits still remain bounded"
+                },
+                {
+                  "order": 4,
+                  "text": "improvement logging still stays explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic caution prose if the self-repair checkpoint stack is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into general approval governance if it stops centering on bounded self-repair"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate when escalation should replace retries"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded workflow-side checkpoint stack rather than a general policy system"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between repair shape and checkpoint posture"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded self-repair checkpoint technique"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0084",
+      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/progression-evidence-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0084"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "progression-evidence-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around multi-axis progression evidence rather than ranking or routing doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when reviewed evidence needs one bounded progression delta rather than another owner verdict or one global score"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when multi-axis movement and mixed verdicts matter more than celebration or policy"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default progression technique for every reflective workflow"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable progression-evidence seam while stripping local status ladders and role-specific wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between progression evidence and quest-flavor overlays should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0084` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same multi-axis progression boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/progression-evidence-lift/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0084"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "progression-evidence-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-progression-lift/SKILL.md`\n- `skills/aoa-session-progression-lift/references/progression-axes.md`\n- `skills/aoa-session-progression-lift/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-progression-lift/session_progression_lift_reviewed_multi_axis_evidence.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the progression skill explicitly starts from reviewed evidence and rejects universal score authority"
+                },
+                {
+                  "order": 2,
+                  "text": "the skill names a bounded axis set and preserves verdicts such as advance, hold, reanchor, or downgrade"
+                },
+                {
+                  "order": 3,
+                  "text": "the review checklist forbids progression from turning into hidden routing or policy authority"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed multi-axis evaluation snapshot expects qualitative evidence-backed movement rather than one global score"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded progression-evidence lift over reviewed session artifacts"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay smaller than role law or ranking doctrine while still making growth legible"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/progression-evidence-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0084"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "progression-evidence-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the skill-local progression delta became one bounded public progression-evidence technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA axis naming and role-flavor detail moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "optional quest- and RPG-shaped reflection stayed separate as the sibling `multi-axis-quest-overlay` technique instead of remaining fused into one broad bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "progression still starts only from reviewed evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "movement still stays multi-axis"
+                },
+                {
+                  "order": 3,
+                  "text": "verdicts still remain descriptive rather than sovereign"
+                },
+                {
+                  "order": 4,
+                  "text": "universal scores still remain out of scope"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "public wording can drift into generic motivation language if evidence-backed movement is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into ranking doctrine if verdicts or unlock hints start granting authority"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate the importance of negative or zero movement"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session progression workflow rather than role law or routing policy"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between progression deltas and optional quest-flavor overlays"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded progression-evidence-lift technique"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0085",
+      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/multi-axis-quest-overlay/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0085"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "multi-axis-quest-overlay"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around adjunct reflective overlay rather than lore or authority doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when reviewed evidence already has a bounded base object and the missing piece is reflective route legibility"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when quest or RPG language can help without replacing owner truth, proof posture, or routing authority"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default reflective overlay technique for every narrative or progression surface"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable adjunct-overlay seam while stripping local lore conventions and role-specific wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between progression evidence, route legibility, and reflective flavor should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0085` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same adjunct quest-overlay boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/multi-axis-quest-overlay/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0085"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "multi-axis-quest-overlay"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-progression-lift/SKILL.md`\n- `skills/aoa-session-donor-harvest/references/rpg-reflection-posture.md`\n- `skills/aoa-session-progression-lift/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-progression-lift/session_progression_lift_reviewed_multi_axis_evidence.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the progression skill allows rank reflection notes, quest hooks, and chronicle stubs only as adjunct outputs over reviewed evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "the family-wide RPG reflection posture explicitly says quest language may improve legibility but must not replace owner truth or proof surfaces"
+                },
+                {
+                  "order": 3,
+                  "text": "the progression review checklist rejects sovereign quest language, hidden policy authority, and status jumps without evidence"
+                },
+                {
+                  "order": 4,
+                  "text": "the reviewed progression evaluation snapshot expects a bounded progression delta first, not free-floating narrative flavor"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one bounded reflective overlay layered over an evidence-backed base"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay adjunct and narrative without widening into role law, routing policy, or memory authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/multi-axis-quest-overlay/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0085"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "multi-axis-quest-overlay"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "family-local RPG reflection posture became one bounded adjunct overlay technique"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA lore and local campaign vocabulary moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the underlying progression evidence remained separate as the sibling `progression-evidence-lift` technique instead of staying fused into one broad bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the overlay still rests on reviewed evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "flavor still remains adjunct rather than sovereign"
+                },
+                {
+                  "order": 3,
+                  "text": "owner and proof truth still remain elsewhere"
+                },
+                {
+                  "order": 4,
+                  "text": "narrative cues still stay small"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "public wording can drift into lore or metaphor if the underlying evidence-backed base is not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into authority theater if flavor starts granting rights or rank"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate how easily chronicle language can be mistaken for memory truth"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded reflective workflow-side overlay rather than a role doctrine or memory system"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between evidence-backed progression and adjunct narrative flavor"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded adjunct quest-overlay technique"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

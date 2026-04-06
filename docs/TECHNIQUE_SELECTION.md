@@ -121,6 +121,15 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md): none
 - [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md): `complements` [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md), [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
 - [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md): `complements` [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md)
+- [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md): `complements` [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
+- [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md): `complements` [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md), [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md)
+- [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md): `complements` [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md), [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md)
+- [AOA-T-0080](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md): `complements` [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
+- [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md): `complements` [AOA-T-0080](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md), [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md)
+- [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md): `complements` [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md), [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md)
+- [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md): `complements` [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md), [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+- [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md): `complements` [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md), [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md)
+- [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md): `complements` [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md), [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -160,6 +169,15 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract. |
 | [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. |
 | [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse. |
+| [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another. |
+| [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation. |
+| [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy. |
+| [AOA-T-0080](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape. |
+| [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet. |
+| [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout. |
+| [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. |
+| [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. |
+| [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
 
 ### `docs`
 
@@ -222,7 +240,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 76/76 techniques.
+- `export_ready` is currently `true` for 85/85 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

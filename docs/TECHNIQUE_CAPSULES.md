@@ -431,6 +431,123 @@ See also:
 - Validate by: the candidate unit is bounded and singular; one primary owner layer is named explicitly; the nearest wrong target is...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
 
+### [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
+
+- Summary: Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another.
+- Intent: Keep one bounded HARVEST_PACKET contract over a reviewed session artifact so later family seams...
+- Use when: a reviewed session already produced reusable extracts and needs one explicit packet shape or later family seams such...
+- Avoid when: the session is still live or not yet reviewed or the real task is donor extraction, owner placement...
+- Needs: one reviewed session reference; one or more reviewed source artifacts; one bounded extract record for each kept...
+- Produces: one HARVEST_PACKET with required packet fields; one normalized extract shape for each kept reusable unit; optional bounded...
+- Core contract: the packet starts after review; the required spine stays small and explicit.
+- Main risk: the packet becomes a recap blob instead of a bounded extract container.
+- Validate by: the packet starts from reviewed material; the required fields are explicit and present; each extract record remains bounded and...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md)
+
+### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
+
+- Summary: Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.
+- Intent: Turn one reviewed session or harvest packet into explicit decision fork cards so materially...
+- Use when: the session is already reviewed and more than one honest next route remains or different branches have meaningfully...
+- Avoid when: there is only one obvious next bounded move or donor extraction or packet shaping still has not happened.
+- Needs: one reviewed session artifact or bounded harvest packet; one set of candidate next routes; known blockers, dependencies...
+- Produces: one fork card per materially different route; one likely gain, cost, and risk for each route; one...
+- Core contract: fork cards describe choices; they do not decide authority; each card must represent one materially distinct route.
+- Main risk: the cards describe variants of the same route instead of real forks.
+- Validate by: the source material is reviewed; each card represents a materially distinct route; each route names gains, costs, risks, and...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md)
+
+### [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
+
+- Summary: Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.
+- Intent: Attach one small risk passport to each explicit next route so route choice keeps...
+- Use when: explicit next routes already exist and need a smaller per-route posture summary or reviewers need to compare difficulty...
+- Avoid when: there is only one route and no meaningful comparison surface or the real need is donor extraction, diagnosis...
+- Needs: one explicit next route; route-level gain and cost summary; known risk signals and blockers.
+- Produces: one small route passport; one difficulty cue; one risk cue.
+- Core contract: one passport belongs to one route; the passport stays smaller than the branch card it complements.
+- Main risk: the passport becomes a hidden scorecard instead of a small posture summary.
+- Validate by: each passport belongs to one explicit route; the field set stays small and reviewable; difficulty, risk, control mode, delegate...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md)
+
+### [AOA-T-0080](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
+
+- Summary: Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape.
+- Intent: Classify repeated post-session friction into bounded drift types so a later diagnosis pass can...
+- Use when: the session is reviewed and several friction signals survived it or the next honest move is diagnosis rather...
+- Avoid when: the session is still live or unreviewed or the issue is already fully diagnosed.
+- Needs: one reviewed session artifact or harvest packet; observed frictions, failures, contradictions, or proof gaps; any repeated blockers...
+- Produces: one bounded drift-type list; one description of what each drift type means in the current case; one...
+- Core contract: taxonomy is read-only; drift type is not the same thing as probable cause.
+- Main risk: vague labels replace real classification.
+- Validate by: the source evidence is reviewed; drift labels stay bounded and reusable; symptom, drift type, and probable cause remain distinct.
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md)
+
+### [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
+
+- Summary: Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet.
+- Intent: Turn reviewed friction evidence into a bounded diagnosis packet so symptoms, probable causes, owner...
+- Use when: the session is reviewed and repeated friction or contradiction survived it or the next honest move is diagnosis...
+- Avoid when: the session is still live or unreviewed or diagnosis already exists and the next honest move is repair.
+- Needs: one reviewed session artifact or harvest packet; explicit symptoms, frictions, contradictions, or failures; any drift taxonomy already...
+- Produces: one DIAGNOSIS_PACKET; one symptom list; one probable-cause layer with explicit uncertainty where needed.
+- Core contract: diagnosis starts from reviewed evidence; symptom and probable-cause layers stay distinct.
+- Main risk: symptoms and causes collapse into one vague narrative.
+- Validate by: the source evidence is reviewed and bounded; symptoms and probable causes stay distinct; likely owner hints remain explicit but...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md)
+
+### [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
+
+- Summary: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout.
+- Intent: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next...
+- Use when: a reviewed diagnosis already exists or the next honest move is a bounded repair packet rather than another...
+- Avoid when: diagnosis does not exist yet or the repair is large enough to be a playbook or broader rollout.
+- Needs: one reviewed diagnosis packet; likely owner targets or owner-layer hints; known validation surfaces.
+- Produces: one smallest honest repair shape; one primary owner target; one target artifact class or repair quest shape.
+- Core contract: diagnosis is a prerequisite; the chosen repair shape stays smaller than a scenario rollout.
+- Main risk: the chosen repair shape is larger than the diagnosis justifies.
+- Validate by: a reviewed diagnosis exists; the chosen repair shape is the smallest honest shape; one primary owner target is explicit.
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md)
+
+### [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
+
+- Summary: Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification.
+- Intent: Keep self-repair behind explicit checkpoint posture so bounded repair stays reviewable and reversible instead...
+- Use when: a bounded repair shape already exists or the repair may touch important system surfaces.
+- Avoid when: no reviewed diagnosis or repair shape exists yet or the work is a small non-sensitive edit that does...
+- Needs: one bounded repair shape; relevant policy or constitution checks; approval posture.
+- Produces: one checkpoint-bound repair packet; one explicit approval or confirmation requirement; one rollback marker.
+- Core contract: self-repair is not free self-modification; important mutations require checkpoint posture.
+- Main risk: checkpoint posture is partial and one critical field is missing.
+- Validate by: a bounded repair shape exists first; checkpoint fields are all explicit; rollback and health-check posture are present.
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md)
+
+### [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
+
+- Summary: Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.
+- Intent: Lift reviewed session evidence into a bounded multi-axis progression delta so growth stays legible...
+- Use when: a reviewed session produced meaningful mastery evidence or the route needs progression legibility without mutating role or owner...
+- Avoid when: there is no reviewed evidence or the request wants one universal power number.
+- Needs: one reviewed session artifact or harvest packet; named evidence refs; any current progression baseline if it exists.
+- Produces: one bounded PROGRESSION_DELTA; one qualitative movement note per meaningful axis; one verdict such as advance, hold, reanchor...
+- Core contract: progression remains evidence-backed; movement stays multi-axis rather than one-score.
+- Main risk: movement is invented from vibe instead of evidence.
+- Validate by: meaningful axis claims cite reviewed evidence; the output stays multi-axis; the verdict matches the evidence.
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md)
+
+### [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
+
+- Summary: Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.
+- Intent: Add quest-, RPG-, or chronicle-shaped reflection to a bounded progression or route-reading surface so...
+- Use when: a reviewed session already produced a bounded progression delta or route reflection or quest-, RPG-, or chronicle-shaped language...
+- Avoid when: no reviewed evidence exists underneath the overlay or quest or RPG flavor is being used to grant rights...
+- Needs: one reviewed progression delta or other bounded reflective base; optional quest hooks, chronicle cues, or unlock hints...
+- Produces: one adjunct quest- or RPG-shaped reflection; one or more narrative cues such as quest residue, campaign hint...
+- Core contract: the overlay always rests on reviewed evidence; the overlay remains adjunct, not sovereign.
+- Main risk: narrative flavor starts replacing the underlying evidence-backed result.
+- Validate by: the overlay rests on reviewed evidence; the underlying progression or route note remains explicit; flavor remains adjunct rather than...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md)
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

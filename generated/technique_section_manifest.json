@@ -4269,6 +4269,510 @@
           "markdown": "What can vary across projects:\n- the owner-layer names\n- the artifact names used after triage\n- how evidence anchors are recorded\n- whether local policy requires an extra review step before drafting\n- how `hold` or defer states are represented\n\nWhat should stay invariant:\n- one candidate unit gets one primary owner verdict\n- the nearest wrong target stays explicit\n- the next artifact stays proportional to the verdict\n- derivative layers stay downstream of source-owned authoring\n\nProject-shaped details that should not be treated as invariant:\n- one specific repo layout\n- one promotion board or routing table\n- one command or orchestrator syntax\n- one local naming convention for notes and bundles\n\nAoA adaptation example:\n- reusable practice canon usually maps to `aoa-techniques`\n- bounded executable workflow usually maps to `aoa-skills`\n- recurring multi-step scenario usually maps to `aoa-playbooks`\n- proof or verdict posture usually maps to `aoa-evals`\n- recall or writeback posture usually maps to `aoa-memo`\n- role or actor-boundary posture usually maps to `aoa-agents`\n- derivative routing and KAG surfaces stay downstream unless the source-owned object already exists elsewhere"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0077",
+      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep one bounded `HARVEST_PACKET` contract over a reviewed session artifact so\nlater family seams can consume one explicit packet shape instead of reopening\nchat memory or stuffing all post-session meaning into one oversized recap."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a reviewed session already produced reusable extracts and needs one explicit packet shape\n- later family seams such as owner placement, forks, diagnosis, repair, progression, or quest follow-up should read from one bounded packet\n- the workflow needs required fields and optional extensions without pretending the packet is a sovereign routing layer\n- reviewers need to confirm what the nucleus packet owns and what it merely points toward"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the session is still live or not yet reviewed\n- the real task is donor extraction, owner placement, diagnosis, repair, progression, or quest promotion itself\n- the packet would only repeat a generic session recap with no bounded extracts\n- the contract would widen into memory canon, routing authority, or a dashboard schema"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed session reference\n- one or more reviewed source artifacts\n- one bounded extract record for each kept reusable unit\n- optional follow-on family signals such as fork cards, diagnosis, repair candidates, progression, or quest hooks"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one `HARVEST_PACKET` with required packet fields\n- one normalized extract shape for each kept reusable unit\n- optional bounded extension fields for later family seams\n- one explicit rule that optional family fields remain pointers rather than replacements for sibling seams"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from a reviewed session reference and reviewed source artifacts.\n2. Keep the required packet spine small: `session_ref`, `reviewed_artifacts`, and `extracts`.\n3. Record one bounded extract per reusable unit rather than one merged narrative block.\n4. Require extract fields that keep meaning reviewable: title, kind, summary, evidence refs, repeat signal, owner hint, next surface, and nearest wrong target.\n5. Allow optional packet fields such as frictions, deferrals, fork cards, diagnosis, repair candidates, progression, quest hooks, or chronicle hints only when they remain clearly subordinate.\n6. Reject packet shapes that silently replace donor extraction, routing, diagnosis, repair, progression, or final quest verdicts.\n7. Keep the packet readable as a nucleus artifact that hands off to later seams instead of becoming one permanent truth surface."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the packet starts after review\n- the required spine stays small and explicit\n- each extract remains one bounded reusable unit\n- optional fields can point to later family seams but must not replace them\n- the packet is a source-owned post-session nucleus, not memory canon or routing authority\n- later family seams may consume the packet, but they still own their own verdicts\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not decide which reusable units survive donor extraction; it only keeps the resulting packet shape bounded. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide one owner verdict over one bounded unit. It should stay smaller than any later fork, diagnosis, repair, progression, or quest seam that the packet may reference."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the packet becomes a recap blob instead of a bounded extract container\n- optional fields start carrying hidden routing or promotion verdicts\n- extract records lose the fields needed for later review and handoff\n\n### Negative effects\n\n- overgrown packets can blur boundaries between the family seams\n- teams may mistake packet completeness for proof that every later seam is already closed\n- packet schema churn can create fake sophistication without clearer review\n\n### Misuse patterns\n\n- treating the packet as a memory object or universal session database\n- stuffing unresolved diagnosis, repair, or progression doctrine into free-form notes\n- emitting one packet before donor extraction is honestly done\n- replacing sibling seams with packet subfields instead of keeping them explicit\n\n### Detection signals\n\n- extract records do not name bounded reusable units\n- optional family fields read like hidden verdicts rather than pointers\n- reviewers cannot tell which packet fields are required and which are optional\n- the packet grows into a large schema before the family seams are stable\n\n### Mitigations\n\n- keep the required spine fixed and small\n- require one bounded extract record per kept reusable unit\n- preserve optional fields as adjuncts rather than replacements\n- keep later family seams explicit even when the packet links to them"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the packet starts from reviewed material\n- the required fields are explicit and present\n- each extract record remains bounded and reviewable\n- optional family fields remain clearly subordinate\n- the packet does not silently replace routing, diagnosis, repair, progression, or quest verdicts\n\nSee `checks/harvest-packet-contract-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact packet filename or storage path\n- how reviewed artifacts are referenced\n- the names of optional family fields\n- whether extract records keep owner hints as repo names, owner shapes, or another bounded target vocabulary\n\nWhat should stay invariant:\n- the packet starts only after review\n- the required spine remains small\n- extract records stay bounded and evidence-backed\n- optional family fields remain subordinate to later explicit seams\n\nProject-shaped details that should not be treated as invariant:\n- one repo naming convention\n- one packet serialization format\n- one specific session index or memory store\n- one project's downstream owner map\n\nAoA adaptation example:\n- the donor nucleus usually emits a `HARVEST_PACKET`\n- owner-layer hints may later feed `AOA-T-0076`\n- forks, diagnosis, repair, progression, and quest seams remain separate follow-on steps"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0078",
+      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn one reviewed session or harvest packet into explicit decision fork cards\nso materially different next routes stay legible and reviewable instead of\nbeing buried in one favored recommendation."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- the session is already reviewed and more than one honest next route remains\n- different branches have meaningfully different gains, costs, risks, or owner targets\n- reviewers need visible choice architecture rather than one compressed recommendation\n- the route needs bounded branch analysis without turning branch cards into runtime policy"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- there is only one obvious next bounded move\n- donor extraction or packet shaping still has not happened\n- the real need is diagnosis, repair, progression reflection, or final quest promotion\n- the branch surface would only restate cosmetic variants of the same move"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed session artifact or bounded harvest packet\n- one set of candidate next routes\n- known blockers, dependencies, and uncertainty notes\n- any already named owner targets or control posture preferences"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one fork card per materially different route\n- one likely gain, cost, and risk for each route\n- one likely first owner target for each route\n- one explicit stop condition for risky or expensive routes\n- one hold, defer, or reanchor route when uncertainty is still honest"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from reviewed evidence rather than free speculation.\n2. Split routes until each card describes one materially distinct next move.\n3. Reject cosmetic variants that only rename the same route.\n4. Name the likely first owner target for each surviving route.\n5. Record at least one likely gain, one likely cost, and one likely risk for each route.\n6. Keep stop conditions visible for risky, expensive, or uncertain routes.\n7. Preserve a hold, defer, or reanchor card when the honest outcome is still uncertainty.\n8. Keep the card set legible as branch analysis rather than hidden routing authority."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- fork cards describe choices; they do not decide authority\n- each card must represent one materially distinct route\n- visible downside is required, not optional polish\n- stop conditions remain first-class for risky routes\n- a default route may be suggested, but alternatives must remain visible\n\nRelationship to adjacent techniques: unlike [AOA-T-0077](../harvest-packet-contract/TECHNIQUE.md), this technique does not define the nucleus packet shape; it assumes the source packet or reviewed artifact already exists. Unlike [AOA-T-0079](../risk-passport-lift/TECHNIQUE.md), it owns the branch cards themselves rather than the smaller per-route passport fields. It should stay narrower than playbook design because it keeps next-route choices legible without authoring a full recurring scenario."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the cards describe variants of the same route instead of real forks\n- a favorite branch is smuggled in as if alternatives do not exist\n- routes omit visible costs or risks and become optimism theater\n\n### Negative effects\n\n- too many thin cards can create fake complexity\n- card sets can encourage analysis loops when one route is already obvious\n- teams may confuse fork cards with runtime routing policy\n\n### Misuse patterns\n\n- writing branch cards before donor extraction or reviewed evidence exists\n- using fork cards to hide an already decided route\n- flattening large playbook design into a handful of vague route cards\n- treating quest-board language as execution authority\n\n### Detection signals\n\n- several cards differ only cosmetically\n- reviewers cannot explain why one branch is distinct from another\n- costs, risks, or stop conditions are missing from the route set\n- the cards read like policy or command selection rather than choice support\n\n### Mitigations\n\n- require materially different routes\n- keep at least one downside visible per route\n- preserve hold or defer as a valid card\n- keep route-card output bounded to next-step analysis rather than full scenario design"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the source material is reviewed\n- each card represents a materially distinct route\n- each route names gains, costs, risks, and owner target cues\n- stop conditions exist for risky routes\n- hold, defer, or reanchor remains available when uncertainty is real\n\nSee `checks/decision-fork-cards-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the card format\n- the names of owner targets\n- how costs and risks are scored or labeled\n- whether one default route is allowed in addition to visible alternatives\n\nWhat should stay invariant:\n- branch cards start after review\n- each card remains materially distinct\n- downside remains visible\n- cards stay advisory rather than authoritative\n\nProject-shaped details that should not be treated as invariant:\n- one quest-board vocabulary\n- one delegate-tier system\n- one repo naming scheme\n- one routing engine or planner\n\nAoA adaptation example:\n- fork cards often point toward `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, or `hold`\n- route passports may later refine difficulty, risk, control mode, or delegate tier\n- quest-board language may help legibility, but it does not replace owner truth"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0079",
+      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Attach one small risk passport to each explicit next route so route choice\nkeeps bounded control posture, difficulty, and stop-condition visibility\ninstead of dissolving into vague risk prose or hidden planner metadata."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- explicit next routes already exist and need a smaller per-route posture summary\n- reviewers need to compare difficulty, risk, control mode, delegate tier, or stop-condition posture across branches\n- branch analysis should remain visible without inflating into a full routing system\n- the main need is route posture metadata, not the branch-card seam itself"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- there is only one route and no meaningful comparison surface\n- the real need is donor extraction, diagnosis, repair, or scenario design\n- the route passport would become a hidden authority score\n- the team needs a full operational runbook rather than a small branch posture summary"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one explicit next route\n- route-level gain and cost summary\n- known risk signals and blockers\n- desired control mode or approval posture\n- any already known delegate tier or escalation cue"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one small route passport\n- one difficulty cue\n- one risk cue\n- one control-mode cue\n- one delegate-tier cue\n- one stop-condition cue"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one explicit route rather than from a whole route set.\n2. Name only the smallest posture fields that help comparison and review.\n3. Keep the passport short enough to sit alongside a branch card instead of replacing it.\n4. Record stop conditions whenever risk or cost meaningfully rises.\n5. Reject fake precision such as synthetic scores that pretend to be authority.\n6. Keep the passport readable as posture metadata rather than hidden routing policy."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one passport belongs to one route\n- the passport stays smaller than the branch card it complements\n- risk posture remains descriptive, not sovereign\n- stop conditions remain explicit when risk or cost is meaningful\n- the passport informs branch choice but does not decide authority by itself\n\nRelationship to adjacent techniques: unlike [AOA-T-0078](../decision-fork-cards/TECHNIQUE.md), this technique does not decide which materially distinct branches exist; it only keeps route posture metadata small and explicit per branch. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not govern mutation checkpoints over a repair packet; it only lifts comparison-ready route posture."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the passport becomes a hidden scorecard instead of a small posture summary\n- stop conditions disappear and risk becomes decorative\n- too many metadata fields make the passport larger than the route itself\n\n### Negative effects\n\n- fake precision can create false confidence\n- passport proliferation can over-formalize obvious routes\n- teams may treat control mode or delegate tier as sovereign routing authority\n\n### Misuse patterns\n\n- attaching passports before any route is honestly explicit\n- using passport fields as command dispatch policy\n- inflating posture fields into a full runbook\n- flattening uncertainty into one synthetic risk score\n\n### Detection signals\n\n- passports contain more metadata than route meaning\n- reviewers cannot explain what changed when a route passport changes\n- stop conditions or uncertainty cues are missing\n- difficulty or risk labels are treated as final authority instead of comparison help\n\n### Mitigations\n\n- keep the field set small\n- require one stop-condition cue when risk is meaningful\n- reject synthetic total scores\n- keep passports adjacent to branch cards instead of replacing them"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- each passport belongs to one explicit route\n- the field set stays small and reviewable\n- difficulty, risk, control mode, delegate tier, and stop-condition cues remain visible where needed\n- the passport does not become hidden routing authority\n\nSee `checks/risk-passport-lift-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the names of difficulty or risk bands\n- the control-mode vocabulary\n- whether delegate tier is numeric, named, or absent\n- the exact passport rendering format\n\nWhat should stay invariant:\n- one passport belongs to one route\n- the passport stays small\n- risk posture remains descriptive\n- stop-condition cues remain visible for meaningful risk\n\nProject-shaped details that should not be treated as invariant:\n- one planner schema\n- one orchestration permission model\n- one repo-specific approval ladder\n- one project's routing engine\n\nAoA adaptation example:\n- passports often carry `difficulty`, `risk`, `control_mode`, and `delegate_tier`\n- the same posture language may later appear in repair packets, but route choice and repair checkpoints remain separate seams"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0080",
+      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Classify repeated post-session friction into bounded drift types so a later\ndiagnosis pass can describe what kind of problem is present before claiming one\nprobable cause or repair direction."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- the session is reviewed and several friction signals survived it\n- the next honest move is diagnosis rather than immediate repair\n- the same class of confusion, contradiction, or proof blur may be recurring\n- reviewers need a bounded vocabulary before they trust a diagnosis packet"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the session is still live or unreviewed\n- the issue is already fully diagnosed\n- the route only needs one repair packet or one final promotion verdict\n- the friction is too weak or singular to justify structural classification"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed session artifact or harvest packet\n- observed frictions, failures, contradictions, or proof gaps\n- any repeated blockers or earlier related evidence"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one bounded drift-type list\n- one description of what each drift type means in the current case\n- one explicit separation between drift type and probable cause\n- one reminder that owner hints and repair shapes come later"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from reviewed friction evidence rather than live debugging.\n2. Separate raw symptoms from the drift category they suggest.\n3. Classify only bounded drift types such as boundary drift, proof debt, role leakage, memory contamination, route collapse, compaction damage, or repeated blocker patterns.\n4. Reject vague mood labels that do not help later diagnosis.\n5. Preserve mixed or uncertain classifications when the evidence does not justify one clean label.\n6. Hand the bounded taxonomy forward to a diagnosis pass instead of pretending taxonomy alone solved the problem."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- taxonomy is read-only\n- drift type is not the same thing as probable cause\n- one odd anecdote is not enough for structural classification\n- bounded labels should help later diagnosis rather than replace it\n- the taxonomy stays smaller than a full diagnosis packet\n\nRelationship to adjacent techniques: unlike [AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique does not claim probable causes, owner hints, or repair shapes over the whole packet; it only classifies the type of drift. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not place one reusable unit into one owner layer."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- vague labels replace real classification\n- drift type is confused with probable cause\n- one anecdote gets inflated into a systemic taxonomy verdict\n\n### Negative effects\n\n- over-classification can make weak evidence look stronger than it is\n- taxonomy jargon can obscure the real session evidence\n- teams may reuse one favorite label for every friction pattern\n\n### Misuse patterns\n\n- using taxonomy as a substitute for diagnosis\n- inventing new labels when a bounded existing type already fits\n- treating one temporary inconvenience as structural drift\n- using taxonomy to blame one owner layer prematurely\n\n### Detection signals\n\n- classifications sound like vibes instead of bounded drift types\n- reviewers cannot tell the difference between symptom, drift type, and cause\n- the taxonomy verdict is more confident than the evidence supports\n- owner hints appear before the taxonomy pass is done\n\n### Mitigations\n\n- keep drift labels bounded and reusable\n- separate taxonomy from probable-cause language\n- preserve mixed or uncertain labels when needed\n- hand off to diagnosis instead of pretending taxonomy is enough"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the source evidence is reviewed\n- drift labels stay bounded and reusable\n- symptom, drift type, and probable cause remain distinct\n- mixed or uncertain classifications remain possible\n- the output stays smaller than a full diagnosis packet\n\nSee `checks/session-drift-taxonomy-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact drift labels\n- how strong repeated evidence must be before classification\n- whether severity tags accompany the taxonomy\n- how mixed classifications are represented\n\nWhat should stay invariant:\n- taxonomy starts after review\n- drift type stays distinct from cause\n- uncertainty remains available\n- the taxonomy remains smaller than the full diagnosis pass\n\nProject-shaped details that should not be treated as invariant:\n- one team's favorite label set\n- one escalation ladder\n- one owner map\n- one reporting schema\n\nAoA adaptation example:\n- frequent labels include `boundary_drift`, `proof_debt`, `role_leakage`, `route_collapse`, and `compaction_damage`\n- owner hints and repair shapes remain later seams rather than part of the taxonomy itself"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0081",
+      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn reviewed friction evidence into a bounded diagnosis packet so symptoms,\nprobable causes, owner hints, and explicit unknowns become legible before any\nrepair work starts."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- the session is reviewed and repeated friction or contradiction survived it\n- the next honest move is diagnosis before repair\n- probable causes need to be named without pretending certainty the evidence does not support\n- the workflow needs likely owner hints without treating them as final verdicts"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the session is still live or unreviewed\n- diagnosis already exists and the next honest move is repair\n- the work only needs one drift taxonomy pass without a full diagnosis packet\n- the real need is a final promotion verdict instead of a read-only diagnosis"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed session artifact or harvest packet\n- explicit symptoms, frictions, contradictions, or failures\n- any drift taxonomy already available\n- touched owner layers or repos if known\n- previous related evidence if available"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one `DIAGNOSIS_PACKET`\n- one symptom list\n- one probable-cause layer with explicit uncertainty where needed\n- one likely owner hint set\n- one suggested repair shape\n- one unknowns section when evidence remains incomplete"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from reviewed evidence rather than live debugging.\n2. Gather symptoms and evidence refs before stating any cause.\n3. Keep symptoms separate from probable causes.\n4. Use drift taxonomy as a bounded input when it helps, but do not confuse labels with diagnosis.\n5. Map likely owner hints only after the diagnosis shape is visible.\n6. Suggest a repair shape without silently performing it.\n7. Preserve unknowns and probabilities where evidence is thin.\n8. Keep the diagnosis packet read-only and reviewable."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- diagnosis starts from reviewed evidence\n- symptom and probable-cause layers stay distinct\n- probable causes remain probabilistic when the evidence is thin\n- owner hints do not override later owner-layer law\n- diagnosis is read-only and must not silently mutate anything\n- unknowns remain valid outputs when the evidence is incomplete\n\nRelationship to adjacent techniques: unlike [AOA-T-0080](../session-drift-taxonomy/TECHNIQUE.md), this technique owns the full diagnosis packet rather than just the drift label layer. Unlike [AOA-T-0082](../repair-shape-from-diagnosis/TECHNIQUE.md), it does not choose the smallest repair packet or checkpoint posture; it only prepares the diagnosis that later repair work can consume."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- symptoms and causes collapse into one vague narrative\n- owner hints are stated as if they were already final verdicts\n- diagnosis starts performing repair work implicitly\n\n### Negative effects\n\n- overconfident diagnosis can make weak evidence look settled\n- repeated diagnosis passes can create ritual delay when repair is already justified\n- teams may mistake a likely cause for a proven cause\n\n### Misuse patterns\n\n- using diagnosis as a replacement for repair planning\n- naming one convenient owner layer before the evidence supports it\n- turning one anecdote into structural certainty\n- silently fixing the problem while writing the diagnosis\n\n### Detection signals\n\n- the packet has no explicit unknowns even though evidence is mixed\n- symptoms and causes are worded as if they were the same thing\n- the diagnosis output already contains repair commands or silent edits\n- reviewers cannot explain what evidence supports each probable cause\n\n### Mitigations\n\n- require evidence refs for meaningful symptoms\n- keep probable-cause language explicitly probabilistic when needed\n- preserve owner hints as hints, not verdicts\n- hand off to repair instead of smuggling mutation into diagnosis"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the source evidence is reviewed and bounded\n- symptoms and probable causes stay distinct\n- likely owner hints remain explicit but non-sovereign\n- suggested repair shapes remain suggestions rather than hidden mutations\n- unknowns remain visible where the evidence is incomplete\n\nSee `checks/diagnosis-from-reviewed-evidence-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the diagnosis packet format\n- whether drift taxonomy is inline or referenced\n- how likely owner hints are named\n- whether severity or urgency notes are included\n\nWhat should stay invariant:\n- diagnosis starts after review\n- symptoms and causes remain separate\n- mutation stays out of the diagnosis pass\n- unknowns remain available\n\nProject-shaped details that should not be treated as invariant:\n- one incident template\n- one repo naming scheme for owner hints\n- one escalation ladder\n- one proof rubric\n\nAoA adaptation example:\n- likely owner hints often point toward `aoa-skills`, `aoa-techniques`, `aoa-evals`, or `aoa-agents`\n- suggested repair shapes may later feed a bounded repair packet instead of immediate mutation"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0082",
+      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn a reviewed diagnosis packet into the smallest honest repair shape so the\nnext step stays bounded and explicit instead of becoming vague self-improvement\nrhetoric or a hidden scenario rollout."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a reviewed diagnosis already exists\n- the next honest move is a bounded repair packet rather than another diagnosis pass\n- the repair still fits inside one bounded owner-facing unit\n- reviewers need one explicit target artifact or repair quest instead of general aspiration"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- diagnosis does not exist yet\n- the repair is large enough to be a playbook or broader rollout\n- the request mainly wants the system to \"improve itself\" without a bounded target\n- the real issue is checkpoint posture rather than the repair shape itself"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed diagnosis packet\n- likely owner targets or owner-layer hints\n- known validation surfaces\n- current risk and approval posture if already visible"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one smallest honest repair shape\n- one primary owner target\n- one target artifact class or repair quest shape\n- one validation plan\n- one stop or escalation cue if the repair would widen"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from a reviewed diagnosis packet rather than from aspiration.\n2. Restate the actual bounded problem the repair should address.\n3. Choose the smallest owner-facing artifact that can honestly address the diagnosis.\n4. Reject shapes that smuggle a playbook-scale rollout into one \"repair packet\".\n5. Name the validation plan that proves the repair worked.\n6. Preserve escalation when the repair widens past one bounded unit.\n7. Hand checkpoint posture to a later seam rather than hiding it implicitly."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- diagnosis is a prerequisite\n- the chosen repair shape stays smaller than a scenario rollout\n- one primary owner target remains explicit\n- validation remains part of the repair shape, not a later surprise\n- escalation remains valid when the repair cannot stay bounded\n\nRelationship to adjacent techniques: unlike [AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique does not explain symptoms and probable causes; it starts after diagnosis exists. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not own the checkpoint stack itself; it chooses the repair shape that later checkpoint posture should govern."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the chosen repair shape is larger than the diagnosis justifies\n- a vague \"improve the system\" request is treated as if it were bounded\n- owner target and validation plan remain implicit\n\n### Negative effects\n\n- too much repair ceremony can slow obvious small fixes\n- too-small repair shapes can hide a wider scenario problem\n- teams may skip escalation because the label \"repair packet\" sounds tidy\n\n### Misuse patterns\n\n- choosing a playbook-scale rollout as if it were one repair packet\n- using repair shaping before diagnosis exists\n- confusing repair shape with checkpoint posture\n- turning repair shaping into general roadmap planning\n\n### Detection signals\n\n- the proposed artifact is much larger than the diagnosis packet\n- validation is missing or generic\n- the same repair packet keeps reopening because the real issue was wider\n- reviewers cannot explain why this is the smallest honest shape\n\n### Mitigations\n\n- require diagnosis first\n- name one primary owner target explicitly\n- preserve escalation when the repair widens\n- keep checkpoint posture explicit as a separate seam"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a reviewed diagnosis exists\n- the chosen repair shape is the smallest honest shape\n- one primary owner target is explicit\n- validation and escalation cues are named\n- the output stays smaller than a scenario rollout\n\nSee `checks/repair-shape-from-diagnosis-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the names of owner targets\n- the artifact classes used for the repair\n- how validation plans are recorded\n- whether escalation becomes a ticket, quest, or review note\n\nWhat should stay invariant:\n- diagnosis comes first\n- the repair shape stays bounded\n- owner target and validation plan stay explicit\n- escalation remains valid when widening is honest\n\nProject-shaped details that should not be treated as invariant:\n- one issue template\n- one repo naming convention\n- one rollout board\n- one approval ladder\n\nAoA adaptation example:\n- common repair shapes include a bounded skill delta, technique delta, playbook correction note, or repair quest\n- owner targets often map toward `aoa-skills`, `aoa-techniques`, `aoa-evals`, or `aoa-agents`"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0083",
+      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep self-repair behind explicit checkpoint posture so bounded repair stays\nreviewable and reversible instead of feeling like silent self-modification."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a bounded repair shape already exists\n- the repair may touch important system surfaces\n- reviewers need explicit approval, rollback, health-check, and iteration-limit posture\n- the route must remain smaller than one general governance framework while still protecting against silent mutation"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- no reviewed diagnosis or repair shape exists yet\n- the work is a small non-sensitive edit that does not need a self-repair frame\n- the route is trying to bypass approval, rollback, or post-change verification\n- the real need is just branch posture or generic confirmation before mutation"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one bounded repair shape\n- relevant policy or constitution checks\n- approval posture\n- rollback anchor\n- health-check path\n- bounded iteration limit\n- improvement-log target"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one checkpoint-bound repair packet\n- one explicit approval or confirmation requirement\n- one rollback marker\n- one post-change health check\n- one bounded iteration limit\n- one explicit improvement-log or audit stub"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from a bounded repair shape rather than from free self-improvement language.\n2. Require a visible policy or constitution check before important mutation.\n3. Require an explicit approval or confirmation seam when the repair is meaningful.\n4. Name a rollback marker before the repair executes.\n5. Name the health check that will verify the repair afterward.\n6. Keep a bounded iteration limit so repair does not turn into hidden retry loops.\n7. Write an improvement-log or audit stub so the mutation remains reviewable later."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- self-repair is not free self-modification\n- important mutations require checkpoint posture\n- rollback and health-check cues remain explicit\n- bounded iteration limits prevent hidden retry loops\n- improvement logging remains part of the repair contract\n- role-law and proof-law changes may need handoff to other owner layers\n\nRelationship to adjacent techniques: unlike [AOA-T-0082](../repair-shape-from-diagnosis/TECHNIQUE.md), this technique does not choose the repair shape itself; it governs the checkpoint posture around an already chosen repair. Unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), it is narrower and more specialized: it governs a self-repair packet with rollback, health-check, and improvement-log posture rather than a general confirmation seam before any mutation."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- checkpoint posture is partial and one critical field is missing\n- the repair still feels automatic because approval or rollback is implicit\n- iteration loops hide repeated failed self-repair attempts\n\n### Negative effects\n\n- too much checkpoint ceremony can slow obviously safe tiny repairs\n- teams may over-trust the checkpoint stack and stop questioning whether the repair should happen at all\n- improvement logs can become ceremonial if they are never reread\n\n### Misuse patterns\n\n- using checkpoint posture as a substitute for repair shaping\n- treating approval as optional for meaningful self-repair\n- hiding doctrine edits behind repair language\n- using retries as pseudo-progress instead of escalation\n\n### Detection signals\n\n- rollback anchors or health checks are missing\n- no iteration limit is named for a risky repair loop\n- reviewers cannot find the improvement-log stub afterward\n- repair packets change important surfaces with no visible checkpoint gate\n\n### Mitigations\n\n- require all checkpoint fields for meaningful repairs\n- keep escalation available when retries fail\n- preserve improvement-log visibility\n- keep general mutation confirmation and self-repair checkpoint posture distinct"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- a bounded repair shape exists first\n- checkpoint fields are all explicit\n- rollback and health-check posture are present\n- iteration limits and improvement logging are visible\n- the repair does not feel like silent self-mutation\n\nSee `checks/checkpoint-bound-self-repair-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the names of policy or constitution checks\n- the approval mechanism\n- the rollback-anchor format\n- the health-check surface\n- the improvement-log location\n\nWhat should stay invariant:\n- checkpoint posture stays explicit\n- rollback and health checks remain visible\n- iteration stays bounded\n- self-repair never feels silent\n\nProject-shaped details that should not be treated as invariant:\n- one approval bot or command\n- one log filename\n- one repo layout\n- one governance stack\n\nAoA adaptation example:\n- common checkpoint fields include constitution check, approval gate, rollback marker, health check, iteration limit, and improvement-log stub\n- role-law changes often hand off to `aoa-agents`, and proof-law changes often hand off to `aoa-evals`"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0084",
+      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Lift reviewed session evidence into a bounded multi-axis progression delta so\ngrowth stays legible and evidence-backed without inventing one universal score\nor hidden routing authority."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a reviewed session produced meaningful mastery evidence\n- the route needs progression legibility without mutating role or owner truth\n- the output should stay small, qualitative, and multi-axis\n- reviewers need explicit verdicts such as advance, hold, reanchor, or downgrade"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- there is no reviewed evidence\n- the request wants one universal power number\n- progression language is being used as policy or routing authority\n- the route is trying to grant rights or status without evidence"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed session artifact or harvest packet\n- named evidence refs\n- any current progression baseline if it exists\n- relevant role or cohort context if needed"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one bounded `PROGRESSION_DELTA`\n- one qualitative movement note per meaningful axis\n- one verdict such as advance, hold, reanchor, or downgrade\n- one small unlock hint set only when evidence supports it\n- one explicit place for negative or zero movement"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from reviewed evidence refs rather than from mood.\n2. Assess movement qualitatively across a bounded axis set.\n3. Preserve zero or negative movement when it is more honest than forced progress.\n4. Emit one verdict that matches the evidence rather than one inflated celebration.\n5. Keep unlock hints small and explicit.\n6. Reject universal scores and sovereign rank authority."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- progression remains evidence-backed\n- movement stays multi-axis rather than one-score\n- verdicts remain descriptive, not sovereign\n- unlock hints stay small and reviewable\n- progression does not replace owner-layer truth or routing authority\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not extract reusable units from a reviewed session artifact; it only reflects mastery movement from already reviewed evidence. Unlike [AOA-T-0085](../multi-axis-quest-overlay/TECHNIQUE.md), it owns the progression delta itself rather than the optional quest- or RPG-shaped reflection layered over that delta."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- movement is invented from vibe instead of evidence\n- several axes are flattened into one total score\n- unlock hints become hidden authority grants\n\n### Negative effects\n\n- forced positive motion can make review less honest\n- progression overlays can distract from owner truth if they overgrow\n- teams may confuse a descriptive verdict with rank or permission\n\n### Misuse patterns\n\n- using progression to decide what repo or skill should run next\n- granting status or authority through flavor instead of evidence\n- treating every reviewed session as if it must show progress\n- collapsing multi-axis movement into one celebratory metric\n\n### Detection signals\n\n- no evidence refs support meaningful movement claims\n- the output contains one total score or rank number\n- hold, reanchor, or downgrade are absent even when evidence is mixed\n- unlock hints read like permissions rather than reflections\n\n### Mitigations\n\n- require reviewed evidence for meaningful claims\n- preserve zero and negative movement\n- keep unlock hints explicitly small\n- reject universal scoring and authority language"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- meaningful axis claims cite reviewed evidence\n- the output stays multi-axis\n- the verdict matches the evidence\n- zero or negative movement remains possible\n- no universal score or hidden policy authority appears\n\nSee `checks/progression-evidence-lift-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the axis names\n- the verdict vocabulary\n- whether cohort or role context is included\n- the rendering format for unlock hints\n\nWhat should stay invariant:\n- progression starts from reviewed evidence\n- movement stays multi-axis\n- verdicts remain descriptive\n- universal scores remain out of scope\n\nProject-shaped details that should not be treated as invariant:\n- one game-like progression ladder\n- one role hierarchy\n- one unlock taxonomy\n- one status board\n\nAoA adaptation example:\n- common axes include `boundary_integrity`, `execution_reliability`, `change_legibility`, `review_sharpness`, `proof_discipline`, `provenance_hygiene`, and `deep_readiness`\n- unlock hints may later help session-harvest planning, but they do not replace owner truth"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0085",
+      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded progression or\nroute-reading surface so the path becomes easier to read without letting flavor\noverwrite owner truth, proof posture, or routing authority."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a reviewed session already produced a bounded progression delta or route reflection\n- quest-, RPG-, or chronicle-shaped language would improve legibility\n- the reflective layer should remain descriptive and adjunct rather than sovereign\n- reviewers need to preserve narrative usefulness without minting authority"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- no reviewed evidence exists underneath the overlay\n- quest or RPG flavor is being used to grant rights, rank, or routing policy\n- the route needs owner truth, proof, or memory decisions rather than reflective framing\n- the overlay would turn every session into a campaign whether or not the evidence supports it"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed progression delta or other bounded reflective base\n- optional quest hooks, chronicle cues, or unlock hints\n- one explicit reminder of the underlying owner or proof truth"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one adjunct quest- or RPG-shaped reflection\n- one or more narrative cues such as quest residue, campaign hint, chronicle stub, or ability-like unlock hint\n- one explicit boundary note that owner truth remains elsewhere\n- one rejection path for overlay ideas that would turn into authority claims"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from a bounded evidence-backed base such as a progression delta.\n2. Layer quest or RPG language only after the underlying verdict is explicit.\n3. Keep the overlay readable as adjunct reflection rather than rule or status law.\n4. Allow narrative cues such as quest residue, chronicle stub, campaign hint, or safe unlock flavor only when they stay small.\n5. Reject overlay language that grants rank, rights, or routing authority.\n6. Preserve the underlying owner, proof, and memory seams as the real truth surfaces."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the overlay always rests on reviewed evidence\n- the overlay remains adjunct, not sovereign\n- quest or RPG language does not replace owner-layer truth\n- flavor does not grant authority rights\n- the overlay remains smaller than the underlying progression or route-reading object\n\nRelationship to adjacent techniques: unlike [AOA-T-0084](../progression-evidence-lift/TECHNIQUE.md), this technique does not decide the progression verdict or multi-axis movement; it only adds adjunct reflective framing. Unlike [AOA-T-0078](../decision-fork-cards/TECHNIQUE.md), it does not define the explicit route cards themselves; it can only make an already bounded route-reading surface more legible."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- narrative flavor starts replacing the underlying evidence-backed result\n- unlock hints become disguised authority grants\n- every session is forced into a campaign frame whether it fits or not\n\n### Negative effects\n\n- reflective language can distract from real owner or proof work\n- teams may over-read flavor as status law\n- too much quest framing can make a bounded reflective note feel theatrical\n\n### Misuse patterns\n\n- using RPG language to avoid explicit owner verdicts\n- turning progression overlays into universal power rankings\n- treating chronicle stubs as memory authority\n- making flavor the only surviving output when the evidence is weak\n\n### Detection signals\n\n- the overlay has no visible underlying evidence-backed base\n- quest or RPG words are doing authority work\n- narrative cues are larger than the underlying progression or route note\n- reviewers cannot say what remains reflection versus what remains real\n\n### Mitigations\n\n- require a bounded underlying base\n- keep narrative cues small\n- reject authority-bearing flavor\n- preserve owner, proof, and routing seams as the real truth surfaces"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the overlay rests on reviewed evidence\n- the underlying progression or route note remains explicit\n- flavor remains adjunct rather than sovereign\n- no rank, rights, or routing authority is granted through narrative language\n- narrative cues stay small and reviewable\n\nSee `checks/multi-axis-quest-overlay-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the quest or RPG vocabulary\n- whether the overlay reads as a quest hook, chronicle stub, or campaign hint\n- the names of safe unlock hints\n- whether the base object is progression-first or route-first\n\nWhat should stay invariant:\n- the overlay rests on reviewed evidence\n- flavor remains adjunct\n- owner and proof truth remain elsewhere\n- narrative cues stay small\n\nProject-shaped details that should not be treated as invariant:\n- one game's rank ladder\n- one campaign-board format\n- one status hierarchy\n- one local chronicle store\n\nAoA adaptation example:\n- common adjunct cues include quest residue, quest hook, questline hint, chronicle stub, ability-like unlock hint, or feat-like hint\n- the underlying owner layer still decides what artifact is real"
+        }
+      ]
     }
   ]
 }
