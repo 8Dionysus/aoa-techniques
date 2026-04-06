@@ -196,6 +196,18 @@ See also:
 |---|---|---|---|---|
 | telegram-export-normalization-to-local-store checklist | `absent` | `6` | `techniques/agent-workflows/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
 
+### [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| session-donor-harvest checklist | `absent` | `8` | `techniques/agent-workflows/session-donor-harvest/checks/session-donor-harvest-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) |
+
+### [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| owner-layer-triage checklist | `absent` | `8` | `techniques/agent-workflows/owner-layer-triage/checks/owner-layer-triage-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

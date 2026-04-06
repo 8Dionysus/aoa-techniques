@@ -119,6 +119,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0072](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md): none
 - [AOA-T-0073](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md): none
 - [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md): none
+- [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md): `complements` [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md), [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
+- [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md): `complements` [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md), [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -156,6 +158,8 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0072](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma. |
 | [AOA-T-0073](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation. |
 | [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract. |
+| [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. |
+| [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse. |
 
 ### `docs`
 
@@ -218,7 +222,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 74/74 techniques.
+- `export_ready` is currently `true` for 76/76 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

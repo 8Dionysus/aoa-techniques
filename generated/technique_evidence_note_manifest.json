@@ -37870,6 +37870,740 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0075",
+      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/session-donor-harvest/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0075"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-donor-harvest"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around post-session donor extraction rather than live capture, memory, or promotion doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when the missing object is a bounded donor pack over a reviewed session artifact rather than a transcript export, recap, or final promotion verdict"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when several reusable units may have emerged from one reviewed session and later owner placement should start from explicit candidate records"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default workflow for every post-session distillation problem"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the reusable donor-pack workflow while stripping local runtime wrapper detail and keeping AoA repo mapping in adaptation notes only"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between donor extraction and later owner placement should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0075` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same post-session donor-pack boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/session-donor-harvest/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0075"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-donor-harvest"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-donor-harvest/SKILL.md`\n- `skills/aoa-session-donor-harvest/techniques.yaml`\n- `skills/aoa-session-donor-harvest/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-donor-harvest/session_donor_harvest_reviewed_multi_unit_session.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor skill explicitly requires a reviewed post-session artifact and rejects live capture, transcript export, and local indexing as out-of-scope prerequisites"
+                },
+                {
+                  "order": 2,
+                  "text": "the workflow extracts reusable units instead of themes, splits merged candidates, and preserves a donor-pack posture before any final promotion verdict"
+                },
+                {
+                  "order": 3,
+                  "text": "the skill review checklist requires one concrete next artifact per accepted candidate while still allowing `hold` instead of forced promotion"
+                },
+                {
+                  "order": 4,
+                  "text": "the evaluation fixture for the reviewed multi-unit session requires several candidate units to survive in parallel instead of collapsing practice, workflow, and broader route into one bucket"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one post-session donor-extraction pass over a reviewed session artifact"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded to donor-pack creation with evidence anchors without importing skill invocation wrappers, repo-local routing policy, or final promotion doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/session-donor-harvest/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0075"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-donor-harvest"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor skill wrapper was reduced to a reusable technique contract for post-session donor extraction"
+                },
+                {
+                  "order": 2,
+                  "text": "AoA repo names and local routing details moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "owner placement was split into the sibling `owner-layer-triage` technique instead of staying fused into one broad skill-shaped bundle"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the workflow still starts only after the session artifact is reviewed"
+                },
+                {
+                  "order": 2,
+                  "text": "reusable units are still extracted as bounded candidates rather than broad topics"
+                },
+                {
+                  "order": 3,
+                  "text": "evidence anchors still remain visible for later review"
+                },
+                {
+                  "order": 4,
+                  "text": "defer or hold posture remains available instead of forcing promotion"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic summarization if candidate extraction and evidence-anchor posture are not kept explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can drift back into ecosystem-specific routing if adaptation notes start replacing the technique contract"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate the need to split merged candidates before later placement"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is a bounded post-session workflow, not a docs taxonomy or memory surface"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still preserves the seam between donor extraction and later owner placement"
+                },
+                {
+                  "order": 3,
+                  "text": "the donor evidence remains strong enough to justify a promoted public bundle without importing local runtime invocation details"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded workflow for extracting donor candidates from reviewed session artifacts"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0076",
+      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/owner-layer-triage/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0076"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "owner-layer-triage"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the second context adaptation kept the contract bounded around one owner-placement verdict rather than broader routing or promotion doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when one reusable unit has already been isolated and the main missing object is a primary owner verdict with a rejected nearest-wrong target"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when adjacent surfaces such as practice, workflow, scenario, proof, recall, and role all look plausible and the boundary must be made explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default placement technique for every repository taxonomy or promotion system"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence supports promotion, but not canonical status"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-05"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps one bounded owner-placement verdict while stripping local routing tables and reducing AoA repo names to adaptation examples"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between owner placement, context-map design, and final promotion review should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0076` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more live context proves the same one-unit owner-placement boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/owner-layer-triage/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0076"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "owner-layer-triage"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `skills/aoa-session-donor-harvest/SKILL.md`\n- `skills/aoa-session-donor-harvest/references/owner-layer-map.md`\n- `skills/aoa-session-donor-harvest/checks/review.md`\n- `tests/fixtures/skill_evaluation_cases.yaml`\n- `tests/fixtures/skill_evaluation_snapshots/aoa-session-donor-harvest/session_donor_harvest_reviewed_multi_unit_session.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor skill classifies each kept candidate by reuse kind and then by owner shape instead of treating usefulness as its own owner layer"
+                },
+                {
+                  "order": 2,
+                  "text": "the skill's routing rules distinguish reusable practice, bounded workflow, recurring scenario, proof, recall, role law, and hold posture while keeping derivative layers out of first authoring"
+                },
+                {
+                  "order": 3,
+                  "text": "the owner-layer map exists as an explicit support surface because this placement seam needs named boundaries rather than implicit repo convenience"
+                },
+                {
+                  "order": 4,
+                  "text": "the review checklist and evaluation fixture both require the output to name the chosen owner layer, the smallest next artifact, and the nearest wrong target"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is one owner-placement verdict over one bounded reusable unit"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded to one primary owner choice plus one rejected nearest-wrong target without importing full ecosystem routing doctrine, promotion review, or skill packaging"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/owner-layer-triage/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0076"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "owner-layer-triage"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "AoA repo names were reduced to owner-shape language in the invariant core"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor skill's local owner map became one portable placement technique with adaptation notes instead of a runtime-only reference sheet"
+                },
+                {
+                  "order": 3,
+                  "text": "donor extraction was split into the sibling `session-donor-harvest` technique so this bundle only owns one owner verdict per candidate"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one bounded candidate unit still maps to one primary owner layer"
+                },
+                {
+                  "order": 2,
+                  "text": "the nearest wrong target still has to be rejected explicitly"
+                },
+                {
+                  "order": 3,
+                  "text": "the chosen next artifact still remains proportional to the owner verdict"
+                },
+                {
+                  "order": 4,
+                  "text": "derivative routing or graph surfaces still stay out of first-authoring"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift back into ecosystem-specific routing if the adaptation notes overshadow the core owner-shape contract"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into context-map doctrine if examples start explaining whole repo topologies instead of one bounded placement verdict"
+                },
+                {
+                  "order": 3,
+                  "text": "a minimal example can understate the need to split mixed units before triage"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded placement workflow, not a docs taxonomy or routing system"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording still keeps one candidate, one owner, one rejected nearest-wrong target as the core seam"
+                },
+                {
+                  "order": 3,
+                  "text": "the donor evidence remains strong enough to justify a promoted public bundle without importing the whole AoA routing surface"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a bounded workflow for owner-layer placement over one reusable unit"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
