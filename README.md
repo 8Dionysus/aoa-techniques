@@ -22,7 +22,7 @@ Use the shortest route by need:
 - repo layer position and neighboring repos: `docs/ECOSYSTEM_CONTEXT.md`
 - current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
 - feat-reader and runtime-card surfaces: `docs/TECHNIQUE_FEAT_MODEL.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
-- status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `docs/PROMOTION_READINESS_MATRIX.md`, and `docs/RELEASING.md`
+- status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `docs/PROMOTION_READINESS_MATRIX.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
 - one end-to-end example path: `WALKTHROUGH.md`
 - bounded execution and proof neighbors: [`aoa-skills`](https://github.com/8Dionysus/aoa-skills) and [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
 - navigation and ecosystem map: [`aoa-routing`](https://github.com/8Dionysus/aoa-routing) and [`Agents-of-Abyss`](https://github.com/8Dionysus/Agents-of-Abyss)
@@ -35,6 +35,7 @@ Use the shortest route by need:
 - repo-doc routing and authoritative doc/status manifests: `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
 - source-lift, KAG, and section families: `docs/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json`, `docs/KAG_SOURCE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
 - review and shadow surfaces: `docs/SHADOW_PATTERNS.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
+- public readiness lens for the published corpus: `generated/technique_promotion_readiness.min.json`
 - owner-local live receipt publication for closeout/stats integration: `scripts/publish_live_receipts.py` and `.aoa/live_receipts/technique-receipts.jsonl`
 - current verify and release-prep path: `python scripts/validate_repo.py`, `python -m unittest discover -s tests`, `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
 

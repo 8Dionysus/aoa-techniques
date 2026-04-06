@@ -63,6 +63,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_github_review_template_manifest.py",
     "scripts/build_semantic_review_manifest.py",
     "scripts/build_shadow_review_manifest.py",
+    "scripts/build_promotion_readiness.py",
     "scripts/build_repo_doc_surface_manifest.py",
     "scripts/build_kag_export.py",
     "scripts/release_check.py",
@@ -85,6 +86,7 @@ REQUIRED_STAGE1_FILES = (
     "generated/semantic_review_manifest.min.json",
     "generated/shadow_review_manifest.json",
     "generated/shadow_review_manifest.min.json",
+    "generated/technique_promotion_readiness.min.json",
     "generated/repo_doc_surface_manifest.json",
     "generated/repo_doc_surface_manifest.min.json",
     "generated/kag_export.json",
@@ -4083,6 +4085,49 @@ def build_catalog_payloads(
     return full_catalog, min_catalog
 
 
+def build_promotion_readiness_payload(repo_root: Path, records: list[TechniqueRecord]) -> dict[str, Any]:
+    scoped_records = sorted(
+        (record for record in records if record.status in {"canonical", "promoted"}),
+        key=lambda record: record.id,
+    )
+    entries: list[dict[str, Any]] = []
+    for record in scoped_records:
+        note_kinds = {note.kind for note in record.notes}
+        has_canonical_readiness_note = "canonical_readiness" in note_kinds
+        has_adverse_effects_review = "adverse_effects_review" in note_kinds
+        blockers: list[str] = []
+        if record.status == "promoted" and not has_canonical_readiness_note:
+            blockers.append("missing_canonical_readiness_note")
+        if record.status == "canonical" and not has_adverse_effects_review:
+            blockers.append("missing_adverse_effects_review")
+        entries.append(
+            {
+                "technique_id": record.id,
+                "technique_name": record.name,
+                "status": record.status,
+                "export_ready": bool(record.frontmatter.get("export_ready")),
+                "review_required": bool(record.frontmatter.get("review_required")),
+                "has_canonical_readiness_note": has_canonical_readiness_note,
+                "has_adverse_effects_review": has_adverse_effects_review,
+                "readiness_passed": len(blockers) == 0,
+                "blockers": blockers,
+            }
+        )
+
+    return {
+        "schema_version": 1,
+        "layer": "aoa-techniques",
+        "scope": "published-non-deprecated",
+        "source_of_truth": {
+            "catalog": "generated/technique_catalog.min.json",
+            "bundles": "techniques/*/*/TECHNIQUE.md",
+            "canonical_readiness_note": "notes/canonical-readiness.md",
+            "adverse_effects_review": "notes/adverse-effects-review.md",
+        },
+        "techniques": entries,
+    }
+
+
 def build_capsule_payload(repo_root: Path, records: list[TechniqueRecord]) -> dict[str, Any]:
     sorted_records = sorted(records, key=lambda record: record.id)
     return {
@@ -5242,6 +5287,86 @@ def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_st
         fail(f"{min_path}: min catalog must stay a projection of the full catalog")
 
 
+def validate_promotion_readiness_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    path = repo_root / "generated" / "technique_promotion_readiness.min.json"
+    expected = build_promotion_readiness_payload(repo_root, records)
+    actual = read_json(path)
+
+    if actual != expected:
+        fail(
+            f"{path}: generated promotion readiness surface is out of date; "
+            "run 'python scripts/build_promotion_readiness.py'"
+        )
+    if actual.get("schema_version") != 1:
+        fail(f"{path}: must declare schema_version 1")
+    if actual.get("layer") != "aoa-techniques":
+        fail(f"{path}: must declare layer 'aoa-techniques'")
+    if actual.get("scope") != "published-non-deprecated":
+        fail(f"{path}: must declare scope 'published-non-deprecated'")
+    expected_source_of_truth = {
+        "catalog": "generated/technique_catalog.min.json",
+        "bundles": "techniques/*/*/TECHNIQUE.md",
+        "canonical_readiness_note": "notes/canonical-readiness.md",
+        "adverse_effects_review": "notes/adverse-effects-review.md",
+    }
+    if actual.get("source_of_truth") != expected_source_of_truth:
+        fail(f"{path}: must keep source_of_truth stable")
+
+    entries = actual.get("techniques")
+    if not isinstance(entries, list):
+        fail(f"{path}: techniques must be a list")
+
+    expected_records = sorted(
+        (record for record in records if record.status in {"canonical", "promoted"}),
+        key=lambda record: record.id,
+    )
+    expected_ids = [record.id for record in expected_records]
+    actual_ids = [entry.get("technique_id") for entry in entries if isinstance(entry, dict)]
+    if actual_ids != expected_ids:
+        fail(f"{path}: techniques must cover the published canonical/promoted corpus exactly once")
+    if len(actual_ids) != len(set(actual_ids)):
+        fail(f"{path}: techniques must not duplicate technique_id")
+
+    records_by_id = {record.id: record for record in expected_records}
+    for index, entry in enumerate(entries):
+        location = f"{path}[{index}]"
+        if not isinstance(entry, dict):
+            fail(f"{location}: entry must be an object")
+        technique_id = entry.get("technique_id")
+        if not isinstance(technique_id, str) or technique_id not in records_by_id:
+            fail(f"{location}: technique_id must resolve in the canonical/promoted corpus")
+        record = records_by_id[technique_id]
+        if entry.get("technique_name") != record.name:
+            fail(f"{location}: technique_name must match authored frontmatter")
+        if entry.get("status") != record.status:
+            fail(f"{location}: status must match authored frontmatter")
+        if entry.get("export_ready") is not bool(record.frontmatter.get("export_ready")):
+            fail(f"{location}: export_ready must match authored frontmatter")
+        if entry.get("review_required") is not bool(record.frontmatter.get("review_required")):
+            fail(f"{location}: review_required must match authored frontmatter")
+
+        note_kinds = {note.kind for note in record.notes}
+        expected_has_canonical_readiness = "canonical_readiness" in note_kinds
+        expected_has_adverse_effects_review = "adverse_effects_review" in note_kinds
+        if entry.get("has_canonical_readiness_note") is not expected_has_canonical_readiness:
+            fail(f"{location}: has_canonical_readiness_note must reflect bundle notes")
+        if entry.get("has_adverse_effects_review") is not expected_has_adverse_effects_review:
+            fail(f"{location}: has_adverse_effects_review must reflect bundle notes")
+
+        blockers = entry.get("blockers")
+        if not isinstance(blockers, list) or not all(isinstance(item, str) for item in blockers):
+            fail(f"{location}: blockers must be a list of strings")
+        expected_blockers: list[str] = []
+        if record.status == "promoted" and not expected_has_canonical_readiness:
+            expected_blockers.append("missing_canonical_readiness_note")
+        if record.status == "canonical" and not expected_has_adverse_effects_review:
+            expected_blockers.append("missing_adverse_effects_review")
+        if blockers != expected_blockers:
+            fail(f"{location}: blockers must stay aligned with the current note-backed readiness posture")
+        if entry.get("readiness_passed") is not (len(expected_blockers) == 0):
+            fail(f"{location}: readiness_passed must reflect whether blockers is empty")
+
+
 def validate_capsules(repo_root: Path, records: list[TechniqueRecord]) -> None:
     path = repo_root / "generated" / "technique_capsules.json"
     min_path = repo_root / "generated" / "technique_capsules.min.json"
@@ -5997,6 +6122,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_evidence(records)
     validate_relations(records)
     validate_catalogs(repo_root, records, schema_store)
+    validate_promotion_readiness_surface(repo_root, records)
     validate_capsules(repo_root, records)
     validate_section_surfaces(repo_root, records)
     validate_section_manifests(repo_root, records)
@@ -6024,6 +6150,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated TECHNIQUE_INDEX.md structure and parity")
     print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
+    print("[ok] validated generated promotion readiness parity")
     print("[ok] validated generated capsule parity and reader surface")
     print("[ok] validated generated full section surface parity")
     print("[ok] validated generated section manifest parity and reader surface")
