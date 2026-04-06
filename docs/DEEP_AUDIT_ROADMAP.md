@@ -15,7 +15,7 @@ Historical note:
 ## Current Live Closure Snapshot
 
 - current verification path: read-only current-state checks via `python scripts/validate_repo.py` plus `python -m unittest discover -s tests`, and bounded release-prep parity via `python scripts/release_check.py`
-- current corpus split: `74` bundles, `25 canonical`, `49 promoted`
+- current corpus split: `76` bundles, `25 canonical`, `51 promoted`
 - repo-only hardening is largely landed; the main open work is now external-evidence execution rather than missing internal infrastructure
 - recent canonical closures since the baseline below:
   - [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)

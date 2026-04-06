@@ -940,6 +940,28 @@
           "body_markdown": "Normalized message object:\n- `message_id: 18422`\n- `chat_id: saved_messages`\n- `timestamp: 2026-03-27T18:42:11Z`\n- `sender: self`\n- `reply_to_id: 18410`\n- `text: check the invoice screenshots later`\n- `media_refs[]`\n  - `media/2026/03/receipt-18422.jpg`\n- `source_kind: telegram_export`\n- `source_path: exports/saved-messages/messages.json`\n\nResume metadata:\n- `resume_cursor: 18422`\n- `last_sync_at: 2026-03-27T18:43:00Z`\n\nThe point of the example is that Telegram-derived data becomes one stable local object contract.\nIt does not define auth, session, or memory policy."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0075",
+      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/session-donor-harvest/examples/minimal-session-donor-harvest.md",
+          "title": "minimal session-donor-harvest",
+          "body_markdown": "## Reviewed session artifact cues\n\n- one repeated post-session move for turning review notes into a bounded donor packet\n- one explicit operator workflow for harvesting reusable units after review\n- one broader recurring rollout route that spans drafting, review, and later proof updates\n\n## Minimal donor pack\n\n```yaml\nsession_donor_pack:\n  source_artifact: reviewed-session-2026-04-05.md\n  kept_candidates:\n    - unit_name: reviewed-session donor packet\n      reuse_kind: pattern\n      evidence_anchors:\n        - \"the review note repeatedly turns raw recap into a bounded candidate pack\"\n    - unit_name: explicit post-session donor harvest workflow\n      reuse_kind: mechanic\n      evidence_anchors:\n        - \"the operator runs one bounded post-session harvesting workflow after review\"\n    - unit_name: recurring harvest-to-promotion route\n      reuse_kind: route\n      evidence_anchors:\n        - \"the route spans drafting, review, and later proof refresh\"\n  hold_or_defer:\n    - \"theme-level morale notes with no bounded reusable unit\"\n```\n\nWhy this example stays bounded:\n\n- it starts from a reviewed artifact instead of a live session\n- it emits candidate records with evidence anchors rather than a promotion verdict\n- it preserves several reusable units without collapsing them into one recap or one owner-layer answer"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0076",
+      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/owner-layer-triage/examples/minimal-owner-layer-triage.md",
+          "title": "minimal owner-layer-triage",
+          "body_markdown": "## Candidate unit\n\n```yaml\ncandidate_unit:\n  unit_name: explicit post-session donor harvest workflow\n  reuse_kind: mechanic\n  evidence_anchors:\n    - \"the reviewed session repeatedly performs one bounded post-session operator workflow\"\n```\n\n## Placement verdict\n\n```yaml\nowner_layer_verdict:\n  primary_owner_shape: bounded_executable_workflow\n  next_artifact: SKILL.md\n  rejected_nearest_wrong_target:\n    owner_shape: reusable_practice_canon\n    reason: \"the value here depends on a bounded operator workflow rather than on one abstract rule alone\"\n```\n\nWhy this example stays bounded:\n\n- it starts from one already isolated candidate unit\n- it chooses one primary owner verdict rather than several partial owners\n- it rejects the nearest wrong target explicitly instead of leaving the boundary implicit"
+        }
+      ]
     }
   ]
 }

@@ -4157,6 +4157,118 @@
           "markdown": "What can vary across projects:\n- local store backend\n- export versus live sync route\n- media storage paths\n- message-family extensions\n- checkpoint format for resume behavior\n\nWhat should stay invariant:\n- auth remains separate\n- normalized message objects preserve provenance\n- the store remains resumable\n- downstream systems read one stable local object contract\n\nProject-shaped details that should not be treated as invariant:\n- session-secret storage policy\n- auth bootstrap procedure\n- agent-control rhetoric\n- automatic memory writeback"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0075",
+      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn one reviewed session artifact into a bounded donor pack of reusable candidates so later placement, drafting, and promotion work starts from named units with visible evidence anchors instead of from vague memory of the session."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a session transcript, compaction note, review packet, or bounded recap already exists and has been reviewed\n- the main question is which reusable units emerged from the session rather than merely what happened\n- several candidate units may coexist and should be split before any owner-layer verdict or promotion choice\n- later work needs one donor pack with evidence anchors, candidate kinds, and defer or hold posture\n- the workflow must stay post-session and reviewable rather than reopen live execution"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the session is still live, unreviewed, or only partially captured\n- the real need is raw session capture, transcript export, replay packaging, or local indexing\n- the work already has one isolated repeated quest unit and only needs final promotion triage\n- the artifact is only a progress log, emotional recap, or theme cloud with no bounded reusable unit\n- the intended first output is a derivative routing or graph surface rather than a source-owned reusable object"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed session artifact\n- session goal and closure state\n- repeat or reuse signals visible in the artifact\n- explicit uncertainty notes and boundary risks\n- desired donor-pack posture such as classify-only, draft-stub, or patch-ready follow-through"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one bounded donor harvest pack\n- one candidate record for each kept reusable unit\n- visible evidence anchors for every kept candidate\n- one reuse-kind hint for each kept candidate such as pattern, mechanic, utility, law, proof, recall, or route\n- one defer, drop, or hold list for material that should not be promoted yet"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from a reviewed session artifact rather than from transient chat memory.\n2. Scan for reusable units, not topics. Prefer explicit moves, laws, checklists, structures, routes, or proof patterns.\n3. Split merged candidate clusters until each kept record names one reusable unit.\n4. Reject theme-only repetition, broad \"good idea\" residue, and aesthetic resonance when no bounded reusable unit survives.\n5. Capture evidence anchors for each kept candidate so later owner placement can cite where the unit actually appears in the reviewed artifact.\n6. Mark the candidate with a reuse-kind hint such as pattern, mechanic, utility, law, proof, recall, or route.\n7. Keep the donor pack smaller than a promotion verdict. The pack should preserve candidate units and evidence without pretending the owner decision is already closed.\n8. Record defer or hold outcomes for weak, mixed, or under-evidenced candidates instead of forcing every unit into canon.\n9. Hand each kept candidate to an owner-layer placement pass such as `AOA-T-0076 owner-layer-triage`.\n10. Draft the smallest next artifact only after one primary owner shape is explicit."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- invocation is explicit and post-session\n- the technique starts from a reviewed artifact rather than raw live session state\n- one candidate record names one reusable unit\n- every kept candidate keeps visible evidence anchors\n- the donor pack stays smaller than owner placement, promotion verdict, or writeback\n- session history remains source evidence, not memory canon or instruction authority\n- derivative routing or graph surfaces do not become first-authoring targets for source-owned meaning\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique assumes the transcript or equivalent reviewed artifact already exists and only owns donor extraction after review. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide the final primary owner layer for each candidate. It should also stay narrower than final quest promotion triage because it can emit several candidate units from one session instead of one promotion verdict."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- mixed clusters survive and later owner placement has to guess what the unit really is\n- the donor pack becomes a noisy session summary instead of a reusable-unit pack\n- candidates lose their evidence anchors and later drafting turns into memory or interpretation drift\n\n### Negative effects\n\n- over-harvesting can create too many thin candidates from one session\n- donor extraction adds review overhead when the honest outcome should have been `hold`\n- teams may confuse a rich donor pack with proof that promotion should already happen\n\n### Misuse patterns\n\n- using the technique for live sessions that still need execution or review\n- relabeling transcript packaging or local indexing as donor harvest\n- treating every repeated topic as a reusable unit\n- letting derivative routing, graph, or memory surfaces become the first destination\n\n### Detection signals\n\n- candidate names describe topics instead of reusable units\n- evidence anchors are missing or too vague to reopen the source artifact\n- the donor pack reads like one long recap instead of several bounded candidate records\n- reviewers cannot explain why a weak item was not deferred or held\n\n### Mitigations\n\n- split candidates aggressively until each one names one reusable unit\n- require an evidence anchor for every kept candidate\n- preserve `defer` and `hold` as valid outcomes\n- keep owner placement and promotion as explicit later seams instead of hiding them inside the donor pack"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the source artifact is reviewed and bounded\n- each kept candidate names one reusable unit rather than one topic cluster\n- each kept candidate preserves at least one evidence anchor\n- the donor pack remains smaller than owner placement or promotion verdict\n- defer or hold outcomes remain available for weak candidates\n- the bundle is not being used for capture, transcript export, replay packaging, or indexing\n\nSee `checks/session-donor-harvest-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the reviewed session artifact format\n- how evidence anchors are recorded\n- the donor-pack schema\n- the names of reuse kinds or later owner layers\n- whether the next step is classify-only, draft-stub, or patch-ready\n\nWhat should stay invariant:\n- donor harvest starts after review\n- candidate units stay bounded and split\n- evidence anchors stay visible\n- the donor pack remains smaller than owner placement and promotion\n\nProject-shaped details that should not be treated as invariant:\n- one compaction-note template\n- one transcript export tool\n- one repo naming scheme for next artifacts\n- one ecosystem's owner-layer map\n\nAoA adaptation example:\n- practice canon usually maps to `aoa-techniques`\n- bounded executable workflow usually maps to `aoa-skills`\n- multi-step recurring scenario usually maps to `aoa-playbooks`\n- proof or verdict posture usually maps to `aoa-evals`\n- recall or writeback posture usually maps to `aoa-memo`\n- role or actor-boundary posture usually maps to `aoa-agents`"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0076",
+      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Take one bounded reusable unit and assign it to one primary owner layer, one smallest honest next artifact, and one rejected nearest-wrong target so adjacent surfaces stay distinct and later promotion work starts from an explicit placement verdict."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- one reusable unit has already been isolated from its source artifact\n- several nearby owner layers look plausible and a primary placement verdict is needed\n- the workflow must separate reusable practice, bounded workflow, recurring scenario, proof, recall, role, and hold posture\n- the reviewer needs one reason for the chosen owner and one reason against the nearest wrong owner\n- derivative routing or graph layers must not become first-authoring targets for source-owned meaning"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the source still contains several mixed units that have not been split yet\n- the real need is still raw capture, transcript packaging, replay, or indexing\n- the work already has one repeated quest unit and only needs final promotion triage\n- the reusable object is a whole context map or ecosystem charter rather than one bounded candidate-unit placement\n- the task is purely to derive a derivative bridge after the source-owned artifact already exists elsewhere"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one bounded candidate unit\n- evidence anchors that justify the candidate\n- a reuse-kind hint such as pattern, mechanic, utility, law, proof, recall, or route\n- nearby owner-layer options in scope\n- optional local repo or artifact map for the current ecosystem"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one primary owner-layer verdict\n- one smallest honest next artifact\n- one rejected nearest-wrong target\n- one short reason for the chosen owner and one short reason against the rejected owner\n- one `hold` outcome when evidence is too weak to place honestly"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start with one bounded candidate unit. Split again first if several units are still fused together.\n2. Re-state the unit in reusable form rather than as a session anecdote or topic label.\n3. Ask which owner shape the unit primarily belongs to: reusable practice canon, bounded executable workflow, recurring multi-step scenario, proof or verdict surface, recall or writeback surface, role or actor-boundary surface, or hold.\n4. Choose one primary owner layer instead of spreading one unit across several surfaces at once.\n5. Name the nearest wrong target and explain why it is wrong for this unit.\n6. Reject derivative routing, graph, or search layers as first-authoring targets unless the source-owned object already exists elsewhere and only the derivative bridge changed.\n7. Name the smallest honest next artifact such as `TECHNIQUE.md`, `SKILL.md`, `PLAYBOOK.md`, `EVAL.md`, memory seed, role note, or `hold`.\n8. Preserve `hold` when the evidence is weak, mixed, or still too early."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one candidate unit maps to one primary owner layer\n- usefulness is a reuse signal, not an owner layer by itself\n- the nearest wrong target is named explicitly rather than left implicit\n- derivative routing or graph layers do not become first-authoring targets for source-owned meaning\n- the technique owns one placement verdict, not the whole donor-extraction workflow\n- the technique stays smaller than final promotion review for an already repeated quest unit\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not extract candidate units from a reviewed session artifact; it only places one already-isolated unit. Unlike [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md), it does not define the full context map or interface structure of a system; it makes one bounded owner verdict over one candidate unit. It should also stay narrower than final quest promotion triage because it can return `hold` or a first owner layer without deciding whether the unit is already ready for canon promotion."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- one mixed unit is forced into one owner layer before it is actually split\n- the chosen owner is really just the most convenient repo rather than the honest primary shape\n- the nearest wrong target is not named and boundary drift stays hidden\n\n### Negative effects\n\n- a hard owner verdict can create false certainty when evidence is still weak\n- reviewers may over-fit placement to the current ecosystem's repo map\n- too much placement ceremony can slow down obvious cases\n\n### Misuse patterns\n\n- treating every useful unit as a skill because it feels executable\n- pushing source-owned meaning into derivative routing or graph surfaces first\n- using the technique as a substitute for donor extraction, proof review, or full context-map design\n- collapsing role law, workflow, and scenario composition into one generic reuse bucket\n\n### Detection signals\n\n- reviewers cannot explain why one nearby owner is right and another is wrong\n- several owner layers still look equally primary after the verdict is written\n- the proposed next artifact is larger than the chosen owner verdict needs\n- the same kind of unit is repeatedly misrouted into derivative or convenience surfaces\n\n### Mitigations\n\n- split mixed units before placement\n- require one chosen owner and one rejected nearest-wrong target\n- keep derivative surfaces as downstream bridges rather than first-authoring targets\n- preserve `hold` when evidence is not strong enough for an honest placement verdict"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the candidate unit is bounded and singular\n- one primary owner layer is named explicitly\n- the nearest wrong target is rejected explicitly\n- the chosen next artifact fits the owner verdict\n- derivative routing or graph surfaces were not selected as first-authoring targets\n- `hold` remains available when evidence is weak or mixed\n\nSee `checks/owner-layer-triage-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the owner-layer names\n- the artifact names used after triage\n- how evidence anchors are recorded\n- whether local policy requires an extra review step before drafting\n- how `hold` or defer states are represented\n\nWhat should stay invariant:\n- one candidate unit gets one primary owner verdict\n- the nearest wrong target stays explicit\n- the next artifact stays proportional to the verdict\n- derivative layers stay downstream of source-owned authoring\n\nProject-shaped details that should not be treated as invariant:\n- one specific repo layout\n- one promotion board or routing table\n- one command or orchestrator syntax\n- one local naming convention for notes and bundles\n\nAoA adaptation example:\n- reusable practice canon usually maps to `aoa-techniques`\n- bounded executable workflow usually maps to `aoa-skills`\n- recurring multi-step scenario usually maps to `aoa-playbooks`\n- proof or verdict posture usually maps to `aoa-evals`\n- recall or writeback posture usually maps to `aoa-memo`\n- role or actor-boundary posture usually maps to `aoa-agents`\n- derivative routing and KAG surfaces stay downstream unless the source-owned object already exists elsewhere"
+        }
+      ]
     }
   ]
 }

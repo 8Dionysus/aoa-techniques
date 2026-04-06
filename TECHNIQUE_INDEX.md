@@ -85,6 +85,8 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0072 | perceptual-media-dedupe-with-threshold-review | agent-workflows | promoted | Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma. |
 | AOA-T-0073 | semantic-media-bucketing-with-vision-plus-ocr | agent-workflows | promoted | Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation. |
 | AOA-T-0074 | telegram-export-normalization-to-local-store | agent-workflows | promoted | Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract. |
+| AOA-T-0075 | session-donor-harvest | agent-workflows | promoted | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. |
+| AOA-T-0076 | owner-layer-triage | agent-workflows | promoted | Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse. |
 
 ## Deprecated techniques
 

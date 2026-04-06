@@ -3287,6 +3287,96 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0075",
+      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/session-donor-harvest/checks/session-donor-harvest-checklist.md",
+          "title": "session-donor-harvest checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the source artifact is already reviewed and bounded"
+            },
+            {
+              "order": 2,
+              "text": "[ ] each kept record names one reusable unit rather than one topic cluster"
+            },
+            {
+              "order": 3,
+              "text": "[ ] each kept candidate preserves at least one evidence anchor"
+            },
+            {
+              "order": 4,
+              "text": "[ ] weak or mixed material can remain deferred or held"
+            },
+            {
+              "order": 5,
+              "text": "[ ] the donor pack stays smaller than owner placement or promotion verdict"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the example does not reopen live execution, transcript packaging, replay, or indexing"
+            },
+            {
+              "order": 7,
+              "text": "[ ] derivative routing or graph surfaces do not become first-authoring targets"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0076",
+      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/owner-layer-triage/checks/owner-layer-triage-checklist.md",
+          "title": "owner-layer-triage checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the candidate unit is already split into one bounded reusable unit"
+            },
+            {
+              "order": 2,
+              "text": "[ ] one primary owner layer is named explicitly"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the nearest wrong target is rejected explicitly"
+            },
+            {
+              "order": 4,
+              "text": "[ ] the chosen next artifact is proportional to the owner verdict"
+            },
+            {
+              "order": 5,
+              "text": "[ ] derivative routing or graph surfaces were not treated as first-authoring targets"
+            },
+            {
+              "order": 6,
+              "text": "[ ] `hold` remains available when the evidence is weak or mixed"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the example stays smaller than full context-map, promotion-board, or routing doctrine"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

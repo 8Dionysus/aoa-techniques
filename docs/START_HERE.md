@@ -46,13 +46,14 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## Current Corpus Posture
 
-- current split: `25 canonical`, `49 promoted`
+- current split: `25 canonical`, `51 promoted`
 - latest canonical promotions: `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0044`, `AOA-T-0053`
 - current closest promoted queue item: `AOA-T-0032`
 - current internal-origin promoted techniques: `AOA-T-0033`, `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
 - current future-import-wave promoted techniques: `AOA-T-0035`, `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0042`, `AOA-T-0043`, `AOA-T-0045`
 - current chat-wave promoted techniques: `AOA-T-0049`, `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, `AOA-T-0069`
 - current personal-ingest-wave promoted techniques: `AOA-T-0070`, `AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, `AOA-T-0074`
+- current session-harvest-wave promoted techniques: `AOA-T-0075`, `AOA-T-0076`
 - current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 - current bounded `history` domain covers capture, transcript packaging, replay, local indexing, code lineage, and witness artifacts only; memory objects and recall surfaces still stay outside this repo's ownership boundary
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`
