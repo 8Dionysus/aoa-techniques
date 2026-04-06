@@ -269,6 +269,24 @@ See also:
 |---|---|---|---|
 | minimal multi-axis-quest-overlay | `present` | `techniques/agent-workflows/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md` | [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) |
 
+### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal automation-fit-matrix | `present` | `techniques/agent-workflows/automation-fit-matrix/examples/minimal-automation-fit-matrix.md` | [TECHNIQUE.md](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) |
+
+### [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal human-loop-to-seed-lift | `present` | `techniques/agent-workflows/human-loop-to-seed-lift/examples/minimal-human-loop-to-seed-lift.md` | [TECHNIQUE.md](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) |
+
+### [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal approval-sensitivity-check | `present` | `techniques/agent-workflows/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

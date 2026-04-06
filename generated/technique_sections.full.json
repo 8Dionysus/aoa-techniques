@@ -6990,6 +6990,252 @@
           "content_markdown": "- keep progression evidence separate through `AOA-T-0084`\n- keep explicit route-card meaning separate through `AOA-T-0078`\n- add a second live context that uses the same adjunct quest-overlay seam outside the current AoA session-harvest lineage"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0086",
+      "name": "automation-fit-matrix",
+      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Classify one recurring manual route with a small automation-fit matrix so the\nresult says whether the route is honestly ready for automation-oriented lift,\nstill blocked, or not worth forcing yet."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a reviewed session or recurring project slice exposes a repeated manual route\n- the team needs an explicit read on repeat signal, friction, determinism, and proof posture before calling the route automation-ready\n- the route may be a good automation candidate, but enthusiasm still needs one bounded classification object\n- reviewers want a small matrix instead of one opaque confidence score or a vague \"this should be automated\" statement"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the route only happened once and still looks exploratory\n- the real task is choosing the final owner layer or next artifact rather than classifying fit\n- the route is mostly creative synthesis with no stable trigger or output contract\n- the matrix would be used as sovereign routing or approval authority"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one reviewed route description\n- repeat evidence across sessions, windows, or artifacts\n- current friction signals\n- current trigger, input, and output posture\n- current proof, dry-run, reversibility, secret-coupling, and approval posture when known"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one bounded automation-fit matrix\n- one explicit verdict such as `seed_ready`, `checkpoint_required`, or `not_now`\n- one short explanation for the strongest blocking or enabling factors\n- one reminder that the matrix is descriptive rather than sovereign"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Start from one reviewed recurring route rather than from abstract automation desire.\n2. Score the route with small explicit rows: frequency, friction, determinism, input clarity, output clarity, proof surface, dry-run posture, reversibility, secret coupling, and approval sensitivity.\n3. Keep each row descriptive and evidence-backed instead of numeric and fake-precise.\n4. Name the strongest enabling signals and the strongest blockers.\n5. Emit `seed_ready` only when repeat signal, rule stability, proof posture, and bounded reversibility are all honestly present.\n6. Emit `checkpoint_required` when the route could be automation-worthy but authority, mutation, or rollback posture raises the burden.\n7. Emit `not_now` when the route is still too unstable, secret-heavy, or vague to justify automation lift."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the matrix classifies one route; it does not create automation authority\n- row descriptions stay evidence-backed and small\n- verdicts remain bounded to readiness posture, not final implementation or routing doctrine\n- a strong fit does not remove the need for later owner-layer or checkpoint decisions\n\nRelationship to adjacent techniques: unlike [AOA-T-0087](../human-loop-to-seed-lift/TECHNIQUE.md), this technique does not choose the first honest landing or next artifact; it only classifies whether the route has enough shape to lift. Unlike [AOA-T-0088](../approval-sensitivity-check/TECHNIQUE.md), it does not own the checkpoint or approval analysis itself; it only includes approval sensitivity as one row in the matrix."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the matrix hides missing evidence behind confident labels\n- row meanings drift into one opaque score\n- verdicts are emitted even when key rows are unknown\n\n### Negative effects\n\n- teams may over-trust a clean-looking matrix and skip later boundary checks\n- fake precision can make unstable routes look more mature than they are\n- low-value repetitive work can receive too much automation pressure\n\n### Misuse patterns\n\n- using the matrix as final routing authority\n- calling one exciting session a repeat signal\n- hiding secret-heavy or approval-heavy work behind generalized row labels\n- collapsing multiple different routes into one matrix\n\n### Detection signals\n\n- evidence refs for repeat signal or proof posture are missing\n- the matrix cannot name one current manual route\n- verdict language sounds like implementation approval instead of readiness posture\n- reviewers disagree on what one row actually means\n\n### Mitigations\n\n- keep one matrix per route\n- keep row vocabulary descriptive and small\n- require explicit blockers when key rows are weak or unknown\n- hand off owner and checkpoint questions to later explicit seams"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one reviewed recurring route is named explicitly\n- each row is evidence-backed or honestly marked unknown\n- the verdict matches the strongest blockers and enabling factors\n- approval sensitivity and reversibility remain visible\n- the matrix does not pretend to be routing or execution authority\n\nSee `checks/automation-fit-matrix-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact row wording\n- the names of verdict labels\n- how repeat evidence is referenced\n- whether the matrix is written as markdown, YAML, or a small table\n\nWhat should stay invariant:\n- one route stays one matrix\n- repeat signal, determinism, proof posture, reversibility, and approval sensitivity remain visible\n- verdicts stay descriptive rather than sovereign\n- the matrix remains smaller than any later seed, skill, or playbook artifact\n\nProject-shaped details that should not be treated as invariant:\n- one repo-specific automation queue\n- one score system\n- one scheduler vocabulary\n- one local environment or secret model\n\nAoA adaptation example:\n- common rows include repeat signal, friction, determinism, input and output clarity, proof surface, dry run, reversibility, secret coupling, and approval sensitivity\n- common verdicts are `seed_ready`, `checkpoint_required`, and `not_now`"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable route-classification seam: one small matrix over repeat signal, friction, determinism, proof posture, reversibility, and approval sensitivity. AoA repo names, local scheduler language, and project-specific automation queues were reduced to adaptation examples or kept out of the invariant core."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-automation-fit-matrix.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/automation-fit-matrix-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `aoa-skills` as the classification spine inside `aoa-automation-opportunity-scan`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded recurring-route fit matrix"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep first-landing choice separate through `AOA-T-0087`\n- keep approval and checkpoint posture separate through `AOA-T-0088`\n- add a second live context that uses the same small fit matrix outside the current AoA session-harvest automation lineage"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0087",
+      "name": "human-loop-to-seed-lift",
+      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Lift one recurring human loop into the first honest automation-facing landing\nwithout skipping the difference between a bounded skill, a playbook seed, a\ntechnique candidate, a repair quest, or a defer verdict."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a recurring reviewed route already has enough shape for a next-artifact decision\n- the real question is where the route should land first rather than whether the fit matrix is strong\n- a team needs one bounded owner-aware handoff instead of vague \"automate this later\" language\n- schedule hints, if present, must remain advisory rather than becoming authority"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- no reviewed recurring route exists yet\n- the route still needs fit classification or approval-checkpoint analysis first\n- the task is asking for live automation, hidden scheduling, or direct mutation authority\n- the route is already a mature implementation artifact rather than a first landing decision"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one recurring reviewed route\n- one readiness classification or equivalent evidence\n- likely owner-layer options\n- known schedule hints, if any\n- known blockers that may force repair, defer, or checkpoint posture"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one first-honest-landing verdict\n- one owner-layer recommendation\n- one next-artifact type such as `skill`, `playbook_seed`, `technique_candidate`, `repair_quest`, or `defer`\n- one rejected nearest-wrong target\n- optional schedule hints kept as advisory only"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Start from one recurring reviewed human loop rather than from abstract automation aspiration.\n2. Ask which first landing keeps the route smallest and most truthful.\n3. Choose `skill` when the route is one bounded executable workflow.\n4. Choose `playbook_seed` when the route is a recurring scenario composed of multiple skills, checkpoints, or scheduled rhythms.\n5. Choose `technique_candidate` when the reusable core is a stable practice behind several possible automations.\n6. Choose `repair_quest` or `defer` when missing proof, missing boundaries, or hidden authority still block honest lift.\n7. Record the nearest wrong target so promotion pressure stays explicit and reviewers can see what was intentionally rejected."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the lift chooses the first honest landing; it does not grant live automation authority\n- schedule hints remain hints rather than runtime truth\n- one bounded skill must not hide a recurring scenario seed\n- repair or defer verdicts remain honorable outcomes rather than failures of ambition\n\nRelationship to adjacent techniques: unlike [AOA-T-0086](../automation-fit-matrix/TECHNIQUE.md), this technique does not classify the route across readiness rows; it starts after enough evidence exists to choose a first landing. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it is narrower and more automation-facing: it chooses the first honest lift from a human loop into an automation-oriented artifact rather than placing any reusable unit into any owner layer."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the route is forced into a skill when it really wants a scenario seed or defer verdict\n- schedule hints quietly become authority\n- the rejected nearest-wrong target is omitted, hiding classification pressure\n\n### Negative effects\n\n- teams may create brittle skills where a broader playbook seed was needed\n- too much optimism can move unstable work into seed lanes before repair or checkpoint posture exists\n- defers can look like indecision if the bundle does not explain why smaller is more honest\n\n### Misuse patterns\n\n- treating `playbook_seed` as a synonym for \"automation exists now\"\n- using one landing verdict as proof that implementation should begin immediately\n- hiding unresolved blockers behind a positive owner-layer label\n- widening the lift into a generic roadmap or prioritization system\n\n### Detection signals\n\n- the route cannot name one current manual loop\n- schedule hints are phrased like commands or fixed policy\n- reviewers cannot tell why one landing was chosen over another\n- the nearest wrong target is missing even though obvious alternatives existed\n\n### Mitigations\n\n- require one explicit current manual loop first\n- keep schedule hints advisory only\n- require one rejected nearest-wrong target\n- preserve repair and defer as honest outcomes"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one recurring reviewed loop is named\n- the first landing stays smaller than a full implementation\n- owner-layer and next-artifact posture are explicit\n- schedule hints remain advisory only\n- the nearest wrong target is visible when classification pressure exists\n\nSee `checks/human-loop-to-seed-lift-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the names of owner layers\n- the names of next-artifact types\n- whether schedule hints are expressed in prose, fields, or follow-up notes\n- which automation surfaces count as local skills versus scenario seeds\n\nWhat should stay invariant:\n- one human loop still gets one first-honest-landing verdict\n- schedule hints remain advisory\n- smaller landings beat premature implementation\n- repair and defer remain acceptable outputs\n\nProject-shaped details that should not be treated as invariant:\n- one repo map\n- one scheduler stack\n- one skill registry\n- one prioritization board\n\nAoA adaptation example:\n- first landings commonly include `aoa-skills`, `aoa-playbooks`, `aoa-techniques`, or a repair/defer lane\n- a recurring session closeout route often lands as a playbook seed before any scheduler or runtime implementation exists"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable first-landing seam: one recurring human loop, one owner-aware next-artifact verdict, and one rejected nearest wrong target. AoA repo names, specific scheduler ideas, and project-local queue shapes were reduced to adaptation examples or kept out of the invariant core."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-human-loop-to-seed-lift.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/human-loop-to-seed-lift-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `aoa-skills` as the first-landing bridge inside `aoa-automation-opportunity-scan`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded lift from recurring human work into a seed-oriented next artifact"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep fit classification separate through `AOA-T-0086`\n- keep generic owner placement separate through `AOA-T-0076`\n- add a second live context that uses the same first-honest-landing seam outside the current AoA session-harvest automation lineage"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0088",
+      "name": "approval-sensitivity-check",
+      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Classify whether one automation candidate crosses approval, rollback, hidden\nauthority, or self-change boundaries so later seed or repair work must carry\nexplicit checkpoint posture instead of feeling like silent automation."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- an automation candidate may mutate important system surfaces\n- authority, approval, rollback, or health-check posture is unclear\n- the route looks automation-worthy but could become unsafe without one explicit checkpoint verdict\n- reviewers need to know whether the next honest move is still a seed candidate or a checkpoint-aware repair or proposal"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the route is clearly low-risk and read-only\n- the real task is generic confirmation before mutation rather than automation-candidate review\n- no recurring reviewed route exists yet\n- the route still needs basic fit classification or donor extraction first"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one recurring automation candidate\n- mutation surface and authority posture\n- rollback and health-check posture\n- secret and environment coupling\n- any existing approval gate or its current absence"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one approval-sensitivity verdict\n- one explicit `checkpoint_required` or `not_required` result\n- one short explanation of the strongest checkpoint trigger\n- one downgraded landing recommendation when the candidate is not honestly seed-ready yet"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Start from one bounded automation candidate rather than from generic risk language.\n2. Ask whether the route mutates important surfaces, relies on hidden authority, behaves like self-change, or lacks visible rollback and health checks.\n3. Mark `checkpoint_required` whenever approval posture or rollback discipline would be essential to keep the route reviewable.\n4. Downgrade any `seed_ready` impulse when checkpoint posture is still missing or underdefined.\n5. Distinguish low-risk read-only or preview-oriented candidates from approval-heavy or mutation-heavy candidates.\n6. Name the next honest artifact as a checkpoint-aware repair route, reviewed seed proposal, or defer verdict when risk posture is still too open.\n7. Preserve the difference between a checkpoint requirement and permission to execute."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the check classifies one candidate's approval burden; it does not approve execution\n- `checkpoint_required` is a boundary flag, not a scheduler or mutation grant\n- hidden authority, missing rollback, and missing health checks all count against seed-ready posture\n- later repair or approval systems still own the actual checkpoint stack\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not govern a general confirmation seam before mutation; it only classifies whether an automation candidate has crossed into checkpoint-required territory. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not build the full repair checkpoint packet; it only decides when automation-oriented lift must hand off to one."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- approval-heavy candidates are mislabeled as safe or seed-ready\n- checkpoint posture is triggered too late because hidden authority was ignored\n- checkpoint-required results are mistaken for permission to proceed\n\n### Negative effects\n\n- teams may automate mutation-heavy routes before rollback and health checks exist\n- over-triggering checkpoint posture can make low-risk read-only candidates look scarier than they are\n- reviewers may conflate approval sensitivity with general worthiness or priority\n\n### Misuse patterns\n\n- treating the check as a green light instead of a boundary classification\n- using approval jargon to hide self-change or secret-heavy behavior\n- widening the check into one full repair or governance framework\n- skipping fit classification and donor evidence because the route feels urgent\n\n### Detection signals\n\n- mutation surface or authority posture is missing from the write-up\n- rollback or health-check seams are absent on a meaningful candidate\n- the next artifact still sounds like immediate implementation after `checkpoint_required`\n- reviewers cannot tell whether the route is read-only, preview-only, or mutating\n\n### Mitigations\n\n- require explicit mutation and authority posture\n- keep `checkpoint_required` separate from permission to execute\n- preserve a downgrade path to repair, reviewed proposal, or defer\n- keep full checkpoint packet construction in later explicit techniques"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- one automation candidate is named explicitly\n- mutation, authority, rollback, and health-check posture are visible\n- `checkpoint_required` is explicit when the route is approval-heavy or self-changing\n- low-risk read-only candidates can still remain outside checkpoint posture\n- the result does not imply permission to execute\n\nSee `checks/approval-sensitivity-check-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the names of approval classes\n- the rollback-anchor format\n- the health-check surface\n- whether the result is rendered in prose, YAML, or a small packet field\n\nWhat should stay invariant:\n- one candidate still gets one approval-sensitivity verdict\n- hidden authority and missing rollback stay visible\n- `checkpoint_required` remains boundary posture rather than permission\n- low-risk read-only candidates remain distinguishable from self-changing ones\n\nProject-shaped details that should not be treated as invariant:\n- one approval bot or command\n- one repo layout\n- one scheduler stack\n- one change-management doctrine\n\nAoA adaptation example:\n- common checkpoint triggers include important surface mutation, hidden or shifting authority, missing rollback marker, missing health check, and self-repair posture\n- common resulting artifacts include a checkpoint-aware repair route, a reviewed seed proposal, or a defer verdict"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable approval-boundary seam: one automation candidate, one explicit checkpoint-required verdict, and one reasoned downgrade path when mutation or hidden authority raises the burden. AoA approval commands, local ops doctrine, and runtime wrappers were reduced to adaptation examples or kept out of the invariant core."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-approval-sensitivity-check.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/approval-sensitivity-check-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in `aoa-skills` as the checkpoint-boundary seam inside `aoa-automation-opportunity-scan`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded approval-sensitivity check over one automation candidate"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep generic confirmation seams separate through `AOA-T-0028`\n- keep full self-repair checkpoint packets separate through `AOA-T-0083`\n- add a second live context that uses the same automation-bound approval check outside the current AoA session-harvest automation lineage"
+        }
+      ]
     }
   ]
 }

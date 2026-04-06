@@ -1191,6 +1191,48 @@
       "main_risk_short": "Main risk: narrative flavor starts replacing the underlying evidence-backed result.",
       "validation_short": "Validate by checking the overlay rests on reviewed evidence; the underlying progression or route note remains explicit; flavor remains adjunct rather than...",
       "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0086",
+      "name": "automation-fit-matrix",
+      "summary": "Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.",
+      "one_line_intent": "Classify one recurring manual route with a small automation-fit matrix so the result says...",
+      "use_when_short": "Use when a reviewed session or recurring project slice exposes a repeated manual route or the team needs an explicit...",
+      "do_not_use_short": "Avoid when the route only happened once and still looks exploratory or the real task is choosing the final owner...",
+      "inputs_short": "Needs one reviewed route description; repeat evidence across sessions, windows, or artifacts; current friction signals.",
+      "outputs_short": "Produces one bounded automation-fit matrix; one explicit verdict such as seed_ready, checkpoint_required, or not_now; one short explanation for...",
+      "core_contract_short": "Core contract: the matrix classifies one route; it does not create automation authority; row descriptions stay evidence-backed and small.",
+      "main_risk_short": "Main risk: the matrix hides missing evidence behind confident labels.",
+      "validation_short": "Validate by checking one reviewed recurring route is named explicitly; each row is evidence-backed or honestly marked unknown; the verdict matches the...",
+      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0087",
+      "name": "human-loop-to-seed-lift",
+      "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
+      "one_line_intent": "Lift one recurring human loop into the first honest automation-facing landing without skipping the...",
+      "use_when_short": "Use when a recurring reviewed route already has enough shape for a next-artifact decision or the real question is where...",
+      "do_not_use_short": "Avoid when no reviewed recurring route exists yet or the route still needs fit classification or approval-checkpoint analysis first.",
+      "inputs_short": "Needs one recurring reviewed route; one readiness classification or equivalent evidence; likely owner-layer options.",
+      "outputs_short": "Produces one first-honest-landing verdict; one owner-layer recommendation; one next-artifact type such as skill, playbook_seed, technique_candidate, repair_quest, or defer.",
+      "core_contract_short": "Core contract: the lift chooses the first honest landing; it does not grant live automation authority; schedule hints remain hints...",
+      "main_risk_short": "Main risk: the route is forced into a skill when it really wants a scenario seed or defer verdict.",
+      "validation_short": "Validate by checking one recurring reviewed loop is named; the first landing stays smaller than a full implementation; owner-layer and next-artifact posture...",
+      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0088",
+      "name": "approval-sensitivity-check",
+      "summary": "Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible.",
+      "one_line_intent": "Classify whether one automation candidate crosses approval, rollback, hidden authority, or self-change boundaries so...",
+      "use_when_short": "Use when an automation candidate may mutate important system surfaces or authority, approval, rollback, or health-check posture is unclear.",
+      "do_not_use_short": "Avoid when the route is clearly low-risk and read-only or the real task is generic confirmation before mutation rather than...",
+      "inputs_short": "Needs one recurring automation candidate; mutation surface and authority posture; rollback and health-check posture.",
+      "outputs_short": "Produces one approval-sensitivity verdict; one explicit checkpoint_required or not_required result; one short explanation of the strongest checkpoint trigger.",
+      "core_contract_short": "Core contract: the check classifies one candidate's approval burden; it does not approve execution; checkpoint_required is a boundary flag, not...",
+      "main_risk_short": "Main risk: approval-heavy candidates are mislabeled as safe or seed-ready.",
+      "validation_short": "Validate by checking one automation candidate is named explicitly; mutation, authority, rollback, and health-check posture are visible; checkpoint_required is explicit when the...",
+      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md"
     }
   ]
 }

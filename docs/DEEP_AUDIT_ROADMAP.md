@@ -15,7 +15,7 @@ Historical note:
 ## Current Live Closure Snapshot
 
 - current verification path: read-only current-state checks via `python scripts/validate_repo.py` plus `python -m unittest discover -s tests`, and bounded release-prep parity via `python scripts/release_check.py`
-- current corpus split: `85` bundles, `25 canonical`, `60 promoted`
+- current corpus split: `88` bundles, `25 canonical`, `63 promoted`
 - repo-only hardening is largely landed; the main open work is now external-evidence execution rather than missing internal infrastructure
 - recent canonical closures since the baseline below:
   - [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
@@ -31,6 +31,10 @@ Historical note:
   - [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
   - [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
   - [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
+- latest internal-origin promoted additions:
+  - [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md)
+  - [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md)
+  - [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md)
 - current closest promoted queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
 - current external-evidence lead sprint:
   - [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)

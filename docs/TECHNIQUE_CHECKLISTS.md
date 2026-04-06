@@ -262,6 +262,24 @@ See also:
 |---|---|---|---|---|
 | multi-axis-quest-overlay checklist | `absent` | `6` | `techniques/agent-workflows/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) |
 
+### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| automation-fit-matrix checklist | `absent` | `7` | `techniques/agent-workflows/automation-fit-matrix/checks/automation-fit-matrix-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) |
+
+### [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| human-loop-to-seed-lift checklist | `absent` | `7` | `techniques/agent-workflows/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) |
+
+### [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| approval-sensitivity-check checklist | `absent` | `7` | `techniques/agent-workflows/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

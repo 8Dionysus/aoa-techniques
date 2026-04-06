@@ -96,6 +96,9 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0083 | checkpoint-bound-self-repair | agent-workflows | promoted | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. |
 | AOA-T-0084 | progression-evidence-lift | agent-workflows | promoted | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. |
 | AOA-T-0085 | multi-axis-quest-overlay | agent-workflows | promoted | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
+| AOA-T-0086 | automation-fit-matrix | agent-workflows | promoted | Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm. |
+| AOA-T-0087 | human-loop-to-seed-lift | agent-workflows | promoted | Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred. |
+| AOA-T-0088 | approval-sensitivity-check | agent-workflows | promoted | Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible. |
 
 ## Deprecated techniques
 
