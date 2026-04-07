@@ -3951,6 +3951,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0091",
+      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md",
+          "title": "workspace-root-ingress-and-mutation-gate checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the workspace root is named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the primary repo root is named explicitly"
+            },
+            {
+              "order": 3,
+              "text": "[ ] ingress runs before substantial work begins"
+            },
+            {
+              "order": 4,
+              "text": "[ ] guard runs before risky mutation begins"
+            },
+            {
+              "order": 5,
+              "text": "[ ] `must_confirm` and `blocked_actions` remain visible and actionable"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the technique stays smaller than install, bootstrap, or closeout doctrine"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

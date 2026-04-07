@@ -5053,6 +5053,62 @@
           "markdown": "What can vary across projects:\n- the set of adjacent targets in scope\n- how rejection reasons are written\n- whether the rejection appears inline or in a sidecar field\n\nWhat should stay invariant:\n- the rejected target is plausible and adjacent\n- the rejection reason clarifies a boundary\n- the technique stays smaller than the chosen verdict workflow\n\nProject-shaped details that should not be treated as invariant:\n- one owner-layer taxonomy\n- one repo naming scheme\n- one review template\n- one packet format\n\nAoA adaptation example:\n- `promote_to_playbook` may reject `promote_to_skill` when the repeated unit is route-shaped\n- `promote_to_skill` may reject `promote_to_playbook` when the repeated unit is leaf-workflow-shaped\n- `keep_quest` may reject `promote_to_skill` when repetition is still weak or mixed"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0091",
+      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Enter federated workspaces through one explicit ingress pass and require one explicit guard pass before risky mutation so session posture stays visible, reviewable, and anchored to the workspace root instead of hiding in operator memory."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- work starts from a sibling workspace that contains several related repositories under one root\n- the next step depends on choosing one primary repo root while still respecting workspace-level guidance\n- the operator or agent needs a visible readout of relevant skills, must-confirm gates, and blocked actions before changing code, config, runtime, or shared artifacts\n- the reusable object is one bounded session posture law for federated work, not a total startup platform or mission framework"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the task is truly single-repo and no meaningful workspace-root posture exists\n- the main need is just one opening read-and-verify ritual without any workspace-specific guard seam\n- the workflow already lives inside a narrower confirmed mutation contract and does not need a separate ingress pass\n- the route would widen into workspace installation, repo bootstrap, or full closeout orchestration doctrine"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one workspace root\n- one primary repo root or one explicit reason to keep the workspace root primary for now\n- one short statement of intent for the current pass\n- one mutation surface classification when mutation is actually planned"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit ingress report for the current workspace and repo root\n- one explicit guard report before risky mutation\n- one visible list of `activate_now`, `must_confirm`, `suggest_next`, and `blocked_actions`\n- one clearer operator decision to proceed, confirm, defer, or reroute before mutation"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start by naming the workspace root and the primary repo root for the current pass.\n2. Before substantial work, run one ingress pass against that repo root from the workspace root.\n3. Read the returned `activate_now`, `must_confirm`, `suggest_next`, and `blocked_actions` instead of carrying session posture implicitly.\n4. If the task stays read-only, continue from the ingress report without inventing a second guard step.\n5. Before risky, mutating, infra, runtime, repo-config, or public-share actions, run one guard pass with the intended mutation surface.\n6. Treat `must_confirm` and `blocked_actions` as real gates rather than as decorative hints.\n7. Allow safe auto-activation only where the detector already permits it; keep `explicit-only` skills visible instead of silently firing them.\n8. Keep closeout, post-session growth chains, and owner-layer authorship outside this technique unless they become the actual route anchor."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the workspace root is explicit before ingress runs\n- one primary repo root is named for the current pass, even when it is temporarily the workspace root itself\n- ingress happens before substantial work\n- guard happens before risky mutation, not after\n- `must_confirm` and `blocked_actions` remain actionable gates\n- the technique stays smaller than workspace install doctrine, repo bootstrap, closeout routing, and owner-layer authorship\n\nRelationship to adjacent techniques: unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), this technique does not own the general \u201cread current state before work\u201d ritual for any resumed session; it owns the workspace-root posture where ingress and pre-mutation guard are explicit control-plane passes. Unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), it does not replace the local confirmation seam around one concrete mutation; it prepares the workspace-aware gate posture before mutation is even allowed. Unlike [AOA-T-0061](../cross-repo-resource-map-bootstrap/TECHNIQUE.md), it does not author a cross-repo map artifact; it governs how an active session should enter and guard work once a federated workspace already exists."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- ingress becomes symbolic and nobody actually reads the returned posture\n- guard runs too late, after mutation is already underway\n- the workspace root and repo root stay implicit, so the reports are generated against the wrong surface\n\n### Negative effects\n\n- the technique can add ceremony when the task is tiny or obviously read-only\n- contributors may overtrust detector output and skip deeper repo-specific reasoning\n- a workspace law can drift into a project-specific launcher if too many install or runtime details accumulate inside it\n\n### Misuse patterns\n\n- treating any startup command as equivalent to ingress even when no structured posture is returned\n- using guard as a retrospective explanation after mutation already happened\n- widening the bundle into full workspace install, closeout, or skill-governance doctrine\n\n### Detection signals\n\n- the operator cannot name which repo root ingress targeted\n- risky mutation happens with no visible guard report\n- `must_confirm` items are silently skipped\n- the technique starts accumulating install instructions, repo-local overlays, or full closeout routes as invariants\n\n### Mitigations\n\n- require one explicit workspace root and repo root per pass\n- keep ingress and guard outputs visible in the session trail\n- stop when `blocked_actions` or unresolved `must_confirm` items apply\n- route install doctrine, bootstrap, and closeout behavior to sibling bundles once they become the real center of gravity"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- ingress runs before substantial work begins\n- the current repo root and workspace root are explicit\n- risky mutation triggers a guard pass before mutation starts\n- `must_confirm` and `blocked_actions` remain visible and actionable\n- the technique still makes sense without importing workspace install or closeout doctrine\n\nSee `checks/workspace-root-ingress-and-mutation-gate-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact CLI or API used to run ingress and guard\n- whether reports are written to JSON files, logs, terminal output, or another reviewable artifact\n- the set of mutation-surface labels\n- how the workspace root and repo root are discovered\n\nWhat should stay invariant:\n- one ingress pass happens before substantial workspace work\n- one guard pass happens before risky mutation\n- the workspace root and primary repo root are explicit\n- the returned gate posture stays visible rather than hidden in memory\n\nProject-shaped details that should not be treated as invariant:\n- `/srv` as the workspace root\n- one specific foundation profile name\n- one exact path like `.aoa/skill-dispatch`\n- one exact command spelling such as `aoa skills enter` or `aoa skills guard`\n- one specific host wrapper or local runtime shell script\n\nAoA adaptation example:\n- choose one primary `repo_root` under the sibling workspace\n- run ingress from the workspace root before substantial work\n- run guard before code, infra, runtime, repo-config, or public-share mutation\n- keep explicit-only skill activations visible instead of silently auto-running them"
+        }
+      ]
     }
   ]
 }
