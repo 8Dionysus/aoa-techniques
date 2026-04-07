@@ -612,7 +612,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(90, len(technique_paths))
+        self.assertEqual(91, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -645,7 +645,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
         self.assertEqual(25, status_counts["canonical"])
-        self.assertEqual(65, status_counts["promoted"])
+        self.assertEqual(66, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -848,13 +848,14 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-evals",
             "aoa-routing",
             "25 canonical",
-            "65 promoted",
+            "66 promoted",
             "external-dependency-first promoted techniques",
             "future-import-wave promoted techniques",
             "chat-wave promoted techniques",
             "personal-ingest-wave promoted techniques",
             "session-harvest-wave promoted techniques",
             "automation-opportunity-wave promoted techniques",
+            "workspace-foundation-wave promoted techniques",
             "internal-origin promoted techniques",
             "AOA-T-0005",
             "latest canonical promotions:",
@@ -926,6 +927,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0088",
             "AOA-T-0089",
             "AOA-T-0090",
+            "AOA-T-0091",
             "AOA-T-0032",
             "AOA-T-0026",
             "python scripts/validate_repo.py",

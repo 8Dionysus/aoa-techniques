@@ -4844,6 +4844,64 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0091",
+      "name": "workspace-root-ingress-and-mutation-gate",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.",
+      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-sdk + 8Dionysus",
+        "path": "src/aoa_sdk/skills/detector.py + src/aoa_sdk/cli/main.py + docs/WORKSPACE_INSTALL.md + /srv/AGENTS.md",
+        "note": "Extracted from the workspace-foundation landing wave where federated AoA work starts through an explicit ingress pass and risky mutation is gated through a second workspace-aware guard pass."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "workspace",
+        "ingress",
+        "mutation-gate",
+        "federation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-06",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0060"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0028"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0061"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

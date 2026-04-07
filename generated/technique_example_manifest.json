@@ -1116,6 +1116,17 @@
           "body_markdown": "```yaml\ntarget_rejection:\n  chosen_target: promote_to_playbook\n  nearest_wrong_target: promote_to_skill\n  rejection_reason: repeated unit is route-shaped, not one leaf workflow\n```\n\nWhy this example stays bounded:\n\n- it rejects the closest wrong target instead of a distant strawman\n- it uses one boundary reason rather than a long essay\n- it clarifies the chosen verdict without replacing the verdict itself"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0091",
+      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md",
+          "title": "minimal workspace-root-ingress-and-mutation-gate",
+          "body_markdown": "```yaml\nworkspace_posture:\n  workspace_root: /workspace\n  repo_root: /workspace/aoa-sdk\n  ingress:\n    command: aoa skills enter /workspace/aoa-sdk --root /workspace --intent-text \"inspect closeout seam\"\n    must_confirm: []\n  guard:\n    command: aoa skills guard /workspace/aoa-sdk --root /workspace --intent-text \"update closeout routing\" --mutation-surface code\n    must_confirm:\n      - approval_gate\n      - dry_run_first\n```\n\nWhy this example stays bounded:\n\n- it names one workspace root and one repo root instead of a whole install route\n- it makes ingress and guard visible without claiming they auto-resolve every decision\n- it shows mutation gating without widening into closeout or bootstrap doctrine"
+        }
+      ]
     }
   ]
 }

@@ -43690,6 +43690,361 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0091",
+      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0091"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "workspace-root-ingress-and-mutation-gate"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps the contract narrow around explicit workspace ingress and pre-mutation guard posture"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but live evidence is still concentrated in the current AoA sibling-workspace lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when federated workspaces need one explicit session-start and pre-mutation posture law"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when operators need visible gate output rather than implicit \u201cremembered\u201d workspace habits"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default workspace posture outside the current AoA federation"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-06"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the bounded ingress-plus-guard seam while stripping local rollout and ownership-repair details"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second live context outside the current AoA sibling workspace"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between general session opening and workspace-specific posture should stay tested through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0091` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more federated workspace proves the same ingress-plus-guard boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0091"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "workspace-root-ingress-and-mutation-gate"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-sdk + 8Dionysus"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `src/aoa_sdk/skills/detector.py`\n- `src/aoa_sdk/cli/main.py`\n- `docs/session-closeout.md`\n- `docs/WORKSPACE_INSTALL.md`\n- `/srv/AGENTS.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the workspace root now defines an explicit session-start contract that requires one ingress pass before substantial work"
+                },
+                {
+                  "order": 2,
+                  "text": "the same root contract requires one guard pass before risky, mutating, infra, runtime, repo-config, or public-share actions"
+                },
+                {
+                  "order": 3,
+                  "text": "the detector output keeps `activate_now`, `must_confirm`, `suggest_next`, and `blocked_actions` visible instead of hiding posture in free-form memory"
+                },
+                {
+                  "order": 4,
+                  "text": "the route was used as part of the real workspace-foundation landing wave rather than being invented as a template-only abstraction"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surviving reusable object is one workspace-root operating law for entering and gating federated work"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded around ingress-plus-guard posture without importing workspace install, bootstrap, or closeout doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0091"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "workspace-root-ingress-and-mutation-gate"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the project-local `/srv` posture was reduced to one bounded workspace law for ingress and guard passes"
+                },
+                {
+                  "order": 2,
+                  "text": "root path names, rollout mechanics, and closeout telemetry stayed in adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "substantial workspace work still begins through one explicit ingress pass"
+                },
+                {
+                  "order": 2,
+                  "text": "risky mutation still requires one explicit guard pass beforehand"
+                },
+                {
+                  "order": 3,
+                  "text": "the workspace root and primary repo root remain explicit instead of being assumed from memory"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic startup advice if the ingress and guard outputs stop being central"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into bootstrap or install doctrine if workspace landing details are treated as invariants"
+                },
+                {
+                  "order": 3,
+                  "text": "a tiny example can understate how important `must_confirm` and `blocked_actions` are for real mutation gating"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one bounded workspace posture law rather than a playbook route"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps install, bootstrap, and closeout logic adjacent but separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted bundle without importing local root ownership or rollout specifics"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded ingress-plus-guard posture for federated workspaces"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
