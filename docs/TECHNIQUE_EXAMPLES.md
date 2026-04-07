@@ -305,6 +305,12 @@ See also:
 |---|---|---|---|
 | minimal workspace-root-ingress-and-mutation-gate | `present` | `techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md` | [TECHNIQUE.md](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
 
+### [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal audit-to-closeout-proof-loop example | `present` | `techniques/agent-workflows/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
