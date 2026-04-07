@@ -304,6 +304,12 @@ See also:
 |---|---|---|---|---|
 | audit-to-closeout-proof-loop checklist | `present` | `8` | `techniques/agent-workflows/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
 
+### [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| recommendation-truth-vs-host-actionability checklist | `absent` | `8` | `techniques/agent-workflows/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

@@ -7564,6 +7564,88 @@
           "content_markdown": "- keep findings compaction in `AOA-T-0052` instead of widening this bundle backward into review dedupe\n- keep scenario-level multi-repo choreography in `aoa-playbooks` instead of absorbing route semantics here\n- revisit canonical readiness only after another non-identical public context proves the same finding-first proof boundary"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0093",
+      "name": "recommendation-truth-vs-host-actionability",
+      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep router recommendation truth and host actionability separate so control-plane reports stay honest, activation only reflects what the current host can execute, and missing local installs do not erase semantically relevant guidance."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a control plane recommends skills, capabilities, or bounded workflow objects from a corpus that may be larger than the current host install\n- the system needs to preserve why an item was recommended even when the host cannot execute it directly\n- `activate_now`, `must_confirm`, and `suggest_next` need honest actionability semantics rather than one blended relevance score\n- canonical install roots or explicit host manifests exist and must determine executability separately from routing logic\n- risk gates still need to stay visible even when the host only has a manual fallback path"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- every recommended object is always bundled with the same runtime and host executability can never diverge\n- the real need is upstream source readiness before publication rather than local host actionability after recommendation\n- the real need is discovery-query design, marketplace curation, or registry policy instead of control-plane honesty\n- the real need is skill-command ownership or docs routing rather than runtime availability semantics\n- the system has no meaningful distinction between auto-activation, explicit confirmation, and non-executable guidance"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one router recommendation result such as `activate_now`, `must_confirm`, and `suggest_next`\n- one explicit host inventory source or one ordered install-root discovery rule\n- one small precedence rule between manual overrides and auto-discovered roots\n- one availability annotation shape that can represent executable, router-only, and unknown states\n- one report surface that exposes both recommendation reasoning and host actionability"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one annotated recommendation report where each item keeps both its routing reason and its host-availability state\n- one explicit actionability-gap surface for items that remain relevant but are not directly executable\n- one `activate_now` set constrained to host-executable items only\n- one visible record of which inventory source or install root determined executability\n- one clearer operator decision about whether to execute, confirm manually, install, or defer"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Produce the recommendation result from routing logic before consulting host inventory.\n2. Resolve host inventory separately through explicit overrides or a small ordered set of canonical install roots.\n3. Annotate each recommended item with a host-availability state such as `host-executable`, `router-only`, or `unknown`, plus the inventory source that produced the verdict.\n4. Treat `router-only` as a real semantic recommendation state, not as invalidity or irrelevance.\n5. Keep `activate_now` limited to `host-executable` items. If an auto-activated item is not executable, demote it out of `activate_now` and surface the gap explicitly.\n6. Leave `must_confirm` and `suggest_next` visible even when an item is `router-only`, especially when manual fallback is still allowed or operator attention is still required.\n7. Emit one clear report-level note when host inventory was missing, partial, or auto-discovered so reviewers can tell how actionability was resolved.\n8. Keep inventory precedence explicit and small; do not infer executability from repo-export theater, stale assumptions, or hidden local state.\n9. If a required risk gate is only `router-only` and no safe manual path exists, stop and surface that impossibility instead of pretending the gate passed."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- router recommendation truth is computed separately from host executability\n- host inventory source and precedence remain explicit\n- `activate_now` requires `host-executable`\n- `router-only` is not treated as invalid, irrelevant, or silently dropped\n- `must_confirm` remains visible and actionable even when an item is not directly executable\n- `unknown` remains a visible state instead of collapsing into either success or absence\n- the technique stays smaller than discovery doctrine, marketplace curation, registry governance, or upstream-health policy\n\nRelationship to adjacent techniques: unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), this technique does not ask whether an upstream source is publishable or reachable; it governs local host actionability after recommendation already happened. Unlike [AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does not decide when ingress and guard run; it governs the truth split inside their reports. Unlike [AOA-T-0064](../../docs/capability-discovery/TECHNIQUE.md), it does not own discovery-query semantics; it starts after one bounded recommendation set already exists."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- host actionability leaks back into recommendation truth, so relevant items disappear when they are merely unavailable\n- auto-discovered install roots silently override explicit host manifests or operator-provided overrides\n- `activate_now` still includes non-executable items, so the control plane overstates what can run\n- `router-only` items are hidden instead of being surfaced as actionable gaps\n- the system treats one repo-local export surface as if it were the canonical proof of host executability\n\n### Negative effects\n\n- the technique adds annotation and reporting overhead for very small systems\n- a more honest split can feel stricter or noisier because non-executable items stay visible\n- canonical install-root discovery adds one more precedence surface that contributors need to understand\n\n### Misuse patterns\n\n- treating `router-only` as a broken-skill verdict instead of a local actionability verdict\n- collapsing `unknown` into `false` to make reports look simpler\n- widening the bundle into marketplace, registry, or trust policy\n- hardcoding one repository's install paths as universal invariants\n\n### Detection signals\n\n- a report cannot explain why an item was recommended separately from why it is or is not executable\n- `activate_now` contains items marked non-executable\n- missing host inventory causes the system to drop semantically relevant recommendations entirely\n- `must_confirm` items disappear when they are router-only instead of remaining visible\n- reviewers cannot tell which install root or manifest produced the host-availability verdict\n\n### Mitigations\n\n- require one explicit availability annotation and one explicit source field per item\n- keep precedence between overrides and auto-discovery small and readable\n- emit `actionability_gaps` instead of silently filtering router-only items away\n- fail closed when a required risk gate has no honest executable or manual path\n- keep host-actionability rules adjacent to, but separate from, discovery and upstream-health doctrine"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- a recommendation can remain visible even when it is not directly executable on the host\n- `activate_now` contains only `host-executable` items\n- an originally auto-activated router-only item is demoted and surfaced as an actionability gap\n- explicit host overrides take precedence over auto-discovered install roots when both exist\n- canonical install roots are checked in declared order\n- a router-only `must_confirm` item remains visible instead of disappearing\n- the report states whether host inventory was explicit, auto-discovered, or missing\n\nSee `checks/recommendation-truth-vs-host-actionability-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the exact report format\n- the exact host-inventory carrier such as CLI flags, manifest files, or runtime inspection\n- the ordered install roots and how they are discovered\n- the exact status labels used for host availability\n- whether manual fallback is modeled as a separate field or inferred from context\n\nWhat should stay invariant:\n- recommendation truth is produced independently from host actionability\n- host actionability is annotated explicitly rather than implied\n- `activate_now` is reserved for host-executable items\n- router-only recommendations remain visible\n- inventory precedence remains explicit and reviewable\n\nProject-shaped details that should not be treated as invariant:\n- exact paths such as `.agents/skills`\n- one workspace root such as `/srv`\n- one exact CLI spelling such as `aoa skills detect`\n- one exact JSON key such as `host_inventory_provided`\n- one exact trio of labels such as `host-executable`, `router-only`, and `unknown`\n\nAoA adaptation example:\n- route skill relevance through the detector first\n- resolve host actionability from explicit host manifests or canonical repo, workspace, and user install roots\n- demote non-executable auto-actions out of `activate_now`\n- keep router-only gates visible in `must_confirm` instead of pretending the host already satisfied them"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable control-plane law: recommendation truth and host actionability are separate surfaces, and reports must preserve both. AoA-specific path names, CLI output details, local install quirks, and session-local debugging context were reduced to adaptation examples or left out."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-recommendation-truth-vs-host-actionability.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/recommendation-truth-vs-host-actionability-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born from the `aoa-sdk` skill-runtime recommendation-gap repair on 2026-04-06\n- harvested in `Dionysus` as a surviving control-plane law on 2026-04-06\n- promoted into `aoa-techniques` on 2026-04-06 as a bounded recommendation-versus-executability split for skill control planes"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- keep upstream source readiness in `AOA-T-0042` instead of widening this bundle into publish-time health doctrine\n- keep workspace ingress and mutation posture in `AOA-T-0091` instead of making this a general session-start technique\n- revisit stricter fail-fast posture for router-only risk gates only after another live host context proves the same seam outside the current `aoa-sdk` lineage"
+        }
+      ]
     }
   ]
 }
