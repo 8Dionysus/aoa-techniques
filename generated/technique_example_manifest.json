@@ -1171,6 +1171,17 @@
           "body_markdown": "## Situation\n\nA coordination repository tracks one final owner-side contract change, but the\nowner repository is intentionally handled through GitHub only in the current\nenvironment.\n\n## Minimal route\n\n1. Write one bounded track packet with goal, non-goals, validator of record,\n   stop condition, and rollback marker.\n2. Open one owner-side issue and one PR branch in GitHub.\n3. Land the smallest owner-side contract doc or config change.\n4. Wait for the named PR checks to pass and merge the owner PR.\n5. In the same closeout pass, update the coordination repository so its\n   lifecycle markers and reality checks now point at the merged owner anchors.\n\n## Honest result\n\n- the owner repo remains the source of truth\n- GitHub-native validation proves only the bounded owner-side claim\n- the coordination layer no longer reports staged truth after the merge\n\n## Non-example\n\nDo not treat one green owner-side PR as proof of broad runtime parity or full\nproduct support beyond the merged owner contract."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0096",
+      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md",
+          "title": "minimal pinned-validation-matrix-before-generated-publish",
+          "body_markdown": "```yaml\ngenerated_publish:\n  repo_root: /workspace/aoa-routing\n  outputs:\n    - generated/owner_layer_shortlist.min.json\n  workflow_pinned_inputs:\n    - repo: aoa-playbooks\n      ref: origin/main\n      required_surface: generated/playbook_review_status.min.json\n    - repo: aoa-skills\n      ref: workflow-pinned-sibling\n      required_surface: generated/core_skill_receipt_contracts.min.json\n  rebuild:\n    command: python scripts/build_router.py --check\n  publish_gate:\n    requires:\n      - pinned_matrix_rebuilt\n      - generated_diff_honest\n      - repo_validators_green\n```\n\nWhy this example stays bounded:\n\n- it names the generated outputs and the workflow-pinned inputs before publish\n- it makes the pinned matrix explicit instead of treating local workspace state\n  as automatically sufficient\n- it shows one publish gate without widening into full release choreography"
+        }
+      ]
     }
   ]
 }

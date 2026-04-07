@@ -45485,6 +45485,361 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0096",
+      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0096"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "pinned-validation-matrix-before-generated-publish"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps the contract narrow around generated publish and\nworkflow-pinned validation inputs"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but live evidence\nis still concentrated in the current AoA generated-surface family"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when generated outputs depend on sibling surfaces or mirrored\ncontracts that CI pins more strictly than a local workspace does"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when publish risk comes from false local confidence rather\nthan from ordinary code drift"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default publish posture outside the current AoA\ncross-repo generated-surface context"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-07"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the bounded\npinned-matrix rule while stripping private runner setup, credentials, and\nbroader release bureaucracy"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second live generated-surface repo outside the\ncurrent AoA sibling family"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam between upstream health checks, split-wave playbooks, and generated\npublish posture should stay explicit through future reuse"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0096` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after at least one more non-identical\ngenerated-publish context proves the same pinned-matrix boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0096"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "pinned-validation-matrix-before-generated-publish"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-routing + aoa-skills + Dionysus"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `scripts/build_router.py`\n- `tests/test_live_workspace_contracts.py`\n- `scripts/publish_core_skill_receipts.py`\n- `reports/ecosystem-audits/2026-04-07.cross-repo.surface-detection-wave-rollout-session-harvest.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surface-detection second-wave landing exposed a repeatable gap between\nlocal workspace rebuilds and the sibling refs that GitHub workflows actually\nvalidated"
+                },
+                {
+                  "order": 2,
+                  "text": "`aoa-routing` needed a repair pass that synced generated snapshots with the\nlive `aoa-playbooks` review track instead of trusting stale local\nexpectations"
+                },
+                {
+                  "order": 3,
+                  "text": "`aoa-skills` needed portable receipt-schema mirrors so the publish path would\nmatch the workflow-consumed contracts rather than a narrower local state"
+                },
+                {
+                  "order": 4,
+                  "text": "the durable session harvest in `Dionysus` recorded the surviving reusable\nobject as a technique-shaped publish-hygiene law rather than as repo-local CI\ntrivia"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surviving reusable object is one bounded rule for generated publish:\nreproduce the workflow-pinned matrix first, then rebuild and validate"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay smaller than full release choreography while\nstill preventing false local confidence"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0096"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "pinned-validation-matrix-before-generated-publish"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "repo-specific second-wave PR tails were reduced to one bounded publish-hygiene\nlaw about reproducing workflow-pinned validation inputs"
+                },
+                {
+                  "order": 2,
+                  "text": "concrete sibling repo names and one-off repair details were kept in evidence\nnotes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the adapted bundle was reduced to one technique doc, one checklist, one\nexample, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "generated publish confidence still depends on the same matrix that CI really\nreads"
+                },
+                {
+                  "order": 2,
+                  "text": "local workspace state still cannot silently replace pinned sibling refs"
+                },
+                {
+                  "order": 3,
+                  "text": "publish still waits for the pinned-matrix pass rather than for a convenient\nrepo-local green check"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic CI advice if generated publish\nposture stops being central"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can widen into release automation or multi-repo choreography if\nthe pinned matrix is not kept sharply bounded"
+                },
+                {
+                  "order": 3,
+                  "text": "a tiny example can understate how much local `main` drift can mislead publish\ndecisions"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is\none bounded publish workflow law rather than an eval policy or playbook route"
+                },
+                {
+                  "order": 2,
+                  "text": "the wording preserves the generated-publish seam without pulling in private\nworkflow setup or broader wave doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted bundle from\nreal cross-repo use"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one pinned-matrix rule for\ngenerated publish honesty"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
