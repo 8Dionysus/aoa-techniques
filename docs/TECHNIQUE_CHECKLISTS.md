@@ -316,6 +316,12 @@ See also:
 |---|---|---|---|---|
 | github-only-owner-endcap-with-reality-sync Checklist | `absent` | `7` | `techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
 
+### [AOA-T-0096](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| pinned-validation-matrix-before-generated-publish checklist | `absent` | `7` | `techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

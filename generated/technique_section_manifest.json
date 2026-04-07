@@ -5333,6 +5333,62 @@
           "markdown": "What can vary across projects:\n- the exact GitHub lane shape such as issue plus PR, issue plus draft PR, or PR\n  only\n- the owner-side validation surface such as docs checks, smoke tests, or a full\n  test workflow\n- the coordination layer that performs post-merge reality sync\n- the specific anchor form such as GitHub URLs, raw URLs, or mirrored public\n  docs\n\nWhat should stay invariant:\n- the owner repo lands first\n- GitHub stays the declared execution surface when the route is GitHub-only\n- post-merge reality sync happens immediately after the owner landing\n- public claims stay bounded to merged owner evidence\n\nProject-shaped details that should not be treated as invariant:\n- one milestone number such as `#1`\n- one issue or PR number such as `#49` or `#50`\n- one owner doc path such as `docs/PRODUCT_EDGE_POSTURE.md`\n- one specific seed-garden repo such as `Dionysus`\n- one exact anchor type such as GitHub raw URLs\n\nAoA adaptation example:\n- keep the final remote-only owner endcap in `ATM10-Agent` GitHub-native\n- let PR checks prove the bounded product-edge contract before merge\n- then update `Dionysus` lifecycle markers, ledger, and owner-repo reality\n  canary to point at the merged owner anchors instead of the staged pack"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0096",
+      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Rebuild and validate generated outputs against the same workflow-pinned sibling\nrefs, mirrored surfaces, or bounded upstream inputs that CI will actually read\nbefore publish so local green does not overstate merge-readiness."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- the repo publishes generated files or snapshots that depend on sibling repos\n  or other bounded upstream surfaces\n- CI or release checks validate those outputs against pinned refs rather than\n  whatever currently happens to be checked out locally\n- local rebuilds look clean against workspace `main`, but publish confidence\n  still depends on a narrower validation matrix\n- the reusable object is one bounded publish-hygiene law, not a full release\n  playbook or automation system"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the generated outputs are fully single-repo and CI reads only the current\n  checkout\n- the task is ordinary code validation rather than generated-surface publish\n  posture\n- the route is really one broader ordered-wave playbook or release cutover\n  rather than one publish guardrail\n- the needed matrix still depends on private runner state or unrevealed inputs\n  that cannot be named publicly"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one owner repo that is about to publish generated outputs\n- one explicit list of workflow-pinned sibling refs, mirrored inputs, or\n  bounded upstream surfaces\n- one rebuild or `--check` path that can run against those pinned inputs\n- one decision point for publish, defer, or repair"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one local validation pass that matches the workflow-pinned matrix closely\n  enough to predict CI honestly\n- one generated diff or clean-state result produced against those pinned inputs\n- one clearer publish decision grounded in the same inputs CI will use"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start by naming the generated outputs that are about to publish and the\n   workflow-pinned sibling refs or mirrored inputs that CI actually validates.\n2. Read the workflow or validator contract first; do not substitute local\n   workspace `main` by habit.\n3. Sync, pin, or otherwise emulate those exact sibling refs locally before the\n   rebuild or `--check` pass begins.\n4. Rebuild or validate the generated outputs against that pinned matrix rather\n   than against whatever happens to be newest in the workspace.\n5. If the pinned-matrix pass fails, repair the generated outputs, supporting\n   mirrors, or docs against that same bounded matrix instead of widening into\n   unrelated cleanup.\n6. Publish only after the pinned-matrix pass and the repo-native validators\n   agree that the generated outputs are honest.\n7. If the route still needs broader merge-order choreography, hand off to a\n   playbook or ordered-wave workflow instead of widening this technique."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the workflow-pinned validation matrix is explicit before rebuild begins\n- local workspace state never silently substitutes for pinned refs\n- generated publish waits for the pinned-matrix pass, not just a workspace-only\n  green check\n- repairs stay bounded to the inputs that the workflow actually reads\n- the technique stays smaller than full release automation, split-wave playbook\n  doctrine, or CI platform design\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), this technique is\nnot the whole change protocol; it adds one stricter publish rule around pinned\nvalidation inputs for generated outputs. Unlike\n[AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), it\ndoes not score upstream readiness in the abstract; it reproduces the exact\npublish-time matrix that generated-surface CI will read. Unlike\n[AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does\nnot govern session start or mutation gating; it acts later, when generated\npublish honesty is on the line."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- local rebuilds go green against workspace state while CI still reads older or\n  pinned sibling refs and fails\n- contributors fix the generated files but not the mirrored sources or schemas\n  that the workflow actually consumes\n- the route widens into broad cross-repo cleanup because the pinned matrix was\n  never named sharply enough\n\n### Negative effects\n\n- the technique adds setup overhead before each generated publish\n- reproducing pinned refs locally can feel slower than trusting current\n  workspace `main`\n- public docs can understate how easy it is to overtrust a convenient local\n  rebuild\n\n### Misuse patterns\n\n- assuming \u201clatest local sibling checkout\u201d is equivalent to the workflow matrix\n- running only repo-local validators while skipping the pinned cross-repo\n  rebuild\n- using this technique as generic CI debugging advice outside generated publish\n  posture\n- widening the bundle into full release choreography or automation doctrine\n\n### Detection signals\n\n- CI fails on generated-surface drift that local rebuilds never saw\n- the publish route cannot name which sibling refs or mirrored files the\n  workflow actually used\n- fixes keep landing in generated snapshots while the upstream mirrored\n  contract still drifts\n- reviewers cannot tell whether the final green state came from pinned inputs\n  or from ad hoc workspace state\n\n### Mitigations\n\n- require the pinned validation inputs to be named before rebuild begins\n- run the rebuild or `--check` pass against those exact inputs\n- keep repair scope bounded to the workflow-consumed mirrors, schemas, docs, or\n  generated snapshots\n- stop and hand off to an ordered-wave route when the publish path becomes\n  broader than one bounded generated-surface closure"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n\n- the workflow-pinned sibling refs or mirrored inputs were named explicitly\n- the local rebuild or `--check` pass used that same matrix\n- generated outputs stayed aligned after the pinned-matrix pass\n- repo-native validators also stayed green\n- the final publish claim now matches what CI will actually read\n\nSee `checks/pinned-validation-matrix-before-generated-publish-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n\n- the exact workflow system or CI runner\n- whether the pinned inputs are sibling repos, mirrored JSON surfaces, schema\n  files, or release artifacts\n- the exact rebuild command or validation command\n- whether the pinned refs are branches, tags, raw URLs, or copied mirrors\n\nWhat should stay invariant:\n\n- the publish matrix is read before rebuild begins\n- the same pinned inputs are used locally before publish\n- generated publish waits for that pinned-matrix pass\n- the route stays honest about what CI will really validate\n\nProject-shaped details that should not be treated as invariant:\n\n- one repo name such as `aoa-routing` or `aoa-skills`\n- one exact validator like `python scripts/build_router.py --check`\n- one exact sibling path such as `/srv/aoa-playbooks`\n- one exact GitHub Actions workflow file or runner image\n\nAoA adaptation example:\n\n- inspect which sibling surfaces or schema mirrors the workflow reads\n- rebuild the generated outputs against those pinned inputs before publish\n- repair the bounded mirrors or snapshots that drifted\n- publish only after the pinned-matrix pass and repo-native validators agree"
+        }
+      ]
     }
   ]
 }

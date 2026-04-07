@@ -4164,6 +4164,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0096",
+      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md",
+          "title": "pinned-validation-matrix-before-generated-publish checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the generated outputs about to publish are named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] the workflow-pinned sibling refs or mirrored inputs are named explicitly"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the local rebuild or `--check` pass uses that same pinned matrix"
+            },
+            {
+              "order": 4,
+              "text": "[ ] publish does not rely only on workspace `main` state"
+            },
+            {
+              "order": 5,
+              "text": "[ ] repo-native validators also stay green after the pinned-matrix pass"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the technique stays smaller than release automation or split-wave playbook doctrine"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

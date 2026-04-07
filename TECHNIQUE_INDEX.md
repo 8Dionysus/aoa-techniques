@@ -106,6 +106,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0093 | recommendation-truth-vs-host-actionability | agent-workflows | promoted | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. |
 | AOA-T-0094 | canonical-owner-with-validated-mirror | docs | promoted | Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned. |
 | AOA-T-0095 | github-only-owner-endcap-with-reality-sync | agent-workflows | promoted | Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing. |
+| AOA-T-0096 | pinned-validation-matrix-before-generated-publish | agent-workflows | promoted | Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness. |
 
 ## Deprecated techniques
 
