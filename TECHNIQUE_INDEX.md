@@ -102,6 +102,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0089 | quest-unit-promotion-review | agent-workflows | promoted | Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure. |
 | AOA-T-0090 | nearest-wrong-target-rejection | agent-workflows | promoted | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. |
 | AOA-T-0091 | workspace-root-ingress-and-mutation-gate | agent-workflows | promoted | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. |
+| AOA-T-0092 | audit-to-closeout-proof-loop | agent-workflows | promoted | Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone. |
 
 ## Deprecated techniques
 

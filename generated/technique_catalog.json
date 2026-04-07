@@ -4902,6 +4902,60 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0092",
+      "name": "audit-to-closeout-proof-loop",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.",
+      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "origin": {
+        "project": "Dionysus + AoA ecosystem repos",
+        "path": "reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md + aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md",
+        "note": "Extracted from reviewed cross-repo audit remediation runs where findings were re-confirmed in live code, fixed at the owning source surface, and closed through targeted proof plus full verification."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "audit",
+        "closeout",
+        "proof",
+        "remediation"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-04-06",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0052"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

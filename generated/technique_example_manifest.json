@@ -1127,6 +1127,17 @@
           "body_markdown": "```yaml\nworkspace_posture:\n  workspace_root: /workspace\n  repo_root: /workspace/aoa-sdk\n  ingress:\n    command: aoa skills enter /workspace/aoa-sdk --root /workspace --intent-text \"inspect closeout seam\"\n    must_confirm: []\n  guard:\n    command: aoa skills guard /workspace/aoa-sdk --root /workspace --intent-text \"update closeout routing\" --mutation-surface code\n    must_confirm:\n      - approval_gate\n      - dry_run_first\n```\n\nWhy this example stays bounded:\n\n- it names one workspace root and one repo root instead of a whole install route\n- it makes ingress and guard visible without claiming they auto-resolve every decision\n- it shows mutation gating without widening into closeout or bootstrap doctrine"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0092",
+      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md",
+          "title": "Minimal audit-to-closeout-proof-loop example",
+          "body_markdown": "Input findings:\n\n- `repo A accepts an optional path as required and aborts the closeout path`\n- `repo B appends JSONL receipts without restoring a missing trailing newline`\n\nProof-backed closeout:\n\n1. Re-confirm both findings in live code rather than trusting the audit wording alone.\n2. Patch the smallest owner-surface causes in each repository.\n3. Add one targeted regression seam for the optional-path behavior and one for the JSONL boundary behavior.\n4. Rerun the targeted checks immediately after each fix.\n5. Rerun the broader repo validation or full test suite before the findings are marked closed.\n6. Record any remaining warnings or follow-on seams instead of pretending the route is perfectly clean.\n\nWhy this works:\n\n- the findings are closed on named proof, not only on patch presence\n- the targeted checks prove the failure mode directly\n- the broader closeout rerun checks that the repositories still hold together after the local fixes"
+        }
+      ]
     }
   ]
 }

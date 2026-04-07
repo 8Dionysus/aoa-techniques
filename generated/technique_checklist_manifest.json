@@ -3992,6 +3992,51 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0092",
+      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md",
+          "title": "audit-to-closeout-proof-loop checklist",
+          "intro_markdown": "Use this checklist when reviewing whether an audit remediation pass still behaves like a bounded proof-backed closeout loop instead of drifting into generic triage or rollout theater.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] the source findings set is reviewed and bounded before remediation starts"
+            },
+            {
+              "order": 2,
+              "text": "[ ] each closed finding was re-confirmed against live code or explicitly marked non-repro"
+            },
+            {
+              "order": 3,
+              "text": "[ ] the owner repository and source checkout are named before mutation"
+            },
+            {
+              "order": 4,
+              "text": "[ ] each closed finding has one targeted proof surface that matches the named failure mode"
+            },
+            {
+              "order": 5,
+              "text": "[ ] an owner-level closeout surface reran after the bounded fixes landed"
+            },
+            {
+              "order": 6,
+              "text": "[ ] deferred, uncertain, or follow-on findings remain explicit"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the route did not close findings only because one final full-suite pass was green"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the example still shows the difference between finding-level proof and broader closeout"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

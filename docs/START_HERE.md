@@ -46,7 +46,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## Current Corpus Posture
 
-- current split: `25 canonical`, `66 promoted`
+- current split: `25 canonical`, `67 promoted`
 - latest canonical promotions: `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0044`, `AOA-T-0053`
 - current closest promoted queue item: `AOA-T-0032`
 - current internal-origin promoted techniques: `AOA-T-0033`, `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
@@ -57,6 +57,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - current automation-opportunity-wave promoted techniques: `AOA-T-0086`, `AOA-T-0087`, `AOA-T-0088`
 - current quest-promotion-wave promoted techniques: `AOA-T-0089`, `AOA-T-0090`
 - current workspace-foundation-wave promoted techniques: `AOA-T-0091`
+- current audit-remediation-wave promoted techniques: `AOA-T-0092`
 - current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 - current bounded `history` domain covers capture, transcript packaging, replay, local indexing, code lineage, and witness artifacts only; memory objects and recall surfaces still stay outside this repo's ownership boundary
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`

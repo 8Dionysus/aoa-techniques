@@ -44045,6 +44045,365 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0092",
+      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0092"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "audit-to-closeout-proof-loop"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique already has two reviewed AoA contexts with different blocker families"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle keeps the contract narrow around live finding confirmation, targeted proof, and final closeout"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when teams need a stronger answer than \"we patched it and the suite is green\""
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when reviewed findings must be closed against current code and owner repositories"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default closeout law outside the current AoA remediation lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-06"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published technique keeps the proof loop while stripping local audit files, path quirks, and session-specific telemetry"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from one more public context outside the current AoA remediation family"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam against `AOA-T-0001` and `AOA-P-0018` should stay visible through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0092` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after another non-identical context proves the same finding-first proof loop"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0092"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "audit-to-closeout-proof-loop"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "Dionysus + AoA ecosystem repos"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `/srv/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.packet.json`\n- `/srv/aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the April 6, 2026 remediation wave closed a bounded audit packet across `aoa-sdk`, `aoa-memo`, `aoa-stats`, `aoa-skills`, and source-owned `abyss-stack` by re-checking findings in live code, landing minimal owner-surface fixes, and then rerunning targeted plus full validation"
+                },
+                {
+                  "order": 2,
+                  "text": "the route explicitly rejected mirror-side fixes for `abyss-stack` and used the preferred source checkout instead"
+                },
+                {
+                  "order": 3,
+                  "text": "the same session closed with full `pytest` runs across all touched repositories rather than stopping at local green slices"
+                },
+                {
+                  "order": 4,
+                  "text": "the earlier April 5, 2026 reviewed remediation run in `aoa-playbooks` shows the same finding-first closure posture across a different blocker family and a wider repo set"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surviving reusable object is a finding-first proof loop that sits between reviewed findings and honest closeout"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded around live confirmation, owner-surface repair, targeted proof, and final closeout without turning into full review production, incident response, or program management"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0092"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "audit-to-closeout-proof-loop"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over bounded technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the concrete repo list, audit filenames, and session-specific closeout narration were reduced to one reusable finding-first proof loop"
+                },
+                {
+                  "order": 2,
+                  "text": "the local source-checkout exception for `abyss-stack` moved to adaptation guidance rather than the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewed findings still need live confirmation before patching"
+                },
+                {
+                  "order": 2,
+                  "text": "each closed finding still needs one targeted proof seam"
+                },
+                {
+                  "order": 3,
+                  "text": "broader repo-level closeout still reruns before the route can claim closure"
+                },
+                {
+                  "order": 4,
+                  "text": "unresolved findings still stay explicit rather than disappearing into a green summary"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can collapse into generic \"test your fixes\" advice if the named finding-first loop stops being central"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can drift toward scenario-level remediation choreography that belongs in `aoa-playbooks`"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle can overfit to AoA audit habits if future contexts do not test different finding families"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the April 5 and April 6 remediation runs show the same proof boundary across different blocker families and repo mixes"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one closure discipline, not a playbook or eval surface"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted bundle without importing local audit files or repo-private runtime detail"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded finding-first closeout law across more than one reviewed remediation context"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

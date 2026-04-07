@@ -298,6 +298,12 @@ See also:
 |---|---|---|---|---|
 | workspace-root-ingress-and-mutation-gate checklist | `absent` | `7` | `techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
 
+### [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| audit-to-closeout-proof-loop checklist | `present` | `8` | `techniques/agent-workflows/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
