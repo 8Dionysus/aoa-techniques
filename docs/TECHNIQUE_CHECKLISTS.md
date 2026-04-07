@@ -468,6 +468,12 @@ See also:
 |---|---|---|---|---|
 | capability-discovery checklist | `absent` | `8` | `techniques/docs/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/docs/capability-discovery/TECHNIQUE.md) |
 
+### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Canonical Owner With Validated Mirror Checklist | `absent` | `7` | `techniques/docs/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

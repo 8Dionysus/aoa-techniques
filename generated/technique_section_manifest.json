@@ -5221,6 +5221,62 @@
           "markdown": "What can vary across projects:\n- the exact report format\n- the exact host-inventory carrier such as CLI flags, manifest files, or runtime inspection\n- the ordered install roots and how they are discovered\n- the exact status labels used for host availability\n- whether manual fallback is modeled as a separate field or inferred from context\n\nWhat should stay invariant:\n- recommendation truth is produced independently from host actionability\n- host actionability is annotated explicitly rather than implied\n- `activate_now` is reserved for host-executable items\n- router-only recommendations remain visible\n- inventory precedence remains explicit and reviewable\n\nProject-shaped details that should not be treated as invariant:\n- exact paths such as `.agents/skills`\n- one workspace root such as `/srv`\n- one exact CLI spelling such as `aoa skills detect`\n- one exact JSON key such as `host_inventory_provided`\n- one exact trio of labels such as `host-executable`, `router-only`, and `unknown`\n\nAoA adaptation example:\n- route skill relevance through the detector first\n- resolve host actionability from explicit host manifests or canonical repo, workspace, and user install roots\n- demote non-executable auto-actions out of `activate_now`\n- keep router-only gates visible in `must_confirm` instead of pretending the host already satisfied them"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0094",
+      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Keep one canonical owner for a cross-repo contract while still permitting nearby mirrors, as long as each mirror proves exact parity instead of becoming a second drifting source of truth."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- one shared schema, contract, or vocabulary is consumed across several repositories\n- a neighboring repository needs a local mirror for bounded workflow reasons such as local validation, docs, or packaging\n- ownership metadata and allowed values must stay exact across the canonical copy and every mirror\n- the main risk is split-brain drift rather than absence of any shared contract\n- consumers should fail fast when a producer invents or misspells a contract token"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- every repository can depend directly on the canonical contract and no local mirror is needed\n- two repositories genuinely co-own different parts of the contract and the real need is a clearer boundary split\n- the local copy is intended to become the new primary editable home\n- the real need is only generic single-source distribution inside one repository\n- the real need is a runtime rollout route rather than a contract ownership law"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one shared contract that several repositories already consume\n- one explicit canonical owner for that contract\n- zero or more local mirrors with bounded reasons to exist\n- one parity rule covering both ownership metadata and payload vocabulary\n- one consumer-side validation path that can reject unknown or drifted tokens"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one explicit canonical contract home\n- zero or more legal mirrors that stay subordinate to the canonical source\n- one fail-fast parity check for mirrors\n- one fail-fast consumer validation path for contract tokens\n- lower split-brain risk during cross-repo contract evolution"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Name one repository as the canonical owner of the shared contract and make that ownership explicit in the contract metadata.\n2. Reduce every neighboring copy to a mirror posture rather than treating it as a second editable source.\n3. Encode a small parity rule that checks owner metadata, canonical-reference metadata, and bounded vocabulary values between canonical and mirror copies.\n4. Keep consumer intake validation anchored to the canonical vocabulary so unknown tokens fail early.\n5. Land contract migrations in the canonical owner first, then update mirrors through parity-preserving sync rather than independent edits by default.\n6. If a mirror needs local wrapper logic, keep that wrapper outside the mirrored contract payload.\n7. Stop the rollout when parity or intake validation fails instead of normalizing drift as local convenience."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- exactly one repository owns the shared contract\n- a mirror is legal only when it stays subordinate to the canonical owner\n- parity covers ownership metadata and bounded vocabulary, not just loose shape compatibility\n- consumers reject unknown contract tokens early\n- migrations move through the canonical owner before mirrors\n- local wrappers stay separate from the mirrored contract payload\n- this technique stays smaller than rollout sequencing, playbook composition, or runtime publication policy\n\nRelationship to adjacent techniques: unlike [AOA-T-0013](../single-source-rule-distribution/TECHNIQUE.md), this technique governs a cross-repo contract that still permits local mirrors rather than pure fan-out from one source inside one rule-distribution system. Unlike [AOA-T-0024](../upstream-mirroring-with-provenance/TECHNIQUE.md), the mirror here stays inside one federated ecosystem and must prove exact parity rather than mainly preserving external provenance. Unlike [AOA-T-0019](../frontmatter-metadata-spine/TECHNIQUE.md), the goal is not metadata routing in one corpus; it is split-brain prevention for one shared cross-repo contract."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- a mirror starts accepting local edits and becomes a shadow source of truth\n- parity checks compare only shape and miss vocabulary drift\n- consumer validation stays permissive, so unknown tokens reach derived views before failing\n- migration order reverses and a mirror introduces tokens before the canonical owner does\n\n### Negative effects\n\n- strict parity can slow local iteration when contributors are used to editing the nearest copy\n- fail-fast vocabulary validation can surface more red checks during migration windows\n- a canonical-owner rule adds one more governance boundary contributors need to understand\n\n### Misuse patterns\n\n- using mirrors as convenience patch points because they are closer to the current repository\n- claiming a mirror is \"temporary\" while never adding parity validation\n- widening the technique into full rollout orchestration, publisher readiness, or runtime incident handling\n- treating consumer tolerance as a safer default than explicit drift detection\n\n### Detection signals\n\n- different repositories list different allowed contract tokens for the same shared envelope\n- ownership metadata disagrees between the canonical copy and its mirror\n- derived consumers accept unexpected token families or silently ignore them\n- a migration requires hand-edited fixes in several mirrors before the canonical copy is stable\n\n### Mitigations\n\n- keep one explicit canonical owner field and one canonical-reference field in mirrored copies\n- validate mirror parity against the canonical copy on every repository-level verification path\n- reject unknown tokens in consumer intake rather than only in downstream summaries\n- land migrations in canonical-first order and keep local wrapper logic outside the mirrored contract file"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the shared contract names exactly one canonical owner\n- each mirror carries explicit canonical-reference metadata\n- parity validation fails when owner metadata or allowed vocabulary diverges\n- consumer validation rejects unknown tokens before derived outputs are built\n- local wrapper or packaging logic stays outside the mirrored contract payload\n\nSee `checks/canonical-owner-with-validated-mirror-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact contract format such as JSON Schema, YAML, or typed config\n- how mirrors are packaged or referenced locally\n- the specific vocabulary being parity-checked\n- the exact validator or check command that enforces parity\n\nWhat should stay invariant:\n- one canonical owner remains explicit\n- mirrors stay subordinate to that owner\n- parity checks cover metadata and bounded vocabulary\n- consumer intake rejects unknown tokens early\n\nProject-shaped details that should not be treated as invariant:\n- one exact field name such as `x-owner_repo`\n- one exact consumer script name such as `build_views.py`\n- one exact mirrored repository such as `aoa-evals`\n- one exact event family such as receipt envelopes\n\nAoA adaptation example:\n- keep the shared stats event envelope canonical in `aoa-stats`\n- allow `aoa-evals` to keep a local mirror only when owner metadata and event-kind enum stay exact\n- validate `event_kind` against the canonical vocabulary during stats intake so drift fails before summary generation"
+        }
+      ]
     }
   ]
 }

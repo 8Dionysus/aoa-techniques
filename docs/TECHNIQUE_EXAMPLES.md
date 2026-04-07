@@ -484,6 +484,12 @@ See also:
 |---|---|---|---|
 | minimal capability discovery | `present` | `techniques/docs/capability-discovery/examples/minimal-capability-discovery.md` | [TECHNIQUE.md](../techniques/docs/capability-discovery/TECHNIQUE.md) |
 
+### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Canonical Owner With Validated Mirror | `present` | `techniques/docs/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

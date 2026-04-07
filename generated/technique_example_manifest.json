@@ -1149,6 +1149,17 @@
           "body_markdown": "```yaml\nskill_dispatch:\n  router_recommendations:\n    activate_now:\n      - aoa-change-protocol\n      - aoa-sanitized-share\n  host_inventory:\n    source: repo-install\n    roots_checked:\n      - /workspace/project/.agents/skills\n      - /workspace/.agents/skills\n      - /user-skill-root/.agents/skills\n    present_skills:\n      - aoa-change-protocol\n  annotated_result:\n    activate_now:\n      - skill_name: aoa-change-protocol\n        host_availability:\n          status: host-executable\n          source: repo-install\n    must_confirm:\n      - skill_name: aoa-sanitized-share\n        reason: strong router match; host inventory is router-only for this skill\n        host_availability:\n          status: router-only\n          source: repo-install\n          manual_fallback_allowed: true\n    actionability_gaps:\n      - aoa-sanitized-share\n```\n\nWhy this example stays bounded:\n\n- it separates recommendation truth from host actionability instead of blending them into one verdict\n- it demotes a non-executable auto-action instead of silently dropping it\n- it keeps install-root discovery explicit without widening into marketplace or registry policy"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0094",
+      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md",
+          "title": "Minimal Canonical Owner With Validated Mirror",
+          "body_markdown": "Use one canonical contract plus one legal mirror.\n\n- canonical copy:\n  - lives in the owner repository\n  - declares the owning repository explicitly\n  - carries the bounded vocabulary that consumers must accept\n- mirror copy:\n  - names the canonical source explicitly\n  - stays byte-for-byte or semantically equivalent on owner metadata and allowed vocabulary\n  - does not become the convenient place for local contract edits\n- consumer validation:\n  - reads the canonical vocabulary\n  - rejects unknown tokens before building downstream views\n\nIf rollout ordering, owner activation, or live publisher recovery becomes the main problem, treat that as a separate playbook rather than widening this technique."
+        }
+      ]
     }
   ]
 }
