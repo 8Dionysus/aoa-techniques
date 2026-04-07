@@ -138,6 +138,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md): `complements` [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md), [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md)
 - [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md): `complements` [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md)
 - [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md): `complements` [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md)
+- [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md): `complements` [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md), [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -225,6 +226,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts. |
 | [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. |
 | [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. |
+| [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned. |
 
 ### `evaluation`
 
@@ -256,7 +258,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 93/93 techniques.
+- `export_ready` is currently `true` for 94/94 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

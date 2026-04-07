@@ -44767,6 +44767,365 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0094",
+      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/docs/canonical-owner-with-validated-mirror/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0094"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "canonical-owner-with-validated-mirror"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps the contract narrow around canonical ownership, mirror legality, and fail-fast vocabulary validation"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and public-safe example, but live evidence is still concentrated in one receipt-envelope lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when one federated ecosystem needs a shared contract with a single truthful owner and one or more bounded mirrors"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when mirror convenience would otherwise create split-brain drift across neighboring repositories"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default law for every mirrored contract family outside the current schema-and-vocabulary context"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-07"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published bundle keeps the ownership and parity law while stripping session-local and repo-private detail"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second live context outside the current receipt-envelope lineage"
+                },
+                {
+                  "order": 2,
+                  "text": "stronger automation around parity sync would benefit from more than one contract family before being treated as invariant"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0094` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after another live cross-repo contract shows the same canonical-owner and validated-mirror seam"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/canonical-owner-with-validated-mirror/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0094"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "canonical-owner-with-validated-mirror"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "Dionysus + AoA ecosystem repos"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.md`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.packet.json`\n- `/srv/aoa-stats/schemas/stats-event-envelope.schema.json`\n- `/srv/aoa-stats/scripts/build_views.py`\n- `/srv/aoa-evals/schemas/stats-event-envelope.schema.json`\n- `/srv/aoa-evals/scripts/validate_repo.py`\n- `/srv/aoa-skills/config/project_core_skill_kernel.json`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the April 7, 2026 cross-repo rollout moved the shared stats event envelope to `aoa-stats` as the canonical owner and left `aoa-evals` with an explicit mirror rather than a competing source"
+                },
+                {
+                  "order": 2,
+                  "text": "`aoa-stats` now fails early when `event_kind` leaves the allowed vocabulary instead of accepting any non-empty string"
+                },
+                {
+                  "order": 3,
+                  "text": "`aoa-evals` validates mirror parity against the canonical schema so ownership metadata and enum values cannot silently drift"
+                },
+                {
+                  "order": 4,
+                  "text": "the same rollout absorbed `diagnosis_packet_receipt` into the shared vocabulary without reopening split-brain drift across repositories"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surviving reusable object is a cross-repo contract law: one canonical owner, legal mirrors only with explicit parity validation, and fail-fast consumer vocabulary checks"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded around ownership, mirror legality, and vocabulary drift prevention without widening into rollout sequencing or live publisher operations"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/docs/canonical-owner-with-validated-mirror/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0094"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "canonical-owner-with-validated-mirror"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the live receipt-envelope seam was reduced to one bounded law about canonical ownership and validated mirrors"
+                },
+                {
+                  "order": 2,
+                  "text": "repository-specific schema field names, file paths, and migration chatter were moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the public bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "exactly one repository owns the shared contract"
+                },
+                {
+                  "order": 2,
+                  "text": "local mirrors stay legal only when they remain subordinate and parity-checked"
+                },
+                {
+                  "order": 3,
+                  "text": "consumer intake rejects unknown contract tokens early"
+                },
+                {
+                  "order": 4,
+                  "text": "migrations move through the canonical owner before mirrors"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift back into generic source-of-truth doctrine if mirror legality stops being the center"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can drift into rollout policy if owner ordering and publisher recovery become the focus"
+                },
+                {
+                  "order": 3,
+                  "text": "a tiny example can understate how important consumer-side fail-fast validation is for catching drift"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `docs` because the surviving object is a contract-ownership law, not a runtime workflow or proof doctrine"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps adjacent techniques for distribution, mirroring, and rollout explicit rather than blending them"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough for a promoted public bundle without importing session-local detail as invariant contract language"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded rule for canonical cross-repo contract ownership with validated mirrors"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

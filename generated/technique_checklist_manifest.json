@@ -4082,6 +4082,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0094",
+      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md",
+          "title": "Canonical Owner With Validated Mirror Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name exactly one canonical owner for the shared contract."
+            },
+            {
+              "order": 2,
+              "text": "Keep each local mirror subordinate to the canonical owner rather than independently editable by default."
+            },
+            {
+              "order": 3,
+              "text": "Preserve explicit canonical-reference metadata in every mirror."
+            },
+            {
+              "order": 4,
+              "text": "Validate parity for owner metadata and bounded vocabulary, not only loose shape."
+            },
+            {
+              "order": 5,
+              "text": "Reject unknown contract tokens in consumer intake before derived outputs are built."
+            },
+            {
+              "order": 6,
+              "text": "Land migrations in the canonical owner first and update mirrors through parity-preserving sync."
+            },
+            {
+              "order": 7,
+              "text": "Keep local wrapper or packaging logic outside the mirrored contract payload."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
