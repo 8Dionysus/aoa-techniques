@@ -5277,6 +5277,62 @@
           "markdown": "What can vary across projects:\n- the exact contract format such as JSON Schema, YAML, or typed config\n- how mirrors are packaged or referenced locally\n- the specific vocabulary being parity-checked\n- the exact validator or check command that enforces parity\n\nWhat should stay invariant:\n- one canonical owner remains explicit\n- mirrors stay subordinate to that owner\n- parity checks cover metadata and bounded vocabulary\n- consumer intake rejects unknown tokens early\n\nProject-shaped details that should not be treated as invariant:\n- one exact field name such as `x-owner_repo`\n- one exact consumer script name such as `build_views.py`\n- one exact mirrored repository such as `aoa-evals`\n- one exact event family such as receipt envelopes\n\nAoA adaptation example:\n- keep the shared stats event envelope canonical in `aoa-stats`\n- allow `aoa-evals` to keep a local mirror only when owner metadata and event-kind enum stay exact\n- validate `event_kind` against the canonical vocabulary during stats intake so drift fails before summary generation"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0095",
+      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Close a bounded remote-only owner surface through GitHub-native issue and PR\nflow, then immediately sync the coordination or seed-garden layer to the merged\nowner anchors so public staging truth does not linger past the real landing."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- the final owning repository is intentionally GitHub-only in the current route\n- the coordination layer can plan and track the work but must not pretend to\n  own the landed meaning\n- one bounded issue, milestone, or PR track is enough to express the owner-side\n  endcap\n- owner-native CI or PR checks can act as the validation surface before merge\n- post-merge lineage and reality sync are necessary to keep staging markers\n  honest"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- a real local source checkout exists and is the intended execution surface\n- the route still needs broader multi-repo choreography rather than one bounded\n  owner-side endcap\n- the work would require hidden credentials, private infra, or unrevealed host\n  topology to explain the public contract\n- the coordination layer is trying to keep sovereign meaning after the owner\n  repo lands the change\n- the route is really generic GitHub contribution hygiene without a staging or\n  reality-sync seam"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one bounded owner-side goal with explicit non-goals\n- one coordination or seed-garden surface that currently tracks the work\n- one GitHub-native execution path such as issue plus milestone plus branch\n  plus PR\n- one owner-native validation surface such as CI jobs, repo checks, or review\n  gates\n- one explicit post-merge reality-sync path for the coordination layer"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one merged owner-side landing in the real repository\n- one visible GitHub trail such as issue, milestone, and PR references\n- one bounded validation result attached to the PR or merge\n- one post-merge lineage update in the coordination layer\n- one reality-check surface that now points at merged owner anchors instead of\n  staged assumptions"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one bounded track packet that names the goal, non-goals,\n   validator of record, stop condition, and rollback marker.\n2. Confirm that the owner surface should stay GitHub-only for this route and do\n   not invent a local checkout as a hidden parallel source of execution.\n3. Open or adopt one explicit GitHub tracking lane such as issue plus milestone\n   plus PR branch so the owner-side work stays reviewable.\n4. Land the smallest owner-side change that closes the bounded endcap without\n   widening into broader product or runtime claims.\n5. Let the owner-native PR checks or required reviews act as the proof surface\n   before merge; repair inside that PR if the checks fail.\n6. Merge in the owner repository first and treat the merged owner docs, code,\n   or config as the new source anchor.\n7. In the same follow-up pass, update the coordination or seed-garden layer so\n   lifecycle markers, ledgers, and reality canaries point at the merged owner\n   anchors rather than the old staged packet.\n8. Preserve explicit non-goals and known limits so GitHub green checks do not\n   inflate into broader platform or deployment claims.\n9. Stop if the route starts requiring local execution, unrevealed host detail,\n   or wider scenario policy than one owner-side endcap."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- the owner repository remains the source of truth for landed meaning\n- GitHub-native execution does not create a second hidden local source of truth\n- merge happens in the owner repo before coordination-layer truth is updated\n- post-merge reality sync happens in the same closeout pass rather than as an\n  optional later cleanup\n- public claims stay bounded to what the owner-side docs and checks actually\n  prove\n- the technique stays smaller than full remediation-wave choreography or\n  product support policy\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0092](../audit-to-closeout-proof-loop/TECHNIQUE.md), this technique is\nnot about finding-first remediation proof across live source checkouts. It\nbegins later, when one bounded owner-side endcap must land through GitHub\nrather than a local checkout. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md),\nit adds a stricter owner-truth rule: the coordination layer must rebind itself\nto merged owner anchors immediately after the GitHub-native landing."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the coordination layer updates its own staging note before the owner PR is\n  really merged\n- GitHub CI goes green on a narrow doc or smoke lane and the route starts\n  over-claiming broader support or runtime parity\n- a hidden local checkout appears and silently becomes the real execution\n  source even though the route was supposed to stay GitHub-only\n- reality canaries keep pointing at staged packets or stale anchors after the\n  owner repo has already moved\n\n### Negative effects\n\n- the route adds ceremony when a local owner checkout would have been simpler\n- GitHub-only execution can slow iteration compared with local source edits\n- post-merge sync adds one more cleanup step that contributors may forget\n\n### Misuse patterns\n\n- using the technique as generic GitHub contribution advice outside a real\n  owner-truth sync problem\n- treating a coordination repo as if it can declare closure before the owner\n  repo lands\n- using one green PR as proof of wide product support beyond the bounded\n  owner-side contract\n- widening the bundle into full remediation-wave planning or playbook doctrine\n\n### Detection signals\n\n- lifecycle markers in the coordination repo still say staged-only after the\n  owner PR merged\n- owner-side docs and the coordination-layer summary disagree about what landed\n- the route quietly depends on local files that the public GitHub track never\n  mentions\n- the PR validation surface is too weak to support the public claim now stored\n  in the owner repo\n\n### Mitigations\n\n- require one explicit validator of record in the GitHub track packet\n- keep owner-side non-goals visible inside the landed docs or PR summary\n- update lineage and reality surfaces immediately after merge\n- reject wider product or deployment claims that the landed owner-side checks do\n  not prove"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- the owner-side goal, non-goals, and stop condition were explicit before the\n  PR landed\n- the owner repository merged the bounded change through a visible GitHub trail\n- the PR checks or required reviews named in the track packet passed before\n  closure\n- the coordination layer updated lifecycle or reality-check surfaces after the\n  merge\n- the final public-safe summary now points at merged owner anchors instead of\n  staged assumptions\n\nSee `checks/github-only-owner-endcap-with-reality-sync-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the exact GitHub lane shape such as issue plus PR, issue plus draft PR, or PR\n  only\n- the owner-side validation surface such as docs checks, smoke tests, or a full\n  test workflow\n- the coordination layer that performs post-merge reality sync\n- the specific anchor form such as GitHub URLs, raw URLs, or mirrored public\n  docs\n\nWhat should stay invariant:\n- the owner repo lands first\n- GitHub stays the declared execution surface when the route is GitHub-only\n- post-merge reality sync happens immediately after the owner landing\n- public claims stay bounded to merged owner evidence\n\nProject-shaped details that should not be treated as invariant:\n- one milestone number such as `#1`\n- one issue or PR number such as `#49` or `#50`\n- one owner doc path such as `docs/PRODUCT_EDGE_POSTURE.md`\n- one specific seed-garden repo such as `Dionysus`\n- one exact anchor type such as GitHub raw URLs\n\nAoA adaptation example:\n- keep the final remote-only owner endcap in `ATM10-Agent` GitHub-native\n- let PR checks prove the bounded product-edge contract before merge\n- then update `Dionysus` lifecycle markers, ledger, and owner-repo reality\n  canary to point at the merged owner anchors instead of the staged pack"
+        }
+      ]
     }
   ]
 }

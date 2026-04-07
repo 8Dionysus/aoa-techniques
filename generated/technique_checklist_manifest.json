@@ -4123,6 +4123,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0095",
+      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md",
+          "title": "github-only-owner-endcap-with-reality-sync Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "one bounded track packet named the goal, non-goals, validator, stop condition, and rollback marker before landing"
+            },
+            {
+              "order": 2,
+              "text": "the route stayed GitHub-only at the owner surface and did not invent a hidden local execution checkout"
+            },
+            {
+              "order": 3,
+              "text": "one visible issue, PR, or equivalent GitHub trail exists for the owner-side endcap"
+            },
+            {
+              "order": 4,
+              "text": "the named owner-side validation surface passed before merge"
+            },
+            {
+              "order": 5,
+              "text": "the merged owner artifact is now the anchor used by the coordination layer"
+            },
+            {
+              "order": 6,
+              "text": "lifecycle, ledger, or reality surfaces were updated after the merge"
+            },
+            {
+              "order": 7,
+              "text": "final public-safe wording does not claim more than the owner-side change and named checks actually proved"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -317,6 +317,12 @@ See also:
 |---|---|---|---|
 | minimal recommendation-truth-vs-host-actionability | `present` | `techniques/agent-workflows/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md` | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
 
+### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Example | `present` | `techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md` | [TECHNIQUE.md](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
