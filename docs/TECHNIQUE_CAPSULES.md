@@ -1189,6 +1189,36 @@ See also:
 - Validate by: an unreachable source is distinguishable from a malformed but reachable source; the verdict stays tied to source availability and...
 - Source: [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md)
 
+## `system-recovery`
+
+### [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+
+- Summary: Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater.
+- Intent: Keep partial failure honest and useful by moving through one bounded sequence: degrade safely...
+- Use when: an optional or derived stage fails but earlier grounded evidence is still usable or retrieval, routing, memory, runtime...
+- Avoid when: the degraded mode would become broader than the normal path or the surface cannot say what remains trustworthy...
+- Needs: owner-local run artifacts; current surface status or error state; bounded source evidence that still remains trustworthy.
+- Produces: one bounded degraded result or explicit safe stop; one source-owned stressor receipt; one clearer reground path to...
+- Core contract: degraded mode must stay weaker than the normal mode; blocked actions stay blocked during degradation.
+- Main risk: degraded continuation quietly broadens authority or claims equivalent quality to the normal path.
+- Validate by: the degraded result or stop condition stayed bounded; the reground source stayed stronger than speculative completion; one source-owned receipt...
+- Source: [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md)
+
+## `validation-patterns`
+
+### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+
+- Summary: Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology.
+- Intent: Turn failure review into bounded evidence-led iteration by starting from source-owned receipts, separating facts...
+- Use when: a degraded run completed and needs explicit follow-up learning or the same stressor family repeats across a bounded...
+- Avoid when: the repo does not yet emit any trustworthy source-owned receipt surface or the main need is immediate runtime...
+- Needs: source-owned stressor receipts; owner-local run artifacts; optional adaptation deltas.
+- Produces: one named stressor family; one bounded hypothesis for improvement; one explicit change candidate.
+- Core contract: source-owned receipts remain the first trustworthy object after the stress event; facts and hypotheses stay explicitly separated.
+- Main risk: dashboards, memory, or retrospective summaries replace source-owned evidence.
+- Validate by: the originating receipts are named explicitly; facts and hypotheses remain separate in the review; the proposed change is narrower...
+- Source: [TECHNIQUE.md](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md)
+
 ## `history`
 
 ### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)

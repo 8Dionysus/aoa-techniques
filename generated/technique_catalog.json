@@ -5176,6 +5176,100 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0097",
+      "name": "degrade-reground-recover",
+      "domain": "system-recovery",
+      "status": "promoted",
+      "summary": "Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater.",
+      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "origin": {
+        "project": "ATM10-Agent",
+        "path": "docs/ANTIFRAGILITY_FIRST_WAVE.md",
+        "note": "Generalized from bounded hybrid-query degradation work where degraded continuation had to stay truthful, source-owned, and weaker than the normal path."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "antifragility",
+        "degraded-mode",
+        "recovery",
+        "receipts"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-07",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0098"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0098",
+      "name": "receipt-first-failure-analysis",
+      "domain": "validation-patterns",
+      "status": "promoted",
+      "summary": "Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology.",
+      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "origin": {
+        "project": "ATM10-Agent",
+        "path": "docs/ANTIFRAGILITY_FIRST_WAVE.md",
+        "note": "Generalized from first-wave stressor review work where the safest starting point was the owner-local receipt rather than retrospective summary or dashboard narrative."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "antifragility",
+        "validation",
+        "receipts",
+        "failure-analysis"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-07",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0097"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0015"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
     }
   ]
 }

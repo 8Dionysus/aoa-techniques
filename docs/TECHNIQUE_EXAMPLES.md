@@ -584,6 +584,22 @@ See also:
 |---|---|---|---|
 | Minimal Upstream Skill Health Checking | `present` | `techniques/evaluation/upstream-skill-health-checking/examples/minimal-upstream-skill-health-checking.md` | [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) |
 
+## `system-recovery`
+
+### [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Degraded Handoff | `present` | `techniques/system-recovery/degrade-reground-recover/examples/minimal-degraded-handoff.md` | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |
+
+## `validation-patterns`
+
+### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Receipt Review | `present` | `techniques/validation-patterns/receipt-first-failure-analysis/examples/minimal-receipt-review.md` | [TECHNIQUE.md](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) |
+
 ## `history`
 
 ### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)

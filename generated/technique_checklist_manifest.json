@@ -4205,6 +4205,72 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0097",
+      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/system-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md",
+          "title": "Degrade Reground Recover Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Name the stressor in owner-local language."
+            },
+            {
+              "order": 2,
+              "text": "Show what stayed bounded and what was blocked."
+            },
+            {
+              "order": 3,
+              "text": "Keep degraded mode weaker than the normal path."
+            },
+            {
+              "order": 4,
+              "text": "Reground on stronger authority rather than speculative completion."
+            },
+            {
+              "order": 5,
+              "text": "Emit one source-owned receipt before discussing later recovery."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0098",
+      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/validation-patterns/receipt-first-failure-analysis/checks/receipt-first-failure-analysis-checklist.md",
+          "title": "Receipt First Failure Analysis Checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "Start from source-owned receipts, not dashboard summaries."
+            },
+            {
+              "order": 2,
+              "text": "Separate facts from hypotheses explicitly."
+            },
+            {
+              "order": 3,
+              "text": "Group by one named stressor family and surface."
+            },
+            {
+              "order": 4,
+              "text": "Keep the proposed change narrower than the observed failure family."
+            },
+            {
+              "order": 5,
+              "text": "Name the future receipt or eval path that would count as improvement."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

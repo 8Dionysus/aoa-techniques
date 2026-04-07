@@ -38,6 +38,8 @@
         "agent-workflows",
         "docs",
         "evaluation",
+        "system-recovery",
+        "validation-patterns",
         "history"
       ]
     },

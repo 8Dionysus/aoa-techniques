@@ -1182,6 +1182,28 @@
           "body_markdown": "```yaml\ngenerated_publish:\n  repo_root: /workspace/aoa-routing\n  outputs:\n    - generated/owner_layer_shortlist.min.json\n  workflow_pinned_inputs:\n    - repo: aoa-playbooks\n      ref: origin/main\n      required_surface: generated/playbook_review_status.min.json\n    - repo: aoa-skills\n      ref: workflow-pinned-sibling\n      required_surface: generated/core_skill_receipt_contracts.min.json\n  rebuild:\n    command: python scripts/build_router.py --check\n  publish_gate:\n    requires:\n      - pinned_matrix_rebuilt\n      - generated_diff_honest\n      - repo_validators_green\n```\n\nWhy this example stays bounded:\n\n- it names the generated outputs and the workflow-pinned inputs before publish\n- it makes the pinned matrix explicit instead of treating local workspace state\n  as automatically sufficient\n- it shows one publish gate without widening into full release choreography"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0097",
+      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/system-recovery/degrade-reground-recover/examples/minimal-degraded-handoff.md",
+          "title": "Minimal Degraded Handoff",
+          "body_markdown": "1. Retrieval succeeds on a bounded query surface.\n2. A downstream KAG stage fails or returns no useful expansion.\n3. The owner repo publishes a degraded retrieval-only result instead of pretending full hybrid grounding still happened.\n4. The run emits one source-owned stressor receipt with:\n   - what failed\n   - what stayed bounded\n   - what fallback was taken\n5. Later improvement work cites that receipt in an explicit adaptation delta rather than inferring the history from memory."
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0098",
+      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/validation-patterns/receipt-first-failure-analysis/examples/minimal-receipt-review.md",
+          "title": "Minimal Receipt Review",
+          "body_markdown": "1. Collect the source-owned receipts for one repeated degraded hybrid-query family.\n2. Group them by `surface=hybrid-query` and one named `stressor_class`.\n3. Record facts from the receipts and linked run artifacts.\n4. Write hypotheses separately from facts.\n5. Propose one narrow change, such as clearer fallback labeling or stronger evidence linkage.\n6. Name the next receipt or eval surface that should show improvement after the change."
+        }
+      ]
     }
   ]
 }

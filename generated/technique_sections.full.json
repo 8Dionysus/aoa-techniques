@@ -7892,6 +7892,170 @@
           "content_markdown": "- collect one more non-identical generated-surface repo where the same\n  publish-matrix rule holds\n- keep split-wave choreography in `aoa-playbooks` instead of widening this\n  technique into a release or rollout playbook\n- revisit canonical readiness only after the technique proves portable beyond\n  the current AoA generated-surface family"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0097",
+      "name": "degrade-reground-recover",
+      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Keep partial failure honest and useful by moving through one bounded sequence:\ndegrade safely, reground on stronger authority, and recover later through explicit reviewed adaptation rather than hidden widening or repair theater."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- an optional or derived stage fails but earlier grounded evidence is still usable\n- retrieval, routing, memory, runtime helper, or another adjunct surface is degraded\n- continuing with a smaller truthful answer is safer than inventing a fuller one\n- operator trust depends on visible degraded posture instead of silent best-effort completion"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the degraded mode would become broader than the normal path\n- the surface cannot say what remains trustworthy after the stress event\n- the fallback would hide uncertainty, citations, or blocked actions\n- the real need is a proof bundle, not an operational recovery posture"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- owner-local run artifacts\n- current surface status or error state\n- bounded source evidence that still remains trustworthy\n- fallback policy for the current surface"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one bounded degraded result or explicit safe stop\n- one source-owned stressor receipt\n- one clearer reground path to stronger sources\n- optional later adaptation delta after a reviewed change"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. detect the stressor in owner-local language\n2. contain the impact to the current run, turn, surface, or action lane\n3. degrade honestly into the weakest valid mode that preserves truthfulness\n4. reground against stronger authority such as source-owned artifacts, canonical policy, or operator confirmation\n5. emit a source-owned receipt that records what failed, what stayed bounded, and what fallback was taken\n6. recover later only through an explicit reviewed change that cites the originating receipt"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- degraded mode must stay weaker than the normal mode\n- blocked actions stay blocked during degradation\n- source-owned evidence comes before cross-repo summaries\n- regrounding leans on stronger authority rather than speculative completion\n- recovery work cites the original receipt instead of rewriting history from memory"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- degraded continuation quietly broadens authority or claims equivalent quality to the normal path\n- regrounding collapses into speculation instead of leaning on stronger owner-local sources\n- source-owned evidence is skipped because the degraded result already worked\n\n### Negative effects\n\n- overusing degraded mode can normalize permanently weaker operation\n- extra receipt and fallback ceremony can slow fast local iteration when the stress event is trivial\n- a clean degraded surface can create false confidence that recovery pressure no longer matters\n\n### Misuse patterns\n\n- using degraded mode as an excuse for hidden repair automation\n- treating any warning string as sufficient evidence instead of publishing a receipt\n- claiming regrounding happened when the system only guessed from nearby context\n\n### Detection signals\n\n- degraded outputs look broader or more certain than healthy outputs\n- reviewers cannot point to a source-owned receipt for the event\n- later remediation work mentions stressors without citing owner-local evidence\n\n### Mitigations\n\n- keep degraded behavior explicitly weaker and machine-readable\n- bind each stress event to one owner-local receipt path\n- prefer explicit safe stop when no trustworthy reground source remains"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the degraded result or stop condition stayed bounded\n- the reground source stayed stronger than speculative completion\n- one source-owned receipt was emitted for the stress event\n- blocked mutations remained blocked\n- later recovery work can cite the original receipt cleanly"
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- which surfaces degrade\n- the names of stressor classes\n- whether regrounding uses retrieval, canonical docs, runtime artifacts, or operator confirmation\n- where receipts are stored and surfaced\n\nWhat should stay invariant:\n- degraded mode stays weaker than the normal mode\n- regrounding uses stronger authority, not broader guessing\n- source-owned receipt emission remains explicit\n- later recovery cites the originating receipt"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "The public bundle removes project-local runtime topology and host details while keeping the reusable degraded-continuation sequence and receipt-first posture intact."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-degraded-handoff.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/degrade-reground-recover-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born from `ATM10-Agent` first-wave hybrid-query degradation review\n- promoted into `aoa-techniques` as a public reusable recovery pattern on 2026-04-07"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a second public context beyond hybrid-query degradation\n- connect more explicitly to bounded eval and stats consumer surfaces\n- clarify when explicit safe stop is healthier than degraded continuation"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0098",
+      "name": "receipt-first-failure-analysis",
+      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Turn failure review into bounded evidence-led iteration by starting from source-owned receipts, separating facts from guesses, and defining improvement checks before any remediation story becomes credible."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- a degraded run completed and needs explicit follow-up learning\n- the same stressor family repeats across a bounded window\n- a team needs to decide whether one change deserves promotion\n- a later eval or derived stats view needs owner-local grounding"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the repo does not yet emit any trustworthy source-owned receipt surface\n- the main need is immediate runtime containment rather than post-event analysis\n- the review is trying to prove broad quality rather than explain one bounded failure family\n- a dashboard aggregate is being mistaken for primary evidence"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- source-owned stressor receipts\n- owner-local run artifacts\n- optional adaptation deltas\n- optional bounded eval reports"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one named stressor family\n- one bounded hypothesis for improvement\n- one explicit change candidate\n- one verification plan tied to receipts or eval outputs"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. collect owner-local receipts before opening summaries or narrative dashboards\n2. group events by named family, surface, degraded mode, or blocked-mutation posture\n3. separate facts backed by receipts or artifacts from guesses that remain hypotheses\n4. identify the narrowest plausible change rather than a sprawling theory patch\n5. define how improvement will be checked the next time the stressor appears\n6. publish an adaptation delta only when a reviewed change actually lands"
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- source-owned receipts remain the first trustworthy object after the stress event\n- facts and hypotheses stay explicitly separated\n- proposed changes stay narrower than the observed failure family\n- improvement checks name the future receipt or eval path that should show the difference\n- adaptation deltas do not exist without originating receipts"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- dashboards, memory, or retrospective summaries replace source-owned evidence\n- causality claims are made from raw log volume or anecdotal recollection alone\n- adaptation deltas get written without a clear receipt lineage\n\n### Negative effects\n\n- evidence-led review can feel slower than jumping straight to a fix\n- repeated receipt review can bias teams toward only what is already instrumented\n- narrow hypotheses can look under-ambitious when broader architecture frustration is high\n\n### Misuse patterns\n\n- treating a summary aggregate as if it were the owner-local source\n- collapsing several stressor families into one prestige narrative\n- calling a remediation idea verified before the next receipt or eval surface shows improvement\n\n### Detection signals\n\n- reviewers cannot point to the originating receipts for a proposed change\n- change candidates widen across several unrelated surfaces at once\n- the writeup states strong causal conclusions but cites only dashboards or memory\n\n### Mitigations\n\n- start every bounded review from the receipt set itself\n- keep change candidates as small as the evidence honestly supports\n- require an explicit future verification path before calling a remediation plan credible"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the originating receipts are named explicitly\n- facts and hypotheses remain separate in the review\n- the proposed change is narrower than the stressor family under discussion\n- the improvement check names a future receipt or eval surface\n- any adaptation delta cites the original receipt lineage"
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- receipt schema details\n- how stressor families are grouped\n- whether follow-up checks land in receipts, evals, or both\n- which surfaces are eligible remediation targets\n\nWhat should stay invariant:\n- receipt-first reading\n- explicit separation of facts from guesses\n- narrow change hypotheses\n- explicit future verification path"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "The public bundle removes project-local dashboards, logs, and runtime detail while preserving the reusable evidence-led review pattern."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-receipt-review.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/receipt-first-failure-analysis-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born from first-wave antifragility review needs around `ATM10-Agent`\n- promoted into `aoa-techniques` as a reusable validation pattern on 2026-04-07"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a second context with repeated-window evidence rather than one family only\n- connect more explicitly to adaptation-delta review patterns\n- clarify where this pattern stops and `aoa-evals` begins"
+        }
+      ]
     }
   ]
 }

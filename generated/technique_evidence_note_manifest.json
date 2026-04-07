@@ -45840,6 +45840,436 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0097",
+      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/system-recovery/degrade-reground-recover/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0097"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "degrade-reground-recover"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "ATM10-Agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `scripts/hybrid_query_demo.py`\n- `scripts/gateway_v1_local.py`\n- `docs/ANTIFRAGILITY_FIRST_WAVE.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "first-wave antifragility landing in `ATM10-Agent` already had a real bounded degraded path around hybrid-query fallback"
+                },
+                {
+                  "order": 2,
+                  "text": "the owner-local surface already persisted `run.json` and `hybrid_query_results.json`, so one stressor receipt could be emitted without inventing a second runtime authority"
+                },
+                {
+                  "order": 3,
+                  "text": "the reusable core was the posture sequence rather than the repo-local topology: detect one named stressor, degrade into a weaker truthful mode, reground on stronger authority, emit one source-owned receipt, and recover later through reviewed adaptation"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique came from live owner-repo behavior rather than abstract resilience language"
+                },
+                {
+                  "order": 2,
+                  "text": "the portable part is the degrade -> reground -> recover posture, not the specific `ATM10-Agent` runtime stack"
+                },
+                {
+                  "order": 3,
+                  "text": "other repos can adopt the sequence without inheriting the origin repo's directories, transport, or operator UI"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/system-recovery/degrade-reground-recover/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0097"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "degrade-reground-recover"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a runtime substrate, routing layer, or operator-facing control surface where one helper stage can weaken while a smaller truthful mode still exists"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surface names can change"
+                },
+                {
+                  "order": 2,
+                  "text": "the fallback mechanics can change"
+                },
+                {
+                  "order": 3,
+                  "text": "the receipt storage path can change"
+                },
+                {
+                  "order": 4,
+                  "text": "the stronger authority used for regrounding can change"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "degraded mode stays weaker, not broader"
+                },
+                {
+                  "order": 2,
+                  "text": "regrounding leans on stronger owner-local authority"
+                },
+                {
+                  "order": 3,
+                  "text": "the stress event leaves one source-owned receipt"
+                },
+                {
+                  "order": 4,
+                  "text": "later recovery remains a reviewed adaptation step instead of hidden auto-repair"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a target repo may copy the language while skipping the explicit reground step"
+                },
+                {
+                  "order": 2,
+                  "text": "receipt naming may drift if the target project already uses overloaded degraded-state terms"
+                },
+                {
+                  "order": 3,
+                  "text": "adaptation can get mistaken for blanket runtime guidance instead of one bounded recovery posture"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin `ATM10-Agent` landing already demonstrated that the posture can be expressed through docs, schemas, and one bounded live receipt path"
+                },
+                {
+                  "order": 2,
+                  "text": "the sequence depends on authority discipline more than on any one storage or transport detail"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique remains portable across owner repos as long as they preserve weaker degraded mode, stronger reground authority, one source-owned receipt, and reviewed recovery changes"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0098",
+      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/validation-patterns/receipt-first-failure-analysis/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0098"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "receipt-first-failure-analysis"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "ATM10-Agent"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `docs/ANTIFRAGILITY_FIRST_WAVE.md`\n- `schemas/stressor_receipt_v1.json`\n- `examples/stressor_receipt.retrieval_only_fallback.example.json`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the first-wave antifragility landing showed that the main risk was not a lack of ideas but jumping from a degraded run straight to explanation, remediation, or summary language without a stable owner-local evidence anchor"
+                },
+                {
+                  "order": 2,
+                  "text": "the owner-local receipt surface gave a compact starting point for bounded review without collapsing the larger run artifacts into one prestige narrative"
+                },
+                {
+                  "order": 3,
+                  "text": "the portable review shape is small and repeatable: start from the receipt, separate fact from guess, propose the smallest plausible change, and define how the next receipt or eval would show improvement"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern is evidence-led rather than dashboard-led or memory-led"
+                },
+                {
+                  "order": 2,
+                  "text": "it stays downstream from owner-local receipts instead of replacing them"
+                },
+                {
+                  "order": 3,
+                  "text": "it can travel to other repos as long as they already expose one trustworthy receipt family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/validation-patterns/receipt-first-failure-analysis/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0098"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "receipt-first-failure-analysis"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "any owner repo that already has one source-owned receipt surface, one bounded failure family worth reviewing, and one explicit place to record adaptation deltas or follow-up proof"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the receipt schema can change"
+                },
+                {
+                  "order": 2,
+                  "text": "the stressor family vocabulary can change"
+                },
+                {
+                  "order": 3,
+                  "text": "the remediation surfaces can change"
+                },
+                {
+                  "order": 4,
+                  "text": "the downstream proof surfaces can change"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "review starts from the receipt instead of later summary language"
+                },
+                {
+                  "order": 2,
+                  "text": "fact versus hypothesis stays explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "the change candidate stays narrow"
+                },
+                {
+                  "order": 4,
+                  "text": "the improvement check is named before stronger claims are made"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a target project may have receipts that are too weak to support useful analysis even though the shape exists"
+                },
+                {
+                  "order": 2,
+                  "text": "the pattern can be widened into generic incident review if the bounded family is not named clearly"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream proof surfaces can be overused until they eclipse the owner-local receipt"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the origin antifragility landing showed the pattern can stay compact while still producing a reviewable next-step shape"
+                },
+                {
+                  "order": 2,
+                  "text": "the receipt-first discipline remained stable even though the surrounding proof and stats layers were intentionally kept downstream"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the pattern transfers cleanly to other owner repos when receipt ownership is already clear and the review stays bounded to one named failure family"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
