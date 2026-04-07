@@ -137,6 +137,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md): `complements` [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
 - [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md): `complements` [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md), [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md)
 - [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md): `complements` [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md)
+- [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md): `complements` [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -192,6 +193,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 | [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. |
 | [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. |
 | [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) | `promoted` | `cross_context` | `bounded` | Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone. |
+| [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `promoted` | `source_backed` | `bounded` | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. |
 
 ### `docs`
 
@@ -254,7 +256,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 92/92 techniques.
+- `export_ready` is currently `true` for 93/93 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

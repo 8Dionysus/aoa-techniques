@@ -4037,6 +4037,51 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0093",
+      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md",
+          "title": "recommendation-truth-vs-host-actionability checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] recommendation truth is computed before host-actionability filtering"
+            },
+            {
+              "order": 2,
+              "text": "[ ] host inventory source and precedence are explicit"
+            },
+            {
+              "order": 3,
+              "text": "[ ] `activate_now` contains only host-executable items"
+            },
+            {
+              "order": 4,
+              "text": "[ ] router-only items remain visible in `must_confirm`, `suggest_next`, or `actionability_gaps`"
+            },
+            {
+              "order": 5,
+              "text": "[ ] explicit host overrides beat auto-discovered inventory when both are present"
+            },
+            {
+              "order": 6,
+              "text": "[ ] the report still explains why an item was recommended even when it is not executable"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the bundle stays smaller than discovery, marketplace, or registry doctrine"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

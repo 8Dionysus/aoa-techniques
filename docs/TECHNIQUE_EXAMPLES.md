@@ -311,6 +311,12 @@ See also:
 |---|---|---|---|
 | Minimal audit-to-closeout-proof-loop example | `present` | `techniques/agent-workflows/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
 
+### [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal recommendation-truth-vs-host-actionability | `present` | `techniques/agent-workflows/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md` | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

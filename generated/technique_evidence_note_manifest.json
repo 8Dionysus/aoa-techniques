@@ -44404,6 +44404,369 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0093",
+      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0093"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "recommendation-truth-vs-host-actionability"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps the contract narrow around recommendation truth, host actionability, and explicit inventory precedence"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle now has a checklist and a public-safe example, but live evidence is still concentrated in the current `aoa-sdk` lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when control planes recommend capabilities from a larger corpus than the current host can execute"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when operators need honest `activate_now` semantics without losing visibility into router-only relevance"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default law for every capability selector or router outside the present skill-runtime context"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-06"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published bundle keeps the bounded truth split while stripping local CLI and install-root specifics from the invariant core"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from a second live context outside `aoa-sdk`"
+                },
+                {
+                  "order": 2,
+                  "text": "router-only risk-gate handling still needs another context before a stricter canonical fail-fast posture would be justified"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0093` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after another live capability-control-plane context proves the same recommendation-versus-executability seam"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0093"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "recommendation-truth-vs-host-actionability"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-sdk + Dionysus"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `src/aoa_sdk/skills/detector.py`\n- `src/aoa_sdk/models.py`\n- `src/aoa_sdk/cli/main.py`\n- `docs/skill-runtime-recommendation-gap.md`\n- `docs/skill-runtime-recommendation-gap-fix-spec.md`\n- `reports/ecosystem-audits/2026-04-06.aoa-sdk.skill-runtime-recommendation-gap-fix-session-harvest.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the live repair kept router recommendation truth intact while annotating host actionability separately"
+                },
+                {
+                  "order": 2,
+                  "text": "host executability now resolves from explicit host manifests or canonical repo, workspace, and user install roots"
+                },
+                {
+                  "order": 3,
+                  "text": "non-executable auto-actions are demoted out of `activate_now` instead of being treated as runnable"
+                },
+                {
+                  "order": 4,
+                  "text": "router-only items stay visible so the report can still explain relevance and manual fallback posture"
+                },
+                {
+                  "order": 5,
+                  "text": "the seam was hardened in real code and verified through full `pytest`, `ruff`, and live `skills detect` and `skills guard` checks"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surviving reusable object is one control-plane law for separating semantic recommendation from runtime executability"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded around recommendation truth, host inventory precedence, and executable-action honesty without widening into discovery, marketplace, or upstream-health doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0093"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "recommendation-truth-vs-host-actionability"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over portable technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the `aoa-sdk`-specific runtime seam was reduced to one bounded control-plane law for recommendation truth and host executability"
+                },
+                {
+                  "order": 2,
+                  "text": "exact install-root paths, JSON fields, and CLI details were moved into adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "semantic recommendation is computed separately from host actionability"
+                },
+                {
+                  "order": 2,
+                  "text": "host actionability remains visible as an explicit annotation rather than a hidden filter"
+                },
+                {
+                  "order": 3,
+                  "text": "non-executable auto-actions are demoted instead of being left in runnable surfaces"
+                },
+                {
+                  "order": 4,
+                  "text": "router-only items remain visible when they still matter for confirmation or manual fallback"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can drift into generic discovery or marketplace language if recommendation truth stops being the center"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can drift into upstream-health or registry doctrine if host inventory precedence becomes too broad"
+                },
+                {
+                  "order": 3,
+                  "text": "a tiny example can understate how important actionability gaps are for honest risk gating"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is a control-plane actionability law, not a docs taxonomy"
+                },
+                {
+                  "order": 2,
+                  "text": "the public wording keeps workspace posture, upstream source readiness, and discovery semantics adjacent but separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the origin evidence remains strong enough to justify a promoted bundle without importing `aoa-sdk`-specific CLI or path doctrine as invariants"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one bounded recommendation-versus-executability split for skill-oriented control planes"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

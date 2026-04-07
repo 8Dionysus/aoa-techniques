@@ -1138,6 +1138,17 @@
           "body_markdown": "Input findings:\n\n- `repo A accepts an optional path as required and aborts the closeout path`\n- `repo B appends JSONL receipts without restoring a missing trailing newline`\n\nProof-backed closeout:\n\n1. Re-confirm both findings in live code rather than trusting the audit wording alone.\n2. Patch the smallest owner-surface causes in each repository.\n3. Add one targeted regression seam for the optional-path behavior and one for the JSONL boundary behavior.\n4. Rerun the targeted checks immediately after each fix.\n5. Rerun the broader repo validation or full test suite before the findings are marked closed.\n6. Record any remaining warnings or follow-on seams instead of pretending the route is perfectly clean.\n\nWhy this works:\n\n- the findings are closed on named proof, not only on patch presence\n- the targeted checks prove the failure mode directly\n- the broader closeout rerun checks that the repositories still hold together after the local fixes"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0093",
+      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md",
+          "title": "minimal recommendation-truth-vs-host-actionability",
+          "body_markdown": "```yaml\nskill_dispatch:\n  router_recommendations:\n    activate_now:\n      - aoa-change-protocol\n      - aoa-sanitized-share\n  host_inventory:\n    source: repo-install\n    roots_checked:\n      - /workspace/project/.agents/skills\n      - /workspace/.agents/skills\n      - /user-skill-root/.agents/skills\n    present_skills:\n      - aoa-change-protocol\n  annotated_result:\n    activate_now:\n      - skill_name: aoa-change-protocol\n        host_availability:\n          status: host-executable\n          source: repo-install\n    must_confirm:\n      - skill_name: aoa-sanitized-share\n        reason: strong router match; host inventory is router-only for this skill\n        host_availability:\n          status: router-only\n          source: repo-install\n          manual_fallback_allowed: true\n    actionability_gaps:\n      - aoa-sanitized-share\n```\n\nWhy this example stays bounded:\n\n- it separates recommendation truth from host actionability instead of blending them into one verdict\n- it demotes a non-executable auto-action instead of silently dropping it\n- it keeps install-root discovery explicit without widening into marketplace or registry policy"
+        }
+      ]
     }
   ]
 }
