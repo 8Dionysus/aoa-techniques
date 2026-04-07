@@ -1160,6 +1160,17 @@
           "body_markdown": "Use one canonical contract plus one legal mirror.\n\n- canonical copy:\n  - lives in the owner repository\n  - declares the owning repository explicitly\n  - carries the bounded vocabulary that consumers must accept\n- mirror copy:\n  - names the canonical source explicitly\n  - stays byte-for-byte or semantically equivalent on owner metadata and allowed vocabulary\n  - does not become the convenient place for local contract edits\n- consumer validation:\n  - reads the canonical vocabulary\n  - rejects unknown tokens before building downstream views\n\nIf rollout ordering, owner activation, or live publisher recovery becomes the main problem, treat that as a separate playbook rather than widening this technique."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0095",
+      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md",
+          "title": "Minimal Example",
+          "body_markdown": "## Situation\n\nA coordination repository tracks one final owner-side contract change, but the\nowner repository is intentionally handled through GitHub only in the current\nenvironment.\n\n## Minimal route\n\n1. Write one bounded track packet with goal, non-goals, validator of record,\n   stop condition, and rollback marker.\n2. Open one owner-side issue and one PR branch in GitHub.\n3. Land the smallest owner-side contract doc or config change.\n4. Wait for the named PR checks to pass and merge the owner PR.\n5. In the same closeout pass, update the coordination repository so its\n   lifecycle markers and reality checks now point at the merged owner anchors.\n\n## Honest result\n\n- the owner repo remains the source of truth\n- GitHub-native validation proves only the bounded owner-side claim\n- the coordination layer no longer reports staged truth after the merge\n\n## Non-example\n\nDo not treat one green owner-side PR as proof of broad runtime parity or full\nproduct support beyond the merged owner contract."
+        }
+      ]
     }
   ]
 }

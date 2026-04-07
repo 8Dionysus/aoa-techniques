@@ -45126,6 +45126,365 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0095",
+      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0095"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "github-only-owner-endcap-with-reality-sync"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough for a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique already has one reviewed end-to-end context with visible owner\nissue plus PR plus CI plus merge plus post-merge truth sync"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle stays narrow around owner-first landing and immediate coordination\nsync"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when a coordination layer must close a remote-only owner\nsurface without faking local execution"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when the route needs one bounded GitHub-native endcap and a\nvisible post-merge reality sync"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default remote-owner closeout law outside the\ncurrent AoA lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-04-07"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the published bundle keeps the owner-truth law\nwhile stripping raw terminal output, local temporary paths, and private host\ndetails"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from one more non-identical GitHub-only owner\ncontext outside the current `ATM10-Agent` endcap"
+                },
+                {
+                  "order": 2,
+                  "text": "the seam against `AOA-T-0092` and future `aoa-playbooks` scenario capture\nshould stay explicit through future sibling use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0095` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after another remote-only owner endcap shows\nthe same owner-first landing and post-merge truth-sync boundary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0095"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "github-only-owner-endcap-with-reality-sync"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "Dionysus + ATM10-Agent + AoA ecosystem repos"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.packet.json`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md`\n- `https://github.com/8Dionysus/ATM10-Agent/issues/49`\n- `https://github.com/8Dionysus/ATM10-Agent/pull/50`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.reality-check.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the final `WS12` track explicitly kept `ATM10-Agent` GitHub-only instead of\ninventing a local execution checkout"
+                },
+                {
+                  "order": 2,
+                  "text": "the owner-side change landed through a bounded issue plus milestone plus PR\nflow with green PR checks before merge"
+                },
+                {
+                  "order": 3,
+                  "text": "after merge, `Dionysus` updated lifecycle markers, the remediation ledger,\nthe reality check, and the owner-repo reality canary to point at merged\nowner anchors"
+                },
+                {
+                  "order": 4,
+                  "text": "the same closeout explicitly refused to widen GitHub checks into broader\nproduct or deployment support claims"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the surviving reusable object is a narrow closeout law for remote-only owner\nsurfaces, not the broader remediation-wave scenario"
+                },
+                {
+                  "order": 2,
+                  "text": "the public technique can stay bounded around GitHub-native owner landing plus\nimmediate coordination-layer truth sync without importing local host detail\nor broader playbook choreography"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0095"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "github-only-owner-endcap-with-reality-sync"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public documentation repository for reusable workflow techniques"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent contribution workflow over bounded technique bundles"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the concrete `ATM10-Agent` product-edge wording was reduced to one reusable\nowner-landing law"
+                },
+                {
+                  "order": 2,
+                  "text": "milestone numbers, issue numbers, PR numbers, and doc paths moved into origin\nevidence and adaptation notes rather than the invariant core"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and\nthree evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the owner repository still lands first"
+                },
+                {
+                  "order": 2,
+                  "text": "GitHub still stays the declared execution surface when the route is\nintentionally remote-only"
+                },
+                {
+                  "order": 3,
+                  "text": "coordination-layer lifecycle and reality surfaces still sync immediately after\nmerge"
+                },
+                {
+                  "order": 4,
+                  "text": "public claims still stay bounded to merged owner evidence and named checks"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public wording can collapse into generic GitHub contribution advice if\nthe owner-truth sync seam stops being central"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can drift toward scenario-level remediation choreography that\nbelongs in `aoa-playbooks`"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle can overfit to `Dionysus` lineage habits if future contexts do not\ntest a different coordination layer"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the original run already included one real remote-only owner surface and one\nreal coordination-layer truth sync"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is\none bounded landing-and-sync chain, not a docs doctrine or a playbook"
+                },
+                {
+                  "order": 3,
+                  "text": "origin evidence remains strong enough for a promoted bundle without importing\nprivate host detail or broader product policy"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle reads as one bounded owner-closeout workflow rather\nthan as a generic GitHub handbook or remediation program"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

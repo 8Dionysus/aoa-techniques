@@ -310,6 +310,12 @@ See also:
 |---|---|---|---|---|
 | recommendation-truth-vs-host-actionability checklist | `absent` | `8` | `techniques/agent-workflows/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
 
+### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| github-only-owner-endcap-with-reality-sync Checklist | `absent` | `7` | `techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

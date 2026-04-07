@@ -5064,6 +5064,60 @@
           "path": "notes/canonical-readiness.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0095",
+      "name": "github-only-owner-endcap-with-reality-sync",
+      "domain": "agent-workflows",
+      "status": "promoted",
+      "summary": "Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.",
+      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "origin": {
+        "project": "Dionysus + ATM10-Agent + AoA ecosystem repos",
+        "path": "reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md + reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md + https://github.com/8Dionysus/ATM10-Agent/pull/50",
+        "note": "Extracted from the final federated audit-remediation endcap where a remote-only owner surface stayed GitHub-native through issue plus PR plus CI plus merge, and Dionysus then rebound its lineage and reality checks to the landed owner anchors."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "github",
+        "owner-truth",
+        "reality-sync",
+        "closeout"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-07",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0001"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0092"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }
