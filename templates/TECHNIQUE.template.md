@@ -2,7 +2,7 @@
 id: AOA-T-XXXX
 name: technique-name
 domain: agent-workflows
-# choose one: agent-workflows, docs, evaluation, history
+# choose one: agent-workflows, docs, evaluation, system-recovery, validation-patterns, history
 status: promoted
 origin:
   project: source-project-name

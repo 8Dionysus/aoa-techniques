@@ -560,6 +560,22 @@ See also:
 |---|---|---|---|---|
 | Upstream Skill Health Checking Checklist | `absent` | `10` | `techniques/evaluation/upstream-skill-health-checking/checks/upstream-skill-health-checking-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) |
 
+## `system-recovery`
+
+### [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Degrade Reground Recover Checklist | `absent` | `5` | `techniques/system-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |
+
+## `validation-patterns`
+
+### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Receipt First Failure Analysis Checklist | `absent` | `5` | `techniques/validation-patterns/receipt-first-failure-analysis/checks/receipt-first-failure-analysis-checklist.md` | [TECHNIQUE.md](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) |
+
 ## `history`
 
 ### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)

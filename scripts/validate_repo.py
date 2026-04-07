@@ -223,6 +223,18 @@ DOMAIN_START_SPECS = (
         "note": "Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear.",
     },
     {
+        "domain": "system-recovery",
+        "lead_ids": ("AOA-T-0097",),
+        "review_docs": (),
+        "note": "Start with bounded degraded continuation and regrounding posture before inventing wider repair or runtime-control doctrine.",
+    },
+    {
+        "domain": "validation-patterns",
+        "lead_ids": ("AOA-T-0098",),
+        "review_docs": (),
+        "note": "Start with receipt-led failure analysis when the next question is what changed, why, and how improvement should be checked without widening into a full eval bundle.",
+    },
+    {
         "domain": "history",
         "lead_ids": ("AOA-T-0044", "AOA-T-0053"),
         "review_docs": (),
@@ -467,8 +479,22 @@ SECTION_STATUS = {
 }
 
 STATUS_SECTION = {value: key for key, value in SECTION_STATUS.items()}
-DOMAIN_VALUES = {"agent-workflows", "docs", "evaluation", "history"}
-DOMAIN_ORDER = ("agent-workflows", "docs", "evaluation", "history")
+DOMAIN_VALUES = {
+    "agent-workflows",
+    "docs",
+    "evaluation",
+    "system-recovery",
+    "validation-patterns",
+    "history",
+}
+DOMAIN_ORDER = (
+    "agent-workflows",
+    "docs",
+    "evaluation",
+    "system-recovery",
+    "validation-patterns",
+    "history",
+)
 RELATION_TYPE_ORDER = (
     "requires",
     "complements",

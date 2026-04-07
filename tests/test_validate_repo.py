@@ -612,7 +612,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(96, len(technique_paths))
+        self.assertEqual(98, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -643,9 +643,19 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         for entry in catalog["techniques"]:
             status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
 
-        self.assertEqual({"agent-workflows", "docs", "evaluation", "history"}, domain_values)
+        self.assertEqual(
+            {
+                "agent-workflows",
+                "docs",
+                "evaluation",
+                "system-recovery",
+                "validation-patterns",
+                "history",
+            },
+            domain_values,
+        )
         self.assertEqual(25, status_counts["canonical"])
-        self.assertEqual(71, status_counts["promoted"])
+        self.assertEqual(73, status_counts["promoted"])
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (

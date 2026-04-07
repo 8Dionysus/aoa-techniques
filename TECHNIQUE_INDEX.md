@@ -107,6 +107,8 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0094 | canonical-owner-with-validated-mirror | docs | promoted | Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned. |
 | AOA-T-0095 | github-only-owner-endcap-with-reality-sync | agent-workflows | promoted | Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing. |
 | AOA-T-0096 | pinned-validation-matrix-before-generated-publish | agent-workflows | promoted | Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness. |
+| AOA-T-0097 | degrade-reground-recover | system-recovery | promoted | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. |
+| AOA-T-0098 | receipt-first-failure-analysis | validation-patterns | promoted | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. |
 
 ## Deprecated techniques
 
