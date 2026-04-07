@@ -77,6 +77,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_github_review_template_manifest.py"),
                 ("python", "scripts/build_semantic_review_manifest.py"),
                 ("python", "scripts/build_shadow_review_manifest.py"),
+                ("python", "scripts/build_promotion_readiness.py"),
                 ("python", "scripts/build_kag_export.py"),
                 ("python", "-m", "unittest", "discover", "-s", "tests"),
                 ("python", "scripts/validate_nested_agents.py"),

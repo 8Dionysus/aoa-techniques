@@ -16,6 +16,9 @@ If the question is still which `promoted` bundle is honestly closest to review, 
 
 If the question is how to run the current evidence-prep swarm without widening bundle meaning or faking closure, start with [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md) instead.
 
+The generated `technique_promotion_readiness.min.json` surface is a public readiness lens over the current `canonical` and `promoted` corpus.
+It does not replace this guide and does not auto-judge status transitions by itself.
+
 This guide starts after one bundle is already under a real `approve now` versus `defer for now` decision.
 
 ## Outcomes

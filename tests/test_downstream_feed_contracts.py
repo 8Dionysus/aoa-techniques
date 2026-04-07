@@ -20,6 +20,7 @@ class DownstreamFeedContractsTests(unittest.TestCase):
     def test_expected_downstream_feeds_exist(self) -> None:
         for relative_path in (
             "generated/technique_catalog.min.json",
+            "generated/technique_promotion_readiness.min.json",
             "generated/technique_capsules.json",
             "generated/technique_sections.full.json",
             "generated/repo_doc_surface_manifest.min.json",
@@ -64,6 +65,38 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             self.assertIn("summary", entry)
             self.assertIn("validation_strength", entry)
             self.assertIn("review_required", entry)
+
+    def test_promotion_readiness_surface_tracks_canonical_and_promoted_corpus(self) -> None:
+        catalog = load_json("generated/technique_catalog.min.json")
+        readiness = load_json("generated/technique_promotion_readiness.min.json")
+
+        self.assertEqual(readiness["schema_version"], 1)
+        self.assertEqual(readiness["layer"], "aoa-techniques")
+        self.assertEqual(readiness["scope"], "published-non-deprecated")
+        self.assertEqual(
+            readiness["source_of_truth"],
+            {
+                "catalog": "generated/technique_catalog.min.json",
+                "bundles": "techniques/*/*/TECHNIQUE.md",
+                "canonical_readiness_note": "notes/canonical-readiness.md",
+                "adverse_effects_review": "notes/adverse-effects-review.md",
+            },
+        )
+
+        scoped_catalog = [
+            (entry["id"], entry["name"], entry["status"])
+            for entry in catalog["techniques"]
+            if entry["status"] in {"canonical", "promoted"}
+        ]
+        readiness_entries = [
+            (entry["technique_id"], entry["technique_name"], entry["status"])
+            for entry in readiness["techniques"]
+        ]
+        self.assertEqual(readiness_entries, scoped_catalog)
+        self.assertTrue(all(isinstance(entry["blockers"], list) for entry in readiness["techniques"]))
+        self.assertTrue(
+            all(entry["readiness_passed"] == (len(entry["blockers"]) == 0) for entry in readiness["techniques"])
+        )
 
     def test_repo_doc_surface_manifest_is_router_safe(self) -> None:
         manifest = load_json("generated/repo_doc_surface_manifest.min.json")

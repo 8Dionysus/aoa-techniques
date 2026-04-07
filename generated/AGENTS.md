@@ -6,7 +6,7 @@ Guidance for coding agents and humans working under `generated/`.
 
 `generated/` stores committed derived reader surfaces built from authored sources elsewhere in the repository.
 
-Representative surfaces include `generated/technique_catalog.json`, `generated/technique_capsules.json`, `generated/repo_doc_surface_manifest.json`, `generated/kag_export.json`, the section and checklist manifests, the example and evidence-note manifests, and the semantic/shadow review manifests.
+Representative surfaces include `generated/technique_catalog.json`, `generated/technique_promotion_readiness.min.json`, `generated/technique_capsules.json`, `generated/repo_doc_surface_manifest.json`, `generated/kag_export.json`, the section and checklist manifests, the example and evidence-note manifests, and the semantic/shadow review manifests.
 
 ## Core rule
 
@@ -24,6 +24,7 @@ If one generated output drifts, repair the source or generator rather than patch
 After `python -m pip install -r requirements-dev.txt`, changes here or to the generators that feed this directory should run the smallest covering commands. Common paths include:
 
 - `python scripts/build_catalog.py`
+- `python scripts/build_promotion_readiness.py`
 - `python scripts/build_capsules.py`
 - `python scripts/build_repo_doc_surface_manifest.py`
 - `python scripts/build_kag_export.py`
