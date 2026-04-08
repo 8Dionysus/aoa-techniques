@@ -236,11 +236,16 @@ See `checks/pinned-validation-matrix-before-generated-publish-checklist.md`.
   workflow's real validation inputs before publish could close honestly
 - promoted into `aoa-techniques` on 2026-04-07 as a bounded generated-publish
   hygiene technique
+- replayed on 2026-04-08 during the via-negativa owner wave, where
+  `aoa-routing` still needed parity-only regeneration against the
+  workflow-pinned `aoa-skills` snapshot and `aoa-skills` still needed a final
+  `validate` rerun on the rebased head before merge
 
 ## Future evolution
 
-- collect one more non-identical generated-surface repo where the same
-  publish-matrix rule holds
+- collect one more non-identical generated-surface repo or publish matrix
+  outside the current `aoa-routing` and `aoa-skills` sibling family before
+  considering canonical promotion
 - keep split-wave choreography in `aoa-playbooks` instead of widening this
   technique into a release or rollout playbook
 - revisit canonical readiness only after the technique proves portable beyond

@@ -11,8 +11,11 @@
 - origin evidence is strong enough to justify a promoted public bundle
 - the adapted bundle keeps the contract narrow around generated publish and
   workflow-pinned validation inputs
-- the bundle now has a checklist and a public-safe example, but live evidence
-  is still concentrated in the current AoA generated-surface family
+- the bundle now has a checklist and a public-safe example, and the
+  via-negativa owner wave added a second live replay of the same bounded
+  failure family
+- live evidence is stronger than it was at first promotion, but it is still
+  concentrated in the current AoA generated-surface sibling family
 
 ## Default-use rationale
 - this is useful when generated outputs depend on sibling surfaces or mirrored
@@ -23,15 +26,17 @@
   cross-repo generated-surface context
 
 ## Fresh public-safety check
-- review date: 2026-04-07
+- review date: 2026-04-08
 - result: pass
 - sanitization still holds: the published technique keeps the bounded
   pinned-matrix rule while stripping private runner setup, credentials, and
   broader release bureaucracy
 
 ## Remaining gaps
-- the bundle would benefit from a second live generated-surface repo outside the
-  current AoA sibling family
+- the bundle would still benefit from a second live generated-surface repo
+  outside the current `aoa-routing` and `aoa-skills` sibling family
+- the via-negativa replay strengthens confidence, but it still replays the same
+  family rather than proving a non-identical publish context
 - the seam between upstream health checks, split-wave playbooks, and generated
   publish posture should stay explicit through future reuse
 
