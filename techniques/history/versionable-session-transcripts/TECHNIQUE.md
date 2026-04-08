@@ -2,6 +2,7 @@
 id: AOA-T-0044
 name: versionable-session-transcripts
 domain: history
+kind: artifact
 status: canonical
 origin:
   project: SpecStory

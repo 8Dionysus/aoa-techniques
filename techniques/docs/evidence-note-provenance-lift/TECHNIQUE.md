@@ -2,6 +2,7 @@
 id: AOA-T-0020
 name: evidence-note-provenance-lift
 domain: docs
+kind: lift
 status: promoted
 origin:
   project: aoa-techniques

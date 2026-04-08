@@ -2,6 +2,7 @@
 id: AOA-T-0014
 name: tdd-slice
 domain: agent-workflows
+kind: workflow
 status: canonical
 origin:
   project: atm10-agent

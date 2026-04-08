@@ -2,6 +2,7 @@
 id: AOA-T-0090
 name: nearest-wrong-target-rejection
 domain: agent-workflows
+kind: guardrail
 status: promoted
 origin:
   project: aoa-skills

@@ -21,6 +21,7 @@ Use the shortest route by need:
 
 - repo layer position and neighboring repos: `docs/ECOSYSTEM_CONTEXT.md`
 - current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
+- frontmatter routing axes and kind doctrine: `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `data/technique_kind_wave1.yaml`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
 - feat-reader and runtime-card surfaces: `docs/TECHNIQUE_FEAT_MODEL.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
 - status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `docs/PROMOTION_READINESS_MATRIX.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
 - one end-to-end example path: `WALKTHROUGH.md`

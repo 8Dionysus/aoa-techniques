@@ -2,6 +2,7 @@
 id: AOA-T-0021
 name: bounded-relation-lift-for-kag
 domain: docs
+kind: lift
 status: canonical
 origin:
   project: aoa-techniques

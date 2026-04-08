@@ -2,6 +2,7 @@
 id: AOA-T-0079
 name: risk-passport-lift
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

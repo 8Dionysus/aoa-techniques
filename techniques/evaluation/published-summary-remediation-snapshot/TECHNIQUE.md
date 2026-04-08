@@ -2,6 +2,7 @@
 id: AOA-T-0008
 name: published-summary-remediation-snapshot
 domain: evaluation
+kind: lift
 status: canonical
 origin:
   project: atm10-agent

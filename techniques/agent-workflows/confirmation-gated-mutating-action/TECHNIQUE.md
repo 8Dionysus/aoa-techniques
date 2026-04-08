@@ -2,6 +2,7 @@
 id: AOA-T-0028
 name: confirmation-gated-mutating-action
 domain: agent-workflows
+kind: guardrail
 status: canonical
 origin:
   project: qqqa

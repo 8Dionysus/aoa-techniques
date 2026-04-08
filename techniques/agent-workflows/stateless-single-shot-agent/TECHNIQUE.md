@@ -2,6 +2,7 @@
 id: AOA-T-0023
 name: stateless-single-shot-agent
 domain: agent-workflows
+kind: workflow
 status: canonical
 origin:
   project: qqqa

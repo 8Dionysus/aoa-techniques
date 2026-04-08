@@ -2,6 +2,7 @@
 id: AOA-T-0087
 name: human-loop-to-seed-lift
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

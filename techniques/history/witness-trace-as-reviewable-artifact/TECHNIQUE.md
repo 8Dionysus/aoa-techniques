@@ -2,6 +2,7 @@
 id: AOA-T-0045
 name: witness-trace-as-reviewable-artifact
 domain: history
+kind: artifact
 status: promoted
 origin:
   project: aoa-memo + aoa-playbooks

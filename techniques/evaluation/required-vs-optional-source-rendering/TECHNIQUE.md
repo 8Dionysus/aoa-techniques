@@ -2,6 +2,7 @@
 id: AOA-T-0011
 name: required-vs-optional-source-rendering
 domain: evaluation
+kind: guardrail
 status: canonical
 origin:
   project: atm10-agent

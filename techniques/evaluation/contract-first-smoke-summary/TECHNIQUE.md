@@ -2,6 +2,7 @@
 id: AOA-T-0003
 name: contract-first-smoke-summary
 domain: evaluation
+kind: validation
 status: canonical
 origin:
   project: atm10-agent

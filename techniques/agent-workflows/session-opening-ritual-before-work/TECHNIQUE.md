@@ -2,6 +2,7 @@
 id: AOA-T-0060
 name: session-opening-ritual-before-work
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: thebasedcapital/nightcrawler

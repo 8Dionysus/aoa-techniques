@@ -2,6 +2,7 @@
 id: AOA-T-0063
 name: versioned-agent-registry-contract
 domain: docs
+kind: artifact
 status: promoted
 origin:
   project: agntcy/dir

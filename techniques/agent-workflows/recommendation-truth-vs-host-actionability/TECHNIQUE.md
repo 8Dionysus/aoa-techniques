@@ -2,6 +2,7 @@
 id: AOA-T-0093
 name: recommendation-truth-vs-host-actionability
 domain: agent-workflows
+kind: guardrail
 status: promoted
 origin:
   project: aoa-sdk + Dionysus

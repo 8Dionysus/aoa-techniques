@@ -2,6 +2,7 @@
 id: AOA-T-0051
 name: commit-triggered-background-review
 domain: agent-workflows
+kind: workflow
 status: promoted
 origin:
   project: roborev-dev/roborev

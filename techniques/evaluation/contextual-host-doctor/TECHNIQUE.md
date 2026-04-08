@@ -2,6 +2,7 @@
 id: AOA-T-0037
 name: contextual-host-doctor
 domain: evaluation
+kind: validation
 status: promoted
 origin:
   project: abyss-stack

@@ -2,6 +2,7 @@
 id: AOA-T-0089
 name: quest-unit-promotion-review
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

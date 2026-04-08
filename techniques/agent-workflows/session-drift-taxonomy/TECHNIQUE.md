@@ -2,6 +2,7 @@
 id: AOA-T-0080
 name: session-drift-taxonomy
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

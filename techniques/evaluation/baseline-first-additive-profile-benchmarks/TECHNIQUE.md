@@ -2,6 +2,7 @@
 id: AOA-T-0039
 name: baseline-first-additive-profile-benchmarks
 domain: evaluation
+kind: validation
 status: promoted
 origin:
   project: atm10-agent

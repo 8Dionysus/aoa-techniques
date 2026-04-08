@@ -2,6 +2,7 @@
 id: AOA-T-0038
 name: one-command-service-lifecycle
 domain: agent-workflows
+kind: workflow
 status: promoted
 origin:
   project: OpenMemory-Code

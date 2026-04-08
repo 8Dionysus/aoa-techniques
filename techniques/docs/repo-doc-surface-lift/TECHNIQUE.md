@@ -2,6 +2,7 @@
 id: AOA-T-0046
 name: repo-doc-surface-lift
 domain: docs
+kind: lift
 status: promoted
 origin:
   project: aoa-techniques

@@ -2,6 +2,7 @@
 id: AOA-T-0018
 name: markdown-technique-section-lift
 domain: docs
+kind: lift
 status: canonical
 origin:
   project: aoa-techniques

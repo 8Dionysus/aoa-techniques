@@ -2,6 +2,7 @@
 id: AOA-T-0077
 name: harvest-packet-contract
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: aoa-skills

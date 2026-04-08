@@ -2,6 +2,7 @@
 id: AOA-T-0059
 name: git-verified-handoff-claims
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: thebasedcapital/nightcrawler + jeremiah-k/agor

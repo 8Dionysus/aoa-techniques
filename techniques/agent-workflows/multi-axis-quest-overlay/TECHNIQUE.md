@@ -2,6 +2,7 @@
 id: AOA-T-0085
 name: multi-axis-quest-overlay
 domain: agent-workflows
+kind: artifact
 status: promoted
 origin:
   project: aoa-skills

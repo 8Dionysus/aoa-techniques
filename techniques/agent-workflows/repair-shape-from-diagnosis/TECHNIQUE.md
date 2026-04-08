@@ -2,6 +2,7 @@
 id: AOA-T-0082
 name: repair-shape-from-diagnosis
 domain: agent-workflows
+kind: recovery
 status: promoted
 origin:
   project: aoa-skills

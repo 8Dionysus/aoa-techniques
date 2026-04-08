@@ -2,6 +2,7 @@
 id: AOA-T-0042
 name: upstream-skill-health-checking
 domain: evaluation
+kind: validation
 status: promoted
 origin:
   project: n-skills + MCP Gateway Registry

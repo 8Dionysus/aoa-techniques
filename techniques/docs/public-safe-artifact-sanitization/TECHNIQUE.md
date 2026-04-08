@@ -2,6 +2,7 @@
 id: AOA-T-0034
 name: public-safe-artifact-sanitization
 domain: docs
+kind: guardrail
 status: canonical
 origin:
   project: aoa-skills

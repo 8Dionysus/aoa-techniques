@@ -2,6 +2,7 @@
 id: AOA-T-0040
 name: skill-vs-command-boundary
 domain: docs
+kind: guardrail
 status: promoted
 origin:
   project: agentic-dev-team

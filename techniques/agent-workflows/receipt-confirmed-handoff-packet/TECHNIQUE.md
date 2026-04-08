@@ -2,6 +2,7 @@
 id: AOA-T-0058
 name: receipt-confirmed-handoff-packet
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: jeremiah-k/agor + ax-platform/ax-platform-mcp

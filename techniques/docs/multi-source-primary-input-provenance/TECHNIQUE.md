@@ -2,6 +2,7 @@
 id: AOA-T-0043
 name: multi-source-primary-input-provenance
 domain: docs
+kind: guardrail
 status: promoted
 origin:
   project: aoa-kag + Tree-of-Sophia bridge contracts

@@ -2,6 +2,7 @@
 id: AOA-T-0015
 name: contract-test-design
 domain: evaluation
+kind: validation
 status: canonical
 origin:
   project: abyss-stack

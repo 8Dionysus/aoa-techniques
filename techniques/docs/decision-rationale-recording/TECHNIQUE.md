@@ -2,6 +2,7 @@
 id: AOA-T-0033
 name: decision-rationale-recording
 domain: docs
+kind: artifact
 status: promoted
 origin:
   project: aoa-skills

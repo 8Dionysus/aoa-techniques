@@ -2,6 +2,7 @@
 id: AOA-T-0097
 name: degrade-reground-recover
 domain: system-recovery
+kind: recovery
 status: promoted
 origin:
   project: ATM10-Agent

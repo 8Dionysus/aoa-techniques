@@ -2,6 +2,7 @@
 id: AOA-T-0024
 name: upstream-mirroring-with-provenance
 domain: docs
+kind: distribution
 status: promoted
 origin:
   project: n-skills

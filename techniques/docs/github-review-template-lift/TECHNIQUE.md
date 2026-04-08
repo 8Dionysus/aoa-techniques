@@ -2,6 +2,7 @@
 id: AOA-T-0047
 name: github-review-template-lift
 domain: docs
+kind: lift
 status: promoted
 origin:
   project: aoa-techniques

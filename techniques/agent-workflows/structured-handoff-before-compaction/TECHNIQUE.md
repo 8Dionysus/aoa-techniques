@@ -2,6 +2,7 @@
 id: AOA-T-0057
 name: structured-handoff-before-compaction
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: thebasedcapital/nightcrawler + yan5xu/code-relay

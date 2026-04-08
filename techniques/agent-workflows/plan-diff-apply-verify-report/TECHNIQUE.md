@@ -2,6 +2,7 @@
 id: AOA-T-0001
 name: plan-diff-apply-verify-report
 domain: agent-workflows
+kind: workflow
 status: canonical
 origin:
   project: abyss-stack

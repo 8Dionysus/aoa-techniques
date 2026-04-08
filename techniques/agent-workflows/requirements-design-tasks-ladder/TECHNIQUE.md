@@ -2,6 +2,7 @@
 id: AOA-T-0055
 name: requirements-design-tasks-ladder
 domain: agent-workflows
+kind: workflow
 status: promoted
 origin:
   project: gotalab/cc-sdd

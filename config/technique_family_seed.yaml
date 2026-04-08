@@ -1,0 +1,199 @@
+schema_version: 1
+axis_name: technique_family
+status: optional-wave1-seed
+cardinality: zero-or-one-secondary-family
+purpose: Optional second semantic axis for stable corpus clusters. Not required to land wave1 `kind`.
+core_rules:
+- Keep family narrower than domain and more cluster-like than kind.
+- A family may contain multiple kinds when one stable cluster spans workflows, guardrails, and evidence
+  surfaces.
+- Do not block wave1 on family if bulk frontmatter migration becomes noisy.
+families:
+- id: agent-workflows-core
+  summary: Safe bounded agent execution backbone, one-shot posture, and mutation seam discipline.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - workflow
+  - guardrail
+  - composition
+- id: intent-chain
+  summary: Intent normalization, dry-run validation, and safe rollout of new intent types.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - workflow
+  - guardrail
+- id: docs-boundary
+  summary: Document-role separation, status snapshots, rationale notes, and public-safe sharing hygiene.
+  typical_domains:
+  - docs
+  typical_kinds:
+  - artifact
+  - guardrail
+- id: instruction-surface
+  summary: Composed, mirrored, layered, and propagated instruction or context surfaces with explicit source
+    ownership.
+  typical_domains:
+  - docs
+  typical_kinds:
+  - composition
+  - distribution
+- id: evaluation-chain
+  summary: Machine-readable validation contract production and staged promotion from signal to enforcement.
+  typical_domains:
+  - evaluation
+  typical_kinds:
+  - validation
+  - guardrail
+- id: published-summary
+  summary: Published summary storage, remediation, integrity, and rendering policy.
+  typical_domains:
+  - evaluation
+  typical_kinds:
+  - artifact
+  - lift
+  - validation
+  - guardrail
+- id: skill-support
+  summary: Boundary-contract testing, invariant coverage, and bounded-context vocabulary around capability
+    seams.
+  typical_domains:
+  - evaluation
+  - docs
+  typical_kinds:
+  - validation
+  - artifact
+- id: kag-source-lift
+  summary: Section, metadata, provenance, relation, repo-doc, and review-surface lift from authoritative
+    markdown.
+  typical_domains:
+  - docs
+  typical_kinds:
+  - lift
+- id: history-artifacts
+  summary: Capture, version, replay, index, and lineage-link session evidence as durable reviewable artifacts.
+  typical_domains:
+  - history
+  typical_kinds:
+  - artifact
+- id: runtime-truth-lifecycle
+  summary: Render effective runtime truth, check host readiness, operate service lifecycle, and benchmark
+    additive profiles.
+  typical_domains:
+  - agent-workflows
+  - evaluation
+  typical_kinds:
+  - composition
+  - validation
+  - workflow
+- id: capability-registry
+  summary: Versioned capability or registry contracts and bounded lookup over published entries.
+  typical_domains:
+  - docs
+  typical_kinds:
+  - artifact
+  - discovery
+- id: capability-boundary
+  summary: Explicit separation between capability meaning, input provenance, recommendation truth, and
+    host actionability.
+  typical_domains:
+  - docs
+  - agent-workflows
+  typical_kinds:
+  - guardrail
+- id: skill-discovery
+  summary: Editorial discovery and health visibility over upstream-owned skill sources.
+  typical_domains:
+  - docs
+  - evaluation
+  typical_kinds:
+  - discovery
+  - validation
+- id: ready-work-graphs
+  summary: Dependency-aware planning, frontier selection, and laddering from requirements to tasks.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - workflow
+- id: review-compaction
+  summary: Background review triggering, findings compaction, and recovery of capability loading after
+    compaction.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - workflow
+  - handoff
+- id: handoff-continuation
+  summary: Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - handoff
+- id: tool-gateway
+  summary: One bounded caller surface over multiple upstream tool or MCP endpoints.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - composition
+- id: approval-evidence
+  summary: Approval-gated mutation and durable work with explicit allow or block evidence.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - guardrail
+  - handoff
+- id: media-ingest
+  summary: OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - ingest
+- id: donor-harvest
+  summary: Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay
+    artifacts without forced promotion.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - lift
+  - artifact
+  - handoff
+- id: decision-routing
+  summary: Owner-layer routing, explicit fork cards, and route risk posture for next-step choice.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - assessment
+- id: diagnosis-repair
+  summary: Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-repair.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - assessment
+  - recovery
+- id: automation-governance
+  summary: Automation-worthiness, approval sensitivity, seed routing, and promotion-boundary review.
+  typical_domains:
+  - agent-workflows
+  typical_kinds:
+  - assessment
+  - guardrail
+- id: owner-truth-closeout
+  summary: Ingress or mutation gates, proof-backed closeout, validated mirrors, and publish-readiness
+    against owner truth.
+  typical_domains:
+  - agent-workflows
+  - docs
+  typical_kinds:
+  - guardrail
+  - workflow
+  - validation
+  - distribution
+- id: antifragility-recovery
+  summary: Degraded continuation, regrounding, and receipt-first failure analysis.
+  typical_domains:
+  - system-recovery
+  - validation-patterns
+  typical_kinds:
+  - recovery
+  - validation

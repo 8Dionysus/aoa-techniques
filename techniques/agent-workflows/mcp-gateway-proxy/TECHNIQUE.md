@@ -2,6 +2,7 @@
 id: AOA-T-0065
 name: mcp-gateway-proxy
 domain: agent-workflows
+kind: composition
 status: promoted
 origin:
   project: lasso-security/mcp-gateway

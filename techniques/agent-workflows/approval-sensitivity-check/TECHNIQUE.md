@@ -2,6 +2,7 @@
 id: AOA-T-0088
 name: approval-sensitivity-check
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

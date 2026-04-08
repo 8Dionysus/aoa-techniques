@@ -2,6 +2,7 @@
 id: AOA-T-0067
 name: transcript-linked-code-lineage
 domain: history
+kind: artifact
 status: promoted
 origin:
   project: git-ai-project/git-ai

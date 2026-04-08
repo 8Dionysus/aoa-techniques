@@ -41,6 +41,7 @@ Only contribute techniques that are:
 - verifiable
 
 If adjacent meaning already has a canonical home, route to it. If a reusable contract can be extracted cleanly, the extracted technique belongs here.
+When a technique has multiple plausible `kind` values, keep `domain` first, pick one primary `kind`, and use the registry tie-break rules instead of widening the axis.
 
 ## Read this first
 
@@ -50,8 +51,9 @@ Before making changes, read in this order:
 2. `docs/START_HERE.md`
 3. `WALKTHROUGH.md`
 4. `docs/TECHNIQUE_SELECTION.md`
-5. the target `techniques/**/TECHNIQUE.md`
-6. any generated catalogs or capsules affected by the change
+5. `docs/TECHNIQUE_KIND_GUIDE.md` and `docs/TECHNIQUE_KINDS_SEED.md` when the task touches kind selection, review, or routing
+6. the target `techniques/**/TECHNIQUE.md`
+7. any generated catalogs or capsules affected by the change
 
 If the task touches donor intake, promotion, or source-lift surfaces, read the neighboring docs that govern those flows before editing.
 
@@ -66,6 +68,7 @@ The most important objects in this repository are:
 - generated catalogs, capsules, and source-lift manifests under `generated/`
 - selection, intake, promotion, and release docs under `docs/`
 - validation and generation helpers under `scripts/` and `tests/`
+- the canonical kind doctrine in `docs/TECHNIQUE_KIND_GUIDE.md`, with `docs/TECHNIQUE_KINDS_SEED.md` kept only as a historical wave1 note
 
 ## Hard NO
 

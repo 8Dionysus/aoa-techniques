@@ -2,6 +2,7 @@
 id: AOA-T-0091
 name: workspace-root-ingress-and-mutation-gate
 domain: agent-workflows
+kind: guardrail
 status: promoted
 origin:
   project: aoa-sdk + 8Dionysus

@@ -2,6 +2,7 @@
 id: AOA-T-0098
 name: receipt-first-failure-analysis
 domain: validation-patterns
+kind: validation
 status: promoted
 origin:
   project: ATM10-Agent

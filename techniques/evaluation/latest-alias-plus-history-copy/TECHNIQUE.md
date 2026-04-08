@@ -2,6 +2,7 @@
 id: AOA-T-0006
 name: latest-alias-plus-history-copy
 domain: evaluation
+kind: artifact
 status: canonical
 origin:
   project: atm10-agent

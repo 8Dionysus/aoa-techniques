@@ -2,6 +2,7 @@
 id: AOA-T-0030
 name: fragmented-agent-context
 domain: docs
+kind: composition
 status: promoted
 origin:
   project: agents-md

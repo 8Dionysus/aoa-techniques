@@ -2,6 +2,7 @@
 id: AOA-T-0027
 name: cross-agent-skill-propagation
 domain: docs
+kind: distribution
 status: promoted
 origin:
   project: ruler

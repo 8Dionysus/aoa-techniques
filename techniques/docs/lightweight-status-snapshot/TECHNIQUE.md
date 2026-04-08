@@ -2,6 +2,7 @@
 id: AOA-T-0009
 name: lightweight-status-snapshot
 domain: docs
+kind: artifact
 status: canonical
 origin:
   project: atm10-agent

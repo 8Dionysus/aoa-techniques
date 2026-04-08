@@ -2,6 +2,7 @@
 id: AOA-T-0094
 name: canonical-owner-with-validated-mirror
 domain: docs
+kind: distribution
 status: promoted
 origin:
   project: Dionysus + aoa-stats + aoa-evals + aoa-skills
