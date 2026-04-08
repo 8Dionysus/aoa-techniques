@@ -2,6 +2,7 @@
 id: AOA-T-0062
 name: episode-bounded-agent-loop
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: thebasedcapital/nightcrawler

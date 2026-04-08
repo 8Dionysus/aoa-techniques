@@ -2,6 +2,7 @@
 id: AOA-T-0010
 name: telemetry-integrity-snapshot
 domain: evaluation
+kind: validation
 status: canonical
 origin:
   project: atm10-agent

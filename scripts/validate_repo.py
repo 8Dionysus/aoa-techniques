@@ -54,6 +54,7 @@ REQUIRED_STAGE1_FILES = (
     "schemas/relation.schema.json",
     "schemas/index-entry.schema.json",
     "scripts/build_catalog.py",
+    "scripts/build_kind_manifest.py",
     "scripts/build_capsules.py",
     "scripts/build_sections.py",
     "scripts/build_section_manifest.py",
@@ -108,6 +109,28 @@ REQUIRED_KAG_SOURCE_READER_FILES = (
 REQUIRED_CAPSULE_SURFACE_FILES = ("docs/TECHNIQUE_CAPSULES.md",)
 REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
 REQUIRED_KAG_EXPORT_FILES = ("docs/KAG_EXPORT.md",)
+REQUIRED_KIND_DOCTRINE_FILES = (
+    "docs/TECHNIQUE_KIND_GUIDE.md",
+    "docs/TECHNIQUE_KINDS_SEED.md",
+    "docs/TECHNIQUE_KIND_HANDOFF_PACK.md",
+)
+REQUIRED_KIND_DATA_FILES = (
+    "config/technique_kind_registry.yaml",
+    "config/technique_family_seed.yaml",
+    "data/technique_kind_wave1.yaml",
+    "data/technique_kind_wave1.csv",
+    "reports/wave1_kind_counts.md",
+)
+REQUIRED_KIND_SURFACE_FILES = (
+    "generated/technique_kind_manifest.json",
+    "generated/technique_kind_manifest.min.json",
+    "docs/TECHNIQUE_KINDS.md",
+)
+REQUIRED_KIND_REPORT_FILES = (
+    "reports/technique_family_scout.md",
+    "reports/technique_family_scout.json",
+    "reports/kind_ambiguity_audit.md",
+)
 KAG_EXPORT_TECHNIQUE_ID = "AOA-T-0043"
 KAG_EXPORT_SECTION_HANDLES = (
     "intent",
@@ -495,6 +518,77 @@ DOMAIN_ORDER = (
     "validation-patterns",
     "history",
 )
+KIND_ORDER = (
+    "workflow",
+    "guardrail",
+    "validation",
+    "composition",
+    "distribution",
+    "artifact",
+    "lift",
+    "discovery",
+    "handoff",
+    "ingest",
+    "assessment",
+    "recovery",
+)
+KIND_VALUES = set(KIND_ORDER)
+KIND_INDEX = {kind: index for index, kind in enumerate(KIND_ORDER)}
+TECHNIQUE_KIND_REGISTRY_PATH = "config/technique_kind_registry.yaml"
+TECHNIQUE_FAMILY_SEED_PATH = "config/technique_family_seed.yaml"
+TECHNIQUE_KIND_WAVE1_PATH = "data/technique_kind_wave1.yaml"
+TECHNIQUE_KIND_WAVE1_CSV_PATH = "data/technique_kind_wave1.csv"
+WAVE1_KIND_COUNTS_REPORT_PATH = "reports/wave1_kind_counts.md"
+KIND_MANIFEST_VERSION = 1
+KIND_MANIFEST_SOURCE_OF_TRUTH = {
+    "kind_registry": TECHNIQUE_KIND_REGISTRY_PATH,
+    "catalog": "generated/technique_catalog.json",
+    "bundles": "techniques/*/*/TECHNIQUE.md",
+}
+FAMILY_SCOUT_REPORT_VERSION = 1
+FAMILY_SCOUT_SOURCE_OF_TRUTH = {
+    "family_seed": TECHNIQUE_FAMILY_SEED_PATH,
+    "kind_registry": TECHNIQUE_KIND_REGISTRY_PATH,
+    "wave1_mapping": TECHNIQUE_KIND_WAVE1_PATH,
+    "catalog": "generated/technique_catalog.json",
+}
+FAMILY_SCOUT_AUTHORITY_NOTE = (
+    "This report is scout-only, non-authoritative, and weaker than bundle frontmatter. "
+    "It must not be treated as schema truth, frontmatter truth, or automatic remap authority."
+)
+KIND_AMBIGUITY_AUTHORITY_NOTE = (
+    "This audit is scout-only, non-authoritative, and weaker than bundle frontmatter. "
+    "Use it to review tie-break seams, not to remap techniques automatically."
+)
+KIND_AMBIGUITY_SEAMS = (
+    ("workflow", "guardrail"),
+    ("validation", "assessment"),
+    ("artifact", "lift"),
+    ("composition", "distribution"),
+    ("handoff", "workflow"),
+)
+KIND_AMBIGUITY_KEYWORDS = {
+    ("workflow", "guardrail"): {
+        "workflow": ("workflow", "step", "steps", "plan", "loop", "process", "procedure", "execute"),
+        "guardrail": ("guardrail", "gate", "gated", "approval", "reject", "block", "fail-closed", "policy"),
+    },
+    ("validation", "assessment"): {
+        "validation": ("validation", "validate", "proof", "verify", "integrity", "smoke", "check", "health"),
+        "assessment": ("assessment", "classify", "classification", "diagnosis", "diagnose", "route", "matrix", "decision"),
+    },
+    ("artifact", "lift"): {
+        "artifact": ("artifact", "snapshot", "transcript", "index", "capture", "record", "storage", "spec"),
+        "lift": ("lift", "derived", "derive", "manifest", "surface", "projection", "overlay", "export"),
+    },
+    ("composition", "distribution"): {
+        "composition": ("composition", "compose", "composed", "assembly", "assemble", "merge", "layer", "precedence"),
+        "distribution": ("distribution", "mirror", "mirroring", "fan-out", "propagate", "propagation", "parity", "publish"),
+    },
+    ("handoff", "workflow"): {
+        "handoff": ("handoff", "checkpoint", "receipt", "packet", "resume", "continuation", "mailbox", "episode"),
+        "workflow": ("workflow", "step", "steps", "plan", "loop", "process", "procedure", "execute"),
+    },
+}
 RELATION_TYPE_ORDER = (
     "requires",
     "complements",
@@ -1051,6 +1145,7 @@ class TechniqueRecord:
     id: str
     name: str
     domain: str
+    kind: str
     status: str
     summary: str
     frontmatter: dict[str, Any]
@@ -1088,6 +1183,36 @@ def read_yaml(path: Path) -> Any:
         return yaml.safe_load(read_text(path))
     except yaml.YAMLError as exc:
         fail(f"{path}: invalid YAML: {exc}")
+
+
+def load_kind_registry(repo_root: Path) -> dict[str, Any]:
+    registry_path = repo_root / TECHNIQUE_KIND_REGISTRY_PATH
+    if not registry_path.is_file():
+        fail(f"{repo_root}: missing kind registry '{TECHNIQUE_KIND_REGISTRY_PATH}'")
+    registry = read_yaml(registry_path)
+    if not isinstance(registry, dict):
+        fail(f"{registry_path}: registry payload must be a mapping")
+    return registry
+
+
+def load_family_seed(repo_root: Path) -> dict[str, Any]:
+    seed_path = repo_root / TECHNIQUE_FAMILY_SEED_PATH
+    if not seed_path.is_file():
+        fail(f"{repo_root}: missing family seed '{TECHNIQUE_FAMILY_SEED_PATH}'")
+    seed = read_yaml(seed_path)
+    if not isinstance(seed, dict):
+        fail(f"{seed_path}: family seed payload must be a mapping")
+    return seed
+
+
+def load_wave1_kind_overlay(repo_root: Path) -> dict[str, Any]:
+    overlay_path = repo_root / TECHNIQUE_KIND_WAVE1_PATH
+    if not overlay_path.is_file():
+        fail(f"{repo_root}: missing wave1 kind overlay '{TECHNIQUE_KIND_WAVE1_PATH}'")
+    overlay = read_yaml(overlay_path)
+    if not isinstance(overlay, dict):
+        fail(f"{overlay_path}: wave1 kind overlay payload must be a mapping")
+    return overlay
 
 
 def split_frontmatter(technique_path: Path) -> tuple[str, str]:
@@ -1397,6 +1522,165 @@ def validate_frontmatter_schema(
 ) -> None:
     schema = resolve_schema_ref("technique.schema.json", schema_store)
     validate_schema_instance(frontmatter, schema, str(technique_path), schema_store)
+
+
+def validate_kind_axis_alignment(repo_root: Path, schema_store: dict[str, Any]) -> None:
+    registry_path = repo_root / TECHNIQUE_KIND_REGISTRY_PATH
+    registry = load_kind_registry(repo_root)
+
+    selection_order = registry.get("selection_order")
+    if selection_order != list(KIND_ORDER):
+        fail(f"{registry_path}: selection_order must match KIND_ORDER exactly")
+
+    registry_ids = list(kind_registry_values_by_id(registry, registry_path))
+    if registry_ids != list(KIND_ORDER):
+        fail(f"{registry_path}: values[*].id must match KIND_ORDER exactly")
+
+    for schema_name in ("technique.schema.json", "index-entry.schema.json"):
+        schema = resolve_schema_ref(schema_name, schema_store)
+        kind_schema = schema.get("properties", {}).get("kind")
+        if not isinstance(kind_schema, dict):
+            fail(f"{schema_name}: missing properties.kind")
+        if kind_schema.get("enum") != list(KIND_ORDER):
+            fail(f"{schema_name}: kind enum must match KIND_ORDER exactly")
+
+
+def kind_registry_values_by_id(registry: dict[str, Any], registry_path: Path | str) -> dict[str, dict[str, Any]]:
+    values = registry.get("values")
+    if not isinstance(values, list):
+        fail(f"{registry_path}: values must be a list")
+
+    values_by_id: dict[str, dict[str, Any]] = {}
+    for index, item in enumerate(values):
+        location = f"{registry_path}.values[{index}]"
+        if not isinstance(item, dict):
+            fail(f"{location}: value entry must be an object")
+        kind_id = item.get("id")
+        if not isinstance(kind_id, str) or not kind_id:
+            fail(f"{location}: id must be a non-empty string")
+        if kind_id in values_by_id:
+            fail(f"{location}: duplicate kind id '{kind_id}'")
+        summary = item.get("summary")
+        if not isinstance(summary, str) or not summary.strip():
+            fail(f"{location}: summary must be a non-empty string")
+        for list_key in ("choose_when", "not_when"):
+            field_value = item.get(list_key)
+            if not isinstance(field_value, list) or not field_value:
+                fail(f"{location}: {list_key} must be a non-empty list")
+            if not all(isinstance(entry, str) and entry.strip() for entry in field_value):
+                fail(f"{location}: {list_key} must contain only non-empty strings")
+        values_by_id[kind_id] = item
+    return values_by_id
+
+
+def family_seed_entries_by_id(seed: dict[str, Any], seed_path: Path | str) -> dict[str, dict[str, Any]]:
+    families = seed.get("families")
+    if not isinstance(families, list):
+        fail(f"{seed_path}: families must be a list")
+
+    entries_by_id: dict[str, dict[str, Any]] = {}
+    for index, item in enumerate(families):
+        location = f"{seed_path}.families[{index}]"
+        if not isinstance(item, dict):
+            fail(f"{location}: family entry must be an object")
+        family_id = item.get("id")
+        if not isinstance(family_id, str) or not family_id:
+            fail(f"{location}: id must be a non-empty string")
+        if family_id in entries_by_id:
+            fail(f"{location}: duplicate family id '{family_id}'")
+        summary = item.get("summary")
+        if not isinstance(summary, str) or not summary.strip():
+            fail(f"{location}: summary must be a non-empty string")
+        typical_domains = item.get("typical_domains")
+        if not isinstance(typical_domains, list) or not typical_domains:
+            fail(f"{location}: typical_domains must be a non-empty list")
+        if not all(isinstance(domain, str) and domain in DOMAIN_VALUES for domain in typical_domains):
+            fail(f"{location}: typical_domains must stay inside DOMAIN_VALUES")
+        typical_kinds = item.get("typical_kinds")
+        if not isinstance(typical_kinds, list) or not typical_kinds:
+            fail(f"{location}: typical_kinds must be a non-empty list")
+        if not all(isinstance(kind, str) and kind in KIND_VALUES for kind in typical_kinds):
+            fail(f"{location}: typical_kinds must stay inside KIND_VALUES")
+        entries_by_id[family_id] = item
+    return entries_by_id
+
+
+def wave1_overlay_entries_by_id(overlay: dict[str, Any], overlay_path: Path | str) -> dict[str, dict[str, Any]]:
+    entries = overlay.get("entries")
+    if not isinstance(entries, list):
+        fail(f"{overlay_path}: entries must be a list")
+
+    entries_by_id: dict[str, dict[str, Any]] = {}
+    for index, item in enumerate(entries):
+        location = f"{overlay_path}.entries[{index}]"
+        if not isinstance(item, dict):
+            fail(f"{location}: overlay entry must be an object")
+        entry_id = item.get("id")
+        if not isinstance(entry_id, str) or not entry_id:
+            fail(f"{location}: id must be a non-empty string")
+        if entry_id in entries_by_id:
+            fail(f"{location}: duplicate overlay id '{entry_id}'")
+        for field_name in ("name", "domain", "status", "kind"):
+            field_value = item.get(field_name)
+            if not isinstance(field_value, str) or not field_value:
+                fail(f"{location}: {field_name} must be a non-empty string")
+        entries_by_id[entry_id] = item
+    return entries_by_id
+
+
+def validate_family_seed_alignment(repo_root: Path) -> None:
+    seed_path = repo_root / TECHNIQUE_FAMILY_SEED_PATH
+    seed = load_family_seed(repo_root)
+    if seed.get("schema_version") != 1:
+        fail(f"{seed_path}: schema_version must be 1")
+    if seed.get("axis_name") != "technique_family":
+        fail(f"{seed_path}: axis_name must stay 'technique_family'")
+    if seed.get("status") != "optional-wave1-seed":
+        fail(f"{seed_path}: status must stay 'optional-wave1-seed'")
+    family_seed_entries_by_id(seed, seed_path)
+
+
+def validate_wave1_kind_overlay(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    overlay_path = repo_root / TECHNIQUE_KIND_WAVE1_PATH
+    overlay = load_wave1_kind_overlay(repo_root)
+    if overlay.get("schema_version") != 1:
+        fail(f"{overlay_path}: schema_version must be 1")
+    if overlay.get("source_catalog_version") != 1:
+        fail(f"{overlay_path}: source_catalog_version must be 1")
+    if overlay.get("source_of_truth") != "wave1-seed-overlay":
+        fail(f"{overlay_path}: source_of_truth must stay 'wave1-seed-overlay'")
+
+    family_seed_path = repo_root / TECHNIQUE_FAMILY_SEED_PATH
+    family_entries = family_seed_entries_by_id(load_family_seed(repo_root), family_seed_path)
+    overlay_entries = wave1_overlay_entries_by_id(overlay, overlay_path)
+    records_by_id = {record.id: record for record in records}
+
+    if set(overlay_entries) != set(records_by_id):
+        missing = sorted(set(records_by_id) - set(overlay_entries))
+        extra = sorted(set(overlay_entries) - set(records_by_id))
+        detail_parts: list[str] = []
+        if missing:
+            detail_parts.append(f"missing {missing}")
+        if extra:
+            detail_parts.append(f"extra {extra}")
+        fail(f"{overlay_path}: entries must cover the current corpus exactly once ({'; '.join(detail_parts)})")
+
+    for technique_id, overlay_entry in overlay_entries.items():
+        record = records_by_id[technique_id]
+        if overlay_entry["name"] != record.name:
+            fail(f"{overlay_path}: {technique_id} name must match bundle frontmatter")
+        if overlay_entry["domain"] != record.domain:
+            fail(f"{overlay_path}: {technique_id} domain must match bundle frontmatter")
+        if overlay_entry["status"] != record.status:
+            fail(f"{overlay_path}: {technique_id} status must match bundle frontmatter")
+        if overlay_entry["kind"] != record.kind:
+            fail(f"{overlay_path}: {technique_id} kind must match bundle frontmatter")
+        family = overlay_entry.get("family")
+        if family is not None:
+            if not isinstance(family, str) or not family:
+                fail(f"{overlay_path}: {technique_id} family must be a non-empty string when present")
+            if family not in family_entries:
+                fail(f"{overlay_path}: {technique_id} family '{family}' is not declared in {family_seed_path}")
 
 
 def normalize_section_markdown(raw_markdown: str) -> str:
@@ -3135,6 +3419,34 @@ def validate_kag_export_files(repo_root: Path) -> None:
             fail(f"{repo_root}: missing required KAG export file '{relative_path}'")
 
 
+def validate_kind_doctrine_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_KIND_DOCTRINE_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required kind doctrine file '{relative_path}'")
+
+
+def validate_kind_data_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_KIND_DATA_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required kind data file '{relative_path}'")
+
+
+def validate_kind_surface_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_KIND_SURFACE_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required kind surface file '{relative_path}'")
+
+
+def validate_kind_report_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_KIND_REPORT_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required kind scout report '{relative_path}'")
+
+
 def validate_technique_bundle(
     repo_root: Path, technique_dir: Path, expected_domain: str, schema_store: dict[str, Any]
 ) -> TechniqueRecord:
@@ -3164,6 +3476,7 @@ def validate_technique_bundle(
         id=frontmatter["id"],
         name=frontmatter["name"],
         domain=frontmatter["domain"],
+        kind=frontmatter["kind"],
         status=frontmatter["status"],
         summary=frontmatter["summary"],
         frontmatter=frontmatter,
@@ -3372,6 +3685,7 @@ def full_catalog_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, An
         "id": frontmatter["id"],
         "name": frontmatter["name"],
         "domain": frontmatter["domain"],
+        "kind": frontmatter["kind"],
         "status": frontmatter["status"],
         "summary": frontmatter["summary"],
         "technique_path": record.technique_path.relative_to(repo_root).as_posix(),
@@ -3396,6 +3710,7 @@ def min_catalog_entry(repo_root: Path, record: TechniqueRecord) -> dict[str, Any
         "id": frontmatter["id"],
         "name": frontmatter["name"],
         "domain": frontmatter["domain"],
+        "kind": frontmatter["kind"],
         "status": frontmatter["status"],
         "summary": frontmatter["summary"],
         "maturity_score": frontmatter["maturity_score"],
@@ -4369,6 +4684,502 @@ def build_repo_doc_surface_manifest_payloads(
     return full_manifest, project_min_repo_doc_surface_manifest(full_manifest)
 
 
+def kind_manifest_entry(entry: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": entry["id"],
+        "name": entry["name"],
+        "domain": entry["domain"],
+        "status": entry["status"],
+        "summary": entry["summary"],
+        "technique_path": entry["technique_path"],
+    }
+
+
+def ordered_domain_counts(entries: list[dict[str, Any]]) -> dict[str, int]:
+    counts = {domain: 0 for domain in DOMAIN_ORDER}
+    for entry in entries:
+        domain = entry["domain"]
+        if domain not in counts:
+            fail(f"generated catalog contains unsupported domain '{domain}'")
+        counts[domain] += 1
+    return counts
+
+
+def ordered_kind_counts(entries: list[dict[str, Any]]) -> dict[str, int]:
+    counts = {kind: 0 for kind in KIND_ORDER}
+    for entry in entries:
+        kind = entry["kind"]
+        if kind not in counts:
+            fail(f"generated catalog contains unsupported kind '{kind}'")
+        counts[kind] += 1
+    return counts
+
+
+def catalog_domain_rank(domain: str) -> int:
+    if domain in DOMAIN_ORDER:
+        return DOMAIN_ORDER.index(domain)
+    return len(DOMAIN_ORDER)
+
+
+def kind_group_sort_key(entry: dict[str, Any]) -> tuple[int, int, str, str]:
+    return (
+        catalog_domain_rank(entry["domain"]),
+        capsule_status_rank(entry["status"]),
+        entry["status"],
+        entry["id"],
+    )
+
+
+def project_min_kind_manifest(full_manifest: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "manifest_version": full_manifest["manifest_version"],
+        "source_of_truth": full_manifest["source_of_truth"],
+        "selection_order": list(full_manifest["selection_order"]),
+        "kinds": [
+            {
+                "kind": entry["kind"],
+                "summary": entry["summary"],
+                "counts": entry["counts"],
+                "technique_ids": [technique["id"] for technique in entry["techniques"]],
+            }
+            for entry in full_manifest["kinds"]
+        ],
+    }
+
+
+def build_kind_manifest_payloads(
+    catalog: dict[str, Any], registry: dict[str, Any]
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    catalog_entries = catalog.get("techniques")
+    if not isinstance(catalog_entries, list):
+        fail("generated/technique_catalog.json: techniques must be a list")
+    selection_order = registry.get("selection_order")
+    if selection_order != list(KIND_ORDER):
+        fail("config/technique_kind_registry.yaml: selection_order must match KIND_ORDER exactly")
+    registry_values = kind_registry_values_by_id(registry, TECHNIQUE_KIND_REGISTRY_PATH)
+
+    full_manifest = {
+        "manifest_version": KIND_MANIFEST_VERSION,
+        "source_of_truth": KIND_MANIFEST_SOURCE_OF_TRUTH,
+        "selection_order": list(selection_order),
+        "kinds": [],
+    }
+
+    for kind in selection_order:
+        registry_entry = registry_values[kind]
+        matching_entries = sorted(
+            [entry for entry in catalog_entries if entry.get("kind") == kind],
+            key=kind_group_sort_key,
+        )
+        kind_entries = [kind_manifest_entry(entry) for entry in matching_entries]
+        full_manifest["kinds"].append(
+            {
+                "kind": kind,
+                "summary": registry_entry["summary"],
+                "choose_when": list(registry_entry["choose_when"]),
+                "not_when": list(registry_entry["not_when"]),
+                "counts": {
+                    "total": len(kind_entries),
+                    "canonical": sum(1 for entry in matching_entries if entry["status"] == "canonical"),
+                    "promoted": sum(1 for entry in matching_entries if entry["status"] == "promoted"),
+                    "by_domain": ordered_domain_counts(matching_entries),
+                },
+                "techniques": kind_entries,
+            }
+        )
+
+    return full_manifest, project_min_kind_manifest(full_manifest)
+
+
+def build_kind_reader_markdown(full_manifest: dict[str, Any]) -> str:
+    lines = [
+        "# Technique Kinds",
+        "",
+        "This file is generated from `../generated/technique_catalog.json` plus the repo-owned `kind` registry.",
+        "Do not edit it by hand; run `python scripts/build_kind_manifest.py`.",
+        "",
+        "Use this surface when `domain` already narrowed the owner layer and you need the bounded second cut that answers what primary reusable practice a technique is.",
+        "",
+        "This surface is kind-first, not promotion-first. It keeps `kind` singular, repo-owned, and subordinate to authored bundle meaning.",
+        "",
+        "See also:",
+        "- [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)",
+        "- [Technique Selection](TECHNIQUE_SELECTION.md)",
+        "- [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)",
+        "- [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)",
+        "- [Full kind manifest](../generated/technique_kind_manifest.json)",
+        "- [Min kind manifest](../generated/technique_kind_manifest.min.json)",
+        "- [Documentation Map](README.md)",
+        "",
+        "## Kind Scope",
+        "",
+        "| kind | summary | total | canonical | promoted |",
+        "|---|---|---|---|---|",
+    ]
+
+    for entry in full_manifest["kinds"]:
+        counts = entry["counts"]
+        lines.append(
+            "| "
+            f"`{entry['kind']}` | "
+            f"{escape_markdown_table_cell(entry['summary'])} | "
+            f"`{counts['total']}` | "
+            f"`{counts['canonical']}` | "
+            f"`{counts['promoted']}` |"
+        )
+
+    lines.append("")
+
+    for entry in full_manifest["kinds"]:
+        counts = entry["counts"]
+        lines.extend(
+            [
+                f"## `{entry['kind']}`",
+                "",
+                f"{entry['summary']}",
+                "",
+                "Choose this when:",
+            ]
+        )
+        lines.extend(f"- {item}" for item in entry["choose_when"])
+        lines.extend(["", "Do not use this when:"])
+        lines.extend(f"- {item}" for item in entry["not_when"])
+        lines.extend(
+            [
+                "",
+                f"Counts: `total` {counts['total']}, `canonical` {counts['canonical']}, `promoted` {counts['promoted']}.",
+                "",
+                "| domain | entries |",
+                "|---|---|",
+            ]
+        )
+        for domain, count in counts["by_domain"].items():
+            lines.append(f"| `{domain}` | `{count}` |")
+
+        lines.extend(
+            [
+                "",
+                "| technique | domain | status | summary | source |",
+                "|---|---|---|---|---|",
+            ]
+        )
+        for technique in entry["techniques"]:
+            lines.append(
+                "| "
+                f"{selection_technique_link(technique)} | "
+                f"`{technique['domain']}` | "
+                f"`{technique['status']}` | "
+                f"{escape_markdown_table_cell(technique['summary'])} | "
+                f"[TECHNIQUE.md](../{technique['technique_path']}) |"
+            )
+        if not entry["techniques"]:
+            lines.append("| _No techniques currently mapped._ | - | - | - | - |")
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            "- `domain` stays the first owner and routing axis.",
+            "- `kind` stays one bounded primary reusable-practice axis only.",
+            "- `tags` remain the freeform nuance layer.",
+            "- `family` stays scout-only and does not become frontmatter or schema truth in this wave.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def build_family_scout_payload(
+    catalog: dict[str, Any], family_seed: dict[str, Any], wave1_overlay: dict[str, Any]
+) -> dict[str, Any]:
+    catalog_entries = catalog.get("techniques")
+    if not isinstance(catalog_entries, list):
+        fail("generated/technique_catalog.json: techniques must be a list")
+    catalog_by_id = {entry["id"]: entry for entry in catalog_entries}
+    family_entries = family_seed_entries_by_id(family_seed, TECHNIQUE_FAMILY_SEED_PATH)
+    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+
+    families_payload: list[dict[str, Any]] = []
+    for family in family_seed["families"]:
+        family_id = family["id"]
+        family_catalog_entries = sorted(
+            [
+                catalog_by_id[technique_id]
+                for technique_id, overlay_entry in overlay_entries.items()
+                if overlay_entry.get("family") == family_id and technique_id in catalog_by_id
+            ],
+            key=kind_group_sort_key,
+        )
+        families_payload.append(
+            {
+                "family": family_id,
+                "summary": family["summary"],
+                "typical_domains": list(family["typical_domains"]),
+                "typical_kinds": list(family["typical_kinds"]),
+                "counts": {
+                    "total": len(family_catalog_entries),
+                    "canonical": sum(
+                        1 for entry in family_catalog_entries if entry["status"] == "canonical"
+                    ),
+                    "promoted": sum(
+                        1 for entry in family_catalog_entries if entry["status"] == "promoted"
+                    ),
+                    "by_domain": ordered_domain_counts(family_catalog_entries),
+                    "by_kind": ordered_kind_counts(family_catalog_entries),
+                },
+                "technique_ids": [entry["id"] for entry in family_catalog_entries],
+                "techniques": [kind_manifest_entry(entry) | {"kind": entry["kind"]} for entry in family_catalog_entries],
+            }
+        )
+
+    unassigned_ids = sorted(
+        technique_id
+        for technique_id in catalog_by_id
+        if technique_id not in overlay_entries or not overlay_entries[technique_id].get("family")
+    )
+
+    return {
+        "report_version": FAMILY_SCOUT_REPORT_VERSION,
+        "status": "scout-only-non-authoritative",
+        "source_of_truth": FAMILY_SCOUT_SOURCE_OF_TRUTH,
+        "authority_note": FAMILY_SCOUT_AUTHORITY_NOTE,
+        "families": families_payload,
+        "unassigned_technique_ids": unassigned_ids,
+    }
+
+
+def build_family_scout_markdown(report: dict[str, Any]) -> str:
+    lines = [
+        "# Technique Family Scout",
+        "",
+        "This file is generated from the current kind registry, family seed, wave1 overlay, and generated catalog.",
+        "Do not edit it by hand; run `python scripts/build_kind_manifest.py`.",
+        "",
+        FAMILY_SCOUT_AUTHORITY_NOTE,
+        "",
+        "Use this report when you want to inspect likely family clusters without promoting `family` into frontmatter, schema, or validator-required bundle truth.",
+        "",
+        "## Scout Scope",
+        "",
+        "| family | summary | total | canonical | promoted |",
+        "|---|---|---|---|---|",
+    ]
+
+    for family in report["families"]:
+        counts = family["counts"]
+        lines.append(
+            "| "
+            f"`{family['family']}` | "
+            f"{escape_markdown_table_cell(family['summary'])} | "
+            f"`{counts['total']}` | "
+            f"`{counts['canonical']}` | "
+            f"`{counts['promoted']}` |"
+        )
+
+    lines.extend(
+        [
+            "",
+            f"Unassigned wave1 family suggestions: `{len(report['unassigned_technique_ids'])}`.",
+            "",
+        ]
+    )
+
+    for family in report["families"]:
+        counts = family["counts"]
+        lines.extend(
+            [
+                f"## `{family['family']}`",
+                "",
+                family["summary"],
+                "",
+                f"Typical domains: {', '.join(f'`{domain}`' for domain in family['typical_domains'])}.",
+                f"Typical kinds: {', '.join(f'`{kind}`' for kind in family['typical_kinds'])}.",
+                "",
+                f"Counts: `total` {counts['total']}, `canonical` {counts['canonical']}, `promoted` {counts['promoted']}.",
+                "",
+                "| technique | domain | kind | status | summary |",
+                "|---|---|---|---|---|",
+            ]
+        )
+        for technique in family["techniques"]:
+            lines.append(
+                "| "
+                f"{selection_technique_link(technique)} | "
+                f"`{technique['domain']}` | "
+                f"`{technique['kind']}` | "
+                f"`{technique['status']}` | "
+                f"{escape_markdown_table_cell(technique['summary'])} |"
+            )
+        if not family["techniques"]:
+            lines.append("| _No wave1 techniques currently map here._ | - | - | - | - |")
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            f"- {FAMILY_SCOUT_AUTHORITY_NOTE}",
+            "- Family suggestions may inform later clustering work, but bundle frontmatter remains the stronger source of meaning.",
+            "- Do not use this report to add automatic remaps or new required metadata in this wave.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def seam_label(seam: tuple[str, str]) -> str:
+    return f"{seam[0]} vs {seam[1]}"
+
+
+def format_keyword_hits(hits: list[str]) -> str:
+    if not hits:
+        return "none"
+    return ", ".join(f"`{hit}`" for hit in hits)
+
+
+def catalog_entry_signal_text(entry: dict[str, Any], overlay_entry: dict[str, Any] | None) -> str:
+    tags = entry.get("tags")
+    tag_text = " ".join(tag for tag in tags if isinstance(tag, str)) if isinstance(tags, list) else ""
+    family = overlay_entry.get("family") if isinstance(overlay_entry, dict) else ""
+    return " ".join(
+        part
+        for part in (entry.get("name", ""), entry.get("summary", ""), tag_text, str(family or ""))
+        if part
+    ).lower()
+
+
+def matched_keywords(text: str, keywords: tuple[str, ...]) -> list[str]:
+    matches: list[str] = []
+    for keyword in keywords:
+        if keyword in text and keyword not in matches:
+            matches.append(keyword)
+    return matches
+
+
+def kind_tie_break_rule_map(registry: dict[str, Any]) -> dict[str, str]:
+    rules = registry.get("tie_break_rules")
+    if not isinstance(rules, list):
+        fail(f"{TECHNIQUE_KIND_REGISTRY_PATH}: tie_break_rules must be a list")
+    mapping: dict[str, str] = {}
+    for rule in rules:
+        if not isinstance(rule, str) or ":" not in rule:
+            fail(f"{TECHNIQUE_KIND_REGISTRY_PATH}: tie_break_rules must contain '<seam>: <rule>' strings")
+        seam, detail = rule.split(":", 1)
+        mapping[seam.strip()] = detail.strip()
+    return mapping
+
+
+def ambiguity_verdict(current_hits: list[str], other_hits: list[str]) -> str:
+    if len(other_hits) > len(current_hits):
+        return "candidate remap"
+    if len(other_hits) >= len(current_hits) and other_hits:
+        return "revisit later"
+    return "keep current kind"
+
+
+def build_kind_ambiguity_audit_markdown(
+    catalog: dict[str, Any],
+    registry: dict[str, Any],
+    family_seed: dict[str, Any],
+    wave1_overlay: dict[str, Any],
+) -> str:
+    catalog_entries = catalog.get("techniques")
+    if not isinstance(catalog_entries, list):
+        fail("generated/technique_catalog.json: techniques must be a list")
+    family_entries = family_seed_entries_by_id(family_seed, TECHNIQUE_FAMILY_SEED_PATH)
+    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+    tie_break_rules = kind_tie_break_rule_map(registry)
+    catalog_by_id = {entry["id"]: entry for entry in catalog_entries}
+
+    lines = [
+        "# Kind Ambiguity Audit",
+        "",
+        "This file is generated from the current kind registry, family seed, wave1 overlay, and generated catalog.",
+        "Do not edit it by hand; run `python scripts/build_kind_manifest.py`.",
+        "",
+        KIND_AMBIGUITY_AUTHORITY_NOTE,
+        "",
+        "Use this audit to inspect likely tie-break seams before proposing any later remap wave.",
+        "",
+    ]
+
+    for seam in KIND_AMBIGUITY_SEAMS:
+        left_kind, right_kind = seam
+        keyword_map = KIND_AMBIGUITY_KEYWORDS[seam]
+        candidates: list[tuple[int, str, dict[str, Any], dict[str, Any] | None, list[str], list[str], bool]] = []
+
+        for technique_id, entry in catalog_by_id.items():
+            if entry.get("kind") not in seam:
+                continue
+            overlay_entry = overlay_entries.get(technique_id)
+            signal_text = catalog_entry_signal_text(entry, overlay_entry)
+            left_hits = matched_keywords(signal_text, keyword_map[left_kind])
+            right_hits = matched_keywords(signal_text, keyword_map[right_kind])
+            current_hits = left_hits if entry["kind"] == left_kind else right_hits
+            other_hits = right_hits if entry["kind"] == left_kind else left_hits
+            family_has_both = False
+            family = overlay_entry.get("family") if isinstance(overlay_entry, dict) else None
+            if isinstance(family, str) and family in family_entries:
+                typical_kinds = set(family_entries[family]["typical_kinds"])
+                family_has_both = left_kind in typical_kinds and right_kind in typical_kinds
+            if not other_hits and not family_has_both:
+                continue
+            score = len(other_hits) * 3 + len(current_hits) + (2 if family_has_both else 0)
+            candidates.append((score, technique_id, entry, overlay_entry, current_hits, other_hits, family_has_both))
+
+        candidates.sort(key=lambda item: (-item[0], kind_group_sort_key(item[2])))
+
+        lines.extend(
+            [
+                f"## `{left_kind}` vs `{right_kind}`",
+                "",
+                f"Tie-break rule: {tie_break_rules[seam_label(seam)]}",
+                "",
+            ]
+        )
+
+        if not candidates:
+            lines.extend(
+                [
+                    "_No current candidates crossed this seam strongly enough to flag in the scout audit._",
+                    "",
+                ]
+            )
+            continue
+
+        for _score, _technique_id, entry, overlay_entry, current_hits, other_hits, family_has_both in candidates[:6]:
+            family = overlay_entry.get("family") if isinstance(overlay_entry, dict) else None
+            opposing_kind = right_kind if entry["kind"] == left_kind else left_kind
+            family_note = ""
+            if isinstance(family, str) and family_has_both:
+                family_note = (
+                    f" Seed family `{family}` already spans both `{left_kind}` and `{right_kind}`."
+                )
+            verdict = ambiguity_verdict(current_hits, other_hits)
+            lines.extend(
+                [
+                    f"- {selection_technique_link(entry)} - {entry['name']} (`{entry['domain']}`, current `{entry['kind']}`): "
+                    f"current-kind cues {format_keyword_hits(current_hits)}; opposing `{opposing_kind}` cues {format_keyword_hits(other_hits)}.{family_note} "
+                    f"Verdict: `{verdict}`."
+                ]
+            )
+
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Boundaries",
+            "",
+            f"- {KIND_AMBIGUITY_AUTHORITY_NOTE}",
+            "- Use the registry tie-break rules first, then this audit as a bounded scout aid only.",
+            "- A later remap wave should still review bundle meaning directly before changing any frontmatter.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def selection_technique_link(entry: dict[str, Any]) -> str:
     return f"[{entry['id']}](../{entry['technique_path']})"
 
@@ -4390,6 +5201,19 @@ def capsule_status_rank(status: str) -> int:
     if status == "promoted":
         return 1
     return 2
+
+
+def kind_rank(kind: str) -> int:
+    return KIND_INDEX.get(kind, len(KIND_ORDER))
+
+
+def selection_entry_sort_key(entry: dict[str, Any]) -> tuple[int, int, str, str]:
+    return (
+        kind_rank(entry["kind"]),
+        capsule_status_rank(entry["status"]),
+        entry["status"],
+        entry["id"],
+    )
 
 
 def escape_markdown_table_cell(value: str) -> str:
@@ -4881,6 +5705,10 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         if entry["status"] == "canonical":
             canonical_by_domain[domain].append(entry)
 
+    for domain in DOMAIN_ORDER:
+        canonical_by_domain[domain].sort(key=selection_entry_sort_key)
+        entries_by_domain[domain].sort(key=selection_entry_sort_key)
+
     export_ready_true = sum(1 for entry in entries if entry["export_ready"])
     total_entries = len(entries)
     evaluation_starters = canonical_by_domain["evaluation"]
@@ -4893,9 +5721,10 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         "",
         "Use this surface to make one bounded choice:",
         "1. narrow by `domain` first",
-        "2. prefer `canonical` techniques for default use",
-        "3. use `validation_strength` as an evidence-breadth signal",
-        "4. use direct `relations` as adjacency hints, not graph traversal",
+        "2. narrow by `kind` second",
+        "3. prefer `canonical` techniques for default use",
+        "4. use `validation_strength` as an evidence-breadth signal",
+        "5. use direct `relations` as adjacency hints, not graph traversal",
         "",
         "See also:",
         "- [Start Here](START_HERE.md)",
@@ -4911,14 +5740,15 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         "",
         "### I need an evaluation pattern. Where do I start?",
         "",
-        "| technique | validation | summary |",
-        "|---|---|---|",
+        "| technique | kind | validation | summary |",
+        "|---|---|---|---|",
     ]
 
     for entry in evaluation_starters:
         lines.append(
             "| "
             f"{selection_technique_link(entry)} | "
+            f"`{entry['kind']}` | "
             f"`{entry['validation_strength']}` | "
             f"{escape_markdown_table_cell(entry['summary'])} |"
         )
@@ -4934,7 +5764,10 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
     )
 
     for domain in DOMAIN_ORDER:
-        defaults = ", ".join(selection_technique_link(entry) for entry in canonical_by_domain[domain])
+        defaults = ", ".join(
+            f"{selection_technique_link(entry)} (`{entry['kind']}`)"
+            for entry in canonical_by_domain[domain]
+        )
         lines.append(f"| `{domain}` | {defaults or '-'} |")
 
     lines.extend(
@@ -4948,21 +5781,30 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
     for entry in entries:
         lines.append(f"- {selection_technique_link(entry)}: {relation_summary(entry, entries_by_id)}")
 
-    lines.extend(["", "## Browse By Domain", ""])
+    lines.extend(
+        [
+            "",
+            "## Browse By Domain",
+            "",
+            "Within each domain, techniques are ordered by `kind`, then by status, then by ID.",
+            "",
+        ]
+    )
 
     for domain in DOMAIN_ORDER:
         lines.extend(
             [
                 f"### `{domain}`",
                 "",
-                "| technique | status | validation | rigor | summary |",
-                "|---|---|---|---|---|",
+                "| technique | kind | status | validation | rigor | summary |",
+                "|---|---|---|---|---|---|",
             ]
         )
         for entry in entries_by_domain[domain]:
             lines.append(
                 "| "
                 f"{selection_technique_link(entry)} | "
+                f"`{entry['kind']}` | "
                 f"`{entry['status']}` | "
                 f"`{entry['validation_strength']}` | "
                 f"`{entry['rigor_level']}` | "
@@ -5296,6 +6138,7 @@ def validate_catalogs(repo_root: Path, records: list[TechniqueRecord], schema_st
                 "id",
                 "name",
                 "domain",
+                "kind",
                 "status",
                 "summary",
                 "maturity_score",
@@ -5706,6 +6549,118 @@ def validate_repo_doc_surface_manifests(repo_root: Path) -> None:
     projected_min = project_min_repo_doc_surface_manifest(actual_full)
     if projected_min != actual_min:
         fail(f"{min_path}: min repo doc surface manifest must stay a projection of the full manifest")
+
+
+def validate_kind_manifests(repo_root: Path) -> None:
+    full_path = repo_root / "generated" / "technique_kind_manifest.json"
+    min_path = repo_root / "generated" / "technique_kind_manifest.min.json"
+    reader_path = repo_root / "docs" / "TECHNIQUE_KINDS.md"
+    catalog_path = repo_root / "generated" / "technique_catalog.json"
+
+    catalog = read_json(catalog_path)
+    registry = load_kind_registry(repo_root)
+    expected_full, expected_min = build_kind_manifest_payloads(catalog, registry)
+    expected_reader = build_kind_reader_markdown(expected_full)
+    actual_full = read_json(full_path)
+    actual_min = read_json(min_path)
+    actual_reader = read_text(reader_path)
+
+    if actual_full != expected_full:
+        fail(
+            f"{full_path}: generated kind manifest is out of date; run "
+            f"'python scripts/build_kind_manifest.py'"
+        )
+    if actual_min != expected_min:
+        fail(
+            f"{min_path}: generated min kind manifest is out of date; run "
+            f"'python scripts/build_kind_manifest.py'"
+        )
+    if actual_reader != expected_reader:
+        fail(
+            f"{reader_path}: generated kind reader surface is out of date; run "
+            f"'python scripts/build_kind_manifest.py'"
+        )
+
+    if actual_full.get("manifest_version") != KIND_MANIFEST_VERSION:
+        fail(f"{full_path}: manifest_version must be {KIND_MANIFEST_VERSION}")
+    if actual_full.get("source_of_truth") != KIND_MANIFEST_SOURCE_OF_TRUTH:
+        fail(f"{full_path}: source_of_truth must stay stable")
+    if actual_full.get("selection_order") != list(KIND_ORDER):
+        fail(f"{full_path}: selection_order must follow the registry order exactly")
+    projected_min = project_min_kind_manifest(actual_full)
+    if projected_min != actual_min:
+        fail(f"{min_path}: min kind manifest must stay a projection of the full manifest")
+
+    kind_entries = actual_full.get("kinds")
+    if not isinstance(kind_entries, list):
+        fail(f"{full_path}: kinds must be a list")
+    if [entry.get("kind") for entry in kind_entries if isinstance(entry, dict)] != list(KIND_ORDER):
+        fail(f"{full_path}: kinds must appear exactly once in registry selection order")
+
+    catalog_entries = catalog["techniques"]
+    for entry in kind_entries:
+        if not isinstance(entry, dict):
+            fail(f"{full_path}: each kind entry must be an object")
+        counts = entry.get("counts")
+        if not isinstance(counts, dict):
+            fail(f"{full_path}: kind entry counts must be an object")
+        by_domain = counts.get("by_domain")
+        if not isinstance(by_domain, dict) or list(by_domain) != list(DOMAIN_ORDER):
+            fail(f"{full_path}: counts.by_domain must preserve DOMAIN_ORDER exactly")
+
+        technique_entries = entry.get("techniques")
+        if not isinstance(technique_entries, list):
+            fail(f"{full_path}: kind entry techniques must be a list")
+        expected_entries = [
+            kind_manifest_entry(catalog_entry)
+            for catalog_entry in sorted(
+                [catalog_entry for catalog_entry in catalog_entries if catalog_entry["kind"] == entry["kind"]],
+                key=kind_group_sort_key,
+            )
+        ]
+        if technique_entries != expected_entries:
+            fail(f"{full_path}: kind entry '{entry['kind']}' must stay aligned with generated/technique_catalog.json")
+
+
+def validate_kind_scout_reports(repo_root: Path) -> None:
+    markdown_path = repo_root / "reports" / "technique_family_scout.md"
+    json_path = repo_root / "reports" / "technique_family_scout.json"
+    audit_path = repo_root / "reports" / "kind_ambiguity_audit.md"
+    catalog = read_json(repo_root / "generated" / "technique_catalog.json")
+    registry = load_kind_registry(repo_root)
+    family_seed = load_family_seed(repo_root)
+    wave1_overlay = load_wave1_kind_overlay(repo_root)
+
+    expected_report = build_family_scout_payload(catalog, family_seed, wave1_overlay)
+    expected_markdown = build_family_scout_markdown(expected_report)
+    expected_audit = build_kind_ambiguity_audit_markdown(
+        catalog, registry, family_seed, wave1_overlay
+    )
+    actual_report = read_json(json_path)
+    actual_markdown = read_text(markdown_path)
+    actual_audit = read_text(audit_path)
+
+    if actual_report != expected_report:
+        fail(
+            f"{json_path}: generated family scout report is out of date; run "
+            f"'python scripts/build_kind_manifest.py'"
+        )
+    if actual_markdown != expected_markdown:
+        fail(
+            f"{markdown_path}: generated family scout markdown is out of date; run "
+            f"'python scripts/build_kind_manifest.py'"
+        )
+    if actual_audit != expected_audit:
+        fail(
+            f"{audit_path}: generated kind ambiguity audit is out of date; run "
+            f"'python scripts/build_kind_manifest.py'"
+        )
+    if actual_report.get("status") != "scout-only-non-authoritative":
+        fail(f"{json_path}: status must stay 'scout-only-non-authoritative'")
+    if actual_report.get("authority_note") != FAMILY_SCOUT_AUTHORITY_NOTE:
+        fail(f"{json_path}: authority_note must stay stable")
+    if "non-authoritative" not in actual_markdown or "non-authoritative" not in actual_audit:
+        fail(f"{repo_root}: kind scout reports must stay explicitly non-authoritative")
 
 
 def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
@@ -6140,8 +7095,15 @@ def validate_repo(repo_root: Path) -> None:
     validate_capsule_surface_files(repo_root)
     validate_repo_doc_surface_files(repo_root)
     validate_kag_export_files(repo_root)
+    validate_kind_doctrine_files(repo_root)
+    validate_kind_data_files(repo_root)
+    validate_kind_surface_files(repo_root)
+    validate_kind_report_files(repo_root)
     schema_store = load_schema_store(repo_root)
+    validate_kind_axis_alignment(repo_root, schema_store)
     records = collect_techniques(repo_root, schema_store)
+    validate_family_seed_alignment(repo_root)
+    validate_wave1_kind_overlay(repo_root, records)
     validate_selection_navigation_specs(records, repo_root)
     validate_repo_doc_navigation_specs(repo_root)
     validate_index(repo_root, records)
@@ -6159,6 +7121,8 @@ def validate_repo(repo_root: Path) -> None:
     validate_semantic_review_manifests(repo_root)
     validate_shadow_review_manifests(repo_root)
     validate_repo_doc_surface_manifests(repo_root)
+    validate_kind_manifests(repo_root)
+    validate_kind_scout_reports(repo_root)
     validate_selection_surface(repo_root, records)
     validate_repo_doc_surface_reader(repo_root)
     validate_kag_export(repo_root, records)
@@ -6174,7 +7138,7 @@ def validate_repo(repo_root: Path) -> None:
         f"({canonical_count} canonical, {promoted_count} promoted, {deprecated_count} deprecated)"
     )
     print("[ok] validated TECHNIQUE_INDEX.md structure and parity")
-    print("[ok] validated frontmatter-v2 schema, evidence coverage, and relations")
+    print("[ok] validated frontmatter kind axis, schema parity, evidence coverage, and relations")
     print("[ok] validated generated catalog parity")
     print("[ok] validated generated promotion readiness parity")
     print("[ok] validated generated capsule parity and reader surface")
@@ -6187,6 +7151,8 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated semantic review manifest parity")
     print("[ok] validated generated shadow review manifest parity")
     print("[ok] validated generated repo doc surface manifest parity")
+    print("[ok] validated generated kind manifest parity and reader surface")
+    print("[ok] validated wave1 family scout and ambiguity audit parity")
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated generated repo doc surface parity")
     print("[ok] validated generated source-owned KAG export parity")

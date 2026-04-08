@@ -2,6 +2,7 @@
 id: AOA-T-0078
 name: decision-fork-cards
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

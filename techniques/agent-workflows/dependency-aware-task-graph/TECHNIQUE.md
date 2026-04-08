@@ -2,6 +2,7 @@
 id: AOA-T-0049
 name: dependency-aware-task-graph
 domain: agent-workflows
+kind: workflow
 status: promoted
 origin:
   project: steveyegge/beads

@@ -2,6 +2,7 @@
 id: AOA-T-0013
 name: single-source-rule-distribution
 domain: docs
+kind: distribution
 status: canonical
 origin:
   project: ruler

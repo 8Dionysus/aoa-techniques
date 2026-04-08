@@ -815,7 +815,7 @@
             },
             {
               "order": 3,
-              "text": "The catalog answers bounded routing questions such as status, domain, or direct relation lookup."
+              "text": "The catalog answers bounded routing questions such as status, domain, kind, or direct relation lookup."
             },
             {
               "order": 4,
@@ -823,7 +823,7 @@
             },
             {
               "order": 5,
-              "text": "No new `kag` domain, richer schema, or metadata-first source-of-truth claim was needed."
+              "text": "No new `kag` domain, unbounded richer schema, or metadata-first source-of-truth claim was needed."
             }
           ]
         }

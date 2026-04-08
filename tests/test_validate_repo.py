@@ -68,6 +68,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
             (
                 ("python", "scripts/build_repo_doc_surface_manifest.py"),
                 ("python", "scripts/build_catalog.py"),
+                ("python", "scripts/build_kind_manifest.py"),
                 ("python", "scripts/build_capsules.py"),
                 ("python", "scripts/build_sections.py"),
                 ("python", "scripts/build_section_manifest.py"),
@@ -170,6 +171,7 @@ relations:
                 {
                     "id": "AOA-T-9999",
                     "domain": "evaluation",
+                    "kind": "workflow",
                     "status": "canonical",
                     "summary": "Alpha | Beta\nGamma",
                     "validation_strength": "cross_context",
@@ -639,6 +641,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         status_counts: dict[str, int] = {}
         domain_values = {entry["domain"] for entry in catalog["techniques"]}
+        kind_values = {entry["kind"] for entry in catalog["techniques"]}
 
         for entry in catalog["techniques"]:
             status_counts[entry["status"]] = status_counts.get(entry["status"], 0) + 1
@@ -654,8 +657,64 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             },
             domain_values,
         )
+        self.assertEqual(validate_repo.KIND_VALUES, kind_values)
         self.assertEqual(25, status_counts["canonical"])
         self.assertEqual(73, status_counts["promoted"])
+
+    def test_kind_manifest_matches_builder_projection_and_order(self) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        registry = validate_repo.load_kind_registry(REPO_ROOT)
+        manifest = validate_repo.read_json(REPO_ROOT / "generated" / "technique_kind_manifest.json")
+        min_manifest = validate_repo.read_json(
+            REPO_ROOT / "generated" / "technique_kind_manifest.min.json"
+        )
+        reader = (REPO_ROOT / "docs" / "TECHNIQUE_KINDS.md").read_text(encoding="utf-8")
+
+        expected_full, expected_min = validate_repo.build_kind_manifest_payloads(catalog, registry)
+
+        self.assertEqual(expected_full, manifest)
+        self.assertEqual(expected_min, min_manifest)
+        self.assertEqual(validate_repo.build_kind_reader_markdown(expected_full), reader)
+        self.assertEqual(list(validate_repo.KIND_ORDER), manifest["selection_order"])
+        self.assertEqual(
+            list(validate_repo.KIND_ORDER),
+            [entry["kind"] for entry in manifest["kinds"]],
+        )
+        self.assertEqual(
+            validate_repo.project_min_kind_manifest(manifest),
+            min_manifest,
+        )
+
+    def test_kind_manifest_counts_and_catalog_alignment_stay_exact(self) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        manifest = validate_repo.read_json(REPO_ROOT / "generated" / "technique_kind_manifest.json")
+        catalog_entries = catalog["techniques"]
+
+        for kind_entry in manifest["kinds"]:
+            kind = kind_entry["kind"]
+            expected_entries = [
+                entry
+                for entry in sorted(catalog_entries, key=validate_repo.kind_group_sort_key)
+                if entry["kind"] == kind
+            ]
+            expected_ids = [entry["id"] for entry in expected_entries]
+            manifest_ids = [entry["id"] for entry in kind_entry["techniques"]]
+            counts = kind_entry["counts"]
+
+            self.assertEqual(expected_ids, manifest_ids)
+            self.assertEqual(len(expected_entries), counts["total"])
+            self.assertEqual(
+                sum(1 for entry in expected_entries if entry["status"] == "canonical"),
+                counts["canonical"],
+            )
+            self.assertEqual(
+                sum(1 for entry in expected_entries if entry["status"] == "promoted"),
+                counts["promoted"],
+            )
+            self.assertEqual(
+                {domain: sum(1 for entry in expected_entries if entry["domain"] == domain) for domain in validate_repo.DOMAIN_ORDER},
+                counts["by_domain"],
+            )
 
     def test_telemetry_guardrail_status_language_is_consistent(self) -> None:
         technique = (
@@ -843,6 +902,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         for target in (
             "plan-diff-apply-verify-report/TECHNIQUE.md",
             "TECHNIQUE_SELECTION_GUIDE.md",
+            "TECHNIQUE_KIND_GUIDE.md",
+            "TECHNIQUE_KIND_HANDOFF_PACK.md",
             "TECHNIQUE_SELECTION.md",
             "SELECTION_PATTERNS.md",
             "TECHNIQUE_INDEX.md",
@@ -857,96 +918,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "aoa-skills",
             "aoa-evals",
             "aoa-routing",
-            "25 canonical",
-            "71 promoted",
-            "external-dependency-first promoted techniques",
-            "future-import-wave promoted techniques",
-            "chat-wave promoted techniques",
-            "personal-ingest-wave promoted techniques",
-            "session-harvest-wave promoted techniques",
-            "automation-opportunity-wave promoted techniques",
-            "workspace-foundation-wave promoted techniques",
-            "audit-remediation-wave promoted techniques",
-            "pinned-generated-publish-wave promoted techniques",
-            "internal-origin promoted techniques",
-            "AOA-T-0005",
-            "latest canonical promotions:",
-            "current closest promoted queue item: `AOA-T-0032`",
-            "AOA-T-0020",
-            "AOA-T-0022",
-            "AOA-T-0028",
-            "AOA-T-0031",
-            "AOA-T-0027",
-            "AOA-T-0024",
-            "AOA-T-0025",
-            "AOA-T-0029",
-            "AOA-T-0030",
-            "AOA-T-0033",
-            "AOA-T-0032",
-            "AOA-T-0035",
-            "AOA-T-0036",
-            "AOA-T-0037",
-            "AOA-T-0038",
-            "AOA-T-0039",
-            "AOA-T-0040",
-            "AOA-T-0041",
-            "AOA-T-0042",
-            "AOA-T-0043",
-            "AOA-T-0044",
-            "AOA-T-0045",
-            "AOA-T-0046",
-            "AOA-T-0047",
-            "AOA-T-0048",
-            "AOA-T-0049",
-            "AOA-T-0050",
-            "AOA-T-0051",
-            "AOA-T-0052",
-            "AOA-T-0053",
-            "AOA-T-0054",
-            "AOA-T-0055",
-            "AOA-T-0056",
-            "AOA-T-0057",
-            "AOA-T-0058",
-            "AOA-T-0059",
-            "AOA-T-0060",
-            "AOA-T-0061",
-            "AOA-T-0062",
-            "AOA-T-0063",
-            "AOA-T-0064",
-            "AOA-T-0065",
-            "AOA-T-0066",
-            "AOA-T-0067",
-            "AOA-T-0068",
-            "AOA-T-0069",
-            "AOA-T-0070",
-            "AOA-T-0071",
-            "AOA-T-0072",
-            "AOA-T-0073",
-            "AOA-T-0074",
-            "AOA-T-0075",
-            "AOA-T-0076",
-            "AOA-T-0077",
-            "AOA-T-0078",
-            "AOA-T-0079",
-            "AOA-T-0080",
-            "AOA-T-0081",
-            "AOA-T-0082",
-            "AOA-T-0083",
-            "AOA-T-0084",
-            "AOA-T-0085",
-            "AOA-T-0086",
-            "AOA-T-0087",
-            "AOA-T-0088",
-            "AOA-T-0089",
-            "AOA-T-0090",
-            "AOA-T-0091",
-            "AOA-T-0092",
-            "AOA-T-0093",
-            "AOA-T-0094",
-            "AOA-T-0095",
-            "AOA-T-0096",
-            "AOA-T-0032",
-            "AOA-T-0026",
+            "current corpus posture is generated",
+            "../generated/technique_catalog.min.json",
+            "domain/kind/status split",
+            "machine-readable corpus view",
             "python scripts/validate_repo.py",
             "python -m unittest discover -s tests",
             "python scripts/release_check.py",
@@ -1488,6 +1463,24 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("python scripts/build_kag_export.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
 
+    def test_kind_guide_and_handoff_pack_are_discoverable_from_root_docs_and_release_entrypoints(
+        self,
+    ) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
+        releasing = (REPO_ROOT / "docs" / "RELEASING.md").read_text(encoding="utf-8")
+
+        self.assertIn("TECHNIQUE_KIND_GUIDE.md", docs_readme)
+        self.assertIn("TECHNIQUE_KIND_GUIDE.md", start_here)
+        self.assertIn("docs/TECHNIQUE_KIND_GUIDE.md", readme)
+        self.assertIn("TECHNIQUE_KIND_GUIDE.md", releasing)
+        self.assertIn("TECHNIQUE_KIND_HANDOFF_PACK.md", docs_readme)
+        self.assertIn("docs/TECHNIQUE_KIND_HANDOFF_PACK.md", readme)
+        self.assertIn("python scripts/build_kind_manifest.py", releasing)
+        self.assertIn("generated/technique_kind_manifest.json", releasing)
+        self.assertIn("generated/technique_kind_manifest.min.json", releasing)
+
     def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         selection = (REPO_ROOT / "docs" / "TECHNIQUE_SELECTION.md").read_text(encoding="utf-8")
@@ -1501,6 +1494,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("TECHNIQUE_SELECTION_GUIDE.md", docs_readme)
         self.assertIn("SEMANTIC_REVIEW_GUIDE.md", docs_readme)
         self.assertIn("Technique Selection Guide", selection)
+        self.assertIn("narrow by `kind` second", selection)
+        self.assertIn("| technique | kind | status | validation | rigor | summary |", selection)
         self.assertIn("Technique Selection Guide", patterns)
         self.assertIn("Semantic Review Guide", patterns)
 
@@ -1604,6 +1599,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             id="AOA-T-9999",
             name="demo-technique",
             domain="docs",
+            kind="artifact",
             status="promoted",
             summary="demo",
             frontmatter={},
@@ -1841,6 +1837,48 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("adverse_effects_review", provenance_guide)
         self.assertIn("bounded-relation-lift-for-kag", relation_guide)
 
+    def test_family_scout_reports_are_builder_aligned_and_explicitly_non_authoritative(
+        self,
+    ) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        registry = validate_repo.load_kind_registry(REPO_ROOT)
+        family_seed = validate_repo.load_family_seed(REPO_ROOT)
+        wave1_overlay = validate_repo.load_wave1_kind_overlay(REPO_ROOT)
+        report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_family_scout.json")
+        report_markdown = (
+            REPO_ROOT / "reports" / "technique_family_scout.md"
+        ).read_text(encoding="utf-8")
+        audit_markdown = (
+            REPO_ROOT / "reports" / "kind_ambiguity_audit.md"
+        ).read_text(encoding="utf-8")
+
+        expected_report = validate_repo.build_family_scout_payload(
+            catalog, family_seed, wave1_overlay
+        )
+        expected_markdown = validate_repo.build_family_scout_markdown(expected_report)
+        expected_audit = validate_repo.build_kind_ambiguity_audit_markdown(
+            catalog, registry, family_seed, wave1_overlay
+        )
+
+        self.assertEqual(expected_report, report)
+        self.assertEqual(expected_markdown, report_markdown)
+        self.assertEqual(expected_audit, audit_markdown)
+        self.assertEqual("scout-only-non-authoritative", report["status"])
+        self.assertEqual(validate_repo.FAMILY_SCOUT_AUTHORITY_NOTE, report["authority_note"])
+        self.assertIn("non-authoritative", report_markdown)
+        self.assertIn("weaker than bundle frontmatter", report_markdown)
+        self.assertIn("non-authoritative", audit_markdown)
+        for seam_heading in (
+            "## `workflow` vs `guardrail`",
+            "## `validation` vs `assessment`",
+            "## `artifact` vs `lift`",
+            "## `composition` vs `distribution`",
+            "## `handoff` vs `workflow`",
+        ):
+            self.assertIn(seam_heading, audit_markdown)
+        for verdict in ("`keep current kind`", "`revisit later`", "`candidate remap`"):
+            self.assertIn(verdict, audit_markdown)
+
     def test_shadow_surface_is_discoverable_from_root_docs_and_changelog(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
@@ -1868,6 +1906,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         entry = next(entry for entry in catalog["techniques"] if entry["id"] == "AOA-T-0022")
 
         self.assertEqual("docs", entry["domain"])
+        self.assertEqual("lift", entry["kind"])
         self.assertEqual("promoted", entry["status"])
         self.assertIn("risk-and-negative-effect-lift", technique_index)
         self.assertIn("AOA-T-0022", selection)
@@ -1908,6 +1947,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             id="AOA-T-9999",
             name="demo-technique",
             domain="docs",
+            kind="artifact",
             status="promoted",
             summary="Short demo summary.",
             frontmatter={},
@@ -1930,6 +1970,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             id="AOA-T-9999",
             name="demo-technique",
             domain="docs",
+            kind="artifact",
             status="promoted",
             summary="Short demo summary.",
             frontmatter={},

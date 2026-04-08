@@ -2,6 +2,7 @@
 id: AOA-T-0048
 name: semantic-review-surface-lift
 domain: docs
+kind: lift
 status: promoted
 origin:
   project: aoa-techniques

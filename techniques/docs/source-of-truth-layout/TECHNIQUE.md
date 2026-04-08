@@ -2,6 +2,7 @@
 id: AOA-T-0002
 name: source-of-truth-layout
 domain: docs
+kind: artifact
 status: canonical
 origin:
   project: atm10-agent

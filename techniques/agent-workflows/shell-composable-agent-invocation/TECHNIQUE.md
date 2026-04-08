@@ -2,6 +2,7 @@
 id: AOA-T-0031
 name: shell-composable-agent-invocation
 domain: agent-workflows
+kind: composition
 status: canonical
 origin:
   project: qqqa

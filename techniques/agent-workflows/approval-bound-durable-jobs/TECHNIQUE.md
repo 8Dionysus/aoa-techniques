@@ -2,6 +2,7 @@
 id: AOA-T-0069
 name: approval-bound-durable-jobs
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: Clyra-AI/gait

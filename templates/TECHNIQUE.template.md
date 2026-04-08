@@ -3,6 +3,8 @@ id: AOA-T-XXXX
 name: technique-name
 domain: agent-workflows
 # choose one: agent-workflows, docs, evaluation, system-recovery, validation-patterns, history
+kind: workflow
+# choose one; see config/technique_kind_registry.yaml for usage guidance
 status: promoted
 origin:
   project: source-project-name

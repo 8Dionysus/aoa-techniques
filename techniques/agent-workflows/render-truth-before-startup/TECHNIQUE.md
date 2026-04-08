@@ -2,6 +2,7 @@
 id: AOA-T-0036
 name: render-truth-before-startup
 domain: agent-workflows
+kind: composition
 status: promoted
 origin:
   project: abyss-stack

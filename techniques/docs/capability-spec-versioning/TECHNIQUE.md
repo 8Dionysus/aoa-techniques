@@ -2,6 +2,7 @@
 id: AOA-T-0025
 name: capability-spec-versioning
 domain: docs
+kind: artifact
 status: promoted
 origin:
   project: agentic

@@ -2,6 +2,7 @@
 id: AOA-T-0022
 name: risk-and-negative-effect-lift
 domain: docs
+kind: lift
 status: promoted
 origin:
   project: aoa-techniques

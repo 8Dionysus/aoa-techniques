@@ -2,6 +2,7 @@
 id: AOA-T-0016
 name: bounded-context-map
 domain: docs
+kind: artifact
 status: canonical
 origin:
   project: atm10-agent

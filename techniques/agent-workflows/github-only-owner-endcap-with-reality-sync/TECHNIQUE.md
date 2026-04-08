@@ -2,6 +2,7 @@
 id: AOA-T-0095
 name: github-only-owner-endcap-with-reality-sync
 domain: agent-workflows
+kind: workflow
 status: promoted
 origin:
   project: Dionysus + ATM10-Agent + AoA ecosystem repos

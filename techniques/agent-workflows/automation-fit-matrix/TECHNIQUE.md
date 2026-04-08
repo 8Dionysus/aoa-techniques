@@ -2,6 +2,7 @@
 id: AOA-T-0086
 name: automation-fit-matrix
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

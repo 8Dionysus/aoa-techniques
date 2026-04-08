@@ -2,6 +2,7 @@
 id: AOA-T-0075
 name: session-donor-harvest
 domain: agent-workflows
+kind: lift
 status: promoted
 origin:
   project: aoa-skills

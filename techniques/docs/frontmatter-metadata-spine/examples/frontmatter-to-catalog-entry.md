@@ -8,6 +8,7 @@ This example shows how bounded frontmatter can act as a metadata spine while the
 id: AOA-T-0019
 name: frontmatter-metadata-spine
 domain: docs
+kind: lift
 status: promoted
 summary: Treat bounded frontmatter and derived catalog outputs as a metadata spine.
 validation_strength: source_backed
@@ -25,6 +26,7 @@ evidence:
 {
   "id": "AOA-T-0019",
   "domain": "docs",
+  "kind": "lift",
   "status": "promoted",
   "summary": "Treat bounded frontmatter and derived catalog outputs as a metadata spine.",
   "validation_strength": "source_backed",

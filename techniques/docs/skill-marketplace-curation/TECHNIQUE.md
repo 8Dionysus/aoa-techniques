@@ -2,6 +2,7 @@
 id: AOA-T-0041
 name: skill-marketplace-curation
 domain: docs
+kind: discovery
 status: promoted
 origin:
   project: n-skills

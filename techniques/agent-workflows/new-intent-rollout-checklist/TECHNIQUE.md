@@ -2,6 +2,7 @@
 id: AOA-T-0005
 name: new-intent-rollout-checklist
 domain: agent-workflows
+kind: guardrail
 status: promoted
 origin:
   project: atm10-agent

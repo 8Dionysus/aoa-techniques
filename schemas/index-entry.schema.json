@@ -8,6 +8,7 @@
     "id",
     "name",
     "domain",
+    "kind",
     "status",
     "summary",
     "maturity_score",
@@ -36,6 +37,23 @@
         "system-recovery",
         "validation-patterns",
         "history"
+      ]
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "workflow",
+        "guardrail",
+        "validation",
+        "composition",
+        "distribution",
+        "artifact",
+        "lift",
+        "discovery",
+        "handoff",
+        "ingest",
+        "assessment",
+        "recovery"
       ]
     },
     "status": {

@@ -2,6 +2,7 @@
 id: AOA-T-0035
 name: profile-preset-composition
 domain: docs
+kind: composition
 status: promoted
 origin:
   project: abyss-stack

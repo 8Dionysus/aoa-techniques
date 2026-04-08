@@ -2,6 +2,7 @@
 id: AOA-T-0017
 name: property-invariants
 domain: evaluation
+kind: validation
 status: canonical
 origin:
   project: atm10-agent

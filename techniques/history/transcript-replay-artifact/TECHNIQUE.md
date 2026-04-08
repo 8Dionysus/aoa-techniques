@@ -2,6 +2,7 @@
 id: AOA-T-0066
 name: transcript-replay-artifact
 domain: history
+kind: artifact
 status: promoted
 origin:
   project: es617/claude-replay + wesm/agentsview

@@ -2,6 +2,7 @@
 id: AOA-T-0032
 name: context-report-for-ci
 domain: evaluation
+kind: validation
 status: promoted
 origin:
   project: agents-md

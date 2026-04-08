@@ -2,6 +2,7 @@
 id: AOA-T-0053
 name: local-first-session-index
 domain: history
+kind: artifact
 status: canonical
 origin:
   project: wesm/agentsview

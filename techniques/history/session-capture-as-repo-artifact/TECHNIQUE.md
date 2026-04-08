@@ -2,6 +2,7 @@
 id: AOA-T-0026
 name: session-capture-as-repo-artifact
 domain: history
+kind: artifact
 status: promoted
 origin:
   project: getspecstory

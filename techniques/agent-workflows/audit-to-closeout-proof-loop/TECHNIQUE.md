@@ -2,6 +2,7 @@
 id: AOA-T-0092
 name: audit-to-closeout-proof-loop
 domain: agent-workflows
+kind: workflow
 status: promoted
 origin:
   project: Dionysus + AoA ecosystem repos

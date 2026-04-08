@@ -2,6 +2,7 @@
 id: AOA-T-0084
 name: progression-evidence-lift
 domain: agent-workflows
+kind: lift
 status: promoted
 origin:
   project: aoa-skills

@@ -2,6 +2,7 @@
 id: AOA-T-0074
 name: telegram-export-normalization-to-local-store
 domain: agent-workflows
+kind: ingest
 status: promoted
 origin:
   project: Telethon + TDLib + opentele + Chatistics + tg-archive + telegram-mcp

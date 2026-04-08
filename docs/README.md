@@ -15,8 +15,12 @@ Choose the path that matches your question:
   - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
 - I need to pick a technique now:
   - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
+  - [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
+  - [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
+  - [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)
+    - historical wave1 note; use it only as a pointer to the living kind guide and source files
 - I need a small local runtime card for one technique:
   - [Technique Capsules](TECHNIQUE_CAPSULES.md)
   - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
@@ -97,7 +101,7 @@ Choose the path that matches your question:
 These are reader-facing navigation artifacts derived from authoritative markdown and generated data.
 
 - [Technique Selection](TECHNIQUE_SELECTION.md)
-  - use when you need one bounded choice by domain, status, validation strength, or nearby relations
+  - use when you need one bounded choice by domain, kind, status, validation strength, or nearby relations
 - [Selection Patterns](SELECTION_PATTERNS.md)
   - use when direct adjacency is not enough and you want validator-backed starting points, common next moves, or review-backed working sets
 - [Shadow Patterns](SHADOW_PATTERNS.md)
@@ -181,8 +185,11 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
 - [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md)
 - [Cross-Layer Technique Candidates](CROSS_LAYER_TECHNIQUE_CANDIDATES.md)
+- [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
+- [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
 - [External Import Runbook](EXTERNAL_IMPORT_RUNBOOK.md)
 - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
+- [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)
 - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
 - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)

@@ -2,6 +2,7 @@
 id: AOA-T-0019
 name: frontmatter-metadata-spine
 domain: docs
+kind: lift
 status: canonical
 origin:
   project: aoa-techniques
@@ -50,7 +51,7 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 ## When to use
 
 - markdown-first repositories that need a small machine-readable layer for lookup or routing
-- corpora where domain, status, summary, evidence handles, and direct relations should be visible without opening every bundle first
+- corpora where domain, kind, status, summary, evidence handles, and direct relations should be visible without opening every bundle first
 - generated catalog or selection surfaces that must stay derived from authoritative markdown
 - KAG-oriented work that needs bundle-level metadata handles before section or provenance consumers go deeper
 
@@ -58,14 +59,14 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 
 - systems that want full section meaning, rationale, or caution language to live in metadata
 - repos where frontmatter is still unstable or overloaded with project-local details
-- cases where the next step is graph behavior, section IDs, schema expansion, or a metadata-first source of truth rather than bounded routing metadata
+- cases where the next step is graph behavior, section IDs, unbounded schema expansion, or a metadata-first source of truth rather than bounded routing metadata
 - workflows that would hand-edit the derived catalog instead of regenerating it
 
 ## Inputs
 
 - bounded frontmatter on each authoritative bundle
 - a validator or generator that can project frontmatter into a derived catalog
-- current routing questions such as lookup by status, domain, review posture, or direct adjacency
+- current routing questions such as lookup by status, domain, kind, review posture, or direct adjacency
 - explicit agreement that markdown sections still hold the real technique meaning
 
 ## Outputs
@@ -77,9 +78,9 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 
 ## Core procedure
 
-1. Keep only bundle identity, review posture, summary, evidence handles, and direct adjacency in frontmatter.
+1. Keep only bundle identity, bounded routing axes, review posture, summary, evidence handles, and direct adjacency in frontmatter.
 2. Generate a catalog from that frontmatter rather than maintaining a second hand-authored metadata source.
-3. Use the catalog for bundle lookup, status routing, or direct-edge hints.
+3. Use the catalog for bundle lookup, domain-plus-kind routing, status routing, or direct-edge hints.
 4. Route any question about section meaning, caution language, or provenance argument back to markdown sections and note files.
 5. Add new metadata only when the routing problem cannot be solved by the current bounded spine and markdown authority still remains primary.
 6. Rebuild the catalog whenever source frontmatter changes.
@@ -90,7 +91,7 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 - the catalog remains fully derived from authoritative markdown-frontmatter
 - metadata supports routing and lookup, not full knowledge replacement
 - caution language, section meaning, and provenance interpretation remain in markdown
-- the technique does not require schema expansion, a new `kag` domain, or a replacement for markdown authority
+- any schema refinement stays tied to one concrete routing problem and does not replace markdown authority
 
 ## Risks
 
@@ -109,7 +110,7 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 ### Misuse patterns
 
 - treating the catalog as a replacement for reading `TECHNIQUE.md`
-- adding new fields because a future KAG layer might want them, rather than because current bounded routing needs them
+- adding new fields because a future KAG layer might want them, rather than because a current bounded routing problem such as domain-plus-kind selection needs them
 - moving caution, relation rationale, or section payloads into frontmatter for convenience
 
 ### Detection signals
@@ -131,9 +132,9 @@ Use shallow frontmatter and derived catalog outputs as a stable metadata spine f
 Verify the technique by confirming that:
 - bundle identity and routing fields are visible in frontmatter
 - derived catalog entries match source frontmatter
-- the catalog helps answer bounded routing questions such as status, domain, or direct adjacency
+- the catalog helps answer bounded routing questions such as status, domain, kind, or direct adjacency
 - questions about deeper meaning still route back to markdown sections or notes
-- no schema or frontmatter widening was needed beyond the bounded metadata spine
+- no unbounded schema or frontmatter widening was needed beyond the bounded metadata spine
 
 See `checks/metadata-spine-checklist.md` and `examples/frontmatter-to-catalog-entry.md`.
 For repo-grounded origin evidence, see `notes/origin-evidence.md`.
@@ -152,7 +153,7 @@ What should stay invariant:
 - markdown sections still hold the real technique meaning
 - the spine is justified by current routing value, not by future graph ambition
 
-Do not widen the technique into richer schema just because later KAG work exists. The point is a bounded metadata spine, not metadata-first authorship or a replacement for markdown authority.
+Do not widen the technique into richer schema just because later KAG work exists. The point is a bounded metadata spine that can absorb a small routing field such as `kind`, not metadata-first authorship or a replacement for markdown authority.
 
 ## Public sanitization notes
 

@@ -38,6 +38,7 @@ The selection family stays bounded to shallow bundle-routing knowledge:
 - `id`
 - `name`
 - `domain`
+- `kind`
 - `status`
 - `summary`
 - current review-related metadata fields
@@ -46,6 +47,7 @@ The selection family stays bounded to shallow bundle-routing knowledge:
 
 The family is allowed to help a reader choose one next technique or one nearby cluster.
 It is not allowed to replace `TECHNIQUE.md`, semantic review docs, or bundle-local notes as the source of meaning.
+`domain` stays the first routing cut, while `kind` is the bounded second cut inside that owner layer.
 
 If a domain has no canonical default yet, the validator-backed domain-start specs may point to one bounded `promoted` starter for that domain.
 That is a temporary route aid, not a silent promotion.

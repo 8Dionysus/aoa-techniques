@@ -2,6 +2,7 @@
 id: AOA-T-0071
 name: template-backed-field-extraction-after-ocr
 domain: agent-workflows
+kind: ingest
 status: promoted
 origin:
   project: invoice2data + receiptparser + receipt-parser-legacy

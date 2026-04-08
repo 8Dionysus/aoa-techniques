@@ -2,6 +2,7 @@
 id: AOA-T-0050
 name: ready-work-from-blocker-graph
 domain: agent-workflows
+kind: workflow
 status: promoted
 origin:
   project: steveyegge/beads

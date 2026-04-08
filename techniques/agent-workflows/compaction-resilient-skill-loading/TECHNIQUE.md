@@ -2,6 +2,7 @@
 id: AOA-T-0054
 name: compaction-resilient-skill-loading
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: joshuadavidthomas/opencode-agent-skills

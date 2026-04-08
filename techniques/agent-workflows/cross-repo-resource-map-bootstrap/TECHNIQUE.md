@@ -2,6 +2,7 @@
 id: AOA-T-0061
 name: cross-repo-resource-map-bootstrap
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: yan5xu/code-relay

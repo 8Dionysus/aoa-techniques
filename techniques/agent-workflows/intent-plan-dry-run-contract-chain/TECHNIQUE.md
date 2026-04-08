@@ -2,6 +2,7 @@
 id: AOA-T-0004
 name: intent-plan-dry-run-contract-chain
 domain: agent-workflows
+kind: workflow
 status: canonical
 origin:
   project: atm10-agent

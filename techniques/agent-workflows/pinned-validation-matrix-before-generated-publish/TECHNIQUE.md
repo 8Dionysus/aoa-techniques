@@ -2,6 +2,7 @@
 id: AOA-T-0096
 name: pinned-validation-matrix-before-generated-publish
 domain: agent-workflows
+kind: validation
 status: promoted
 origin:
   project: aoa-routing + aoa-skills + Dionysus

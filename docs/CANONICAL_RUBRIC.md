@@ -16,6 +16,7 @@ Stage 1 metadata can inform selection and canonical review, but it does not repl
 
 - frontmatter fields help reviewers understand maturity, validation posture, and publication safety
 - the same bounded frontmatter layer can also serve as a metadata spine for later generated KAG entrypoints, while markdown sections remain authoritative and section-level lift stays separate
+- `domain` remains the first owner/routing axis, while `kind` is the bounded second selector axis inside that owner layer
 - they do not auto-promote a technique to `canonical`
 - `promoted -> canonical` decisions should follow the bounded review contract in [CANONICAL_REVIEW_GUIDE.md](CANONICAL_REVIEW_GUIDE.md)
 - if the open question is whether a bundle is even ready to enter canonical review yet, use [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md) before treating the metadata as a go signal
@@ -29,6 +30,7 @@ Stage 1 metadata can inform selection and canonical review, but it does not repl
 | `reversibility` | How hard it is to back the technique out after adoption. `easy` means low-cost rollback, `moderate` means rollback needs planned cleanup, `hard` means rollback changes operator policy or enforcement posture. |
 | `review_required` | Whether normal adoption should include explicit human review before the technique becomes a default in a new context. |
 | `validation_strength` | Evidence strength. `baseline` means mostly structural validation, `source_backed` means real-project evidence exists, `cross_context` means real-project evidence plus second-context or canonical-review reinforcement exists. |
+| `kind` | Exactly one primary reusable-practice axis for selection inside a chosen `domain`. Keep it narrow, keep it singular, and use `tags` for extra nuance rather than widening `kind`. |
 | `public_safety_reviewed_at` | Most recent public-safety review date for the published technique bundle, formatted as `YYYY-MM-DD`. |
 | `export_ready` | Whether the technique is safe to include in Stage 1 structured catalog outputs. This field is about machine-readable publication safety for the committed repo-local catalog, not graph or AoA export. |
 | `relations` | Small structured links to other in-repo techniques. Keep the list bounded to direct reusable relationships only; this is already suitable for later direct-edge KAG lifting, but rationale and graph behavior remain separate. |

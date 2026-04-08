@@ -30,6 +30,7 @@ A release should make it easy to answer:
    - the current script keeps the underlying source contracts explicit and runs:
      - `python scripts/build_repo_doc_surface_manifest.py`
      - `python scripts/build_catalog.py`
+     - `python scripts/build_kind_manifest.py`
      - `python scripts/build_capsules.py`
      - `python scripts/build_sections.py`
      - `python scripts/build_section_manifest.py`
@@ -51,6 +52,8 @@ A release should make it easy to answer:
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
    - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULES.md`.
    - Use `TECHNIQUE_CAPSULE_GUIDE.md` as the authored contract reference when checking that the runtime card family stayed bounded.
+   - This also includes the kind doctrine and routing surfaces: `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `docs/TECHNIQUE_KINDS_SEED.md`, `generated/technique_kind_manifest.json`, `generated/technique_kind_manifest.min.json`, `docs/TECHNIQUE_KINDS.md`, `config/technique_kind_registry.yaml`, `data/technique_kind_wave1.yaml`, and `reports/wave1_kind_counts.md`.
+   - Use `TECHNIQUE_KIND_GUIDE.md` as the authored contract reference when checking that kind stayed narrow, singular, and scout-only for family.
    - This now also includes the KAG/source-lift reader companions for sections, checklists, examples, and evidence notes:
      - `generated/technique_sections.full.json`
      - `generated/technique_section_manifest.json` and `docs/TECHNIQUE_SECTIONS.md`
@@ -66,6 +69,7 @@ A release should make it easy to answer:
    - no internal-only URLs
    - no private infrastructure details
    - no raw sensitive logs
+   - no hand-maintained corpus posture counts in entrypoint docs; use `generated/technique_catalog.min.json` and `docs/TECHNIQUE_SELECTION.md` for live splits instead
 7. Merge the release-prep PR to `main`.
 8. Create a Git tag such as `v0.1.0`.
 9. Publish GitHub release notes using the matching changelog section or a clearly equivalent human-first shape.

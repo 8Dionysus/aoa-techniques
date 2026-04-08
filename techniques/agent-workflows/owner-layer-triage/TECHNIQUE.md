@@ -2,6 +2,7 @@
 id: AOA-T-0076
 name: owner-layer-triage
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

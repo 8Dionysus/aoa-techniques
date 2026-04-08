@@ -2,6 +2,7 @@
 id: AOA-T-0068
 name: fail-closed-evidence-gate
 domain: agent-workflows
+kind: guardrail
 status: promoted
 origin:
   project: Clyra-AI/gait

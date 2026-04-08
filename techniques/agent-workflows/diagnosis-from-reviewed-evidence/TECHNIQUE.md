@@ -2,6 +2,7 @@
 id: AOA-T-0081
 name: diagnosis-from-reviewed-evidence
 domain: agent-workflows
+kind: assessment
 status: promoted
 origin:
   project: aoa-skills

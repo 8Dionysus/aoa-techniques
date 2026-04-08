@@ -2,6 +2,7 @@
 id: AOA-T-0012
 name: deterministic-context-composition
 domain: docs
+kind: composition
 status: canonical
 origin:
   project: agents-md

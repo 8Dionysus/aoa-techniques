@@ -2,6 +2,7 @@
 id: AOA-T-0007
 name: signal-first-gate-promotion
 domain: evaluation
+kind: guardrail
 status: canonical
 origin:
   project: atm10-agent

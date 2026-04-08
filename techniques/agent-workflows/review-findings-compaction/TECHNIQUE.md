@@ -2,6 +2,7 @@
 id: AOA-T-0052
 name: review-findings-compaction
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: roborev-dev/roborev

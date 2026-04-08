@@ -2,6 +2,7 @@
 id: AOA-T-0029
 name: nested-rule-loading
 domain: docs
+kind: composition
 status: promoted
 origin:
   project: ruler

@@ -2,6 +2,7 @@
 id: AOA-T-0083
 name: checkpoint-bound-self-repair
 domain: agent-workflows
+kind: recovery
 status: promoted
 origin:
   project: aoa-skills

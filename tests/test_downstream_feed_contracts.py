@@ -20,6 +20,7 @@ class DownstreamFeedContractsTests(unittest.TestCase):
     def test_expected_downstream_feeds_exist(self) -> None:
         for relative_path in (
             "generated/technique_catalog.min.json",
+            "generated/technique_kind_manifest.min.json",
             "generated/technique_promotion_readiness.min.json",
             "generated/technique_capsules.json",
             "generated/technique_sections.full.json",
@@ -62,6 +63,7 @@ class DownstreamFeedContractsTests(unittest.TestCase):
         self.assertEqual(catalog_pairs, section_pairs)
 
         for entry in catalog["techniques"]:
+            self.assertIn("kind", entry)
             self.assertIn("summary", entry)
             self.assertIn("validation_strength", entry)
             self.assertIn("review_required", entry)
@@ -116,6 +118,69 @@ class DownstreamFeedContractsTests(unittest.TestCase):
                 or entry["doc_path"].endswith(".md")
             )
             self.assertTrue(entry["top_level_sections"])
+
+    def test_kind_manifest_min_stays_router_safe(self) -> None:
+        manifest = load_json("generated/technique_kind_manifest.min.json")
+
+        self.assertEqual(manifest["manifest_version"], 1)
+        self.assertEqual(
+            manifest["source_of_truth"],
+            {
+                "kind_registry": "config/technique_kind_registry.yaml",
+                "catalog": "generated/technique_catalog.json",
+                "bundles": "techniques/*/*/TECHNIQUE.md",
+            },
+        )
+        self.assertEqual(
+            manifest["selection_order"],
+            [
+                "workflow",
+                "guardrail",
+                "validation",
+                "composition",
+                "distribution",
+                "artifact",
+                "lift",
+                "discovery",
+                "handoff",
+                "ingest",
+                "assessment",
+                "recovery",
+            ],
+        )
+        self.assertEqual(len(manifest["kinds"]), len(manifest["selection_order"]))
+
+        all_ids: list[str] = []
+        for entry in manifest["kinds"]:
+            self.assertEqual(
+                {"kind", "summary", "counts", "technique_ids"},
+                set(entry),
+            )
+            self.assertIn(entry["kind"], manifest["selection_order"])
+            self.assertTrue(entry["summary"])
+            self.assertEqual(
+                {"total", "canonical", "promoted", "by_domain"},
+                set(entry["counts"]),
+            )
+            self.assertEqual(
+                {
+                    "agent-workflows",
+                    "docs",
+                    "evaluation",
+                    "system-recovery",
+                    "validation-patterns",
+                    "history",
+                },
+                set(entry["counts"]["by_domain"]),
+            )
+            self.assertEqual(entry["counts"]["total"], len(entry["technique_ids"]))
+            all_ids.extend(entry["technique_ids"])
+
+        catalog = load_json("generated/technique_catalog.min.json")
+        self.assertEqual(
+            [entry["id"] for entry in catalog["techniques"]],
+            sorted(all_ids),
+        )
 
     def test_technique_feat_example_validates_against_schema(self) -> None:
         schema = json.loads(

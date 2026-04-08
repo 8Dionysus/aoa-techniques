@@ -2,6 +2,7 @@
 id: AOA-T-0072
 name: perceptual-media-dedupe-with-threshold-review
 domain: agent-workflows
+kind: ingest
 status: promoted
 origin:
   project: imagededup + imgdupes

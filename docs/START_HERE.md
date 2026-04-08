@@ -15,8 +15,11 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 - open [`plan-diff-apply-verify-report`](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
 - open [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md) when the question is how the selection family stays bounded before you trust any chooser surface
+- open [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md) when the second selector axis or a kind tie-break matters
+- open [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md) when a neighboring AoA repo needs the bounded `domain + kind` handoff
 - open [Technique Selection](TECHNIQUE_SELECTION.md) for one bounded pick by domain and current defaults
 - open [Selection Patterns](SELECTION_PATTERNS.md) when adjacency, working sets, or common next moves matter more than a flat list
+- open [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md) only when you need the historical wave1 note and source pointers
 - open [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) when you want the whole corpus map first
 - if you are an agent and want the smallest repo-owned runtime card before expanding markdown, open [Technique Capsules](TECHNIQUE_CAPSULES.md) or `../generated/technique_capsules.min.json`
 
@@ -46,24 +49,9 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 ## Current Corpus Posture
 
-- current split: `25 canonical`, `71 promoted`
-- latest canonical promotions: `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0044`, `AOA-T-0053`
-- current closest promoted queue item: `AOA-T-0032`
-- current internal-origin promoted techniques: `AOA-T-0033`, `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
-- current future-import-wave promoted techniques: `AOA-T-0035`, `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0042`, `AOA-T-0043`, `AOA-T-0045`
-- current chat-wave promoted techniques: `AOA-T-0049`, `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, `AOA-T-0069`
-- current personal-ingest-wave promoted techniques: `AOA-T-0070`, `AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, `AOA-T-0074`
-- current session-harvest-wave promoted techniques: `AOA-T-0075`, `AOA-T-0076`, `AOA-T-0077`, `AOA-T-0078`, `AOA-T-0079`, `AOA-T-0080`, `AOA-T-0081`, `AOA-T-0082`, `AOA-T-0083`, `AOA-T-0084`, `AOA-T-0085`
-- current automation-opportunity-wave promoted techniques: `AOA-T-0086`, `AOA-T-0087`, `AOA-T-0088`
-- current quest-promotion-wave promoted techniques: `AOA-T-0089`, `AOA-T-0090`
-- current workspace-foundation-wave promoted techniques: `AOA-T-0091`
-- current audit-remediation-wave promoted techniques: `AOA-T-0092`
-- current control-plane-truth-wave promoted techniques: `AOA-T-0093`
-- current contract-ownership-wave promoted techniques: `AOA-T-0094`
-- current GitHub-owner-closeout-wave promoted techniques: `AOA-T-0095`
-- current pinned-generated-publish-wave promoted techniques: `AOA-T-0096`
-- current external-dependency-first promoted techniques: `AOA-T-0005`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
-- current bounded `history` domain covers capture, transcript packaging, replay, local indexing, code lineage, and witness artifacts only; memory objects and recall surfaces still stay outside this repo's ownership boundary
+- current corpus posture is generated from `../generated/technique_catalog.min.json` and the selection surfaces, not hand-maintained here
+- open `TECHNIQUE_SELECTION.md` for the live domain/kind/status split before you trust any snapshot count
+- use `../generated/technique_catalog.min.json` when you need the current machine-readable corpus view
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`
 
 ## Repo-Only Operating Contract

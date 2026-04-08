@@ -1,0 +1,141 @@
+schema_version: 1
+axis_name: technique_kind
+status: wave1-seed
+cardinality: exactly-one-primary-kind
+purpose: Primary reusable-practice axis that answers what sort of technique this is without replacing
+  domain ownership.
+core_rules:
+- Keep `domain` as the ownership and first-routing axis.
+- Use `kind` to answer what reusable practice the technique is, not where it is stored.
+- Pick one primary kind only. Use `tags` and optional `family` for extra nuance.
+- Choose the narrowest honest kind that helps a selector understand default use.
+- Do not let `kind` replace source-owned meaning in `TECHNIQUE.md` bundles.
+selection_order:
+- workflow
+- guardrail
+- validation
+- composition
+- distribution
+- artifact
+- lift
+- discovery
+- handoff
+- ingest
+- assessment
+- recovery
+values:
+- id: workflow
+  summary: Ordered procedure for doing bounded work or coordinating state change.
+  choose_when:
+  - the main promise is how to do the work step by step
+  - state change or execution choreography is the center of gravity
+  not_when:
+  - the primary value is blocking unsafe actions
+  - the technique is mainly about durable artifact shape, not the work loop
+- id: guardrail
+  summary: Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden
+    strictness.
+  choose_when:
+  - the main promise is when to stop, gate, reject, or require approval
+  - the technique narrows action through explicit policy seams or fail-closed posture
+  not_when:
+  - the technique mostly verifies correctness after the fact
+  - the primary value is assembling or publishing artifacts
+- id: validation
+  summary: Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit
+    evidence.
+  choose_when:
+  - the technique produces or evaluates proof, health, integrity, or contract-verification signals
+  - a verdict or evidence surface is the main reusable output
+  not_when:
+  - the technique mainly classifies options or diagnoses routes without claiming proof
+  - the primary value is a durable artifact layout or history container
+- id: composition
+  summary: Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result.
+  choose_when:
+  - the technique builds one effective view from smaller pieces
+  - ordering, precedence, or assembly logic is the main contract
+  not_when:
+  - one source is being fanned out to multiple targets
+  - the technique is mostly a work loop or approval boundary
+- id: distribution
+  summary: Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces.
+  choose_when:
+  - one authoritative source must reach multiple targets without drift
+  - mirroring, propagation, or parity validation is the main reusable contract
+  not_when:
+  - the technique is mainly composing inputs into one result
+  - the technique mostly defines the durable artifact itself
+- id: artifact
+  summary: Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract.
+  choose_when:
+  - the technique primarily defines what durable artifact should exist and how it stays legible
+  - layout, storage, snapshot, indexing, replay, or rationale shape is central
+  not_when:
+  - the technique mainly derives a secondary lookup surface from another authoritative source
+  - the main promise is stepwise execution or approval gating
+- id: lift
+  summary: Bounded derivation of a secondary surface from an authoritative source while keeping the source
+    authoritative.
+  choose_when:
+  - the technique turns source-owned artifacts into derived manifests, packets, overlays, or review surfaces
+  - the derived output must stay weaker than the source
+  not_when:
+  - the artifact being defined is itself the primary source of truth
+  - the technique is mainly about raw input ingestion from external sources
+- id: discovery
+  summary: Editorial or query-oriented surfacing of capabilities or resources without taking ownership
+    of their meaning.
+  choose_when:
+  - selection, lookup, or curation is the main behavior
+  - the technique helps a caller discover what exists without becoming registry product doctrine
+  not_when:
+  - the technique mainly versions or stores the authoritative contract
+  - the main value is safety gating or route diagnosis
+- id: handoff
+  summary: Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals,
+    or episodes.
+  choose_when:
+  - transfer and continuation are the main reusable seam
+  - the technique keeps work durable or resumable across bounded context loss
+  not_when:
+  - the technique is mainly the work loop itself
+  - the technique only stores history without a transfer or continuation seam
+- id: ingest
+  summary: Normalization of raw external inputs into reviewable structured intermediates.
+  choose_when:
+  - the source begins as raw documents, media, exports, or OCR output
+  - normalization, extraction, dedupe, or bucketing is the main contract
+  not_when:
+  - the technique derives secondary surfaces from already authoritative repo-owned artifacts
+  - the main promise is downstream diagnosis or approval policy
+- id: assessment
+  summary: Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive
+    rather than mutating.
+  choose_when:
+  - the technique compares options, labels drift, or names likely causes or owner targets
+  - the output is a bounded verdict packet, matrix, route card, or routing aid rather than proof of correctness
+  not_when:
+  - the technique is a hard proof or integrity check
+  - the technique directly performs repair, mutation, or guarded execution
+- id: recovery
+  summary: Degraded continuation, regrounding, repair, rollback, or explicit recovery posture.
+  choose_when:
+  - the technique exists to keep work safe when the normal path is weakened or broken
+  - repair or recovery posture is the main reusable contract
+  not_when:
+  - the technique only diagnoses a problem without shaping recovery or repair
+  - the technique is a steady-state workflow with no degraded or repair posture
+tie_break_rules:
+- 'workflow vs guardrail: pick `workflow` when the main promise is how to do the work; pick `guardrail`
+  when the main promise is how to stop, narrow, or approve the work.'
+- 'artifact vs lift: pick `artifact` when the technique defines a primary durable artifact or storage
+  shape; pick `lift` when it derives a bounded secondary surface from an already authoritative source.'
+- 'composition vs distribution: pick `composition` when many pieces become one result; pick `distribution`
+  when one canonical source fans out to many targets.'
+- 'validation vs assessment: pick `validation` when the output is proof, integrity, or correctness evidence;
+  pick `assessment` when the output is classification, diagnosis, or decision support.'
+- 'handoff vs workflow: pick `handoff` when transfer, checkpoint, or resume is the center of gravity;
+  pick `workflow` when the center of gravity is the work loop itself.'
+- 'ingest vs lift: pick `ingest` for raw external inputs; pick `lift` for derived surfaces from authoritative
+  internal artifacts.'

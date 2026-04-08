@@ -2,6 +2,7 @@
 id: AOA-T-0073
 name: semantic-media-bucketing-with-vision-plus-ocr
 domain: agent-workflows
+kind: ingest
 status: promoted
 origin:
   project: CLIP + PaddleOCR

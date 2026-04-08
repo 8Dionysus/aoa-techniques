@@ -2,6 +2,7 @@
 id: AOA-T-0056
 name: channelized-agent-mailbox
 domain: agent-workflows
+kind: handoff
 status: promoted
 origin:
   project: agentralabs/agentic-comm

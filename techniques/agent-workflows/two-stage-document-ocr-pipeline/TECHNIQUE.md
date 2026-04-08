@@ -2,6 +2,7 @@
 id: AOA-T-0070
 name: two-stage-document-ocr-pipeline
 domain: agent-workflows
+kind: ingest
 status: promoted
 origin:
   project: PaddleOCR + docTR

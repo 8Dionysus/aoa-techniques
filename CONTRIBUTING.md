@@ -25,6 +25,8 @@ Bad contributions:
 Please make sure:
 - the technique is sanitized
 - the technique has a clear purpose
+- the technique chooses exactly one primary `kind` using [Technique Kind Guide](docs/TECHNIQUE_KIND_GUIDE.md) and the registry tie-break rules
+- `tags` carry extra nuance, while `family` stays scout-only and non-authoritative in this wave
 - the technique includes a canonical `TECHNIQUE.md`
 - examples are public-safe
 - risks are documented as failure modes, negative effects, misuse patterns, detection signals, and mitigations
@@ -36,6 +38,8 @@ Before opening a PR, run `python -m pip install -r requirements-dev.txt`, then r
 
 That command is the public release-check entrypoint for this repository.
 If you need the transparent lower-level breakdown, it runs the current build path and ends with `python -m unittest discover -s tests` plus `python scripts/validate_repo.py`, after the same `requirements-dev.txt` install step.
+
+When the `kind` choice feels ambiguous, start from [Technique Kind Guide](docs/TECHNIQUE_KIND_GUIDE.md) and keep the review narrow instead of widening the axis.
 
 See `docs/TECHNIQUE_SHADOW_GUIDE.md` for the repo-level shadow-discipline guidance behind the `## Risks` section.
 

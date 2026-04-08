@@ -2,6 +2,7 @@
 id: AOA-T-0064
 name: capability-discovery
 domain: docs
+kind: discovery
 status: promoted
 origin:
   project: agntcy/dir
