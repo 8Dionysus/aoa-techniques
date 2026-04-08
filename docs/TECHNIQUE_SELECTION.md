@@ -146,6 +146,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0096](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md): `complements` [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md)
 - [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md): `complements` [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md)
 - [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md): `complements` [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md)
+- [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md): `complements` [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -261,6 +262,7 @@ Within each domain, techniques are ordered by `kind`, then by status, then by ID
 | technique | kind | status | validation | rigor | summary |
 |---|---|---|---|---|---|
 | [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) | `recovery` | `promoted` | `source_backed` | `bounded` | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. |
+| [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | `recovery` | `promoted` | `source_backed` | `bounded` | Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown. |
 
 ### `validation-patterns`
 
@@ -281,7 +283,7 @@ Within each domain, techniques are ordered by `kind`, then by status, then by ID
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 98/98 techniques.
+- `export_ready` is currently `true` for 99/99 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

@@ -18,7 +18,7 @@ See also:
 
 | note kind | title | note shape | routing signal | entries |
 |---|---|---|---|---|
-| `origin_evidence` | Origin Evidence | `typed_sections` | `4` fixed sections: `Technique`, `Source project`, `Evidence`, `Interpretation` | `55` |
+| `origin_evidence` | Origin Evidence | `typed_sections` | `4` fixed sections: `Technique`, `Source project`, `Evidence`, `Interpretation` | `56` |
 | `second_context` | Second Context Adaptation | `typed_sections` | `7` fixed sections: `Technique`, `Target project`, `What changed`, `What stayed invariant`, `Risks introduced by adaptation`, `Evidence`, `Result` | `95` |
 | `canonical_readiness` | Canonical Readiness | `typed_sections` | `7` fixed sections: `Technique`, `Verdict`, `Evidence summary`, `Default-use rationale`, `Fresh public-safety check`, `Remaining gaps`, `Recommendation` | `93` |
 | `adverse_effects_review` | Adverse Effects Review | `typed_sections` | `8` fixed sections: `Technique`, `Review focus`, `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, `Mitigations`, `Recommendation` | `25` |
@@ -83,6 +83,7 @@ See also:
 | Origin Evidence | `typed_sections` | `4` typed sections | [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `techniques/evaluation/baseline-first-additive-profile-benchmarks/notes/origin-evidence.md` | [Note](../techniques/evaluation/baseline-first-additive-profile-benchmarks/notes/origin-evidence.md) |
 | Origin Evidence | `typed_sections` | `4` typed sections | [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) | `techniques/evaluation/upstream-skill-health-checking/notes/origin-evidence.md` | [Note](../techniques/evaluation/upstream-skill-health-checking/notes/origin-evidence.md) |
 | Origin Evidence | `typed_sections` | `4` typed sections | [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) | `techniques/system-recovery/degrade-reground-recover/notes/origin-evidence.md` | [Note](../techniques/system-recovery/degrade-reground-recover/notes/origin-evidence.md) |
+| Origin Evidence | `typed_sections` | `4` typed sections | [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | `techniques/system-recovery/isolated-service-stop-on-shared-substrate/notes/origin-evidence.md` | [Note](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/notes/origin-evidence.md) |
 | Origin Evidence | `typed_sections` | `4` typed sections | [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) | `techniques/validation-patterns/receipt-first-failure-analysis/notes/origin-evidence.md` | [Note](../techniques/validation-patterns/receipt-first-failure-analysis/notes/origin-evidence.md) |
 | Origin Evidence | `typed_sections` | `4` typed sections | [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | `techniques/history/witness-trace-as-reviewable-artifact/notes/origin-evidence.md` | [Note](../techniques/history/witness-trace-as-reviewable-artifact/notes/origin-evidence.md) |
 

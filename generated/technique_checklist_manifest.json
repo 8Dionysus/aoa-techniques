@@ -4271,6 +4271,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0099",
+      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md",
+          "title": "Isolated Service Stop On Shared Substrate Checklist",
+          "intro_markdown": "Use this checklist to confirm that the bounded stop stayed smaller than full teardown and still produced explicit evidence.",
+          "items": [
+            {
+              "order": 1,
+              "text": "The target service was named explicitly before the stop."
+            },
+            {
+              "order": 2,
+              "text": "The shared substrate set was named explicitly before the stop."
+            },
+            {
+              "order": 3,
+              "text": "The stop handle affected only the target service."
+            },
+            {
+              "order": 4,
+              "text": "A post-stop check showed that the target service was actually down."
+            },
+            {
+              "order": 5,
+              "text": "A post-stop check showed that the shared substrate was still healthy enough for the next bounded step."
+            },
+            {
+              "order": 6,
+              "text": "The route preserved an explicit escalation seam to broader recovery if hidden coupling appeared."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

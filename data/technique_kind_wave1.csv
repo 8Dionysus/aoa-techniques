@@ -97,3 +97,4 @@ AOA-T-0095,github-only-owner-endcap-with-reality-sync,agent-workflows,promoted,w
 AOA-T-0096,pinned-validation-matrix-before-generated-publish,agent-workflows,promoted,validation,owner-truth-closeout
 AOA-T-0097,degrade-reground-recover,system-recovery,promoted,recovery,antifragility-recovery
 AOA-T-0098,receipt-first-failure-analysis,validation-patterns,promoted,validation,antifragility-recovery
+AOA-T-0099,isolated-service-stop-on-shared-substrate,system-recovery,promoted,recovery,antifragility-recovery

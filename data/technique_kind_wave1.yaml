@@ -594,3 +594,9 @@ entries:
   status: promoted
   kind: validation
   family: antifragility-recovery
+- id: AOA-T-0099
+  name: isolated-service-stop-on-shared-substrate
+  domain: system-recovery
+  status: promoted
+  kind: recovery
+  family: antifragility-recovery

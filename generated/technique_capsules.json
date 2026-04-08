@@ -1373,6 +1373,20 @@
       "main_risk_short": "Main risk: dashboards, memory, or retrospective summaries replace source-owned evidence.",
       "validation_short": "Validate by checking the originating receipts are named explicitly; facts and hypotheses remain separate in the review; the proposed change is narrower...",
       "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0099",
+      "name": "isolated-service-stop-on-shared-substrate",
+      "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
+      "one_line_intent": "Stop one bounded service in a shared local stack without needlessly tearing down the...",
+      "use_when_short": "Use when one helper, UI, worker, or edge service needs to stop while shared data services should stay available or...",
+      "do_not_use_short": "Avoid when the target service owns exclusive mutable state that must be quiesced together with its dependencies or the shared...",
+      "inputs_short": "Needs one named target service; one named shared substrate set that should remain alive; one stop handle for...",
+      "outputs_short": "Produces one stopped target service; one explicit continuity check for the shared substrate; one bounded closeout or recovery...",
+      "core_contract_short": "Core contract: the target stop stays singular and named; the shared substrate set is explicit before the stop happens.",
+      "main_risk_short": "Main risk: operators stop more than the named target service and silently widen the route.",
+      "validation_short": "Validate by checking the target service and shared substrate were named before the stop; the stop affected only the target service; one...",
+      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md"
     }
   ]
 }

@@ -8056,6 +8056,88 @@
           "content_markdown": "- add a second context with repeated-window evidence rather than one family only\n- connect more explicitly to adaptation-delta review patterns\n- clarify where this pattern stops and `aoa-evals` begins"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0099",
+      "name": "isolated-service-stop-on-shared-substrate",
+      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Stop one bounded service in a shared local stack without needlessly tearing down the substrate that other verification, recovery, or follow-through work still needs.\n\nThe technique keeps the stop smaller than a full profile shutdown and makes both halves of the result explicit:\nthe target service is really down, and the shared substrate is really still alive."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- one helper, UI, worker, or edge service needs to stop while shared data services should stay available\n- the route is closing a bounded helper lane rather than ending the whole environment\n- follow-up verification still needs the shared substrate after the target service is gone\n- the safe alternative to full teardown is small enough to verify explicitly"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the target service owns exclusive mutable state that must be quiesced together with its dependencies\n- the shared substrate is itself the unstable surface and needs broader recovery or rollback\n- operators cannot name the exact target service and the exact services that should remain alive\n- the route really needs full profile shutdown, cutover, or incident recovery rather than bounded stop"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one named target service\n- one named shared substrate set that should remain alive\n- one stop handle for the target service\n- one bounded verification path for target absence and substrate continuity"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one stopped target service\n- one explicit continuity check for the shared substrate\n- one bounded closeout or recovery note that says what was stopped and what intentionally stayed alive\n- one escalation point if the stop reveals wider instability than expected"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Name the exact target service that should stop and the exact shared substrate that should remain alive.\n2. Confirm that the route really needs a bounded service stop rather than full-stack teardown.\n3. Stop only the target service through the narrowest runtime handle available.\n4. Verify that the target service is actually down instead of assuming the stop succeeded.\n5. Verify that the shared substrate is still healthy enough for the next bounded step.\n6. Record the result as a bounded closeout or recovery fact: target stopped, substrate still alive, wider rollback not currently required.\n7. Escalate to broader recovery or rollback only if the stop breaks the shared substrate or exposes hidden coupling."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- the target stop stays singular and named\n- the shared substrate set is explicit before the stop happens\n- target absence and substrate continuity both need evidence\n- the bounded stop must remain smaller than full-stack teardown\n- wider rollback or incident posture must be re-opened explicitly if the stop exposes hidden coupling"
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- operators stop more than the named target service and silently widen the route\n- the target looks stopped from one surface while another runtime handle still keeps it alive\n- shared substrate health is assumed instead of checked after the stop\n\n### Negative effects\n\n- keeping the substrate alive can preserve cost or background noise longer than a full teardown would\n- a narrow stop can create false confidence that the whole environment is healthy\n- teams may delay a needed broader rollback because the first bounded stop appeared clean\n\n### Misuse patterns\n\n- treating a narrow service stop as a substitute for incident recovery\n- using ambiguous labels like \"the helper stack\" instead of naming the exact target and substrate set\n- declaring closeout after the stop without proving the shared substrate still supports the next step\n\n### Detection signals\n\n- reviewers cannot tell which service was intentionally stopped\n- substrate continuity is described narratively but not checked\n- later follow-up fails because hidden coupling was ignored during the bounded stop\n\n### Mitigations\n\n- name target and substrate explicitly before mutation\n- verify both absence and continuity after the stop\n- keep a visible escalation seam to broader rollback when hidden coupling appears\n- prefer full-stack teardown when the substrate itself is unstable"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- the target service and shared substrate were named before the stop\n- the stop affected only the target service\n- one post-stop check showed the target was down\n- one post-stop check showed the shared substrate was still usable\n- the route kept an explicit escalation seam if the bounded stop was not enough\n\nSee `checks/isolated-service-stop-on-shared-substrate-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- container runtime or supervisor tooling\n- the names and count of shared substrate services\n- which continuity signals count as healthy enough for the next step\n- whether the closeout note lives in a runbook, receipt, or reviewed summary\n\nWhat should stay invariant:\n- one named target stop\n- one named substrate continuity set\n- explicit verification of both target absence and substrate health\n- escalation to broader recovery when the bounded stop is no longer honest"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle removes machine-local paths, secret-bearing env surfaces, and project-specific runtime names while preserving the reusable bounded-stop contract: stop only the named service, prove it is down, and prove the shared substrate still supports the next honest step."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-isolated-service-stop.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/isolated-service-stop-on-shared-substrate-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born from a bounded `abyss-stack` local-stack closeout for `tos-graph`\n- promoted into `aoa-techniques` on 2026-04-08 as a reusable shared-substrate stop pattern"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- add a second context where the same bounded-stop seam appears outside the current local-stack family\n- clarify when this pattern should yield to explicit cutover or incident-recovery playbooks\n- connect it more directly to receipt publication once a second public context exists"
+        }
+      ]
     }
   ]
 }

@@ -592,6 +592,12 @@ See also:
 |---|---|---|---|
 | Minimal Degraded Handoff | `present` | `techniques/system-recovery/degrade-reground-recover/examples/minimal-degraded-handoff.md` | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |
 
+### [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Isolated Service Stop | `present` | `techniques/system-recovery/isolated-service-stop-on-shared-substrate/examples/minimal-isolated-service-stop.md` | [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
+
 ## `validation-patterns`
 
 ### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)

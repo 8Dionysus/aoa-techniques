@@ -35,7 +35,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `diagnosis-repair` | Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-repair. | `4` | `0` | `4` |
 | `automation-governance` | Automation-worthiness, approval sensitivity, seed routing, and promotion-boundary review. | `5` | `0` | `5` |
 | `owner-truth-closeout` | Ingress or mutation gates, proof-backed closeout, validated mirrors, and publish-readiness against owner truth. | `5` | `0` | `5` |
-| `antifragility-recovery` | Degraded continuation, regrounding, and receipt-first failure analysis. | `2` | `0` | `2` |
+| `antifragility-recovery` | Degraded continuation, regrounding, and receipt-first failure analysis. | `3` | `0` | `3` |
 
 Unassigned wave1 family suggestions: `0`.
 
@@ -430,11 +430,12 @@ Degraded continuation, regrounding, and receipt-first failure analysis.
 Typical domains: `system-recovery`, `validation-patterns`.
 Typical kinds: `recovery`, `validation`.
 
-Counts: `total` 2, `canonical` 0, `promoted` 2.
+Counts: `total` 3, `canonical` 0, `promoted` 3.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) | `system-recovery` | `recovery` | `promoted` | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. |
+| [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | `system-recovery` | `recovery` | `promoted` | Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown. |
 | [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) | `validation-patterns` | `validation` | `promoted` | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. |
 
 ## Boundaries
