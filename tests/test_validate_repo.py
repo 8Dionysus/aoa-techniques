@@ -614,7 +614,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_all_published_techniques_use_richer_risks_contract(self) -> None:
         technique_paths = sorted((REPO_ROOT / "techniques").glob("**/TECHNIQUE.md"))
-        self.assertEqual(98, len(technique_paths))
+        self.assertEqual(99, len(technique_paths))
 
         for technique_path in technique_paths:
             _frontmatter, body = validate_repo.split_frontmatter(technique_path)
@@ -659,7 +659,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         self.assertEqual(validate_repo.KIND_VALUES, kind_values)
         self.assertEqual(25, status_counts["canonical"])
-        self.assertEqual(73, status_counts["promoted"])
+        self.assertEqual(74, status_counts["promoted"])
 
     def test_kind_manifest_matches_builder_projection_and_order(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")

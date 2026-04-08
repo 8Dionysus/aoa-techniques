@@ -568,6 +568,12 @@ See also:
 |---|---|---|---|---|
 | Degrade Reground Recover Checklist | `absent` | `5` | `techniques/system-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |
 
+### [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Isolated Service Stop On Shared Substrate Checklist | `present` | `6` | `techniques/system-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
+
 ## `validation-patterns`
 
 ### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)

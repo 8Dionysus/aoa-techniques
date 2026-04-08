@@ -1204,6 +1204,17 @@
           "body_markdown": "1. Collect the source-owned receipts for one repeated degraded hybrid-query family.\n2. Group them by `surface=hybrid-query` and one named `stressor_class`.\n3. Record facts from the receipts and linked run artifacts.\n4. Write hypotheses separately from facts.\n5. Propose one narrow change, such as clearer fallback labeling or stronger evidence linkage.\n6. Name the next receipt or eval surface that should show improvement after the change."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0099",
+      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/examples/minimal-isolated-service-stop.md",
+          "title": "Minimal Isolated Service Stop",
+          "body_markdown": "This example shows a bounded helper-service closeout where one service should stop while the shared substrate remains available for later checks.\n\n## Situation\n\n- Target service: `route-helper`\n- Shared substrate that should remain alive: `postgres`, `redis`, `graph-store`\n- Reason: the helper lane is closing, but later validation still needs the shared substrate\n\n## Bounded stop\n\n1. Name `route-helper` as the only target that should stop.\n2. Name `postgres`, `redis`, and `graph-store` as the services that should remain alive.\n3. Stop only `route-helper` with the narrowest runtime handle available.\n4. Check that `route-helper` no longer answers on its health seam.\n5. Check that `postgres`, `redis`, and `graph-store` still answer their continuity probes.\n6. Record that the helper lane is closed and that broader rollback is not currently required.\n\n## Anti-Drift Rule\n\nIf the shared substrate also needs to stop, this is no longer an isolated-service stop.\nIf the target cannot be named precisely, the route is still too vague for this technique."
+        }
+      ]
     }
   ]
 }

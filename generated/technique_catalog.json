@@ -5368,6 +5368,49 @@
           "path": "notes/second-context-adaptation.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0099",
+      "name": "isolated-service-stop-on-shared-substrate",
+      "domain": "system-recovery",
+      "kind": "recovery",
+      "status": "promoted",
+      "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
+      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "origin": {
+        "project": "abyss-stack",
+        "path": "docs/TOS_GRAPH_CURATION.md",
+        "note": "Generalized from a bounded local-stack closeout where one helper service had to be stopped after live verification while the shared substrate remained intentionally alive for continued validation and follow-through."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "system-recovery",
+        "bounded-stop",
+        "shared-substrate",
+        "runtime",
+        "closeout"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-08",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0097"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        }
+      ]
     }
   ]
 }

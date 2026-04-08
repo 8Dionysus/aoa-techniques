@@ -1089,14 +1089,14 @@
         "the technique is a steady-state workflow with no degraded or repair posture"
       ],
       "counts": {
-        "total": 3,
+        "total": 4,
         "canonical": 0,
-        "promoted": 3,
+        "promoted": 4,
         "by_domain": {
           "agent-workflows": 2,
           "docs": 0,
           "evaluation": 0,
-          "system-recovery": 1,
+          "system-recovery": 2,
           "validation-patterns": 0,
           "history": 0
         }
@@ -1125,6 +1125,14 @@
           "status": "promoted",
           "summary": "Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater.",
           "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0099",
+          "name": "isolated-service-stop-on-shared-substrate",
+          "domain": "system-recovery",
+          "status": "promoted",
+          "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
+          "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md"
         }
       ]
     }
