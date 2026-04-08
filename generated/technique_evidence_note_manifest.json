@@ -45540,7 +45540,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but live evidence\nis still concentrated in the current AoA generated-surface family"
+                  "text": "the bundle now has a checklist and a public-safe example, and the\nvia-negativa owner wave added a second live replay of the same bounded\nfailure family"
+                },
+                {
+                  "order": 4,
+                  "text": "live evidence is stronger than it was at first promotion, but it is still\nconcentrated in the current AoA generated-surface sibling family"
                 }
               ]
             },
@@ -45571,7 +45575,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-07"
+                  "value_markdown": "2026-04-08"
                 },
                 {
                   "order": 2,
@@ -45592,10 +45596,14 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second live generated-surface repo outside the\ncurrent AoA sibling family"
+                  "text": "the bundle would still benefit from a second live generated-surface repo\noutside the current `aoa-routing` and `aoa-skills` sibling family"
                 },
                 {
                   "order": 2,
+                  "text": "the via-negativa replay strengthens confidence, but it still replays the same\nfamily rather than proving a non-identical publish context"
+                },
+                {
+                  "order": 3,
                   "text": "the seam between upstream health checks, split-wave playbooks, and generated\npublish posture should stay explicit through future reuse"
                 }
               ]
@@ -45677,6 +45685,14 @@
                 },
                 {
                   "order": 4,
+                  "text": "the via-negativa owner wave replayed the same family on 2026-04-08:\n`aoa-routing` needed a parity-only follow-up so\n`generated/two_stage_router_eval_cases.jsonl` matched the\nworkflow-pinned `aoa-skills` snapshot that GitHub actually validated rather\nthan a convenient local sibling state"
+                },
+                {
+                  "order": 5,
+                  "text": "the same wave also required `aoa-skills` to rebase onto fresh `origin/main`\nso the required `validate` check reran on the final head before merge,\nreinforcing that merge-readiness has to track the workflow's real inputs and\nhead state instead of a local pre-merge impression"
+                },
+                {
+                  "order": 6,
                   "text": "the durable session harvest in `Dionysus` recorded the surviving reusable\nobject as a technique-shaped publish-hygiene law rather than as repo-local CI\ntrivia"
                 }
               ]
@@ -45693,6 +45709,10 @@
                 {
                   "order": 2,
                   "text": "the public technique can stay smaller than full release choreography while\nstill preventing false local confidence"
+                },
+                {
+                  "order": 3,
+                  "text": "the via-negativa replay strengthens the evidence for the same law without yet\nproving a second non-identical publish family"
                 }
               ]
             }

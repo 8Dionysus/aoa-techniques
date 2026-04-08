@@ -7884,12 +7884,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born from the 2026-04-07 surface-detection second-wave landing, where\n  `aoa-routing` and `aoa-skills` each needed CI-tail repairs around the\n  workflow's real validation inputs before publish could close honestly\n- promoted into `aoa-techniques` on 2026-04-07 as a bounded generated-publish\n  hygiene technique"
+          "content_markdown": "- born from the 2026-04-07 surface-detection second-wave landing, where\n  `aoa-routing` and `aoa-skills` each needed CI-tail repairs around the\n  workflow's real validation inputs before publish could close honestly\n- promoted into `aoa-techniques` on 2026-04-07 as a bounded generated-publish\n  hygiene technique\n- replayed on 2026-04-08 during the via-negativa owner wave, where\n  `aoa-routing` still needed parity-only regeneration against the\n  workflow-pinned `aoa-skills` snapshot and `aoa-skills` still needed a final\n  `validate` rerun on the rebased head before merge"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- collect one more non-identical generated-surface repo where the same\n  publish-matrix rule holds\n- keep split-wave choreography in `aoa-playbooks` instead of widening this\n  technique into a release or rollout playbook\n- revisit canonical readiness only after the technique proves portable beyond\n  the current AoA generated-surface family"
+          "content_markdown": "- collect one more non-identical generated-surface repo or publish matrix\n  outside the current `aoa-routing` and `aoa-skills` sibling family before\n  considering canonical promotion\n- keep split-wave choreography in `aoa-playbooks` instead of widening this\n  technique into a release or rollout playbook\n- revisit canonical readiness only after the technique proves portable beyond\n  the current AoA generated-surface family"
         }
       ]
     },
