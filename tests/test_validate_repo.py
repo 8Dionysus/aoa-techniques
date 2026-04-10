@@ -874,6 +874,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("## [Unreleased]", changelog)
+        self.assertIn("## [0.4.0] - 2026-04-10", changelog)
         self.assertIn("## [0.2.0] - 2026-03-23", changelog)
         self.assertIn("## [0.1.0] - 2026-03-17", changelog)
 
@@ -1370,6 +1371,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertEqual(
             (
                 "[Unreleased]",
+                "[0.4.0] - 2026-04-10",
                 "[0.3.0] - 2026-04-01",
                 "[0.2.0] - 2026-03-23",
                 "[0.1.0] - 2026-03-17",

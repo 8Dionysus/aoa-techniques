@@ -6,6 +6,24 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-04-10
+
+### Added
+
+- workspace ingress and mutation-gate techniques plus audit-to-closeout
+  proof-loop, recommendation-truth-vs-host-actionability, canonical-owner
+  mirror, and pinned-validation techniques
+- technique promotion-readiness surfaces and live technique receipt publishing
+- antifragility recovery domains, via negativa techniques checklist, and quest
+  feed validation surfaces
+
+### Changed
+
+- strengthened pinned validation evidence, repo/root technique-kind scouting,
+  and next-wave practice posture across the published corpus
+- promoted new isolated shared-substrate and GitHub-only owner-sync techniques
+  into the public set
+
 ## [0.3.0] - 2026-04-01
 
 Third public corpus release.
