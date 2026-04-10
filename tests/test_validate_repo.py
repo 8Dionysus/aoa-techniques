@@ -476,6 +476,14 @@ relations:
         with self.assertRaises(validate_repo.ValidationError):
             validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
 
+    def test_validate_sections_ignores_fenced_markdown_headings(self) -> None:
+        body = build_required_section_body().replace(
+            "Bounded content for example.",
+            "```md\n## Example inside code\n### Not a subsection either\n```\n\nBounded content for example.",
+        )
+
+        validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
+
 
 class TechniqueContentSmokeTests(unittest.TestCase):
     def test_external_import_runbook_is_discoverable_and_operator_complete(self) -> None:
@@ -2308,6 +2316,23 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 "repo must be 'aoa-techniques'",
             ):
                 validate_repo.validate_questbook_surface(repo_root)
+
+    def test_invalid_harvest_target_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            write_text(
+                repo_root / "quests" / "AOA-TECH-Q-0005.yaml",
+                (repo_root / "quests" / "AOA-TECH-Q-0005.yaml")
+                .read_text(encoding="utf-8")
+                .replace("target: technique", "target: generated_surface"),
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "harvest.target must be one of",
+            ):
+                validate_repo.build_quest_dispatch_projection(repo_root)
 
     def test_dispatch_example_drift_fails(self) -> None:
         with TemporaryDirectory() as temp_dir:

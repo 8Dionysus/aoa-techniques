@@ -39,7 +39,7 @@ evidence:
   - mastery harvest sources remain explicit
   - feat reflection does not bypass canonical review
 harvest:
-  target: generated_surface
+  target: technique
 opened_at: '2026-04-01'
 touched_at: '2026-04-01'
 tags:
