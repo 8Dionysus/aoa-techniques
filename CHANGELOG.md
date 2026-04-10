@@ -6,6 +6,36 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-04-10
+
+### Added
+
+- workspace ingress and mutation-gate techniques plus audit-to-closeout
+  proof-loop, recommendation-truth-vs-host-actionability, canonical-owner
+  mirror, and pinned-validation techniques
+- technique promotion-readiness surfaces and live technique receipt publishing
+- antifragility recovery domains, via negativa techniques checklist, and quest
+  feed validation surfaces
+
+### Changed
+
+- strengthened pinned validation evidence, repo/root technique-kind scouting,
+  and next-wave practice posture across the published corpus
+- promoted new isolated shared-substrate and GitHub-only owner-sync techniques
+  into the public set
+
+### Included in this release
+
+- technique corpus growth across `techniques/`, `docs/`, `generated/`,
+  `reports/`, `config/`, `data/`, and `templates/`, including the
+  session-donor and session-harvest family, workspace ingress and
+  mutation-gate techniques, audit-to-closeout proof loops, canonical-owner
+  mirror, pinned validation, and live receipt publishing
+- repo-local validation and release surfaces under `.agents/`, `AGENTS.md`,
+  `README.md`, `CONTRIBUTING.md`, `TECHNIQUE_INDEX.md`, `schemas/`, `scripts/`,
+  `tests/`, and `quests/`, including promotion-readiness manifests, via
+  negativa guidance, quest-feed validation, and public corpus status refreshes
+
 ## [0.3.0] - 2026-04-01
 
 Third public corpus release.

@@ -62,7 +62,7 @@ Use these when the question is what changed, what is currently unreleased, and h
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [Changelog](../CHANGELOG.md) (`CHANGELOG.md`) | release and unreleased status history for the public corpus | `[Unreleased]`, `[0.3.0] - 2026-04-01`, `[0.2.0] - 2026-03-23`, `[0.1.0] - 2026-03-17` |
+| [Changelog](../CHANGELOG.md) (`CHANGELOG.md`) | release and unreleased status history for the public corpus | `[Unreleased]`, `[0.4.0] - 2026-04-10`, `[0.3.0] - 2026-04-01`, `[0.2.0] - 2026-03-23`, `[0.1.0] - 2026-03-17` |
 | [Releasing `aoa-techniques`](RELEASING.md) (`docs/RELEASING.md`) | bounded release flow and validation path for public docs and technique updates | `Release goals`, `Recommended release flow`, `Release note shape`, `Versioning guidance`, `What not to optimize yet`, `Current stance` |
 
 ## Boundaries
