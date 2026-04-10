@@ -24,6 +24,18 @@ The format is intentionally simple and human-first.
 - promoted new isolated shared-substrate and GitHub-only owner-sync techniques
   into the public set
 
+### Included in this release
+
+- technique corpus growth across `techniques/`, `docs/`, `generated/`,
+  `reports/`, `config/`, `data/`, and `templates/`, including the
+  session-donor and session-harvest family, workspace ingress and
+  mutation-gate techniques, audit-to-closeout proof loops, canonical-owner
+  mirror, pinned validation, and live receipt publishing
+- repo-local validation and release surfaces under `.agents/`, `AGENTS.md`,
+  `README.md`, `CONTRIBUTING.md`, `TECHNIQUE_INDEX.md`, `schemas/`, `scripts/`,
+  `tests/`, and `quests/`, including promotion-readiness manifests, via
+  negativa guidance, quest-feed validation, and public corpus status refreshes
+
 ## [0.3.0] - 2026-04-01
 
 Third public corpus release.
