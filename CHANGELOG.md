@@ -8,6 +8,20 @@ The format is intentionally simple and human-first.
 
 ## [0.4.0] - 2026-04-10
 
+### Summary
+
+- this release adds workspace ingress and mutation-gate techniques, audit-to-closeout proof loops, promotion-readiness surfaces, live technique receipt publishing, and antifragility/via-negativa guidance
+- pinned validation evidence, repo/root scouting, and current-practice posture are strengthened while new shared-substrate and owner-sync techniques are promoted into the public set
+- `aoa-techniques` remains a curated public corpus and documentation surface rather than a package or registry authority
+
+### Validation
+
+- `python scripts/release_check.py`
+
+### Notes
+
+- detailed corpus, generated-surface, report, and validation-asset coverage for this release remains enumerated below under `Added`, `Changed`, and `Included in this release`
+
 ### Added
 
 - workspace ingress and mutation-gate techniques plus audit-to-closeout
