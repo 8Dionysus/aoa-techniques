@@ -600,8 +600,9 @@ RELATION_TYPE_ORDER = (
 )
 SUPPORT_PATH_RE = re.compile(r"(?<!\w)(?:checks|examples|notes)/[A-Za-z0-9._/-]+\.md")
 FRONTMATTER_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n?", re.DOTALL)
-SECTION_RE = re.compile(r"^## (.+)$", re.MULTILINE)
-SUBSECTION_RE = re.compile(r"^### (.+)$", re.MULTILINE)
+SECTION_RE = re.compile(r"^[ ]{0,3}## (.+)$", re.MULTILINE)
+SUBSECTION_RE = re.compile(r"^[ ]{0,3}### (.+)$", re.MULTILINE)
+FENCE_DELIMITER_RE = re.compile(r"^[ ]{0,3}(`{3,}|~{3,})")
 NOTE_FIELD_RE = re.compile(r"- ([a-z0-9][a-z0-9_ /-]*):\s*(.*)")
 TEMPLATE_FIELD_RE = re.compile(r"- ([^:]+):\s*(.*)")
 TEMPLATE_CHECKBOX_RE = re.compile(r"- \[( |x|X)\] (.*)")
@@ -1688,37 +1689,75 @@ def normalize_section_markdown(raw_markdown: str) -> str:
 
 
 def parse_subsections(markdown: str) -> tuple[TechniqueSection, ...]:
-    matches = list(SUBSECTION_RE.finditer(markdown))
-    sections: list[TechniqueSection] = []
-
-    for index, match in enumerate(matches):
-        start = match.end()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(markdown)
-        sections.append(
-            TechniqueSection(
-                heading=match.group(1).strip(),
-                markdown=normalize_section_markdown(markdown[start:end]),
-            )
-        )
-
-    return tuple(sections)
+    _intro_markdown, sections = split_markdown_sections(markdown, level=3)
+    return sections
 
 
 def parse_sections(body: str) -> tuple[TechniqueSection, ...]:
-    matches = list(SECTION_RE.finditer(body))
-    sections: list[TechniqueSection] = []
+    _intro_markdown, sections = split_markdown_sections(body, level=2)
+    return sections
 
-    for index, match in enumerate(matches):
-        start = match.end()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+
+def split_markdown_sections(
+    markdown: str, *, level: int
+) -> tuple[str, tuple[TechniqueSection, ...]]:
+    if level == 2:
+        heading_re = SECTION_RE
+    elif level == 3:
+        heading_re = SUBSECTION_RE
+    else:  # pragma: no cover - current callers only need level 2 or 3
+        raise ValueError(f"unsupported markdown heading level {level}")
+
+    sections: list[TechniqueSection] = []
+    intro_lines: list[str] = []
+    current_heading: str | None = None
+    current_lines: list[str] = []
+    active_fence: tuple[str, int] | None = None
+
+    def append_line(line: str) -> None:
+        if current_heading is None:
+            intro_lines.append(line)
+        else:
+            current_lines.append(line)
+
+    def flush_current() -> None:
+        nonlocal current_heading, current_lines
+        if current_heading is None:
+            return
         sections.append(
             TechniqueSection(
-                heading=match.group(1).strip(),
-                markdown=normalize_section_markdown(body[start:end]),
+                heading=current_heading,
+                markdown=normalize_section_markdown("".join(current_lines)),
             )
         )
+        current_heading = None
+        current_lines = []
 
-    return tuple(sections)
+    for line in markdown.splitlines(keepends=True):
+        stripped_line = line.rstrip("\r\n")
+        fence_match = FENCE_DELIMITER_RE.match(stripped_line)
+        if fence_match is not None:
+            delimiter = fence_match.group(1)
+            delimiter_key = (delimiter[0], len(delimiter))
+            if active_fence is None:
+                active_fence = delimiter_key
+            elif delimiter_key[0] == active_fence[0] and delimiter_key[1] >= active_fence[1]:
+                active_fence = None
+            append_line(line)
+            continue
+
+        if active_fence is None:
+            heading_match = heading_re.match(stripped_line)
+            if heading_match is not None:
+                flush_current()
+                current_heading = heading_match.group(1).strip()
+                current_lines = []
+                continue
+
+        append_line(line)
+
+    flush_current()
+    return normalize_section_markdown("".join(intro_lines)), tuple(sections)
 
 
 def normalize_plain_text(text: str) -> str:
@@ -1931,18 +1970,16 @@ def summarize_capsule_validation(markdown: str) -> str:
 
 
 def validate_risks_markdown(risks_markdown: str, technique_path: Path) -> None:
-    subsection_matches = list(SUBSECTION_RE.finditer(risks_markdown))
-    if not subsection_matches:
+    intro_markdown, subsections = split_markdown_sections(risks_markdown, level=3)
+    if not subsections:
         fail(
             f"{technique_path}: '## Risks' must include fixed '###' subsections for the "
             f"rich risks contract"
         )
 
-    intro_markdown = normalize_section_markdown(risks_markdown[: subsection_matches[0].start()])
     if intro_markdown:
         fail(f"{technique_path}: '## Risks' must not include prose before its first '###' subsection")
 
-    subsections = parse_subsections(risks_markdown)
     actual_headings = tuple(section.heading for section in subsections)
     if actual_headings != RISK_SUBSECTION_HEADINGS:
         expected = ", ".join(f"'### {heading}'" for heading in RISK_SUBSECTION_HEADINGS)
@@ -2152,24 +2189,10 @@ def extract_top_level_section_headings(
 
 
 def split_typed_note_body(note_path: Path, body: str) -> tuple[str, tuple[TechniqueSection, ...]]:
-    matches = list(SECTION_RE.finditer(body))
-    if not matches:
+    intro_markdown, sections = split_markdown_sections(body, level=2)
+    if not sections:
         fail(f"{note_path}: typed note must include top-level '## ' sections")
-
-    intro_markdown = normalize_section_markdown(body[: matches[0].start()])
-    sections: list[TechniqueSection] = []
-
-    for index, match in enumerate(matches):
-        start = match.end()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
-        sections.append(
-            TechniqueSection(
-                heading=match.group(1).strip(),
-                markdown=normalize_section_markdown(body[start:end]),
-            )
-        )
-
-    return intro_markdown, tuple(sections)
+    return intro_markdown, sections
 
 
 def top_level_meaningful_indexes(lines: list[str]) -> list[int]:
@@ -2381,13 +2404,11 @@ def validate_issue_template_metadata(
 def parse_review_template_sections(
     template_path: Path, body: str, expected_headings: tuple[str, ...]
 ) -> tuple[TechniqueSection, ...]:
-    matches = list(SECTION_RE.finditer(body))
-    if not matches:
+    intro_markdown, sections = split_markdown_sections(body, level=2)
+    if not sections:
         fail(f"{template_path}: template body must include top-level '## ' sections")
-    if normalize_section_markdown(body[: matches[0].start()]) != "":
+    if intro_markdown != "":
         fail(f"{template_path}: template body must start directly with its first '## ' section")
-
-    sections = parse_sections(body)
     actual_headings = tuple(section.heading for section in sections)
     if actual_headings != expected_headings:
         expected = ", ".join(f"'## {heading}'" for heading in expected_headings)
@@ -2558,23 +2579,10 @@ def semantic_review_id_from_path(review_path: Path) -> str:
 def split_semantic_review_body(
     review_path: Path, body: str
 ) -> tuple[str, tuple[TechniqueSection, ...]]:
-    matches = list(SECTION_RE.finditer(body))
-    if not matches:
+    intro_markdown, sections = split_markdown_sections(body, level=2)
+    if not sections:
         fail(f"{review_path}: semantic review doc must include top-level '## ' sections")
-
-    intro_markdown = normalize_section_markdown(body[: matches[0].start()])
-    sections: list[TechniqueSection] = []
-    for index, match in enumerate(matches):
-        start = match.end()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
-        sections.append(
-            TechniqueSection(
-                heading=match.group(1).strip(),
-                markdown=normalize_section_markdown(body[start:end]),
-            )
-        )
-
-    return intro_markdown, tuple(sections)
+    return intro_markdown, sections
 
 
 def extract_last_outcome(markdown: str) -> str | None:
@@ -2641,20 +2649,16 @@ def parse_semantic_review_map_entries(
 def parse_semantic_review_seams(
     review_path: Path, seam_markdown: str
 ) -> tuple[SemanticReviewSeam, ...]:
-    matches = list(SUBSECTION_RE.finditer(seam_markdown))
-    if not matches:
+    intro_markdown, parsed_seams = split_markdown_sections(seam_markdown, level=3)
+    if not parsed_seams:
         fail(f"{review_path}: semantic review '## Seam Review' must include '### ' subsections")
-
-    intro = normalize_section_markdown(seam_markdown[: matches[0].start()])
-    if intro:
+    if intro_markdown:
         fail(f"{review_path}: semantic review '## Seam Review' must not include prose before seams")
 
     seams: list[SemanticReviewSeam] = []
-    for index, match in enumerate(matches):
-        start = match.end()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(seam_markdown)
-        heading = match.group(1).strip()
-        body_markdown = normalize_section_markdown(seam_markdown[start:end])
+    for section in parsed_seams:
+        heading = section.heading
+        body_markdown = section.markdown
         if not body_markdown:
             fail(f"{review_path}: semantic review seam '{heading}' must not be empty")
 
@@ -6792,6 +6796,27 @@ def validate_quest_payload_for_projection(quest_id: str, payload: dict[str, Any]
     activation_mode = activation.get("mode")
     if not isinstance(activation_mode, str) or not activation_mode:
         fail(f"quests/{quest_id}.yaml: quest must define string field 'activation.mode'")
+
+    harvest = payload.get("harvest")
+    if harvest is not None:
+        if not isinstance(harvest, dict):
+            fail(f"quests/{quest_id}.yaml: harvest must be an object when present")
+        target = harvest.get("target")
+        allowed_targets = {
+            "none",
+            "technique",
+            "skill",
+            "eval",
+            "playbook",
+            "agent_contract",
+            "memo",
+            "routing",
+        }
+        if not isinstance(target, str) or target not in allowed_targets:
+            fail(
+                f"quests/{quest_id}.yaml: harvest.target must be one of "
+                f"{', '.join(sorted(allowed_targets))}"
+            )
 
 
 def validate_dispatch_entry_against_schema(

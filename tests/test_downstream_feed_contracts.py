@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 import unittest
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 from jsonschema import Draft202012Validator
 
@@ -17,6 +17,12 @@ def load_json(relative_path: str) -> dict:
 
 
 class DownstreamFeedContractsTests(unittest.TestCase):
+    def assert_router_safe_doc_path(self, doc_path: str) -> None:
+        parts = PurePosixPath(doc_path).parts
+        self.assertFalse(PurePosixPath(doc_path).is_absolute())
+        self.assertNotIn("..", parts)
+        self.assertTrue(doc_path.startswith("docs/") or ("/" not in doc_path and doc_path.endswith(".md")))
+
     def test_expected_downstream_feeds_exist(self) -> None:
         for relative_path in (
             "generated/technique_catalog.min.json",
@@ -112,12 +118,18 @@ class DownstreamFeedContractsTests(unittest.TestCase):
         self.assertEqual(len({entry["doc_path"] for entry in docs}), len(docs))
 
         for entry in docs:
-            self.assertTrue(
-                entry["doc_path"] == "README.md"
-                or entry["doc_path"].startswith("docs/")
-                or entry["doc_path"].endswith(".md")
-            )
+            self.assert_router_safe_doc_path(entry["doc_path"])
             self.assertTrue(entry["top_level_sections"])
+
+    def test_router_safe_doc_path_rejects_out_of_scope_locations(self) -> None:
+        for doc_path in (
+            "../private.md",
+            "/tmp/private.md",
+            "techniques/history/example/TECHNIQUE.md",
+        ):
+            with self.subTest(doc_path=doc_path):
+                with self.assertRaises(AssertionError):
+                    self.assert_router_safe_doc_path(doc_path)
 
     def test_kind_manifest_min_stays_router_safe(self) -> None:
         manifest = load_json("generated/technique_kind_manifest.min.json")
