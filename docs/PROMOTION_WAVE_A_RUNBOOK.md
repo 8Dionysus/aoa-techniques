@@ -4,7 +4,7 @@ This runbook records the first actionable evidence-prep wave after [Promotion Re
 
 Use it when the question is not "which promoted bundle is generally closest to canonical?", but "how should the next swarm-backed evidence wave run without faking closure, widening bundle meaning, or colliding on shared surfaces?"
 
-This runbook is separate from the already-landed future-import `Wave A`, `Wave B`, and `Wave C` recorded in [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md).
+This runbook is separate from the already-landed future-import `Wave A`, `Wave B`, and `Wave C` recorded in [Roadmap](../ROADMAP.md).
 Those waves landed new techniques.
 This runbook is about strengthening existing `promoted` bundles without flipping status early.
 `AOA-T-0018`, `AOA-T-0013`, `AOA-T-0034`, and `AOA-T-0023` have since exited this runbook through separate follow-up canonical reviews, so the active roster below now tracks the three remaining promoted candidates from the original Wave A pack.

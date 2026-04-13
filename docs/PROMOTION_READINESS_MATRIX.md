@@ -4,7 +4,7 @@ This doc records the current bundle-by-bundle promotion queue for the `promoted`
 
 Use it when the question is not "which repo-wide closure wave should open next?", but "which promoted bundle can be honestly strengthened next, and what proof is still missing before `promoted -> canonical` is real?"
 
-This doc complements [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md) and [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md).
+This doc complements [Roadmap](../ROADMAP.md) and [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md).
 Bundle meaning still lives in each `TECHNIQUE.md` and `notes/canonical-readiness.md`.
 For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md).
 

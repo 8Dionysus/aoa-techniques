@@ -9,7 +9,7 @@ See also:
 - [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
 - [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
 - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
-- [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+- [Roadmap](../ROADMAP.md)
 - [External Import Runbook](EXTERNAL_IMPORT_RUNBOOK.md)
 
 ## When To Open This
@@ -65,7 +65,7 @@ Why this order:
   - exact-fit versus overlap verdicts
   - updates to [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
   - updates to [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
-  - any later sync to [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+  - any later sync to [Roadmap](../ROADMAP.md)
   - `python -m pip install -r requirements-dev.txt`
   - final `python scripts/release_check.py`
 - each worker owns:
@@ -147,9 +147,9 @@ The sprint does not need to increase the canonical count to count as progress.
 - keep bundle edits local until evidence is real
 - merge one technique per PR
 - run `python scripts/release_check.py` after a merge-ready bundle exists
-- update [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md), [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md), and [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md) only when the blocker or queue meaning actually changed
+- update [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md), [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md), and [Roadmap](../ROADMAP.md) only when the blocker or queue meaning actually changed
 
 ## Notes
 
-- This runbook is intentionally narrower than [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md); it owns live search execution, not the whole historical audit record.
+- This runbook is intentionally narrower than [Roadmap](../ROADMAP.md); it owns live search execution, not the whole historical audit record.
 - Expand [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md) when a real lane search happens or a bundle exits the queue.

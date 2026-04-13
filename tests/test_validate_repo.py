@@ -958,7 +958,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
-        roadmap = (REPO_ROOT / "docs" / "DEEP_AUDIT_ROADMAP.md").read_text(encoding="utf-8")
+        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         runbook = (REPO_ROOT / "docs" / "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md").read_text(
             encoding="utf-8"
         )
@@ -1002,7 +1002,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
-        roadmap = (REPO_ROOT / "docs" / "DEEP_AUDIT_ROADMAP.md").read_text(encoding="utf-8")
+        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
 
         for content in (root_readme, docs_readme, start_here, roadmap):
             self.assertIn("CROSS_LAYER_TECHNIQUE_CANDIDATES.md", content)
@@ -1150,7 +1150,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn(target, candidates)
 
     def test_deep_audit_roadmap_describes_swarm_future_import_execution_pack(self) -> None:
-        roadmap = (REPO_ROOT / "docs" / "DEEP_AUDIT_ROADMAP.md").read_text(
+        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(
             encoding="utf-8"
         )
 
@@ -1164,10 +1164,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "[AOA-T-0044]",
             "[AOA-T-0045]",
             "minimum packet shape: `phase/checkpoint`, `done`, `blocked`, `next action`, `next owner`, `entry/exit condition`, and `stop/return/escalation`",
-            "[AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) keeps ownership of session capture, project-scoped persistence, and local-first artifact availability itself",
+            "[AOA-T-0026](techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) keeps ownership of session capture, project-scoped persistence, and local-first artifact availability itself",
             "selected conversations saved into one Markdown document, review or edit before saving, and timestamped transcript artifacts ready for code review or knowledge sharing",
             "any future transcript-history sibling still fails the seam if its value proposition is merely `save sessions locally` instead of shaping or packaging an already-saved transcript for review",
-            "[AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns export/review/citation discipline for one structured witness trace plus summary without becoming a new memory-object kind",
+            "[AOA-T-0045](techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns export/review/citation discipline for one structured witness trace plus summary without becoming a new memory-object kind",
             "any future witness-history sibling still fails the seam if it needs runtime witness generation, memory writeback, or future-instruction derivation to explain its value",
             "the latest public `agentwise` read exposes `phase-based synchronization across all agents` and `Phase Controller`",
             "donor evidence refresh checked on `2026-03-23` still reaches only a partial phase-boundary signal",
