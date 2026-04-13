@@ -42,7 +42,7 @@ Choose the path that matches your question:
   - [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md)
   - [External Import Runbook](EXTERNAL_IMPORT_RUNBOOK.md)
   - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
-  - [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+  - [Roadmap](../ROADMAP.md)
   - [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md)
   - [Cross-Layer Technique Candidates](CROSS_LAYER_TECHNIQUE_CANDIDATES.md)
 - I need to understand the repo's markdown-first caution discipline:
@@ -182,7 +182,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
 - [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md)
 - [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
-- [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+- [Roadmap](../ROADMAP.md)
 - [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md)
 - [Cross-Layer Technique Candidates](CROSS_LAYER_TECHNIQUE_CANDIDATES.md)
 - [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
@@ -284,7 +284,7 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 3. [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
 4. [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
 5. [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
-6. [Deep Audit Roadmap](DEEP_AUDIT_ROADMAP.md)
+6. [Roadmap](../ROADMAP.md)
 
 ### KAG / lift path
 

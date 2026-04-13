@@ -13,6 +13,7 @@ Use the shortest route by need:
 - repo-owned entrypoint: `docs/START_HERE.md`
 - one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
 - current technique map: `TECHNIQUE_INDEX.md`
+- current direction and hardening waves: `docs/START_HERE.md` and `ROADMAP.md`
 - verify current repo state: `python scripts/validate_repo.py` and `python -m unittest discover -s tests`
 - release-prep parity path: `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
 - deeper docs map: `docs/README.md`
