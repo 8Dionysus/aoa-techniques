@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import json
 import unittest
+from collections import Counter
 from pathlib import Path
 
 
@@ -28,6 +30,21 @@ CURRENT_RELEASE_SURFACES = (
 
 
 class RoadmapParityTestCase(unittest.TestCase):
+    def test_promotion_readiness_matrix_matches_generated_promoted_corpus(self) -> None:
+        catalog = json.loads((REPO_ROOT / "generated/technique_catalog.min.json").read_text(encoding="utf-8"))
+        techniques = catalog["techniques"]
+        status_counts = Counter(technique["status"] for technique in techniques)
+        promoted_count = status_counts["promoted"]
+
+        readiness_matrix = (REPO_ROOT / "docs/PROMOTION_READINESS_MATRIX.md").read_text(encoding="utf-8")
+
+        self.assertEqual(promoted_count, 74)
+        self.assertIn(f"current promoted corpus: `{promoted_count}` techniques", readiness_matrix)
+        self.assertIn("`49` promoted techniques are explicitly categorized", readiness_matrix)
+        self.assertIn("`25` newer `v0.4`", readiness_matrix)
+        self.assertIn("`v0.4 matrix-expansion lane` | `25`", readiness_matrix)
+        self.assertIn("`AOA-T-0075` through `AOA-T-0099`", readiness_matrix)
+
     def test_roadmap_matches_current_v0_4_0_release_contour(self) -> None:
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
