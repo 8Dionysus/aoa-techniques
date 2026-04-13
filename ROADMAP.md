@@ -15,7 +15,7 @@ Historical note:
 ## Current Live Closure Snapshot
 
 - current verification path: read-only current-state checks via `python scripts/validate_repo.py` plus `python -m unittest discover -s tests`, and bounded release-prep parity via `python scripts/release_check.py`
-- current corpus split: `91` bundles, `25 canonical`, `66 promoted`
+- current corpus split: `99` bundles, `25 canonical`, `74 promoted`
 - repo-only hardening is largely landed; the main open work is now external-evidence execution rather than missing internal infrastructure
 - recent canonical closures since the baseline below:
   - [AOA-T-0018](techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
@@ -136,7 +136,7 @@ Historical note:
 |---|---|---|---|---|---|
 | technique catalog / selection | `techniques/**/TECHNIQUE.md`, frontmatter, `relations`, review-backed working-set specs in [scripts/validate_repo.py](scripts/validate_repo.py) | [TECHNIQUE_SELECTION.md](docs/TECHNIQUE_SELECTION.md), [SELECTION_PATTERNS.md](docs/SELECTION_PATTERNS.md), [SHADOW_PATTERNS.md](docs/SHADOW_PATTERNS.md) | `generated/technique_catalog.json`, `generated/technique_catalog.min.json` | `build_catalog.py`, `validate_catalogs`, `validate_selection_surface`, navigation-spec tests in [tests/test_validate_repo.py](tests/test_validate_repo.py) | `repo-only closure`: strong generated parity and tests, but no single authored contract guide for the selection family |
 | capsules | `TECHNIQUE.md` `summary` plus fixed bounded sections, defined in [TECHNIQUE_CAPSULE_GUIDE.md](docs/TECHNIQUE_CAPSULE_GUIDE.md) | [TECHNIQUE_CAPSULES.md](docs/TECHNIQUE_CAPSULES.md) | `generated/technique_capsules.json`, `generated/technique_capsules.min.json` | `build_capsules.py`, `validate_capsules`, multiple capsule regression tests | `keep`: family is 1:1 mapped and well locked |
-| repo-doc surfaces | bounded source set defined in [REPO_DOC_SURFACE_LIFT_GUIDE.md](docs/REPO_DOC_SURFACE_LIFT_GUIDE.md) | [REPO_DOC_SURFACES.md](docs/REPO_DOC_SURFACES.md) | `generated/repo_doc_surface_manifest.json`, `generated/repo_doc_surface_manifest.min.json` | `build_repo_doc_surface_manifest.py`, `validate_repo_doc_surface_manifests`, `validate_repo_doc_navigation_specs` | `repo-only closure`: source/reader/manifest contract is clear, but [docs/README.md](docs/README.md) still describes the source set as `10` docs while the current contract is `11` |
+| repo-doc surfaces | bounded source set defined in [REPO_DOC_SURFACE_LIFT_GUIDE.md](docs/REPO_DOC_SURFACE_LIFT_GUIDE.md) | [REPO_DOC_SURFACES.md](docs/REPO_DOC_SURFACES.md) | `generated/repo_doc_surface_manifest.json`, `generated/repo_doc_surface_manifest.min.json` | `build_repo_doc_surface_manifest.py`, `validate_repo_doc_surface_manifests`, `validate_repo_doc_navigation_specs` | `keep`: source, reader, manifest, and docs-map wording are aligned around the current `12`-doc source set |
 | section / checklist / example / evidence-note readers | authored markdown bundles plus bounded lift guides | [TECHNIQUE_SECTIONS.md](docs/TECHNIQUE_SECTIONS.md), [TECHNIQUE_CHECKLISTS.md](docs/TECHNIQUE_CHECKLISTS.md), [TECHNIQUE_EXAMPLES.md](docs/TECHNIQUE_EXAMPLES.md), [EVIDENCE_NOTE_SURFACES.md](docs/EVIDENCE_NOTE_SURFACES.md) | `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json` | dedicated `build_*` scripts plus manifest parity validators and tests | `keep`: the family already has explicit lift guides and bounded manifests |
 | semantic review manifests | authored semantic review docs, working-set specs in [scripts/validate_repo.py](scripts/validate_repo.py) | review docs themselves plus [SELECTION_PATTERNS.md](docs/SELECTION_PATTERNS.md) working sets | `generated/semantic_review_manifest.json`, `generated/semantic_review_manifest.min.json` | `build_semantic_review_manifest.py`, `validate_semantic_review_manifests`, working-set tests | `review refresh`: manifest coverage exists, but there is no single authored contract guide for the semantic-review family |
 | shadow review manifests | authored shadow review docs plus canonical `adverse_effects_review` notes, explained in [TECHNIQUE_SHADOW_GUIDE.md](docs/TECHNIQUE_SHADOW_GUIDE.md) | [SHADOW_PATTERNS.md](docs/SHADOW_PATTERNS.md) plus the shadow review docs | `generated/shadow_review_manifest.json`, `generated/shadow_review_manifest.min.json` | `build_shadow_review_manifest.py`, `validate_shadow_review_manifests`, shadow-spec tests | `keep`: guide, manifest, reader, and validator parity are already aligned |
@@ -145,7 +145,6 @@ Wave 1A backlog:
 
 - `repo-only closure`: add one authored selection-family contract guide so the current contract is not split between generated readers and validator specs.
 - `review refresh`: add one authored semantic-review family contract guide so the manifest family does not rely on code plus pilot docs alone.
-- `repo-only closure`: fix the `10` vs `11` authoritative repo-doc count drift in [docs/README.md](docs/README.md).
 
 ### Wave 1B - Validation And Release Hardening Audit
 
@@ -155,15 +154,13 @@ Findings:
 - The release path is structurally sound: builder order is explicit, worktree stabilization is checked, and a clean repo must stay diff-clean after the bounded release pass.
 - `repo-only closure`: dirty-worktree drift detection is weaker than clean-worktree drift detection. The current stabilization logic compares `git status --porcelain` snapshots, so a tracked file that was already `M` can still change content without changing the snapshot shape.
 - `repo-only closure`: there is no targeted regression test for the dirty-worktree masking case in [tests/test_validate_repo.py](tests/test_validate_repo.py).
-- `repo-only closure`: release doctrine is still described in more than one place. [docs/RELEASING.md](docs/RELEASING.md) treats `python scripts/release_check.py` as the bounded path, while [CONTRIBUTING.md](CONTRIBUTING.md) still only names `unittest` plus `validate_repo.py`.
-- `repo-only closure`: generated parity is well locked, but route prose is not. The stale `10` vs `11` repo-doc wording survived because current tests do not lock that docs-map claim.
+- `keep`: release doctrine is still described in more than one place, but [docs/RELEASING.md](docs/RELEASING.md) and [CONTRIBUTING.md](CONTRIBUTING.md) now agree on `python scripts/release_check.py` as the bounded release-prep path while still surfacing the lower-level commands.
+- `keep`: generated parity and route prose are now aligned on the `12`-doc repo-doc source set, and current tests lock that docs-map claim directly.
 
 Wave 1B backlog:
 
-- align [CONTRIBUTING.md](CONTRIBUTING.md) with the current release-check doctrine without removing the explicit lower-level commands.
 - harden [scripts/release_check.py](scripts/release_check.py) so dirty tracked files cannot hide generated drift.
 - add one regression test for dirty-worktree stabilization behavior.
-- add one small regression lock for repo-doc source-count wording so route prose does not drift silently after repo-doc family changes.
 
 ### Wave 1C - Public Hygiene And Safety Audit
 
@@ -254,11 +251,11 @@ Shadow review verdicts:
 
 Route-friction findings:
 
-- `repo-only closure`: [README.md](README.md) still routes new readers through [docs/README.md](docs/README.md) before the first concrete technique, even though [START_HERE.md](docs/START_HERE.md) now owns the primary branching logic.
-- `repo-only closure`: [docs/README.md](docs/README.md) still contains one stale repo-doc count claim and a mild loop in its `New reader path`, which starts at `Start Here` and then routes back to `README`.
+- `keep`: [README.md](README.md) now gives both a direct one-bundle route and [docs/START_HERE.md](docs/START_HERE.md) before the deeper docs map, so new readers are not forced through [docs/README.md](docs/README.md) first.
+- `keep`: [docs/README.md](docs/README.md) now names the `12`-doc repo-doc source set and its `New reader path` no longer carries the earlier count drift.
 - `repo-only closure`: the `KAG / lift path` in [docs/README.md](docs/README.md) is still too long for a shortest-path journey because it mixes guides, readers, manifests, and reusable lift bundles before naming one bounded next surface.
 - `repo-only closure`: [README.md](README.md) still has one dense `Deeper routes` bullet that lumps repo-doc routing, reader families, manifests, guides, and reusable lift bundles together.
-- `repo-only closure`: the audit and closure roadmap itself is not yet part of the documented maintainer route.
+- `keep`: the audit and closure roadmap is now part of the documented maintainer route through [README.md](README.md) and [docs/START_HERE.md](docs/START_HERE.md).
 
 ### Wave 3B - Surface Family Vocabulary Audit
 
@@ -287,8 +284,8 @@ No selector-like surface currently needs a boundedness rollback.
 Findings:
 
 - `keep`: [AGENTS.md](AGENTS.md), [README.md](README.md), [docs/START_HERE.md](docs/START_HERE.md), [docs/RELEASING.md](docs/RELEASING.md), [docs/CANONICAL_RUBRIC.md](docs/CANONICAL_RUBRIC.md), and [docs/CANONICAL_REVIEW_GUIDE.md](docs/CANONICAL_REVIEW_GUIDE.md) are broadly coherent about what the repo owns and how promotion works.
-- `repo-only closure`: [CONTRIBUTING.md](CONTRIBUTING.md) still points contributors to `unittest` plus `validate_repo.py` without also naming [scripts/release_check.py](scripts/release_check.py) as the bounded release-prep path now used elsewhere.
-- `repo-only closure`: [docs/README.md](docs/README.md) still says the repo-doc surface manifest lifts `10` authoritative docs/status files, while [REPO_DOC_SURFACE_LIFT_GUIDE.md](docs/REPO_DOC_SURFACE_LIFT_GUIDE.md) and [REPO_DOC_SURFACES.md](docs/REPO_DOC_SURFACES.md) already use `11`.
+- `keep`: [CONTRIBUTING.md](CONTRIBUTING.md) now names [scripts/release_check.py](scripts/release_check.py) as the bounded release-prep path while still keeping the lower-level commands visible.
+- `keep`: [docs/README.md](docs/README.md), [REPO_DOC_SURFACE_LIFT_GUIDE.md](docs/REPO_DOC_SURFACE_LIFT_GUIDE.md), and [REPO_DOC_SURFACES.md](docs/REPO_DOC_SURFACES.md) are now aligned around the same `12` authoritative docs/status files.
 
 Overall verdict: `coherent with a small docs-path cleanup queue`
 
@@ -330,7 +327,7 @@ The queue below is now historical and shipped:
      - [CONTRIBUTING.md](CONTRIBUTING.md)
      - route references from [docs/START_HERE.md](docs/START_HERE.md)
    - close:
-     - `10` vs `11` repo-doc source-count drift
+     - earlier repo-doc source-count drift on the docs path
      - missing mention of `python scripts/release_check.py` in contribution guidance
      - missing route to this audit roadmap
 2. `selection and semantic-review contract hardening`

@@ -72,12 +72,13 @@ Do not smuggle those higher-layer claims back into the technique canon.
 Before making changes, read in this order:
 
 1. `README.md`
-2. `docs/START_HERE.md`
-3. `WALKTHROUGH.md`
-4. `docs/TECHNIQUE_SELECTION.md`
-5. `docs/TECHNIQUE_KIND_GUIDE.md`
-6. the target `techniques/**/TECHNIQUE.md`
-7. any generated catalogs, capsules, feat-card surfaces, or source-lift outputs affected by the change
+2. `ROADMAP.md`
+3. `docs/START_HERE.md`
+4. `WALKTHROUGH.md`
+5. `docs/TECHNIQUE_SELECTION.md`
+6. `docs/TECHNIQUE_KIND_GUIDE.md`
+7. the target `techniques/**/TECHNIQUE.md`
+8. any generated catalogs, capsules, feat-card surfaces, or source-lift outputs affected by the change
 
 Then branch by task:
 
