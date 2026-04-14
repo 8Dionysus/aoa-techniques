@@ -1,0 +1,272 @@
+{
+  "schema_version": "aoa_recurrence_component_v2",
+  "component_ref": "component:techniques:canon-and-intake-beacons",
+  "owner_repo": "aoa-techniques",
+  "description": "Technique canon, cross-layer intake, promotion readiness, and live receipt publication.",
+  "source_inputs": [
+    "techniques/**/*.md",
+    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "docs/CANONICAL_RUBRIC.md",
+    "docs/PROMOTION_READINESS_MATRIX.md",
+    "docs/CANONICAL_REVIEW_GUIDE.md"
+  ],
+  "generated_surfaces": [
+    "generated/technique_catalog.min.json",
+    "generated/technique_capsules.min.json",
+    "generated/technique_promotion_readiness.min.json"
+  ],
+  "contract_surfaces": [
+    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "docs/CANONICAL_RUBRIC.md",
+    "docs/PROMOTION_READINESS_MATRIX.md",
+    "docs/CANONICAL_REVIEW_GUIDE.md"
+  ],
+  "documentation_surfaces": [
+    "README.md",
+    "TECHNIQUE_INDEX.md"
+  ],
+  "proof_surfaces": [
+    "python scripts/validate_repo.py",
+    "python -m unittest discover -s tests",
+    "python scripts/release_check.py"
+  ],
+  "receipt_surfaces": [
+    ".aoa/live_receipts/technique-receipts.jsonl"
+  ],
+  "refresh_routes": [
+    {
+      "action": "revalidate",
+      "commands": [
+        "python scripts/validate_repo.py",
+        "python -m unittest discover -s tests"
+      ],
+      "notes": "keep technique canon and review surfaces internally consistent"
+    },
+    {
+      "action": "repair",
+      "commands": [
+        "python scripts/validate_repo.py",
+        "python scripts/release_check.py"
+      ],
+      "notes": "repair authoring or generated-surface drift before promotion decisions"
+    }
+  ],
+  "consumer_edges": [
+    {
+      "kind": "handoff_home",
+      "target": "playbooks/component-refresh-cycle/PLAYBOOK.md",
+      "target_repo": "aoa-playbooks",
+      "required": true,
+      "suggested_action": "handoff",
+      "suggested_commands": [],
+      "notes": "owner-law follow-through remains explicit when technique surfaces drift"
+    }
+  ],
+  "drift_signals": [
+    {
+      "signal": "cross_layer_candidate_changed_without_readiness_refresh",
+      "recommended_action": "revalidate",
+      "severity": "medium"
+    },
+    {
+      "signal": "canonical_fields_changed_without_review_refresh",
+      "recommended_action": "repair",
+      "severity": "medium"
+    }
+  ],
+  "freshness": {
+    "stale_after_days": 21,
+    "repeat_trigger_threshold": 2,
+    "open_window_days": 14
+  },
+  "rollback_anchors": [
+    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "docs/CANONICAL_REVIEW_GUIDE.md"
+  ],
+  "tags": [
+    "techniques",
+    "canon",
+    "promotion",
+    "beacons"
+  ],
+  "signal_edges": [
+    {
+      "kind": "implemented_by_skill",
+      "target": "component:skills:bundle-and-activation-beacons",
+      "target_repo": "aoa-skills",
+      "notes": "skills may prove technique pressure without owning technique canon"
+    },
+    {
+      "kind": "proved_by_eval",
+      "target": "component:evals:portable-proof-beacons",
+      "target_repo": "aoa-evals",
+      "notes": "eval evidence can harden technique pressure without auto-promotion"
+    },
+    {
+      "kind": "composed_by_playbook",
+      "target": "component:playbooks:scenario-composition-beacons",
+      "target_repo": "aoa-playbooks",
+      "notes": "playbooks can donate recurring scenario evidence into technique review"
+    }
+  ],
+  "observation_inputs": [
+    {
+      "input_ref": "cross-layer-technique-candidates",
+      "kind": "other",
+      "path_globs": [
+        "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+      ],
+      "notes": "technique-shaped donor intake surface"
+    },
+    {
+      "input_ref": "technique-live-receipts",
+      "kind": "receipt",
+      "path_globs": [
+        ".aoa/live_receipts/technique-receipts.jsonl"
+      ],
+      "notes": "owner-local public-safe receipts"
+    },
+    {
+      "input_ref": "promotion-readiness",
+      "kind": "evaluation_matrix",
+      "path_globs": [
+        "generated/technique_promotion_readiness.min.json"
+      ],
+      "notes": "readiness signals stay advisory until review"
+    }
+  ],
+  "beacon_rules": [
+    {
+      "beacon_ref": "technique.new_candidate.distillation_pressure",
+      "kind": "new_technique_candidate",
+      "decision_surface": "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+      "target_repo": "aoa-techniques",
+      "observation_inputs": [
+        "change_signal",
+        "cross-layer-technique-candidates",
+        "technique-live-receipts"
+      ],
+      "match_signals": [
+        "source_changed",
+        "cross_layer_candidate_seen",
+        "candidate_harvested",
+        "distillation_pressure_observed"
+      ],
+      "match_categories": [
+        "change_pressure",
+        "repeat_pattern",
+        "review_signal"
+      ],
+      "thresholds": {
+        "watch_observations": 1,
+        "candidate_observations": 2,
+        "review_ready_observations": 4,
+        "min_unique_sources": 2,
+        "min_unique_evidence_refs": 2
+      },
+      "status_ladder": [
+        "hint",
+        "watch",
+        "candidate",
+        "review_ready"
+      ],
+      "suppress_when": [
+        "overlap_hold_open"
+      ],
+      "recommended_actions": [
+        "refresh cross-layer technique candidate intake",
+        "check overlap and boundedness before distillation"
+      ],
+      "notes": "do not treat donor intake as self-authorizing technique creation"
+    },
+    {
+      "beacon_ref": "technique.canonical.second_consumer_pressure",
+      "kind": "canonical_pressure",
+      "decision_surface": "docs/PROMOTION_READINESS_MATRIX.md",
+      "target_repo": "aoa-techniques",
+      "observation_inputs": [
+        "change_signal",
+        "promotion-readiness",
+        "technique-live-receipts"
+      ],
+      "match_signals": [
+        "promotion_readiness_changed",
+        "second_consumer_confirmed",
+        "cross_context_evidence_present",
+        "receipt_changed"
+      ],
+      "match_categories": [
+        "change_pressure",
+        "evidence_pressure",
+        "review_signal"
+      ],
+      "thresholds": {
+        "watch_observations": 1,
+        "candidate_observations": 2,
+        "review_ready_observations": 3,
+        "min_unique_sources": 2,
+        "min_unique_evidence_refs": 2
+      },
+      "status_ladder": [
+        "hint",
+        "watch",
+        "candidate",
+        "review_ready"
+      ],
+      "suppress_when": [
+        "canonical_review_blocked"
+      ],
+      "recommended_actions": [
+        "refresh promotion-readiness evidence",
+        "open canonical review only after explicit owner judgment"
+      ],
+      "notes": "metadata informs review but never replaces review"
+    },
+    {
+      "beacon_ref": "technique.overlap_hold.guard",
+      "kind": "technique_overlap_hold",
+      "decision_surface": "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+      "target_repo": "aoa-techniques",
+      "observation_inputs": [
+        "cross-layer-technique-candidates",
+        "change_signal"
+      ],
+      "match_signals": [
+        "overlap_hold_open",
+        "boundary_blur_detected",
+        "source_changed"
+      ],
+      "match_categories": [
+        "review_signal",
+        "change_pressure"
+      ],
+      "thresholds": {
+        "watch_observations": 1,
+        "candidate_observations": 2,
+        "review_ready_observations": 4,
+        "min_unique_sources": 1,
+        "min_unique_evidence_refs": 1
+      },
+      "status_ladder": [
+        "hint",
+        "watch",
+        "candidate",
+        "review_ready"
+      ],
+      "suppress_when": [],
+      "recommended_actions": [
+        "keep the candidate on overlap hold until separability sharpens"
+      ],
+      "notes": "a hold is a real signal, not a discard pile"
+    }
+  ],
+  "decision_surfaces": [
+    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "docs/PROMOTION_READINESS_MATRIX.md",
+    "docs/CANONICAL_REVIEW_GUIDE.md"
+  ],
+  "candidate_targets": [
+    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "generated/technique_promotion_readiness.min.json"
+  ]
+}

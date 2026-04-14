@@ -1,0 +1,61 @@
+{
+  "schema_version": "aoa_hook_binding_set_v1",
+  "component_ref": "component:techniques:canon-and-intake-beacons",
+  "owner_repo": "aoa-techniques",
+  "notes": "Session-stop receipt bridge for technique distillation and second-consumer pressure.",
+  "bindings": [
+    {
+      "binding_ref": "techniques.live_receipts.session_stop",
+      "event": "session_stop",
+      "producer": "jsonl_receipt_watch",
+      "component_ref": "component:techniques:canon-and-intake-beacons",
+      "owner_repo": "aoa-techniques",
+      "input_ref": "technique-live-receipts",
+      "path_globs": [
+        ".aoa/live_receipts/technique-receipts.jsonl"
+      ],
+      "config": {
+        "record_id_field": "receipt_ref"
+      },
+      "signal_rules": [
+        {
+          "signal": "receipt_changed",
+          "category": "evidence_pressure",
+          "match": "always",
+          "notes": "receipt publication is itself a bounded evidence pulse"
+        },
+        {
+          "signal": "candidate_harvested",
+          "category": "review_signal",
+          "match": "exists",
+          "field": "candidate_ref",
+          "attributes_from_fields": [
+            "candidate_ref"
+          ],
+          "notes": "a reviewed candidate surfaced in the receipt stream"
+        },
+        {
+          "signal": "distillation_pressure_observed",
+          "category": "review_signal",
+          "match": "exists",
+          "field": "candidate_ref",
+          "attributes_from_fields": [
+            "candidate_ref"
+          ],
+          "notes": "candidate receipt contributes to technique distillation pressure"
+        },
+        {
+          "signal": "second_consumer_confirmed",
+          "category": "evidence_pressure",
+          "match": "exists",
+          "field": "second_consumer_ref",
+          "attributes_from_fields": [
+            "second_consumer_ref"
+          ],
+          "notes": "receipt records a second independent consumer or adapter"
+        }
+      ],
+      "notes": "Keep technique canon reviewable. Do not auto-promote from receipt metadata."
+    }
+  ]
+}
