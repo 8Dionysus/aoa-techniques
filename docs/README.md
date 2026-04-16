@@ -93,6 +93,9 @@ Choose the path that matches your question:
 - I need release process guidance:
   - [Start Here](START_HERE.md)
   - [Releasing `aoa-techniques`](RELEASING.md)
+- I need the bounded cross-layer stress program shape before opening owner repos:
+  - [Chaos Wave 1 Program](CHAOS_WAVE1_PROGRAM.md)
+  - [`stress-receipt-reground-closeout`](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
 
 ## Surface Types
 

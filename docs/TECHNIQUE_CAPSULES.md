@@ -1217,6 +1217,19 @@ See also:
 - Validate by: the target service and shared substrate were named before the stop; the stop affected only the target service; one...
 - Source: [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md)
 
+### [AOA-T-0100](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+
+- Summary: Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.
+- Intent: Provide a reusable workflow for bounded chaos or stress events where the right move...
+- Use when: runtime timeout or overload events or degraded continuation that must remain operator-visible.
+- Avoid when: the surface has no owner-local receipt or equivalent artifact yet or the real need is immediate containment only...
+- Needs: bounded stressor; named owner surface; containment posture.
+- Produces: owner-local receipt; degraded continuation or explicit hold; optional playbook stress lane and re-entry gate.
+- Core contract: one bounded stress family and owner surface stay named explicitly; owner-local evidence comes before routing, playbook, stats, or...
+- Main risk: a symbolic receipt is emitted without real evidence refs.
+- Validate by: another reviewer can see exactly what degraded and what stayed visible; the degraded continuation or hold is explicit, not...
+- Source: [TECHNIQUE.md](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
+
 ## `validation-patterns`
 
 ### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)

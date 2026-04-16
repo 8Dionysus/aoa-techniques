@@ -31,7 +31,7 @@ See also:
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `0` | `11` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
 | `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `9` | `0` | `9` |
-| `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `4` | `0` | `4` |
+| `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `5` | `0` | `5` |
 
 ## `workflow`
 
@@ -426,14 +426,14 @@ Do not use this when:
 - the technique only diagnoses a problem without shaping recovery or repair
 - the technique is a steady-state workflow with no degraded or repair posture
 
-Counts: `total` 4, `canonical` 0, `promoted` 4.
+Counts: `total` 5, `canonical` 0, `promoted` 5.
 
 | domain | entries |
 |---|---|
 | `agent-workflows` | `2` |
 | `docs` | `0` |
 | `evaluation` | `0` |
-| `system-recovery` | `2` |
+| `system-recovery` | `3` |
 | `validation-patterns` | `0` |
 | `history` | `0` |
 
@@ -443,6 +443,7 @@ Counts: `total` 4, `canonical` 0, `promoted` 4.
 | [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. | [TECHNIQUE.md](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) |
 | [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) | `system-recovery` | `promoted` | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |
 | [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | `system-recovery` | `promoted` | Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown. | [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
+| [AOA-T-0100](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) | `system-recovery` | `promoted` | Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading. | [TECHNIQUE.md](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) |
 
 ## Boundaries
 

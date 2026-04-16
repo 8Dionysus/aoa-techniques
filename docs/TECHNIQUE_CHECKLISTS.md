@@ -574,6 +574,12 @@ See also:
 |---|---|---|---|---|
 | Isolated Service Stop On Shared Substrate Checklist | `present` | `6` | `techniques/system-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
 
+### [AOA-T-0100](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| stress-receipt-reground-closeout checklist | `present` | `8` | `techniques/system-recovery/stress-receipt-reground-closeout/checks/stress-receipt-reground-closeout-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) |
+
 ## `validation-patterns`
 
 ### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)

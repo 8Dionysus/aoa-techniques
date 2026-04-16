@@ -598,6 +598,12 @@ See also:
 |---|---|---|---|
 | Minimal Isolated Service Stop | `present` | `techniques/system-recovery/isolated-service-stop-on-shared-substrate/examples/minimal-isolated-service-stop.md` | [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
 
+### [AOA-T-0100](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal stress closeout lane | `present` | `techniques/system-recovery/stress-receipt-reground-closeout/examples/minimal-stress-closeout-lane.md` | [TECHNIQUE.md](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) |
+
 ## `validation-patterns`
 
 ### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)

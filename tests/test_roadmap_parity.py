@@ -38,12 +38,12 @@ class RoadmapParityTestCase(unittest.TestCase):
 
         readiness_matrix = (REPO_ROOT / "docs/PROMOTION_READINESS_MATRIX.md").read_text(encoding="utf-8")
 
-        self.assertEqual(promoted_count, 74)
+        self.assertEqual(promoted_count, 75)
         self.assertIn(f"current promoted corpus: `{promoted_count}` techniques", readiness_matrix)
         self.assertIn("`49` promoted techniques are explicitly categorized", readiness_matrix)
-        self.assertIn("`25` newer `v0.4`", readiness_matrix)
-        self.assertIn("`v0.4 matrix-expansion lane` | `25`", readiness_matrix)
-        self.assertIn("`AOA-T-0075` through `AOA-T-0099`", readiness_matrix)
+        self.assertIn("`26` newer `v0.4`", readiness_matrix)
+        self.assertIn("`v0.4 matrix-expansion lane` | `26`", readiness_matrix)
+        self.assertIn("`AOA-T-0075` through `AOA-T-0100`", readiness_matrix)
 
     def test_roadmap_matches_current_v0_4_0_release_contour(self) -> None:
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
@@ -54,7 +54,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         self.assertIn("Current release: `v0.4.0`", readme)
         self.assertIn("## [0.4.0]", changelog)
         self.assertIn("`v0.4.0`", roadmap)
-        self.assertIn("`99` bundles", roadmap)
+        self.assertIn("`100` bundles", roadmap)
         self.assertIn("Roadmap drift", roadmap)
         self.assertIn("does not change technique status", roadmap)
 

@@ -110,6 +110,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0097 | degrade-reground-recover | system-recovery | promoted | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. |
 | AOA-T-0098 | receipt-first-failure-analysis | validation-patterns | promoted | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. |
 | AOA-T-0099 | isolated-service-stop-on-shared-substrate | system-recovery | promoted | Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown. |
+| AOA-T-0100 | stress-receipt-reground-closeout | system-recovery | promoted | Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading. |
 
 ## Deprecated techniques
 
