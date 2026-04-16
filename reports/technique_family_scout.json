@@ -1993,14 +1993,14 @@
         "validation"
       ],
       "counts": {
-        "total": 3,
+        "total": 4,
         "canonical": 0,
-        "promoted": 3,
+        "promoted": 4,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 0,
           "evaluation": 0,
-          "system-recovery": 2,
+          "system-recovery": 3,
           "validation-patterns": 1,
           "history": 0
         },
@@ -2016,12 +2016,13 @@
           "handoff": 0,
           "ingest": 0,
           "assessment": 0,
-          "recovery": 2
+          "recovery": 3
         }
       },
       "technique_ids": [
         "AOA-T-0097",
         "AOA-T-0099",
+        "AOA-T-0100",
         "AOA-T-0098"
       ],
       "techniques": [
@@ -2041,6 +2042,15 @@
           "status": "promoted",
           "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
           "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+          "kind": "recovery"
+        },
+        {
+          "id": "AOA-T-0100",
+          "name": "stress-receipt-reground-closeout",
+          "domain": "system-recovery",
+          "status": "promoted",
+          "summary": "Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.",
+          "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
           "kind": "recovery"
         },
         {

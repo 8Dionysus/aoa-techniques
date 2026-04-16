@@ -46373,6 +46373,236 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0100",
+      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/system-recovery/stress-receipt-reground-closeout/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0100"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "stress-receipt-reground-closeout"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "Dionysus donor pack `aoa-chaos-wave1-seed`"
+                },
+                {
+                  "order": 2,
+                  "key": "source artifact",
+                  "value_markdown": "`aoa-chaos-wave1-seed.zip`"
+                },
+                {
+                  "order": 3,
+                  "key": "source digest",
+                  "value_markdown": "`c029f6f9a7c7e3774b7378a895950f6a979b3d53d11b8bcbcec5f17579df5ee2`"
+                },
+                {
+                  "order": 4,
+                  "key": "source files",
+                  "value_markdown": "- `README.md`\n- `proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.seed.md`\n- `proposed/abyss-stack/service_degradation_receipt.*.seed.json`\n- `proposed/abyss-stack/repair_safe_closeout_receipt.*.seed.json`\n- `proposed/aoa-playbooks/playbook_stress_lane.*.seed.json`\n- `proposed/aoa-kag/projection_health_receipt.*.seed.json`\n- `proposed/aoa-kag/regrounding_ticket.*.seed.json`\n- `proposed/aoa-evals/runtime_evidence_selection.*.seed.json`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor already separated owner-local receipt truth from routing, playbook,\nKAG, stats, and eval layers"
+                },
+                {
+                  "order": 2,
+                  "text": "the reusable core was the workflow sequence, not any single repo-local schema\nname or generated surface path"
+                },
+                {
+                  "order": 3,
+                  "text": "the donor made the reviewed closeout step explicit before any later eval\nbridge, which keeps runtime and routing out of verdict ownership"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the portable object is the bounded sequence:\nstress -> receipt -> reground or hold -> reviewed closeout -> optional eval bridge"
+                },
+                {
+                  "order": 2,
+                  "text": "the donor pack stays wider than the technique, because it also includes\nrepo-local example families, route hints, playbook gates, KAG objects, stats\nsummaries, and eval bridge candidates"
+                },
+                {
+                  "order": 3,
+                  "text": "the technique extracts the reusable posture without importing wave-specific\nrepo queue control into `aoa-techniques`"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/system-recovery/stress-receipt-reground-closeout/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0100"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "stress-receipt-reground-closeout"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a runtime substrate, routing layer, playbook layer, or control surface where\none bounded stress event must stay visible from receipt through closeout"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "receipt schema names can change"
+                },
+                {
+                  "order": 2,
+                  "text": "the next bounded hop can point to routing, playbooks, KAG, or a local review surface"
+                },
+                {
+                  "order": 3,
+                  "text": "the degraded continuation may stay active or become an explicit hold"
+                },
+                {
+                  "order": 4,
+                  "text": "closeout storage paths and review mechanics can change"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one owner-local receipt comes first"
+                },
+                {
+                  "order": 2,
+                  "text": "degraded posture stays weaker than the normal path"
+                },
+                {
+                  "order": 3,
+                  "text": "blocked widening remains explicit"
+                },
+                {
+                  "order": 4,
+                  "text": "reviewed closeout arrives before stronger proof reading"
+                },
+                {
+                  "order": 5,
+                  "text": "eval bridge candidates stay evidence-only until a real eval consumes them"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a target repo may copy the wording while skipping the actual reviewed closeout artifact"
+                },
+                {
+                  "order": 2,
+                  "text": "routing or playbook consumers may overstate their role and obscure owner-local evidence"
+                },
+                {
+                  "order": 3,
+                  "text": "adaptation can get mistaken for blanket incident doctrine instead of one bounded recovery workflow"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the donor pack already showed the workflow across several owner layers, which\ndemonstrates that the sequence travels better than any single example file"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique depends on boundary discipline more than on one particular\nruntime, registry, or generated surface layout"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "the technique remains portable across owner repos as long as they preserve",
+                  "value_markdown": "one owner-local receipt, one honest degraded continuation or hold, one\nreviewed closeout artifact, and an explicit weaker-than-verdict eval bridge"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1089,14 +1089,14 @@
         "the technique is a steady-state workflow with no degraded or repair posture"
       ],
       "counts": {
-        "total": 4,
+        "total": 5,
         "canonical": 0,
-        "promoted": 4,
+        "promoted": 5,
         "by_domain": {
           "agent-workflows": 2,
           "docs": 0,
           "evaluation": 0,
-          "system-recovery": 2,
+          "system-recovery": 3,
           "validation-patterns": 0,
           "history": 0
         }
@@ -1133,6 +1133,14 @@
           "status": "promoted",
           "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
           "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0100",
+          "name": "stress-receipt-reground-closeout",
+          "domain": "system-recovery",
+          "status": "promoted",
+          "summary": "Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.",
+          "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md"
         }
       ]
     }

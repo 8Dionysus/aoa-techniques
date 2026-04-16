@@ -4308,6 +4308,51 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0100",
+      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/system-recovery/stress-receipt-reground-closeout/checks/stress-receipt-reground-closeout-checklist.md",
+          "title": "stress-receipt-reground-closeout checklist",
+          "intro_markdown": "Use this checklist to verify that a bounded stress event stayed honest from\nreceipt through reviewed closeout.",
+          "items": [
+            {
+              "order": 1,
+              "text": "one bounded stress family and owner surface are named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "one owner-local receipt exists before broader interpretation starts"
+            },
+            {
+              "order": 3,
+              "text": "the degraded continuation or explicit hold stays weaker than the normal route"
+            },
+            {
+              "order": 4,
+              "text": "blocked widening is visible, not implied"
+            },
+            {
+              "order": 5,
+              "text": "the next hop points to the owning layer rather than inventing a new judge"
+            },
+            {
+              "order": 6,
+              "text": "any KAG or playbook adjuncts remain additive, not sovereign"
+            },
+            {
+              "order": 7,
+              "text": "reviewed closeout records what was done, what stayed deferred, and what stayed blocked"
+            },
+            {
+              "order": 8,
+              "text": "any exported eval bridge candidate is still evidence-only"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

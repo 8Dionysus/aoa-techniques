@@ -5557,6 +5557,62 @@
           "markdown": "What can vary across projects:\n- container runtime or supervisor tooling\n- the names and count of shared substrate services\n- which continuity signals count as healthy enough for the next step\n- whether the closeout note lives in a runbook, receipt, or reviewed summary\n\nWhat should stay invariant:\n- one named target stop\n- one named substrate continuity set\n- explicit verification of both target absence and substrate health\n- escalation to broader recovery when the bounded stop is no longer honest"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0100",
+      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Provide a reusable workflow for bounded chaos or stress events where the right\nmove is not \"repair immediately\", but:\n\n- record the stress honestly\n- preserve the smallest safe continuation\n- hold unsafe widening\n- reground through source-owned surfaces when derived ones are unhealthy\n- close out with reviewed evidence\n- hand later proof reading to `aoa-evals`"
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- runtime timeout or overload events\n- degraded continuation that must remain operator-visible\n- derived-surface outages where source-first fallback is required\n- ambiguous activation or collision situations that must end in manual or no-skill\n- trace or return-path uncertainty that must be surfaced before claims of improvement"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the surface has no owner-local receipt or equivalent artifact yet\n- the real need is immediate containment only, not bounded continuation and closeout\n- the next move requires broad repair fan-out or hidden mutation\n- the goal is to compute a verdict instead of leaving a reviewed recovery trail"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- bounded stressor\n- named owner surface\n- containment posture\n- evidence refs\n- next-hop or reground path\n- review posture"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- owner-local receipt\n- degraded continuation or explicit hold\n- optional playbook stress lane and re-entry gate\n- optional KAG projection-health receipt and regrounding ticket\n- optional stats summary later\n- optional eval bridge candidate later\n- reviewed closeout receipt"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Name the exact bounded stress family and owner surface.\n2. Emit one owner-local artifact that says what degraded, what stayed visible,\n   and what widening stayed blocked.\n3. Either keep the smallest honest continuation or hold the route explicitly.\n4. Route the next hop to the owner layer that should read it next:\n   routing for the next bounded hop, playbooks for degraded-lane composition,\n   and KAG for quarantine or regrounding when derived surfaces are unhealthy.\n5. Preserve evidence refs early enough that later summaries and eval hooks do\n   not need to guess.\n6. Emit a reviewed closeout receipt that says what was done, what remained\n   deferred, and what was still blocked.\n7. If bounded proof reading is warranted, prepare an `aoa-evals` bridge\n   candidate without computing a verdict in runtime or routing."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one bounded stress family and owner surface stay named explicitly\n- owner-local evidence comes before routing, playbook, stats, or memo overlays\n- degraded continuation stays smaller than the normal route\n- blocked widening stays explicit through closeout\n- reviewed closeout remains weaker than any later eval verdict\n- later proof reading consumes artifacts but does not rewrite their owner meaning"
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- a symbolic receipt is emitted without real evidence refs\n- degraded continuation becomes invisible or broader than the normal route\n- routing, playbooks, or stats quietly replace owner-local meaning\n- closeout language implies a verdict that has not been evaluated\n\n### Negative effects\n\n- extra artifact discipline can slow genuinely trivial local incidents\n- teams may overfit to receipt-writing and underinvest in real fixes\n- explicit holds can feel unsatisfying when pressure to resume is high\n\n### Misuse patterns\n\n- using the workflow as a cover for hidden repair fan-out\n- calling a route hint or stats summary the primary evidence\n- treating an eval bridge candidate as if the verdict already exists\n- reopening blocked mutation families because the degraded mode still looked useful\n\n### Detection signals\n\n- reviewers cannot point to one owner-local receipt for the stress event\n- re-entry or recovery resumes without an explicit gate or reviewed closeout\n- derived or routing surfaces tell a stronger story than the owner receipt\n- artifacts are exported upward before the blocked-widening posture is recorded\n\n### Mitigations\n\n- require one owner-local receipt before broader interpretation\n- keep degraded posture visibly weaker than the normal route\n- require reviewed closeout before stronger recovery claims\n- keep eval bridge candidates explicitly weaker than verdict surfaces"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n\n- another reviewer can see exactly what degraded and what stayed visible\n- the degraded continuation or hold is explicit, not implied\n- blocked actions remained blocked through closeout\n- the next hop points back to owner evidence before broader action\n- the closeout artifact is reviewed and bounded\n- any later eval bridge stays evidence-only until a real eval runs"
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n\n- receipt schema names and storage locations\n- the exact routing, playbook, or KAG surfaces used for the next hop\n- whether the degraded continuation remains active or becomes an explicit hold\n- how reviewed closeout is recorded\n\nWhat should stay invariant:\n\n- one owner-local receipt comes first\n- degraded continuation stays weaker than the normal path\n- blocked widening remains explicit\n- reviewed closeout comes before stronger proof reading\n- eval bridge candidates stay weaker than verdicts"
+        }
+      ]
     }
   ]
 }

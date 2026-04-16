@@ -1215,6 +1215,17 @@
           "body_markdown": "This example shows a bounded helper-service closeout where one service should stop while the shared substrate remains available for later checks.\n\n## Situation\n\n- Target service: `route-helper`\n- Shared substrate that should remain alive: `postgres`, `redis`, `graph-store`\n- Reason: the helper lane is closing, but later validation still needs the shared substrate\n\n## Bounded stop\n\n1. Name `route-helper` as the only target that should stop.\n2. Name `postgres`, `redis`, and `graph-store` as the services that should remain alive.\n3. Stop only `route-helper` with the narrowest runtime handle available.\n4. Check that `route-helper` no longer answers on its health seam.\n5. Check that `postgres`, `redis`, and `graph-store` still answer their continuity probes.\n6. Record that the helper lane is closed and that broader rollback is not currently required.\n\n## Anti-Drift Rule\n\nIf the shared substrate also needs to stop, this is no longer an isolated-service stop.\nIf the target cannot be named precisely, the route is still too vague for this technique."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0100",
+      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/system-recovery/stress-receipt-reground-closeout/examples/minimal-stress-closeout-lane.md",
+          "title": "Minimal stress closeout lane",
+          "body_markdown": "Use this example when a route or runtime surface hits one bounded stress event\nand the system needs an honest degraded path without widening recovery.\n\n## Stress family\n\n- family: `retrieval-outage-honesty`\n- owner surface: `runtime route-api`\n\n## Minimal sequence\n\n1. Emit one owner-local receipt that names the outage, degraded mode, and\n   blocked widening.\n2. Keep the consumer posture source-first or hold the route explicitly.\n3. Route the next hop to the bounded owner layers that should read it:\n   - routing may point back to the receipt\n   - playbooks may provide a degraded lane and re-entry gate\n   - KAG may quarantine and reground a derived surface\n4. Emit one reviewed closeout receipt when the bounded repair step finishes or\n   remains deferred.\n5. Export an eval bridge candidate only if the artifact trail is coherent\n   enough for later proof reading.\n\n## What this example proves\n\n- the route can stay truthful under stress\n- the next hop can stay owner-scoped\n- reviewed closeout can exist without pretending that proof already happened"
+        }
+      ]
     }
   ]
 }

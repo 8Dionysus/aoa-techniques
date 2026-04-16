@@ -15,7 +15,7 @@ Historical note:
 ## Current Live Closure Snapshot
 
 - current verification path: read-only current-state checks via `python scripts/validate_repo.py` plus `python -m unittest discover -s tests`, and bounded release-prep parity via `python scripts/release_check.py`
-- current corpus split: `99` bundles, `25 canonical`, `74 promoted`
+- current corpus split: `100` bundles, `25 canonical`, `75 promoted`
 - current release contour: `v0.4.0` carries the workspace ingress and mutation
   gate, audit-to-closeout proof loop, recommendation-truth-versus-host
   actionability split, canonical-owner mirror, GitHub-only owner endcap, pinned
@@ -49,6 +49,7 @@ Historical note:
   - [AOA-T-0097](techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md)
   - [AOA-T-0098](techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md)
   - [AOA-T-0099](techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md)
+  - [AOA-T-0100](techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
 - current closest promoted queue item: [AOA-T-0032](techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
 - current external-evidence lead sprint:
   - [AOA-T-0032](techniques/evaluation/context-report-for-ci/TECHNIQUE.md)

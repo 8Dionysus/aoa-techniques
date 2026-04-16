@@ -5411,6 +5411,57 @@
           "path": "notes/origin-evidence.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0100",
+      "name": "stress-receipt-reground-closeout",
+      "domain": "system-recovery",
+      "kind": "recovery",
+      "status": "promoted",
+      "summary": "Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.",
+      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "origin": {
+        "project": "Dionysus",
+        "path": "aoa-chaos-wave1-seed/proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.seed.md",
+        "note": "Generalized from the aoa-chaos-wave1 donor pack, where runtime receipts, routing hints, playbook gates, KAG regrounding, and eval bridge candidates had to stay owner-scoped and reviewable under stress."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "stress",
+        "receipts",
+        "regrounding",
+        "closeout",
+        "recovery"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-04-16",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0097"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0098"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        }
+      ]
     }
   ]
 }

@@ -10,8 +10,8 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 
 ## Current Posture
 
-- current promoted corpus: `74` techniques
-- matrix categorization status: `49` promoted techniques are explicitly categorized in the pack matrix below; `25` newer `v0.4` / session-harvest / recovery-wave promoted techniques (`AOA-T-0075` through `AOA-T-0099`) are tracked in generated promotion readiness and need one matrix-expansion pass before canonical-promotion debate
+- current promoted corpus: `75` techniques
+- matrix categorization status: `49` promoted techniques are explicitly categorized in the pack matrix below; `26` newer `v0.4` / session-harvest / recovery-wave promoted techniques (`AOA-T-0075` through `AOA-T-0100`) are tracked in generated promotion readiness and need one matrix-expansion pass before canonical-promotion debate
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
 - latest graduation wave: [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
@@ -58,7 +58,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `external live-adopter lane` | `34` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
-| `v0.4 matrix-expansion lane` | `25` | Newer `v0.4`, session-harvest, and recovery-wave promoted bundles `AOA-T-0075` through `AOA-T-0099` are present in generated promotion readiness; the maintainer-facing pack matrix still needs bundle-by-bundle categorization before canonical-promotion debate. |
+| `v0.4 matrix-expansion lane` | `26` | Newer `v0.4`, session-harvest, and recovery-wave promoted bundles `AOA-T-0075` through `AOA-T-0100` are present in generated promotion readiness; the maintainer-facing pack matrix still needs bundle-by-bundle categorization before canonical-promotion debate. |
 
 ## Swarm Rule
 
@@ -338,7 +338,7 @@ Shared blocker: the donor Telegram family and repo-local adaptation both show a 
 ## Suggested Wave Order
 
 1. `Wave 0 - v0.4 matrix expansion`
-   - `AOA-T-0075` through `AOA-T-0099`
+   - `AOA-T-0075` through `AOA-T-0100`
    - goal: categorize newer promoted bundles from generated promotion readiness into this maintainer-facing pack matrix before any canonical-promotion debate
 2. `Wave A - evidence-prep leaders`
    - `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
