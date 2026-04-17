@@ -73,5 +73,20 @@
     "owner_surface": "techniques/feat-reflection",
     "source_path": "quests/AOA-TECH-Q-0005.yaml",
     "public_safe": true
+  },
+  {
+    "id": "AOA-TECH-Q-0006",
+    "title": "Reanchor chaos-wave1 technique follow-through at promotion readiness",
+    "repo": "aoa-techniques",
+    "theme_ref": "",
+    "milestone_ref": "",
+    "state": "captured",
+    "band": "near",
+    "kind": "harvest",
+    "difficulty": "d3_seam",
+    "risk": "r2_contract",
+    "owner_surface": "docs/PROMOTION_READINESS_MATRIX.md",
+    "source_path": "quests/AOA-TECH-Q-0006.yaml",
+    "public_safe": true
   }
 ]

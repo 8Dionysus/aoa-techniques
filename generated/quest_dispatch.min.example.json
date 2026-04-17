@@ -111,5 +111,27 @@
     "public_safe": true,
     "fallback_tier": "conductor",
     "wrapper_class": "hybrid"
+  },
+  {
+    "schema_version": "quest_dispatch_v1",
+    "id": "AOA-TECH-Q-0006",
+    "repo": "aoa-techniques",
+    "state": "captured",
+    "band": "near",
+    "difficulty": "d3_seam",
+    "risk": "r2_contract",
+    "control_mode": "human_codex_copilot",
+    "delegate_tier": "planner",
+    "split_required": true,
+    "write_scope": "repo_local",
+    "requires_artifacts": [
+      "recurrence_evidence",
+      "promotion_decision"
+    ],
+    "activation_mode": "on_review_of",
+    "source_path": "quests/AOA-TECH-Q-0006.yaml",
+    "public_safe": true,
+    "fallback_tier": "verifier",
+    "wrapper_class": "codex_primary"
   }
 ]
