@@ -1,0 +1,63 @@
+schema_version: work_quest_v1
+id: AOA-TECH-Q-0006
+title: Reanchor chaos-wave1 technique follow-through at promotion readiness
+summary: Keep the reviewed chaos-wave1 technique-shaped follow-through visible at
+  the technique layer without promoting one owner-routed recovery slice into
+  new skill canon or cross-repo backlog.
+repo: aoa-techniques
+owner_surface: docs/PROMOTION_READINESS_MATRIX.md
+theme_ref: ''
+milestone_ref: ''
+kind: harvest
+state: captured
+band: near
+difficulty: d3_seam
+risk: r2_contract
+control_mode: human_codex_copilot
+delegate_tier: planner
+fallback_tier: verifier
+wrapper_class: codex_primary
+write_scope: repo_local
+split_required: true
+complexity_basis:
+  scope: 2
+  ambiguity: 2
+  boundary: 2
+  verification: 1
+parent: null
+depends_on: []
+activation:
+  mode: on_review_of
+  ref: session:2026-04-16T15-16-30-804824Z-abyss-stack-checkpoint-growth-74c888d1-3a8
+  note: open when reviewed closeout preserves technique-shaped readiness
+    pressure from chaos-wave1 without proving a new reusable technique yet
+anchor_ref:
+  artifact: promotion_readiness_matrix
+  ref: docs/PROMOTION_READINESS_MATRIX.md
+  note: keep the next move at technique promotion and donor follow-through
+    rather than false skill ownership
+handoff_role: technique-maintainer
+evidence:
+  - candidate:pattern:aoa-techniques-technique-promotion-readiness-min survived
+    the reviewed closeout as a technique-shaped owner hint
+  - candidate:growth:aoa-techniques-commit-code remained bounded adjacent
+    evidence rather than a new technique bundle
+  - owner handoff marked aoa-skills as the nearest wrong target for this
+    follow-through, so the route needs reanchor before any canon lift
+harvest:
+  target: technique
+  trigger_count: 2
+  note: consider a new technique or readiness-lane expansion only if another
+    reviewed chaos-wave route preserves the same technique-shaped pressure
+opened_at: '2026-04-17'
+touched_at: '2026-04-17'
+tags:
+  - chaos-wave1
+  - technique
+  - promotion-readiness
+  - reanchor
+notes: >
+  The honest owner move here is not a fresh technique bundle on one session.
+  Keep the signal in the promotion-readiness and donor-follow-through lane until
+  another reviewed route proves that the same reusable method really repeats.
+public_safe: true
