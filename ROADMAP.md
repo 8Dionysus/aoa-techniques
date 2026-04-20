@@ -16,7 +16,7 @@ Historical note:
 
 - current verification path: read-only current-state checks via `python scripts/validate_repo.py` plus `python -m unittest discover -s tests`, and bounded release-prep parity via `python scripts/release_check.py`
 - current corpus split: `100` bundles, `25 canonical`, `75 promoted`
-- current release contour: `v0.4.0` carries the workspace ingress and mutation
+- current release contour: `v0.4.1` carries the workspace ingress and mutation
   gate, audit-to-closeout proof loop, recommendation-truth-versus-host
   actionability split, canonical-owner mirror, GitHub-only owner endcap, pinned
   validation matrix, antifragility recovery, receipt-first failure analysis,
@@ -37,7 +37,7 @@ Historical note:
   - [Promotion Wave A Runbook](docs/PROMOTION_WAVE_A_RUNBOOK.md)
   - [External Evidence Sprint Runbook](docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
   - [External Evidence Ledger](docs/EXTERNAL_EVIDENCE_LEDGER.md)
-- latest internal-origin promoted additions and `v0.4.0` practice wave:
+- latest internal-origin promoted additions and `v0.4.1` practice wave:
   - [AOA-T-0089](techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md)
   - [AOA-T-0090](techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
   - [AOA-T-0091](techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md)
