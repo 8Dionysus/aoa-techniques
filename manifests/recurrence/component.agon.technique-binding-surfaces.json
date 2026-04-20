@@ -9,9 +9,8 @@
         "review_signal"
       ],
       "match_signals": [
-        "lawful_move_needs_practice",
-        "technique_candidate_repeated",
-        "practice_gap_repeated"
+        "agon_stop_line_repeated",
+        "agon_recurrence_surface_seen"
       ],
       "notes": "Lawful moves can request practice; recurrence must not promote techniques automatically.",
       "observation_inputs": [
@@ -48,12 +47,11 @@
         "overclaim_risk"
       ],
       "match_signals": [
-        "technique_claims_move_law",
-        "technique_claims_arena_authority"
+        "live_protocol_claim_present"
       ],
       "notes": "Technique surfaces do not own Agon law.",
       "observation_inputs": [
-        "agon-technique-bridge-docs"
+        "agon-technique-binding-candidates"
       ],
       "recommended_actions": [
         "return move law to center",
@@ -66,7 +64,6 @@
         "review_ready"
       ],
       "suppress_when": [
-        "live_protocol_claim_present",
         "hidden_authority_detected"
       ],
       "target_repo": "aoa-techniques",
