@@ -6,6 +6,22 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Added
+
+- Agon Wave IV technique candidate bridge docs, seed/config, generated index,
+  and explicit builder / validator / test surfaces
+
+### Changed
+
+- root and docs entry routes now expose the Agon practice-candidate bridge as a
+  requested-not-landed companion surface instead of leaving it implicit
+
+### Validation
+
+- `python scripts/build_agon_technique_binding_candidates.py --check`
+- `python scripts/validate_agon_technique_binding_candidates.py`
+- `python -m pytest -q tests/test_agon_technique_binding_candidates.py`
+
 ## [0.4.1] - 2026-04-19
 
 ### Summary

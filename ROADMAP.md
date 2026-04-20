@@ -37,6 +37,12 @@ Historical note:
   - [Promotion Wave A Runbook](docs/PROMOTION_WAVE_A_RUNBOOK.md)
   - [External Evidence Sprint Runbook](docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
   - [External Evidence Ledger](docs/EXTERNAL_EVIDENCE_LEDGER.md)
+- current Agon Wave IV companion bridge is now documented in:
+  - [AGON_MOVE_TECHNIQUE_BRIDGE](docs/AGON_MOVE_TECHNIQUE_BRIDGE.md)
+  - [AGON_WAVE4_TECHNIQUE_LANDING](docs/AGON_WAVE4_TECHNIQUE_LANDING.md)
+  - `generated/agon_technique_binding_candidates.min.json`
+  - the candidate bridge remains `requested_not_landed` and does not create
+    canonical techniques
 - latest internal-origin promoted additions and `v0.4.1` practice wave:
   - [AOA-T-0089](techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md)
   - [AOA-T-0090](techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)

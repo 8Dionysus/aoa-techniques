@@ -17,6 +17,15 @@ class CurrentDirectionRoutesTestCase(unittest.TestCase):
         self.assertIn("ROADMAP.md", readme)
         self.assertIn("ROADMAP.md", agents)
 
+    def test_agon_wave4_technique_bridge_is_routable(self) -> None:
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
+
+        self.assertIn("docs/AGON_MOVE_TECHNIQUE_BRIDGE.md", readme)
+        self.assertIn("AGON_MOVE_TECHNIQUE_BRIDGE.md", docs_readme)
+        self.assertIn("AGON_MOVE_TECHNIQUE_BRIDGE.md", start_here)
+
 
 if __name__ == "__main__":
     unittest.main()

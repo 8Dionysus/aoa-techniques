@@ -1,0 +1,214 @@
+{
+  "candidates": [
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/assert-position-practice",
+      "move_class": "stance",
+      "move_id": "agon.move.stance.assert_position",
+      "move_name": "assert_position",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move assert_position without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/challenge-claim-practice",
+      "move_class": "stance",
+      "move_id": "agon.move.stance.challenge_claim",
+      "move_name": "challenge_claim",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move challenge_claim without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/request-evidence-practice",
+      "move_class": "evidence",
+      "move_id": "agon.move.evidence.request_evidence",
+      "move_name": "request_evidence",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move request_evidence without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/offer-evidence-reference-practice",
+      "move_class": "evidence",
+      "move_id": "agon.move.evidence.offer_evidence_reference",
+      "move_name": "offer_evidence_reference",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move offer_evidence_reference without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/probe-trace-practice",
+      "move_class": "trace",
+      "move_id": "agon.move.trace.probe_trace",
+      "move_name": "probe_trace",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move probe_trace without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/deny-trace-closure-practice",
+      "move_class": "trace",
+      "move_id": "agon.move.trace.deny_trace_closure",
+      "move_name": "deny_trace_closure",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move deny_trace_closure without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/mark-contradiction-practice",
+      "move_class": "contradiction",
+      "move_id": "agon.move.contradiction.mark_contradiction",
+      "move_name": "mark_contradiction",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move mark_contradiction without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/localize-contradiction-practice",
+      "move_class": "contradiction",
+      "move_id": "agon.move.contradiction.localize_contradiction",
+      "move_name": "localize_contradiction",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move localize_contradiction without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/deny-closure-practice",
+      "move_class": "closure",
+      "move_id": "agon.move.closure.deny_closure",
+      "move_name": "deny_closure",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move deny_closure without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/revise-position-practice",
+      "move_class": "revision",
+      "move_id": "agon.move.revision.revise_position",
+      "move_name": "revise_position",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move revise_position without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/stand-fast-practice",
+      "move_class": "revision",
+      "move_id": "agon.move.revision.stand_fast",
+      "move_name": "stand_fast",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move stand_fast without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    },
+    {
+      "bridge_kind": "practice_candidate",
+      "candidate_id": "candidate:aoa-techniques:agon/concede-practice",
+      "move_class": "revision",
+      "move_id": "agon.move.revision.concede",
+      "move_name": "concede",
+      "must_not": [
+        "define lawful move vocabulary",
+        "create skill workflow",
+        "issue proof verdict",
+        "write scars",
+        "start arena runtime"
+      ],
+      "practice_intent": "Prepare reusable practice guidance for the lawful move concede without defining the move law or an executable skill.",
+      "source_owner_binding": "Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+      "status": "requested_not_landed"
+    }
+  ],
+  "schema_version": "agon-technique-binding-candidates.seed/0.1",
+  "scope": "practice candidates requested by center owner-binding; no technique promotion yet",
+  "source_owner_binding_registry": "../Agents-of-Abyss/generated/agon_move_owner_binding_registry.min.json",
+  "status": "owner_repo_candidate_requests",
+  "title": "Agon technique binding candidates",
+  "wave": "IV"
+}

@@ -28,6 +28,7 @@ Use the shortest route by need:
 - frontmatter routing axes and kind doctrine: `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `data/technique_kind_wave1.yaml`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
 - feat-reader and runtime-card surfaces: `docs/TECHNIQUE_FEAT_MODEL.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
 - status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `docs/PROMOTION_READINESS_MATRIX.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
+- Agon Wave IV practice-candidate bridge: `docs/AGON_MOVE_TECHNIQUE_BRIDGE.md`, `docs/AGON_WAVE4_TECHNIQUE_LANDING.md`, `generated/agon_technique_binding_candidates.min.json`, `python scripts/build_agon_technique_binding_candidates.py --check`, `python scripts/validate_agon_technique_binding_candidates.py`, and `python -m pytest -q tests/test_agon_technique_binding_candidates.py`
 - one end-to-end example path: `WALKTHROUGH.md`
 - bounded execution and proof neighbors: [`aoa-skills`](https://github.com/8Dionysus/aoa-skills) and [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
 - navigation and ecosystem map: [`aoa-routing`](https://github.com/8Dionysus/aoa-routing) and [`Agents-of-Abyss`](https://github.com/8Dionysus/Agents-of-Abyss)
@@ -35,6 +36,7 @@ Use the shortest route by need:
 ## Deeper routes
 
 - donor intake, refinement, and promotion: `docs/DONOR_REFINERY_RUBRIC.md`, `docs/EXTERNAL_IMPORT_RUNBOOK.md`, `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, `docs/PROMOTION_READINESS_MATRIX.md`, `docs/PROMOTION_WAVE_A_RUNBOOK.md`, `docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md`, and `docs/EXTERNAL_EVIDENCE_LEDGER.md`
+- Agon owner-binding companion surfaces: `docs/AGON_MOVE_TECHNIQUE_BRIDGE.md`, `docs/AGON_WAVE4_TECHNIQUE_LANDING.md`, `config/agon_technique_binding_candidates.seed.json`, and `generated/agon_technique_binding_candidates.min.json`
 - selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
 - runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
 - repo-doc routing and authoritative doc/status manifests: `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`

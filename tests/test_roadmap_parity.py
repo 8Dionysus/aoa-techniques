@@ -70,6 +70,26 @@ class RoadmapParityTestCase(unittest.TestCase):
                 self.assertTrue((REPO_ROOT / surface).is_file())
                 self.assertIn(surface, readme)
 
+    def test_roadmap_names_agon_wave4_companion_bridge_surfaces(self) -> None:
+        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+
+        for relative_path in (
+            "docs/AGON_MOVE_TECHNIQUE_BRIDGE.md",
+            "docs/AGON_WAVE4_TECHNIQUE_LANDING.md",
+            "generated/agon_technique_binding_candidates.min.json",
+            "config/agon_technique_binding_candidates.seed.json",
+            "scripts/build_agon_technique_binding_candidates.py",
+            "scripts/validate_agon_technique_binding_candidates.py",
+            "tests/test_agon_technique_binding_candidates.py",
+        ):
+            self.assertTrue((REPO_ROOT / relative_path).is_file())
+
+        self.assertIn("AGON_MOVE_TECHNIQUE_BRIDGE", roadmap)
+        self.assertIn("generated/agon_technique_binding_candidates.min.json", roadmap)
+        self.assertIn("requested_not_landed", roadmap)
+        self.assertIn("docs/AGON_MOVE_TECHNIQUE_BRIDGE.md", readme)
+
 
 if __name__ == "__main__":
     unittest.main()
