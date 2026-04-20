@@ -2524,6 +2524,12 @@ def parse_review_template_section_payload(
 
 def parse_github_review_templates(repo_root: Path) -> tuple[GitHubReviewTemplate, ...]:
     templates: list[GitHubReviewTemplate] = []
+    duplicate_pull_request_template = repo_root / ".github" / "pull_request_template.md"
+    if duplicate_pull_request_template.exists():
+        fail(
+            f"{duplicate_pull_request_template}: competing pull request template path is not allowed; "
+            "keep .github/PULL_REQUEST_TEMPLATE.md as the sole canonical PR template"
+        )
 
     for spec in GITHUB_REVIEW_TEMPLATE_SPECS:
         template_path = repo_root / spec["template_path"]

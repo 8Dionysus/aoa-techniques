@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -578,6 +579,28 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("overlap", pr_template)
         self.assertIn("reusable object extracted", external_origin)
         self.assertIn("what stays out of the donor", external_origin)
+
+    def test_pull_request_template_path_stays_uppercase_only(self) -> None:
+        canonical_template = REPO_ROOT / ".github" / "PULL_REQUEST_TEMPLATE.md"
+        lowercase_template = REPO_ROOT / ".github" / "pull_request_template.md"
+
+        self.assertTrue(canonical_template.is_file())
+        self.assertFalse(lowercase_template.exists())
+
+        with TemporaryDirectory() as temp_dir:
+            temp_root = Path(temp_dir)
+            shutil.copytree(REPO_ROOT / ".github", temp_root / ".github")
+            duplicate_template = temp_root / ".github" / "pull_request_template.md"
+            duplicate_template.write_text(
+                canonical_template.read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                r"sole canonical PR template",
+            ):
+                validate_repo.parse_github_review_templates(temp_root)
 
     def test_evidence_note_guide_references_current_note_templates(self) -> None:
         guide = (REPO_ROOT / "docs" / "EVIDENCE_NOTE_PROVENANCE_GUIDE.md").read_text(
