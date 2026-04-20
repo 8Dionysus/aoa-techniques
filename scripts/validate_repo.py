@@ -2522,8 +2522,29 @@ def parse_review_template_section_payload(
     )
 
 
+def path_exists_with_exact_case(repo_root: Path, relative_path: Path) -> bool:
+    current = repo_root
+    for part in relative_path.parts:
+        if part in {"", "."}:
+            continue
+        if not current.is_dir():
+            return False
+        entries = {entry.name: entry for entry in current.iterdir()}
+        next_path = entries.get(part)
+        if next_path is None:
+            return False
+        current = next_path
+    return current.exists()
+
+
 def parse_github_review_templates(repo_root: Path) -> tuple[GitHubReviewTemplate, ...]:
     templates: list[GitHubReviewTemplate] = []
+    duplicate_pull_request_template = Path(".github") / "pull_request_template.md"
+    if path_exists_with_exact_case(repo_root, duplicate_pull_request_template):
+        fail(
+            f"{repo_root / duplicate_pull_request_template}: competing pull request template path is not allowed; "
+            "keep .github/PULL_REQUEST_TEMPLATE.md as the sole canonical PR template"
+        )
 
     for spec in GITHUB_REVIEW_TEMPLATE_SPECS:
         template_path = repo_root / spec["template_path"]
