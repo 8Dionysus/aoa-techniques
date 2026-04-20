@@ -1,0 +1,64 @@
+{
+  "$id": "https://github.com/8Dionysus/aoa-techniques/schemas/agon-technique-binding-candidate.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bridge_kind": {
+      "enum": [
+        "practice_candidate",
+        "bounded_workflow_candidate"
+      ],
+      "type": "string"
+    },
+    "candidate_id": {
+      "pattern": "^candidate:aoa-(techniques|skills):agon/[a-z0-9-]+-(practice|workflow)$",
+      "type": "string"
+    },
+    "move_class": {
+      "type": "string"
+    },
+    "move_id": {
+      "pattern": "^agon\\.move\\.[a-z_]+\\.[a-z0-9_]+$",
+      "type": "string"
+    },
+    "move_name": {
+      "type": "string"
+    },
+    "must_not": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "practice_intent": {
+      "type": "string"
+    },
+    "requires": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source_owner_binding": {
+      "type": "string"
+    },
+    "status": {
+      "const": "requested_not_landed"
+    },
+    "workflow_intent": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidate_id",
+    "move_id",
+    "move_name",
+    "move_class",
+    "status",
+    "bridge_kind",
+    "source_owner_binding"
+  ],
+  "title": "Agon technique binding candidate",
+  "type": "object"
+}

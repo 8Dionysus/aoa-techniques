@@ -37,6 +37,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Roadmap](../ROADMAP.md) when the question is which repo-only hardening, review refresh, or external evidence wave should open next
 - open [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md) when the question is which remaining external seed idea is actually worth distilling into a future bundle
 - open [Cross-Layer Technique Candidates](CROSS_LAYER_TECHNIQUE_CANDIDATES.md) when the question is how the Dionysus donor-note candidate set should be filtered without widening the external-only intake surface
+- open [Agon Move Technique Bridge](AGON_MOVE_TECHNIQUE_BRIDGE.md), [Agon Wave IV Technique Landing](AGON_WAVE4_TECHNIQUE_LANDING.md), and `../generated/agon_technique_binding_candidates.min.json` when the question is how Agon lawful moves request future practice without creating canonical techniques yet
 - use [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) as the live corpus split
 
 ## If You Need Derived Surfaces

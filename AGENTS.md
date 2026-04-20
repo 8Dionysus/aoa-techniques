@@ -95,6 +95,9 @@ Then branch by task:
   `docs/CANONICAL_REVIEW_GUIDE.md`,
   `docs/PROMOTION_READINESS_MATRIX.md`, and
   `docs/RELEASING.md`
+- Agon owner-binding companion candidates:
+  `docs/AGON_MOVE_TECHNIQUE_BRIDGE.md` and
+  `docs/AGON_WAVE4_TECHNIQUE_LANDING.md`
 - donor intake or external refinement:
   `docs/DONOR_REFINERY_RUBRIC.md`,
   `docs/EXTERNAL_IMPORT_RUNBOOK.md`, and
@@ -168,6 +171,14 @@ wide generated outputs, or release-facing docs:
 ```bash
 python scripts/release_check.py
 git status -sb
+```
+
+If the task touches the Agon Wave IV technique candidate bridge, also run:
+
+```bash
+python scripts/build_agon_technique_binding_candidates.py --check
+python scripts/validate_agon_technique_binding_candidates.py
+python -m pytest -q tests/test_agon_technique_binding_candidates.py
 ```
 
 Confirm that:

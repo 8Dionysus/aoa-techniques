@@ -45,6 +45,11 @@ Choose the path that matches your question:
   - [Roadmap](../ROADMAP.md)
   - [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md)
   - [Cross-Layer Technique Candidates](CROSS_LAYER_TECHNIQUE_CANDIDATES.md)
+- I need the Agon Wave IV companion bridge for future practice candidates:
+  - [Agon Move Technique Bridge](AGON_MOVE_TECHNIQUE_BRIDGE.md)
+  - [Agon Wave IV Technique Landing](AGON_WAVE4_TECHNIQUE_LANDING.md)
+  - [`../generated/agon_technique_binding_candidates.min.json`](../generated/agon_technique_binding_candidates.min.json)
+  - `../config/agon_technique_binding_candidates.seed.json`
 - I need to understand the repo's markdown-first caution discipline:
   - [Shadow Patterns](SHADOW_PATTERNS.md)
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
