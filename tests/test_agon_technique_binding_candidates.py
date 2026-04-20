@@ -4,9 +4,8 @@ import importlib.util
 import json
 import subprocess
 import sys
+import unittest
 from pathlib import Path
-
-import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -44,5 +43,6 @@ def test_builder_rejects_candidates_without_skill_workflow_stop_line() -> None:
     config["candidates"][0]["must_not"] = [
         item for item in config["candidates"][0]["must_not"] if "skill workflow" not in item
     ]
-    with pytest.raises(builder.ValidationError, match="create skill workflow"):
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "create skill workflow"):
         builder.validate_config(config)
