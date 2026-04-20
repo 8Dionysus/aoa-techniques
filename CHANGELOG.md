@@ -6,6 +6,37 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-04-19
+
+### Summary
+
+- this patch adds chaos-wave stress closeout guidance, recurrence beacons, and
+  stronger promotion-readiness alignment across the public technique corpus
+- pull request template coverage, Node24 workflow refs, and required-check
+  posture are aligned with the current release contract
+- `aoa-techniques` remains the curated public technique layer rather than a
+  runtime or package authority
+
+### Added
+
+- a chaos wave 1 stress closeout technique, recurrence beacons with hook
+  bindings, and filesystem-aware PR template test coverage
+
+### Changed
+
+- promotion-readiness matrix, roadmap/root-entry docs, canonical PR template
+  path handling, and CI/protection surfaces are refreshed for the current
+  technique wave
+
+### Validation
+
+- `python scripts/release_check.py`
+
+### Notes
+
+- this patch extends technique guidance and validation posture without turning
+  the repository into a package registry or runtime authority
+
 ## [0.4.0] - 2026-04-10
 
 ### Summary

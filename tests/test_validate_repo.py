@@ -1422,6 +1422,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertEqual(
             (
                 "[Unreleased]",
+                "[0.4.1] - 2026-04-19",
                 "[0.4.0] - 2026-04-10",
                 "[0.3.0] - 2026-04-01",
                 "[0.2.0] - 2026-03-23",
