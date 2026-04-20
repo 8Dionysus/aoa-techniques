@@ -586,10 +586,30 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertTrue(canonical_template.is_file())
         self.assertFalse(lowercase_template.exists())
+        self.assertTrue(
+            validate_repo.path_exists_with_exact_case(
+                REPO_ROOT, Path(".github") / "PULL_REQUEST_TEMPLATE.md"
+            )
+        )
+        self.assertFalse(
+            validate_repo.path_exists_with_exact_case(
+                REPO_ROOT, Path(".github") / "pull_request_template.md"
+            )
+        )
 
         with TemporaryDirectory() as temp_dir:
             temp_root = Path(temp_dir)
             shutil.copytree(REPO_ROOT / ".github", temp_root / ".github")
+            self.assertTrue(
+                validate_repo.path_exists_with_exact_case(
+                    temp_root, Path(".github") / "PULL_REQUEST_TEMPLATE.md"
+                )
+            )
+            self.assertFalse(
+                validate_repo.path_exists_with_exact_case(
+                    temp_root, Path(".github") / "pull_request_template.md"
+                )
+            )
             duplicate_template = temp_root / ".github" / "pull_request_template.md"
             duplicate_template.write_text(
                 canonical_template.read_text(encoding="utf-8"),
