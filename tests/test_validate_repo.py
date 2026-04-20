@@ -6,6 +6,7 @@ import shutil
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 from jsonschema import Draft202012Validator
 
@@ -583,6 +584,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
     def test_pull_request_template_path_stays_uppercase_only(self) -> None:
         canonical_template = REPO_ROOT / ".github" / "PULL_REQUEST_TEMPLATE.md"
         lowercase_template = REPO_ROOT / ".github" / "pull_request_template.md"
+        duplicate_relative_path = Path(".github") / "pull_request_template.md"
 
         self.assertTrue(canonical_template.is_file())
         self.assertFalse(lowercase_template.exists())
@@ -607,20 +609,26 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             )
             self.assertFalse(
                 validate_repo.path_exists_with_exact_case(
-                    temp_root, Path(".github") / "pull_request_template.md"
+                    temp_root, duplicate_relative_path
                 )
             )
-            duplicate_template = temp_root / ".github" / "pull_request_template.md"
-            duplicate_template.write_text(
-                canonical_template.read_text(encoding="utf-8"),
-                encoding="utf-8",
-            )
+            real_path_exists_with_exact_case = validate_repo.path_exists_with_exact_case
 
-            with self.assertRaisesRegex(
-                validate_repo.ValidationError,
-                r"sole canonical PR template",
+            def fake_path_exists_with_exact_case(repo_root: Path, relative_path: Path) -> bool:
+                if repo_root == temp_root and relative_path == duplicate_relative_path:
+                    return True
+                return real_path_exists_with_exact_case(repo_root, relative_path)
+
+            with patch.object(
+                validate_repo,
+                "path_exists_with_exact_case",
+                side_effect=fake_path_exists_with_exact_case,
             ):
-                validate_repo.parse_github_review_templates(temp_root)
+                with self.assertRaisesRegex(
+                    validate_repo.ValidationError,
+                    r"sole canonical PR template",
+                ):
+                    validate_repo.parse_github_review_templates(temp_root)
 
     def test_evidence_note_guide_references_current_note_templates(self) -> None:
         guide = (REPO_ROOT / "docs" / "EVIDENCE_NOTE_PROVENANCE_GUIDE.md").read_text(
