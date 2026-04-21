@@ -1,0 +1,20 @@
+{
+  "component_id": "component:agon:epistemic-technique-candidates",
+  "forbidden_effects": [
+    "live_verdict_authority",
+    "durable_scar_write",
+    "retention_execution",
+    "rank_mutation",
+    "trust_mutation",
+    "tree_of_sophia_promotion",
+    "kag_promotion",
+    "hidden_scheduler_action",
+    "assistant_contestant_drift",
+    "auto_doctrine_rewrite"
+  ],
+  "posture": "observation_only",
+  "surfaces": [
+    "generated/agon_epistemic_technique_candidates.min.json"
+  ],
+  "wave": "XV"
+}
