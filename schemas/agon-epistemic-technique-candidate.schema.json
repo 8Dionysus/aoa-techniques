@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_outputs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "forbidden_effects": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 10,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "live_protocol": {
+      "const": false
+    },
+    "owner_repo": {
+      "const": "aoa-techniques"
+    },
+    "practice_boundary": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "runtime_effect": {
+      "enum": [
+        "none",
+        "candidate_only",
+        "local_dry_run_candidate_only",
+        "local_rehearsal_candidate_only"
+      ]
+    },
+    "status": {
+      "const": "requested_only_candidate"
+    },
+    "supports_move_extensions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "technique_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidate_outputs",
+    "forbidden_effects",
+    "live_protocol",
+    "owner_repo",
+    "practice_boundary",
+    "runtime_effect",
+    "status",
+    "supports_move_extensions",
+    "technique_id"
+  ],
+  "title": "Agon Epistemic Technique Candidate",
+  "type": "object"
+}

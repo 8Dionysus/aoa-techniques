@@ -1,0 +1,23 @@
+{
+  "allowed_outputs": [
+    "recurrence_observation",
+    "review_queue_candidate",
+    "owner_dossier_candidate"
+  ],
+  "forbidden_effects": [
+    "live_verdict_authority",
+    "durable_scar_write",
+    "retention_execution",
+    "rank_mutation",
+    "trust_mutation",
+    "tree_of_sophia_promotion",
+    "kag_promotion",
+    "hidden_scheduler_action",
+    "assistant_contestant_drift",
+    "auto_doctrine_rewrite"
+  ],
+  "hook_set_id": "component:agon:epistemic-technique-candidates.hooks",
+  "observes_component": "component:agon:epistemic-technique-candidates",
+  "posture": "review_queue_only",
+  "wave": "XV"
+}

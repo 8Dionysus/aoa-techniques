@@ -1,0 +1,277 @@
+{
+  "registry_id": "agon.epistemic_technique_candidates.registry.v1",
+  "runtime_posture": "candidate_only",
+  "techniques": [
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "state_hypothesis"
+      ],
+      "technique_id": "agon.tech.epistemic.hypothesis_staking_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "predict_other_model"
+      ],
+      "technique_id": "agon.tech.epistemic.model_of_other_prediction_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "attack_inference_chain"
+      ],
+      "technique_id": "agon.tech.epistemic.inference_chain_attack_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "compare_explanatory_power"
+      ],
+      "technique_id": "agon.tech.epistemic.explanatory_power_comparison_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "defend_concept_boundary"
+      ],
+      "technique_id": "agon.tech.epistemic.concept_boundary_probe_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "propose_bifurcation"
+      ],
+      "technique_id": "agon.tech.epistemic.bifurcation_mapping_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "mark_epistemic_rupture"
+      ],
+      "technique_id": "agon.tech.epistemic.rupture_detection_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "request_doctrine_review"
+      ],
+      "technique_id": "agon.tech.epistemic.doctrine_revision_review_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "challenge_model"
+      ],
+      "technique_id": "agon.tech.epistemic.counterfactual_pressure_practice"
+    },
+    {
+      "candidate_outputs": [
+        "technique_candidate",
+        "practice_review_dossier_candidate"
+      ],
+      "forbidden_effects": [
+        "live_verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation",
+        "trust_mutation",
+        "tree_of_sophia_promotion",
+        "kag_promotion",
+        "hidden_scheduler_action",
+        "assistant_contestant_drift",
+        "auto_doctrine_rewrite"
+      ],
+      "live_protocol": false,
+      "owner_repo": "aoa-techniques",
+      "practice_boundary": "reusable thinking practice only; not bounded execution or proof authority",
+      "runtime_effect": "candidate_only",
+      "status": "requested_only_candidate",
+      "supports_move_extensions": [
+        "compare_explanatory_power"
+      ],
+      "technique_id": "agon.tech.epistemic.false_consensus_breaking_practice"
+    }
+  ],
+  "wave": "XV"
+}

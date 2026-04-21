@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "count": {
+      "const": 10
+    },
+    "digest": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "registry_id": {
+      "const": "agon.epistemic_technique_candidates.registry.v1"
+    },
+    "runtime_posture": {
+      "const": "candidate_only"
+    },
+    "techniques": {
+      "items": {
+        "$ref": "agon-epistemic-technique-candidate.schema.json"
+      },
+      "maxItems": 10,
+      "minItems": 10,
+      "type": "array"
+    },
+    "wave": {
+      "const": "XV"
+    }
+  },
+  "required": [
+    "registry_id",
+    "wave",
+    "runtime_posture",
+    "count",
+    "techniques",
+    "digest"
+  ],
+  "title": "Agon Epistemic Technique Candidate Registry",
+  "type": "object"
+}
