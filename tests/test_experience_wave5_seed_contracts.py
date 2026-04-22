@@ -61,18 +61,18 @@ def is_rfc3339_date(year: int, month: int, day: int) -> bool:
 
 
 def is_rfc3339_leap_second(match: re.Match[str], year: int, month: int, day: int, hour: int, minute: int) -> bool:
-    if minute != 59 or year == 0:
-        return False
     if match["zone"] in ("Z", "z"):
-        return hour == 23 and (year, month, day) in RFC3339_UTC_LEAP_SECOND_DATES
+        return hour == 23 and minute == 59 and (year, month, day) in RFC3339_UTC_LEAP_SECOND_DATES
+    if year == 0:
+        return False
     offset_minutes = int(match["offset_hour"]) * 60 + int(match["offset_minute"])
     if match["offset_sign"] == "-":
         offset_minutes = -offset_minutes
     try:
         local_second = datetime(year, month, day, hour, minute, 59)
-    except ValueError:
+        utc_second = local_second - timedelta(minutes=offset_minutes)
+    except (OverflowError, ValueError):
         return False
-    utc_second = local_second - timedelta(minutes=offset_minutes)
     return (
         utc_second.hour == 23
         and utc_second.minute == 59
@@ -459,6 +459,8 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                     "2026-04-22T24:00:00Z",
                     "2026-04-22T00:00:60Z",
                     "2026-04-22T00:00:00+24:00",
+                    "0001-01-01T00:59:60+01:00",
+                    "9999-12-31T23:59:60-00:01",
                     "\u0662\u0660\u0662\u0666-04-22T00:00:00Z",
                 ):
                     with self.subTest(stem=stem, path=path, value=bad_value):
@@ -480,6 +482,8 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                     "0000-02-29T00:00:00Z",
                     "2016-12-31T23:59:60Z",
                     "2017-01-01T00:59:60+01:00",
+                    "2017-01-01T00:29:60+00:30",
+                    "2017-01-01T05:44:60+05:45",
                 ):
                     with self.subTest(stem=stem, path=path, value=valid_value):
                         mutated = copy.deepcopy(example)
