@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import copy
-from datetime import date
 import json
 from pathlib import Path
 import re
@@ -20,6 +19,15 @@ RFC3339_DATETIME = re.compile(
 )
 
 
+def is_rfc3339_leap_year(year: int) -> bool:
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+
+def is_rfc3339_date(year: int, month: int, day: int) -> bool:
+    month_lengths = [31, 29 if is_rfc3339_leap_year(year) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    return 1 <= month <= 12 and 1 <= day <= month_lengths[month - 1]
+
+
 @FORMAT_CHECKER.checks("date-time")
 def is_rfc3339_datetime(value: object) -> bool:
     if not isinstance(value, str):
@@ -27,14 +35,12 @@ def is_rfc3339_datetime(value: object) -> bool:
     match = RFC3339_DATETIME.fullmatch(value)
     if not match:
         return False
-    try:
-        date(int(match["year"]), int(match["month"]), int(match["day"]))
-    except ValueError:
+    if not is_rfc3339_date(int(match["year"]), int(match["month"]), int(match["day"])):
         return False
     hour = int(match["hour"])
     minute = int(match["minute"])
     second = int(match["second"])
-    if hour > 23 or minute > 59 or second > 60:
+    if hour > 23 or minute > 59 or second > 59:
         return False
     if match["offset_hour"] is not None:
         if int(match["offset_hour"]) > 23 or int(match["offset_minute"]) > 59:
@@ -393,11 +399,18 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
             for path, constraint in constrained_paths(schema, example, "format"):
                 if constraint != "date-time":
                     continue
-                with self.subTest(stem=stem, path=path):
-                    mutated = copy.deepcopy(example)
-                    set_path(mutated, path, "not-a-date")
-                    self.assert_invalid(schema, mutated, f"{stem} bad date-time at {path}")
-                    exercised += 1
+                for bad_value in (
+                    "not-a-date",
+                    "2026-02-30T00:00:00Z",
+                    "2026-04-22T24:00:00Z",
+                    "2026-04-22T00:00:60Z",
+                    "2026-04-22T00:00:00+24:00",
+                ):
+                    with self.subTest(stem=stem, path=path, value=bad_value):
+                        mutated = copy.deepcopy(example)
+                        set_path(mutated, path, bad_value)
+                        self.assert_invalid(schema, mutated, f"{stem} bad date-time at {path}")
+                        exercised += 1
         self.assertGreater(exercised, 0)
 
     def test_experience_wave5_schemas_accept_rfc3339_datetime_variants(self) -> None:
@@ -407,12 +420,13 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
             for path, constraint in constrained_paths(schema, example, "format"):
                 if constraint != "date-time":
                     continue
-                with self.subTest(stem=stem, path=path):
-                    mutated = copy.deepcopy(example)
-                    set_path(mutated, path, "2026-04-22t00:00:00.123456789z")
-                    errors = validation_errors(schema, mutated)
-                    self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
-                    exercised += 1
+                for valid_value in ("2026-04-22t00:00:00.123456789z", "0000-02-29T00:00:00Z"):
+                    with self.subTest(stem=stem, path=path, value=valid_value):
+                        mutated = copy.deepcopy(example)
+                        set_path(mutated, path, valid_value)
+                        errors = validation_errors(schema, mutated)
+                        self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
+                        exercised += 1
         self.assertGreater(exercised, 0)
 
     def test_experience_wave5_schemas_reject_numeric_bound_escapes(self) -> None:
