@@ -70,6 +70,18 @@ def wrong_type_value(value: object) -> object:
     return "not-null"
 
 
+def const_escape_value(value: object) -> object:
+    if isinstance(value, bool):
+        return not value
+    if isinstance(value, int) and not isinstance(value, bool):
+        return value + 1
+    if isinstance(value, float):
+        return value + 1.0
+    if isinstance(value, str):
+        return f"{value}{ENUM_ESCAPE_VALUE}"
+    return ENUM_ESCAPE_VALUE
+
+
 def schema_properties(schema: dict[str, object]) -> dict[str, object]:
     properties = schema.get("properties")
     return properties if isinstance(properties, dict) else {}
@@ -177,6 +189,7 @@ class ExperienceWave3SeedContractTests(unittest.TestCase):
                             self.assert_invalid(schema, with_wrong_payload_type, f"{stem} wrong {key} type")
 
     def test_experience_wave3_schemas_reject_guardrail_boolean_inversions(self) -> None:
+        exercised = 0
         for stem in WAVE3_STEMS:
             schema, example = load_contract(stem)
             payload = example.get("payload")
@@ -185,11 +198,13 @@ class ExperienceWave3SeedContractTests(unittest.TestCase):
             for key, value in payload.items():
                 if key not in GUARDRAIL_BOOLEAN_FIELDS or not isinstance(value, bool):
                     continue
+                exercised += 1
                 with self.subTest(stem=stem, key=key):
                     mutated = copy.deepcopy(example)
                     self.assertIsInstance(mutated["payload"], dict)
                     mutated["payload"][key] = not value
                     self.assert_invalid(schema, mutated, f"{stem} inverted {key}")
+        self.assertGreater(exercised, 0, "no wave3 guardrail booleans were exercised")
 
     def test_experience_wave3_schemas_reject_missing_required_payload_fields(self) -> None:
         exercised = 0
@@ -277,6 +292,32 @@ class ExperienceWave3SeedContractTests(unittest.TestCase):
                     mutated["payload"][key] = ENUM_ESCAPE_VALUE
                     self.assert_invalid(schema, mutated, f"{stem} enum escape payload.{key}")
         self.assertGreater(exercised, 0, "no wave3 enum fields were exercised")
+
+    def test_experience_wave3_schemas_reject_const_escape_values(self) -> None:
+        exercised = 0
+        for stem in WAVE3_STEMS:
+            schema, example = load_contract(stem)
+            for key, prop in schema_properties(schema).items():
+                if not isinstance(prop, dict) or "const" not in prop or key not in example:
+                    continue
+                exercised += 1
+                with self.subTest(stem=stem, section="top", key=key):
+                    mutated = copy.deepcopy(example)
+                    mutated[key] = const_escape_value(example[key])
+                    self.assert_invalid(schema, mutated, f"{stem} const escape {key}")
+            payload = example.get("payload")
+            if not isinstance(payload, dict):
+                continue
+            for key, prop in payload_schema_properties(schema).items():
+                if not isinstance(prop, dict) or "const" not in prop or key not in payload:
+                    continue
+                exercised += 1
+                with self.subTest(stem=stem, section="payload", key=key):
+                    mutated = copy.deepcopy(example)
+                    self.assertIsInstance(mutated["payload"], dict)
+                    mutated["payload"][key] = const_escape_value(payload[key])
+                    self.assert_invalid(schema, mutated, f"{stem} const escape payload.{key}")
+        self.assertGreater(exercised, 0, "no wave3 const fields were exercised")
 
 
 if __name__ == "__main__":
