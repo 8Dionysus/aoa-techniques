@@ -1,15 +1,34 @@
 from __future__ import annotations
 
 import copy
+from datetime import datetime
 import json
 from pathlib import Path
+import re
 import unittest
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
 ESCAPE_VALUE = "__wave5_not_allowed__"
+FORMAT_CHECKER = FormatChecker()
+RFC3339_DATETIME = re.compile(
+    r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$"
+)
+
+
+@FORMAT_CHECKER.checks("date-time")
+def is_rfc3339_datetime(value: object) -> bool:
+    if not isinstance(value, str):
+        return True
+    if not RFC3339_DATETIME.fullmatch(value):
+        return False
+    try:
+        datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return True
 
 WAVE5_CONTRACTS = (
     ('handoff_compression_technique_note_v1', 'handoff_compression_technique_note_v1.json'),
@@ -29,7 +48,10 @@ def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[
 
 
 def validation_errors(schema: dict[str, object], value: object) -> list[object]:
-    return sorted(Draft202012Validator(schema).iter_errors(value), key=lambda error: list(error.path))
+    return sorted(
+        Draft202012Validator(schema, format_checker=FORMAT_CHECKER).iter_errors(value),
+        key=lambda error: list(error.path),
+    )
 
 
 def effective_schema(schema: object, value: object) -> object:
@@ -350,6 +372,20 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, escape_value(value))
                     self.assert_invalid(schema, mutated, f"{stem} enum escape at {path}")
+                    exercised += 1
+        self.assertGreater(exercised, 0)
+
+    def test_experience_wave5_schemas_reject_bad_datetime_formats(self) -> None:
+        exercised = 0
+        for stem, schema_file in WAVE5_CONTRACTS:
+            schema, example = load_contract(stem, schema_file)
+            for path, constraint in constrained_paths(schema, example, "format"):
+                if constraint != "date-time":
+                    continue
+                with self.subTest(stem=stem, path=path):
+                    mutated = copy.deepcopy(example)
+                    set_path(mutated, path, "not-a-date")
+                    self.assert_invalid(schema, mutated, f"{stem} bad date-time at {path}")
                     exercised += 1
         self.assertGreater(exercised, 0)
 
