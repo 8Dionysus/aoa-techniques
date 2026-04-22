@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/aoa-techniques/schemas/sealed_decision_technique_note_v1.json",
+  "title": "sealed_decision_technique_note_v1",
+  "description": "Seed schema for sealed_decision_technique_note_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "applies_to",
+    "note_id",
+    "technique"
+  ],
+  "properties": {
+    "applies_to": {
+      "type": "string",
+      "minLength": 1
+    },
+    "note_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "technique": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

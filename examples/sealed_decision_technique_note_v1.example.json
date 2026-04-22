@@ -1,0 +1,5 @@
+{
+  "applies_to": "governance_vote",
+  "note_id": "tech_001",
+  "technique": "commit_reveal_hashing"
+}
