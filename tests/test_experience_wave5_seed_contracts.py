@@ -1,15 +1,45 @@
 from __future__ import annotations
 
 import copy
+from datetime import date
 import json
 from pathlib import Path
+import re
 import unittest
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
 ESCAPE_VALUE = "__wave5_not_allowed__"
+FORMAT_CHECKER = FormatChecker()
+RFC3339_DATETIME = re.compile(
+    r"^(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})"
+    r"[Tt](?P<hour>\d{2}):(?P<minute>\d{2}):(?P<second>\d{2})"
+    r"(?:\.\d+)?(?P<zone>[Zz]|[+-](?P<offset_hour>\d{2}):(?P<offset_minute>\d{2}))$"
+)
+
+
+@FORMAT_CHECKER.checks("date-time")
+def is_rfc3339_datetime(value: object) -> bool:
+    if not isinstance(value, str):
+        return True
+    match = RFC3339_DATETIME.fullmatch(value)
+    if not match:
+        return False
+    try:
+        date(int(match["year"]), int(match["month"]), int(match["day"]))
+    except ValueError:
+        return False
+    hour = int(match["hour"])
+    minute = int(match["minute"])
+    second = int(match["second"])
+    if hour > 23 or minute > 59 or second > 60:
+        return False
+    if match["offset_hour"] is not None:
+        if int(match["offset_hour"]) > 23 or int(match["offset_minute"]) > 59:
+            return False
+    return True
 
 WAVE5_CONTRACTS = (
     ('handoff_compression_technique_note_v1', 'handoff_compression_technique_note_v1.json'),
@@ -29,7 +59,10 @@ def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[
 
 
 def validation_errors(schema: dict[str, object], value: object) -> list[object]:
-    return sorted(Draft202012Validator(schema).iter_errors(value), key=lambda error: list(error.path))
+    return sorted(
+        Draft202012Validator(schema, format_checker=FORMAT_CHECKER).iter_errors(value),
+        key=lambda error: list(error.path),
+    )
 
 
 def effective_schema(schema: object, value: object) -> object:
@@ -350,6 +383,35 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, escape_value(value))
                     self.assert_invalid(schema, mutated, f"{stem} enum escape at {path}")
+                    exercised += 1
+        self.assertGreater(exercised, 0)
+
+    def test_experience_wave5_schemas_reject_bad_datetime_formats(self) -> None:
+        exercised = 0
+        for stem, schema_file in WAVE5_CONTRACTS:
+            schema, example = load_contract(stem, schema_file)
+            for path, constraint in constrained_paths(schema, example, "format"):
+                if constraint != "date-time":
+                    continue
+                with self.subTest(stem=stem, path=path):
+                    mutated = copy.deepcopy(example)
+                    set_path(mutated, path, "not-a-date")
+                    self.assert_invalid(schema, mutated, f"{stem} bad date-time at {path}")
+                    exercised += 1
+        self.assertGreater(exercised, 0)
+
+    def test_experience_wave5_schemas_accept_rfc3339_datetime_variants(self) -> None:
+        exercised = 0
+        for stem, schema_file in WAVE5_CONTRACTS:
+            schema, example = load_contract(stem, schema_file)
+            for path, constraint in constrained_paths(schema, example, "format"):
+                if constraint != "date-time":
+                    continue
+                with self.subTest(stem=stem, path=path):
+                    mutated = copy.deepcopy(example)
+                    set_path(mutated, path, "2026-04-22t00:00:00.123456789z")
+                    errors = validation_errors(schema, mutated)
+                    self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
                     exercised += 1
         self.assertGreater(exercised, 0)
 
