@@ -1,0 +1,26 @@
+{
+  "schema_id": "technique_obsolescence_notice_v1",
+  "kind": "technique_obsolescence_notice",
+  "version": "1.0",
+  "status": "proposed",
+  "summary": "Example technique_obsolescence_notice object for Experience Adoption Forge v0.7.",
+  "refs": {
+    "source": "experience.shared_pattern_registry",
+    "owner": "aoa-techniques",
+    "related": [
+      "experience.v0.6.federation_harvest",
+      "experience.v0.7.adoption_forge"
+    ]
+  },
+  "payload": {
+    "wave": "v0.7",
+    "repo": "aoa-techniques",
+    "pattern_ref": "pattern.shared.wrong_surface_to_owner_landing.v1",
+    "owner_surface": "aoa-techniques",
+    "requires_owner_consent": true,
+    "rollback_required": true,
+    "retention_cycles": 3,
+    "technique_contract": "practice_pattern",
+    "may_generate_skill_proposal": true
+  }
+}
