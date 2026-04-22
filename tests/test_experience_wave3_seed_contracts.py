@@ -83,6 +83,16 @@ def payload_schema_properties(schema: dict[str, object]) -> dict[str, object]:
     return payload_properties if isinstance(payload_properties, dict) else {}
 
 
+def required_payload_fields(schema: dict[str, object]) -> list[str]:
+    payload = schema_properties(schema).get("payload")
+    if not isinstance(payload, dict):
+        return []
+    required = payload.get("required")
+    if not isinstance(required, list):
+        return []
+    return [field for field in required if isinstance(field, str)]
+
+
 def array_field_targets(example: dict[str, object]) -> list[tuple[str, str]]:
     targets: list[tuple[str, str]] = []
     for key, value in example.items():
@@ -180,6 +190,24 @@ class ExperienceWave3SeedContractTests(unittest.TestCase):
                     self.assertIsInstance(mutated["payload"], dict)
                     mutated["payload"][key] = not value
                     self.assert_invalid(schema, mutated, f"{stem} inverted {key}")
+
+    def test_experience_wave3_schemas_reject_missing_required_payload_fields(self) -> None:
+        exercised = 0
+        for stem in WAVE3_STEMS:
+            schema, example = load_contract(stem)
+            payload = example.get("payload")
+            if not isinstance(payload, dict):
+                continue
+            for key in required_payload_fields(schema):
+                if key not in payload:
+                    continue
+                exercised += 1
+                with self.subTest(stem=stem, key=key):
+                    mutated = copy.deepcopy(example)
+                    self.assertIsInstance(mutated["payload"], dict)
+                    del mutated["payload"][key]
+                    self.assert_invalid(schema, mutated, f"{stem} missing required payload.{key}")
+        self.assertGreater(exercised, 0, "no required wave3 payload fields were exercised")
 
     def test_experience_wave3_schemas_reject_invalid_numeric_ranges(self) -> None:
         for stem in WAVE3_STEMS:
