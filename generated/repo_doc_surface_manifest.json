@@ -109,15 +109,13 @@
       "bounded_role": "contributor doctrine for public-safe planning, focused diffs, verification, and reporting",
       "top_level_sections": [
         "Purpose",
-        "Owns",
-        "Does not own",
-        "Core rules",
-        "Growth posture",
-        "Read this first",
-        "Primary objects",
-        "Hard NO",
-        "Contribution doctrine",
-        "Validation"
+        "Owner lane",
+        "Start here",
+        "AGENTS stack law",
+        "Route away when",
+        "Verify",
+        "Report",
+        "Full reference"
       ]
     },
     {
