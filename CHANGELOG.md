@@ -6,21 +6,52 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-04-23
+
+### Summary
+
+- this patch adds Agon technique binding candidates, recurrence technique
+  manifests, Wave XV epistemic practice candidates, technique-to-skill
+  handoff posture, and owner-observation boundaries
+- Experience wave3, wave4, and wave5 technique contracts are aligned with
+  adoption, governance, installation, service clarity, handoff compression,
+  scope boundaries, appeal reasoning, authority resolution, and
+  sovereign-release posture
+- `aoa-techniques` remains the reusable practice canon rather than a runtime,
+  skill, or package-publication authority
+
 ### Added
 
 - Agon Wave IV technique candidate bridge docs, seed/config, generated index,
   and explicit builder / validator / test surfaces
+- Agon recurrence technique manifests, Wave XV epistemic technique candidates,
+  recurrence live-observation and review-decision closure notes, and
+  recurrence owner-observation boundaries
+- Experience wave3-wave5 practice surfaces for adoption boundaries,
+  governance precedent, installation notes, service clarity, handoff
+  compression, scope boundaries, sealed decisions, appeal reasoning,
+  authority resolution, retention checks, obsolescence, and
+  technique-to-skill handoff
 
 ### Changed
 
 - root and docs entry routes now expose the Agon practice-candidate bridge as a
   requested-not-landed companion surface instead of leaving it implicit
+- Agon review follow-ups, generated doc-surface manifests, technique adoption
+  contract tests, Experience governance contracts, and Wave5 RFC3339 datetime
+  checking were tightened
 
 ### Validation
 
+- `python scripts/release_check.py`
 - `python scripts/build_agon_technique_binding_candidates.py --check`
 - `python scripts/validate_agon_technique_binding_candidates.py`
 - `python -m pytest -q tests/test_agon_technique_binding_candidates.py`
+
+### Notes
+
+- this patch expands practice surfaces and contract validation without turning
+  technique candidates into executable skill truth or runtime authority
 
 ## [0.4.1] - 2026-04-19
 

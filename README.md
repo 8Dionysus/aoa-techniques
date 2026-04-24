@@ -4,7 +4,7 @@ Public library of reusable techniques for coding agents and humans.
 
 `aoa-techniques` is the public practice canon of AoA. It is not a snippet dump and not an “awesome list”. A technique here is a minimal reproducible unit of engineering practice: a workflow, validation pattern, safety protocol, documentation layout, evaluation loop, or transfer method that can travel cleanly across projects.
 
-> Current release: `v0.4.1`. See [CHANGELOG](CHANGELOG.md) for release notes.
+> Current release: `v0.4.2`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
 ## Start here
 
