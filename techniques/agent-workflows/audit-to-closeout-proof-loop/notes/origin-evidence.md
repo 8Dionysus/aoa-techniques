@@ -7,9 +7,9 @@
 ## Source project
 - name: Dionysus + AoA ecosystem repos
 - source files:
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md`
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.packet.json`
-  - `/srv/aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.packet.json`
+  - `/srv/AbyssOS/aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md`
 
 ## Evidence
 - the April 6, 2026 remediation wave closed a bounded audit packet across `aoa-sdk`, `aoa-memo`, `aoa-stats`, `aoa-skills`, and source-owned `abyss-stack` by re-checking findings in live code, landing minimal owner-surface fixes, and then rerunning targeted plus full validation

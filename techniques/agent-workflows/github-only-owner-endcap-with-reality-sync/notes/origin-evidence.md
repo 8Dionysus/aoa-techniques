@@ -7,12 +7,12 @@
 ## Source project
 - name: Dionysus + ATM10-Agent + AoA ecosystem repos
 - source files:
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md`
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.packet.json`
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.packet.json`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md`
   - `https://github.com/8Dionysus/ATM10-Agent/issues/49`
   - `https://github.com/8Dionysus/ATM10-Agent/pull/50`
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.reality-check.md`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.reality-check.md`
 
 ## Evidence
 - the final `WS12` track explicitly kept `ATM10-Agent` GitHub-only instead of

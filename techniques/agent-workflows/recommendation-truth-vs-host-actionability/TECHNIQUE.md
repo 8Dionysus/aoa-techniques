@@ -170,7 +170,7 @@ What should stay invariant:
 
 Project-shaped details that should not be treated as invariant:
 - exact paths such as `.agents/skills`
-- one workspace root such as `/srv`
+- one workspace root such as `/srv/AbyssOS`
 - one exact CLI spelling such as `aoa skills detect`
 - one exact JSON key such as `host_inventory_provided`
 - one exact trio of labels such as `host-executable`, `router-only`, and `unknown`

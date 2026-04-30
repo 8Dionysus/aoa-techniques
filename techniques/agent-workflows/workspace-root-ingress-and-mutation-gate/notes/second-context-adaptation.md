@@ -10,7 +10,7 @@
 - runtime: human and agent contribution workflow over portable technique bundles
 
 ## What changed
-- the project-local `/srv` posture was reduced to one bounded workspace law for ingress and guard passes
+- the project-local `/srv/AbyssOS` posture was reduced to one bounded workspace law for ingress and guard passes
 - root path names, rollout mechanics, and closeout telemetry stayed in adaptation notes instead of the invariant core
 - the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes
 

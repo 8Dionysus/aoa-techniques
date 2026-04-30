@@ -156,7 +156,7 @@ What should stay invariant:
 - the returned gate posture stays visible rather than hidden in memory
 
 Project-shaped details that should not be treated as invariant:
-- `/srv` as the workspace root
+- `/srv/AbyssOS` as the workspace root
 - one specific foundation profile name
 - one exact path like `.aoa/skill-dispatch`
 - one exact command spelling such as `aoa skills enter` or `aoa skills guard`
@@ -182,7 +182,7 @@ See `checks/workspace-root-ingress-and-mutation-gate-checklist.md`.
 
 ## Promotion history
 
-- born in the AoA workspace-foundation landing wave across `aoa-sdk`, `8Dionysus`, and `/srv` root guidance
+- born in the AoA workspace-foundation landing wave across `aoa-sdk`, `8Dionysus`, and `/srv/AbyssOS` root guidance
 - extracted into `aoa-techniques` on 2026-04-06 as a bounded workspace posture technique for explicit ingress and pre-mutation guard passes
 
 ## Future evolution

@@ -204,7 +204,7 @@ Project-shaped details that should not be treated as invariant:
 
 - one repo name such as `aoa-routing` or `aoa-skills`
 - one exact validator like `python scripts/build_router.py --check`
-- one exact sibling path such as `/srv/aoa-playbooks`
+- one exact sibling path such as `/srv/AbyssOS/aoa-playbooks`
 - one exact GitHub Actions workflow file or runner image
 
 AoA adaptation example:
