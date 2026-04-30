@@ -43956,7 +43956,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the project-local `/srv` posture was reduced to one bounded workspace law for ingress and guard passes"
+                  "text": "the project-local `/srv/AbyssOS` posture was reduced to one bounded workspace law for ingress and guard passes"
                 },
                 {
                   "order": 2,
@@ -44214,7 +44214,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `/srv/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.packet.json`\n- `/srv/aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md`"
+                  "value_markdown": "- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md`\n- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.packet.json`\n- `/srv/AbyssOS/aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md`"
                 }
               ]
             },
@@ -44936,7 +44936,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.md`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.packet.json`\n- `/srv/aoa-stats/schemas/stats-event-envelope.schema.json`\n- `/srv/aoa-stats/scripts/build_views.py`\n- `/srv/aoa-evals/schemas/stats-event-envelope.schema.json`\n- `/srv/aoa-evals/scripts/validate_repo.py`\n- `/srv/aoa-skills/config/project_core_skill_kernel.json`"
+                  "value_markdown": "- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.md`\n- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.packet.json`\n- `/srv/AbyssOS/aoa-stats/schemas/stats-event-envelope.schema.json`\n- `/srv/AbyssOS/aoa-stats/scripts/build_views.py`\n- `/srv/AbyssOS/aoa-evals/schemas/stats-event-envelope.schema.json`\n- `/srv/AbyssOS/aoa-evals/scripts/validate_repo.py`\n- `/srv/AbyssOS/aoa-skills/config/project_core_skill_kernel.json`"
                 }
               ]
             },
@@ -45295,7 +45295,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.packet.json`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md`\n- `https://github.com/8Dionysus/ATM10-Agent/issues/49`\n- `https://github.com/8Dionysus/ATM10-Agent/pull/50`\n- `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.reality-check.md`"
+                  "value_markdown": "- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md`\n- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.packet.json`\n- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md`\n- `https://github.com/8Dionysus/ATM10-Agent/issues/49`\n- `https://github.com/8Dionysus/ATM10-Agent/pull/50`\n- `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.federated-audit-remediation.reality-check.md`"
                 }
               ]
             },

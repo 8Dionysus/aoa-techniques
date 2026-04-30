@@ -7,13 +7,13 @@
 ## Source project
 - name: Dionysus + AoA ecosystem repos
 - source files:
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.md`
-  - `/srv/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.packet.json`
-  - `/srv/aoa-stats/schemas/stats-event-envelope.schema.json`
-  - `/srv/aoa-stats/scripts/build_views.py`
-  - `/srv/aoa-evals/schemas/stats-event-envelope.schema.json`
-  - `/srv/aoa-evals/scripts/validate_repo.py`
-  - `/srv/aoa-skills/config/project_core_skill_kernel.json`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.md`
+  - `/srv/AbyssOS/Dionysus/reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.packet.json`
+  - `/srv/AbyssOS/aoa-stats/schemas/stats-event-envelope.schema.json`
+  - `/srv/AbyssOS/aoa-stats/scripts/build_views.py`
+  - `/srv/AbyssOS/aoa-evals/schemas/stats-event-envelope.schema.json`
+  - `/srv/AbyssOS/aoa-evals/scripts/validate_repo.py`
+  - `/srv/AbyssOS/aoa-skills/config/project_core_skill_kernel.json`
 
 ## Evidence
 - the April 7, 2026 cross-repo rollout moved the shared stats event envelope to `aoa-stats` as the canonical owner and left `aoa-evals` with an explicit mirror rather than a competing source
