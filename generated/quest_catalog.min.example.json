@@ -100,7 +100,7 @@
     "kind": "harvest",
     "difficulty": "d3_seam",
     "risk": "r2_contract",
-    "owner_surface": "mechanics/growth-cycle/REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md",
+    "owner_surface": "mechanics/growth-cycle/parts/promotion-readiness-incubation/README.md",
     "source_path": "quests/AOA-TECH-Q-0007.yaml",
     "public_safe": true
   }

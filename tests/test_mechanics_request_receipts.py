@@ -33,16 +33,22 @@ class MechanicsRequestReceiptsTestCase(unittest.TestCase):
             compact_receipts,
         )
 
-    def test_request_receipts_keeps_agon_outside_direct_orq_lane(self) -> None:
+    def test_request_receipts_keeps_non_orq_mechanics_outside_direct_orq_lane(self) -> None:
         receipts = (REPO_ROOT / "mechanics" / "REQUEST_RECEIPTS.md").read_text(
             encoding="utf-8"
         )
 
         non_orq_section = receipts.split("## Non-ORQ Center Pressure", 1)[1]
         self.assertIn("### [agon](agon/README.md)", non_orq_section)
+        self.assertIn("### [growth-cycle](growth-cycle/README.md)", non_orq_section)
         self.assertIn("Current status: `candidate-only`", non_orq_section)
         self.assertIn("no direct\n  `ORQ-AGON-TECHNIQUES-*` request", non_orq_section)
+        self.assertIn("no\n  direct `ORQ-GROWTHCYCLE-TECHNIQUES-*` request", non_orq_section)
         self.assertNotIn("ORQ-AGON-TECHNIQUES", receipts.split("## Non-ORQ Center Pressure", 1)[0])
+        self.assertNotIn(
+            "ORQ-GROWTHCYCLE-TECHNIQUES",
+            receipts.split("## Non-ORQ Center Pressure", 1)[0],
+        )
 
     def test_distillation_receipt_maps_owner_landing_readout(self) -> None:
         receipts = (REPO_ROOT / "mechanics" / "REQUEST_RECEIPTS.md").read_text(

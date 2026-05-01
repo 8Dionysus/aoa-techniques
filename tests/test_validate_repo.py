@@ -2499,12 +2499,16 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             repo_root
             / "mechanics"
             / "growth-cycle"
-            / "QUESTBOOK_TECHNIQUE_INTEGRATION.md",
+            / "parts"
+            / "questbook-integration"
+            / "README.md",
             (
                 REPO_ROOT
                 / "mechanics"
                 / "growth-cycle"
-                / "QUESTBOOK_TECHNIQUE_INTEGRATION.md"
+                / "parts"
+                / "questbook-integration"
+                / "README.md"
             ).read_text(encoding="utf-8"),
         )
         write_text(

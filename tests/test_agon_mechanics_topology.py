@@ -50,8 +50,29 @@ ROOT_AGON_ARTIFACTS = (
     "manifests/recurrence/hooks/component.agon.epistemic-technique-candidates.hooks.json",
 )
 
+ACTIVE_AGON_ROUTE_SURFACES = (
+    "mechanics/agon/README.md",
+    "mechanics/agon/DIRECTION.md",
+    "mechanics/agon/PARTS.md",
+    "mechanics/agon/LANDING_LOG.md",
+    "mechanics/agon/PROVENANCE.md",
+    "mechanics/agon/ROADMAP.md",
+)
+
 
 class AgonMechanicsTopologyTestCase(unittest.TestCase):
+    def test_agon_active_route_surfaces_are_discoverable(self) -> None:
+        for relative_path in ACTIVE_AGON_ROUTE_SURFACES:
+            with self.subTest(relative_path=relative_path):
+                self.assertTrue((REPO_ROOT / relative_path).is_file())
+
+    def test_agon_readme_routes_to_roadmap(self) -> None:
+        readme = (REPO_ROOT / "mechanics" / "agon" / "README.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("[ROADMAP](ROADMAP.md)", readme)
+
     def test_agon_artifacts_live_under_owning_parts(self) -> None:
         for relative_path in PART_LOCAL_AGON_ARTIFACTS:
             with self.subTest(relative_path=relative_path):
