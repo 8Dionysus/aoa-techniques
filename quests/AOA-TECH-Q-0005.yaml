@@ -31,7 +31,7 @@ activation:
   note: open when the second-wave feat slice is ready to land after first-wave progression/proof contracts exist
 anchor_ref:
   artifact: technique_feat_model
-  ref: mechanics/growth-cycle/TECHNIQUE_FEAT_MODEL.md
+  ref: mechanics/growth-cycle/parts/technique-feat-model/README.md
   note: feat cards must stay derived from source-first technique canon
 handoff_role: technique-layer-maintainer
 evidence:

@@ -110,7 +110,7 @@ Then branch by task:
   `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, and
   `generated/technique_kind_manifest.min.json`
 - feat-reader or capsule surfaces:
-  `mechanics/growth-cycle/TECHNIQUE_FEAT_MODEL.md`,
+  `mechanics/growth-cycle/parts/technique-feat-model/README.md`,
   `docs/TECHNIQUE_CAPSULES.md`, and
   `docs/TECHNIQUE_CAPSULE_GUIDE.md`
 - promotion, review, or release posture:

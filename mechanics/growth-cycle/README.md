@@ -4,13 +4,24 @@ This package owns the `aoa-techniques` side of the cross-project Growth Cycle
 mechanic: recurring harvest, questbook followthrough, reviewed closeout
 incubation, and feat-shaped reflection around technique canon.
 
-- [Mastery Harvest Posture](MASTERY_HARVEST_POSTURE.md): posture for harvesting
+Start with:
+
+- [Direction](DIRECTION.md): current intent, boundaries, and route posture.
+- [Parts](PARTS.md): active part map.
+- [Provenance](PROVENANCE.md): active-first bridge back to pre-split
+  Growth-cycle surfaces.
+- [Landing Log](LANDING_LOG.md): dated accounting for structural landings.
+- [Roadmap](ROADMAP.md): next honest passes.
+
+Current active parts:
+
+- [Mastery Harvest](parts/mastery-harvest/README.md): posture for harvesting
   mastery signals without inventing achievement authority.
-- [Technique Feat Model](TECHNIQUE_FEAT_MODEL.md): feat-card reflection model
-  for reviewed techniques.
-- [Questbook Technique Integration](QUESTBOOK_TECHNIQUE_INTEGRATION.md):
-  repo-local questbook route into technique hardening work.
-- [Reviewed Closeout Promotion Readiness Incubation](REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md):
+- [Technique Feat Model](parts/technique-feat-model/README.md): feat-card
+  reflection model for reviewed techniques.
+- [Questbook Integration](parts/questbook-integration/README.md): repo-local
+  questbook route into technique hardening work.
+- [Promotion Readiness Incubation](parts/promotion-readiness-incubation/README.md):
   incubation route for technique-shaped survivors from reviewed closeout.
 
 Growth-cycle surfaces may keep obligations and mastery-shaped readings visible.

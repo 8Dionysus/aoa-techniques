@@ -117,6 +117,14 @@ or candidate lanes without a direct AoA owner-request ID targeting
   XV technique-side pressure as requested-only practice candidates, not
   owner-request acceptance.
 
+### [growth-cycle](growth-cycle/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Growth Cycle request queue has no
+  direct `ORQ-GROWTHCYCLE-TECHNIQUES-*` request. Local Growth-cycle surfaces
+  preserve technique-layer harvest, feat-reader, questbook, and
+  promotion-readiness pressure without claiming center request acceptance.
+
 ## Update Discipline
 
 When AoA adds, supersedes, or lands an owner request targeting

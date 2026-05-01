@@ -75,6 +75,7 @@ lineage behind an active part.
 - [parts](parts/): functioning technique-side Agon parts.
 - [LANDING_LOG](LANDING_LOG.md): checked landing ledger.
 - [PROVENANCE](PROVENANCE.md): active-first bridge back to preserved waves.
+- [ROADMAP](ROADMAP.md): next honest Agon passes.
 
 ## Functioning parts
 

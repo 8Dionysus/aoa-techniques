@@ -672,7 +672,13 @@ SHADOW_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-shadow-reviews-v1"
 REPO_DOC_SURFACE_MANIFEST_VERSION = 1
 REPO_DOC_SURFACE_MANIFEST_SOURCE_OF_TRUTH = "markdown-repo-doc-surfaces-v1"
 QUESTBOOK_PATH = Path("QUESTBOOK.md")
-QUESTBOOK_INTEGRATION_PATH = Path("mechanics") / "growth-cycle" / "QUESTBOOK_TECHNIQUE_INTEGRATION.md"
+QUESTBOOK_INTEGRATION_PATH = (
+    Path("mechanics")
+    / "growth-cycle"
+    / "parts"
+    / "questbook-integration"
+    / "README.md"
+)
 QUEST_SCHEMA_PATH = Path("schemas") / "quest.schema.json"
 QUEST_DISPATCH_SCHEMA_PATH = Path("schemas") / "quest_dispatch.schema.json"
 QUEST_CATALOG_PATH = Path("generated") / "quest_catalog.min.json"

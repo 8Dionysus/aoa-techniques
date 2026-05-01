@@ -5,7 +5,7 @@ summary: Keep the Agents-of-Abyss v0.4.0 closeout technique-shaped growth trail
   visible at the technique layer without promoting one release closeout into a
   new technique bundle or skill workflow.
 repo: aoa-techniques
-owner_surface: mechanics/growth-cycle/REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md
+owner_surface: mechanics/growth-cycle/parts/promotion-readiness-incubation/README.md
 theme_ref: ''
 milestone_ref: ''
 kind: harvest
@@ -34,7 +34,7 @@ activation:
     growth trail without proving a reusable technique yet
 anchor_ref:
   artifact: reviewed_closeout_promotion_readiness_incubation
-  ref: mechanics/growth-cycle/REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md
+  ref: mechanics/growth-cycle/parts/promotion-readiness-incubation/README.md
   note: keep the next move at technique promotion-readiness and donor
     follow-through rather than false skill ownership
 handoff_role: technique-maintainer
