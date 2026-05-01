@@ -6,6 +6,7 @@
   "source_inputs": [
     "techniques/**/*.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
     "docs/CANONICAL_RUBRIC.md",
     "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
@@ -13,7 +14,8 @@
   "generated_surfaces": [
     "generated/technique_catalog.min.json",
     "generated/technique_capsules.min.json",
-    "generated/technique_promotion_readiness.min.json"
+    "generated/technique_promotion_readiness.min.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json"
   ],
   "contract_surfaces": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
@@ -81,6 +83,7 @@
   },
   "rollback_anchors": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "tags": [
@@ -114,9 +117,10 @@
       "input_ref": "cross-layer-technique-candidates",
       "kind": "other",
       "path_globs": [
-        "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md"
+        "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+        "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json"
       ],
-      "notes": "technique-shaped donor intake surface"
+      "notes": "active intake README plus generated registry evidence; generated registry is observation input only, not candidate or promotion authority"
     },
     {
       "input_ref": "technique-live-receipts",
@@ -177,7 +181,7 @@
         "refresh cross-layer technique candidate intake",
         "check overlap and boundedness before distillation"
       ],
-      "notes": "do not treat donor intake as self-authorizing technique creation"
+      "notes": "do not treat donor intake or generated registry evidence as self-authorizing technique creation"
     },
     {
       "beacon_ref": "technique.canonical.second_consumer_pressure",
@@ -257,7 +261,7 @@
       "recommended_actions": [
         "keep the candidate on overlap hold until separability sharpens"
       ],
-      "notes": "a hold is a real signal, not a discard pile"
+      "notes": "a hold is a real signal, not a discard pile; generated registry evidence can expose holds but cannot release them"
     }
   ],
   "decision_surfaces": [
@@ -267,6 +271,7 @@
   ],
   "candidate_targets": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
     "generated/technique_promotion_readiness.min.json"
   ]
 }

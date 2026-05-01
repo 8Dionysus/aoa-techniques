@@ -127,3 +127,30 @@ Not moved:
 - no wave program was reopened
 - no generated index became authority over the active part README, landed
   technique bundles, or recurrence review path
+
+## 2026-05-01 - Cross-layer recurrence observation repoint
+
+Changed:
+
+- repointed technique recurrence observation to read both
+  [parts/cross-layer-candidate-ledger](parts/cross-layer-candidate-ledger/README.md)
+  and the generated
+  [cross-layer registry index](parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json)
+- kept the active README as the decision route while treating the generated
+  registry as observation evidence for counts, gates, waves, and holds
+- made the recurrence stop line explicit: generated registry evidence cannot
+  create candidates, release holds, authorize import, or promote techniques
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_recurrence_manifest_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no recurrence manifest became candidate or promotion authority
+- no candidate status changed
+- no generated index became a decision surface

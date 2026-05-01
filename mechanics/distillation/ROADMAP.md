@@ -9,8 +9,9 @@
 3. Keep the external and cross-layer registries paired with their active READMEs
    and generated indexes; registries are accounting evidence, not candidate
    authority.
-4. Repoint recurrence observation to the part-local cross-layer registry and
-   README without giving recurrence candidate or promotion authority.
+4. Keep recurrence observation pointed at the part-local cross-layer README plus
+   generated registry without giving recurrence candidate or promotion
+   authority.
 5. Reassess the active narrowing lane only when new public donor evidence
    changes the boundary, handoff packet, continuation permission, or
    stop/return/escalation signals.
