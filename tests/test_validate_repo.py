@@ -1254,6 +1254,23 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             / "cross-layer-candidate-ledger"
             / "README.md"
         ).read_text(encoding="utf-8")
+        receipt = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "raw"
+            / "CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md"
+        ).read_text(encoding="utf-8")
+
+        for target in (
+            "## Landed Wave Anchors",
+            "If future work needs exact wave execution order, use the preserved raw receipt.",
+            "[AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)",
+            "[AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)",
+            "[AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)",
+        ):
+            self.assertIn(target, candidates)
 
         for target in (
             "1. `profile-preset-composition`",
@@ -1274,7 +1291,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "if a draft still needs `save sessions locally` or `derive future instructions` to explain its value",
             "Wave C is now fully landed across the external and cross-layer intake surfaces",
         ):
-            self.assertIn(target, candidates)
+            self.assertIn(target, receipt)
 
     def test_deep_audit_roadmap_describes_swarm_future_import_execution_pack(self) -> None:
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(

@@ -181,3 +181,31 @@ Not moved:
 - no candidate moved out of hold, incubation, overlap, or landed status
 - no technique bundle was drafted
 - no future topology axis became current bundle frontmatter authority
+
+## 2026-05-01 - Cross-layer candidate ledger compaction
+
+Changed:
+
+- preserved the active cross-layer candidate ledger as
+  [legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md)
+- compacted [parts/cross-layer-candidate-ledger](parts/cross-layer-candidate-ledger/README.md)
+  so active route keeps current accounting, landed anchors, implementation
+  rules, and reopen gates instead of detailed landed wave execution order
+- updated provenance and legacy indexes so the preserved receipt is the place
+  for exact Wave A/B/C order, worker-role notes, and seam rationale
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no cross-layer candidate was promoted, dropped, or reclassified
+- no generated registry became authority
+- no landed wave was reopened

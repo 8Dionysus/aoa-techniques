@@ -5,8 +5,8 @@
 1. Keep the atom/topology plus law/local/bridge gate enforced in donor refinery,
    external import, and candidate-ledger reopen rules before any new import
    wave.
-2. Continue any future candidate-ledger compaction one ledger at a time, only
-   after preserving a pre-prune receipt in `legacy/raw/`.
+2. Keep any future candidate-ledger compaction one ledger at a time, only after
+   preserving a pre-prune receipt in `legacy/raw/`.
 3. Keep the external and cross-layer registries paired with their active READMEs
    and generated indexes; registries are accounting evidence, not candidate
    authority.

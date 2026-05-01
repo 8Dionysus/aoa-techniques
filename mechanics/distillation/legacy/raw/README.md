@@ -8,3 +8,6 @@ Current receipts:
 - [EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md):
   external candidate ledger snapshot before source-status clarification around
   historical `seed_4.txt` and `seed_6.txt` labels.
+- [CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md):
+  cross-layer candidate ledger snapshot before compacting landed wave execution
+  order, worker-role notes, and seam rationale out of the active route.
