@@ -1,0 +1,32 @@
+{
+  "atom_topology_gate": {
+    "atomic_move_note": "phase boundary plus handoff packet with continuation permission and stop/return/escalation rule",
+    "atomic_move_status": "named",
+    "capability_class": "handoff",
+    "execution_profile": "orchestration-required",
+    "family_posture": "handoff-continuation candidate; not stable until public evidence separates it from broad orchestration",
+    "likely_domain": "agent-workflows",
+    "portability_note": "must work as a standalone handoff contract, not an Agentwise orchestration feature",
+    "primary_kind": "handoff",
+    "risk_posture": "coordination-drift",
+    "substrate": "conversation"
+  },
+  "current_gate": "Keep as active narrowing lane until public evidence exposes a standalone phase boundary, handoff packet, continuation permission, and stop/return/escalation rule.",
+  "donor": "agentwise",
+  "gate_status": "active_narrowing",
+  "law_local_bridge": {
+    "bridge_stop_line": "do not import model routing, shared context server behavior, token optimization, dynamic specialist generation, registry behavior, or dashboard monitoring",
+    "higher_law": "donor public material only proves donor orchestration behavior until a narrower public contract appears",
+    "local_route": "mechanics/distillation/parts/external-candidate-ledger"
+  },
+  "ledger_status": "future_import_here",
+  "nearest_overlap": [
+    "AOA-T-0001",
+    "AOA-T-0023",
+    "bounded-specialist-generation"
+  ],
+  "next_move": "reopen only when public evidence names the standalone phase handoff contract",
+  "seed_candidate": "phase_sync_for_agents",
+  "suggested_technique_name": "phase-synchronized-agent-handoff",
+  "tentative_domain": "agent-workflows"
+}

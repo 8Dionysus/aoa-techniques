@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import unittest
 from pathlib import Path
@@ -36,6 +37,17 @@ PART_LOCAL_DISTILLATION_READMES = (
     "mechanics/distillation/parts/long-gap-reentry/README.md",
 )
 
+PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS = (
+    "mechanics/distillation/parts/external-candidate-ledger/config/external_candidate_registry.seed.json",
+    "mechanics/distillation/parts/external-candidate-ledger/generated/external_candidate_registry.min.json",
+    "mechanics/distillation/parts/external-candidate-ledger/schemas/external-candidate-registry-entry.schema.json",
+    "mechanics/distillation/parts/external-candidate-ledger/schemas/external-candidate-registry.schema.json",
+    "mechanics/distillation/parts/external-candidate-ledger/examples/external_candidate_registry_entry.example.json",
+    "mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py",
+    "mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py",
+    "mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py",
+)
+
 OLD_FLAT_DISTILLATION_FILES = (
     "mechanics/distillation/DONOR_REFINERY_RUBRIC.md",
     "mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md",
@@ -47,7 +59,11 @@ OLD_FLAT_DISTILLATION_FILES = (
 
 class DistillationMechanicsTopologyTestCase(unittest.TestCase):
     def test_distillation_active_surfaces_are_discoverable(self) -> None:
-        for relative_path in ACTIVE_DISTILLATION_SURFACES + RAW_DISTILLATION_RECEIPTS:
+        for relative_path in (
+            ACTIVE_DISTILLATION_SURFACES
+            + RAW_DISTILLATION_RECEIPTS
+            + PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS
+        ):
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
 
@@ -131,6 +147,26 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("remaining `13` external donor-derived candidates", receipt)
         self.assertNotIn("## Source Status", receipt)
 
+    def test_external_candidate_registry_preserves_current_accounting(self) -> None:
+        registry = json.loads(
+            (
+                REPO_ROOT
+                / "mechanics"
+                / "distillation"
+                / "parts"
+                / "external-candidate-ledger"
+                / "generated"
+                / "external_candidate_registry.min.json"
+            ).read_text(encoding="utf-8")
+        )
+
+        self.assertEqual(13, registry["total_candidates"])
+        self.assertEqual(["phase_sync_for_agents"], registry["active_narrowing_lanes"])
+        self.assertEqual(1, registry["ledger_status_counts"]["future_import_here"])
+        self.assertEqual(4, registry["ledger_status_counts"]["hold_because_overlap"])
+        self.assertEqual(5, registry["gate_status_counts"]["layer_incubation"])
+        self.assertIn("does not create bundles", registry["stop_line"])
+
     def test_distillation_active_parts_decision_is_discoverable(self) -> None:
         decision = (
             REPO_ROOT
@@ -142,6 +178,18 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Distillation Active Parts Split", decision)
         self.assertIn("mechanics/distillation/parts/", decision)
         self.assertIn("No candidate verdicts, ledger counts, or technique statuses", decision)
+
+    def test_external_candidate_registry_decision_is_discoverable(self) -> None:
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-01-distillation-external-candidate-registry.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Distillation External Candidate Registry", decision)
+        self.assertIn("generated compact index is validation evidence only", decision)
+        self.assertIn("normal bundle review path", decision)
 
 
 if __name__ == "__main__":

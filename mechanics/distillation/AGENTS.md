@@ -53,6 +53,14 @@ For Distillation topology changes:
 python -m unittest tests.test_distillation_mechanics_topology
 ```
 
+For the external candidate registry:
+
+```bash
+python mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py --check
+python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
+python -m pytest -q mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py
+```
+
 For repository-level safety after structure changes:
 
 ```bash

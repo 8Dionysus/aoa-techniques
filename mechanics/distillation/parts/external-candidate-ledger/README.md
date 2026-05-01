@@ -36,6 +36,34 @@ checkout.
 - `5` needs layer incubation before distillation here
 - `3` substrate or architecture pattern, not yet a technique
 
+## Structured Registry
+
+The part-local registry keeps the compact ledger machine-checkable without
+turning it into technique canon:
+
+- [config/external_candidate_registry.seed.json](config/external_candidate_registry.seed.json)
+  carries the structured candidate accounting.
+- [generated/external_candidate_registry.min.json](generated/external_candidate_registry.min.json)
+  is derived evidence for counts, gates, donors, and the active narrowing lane.
+- [schemas/](schemas/) and [examples/](examples/) document the expected entry
+  shape.
+- [scripts/build_external_candidate_registry.py](scripts/build_external_candidate_registry.py)
+  builds the derived index, and
+  [scripts/validate_external_candidate_registry.py](scripts/validate_external_candidate_registry.py)
+  verifies that the index still matches the seed.
+
+The registry must preserve this README's candidate statuses and stop line. It
+does not create technique bundles, change candidate status, or authorize import
+without bundle-local review.
+
+Validation:
+
+```bash
+python mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py --check
+python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
+python -m pytest -q mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py
+```
+
 ## Current Active Lane
 
 | seed candidate | donor | suggested technique name | tentative domain | status | current gate |
