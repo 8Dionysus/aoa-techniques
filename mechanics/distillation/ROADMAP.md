@@ -4,9 +4,8 @@
 
 1. Compact one candidate ledger at a time only after preserving a pre-prune
    receipt in `legacy/raw/`.
-2. Resolve the named historical seed references that are retained inside the
-   external candidate ledger, or explicitly mark them as historical references
-   when no checked-out source exists.
+2. Compact the external candidate ledger only after the active source-status
+   note and pre-prune receipt remain green in validation.
 3. Decide whether the external and cross-layer ledgers need structured
    part-local registries like Agon's candidate registries.
 4. Repoint recurrence observation to the part-local cross-layer ledger without
