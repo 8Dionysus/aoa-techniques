@@ -497,13 +497,15 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "mechanics"
             / "distillation"
-            / "EXTERNAL_IMPORT_RUNBOOK.md"
+            / "parts"
+            / "external-import-runbook"
+            / "README.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("External Import Runbook", start_here)
         self.assertIn("External Import Runbook", docs_readme)
-        self.assertIn("mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md", contributing)
-        self.assertIn("mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md", root_readme)
+        self.assertIn("mechanics/distillation/parts/external-import-runbook/README.md", contributing)
+        self.assertIn("mechanics/distillation/parts/external-import-runbook/README.md", root_readme)
         for target in (
             "nearest existing technique or overlap watch",
             "what stays out of the donor",
@@ -974,10 +976,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "REPO_DOC_SURFACES.md",
             "KAG_SOURCE_LIFT_GUIDE.md",
             "SEMANTIC_REVIEW_GUIDE.md",
-            "LONG_GAP_CANON_DESIGN.md",
+            "parts/long-gap-reentry/README.md",
             "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md",
             "EXTERNAL_EVIDENCE_LEDGER.md",
-            "CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+            "parts/cross-layer-candidate-ledger/README.md",
             "aoa-skills",
             "aoa-evals",
             "aoa-routing",
@@ -1065,14 +1067,19 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
 
         for content in (root_readme, docs_readme, start_here, roadmap):
-            self.assertIn("CROSS_LAYER_TECHNIQUE_CANDIDATES.md", content)
+            self.assertIn(
+                "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+                content,
+            )
 
     def test_external_candidates_doc_tracks_clean_top4_wave_backlog(self) -> None:
         candidates = (
             REPO_ROOT
             / "mechanics"
             / "distillation"
-            / "EXTERNAL_TECHNIQUE_CANDIDATES.md"
+            / "parts"
+            / "external-candidate-ledger"
+            / "README.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("remaining `13` external donor-derived candidates", candidates)
@@ -1094,7 +1101,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "mechanics"
             / "distillation"
-            / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+            / "parts"
+            / "cross-layer-candidate-ledger"
+            / "README.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("full `24` technique-shaped candidate names", candidates)
@@ -1148,7 +1157,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "mechanics"
             / "distillation"
-            / "EXTERNAL_TECHNIQUE_CANDIDATES.md"
+            / "parts"
+            / "external-candidate-ledger"
+            / "README.md"
         ).read_text(encoding="utf-8")
 
         for target in (
@@ -1180,7 +1191,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "mechanics"
             / "distillation"
-            / "EXTERNAL_TECHNIQUE_CANDIDATES.md"
+            / "parts"
+            / "external-candidate-ledger"
+            / "README.md"
         ).read_text(encoding="utf-8")
 
         for target in (
@@ -1190,7 +1203,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "[AOA-T-0043]",
             "[AOA-T-0044]",
             "[AOA-T-0045]",
-            "execution role: keep [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor",
+            "execution role: keep [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor",
             "Shared generated surfaces should be synchronized only after the bundle draft is merge-ready, and only by the main agent.",
         ):
             self.assertIn(target, candidates)
@@ -1200,7 +1213,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "mechanics"
             / "distillation"
-            / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+            / "parts"
+            / "cross-layer-candidate-ledger"
+            / "README.md"
         ).read_text(encoding="utf-8")
 
         for target in (
@@ -1217,8 +1232,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "1. `versionable-session-transcripts` (landed as [AOA-T-0044]",
             "2. `witness-trace-as-reviewable-artifact` (landed as [AOA-T-0045]",
             "`AOA-T-0026` keeps ownership of whether sessions are captured",
-            "[AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns transcript versionability, readable packaging, redactable export, and comparison-ready transcript shaping over an already-saved artifact",
-            "[AOA-T-0045](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns witness export, citation, and review-packet discipline over an already-saved artifact instead of witness runtime behavior or memory writeback",
+            "[AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns transcript versionability, readable packaging, redactable export, and comparison-ready transcript shaping over an already-saved artifact",
+            "[AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns witness export, citation, and review-packet discipline over an already-saved artifact instead of witness runtime behavior or memory writeback",
             "if a draft still needs `save sessions locally` or `derive future instructions` to explain its value",
             "Wave C is now fully landed across the external and cross-layer intake surfaces",
         ):

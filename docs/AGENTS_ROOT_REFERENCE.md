@@ -115,9 +115,9 @@ Then branch by task:
   `mechanics/agon/parts/move-technique-bridge/README.md` and
   `mechanics/agon/PROVENANCE.md`
 - donor intake or external refinement:
-  `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`,
-  `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`, and
-  `mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
+  `mechanics/distillation/parts/donor-refinery/README.md`,
+  `mechanics/distillation/parts/external-import-runbook/README.md`, and
+  `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md`
 - source-lift, KAG export, or section families:
   `docs/KAG_EXPORT.md`,
   `docs/KAG_SOURCE_LIFT_GUIDE.md`,

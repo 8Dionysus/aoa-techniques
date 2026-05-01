@@ -36,7 +36,7 @@ Use the shortest route by need:
 
 ## Deeper routes
 
-- donor intake, refinement, and promotion: `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`, `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`, `mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, `mechanics/audit/PROMOTION_READINESS_MATRIX.md`, `mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md`, `mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md`, and `mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md`
+- donor intake, refinement, and promotion: `mechanics/distillation/parts/donor-refinery/README.md`, `mechanics/distillation/parts/external-import-runbook/README.md`, `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md`, `mechanics/audit/PROMOTION_READINESS_MATRIX.md`, `mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md`, `mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md`, and `mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md`
 - Agon owner-binding companion surfaces: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/PARTS.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json`, and `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
 - selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
 - runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`

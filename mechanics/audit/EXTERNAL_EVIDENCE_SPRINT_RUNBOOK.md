@@ -8,9 +8,9 @@ See also:
 - [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
 - [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
 - [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
-- [Long-Gap Canon Design](../distillation/LONG_GAP_CANON_DESIGN.md)
+- [Long-Gap Canon Design](../distillation/parts/long-gap-reentry/README.md)
 - [Roadmap](../../ROADMAP.md)
-- [External Import Runbook](../distillation/EXTERNAL_IMPORT_RUNBOOK.md)
+- [External Import Runbook](../distillation/parts/external-import-runbook/README.md)
 
 ## When To Open This
 
@@ -21,7 +21,7 @@ Open this runbook only when all of the following are already true:
 - the remaining blocker is external evidence, not missing bundle structure
 - the next move should reduce uncertainty even if no status changes happen
 
-If the problem is really donor intake or a new extraction, use [External Import Runbook](../distillation/EXTERNAL_IMPORT_RUNBOOK.md) instead.
+If the problem is really donor intake or a new extraction, use [External Import Runbook](../distillation/parts/external-import-runbook/README.md) instead.
 
 ## Non-Goals
 
@@ -128,7 +128,7 @@ If exact-fit evidence lands, the preferred local update order is:
 ## Stop Rules
 
 - if the candidate evidence would require new bundle meaning, stop and log it as overlap
-- if the candidate evidence is really a donor for a future new technique, route it to [External Import Runbook](../distillation/EXTERNAL_IMPORT_RUNBOOK.md)
+- if the candidate evidence is really a donor for a future new technique, route it to [External Import Runbook](../distillation/parts/external-import-runbook/README.md)
 - if the search result only improves examples but not live reuse, keep the status blocker explicit
 - if the same public source appears across multiple bundles, split ownership by target bundle and keep note edits disjoint
 - if the sprint finds no exact-fit evidence, that is still a valid result; close the lane cleanly and move on

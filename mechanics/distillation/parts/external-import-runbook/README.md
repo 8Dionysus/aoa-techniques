@@ -3,15 +3,15 @@
 Use this runbook when a donor already looks like a bounded reusable technique candidate and the next question is how to move it from triage to merge without inventing a new local process each time.
 
 See also:
-- [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md)
-- [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md)
-- [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md)
-- [Contributing](../../CONTRIBUTING.md)
-- [`templates/ORIGIN_EVIDENCE.template.md`](../../templates/ORIGIN_EVIDENCE.template.md)
-- [`templates/ADAPTATION_NOTE.template.md`](../../templates/ADAPTATION_NOTE.template.md)
-- [`templates/EXTERNAL_ORIGIN.template.md`](../../templates/EXTERNAL_ORIGIN.template.md)
-- [`templates/EXTERNAL_REVIEW.template.md`](../../templates/EXTERNAL_REVIEW.template.md)
-- [`external-import-review` issue template](../../.github/ISSUE_TEMPLATE/external-import-review.md)
+- [Donor Refinery Rubric](../donor-refinery/README.md)
+- [External Technique Candidates](../external-candidate-ledger/README.md)
+- [Long-Gap Canon Design](../long-gap-reentry/README.md)
+- [Contributing](../../../../CONTRIBUTING.md)
+- [`templates/ORIGIN_EVIDENCE.template.md`](../../../../templates/ORIGIN_EVIDENCE.template.md)
+- [`templates/ADAPTATION_NOTE.template.md`](../../../../templates/ADAPTATION_NOTE.template.md)
+- [`templates/EXTERNAL_ORIGIN.template.md`](../../../../templates/EXTERNAL_ORIGIN.template.md)
+- [`templates/EXTERNAL_REVIEW.template.md`](../../../../templates/EXTERNAL_REVIEW.template.md)
+- [`external-import-review` issue template](../../../../.github/ISSUE_TEMPLATE/external-import-review.md)
 
 ## Preconditions
 

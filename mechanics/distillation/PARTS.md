@@ -1,0 +1,18 @@
+# Distillation Parts
+
+This file maps current Distillation behavior to active parts. It is not a raw
+source inventory.
+
+| Part | Current role | Active source | Provenance |
+|---|---|---|---|
+| `donor-refinery` | Defines the compact extraction law for external donors: pattern, contamination, and foreign doctrine. | [parts/donor-refinery](parts/donor-refinery/README.md) | [PROVENANCE](PROVENANCE.md) |
+| `external-import-runbook` | Gives maintainers the path from bounded donor triage to draft, review, validation, and merge. | [parts/external-import-runbook](parts/external-import-runbook/README.md) | [PROVENANCE](PROVENANCE.md) |
+| `external-candidate-ledger` | Preserves public-safe external donor candidate accounting and the current active narrowing lane. | [parts/external-candidate-ledger](parts/external-candidate-ledger/README.md) | [PROVENANCE](PROVENANCE.md) |
+| `cross-layer-candidate-ledger` | Preserves sibling-repo donor-note accounting without widening the external-only intake surface. | [parts/cross-layer-candidate-ledger](parts/cross-layer-candidate-ledger/README.md) | [PROVENANCE](PROVENANCE.md) |
+| `long-gap-reentry` | Holds the long-gap backlog posture for promoted material that needs another external contract before canonical review. | [parts/long-gap-reentry](parts/long-gap-reentry/README.md) | [PROVENANCE](PROVENANCE.md) |
+
+## Part rule
+
+If a part starts carrying stable reusable practice with inputs, outputs, risks,
+and validation, route the practice bundle into `techniques/`. Leave this package
+as the mechanics layer that explains how donor pressure moved.
