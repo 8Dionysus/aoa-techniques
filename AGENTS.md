@@ -7,6 +7,7 @@ Root route card for `aoa-techniques`.
 `aoa-techniques` is the public practice canon of AoA.
 It stores reusable, sanitized, bounded, reviewable engineering techniques that can later be lifted into skills, evals, routing, KAG exports, or other derived artifacts.
 A technique is a portable unit of method, not a skill bundle, proof surface, questline, or agent identity.
+The corpus must work both as an AoA organ and as a standalone public library: external builders should be able to reuse a technique without deploying OS Abyss.
 The primary unit is an atomic executable move: one compact technique should be small enough to classify, template, and hand to a small agent after orchestration supplies the right context.
 Technique classification is faceted: `domain` and `kind` are current frontmatter truth, while family, capability, substrate, execution profile, risk posture, and relation topology should stay explicit design axes instead of being collapsed into tags.
 

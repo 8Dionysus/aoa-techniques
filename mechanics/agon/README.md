@@ -28,6 +28,15 @@ workflows, `aoa-evals` owns proof verdicts, `aoa-routing` owns routing logic,
 `aoa-memo` owns memory writeback, and `Tree-of-Sophia` owns ToS-authored
 meaning.
 
+### Law, local route, bridge
+
+- higher law: `Agents-of-Abyss` owns Agon doctrine, lawful moves, arena law,
+  verdict retention, and rank/scar boundaries
+- local implementation: this package owns only the technique-side staging route
+  for requested practice candidates and later bundle-local review
+- bridge: part-local candidate surfaces translate center-owned move pressure
+  into public-safe technique review without importing center authority
+
 ### Inputs
 
 - center-owned Agon owner-binding requests
@@ -94,5 +103,7 @@ candidates as promoted techniques.
 ## Growth posture
 
 Grow this package one active part at a time. When a candidate becomes a reusable
-practice bundle, land it under `techniques/` through the normal review path and
-record the source route here.
+practice bundle, first name the atomic move, likely `domain`, primary `kind`,
+family posture, capability, substrate, execution profile, risk posture, and
+nearest relation or conflict points. Then land it under `techniques/` through
+the normal review path and record the source route here.

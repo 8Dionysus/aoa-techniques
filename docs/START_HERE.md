@@ -9,6 +9,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - the public practice canon of AoA
 - the source of truth for technique meaning, IDs, bounded contracts, adaptation notes, and generated technique surfaces built from those authored sources
 - the home for atomic executable moves: one technique should be compact enough to classify, template, verify, and hand to a small agent after orchestration supplies the right context
+- a standalone public library: external builders should be able to take one technique, capsule, or bundle into their own agent system without deploying OS Abyss or the whole AoA ecosystem
 - the owner of the technique topology contract: `domain` and `kind` are current frontmatter truth, while family, capability, substrate, execution profile, risk posture, and relation topology are explicit design axes for future scale
 - a repository for reusable techniques, not for bounded execution workflows, verdict logic, routing policy, or private project operations
 - the technique-layer home inside the AoA ontology spine; open [Ecosystem Context](ECOSYSTEM_CONTEXT.md) when the question is why this layer exists separately from skills, playbooks, evals, or runtime repos
@@ -61,6 +62,9 @@ Use it when you want one bounded answer to what to open next without guessing be
 - use `../generated/technique_catalog.min.json` when you need the current machine-readable corpus view
 - the intended growth shape is `1000+` compact, well-classified, template-backed techniques as an early target, with a faceted topology that can grow beyond that without turning `agent-workflows` or `docs` into junk drawers
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`
+- AoA sibling links are allowed as provenance, owner-boundary, and deeper-context
+  routes, but the core technique should remain understandable and reusable by a
+  reader who only checked out this repository
 
 ## Repo-Only Operating Contract
 

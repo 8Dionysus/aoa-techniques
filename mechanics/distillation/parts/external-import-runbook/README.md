@@ -21,6 +21,10 @@ Open this runbook only when all of the following are already true:
 - the pattern's canonical home should be `aoa-techniques`
 - the public-safe extraction path is plausible
 - the candidate is not blocked by an unresolved overlap with an existing technique
+- the candidate can name one atomic move, likely `domain`, primary `kind`, and
+  nearest relation or conflict points
+- the candidate can separate source law, local extraction route, and bridge stop
+  line without making OS Abyss a hidden dependency for portable use
 
 If those checks still fail, stop and record the result in the candidate or review surface instead of drafting a bundle.
 
@@ -28,11 +32,14 @@ If those checks still fail, stop and record the result in the candidate or revie
 
 1. Triage the donor.
    - name the reusable object being extracted
+   - name the atomic move and likely topology posture
    - name the nearest existing technique or overlap watch
+   - name the source law, local extraction route, and bridge stop line
    - state what stays out of the donor
 2. Confirm canonical-home fit.
    - keep technique meaning here
    - route skills, eval doctrine, routing policy, role contracts, memory semantics, and private operations back to their owning layers
+   - keep AoA-only integration detail out of the portable technique center
 3. Draft the bundle.
    - create or update `TECHNIQUE.md`
    - add the smallest useful example, check, and note set
@@ -69,6 +76,12 @@ Do not add extra notes just to imitate a later canonical bundle. Add only what t
 For every import issue or PR, name these explicitly:
 
 - nearest existing technique or overlap watch
+- atomic move
+- likely `domain` and primary `kind`
+- likely family or reason no family is stable yet
+- capability class, substrate, execution profile, and risk posture
+- source law, local extraction route, and bridge stop line
+- standalone portability note for readers outside OS Abyss
 - what stays out of the donor
 - expected evidence notes and note paths
 - expected generated surfaces
@@ -84,6 +97,8 @@ Do not merge the import if:
 - the candidate is really a skill, eval, routing rule, role contract, or memory object
 - the imported wording carries internal-only URLs, secrets, or project-only operational detail
 - the proposed bundle needs schema growth, graph behavior, or a new domain just to stay coherent
+- the candidate only works when the reader has the whole AoA or OS Abyss stack
+  rather than one portable practice plus local context
 
 ## Hosting-Side Governance Checklist
 

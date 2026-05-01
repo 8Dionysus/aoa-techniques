@@ -28,6 +28,25 @@ candidate needs several independent outcomes, a persistent role, long-running
 state, orchestration policy, or scenario composition, it is no longer one
 technique.
 
+## Standalone Portability Target
+
+`aoa-techniques` is part of OS Abyss, but a technique must not require OS Abyss
+to be useful.
+
+A builder should be able to take one technique, capsule, or bundle into another
+agent system and still understand:
+
+- the move to perform
+- the inputs to provide
+- the output to return
+- the stop line
+- the validation signal
+- the risks and owner-boundary cautions
+
+AoA-specific law, provenance, generated surfaces, or sibling-repo consumers may
+be linked, but they should behave as context and integration help rather than
+as hidden runtime dependencies for the portable practice.
+
 ## Small-Agent Target
 
 The target shape is not only human readability. A well-shaped technique should

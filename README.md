@@ -8,6 +8,19 @@ minimal reproducible unit of engineering practice that can be classified,
 templated, verified, and handed to a small agent after orchestration supplies the
 right context.
 
+This repo has a dual posture:
+
+- standalone public library: a builder should be able to take one technique,
+  capsule, or bundle into their own agent system without deploying OS Abyss or
+  the whole AoA ecosystem
+- AoA organ: inside OS Abyss, the same authored techniques keep stable IDs,
+  topology, provenance, review posture, mechanics, and generated surfaces for
+  sibling repos to consume
+
+AoA references are allowed to explain provenance, owner law, or neighboring
+responsibilities. They should not make the core technique unusable for an
+external reader who only wants the bounded practice.
+
 > Current release: `v0.4.2`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
 ## Start here
@@ -78,6 +91,8 @@ Bad candidates:
 
 ## Core principles
 
+- standalone portability without requiring a full OS Abyss deployment
+- AoA organ fidelity without hiding local dependencies inside portable practice
 - public-safe reusable practice over project-local residue
 - atomic executable moves over chains disguised as techniques
 - faceted topology over overloaded buckets or one giant category tree
