@@ -43,10 +43,12 @@ It does not own:
    `docs/START_HERE.md`.
 2. Read `docs/TECHNIQUE_ATOM_CONTRACT.md`,
    `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and `mechanics/README.md`.
-3. Read the nearest package README for the touched path.
-4. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `legacy/`,
+3. If the work cites an AoA center-side `ORQ-*` request or downstream owner
+   request, read `mechanics/REQUEST_RECEIPTS.md`.
+4. Read the nearest package README for the touched path.
+5. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `legacy/`,
    or `parts/`, use those active route surfaces before opening raw legacy.
-5. For status, release, or promotion changes, also read
+6. For status, release, or promotion changes, also read
    `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, and
    `docs/RELEASING.md`.
 
@@ -59,6 +61,9 @@ It does not own:
 - When a mechanics surface points to another AoA owner, name the owner route
   and stop-line only as much as the current surface needs. Do not import sibling
   authority or turn boundary notes into a local doctrine block.
+- When a mechanics surface answers an AoA center-side owner request, keep the
+  local receipt in `mechanics/REQUEST_RECEIPTS.md` and do not treat the request
+  packet as local acceptance or landing.
 - Before a mechanics candidate becomes a technique bundle, the active surface
   should be able to name the atomic move, likely `domain`, likely `kind`,
   likely family or reason no family is stable yet, capability class, substrate,

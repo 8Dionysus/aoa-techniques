@@ -1,4 +1,4 @@
-# TECHNIQUE ADOPTION BOUNDARIES
+# Technique Adoption Boundaries
 
 Version: v0.7
 Owner surface: `aoa-techniques`
@@ -8,13 +8,13 @@ Seed family: Experience Adoption Forge
 
 Technique-level boundaries and no-policy-overreach rule.
 
-## Core law
+## Core Law
 
 - Adoption must be explicit.
 - Local owner consent is required.
 - Durable behavior change needs evidence, rollback and retention.
 
-## Lifecycle hooks
+## Lifecycle Hooks
 
 - request
 - readiness
@@ -27,7 +27,7 @@ Technique-level boundaries and no-policy-overreach rule.
 
 - technique_adoption_boundaries
 
-## Stop lines
+## Stop Lines
 
 - No hidden assistant self-adoption.
 - No adoption without local owner consent.
@@ -38,4 +38,8 @@ Technique-level boundaries and no-policy-overreach rule.
 
 ## Notes
 
-This document belongs to the v0.7 downstream adoption wave. It assumes the v0.6 federation harvest has already approved a shared pattern, but it refuses to treat approval as automatic adoption. Adoption is a second sovereign act: local owner consent, compatibility, shadow proof, rollback path, retention watch, and kind-safe projection are required.
+This document belongs to the v0.7 downstream adoption wave. It assumes the v0.6
+federation harvest has already approved a shared pattern, but it refuses to
+treat approval as automatic adoption. Adoption is a second sovereign act: local
+owner consent, compatibility, shadow proof, rollback path, retention watch, and
+kind-safe projection are required.

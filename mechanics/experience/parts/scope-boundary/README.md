@@ -1,6 +1,7 @@
 # Scope Boundary Technique
 
-This v1.1 surface belongs to the **AoA Experience Live Office Expansion and Multi-Release Train**.
+This v1.1 surface belongs to the **AoA Experience Live Office Expansion and
+Multi-Release Train**.
 
 ## Purpose
 
@@ -12,4 +13,7 @@ Live office expansion law lives in [Agents-of-Abyss](https://github.com/8Dionysu
 
 ## Shape
 
-`notary.assistant` remains the first receipt-bearing anchor. `concierge.assistant`, `courier.assistant`, and `monitor.assistant` join through a governed train with compatibility checks, handoff graph, smoke gates, rollback, replay audit, and operator go/no-go.
+`notary.assistant` remains the first receipt-bearing anchor.
+`concierge.assistant`, `courier.assistant`, and `monitor.assistant` join through
+a governed train with compatibility checks, handoff graph, smoke gates,
+rollback, replay audit, and operator go/no-go.
