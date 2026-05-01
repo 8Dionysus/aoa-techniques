@@ -27,6 +27,7 @@ ACTIVE_DISTILLATION_SURFACES = (
 
 RAW_DISTILLATION_RECEIPTS = (
     "mechanics/distillation/legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md",
+    "mechanics/distillation/legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md",
 )
 
 PART_LOCAL_DISTILLATION_READMES = (
@@ -129,6 +130,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("full `24` technique-shaped candidate names", cross_layer)
         self.assertIn("`10` landed from this wave map", cross_layer)
         self.assertIn("remaining `18` candidates here", cross_layer)
+        self.assertIn("## Landed Wave Anchors", cross_layer)
+        self.assertNotIn("## Current Wave Program", cross_layer)
 
         rows = re.findall(r"^\| `([^`]+)` \|", cross_layer, flags=re.MULTILINE)
         self.assertEqual(24, len(rows))
@@ -204,6 +207,42 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertEqual(3, registry["gate_status_counts"]["not_technique_shaped"])
         self.assertEqual({"A": 5, "B": 3, "C": 2}, registry["wave_counts"])
         self.assertIn("recurrence promotion authority", registry["stop_line"])
+
+    def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
+        active = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "cross-layer-candidate-ledger"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        receipt = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "raw"
+            / "CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md"
+        ).read_text(encoding="utf-8")
+        legacy_index = (
+            REPO_ROOT / "mechanics" / "distillation" / "legacy" / "INDEX.md"
+        ).read_text(encoding="utf-8")
+        legacy_log = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "DISTILLATION_LOG.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md", active)
+        self.assertIn("## Current Wave Program", receipt)
+        self.assertIn("1. `profile-preset-composition`", receipt)
+        self.assertIn("1. `skill-vs-command-boundary`", receipt)
+        self.assertIn("1. `versionable-session-transcripts`", receipt)
+        self.assertIn("CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md", legacy_index)
+        self.assertIn("Cross-layer candidate ledger active compaction", legacy_log)
 
     def test_distillation_active_parts_decision_is_discoverable(self) -> None:
         decision = (

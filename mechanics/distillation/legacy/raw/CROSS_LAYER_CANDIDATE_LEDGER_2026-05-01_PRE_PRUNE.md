@@ -7,9 +7,6 @@ Use it when the question is not "which landed technique should I open?", but "wh
 This is an intake and decision surface.
 It does not change technique status, create a new bundle, or authorize import by itself.
 
-The detailed pre-prune receipt is preserved at
-[legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](../../legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md).
-
 ## Scope
 
 - this doc accounts for the full `24` technique-shaped candidate names explicitly proposed in the donor note
@@ -110,36 +107,79 @@ python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/te
 
 None right now. The remaining live sequencing track now sits in the external narrowing lane for `phase-synchronized-agent-handoff`.
 
-## Landed Wave Anchors
+## Current Wave Program
 
-The old wave program is no longer an active execution queue. Waves A, B, and C
-are fully landed; their detailed order, worker-role notes, and seam rationale
-are preserved in the pre-prune receipt.
+The current `future import here` lane is now staged as a wave program rather than a flat next-candidate queue.
 
-Keep these compact anchors active:
+The `already staged elsewhere` candidates keep their inherited placement in the [External Candidate Ledger](../external-candidate-ledger/README.md) and are not remapped here.
 
-- Wave A landed [AOA-T-0035](../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md),
-  [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md),
-  [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md),
-  [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md),
-  and [AOA-T-0039](../../../../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md);
-  keep local lifecycle distinct from profile, rendered-truth, preflight, and
-  additive-benchmark contracts.
-- Wave B landed [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md),
-  [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md),
-  and [AOA-T-0043](../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md),
-  with [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
-  as the external companion; keep curation, boundary, upstream-readiness, and
-  primary-input provenance separate from registry governance, routing policy,
-  retrieval ranking, and graph semantics.
-- Wave C landed [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
-  and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md);
-  [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-  still owns session capture, persistence, and artifact-layer availability.
+Each technique in a wave still lands through its own PR. The wave is a family-level import program, not a multi-technique merge unit.
 
-If future work needs exact wave execution order, use the preserved raw receipt.
+- the main agent owns wave boundaries, final wording, shared generated surfaces, intake or roadmap sync, and `python scripts/release_check.py`
+- before that final release-check path, install local validator deps with `python -m pip install -r requirements-dev.txt`
+- each worker should own only one future bundle directory plus its `notes/`, `checks/`, and `examples/`
+- shared files such as catalog, index, and generated surfaces stay out of worker ownership until a bundle draft is merge-ready
 
-## Implementation Rules
+### Wave A - Runtime Truth And Local Lifecycle
+
+- landed techniques:
+  - [AOA-T-0035](../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md) `profile-preset-composition`
+  - [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) `render-truth-before-startup`
+  - [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) `contextual-host-doctor`
+  - [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) `one-command-service-lifecycle`
+  - [AOA-T-0039](../../../../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) `baseline-first-additive-profile-benchmarks`
+- execution order:
+  1. `profile-preset-composition` (landed as [AOA-T-0035](../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md))
+  2. `render-truth-before-startup` (landed as [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md))
+  3. `contextual-host-doctor` (landed as [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md))
+  4. `one-command-service-lifecycle` (landed as [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md))
+  5. `baseline-first-additive-profile-benchmarks` (landed as [AOA-T-0039](../../../../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md))
+- remaining candidates staged here: `none`
+- external companion now landed as [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) through the [External Candidate Ledger](../external-candidate-ledger/README.md)
+- in scope: profile composition, rendered runtime truth, profile-scoped preflight, additive comparison discipline, and bounded local lifecycle
+- out of scope: deployment orchestration, secret transport, fleet monitoring, memory semantics, and generic launcher or platform doctrine
+- overlap watch: keep [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) as the lifecycle sibling only; do not let it absorb the profile/preset, rendered-truth, or preflight contracts of the other Wave A techniques
+- completion note: Wave A remains fully landed across the cross-layer and external intake surfaces and should stay closed while later sequencing moves elsewhere
+
+### Wave B - Curated Input Surfaces And Capability Boundaries
+
+- landed techniques:
+  - [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) `skill-vs-command-boundary`
+  - [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) `skill-marketplace-curation` as the landed external companion
+  - [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) `upstream-skill-health-checking`
+  - [AOA-T-0043](../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) `multi-source-primary-input-provenance`
+- execution order:
+  1. `skill-vs-command-boundary` (landed as [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md))
+  2. `skill-marketplace-curation` (landed as [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) via the [External Candidate Ledger](../external-candidate-ledger/README.md))
+  3. `upstream-skill-health-checking` (landed as [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md))
+  4. `multi-source-primary-input-provenance` (landed as [AOA-T-0043](../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md))
+- candidates staged here: `none`
+- external companion now landed in the [External Candidate Ledger](../external-candidate-ledger/README.md) as [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
+- in scope: artifact-boundary clarity, curated discoverability, upstream shape and availability checks, and primary-vs-supporting provenance ordering
+- out of scope: registry governance, routing policy, slash-command product semantics, retrieval ranking, and graph semantics
+- overlap watch: keep `skill-marketplace-curation` editorial and discovery-focused; if `multi-source-primary-input-provenance` starts sounding like bridge architecture or retrieval ranking, defer it instead of widening Wave B
+- overlap watch: keep `skill-vs-command-boundary` distinct from [AOA-T-0013](../../../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) and [AOA-T-0027](../../../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md); keep `upstream-skill-health-checking` distinct from [AOA-T-0024](../../../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) and [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md); keep `multi-source-primary-input-provenance` distinct from [AOA-T-0020](../../../../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) and [AOA-T-0021](../../../../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- completion note: Wave B is now fully landed across the cross-layer and external intake surfaces through [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md); the remaining live sequencing track is the active narrowing lane now that Wave C is fully landed through [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
+
+### Wave C - History As Reviewable Artifact
+
+- landed techniques:
+  - [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) `versionable-session-transcripts`
+  - [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) `witness-trace-as-reviewable-artifact`
+- external companion now landed through the [External Candidate Ledger](../external-candidate-ledger/README.md) as [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) `versionable-session-transcripts`
+- prerequisite: keep both techniques artifact-first and do not let them widen into memory substrate, recall surfaces, or hidden instruction authority
+- seam rule: [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) owns capture, persistence, and artifact-layer availability; Wave C may begin only at post-capture artifact shaping, export, or review
+- `AOA-T-0026` keeps ownership of whether sessions are captured, where the local project-scoped artifact layer lives, and whether a reviewer can inspect the saved artifact without hidden runtime state
+- [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns transcript versionability, readable packaging, redactable export, and comparison-ready transcript shaping over an already-saved artifact
+- [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns witness export, citation, and review-packet discipline over an already-saved artifact instead of witness runtime behavior or memory writeback
+- execution order after seam clarification:
+  1. `versionable-session-transcripts` (landed as [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md))
+  2. `witness-trace-as-reviewable-artifact` (landed as [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md))
+- keep the landed pair narrow enough to separate [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) from raw session capture and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) from a new memory kind
+- no-go rule for future siblings: if a draft still needs `save sessions locally` or `derive future instructions` to explain its value, keep Wave C closed
+- completion note: Wave C is now fully landed across the external and cross-layer intake surfaces and should stay closed while later sequencing focuses on the active narrowing lane
+
+## Implementation Rules For The Current Wave Program
 
 - external donors continue to use the normal external-import package in the external intake surface: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/external-import-review.md`, `notes/second-context-adaptation.md`, one checklist, one minimal public-safe example, and the expected generated-surface sync
 - cross-layer or internal-origin candidates here should use donor-appropriate origin and adaptation notes without forcing `external-*` note names where the donor is not actually an external-import case
@@ -216,8 +256,6 @@ derived index as evidence only.
 - these are candidate techniques, not commitments to import
 - a candidate can still be a valid AoA technique even if it currently needs one more extraction pass before it can land here cleanly
 - the original `24`-name donor-note universe is still accounted for here because the intake map keeps `6` inherited external placements, `10` landed imports from the current wave map, and the remaining native candidate lanes visible in one surface
-- the landed Wave A, Wave B, and Wave C families point at their technique
-  bundles while inherited external placements stay in the external intake
-  surface
+- the wave program here now points the landed Wave A, Wave B, and Wave C families at their technique bundles while inherited external placements stay in the external intake surface
 - cross-layer links are provenance and boundary context unless a tracked
   bundle explicitly promotes one portable technique contract

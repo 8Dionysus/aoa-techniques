@@ -31,3 +31,17 @@ the detailed wave execution notes, public donor-read details, and old expected
 first import package.
 
 Candidate counts and verdicts were not changed.
+
+## 2026-05-01 - Cross-layer candidate ledger active compaction
+
+Preserved the active cross-layer candidate ledger before compaction:
+
+- `parts/cross-layer-candidate-ledger/README.md` -> `legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md`
+
+Compacted the active surface so it keeps current route accounting, all `24`
+candidate rows, landed wave anchors, implementation rules, and the reopen gate.
+The preserved receipt keeps detailed Wave A/B/C execution order, worker-role
+notes, and seam rationale.
+
+Candidate counts, verdicts, landed anchors, and registry authority did not
+change.
