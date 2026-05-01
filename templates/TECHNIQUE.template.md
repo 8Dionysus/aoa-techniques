@@ -36,6 +36,28 @@ evidence:
 
 What problem this technique solves.
 
+## Atomic move
+
+Name the one move this technique performs. If the answer needs several
+independent verbs, split the candidate or route it to a skill, playbook, eval,
+or mechanic instead.
+
+## Topology fit
+
+Name the current and likely future classification fit:
+
+- domain:
+- kind:
+- likely family or no stable family yet:
+- likely capability class:
+- likely substrate:
+- execution profile:
+- risk posture:
+
+Only `domain` and `kind` are current frontmatter truth. Treat the remaining
+axes as review notes until the topology contract promotes them into schema,
+generated catalogs, or validators.
+
 ## When to use
 
 - case 1
@@ -59,7 +81,18 @@ What problem this technique solves.
 
 ## Core procedure
 
-Describe the technique step by step.
+Describe the smallest successful application of the technique step by step.
+Keep every step subordinate to the one atomic move above.
+
+## Small-agent execution shape
+
+Describe what a small model should see after orchestration supplies context:
+
+- compact task frame
+- required local facts
+- exact action to take
+- visible stop line
+- minimal verification signal
 
 ## Contracts
 

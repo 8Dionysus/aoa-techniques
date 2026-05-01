@@ -76,6 +76,11 @@ widening the axis.
 ## Growth posture
 
 This repository captures reusable method, not agent destiny.
+The primary technique unit is one atomic executable move, not a chained skill or
+scenario object.
+Classification is faceted: `domain` and `kind` are current frontmatter truth,
+while family, capability, substrate, execution profile, risk posture, and
+relation topology stay explicit design axes until promoted.
 
 Higher layers may later package these techniques into bounded workflows,
 portable proofs, routing hints, continuity support, or longer-horizon
@@ -89,12 +94,14 @@ Before making changes, read in this order:
 1. `README.md`
 2. `ROADMAP.md`
 3. `docs/START_HERE.md`
-4. `mechanics/README.md` when movement surfaces are involved
-5. `WALKTHROUGH.md`
-6. `docs/TECHNIQUE_SELECTION.md`
-7. `docs/TECHNIQUE_KIND_GUIDE.md`
-8. the target `techniques/**/TECHNIQUE.md`
-9. any generated catalogs, capsules, feat-card surfaces, or source-lift outputs affected by the change
+4. `docs/TECHNIQUE_ATOM_CONTRACT.md`
+5. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+6. `mechanics/README.md` when movement surfaces are involved
+7. `WALKTHROUGH.md`
+8. `docs/TECHNIQUE_SELECTION.md`
+9. `docs/TECHNIQUE_KIND_GUIDE.md`
+10. the target `techniques/**/TECHNIQUE.md`
+11. any generated catalogs, capsules, feat-card surfaces, or source-lift outputs affected by the change
 
 Then branch by task:
 

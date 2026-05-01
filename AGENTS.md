@@ -7,13 +7,16 @@ Root route card for `aoa-techniques`.
 `aoa-techniques` is the public practice canon of AoA.
 It stores reusable, sanitized, bounded, reviewable engineering techniques that can later be lifted into skills, evals, routing, KAG exports, or other derived artifacts.
 A technique is a portable unit of method, not a skill bundle, proof surface, questline, or agent identity.
+The primary unit is an atomic executable move: one compact technique should be small enough to classify, template, and hand to a small agent after orchestration supplies the right context.
+Technique classification is faceted: `domain` and `kind` are current frontmatter truth, while family, capability, substrate, execution profile, risk posture, and relation topology should stay explicit design axes instead of being collapsed into tags.
 
 ## Owner lane
 
 This repository owns:
 
 - technique bundle meaning, IDs, intent, contracts, and adaptation notes
-- public-safe technique wording and kind/domain selection
+- public-safe technique wording and topology selection, including current
+  domain/kind truth and future family/capability/substrate/risk axes
 - owner-local participation in AoA cross-mechanics around reusable practice movement
 - generated technique catalogs, capsules, feat-card reader surfaces, and source-lift surfaces
 
@@ -27,13 +30,15 @@ It does not own:
 1. `README.md`
 2. `ROADMAP.md`
 3. `docs/START_HERE.md`
-4. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
-5. `WALKTHROUGH.md`
-6. `docs/TECHNIQUE_SELECTION.md`
-7. `docs/TECHNIQUE_KIND_GUIDE.md`
-8. the target `techniques/**/TECHNIQUE.md`
-9. affected generated catalogs, capsules, feat cards, or source-lift outputs
-10. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
+4. `docs/TECHNIQUE_ATOM_CONTRACT.md`
+5. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+6. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
+7. `WALKTHROUGH.md`
+8. `docs/TECHNIQUE_SELECTION.md`
+9. `docs/TECHNIQUE_KIND_GUIDE.md`
+10. the target `techniques/**/TECHNIQUE.md`
+11. affected generated catalogs, capsules, feat cards, or source-lift outputs
+12. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
 
 
 ## AGENTS stack law
@@ -48,6 +53,7 @@ It does not own:
 ## Route away when
 
 - the object is an executable workflow, not a reusable practice
+- the object needs a chain of several independent moves instead of one atomic technique
 - the change is proof, routing, memory, role, playbook, KAG, or stats meaning
 - the idea is vague philosophy without an operational method
 

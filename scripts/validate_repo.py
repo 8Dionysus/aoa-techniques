@@ -1636,8 +1636,8 @@ def validate_family_seed_alignment(repo_root: Path) -> None:
         fail(f"{seed_path}: schema_version must be 1")
     if seed.get("axis_name") != "technique_family":
         fail(f"{seed_path}: axis_name must stay 'technique_family'")
-    if seed.get("status") != "optional-wave1-seed":
-        fail(f"{seed_path}: status must stay 'optional-wave1-seed'")
+    if seed.get("status") != "scout-foundation":
+        fail(f"{seed_path}: status must stay 'scout-foundation'")
     family_seed_entries_by_id(seed, seed_path)
 
 

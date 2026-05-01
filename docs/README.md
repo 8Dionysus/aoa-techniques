@@ -14,6 +14,8 @@ Choose the path that matches your question:
   - [Start Here](START_HERE.md)
   - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
 - I need to pick a technique now:
+  - [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
+  - [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
   - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
   - [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
   - [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
@@ -185,6 +187,8 @@ These are human-authored guides that define bounded review, metadata, and docume
 
 - [Start Here](START_HERE.md)
 - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
+- [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
+- [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Mechanics](../mechanics/README.md)
@@ -321,6 +325,8 @@ These are outside `docs/` but matter when navigating the repo:
 ## Notes
 
 - Prefer [Start Here](START_HERE.md) when the question is "where should I begin inside this repo before choosing a deeper surface?"
+- Prefer [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is "what counts as one technique instead of a skill, playbook, or chain?"
+- Prefer [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is "which classes, families, categories, or axes should organize a large technique corpus?"
 - Prefer generated reader surfaces when the question is "what should I inspect next?"
 - Prefer `TECHNIQUE_SECTIONS.md` when the question is "which published techniques expose this lifted section heading?"
 - Prefer `../generated/technique_sections.full.json` when the question is "which exact technique section should I expand next?"

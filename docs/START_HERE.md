@@ -8,13 +8,18 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 - the public practice canon of AoA
 - the source of truth for technique meaning, IDs, bounded contracts, adaptation notes, and generated technique surfaces built from those authored sources
+- the home for atomic executable moves: one technique should be compact enough to classify, template, verify, and hand to a small agent after orchestration supplies the right context
+- the owner of the technique topology contract: `domain` and `kind` are current frontmatter truth, while family, capability, substrate, execution profile, risk posture, and relation topology are explicit design axes for future scale
 - a repository for reusable techniques, not for bounded execution workflows, verdict logic, routing policy, or private project operations
 - the technique-layer home inside the AoA ontology spine; open [Ecosystem Context](ECOSYSTEM_CONTEXT.md) when the question is why this layer exists separately from skills, playbooks, evals, or runtime repos
 
 ## If You Need One Technique Now
 
+- open [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is whether a candidate is one atomic technique or a skill/playbook/chain wearing technique clothing
+- open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is how a technique should be classified beyond the first `domain` and `kind`
 - open [`plan-diff-apply-verify-report`](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
 - open [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md) when the question is how the selection family stays bounded before you trust any chooser surface
+- open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) before proposing new classes, families, categories, or schema axes
 - open [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md) when the second selector axis or a kind tie-break matters
 - open [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md) when a neighboring AoA repo needs the bounded `domain + kind` handoff
 - open [Technique Selection](TECHNIQUE_SELECTION.md) for one bounded pick by domain and current defaults
@@ -54,6 +59,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - current corpus posture is generated from `../generated/technique_catalog.min.json` and the selection surfaces, not hand-maintained here
 - open `TECHNIQUE_SELECTION.md` for the live domain/kind/status split before you trust any snapshot count
 - use `../generated/technique_catalog.min.json` when you need the current machine-readable corpus view
+- the intended growth shape is `1000+` compact, well-classified, template-backed techniques as an early target, with a faceted topology that can grow beyond that without turning `agent-workflows` or `docs` into junk drawers
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`
 
 ## Repo-Only Operating Contract
@@ -61,7 +67,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - `pick`: choose one route from this page, `TECHNIQUE_SELECTION.md`, or `REPO_DOC_SURFACES.md`
 - `inspect`: open one `TECHNIQUE.md`, one guide, or one review surface
 - `expand`: only then open a generated manifest or full markdown section/body
-- `object use`: use the technique meaning or derived routing surface from this repo before jumping to execution or routing repos
+- `object use`: use one atomic technique meaning or derived routing surface from this repo before jumping to execution or routing repos
 
 ## When To Leave This Repo
 

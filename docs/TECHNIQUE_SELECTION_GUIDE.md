@@ -6,6 +6,7 @@ Use it when the question is not which one technique to choose, but how the repo'
 
 See also:
 - [Start Here](START_HERE.md)
+- [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
 - [Technique Selection](TECHNIQUE_SELECTION.md)
 - [Selection Patterns](SELECTION_PATTERNS.md)
 - [`../generated/technique_catalog.json`](../generated/technique_catalog.json)
@@ -48,6 +49,9 @@ The selection family stays bounded to shallow bundle-routing knowledge:
 The family is allowed to help a reader choose one next technique or one nearby cluster.
 It is not allowed to replace `TECHNIQUE.md`, semantic review docs, or bundle-local notes as the source of meaning.
 `domain` stays the first routing cut, while `kind` is the bounded second cut inside that owner layer.
+The wider topology contract may add future axes such as family, capability
+class, substrate, execution profile, and risk posture, but this selection
+family only uses axes that are current source or validator truth.
 
 If a domain has no canonical default yet, the validator-backed domain-start specs may point to one bounded `promoted` starter for that domain.
 That is a temporary route aid, not a silent promotion.

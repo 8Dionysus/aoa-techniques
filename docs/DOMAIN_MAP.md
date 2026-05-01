@@ -1,6 +1,11 @@
 # Domain Map
 
-This document anchors the bounded meaning of the current `domain` values in technique frontmatter.
+This document anchors the bounded meaning of the current `domain` values in
+technique frontmatter.
+
+For the wider classification system, see
+[Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md). `domain` is the
+first owner and review route, not the whole category system.
 
 ## Current domains
 
@@ -18,6 +23,8 @@ This document anchors the bounded meaning of the current `domain` values in tech
 - Pick the domain that best matches the technique's primary reusable contract, not every place it may be used.
 - Do not create a new domain just to fit one project-shaped bundle.
 - If a technique spans multiple areas, choose the domain that should own the default review vocabulary for that technique.
+- Do not force substrate, capability class, family, or risk posture into
+  `domain`; those are separate topology questions.
 - `system-recovery` owns reusable degraded/reground/recover posture only; it does not own live runtime contracts, repair automation, or source-owned failure meaning.
 - `validation-patterns` owns evidence-led analysis patterns only; it does not replace `aoa-evals`, repo-local receipts, or project-specific remediation policy.
 - `history` owns session or transcript artifact discipline only; memory objects, retrieval semantics, and recall surfaces still belong outside this repo's current ownership boundary.
