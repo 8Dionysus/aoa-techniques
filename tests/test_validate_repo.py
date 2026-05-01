@@ -1161,10 +1161,32 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             / "external-candidate-ledger"
             / "README.md"
         ).read_text(encoding="utf-8")
+        receipt = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "raw"
+            / "EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md"
+        ).read_text(encoding="utf-8")
+
+        for target in (
+            "## Current Active Lane",
+            "`phase_sync_for_agents`",
+            "`phase-synchronized-agent-handoff`",
+            "standalone handoff contract",
+            "phase boundary, packet, continuation permission, and stop/return/escalation rule",
+            "routing, shared context server behavior",
+            "shared context server behavior",
+            "AOA-T-0001",
+            "AOA-T-0023",
+            "bounded-specialist-generation",
+            "## Reopen Rule",
+        ):
+            self.assertIn(target, candidates)
 
         for target in (
             "## Current Narrowing Slice: `phase_sync_for_agents`",
-            "`phase-synchronized-agent-handoff`",
             "### Current donor read stays no-go",
             "public evidence refresh checked on `2026-03-23` across the GitHub README and `agentwise-docs.vercel.app` home",
             "one explicit handoff artifact or status packet",
@@ -1176,15 +1198,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "continuation permission: missing",
             "stop, return, or escalation rule: missing",
             "`checkpoint`, `handoff`, and `packet` still do not appear in the public GitHub README or docs home",
-            "model routing",
-            "shared context server or token optimization",
-            "AOA-T-0001",
-            "AOA-T-0023",
-            "bounded-specialist-generation",
             "`notes/external-origin.md`",
             "`notes/external-import-review.md`",
         ):
-            self.assertIn(target, candidates)
+            self.assertIn(target, receipt)
 
     def test_external_candidates_doc_describes_swarm_execution_roles(self) -> None:
         candidates = (
@@ -1195,6 +1212,24 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             / "external-candidate-ledger"
             / "README.md"
         ).read_text(encoding="utf-8")
+        receipt = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "raw"
+            / "EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md"
+        ).read_text(encoding="utf-8")
+
+        for target in (
+            "old wave notes are no longer active execution instructions",
+            "landed anchors remain useful for route memory",
+            "Wave A external anchor",
+            "Wave B external anchor",
+            "Wave C external anchor",
+            "use the preserved raw receipt",
+        ):
+            self.assertIn(target, candidates)
 
         for target in (
             "the main agent owns wave boundaries, final wording, the cross-doc sequence, shared generated-surface sync, and `python scripts/release_check.py`",
@@ -1206,7 +1241,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "execution role: keep [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor",
             "Shared generated surfaces should be synchronized only after the bundle draft is merge-ready, and only by the main agent.",
         ):
-            self.assertIn(target, candidates)
+            self.assertIn(target, receipt)
 
     def test_cross_layer_candidates_doc_describes_exact_wave_execution_order(self) -> None:
         candidates = (

@@ -44,3 +44,22 @@ Verification lane:
 python -m unittest tests.test_distillation_mechanics_topology
 python scripts/validate_repo.py
 ```
+
+## 2026-05-01 - External candidate ledger compaction
+
+Changed:
+
+- compacted the active external candidate ledger into route, source-status,
+  summary, candidate-accounting, landed-anchor, and reopen-rule sections
+- kept the detailed wave execution notes and donor-read details in the preserved
+  pre-prune receipt
+- kept candidate verdicts, counts, and the `phase_sync_for_agents` narrowing
+  lane unchanged
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```

@@ -24,17 +24,19 @@ the active route just because it exists.
 | Pre-split flat `DONOR_REFINERY_RUBRIC.md` | [parts/donor-refinery](parts/donor-refinery/README.md) | Donor extraction must name pattern, contamination risk, and foreign doctrine before importing reusable practice. |
 | Pre-split flat `EXTERNAL_IMPORT_RUNBOOK.md` plus repo templates | [parts/external-import-runbook](parts/external-import-runbook/README.md) | A donor can move from triage to merge only through explicit overlap checks, evidence notes, generated-surface expectations, validation, and public-safe review. |
 | Pre-split flat `EXTERNAL_TECHNIQUE_CANDIDATES.md`, its 2026-05-01 pre-prune receipt, and named historical `seed_4.txt` / `seed_6.txt` labels whose raw files are not present in the current checkout | [parts/external-candidate-ledger](parts/external-candidate-ledger/README.md) | External donor candidates remain accounted for with explicit landed, hold, incubation, substrate, and narrowing-lane states while the missing raw seed files are treated as historical labels rather than active source files. |
+| [legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md) | [parts/external-candidate-ledger](parts/external-candidate-ledger/README.md) | Detailed wave execution notes, public donor-read details, and old import package expectations are preserved out of the compact active route. |
 | Pre-split flat `CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, sibling donor notes, and incoming wave packets | [parts/cross-layer-candidate-ledger](parts/cross-layer-candidate-ledger/README.md) | Cross-layer candidate pressure stays visible without turning `aoa-techniques` into a second donor backlog. |
 | Pre-split flat `LONG_GAP_CANON_DESIGN.md` plus bundle-local technique evidence | [parts/long-gap-reentry](parts/long-gap-reentry/README.md) | Long-gap promoted material needs new external contracts before another honest canonical review. |
 
 ## Legacy posture
 
 The 2026-05-01 split moved the current flat files into active part homes without
-rewriting candidate verdicts. Because no ledger was pruned in this slice,
-`legacy/raw/` remains reserved for future pre-prune receipts.
+rewriting candidate verdicts. The later external candidate ledger source-status
+and compaction passes preserved the pre-pruned active ledger in `legacy/raw/`
+before shortening the current route surface.
 
-When a future pass compacts a ledger, preserve the pre-pruned accounting in
-`legacy/raw/`, update [legacy/INDEX.md](legacy/INDEX.md), and record the
+When a future pass compacts another ledger, preserve the pre-pruned accounting
+in `legacy/raw/`, update [legacy/INDEX.md](legacy/INDEX.md), and record the
 distillation in [legacy/DISTILLATION_LOG.md](legacy/DISTILLATION_LOG.md).
 
 ## Distillation rule
