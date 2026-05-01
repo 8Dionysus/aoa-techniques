@@ -17,21 +17,9 @@ AoA should refine external donors through this chain:
 `aoa-techniques` owns the extraction of reusable practice from that chain.
 It does not own playbook meaning or eval doctrine.
 
-## Law, Local Route, Bridge
-
-Distillation must keep three layers separate:
-
-- higher law: the source owner or AoA layer that defines authority, meaning,
-  and stop-lines
-- local route: this package's extraction, hold, overlap, incubation, or import
-  path inside `aoa-techniques`
-- bridge: a narrow handoff that names the donor input, extracted output shape,
-  owner boundary, and stop line
-
-A donor may help OS Abyss, but the extracted technique candidate must still be
-portable as a bounded practice. AoA-only law, runtime assumptions, or sibling
-repo integration details should stay as provenance or boundary context, not as
-hidden requirements for the technique.
+Donor intake stays portable: owner references and AoA context explain boundary
+and provenance. The extracted candidate still has to stand as one bounded
+practice outside OS Abyss.
 
 ## Three intake tests
 
@@ -133,20 +121,23 @@ The atom/topology side of the packet is:
 These fields classify the candidate for extraction. They do not promote future
 topology axes into current technique frontmatter authority.
 
-## Law/Local/Bridge Gate
+## Boundary And Portability Gate
 
-The law/local/bridge side of the same packet is:
+The boundary side of the same packet is:
 
 - `higher_law`: the source owner or layer whose authority and stop lines matter
+  for extraction
 - `local_route`: the `aoa-techniques` path for extraction, hold, overlap,
   incubation, import, or rejection
-- `bridge_stop_line`: what the bridge must not carry across
+- `bridge_stop_line`: what must not cross into technique canon
 - `portable_core`: what remains useful outside OS Abyss
 - `aoa_only_context`: what stays as local integration or provenance context
 - donor exclusions: what is intentionally left behind
 
-If this split cannot be named without importing the donor's whole system, keep
-the material in the relevant ledger or incubation lane.
+These registry field names are compact route metadata, not a section template
+for every mechanic. If the boundary cannot be named without importing the
+donor's whole system, keep the material in the relevant ledger or incubation
+lane.
 
 ## Gate Verdicts
 

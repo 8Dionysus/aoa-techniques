@@ -38,9 +38,9 @@ bundle, the active part should be able to name a compact gate packet:
 - the atomic move and the likely `domain` / primary `kind`
 - the family posture, capability class, substrate, execution profile, and risk
   posture
-- `higher_law`, `local_route`, and `bridge_stop_line`
+- source owner or boundary, repo-local handling route, and stop line
 - what remains portable outside OS Abyss and what is only AoA integration
-  context, or `portable_core` and `aoa_only_context`
+  context
 
 If those cannot be named, keep the material here as a candidate, hold,
 incubation lane, or legacy receipt.

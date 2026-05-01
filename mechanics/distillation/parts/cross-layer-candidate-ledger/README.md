@@ -144,9 +144,9 @@ If future work needs exact wave execution order, use the preserved raw receipt.
 - external donors continue to use the normal external-import package in the external intake surface: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/external-import-review.md`, `notes/second-context-adaptation.md`, one checklist, one minimal public-safe example, and the expected generated-surface sync
 - cross-layer or internal-origin candidates here should use donor-appropriate origin and adaptation notes without forcing `external-*` note names where the donor is not actually an external-import case
 - do not reopen `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique` lanes just to fill a wave
-- do not treat a sibling repo's local implementation as higher law for
-  `aoa-techniques`; name source law, local extraction route, and bridge stop
-  line separately
+- do not treat a sibling repo's local behavior as technique authority;
+  name the source owner, extraction route, and stop line only where it changes
+  the candidate route
 - do not draft a bundle until the candidate can name its atomic move, likely
   `domain`, primary `kind`, family posture, capability class, substrate,
   execution profile, risk posture, and standalone portability note
@@ -172,14 +172,13 @@ Atom/topology gate:
 - capability class, substrate, execution profile, and risk posture
 - nearest landed technique, overlap watch, or layer-owner surface
 
-Law/local/bridge gate:
+Boundary/portability gate:
 
 - `higher_law`: the source owner or AoA layer whose authority and stop lines
-  matter
+  matter for extraction
 - `local_route`: why this row stays held, moves to incubation, enters import
   review, or remains closed as landed
-- `bridge_stop_line`: what must not cross from source layer into technique
-  canon
+- `bridge_stop_line`: what must not cross from source layer into technique canon
 - what remains portable outside OS Abyss
 - `aoa_only_context` or equivalent note for local integration context
 - source owner and generated or indexed surfaces expected to change

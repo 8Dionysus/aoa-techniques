@@ -20,13 +20,6 @@ turning queue pressure into canonical status.
   promotion by themselves
 - Audit can name blockers and route work, but it does not silently flip
   technique status
-
-## Law, Local Route, Bridge
-
-- higher law: canonical review doctrine and bundle-local evidence notes
-- local route: this package's readiness matrix, promotion runbook, evidence
-  sprint runbook, and searched-lane ledger
-- bridge: compact references from queue surfaces back to exact bundle evidence,
-  external evidence, and generated status summaries
-
-The bridge stops before proof doctrine or final promotion authority.
+- Queue links should point back to exact bundle evidence, external evidence, or
+  generated summaries without becoming proof doctrine or final promotion
+  authority.

@@ -301,7 +301,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         for text in (donor_refinery, external_runbook):
             with self.subTest(surface=text.splitlines()[0]):
                 self.assertIn("Atom/Topology", text)
-                self.assertIn("Law/Local/Bridge", text)
+                self.assertIn("Boundary", text)
                 self.assertIn("atomic_move_note", text)
                 self.assertIn("atomic_move_status", text)
                 self.assertIn("capability_class", text)
@@ -343,7 +343,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             with self.subTest(surface=text.splitlines()[0]):
                 self.assertIn("## Reopen Gate", text)
                 self.assertIn("Atom/topology gate", text)
-                self.assertIn("Law/local/bridge gate", text)
+                self.assertIn("Boundary/portability gate", text)
                 self.assertIn("atomic_move_note", text)
                 self.assertIn("atomic_move_status", text)
                 self.assertIn("higher_law", text)
@@ -365,9 +365,33 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Distillation Gate Alignment", decision)
         self.assertIn("gate packet", decision)
         self.assertIn("atom/topology", decision)
-        self.assertIn("law/local/bridge", decision)
+        self.assertIn("boundary/portability", decision)
         self.assertIn("generated registries remain", decision)
         self.assertIn("evidence only", decision)
+
+    def test_mechanics_boundary_language_correction_is_discoverable(self) -> None:
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-01-mechanics-boundary-language-correction.md"
+        ).read_text(encoding="utf-8")
+
+        mechanics_readme = (REPO_ROOT / "mechanics" / "README.md").read_text(
+            encoding="utf-8"
+        )
+        agon_readme = (
+            REPO_ROOT / "mechanics" / "agon" / "README.md"
+        ).read_text(encoding="utf-8")
+        audit_direction = (
+            REPO_ROOT / "mechanics" / "audit" / "DIRECTION.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Mechanics Boundary Language Correction", decision)
+        self.assertIn("not an instruction to copy", decision)
+        self.assertNotIn("## Law, Local Form, Bridges", mechanics_readme)
+        self.assertNotIn("### Law, local route, bridge", agon_readme)
+        self.assertNotIn("## Law, Local Route, Bridge", audit_direction)
 
 
 if __name__ == "__main__":
