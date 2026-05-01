@@ -1,0 +1,67 @@
+schema_version: work_quest_v1
+id: AOA-TECH-Q-0007
+title: Reanchor Agents-of-Abyss v0.4.0 technique follow-through at promotion readiness
+summary: Keep the Agents-of-Abyss v0.4.0 closeout technique-shaped growth trail
+  visible at the technique layer without promoting one release closeout into a
+  new technique bundle or skill workflow.
+repo: aoa-techniques
+owner_surface: docs/REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md
+theme_ref: ''
+milestone_ref: ''
+kind: harvest
+state: captured
+band: near
+difficulty: d3_seam
+risk: r2_contract
+control_mode: human_codex_copilot
+delegate_tier: planner
+fallback_tier: verifier
+wrapper_class: codex_primary
+write_scope: repo_local
+split_required: true
+complexity_basis:
+  scope: 2
+  ambiguity: 2
+  boundary: 2
+  verification: 1
+parent: null
+depends_on:
+  - AOA-TECH-Q-0006
+activation:
+  mode: on_review_of
+  ref: session:2026-04-24T00-40-24-854570Z-Agents-of-Abyss-checkpoint-growth-6737c0da-e58
+  note: open when the AoA v0.4.0 release closeout preserves a technique-shaped
+    growth trail without proving a reusable technique yet
+anchor_ref:
+  artifact: reviewed_closeout_promotion_readiness_incubation
+  ref: docs/REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md
+  note: keep the next move at technique promotion-readiness and donor
+    follow-through rather than false skill ownership
+handoff_role: technique-maintainer
+evidence:
+  - candidate:growth:aoa-techniques-commit-code survived the AoA v0.4.0 release
+    closeout as a technique-shaped owner hint
+  - the candidate is adjacent to technique promotion readiness, but one center
+    release does not yet prove a durable technique bundle
+  - owner handoff marked skill as the nearest wrong target for this kind of
+    follow-through, so the route needs technique-side reanchor first
+harvest:
+  target: technique
+  trigger_count: 3
+  note: consider a new technique or readiness-lane expansion only if another
+    reviewed center release or owner follow-through route preserves the same
+    technique-shaped pressure with a reusable method boundary
+opened_at: '2026-05-01'
+touched_at: '2026-05-01'
+tags:
+  - agents-of-abyss
+  - release
+  - technique
+  - promotion-readiness
+  - reanchor
+notes: >
+  The honest owner move here is not a fresh technique bundle on one release
+  closeout. Keep the signal in the promotion-readiness and donor-follow-through
+  lane until another reviewed route proves that the same reusable method really
+  repeats.
+public_safe: true

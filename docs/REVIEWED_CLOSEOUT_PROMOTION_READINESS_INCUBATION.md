@@ -71,3 +71,12 @@ session.
 - if that repeat arrives, extract the smallest reusable contract rather than a
   whole promotion bureaucracy
 - until then, preserve the candidate here as incubation only
+
+## 2026-05-01 Reinforcement
+
+The `Agents-of-Abyss` v0.4.0 release closeout preserved
+`candidate:growth:aoa-techniques-commit-code` as another technique-shaped owner
+hint.
+That repeat strengthens the promotion-readiness incubation lane, but it still
+does not prove a canonical technique bundle. The active owner move is tracked as
+`AOA-TECH-Q-0007` until a later route supplies a reusable method boundary.
