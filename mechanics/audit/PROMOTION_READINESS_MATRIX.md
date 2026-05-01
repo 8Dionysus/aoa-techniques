@@ -4,7 +4,7 @@ This doc records the current bundle-by-bundle promotion queue for the `promoted`
 
 Use it when the question is not "which repo-wide closure wave should open next?", but "which promoted bundle can be honestly strengthened next, and what proof is still missing before `promoted -> canonical` is real?"
 
-This doc complements [Roadmap](../../ROADMAP.md) and [Long-Gap Canon Design](../distillation/LONG_GAP_CANON_DESIGN.md).
+This doc complements [Roadmap](../../ROADMAP.md) and [Long-Gap Canon Design](../distillation/parts/long-gap-reentry/README.md).
 Bundle meaning still lives in each `TECHNIQUE.md` and `notes/canonical-readiness.md`.
 For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md).
 
@@ -23,7 +23,7 @@ For the current actionable first wave, open [Promotion Wave A Runbook](PROMOTION
 The March 31 manual-first questbook pilot closed `AOA-TECH-Q-0002` by carrying one
 surviving donor and promotion debt forward without widening technique bodies.
 
-- The active narrowing lane stays visible in [Cross-Layer Technique Candidates](../distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as `phase-synchronized-agent-handoff`, rather than being promoted into a premature technique import.
+- The active narrowing lane stays visible in [Cross-Layer Technique Candidates](../distillation/parts/cross-layer-candidate-ledger/README.md) as `phase-synchronized-agent-handoff`, rather than being promoted into a premature technique import.
 - The proof-alignment follow-through moved outward to the sibling source/proof quests `AOA-SK-Q-0002` and `AOA-EV-Q-0002`, instead of bloating this matrix into a cross-repo backlog.
 - This matrix keeps readiness and donor signals readable, while `QUESTBOOK.md` carries only the deferred obligations that survive the bounded review.
 

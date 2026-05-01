@@ -9,8 +9,8 @@ Use the staging surfaces in `incoming/chat-wave-3-handoff-bounded-continuation/`
 ## Read first
 
 1. `README.md` at repo root
-2. `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`
-3. `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`
+2. `mechanics/distillation/parts/donor-refinery/README.md`
+3. `mechanics/distillation/parts/external-import-runbook/README.md`
 4. `TECHNIQUE_INDEX.md`
 5. `incoming/chat-wave-3-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_3.md`
 6. `incoming/chat-wave-3-handoff-bounded-continuation/docs/CHAT_WAVE_3_PLANTING_ORDER.md`

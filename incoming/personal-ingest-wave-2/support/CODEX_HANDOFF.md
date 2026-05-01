@@ -9,8 +9,8 @@ Use the staging surfaces in `incoming/personal-ingest-wave-2/` to help the opera
 ## Read first
 
 1. `README.md` at repo root
-2. `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`
-3. `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`
+2. `mechanics/distillation/parts/donor-refinery/README.md`
+3. `mechanics/distillation/parts/external-import-runbook/README.md`
 4. `TECHNIQUE_INDEX.md`
 5. `incoming/personal-ingest-wave-2/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_INGEST_WAVE_2.md`
 6. `incoming/personal-ingest-wave-2/docs/PERSONAL_INGEST_WAVE_2_PLANTING_ORDER.md`

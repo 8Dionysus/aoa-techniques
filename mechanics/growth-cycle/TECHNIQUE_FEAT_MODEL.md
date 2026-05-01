@@ -19,7 +19,7 @@ The owner surfaces remain:
 - `generated/technique_capsules*.json`
 - `generated/technique_sections.full.json`
 - `docs/CANONICAL_RUBRIC.md`
-- `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`
+- `mechanics/distillation/parts/donor-refinery/README.md`
 - `mechanics/audit/EXTERNAL_EVIDENCE_*`
 - `WALKTHROUGH.md`
 

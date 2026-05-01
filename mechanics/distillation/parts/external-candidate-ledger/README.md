@@ -11,17 +11,17 @@ It does not change technique status, create a new bundle, or authorize import by
 
 - this doc tracks the remaining `13` external donor-derived candidates
 - it excludes the already-landed external imports:
-  - [AOA-T-0012](../../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
-  - [AOA-T-0013](../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
-  - [AOA-T-0023](../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
-  - [AOA-T-0028](../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
-  - [AOA-T-0024](../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
-  - [AOA-T-0025](../../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
-  - [AOA-T-0027](../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
-  - [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-  - [AOA-T-0038](../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
-  - [AOA-T-0041](../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
-  - [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
+  - [AOA-T-0012](../../../../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
+  - [AOA-T-0013](../../../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+  - [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+  - [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+  - [AOA-T-0024](../../../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
+  - [AOA-T-0025](../../../../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
+  - [AOA-T-0027](../../../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
+  - [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+  - [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
+  - [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
+  - [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
 - current donor pool represented here:
   - `n-skills`
   - `agents-md`
@@ -66,20 +66,20 @@ It does not change technique status, create a new bundle, or authorize import by
 
 Most recent landings from this backlog:
 
-- [AOA-T-0045](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
-- [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
-- [AOA-T-0041](../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
-- [AOA-T-0038](../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
-- [AOA-T-0029](../../techniques/docs/nested-rule-loading/TECHNIQUE.md)
-- [AOA-T-0030](../../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
-- [AOA-T-0031](../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
-- [AOA-T-0032](../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
-- [AOA-T-0027](../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
-- [AOA-T-0028](../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+- [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
+- [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
+- [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
+- [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
+- [AOA-T-0029](../../../../techniques/docs/nested-rule-loading/TECHNIQUE.md)
+- [AOA-T-0030](../../../../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
+- [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
+- [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+- [AOA-T-0027](../../../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
+- [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
 
 Current history watch:
 
-- keep `project_memory_bootstrap` out of the immediate next wave against [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md); the Wave C history pair now lands through [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
+- keep `project_memory_bootstrap` out of the immediate next wave against [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md); the Wave C history pair now lands through [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
 
 ## Current Wave Placement
 
@@ -93,42 +93,42 @@ The goal is to keep the import path coherent by family while still landing one t
 - before that final release-check path, install local validator deps with `python -m pip install -r requirements-dev.txt`
 - each worker handles one technique at a time, with one bundle draft, one evidence package, and one PR-sized scope
 - external anchors are execution seeds, not merge units: they mark which candidate opens the wave, while the rest of the family follows under the same boundary
-- execution role: keep [AOA-T-0038](../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) as the landed Wave A lifecycle anchor inside the now-complete runtime family after `profile-preset-composition`, `render-truth-before-startup`, `contextual-host-doctor`, and `baseline-first-additive-profile-benchmarks` fixed the sibling boundaries
+- execution role: keep [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) as the landed Wave A lifecycle anchor inside the now-complete runtime family after `profile-preset-composition`, `render-truth-before-startup`, `contextual-host-doctor`, and `baseline-first-additive-profile-benchmarks` fixed the sibling boundaries
 - execution note: Wave A remains fully landed across the external and cross-layer intake surfaces; keep `AOA-T-0038` as the lifecycle sibling only and do not reopen launcher doctrine while later sequencing moves elsewhere
-- execution role: keep [AOA-T-0041](../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) as the landed Wave B external curation anchor after [AOA-T-0040](../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) clarified the reusable-skill versus user-invocation seam
-- execution note: Wave B is now fully landed across both intake surfaces through [AOA-T-0040](../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md); keep the next sequencing on the narrowing lane and the closed Wave C seam rather than reopening marketplace, registry, or bridge doctrine
-- Wave C is now fully landed across the external and cross-layer intake surfaces through [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md); keep later sequencing on the narrowing lane and the closed seam around [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- execution role: keep [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) as the landed Wave B external curation anchor after [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) clarified the reusable-skill versus user-invocation seam
+- execution note: Wave B is now fully landed across both intake surfaces through [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md); keep the next sequencing on the narrowing lane and the closed Wave C seam rather than reopening marketplace, registry, or bridge doctrine
+- Wave C is now fully landed across the external and cross-layer intake surfaces through [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md); keep later sequencing on the narrowing lane and the closed seam around [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 - `phase_sync_for_agents` stays outside the waves as a narrowing lane and does not block Wave A or Wave B
 - latest public donor read for `phase_sync_for_agents` still presents phase sync inside broad orchestration, routing, shared context, monitoring, and token-optimization posture rather than as a standalone handoff contract
 
 ### Wave A - Runtime Truth And Local Lifecycle
 
-- external wave anchor here is now landed as [AOA-T-0038](../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) `one-command-service-lifecycle`
-- Wave A is now fully landed across both intake surfaces with [AOA-T-0035](../../techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), and [AOA-T-0039](../../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) tracked in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](CROSS_LAYER_TECHNIQUE_CANDIDATES.md)
+- external wave anchor here is now landed as [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) `one-command-service-lifecycle`
+- Wave A is now fully landed across both intake surfaces with [AOA-T-0035](../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), and [AOA-T-0039](../../../../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) tracked in the [Cross-Layer Candidate Ledger](../cross-layer-candidate-ledger/README.md)
 - shared in-scope boundary for the full wave: profile composition, rendered runtime truth, profile-scoped preflight, additive comparison discipline, and bounded local lifecycle
 - shared out-of-scope boundary for the full wave: deployment orchestration, secret transport, fleet monitoring, memory semantics, and generic launcher or platform doctrine
 
 ### Wave B - Curated Input Surfaces And Capability Boundaries
 
-- external wave anchor here is now landed as [AOA-T-0041](../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) `skill-marketplace-curation`
-- cross-layer opener now landed as [AOA-T-0040](../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) `skill-vs-command-boundary`
-- the remaining native family stays staged in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as the source/discovery/boundary cluster
-- source-readiness sibling now landed as [AOA-T-0042](../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) `upstream-skill-health-checking`
-- provenance-ordering sibling now landed as [AOA-T-0043](../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) `multi-source-primary-input-provenance`
+- external wave anchor here is now landed as [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) `skill-marketplace-curation`
+- cross-layer opener now landed as [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) `skill-vs-command-boundary`
+- the remaining native family stays staged in the [Cross-Layer Candidate Ledger](../cross-layer-candidate-ledger/README.md) as the source/discovery/boundary cluster
+- source-readiness sibling now landed as [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) `upstream-skill-health-checking`
+- provenance-ordering sibling now landed as [AOA-T-0043](../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) `multi-source-primary-input-provenance`
 - Wave B is now fully landed across both intake surfaces
 - shared in-scope boundary for the full wave: curated discoverability, artifact-boundary clarity, upstream shape and availability checks, and primary-vs-supporting provenance ordering
 - shared out-of-scope boundary for the full wave: registry governance, routing policy, slash-command product semantics, retrieval ranking, and graph semantics
 
 ### Wave C - History As Reviewable Artifact
 
-- external wave anchor here is now landed as [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) `versionable-session-transcripts`
-- the cross-layer companion now lands in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as [AOA-T-0045](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) `witness-trace-as-reviewable-artifact`
+- external wave anchor here is now landed as [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) `versionable-session-transcripts`
+- the cross-layer companion now lands in the [Cross-Layer Candidate Ledger](../cross-layer-candidate-ledger/README.md) as [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) `witness-trace-as-reviewable-artifact`
 - prerequisite for the full wave: keep the techniques artifact-first and do not let them widen into memory substrate, recall surfaces, or hidden instruction authority
-- keep the landed pair behind the same seam around [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) now that both post-capture history siblings are extracted
-- execution role: keep [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor and do not let it collapse back into first-save capture or widen into hosted sharing and rule-derivation behavior
+- keep the landed pair behind the same seam around [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) now that both post-capture history siblings are extracted
+- execution role: keep [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor and do not let it collapse back into first-save capture or widen into hosted sharing and rule-derivation behavior
 - `AOA-T-0026` keeps ownership of whether a session gets captured at all, where the project-scoped artifact home lives, and whether local-first artifact availability exists without cloud dependence
-- [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns the post-capture transcript packaging sibling: selected conversations can be combined, reviewed, edited, and preserved as readable Markdown artifacts for commit or sharing without reopening capture semantics
-- [AOA-T-0045](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns post-capture witness export, citation, and review-packet discipline over an existing artifact without becoming runtime witness generation, memory writeback, or future-instruction derivation
+- [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns the post-capture transcript packaging sibling: selected conversations can be combined, reviewed, edited, and preserved as readable Markdown artifacts for commit or sharing without reopening capture semantics
+- [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns post-capture witness export, citation, and review-packet discipline over an existing artifact without becoming runtime witness generation, memory writeback, or future-instruction derivation
 
 ### Active Narrowing Lane, Not A Wave Yet
 
@@ -140,7 +140,7 @@ The goal is to keep the import path coherent by family while still landing one t
 
 ## Ready To Distill Here
 
-None right now. The current strict-safe lane has already been landed into [AOA-T-0027](../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) and [AOA-T-0028](../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md).
+None right now. The current strict-safe lane has already been landed into [AOA-T-0027](../../../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) and [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md).
 
 ## Future Import Here
 
@@ -152,10 +152,10 @@ None right now. The current strict-safe lane has already been landed into [AOA-T
 
 | seed candidate | donor | suggested technique name | tentative domain | overlap note | next move |
 |---|---|---|---|---|---|
-| `external_sync_manifest` | `n-skills` | `external-sync-manifest` | `docs` | too close to [AOA-T-0024](../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md), which already covers explicit upstream mirroring plus provenance | reopen only if a clean contract emerges that is about sync control rather than provenance-backed mirroring |
-| `project_memory_bootstrap` | `OpenMemory-Code` | `project-history-bootstrap` | `history` | too close to [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) unless it is narrowed to history bootstrap without memory-substrate semantics | reopen only if the seed can be reduced to local-first history bootstrapping and nothing more |
-| `context_injection_for_coding_agents` | `agents-md` | `bounded-context-injection-for-coding-agents` | `docs` | currently overlaps both [AOA-T-0012](../../techniques/docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0023](../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | reopen only if injection itself becomes the distinct contract rather than composition or one-shot execution |
-| `single_step_agent` | `qqqa` | `single-step-confirmed-agent-action` | `agent-workflows` | currently too close to [AOA-T-0023](../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | reopen only if the true center becomes the one-step mutating boundary, not generic stateless invocation |
+| `external_sync_manifest` | `n-skills` | `external-sync-manifest` | `docs` | too close to [AOA-T-0024](../../../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md), which already covers explicit upstream mirroring plus provenance | reopen only if a clean contract emerges that is about sync control rather than provenance-backed mirroring |
+| `project_memory_bootstrap` | `OpenMemory-Code` | `project-history-bootstrap` | `history` | too close to [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) unless it is narrowed to history bootstrap without memory-substrate semantics | reopen only if the seed can be reduced to local-first history bootstrapping and nothing more |
+| `context_injection_for_coding_agents` | `agents-md` | `bounded-context-injection-for-coding-agents` | `docs` | currently overlaps both [AOA-T-0012](../../../../techniques/docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | reopen only if injection itself becomes the distinct contract rather than composition or one-shot execution |
+| `single_step_agent` | `qqqa` | `single-step-confirmed-agent-action` | `agent-workflows` | currently too close to [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | reopen only if the true center becomes the one-step mutating boundary, not generic stateless invocation |
 
 ## Needs Layer Incubation Before Distillation Here
 
@@ -233,8 +233,8 @@ Treat `phase_sync_for_agents` as the active seed-refinement lane because it is a
 
 ### Nearest overlap watch
 
-- [AOA-T-0001](../../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) remains the broader multi-step change workflow; this seed should own cross-agent checkpoint and handoff seams, not the whole plan/verify/report loop
-- [AOA-T-0023](../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) remains the single-shot fast path; it may be a source or sink of a handoff, but it is not the handoff contract itself
+- [AOA-T-0001](../../../../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) remains the broader multi-step change workflow; this seed should own cross-agent checkpoint and handoff seams, not the whole plan/verify/report loop
+- [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) remains the single-shot fast path; it may be a source or sink of a handoff, but it is not the handoff contract itself
 - `bounded-specialist-generation` remains an adjacent incubation lane and must stay out of scope until specialist creation can be separated cleanly from handoff discipline
 
 ### Honest reopen trigger

@@ -28,7 +28,7 @@ parent: null
 depends_on: []
 activation:
   mode: on_review_of
-  ref: mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md
+  ref: mechanics/distillation/parts/cross-layer-candidate-ledger/README.md
   note: open when a deferred follow-up survives review or promotion triage
 anchor_ref:
   artifact: promotion-readiness-matrix

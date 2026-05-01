@@ -16,8 +16,8 @@ This note shows how `QUESTBOOK.md` fits into `aoa-techniques` without turning th
 
 Use stable anchors such as:
 - `mechanics/audit/PROMOTION_READINESS_MATRIX.md`
-- `mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
-- `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`
+- `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md`
+- `mechanics/distillation/parts/donor-refinery/README.md`
 - `generated/technique_capsules.min.json`
 - `docs/KAG_EXPORT.md`
 - `generated/repo_doc_surface_manifest.json`

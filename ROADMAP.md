@@ -130,8 +130,8 @@ Historical note:
   - `qqqa` now also lands the adjacent [AOA-T-0031](techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) import as a bounded shell-composability technique rather than as proof for `AOA-T-0023`
   - `agents-md` now also lands the adjacent [AOA-T-0032](techniques/evaluation/context-report-for-ci/TECHNIQUE.md) import as a bounded CI-facing report technique rather than as proof for `AOA-T-0012`
   - [AOA-T-0044](techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now land the post-capture history-artifact pair around [AOA-T-0026](techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md), while `project_memory_bootstrap` remains outside the immediate wave as a history-overlap watch
-- the remaining `13` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](mechanics/distillation/EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
-- the `24` cross-layer candidates pulled from the Dionysus donor note are now staged in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as `already staged elsewhere`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+- the remaining `13` external donor-derived seed ideas are now staged in the [External Candidate Ledger](mechanics/distillation/parts/external-candidate-ledger/README.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+- the `24` cross-layer candidates pulled from the Dionysus donor note are now staged in the [Cross-Layer Candidate Ledger](mechanics/distillation/parts/cross-layer-candidate-ledger/README.md) as `already staged elsewhere`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
 - the current `future import here` lane is now staged as a wave program rather than a flat queue:
   - Wave A: runtime truth and local lifecycle, now fully landed across [AOA-T-0035](techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), [AOA-T-0038](techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md), and [AOA-T-0039](techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md), with exact candidate membership split across the external and cross-layer intake surfaces and bounded to profile composition, rendered truth, profile-scoped preflight, additive comparison discipline, and local lifecycle
   - Wave B: curated input surfaces and capability boundaries, now fully landed across [AOA-T-0040](techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md), with exact candidate membership split across the external and cross-layer intake surfaces and bounded to curated discoverability, artifact boundaries, upstream shape and availability checks, and primary-vs-supporting provenance ordering
@@ -344,7 +344,7 @@ No current repo-owned doc appears to overclaim ownership of skills, evals, or ro
 
 ### Wave 4C - Long-Gap Backlog Design Audit
 
-Verdict on [LONG_GAP_CANON_DESIGN.md](mechanics/distillation/LONG_GAP_CANON_DESIGN.md): `still decision-complete, now with the first donor wave landed for the current three-technique set`
+Verdict on [Long-Gap Reentry](mechanics/distillation/parts/long-gap-reentry/README.md): `still decision-complete, now with the first donor wave landed for the current three-technique set`
 
 Why:
 
@@ -484,7 +484,7 @@ Status: `partially executed`
   - instruction and input-surface live-adopter search: `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`
   - long-gap holds: `AOA-T-0005`, `AOA-T-0022`
   - closed from this older pack and no longer active external-evidence targets here: `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0034`
-  - donor repos named in [LONG_GAP_CANON_DESIGN.md](mechanics/distillation/LONG_GAP_CANON_DESIGN.md) or the open evidence-prep slots above
+  - donor repos named in [Long-Gap Reentry](mechanics/distillation/parts/long-gap-reentry/README.md) or the open evidence-prep slots above
 - tests and validation:
   - donor-repo native validation first
   - then reopen the corresponding notes and reviews in `aoa-techniques`

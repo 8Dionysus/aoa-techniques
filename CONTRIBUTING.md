@@ -52,7 +52,7 @@ It should record `source_repo`, `source_license`, `inspired_by` or `adapted_from
 
 External imports must still be sanitized, reusable, and bounded.
 The provenance note complements the technique document; it does not replace the canonical `TECHNIQUE.md`.
-Use `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md` for the maintainer-facing donor triage -> draft -> review -> merge path.
+Use `mechanics/distillation/parts/external-import-runbook/README.md` for the maintainer-facing donor triage -> draft -> review -> merge path.
 Starter note templates for origin evidence, adaptation, promotion, adverse-effects review, external-origin provenance, and external review now live under `templates/`.
 
 ## GitHub intake surfaces
