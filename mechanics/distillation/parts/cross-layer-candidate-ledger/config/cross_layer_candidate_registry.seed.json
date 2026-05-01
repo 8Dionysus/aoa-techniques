@@ -1,0 +1,795 @@
+{
+  "candidates": [
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "curated skill marketplace selection is already landed through the external intake surface",
+        "atomic_move_status": "inherited",
+        "capability_class": "discover",
+        "execution_profile": "small-agent",
+        "family_posture": "curated input surfaces; landed external companion",
+        "likely_domain": "docs",
+        "portability_note": "portable as editorial discovery, not as registry governance or sync machinery",
+        "primary_kind": "discovery",
+        "risk_posture": "registry-governance-drift",
+        "substrate": "docs"
+      },
+      "candidate": "skill-marketplace-curation",
+      "current_gate": "Keep the external intake surface as the canonical donor trail and AOA-T-0041 as the landed contract.",
+      "gate_status": "inherited_external",
+      "inherited_external_status": "landed as AOA-T-0041",
+      "landed_technique": {
+        "domain": "docs",
+        "id": "AOA-T-0041",
+        "path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not remap marketplace curation into cross-layer registry governance",
+        "higher_law": "the landed technique bundle owns the reusable practice; the external ledger owns donor trail accounting",
+        "local_route": "already staged elsewhere in cross-layer candidate ledger"
+      },
+      "ledger_status": "already_staged_elsewhere",
+      "nearest_overlap": [
+        "progressive-skill-discovery",
+        "AOA-T-0024"
+      ],
+      "next_move": "use AOA-T-0041 for the landed contract and keep this row as inherited accounting",
+      "source_layer": "n-skills",
+      "tentative_domain": "docs"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "history-to-instructions needs a review gate before it can become a portable technique",
+        "atomic_move_status": "inherited",
+        "capability_class": "transform",
+        "execution_profile": "orchestration-required",
+        "family_posture": "history-artifacts or instruction-surface possible; not stable",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "portable only if instruction changes remain review-gated and explicit",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "hidden-instruction-authority",
+        "substrate": "history"
+      },
+      "candidate": "review-gated-history-derived-instructions",
+      "current_gate": "Keep inherited layer incubation until the invariant review gate is stable.",
+      "gate_status": "inherited_external",
+      "inherited_external_status": "needs layer incubation before distillation here",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not let history become hidden instruction authority",
+        "higher_law": "instruction authority remains with source-owned instruction surfaces",
+        "local_route": "already staged elsewhere in cross-layer candidate ledger"
+      },
+      "ledger_status": "already_staged_elsewhere",
+      "nearest_overlap": [],
+      "next_move": "incubate only if a strict review gate becomes part of the invariant",
+      "source_layer": "SpecStory",
+      "tentative_domain": "not in the current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "phase boundary plus handoff packet with continuation permission and stop/return/escalation rule",
+        "atomic_move_status": "inherited",
+        "capability_class": "handoff",
+        "execution_profile": "orchestration-required",
+        "family_posture": "handoff-continuation candidate; still active in external ledger",
+        "likely_domain": "agent-workflows",
+        "portability_note": "portable only as a standalone handoff contract, not as donor orchestration",
+        "primary_kind": "handoff",
+        "risk_posture": "coordination-drift",
+        "substrate": "conversation"
+      },
+      "candidate": "phase-synchronized-agent-handoff",
+      "current_gate": "Keep it staged in the external donor surface until a cleaner phase-checkpoint contract emerges.",
+      "gate_status": "inherited_external",
+      "inherited_external_status": "future import here",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import model routing, shared context server behavior, token optimization, dynamic specialist generation, registry behavior, or dashboard monitoring",
+        "higher_law": "donor public material only proves donor orchestration behavior until a narrower public contract appears",
+        "local_route": "already staged elsewhere in cross-layer candidate ledger"
+      },
+      "ledger_status": "already_staged_elsewhere",
+      "nearest_overlap": [
+        "AOA-T-0001",
+        "AOA-T-0023",
+        "bounded-specialist-generation"
+      ],
+      "next_move": "reopen in the external donor surface if a cleaner phase-checkpoint contract emerges",
+      "source_layer": "agentwise",
+      "tentative_domain": "agent-workflows"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "agent registry semantics are still tied to stateful runtime implementation",
+        "atomic_move_status": "inherited",
+        "capability_class": "write",
+        "execution_profile": "orchestration-required",
+        "family_posture": "runtime-truth lifecycle possible after spec extraction; not stable",
+        "likely_domain": "docs",
+        "portability_note": "portable only as a versioned public contract, not as runtime registry dependency",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "runtime-state-drift",
+        "substrate": "runtime state"
+      },
+      "candidate": "versioned-agent-registry-contract",
+      "current_gate": "Keep inherited layer incubation until registry semantics separate from implementation.",
+      "gate_status": "inherited_external",
+      "inherited_external_status": "needs layer incubation before distillation here",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import runtime registry implementation as technique canon",
+        "higher_law": "runtime registry behavior belongs to the runtime or registry owner until a public contract is extracted",
+        "local_route": "already staged elsewhere in cross-layer candidate ledger"
+      },
+      "ledger_status": "already_staged_elsewhere",
+      "nearest_overlap": [],
+      "next_move": "incubate until registry semantics can be separated cleanly from registry implementation",
+      "source_layer": "agentic",
+      "tentative_domain": "docs only after spec extraction"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "specialist generation remains mostly role and orchestration behavior",
+        "atomic_move_status": "inherited",
+        "capability_class": "coordinate",
+        "execution_profile": "orchestration-required",
+        "family_posture": "agent-workflow possible after narrowing; not stable",
+        "likely_domain": "agent-workflows",
+        "portability_note": "portable only as one bounded specialist-scope or handoff contract",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "role-orchestration-drift",
+        "substrate": "role contracts"
+      },
+      "candidate": "bounded-specialist-generation",
+      "current_gate": "Keep inherited layer incubation until one stable specialist-scope and handoff contract exists.",
+      "gate_status": "inherited_external",
+      "inherited_external_status": "needs layer incubation before distillation here",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import dynamic specialist generation as role or orchestration authority",
+        "higher_law": "role and orchestration behavior belongs to role/playbook/routing owners until narrowed",
+        "local_route": "already staged elsewhere in cross-layer candidate ledger"
+      },
+      "ledger_status": "already_staged_elsewhere",
+      "nearest_overlap": [
+        "phase-synchronized-agent-handoff"
+      ],
+      "next_move": "wait for one stable specialist-scope and handoff contract before extraction",
+      "source_layer": "agentwise",
+      "tentative_domain": "agent-workflows only after heavy narrowing"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "execution history distillation is still an adaptive learning loop, not one reviewable technique",
+        "atomic_move_status": "inherited",
+        "capability_class": "learn-from-artifact",
+        "execution_profile": "orchestration-required",
+        "family_posture": "history-artifacts possible after strict review gate; not stable",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "portable only as review-gated behavior subordinate to human review",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "adaptive-authority-drift",
+        "substrate": "history"
+      },
+      "candidate": "review-gated-execution-history-distillation",
+      "current_gate": "Keep inherited layer incubation until adaptive behavior is subordinate to an explicit distillation contract.",
+      "gate_status": "inherited_external",
+      "inherited_external_status": "needs layer incubation before distillation here",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not convert execution history into unsupervised learning authority",
+        "higher_law": "review authority and adaptive behavior belong outside technique canon until bounded",
+        "local_route": "already staged elsewhere in cross-layer candidate ledger"
+      },
+      "ledger_status": "already_staged_elsewhere",
+      "nearest_overlap": [],
+      "next_move": "wait for one explicit distillation contract that keeps adaptive behavior subordinate to human review",
+      "source_layer": "agentic",
+      "tentative_domain": "not in the current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "compose modules, profiles, and presets into reviewable runtime posture",
+        "atomic_move_status": "landed",
+        "capability_class": "compose",
+        "execution_profile": "small-agent",
+        "family_posture": "Wave A runtime truth and local lifecycle; landed",
+        "likely_domain": "docs",
+        "portability_note": "portable as profile and preset composition outside OS Abyss when local context supplies modules",
+        "primary_kind": "composition",
+        "risk_posture": "opaque-config-drift",
+        "substrate": "docs"
+      },
+      "candidate": "profile-preset-composition",
+      "current_gate": "Closed as AOA-T-0035; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "docs",
+        "id": "AOA-T-0035",
+        "path": "techniques/docs/profile-preset-composition/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into render, doctor, lifecycle, or launcher semantics",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0012",
+        "AOA-T-0036"
+      ],
+      "next_move": "keep Wave A closed and use AOA-T-0035 for the contract",
+      "source_layer": "abyss-stack",
+      "tentative_domain": "docs",
+      "wave": "A"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "render the effective runtime view before startup",
+        "atomic_move_status": "landed",
+        "capability_class": "render",
+        "execution_profile": "medium-agent",
+        "family_posture": "Wave A runtime truth and local lifecycle; landed",
+        "likely_domain": "agent-workflows",
+        "portability_note": "portable as pre-start rendered-truth review when a local runtime can expose its effective view",
+        "primary_kind": "composition",
+        "risk_posture": "runtime-truth-drift",
+        "substrate": "runtime config"
+      },
+      "candidate": "render-truth-before-startup",
+      "current_gate": "Closed as AOA-T-0036; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "agent-workflows",
+        "id": "AOA-T-0036",
+        "path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into lifecycle control, readiness policy, or config publication",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0035",
+        "AOA-T-0037",
+        "AOA-T-0038"
+      ],
+      "next_move": "keep Wave A closed and use AOA-T-0036 for the contract",
+      "source_layer": "abyss-stack",
+      "tentative_domain": "agent-workflows",
+      "wave": "A"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "run selector-aware host readiness before startup",
+        "atomic_move_status": "landed",
+        "capability_class": "validate",
+        "execution_profile": "medium-agent",
+        "family_posture": "Wave A runtime truth and local lifecycle; landed",
+        "likely_domain": "evaluation",
+        "portability_note": "portable as contextual preflight diagnostics for whichever runtime shape is selected",
+        "primary_kind": "validation",
+        "risk_posture": "generic-monitoring-drift",
+        "substrate": "host checks"
+      },
+      "candidate": "contextual-host-doctor",
+      "current_gate": "Closed as AOA-T-0037; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "evaluation",
+        "id": "AOA-T-0037",
+        "path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into monitoring, smoke tests, or lifecycle control",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0036",
+        "AOA-T-0038"
+      ],
+      "next_move": "keep Wave A closed and use AOA-T-0037 for the contract",
+      "source_layer": "abyss-stack",
+      "tentative_domain": "evaluation",
+      "wave": "A"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "start and stop a bounded local service stack through one explicit lifecycle entrypoint",
+        "atomic_move_status": "landed",
+        "capability_class": "operate",
+        "execution_profile": "medium-agent",
+        "family_posture": "Wave A runtime truth and local lifecycle; landed external anchor",
+        "likely_domain": "agent-workflows",
+        "portability_note": "portable as one local lifecycle entrypoint without requiring OS Abyss launcher doctrine",
+        "primary_kind": "workflow",
+        "risk_posture": "launcher-doctrine-drift",
+        "substrate": "tool surfaces"
+      },
+      "candidate": "one-command-service-lifecycle",
+      "current_gate": "Closed as AOA-T-0038; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "agent-workflows",
+        "id": "AOA-T-0038",
+        "path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into generic launcher doctrine, install flows, or memory semantics",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0036",
+        "AOA-T-0037"
+      ],
+      "next_move": "keep Wave A closed and use AOA-T-0038 for the contract",
+      "source_layer": "OpenMemory-Code",
+      "tentative_domain": "agent-workflows",
+      "wave": "A"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "benchmark a stable baseline before additive profile comparisons",
+        "atomic_move_status": "landed",
+        "capability_class": "compare",
+        "execution_profile": "medium-agent",
+        "family_posture": "Wave A runtime truth and local lifecycle; landed",
+        "likely_domain": "evaluation",
+        "portability_note": "portable as baseline-first comparison discipline over any local profile set",
+        "primary_kind": "validation",
+        "risk_posture": "benchmark-claim-drift",
+        "substrate": "evaluation artifacts"
+      },
+      "candidate": "baseline-first-additive-profile-benchmarks",
+      "current_gate": "Closed as AOA-T-0039; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "evaluation",
+        "id": "AOA-T-0039",
+        "path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into suite ownership, product scoring, or promotion policy",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0035"
+      ],
+      "next_move": "keep Wave A closed and use AOA-T-0039 for the contract",
+      "source_layer": "ATM10-Agent",
+      "tentative_domain": "evaluation",
+      "wave": "A"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "separate reusable skill meaning from user-facing command invocation",
+        "atomic_move_status": "landed",
+        "capability_class": "separate",
+        "execution_profile": "small-agent",
+        "family_posture": "Wave B curated input surfaces and capability boundaries; landed",
+        "likely_domain": "docs",
+        "portability_note": "portable as skill-command boundary discipline outside OS Abyss command syntax",
+        "primary_kind": "guardrail",
+        "risk_posture": "command-syntax-collapse",
+        "substrate": "docs"
+      },
+      "candidate": "skill-vs-command-boundary",
+      "current_gate": "Closed as AOA-T-0040; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "docs",
+        "id": "AOA-T-0040",
+        "path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into propagation, marketplace policy, routing, or slash-command product semantics",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0013",
+        "AOA-T-0027",
+        "AOA-T-0041"
+      ],
+      "next_move": "keep Wave B closed and use AOA-T-0040 for the contract",
+      "source_layer": "agentic-dev-team",
+      "tentative_domain": "docs",
+      "wave": "B"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "check upstream-owned skill sources for availability and manifest readiness",
+        "atomic_move_status": "landed",
+        "capability_class": "validate",
+        "execution_profile": "medium-agent",
+        "family_posture": "Wave B curated input surfaces and capability boundaries; landed",
+        "likely_domain": "evaluation",
+        "portability_note": "portable as pre-surface upstream readiness check without OS Abyss registry policy",
+        "primary_kind": "validation",
+        "risk_posture": "registry-monitoring-drift",
+        "substrate": "upstream manifests"
+      },
+      "candidate": "upstream-skill-health-checking",
+      "current_gate": "Closed as AOA-T-0042; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "evaluation",
+        "id": "AOA-T-0042",
+        "path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into monitoring, registry governance, or security scanning doctrine",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0024",
+        "AOA-T-0032",
+        "AOA-T-0041"
+      ],
+      "next_move": "keep Wave B closed and use AOA-T-0042 for the contract",
+      "source_layer": "n-skills + MCP Gateway Registry",
+      "tentative_domain": "evaluation",
+      "wave": "B"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "mark primary versus supporting source inputs in a multi-source bridge",
+        "atomic_move_status": "landed",
+        "capability_class": "order-provenance",
+        "execution_profile": "small-agent",
+        "family_posture": "Wave B curated input surfaces and capability boundaries; landed",
+        "likely_domain": "docs",
+        "portability_note": "portable as primary/supporting provenance ordering for any multi-source docs bridge",
+        "primary_kind": "guardrail",
+        "risk_posture": "source-priority-drift",
+        "substrate": "docs"
+      },
+      "candidate": "multi-source-primary-input-provenance",
+      "current_gate": "Closed as AOA-T-0043; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "docs",
+        "id": "AOA-T-0043",
+        "path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into note-provenance lift, relation semantics, ranking, or bridge architecture",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0020",
+        "AOA-T-0021"
+      ],
+      "next_move": "keep Wave B closed and use AOA-T-0043 for the contract",
+      "source_layer": "aoa-kag + Tree-of-Sophia bridge contracts",
+      "tentative_domain": "docs",
+      "wave": "B"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "package already-saved session transcripts as readable, versionable Markdown artifacts",
+        "atomic_move_status": "landed",
+        "capability_class": "package",
+        "execution_profile": "small-agent",
+        "family_posture": "Wave C history as reviewable artifact; landed",
+        "likely_domain": "history",
+        "portability_note": "portable as transcript packaging over already-saved artifacts outside OS Abyss",
+        "primary_kind": "artifact",
+        "risk_posture": "history-to-memory-drift",
+        "substrate": "history artifacts"
+      },
+      "candidate": "versionable-session-transcripts",
+      "current_gate": "Closed as AOA-T-0044; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "history",
+        "id": "AOA-T-0044",
+        "path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not reopen capture semantics or widen into memory or instruction authority",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0026",
+        "AOA-T-0045"
+      ],
+      "next_move": "keep Wave C closed and use AOA-T-0044 for the contract",
+      "source_layer": "SpecStory",
+      "tentative_domain": "history",
+      "wave": "C"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "preserve a structured witness trace as a reviewable artifact before writeback or promotion",
+        "atomic_move_status": "landed",
+        "capability_class": "preserve-review",
+        "execution_profile": "medium-agent",
+        "family_posture": "Wave C history as reviewable artifact; landed",
+        "likely_domain": "history",
+        "portability_note": "portable as witness artifact review discipline before downstream writeback or promotion",
+        "primary_kind": "artifact",
+        "risk_posture": "memory-object-drift",
+        "substrate": "history artifacts"
+      },
+      "candidate": "witness-trace-as-reviewable-artifact",
+      "current_gate": "Closed as AOA-T-0045; keep the bundle as owner for the reusable contract.",
+      "gate_status": "landed",
+      "landed_technique": {
+        "domain": "history",
+        "id": "AOA-T-0045",
+        "path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md"
+      },
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen into runtime witness behavior, memory writeback, or a new memory-object kind",
+        "higher_law": "the technique bundle owns the landed reusable practice",
+        "local_route": "landed wave accounting in cross-layer candidate ledger"
+      },
+      "ledger_status": "landed_from_wave_map",
+      "nearest_overlap": [
+        "AOA-T-0026",
+        "AOA-T-0044"
+      ],
+      "next_move": "keep Wave C closed and use AOA-T-0045 for the contract",
+      "source_layer": "aoa-memo + aoa-playbooks",
+      "tentative_domain": "history",
+      "wave": "C"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "progressive disclosure itself is not yet distinct from curated discovery and selector behavior",
+        "atomic_move_status": "not_named",
+        "capability_class": "discover",
+        "execution_profile": "small-agent",
+        "family_posture": "curated input surfaces possible; not stable",
+        "likely_domain": "docs",
+        "portability_note": "portable only if progressive disclosure becomes the distinct invariant",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "discovery-overlap-drift",
+        "substrate": "docs"
+      },
+      "candidate": "progressive-skill-discovery",
+      "current_gate": "Hold until progressive disclosure separates from skill marketplace curation and selector behavior.",
+      "gate_status": "overlap_hold",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not duplicate AOA-T-0041 or the repo's pick-inspect-expand-object-use discovery posture",
+        "higher_law": "curated discovery and selector surfaces keep their own owner contracts",
+        "local_route": "overlap hold in cross-layer candidate ledger"
+      },
+      "ledger_status": "hold_because_overlap",
+      "nearest_overlap": [
+        "AOA-T-0041",
+        "selector surfaces"
+      ],
+      "next_move": "reopen only if progressive disclosure itself becomes the distinct invariant",
+      "source_layer": "n-skills, MCP Gateway Registry, repo-owned selector surfaces",
+      "tentative_domain": "docs"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "counterpart-specific non-identity edge projection is not yet distinct from bounded relation lift",
+        "atomic_move_status": "not_named",
+        "capability_class": "relate",
+        "execution_profile": "medium-agent",
+        "family_posture": "bridge relation possible; not stable",
+        "likely_domain": "docs",
+        "portability_note": "portable only if counterpart projection stays narrower than generic relation lift",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "semantic-collapse-drift",
+        "substrate": "bridge docs"
+      },
+      "candidate": "bounded-counterpart-edge-projection",
+      "current_gate": "Hold until counterpart-specific non-identity semantics become distinct from generic bounded relation lift.",
+      "gate_status": "overlap_hold",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not duplicate AOA-T-0021 or collapse counterpart semantics into generic relation lift",
+        "higher_law": "KAG and ToS bridge contracts own source relation semantics until a narrower public technique is extracted",
+        "local_route": "overlap hold in cross-layer candidate ledger"
+      },
+      "ledger_status": "hold_because_overlap",
+      "nearest_overlap": [
+        "AOA-T-0021"
+      ],
+      "next_move": "reopen only if counterpart edge can carry a stable non-collapse contract of its own",
+      "source_layer": "aoa-kag, Tree-of-Sophia bridge contracts",
+      "tentative_domain": "docs"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "temperature-gated writeback is still memory writeback policy rather than one portable technique",
+        "atomic_move_status": "not_named",
+        "capability_class": "govern-writeback",
+        "execution_profile": "orchestration-required",
+        "family_posture": "memory-adjacent; no current technique family",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "portable only after aoa-memo stabilizes a public-safe writeback contract",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "memory-policy-drift",
+        "substrate": "memory-adjacent artifacts"
+      },
+      "candidate": "temperature-gated-writeback",
+      "current_gate": "Needs one stable, public-safe writeback contract in aoa-memo before extraction.",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import memory writeback policy or temperature semantics as technique canon",
+        "higher_law": "memory writeback semantics belong to aoa-memo until a bounded public contract exists",
+        "local_route": "layer incubation in cross-layer candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [],
+      "next_move": "wait for one stable, public-safe writeback contract in aoa-memo",
+      "source_layer": "aoa-memo",
+      "tentative_domain": "not in the current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "checkpoint cohort rollout is still playbook composition and role choreography",
+        "atomic_move_status": "not_named",
+        "capability_class": "coordinate",
+        "execution_profile": "orchestration-required",
+        "family_posture": "agent-workflow possible after heavy narrowing; not stable",
+        "likely_domain": "agent-workflows",
+        "portability_note": "portable only as one checkpoint or handoff slice, not as the full cohort rollout",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "role-playbook-drift",
+        "substrate": "playbook and role contracts"
+      },
+      "candidate": "checkpoint-cohort-rollout",
+      "current_gate": "Needs one stable checkpoint or handoff slice that can stand without the whole cohort rollout program.",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import playbook choreography or role program authority as technique canon",
+        "higher_law": "checkpoint and cohort rollout behavior belongs to aoa-agents and aoa-playbooks until narrowed",
+        "local_route": "layer incubation in cross-layer candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [
+        "phase-synchronized-agent-handoff"
+      ],
+      "next_move": "wait for one stable checkpoint or handoff slice that can stand without the full program",
+      "source_layer": "aoa-agents, aoa-playbooks",
+      "tentative_domain": "agent-workflows only after heavy narrowing"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "witness-to-compost promotion is still a route between artifacts, not one bounded technique",
+        "atomic_move_status": "not_named",
+        "capability_class": "promote-artifact",
+        "execution_profile": "orchestration-required",
+        "family_posture": "history or docs possible after heavy narrowing; not stable",
+        "likely_domain": "docs",
+        "portability_note": "portable only after promotion gates and destination-artifact contracts are stated without the full pilot playbook",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "promotion-route-drift",
+        "substrate": "review artifacts"
+      },
+      "candidate": "witness-to-compost-promotion",
+      "current_gate": "Needs promotion gates and destination-artifact contracts stated without the full pilot playbook.",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import the full witness-to-compost pilot playbook as a technique",
+        "higher_law": "witness and compost route semantics belong to aoa-playbooks and ToS support surfaces until narrowed",
+        "local_route": "layer incubation in cross-layer candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [
+        "AOA-T-0045"
+      ],
+      "next_move": "incubate until promotion gates and destination-artifact contracts can stand alone",
+      "source_layer": "aoa-playbooks, Tree-of-Sophia support surfaces",
+      "tentative_domain": "docs only after heavy narrowing"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "model-tier state machine is still routing and orchestration architecture",
+        "atomic_move_status": "not_named",
+        "capability_class": "route",
+        "execution_profile": "orchestration-required",
+        "family_posture": "handoff-continuation or escalation possible after extracting one smaller seam",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "portable only after extracting a smaller seam such as deep-call escalation or distillation handoff",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "routing-architecture-drift",
+        "substrate": "model routing"
+      },
+      "candidate": "model-tier-state-machine",
+      "current_gate": "Not technique-shaped until a smaller public-safe seam is extracted.",
+      "gate_status": "not_technique_shaped",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import model-routing state machine architecture as technique canon",
+        "higher_law": "model routing and orchestration semantics belong to aoa-agents and abyss-stack until narrowed",
+        "local_route": "architecture hold in cross-layer candidate ledger"
+      },
+      "ledger_status": "substrate_or_architecture_pattern_not_yet_technique",
+      "nearest_overlap": [
+        "phase-synchronized-agent-handoff"
+      ],
+      "next_move": "extract a smaller public-safe seam such as deep-call escalation or distillation handoff",
+      "source_layer": "aoa-agents, abyss-stack",
+      "tentative_domain": "not in the current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "cross-service SLA normalization is still a multi-service architecture and measurement-policy cluster",
+        "atomic_move_status": "not_named",
+        "capability_class": "compare",
+        "execution_profile": "orchestration-required",
+        "family_posture": "evaluation comparison possible after extracting one bounded contract",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "portable only after one bounded comparison, readiness, or reporting contract is extracted above the SLA program",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "measurement-policy-drift",
+        "substrate": "service metrics"
+      },
+      "candidate": "cross-service-sla-normalization",
+      "current_gate": "Not technique-shaped until one bounded comparison, readiness, or reporting contract is extracted above the SLA program.",
+      "gate_status": "not_technique_shaped",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import a multi-service SLA program as one technique",
+        "higher_law": "service architecture and measurement policy belongs to ATM10-Agent and abyss-stack until narrowed",
+        "local_route": "architecture hold in cross-layer candidate ledger"
+      },
+      "ledger_status": "substrate_or_architecture_pattern_not_yet_technique",
+      "nearest_overlap": [
+        "AOA-T-0037",
+        "AOA-T-0039"
+      ],
+      "next_move": "extract one bounded comparison, readiness, or reporting contract above the SLA program",
+      "source_layer": "ATM10-Agent, abyss-stack",
+      "tentative_domain": "not in the current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "bridge-ready retrieval axis is still retrieval substrate and bridge architecture",
+        "atomic_move_status": "not_named",
+        "capability_class": "retrieve",
+        "execution_profile": "orchestration-required",
+        "family_posture": "input-boundary or retrieval contract possible after extracting one smaller seam",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "portable only after one smaller input-boundary or retrieval contract is extracted",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "retrieval-substrate-drift",
+        "substrate": "retrieval substrate"
+      },
+      "candidate": "bridge-ready-retrieval-axis",
+      "current_gate": "Not technique-shaped until one smaller input-boundary or retrieval contract is extracted.",
+      "gate_status": "not_technique_shaped",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not treat the full retrieval axis as a technique",
+        "higher_law": "retrieval substrate and bridge architecture belongs to aoa-kag until narrowed",
+        "local_route": "architecture hold in cross-layer candidate ledger"
+      },
+      "ledger_status": "substrate_or_architecture_pattern_not_yet_technique",
+      "nearest_overlap": [
+        "AOA-T-0021",
+        "bounded-counterpart-edge-projection"
+      ],
+      "next_move": "extract one smaller input-boundary or retrieval contract first",
+      "source_layer": "aoa-kag bridge contracts",
+      "tentative_domain": "not in the current domain map"
+    }
+  ],
+  "registry_id": "distillation.cross_layer_candidate_registry.v1",
+  "schema_version": "distillation-cross-layer-candidate-registry.seed/0.1",
+  "source_ledger": "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+  "status": "active_accounting_registry",
+  "summary_counts": {
+    "already_staged_elsewhere": 6,
+    "future_import_here": 0,
+    "hold_because_overlap": 2,
+    "landed_from_wave_map": 10,
+    "needs_layer_incubation_before_distillation_here": 3,
+    "ready_to_distill_here": 0,
+    "substrate_or_architecture_pattern_not_yet_technique": 3
+  },
+  "title": "Distillation cross-layer candidate registry"
+}

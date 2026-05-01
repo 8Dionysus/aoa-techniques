@@ -48,6 +48,17 @@ PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS = (
     "mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py",
 )
 
+PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/config/cross_layer_candidate_registry.seed.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/schemas/cross-layer-candidate-registry-entry.schema.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/schemas/cross-layer-candidate-registry.schema.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/examples/cross_layer_candidate_registry_entry.example.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py",
+)
+
 OLD_FLAT_DISTILLATION_FILES = (
     "mechanics/distillation/DONOR_REFINERY_RUBRIC.md",
     "mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md",
@@ -63,6 +74,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ACTIVE_DISTILLATION_SURFACES
             + RAW_DISTILLATION_RECEIPTS
             + PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS
+            + PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS
         ):
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
@@ -116,6 +128,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("remaining `13` external donor-derived candidates", external)
         self.assertIn("full `24` technique-shaped candidate names", cross_layer)
         self.assertIn("`10` landed from this wave map", cross_layer)
+        self.assertIn("remaining `18` candidates here", cross_layer)
 
         rows = re.findall(r"^\| `([^`]+)` \|", cross_layer, flags=re.MULTILINE)
         self.assertEqual(24, len(rows))
@@ -167,6 +180,31 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertEqual(5, registry["gate_status_counts"]["layer_incubation"])
         self.assertIn("does not create bundles", registry["stop_line"])
 
+    def test_cross_layer_candidate_registry_preserves_current_accounting(self) -> None:
+        registry = json.loads(
+            (
+                REPO_ROOT
+                / "mechanics"
+                / "distillation"
+                / "parts"
+                / "cross-layer-candidate-ledger"
+                / "generated"
+                / "cross_layer_candidate_registry.min.json"
+            ).read_text(encoding="utf-8")
+        )
+
+        self.assertEqual(24, registry["total_candidates"])
+        self.assertEqual([], registry["future_import_lanes"])
+        self.assertEqual(6, registry["summary_counts"]["already_staged_elsewhere"])
+        self.assertEqual(10, registry["summary_counts"]["landed_from_wave_map"])
+        self.assertEqual(2, registry["ledger_status_counts"]["hold_because_overlap"])
+        self.assertEqual(
+            3, registry["ledger_status_counts"]["needs_layer_incubation_before_distillation_here"]
+        )
+        self.assertEqual(3, registry["gate_status_counts"]["not_technique_shaped"])
+        self.assertEqual({"A": 5, "B": 3, "C": 2}, registry["wave_counts"])
+        self.assertIn("recurrence promotion authority", registry["stop_line"])
+
     def test_distillation_active_parts_decision_is_discoverable(self) -> None:
         decision = (
             REPO_ROOT
@@ -190,6 +228,18 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Distillation External Candidate Registry", decision)
         self.assertIn("generated compact index is validation evidence only", decision)
         self.assertIn("normal bundle review path", decision)
+
+    def test_cross_layer_candidate_registry_decision_is_discoverable(self) -> None:
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-01-distillation-cross-layer-candidate-registry.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Distillation Cross-Layer Candidate Registry", decision)
+        self.assertIn("without compacting the README in this pass", decision)
+        self.assertIn("recurrence and later compaction work", decision)
 
 
 if __name__ == "__main__":

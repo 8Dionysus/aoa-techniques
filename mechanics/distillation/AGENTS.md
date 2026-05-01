@@ -61,6 +61,14 @@ python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_e
 python -m pytest -q mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py
 ```
 
+For the cross-layer candidate registry:
+
+```bash
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
+python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
+```
+
 For repository-level safety after structure changes:
 
 ```bash

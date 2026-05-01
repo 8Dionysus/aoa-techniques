@@ -1,0 +1,36 @@
+{
+  "atom_topology_gate": {
+    "atomic_move_note": "compose modules, profiles, and presets into reviewable runtime posture",
+    "atomic_move_status": "landed",
+    "capability_class": "compose",
+    "execution_profile": "small-agent",
+    "family_posture": "Wave A runtime truth and local lifecycle; landed",
+    "likely_domain": "docs",
+    "portability_note": "portable as profile and preset composition outside OS Abyss when local context supplies modules",
+    "primary_kind": "composition",
+    "risk_posture": "opaque-config-drift",
+    "substrate": "docs"
+  },
+  "candidate": "profile-preset-composition",
+  "current_gate": "Closed as AOA-T-0035; keep the bundle as owner for the reusable contract.",
+  "gate_status": "landed",
+  "landed_technique": {
+    "domain": "docs",
+    "id": "AOA-T-0035",
+    "path": "techniques/docs/profile-preset-composition/TECHNIQUE.md"
+  },
+  "law_local_bridge": {
+    "bridge_stop_line": "do not widen into render, doctor, lifecycle, or launcher semantics",
+    "higher_law": "the technique bundle owns the landed reusable practice",
+    "local_route": "landed wave accounting in cross-layer candidate ledger"
+  },
+  "ledger_status": "landed_from_wave_map",
+  "nearest_overlap": [
+    "AOA-T-0012",
+    "AOA-T-0036"
+  ],
+  "next_move": "keep Wave A closed and use AOA-T-0035 for the contract",
+  "source_layer": "abyss-stack",
+  "tentative_domain": "docs",
+  "wave": "A"
+}

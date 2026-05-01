@@ -12,7 +12,7 @@ It does not change technique status, create a new bundle, or authorize import by
 - this doc accounts for the full `24` technique-shaped candidate names explicitly proposed in the donor note
 - it treats `seed_donors_inside.md` as origin commentary and donor soil, not as a canonical Dionysus wave seed
 - it includes `6` candidates that are already staged in the [External Candidate Ledger](../external-candidate-ledger/README.md) so the full donor-note universe stays visible in one place
-- it classifies the remaining `17` candidates here as landed wave imports, new future imports, overlap holds, layer-incubation lanes, or not-yet-technique-shaped architecture
+- it classifies the remaining `18` candidates here as landed wave imports, new future imports, overlap holds, layer-incubation lanes, or not-yet-technique-shaped architecture
 
 ## Doctrine Seam
 
@@ -48,6 +48,34 @@ It does not change technique status, create a new bundle, or authorize import by
 - `2` hold because overlap
 - `3` needs layer incubation before distillation here
 - `3` substrate or architecture pattern, not yet a technique
+
+## Structured Registry
+
+The part-local registry keeps the full donor-note universe machine-checkable
+without turning the ledger into promotion authority:
+
+- [config/cross_layer_candidate_registry.seed.json](config/cross_layer_candidate_registry.seed.json)
+  carries the structured accounting for all `24` candidates.
+- [generated/cross_layer_candidate_registry.min.json](generated/cross_layer_candidate_registry.min.json)
+  is derived evidence for counts, waves, source layers, and current gates.
+- [schemas/](schemas/) and [examples/](examples/) document the expected entry
+  shape.
+- [scripts/build_cross_layer_candidate_registry.py](scripts/build_cross_layer_candidate_registry.py)
+  builds the derived index, and
+  [scripts/validate_cross_layer_candidate_registry.py](scripts/validate_cross_layer_candidate_registry.py)
+  verifies that the index still matches the seed.
+
+The registry must preserve this README's verdicts and stop lines. It does not
+create technique bundles, change candidate status, authorize import, or give
+recurrence promotion authority.
+
+Validation:
+
+```bash
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
+python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
+```
 
 ## Already Staged Elsewhere
 

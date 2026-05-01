@@ -93,3 +93,37 @@ Not moved:
 - no raw donor source was treated as present when it was only a historical label
 - no generated index became authority over the active part README or bundle
   review path
+
+## 2026-05-01 - Cross-layer candidate registry
+
+Changed:
+
+- added a part-local seed registry, schemas, example, builder, validator, tests,
+  and generated compact index for
+  [parts/cross-layer-candidate-ledger](parts/cross-layer-candidate-ledger/README.md)
+- kept the `24` candidate universe, `6` already-staged rows, `10` landed wave
+  imports, `0` future imports, `2` overlap holds, `3` layer-incubation lanes,
+  and `3` architecture/substrate holds intact
+- made landed, inherited, overlap, incubation, and architecture gates explicit
+  per candidate without compacting the active README or promoting any candidate
+  into a technique bundle
+- corrected the active README arithmetic from `17` to `18` remaining
+  non-inherited candidates so it matches the unchanged summary counts
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
+python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no cross-layer candidate was promoted, dropped, or reclassified
+- no wave program was reopened
+- no generated index became authority over the active part README, landed
+  technique bundles, or recurrence review path
