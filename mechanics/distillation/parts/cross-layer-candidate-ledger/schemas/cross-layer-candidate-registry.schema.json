@@ -1,0 +1,46 @@
+{
+  "$id": "https://github.com/8Dionysus/aoa-techniques/mechanics/distillation/parts/cross-layer-candidate-ledger/schemas/cross-layer-candidate-registry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidates": {
+      "items": {
+        "$ref": "cross-layer-candidate-registry-entry.schema.json"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "registry_id": {
+      "const": "distillation.cross_layer_candidate_registry.v1"
+    },
+    "schema_version": {
+      "const": "distillation-cross-layer-candidate-registry.seed/0.1"
+    },
+    "source_ledger": {
+      "const": "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md"
+    },
+    "status": {
+      "const": "active_accounting_registry"
+    },
+    "summary_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "type": "object"
+    },
+    "title": {
+      "const": "Distillation cross-layer candidate registry"
+    }
+  },
+  "required": [
+    "registry_id",
+    "schema_version",
+    "source_ledger",
+    "status",
+    "title",
+    "summary_counts",
+    "candidates"
+  ],
+  "title": "Distillation cross-layer candidate registry",
+  "type": "object"
+}
