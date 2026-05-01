@@ -2,7 +2,11 @@
 
 Public library of reusable techniques for coding agents and humans.
 
-`aoa-techniques` is the public practice canon of AoA. It is not a snippet dump and not an “awesome list”. A technique here is a minimal reproducible unit of engineering practice: a workflow, validation pattern, safety protocol, documentation layout, evaluation loop, or transfer method that can travel cleanly across projects.
+`aoa-techniques` is the public practice canon of AoA. It is not a snippet dump
+and not an "awesome list". A technique here is an atomic executable move: one
+minimal reproducible unit of engineering practice that can be classified,
+templated, verified, and handed to a small agent after orchestration supplies the
+right context.
 
 > Current release: `v0.4.2`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
@@ -11,6 +15,8 @@ Public library of reusable techniques for coding agents and humans.
 Use the shortest route by need:
 
 - repo-owned entrypoint: `docs/START_HERE.md`
+- atomic technique contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
+- classification topology contract: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 - one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
 - current technique map: `TECHNIQUE_INDEX.md`
 - current direction and hardening waves: `docs/START_HERE.md` and `ROADMAP.md`
@@ -26,7 +32,8 @@ Use the shortest route by need:
 - repo layer position and neighboring repos: `docs/ECOSYSTEM_CONTEXT.md`
 - current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
 - via negativa pruning checklist: `docs/VIA_NEGATIVA_CHECKLIST.md`
-- frontmatter routing axes and kind doctrine: `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `data/technique_kind_wave1.yaml`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
+- frontmatter routing axes, topology, and kind doctrine: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `config/technique_family_seed.yaml`, `data/technique_kind_wave1.yaml`, `reports/technique_family_scout.md`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
+- atomicity and small-agent authoring contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - feat-reader and runtime-card surfaces: `mechanics/growth-cycle/TECHNIQUE_FEAT_MODEL.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
 - status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `mechanics/audit/PROMOTION_READINESS_MATRIX.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
 - Agon practice-candidate bridge: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/LANDING_LOG.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`, `python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check`, `python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py`, and `python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py`
@@ -72,6 +79,8 @@ Bad candidates:
 ## Core principles
 
 - public-safe reusable practice over project-local residue
+- atomic executable moves over chains disguised as techniques
+- faceted topology over overloaded buckets or one giant category tree
 - bounded, reviewable contracts over vague lore
 - source-linked promotion over raw copying
 - linked docs and generated surfaces over oversized root inventories
@@ -104,6 +113,8 @@ full intake history.
 A strong technique should include:
 
 - clear intent and usage boundaries
+- one atomic move that can be executed from a compact runtime card
+- topology fit across `domain`, `kind`, and any reviewed future axes
 - explicit inputs, outputs, and risks
 - validation method
 - adaptation notes when portability needs them
@@ -112,9 +123,9 @@ A strong technique should include:
 ## Contribution model
 
 `aoa-techniques` owns practice meaning, while neighboring repos own execution,
-proof, routing, role, and scenario composition. If a reusable contract can be
-extracted cleanly from a neighboring layer, it belongs here once it becomes
-public-safe, bounded, and portable.
+proof, routing, role, and scenario composition. If one atomic reusable contract
+can be extracted cleanly from a neighboring layer, it belongs here once it
+becomes public-safe, bounded, and portable.
 
 The current runtime path for public technique use remains:
 

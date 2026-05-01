@@ -1618,6 +1618,126 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("generated/technique_kind_manifest.json", releasing)
         self.assertIn("generated/technique_kind_manifest.min.json", releasing)
 
+    def test_technique_atom_contract_is_discoverable_and_template_backed(self) -> None:
+        atom_contract = (REPO_ROOT / "docs" / "TECHNIQUE_ATOM_CONTRACT.md").read_text(
+            encoding="utf-8"
+        )
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-01-technique-atom-contract.md"
+        ).read_text(encoding="utf-8")
+        template = (REPO_ROOT / "templates" / "TECHNIQUE.template.md").read_text(
+            encoding="utf-8"
+        )
+        agents = (REPO_ROOT / "AGENTS.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(
+            encoding="utf-8"
+        )
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+
+        for target in (
+            "one atomic executable move",
+            "2-4B model",
+            "`1000+` techniques",
+            "A skill can orchestrate. A technique should not.",
+            "small enough to execute once selected",
+            "Capsules should preserve that executable center",
+        ):
+            self.assertIn(target, atom_contract)
+
+        for surface_name, surface in (
+            ("AGENTS.md", agents),
+            ("README.md", readme),
+            ("docs/START_HERE.md", start_here),
+            ("docs/README.md", docs_readme),
+        ):
+            with self.subTest(surface=surface_name):
+                self.assertIn("TECHNIQUE_ATOM_CONTRACT.md", surface)
+
+        self.assertIn("## Atomic move", template)
+        self.assertIn("## Small-agent execution shape", template)
+        self.assertIn("one atomic executable move", decision)
+        self.assertIn("broad mini-skills", decision)
+
+    def test_technique_topology_contract_defines_faceted_classification(self) -> None:
+        topology = (REPO_ROOT / "docs" / "TECHNIQUE_TOPOLOGY_CONTRACT.md").read_text(
+            encoding="utf-8"
+        )
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-01-technique-topology-contract.md"
+        ).read_text(encoding="utf-8")
+        atom_contract = (REPO_ROOT / "docs" / "TECHNIQUE_ATOM_CONTRACT.md").read_text(
+            encoding="utf-8"
+        )
+        domain_map = (REPO_ROOT / "docs" / "DOMAIN_MAP.md").read_text(encoding="utf-8")
+        kind_guide = (REPO_ROOT / "docs" / "TECHNIQUE_KIND_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+        selection_guide = (
+            REPO_ROOT / "docs" / "TECHNIQUE_SELECTION_GUIDE.md"
+        ).read_text(encoding="utf-8")
+        capsule_guide = (REPO_ROOT / "docs" / "TECHNIQUE_CAPSULE_GUIDE.md").read_text(
+            encoding="utf-8"
+        )
+        template = (REPO_ROOT / "templates" / "TECHNIQUE.template.md").read_text(
+            encoding="utf-8"
+        )
+        agents = (REPO_ROOT / "AGENTS.md").read_text(encoding="utf-8")
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(
+            encoding="utf-8"
+        )
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        family_seed = validate_repo.read_yaml(
+            REPO_ROOT / "config" / "technique_family_seed.yaml"
+        )
+
+        for target in (
+            "Classification is faceted, not a single tree.",
+            "`domain` | authoritative frontmatter",
+            "`kind` | authoritative frontmatter",
+            "`family` | scout-only",
+            "`capability_class` | design axis",
+            "`substrate` | design axis",
+            "`execution_profile` | design axis",
+            "`risk_posture` | design axis",
+            "coding, documentation, validation, recovery, history, media, tool use",
+            "The goal is a corpus that can grow very large",
+        ):
+            self.assertIn(target, topology)
+
+        for surface in (
+            atom_contract,
+            domain_map,
+            kind_guide,
+            selection_guide,
+            capsule_guide,
+        ):
+            self.assertIn("TECHNIQUE_TOPOLOGY_CONTRACT.md", surface)
+
+        for surface_name, surface in (
+            ("AGENTS.md", agents),
+            ("README.md", readme),
+            ("docs/START_HERE.md", start_here),
+            ("docs/README.md", docs_readme),
+        ):
+            with self.subTest(surface=surface_name):
+                self.assertIn("TECHNIQUE_TOPOLOGY_CONTRACT.md", surface)
+
+        self.assertIn("## Topology fit", template)
+        self.assertEqual("scout-foundation", family_seed["status"])
+        self.assertIn(
+            "Use family as a library shelf",
+            "\n".join(family_seed["core_rules"]),
+        )
+        self.assertIn("faceted rather than a single tree", decision)
+
     def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         selection = (REPO_ROOT / "docs" / "TECHNIQUE_SELECTION.md").read_text(encoding="utf-8")

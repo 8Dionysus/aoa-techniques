@@ -7,6 +7,7 @@ Use it when you are writing, reviewing, or selecting a technique and need the bo
 See also:
 
 - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
+- [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
 - [Technique Selection](TECHNIQUE_SELECTION.md)
 - [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)
 - [`../config/technique_kind_registry.yaml`](../config/technique_kind_registry.yaml)
@@ -18,6 +19,8 @@ See also:
 
 - `domain` stays the ownership and first-routing axis.
 - `kind` is the bounded second selector axis inside that owner layer.
+- `kind` names the atomic move shape; it is not the family, substrate,
+  capability class, or risk posture.
 - Each technique chooses exactly one primary `kind`.
 - Use `tags` for extra nuance instead of widening `kind`.
 - Keep `family` scout-only and non-authoritative in this wave.

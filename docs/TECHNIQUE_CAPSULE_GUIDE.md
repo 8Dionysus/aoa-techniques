@@ -6,6 +6,8 @@ Capsules are derived lookup cards for local runtime use. They are not KAG/source
 
 See also:
 - [Start Here](START_HERE.md)
+- [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
+- [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
 - [Technique Capsules](TECHNIQUE_CAPSULES.md)
 - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
 - [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
@@ -69,6 +71,11 @@ The runtime card fields are intentionally narrow:
   - the main failure or misuse seam to watch
 - `validation_short`
   - the smallest validation reminder that still routes back to the bundle
+
+The future `execution_profile` topology axis should be tested against capsule
+quality: a `tiny-card` or `small-agent` technique must preserve its executable
+center in this card family, while `orchestration-required` techniques may need
+an outer workflow even though the technique itself remains atomic.
 
 ## Boundaries
 

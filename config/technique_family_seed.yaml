@@ -1,10 +1,12 @@
 schema_version: 1
 axis_name: technique_family
-status: optional-wave1-seed
+status: scout-foundation
 cardinality: zero-or-one-secondary-family
-purpose: Optional second semantic axis for stable corpus clusters. Not required to land wave1 `kind`.
+purpose: Optional semantic shelf axis for stable corpus clusters. Not authoritative frontmatter yet;
+  use the topology contract before promoting family into schema or validators.
 core_rules:
 - Keep family narrower than domain and more cluster-like than kind.
+- Use family as a library shelf that may span domains, kinds, substrates, and risk postures.
 - A family may contain multiple kinds when one stable cluster spans workflows, guardrails, and evidence
   surfaces.
 - Do not block wave1 on family if bulk frontmatter migration becomes noisy.
