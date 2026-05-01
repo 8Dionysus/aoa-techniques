@@ -1,23 +1,11 @@
 # External Technique Candidates
 
-This doc records the remaining external donor-derived technique candidates
-historically attributed to `seeds/seed_4.txt` and `seeds/seed_6.txt`.
+This doc records the remaining external donor-derived technique candidates tracked from `seeds/seed_4.txt` and `seeds/seed_6.txt`.
 
 Use it when the question is not "which landed technique should I open?", but "which remaining external seed idea should we distill into a real `aoa-techniques` bundle next?"
 
 It is an intake and decision surface.
 It does not change technique status, create a new bundle, or authorize import by itself.
-
-## Source Status
-
-The `seed_4.txt` and `seed_6.txt` names are retained as historical source
-labels. A workspace search on 2026-05-01 did not find checked-out
-`seeds/seed_4.txt` or `seeds/seed_6.txt` files under `/srv/AbyssOS`.
-
-Therefore this active ledger is the current reviewable accounting surface for
-those historical labels, not a claim that the raw seed files are present in this
-checkout. The pre-prune ledger snapshot for this pass is preserved at
-[legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](../../legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md).
 
 ## Scope
 

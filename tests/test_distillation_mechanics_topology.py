@@ -24,6 +24,10 @@ ACTIVE_DISTILLATION_SURFACES = (
     "mechanics/distillation/legacy/raw/README.md",
 )
 
+RAW_DISTILLATION_RECEIPTS = (
+    "mechanics/distillation/legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md",
+)
+
 PART_LOCAL_DISTILLATION_READMES = (
     "mechanics/distillation/parts/donor-refinery/README.md",
     "mechanics/distillation/parts/external-import-runbook/README.md",
@@ -43,7 +47,7 @@ OLD_FLAT_DISTILLATION_FILES = (
 
 class DistillationMechanicsTopologyTestCase(unittest.TestCase):
     def test_distillation_active_surfaces_are_discoverable(self) -> None:
-        for relative_path in ACTIVE_DISTILLATION_SURFACES:
+        for relative_path in ACTIVE_DISTILLATION_SURFACES + RAW_DISTILLATION_RECEIPTS:
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
 
@@ -100,6 +104,32 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         rows = re.findall(r"^\| `([^`]+)` \|", cross_layer, flags=re.MULTILINE)
         self.assertEqual(24, len(rows))
         self.assertEqual(24, len(set(rows)))
+
+    def test_external_candidate_ledger_marks_missing_seed_sources(self) -> None:
+        external = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "external-candidate-ledger"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        receipt = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "raw"
+            / "EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("## Source Status", external)
+        self.assertIn("historical source\nlabels", external)
+        self.assertIn("did not find checked-out", external)
+        self.assertIn("seeds/seed_4.txt", external)
+        self.assertIn("seeds/seed_6.txt", external)
+        self.assertIn("remaining `13` external donor-derived candidates", receipt)
+        self.assertNotIn("## Source Status", receipt)
 
     def test_distillation_active_parts_decision_is_discoverable(self) -> None:
         decision = (
