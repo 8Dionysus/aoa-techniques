@@ -21,3 +21,13 @@ Preserved the active external candidate ledger before source-status edits:
 The active ledger now states that `seed_4.txt` and `seed_6.txt` are historical
 source labels whose raw files are not present in the current checkout. Candidate
 counts and verdicts were not changed.
+
+## 2026-05-01 - External candidate ledger active compaction
+
+Compacted `parts/external-candidate-ledger/README.md` after preserving the
+pre-prune receipt. The active surface now keeps current route accounting,
+candidate tables, landed anchors, and reopen rules. The preserved receipt keeps
+the detailed wave execution notes, public donor-read details, and old expected
+first import package.
+
+Candidate counts and verdicts were not changed.
