@@ -8,7 +8,7 @@ Markdown stays authoritative.
 See also:
 - [Documentation Map](README.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-- [Promotion Readiness Matrix](../mechanics/audit/PROMOTION_READINESS_MATRIX.md)
+- [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
 
 ## Metadata And Canonical Review
 
@@ -19,7 +19,7 @@ Stage 1 metadata can inform selection and canonical review, but it does not repl
 - `domain` remains the first owner/routing axis, while `kind` is the bounded second selector axis inside that owner layer
 - they do not auto-promote a technique to `canonical`
 - `promoted -> canonical` decisions should follow the bounded review contract in [CANONICAL_REVIEW_GUIDE.md](CANONICAL_REVIEW_GUIDE.md)
-- if the open question is whether a bundle is even ready to enter canonical review yet, use [Promotion Readiness Matrix](../mechanics/audit/PROMOTION_READINESS_MATRIX.md) before treating the metadata as a go signal
+- if the open question is whether a bundle is even ready to enter canonical review yet, use [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md) before treating the metadata as a go signal
 
 ## Field meanings
 

@@ -8,7 +8,7 @@
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
     "docs/CANONICAL_RUBRIC.md",
-    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "generated_surfaces": [
@@ -20,7 +20,7 @@
   "contract_surfaces": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "docs/CANONICAL_RUBRIC.md",
-    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "documentation_surfaces": [
@@ -186,7 +186,7 @@
     {
       "beacon_ref": "technique.canonical.second_consumer_pressure",
       "kind": "canonical_pressure",
-      "decision_surface": "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
+      "decision_surface": "mechanics/audit/parts/promotion-readiness-matrix/README.md",
       "target_repo": "aoa-techniques",
       "observation_inputs": [
         "change_signal",
@@ -266,7 +266,7 @@
   ],
   "decision_surfaces": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
-    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "candidate_targets": [

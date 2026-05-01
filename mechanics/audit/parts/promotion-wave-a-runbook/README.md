@@ -1,10 +1,10 @@
 # Promotion Wave A Runbook
 
-This runbook records the first actionable evidence-prep wave after [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md).
+This runbook records the first actionable evidence-prep wave after [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md).
 
 Use it when the question is not "which promoted bundle is generally closest to canonical?", but "how should the next swarm-backed evidence wave run without faking closure, widening bundle meaning, or colliding on shared surfaces?"
 
-This runbook is separate from the already-landed future-import `Wave A`, `Wave B`, and `Wave C` recorded in [Roadmap](../../ROADMAP.md).
+This runbook is separate from the already-landed future-import `Wave A`, `Wave B`, and `Wave C` recorded in [Roadmap](../../../../ROADMAP.md).
 Those waves landed new techniques.
 This runbook is about strengthening existing `promoted` bundles without flipping status early.
 `AOA-T-0018`, `AOA-T-0013`, `AOA-T-0034`, and `AOA-T-0023` have since exited this runbook through separate follow-up canonical reviews, so the active roster below now tracks the three remaining promoted candidates from the original Wave A pack.
@@ -13,9 +13,9 @@ This runbook is about strengthening existing `promoted` bundles without flipping
 
 Close the smallest honest blocker for the three remaining strongest current `promoted` candidates:
 
-- [AOA-T-0032](../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
-- [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-- [AOA-T-0036](../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+- [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+- [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 
 ## Non-Goals
 
@@ -30,7 +30,7 @@ Close the smallest honest blocker for the three remaining strongest current `pro
 - main agent owns:
   - wave boundaries
   - exact-fit versus overlap verdicts
-  - any updates to [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
+  - any updates to [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md)
   - any later `TECHNIQUE_INDEX.md` changes
   - generated-surface sync
   - `python -m pip install -r requirements-dev.txt`
@@ -73,17 +73,17 @@ If evidence lands, the preferred local update path is:
 
 | technique | why now | smallest blocker | evidence that counts | not enough | likely local files |
 |---|---|---|---|---|---|
-| [AOA-T-0032](../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Clean companion to canonical `AOA-T-0012`. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family where the same CI-facing context report exists as a real read-only artifact over composition health. | Composition-engine docs, remediation logic, provider telemetry, or a report that owns fixes rather than reporting drift. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact shape becomes clearer. |
-| [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational `history` candidate. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family that persists local-first AI session history as a reviewable project artifact without widening into memory or instruction policy. | Memory systems, recall/search products, transcript-only packaging, or cloud-history wrappers. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact seam gets clearer. |
-| [AOA-T-0036](../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract with one donor lineage only. | One second independent downstream consumer. | A local runtime surface where a pre-start rendered truth step is a real review seam over the effective composed runtime view. | Lifecycle wrappers, readiness-only checks, config publication without review, or a startup path where declared state and effective truth do not meaningfully diverge. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the render-review seam gets sharper. |
+| [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Clean companion to canonical `AOA-T-0012`. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family where the same CI-facing context report exists as a real read-only artifact over composition health. | Composition-engine docs, remediation logic, provider telemetry, or a report that owns fixes rather than reporting drift. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact shape becomes clearer. |
+| [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational `history` candidate. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family that persists local-first AI session history as a reviewable project artifact without widening into memory or instruction policy. | Memory systems, recall/search products, transcript-only packaging, or cloud-history wrappers. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact seam gets clearer. |
+| [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract with one donor lineage only. | One second independent downstream consumer. | A local runtime surface where a pre-start rendered truth step is a real review seam over the effective composed runtime view. | Lifecycle wrappers, readiness-only checks, config publication without review, or a startup path where declared state and effective truth do not meaningfully diverge. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the render-review seam gets sharper. |
 
 ## Recommended Sequence
 
 Run the wave in this order:
 
-1. [AOA-T-0032](../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
-2. [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-3. [AOA-T-0036](../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+1. [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+2. [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+3. [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 
 Why this order:
 
@@ -151,13 +151,13 @@ The goal is to reduce uncertainty and tighten evidence quality, not to force a c
 
 | technique | pass 1 result | note |
 |---|---|---|
-| [AOA-T-0013](../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-agents`, `aoa-routing`, and `aoa-playbooks` show projection and validation discipline, while `aoa-skills` overlay branches stay same-lineage, but none of them prove one-source -> many-managed-target instruction distribution in a second independent context. |
-| [AOA-T-0018](../../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `exact-fit evidence found` | `aoa-routing` confirms section surfaces as real `expand` targets beyond the already-strengthened `aoa-skills` and `aoa-evals` evidence. |
-| [AOA-T-0034](../../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-playbooks` and `aoa-skills` keep sanitization as a prerequisite or origin-lineage surface, not as a second exact-fit live consumer. |
-| [AOA-T-0023](../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `adjacent but insufficient` | checkpointed or swarm-governed flows exist, but not the same shell-side single-shot fast path. |
-| [AOA-T-0032](../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | `adjacent but insufficient` | drift reports, composition audits, and evaluation matrices exist, but not the same CI-facing context-report artifact. |
-| [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `adjacent but insufficient` | downstream witness and artifact-transition consumers exist, but not a second capture-as-artifact contract. |
-| [AOA-T-0036](../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `no exact-fit local consumer found` | the searched local lane shows origin and seed-soil, but not a second independent runtime consumer. |
+| [AOA-T-0013](../../../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-agents`, `aoa-routing`, and `aoa-playbooks` show projection and validation discipline, while `aoa-skills` overlay branches stay same-lineage, but none of them prove one-source -> many-managed-target instruction distribution in a second independent context. |
+| [AOA-T-0018](../../../../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `exact-fit evidence found` | `aoa-routing` confirms section surfaces as real `expand` targets beyond the already-strengthened `aoa-skills` and `aoa-evals` evidence. |
+| [AOA-T-0034](../../../../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-playbooks` and `aoa-skills` keep sanitization as a prerequisite or origin-lineage surface, not as a second exact-fit live consumer. |
+| [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `adjacent but insufficient` | checkpointed or swarm-governed flows exist, but not the same shell-side single-shot fast path. |
+| [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | `adjacent but insufficient` | drift reports, composition audits, and evaluation matrices exist, but not the same CI-facing context-report artifact. |
+| [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `adjacent but insufficient` | downstream witness and artifact-transition consumers exist, but not a second capture-as-artifact contract. |
+| [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `no exact-fit local consumer found` | the searched local lane shows origin and seed-soil, but not a second independent runtime consumer. |
 
 Current implication:
 
@@ -170,7 +170,7 @@ Current implication:
 - keep bundle edits narrow and local while evidence work is in flight
 - merge one technique per PR
 - after a merge-ready bundle exists, run `python scripts/release_check.py`
-- only update shared docs such as [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md) when the bundle's blocker or lane meaning actually changed
+- only update shared docs such as [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md) when the bundle's blocker or lane meaning actually changed
 
 ## Notes
 

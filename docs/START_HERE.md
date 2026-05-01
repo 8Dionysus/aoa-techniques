@@ -34,10 +34,10 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Canonical Rubric](CANONICAL_RUBRIC.md) for the current frontmatter review fields and evidence kinds
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
 - open [Mechanics](../mechanics/README.md) when the question is which AoA cross-mechanic owns practice movement before, around, or after canon
-- open [Promotion Readiness Matrix](../mechanics/audit/PROMOTION_READINESS_MATRIX.md) when the question is which `promoted` bundle can be honestly strengthened next and what proof is still missing
-- open [Promotion Wave A Runbook](../mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
-- open [External Evidence Sprint Runbook](../mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md) when the question is how to run the live external-proof search over the remaining `promoted` queue without repeating stale lanes
-- open [External Evidence Ledger](../mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md) when the question is which external lanes have already been searched, rejected as adjacent, or honestly closed
+- open [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md) when the question is which `promoted` bundle can be honestly strengthened next and what proof is still missing
+- open [Promotion Wave A Runbook](../mechanics/audit/parts/promotion-wave-a-runbook/README.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
+- open [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md) when the question is how to run the live external-proof search over the remaining `promoted` queue without repeating stale lanes
+- open [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md) when the question is which external lanes have already been searched, rejected as adjacent, or honestly closed
 - open [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md) when the question is what can be extracted from an external donor without importing foreign doctrine
 - open [External Import Runbook](../mechanics/distillation/parts/external-import-runbook/README.md) when the question is how to take one bounded donor from triage to merge without inventing a new maintainer path
 - open [Long-Gap Canon Design](../mechanics/distillation/parts/long-gap-reentry/README.md) when the question is why a remaining `promoted` technique still needs an external donor path

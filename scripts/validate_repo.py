@@ -698,7 +698,7 @@ QUESTBOOK_REQUIRED_INTEGRATION_TOKENS = (
     "without turning the repo into a second donor backlog",
     "docs/START_HERE.md",
     "TECHNIQUE_INDEX.md",
-    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/donor-refinery/README.md",
     "generated/technique_capsules.min.json",

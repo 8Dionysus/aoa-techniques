@@ -5,12 +5,12 @@ This runbook records the live maintainer path for external-evidence work over th
 Use it when the question is not "which promoted bundle is generally closest to `canonical`?", but "how should the next external proof sprint run without repeating stale searches, widening bundle meaning, or faking closure?"
 
 See also:
-- [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
-- [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md)
-- [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
-- [Long-Gap Canon Design](../distillation/parts/long-gap-reentry/README.md)
-- [Roadmap](../../ROADMAP.md)
-- [External Import Runbook](../distillation/parts/external-import-runbook/README.md)
+- [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md)
+- [Promotion Wave A Runbook](../promotion-wave-a-runbook/README.md)
+- [External Evidence Ledger](../external-evidence-ledger/README.md)
+- [Long-Gap Canon Design](../../../distillation/parts/long-gap-reentry/README.md)
+- [Roadmap](../../../../ROADMAP.md)
+- [External Import Runbook](../../../distillation/parts/external-import-runbook/README.md)
 
 ## When To Open This
 
@@ -21,7 +21,7 @@ Open this runbook only when all of the following are already true:
 - the remaining blocker is external evidence, not missing bundle structure
 - the next move should reduce uncertainty even if no status changes happen
 
-If the problem is really donor intake or a new extraction, use [External Import Runbook](../distillation/parts/external-import-runbook/README.md) instead.
+If the problem is really donor intake or a new extraction, use [External Import Runbook](../../../distillation/parts/external-import-runbook/README.md) instead.
 
 ## Non-Goals
 
@@ -36,22 +36,22 @@ If the problem is really donor intake or a new extraction, use [External Import 
 Run the external evidence queue in this order:
 
 1. lead queue:
-   - [AOA-T-0032](../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
-   - [AOA-T-0026](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-   - [AOA-T-0036](../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+   - [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+   - [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+   - [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 2. markdown-first and fresh-extraction follow-through:
-   - [AOA-T-0020](../../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
-   - [AOA-T-0046](../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
-   - [AOA-T-0047](../../techniques/docs/github-review-template-lift/TECHNIQUE.md)
-   - [AOA-T-0048](../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+   - [AOA-T-0020](../../../../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+   - [AOA-T-0046](../../../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
+   - [AOA-T-0047](../../../../techniques/docs/github-review-template-lift/TECHNIQUE.md)
+   - [AOA-T-0048](../../../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
 3. long-gap holds:
-   - [AOA-T-0005](../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
-   - [AOA-T-0022](../../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+   - [AOA-T-0005](../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+   - [AOA-T-0022](../../../../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 Closed shell-agent precedents:
 
-- [AOA-T-0028](../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) and [AOA-T-0031](../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) have exited this sprint lane through separate canonical reviews.
-- Use their entries in [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md) as closure examples, not as active search targets.
+- [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) and [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) have exited this sprint lane through separate canonical reviews.
+- Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:
 
@@ -64,9 +64,9 @@ Why this order:
 - main agent owns:
   - sprint order
   - exact-fit versus overlap verdicts
-  - updates to [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
-  - updates to [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
-  - any later sync to [Roadmap](../../ROADMAP.md)
+  - updates to [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md)
+  - updates to [External Evidence Ledger](../external-evidence-ledger/README.md)
+  - any later sync to [Roadmap](../../../../ROADMAP.md)
   - `python -m pip install -r requirements-dev.txt`
   - final `python scripts/release_check.py`
 - each worker owns:
@@ -86,8 +86,8 @@ Why this order:
    - open `notes/canonical-readiness.md`
    - open `notes/second-context-adaptation.md` when it exists
 2. Check shared search memory.
-   - open [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md)
-   - open [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
+   - open [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md)
+   - open [External Evidence Ledger](../external-evidence-ledger/README.md)
    - do not rerun a false-positive lane unless a new public signal exists
 3. Search the exact object layer first.
    - look for the same reusable object in a second real public consumer
@@ -110,7 +110,7 @@ Each search lane should end with one bounded result:
 - `adjacent but insufficient`
   - name the surface
   - explain why it is overlap, sibling, or too broad
-  - add the result to [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md)
+  - add the result to [External Evidence Ledger](../external-evidence-ledger/README.md)
 - `no fit found in searched lane`
   - name the lane
   - restate the blocker in one sentence
@@ -128,7 +128,7 @@ If exact-fit evidence lands, the preferred local update order is:
 ## Stop Rules
 
 - if the candidate evidence would require new bundle meaning, stop and log it as overlap
-- if the candidate evidence is really a donor for a future new technique, route it to [External Import Runbook](../distillation/parts/external-import-runbook/README.md)
+- if the candidate evidence is really a donor for a future new technique, route it to [External Import Runbook](../../../distillation/parts/external-import-runbook/README.md)
 - if the search result only improves examples but not live reuse, keep the status blocker explicit
 - if the same public source appears across multiple bundles, split ownership by target bundle and keep note edits disjoint
 - if the sprint finds no exact-fit evidence, that is still a valid result; close the lane cleanly and move on
@@ -148,9 +148,9 @@ The sprint does not need to increase the canonical count to count as progress.
 - keep bundle edits local until evidence is real
 - merge one technique per PR
 - run `python scripts/release_check.py` after a merge-ready bundle exists
-- update [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md), [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md), and [Roadmap](../../ROADMAP.md) only when the blocker or queue meaning actually changed
+- update [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md), [External Evidence Ledger](../external-evidence-ledger/README.md), and [Roadmap](../../../../ROADMAP.md) only when the blocker or queue meaning actually changed
 
 ## Notes
 
-- This runbook is intentionally narrower than [Roadmap](../../ROADMAP.md); it owns live search execution, not the whole historical audit record.
-- Expand [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md) when a real lane search happens or a bundle exits the queue.
+- This runbook is intentionally narrower than [Roadmap](../../../../ROADMAP.md); it owns live search execution, not the whole historical audit record.
+- Expand [External Evidence Ledger](../external-evidence-ledger/README.md) when a real lane search happens or a bundle exits the queue.

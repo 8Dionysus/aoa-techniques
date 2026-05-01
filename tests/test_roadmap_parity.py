@@ -36,7 +36,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         status_counts = Counter(technique["status"] for technique in techniques)
         promoted_count = status_counts["promoted"]
 
-        readiness_matrix = (REPO_ROOT / "mechanics/audit/PROMOTION_READINESS_MATRIX.md").read_text(encoding="utf-8")
+        readiness_matrix = (REPO_ROOT / "mechanics/audit/parts/promotion-readiness-matrix/README.md").read_text(encoding="utf-8")
 
         self.assertEqual(promoted_count, 75)
         self.assertIn(f"current promoted corpus: `{promoted_count}` techniques", readiness_matrix)
