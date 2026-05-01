@@ -241,6 +241,95 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("without compacting the README in this pass", decision)
         self.assertIn("recurrence and later compaction work", decision)
 
+    def test_distillation_gate_packet_is_named_across_active_parts(self) -> None:
+        donor_refinery = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "donor-refinery"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        external_runbook = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "external-import-runbook"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+
+        for text in (donor_refinery, external_runbook):
+            with self.subTest(surface=text.splitlines()[0]):
+                self.assertIn("Atom/Topology", text)
+                self.assertIn("Law/Local/Bridge", text)
+                self.assertIn("atomic_move_note", text)
+                self.assertIn("atomic_move_status", text)
+                self.assertIn("capability_class", text)
+                self.assertIn("execution_profile", text)
+                self.assertIn("risk_posture", text)
+                self.assertIn("higher_law", text)
+                self.assertIn("local_route", text)
+                self.assertIn("bridge_stop_line", text)
+
+        for verdict in (
+            "pass_to_import_runbook",
+            "ledger_hold",
+            "overlap_hold",
+            "layer_incubation",
+            "not_technique_shaped",
+        ):
+            with self.subTest(verdict=verdict):
+                self.assertIn(verdict, donor_refinery)
+
+    def test_distillation_reopen_gates_preserve_registry_authority_boundary(self) -> None:
+        external = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "external-candidate-ledger"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        cross_layer = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "cross-layer-candidate-ledger"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+
+        for text in (external, cross_layer):
+            with self.subTest(surface=text.splitlines()[0]):
+                self.assertIn("## Reopen Gate", text)
+                self.assertIn("Atom/topology gate", text)
+                self.assertIn("Law/local/bridge gate", text)
+                self.assertIn("atomic_move_note", text)
+                self.assertIn("atomic_move_status", text)
+                self.assertIn("higher_law", text)
+                self.assertIn("local_route", text)
+                self.assertIn("bridge_stop_line", text)
+                self.assertIn("generated registry", text)
+
+        self.assertIn("inherited external rows reopen", cross_layer)
+        self.assertIn("landed rows do not reopen as candidates", cross_layer)
+
+    def test_distillation_gate_alignment_decision_is_discoverable(self) -> None:
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-01-distillation-gate-alignment.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Distillation Gate Alignment", decision)
+        self.assertIn("gate packet", decision)
+        self.assertIn("atom/topology", decision)
+        self.assertIn("law/local/bridge", decision)
+        self.assertIn("generated registries remain", decision)
+        self.assertIn("evidence only", decision)
+
 
 if __name__ == "__main__":
     unittest.main()

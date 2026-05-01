@@ -154,3 +154,30 @@ Not moved:
 - no recurrence manifest became candidate or promotion authority
 - no candidate status changed
 - no generated index became a decision surface
+
+## 2026-05-01 - Distillation gate alignment
+
+Changed:
+
+- made the atom/topology and law/local/bridge packet explicit in the donor
+  refinery and external import runbook
+- aligned external and cross-layer candidate-ledger reopen rules with the same
+  packet before any future import wave
+- kept generated registries as evidence only and kept candidate statuses
+  unchanged
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
+python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no candidate moved out of hold, incubation, overlap, or landed status
+- no technique bundle was drafted
+- no future topology axis became current bundle frontmatter authority
