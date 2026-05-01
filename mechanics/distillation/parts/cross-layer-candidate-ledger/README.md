@@ -192,6 +192,42 @@ Each technique in a wave still lands through its own PR. The wave is a family-le
   execution profile, risk posture, and standalone portability note
 - shared generated surfaces should be synchronized only after a bundle draft is merge-ready, and only by the main agent
 
+## Reopen Gate
+
+Reopen a row from this cross-layer ledger only through one of these routes:
+
+- inherited external rows reopen in the [External Candidate Ledger](../external-candidate-ledger/README.md)
+  unless new independent cross-layer evidence changes the source boundary
+- landed rows do not reopen as candidates; use bundle-local review if the
+  landed technique contract drifts
+- overlap, layer-incubation, and architecture rows can move only when their
+  active ledger row and structured registry seed carry the full gate packet
+
+Atom/topology gate:
+
+- `atomic_move_note`: the one executable move being extracted
+- `atomic_move_status`: named, landed, inherited, or still not named cleanly
+- likely `domain` and primary `kind`
+- likely family or reason no family is stable yet
+- capability class, substrate, execution profile, and risk posture
+- nearest landed technique, overlap watch, or layer-owner surface
+
+Law/local/bridge gate:
+
+- `higher_law`: the source owner or AoA layer whose authority and stop lines
+  matter
+- `local_route`: why this row stays held, moves to incubation, enters import
+  review, or remains closed as landed
+- `bridge_stop_line`: what must not cross from source layer into technique
+  canon
+- what remains portable outside OS Abyss
+- `aoa_only_context` or equivalent note for local integration context
+- source owner and generated or indexed surfaces expected to change
+
+If a row cannot name those fields, keep the row in its current verdict lane.
+Do not update the generated registry directly; update the seed and validate the
+derived index as evidence only.
+
 ## Hold Because Overlap
 
 | candidate | donor or source layer | tentative domain | overlap note | next move |

@@ -115,18 +115,54 @@ The donor is useful when AoA can say:
 
 If AoA cannot say those three things clearly yet, the donor is still evidence or soil, not canon.
 
-## Extraction Gate
+## Atom/Topology Gate
 
 Before a donor-derived candidate can leave this package for bundle drafting,
-the active surface should be able to name:
+the active surface must be able to name the candidate's gate packet.
 
-- the atomic move being extracted
-- the likely `domain` and primary `kind`
-- the likely family, or why no family is stable yet
-- the capability class, substrate, execution profile, and risk posture
-- the nearest landed technique, alternative, or conflict point
-- the source law, local extraction route, and bridge stop line
-- what remains portable outside OS Abyss
+The atom/topology side of the packet is:
 
-If these cannot be named without importing the donor's whole system, keep the
-material in the relevant ledger or incubation lane.
+- `atomic_move_note`: the one executable move being extracted
+- `atomic_move_status`: whether the move is named, landed, inherited, or still
+  not named cleanly
+- likely `domain` and primary `kind`
+- likely family, or why no stable family exists yet
+- `capability_class`, `substrate`, `execution_profile`, and `risk_posture`
+- nearest landed technique, alternative, or conflict point
+
+These fields classify the candidate for extraction. They do not promote future
+topology axes into current technique frontmatter authority.
+
+## Law/Local/Bridge Gate
+
+The law/local/bridge side of the same packet is:
+
+- `higher_law`: the source owner or layer whose authority and stop lines matter
+- `local_route`: the `aoa-techniques` path for extraction, hold, overlap,
+  incubation, import, or rejection
+- `bridge_stop_line`: what the bridge must not carry across
+- `portable_core`: what remains useful outside OS Abyss
+- `aoa_only_context`: what stays as local integration or provenance context
+- donor exclusions: what is intentionally left behind
+
+If this split cannot be named without importing the donor's whole system, keep
+the material in the relevant ledger or incubation lane.
+
+## Gate Verdicts
+
+Use one narrow verdict per candidate:
+
+- `pass_to_import_runbook`: the packet is clear enough to draft through the
+  external import runbook
+- `ledger_hold`: the pattern may matter, but evidence or naming is still too
+  weak
+- `overlap_hold`: the candidate is too close to an existing technique or active
+  repo surface
+- `layer_incubation`: a sibling layer must stabilize its own public-safe
+  contract before extraction here
+- `not_technique_shaped`: the material is still substrate, architecture,
+  runtime, role, or doctrine rather than one technique atom
+
+Do not fill missing packet fields by inference just to move a donor forward.
+The refinery may classify and hold material, but it does not create technique
+bundles or release bundle-local review gates.

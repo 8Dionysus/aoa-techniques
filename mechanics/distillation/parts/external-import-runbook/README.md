@@ -28,11 +28,41 @@ Open this runbook only when all of the following are already true:
 
 If those checks still fail, stop and record the result in the candidate or review surface instead of drafting a bundle.
 
+## Gate Packet
+
+Every import entering this runbook must carry the Distillation gate packet from
+the active ledger, donor refinery, or review surface.
+
+Atom/Topology fields:
+
+- `atomic_move_note`
+- `atomic_move_status`
+- likely `domain` and primary `kind`
+- likely family or reason no stable family exists yet
+- `capability_class`
+- `substrate`
+- `execution_profile`
+- `risk_posture`
+- nearest landed technique, alternative, or conflict point
+
+Law/Local/Bridge fields:
+
+- `higher_law`
+- `local_route`
+- `bridge_stop_line`
+- `portable_core`
+- `aoa_only_context`
+- donor exclusions
+
+The runbook may refine wording, but it must not widen the packet. If drafting
+requires a broader move, a different domain, a new owner, or a hidden OS Abyss
+dependency, return the candidate to the ledger or incubation lane.
+
 ## Operator Path
 
 1. Triage the donor.
    - name the reusable object being extracted
-   - name the atomic move and likely topology posture
+   - name the gate packet's atomic move and likely topology posture
    - name the nearest existing technique or overlap watch
    - name the source law, local extraction route, and bridge stop line
    - state what stays out of the donor
@@ -77,11 +107,13 @@ For every import issue or PR, name these explicitly:
 
 - nearest existing technique or overlap watch
 - atomic move
+- atomic move status
 - likely `domain` and primary `kind`
 - likely family or reason no family is stable yet
 - capability class, substrate, execution profile, and risk posture
-- source law, local extraction route, and bridge stop line
-- standalone portability note for readers outside OS Abyss
+- `higher_law`, `local_route`, and `bridge_stop_line`
+- standalone portability note, or `portable_core`, for readers outside OS Abyss
+- `aoa_only_context` that must not become a hidden dependency
 - what stays out of the donor
 - expected evidence notes and note paths
 - expected generated surfaces

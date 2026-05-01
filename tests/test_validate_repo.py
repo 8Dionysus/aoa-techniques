@@ -1181,7 +1181,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0001",
             "AOA-T-0023",
             "bounded-specialist-generation",
-            "## Reopen Rule",
+            "## Reopen Gate",
+            "Atom/topology gate",
+            "Law/local/bridge gate",
         ):
             self.assertIn(target, candidates)
 

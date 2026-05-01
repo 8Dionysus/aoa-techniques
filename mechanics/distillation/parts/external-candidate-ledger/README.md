@@ -142,21 +142,37 @@ landed anchors remain useful for route memory:
 For exact wave execution roles, public donor-read details, and the old expected
 first import package, use the preserved raw receipt.
 
-## Reopen Rule
+## Reopen Gate
 
-Reopen a candidate from this ledger only when the candidate can name:
+Reopen a candidate from this ledger only when the active ledger row and
+structured registry seed can carry the same Distillation gate packet.
 
-- the atomic move being extracted
-- the likely `domain` and primary `kind`
-- the likely family or reason no family is stable yet
-- the capability class, substrate, execution profile, and risk posture
-- the bounded reusable practice being extracted
-- the nearest landed technique or overlap watch
-- the source law, local extraction route, and bridge stop line
+Atom/topology gate:
+
+- `atomic_move_note`: the one executable move being extracted
+- `atomic_move_status`: named or still not named cleanly
+- likely `domain` and primary `kind`
+- likely family or reason no family is stable yet
+- capability class, substrate, execution profile, and risk posture
+- bounded reusable practice being extracted
+- nearest landed technique or overlap watch
+
+Law/local/bridge gate:
+
+- `higher_law`: the source owner or layer whose authority and stop lines matter
+- `local_route`: why this row should stay held, move to incubation, or enter
+  import review
+- `bridge_stop_line`: what must not cross from donor into technique canon
 - what remains portable outside OS Abyss
+- `aoa_only_context` or equivalent note for local integration context
 - what stays out of the donor
-- the evidence package needed for the current maturity claim
-- the generated or indexed surfaces expected to change
+
+Accounting gate:
+
+- evidence package needed for the current maturity claim
+- generated or indexed surfaces expected to change
+- registry seed update before any generated index is rebuilt
 
 If those cannot be named, keep the candidate in this ledger rather than drafting
-a technique bundle.
+a technique bundle. Do not change status in the generated registry directly;
+change the seed and let validation rebuild evidence.
