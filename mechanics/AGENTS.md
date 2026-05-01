@@ -41,7 +41,8 @@ It does not own:
 
 1. Read the repository root `AGENTS.md`, `README.md`, `ROADMAP.md`, and
    `docs/START_HERE.md`.
-2. Read `mechanics/README.md`.
+2. Read `docs/TECHNIQUE_ATOM_CONTRACT.md`,
+   `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and `mechanics/README.md`.
 3. Read the nearest package README for the touched path.
 4. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `legacy/`,
    or `parts/`, use those active route surfaces before opening raw legacy.
@@ -55,6 +56,15 @@ It does not own:
   silently promote candidates into canon.
 - Every cross-repo handoff must name the owner and stop-line rather than
   importing that owner's authority into this repo.
+- Larger mechanics should distinguish higher law, local implementation, and
+  bridge surfaces when that split helps the project stay legible. Higher law
+  belongs to the source owner; local implementation belongs to this repo's
+  mechanics package; bridges must stay narrow, provenance-linked, and explicit
+  about both sides.
+- Before a mechanics candidate becomes a technique bundle, the active surface
+  should be able to name the atomic move, likely `domain`, likely `kind`,
+  likely family or reason no family is stable yet, capability class, substrate,
+  execution profile, risk posture, and nearest relation or conflict points.
 - Evidence and donor material must stay public-safe, source-linked, and
   reversible.
 - Generated artifacts remain evidence, not authority.

@@ -118,8 +118,14 @@ first import package, use the preserved raw receipt.
 
 Reopen a candidate from this ledger only when the candidate can name:
 
+- the atomic move being extracted
+- the likely `domain` and primary `kind`
+- the likely family or reason no family is stable yet
+- the capability class, substrate, execution profile, and risk posture
 - the bounded reusable practice being extracted
 - the nearest landed technique or overlap watch
+- the source law, local extraction route, and bridge stop line
+- what remains portable outside OS Abyss
 - what stays out of the donor
 - the evidence package needed for the current maturity claim
 - the generated or indexed surfaces expected to change

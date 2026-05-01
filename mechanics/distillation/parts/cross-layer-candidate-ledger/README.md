@@ -156,6 +156,12 @@ Each technique in a wave still lands through its own PR. The wave is a family-le
 - external donors continue to use the normal external-import package in the external intake surface: `TECHNIQUE.md`, `notes/external-origin.md`, `notes/external-import-review.md`, `notes/second-context-adaptation.md`, one checklist, one minimal public-safe example, and the expected generated-surface sync
 - cross-layer or internal-origin candidates here should use donor-appropriate origin and adaptation notes without forcing `external-*` note names where the donor is not actually an external-import case
 - do not reopen `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique` lanes just to fill a wave
+- do not treat a sibling repo's local implementation as higher law for
+  `aoa-techniques`; name source law, local extraction route, and bridge stop
+  line separately
+- do not draft a bundle until the candidate can name its atomic move, likely
+  `domain`, primary `kind`, family posture, capability class, substrate,
+  execution profile, risk posture, and standalone portability note
 - shared generated surfaces should be synchronized only after a bundle draft is merge-ready, and only by the main agent
 
 ## Hold Because Overlap
@@ -187,3 +193,5 @@ Each technique in a wave still lands through its own PR. The wave is a family-le
 - a candidate can still be a valid AoA technique even if it currently needs one more extraction pass before it can land here cleanly
 - the original `24`-name donor-note universe is still accounted for here because the intake map keeps `6` inherited external placements, `10` landed imports from the current wave map, and the remaining native candidate lanes visible in one surface
 - the wave program here now points the landed Wave A, Wave B, and Wave C families at their technique bundles while inherited external placements stay in the external intake surface
+- cross-layer links are provenance and boundary context unless a tracked
+  bundle explicitly promotes one portable technique contract

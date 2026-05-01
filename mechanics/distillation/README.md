@@ -29,3 +29,18 @@ Current active parts:
 
 Distillation may produce a candidate, intake route, or overlap hold. It does
 not by itself promote a technique bundle or replace bundle-local evidence.
+
+## Distillation Gate
+
+Before donor or cross-layer material leaves this package for a technique
+bundle, the active part should be able to name:
+
+- the atomic move and the likely `domain` / primary `kind`
+- the family posture, capability class, substrate, execution profile, and risk
+  posture
+- the source law, local extraction route, and bridge stop line
+- what remains portable outside OS Abyss and what is only AoA integration
+  context
+
+If those cannot be named, keep the material here as a candidate, hold,
+incubation lane, or legacy receipt.

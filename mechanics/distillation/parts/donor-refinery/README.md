@@ -17,6 +17,22 @@ AoA should refine external donors through this chain:
 `aoa-techniques` owns the extraction of reusable practice from that chain.
 It does not own playbook meaning or eval doctrine.
 
+## Law, Local Route, Bridge
+
+Distillation must keep three layers separate:
+
+- higher law: the source owner or AoA layer that defines authority, meaning,
+  and stop-lines
+- local route: this package's extraction, hold, overlap, incubation, or import
+  path inside `aoa-techniques`
+- bridge: a narrow handoff that names the donor input, extracted output shape,
+  owner boundary, and stop line
+
+A donor may help OS Abyss, but the extracted technique candidate must still be
+portable as a bounded practice. AoA-only law, runtime assumptions, or sibling
+repo integration details should stay as provenance or boundary context, not as
+hidden requirements for the technique.
+
 ## Three intake tests
 
 ### Pattern
@@ -98,3 +114,19 @@ The donor is useful when AoA can say:
 - why the resulting technique stays narrower than the donor
 
 If AoA cannot say those three things clearly yet, the donor is still evidence or soil, not canon.
+
+## Extraction Gate
+
+Before a donor-derived candidate can leave this package for bundle drafting,
+the active surface should be able to name:
+
+- the atomic move being extracted
+- the likely `domain` and primary `kind`
+- the likely family, or why no family is stable yet
+- the capability class, substrate, execution profile, and risk posture
+- the nearest landed technique, alternative, or conflict point
+- the source law, local extraction route, and bridge stop line
+- what remains portable outside OS Abyss
+
+If these cannot be named without importing the donor's whole system, keep the
+material in the relevant ledger or incubation lane.
