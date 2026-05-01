@@ -9,8 +9,8 @@ Use the staging surfaces in `incoming/chat-wave-1a-registry-discovery/` to triag
 ## Read first
 
 1. `README.md` at repo root
-2. `docs/DONOR_REFINERY_RUBRIC.md`
-3. `docs/EXTERNAL_IMPORT_RUNBOOK.md`
+2. `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`
+3. `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`
 4. `TECHNIQUE_INDEX.md`
 5. `incoming/chat-wave-1a-registry-discovery/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_1A.md`
 6. `incoming/chat-wave-1a-registry-discovery/docs/CHAT_WAVE_1A_PLANTING_ORDER.md`

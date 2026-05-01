@@ -14,6 +14,7 @@ This repository owns:
 
 - technique bundle meaning, IDs, intent, contracts, and adaptation notes
 - public-safe technique wording and kind/domain selection
+- owner-local participation in AoA cross-mechanics around reusable practice movement
 - generated technique catalogs, capsules, feat-card reader surfaces, and source-lift surfaces
 
 It does not own:
@@ -26,12 +27,13 @@ It does not own:
 1. `README.md`
 2. `ROADMAP.md`
 3. `docs/START_HERE.md`
-4. `WALKTHROUGH.md`
-5. `docs/TECHNIQUE_SELECTION.md`
-6. `docs/TECHNIQUE_KIND_GUIDE.md`
-7. the target `techniques/**/TECHNIQUE.md`
-8. affected generated catalogs, capsules, feat cards, or source-lift outputs
-9. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
+4. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
+5. `WALKTHROUGH.md`
+6. `docs/TECHNIQUE_SELECTION.md`
+7. `docs/TECHNIQUE_KIND_GUIDE.md`
+8. the target `techniques/**/TECHNIQUE.md`
+9. affected generated catalogs, capsules, feat cards, or source-lift outputs
+10. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
 
 
 ## AGENTS stack law

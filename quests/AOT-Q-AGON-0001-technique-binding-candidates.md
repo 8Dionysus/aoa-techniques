@@ -14,7 +14,7 @@ Receive Wave IV practice candidate requests from `Agents-of-Abyss`.
 ## Verify
 
 ```bash
-python scripts/build_agon_technique_binding_candidates.py --check
-python scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q tests/test_agon_technique_binding_candidates.py
+python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check
+python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py
+python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py
 ```

@@ -27,17 +27,18 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 - open [Canonical Rubric](CANONICAL_RUBRIC.md) for the current frontmatter review fields and evidence kinds
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
-- open [Promotion Readiness Matrix](PROMOTION_READINESS_MATRIX.md) when the question is which `promoted` bundle can be honestly strengthened next and what proof is still missing
-- open [Promotion Wave A Runbook](PROMOTION_WAVE_A_RUNBOOK.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
-- open [External Evidence Sprint Runbook](EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md) when the question is how to run the live external-proof search over the remaining `promoted` queue without repeating stale lanes
-- open [External Evidence Ledger](EXTERNAL_EVIDENCE_LEDGER.md) when the question is which external lanes have already been searched, rejected as adjacent, or honestly closed
-- open [Donor Refinery Rubric](DONOR_REFINERY_RUBRIC.md) when the question is what can be extracted from an external donor without importing foreign doctrine
-- open [External Import Runbook](EXTERNAL_IMPORT_RUNBOOK.md) when the question is how to take one bounded donor from triage to merge without inventing a new maintainer path
-- open [Long-Gap Canon Design](LONG_GAP_CANON_DESIGN.md) when the question is why a remaining `promoted` technique still needs an external donor path
+- open [Mechanics](../mechanics/README.md) when the question is which AoA cross-mechanic owns practice movement before, around, or after canon
+- open [Promotion Readiness Matrix](../mechanics/audit/PROMOTION_READINESS_MATRIX.md) when the question is which `promoted` bundle can be honestly strengthened next and what proof is still missing
+- open [Promotion Wave A Runbook](../mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
+- open [External Evidence Sprint Runbook](../mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md) when the question is how to run the live external-proof search over the remaining `promoted` queue without repeating stale lanes
+- open [External Evidence Ledger](../mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md) when the question is which external lanes have already been searched, rejected as adjacent, or honestly closed
+- open [Donor Refinery Rubric](../mechanics/distillation/DONOR_REFINERY_RUBRIC.md) when the question is what can be extracted from an external donor without importing foreign doctrine
+- open [External Import Runbook](../mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md) when the question is how to take one bounded donor from triage to merge without inventing a new maintainer path
+- open [Long-Gap Canon Design](../mechanics/distillation/LONG_GAP_CANON_DESIGN.md) when the question is why a remaining `promoted` technique still needs an external donor path
 - open [Roadmap](../ROADMAP.md) when the question is which repo-only hardening, review refresh, or external evidence wave should open next
-- open [External Technique Candidates](EXTERNAL_TECHNIQUE_CANDIDATES.md) when the question is which remaining external seed idea is actually worth distilling into a future bundle
-- open [Cross-Layer Technique Candidates](CROSS_LAYER_TECHNIQUE_CANDIDATES.md) when the question is how the Dionysus donor-note candidate set should be filtered without widening the external-only intake surface
-- open [Agon Move Technique Bridge](AGON_MOVE_TECHNIQUE_BRIDGE.md), [Agon Wave IV Technique Landing](AGON_WAVE4_TECHNIQUE_LANDING.md), and `../generated/agon_technique_binding_candidates.min.json` when the question is how Agon lawful moves request future practice without creating canonical techniques yet
+- open [External Technique Candidates](../mechanics/distillation/EXTERNAL_TECHNIQUE_CANDIDATES.md) when the question is which remaining external seed idea is actually worth distilling into a future bundle
+- open [Cross-Layer Technique Candidates](../mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md) when the question is how the Dionysus donor-note candidate set should be filtered without widening the external-only intake surface
+- open [Agon](../mechanics/agon/README.md), [Agon Parts](../mechanics/agon/PARTS.md), [Agon Move Technique Bridge](../mechanics/agon/parts/move-technique-bridge/README.md), and `../mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json` when the question is how Agon lawful moves request future practice without creating canonical techniques yet; use [Agon Provenance](../mechanics/agon/PROVENANCE.md) only when the preserved wave lineage matters
 - use [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) as the live corpus split
 
 ## If You Need Derived Surfaces

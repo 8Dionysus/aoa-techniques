@@ -10,7 +10,7 @@ Historical note:
 
 - the Phase 1 and Phase 3 repo-only findings below record the baseline that drove the already-landed hardening wave
 - the detailed phase findings below remain historical audit record unless a later live snapshot says otherwise
-- use the `Current Live Closure Snapshot`, [Promotion Readiness Matrix](docs/PROMOTION_READINESS_MATRIX.md), [Promotion Wave A Runbook](docs/PROMOTION_WAVE_A_RUNBOOK.md), [External Evidence Sprint Runbook](docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md), and [External Evidence Ledger](docs/EXTERNAL_EVIDENCE_LEDGER.md) as the live roadmap for what is still open now
+- use the `Current Live Closure Snapshot`, [Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md), [Promotion Wave A Runbook](mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md), [External Evidence Sprint Runbook](mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md), and [External Evidence Ledger](mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md) as the live roadmap for what is still open now
 
 ## Current Live Closure Snapshot
 
@@ -33,14 +33,17 @@ Historical note:
   - [AOA-T-0044](techniques/history/versionable-session-transcripts/TECHNIQUE.md)
   - [AOA-T-0053](techniques/history/local-first-session-index/TECHNIQUE.md)
 - live promotion and evidence operating surfaces now are:
-  - [Promotion Readiness Matrix](docs/PROMOTION_READINESS_MATRIX.md)
-  - [Promotion Wave A Runbook](docs/PROMOTION_WAVE_A_RUNBOOK.md)
-  - [External Evidence Sprint Runbook](docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
-  - [External Evidence Ledger](docs/EXTERNAL_EVIDENCE_LEDGER.md)
-- current Agon Wave IV companion bridge is now documented in:
-  - [AGON_MOVE_TECHNIQUE_BRIDGE](docs/AGON_MOVE_TECHNIQUE_BRIDGE.md)
-  - [AGON_WAVE4_TECHNIQUE_LANDING](docs/AGON_WAVE4_TECHNIQUE_LANDING.md)
-  - `generated/agon_technique_binding_candidates.min.json`
+  - [Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md)
+  - [Promotion Wave A Runbook](mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md)
+  - [External Evidence Sprint Runbook](mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
+  - [External Evidence Ledger](mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md)
+- current Agon companion bridge is now documented in:
+  - [Agon](mechanics/agon/README.md)
+  - [Agon Parts](mechanics/agon/PARTS.md)
+  - [move-technique-bridge](mechanics/agon/parts/move-technique-bridge/README.md)
+  - [Agon Provenance](mechanics/agon/PROVENANCE.md)
+  - [Agon Landing Log](mechanics/agon/LANDING_LOG.md)
+  - `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
   - the candidate bridge remains `requested_not_landed` and does not create
     canonical techniques
 - latest internal-origin promoted additions and `v0.4.2` practice wave:
@@ -127,8 +130,8 @@ Historical note:
   - `qqqa` now also lands the adjacent [AOA-T-0031](techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) import as a bounded shell-composability technique rather than as proof for `AOA-T-0023`
   - `agents-md` now also lands the adjacent [AOA-T-0032](techniques/evaluation/context-report-for-ci/TECHNIQUE.md) import as a bounded CI-facing report technique rather than as proof for `AOA-T-0012`
   - [AOA-T-0044](techniques/history/versionable-session-transcripts/TECHNIQUE.md) and [AOA-T-0045](techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now land the post-capture history-artifact pair around [AOA-T-0026](techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md), while `project_memory_bootstrap` remains outside the immediate wave as a history-overlap watch
-- the remaining `13` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](docs/EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
-- the `24` cross-layer candidates pulled from the Dionysus donor note are now staged in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as `already staged elsewhere`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+- the remaining `13` external donor-derived seed ideas are now staged in [EXTERNAL_TECHNIQUE_CANDIDATES.md](mechanics/distillation/EXTERNAL_TECHNIQUE_CANDIDATES.md) as `ready to distill here`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
+- the `24` cross-layer candidates pulled from the Dionysus donor note are now staged in [CROSS_LAYER_TECHNIQUE_CANDIDATES.md](mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md) as `already staged elsewhere`, `future import here`, `hold because overlap`, `needs layer incubation before distillation here`, or `substrate or architecture pattern, not yet a technique`
 - the current `future import here` lane is now staged as a wave program rather than a flat queue:
   - Wave A: runtime truth and local lifecycle, now fully landed across [AOA-T-0035](techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), [AOA-T-0038](techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md), and [AOA-T-0039](techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md), with exact candidate membership split across the external and cross-layer intake surfaces and bounded to profile composition, rendered truth, profile-scoped preflight, additive comparison discipline, and local lifecycle
   - Wave B: curated input surfaces and capability boundaries, now fully landed across [AOA-T-0040](techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md), with exact candidate membership split across the external and cross-layer intake surfaces and bounded to curated discoverability, artifact boundaries, upstream shape and availability checks, and primary-vs-supporting provenance ordering
@@ -138,10 +141,14 @@ Historical note:
   - one technique per PR
   - external donors use the normal bounded external-import package
   - cross-layer or internal-origin candidates use donor-appropriate origin and adaptation notes without forcing external-import note names
-- the remaining promoted backlog is now staged as:
-  - `evidence-prep now`: `AOA-T-0018`
-  - `internal-origin review path`: `AOA-T-0033`, `AOA-T-0034`
-  - `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
+- the remaining legacy promoted backlog slice is now staged as:
+  - `lead external-evidence sprint`: `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
+  - `internal-origin second-consumer path`: `AOA-T-0033`
+  - `markdown and source-lift follow-through`: `AOA-T-0020`, `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
+  - `instruction and input-surface live-adopter search`: `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`
+  - `long-gap holds`: `AOA-T-0005`, `AOA-T-0022`
+  - already exited from this slice: `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0034`
+  - use [Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md) for the full `75`-bundle promoted corpus, including newer `v0.4` / session-harvest / recovery-wave packs
 
 ## Finding Classes
 
@@ -223,7 +230,15 @@ Bundle-level result:
 - `needs semantic review refresh`: none
 - `candidate for bounded demotion watch`: none right now
 
-### Wave 2B - Remaining Promoted Backlog Audit
+### Wave 2B - Legacy Promoted Backlog Audit
+
+Current note: this table preserves the older audit baseline. The live active
+queue now excludes `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0023`, `AOA-T-0028`,
+`AOA-T-0031`, and `AOA-T-0034`, which have since exited through follow-up
+canonical reviews. Use the `Current Live Closure Snapshot`,
+[Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md), and
+[External Evidence Sprint Runbook](mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
+for current active order.
 
 | technique | current smallest gap | repo-local vs external gap | phase placement | next honest promotion trigger |
 |---|---|---|---|---|
@@ -243,12 +258,13 @@ Bundle-level result:
 | [AOA-T-0032](techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public CI surface that reports context composition coverage or token-drift signals without widening into the composition engine or a remediation snapshot |
 | [AOA-T-0026](techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | one live second context beyond the donor and docs-first adaptation | external | `external dependency first` | a public repository or surface family that persists local-first session history as a real project artifact layer without widening into memory substrate or instruction policy |
 
-Backlog verdict:
+Historical backlog verdict at the time of this audit:
 
 - `evidence-prep now`: `AOA-T-0018`
 - `external dependency first`: `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
 
-No promoted bundle is vague anymore. The backlog is now staged by the kind of proof it still needs.
+No promoted bundle was vague anymore in that audit slice. The current live
+backlog has since narrowed through the canonical exits named above.
 
 ### Wave 2C - Semantic And Shadow Review Coverage Audit
 
@@ -328,7 +344,7 @@ No current repo-owned doc appears to overclaim ownership of skills, evals, or ro
 
 ### Wave 4C - Long-Gap Backlog Design Audit
 
-Verdict on [LONG_GAP_CANON_DESIGN.md](docs/LONG_GAP_CANON_DESIGN.md): `still decision-complete, now with the first donor wave landed for the current three-technique set`
+Verdict on [LONG_GAP_CANON_DESIGN.md](mechanics/distillation/LONG_GAP_CANON_DESIGN.md): `still decision-complete, now with the first donor wave landed for the current three-technique set`
 
 Why:
 
@@ -375,19 +391,23 @@ The queue below is now historical and shipped:
 
 ### Wave 5B - External Evidence Dependency Queue
 
-| target technique | external repo | exact proof surface needed | what must not be faked by wording |
+| target technique | external repo or lane | exact proof surface needed | what must not be faked by wording |
 |---|---|---|---|
+| `AOA-T-0032` | open public CI or docs-validation lane | one public CI-facing report over context composition coverage or token-drift that stays separate from composition mechanics, remediation policy, prompt-quality scoring, and generic PR policy checks | prompt-eval reports, PR policy checks, activity summaries, or composition-engine docs relabeled as the report artifact |
+| `AOA-T-0026` | open repo-local session-artifact lane | one public repository or surface family that persists local-first AI session history as a reviewable project artifact | memory recall semantics, vector retrieval behavior, transcript packaging, home-directory session stores, or treating session history as instruction authority |
+| `AOA-T-0036` | open runtime/operator lane | one public runtime surface where effective composed truth is rendered and explicitly reviewed before startup as its own safety seam | lifecycle wrappers, readiness checks, deployment previews, or template renders without a named pre-start review seam |
+| `AOA-T-0045` | open witness-run review lane | one second downstream consumer where a bounded run emits a structured trace artifact and human-readable summary before writeback or promotion | transcript/log export alone, post-capture packaging, or memory writeback surfaces |
 | `AOA-T-0005` | open donor slot beyond `atm10-agent` | one non-origin public-safe authored new-intent rollout record over an existing intent chain | another repo-local sketch or another origin-only rollout restatement |
-| `AOA-T-0023` | open donor slot beyond the current external seed import | one public workflow surface that keeps a stateless, confirmation-gated single-shot agent path as a real operator contract | shell-command convenience or general "one task at a time" prose without the same bounded single-shot discipline |
-| `AOA-T-0028` | open donor slot beyond the current external seed import | one public workflow surface that keeps an explicit confirmation seam before mutation as a real bounded operator contract | generic caution wording or vague approval prompts that never act as a real gate |
-| `AOA-T-0013` | `aoa-agents` or another instruction-heavy repo | one-source -> many-target managed instruction flow with validator-backed or generated drift control in a second live context; seeded donor intake now fixes `ruler` as origin, keeps `agents-md` as overlap, and lands `n-skills` as adjacent import rather than closure proof | single-target sync, hand-edited copied rule blocks, or another import-only donor note |
-| `AOA-T-0018` | open donor slot | one second committed markdown-first consumer outside the current bridge pattern | metadata-spine evidence relabeled as section-lift proof |
 | `AOA-T-0020` | open donor slot, but not `aoa-evals` again | one second non-eval markdown-first corpus using typed note kind and path lift | note-graph behavior, note IDs, or another near-identical eval donor |
 | `AOA-T-0022` | open donor slot beyond the first `aoa-skills` bundle | one more committed authored bundle or corpus using the exact five-part `Risks` contract | adjacent caution prose, blind-spot language, or generated caution outputs |
 | `AOA-T-0027` | open donor slot beyond the current external seed import | one second public managed-target fan-out that keeps one canonical skill or rule core subordinate to local source ownership | broader instruction-distribution prose mislabeled as managed-target propagation or any import that widens into MCP or role semantics |
 | `AOA-T-0024` | open donor slot beyond the current external seed import | one second curated mirror context that preserves upstream ownership, explicit provenance, and repeatable local resync | local-source fan-out mislabeled as mirroring or a copy that drops explicit source attribution |
 | `AOA-T-0025` | open donor slot beyond the current external seed import | one public agent-facing surface that uses a versioned capability spec as a real bounded contract | capability prose that drifts into routing policy, role registry semantics, or execution-history learning |
-| `AOA-T-0026` | open donor slot beyond the current external seed import | one public repository or surface family that persists local-first session history as a reviewable project artifact | memory recall semantics, vector retrieval behavior, or treating session history as instruction authority |
+| `AOA-T-0029` | open donor slot beyond the current external seed import | one second public rule hierarchy using explicit precedence while preserving one-way source ownership | generic nested docs, copied rule blocks, or precedence prose without a real layered loading contract |
+| `AOA-T-0030` | open donor slot beyond the current external seed import | one second public repository where agent context stays in bounded fragments before deterministic assembly | monolithic prompt docs, generated-only context artifacts, or fragment language without source-layer ownership |
+| `AOA-T-0046` | open non-origin repo-doc routing consumer | first second-context adaptation plus canonical-readiness review after one non-origin repo-doc routing consumer exists | this repo's own generated doc-surface family relabeled as external reuse |
+| `AOA-T-0047` | open non-origin template-intake consumer | first second-context adaptation plus canonical-readiness review after one non-origin template-intake consumer exists | template presence without derived intake use or workflow automation pretending to be the lift contract |
+| `AOA-T-0048` | open non-origin semantic-review reader or consumer | first second-context adaptation plus canonical-readiness review after one non-origin semantic-review reader or consumer exists | another local semantic-review doc or automatic semantic verdicts |
 
 ### Wave 5C - Next Implementation Wave Pack
 
@@ -458,8 +478,13 @@ Status: `partially executed`
   - do not widen contracts just to manufacture evidence
   - keep `aoa-techniques` as the source of meaning
 - target surfaces:
-  - `AOA-T-0005`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0020`, `AOA-T-0022`, `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0032`, `AOA-T-0026`
-  - donor repos named in [LONG_GAP_CANON_DESIGN.md](docs/LONG_GAP_CANON_DESIGN.md) or the open evidence-prep slots above
+  - lead sprint: `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
+  - active ledger follow-through: `AOA-T-0045`
+  - markdown and source-lift follow-through: `AOA-T-0020`, `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
+  - instruction and input-surface live-adopter search: `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`
+  - long-gap holds: `AOA-T-0005`, `AOA-T-0022`
+  - closed from this older pack and no longer active external-evidence targets here: `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0034`
+  - donor repos named in [LONG_GAP_CANON_DESIGN.md](mechanics/distillation/LONG_GAP_CANON_DESIGN.md) or the open evidence-prep slots above
 - tests and validation:
   - donor-repo native validation first
   - then reopen the corresponding notes and reviews in `aoa-techniques`

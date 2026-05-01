@@ -5,9 +5,9 @@
   "description": "Technique canon, cross-layer intake, promotion readiness, and live receipt publication.",
   "source_inputs": [
     "techniques/**/*.md",
-    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
     "docs/CANONICAL_RUBRIC.md",
-    "docs/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "generated_surfaces": [
@@ -16,9 +16,9 @@
     "generated/technique_promotion_readiness.min.json"
   ],
   "contract_surfaces": [
-    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
     "docs/CANONICAL_RUBRIC.md",
-    "docs/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "documentation_surfaces": [
@@ -80,7 +80,7 @@
     "open_window_days": 14
   },
   "rollback_anchors": [
-    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "tags": [
@@ -114,7 +114,7 @@
       "input_ref": "cross-layer-technique-candidates",
       "kind": "other",
       "path_globs": [
-        "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+        "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
       ],
       "notes": "technique-shaped donor intake surface"
     },
@@ -139,7 +139,7 @@
     {
       "beacon_ref": "technique.new_candidate.distillation_pressure",
       "kind": "new_technique_candidate",
-      "decision_surface": "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+      "decision_surface": "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
       "target_repo": "aoa-techniques",
       "observation_inputs": [
         "change_signal",
@@ -182,7 +182,7 @@
     {
       "beacon_ref": "technique.canonical.second_consumer_pressure",
       "kind": "canonical_pressure",
-      "decision_surface": "docs/PROMOTION_READINESS_MATRIX.md",
+      "decision_surface": "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
       "target_repo": "aoa-techniques",
       "observation_inputs": [
         "change_signal",
@@ -225,7 +225,7 @@
     {
       "beacon_ref": "technique.overlap_hold.guard",
       "kind": "technique_overlap_hold",
-      "decision_surface": "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+      "decision_surface": "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
       "target_repo": "aoa-techniques",
       "observation_inputs": [
         "cross-layer-technique-candidates",
@@ -261,12 +261,12 @@
     }
   ],
   "decision_surfaces": [
-    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
-    "docs/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
     "docs/CANONICAL_REVIEW_GUIDE.md"
   ],
   "candidate_targets": [
-    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
     "generated/technique_promotion_readiness.min.json"
   ]
 }

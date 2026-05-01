@@ -89,11 +89,12 @@ Before making changes, read in this order:
 1. `README.md`
 2. `ROADMAP.md`
 3. `docs/START_HERE.md`
-4. `WALKTHROUGH.md`
-5. `docs/TECHNIQUE_SELECTION.md`
-6. `docs/TECHNIQUE_KIND_GUIDE.md`
-7. the target `techniques/**/TECHNIQUE.md`
-8. any generated catalogs, capsules, feat-card surfaces, or source-lift outputs affected by the change
+4. `mechanics/README.md` when movement surfaces are involved
+5. `WALKTHROUGH.md`
+6. `docs/TECHNIQUE_SELECTION.md`
+7. `docs/TECHNIQUE_KIND_GUIDE.md`
+8. the target `techniques/**/TECHNIQUE.md`
+9. any generated catalogs, capsules, feat-card surfaces, or source-lift outputs affected by the change
 
 Then branch by task:
 
@@ -102,21 +103,21 @@ Then branch by task:
   `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, and
   `generated/technique_kind_manifest.min.json`
 - feat-reader or capsule surfaces:
-  `docs/TECHNIQUE_FEAT_MODEL.md`,
+  `mechanics/growth-cycle/TECHNIQUE_FEAT_MODEL.md`,
   `docs/TECHNIQUE_CAPSULES.md`, and
   `docs/TECHNIQUE_CAPSULE_GUIDE.md`
 - promotion, review, or release posture:
   `docs/CANONICAL_RUBRIC.md`,
   `docs/CANONICAL_REVIEW_GUIDE.md`,
-  `docs/PROMOTION_READINESS_MATRIX.md`, and
+  `mechanics/audit/PROMOTION_READINESS_MATRIX.md`, and
   `docs/RELEASING.md`
 - Agon owner-binding companion candidates:
-  `docs/AGON_MOVE_TECHNIQUE_BRIDGE.md` and
-  `docs/AGON_WAVE4_TECHNIQUE_LANDING.md`
+  `mechanics/agon/parts/move-technique-bridge/README.md` and
+  `mechanics/agon/PROVENANCE.md`
 - donor intake or external refinement:
-  `docs/DONOR_REFINERY_RUBRIC.md`,
-  `docs/EXTERNAL_IMPORT_RUNBOOK.md`, and
-  `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
+  `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`,
+  `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`, and
+  `mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
 - source-lift, KAG export, or section families:
   `docs/KAG_EXPORT.md`,
   `docs/KAG_SOURCE_LIFT_GUIDE.md`,
@@ -191,9 +192,9 @@ git status -sb
 If the task touches the Agon Wave IV technique candidate bridge, also run:
 
 ```bash
-python scripts/build_agon_technique_binding_candidates.py --check
-python scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q tests/test_agon_technique_binding_candidates.py
+python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check
+python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py
+python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py
 ```
 
 Confirm that:
