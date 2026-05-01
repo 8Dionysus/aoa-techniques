@@ -1,0 +1,393 @@
+{
+  "candidates": [
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "phase boundary plus handoff packet with continuation permission and stop/return/escalation rule",
+        "atomic_move_status": "named",
+        "capability_class": "handoff",
+        "execution_profile": "orchestration-required",
+        "family_posture": "handoff-continuation candidate; not stable until public evidence separates it from broad orchestration",
+        "likely_domain": "agent-workflows",
+        "portability_note": "must work as a standalone handoff contract, not an Agentwise orchestration feature",
+        "primary_kind": "handoff",
+        "risk_posture": "coordination-drift",
+        "substrate": "conversation"
+      },
+      "current_gate": "Keep as active narrowing lane until public evidence exposes a standalone phase boundary, handoff packet, continuation permission, and stop/return/escalation rule.",
+      "donor": "agentwise",
+      "gate_status": "active_narrowing",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import model routing, shared context server behavior, token optimization, dynamic specialist generation, registry behavior, or dashboard monitoring",
+        "higher_law": "donor public material only proves donor orchestration behavior until a narrower public contract appears",
+        "local_route": "mechanics/distillation/parts/external-candidate-ledger"
+      },
+      "ledger_status": "future_import_here",
+      "nearest_overlap": [
+        "AOA-T-0001",
+        "AOA-T-0023",
+        "bounded-specialist-generation"
+      ],
+      "next_move": "reopen only when public evidence names the standalone phase handoff contract",
+      "seed_candidate": "phase_sync_for_agents",
+      "suggested_technique_name": "phase-synchronized-agent-handoff",
+      "tentative_domain": "agent-workflows"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "sync control remains too close to provenance-backed mirroring",
+        "atomic_move_status": "not_named",
+        "capability_class": "coordinate",
+        "execution_profile": "medium-agent",
+        "family_posture": "instruction-surface or runtime-truth lifecycle possible; not stable",
+        "likely_domain": "docs",
+        "portability_note": "must become a portable sync-control practice rather than donor sync machinery",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "overlap-drift",
+        "substrate": "instructions"
+      },
+      "current_gate": "Hold until sync control separates from provenance-backed mirroring.",
+      "donor": "n-skills",
+      "gate_status": "overlap_hold",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not widen AOA-T-0024 or duplicate upstream mirroring with provenance",
+        "higher_law": "upstream source ownership and provenance remain with the source-owning surface",
+        "local_route": "overlap hold in external candidate ledger"
+      },
+      "ledger_status": "hold_because_overlap",
+      "nearest_overlap": [
+        "AOA-T-0024"
+      ],
+      "next_move": "reopen only if sync control becomes the distinct invariant",
+      "seed_candidate": "external_sync_manifest",
+      "suggested_technique_name": "external-sync-manifest",
+      "tentative_domain": "docs"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "history bootstrap remains entangled with memory substrate semantics",
+        "atomic_move_status": "not_named",
+        "capability_class": "recover",
+        "execution_profile": "orchestration-required",
+        "family_posture": "history-artifacts possible; not stable while memory semantics dominate",
+        "likely_domain": "history",
+        "portability_note": "must become portable project-local history bootstrapping without requiring OpenMemory substrate behavior",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "memory-substrate-drift",
+        "substrate": "history"
+      },
+      "current_gate": "Hold unless it narrows to history bootstrap without memory substrate semantics.",
+      "donor": "OpenMemory-Code",
+      "gate_status": "overlap_hold",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not turn memory substrate behavior into technique canon",
+        "higher_law": "memory semantics belong to the memory-owning layer or donor context",
+        "local_route": "overlap hold in external candidate ledger"
+      },
+      "ledger_status": "hold_because_overlap",
+      "nearest_overlap": [
+        "AOA-T-0026"
+      ],
+      "next_move": "reopen only if local-first history bootstrap is the bounded contract",
+      "seed_candidate": "project_memory_bootstrap",
+      "suggested_technique_name": "project-history-bootstrap",
+      "tentative_domain": "history"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "bounded context injection is not yet distinct from deterministic composition and single-shot context use",
+        "atomic_move_status": "not_named",
+        "capability_class": "compose",
+        "execution_profile": "small-agent",
+        "family_posture": "instruction-surface possible; not stable",
+        "likely_domain": "docs",
+        "portability_note": "must become a portable context-injection contract, not an agents-md loading convention",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "context-overlap-drift",
+        "substrate": "instructions"
+      },
+      "current_gate": "Hold until injection becomes distinct from composition and single-shot invocation contracts.",
+      "donor": "agents-md",
+      "gate_status": "overlap_hold",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not duplicate deterministic context composition or stateless single-shot agent behavior",
+        "higher_law": "instruction loading semantics stay with the donor or local instruction surfaces until a portable contract is extracted",
+        "local_route": "overlap hold in external candidate ledger"
+      },
+      "ledger_status": "hold_because_overlap",
+      "nearest_overlap": [
+        "AOA-T-0012",
+        "AOA-T-0023"
+      ],
+      "next_move": "reopen only if bounded context injection becomes the distinct invariant",
+      "seed_candidate": "context_injection_for_coding_agents",
+      "suggested_technique_name": "bounded-context-injection-for-coding-agents",
+      "tentative_domain": "docs"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "one-step mutating confirmation is not yet separated from stateless single-shot invocation",
+        "atomic_move_status": "not_named",
+        "capability_class": "mutate",
+        "execution_profile": "orchestration-required",
+        "family_posture": "automation-governance possible; not stable",
+        "likely_domain": "agent-workflows",
+        "portability_note": "must become a portable confirmation gate, not donor one-step agent framing",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "mutating-action",
+        "substrate": "tool surfaces"
+      },
+      "current_gate": "Hold unless the center becomes one-step mutating confirmation.",
+      "donor": "qqqa",
+      "gate_status": "overlap_hold",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not duplicate AOA-T-0023 unless mutating confirmation is the separate contract",
+        "higher_law": "operator approval and mutation safety remain separate from donor one-step framing",
+        "local_route": "overlap hold in external candidate ledger"
+      },
+      "ledger_status": "hold_because_overlap",
+      "nearest_overlap": [
+        "AOA-T-0023"
+      ],
+      "next_move": "reopen only if one-step mutating confirmation becomes separable",
+      "seed_candidate": "single_step_agent",
+      "suggested_technique_name": "single-step-confirmed-agent-action",
+      "tentative_domain": "agent-workflows"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "layered enforcement is not yet public-safe technique material",
+        "atomic_move_status": "not_named",
+        "capability_class": "validate",
+        "execution_profile": "orchestration-required",
+        "family_posture": "memory-adjacent; no current technique family",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "must wait for a stable memory-layer contract before external reuse",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "memory-policy",
+        "substrate": "memory-adjacent artifacts"
+      },
+      "current_gate": "Needs a stable public-safe memory-layer contract before extraction.",
+      "donor": "OpenMemory-Code",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import memory enforcement as technique law",
+        "higher_law": "memory-layer semantics belong outside aoa-techniques until stabilized",
+        "local_route": "layer incubation in external candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [],
+      "next_move": "wait for a public-safe memory-layer contract",
+      "seed_candidate": "memory_enforcement_layers",
+      "suggested_technique_name": "layered-memory-enforcement",
+      "tentative_domain": "not in current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "history-to-instructions needs an invariant review gate before it can be technique-shaped",
+        "atomic_move_status": "not_named",
+        "capability_class": "transform",
+        "execution_profile": "orchestration-required",
+        "family_posture": "history-artifacts or instruction-surface possible; not stable",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "must become a portable review gate before any instruction change",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "hidden-instruction-authority",
+        "substrate": "history"
+      },
+      "current_gate": "Needs an invariant review gate so history does not become hidden instruction authority.",
+      "donor": "SpecStory",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not let history become hidden instruction authority",
+        "higher_law": "instruction authority remains with source-owned instruction surfaces",
+        "local_route": "layer incubation in external candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [],
+      "next_move": "incubate until review-gated history-derived instruction behavior is stable",
+      "seed_candidate": "history_to_instructions",
+      "suggested_technique_name": "review-gated-history-derived-instructions",
+      "tentative_domain": "not in current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "specialist generation remains role and orchestration behavior",
+        "atomic_move_status": "not_named",
+        "capability_class": "coordinate",
+        "execution_profile": "orchestration-required",
+        "family_posture": "agent-workflow possible after narrowing; not stable",
+        "likely_domain": "agent-workflows",
+        "portability_note": "must become a portable bounded specialist-scope or handoff contract",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "role-orchestration-drift",
+        "substrate": "role contracts"
+      },
+      "current_gate": "Needs a stable specialist-scope and handoff contract separated from orchestration.",
+      "donor": "agentwise",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import dynamic specialist generation as role or orchestration authority",
+        "higher_law": "role and orchestration behavior belongs to role/playbook/routing owners until narrowed",
+        "local_route": "layer incubation in external candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [
+        "phase_sync_for_agents"
+      ],
+      "next_move": "wait for one stable specialist-scope or handoff slice",
+      "seed_candidate": "dynamic_specialist_generation",
+      "suggested_technique_name": "bounded-specialist-generation",
+      "tentative_domain": "agent-workflows only after narrowing"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "registry semantics are still tied to stateful runtime implementation",
+        "atomic_move_status": "not_named",
+        "capability_class": "write",
+        "execution_profile": "orchestration-required",
+        "family_posture": "runtime-truth-lifecycle possible after spec extraction; not stable",
+        "likely_domain": "docs",
+        "portability_note": "must become a portable versioned public contract, not a runtime registry dependency",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "runtime-state-drift",
+        "substrate": "runtime state"
+      },
+      "current_gate": "Needs registry semantics separated from stateful runtime registry implementation.",
+      "donor": "agentic",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import runtime registry implementation as technique canon",
+        "higher_law": "runtime registry behavior belongs to the runtime or registry owner until a public contract is extracted",
+        "local_route": "layer incubation in external candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [],
+      "next_move": "incubate until registry semantics separate cleanly from implementation",
+      "seed_candidate": "persistent_agent_registry",
+      "suggested_technique_name": "versioned-agent-registry-contract",
+      "tentative_domain": "docs only after spec extraction"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "execution history learning is still an adaptive learning loop, not one reviewable technique",
+        "atomic_move_status": "not_named",
+        "capability_class": "learn-from-artifact",
+        "execution_profile": "orchestration-required",
+        "family_posture": "history-artifacts possible after strict review gate; not stable",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "must become portable only as review-gated behavior subordinate to human review",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "adaptive-authority-drift",
+        "substrate": "history"
+      },
+      "current_gate": "Needs an explicit distillation contract subordinate to human review.",
+      "donor": "agentic",
+      "gate_status": "layer_incubation",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not convert execution history into unsupervised learning authority",
+        "higher_law": "review authority and adaptive behavior belong outside technique canon until bounded",
+        "local_route": "layer incubation in external candidate ledger"
+      },
+      "ledger_status": "needs_layer_incubation_before_distillation_here",
+      "nearest_overlap": [],
+      "next_move": "wait for one explicit review-gated execution-history distillation contract",
+      "seed_candidate": "execution_history_learning",
+      "suggested_technique_name": "review-gated-execution-history-distillation",
+      "tentative_domain": "not in current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "shared context server is a stateful substrate, not one technique",
+        "atomic_move_status": "not_named",
+        "capability_class": "coordinate",
+        "execution_profile": "orchestration-required",
+        "family_posture": "handoff-continuation possible only after extracting a smaller contract",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "must extract a portable context-sharing handoff above the server layer",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "runtime-substrate-drift",
+        "substrate": "runtime state"
+      },
+      "current_gate": "Not technique-shaped until a smaller public-safe context-sharing handoff is extracted above the server layer.",
+      "donor": "agentwise",
+      "gate_status": "not_technique_shaped",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import shared server state as technique substrate",
+        "higher_law": "runtime coordination semantics belong to runtime or orchestration owners",
+        "local_route": "substrate hold in external candidate ledger"
+      },
+      "ledger_status": "substrate_or_architecture_pattern_not_yet_technique",
+      "nearest_overlap": [
+        "phase_sync_for_agents"
+      ],
+      "next_move": "extract a smaller context-sharing handoff contract first",
+      "seed_candidate": "shared_context_server",
+      "suggested_technique_name": "shared-context-server",
+      "tentative_domain": "not in current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "token optimization is still a performance strategy tied to caching and product tradeoffs",
+        "atomic_move_status": "not_named",
+        "capability_class": "compress",
+        "execution_profile": "orchestration-required",
+        "family_posture": "context reuse possible after narrowing; not stable",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "must become portable reviewable context reuse discipline, not generalized token optimization",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "optimization-drift",
+        "substrate": "conversation"
+      },
+      "current_gate": "Not technique-shaped until one reviewable context reuse discipline is extracted.",
+      "donor": "agentwise",
+      "gate_status": "not_technique_shaped",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import product optimization strategy as technique canon",
+        "higher_law": "performance and caching tradeoffs remain implementation context",
+        "local_route": "substrate hold in external candidate ledger"
+      },
+      "ledger_status": "substrate_or_architecture_pattern_not_yet_technique",
+      "nearest_overlap": [
+        "phase_sync_for_agents",
+        "shared_context_server"
+      ],
+      "next_move": "extract one reviewable context reuse discipline",
+      "seed_candidate": "token_optimization_by_context_sharing",
+      "suggested_technique_name": "context-sharing-token-optimization",
+      "tentative_domain": "not in current domain map"
+    },
+    {
+      "atom_topology_gate": {
+        "atomic_move_note": "agent self assembly is still an architecture cluster around runtime composition",
+        "atomic_move_status": "not_named",
+        "capability_class": "coordinate",
+        "execution_profile": "orchestration-required",
+        "family_posture": "automation-governance possible after extracting one smaller review seam",
+        "likely_domain": "not-in-current-domain-map",
+        "portability_note": "must become one portable bounded capability selection or assembly-review move",
+        "primary_kind": "unassigned-until-narrowed",
+        "risk_posture": "architecture-cluster-drift",
+        "substrate": "role contracts"
+      },
+      "current_gate": "Not technique-shaped until one smaller capability-selection or assembly-review contract is extracted.",
+      "donor": "agentic",
+      "gate_status": "not_technique_shaped",
+      "law_local_bridge": {
+        "bridge_stop_line": "do not import runtime agent assembly architecture as technique canon",
+        "higher_law": "agent composition architecture belongs to runtime, agents, or playbook owners until narrowed",
+        "local_route": "architecture hold in external candidate ledger"
+      },
+      "ledger_status": "substrate_or_architecture_pattern_not_yet_technique",
+      "nearest_overlap": [],
+      "next_move": "extract one smaller capability-selection or assembly-review contract",
+      "seed_candidate": "agent_self_assembly",
+      "suggested_technique_name": "bounded-agent-self-assembly-review",
+      "tentative_domain": "not in current domain map"
+    }
+  ],
+  "registry_id": "distillation.external_candidate_registry.v1",
+  "schema_version": "distillation-external-candidate-registry.seed/0.1",
+  "source_ledger": "mechanics/distillation/parts/external-candidate-ledger/README.md",
+  "status": "active_accounting_registry",
+  "title": "Distillation external candidate registry"
+}

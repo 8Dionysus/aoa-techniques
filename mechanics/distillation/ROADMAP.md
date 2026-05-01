@@ -6,8 +6,9 @@
    import, and candidate-ledger reopen rules before any new import wave.
 2. Continue any future candidate-ledger compaction one ledger at a time, only
    after preserving a pre-prune receipt in `legacy/raw/`.
-3. Decide whether the external and cross-layer ledgers need structured
-   part-local registries like Agon's candidate registries.
+3. Decide whether the cross-layer ledger needs a structured part-local registry;
+   the external candidate ledger now has one, but it is accounting evidence, not
+   candidate authority.
 4. Repoint recurrence observation to the part-local cross-layer ledger without
    giving recurrence candidate or promotion authority.
 5. Reassess the active narrowing lane only when new public donor evidence

@@ -1,0 +1,39 @@
+{
+  "$id": "https://github.com/8Dionysus/aoa-techniques/mechanics/distillation/parts/external-candidate-ledger/schemas/external-candidate-registry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidates": {
+      "items": {
+        "$ref": "external-candidate-registry-entry.schema.json"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "registry_id": {
+      "const": "distillation.external_candidate_registry.v1"
+    },
+    "schema_version": {
+      "const": "distillation-external-candidate-registry.seed/0.1"
+    },
+    "source_ledger": {
+      "const": "mechanics/distillation/parts/external-candidate-ledger/README.md"
+    },
+    "status": {
+      "const": "active_accounting_registry"
+    },
+    "title": {
+      "const": "Distillation external candidate registry"
+    }
+  },
+  "required": [
+    "registry_id",
+    "schema_version",
+    "source_ledger",
+    "status",
+    "title",
+    "candidates"
+  ],
+  "title": "Distillation external candidate registry",
+  "type": "object"
+}

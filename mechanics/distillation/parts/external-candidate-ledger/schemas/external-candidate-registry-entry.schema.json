@@ -1,0 +1,154 @@
+{
+  "$id": "https://github.com/8Dionysus/aoa-techniques/mechanics/distillation/parts/external-candidate-ledger/schemas/external-candidate-registry-entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "atom_topology_gate": {
+      "additionalProperties": false,
+      "properties": {
+        "atomic_move_note": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "atomic_move_status": {
+          "enum": [
+            "named",
+            "not_named"
+          ],
+          "type": "string"
+        },
+        "capability_class": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "execution_profile": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "family_posture": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "likely_domain": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "portability_note": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "primary_kind": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk_posture": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "substrate": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "atomic_move_status",
+        "atomic_move_note",
+        "likely_domain",
+        "primary_kind",
+        "family_posture",
+        "capability_class",
+        "substrate",
+        "execution_profile",
+        "risk_posture",
+        "portability_note"
+      ],
+      "type": "object"
+    },
+    "current_gate": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "donor": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "gate_status": {
+      "enum": [
+        "active_narrowing",
+        "overlap_hold",
+        "layer_incubation",
+        "not_technique_shaped"
+      ],
+      "type": "string"
+    },
+    "law_local_bridge": {
+      "additionalProperties": false,
+      "properties": {
+        "bridge_stop_line": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "higher_law": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "local_route": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "higher_law",
+        "local_route",
+        "bridge_stop_line"
+      ],
+      "type": "object"
+    },
+    "ledger_status": {
+      "enum": [
+        "future_import_here",
+        "hold_because_overlap",
+        "needs_layer_incubation_before_distillation_here",
+        "substrate_or_architecture_pattern_not_yet_technique"
+      ],
+      "type": "string"
+    },
+    "nearest_overlap": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "next_move": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "seed_candidate": {
+      "pattern": "^[a-z0-9_]+$",
+      "type": "string"
+    },
+    "suggested_technique_name": {
+      "pattern": "^[a-z0-9-]+$",
+      "type": "string"
+    },
+    "tentative_domain": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "seed_candidate",
+    "donor",
+    "suggested_technique_name",
+    "tentative_domain",
+    "ledger_status",
+    "gate_status",
+    "current_gate",
+    "atom_topology_gate",
+    "law_local_bridge",
+    "nearest_overlap",
+    "next_move"
+  ],
+  "title": "Distillation external candidate registry entry",
+  "type": "object"
+}

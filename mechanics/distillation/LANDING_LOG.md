@@ -63,3 +63,33 @@ python -m unittest tests.test_distillation_mechanics_topology
 python scripts/validate_repo.py
 python -m unittest discover -s tests
 ```
+
+## 2026-05-01 - External candidate registry
+
+Changed:
+
+- added a part-local seed registry, schemas, example, builder, validator, tests,
+  and generated compact index for
+  [parts/external-candidate-ledger](parts/external-candidate-ledger/README.md)
+- kept all `13` candidate verdicts, status counts, and the
+  `phase_sync_for_agents` active narrowing lane unchanged
+- made atom/topology and law/local/bridge gates explicit per candidate without
+  promoting any candidate into a technique bundle
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py --check
+python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
+python -m pytest -q mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no external candidate was promoted, dropped, or reclassified
+- no raw donor source was treated as present when it was only a historical label
+- no generated index became authority over the active part README or bundle
+  review path
