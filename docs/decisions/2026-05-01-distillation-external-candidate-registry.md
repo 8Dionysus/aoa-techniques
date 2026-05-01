@@ -11,9 +11,10 @@ route readable, but the current `13` candidate states still lived mostly as
 tables and prose.
 
 The project direction now requires each mechanics surface to preserve the
-difference between higher law, local implementation, and bridge stop lines.
-`aoa-techniques` also needs technique candidates to stay portable outside OS
-Abyss while still participating in AoA provenance and review.
+difference between source ownership, local handling, and stop lines where that
+distinction affects candidate movement. `aoa-techniques` also needs technique
+candidates to stay portable outside OS Abyss while still participating in AoA
+provenance and review.
 
 ## Decision
 
@@ -24,7 +25,7 @@ The registry records each remaining external candidate with:
 
 - the existing ledger status and gate status
 - atom/topology fields for the possible future technique shape
-- law/local/bridge fields for source law, local route, and stop line
+- boundary fields for source owner, local route, and stop line
 - nearest overlap and next move
 
 The generated compact index is validation evidence only. The active part README

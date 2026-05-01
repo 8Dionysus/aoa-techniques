@@ -27,7 +27,7 @@ The registry records each candidate with:
 - inherited external placement status when the candidate belongs to the
   external candidate ledger
 - atom/topology fields for possible future technique shape
-- law/local/bridge fields for source law, local route, and stop line
+- boundary fields for source owner, local route, and stop line
 - nearest overlap, wave, and next move
 
 The generated compact index is validation evidence only. The active part README

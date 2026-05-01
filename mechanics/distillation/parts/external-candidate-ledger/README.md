@@ -157,9 +157,10 @@ Atom/topology gate:
 - bounded reusable practice being extracted
 - nearest landed technique or overlap watch
 
-Law/local/bridge gate:
+Boundary/portability gate:
 
 - `higher_law`: the source owner or layer whose authority and stop lines matter
+  for extraction
 - `local_route`: why this row should stay held, move to incubation, or enter
   import review
 - `bridge_stop_line`: what must not cross from donor into technique canon

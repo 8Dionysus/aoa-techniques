@@ -1,6 +1,6 @@
-# Mechanics Law, Local Implementation, And Bridge Alignment
+# Mechanics Boundary Posture Alignment
 
-Status: accepted
+Status: superseded by [Mechanics Boundary Language Correction](2026-05-01-mechanics-boundary-language-correction.md)
 Date: 2026-05-01
 
 ## Context
@@ -10,35 +10,26 @@ then proved the active/legacy pattern through Agon and Distillation. The
 subsequent atom and topology contracts clarified that `aoa-techniques` should
 grow toward a large corpus of small executable moves, not broad mini-skills.
 
-That still left one ambiguity: a mechanics package can mention AoA-wide law,
-local repository implementation, bridge behavior, donor evidence, and technique
-candidate movement in the same surface. If those layers are not separated,
-future agents can mistake local mechanics for higher law or turn a bridge into
-an overloaded doctrine bundle.
+That still left one ambiguity: a mechanics package can mention AoA-wide
+authority, local repository handling, donor evidence, and technique candidate
+movement in the same surface. If owner boundaries are invisible, future agents
+can mistake local mechanics for source authority or turn a handoff note into an
+overloaded doctrine bundle.
 
 ## Decision
 
-Add a mechanics-wide reading rule: larger mechanics should separate higher law,
-local implementation, and bridges whenever that distinction helps the project.
+This record originally chose an explicit mechanics-wide split. The corrected
+decision is narrower: mechanics surfaces should keep owner boundaries legible
+without requiring a repeated named block in every README.
 
-- Higher law belongs to the owning AoA source that defines meaning, authority,
-  and stop-lines.
-- Local implementation belongs to the `aoa-techniques` mechanics package that
-  explains how candidate movement, intake, review, registries, ledgers, or
-  package shape work here.
-- Bridges must stay narrow, provenance-linked, and explicit about both sides,
-  input/output shape, and stop line.
-
-Tie that split to the technique atom and topology contracts before any mechanics
-candidate becomes a technique bundle.
+Tie that boundary posture to the technique atom and topology contracts before
+any mechanics candidate becomes a technique bundle.
 
 ## Consequences
 
-Mechanics entrypoints now carry a stronger gate for future work without forcing
-an immediate schema migration or a bulk rewrite of every package. Distillation
-names this as the next alignment pass before structured registries, while Agon
-records the split in its tracked package entrypoint before any promotion work.
-
-The tradeoff is another explicit review layer. It is worth it because the
-project needs many mechanics to connect across repos without confusing source
-law, owner-local execution, and candidate bridges.
+Mechanics entrypoints should stay light, closer to the current
+`Agents-of-Abyss` style: concise route cards, owner split where needed, and
+provenance surfaces for deeper history. Distillation may still keep compact
+registry fields for source owner, local route, stop line, portable core, and
+AoA-only context because those fields protect candidate movement, but they are
+not a prose template for every mechanic.

@@ -41,27 +41,8 @@ generated-reader interpretation, or public selection guidance. Use
 
 Mechanics can prepare canon. They do not replace canon.
 
-## Law, Local Form, Bridges
-
-Larger mechanics should keep three layers separate when that separation helps
-the project stay legible:
-
-- higher law: the owning AoA source that defines meaning, authority, and
-  stop-lines for the mechanic
-- local implementation: the `aoa-techniques` route for candidate movement,
-  intake, review, registries, ledgers, or package shape
-- bridges: narrow, provenance-linked handoff surfaces that name both sides,
-  the input/output shape, and the stop line
-
-Do not let a local implementation pretend to be the higher law. Do not turn a
-bridge into an overloaded doctrine bundle. When the split is useful, make it an
-explicit block in the package README, `DIRECTION.md`, or part README instead of
-leaving future agents to infer it from old wave language.
-
-Mechanics may serve OS Abyss integration, but they should not make portable
-techniques depend on a full OS Abyss deployment. When a bridge points to an AoA
-sibling repo, name whether that link is source law, provenance, optional
-integration context, or a required owner handoff.
+Cross-repo references stay light: point to the owner, preserve provenance, and
+keep AoA-only context outside the portable technique core.
 
 ## Candidate Gate
 
@@ -74,7 +55,7 @@ and [Technique Topology Contract](../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md):
 - likely family or reason no family is stable yet
 - capability class, substrate, execution profile, and risk posture
 - nearest related techniques, alternatives, or conflict points
-- source law, local implementation route, and bridge stop line
+- owner boundary, portable core, and stop line
 
 If those cannot be named, keep the material in mechanics, legacy, or a
 candidate ledger instead of drafting a broad technique bundle.

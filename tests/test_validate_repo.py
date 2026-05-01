@@ -1189,7 +1189,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "bounded-specialist-generation",
             "## Reopen Gate",
             "Atom/topology gate",
-            "Law/local/bridge gate",
+            "Boundary/portability gate",
         ):
             self.assertIn(target, candidates)
 

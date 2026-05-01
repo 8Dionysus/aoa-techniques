@@ -28,14 +28,8 @@ workflows, `aoa-evals` owns proof verdicts, `aoa-routing` owns routing logic,
 `aoa-memo` owns memory writeback, and `Tree-of-Sophia` owns ToS-authored
 meaning.
 
-### Law, local route, bridge
-
-- higher law: `Agents-of-Abyss` owns Agon doctrine, lawful moves, arena law,
-  verdict retention, and rank/scar boundaries
-- local implementation: this package owns only the technique-side staging route
-  for requested practice candidates and later bundle-local review
-- bridge: part-local candidate surfaces translate center-owned move pressure
-  into public-safe technique review without importing center authority
+Part-local candidate surfaces translate center-owned move pressure into
+public-safe technique review. They do not import center authority.
 
 ### Inputs
 

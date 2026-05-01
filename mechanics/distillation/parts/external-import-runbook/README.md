@@ -23,7 +23,7 @@ Open this runbook only when all of the following are already true:
 - the candidate is not blocked by an unresolved overlap with an existing technique
 - the candidate can name one atomic move, likely `domain`, primary `kind`, and
   nearest relation or conflict points
-- the candidate can separate source law, local extraction route, and bridge stop
+- the candidate can name source owner or boundary, extraction route, and stop
   line without making OS Abyss a hidden dependency for portable use
 
 If those checks still fail, stop and record the result in the candidate or review surface instead of drafting a bundle.
@@ -45,7 +45,7 @@ Atom/Topology fields:
 - `risk_posture`
 - nearest landed technique, alternative, or conflict point
 
-Law/Local/Bridge fields:
+Boundary/portability fields:
 
 - `higher_law`
 - `local_route`
@@ -64,7 +64,7 @@ dependency, return the candidate to the ledger or incubation lane.
    - name the reusable object being extracted
    - name the gate packet's atomic move and likely topology posture
    - name the nearest existing technique or overlap watch
-   - name the source law, local extraction route, and bridge stop line
+   - name the source owner or boundary, extraction route, and stop line
    - state what stays out of the donor
 2. Confirm canonical-home fit.
    - keep technique meaning here
@@ -111,7 +111,7 @@ For every import issue or PR, name these explicitly:
 - likely `domain` and primary `kind`
 - likely family or reason no family is stable yet
 - capability class, substrate, execution profile, and risk posture
-- `higher_law`, `local_route`, and `bridge_stop_line`
+- boundary fields: `higher_law`, `local_route`, and `bridge_stop_line`
 - standalone portability note, or `portable_core`, for readers outside OS Abyss
 - `aoa_only_context` that must not become a hidden dependency
 - what stays out of the donor

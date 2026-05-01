@@ -56,11 +56,9 @@ It does not own:
   silently promote candidates into canon.
 - Every cross-repo handoff must name the owner and stop-line rather than
   importing that owner's authority into this repo.
-- Larger mechanics should distinguish higher law, local implementation, and
-  bridge surfaces when that split helps the project stay legible. Higher law
-  belongs to the source owner; local implementation belongs to this repo's
-  mechanics package; bridges must stay narrow, provenance-linked, and explicit
-  about both sides.
+- When a mechanics surface points to another AoA owner, name the owner route
+  and stop-line only as much as the current surface needs. Do not import sibling
+  authority or turn boundary notes into a local doctrine block.
 - Before a mechanics candidate becomes a technique bundle, the active surface
   should be able to name the atomic move, likely `domain`, likely `kind`,
   likely family or reason no family is stable yet, capability class, substrate,

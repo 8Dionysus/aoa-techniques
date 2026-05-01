@@ -73,7 +73,7 @@ Changed:
   [parts/external-candidate-ledger](parts/external-candidate-ledger/README.md)
 - kept all `13` candidate verdicts, status counts, and the
   `phase_sync_for_agents` active narrowing lane unchanged
-- made atom/topology and law/local/bridge gates explicit per candidate without
+- made atom/topology and boundary/portability gates explicit per candidate without
   promoting any candidate into a technique bundle
 
 Verification lane:
@@ -159,7 +159,7 @@ Not moved:
 
 Changed:
 
-- made the atom/topology and law/local/bridge packet explicit in the donor
+- made the atom/topology and boundary/portability packet explicit in the donor
   refinery and external import runbook
 - aligned external and cross-layer candidate-ledger reopen rules with the same
   packet before any future import wave

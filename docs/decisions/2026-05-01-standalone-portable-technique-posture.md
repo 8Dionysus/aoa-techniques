@@ -24,7 +24,7 @@ Record a dual posture for `aoa-techniques`:
   provenance, review posture, mechanics, and generated surfaces for sibling
   repos
 
-AoA references may explain source law, provenance, owner boundaries, and
+AoA references may explain source ownership, provenance, owner boundaries, and
 integration routes. They should not be required for the core technique to be
 executed by an external agent system after that system supplies its own local
 context and orchestration.
@@ -32,9 +32,9 @@ context and orchestration.
 ## Consequences
 
 Future technique authoring and mechanics work should keep portable practice
-distinct from AoA-only integration detail. Mechanics bridges should name whether
-a sibling reference is higher law, provenance, optional integration context, or
-a required owner handoff.
+distinct from AoA-only integration detail. Mechanics references should make
+clear whether sibling material is provenance, optional integration context, or a
+required owner handoff.
 
 This does not weaken AoA ownership. It keeps the authored practice useful both
 inside OS Abyss and outside it.
