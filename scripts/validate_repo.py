@@ -672,7 +672,7 @@ SHADOW_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-shadow-reviews-v1"
 REPO_DOC_SURFACE_MANIFEST_VERSION = 1
 REPO_DOC_SURFACE_MANIFEST_SOURCE_OF_TRUTH = "markdown-repo-doc-surfaces-v1"
 QUESTBOOK_PATH = Path("QUESTBOOK.md")
-QUESTBOOK_INTEGRATION_PATH = Path("docs") / "QUESTBOOK_TECHNIQUE_INTEGRATION.md"
+QUESTBOOK_INTEGRATION_PATH = Path("mechanics") / "growth-cycle" / "QUESTBOOK_TECHNIQUE_INTEGRATION.md"
 QUEST_SCHEMA_PATH = Path("schemas") / "quest.schema.json"
 QUEST_DISPATCH_SCHEMA_PATH = Path("schemas") / "quest_dispatch.schema.json"
 QUEST_CATALOG_PATH = Path("generated") / "quest_catalog.min.json"
@@ -698,9 +698,9 @@ QUESTBOOK_REQUIRED_INTEGRATION_TOKENS = (
     "without turning the repo into a second donor backlog",
     "docs/START_HERE.md",
     "TECHNIQUE_INDEX.md",
-    "docs/PROMOTION_READINESS_MATRIX.md",
-    "docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
-    "docs/DONOR_REFINERY_RUBRIC.md",
+    "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
+    "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
+    "mechanics/distillation/DONOR_REFINERY_RUBRIC.md",
     "generated/technique_capsules.min.json",
     "docs/KAG_EXPORT.md",
     "generated/repo_doc_surface_manifest.json",
@@ -799,7 +799,7 @@ SHADOW_REVIEW_MAP_DIVIDER = "|---|---|---|"
 SHADOW_REVIEW_QUESTION_PREFIX = "Question: "
 SHADOW_REVIEW_OUTCOME_MARKER = "Outcome: "
 SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX = "Overall outcome: "
-PUBLIC_HYGIENE_SCAN_DIRS = (".github", "docs", "generated", "techniques", "templates")
+PUBLIC_HYGIENE_SCAN_DIRS = (".github", "docs", "generated", "mechanics", "techniques", "templates")
 PUBLIC_HYGIENE_EXCLUDED_ROOT_FILES = {"TODO.md", "PLANS.md", "ROADMAP.md"}
 PUBLIC_HYGIENE_ALLOWED_URL_PREFIXES = (
     "https://github.com/",

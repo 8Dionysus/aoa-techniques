@@ -493,14 +493,17 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         contributing = (REPO_ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
         root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
-        runbook = (REPO_ROOT / "docs" / "EXTERNAL_IMPORT_RUNBOOK.md").read_text(
-            encoding="utf-8"
-        )
+        runbook = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "EXTERNAL_IMPORT_RUNBOOK.md"
+        ).read_text(encoding="utf-8")
 
         self.assertIn("External Import Runbook", start_here)
         self.assertIn("External Import Runbook", docs_readme)
-        self.assertIn("docs/EXTERNAL_IMPORT_RUNBOOK.md", contributing)
-        self.assertIn("docs/EXTERNAL_IMPORT_RUNBOOK.md", root_readme)
+        self.assertIn("mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md", contributing)
+        self.assertIn("mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md", root_readme)
         for target in (
             "nearest existing technique or overlap watch",
             "what stays out of the donor",
@@ -1010,19 +1013,25 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
-        runbook = (REPO_ROOT / "docs" / "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md").read_text(
-            encoding="utf-8"
-        )
-        ledger = (REPO_ROOT / "docs" / "EXTERNAL_EVIDENCE_LEDGER.md").read_text(
-            encoding="utf-8"
-        )
+        runbook = (
+            REPO_ROOT
+            / "mechanics"
+            / "audit"
+            / "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md"
+        ).read_text(encoding="utf-8")
+        ledger = (
+            REPO_ROOT
+            / "mechanics"
+            / "audit"
+            / "EXTERNAL_EVIDENCE_LEDGER.md"
+        ).read_text(encoding="utf-8")
 
         for content in (start_here, docs_readme, roadmap):
             self.assertIn("EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md", content)
             self.assertIn("EXTERNAL_EVIDENCE_LEDGER.md", content)
 
-        self.assertIn("docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md", root_readme)
-        self.assertIn("docs/EXTERNAL_EVIDENCE_LEDGER.md", root_readme)
+        self.assertIn("mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md", root_readme)
+        self.assertIn("mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md", root_readme)
 
         for target in (
             "AOA-T-0032",
@@ -1059,9 +1068,12 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn("CROSS_LAYER_TECHNIQUE_CANDIDATES.md", content)
 
     def test_external_candidates_doc_tracks_clean_top4_wave_backlog(self) -> None:
-        candidates = (REPO_ROOT / "docs" / "EXTERNAL_TECHNIQUE_CANDIDATES.md").read_text(
-            encoding="utf-8"
-        )
+        candidates = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "EXTERNAL_TECHNIQUE_CANDIDATES.md"
+        ).read_text(encoding="utf-8")
 
         self.assertIn("remaining `13` external donor-derived candidates", candidates)
         self.assertIn("`1` future import here", candidates)
@@ -1079,7 +1091,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_cross_layer_candidates_doc_accounts_for_full_seed_donor_matrix(self) -> None:
         candidates = (
-            REPO_ROOT / "docs" / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("full `24` technique-shaped candidate names", candidates)
@@ -1129,9 +1144,12 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn(target, rows)
 
     def test_phase_sync_seed_has_bounded_narrowing_slice(self) -> None:
-        candidates = (REPO_ROOT / "docs" / "EXTERNAL_TECHNIQUE_CANDIDATES.md").read_text(
-            encoding="utf-8"
-        )
+        candidates = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "EXTERNAL_TECHNIQUE_CANDIDATES.md"
+        ).read_text(encoding="utf-8")
 
         for target in (
             "## Current Narrowing Slice: `phase_sync_for_agents`",
@@ -1158,9 +1176,12 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn(target, candidates)
 
     def test_external_candidates_doc_describes_swarm_execution_roles(self) -> None:
-        candidates = (REPO_ROOT / "docs" / "EXTERNAL_TECHNIQUE_CANDIDATES.md").read_text(
-            encoding="utf-8"
-        )
+        candidates = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "EXTERNAL_TECHNIQUE_CANDIDATES.md"
+        ).read_text(encoding="utf-8")
 
         for target in (
             "the main agent owns wave boundaries, final wording, the cross-doc sequence, shared generated-surface sync, and `python scripts/release_check.py`",
@@ -1169,14 +1190,17 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "[AOA-T-0043]",
             "[AOA-T-0044]",
             "[AOA-T-0045]",
-            "execution role: keep [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor",
+            "execution role: keep [AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) as the post-capture transcript-shaping anchor",
             "Shared generated surfaces should be synchronized only after the bundle draft is merge-ready, and only by the main agent.",
         ):
             self.assertIn(target, candidates)
 
     def test_cross_layer_candidates_doc_describes_exact_wave_execution_order(self) -> None:
         candidates = (
-            REPO_ROOT / "docs" / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "CROSS_LAYER_TECHNIQUE_CANDIDATES.md"
         ).read_text(encoding="utf-8")
 
         for target in (
@@ -1193,8 +1217,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "1. `versionable-session-transcripts` (landed as [AOA-T-0044]",
             "2. `witness-trace-as-reviewable-artifact` (landed as [AOA-T-0045]",
             "`AOA-T-0026` keeps ownership of whether sessions are captured",
-            "[AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns transcript versionability, readable packaging, redactable export, and comparison-ready transcript shaping over an already-saved artifact",
-            "[AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns witness export, citation, and review-packet discipline over an already-saved artifact instead of witness runtime behavior or memory writeback",
+            "[AOA-T-0044](../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) now owns transcript versionability, readable packaging, redactable export, and comparison-ready transcript shaping over an already-saved artifact",
+            "[AOA-T-0045](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) now owns witness export, citation, and review-packet discipline over an already-saved artifact instead of witness runtime behavior or memory writeback",
             "if a draft still needs `save sessions locally` or `derive future instructions` to explain its value",
             "Wave C is now fully landed across the external and cross-layer intake surfaces",
         ):
@@ -2277,10 +2301,16 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             (REPO_ROOT / "QUESTBOOK.md").read_text(encoding="utf-8"),
         )
         write_text(
-            repo_root / "docs" / "QUESTBOOK_TECHNIQUE_INTEGRATION.md",
-            (REPO_ROOT / "docs" / "QUESTBOOK_TECHNIQUE_INTEGRATION.md").read_text(
-                encoding="utf-8"
-            ),
+            repo_root
+            / "mechanics"
+            / "growth-cycle"
+            / "QUESTBOOK_TECHNIQUE_INTEGRATION.md",
+            (
+                REPO_ROOT
+                / "mechanics"
+                / "growth-cycle"
+                / "QUESTBOOK_TECHNIQUE_INTEGRATION.md"
+            ).read_text(encoding="utf-8"),
         )
         write_text(
             repo_root / "schemas" / "quest.schema.json",

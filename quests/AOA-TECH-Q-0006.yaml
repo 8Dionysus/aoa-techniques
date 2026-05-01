@@ -5,7 +5,7 @@ summary: Keep the reviewed chaos-wave1 technique-shaped follow-through visible a
   the technique layer without promoting one owner-routed recovery slice into
   new skill canon or cross-repo backlog.
 repo: aoa-techniques
-owner_surface: docs/PROMOTION_READINESS_MATRIX.md
+owner_surface: mechanics/audit/PROMOTION_READINESS_MATRIX.md
 theme_ref: ''
 milestone_ref: ''
 kind: harvest
@@ -33,7 +33,7 @@ activation:
     pressure from chaos-wave1 without proving a new reusable technique yet
 anchor_ref:
   artifact: promotion_readiness_matrix
-  ref: docs/PROMOTION_READINESS_MATRIX.md
+  ref: mechanics/audit/PROMOTION_READINESS_MATRIX.md
   note: keep the next move at technique promotion and donor follow-through
     rather than false skill ownership
 handoff_role: technique-maintainer

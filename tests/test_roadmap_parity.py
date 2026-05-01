@@ -36,7 +36,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         status_counts = Counter(technique["status"] for technique in techniques)
         promoted_count = status_counts["promoted"]
 
-        readiness_matrix = (REPO_ROOT / "docs/PROMOTION_READINESS_MATRIX.md").read_text(encoding="utf-8")
+        readiness_matrix = (REPO_ROOT / "mechanics/audit/PROMOTION_READINESS_MATRIX.md").read_text(encoding="utf-8")
 
         self.assertEqual(promoted_count, 75)
         self.assertIn(f"current promoted corpus: `{promoted_count}` techniques", readiness_matrix)
@@ -75,20 +75,26 @@ class RoadmapParityTestCase(unittest.TestCase):
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
 
         for relative_path in (
-            "docs/AGON_MOVE_TECHNIQUE_BRIDGE.md",
-            "docs/AGON_WAVE4_TECHNIQUE_LANDING.md",
-            "generated/agon_technique_binding_candidates.min.json",
-            "config/agon_technique_binding_candidates.seed.json",
-            "scripts/build_agon_technique_binding_candidates.py",
-            "scripts/validate_agon_technique_binding_candidates.py",
-            "tests/test_agon_technique_binding_candidates.py",
+            "mechanics/agon/PARTS.md",
+            "mechanics/agon/PROVENANCE.md",
+            "mechanics/agon/LANDING_LOG.md",
+            "mechanics/agon/parts/move-technique-bridge/README.md",
+            "mechanics/agon/legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md",
+            "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
+            "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json",
+            "mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py",
+            "mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py",
+            "mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py",
         ):
             self.assertTrue((REPO_ROOT / relative_path).is_file())
 
-        self.assertIn("AGON_MOVE_TECHNIQUE_BRIDGE", roadmap)
-        self.assertIn("generated/agon_technique_binding_candidates.min.json", roadmap)
+        self.assertIn("move-technique-bridge", roadmap)
+        self.assertIn(
+            "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
+            roadmap,
+        )
         self.assertIn("requested_not_landed", roadmap)
-        self.assertIn("docs/AGON_MOVE_TECHNIQUE_BRIDGE.md", readme)
+        self.assertIn("mechanics/agon/parts/move-technique-bridge/README.md", readme)
 
 
 if __name__ == "__main__":

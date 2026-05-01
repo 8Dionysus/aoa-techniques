@@ -14,6 +14,7 @@ Use the shortest route by need:
 - one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
 - current technique map: `TECHNIQUE_INDEX.md`
 - current direction and hardening waves: `docs/START_HERE.md` and `ROADMAP.md`
+- AoA cross-mechanics for technique movement: `mechanics/README.md`
 - verify current repo state: `python scripts/validate_repo.py` and `python -m unittest discover -s tests`
 - release-prep parity path: `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
 - deeper docs map: `docs/README.md`
@@ -26,17 +27,17 @@ Use the shortest route by need:
 - current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
 - via negativa pruning checklist: `docs/VIA_NEGATIVA_CHECKLIST.md`
 - frontmatter routing axes and kind doctrine: `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `data/technique_kind_wave1.yaml`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
-- feat-reader and runtime-card surfaces: `docs/TECHNIQUE_FEAT_MODEL.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
-- status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `docs/PROMOTION_READINESS_MATRIX.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
-- Agon Wave IV practice-candidate bridge: `docs/AGON_MOVE_TECHNIQUE_BRIDGE.md`, `docs/AGON_WAVE4_TECHNIQUE_LANDING.md`, `generated/agon_technique_binding_candidates.min.json`, `python scripts/build_agon_technique_binding_candidates.py --check`, `python scripts/validate_agon_technique_binding_candidates.py`, and `python -m pytest -q tests/test_agon_technique_binding_candidates.py`
+- feat-reader and runtime-card surfaces: `mechanics/growth-cycle/TECHNIQUE_FEAT_MODEL.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
+- status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `mechanics/audit/PROMOTION_READINESS_MATRIX.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
+- Agon practice-candidate bridge: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/LANDING_LOG.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`, `python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check`, `python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py`, and `python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py`
 - one end-to-end example path: `WALKTHROUGH.md`
 - bounded execution and proof neighbors: [`aoa-skills`](https://github.com/8Dionysus/aoa-skills) and [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
 - navigation and ecosystem map: [`aoa-routing`](https://github.com/8Dionysus/aoa-routing) and [`Agents-of-Abyss`](https://github.com/8Dionysus/Agents-of-Abyss)
 
 ## Deeper routes
 
-- donor intake, refinement, and promotion: `docs/DONOR_REFINERY_RUBRIC.md`, `docs/EXTERNAL_IMPORT_RUNBOOK.md`, `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, `docs/PROMOTION_READINESS_MATRIX.md`, `docs/PROMOTION_WAVE_A_RUNBOOK.md`, `docs/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md`, and `docs/EXTERNAL_EVIDENCE_LEDGER.md`
-- Agon owner-binding companion surfaces: `docs/AGON_MOVE_TECHNIQUE_BRIDGE.md`, `docs/AGON_WAVE4_TECHNIQUE_LANDING.md`, `config/agon_technique_binding_candidates.seed.json`, and `generated/agon_technique_binding_candidates.min.json`
+- donor intake, refinement, and promotion: `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`, `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`, `mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`, `mechanics/audit/PROMOTION_READINESS_MATRIX.md`, `mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md`, `mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md`, and `mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md`
+- Agon owner-binding companion surfaces: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/PARTS.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json`, and `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
 - selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
 - runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
 - repo-doc routing and authoritative doc/status manifests: `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
@@ -87,7 +88,8 @@ full intake history.
 - `techniques/` for published technique bundles
 - `templates/` for technique authoring and promotion scaffolds
 - `generated/` for derived catalogs, capsules, source-lift, and review surfaces
-- `docs/` for doctrine, intake, release, selection, and shadow surfaces
+- `mechanics/` for AoA cross-mechanic movement surfaces around technique canon
+- `docs/` for orientation, review doctrine, release, selection, generated-reader interpretation, and shadow surfaces
 - `scripts/` and `tests/` for validation and generation helpers
 
 ## Intended users

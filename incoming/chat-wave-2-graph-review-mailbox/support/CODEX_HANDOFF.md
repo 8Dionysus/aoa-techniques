@@ -9,8 +9,8 @@ Use the staging surfaces in `incoming/chat-wave-2-graph-review-mailbox/` to prep
 ## Read first
 
 1. `README.md` at repo root
-2. `docs/DONOR_REFINERY_RUBRIC.md`
-3. `docs/EXTERNAL_IMPORT_RUNBOOK.md`
+2. `mechanics/distillation/DONOR_REFINERY_RUBRIC.md`
+3. `mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md`
 4. `TECHNIQUE_INDEX.md`
 5. `incoming/chat-wave-2-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_2.md`
 6. `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`

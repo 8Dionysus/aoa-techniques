@@ -28,11 +28,11 @@ parent: null
 depends_on: []
 activation:
   mode: on_review_of
-  ref: docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md
+  ref: mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md
   note: open when a deferred follow-up survives review or promotion triage
 anchor_ref:
   artifact: promotion-readiness-matrix
-  ref: docs/PROMOTION_READINESS_MATRIX.md
+  ref: mechanics/audit/PROMOTION_READINESS_MATRIX.md
   note: current promotion and candidate surfaces
 handoff_role: technique-maintainer
 evidence:

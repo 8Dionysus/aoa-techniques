@@ -44,9 +44,9 @@ The format is intentionally simple and human-first.
 ### Validation
 
 - `python scripts/release_check.py`
-- `python scripts/build_agon_technique_binding_candidates.py --check`
-- `python scripts/validate_agon_technique_binding_candidates.py`
-- `python -m pytest -q tests/test_agon_technique_binding_candidates.py`
+- `python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check`
+- `python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py`
+- `python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py`
 
 ### Notes
 
