@@ -10,6 +10,10 @@ concerns such as donor refinery, promotion readiness, adoption, mastery, and
 stress live inside those cross-cutting mechanics instead of becoming unrelated
 parallel axes.
 
+[Owner Request Receipts](REQUEST_RECEIPTS.md) maps AoA center-side owner
+requests that target `aoa-techniques` to local response surfaces. It is a
+receipt route, not a copy of the AoA request queue and not proof of acceptance.
+
 ## Cross-Mechanics Map
 
 - [method-growth](method-growth/README.md): technique adoption, technique-skill

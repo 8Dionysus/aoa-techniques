@@ -1,4 +1,4 @@
-# TECHNIQUE RETENTION CHECKS
+# Technique To Skill Handoff
 
 Version: v0.7
 Owner surface: `aoa-techniques`
@@ -6,15 +6,15 @@ Seed family: Experience Adoption Forge
 
 ## Purpose
 
-Retention checks for practice-level adoption.
+When technique adoption should generate a skill proposal.
 
-## Core law
+## Core Law
 
 - Adoption must be explicit.
 - Local owner consent is required.
 - Durable behavior change needs evidence, rollback and retention.
 
-## Lifecycle hooks
+## Lifecycle Hooks
 
 - request
 - readiness
@@ -25,9 +25,9 @@ Retention checks for practice-level adoption.
 
 ## Outputs
 
-- technique_retention_checks
+- technique_to_skill_handoff
 
-## Stop lines
+## Stop Lines
 
 - No hidden assistant self-adoption.
 - No adoption without local owner consent.
@@ -38,4 +38,8 @@ Retention checks for practice-level adoption.
 
 ## Notes
 
-This document belongs to the v0.7 downstream adoption wave. It assumes the v0.6 federation harvest has already approved a shared pattern, but it refuses to treat approval as automatic adoption. Adoption is a second sovereign act: local owner consent, compatibility, shadow proof, rollback path, retention watch, and kind-safe projection are required.
+This document belongs to the v0.7 downstream adoption wave. It assumes the v0.6
+federation harvest has already approved a shared pattern, but it refuses to
+treat approval as automatic adoption. Adoption is a second sovereign act: local
+owner consent, compatibility, shadow proof, rollback path, retention watch, and
+kind-safe projection are required.

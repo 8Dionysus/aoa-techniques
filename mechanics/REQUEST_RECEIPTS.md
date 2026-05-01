@@ -1,0 +1,130 @@
+# Mechanics Owner Request Receipts
+
+This file is the `aoa-techniques` owner-local receipt map for AoA center-side
+owner requests that target this repository.
+
+It is not the AoA request queue, not the request-status vocabulary, and not
+proof that a center request is accepted or landed. AoA owns the center-side
+request grammar in `Agents-of-Abyss:mechanics/OWNER_REQUEST_PROTOCOL.md` and
+the current queue in `Agents-of-Abyss:mechanics/OWNER_REQUEST_QUEUE.md`.
+
+Use this file when a mechanics change in `aoa-techniques` carries an `ORQ-*`
+request ID or claims to answer an AoA downstream request.
+
+## Local Status Vocabulary
+
+These statuses are local to this file. They do not change AoA queue status.
+
+| Status | Meaning |
+|---|---|
+| `mapped` | The center request is named here and local route surfaces are identified, but no local acceptance or landing claim is made. |
+| `mapped-with-local-evidence` | Existing local mechanics surfaces, bundle references, or validation routes appear to answer part of the request, but this file does not promote the AoA request to accepted or landed. |
+| `candidate-only` | Local pressure exists only as a candidate lane, watch surface, or receipt; no technique bundle landing is claimed. |
+
+## Direct AoA Requests
+
+### `ORQ-METHOD-TECHNIQUES-001`
+
+- Mechanic: `method-growth`
+- Center queue: `requested`; center mechanic `landed`
+- Local status: `mapped-with-local-evidence`
+- Local response surface: [method-growth](method-growth/README.md),
+  [Parts](method-growth/PARTS.md),
+  [Pattern Adoption](method-growth/parts/pattern-adoption/README.md),
+  [Adoption Boundaries](method-growth/parts/adoption-boundaries/README.md),
+  [Technique To Skill Handoff](method-growth/parts/technique-to-skill-handoff/README.md),
+  [Retention Checks](method-growth/parts/retention-checks/README.md), and
+  [Obsolescence](method-growth/parts/obsolescence/README.md).
+- Owner landing readout:
+  - reusable-practice promotion lives in Pattern Adoption and Adoption
+    Boundaries.
+  - technique-to-skill movement lives in Technique To Skill Handoff without
+    becoming skill acceptance.
+  - retention and pruning posture lives in Retention Checks and Obsolescence.
+  - technique canon lands only when a real `techniques/**/TECHNIQUE.md` bundle
+    carries procedure, boundaries, examples, and canonical-readiness posture.
+- Local proof or evidence route: normal technique review, and `aoa-evals` before
+  public technique-quality claims.
+- Stop-line: AoA center may request reusable practice promotion, but
+  `aoa-techniques` owns reusable-practice canon and `aoa-skills` owns executable
+  workflow meaning.
+
+### `ORQ-DISTILLATION-TECHNIQUES-001`
+
+- Mechanic: `distillation`
+- Center queue: `requested`; center mechanic `landed`
+- Local status: `mapped-with-local-evidence`
+- Local response surface: [distillation](distillation/README.md),
+  [Parts](distillation/PARTS.md),
+  [Donor Refinery](distillation/parts/donor-refinery/README.md),
+  [External Import Runbook](distillation/parts/external-import-runbook/README.md),
+  and candidate ledgers.
+- Owner landing readout:
+  - source intake lives in Donor Refinery and External Import Runbook gates.
+  - active extraction lives in the external and cross-layer candidate ledgers.
+  - noise pruning lives in donor exclusions, overlap holds, layer-incubation
+    lanes, and not-technique-shaped verdicts.
+  - provenance-preserving condensation lives in [Provenance](distillation/PROVENANCE.md),
+    `legacy/raw/` receipts, and [Landing Log](distillation/LANDING_LOG.md).
+  - technique canon lands only when a real `techniques/**/TECHNIQUE.md` bundle
+    carries the reusable practice.
+- Local proof or evidence route: [Landing Log](distillation/LANDING_LOG.md),
+  part-local registries, part-local validators, and any landed
+  `techniques/**/TECHNIQUE.md` bundle refs.
+- Stop-line: Distillation can intake, narrow, hold, or route source pressure.
+  Only technique bundles own reusable practice canon, and public quality claims
+  still route to `aoa-evals`.
+
+### `ORQ-EXPERIENCE-TECHNIQUES-001`
+
+- Mechanic: `experience`
+- Center queue: `requested`; center mechanic `planted`
+- Local status: `mapped-with-local-evidence`
+- Local response surface: [experience](experience/README.md),
+  [Parts](experience/PARTS.md),
+  [Governance Precedent](experience/parts/governance-precedent/README.md),
+  [Authority Resolution](experience/parts/authority-resolution/README.md),
+  [Appeal Reasoning](experience/parts/appeal-reasoning/README.md),
+  [Sealed Decision](experience/parts/sealed-decision/README.md),
+  [Scope Boundary](experience/parts/scope-boundary/README.md),
+  [Handoff Compression](experience/parts/handoff-compression/README.md), and
+  [Service Clarity](experience/parts/service-clarity/README.md).
+- Owner landing readout:
+  - governance and appeal practice live in Governance Precedent, Authority
+    Resolution, Appeal Reasoning, and Sealed Decision.
+  - office/service practice lives in Scope Boundary, Handoff Compression, and
+    Service Clarity.
+  - portable practice stops before live office activation, release approval,
+    assistant self-authority, runtime truth, and ToS write authority.
+  - technique canon lands only when a real `techniques/**/TECHNIQUE.md` bundle
+    carries the reusable practice.
+- Local proof or evidence route: owner-local technique review or reviewed owner
+  receipts before any public usefulness claim.
+- Stop-line: Experience technique notes must not carry live office authority,
+  release approval, runtime truth, or Tree-of-Sophia write authority.
+
+## Non-ORQ Center Pressure
+
+Some local mechanics receive center pressure through wave receipts, provenance,
+or candidate lanes without a direct AoA owner-request ID targeting
+`aoa-techniques`.
+
+### [agon](agon/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Agon request queue has no direct
+  `ORQ-AGON-TECHNIQUES-*` request. Local Agon surfaces preserve Wave IV and Wave
+  XV technique-side pressure as requested-only practice candidates, not
+  owner-request acceptance.
+
+## Update Discipline
+
+When AoA adds, supersedes, or lands an owner request targeting
+`aoa-techniques`:
+
+1. Read the AoA request packet and package-local `OWNER_REQUESTS.md`.
+2. Add or update only the matching row here.
+3. Link the local response surface that can actually be reviewed in this repo.
+4. Keep generated indexes, ledgers, and compact companions as evidence only.
+5. Do not mark a local landing unless the local owner surface and proof route are
+   already present.

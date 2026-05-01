@@ -1,4 +1,4 @@
-# AUTHORITY RESOLUTION TECHNIQUES
+# Authority Resolution Techniques
 
 Techniques for separating actor capability from governance authority.
 

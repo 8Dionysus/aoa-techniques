@@ -1,4 +1,4 @@
-# SEALED DECISION TECHNIQUES
+# Sealed Decision Techniques
 
 Techniques for commit/reveal, hash chain review and tamper detection.
 
