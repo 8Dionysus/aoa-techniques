@@ -85,7 +85,7 @@
     "kind": "harvest",
     "difficulty": "d3_seam",
     "risk": "r2_contract",
-    "owner_surface": "mechanics/audit/PROMOTION_READINESS_MATRIX.md",
+    "owner_surface": "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "source_path": "quests/AOA-TECH-Q-0006.yaml",
     "public_safe": true
   },

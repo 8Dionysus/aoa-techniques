@@ -1,0 +1,44 @@
+# Audit Provenance Bridge
+
+This is the active-first bridge from current Audit parts back to pre-split
+evidence. Use it when auditing how route surfaces moved, not when you need the
+current operating contract.
+
+## Current route first
+
+Start with the active surfaces:
+
+- [README](README.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [parts](parts/)
+- [LANDING_LOG](LANDING_LOG.md)
+
+If those surfaces answer the task, stop there. Do not pull legacy route names
+into current behavior just because they once existed.
+
+## Source map
+
+| Evidence source | Active route | Distilled signal |
+|---|---|---|
+| Pre-split flat `PROMOTION_READINESS_MATRIX.md` | [parts/promotion-readiness-matrix](parts/promotion-readiness-matrix/README.md) | Promoted-corpus readiness stays visible as queue posture, lane counts, blockers, and suggested wave order. |
+| Pre-split flat `PROMOTION_WAVE_A_RUNBOOK.md` | [parts/promotion-wave-a-runbook](parts/promotion-wave-a-runbook/README.md) | The current promotion evidence-prep wave stays bounded to leading promoted candidates without status flips. |
+| Pre-split flat `EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md` | [parts/external-evidence-sprint-runbook](parts/external-evidence-sprint-runbook/README.md) | External proof searches have an execution path that rejects adjacent fits and avoids stale lane reruns. |
+| Pre-split flat `EXTERNAL_EVIDENCE_LEDGER.md` | [parts/external-evidence-ledger](parts/external-evidence-ledger/README.md) | Searched-lane memory and closure precedents stay visible without replacing bundle-local notes. |
+
+## Legacy posture
+
+The 2026-05-01 split moved the current flat files into active part homes without
+rewriting promotion posture, evidence lanes, queue counts, or technique status.
+No raw pre-prune receipt was needed because no audit ledger was shortened in
+this slice.
+
+When a future pass compacts an audit ledger or runbook, preserve the pre-pruned
+accounting in `legacy/raw/`, update [legacy/INDEX.md](legacy/INDEX.md), and
+record the distillation in [legacy/DISTILLATION_LOG.md](legacy/DISTILLATION_LOG.md).
+
+## Audit rule
+
+When evidence changes current behavior, update the relevant bundle-local
+evidence notes first, then update the active Audit part, then update this bridge
+and the landing log if source topology changed.

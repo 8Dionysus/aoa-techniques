@@ -32,7 +32,7 @@ activation:
   note: open when a deferred follow-up survives review or promotion triage
 anchor_ref:
   artifact: promotion-readiness-matrix
-  ref: mechanics/audit/PROMOTION_READINESS_MATRIX.md
+  ref: mechanics/audit/parts/promotion-readiness-matrix/README.md
   note: current promotion and candidate surfaces
 handoff_role: technique-maintainer
 evidence:

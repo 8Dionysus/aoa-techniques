@@ -116,7 +116,7 @@ Then branch by task:
 - promotion, review, or release posture:
   `docs/CANONICAL_RUBRIC.md`,
   `docs/CANONICAL_REVIEW_GUIDE.md`,
-  `mechanics/audit/PROMOTION_READINESS_MATRIX.md`, and
+  `mechanics/audit/parts/promotion-readiness-matrix/README.md`, and
   `docs/RELEASING.md`
 - Agon owner-binding companion candidates:
   `mechanics/agon/parts/move-technique-bridge/README.md` and

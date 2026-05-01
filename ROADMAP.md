@@ -10,7 +10,7 @@ Historical note:
 
 - the Phase 1 and Phase 3 repo-only findings below record the baseline that drove the already-landed hardening wave
 - the detailed phase findings below remain historical audit record unless a later live snapshot says otherwise
-- use the `Current Live Closure Snapshot`, [Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md), [Promotion Wave A Runbook](mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md), [External Evidence Sprint Runbook](mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md), and [External Evidence Ledger](mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md) as the live roadmap for what is still open now
+- use the `Current Live Closure Snapshot`, [Promotion Readiness Matrix](mechanics/audit/parts/promotion-readiness-matrix/README.md), [Promotion Wave A Runbook](mechanics/audit/parts/promotion-wave-a-runbook/README.md), [External Evidence Sprint Runbook](mechanics/audit/parts/external-evidence-sprint-runbook/README.md), and [External Evidence Ledger](mechanics/audit/parts/external-evidence-ledger/README.md) as the live roadmap for what is still open now
 
 ## Current Live Closure Snapshot
 
@@ -33,10 +33,10 @@ Historical note:
   - [AOA-T-0044](techniques/history/versionable-session-transcripts/TECHNIQUE.md)
   - [AOA-T-0053](techniques/history/local-first-session-index/TECHNIQUE.md)
 - live promotion and evidence operating surfaces now are:
-  - [Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md)
-  - [Promotion Wave A Runbook](mechanics/audit/PROMOTION_WAVE_A_RUNBOOK.md)
-  - [External Evidence Sprint Runbook](mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
-  - [External Evidence Ledger](mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md)
+  - [Promotion Readiness Matrix](mechanics/audit/parts/promotion-readiness-matrix/README.md)
+  - [Promotion Wave A Runbook](mechanics/audit/parts/promotion-wave-a-runbook/README.md)
+  - [External Evidence Sprint Runbook](mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
+  - [External Evidence Ledger](mechanics/audit/parts/external-evidence-ledger/README.md)
 - current Agon companion bridge is now documented in:
   - [Agon](mechanics/agon/README.md)
   - [Agon Parts](mechanics/agon/PARTS.md)
@@ -148,7 +148,7 @@ Historical note:
   - `instruction and input-surface live-adopter search`: `AOA-T-0027`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0029`, `AOA-T-0030`
   - `long-gap holds`: `AOA-T-0005`, `AOA-T-0022`
   - already exited from this slice: `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0023`, `AOA-T-0028`, `AOA-T-0031`, `AOA-T-0034`
-  - use [Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md) for the full `75`-bundle promoted corpus, including newer `v0.4` / session-harvest / recovery-wave packs
+  - use [Promotion Readiness Matrix](mechanics/audit/parts/promotion-readiness-matrix/README.md) for the full `75`-bundle promoted corpus, including newer `v0.4` / session-harvest / recovery-wave packs
 
 ## Finding Classes
 
@@ -236,8 +236,8 @@ Current note: this table preserves the older audit baseline. The live active
 queue now excludes `AOA-T-0013`, `AOA-T-0018`, `AOA-T-0023`, `AOA-T-0028`,
 `AOA-T-0031`, and `AOA-T-0034`, which have since exited through follow-up
 canonical reviews. Use the `Current Live Closure Snapshot`,
-[Promotion Readiness Matrix](mechanics/audit/PROMOTION_READINESS_MATRIX.md), and
-[External Evidence Sprint Runbook](mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md)
+[Promotion Readiness Matrix](mechanics/audit/parts/promotion-readiness-matrix/README.md), and
+[External Evidence Sprint Runbook](mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
 for current active order.
 
 | technique | current smallest gap | repo-local vs external gap | phase placement | next honest promotion trigger |

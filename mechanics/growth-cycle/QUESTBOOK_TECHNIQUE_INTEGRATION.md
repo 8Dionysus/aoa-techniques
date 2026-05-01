@@ -15,7 +15,7 @@ This note shows how `QUESTBOOK.md` fits into `aoa-techniques` without turning th
 ## Good anchors in this repo
 
 Use stable anchors such as:
-- `mechanics/audit/PROMOTION_READINESS_MATRIX.md`
+- `mechanics/audit/parts/promotion-readiness-matrix/README.md`
 - `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md`
 - `mechanics/distillation/parts/donor-refinery/README.md`
 - `generated/technique_capsules.min.json`

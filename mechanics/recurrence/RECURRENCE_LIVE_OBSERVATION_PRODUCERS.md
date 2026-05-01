@@ -4,7 +4,7 @@ Producer inputs:
 
 - `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md`
 - `mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json`
-- `mechanics/audit/PROMOTION_READINESS_MATRIX.md`
+- `mechanics/audit/parts/promotion-readiness-matrix/README.md`
 - `generated/technique_promotion_readiness.min.json`
 
 Signals remain advisory: no candidate or canonical status changes happen here.

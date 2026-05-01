@@ -977,8 +977,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "KAG_SOURCE_LIFT_GUIDE.md",
             "SEMANTIC_REVIEW_GUIDE.md",
             "parts/long-gap-reentry/README.md",
-            "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md",
-            "EXTERNAL_EVIDENCE_LEDGER.md",
+            "parts/external-evidence-sprint-runbook/README.md",
+            "parts/external-evidence-ledger/README.md",
             "parts/cross-layer-candidate-ledger/README.md",
             "aoa-skills",
             "aoa-evals",
@@ -1019,21 +1019,27 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "mechanics"
             / "audit"
-            / "EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md"
+            / "parts"
+            / "external-evidence-sprint-runbook"
+            / "README.md"
         ).read_text(encoding="utf-8")
         ledger = (
             REPO_ROOT
             / "mechanics"
             / "audit"
-            / "EXTERNAL_EVIDENCE_LEDGER.md"
+            / "parts"
+            / "external-evidence-ledger"
+            / "README.md"
         ).read_text(encoding="utf-8")
 
         for content in (start_here, docs_readme, roadmap):
-            self.assertIn("EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md", content)
-            self.assertIn("EXTERNAL_EVIDENCE_LEDGER.md", content)
+            self.assertIn(
+                "parts/external-evidence-sprint-runbook/README.md", content
+            )
+            self.assertIn("parts/external-evidence-ledger/README.md", content)
 
-        self.assertIn("mechanics/audit/EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md", root_readme)
-        self.assertIn("mechanics/audit/EXTERNAL_EVIDENCE_LEDGER.md", root_readme)
+        self.assertIn("mechanics/audit/parts/external-evidence-sprint-runbook/README.md", root_readme)
+        self.assertIn("mechanics/audit/parts/external-evidence-ledger/README.md", root_readme)
 
         for target in (
             "AOA-T-0032",
