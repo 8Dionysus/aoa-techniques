@@ -33,7 +33,7 @@ Do not use it for:
 
 ## Backing files
 
-- `quests/*.yaml`
+- `quests/<lane>/<state>/`
 - `schemas/quest.schema.json`
 - `schemas/quest_dispatch.schema.json`
 - `generated/quest_catalog.min.example.json`

@@ -5,6 +5,7 @@ title: Keep technique capsules, KAG export, and repo-doc surface manifests align
 summary: Generated navigation and export surfaces should stay derived from source-owned
   technique sections instead of drifting into parallel truth.
 repo: aoa-techniques
+lane: techniques
 owner_surface: generated/source-alignment
 theme_ref: ''
 milestone_ref: ''

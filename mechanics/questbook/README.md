@@ -11,7 +11,7 @@ This repo owns only the local technique-layer route around its existing
 `QUESTBOOK.md`, `quests/`, schemas, generated quest projections, and
 quest-shaped technique anchors.
 Those already-landed local Questbook source and projection surfaces stay in
-their current homes.
+their root source and projection homes.
 
 ## Active route
 
@@ -24,7 +24,8 @@ their current homes.
 ## Functioning parts
 
 - [Source Index Anchors](parts/source-index-anchors/README.md): maps
-  `QUESTBOOK.md`, `quests/*.yaml`, schemas, and generated quest projections.
+  `QUESTBOOK.md`, lane-first `quests/`, schemas, and generated quest
+  projections.
 - [Technique Obligation Anchors](parts/technique-obligation-anchors/README.md):
   maps canon hardening, donor follow-through, generated/source drift,
   promotion-readiness, and feat-reflection obligations.

@@ -5,6 +5,7 @@ title: Track promotion-readiness and donor-refinery follow-ups without bloating 
 summary: Give promotion gates and donor-refinery leftovers stable IDs so they do not
   vanish into matrix churn or technique-body inflation.
 repo: aoa-techniques
+lane: techniques
 owner_surface: promotion/donor-refinery
 theme_ref: ''
 milestone_ref: ''

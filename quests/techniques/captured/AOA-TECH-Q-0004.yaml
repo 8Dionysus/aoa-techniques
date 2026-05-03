@@ -5,6 +5,7 @@ title: Harvest repeated review and evidence-note repair routes into durable tech
 summary: When the same review or evidence-note repair keeps coming back, open a quest
   that can promote it into technique canon.
 repo: aoa-techniques
+lane: techniques
 owner_surface: harvest/review-patterns
 theme_ref: ''
 milestone_ref: ''

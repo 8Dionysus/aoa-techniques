@@ -19,14 +19,14 @@ packets, and cross-owner route grammar.
 - `LANDING_LOG.md`: dated structural accounting.
 - `ROADMAP.md`: future contour, not a historical ledger.
 - `QUESTBOOK.md`: repo-local human index for durable technique obligations.
-- `quests/*.yaml`: repo-local source quest objects.
+- `quests/<lane>/<state>/`: repo-local source quest objects.
 - `schemas/` and `generated/`: source contracts and derived projections.
 
 ## Local Contour
 
 This package can name:
 
-- the local route from `QUESTBOOK.md` to `quests/*.yaml`, schemas, and
+- the local route from `QUESTBOOK.md` to lane-first `quests/`, schemas, and
   generated quest projections
 - technique-layer obligations around canon hardening, donor-refinery
   follow-through, generated/source drift, review-pattern harvest,

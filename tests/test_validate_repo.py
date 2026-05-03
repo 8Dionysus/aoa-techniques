@@ -2519,11 +2519,23 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             repo_root / "schemas" / "quest_dispatch.schema.json",
             (REPO_ROOT / "schemas" / "quest_dispatch.schema.json").read_text(encoding="utf-8"),
         )
-        for quest_path in sorted((REPO_ROOT / "quests").glob("AOA-TECH-Q-*.yaml")):
-            quest_id = quest_path.stem
+        for relative_path in (
+            "quests/README.md",
+            "quests/AGENTS.md",
+            "quests/techniques/README.md",
+            "quests/agon/README.md",
+        ):
             write_text(
-                repo_root / "quests" / f"{quest_id}.yaml",
-                (REPO_ROOT / "quests" / f"{quest_id}.yaml").read_text(encoding="utf-8"),
+                repo_root / relative_path,
+                (REPO_ROOT / relative_path).read_text(encoding="utf-8"),
+            )
+        for quest_path in sorted((REPO_ROOT / "quests").glob("*/*/*")):
+            if not quest_path.is_file() or quest_path.suffix not in {".yaml", ".md"}:
+                continue
+            relative_path = quest_path.relative_to(REPO_ROOT)
+            write_text(
+                repo_root / relative_path,
+                quest_path.read_text(encoding="utf-8"),
             )
         write_text(
             repo_root / "generated" / "quest_catalog.min.json",
@@ -2576,7 +2588,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         with TemporaryDirectory() as temp_dir:
             repo_root = Path(temp_dir) / "aoa-techniques"
             self.write_valid_surface(repo_root)
-            (repo_root / "quests" / "AOA-TECH-Q-0003.yaml").unlink()
+            (
+                repo_root
+                / "quests"
+                / "techniques"
+                / "captured"
+                / "AOA-TECH-Q-0003.yaml"
+            ).unlink()
 
             with self.assertRaisesRegex(
                 validate_repo.ValidationError,
@@ -2588,11 +2606,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         with TemporaryDirectory() as temp_dir:
             repo_root = Path(temp_dir) / "aoa-techniques"
             self.write_valid_surface(repo_root)
+            quest_path = repo_root / "quests" / "techniques" / "done" / "AOA-TECH-Q-0002.yaml"
             write_text(
-                repo_root / "quests" / "AOA-TECH-Q-0002.yaml",
-                (repo_root / "quests" / "AOA-TECH-Q-0002.yaml")
-                .read_text(encoding="utf-8")
-                .replace("repo: aoa-techniques", "repo: aoa-skills"),
+                quest_path,
+                quest_path.read_text(encoding="utf-8").replace(
+                    "repo: aoa-techniques",
+                    "repo: aoa-skills",
+                ),
             )
 
             with self.assertRaisesRegex(
@@ -2605,11 +2625,19 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         with TemporaryDirectory() as temp_dir:
             repo_root = Path(temp_dir) / "aoa-techniques"
             self.write_valid_surface(repo_root)
+            quest_path = (
+                repo_root
+                / "quests"
+                / "techniques"
+                / "captured"
+                / "AOA-TECH-Q-0005.yaml"
+            )
             write_text(
-                repo_root / "quests" / "AOA-TECH-Q-0005.yaml",
-                (repo_root / "quests" / "AOA-TECH-Q-0005.yaml")
-                .read_text(encoding="utf-8")
-                .replace("target: technique", "target: generated_surface"),
+                quest_path,
+                quest_path.read_text(encoding="utf-8").replace(
+                    "target: technique",
+                    "target: generated_surface",
+                ),
             )
 
             with self.assertRaisesRegex(
@@ -2627,8 +2655,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 (repo_root / "generated" / "quest_dispatch.min.example.json")
                 .read_text(encoding="utf-8")
                 .replace(
-                    '"source_path": "quests/AOA-TECH-Q-0004.yaml"',
-                    '"source_path": "quests/AOA-TECH-Q-9999.yaml"',
+                    '"source_path": "quests/techniques/captured/AOA-TECH-Q-0004.yaml"',
+                    '"source_path": "quests/techniques/captured/AOA-TECH-Q-9999.yaml"',
                 ),
             )
 
@@ -2659,8 +2687,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 (repo_root / "generated" / "quest_catalog.min.example.json")
                 .read_text(encoding="utf-8")
                 .replace(
-                    '"source_path": "quests/AOA-TECH-Q-0004.yaml"',
-                    '"source_path": "quests/AOA-TECH-Q-9999.yaml"',
+                    '"source_path": "quests/techniques/captured/AOA-TECH-Q-0004.yaml"',
+                    '"source_path": "quests/techniques/captured/AOA-TECH-Q-9999.yaml"',
                 ),
             )
 
@@ -2679,8 +2707,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 (repo_root / "generated" / "quest_dispatch.min.json")
                 .read_text(encoding="utf-8")
                 .replace(
-                    '"source_path":"quests/AOA-TECH-Q-0004.yaml"',
-                    '"source_path":"quests/AOA-TECH-Q-9999.yaml"',
+                    '"source_path":"quests/techniques/captured/AOA-TECH-Q-0004.yaml"',
+                    '"source_path":"quests/techniques/captured/AOA-TECH-Q-9999.yaml"',
                 ),
             )
 
@@ -2694,7 +2722,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         with TemporaryDirectory() as temp_dir:
             repo_root = Path(temp_dir) / "aoa-techniques"
             self.write_valid_surface(repo_root)
-            quest_path = repo_root / "quests" / "AOA-TECH-Q-0001.yaml"
+            quest_path = repo_root / "quests" / "techniques" / "done" / "AOA-TECH-Q-0001.yaml"
             quest_text = quest_path.read_text(encoding="utf-8")
             write_text(
                 quest_path,
@@ -2704,7 +2732,54 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
             with self.assertRaisesRegex(
                 validate_repo.ValidationError,
-                "quests/AOA-TECH-Q-0001.yaml: quest must define object field 'activation'",
+                "quests/techniques/done/AOA-TECH-Q-0001.yaml: quest must define object field 'activation'",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_root_level_quest_alias_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            source = (
+                repo_root
+                / "quests"
+                / "techniques"
+                / "captured"
+                / "AOA-TECH-Q-0003.yaml"
+            )
+            write_text(
+                repo_root / "quests" / "AOA-TECH-Q-0003.yaml",
+                source.read_text(encoding="utf-8"),
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "root-level quest aliases are not allowed",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
+
+    def test_markdown_quest_contract_is_required(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            quest_path = (
+                repo_root
+                / "quests"
+                / "agon"
+                / "captured"
+                / "AOT-Q-AGON-0002-epistemic-technique-candidates.md"
+            )
+            write_text(
+                quest_path,
+                quest_path.read_text(encoding="utf-8").replace(
+                    "source_contract: quest_markdown_contract_v1\n\n",
+                    "",
+                ),
+            )
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "missing source_contract: quest_markdown_contract_v1",
             ):
                 validate_repo.validate_questbook_surface(repo_root)
 

@@ -14,7 +14,7 @@ routes recurring quest choreography to `aoa-playbooks`, closure proof to
 to `aoa-routing`.
 
 `aoa-techniques` already has a local Questbook substrate: `QUESTBOOK.md`,
-`quests/*.yaml`, `schemas/quest.schema.json`,
+`quests/`, `schemas/quest.schema.json`,
 `schemas/quest_dispatch.schema.json`, `generated/quest_catalog.min.json`,
 `generated/quest_dispatch.min.json`, and Growth-cycle Questbook integration.
 It also has quest-adjacent technique bundles for donor harvest, owner
@@ -50,9 +50,9 @@ Create three active parts:
 Do not create `legacy/raw/` in this pass because no local pre-split Questbook
 wave receipt or raw source packet is being moved.
 
-Do not move `QUESTBOOK.md`, `quests/`, schemas, or generated quest projections
-into the mechanics package. They remain source and projection surfaces that
-the mechanics package explains.
+Do not move `QUESTBOOK.md`, root `quests/`, schemas, or generated quest
+projections into the mechanics package. They remain source and projection
+surfaces that the mechanics package explains.
 
 Add Questbook to `mechanics/REQUEST_RECEIPTS.md` only under Non-ORQ Center
 Pressure, with `candidate-only` posture.

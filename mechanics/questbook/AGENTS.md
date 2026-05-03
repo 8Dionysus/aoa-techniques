@@ -27,10 +27,10 @@ acceptance, generated quest truth, or technique status changes.
 - Keep Questbook here technique-layered: durable obligations around canon
   hardening, donor follow-through, generated/source drift, and harvest
   candidates.
-- Treat `QUESTBOOK.md` as the human index, `quests/*.yaml` as repo-local
+- Treat `QUESTBOOK.md` as the human index, lane-first `quests/` as repo-local
   source quest objects, and generated quest files as projections only.
-- Do not move `QUESTBOOK.md`, `quests/`, schemas, or generated projections into
-  this package as part of mechanics cleanup.
+- Do not move `QUESTBOOK.md`, root `quests/`, schemas, or generated
+  projections into this package as part of mechanics cleanup.
 - Do not import `Agents-of-Abyss` Questbook law as local implementation
   authority.
 - Do not treat quests, generated quest views, route notes, owner requests, or

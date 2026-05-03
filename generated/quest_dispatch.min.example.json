@@ -17,7 +17,7 @@
       "verification_result"
     ],
     "activation_mode": "immediate",
-    "source_path": "quests/AOA-TECH-Q-0001.yaml",
+    "source_path": "quests/techniques/done/AOA-TECH-Q-0001.yaml",
     "public_safe": true,
     "fallback_tier": "verifier",
     "wrapper_class": "local_patcher"
@@ -39,7 +39,7 @@
       "work_result"
     ],
     "activation_mode": "on_review_of",
-    "source_path": "quests/AOA-TECH-Q-0002.yaml",
+    "source_path": "quests/techniques/done/AOA-TECH-Q-0002.yaml",
     "public_safe": true,
     "fallback_tier": "verifier",
     "wrapper_class": "codex_primary"
@@ -62,7 +62,7 @@
       "verification_result"
     ],
     "activation_mode": "on_review_of",
-    "source_path": "quests/AOA-TECH-Q-0003.yaml",
+    "source_path": "quests/techniques/captured/AOA-TECH-Q-0003.yaml",
     "public_safe": true,
     "fallback_tier": "verifier",
     "wrapper_class": "hybrid"
@@ -84,7 +84,7 @@
       "promotion_decision"
     ],
     "activation_mode": "on_recurrence",
-    "source_path": "quests/AOA-TECH-Q-0004.yaml",
+    "source_path": "quests/techniques/captured/AOA-TECH-Q-0004.yaml",
     "public_safe": true,
     "fallback_tier": "verifier",
     "wrapper_class": "codex_primary"
@@ -107,7 +107,7 @@
       "verification_result"
     ],
     "activation_mode": "manual",
-    "source_path": "quests/AOA-TECH-Q-0005.yaml",
+    "source_path": "quests/techniques/captured/AOA-TECH-Q-0005.yaml",
     "public_safe": true,
     "fallback_tier": "conductor",
     "wrapper_class": "hybrid"
@@ -129,7 +129,7 @@
       "promotion_decision"
     ],
     "activation_mode": "on_review_of",
-    "source_path": "quests/AOA-TECH-Q-0006.yaml",
+    "source_path": "quests/techniques/captured/AOA-TECH-Q-0006.yaml",
     "public_safe": true,
     "fallback_tier": "verifier",
     "wrapper_class": "codex_primary"
@@ -151,7 +151,7 @@
       "promotion_decision"
     ],
     "activation_mode": "on_review_of",
-    "source_path": "quests/AOA-TECH-Q-0007.yaml",
+    "source_path": "quests/techniques/captured/AOA-TECH-Q-0007.yaml",
     "public_safe": true,
     "fallback_tier": "verifier",
     "wrapper_class": "codex_primary"

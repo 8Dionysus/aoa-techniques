@@ -3,6 +3,7 @@ id: AOA-TECH-Q-0005
 title: Reflect reviewed techniques as feat cards with mastery-harvest posture
 summary: Add a bounded feat-card catalog and mastery-harvest note that derive from technique canon, donor-refinery, and readiness surfaces without replacing source meaning.
 repo: aoa-techniques
+lane: techniques
 owner_surface: techniques/feat-reflection
 theme_ref: ''
 milestone_ref: ''

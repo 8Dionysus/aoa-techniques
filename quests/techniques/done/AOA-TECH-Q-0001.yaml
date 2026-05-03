@@ -4,6 +4,7 @@ title: Land repo-local questbook surface for canon hardening and donor-refinery 
 summary: Create the repo-local tracked obligation layer without replacing technique
   meaning, donor intake, or the technique index.
 repo: aoa-techniques
+lane: techniques
 owner_surface: questbook/public-surface
 theme_ref: ''
 milestone_ref: ''
