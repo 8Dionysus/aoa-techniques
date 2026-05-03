@@ -28,6 +28,10 @@ The mechanic receives Experience pressure, but keeps the local output bounded:
    [Handoff Compression](parts/handoff-compression/README.md), and
    [Service Clarity](parts/service-clarity/README.md) for office/service-shaped
    practice that must stay below runtime and release authority.
+6. Use [Technique Candidate Bridge](parts/technique-candidate-bridge/README.md)
+   before drafting any Experience-derived technique bundle, especially when a
+   local part overlaps AoA center governance, office, service, runtime, proof,
+   role, memory, routing, or ToS authority.
 
 ## Boundaries
 
@@ -46,5 +50,6 @@ The first active split moved seven formerly flat Experience files into
 part-local homes. Their seed wording was preserved as active mechanics behavior,
 not promoted into technique bundles.
 
-The next work should decide one part at a time whether the reusable practice is
-ready for `techniques/` or should remain a mechanics-only owner-boundary note.
+The next work should use the candidate bridge to decide one part at a time
+whether the reusable practice is ready for `techniques/`, needs another
+narrowing pass, or should remain a mechanics-only owner-boundary note.
