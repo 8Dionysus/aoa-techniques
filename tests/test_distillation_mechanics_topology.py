@@ -64,6 +64,8 @@ PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
 PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
     "mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
     "mechanics/distillation/parts/agon-candidate-handoff/generated/agon_candidate_handoff.min.json",
     "mechanics/distillation/parts/agon-candidate-handoff/schemas/agon-candidate-handoff-entry.schema.json",
@@ -263,6 +265,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             },
             registry["gate_cards"],
         )
+        self.assertEqual(
+            {
+                "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md"
+            },
+            registry["gate_examples"],
+        )
         self.assertIn(
             "agon.tech.epistemic.doctrine_revision_review_practice",
             registry["owner_route_holds"],
@@ -279,9 +287,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "gates"
         )
 
-        for gate_path in sorted(gate_root.glob("*.md")):
+        for gate_path in sorted(gate_root.rglob("*.md")):
             text = gate_path.read_text(encoding="utf-8")
-            with self.subTest(gate_path=gate_path.name):
+            with self.subTest(gate_path=gate_path.relative_to(gate_root)):
                 for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", text):
                     if re.match(r"^[a-z]+:", target) or target.startswith("#"):
                         continue
@@ -304,6 +312,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn("Do not define Agon", text)
                 self.assertIn("Do not issue proof", text)
                 self.assertNotIn("gate-card-landed, promoted", text)
+
+                if "examples" in gate_path.parts:
+                    self.assertIn("Public Safety", text)
+                    self.assertIn("one missing evidence object", text)
+                    self.assertIn("Return condition", text)
+                    self.assertIn("no private logs", text)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

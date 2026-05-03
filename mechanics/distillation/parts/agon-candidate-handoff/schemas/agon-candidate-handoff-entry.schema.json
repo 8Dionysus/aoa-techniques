@@ -109,6 +109,10 @@
       "pattern": "^mechanics/distillation/parts/agon-candidate-handoff/gates/.+\\.md$",
       "type": "string"
     },
+    "gate_example": {
+      "pattern": "^mechanics/distillation/parts/agon-candidate-handoff/gates/examples/.+\\.md$",
+      "type": "string"
+    },
     "next_move": {
       "minLength": 1,
       "type": "string"
