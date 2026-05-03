@@ -4,7 +4,8 @@ This file preserves the active-first bridge from pre-split recurrence flat
 files to the current part-local homes.
 
 The pre-split files were compact active mechanics surfaces, not raw wave
-receipts. This pass therefore does not create `legacy/raw/`.
+receipts. The [legacy scaffold](legacy/README.md) is present for
+source-to-active accounting, and its current raw inventory is empty.
 
 ## Active Landing Map
 

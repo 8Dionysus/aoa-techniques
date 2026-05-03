@@ -47,8 +47,9 @@ Create three active parts:
 - `parts/technique-obligation-anchors/README.md`
 - `parts/harvest-promotion-anchors/README.md`
 
-Do not create `legacy/raw/` in this pass because no local pre-split Questbook
-wave receipt or raw source packet is being moved.
+Create the `legacy/` scaffold for source-to-active accounting. Keep raw
+inventory empty because no local pre-split Questbook wave receipt or raw source
+packet is being preserved.
 
 Do not move `QUESTBOOK.md`, root `quests/`, schemas, or generated quest
 projections into the mechanics package. They remain source and projection

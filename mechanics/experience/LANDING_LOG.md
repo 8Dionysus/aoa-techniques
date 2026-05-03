@@ -27,3 +27,11 @@ Not moved:
 - no raw wave receipt was copied into `legacy/raw/`
 - no Experience surface was promoted into `techniques/`
 - no live office, release, runtime, or Tree-of-Sophia authority was claimed
+
+## 2026-05-03 - Legacy Scaffold Bridge
+
+- Added `legacy/` scaffold files for source-to-active accounting.
+- Kept raw inventory empty because the pre-split Experience seed surfaces were
+  compact active material already distilled into part-local homes.
+- Updated provenance to point to the scaffold instead of treating legacy as an
+  absent later add-on.

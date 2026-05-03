@@ -47,8 +47,9 @@ Create three active parts:
 - `parts/derived-projection-anchors/README.md`
 - `parts/proof-claim-anchors/README.md`
 
-Do not create `legacy/raw/` in this pass because no local pre-split
-boundary-bridge wave receipt or raw source packet is being moved.
+Create the `legacy/` scaffold for source-to-active accounting. Keep raw
+inventory empty because no local pre-split boundary-bridge wave receipt or raw
+source packet is being preserved.
 
 Add Boundary-bridge to `mechanics/REQUEST_RECEIPTS.md` only under Non-ORQ
 Center Pressure, with `candidate-only` posture.

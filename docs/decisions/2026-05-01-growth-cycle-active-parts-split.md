@@ -29,9 +29,9 @@ active package route files:
 - `parts/AGENTS.md`
 - `parts/README.md`
 
-Do not create `legacy/raw/` in this pass because no large wave receipt or raw
-source packet is being preserved. The previous flat files become active
-part-local homes.
+Treat the previous flat files as active part-local homes, not raw receipts.
+The `2026-05-03` legacy scaffold decision adds a provenance district with empty
+raw inventory for this package.
 
 Add Growth-cycle to `mechanics/REQUEST_RECEIPTS.md` only under Non-ORQ Center
 Pressure, with `candidate-only` posture.
@@ -49,8 +49,11 @@ roadmaps remain visible to git instead of requiring force-adds for every split.
   backlog.
 - Promotion-readiness incubation remains an explicit holding lane until
   repeated reviewed evidence justifies a real technique bundle.
-- Future mechanics splits can add package roadmaps without silently producing
-  ignored files.
+- Mechanics splits can add package roadmaps without silently producing ignored
+  files.
+- Legacy preservation now has a package-local scaffold and must keep
+  `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
+  aligned.
 
 ## Verification
 

@@ -45,8 +45,9 @@ Create two active parts:
 - `parts/phase-handoff-candidate/README.md`
 - `parts/technique-anchors/README.md`
 
-Do not create `legacy/raw/` in this pass because no local pre-split checkpoint
-wave receipt or raw source packet is being moved.
+Create the `legacy/` scaffold for source-to-active accounting. Keep raw
+inventory empty because no local pre-split checkpoint wave receipt or raw
+source packet is being preserved.
 
 Add Checkpoint to `mechanics/REQUEST_RECEIPTS.md` only under Non-ORQ Center
 Pressure, with `candidate-only` posture.

@@ -11,5 +11,6 @@ commitment and not a source ledger.
    `aoa-agents`.
 3. Check whether handoff compression, scope boundary, and service clarity can
    stand as portable techniques without live office or release authority.
-4. Add legacy receipts only if a later pass discovers real wave/source material
-   that should be preserved outside active route surfaces.
+4. Preserve any discovered real wave/source material in `legacy/raw/` and keep
+   `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
+   aligned.

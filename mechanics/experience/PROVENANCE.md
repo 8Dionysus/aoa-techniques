@@ -31,12 +31,10 @@ the active route just because they existed before this split.
 
 ## Legacy Posture
 
-This split did not create `legacy/raw/` because the pre-split files were compact
-active seed surfaces rather than large wave receipts. Their content moved into
-part-local active homes.
-
-Future compaction or raw-wave preservation can add `legacy/` only when there is
-real source accounting to preserve.
+The pre-split files were compact active seed surfaces rather than large wave
+receipts. Their content moved into part-local active homes. The
+[legacy scaffold](legacy/README.md) is present for source-to-active accounting,
+and its current raw inventory is empty.
 
 ## Experience Rule
 

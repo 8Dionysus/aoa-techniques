@@ -18,6 +18,14 @@ a roadmap and not a technique status source.
 - Added topology tests and a decision note for the candidate-only checkpoint
   landing.
 
+## 2026-05-03 - Legacy Scaffold Bridge
+
+- Added `legacy/` scaffold files for source-to-active accounting.
+- Kept raw inventory empty because no local pre-split Checkpoint receipt is
+  preserved.
+- Updated provenance to point to the scaffold instead of treating legacy as an
+  absent later add-on.
+
 ## Verification Route
 
 Use:

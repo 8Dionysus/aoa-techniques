@@ -10,5 +10,6 @@ commitment and not a source ledger.
 2. Check whether feat-card reader surfaces need a generated manifest or should
    remain examples until stronger evidence exists.
 3. Reconcile quest owner surfaces after generated quest catalog rebuilds.
-4. Add legacy receipts only if a later pass discovers raw wave/source material
-   that should be preserved outside active route surfaces.
+4. Preserve any discovered raw wave/source material in `legacy/raw/` and keep
+   `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
+   aligned.
