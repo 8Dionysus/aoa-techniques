@@ -26,6 +26,7 @@ PART_LOCAL_EXPERIENCE_READMES = (
     "mechanics/experience/parts/scope-boundary/README.md",
     "mechanics/experience/parts/handoff-compression/README.md",
     "mechanics/experience/parts/service-clarity/README.md",
+    "mechanics/experience/parts/technique-candidate-bridge/README.md",
 )
 
 OLD_FLAT_EXPERIENCE_FILES = (
@@ -66,10 +67,35 @@ class ExperienceMechanicsTopologyTestCase(unittest.TestCase):
             "scope-boundary",
             "handoff-compression",
             "service-clarity",
+            "technique-candidate-bridge",
         ):
             with self.subTest(part_name=part_name):
                 self.assertIn(part_name, parts)
                 self.assertIn(part_name, provenance)
+
+    def test_experience_candidate_bridge_preserves_extraction_gate(self) -> None:
+        bridge = (
+            REPO_ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "technique-candidate-bridge"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+
+        for required in (
+            "extract_watch",
+            "narrow_more",
+            "hold_overlap",
+            "authority-resolution",
+            "sealed-decision",
+            "governance-precedent",
+            "handoff-compression",
+            "no automatic technique promotion",
+            "capability-authority-separation-check",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, bridge)
 
     def test_request_receipt_points_to_experience_parts_without_runtime_authority(self) -> None:
         receipts = (REPO_ROOT / "mechanics" / "REQUEST_RECEIPTS.md").read_text(
@@ -81,6 +107,8 @@ class ExperienceMechanicsTopologyTestCase(unittest.TestCase):
 
         self.assertIn("Governance Precedent", experience_section)
         self.assertIn("Handoff Compression", experience_section)
+        self.assertIn("Technique Candidate Bridge", experience_section)
+        self.assertIn("candidate extraction now routes through", experience_section)
         self.assertIn("portable practice stops before live office activation", experience_section)
         self.assertIn("runtime truth", experience_section)
         self.assertIn("ToS write authority", experience_section)

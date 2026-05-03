@@ -35,3 +35,29 @@ Not moved:
   compact active material already distilled into part-local homes.
 - Updated provenance to point to the scaffold instead of treating legacy as an
   absent later add-on.
+
+## 2026-05-03 - Technique Candidate Bridge
+
+Changed:
+
+- added `parts/technique-candidate-bridge/` as the Experience extraction gate
+- classified current Experience parts into `extract_watch`, `narrow_more`, and
+  `hold_overlap` lanes
+- linked the bridge to nearest existing technique bundles so future extraction
+  starts from current canon instead of redrafting mechanics
+- updated the owner request receipt for `ORQ-EXPERIENCE-TECHNIQUES-001`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_experience_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Experience part was promoted into `techniques/`
+- no raw legacy source was added
+- no live office, release, runtime, proof, role, memory, routing, or
+  Tree-of-Sophia authority was claimed

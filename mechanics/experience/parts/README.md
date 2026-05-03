@@ -9,6 +9,7 @@ Active Experience parts:
 - [scope-boundary](scope-boundary/README.md)
 - [handoff-compression](handoff-compression/README.md)
 - [service-clarity](service-clarity/README.md)
+- [technique-candidate-bridge](technique-candidate-bridge/README.md)
 
 Use [../PARTS.md](../PARTS.md) for the role map and
 [../PROVENANCE.md](../PROVENANCE.md) for source lineage.

@@ -29,6 +29,12 @@ the active route just because they existed before this split.
 | Pre-split flat `HANDOFF_COMPRESSION_TECHNIQUE.md` | [parts/handoff-compression](parts/handoff-compression/README.md) | Handoff compression remains owner-local contract behavior, not live office execution. |
 | Pre-split flat `SERVICE_CLARITY_TECHNIQUE.md` | [parts/service-clarity](parts/service-clarity/README.md) | Service clarity remains bounded by owner consent and upstream runtime stop-lines. |
 
+## Center Context Bridge
+
+| Context source | Active route | Distilled signal |
+|---|---|---|
+| AoA-center Experience `PARTS.md`, `DIRECTION.md`, `OWNER_REQUESTS.md`, and part contracts | [parts/technique-candidate-bridge](parts/technique-candidate-bridge/README.md) | Local Experience parts must be classified before extraction; center law supplies stop-lines and owner routes, not technique canon. |
+
 ## Legacy Posture
 
 The pre-split files were compact active seed surfaces rather than large wave

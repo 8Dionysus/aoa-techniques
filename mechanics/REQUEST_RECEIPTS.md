@@ -88,12 +88,15 @@ These statuses are local to this file. They do not change AoA queue status.
   [Sealed Decision](experience/parts/sealed-decision/README.md),
   [Scope Boundary](experience/parts/scope-boundary/README.md),
   [Handoff Compression](experience/parts/handoff-compression/README.md), and
-  [Service Clarity](experience/parts/service-clarity/README.md).
+  [Service Clarity](experience/parts/service-clarity/README.md), and
+  [Technique Candidate Bridge](experience/parts/technique-candidate-bridge/README.md).
 - Owner landing readout:
   - governance and appeal practice live in Governance Precedent, Authority
     Resolution, Appeal Reasoning, and Sealed Decision.
   - office/service practice lives in Scope Boundary, Handoff Compression, and
     Service Clarity.
+  - candidate extraction now routes through Technique Candidate Bridge before a
+    technique bundle is drafted.
   - portable practice stops before live office activation, release approval,
     assistant self-authority, runtime truth, and ToS write authority.
   - technique canon lands only when a real `techniques/**/TECHNIQUE.md` bundle

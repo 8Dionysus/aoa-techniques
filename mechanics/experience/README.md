@@ -81,6 +81,7 @@ matters and [PROVENANCE](PROVENANCE.md) when auditing pre-split source lineage.
 - [Scope Boundary](parts/scope-boundary/README.md)
 - [Sealed Decision](parts/sealed-decision/README.md)
 - [Service Clarity](parts/service-clarity/README.md)
+- [Technique Candidate Bridge](parts/technique-candidate-bridge/README.md)
 
 Release-shaped surfaces for installation and sovereign release live in
 [release-support](../release-support/README.md).
@@ -88,3 +89,7 @@ Release-shaped surfaces for installation and sovereign release live in
 Experience may produce a reusable practice note, owner-boundary reminder, or
 governance precedent. It does not by itself approve a release, install a live
 office, activate runtime behavior, or write Tree-of-Sophia meaning.
+
+Use the candidate bridge before extracting a technique from Experience pressure;
+it keeps the atom, nearest existing bundles, and stronger-owner routes visible
+without turning the whole mechanic into a technique draft.
