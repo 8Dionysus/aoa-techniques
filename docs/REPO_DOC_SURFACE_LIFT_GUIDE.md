@@ -1,8 +1,12 @@
 # Repo Doc Surface Lift Guide
 
-This guide defines the bounded contract for lifting the repository's authoritative public docs/status layer into one manifest pair and one generated reader surface.
+This guide defines the bounded contract for lifting the repository's
+authoritative public route, canon-law, contribution, example, and status layer
+into one manifest pair and one generated reader surface.
 
-Use it when the question is not about technique bundles themselves, but about which authored public repo doc should anchor navigation, contribution, safety, or release/status lookup.
+Use it when the question is not about technique bundles themselves, but about
+which authored public repo doc should anchor navigation, canon boundaries,
+contribution, safety, direction, obligations, or release/status lookup.
 
 This source class stays repo-surface-first. It does not add new schema fields, new frontmatter, or a new `kag` domain.
 
@@ -16,24 +20,33 @@ See also:
 
 This family uses one stable shape:
 
-- authoritative source: the current bounded set of authored public docs/status files
+- authoritative source: the current bounded set of authored public route,
+  canon-law, contribution, example, and status files
 - reader companion: `docs/REPO_DOC_SURFACES.md`
 - derived manifests: `generated/repo_doc_surface_manifest.json` and `generated/repo_doc_surface_manifest.min.json`
-- what it must not become: a status-policy engine, release-policy engine, or catch-all docs index for deeper guides
+- what it must not become: a status-policy engine, release-policy engine,
+  root-authority replacement, or catch-all docs index for deeper guides
 
 ## Bounded Source Set
 
-For this first docs/status wave, the authoritative source set is exactly:
+For this public route/canon/status wave, the authoritative source set is
+exactly:
 
 - `README.md`
+- `CHARTER.md`
 - `docs/START_HERE.md`
 - `docs/ECOSYSTEM_CONTEXT.md`
+- `docs/ROOT_SURFACE_LAW.md`
+- `docs/TECHNIQUE_ATOM_CONTRACT.md`
+- `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 - `TECHNIQUE_INDEX.md`
 - `AGENTS.md`
 - `CONTRIBUTING.md`
 - `SECURITY.md`
 - `WALKTHROUGH.md`
 - `CODE_OF_CONDUCT.md`
+- `ROADMAP.md`
+- `QUESTBOOK.md`
 - `CHANGELOG.md`
 - `docs/README.md`
 - `docs/RELEASING.md`
@@ -62,16 +75,17 @@ Each manifest entry stays small and explicit:
 The current surface groups are:
 
 - `entrypoint/map`
+- `canon/authority`
 - `contribution/policy`
 - `walkthrough/context`
 - `status/release`
 
 ## Boundaries
 
-Not part of this current docs/status wave:
+Not part of this current public route/canon/status wave:
 
-- local planning docs such as `TODO.md`, `PLANS.md`, and `ROADMAP.md`
-- deeper guide docs beyond `docs/START_HERE.md`, `docs/README.md`, and `docs/RELEASING.md`
+- local planning docs such as `TODO.md` and `PLANS.md`
+- deeper guide docs outside the named bounded source set
 - semantic-review and shadow-review markdown docs
 - a new source of truth for repo status
 - a status-policy engine, release-policy engine, or graph layer

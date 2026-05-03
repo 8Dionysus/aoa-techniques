@@ -28,3 +28,20 @@ Not moved:
 - no evidence verdict changed
 - no generated promotion surface became authority
 - no raw pre-prune receipt was added because no audit ledger was shortened
+
+## 2026-05-03 - Root roadmap audit history preserved
+
+Changed:
+
+- preserved the former root closure-audit `ROADMAP.md` at
+  `legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md`
+- kept current root `ROADMAP.md` focused on repo-level direction, horizons, and
+  update rules
+- updated Audit provenance and legacy accounting so the old audit baseline stays
+  findable without remaining root authority
+
+Not changed:
+
+- no technique status changed
+- no promotion queue or evidence verdict changed
+- no active Audit part became root authority

@@ -45,7 +45,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         self.assertIn("`v0.4 matrix-expansion lane` | `26`", readiness_matrix)
         self.assertIn("`AOA-T-0075` through `AOA-T-0100`", readiness_matrix)
 
-    def test_roadmap_matches_current_v0_4_0_release_contour(self) -> None:
+    def test_roadmap_matches_current_direction_contour(self) -> None:
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
@@ -55,24 +55,33 @@ class RoadmapParityTestCase(unittest.TestCase):
         self.assertIn("## [0.4.0]", changelog)
         self.assertIn("`v0.4.2`", roadmap)
         self.assertIn("`100` bundles", roadmap)
-        self.assertIn("Roadmap drift", roadmap)
-        self.assertIn("does not change technique status", roadmap)
+        self.assertIn("repo-level direction", roadmap)
+        self.assertIn("mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md", roadmap)
+        self.assertIn("does not own technique status by itself", roadmap)
+        self.assertIn("Horizon: Corpus Topology", roadmap)
+        self.assertIn("Horizon: Standalone Portability", roadmap)
 
         for technique_id, technique_path in CURRENT_RELEASE_TECHNIQUES:
             with self.subTest(technique=technique_id):
                 self.assertTrue((REPO_ROOT / technique_path).is_file())
                 self.assertIn(technique_id, technique_index)
-                self.assertIn(technique_id, roadmap)
-                self.assertIn(technique_path, roadmap)
 
         for surface in CURRENT_RELEASE_SURFACES:
             with self.subTest(surface=surface):
                 self.assertTrue((REPO_ROOT / surface).is_file())
                 self.assertIn(surface, readme)
 
-    def test_roadmap_names_agon_wave4_companion_bridge_surfaces(self) -> None:
+    def test_root_roadmap_preserves_old_audit_detail_in_audit_legacy(self) -> None:
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        legacy_roadmap = (
+            REPO_ROOT
+            / "mechanics"
+            / "audit"
+            / "legacy"
+            / "raw"
+            / "ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md"
+        ).read_text(encoding="utf-8")
 
         for relative_path in (
             "mechanics/agon/PARTS.md",
@@ -88,12 +97,13 @@ class RoadmapParityTestCase(unittest.TestCase):
         ):
             self.assertTrue((REPO_ROOT / relative_path).is_file())
 
-        self.assertIn("move-technique-bridge", roadmap)
+        self.assertIn("mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md", roadmap)
+        self.assertIn("move-technique-bridge", legacy_roadmap)
         self.assertIn(
             "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
-            roadmap,
+            legacy_roadmap,
         )
-        self.assertIn("requested_not_landed", roadmap)
+        self.assertIn("requested_not_landed", legacy_roadmap)
         self.assertIn("mechanics/agon/parts/move-technique-bridge/README.md", readme)
 
 

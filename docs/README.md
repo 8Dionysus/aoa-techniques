@@ -12,7 +12,9 @@ Choose the path that matches your question:
 
 - I need one repo-only entrypoint first:
   - [Start Here](START_HERE.md)
+  - [Charter](../CHARTER.md)
   - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
+  - [Root Surface Law](ROOT_SURFACE_LAW.md)
 - I need to pick a technique now:
   - [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
   - [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
@@ -67,6 +69,7 @@ Choose the path that matches your question:
   - [Repo Doc Surfaces](REPO_DOC_SURFACES.md)
   - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
   - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
+  - [Root Surface Law](ROOT_SURFACE_LAW.md)
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
   - [KAG Export](KAG_EXPORT.md)
@@ -165,10 +168,12 @@ These are small local derived cards for runtime lookup. They stay subordinate to
 
 ### Generated docs/status manifests
 
-These are derived docs/status source-lift surfaces. They stay subordinate to the authored public docs and do not replace those docs as the source of truth.
+These are derived public route/canon/status source-lift surfaces. They stay
+subordinate to the 18 authoritative public route/canon/status files and do not
+replace those docs as the source of truth.
 
 - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-  - use when the 12 authoritative repo docs/status files should be lifted into bounded routing knowledge only
+  - use when the authoritative public route, canon-law, contribution, example, and status files should be lifted into bounded routing knowledge only
 
 ### Generated review manifests
 
@@ -186,6 +191,8 @@ These are derived review-knowledge surfaces for KAG/source-lift lookup. They sta
 These are human-authored guides that define bounded review, metadata, and documentation discipline.
 
 - [Start Here](START_HERE.md)
+- [Charter](../CHARTER.md)
+- [Root Surface Law](ROOT_SURFACE_LAW.md)
 - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
 - [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
 - [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
@@ -279,10 +286,11 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 ### New reader path
 
 1. [README](../README.md)
-2. [Start Here](START_HERE.md)
-3. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
-4. [Technique Selection](TECHNIQUE_SELECTION.md)
-5. one concrete `TECHNIQUE.md` bundle
+2. [Charter](../CHARTER.md)
+3. [Start Here](START_HERE.md)
+4. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
+5. [Technique Selection](TECHNIQUE_SELECTION.md)
+6. one concrete `TECHNIQUE.md` bundle
 
 ### Reviewer path
 
@@ -296,11 +304,11 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 ### Promotion operations path
 
 1. [Start Here](START_HERE.md)
-2. [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-3. [Promotion Wave A Runbook](../mechanics/audit/parts/promotion-wave-a-runbook/README.md)
-4. [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
-5. [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
-6. [Roadmap](../ROADMAP.md)
+2. [Roadmap](../ROADMAP.md) for repo-level direction
+3. [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
+4. [Promotion Wave A Runbook](../mechanics/audit/parts/promotion-wave-a-runbook/README.md)
+5. [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
+6. [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
 
 ### KAG / lift path
 
@@ -315,7 +323,10 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 These are outside `docs/` but matter when navigating the repo:
 
 - [README](../README.md)
+- [CHARTER](../CHARTER.md)
 - [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
+- [ROADMAP](../ROADMAP.md)
+- [QUESTBOOK](../QUESTBOOK.md)
 - [Mechanics](../mechanics/README.md)
 - [CONTRIBUTING](../CONTRIBUTING.md)
 - [AGENTS](../AGENTS.md)
@@ -325,6 +336,8 @@ These are outside `docs/` but matter when navigating the repo:
 ## Notes
 
 - Prefer [Start Here](START_HERE.md) when the question is "where should I begin inside this repo before choosing a deeper surface?"
+- Prefer [Charter](../CHARTER.md) when the question is "what may this repository claim or own?"
+- Prefer [Root Surface Law](ROOT_SURFACE_LAW.md) when the question is "does this file belong in root, docs root, mechanics, generated, decisions, or a bundle?"
 - Prefer [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is "what counts as one technique instead of a skill, playbook, or chain?"
 - Prefer [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is "which classes, families, categories, or axes should organize a large technique corpus?"
 - Prefer generated reader surfaces when the question is "what should I inspect next?"

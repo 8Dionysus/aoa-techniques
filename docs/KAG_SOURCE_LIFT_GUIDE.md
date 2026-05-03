@@ -120,11 +120,17 @@ The next implementation-oriented source-class pilot after shadow review docs now
 - `generated/repo_doc_surface_manifest.json`
 - `generated/repo_doc_surface_manifest.min.json`
 
-Those files lift the authoritative public docs/status layer into derived routing knowledge only. They stay bounded to `README.md`, `TECHNIQUE_INDEX.md`, `AGENTS.md`, `CONTRIBUTING.md`, `SECURITY.md`, `WALKTHROUGH.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`, `docs/START_HERE.md`, `docs/README.md`, and `docs/RELEASING.md`.
+Those files lift the authoritative public route, canon-law, contribution,
+example, and status layer into derived routing knowledge only. They stay bounded
+to the source set named in `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`.
 
 That keeps the repo-owned self-serve entrypoint inside the existing repo-doc family without turning repo-doc routing into a deeper-guide catch-all.
 
-Their human reader companion is `docs/REPO_DOC_SURFACES.md`, and the source-class contract lives in `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`. This still does not create a status-policy engine, broaden the source set to local planning docs, or pull deeper guide/review docs into the same manifest.
+Their human reader companion is `docs/REPO_DOC_SURFACES.md`, and the
+source-class contract lives in `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`. This still
+does not create a status-policy engine, replace root authority, broaden the
+source set to local planning docs, or pull unrelated deeper guide/review docs
+into the same manifest.
 
 ## Stable Source Surfaces
 
