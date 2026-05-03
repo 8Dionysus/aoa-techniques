@@ -28,9 +28,9 @@ active package route files:
 - `parts/AGENTS.md`
 - `parts/README.md`
 
-Do not create `legacy/raw/` in this pass because no large wave receipt or raw
-source packet is being preserved. The previous flat files become active
-part-local homes.
+Treat the previous flat files as active part-local homes, not raw receipts.
+The `2026-05-03` legacy scaffold decision adds a provenance district with empty
+raw inventory for this package.
 
 ## Consequences
 
@@ -41,8 +41,11 @@ part-local homes.
 - Governance, office/service, handoff, and sealed decision practice stay
   portable only as practice notes; they do not become live office, release,
   runtime, proof, or ToS authority.
-- Future work can decide one part at a time whether a real technique bundle is
+- Work can decide one part at a time whether a real technique bundle is
   warranted.
+- Legacy preservation now has a package-local scaffold and must keep
+  `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
+  aligned.
 
 ## Verification
 

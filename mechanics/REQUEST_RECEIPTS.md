@@ -177,6 +177,18 @@ or candidate lanes without a direct AoA owner-request ID targeting
   technique bundles remain canonical only through their
   `techniques/**/TECHNIQUE.md` homes.
 
+### [rpg](rpg/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA RPG owner-request queue has no direct
+  `ORQ-RPG-TECHNIQUES-*` request. Local RPG surfaces preserve feat,
+  progression, quest-overlay, and owner-handoff reflection without claiming
+  hidden ontology, runtime ledger state, role canon, skill truth, playbook
+  choreography, proof verdicts, quest closure, memory canon, chronicle
+  authority, routing authority, owner acceptance, universal scoring, or
+  automatic technique promotion. Existing RPG-adjacent technique bundles remain
+  canonical only through their `techniques/**/TECHNIQUE.md` homes.
+
 ### [recurrence](recurrence/README.md)
 
 - Current status: `candidate-only`

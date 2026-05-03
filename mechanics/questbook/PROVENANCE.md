@@ -4,9 +4,10 @@ This file preserves the active-first bridge from AoA Questbook law, local
 Questbook source surfaces, and existing quest-adjacent technique bundles to
 the current local parts.
 
-This pass does not create `legacy/raw/` because no local pre-split Questbook
-wave receipt or raw source packet is being moved. The package is a local
-mechanic built around already-landed source surfaces: `QUESTBOOK.md`,
+The [legacy scaffold](legacy/README.md) is present for source-to-active
+accounting. Its current raw inventory is empty because no local pre-split
+Questbook wave receipt or raw source packet is being preserved. The package is
+a local mechanic built around already-landed source surfaces: `QUESTBOOK.md`,
 `quests/`, schemas, generated projections, and Growth-cycle Questbook
 integration.
 

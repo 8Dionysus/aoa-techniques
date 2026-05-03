@@ -10,5 +10,6 @@ commitment and not a source ledger.
    handoff part.
 3. Decide whether retention and obsolescence should become candidate technique
    bundles or remain mechanics-only adoption governance.
-4. Add legacy receipts only if a later pass discovers real wave/source material
-   that should be preserved outside active route surfaces.
+4. Preserve any discovered real wave/source material in `legacy/raw/` and keep
+   `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
+   aligned.

@@ -27,6 +27,9 @@ receipt route, not a copy of the AoA request queue and not proof of acceptance.
 - [questbook](questbook/README.md): repo-local durable technique obligations,
   quest source/index/projection posture, and harvest/promotion routing around
   canon hardening.
+- [rpg](rpg/README.md): feat, progression, quest-overlay, and owner-handoff
+  reflection that keeps RPG language adjunct to technique canon and owner
+  truth.
 - [agon](agon/README.md): Agon practice-candidate bridges, active parts,
   provenance, and preserved wave receipts.
 - [recurrence](recurrence/README.md): recurrence observation and closure
@@ -82,8 +85,9 @@ at a time:
 - active behavior in `README.md`, `DIRECTION.md`, `PARTS.md`, and `parts/`
 - provenance bridge in `PROVENANCE.md`
 - checked landing history in `LANDING_LOG.md`
-- preserved source receipts in `legacy/raw/`
 - source-to-active accounting in `legacy/INDEX.md` and
   `legacy/DISTILLATION_LOG.md`
+- preserved source receipts in `legacy/raw/` when raw receipts exist; otherwise
+  an explicit empty raw inventory in `legacy/raw/README.md`
 
 Use [agon](agon/README.md) as the first owner-local example of this split.

@@ -8,7 +8,7 @@ Route card for the `aoa-techniques/mechanics/` surface.
 These files describe how practice moves through the repo by participating in
 cross-project AoA mechanics: method-growth, distillation, audit, growth-cycle,
 Agon, recurrence, experience, release-support, antifragility, checkpoint, and
-boundary-bridge, and questbook.
+boundary-bridge, questbook, and RPG.
 
 Mechanics are not canonical technique bundles. They shape the route into or
 around canon, while `techniques/` owns published technique content and
@@ -21,7 +21,8 @@ This surface owns:
 - owner-local movement grammar for candidate-to-technique flow inside the AoA
   mechanics vocabulary
 - bounded intake, promotion, adoption, mastery, recurrence, release-support,
-  experience, antifragility, checkpoint, boundary-bridge, and questbook routes
+  experience, antifragility, checkpoint, boundary-bridge, questbook, and RPG
+  routes
 - public-safe stop-lines for deciding when a surface must hand off to another
   AoA repo
 - reusable precedent notes that are too procedural for general `docs/` but not
@@ -74,6 +75,9 @@ It does not own:
 - Generated artifacts remain evidence, not authority.
 - Legacy surfaces preserve source lineage. They are not trash archives, and they
   must not be the only place current active behavior lives.
+- Grown mechanics packages should keep a `legacy/` scaffold even when raw
+  inventory is empty. Use it as the provenance district and source-to-active
+  bridge, not as a placeholder receipt store.
 - When a package grows beyond a simple README, prefer the AoA split:
   `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`, `parts/`, and
   `legacy/`, one mechanic at a time.
@@ -92,5 +96,6 @@ python scripts/validate_repo.py
 python -m unittest discover -s tests
 ```
 
-If Agon binding candidates, questbook references, manifests, or generated
-reader surfaces change, run their named builders or validators before closeout.
+If Agon binding candidates, questbook references, RPG references, manifests, or
+generated reader surfaces change, run their named builders or validators before
+closeout.

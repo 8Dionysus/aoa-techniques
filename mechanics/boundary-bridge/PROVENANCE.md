@@ -4,10 +4,11 @@ This file preserves the active-first bridge from AoA boundary-bridge law,
 local source-lift docs, and existing boundary-adjacent technique bundles to the
 current local parts.
 
-This pass does not create `legacy/raw/` because no local pre-split
-boundary-bridge wave receipt or raw source packet is being moved. The package
-is a new local mechanic built from active center guidance and already-landed
-local surfaces.
+The [legacy scaffold](legacy/README.md) is present for source-to-active
+accounting. Its current raw inventory is empty because no local pre-split
+boundary-bridge wave receipt or raw source packet is being preserved. The
+package is a new local mechanic built from active center guidance and
+already-landed local surfaces.
 
 ## Active Landing Map
 

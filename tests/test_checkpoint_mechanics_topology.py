@@ -116,14 +116,32 @@ class CheckpointMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("does not change technique status", anchors)
         self.assertIn("techniques/**/TECHNIQUE.md", anchors)
 
-    def test_checkpoint_does_not_create_legacy_raw_without_source_receipts(self) -> None:
+    def test_checkpoint_legacy_scaffold_marks_empty_raw_inventory(self) -> None:
         provenance = (
             REPO_ROOT / "mechanics" / "checkpoint" / "PROVENANCE.md"
         ).read_text(encoding="utf-8")
+        compact_provenance = " ".join(provenance.split())
+        legacy_dir = REPO_ROOT / "mechanics" / "checkpoint" / "legacy"
+        raw_files = sorted(
+            path.name for path in (legacy_dir / "raw").iterdir() if path.is_file()
+        )
 
-        self.assertFalse((REPO_ROOT / "mechanics" / "checkpoint" / "legacy").exists())
-        self.assertIn("does not create `legacy/raw/`", provenance)
-        self.assertIn("no local pre-split checkpoint", provenance)
+        for relative_path in (
+            "legacy/AGENTS.md",
+            "legacy/README.md",
+            "legacy/INDEX.md",
+            "legacy/DISTILLATION_LOG.md",
+            "legacy/raw/README.md",
+        ):
+            with self.subTest(relative_path=relative_path):
+                self.assertTrue(
+                    (REPO_ROOT / "mechanics" / "checkpoint" / relative_path).is_file()
+                )
+
+        self.assertEqual(["README.md"], raw_files)
+        self.assertIn("legacy scaffold", provenance)
+        self.assertIn("current raw inventory is empty", provenance)
+        self.assertIn("no local pre-split checkpoint", compact_provenance)
 
     def test_checkpoint_stop_lines_remain_explicit(self) -> None:
         direction = (

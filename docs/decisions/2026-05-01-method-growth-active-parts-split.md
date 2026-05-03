@@ -28,9 +28,9 @@ active package route files:
 - `parts/AGENTS.md`
 - `parts/README.md`
 
-Do not create `legacy/raw/` in this pass because no large wave receipt or raw
-source packet is being preserved. The previous flat files become active
-part-local homes.
+Treat the previous flat files as active part-local homes, not raw receipts.
+The `2026-05-03` legacy scaffold decision adds a provenance district with empty
+raw inventory for this package.
 
 ## Consequences
 
@@ -38,10 +38,11 @@ part-local homes.
   mature mechanics packages.
 - `ORQ-METHOD-TECHNIQUES-001` can point at concrete local response surfaces
   without treating those surfaces as technique canon.
-- Future work can deepen one Method-growth part at a time instead of editing a
-  flat package root.
-- Legacy preservation remains available later if real wave/source accounting is
-  found.
+- Work can deepen one Method-growth part at a time instead of editing a flat
+  package root.
+- Legacy preservation now has a package-local scaffold and must keep
+  `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
+  aligned.
 
 ## Verification
 

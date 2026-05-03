@@ -17,3 +17,11 @@ technique review.
   `ORQ-RECURRENCE-TECHNIQUES-*` request exists in the current AoA queue.
 - Added topology coverage for the active recurrence split and updated manifest
   topology coverage to the new part-local producer path.
+
+## 2026-05-03 - Legacy Scaffold Bridge
+
+- Added `legacy/` scaffold files for source-to-active accounting.
+- Kept raw inventory empty because the pre-split recurrence surfaces were
+  compact active material already distilled into part-local homes.
+- Updated provenance to point to the scaffold instead of treating legacy as an
+  absent later add-on.

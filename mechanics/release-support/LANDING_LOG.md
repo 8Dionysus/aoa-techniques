@@ -16,3 +16,11 @@ substitute for technique review, public-claim proof, or owner acceptance.
   `mechanics/REQUEST_RECEIPTS.md`; no direct
   `ORQ-RELEASE-TECHNIQUES-*` request exists in the current AoA queue.
 - Added topology coverage for the active release-support split.
+
+## 2026-05-03 - Legacy Scaffold Bridge
+
+- Added `legacy/` scaffold files for source-to-active accounting.
+- Kept raw inventory empty because the pre-split release-support surfaces were
+  compact active material already distilled into part-local homes.
+- Updated provenance to point to the scaffold instead of treating legacy as an
+  absent later add-on.
