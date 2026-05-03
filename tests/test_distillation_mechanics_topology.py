@@ -64,6 +64,10 @@ PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
 PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
     "mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/README.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
@@ -271,6 +275,18 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             },
             registry["gate_examples"],
         )
+        self.assertEqual(
+            {
+                "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md"
+            },
+            registry["gate_checklists"],
+        )
+        self.assertEqual(
+            {
+                "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md"
+            },
+            registry["gate_evidence_notes"],
+        )
         self.assertIn(
             "agon.tech.epistemic.doctrine_revision_review_practice",
             registry["owner_route_holds"],
@@ -318,6 +334,14 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                     self.assertIn("one missing evidence object", text)
                     self.assertIn("Return condition", text)
                     self.assertIn("no private logs", text)
+                if "checklists" in gate_path.parts:
+                    self.assertIn("Pass Conditions", text)
+                    self.assertIn("Fail Conditions", text)
+                    self.assertIn("exactly one missing evidence object", text)
+                if "evidence-notes" in gate_path.parts:
+                    self.assertIn("Evidence Read", text)
+                    self.assertIn("What This Does Not Support", text)
+                    self.assertIn("ready for a later bundle-readiness review", text)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

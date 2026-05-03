@@ -13,3 +13,11 @@ Current gate cards:
 Current gate examples:
 
 - [request-evidence-minimal-public-safe](examples/request-evidence-minimal-public-safe.md)
+
+Current gate checklists:
+
+- [request-evidence-gate-checklist](checklists/request-evidence-gate-checklist.md)
+
+Current gate evidence notes:
+
+- [request-evidence-gate-evidence-note](evidence-notes/request-evidence-gate-evidence-note.md)

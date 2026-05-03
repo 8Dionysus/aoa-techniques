@@ -67,6 +67,8 @@
       "source_label": "request_evidence",
       "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
       "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
+      "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
+      "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md",
       "distillation_lane": "first_narrowing_watch",
       "distillation_gate": {
         "atomic_move_status": "candidate_named",
@@ -86,7 +88,7 @@
         "nearest_wrong_owner": "aoa-evals",
         "bridge_stop_line": "Do not treat an evidence request as proof, verdict, or eval authority."
       },
-      "next_move": "Use the landed gate card and example to draft a checklist plus evidence note before any bundle pass."
+      "next_move": "Run bundle-readiness review before any one-bundle drafting pass."
     },
     {
       "candidate_ref": "candidate:aoa-techniques:agon/offer-evidence-reference-practice",
