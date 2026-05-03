@@ -20,3 +20,31 @@ mechanic. It is not a historical source ledger.
   compact active material already distilled into part-local homes.
 - Updated provenance to point to the scaffold instead of treating legacy as an
   absent later add-on.
+
+## 2026-05-03 - Stage Technique Anchors
+
+Changed:
+
+- added `parts/stage-technique-anchors/` as the route from AoA center Growth
+  Cycle stages to existing technique bundles and local hold lanes
+- named current anchors for donor harvest, progression lift, automation
+  opportunity, diagnosis, repair, quest promotion, and owner followthrough
+- kept checkpoint intake and reviewed closeout lower-authority until review and
+  owner-local evidence exist
+- updated the non-ORQ request receipt to show that Growth-cycle remains
+  candidate-only while existing bundles answer many stage-level moves
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_growth_cycle_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no direct `ORQ-GROWTHCYCLE-TECHNIQUES-*` request was claimed
+- no existing technique bundle status changed
+- no achievement, rank, proof, memory, runtime, skill execution, playbook,
+  route, stats, or owner-acceptance authority was claimed

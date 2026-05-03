@@ -165,6 +165,9 @@ or candidate lanes without a direct AoA owner-request ID targeting
   direct `ORQ-GROWTHCYCLE-TECHNIQUES-*` request. Local Growth-cycle surfaces
   preserve technique-layer harvest, feat-reader, questbook, and
   promotion-readiness pressure without claiming center request acceptance.
+  Stage Technique Anchors map many center-stage moves to existing technique
+  bundles while keeping promotion-readiness discrimination as a held local
+  candidate lane.
 
 ### [questbook](questbook/README.md)
 

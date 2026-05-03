@@ -25,6 +25,8 @@ This package can name:
 - feat-card reader boundaries
 - questbook followthrough for technique hardening
 - promotion-readiness incubation from reviewed closeout residue
+- stage-to-technique anchors when an existing bundle already owns the smaller
+  reusable move
 
 It cannot name:
 
@@ -44,3 +46,7 @@ canon, quest followthrough, or derived reader support.
 If the output needs execution, proof, memory, routing, playbook choreography,
 runtime activation, or role progression, route to the owner repository instead
 of expanding local prose.
+
+Before extracting a new Growth-cycle technique, use
+[Stage Technique Anchors](parts/stage-technique-anchors/README.md) to check
+whether the move is already covered by an existing bundle.

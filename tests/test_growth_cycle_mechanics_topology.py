@@ -23,6 +23,7 @@ PART_LOCAL_GROWTH_CYCLE_READMES = (
     "mechanics/growth-cycle/parts/technique-feat-model/README.md",
     "mechanics/growth-cycle/parts/questbook-integration/README.md",
     "mechanics/growth-cycle/parts/promotion-readiness-incubation/README.md",
+    "mechanics/growth-cycle/parts/stage-technique-anchors/README.md",
 )
 
 OLD_FLAT_GROWTH_CYCLE_FILES = (
@@ -57,10 +58,34 @@ class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
             "technique-feat-model",
             "questbook-integration",
             "promotion-readiness-incubation",
+            "stage-technique-anchors",
         ):
             with self.subTest(part_name=part_name):
                 self.assertIn(part_name, parts)
                 self.assertIn(part_name, provenance)
+
+    def test_growth_cycle_stage_anchors_name_existing_bundles_and_gaps(self) -> None:
+        anchors = (
+            REPO_ROOT
+            / "mechanics"
+            / "growth-cycle"
+            / "parts"
+            / "stage-technique-anchors"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+
+        for required in (
+            "session-donor-harvest",
+            "progression-evidence-lift",
+            "automation-fit-matrix",
+            "diagnosis-from-reviewed-evidence",
+            "repair-shape-from-diagnosis",
+            "quest-unit-promotion-review",
+            "promotion-readiness discrimination",
+            "no automatic technique promotion",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, anchors)
 
     def test_growth_cycle_stays_outside_direct_orq_lane(self) -> None:
         receipts = (REPO_ROOT / "mechanics" / "REQUEST_RECEIPTS.md").read_text(
@@ -73,6 +98,7 @@ class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("### [growth-cycle](growth-cycle/README.md)", non_orq_section)
         self.assertIn("Current status: `candidate-only`", non_orq_section)
         self.assertIn("no\n  direct `ORQ-GROWTHCYCLE-TECHNIQUES-*` request", non_orq_section)
+        self.assertIn("Stage Technique Anchors", non_orq_section)
 
     def test_growth_cycle_reference_paths_point_to_part_local_homes(self) -> None:
         expected_paths = (

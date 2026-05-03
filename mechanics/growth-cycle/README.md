@@ -83,6 +83,8 @@ matters. Stable reusable practice moves through `techniques/**/TECHNIQUE.md`.
   questbook route into technique hardening work.
 - [Promotion Readiness Incubation](parts/promotion-readiness-incubation/README.md):
   incubation route for technique-shaped survivors from reviewed closeout.
+- [Stage Technique Anchors](parts/stage-technique-anchors/README.md): map AoA
+  Growth Cycle stages to existing technique bundles and local hold lanes.
 
 Growth-cycle surfaces may keep obligations and mastery-shaped readings visible.
 They do not create achievement authority or bypass promotion review.
