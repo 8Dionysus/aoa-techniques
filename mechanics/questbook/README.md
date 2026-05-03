@@ -13,6 +13,68 @@ quest-shaped technique anchors.
 Those already-landed local Questbook source and projection surfaces stay in
 their root source and projection homes.
 
+## Mechanic card
+
+Status: candidate-only obligation route around existing quest surfaces.
+
+### Trigger
+
+Use this package when durable technique obligations, quest source/index
+posture, generated quest projections, harvest pressure, or promotion follow-up
+need a technique-layer route without becoming a second roadmap or playbook.
+
+### Local owns
+
+This package owns local questbook mechanics anchors around `QUESTBOOK.md`,
+root `quests/`, schemas, generated quest projections, harvest/promotion cues,
+and provenance bridges to center Questbook guidance.
+
+### Stronger owner split
+
+`QUESTBOOK.md` and root `quests/` own repo-local obligation source. Generated
+quest files are projections. `Agents-of-Abyss` owns center Questbook law and
+owner-request grammar. `aoa-playbooks` owns scenario choreography,
+`aoa-evals` owns proof, `aoa-routing` owns routing behavior, and `aoa-memo`
+owns memory objects.
+
+### Inputs
+
+- durable technique-canon obligations
+- quest source/index/projection pressure
+- harvest and promotion-review cues
+- generated quest projection drift
+- center Questbook provenance routes
+
+### Outputs
+
+- obligation anchor maps
+- source/projection boundary notes
+- harvest or promotion handoff cues
+- no quest closure, playbook, proof, memory, or routing authority
+
+### Must not claim
+
+- second roadmap
+- private scratchpad or raw donor backlog
+- owner acceptance
+- closure proof or proof verdict
+- playbook choreography
+- memory canon
+- routing authority
+- generated quest views as source truth
+- automatic technique promotion
+
+### Validation
+
+Use [AGENTS](AGENTS.md#verify) for the package validation lane.
+
+### Next route
+
+Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part
+README. Use root [QUESTBOOK](../../QUESTBOOK.md) or `quests/` only when source
+obligations move. Use [PROVENANCE](PROVENANCE.md) when center Questbook source
+bridges matter.
+
 ## Active route
 
 - [Direction](DIRECTION.md)

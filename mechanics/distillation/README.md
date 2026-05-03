@@ -5,7 +5,66 @@ mechanic: turning donor, cross-layer, legacy, or long-gap material into active
 technique-shaped candidates without losing provenance or claiming canon too
 early.
 
-Start with:
+## Mechanic card
+
+Status: mapped-with-local-evidence candidate-intake route for `ORQ-DISTILLATION-TECHNIQUES-001`.
+
+### Trigger
+
+Use this package when donor, sibling-repo, legacy, or long-gap material needs
+to be preserved, pruned, narrowed, held, or handed toward one atomic technique
+candidate without becoming canon by summary.
+
+### Local owns
+
+This package owns donor refinery rules, external import runbooks, candidate
+ledgers, long-gap re-entry posture, active extraction routes, and provenance
+bridges for technique-shaped intake.
+
+### Stronger owner split
+
+`techniques/**/TECHNIQUE.md` owns final reusable practice canon. Source
+repositories keep source meaning. `Agents-of-Abyss` owns center Distillation
+law and owner-request grammar. `aoa-evals` owns proof strength. `Tree-of-Sophia`
+owns ToS-authored meaning and compost, not AoA operational distillation.
+
+### Inputs
+
+- external donors
+- sibling-repo candidate notes
+- pre-split or legacy receipts
+- long-gap promoted material
+- candidate registries and generated counts as evidence
+
+### Outputs
+
+- candidate, hold, exclusion, or incubation lane
+- source and owner boundary note
+- compact gate packet for possible bundle drafting
+- no technique promotion without bundle-local review
+
+### Must not claim
+
+- summary as proof
+- foreign doctrine as AoA law
+- source-owner acceptance
+- ToS canon
+- runtime activation
+- memory canon
+- generated registry authority over authored routes
+
+### Validation
+
+Use [AGENTS](AGENTS.md#verify) for the package validation lane and part-local
+registry checks when candidate registries change.
+
+### Next route
+
+Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part
+README. Use [PROVENANCE](PROVENANCE.md) for source bridges. Draft a technique
+only after the atom and topology questions can be named.
+
+## Active route
 
 - [Direction](DIRECTION.md): current intent, boundaries, and route posture.
 - [Parts](PARTS.md): active part map.
@@ -14,7 +73,7 @@ Start with:
 - [Landing Log](LANDING_LOG.md): dated accounting for structural landings.
 - [Roadmap](ROADMAP.md): next honest passes.
 
-Current active parts:
+## Functioning parts
 
 - [Donor Refinery](parts/donor-refinery/README.md): compact extraction law for
   turning donor material into reusable practice without copying residue.

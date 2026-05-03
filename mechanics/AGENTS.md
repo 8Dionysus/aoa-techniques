@@ -47,7 +47,8 @@ It does not own:
    `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and `mechanics/README.md`.
 3. If the work cites an AoA center-side `ORQ-*` request or downstream owner
    request, read `mechanics/REQUEST_RECEIPTS.md`.
-4. Read the nearest package README for the touched path.
+4. Read the nearest package README for the touched path, starting with its
+   local `Mechanic card`.
 5. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `legacy/`,
    or `parts/`, use those active route surfaces before opening raw legacy.
 6. For status, release, or promotion changes, also read
@@ -63,6 +64,10 @@ It does not own:
 - When a mechanics surface points to another AoA owner, name the owner route
   and stop-line only as much as the current surface needs. Do not import sibling
   authority or turn boundary notes into a local doctrine block.
+- Package README cards use `Local owns`, not `Center owns`: `aoa-techniques`
+  names its technique-layer authority, then routes stronger law or acceptance
+  to `Agents-of-Abyss`, `REQUEST_RECEIPTS.md`, `PROVENANCE.md`, or the sibling
+  owner only when relevant.
 - When a mechanics surface answers an AoA center-side owner request, keep the
   local receipt in `mechanics/REQUEST_RECEIPTS.md` and do not treat the request
   packet as local acceptance or landing.

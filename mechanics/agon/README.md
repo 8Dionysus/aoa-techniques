@@ -6,7 +6,7 @@ technique canon, skill execution, proof, arena runtime, or ToS meaning.
 
 ## Mechanic card
 
-Status: planted owner-local route.
+Status: candidate-only owner-local route.
 
 ### Trigger
 
@@ -14,19 +14,19 @@ Use this package when an Agon move, owner-binding packet, epistemic extension,
 or recurrence signal asks whether reusable technique-side practice should be
 staged in `aoa-techniques`.
 
-### Center owns
+### Local owns
 
-`Agents-of-Abyss` owns Agon doctrine, lawful move vocabulary, owner-binding
-rules, arena/session law, verdict retention, rank/scar boundaries, and ToS
-threshold routing.
+This package owns the public-safe technique-side candidate route: active part
+contracts, candidate indexes, recurrence observation surfaces, and provenance
+bridges that keep Agon pressure reviewable before any technique bundle exists.
 
 ### Stronger owner split
 
-`aoa-techniques` owns only public-safe reusable practice candidates and later
-technique bundles after normal technique review. `aoa-skills` owns executable
-workflows, `aoa-evals` owns proof verdicts, `aoa-routing` owns routing logic,
-`aoa-memo` owns memory writeback, and `Tree-of-Sophia` owns ToS-authored
-meaning.
+`Agents-of-Abyss` owns Agon doctrine, lawful move vocabulary, owner-binding
+rules, arena/session law, verdict retention, rank/scar boundaries, and ToS
+threshold routing. `aoa-skills` owns executable workflows, `aoa-evals` owns
+proof verdicts, `aoa-routing` owns routing logic, `aoa-memo` owns memory
+writeback, and `Tree-of-Sophia` owns ToS-authored meaning.
 
 Part-local candidate surfaces translate center-owned move pressure into
 public-safe technique review. They do not import center authority.

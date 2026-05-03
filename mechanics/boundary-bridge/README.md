@@ -10,6 +10,65 @@ owner maps, non-transfer stop-lines, and owner-request packets. This repo only
 owns reusable practice-shaped pressure that may later distill into
 `techniques/**/TECHNIQUE.md`.
 
+## Mechanic card
+
+Status: candidate-only practice route.
+
+### Trigger
+
+Use this package when owner-boundary placement, non-identity, derived
+projection, proof-claim, generated-reader, or mirrored-surface pressure needs a
+technique-layer bridge without transferring authority.
+
+### Local owns
+
+This package owns technique-layer boundary practice pressure, local anchor
+parts, generated/source distinction notes, proof-claim caution, and provenance
+bridges to center guidance.
+
+### Stronger owner split
+
+`Agents-of-Abyss` owns center Boundary Bridge doctrine, bridge modes, owner
+maps, non-transfer stop-lines, and owner-request packets. `Tree-of-Sophia`
+owns ToS meaning, `aoa-kag` owns derived knowledge substrate semantics,
+`aoa-routing` owns route behavior, `aoa-sdk` owns compatibility helpers,
+`aoa-memo` owns memory objects, `aoa-evals` owns proof, and `abyss-stack` owns
+runtime behavior.
+
+### Inputs
+
+- owner-placement or nearest-wrong-target pressure
+- derived projection and generated-reader surfaces
+- proof-claim or public-claim caution
+- boundary-related technique anchors
+- AoA center boundary-bridge provenance
+
+### Outputs
+
+- local anchor maps
+- candidate-only practice routes
+- proof or owner handoff cues
+- no authority transfer or source identity claim
+
+### Must not claim
+
+- owner acceptance
+- identity between bridged surfaces
+- ToS canon or source interpretation
+- generated projection as source truth
+- routing, SDK, memory, runtime, public projection, or proof authority
+- automatic technique promotion
+
+### Validation
+
+Use [AGENTS](AGENTS.md#verify) for the package validation lane.
+
+### Next route
+
+Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part
+README. Use [PROVENANCE](PROVENANCE.md) only when center or sibling source
+bridges matter. Stable reusable practice moves through `techniques/**/TECHNIQUE.md`.
+
 ## Active route
 
 - [Direction](DIRECTION.md)

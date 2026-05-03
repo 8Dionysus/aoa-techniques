@@ -60,6 +60,33 @@ Mechanics can prepare canon. They do not replace canon.
 Cross-repo references stay light: point to the owner, preserve provenance, and
 keep AoA-only context outside the portable technique core.
 
+## Package Card Standard
+
+Each `mechanics/<slug>/README.md` is an agent-operable local card. It should let
+a reader answer when to use the mechanic, what this repository owns, which
+stronger owners keep final truth, what may enter, what may leave, what must not
+be claimed, how to validate the local route, and where to go next.
+
+Use these headings in package READMEs:
+
+| Heading | Purpose |
+|---|---|
+| `## Mechanic card` | compact package status and entry posture |
+| `### Trigger` | when the local mechanic applies |
+| `### Local owns` | what `aoa-techniques` may author here |
+| `### Stronger owner split` | AoA center or sibling owners that keep stronger truth |
+| `### Inputs` | material that may enter this mechanic |
+| `### Outputs` | material that may leave without becoming canon by itself |
+| `### Must not claim` | stop-lines that keep the package below stronger owners |
+| `### Validation` | where to find exact checks for this package |
+| `### Next route` | the next active surface, provenance bridge, or owner route |
+
+This mirrors the AoA center mechanic-card shape, but adapts the authority. The
+center can say what the center owns. This repository says what the local
+technique-canon organ owns, then routes center law through
+`REQUEST_RECEIPTS.md`, package `PROVENANCE.md`, or a sibling owner only when
+that bridge is relevant.
+
 ## Candidate Gate
 
 Before a mechanics candidate becomes a technique bundle, it should pass the
@@ -90,4 +117,5 @@ at a time:
 - preserved source receipts in `legacy/raw/` when raw receipts exist; otherwise
   an explicit empty raw inventory in `legacy/raw/README.md`
 
-Use [agon](agon/README.md) as the first owner-local example of this split.
+Use the package card first, then open active parts. Enter legacy through
+`PROVENANCE.md` only when the source route matters.

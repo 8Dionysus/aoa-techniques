@@ -10,6 +10,66 @@ bounded continuity, and source ownership. This repo only owns technique-layer
 signals that may help review candidate intake, overlap holds, canonical
 pressure, and decision closure.
 
+## Mechanic card
+
+Status: candidate-only observation route.
+
+### Trigger
+
+Use this package when recurrence signals, generated registry observations,
+readiness beacons, or review-decision closure pressure need to inform technique
+review without becoming operational continuity.
+
+### Local owns
+
+This package owns technique-layer observation producers, review-decision
+closure posture, candidate-intake signal routing, and provenance bridges to
+center recurrence guidance.
+
+### Stronger owner split
+
+`Agents-of-Abyss` owns recurrence law and owner-request grammar. `aoa-routing`
+owns dispatch, `aoa-memo` owns memory recall, `aoa-sdk` owns control-plane
+carry, `aoa-evals` owns proof, `aoa-playbooks` owns scenario choreography,
+`aoa-stats` owns derived summaries, `aoa-kag` owns derived knowledge substrate,
+and `abyss-stack` owns runtime return.
+
+### Inputs
+
+- recurrence observations over candidate or generated surfaces
+- live receipt or readiness signals
+- review-decision closure cues
+- cross-layer candidate registry observations
+- center recurrence provenance routes
+
+### Outputs
+
+- observation or closure posture
+- review cue for a local technique surface
+- owner route for proof, memory, routing, runtime, or stats pressure
+- no candidate creation or status change by recurrence alone
+
+### Must not claim
+
+- ambient continuity
+- hidden memory sovereignty
+- runtime return
+- routing dispatch
+- proof verdicts
+- generated evidence as review authority
+- owner acceptance
+- automatic technique creation or promotion
+
+### Validation
+
+Use [AGENTS](AGENTS.md#verify) for the package validation lane.
+
+### Next route
+
+Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part
+README. Use [PROVENANCE](PROVENANCE.md) only when the center recurrence source
+route matters. Stable reusable practice moves through `techniques/**/TECHNIQUE.md`.
+
 ## Active route
 
 - [Direction](DIRECTION.md)

@@ -9,6 +9,63 @@ The center owns doctrine, via negativa, anti-authority posture, fragile-pattern
 vocabulary, and owner-request packets. This repo owns reusable practice pressure
 and technique-family bridges that may feed or explain technique bundles.
 
+## Mechanic card
+
+Status: candidate-only practice route with existing technique anchors.
+
+### Trigger
+
+Use this package when stress, chaos, degraded-mode, regrounding, or recovery
+pressure needs a technique-layer route without becoming Antifragility doctrine
+or owner-local cleanup authority.
+
+### Local owns
+
+This package owns portable stress-recovery practice pressure, current
+technique-anchor mapping, active part routes, and provenance bridges that keep
+chaos-wave material reviewable.
+
+### Stronger owner split
+
+`Agents-of-Abyss` owns Antifragility doctrine, via negativa, anti-authority
+posture, fragile-pattern vocabulary, and owner-request packets. `aoa-evals`
+owns proof verdicts, `aoa-skills` owns executable recovery workflows,
+`aoa-playbooks` owns recurring stress choreography, `aoa-stats` owns derived
+movement summaries, and `abyss-stack` owns runtime recovery behavior.
+
+### Inputs
+
+- chaos-wave or stress-review pressure
+- degraded-mode, regrounding, and recovery practice notes
+- existing antifragility-recovery technique anchors
+- provenance routes from preserved chaos-wave material
+
+### Outputs
+
+- active practice-pressure parts
+- technique-anchor readouts
+- candidate-only routes for future bundle review
+- no proof, cleanup approval, runtime recovery, or automatic promotion
+
+### Must not claim
+
+- one-score health
+- deletion or cleanup authority
+- proof verdicts
+- runtime self-healing
+- memory, stats, playbook, or routing truth
+- automatic technique promotion
+
+### Validation
+
+Use [AGENTS](AGENTS.md#verify) for the package validation lane.
+
+### Next route
+
+Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part
+README. Open [PROVENANCE](PROVENANCE.md) only when the chaos-wave source route
+matters. Stable reusable practice moves through `techniques/**/TECHNIQUE.md`.
+
 ## Active route
 
 - [Direction](DIRECTION.md)
