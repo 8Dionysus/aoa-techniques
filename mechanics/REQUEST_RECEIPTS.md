@@ -128,6 +128,18 @@ or candidate lanes without a direct AoA owner-request ID targeting
   technique promotion. Existing antifragility-recovery technique bundles remain
   canonical only through their `techniques/**/TECHNIQUE.md` homes.
 
+### [checkpoint](checkpoint/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Checkpoint owner-request queue has no
+  direct `ORQ-CHECKPOINT-TECHNIQUES-*` request. Local Checkpoint surfaces
+  preserve phase handoff, handoff packet, compaction/re-entry, and
+  checkpoint-bound repair pressure without claiming checkpoint implementation
+  authority, memory canon, proof verdicts, runtime activation, owner
+  acceptance, hidden scheduler behavior, autonomous self-repair, or automatic
+  technique promotion. Existing checkpoint-related technique bundles remain
+  canonical only through their `techniques/**/TECHNIQUE.md` homes.
+
 ### [growth-cycle](growth-cycle/README.md)
 
 - Current status: `candidate-only`
