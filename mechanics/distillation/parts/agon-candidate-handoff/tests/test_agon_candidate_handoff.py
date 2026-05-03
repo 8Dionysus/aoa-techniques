@@ -78,6 +78,9 @@ def test_agon_candidate_handoff_shape() -> None:
     assert data["gate_evidence_notes"] == {
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md"
     }
+    assert data["bundle_readiness_reviews"] == {
+        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md"
+    }
     gate_card_rows = [
         candidate
         for candidate in data["candidates"]
@@ -86,11 +89,13 @@ def test_agon_candidate_handoff_shape() -> None:
             or "gate_example" in candidate
             or "gate_checklist" in candidate
             or "gate_evidence_note" in candidate
+            or "bundle_readiness_review" in candidate
         )
     ]
     assert gate_card_rows == [
         {
             "atomic_move_status": "candidate_named",
+            "bundle_readiness_review": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
             "candidate_ref": "candidate:aoa-techniques:agon/request-evidence-practice",
             "distillation_lane": "first_narrowing_watch",
             "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
@@ -99,7 +104,7 @@ def test_agon_candidate_handoff_shape() -> None:
             "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
             "likely_domain": "agent-workflows",
             "nearest_wrong_owner": "aoa-evals",
-            "primary_kind": "evidence-request",
+            "primary_kind": "guardrail",
             "source_label": "request_evidence",
             "source_part": "move-technique-bridge",
             "source_status": "requested_not_landed",
@@ -182,6 +187,7 @@ def test_builder_rejects_gate_card_pointing_to_child_artifact() -> None:
     del with_card["gate_example"]
     del with_card["gate_checklist"]
     del with_card["gate_evidence_note"]
+    del with_card["bundle_readiness_review"]
     case = unittest.TestCase()
     with case.assertRaisesRegex(builder.ValidationError, "gate_card must point"):
         builder.validate_config(config)
@@ -277,5 +283,43 @@ def test_builder_rejects_missing_gate_evidence_note() -> None:
     case = unittest.TestCase()
     with case.assertRaisesRegex(
         builder.ValidationError, "gate_evidence_note path does not exist"
+    ):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_bundle_readiness_review_without_gate_evidence_note() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_review = next(
+        entry for entry in config["entries"] if "bundle_readiness_review" in entry
+    )
+    del with_review["gate_evidence_note"]
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(
+        builder.ValidationError, "bundle_readiness_review requires gate_evidence_note"
+    ):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_missing_bundle_readiness_review() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_review = next(
+        entry for entry in config["entries"] if "bundle_readiness_review" in entry
+    )
+    with_review["bundle_readiness_review"] = (
+        "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/missing.md"
+    )
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(
+        builder.ValidationError, "bundle_readiness_review path does not exist"
     ):
         builder.validate_config(config)

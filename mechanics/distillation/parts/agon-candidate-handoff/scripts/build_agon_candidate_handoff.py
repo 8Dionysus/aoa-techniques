@@ -96,10 +96,14 @@ GATE_CHECKLIST_PREFIX = (
 GATE_EVIDENCE_NOTE_PREFIX = (
     "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/"
 )
+BUNDLE_READINESS_REVIEW_PREFIX = (
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/"
+)
 GATE_CARD_EXCLUDED_PREFIXES = (
     GATE_EXAMPLE_PREFIX,
     GATE_CHECKLIST_PREFIX,
     GATE_EVIDENCE_NOTE_PREFIX,
+    BUNDLE_READINESS_REVIEW_PREFIX,
 )
 
 
@@ -266,6 +270,26 @@ def validate_entry(entry: dict[str, Any], source_map: dict[str, dict[str, str]])
                 f"{ref}: only first_narrowing_watch entries may carry gate_evidence_note"
             )
 
+    bundle_readiness_review = entry.get("bundle_readiness_review")
+    if bundle_readiness_review is not None:
+        if gate_evidence_note is None:
+            raise ValidationError(
+                f"{ref}: bundle_readiness_review requires gate_evidence_note"
+            )
+        if not isinstance(
+            bundle_readiness_review, str
+        ) or not bundle_readiness_review.startswith(BUNDLE_READINESS_REVIEW_PREFIX):
+            raise ValidationError(
+                f"{ref}: bundle_readiness_review must stay under the handoff bundle-reviews directory"
+            )
+        review_path = REPO_ROOT / bundle_readiness_review
+        if not review_path.is_file():
+            raise ValidationError(f"{ref}: bundle_readiness_review path does not exist")
+        if lane != "first_narrowing_watch":
+            raise ValidationError(
+                f"{ref}: only first_narrowing_watch entries may carry bundle_readiness_review"
+            )
+
 
 def validate_config(config: dict[str, Any]) -> None:
     if config.get("schema_version") != EXPECTED_SCHEMA_VERSION:
@@ -332,6 +356,8 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             row["gate_checklist"] = entry["gate_checklist"]
         if "gate_evidence_note" in entry:
             row["gate_evidence_note"] = entry["gate_evidence_note"]
+        if "bundle_readiness_review" in entry:
+            row["bundle_readiness_review"] = entry["bundle_readiness_review"]
         candidate_rows.append(row)
     return {
         "schema_version": EXPECTED_INDEX_SCHEMA,
@@ -370,6 +396,11 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             entry["candidate_ref"]: entry["gate_evidence_note"]
             for entry in entries
             if "gate_evidence_note" in entry
+        },
+        "bundle_readiness_reviews": {
+            entry["candidate_ref"]: entry["bundle_readiness_review"]
+            for entry in entries
+            if "bundle_readiness_review" in entry
         },
         "candidates": candidate_rows,
         "stop_line": (

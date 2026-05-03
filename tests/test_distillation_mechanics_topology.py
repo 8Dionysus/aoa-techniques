@@ -64,6 +64,8 @@ PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
 PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
     "mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/README.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/README.md",
@@ -287,6 +289,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             },
             registry["gate_evidence_notes"],
         )
+        self.assertEqual(
+            {
+                "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md"
+            },
+            registry["bundle_readiness_reviews"],
+        )
         self.assertIn(
             "agon.tech.epistemic.doctrine_revision_review_practice",
             registry["owner_route_holds"],
@@ -341,7 +349,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 if "evidence-notes" in gate_path.parts:
                     self.assertIn("Evidence Read", text)
                     self.assertIn("What This Does Not Support", text)
-                    self.assertIn("ready for a later bundle-readiness review", text)
+                    self.assertIn("ready for bundle-readiness review", text)
+                if "bundle-reviews" in gate_path.parts:
+                    self.assertIn("Verdict", text)
+                    self.assertIn("ready for one-bundle draft", text)
+                    self.assertIn("draft kind: `guardrail`", text)
+                    self.assertIn("What This Does Not Support", text)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

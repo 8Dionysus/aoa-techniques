@@ -103,6 +103,10 @@ Current landed gate evidence note:
 
 - [request-evidence-gate-evidence-note](gates/evidence-notes/request-evidence-gate-evidence-note.md)
 
+Current landed bundle readiness review:
+
+- [request-evidence-bundle-readiness-review](gates/bundle-reviews/request-evidence-bundle-readiness-review.md)
+
 ## Stop Line
 
 This part must not define Agon law, create skill workflows, issue proof

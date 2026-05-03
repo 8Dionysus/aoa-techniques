@@ -12,6 +12,9 @@ Gate example:
 Gate checklist:
 [request-evidence-gate-checklist](../checklists/request-evidence-gate-checklist.md)
 
+Bundle readiness review:
+[request-evidence-bundle-readiness-review](../bundle-reviews/request-evidence-bundle-readiness-review.md)
+
 Status: gate-evidence-note-landed, not a technique bundle.
 
 ## Evidence Read
@@ -28,7 +31,8 @@ change the current review state.
 
 ## What This Supports
 
-- The candidate is ready for a later bundle-readiness review.
+- The candidate is ready for bundle-readiness review; the separate review, not
+  this note, carries any one-bundle draft recommendation.
 - The likely bundle atom is narrow enough to test against a template.
 - The nearest wrong-owner risk is still `aoa-evals`, because an evidence request
   can easily overclaim proof or verdict strength.
