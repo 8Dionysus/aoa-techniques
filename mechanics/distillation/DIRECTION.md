@@ -25,7 +25,9 @@ parts.
    for public-safe external candidate accounting.
 4. Use [Cross-Layer Candidate Ledger](parts/cross-layer-candidate-ledger/README.md)
    for sibling-repo donor-note accounting.
-5. Use [Long-Gap Reentry](parts/long-gap-reentry/README.md) when old promoted
+5. Use [Agon Candidate Handoff](parts/agon-candidate-handoff/README.md) when
+   Agon requested-only candidates need Distillation lanes before an atom card.
+6. Use [Long-Gap Reentry](parts/long-gap-reentry/README.md) when old promoted
    material needs a new external contract before another honest canonical pass.
 
 ## Boundaries

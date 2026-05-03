@@ -28,9 +28,10 @@ decision.
 
 ## Next Agon pass
 
-Only open a promotion pass when one requested candidate is ready to become a
-real technique bundle through normal `aoa-techniques` review. Keep that pass to
-one candidate family at a time.
+Only open a promotion pass after one requested candidate has passed through the
+[Distillation Agon Candidate Handoff](../distillation/parts/agon-candidate-handoff/README.md)
+lane and can name the atomic move, topology, portability, owner stop-lines, and
+nearest overlaps. Keep that pass to one candidate family at a time.
 
 ## Not now
 

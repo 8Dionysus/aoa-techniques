@@ -35,6 +35,14 @@ the active route.
 - [legacy/DISTILLATION_LOG.md](legacy/DISTILLATION_LOG.md): dated accounting for
   this raw-to-active split.
 
+## Downstream Distillation Bridge
+
+When current Agon candidate registries need technique-side narrowing, use
+[Distillation Agon Candidate Handoff](../distillation/parts/agon-candidate-handoff/README.md).
+That bridge reads active Agon generated indexes as source evidence and keeps the
+full `12 + 10` candidate map in Distillation lanes. It does not pull raw Wave IV
+or Wave XV receipts into the active Distillation route.
+
 ## Distillation rule
 
 When a preserved source changes current behavior, update the relevant active

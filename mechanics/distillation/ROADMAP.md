@@ -10,12 +10,18 @@
 3. Keep the external and cross-layer registries paired with their active READMEs
    and generated indexes; registries are accounting evidence, not candidate
    authority.
-4. Keep recurrence observation pointed at the part-local cross-layer README plus
+4. Keep the Agon candidate handoff registry paired with Agon active source
+   registries; it is a Distillation lane map, not Agon acceptance or technique
+   promotion.
+5. Keep recurrence observation pointed at the part-local cross-layer README plus
    generated registry without giving recurrence candidate or promotion
    authority.
-5. Reassess the active narrowing lane only when new public donor evidence
+6. Reassess the active narrowing lane only when new public donor evidence
    changes the boundary, handoff packet, continuation permission, or
    stop/return/escalation signals.
+7. For the Agon first-narrowing cluster, open one atom/topology gate card at a
+   time; do not draft a bundle until the gate proves standalone portability and
+   nearest owner stop-lines.
 
 ## Hold line
 

@@ -41,6 +41,13 @@ It cannot say:
   should happen
 - that a candidate is a promoted technique before bundle review lands it
 
+When a requested candidate starts looking technique-shaped, route the narrowing
+through
+[Distillation Agon Candidate Handoff](../distillation/parts/agon-candidate-handoff/README.md)
+before any bundle draft. The handoff lane can name first-narrowing pressure,
+source-boundary holds, or owner-route holds; it still cannot accept Agon
+candidates or define Agon law.
+
 ## Artifact posture
 
 The current Agon technical artifacts live under their owning active parts:

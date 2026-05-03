@@ -1,0 +1,584 @@
+{
+  "registry_id": "distillation.agon_candidate_handoff.v1",
+  "schema_version": "distillation-agon-candidate-handoff.seed/0.1",
+  "status": "candidate_lane_map",
+  "title": "Distillation Agon candidate handoff lanes",
+  "source_surfaces": {
+    "epistemic_technique_candidates": "mechanics/agon/parts/epistemic-technique-candidates/generated/agon_epistemic_technique_candidates.min.json",
+    "move_technique_bridge": "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json"
+  },
+  "entries": [
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/assert-position-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "assert_position",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "asserting a position still depends on Agon stance grammar before it can become one portable practice move",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "Agon move-practice candidate; source-bound",
+        "capability_class": "position",
+        "substrate": "argument state",
+        "execution_profile": "orchestration-required",
+        "risk_posture": "lawful-move-authority-drift",
+        "portable_core": "portable only after the practice is restated as bounded position expression outside Agon move law"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns lawful move vocabulary and owner binding.",
+        "local_route": "Hold in the Agon source-boundary lane until Distillation can name one non-legal practice atom.",
+        "nearest_wrong_owner": "aoa-skills",
+        "bridge_stop_line": "Do not define Agon law, create a skill workflow, issue proof verdicts, write scars, or start arena runtime."
+      },
+      "next_move": "Find one non-Agon position-statement example before writing an atom card."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/challenge-claim-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "challenge_claim",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "challenge one claim by naming the challenged statement, the pressure reason, and the evidence needed next",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "challenge",
+        "family_posture": "evidence and claim-pressure practice; not yet a bundle",
+        "capability_class": "challenge",
+        "substrate": "claim text",
+        "execution_profile": "small-agent",
+        "risk_posture": "argument-escalation-drift",
+        "portable_core": "portable as bounded claim challenge without Agon move legality or arena effects"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns lawful challenge vocabulary.",
+        "local_route": "Run one Distillation atom/topology card before any technique draft.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not make the challenge a proof verdict, rank effect, scar, or live arena move."
+      },
+      "next_move": "Draft a gate card that separates bounded claim challenge from eval verdict and debate choreography."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/request-evidence-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "request_evidence",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "ask for the smallest missing evidence object that would change the review state",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "evidence-request",
+        "family_posture": "evidence-request practice; not yet a bundle",
+        "capability_class": "request-evidence",
+        "substrate": "review state",
+        "execution_profile": "small-agent",
+        "risk_posture": "evidence-theater",
+        "portable_core": "portable as a small evidence request outside OS Abyss and outside Agon protocol"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns evidence move law.",
+        "local_route": "Run one gate card focused on missing evidence object, review state, and stop condition.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not treat an evidence request as proof, verdict, or eval authority."
+      },
+      "next_move": "Build a gate card around missing evidence, acceptable receipt, and return condition."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/offer-evidence-reference-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "offer_evidence_reference",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "offer one evidence reference with scope, relevance, and limit before relying on it",
+        "likely_domain": "docs",
+        "primary_kind": "evidence-reference",
+        "family_posture": "evidence citation practice; not yet a bundle",
+        "capability_class": "cite",
+        "substrate": "evidence reference",
+        "execution_profile": "small-agent",
+        "risk_posture": "citation-overclaim",
+        "portable_core": "portable as scoped evidence-reference offering without Agon verdict authority"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns evidence-reference move law.",
+        "local_route": "Run one gate card focused on source, relevance, scope, and limit.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not turn a reference into proof verdict, source truth transfer, or KAG promotion."
+      },
+      "next_move": "Write a gate card that forces scope and relevance before an evidence reference is used."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/probe-trace-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "probe_trace",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "probe one reasoning or provenance trace for the next missing link",
+        "likely_domain": "history",
+        "primary_kind": "trace-probe",
+        "family_posture": "trace review practice; not yet a bundle",
+        "capability_class": "inspect",
+        "substrate": "trace artifact",
+        "execution_profile": "medium-agent",
+        "risk_posture": "trace-closure-overclaim",
+        "portable_core": "portable as one trace-probe move before closure or memory writeback"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns trace move law.",
+        "local_route": "Run one gate card focused on one missing trace link and no closure claim.",
+        "nearest_wrong_owner": "aoa-memo",
+        "bridge_stop_line": "Do not write memory, issue closure, or promote trace evidence."
+      },
+      "next_move": "Draft a gate card around one trace link, inspected artifact, and explicit unknown."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/deny-trace-closure-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "deny_trace_closure",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "trace-closure denial still depends on Agon closure law and should not become a generic refusal",
+        "likely_domain": "history",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "trace review guardrail; source-bound",
+        "capability_class": "block-closure",
+        "substrate": "trace artifact",
+        "execution_profile": "medium-agent",
+        "risk_posture": "closure-authority-drift",
+        "portable_core": "portable only if restated as a reviewable incomplete-trace guardrail"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns closure language.",
+        "local_route": "Hold until a non-Agon incomplete-trace example shows the same guardrail.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not turn closure denial into proof verdict or permanent block."
+      },
+      "next_move": "Collect one incomplete-trace case where the output is a next-evidence request rather than a verdict."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/mark-contradiction-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "mark_contradiction",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "marking contradiction risks acting like a verdict unless the mark stays below localization and proof",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "contradiction practice; source-bound",
+        "capability_class": "detect",
+        "substrate": "claims",
+        "execution_profile": "medium-agent",
+        "risk_posture": "verdict-drift",
+        "portable_core": "portable only as a provisional contradiction marker with no proof or rank effect"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns contradiction move law.",
+        "local_route": "Hold behind localize-contradiction until the marker output is bounded.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not issue contradiction proof, verdict, scar, or rank effect."
+      },
+      "next_move": "Prefer localize-contradiction first; revisit marking only after marker output is bounded."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/localize-contradiction-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "localize_contradiction",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "locate the smallest conflicting claims and state what evidence would separate them",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "diagnosis",
+        "family_posture": "contradiction diagnosis practice; not yet a bundle",
+        "capability_class": "localize",
+        "substrate": "claims",
+        "execution_profile": "medium-agent",
+        "risk_posture": "over-broad-contradiction",
+        "portable_core": "portable as contradiction localization without Agon verdict or proof authority"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns contradiction move law.",
+        "local_route": "Run one gate card focused on smallest conflicting claims and next evidence.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not claim proof, verdict, scar, rank mutation, or closure."
+      },
+      "next_move": "Draft a gate card that forces smallest-conflict localization and avoids full dispute resolution."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/deny-closure-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "deny_closure",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "block closure because one named condition remains unmet",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "guardrail",
+        "family_posture": "closure guardrail practice; not yet a bundle",
+        "capability_class": "block-closure",
+        "substrate": "review state",
+        "execution_profile": "small-agent",
+        "risk_posture": "false-finality",
+        "portable_core": "portable as a bounded no-closure guardrail without Agon arena authority"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns closure law.",
+        "local_route": "Run one gate card focused on a named unmet condition and reopen route.",
+        "nearest_wrong_owner": "aoa-routing",
+        "bridge_stop_line": "Do not create route authority, proof verdict, or permanent dispute state."
+      },
+      "next_move": "Write a gate card with condition, evidence gap, and explicit reopen route."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/revise-position-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "revise_position",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "position revision still depends on position lifecycle and evidence update rules",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "stance revision practice; source-bound",
+        "capability_class": "revise",
+        "substrate": "argument state",
+        "execution_profile": "orchestration-required",
+        "risk_posture": "unreviewed-self-rewrite",
+        "portable_core": "portable only after the revision trigger and retained-position receipt are explicit"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns position lifecycle law.",
+        "local_route": "Hold until Distillation can name a reviewable revision receipt.",
+        "nearest_wrong_owner": "aoa-memo",
+        "bridge_stop_line": "Do not create memory writeback, doctrine rewrite, or live actor mutation."
+      },
+      "next_move": "Require a revision receipt shape before drafting any technique."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/stand-fast-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "stand_fast",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "standing fast needs evidence posture and stop-lines so it does not become stubborn refusal",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "stance retention practice; source-bound",
+        "capability_class": "hold-position",
+        "substrate": "argument state",
+        "execution_profile": "orchestration-required",
+        "risk_posture": "dogma-drift",
+        "portable_core": "portable only as evidence-bound stance retention with clear revisit conditions"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns stance and contest posture.",
+        "local_route": "Hold until revisit condition and evidence basis are explicit.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not claim verdict, rank, proof, or doctrine authority."
+      },
+      "next_move": "Name the evidence basis and revisit trigger before any atom card."
+    },
+    {
+      "candidate_ref": "candidate:aoa-techniques:agon/concede-practice",
+      "source_part": "move-technique-bridge",
+      "source_status": "requested_not_landed",
+      "source_label": "concede",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "concession needs closure, retained lesson, and owner effects separated before it can be portable",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "stance closure practice; source-bound",
+        "capability_class": "close",
+        "substrate": "argument state",
+        "execution_profile": "orchestration-required",
+        "risk_posture": "false-finality",
+        "portable_core": "portable only as bounded concession receipt without scar, rank, or memory mutation"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns closure and verdict boundaries.",
+        "local_route": "Hold until concession receipt stays below memory, rank, and proof owners.",
+        "nearest_wrong_owner": "aoa-memo",
+        "bridge_stop_line": "Do not write scar, mutate rank, create proof verdict, or close live arena state."
+      },
+      "next_move": "Define a concession receipt that preserves lesson without memory or rank effects."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.hypothesis_staking_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "hypothesis_staking_practice",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "hypothesis staking needs stake meaning separated from Agon pressure and rank economy",
+        "likely_domain": "evaluation",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "epistemic practice; source-bound",
+        "capability_class": "commit",
+        "substrate": "hypothesis",
+        "execution_profile": "medium-agent",
+        "risk_posture": "commitment-pressure-drift",
+        "portable_core": "portable only if stake means review expectation, not rank, scar, or live contest effect"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns epistemic pressure and rank boundaries.",
+        "local_route": "Hold until stake output is a reviewable note rather than a contest effect.",
+        "nearest_wrong_owner": "aoa-stats",
+        "bridge_stop_line": "Do not mutate rank, trust, scars, or proof state."
+      },
+      "next_move": "Define what a non-runtime hypothesis stake records and what it cannot change."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.model_of_other_prediction_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "model_of_other_prediction_practice",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "model-of-other prediction needs role and evidence boundaries before becoming a portable practice",
+        "likely_domain": "evaluation",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "epistemic comparison practice; source-bound",
+        "capability_class": "predict",
+        "substrate": "model of other",
+        "execution_profile": "medium-agent",
+        "risk_posture": "other-model-overclaim",
+        "portable_core": "portable only as evidence-bounded prediction, not persona truth or role authority"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns contestant and model-of-other boundaries.",
+        "local_route": "Hold until prediction evidence, uncertainty, and role stop-line are explicit.",
+        "nearest_wrong_owner": "aoa-agents",
+        "bridge_stop_line": "Do not create assistant contestant authority, role truth, or memory about another actor."
+      },
+      "next_move": "Require uncertainty and evidence basis before any atom card."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.inference_chain_attack_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "inference_chain_attack_practice",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "attack one inference chain by naming the weakest link and the evidence that would repair it",
+        "likely_domain": "evaluation",
+        "primary_kind": "review",
+        "family_posture": "reasoning audit practice; not yet a bundle",
+        "capability_class": "audit-reasoning",
+        "substrate": "inference chain",
+        "execution_profile": "medium-agent",
+        "risk_posture": "adversarial-overreach",
+        "portable_core": "portable as bounded inference-chain audit without Agon contestant posture"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns attack posture and contest law.",
+        "local_route": "Run one gate card that restates attack as bounded audit and repair evidence.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not issue proof verdict or turn review into live contest."
+      },
+      "next_move": "Gate the move as weakest-link audit with repair evidence, not adversarial theater."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.explanatory_power_comparison_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "explanatory_power_comparison_practice",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "compare two explanations against the same evidence and name the remaining unknown",
+        "likely_domain": "evaluation",
+        "primary_kind": "comparison",
+        "family_posture": "reasoning comparison practice; not yet a bundle",
+        "capability_class": "compare",
+        "substrate": "explanations",
+        "execution_profile": "small-agent",
+        "risk_posture": "winner-overclaim",
+        "portable_core": "portable as explanation comparison without verdict, rank, or doctrine rewrite"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns epistemic contest framing.",
+        "local_route": "Run one gate card focused on same evidence, comparison axis, and remaining unknown.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not turn comparison into proof verdict or canonical truth."
+      },
+      "next_move": "Draft a gate card with two explanations, shared evidence, and bounded unknown."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.concept_boundary_probe_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "concept_boundary_probe_practice",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "probe a concept boundary by testing one near case and one excluded case",
+        "likely_domain": "docs",
+        "primary_kind": "boundary",
+        "family_posture": "concept boundary practice; not yet a bundle",
+        "capability_class": "differentiate",
+        "substrate": "concept docs",
+        "execution_profile": "small-agent",
+        "risk_posture": "semantic-collapse",
+        "portable_core": "portable as concept-boundary probing outside OS Abyss ontology"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns pressure framing, not local concept truth.",
+        "local_route": "Run one gate card with near case, excluded case, and stop-line.",
+        "nearest_wrong_owner": "Tree-of-Sophia",
+        "bridge_stop_line": "Do not write ToS canon, source meaning, or doctrine authority."
+      },
+      "next_move": "Gate as a docs technique only if it keeps source meaning and canon ownership outside the move."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.bifurcation_mapping_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "bifurcation_mapping_practice",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "bifurcation mapping is promising but still needs a smaller map unit and owner route",
+        "likely_domain": "docs",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "decision or concept-map practice; source-bound",
+        "capability_class": "map-alternatives",
+        "substrate": "decision branches",
+        "execution_profile": "medium-agent",
+        "risk_posture": "route-sprawl",
+        "portable_core": "portable only after one bifurcation unit and its owner stop-line are named"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns rupture and bifurcation pressure.",
+        "local_route": "Hold until one map unit can be separated from campaign or doctrine flow.",
+        "nearest_wrong_owner": "aoa-playbooks",
+        "bridge_stop_line": "Do not create campaign choreography, route dispatch, or proof verdict."
+      },
+      "next_move": "Name one map unit, not a full branch-management workflow."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.rupture_detection_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "rupture_detection_practice",
+      "distillation_lane": "source_boundary_hold",
+      "distillation_gate": {
+        "atomic_move_status": "not_named_cleanly",
+        "atomic_move_note": "rupture detection still risks becoming proof or alarm authority instead of one review move",
+        "likely_domain": "evaluation",
+        "primary_kind": "unassigned-until-narrowed",
+        "family_posture": "risk or contradiction practice; source-bound",
+        "capability_class": "detect",
+        "substrate": "claims and traces",
+        "execution_profile": "medium-agent",
+        "risk_posture": "alarm-authority-drift",
+        "portable_core": "portable only as review-trigger detection with no verdict or route dispatch"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns rupture pressure and stop-lines.",
+        "local_route": "Hold until the output is a review trigger rather than proof, alarm, or route action.",
+        "nearest_wrong_owner": "aoa-routing",
+        "bridge_stop_line": "Do not dispatch routes, issue proof verdicts, or write scars."
+      },
+      "next_move": "Separate rupture signal from route action before writing an atom card."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.doctrine_revision_review_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "doctrine_revision_review_practice",
+      "distillation_lane": "owner_route_hold",
+      "distillation_gate": {
+        "atomic_move_status": "owner_route_needed",
+        "atomic_move_note": "doctrine revision review touches source-law authority and cannot be distilled until owner route and proof path are explicit",
+        "likely_domain": "docs",
+        "primary_kind": "unassigned-until-owner-route",
+        "family_posture": "doctrine review pressure; stronger-owner route required",
+        "capability_class": "review-doctrine",
+        "substrate": "doctrine docs",
+        "execution_profile": "orchestration-required",
+        "risk_posture": "doctrine-authority-drift",
+        "portable_core": "portable only after the owner route keeps doctrine authority outside the technique"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss owns center doctrine; source repositories own their own doctrine.",
+        "local_route": "Hold until an owner-route packet says what is being reviewed and who can accept it.",
+        "nearest_wrong_owner": "aoa-techniques",
+        "bridge_stop_line": "Do not let aoa-techniques rewrite doctrine, center law, or source-owner meaning."
+      },
+      "next_move": "Route through owner-boundary review before any technique extraction attempt."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.counterfactual_pressure_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "counterfactual_pressure_practice",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "apply one counterfactual pressure case to reveal which claim would have to change",
+        "likely_domain": "evaluation",
+        "primary_kind": "stress-case",
+        "family_posture": "counterfactual review practice; not yet a bundle",
+        "capability_class": "stress",
+        "substrate": "claim set",
+        "execution_profile": "small-agent",
+        "risk_posture": "hypothetical-overreach",
+        "portable_core": "portable as bounded counterfactual stress without Agon contest or proof authority"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns pressure posture.",
+        "local_route": "Run one gate card with one counterfactual, affected claim, and unchanged limits.",
+        "nearest_wrong_owner": "aoa-evals",
+        "bridge_stop_line": "Do not treat hypothetical pressure as proof, verdict, or doctrine rewrite."
+      },
+      "next_move": "Gate with one counterfactual case and an explicit unchanged-scope note."
+    },
+    {
+      "candidate_ref": "agon.tech.epistemic.false_consensus_breaking_practice",
+      "source_part": "epistemic-technique-candidates",
+      "source_status": "requested_only_candidate",
+      "source_label": "false_consensus_breaking_practice",
+      "distillation_lane": "first_narrowing_watch",
+      "distillation_gate": {
+        "atomic_move_status": "candidate_named",
+        "atomic_move_note": "break false consensus by naming the assumed agreement, missing dissent, and next check",
+        "likely_domain": "agent-workflows",
+        "primary_kind": "review",
+        "family_posture": "assumption review practice; not yet a bundle",
+        "capability_class": "de-bias",
+        "substrate": "review conversation",
+        "execution_profile": "small-agent",
+        "risk_posture": "consensus-theater",
+        "portable_core": "portable as assumption and dissent check without Agon contest authority"
+      },
+      "bridge": {
+        "higher_law": "Agents-of-Abyss mechanics/agon owns contest framing.",
+        "local_route": "Run one gate card that names assumed agreement, dissent source, and next check.",
+        "nearest_wrong_owner": "aoa-agents",
+        "bridge_stop_line": "Do not create actor-role authority, proof verdict, or live contest."
+      },
+      "next_move": "Draft a gate card around assumed agreement, absent dissent, and one check."
+    }
+  ]
+}

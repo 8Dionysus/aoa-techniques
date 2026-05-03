@@ -35,6 +35,7 @@ PART_LOCAL_DISTILLATION_READMES = (
     "mechanics/distillation/parts/external-import-runbook/README.md",
     "mechanics/distillation/parts/external-candidate-ledger/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/README.md",
     "mechanics/distillation/parts/long-gap-reentry/README.md",
 )
 
@@ -60,6 +61,17 @@ PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
     "mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py",
 )
 
+PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
+    "mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json",
+    "mechanics/distillation/parts/agon-candidate-handoff/generated/agon_candidate_handoff.min.json",
+    "mechanics/distillation/parts/agon-candidate-handoff/schemas/agon-candidate-handoff-entry.schema.json",
+    "mechanics/distillation/parts/agon-candidate-handoff/schemas/agon-candidate-handoff.schema.json",
+    "mechanics/distillation/parts/agon-candidate-handoff/examples/agon_candidate_handoff_entry.example.json",
+    "mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py",
+    "mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py",
+    "mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py",
+)
+
 OLD_FLAT_DISTILLATION_FILES = (
     "mechanics/distillation/DONOR_REFINERY_RUBRIC.md",
     "mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md",
@@ -76,6 +88,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             + RAW_DISTILLATION_RECEIPTS
             + PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS
             + PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS
+            + PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS
         ):
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
@@ -102,6 +115,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "external-import-runbook",
             "external-candidate-ledger",
             "cross-layer-candidate-ledger",
+            "agon-candidate-handoff",
             "long-gap-reentry",
         ):
             with self.subTest(part_name=part_name):
@@ -207,6 +221,45 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertEqual(3, registry["gate_status_counts"]["not_technique_shaped"])
         self.assertEqual({"A": 5, "B": 3, "C": 2}, registry["wave_counts"])
         self.assertIn("recurrence promotion authority", registry["stop_line"])
+
+    def test_agon_candidate_handoff_registry_preserves_source_coverage(self) -> None:
+        registry = json.loads(
+            (
+                REPO_ROOT
+                / "mechanics"
+                / "distillation"
+                / "parts"
+                / "agon-candidate-handoff"
+                / "generated"
+                / "agon_candidate_handoff.min.json"
+            ).read_text(encoding="utf-8")
+        )
+
+        self.assertEqual(22, registry["total_candidates"])
+        self.assertEqual(
+            {
+                "epistemic-technique-candidates": 10,
+                "move-technique-bridge": 12,
+            },
+            registry["source_counts"],
+        )
+        self.assertEqual(
+            {
+                "first_narrowing_watch": 11,
+                "owner_route_hold": 1,
+                "source_boundary_hold": 10,
+            },
+            registry["distillation_lane_counts"],
+        )
+        self.assertIn(
+            "candidate:aoa-techniques:agon/request-evidence-practice",
+            registry["first_narrowing_watch"],
+        )
+        self.assertIn(
+            "agon.tech.epistemic.doctrine_revision_review_practice",
+            registry["owner_route_holds"],
+        )
+        self.assertIn("does not define Agon law", registry["stop_line"])
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
@@ -368,6 +421,20 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("boundary/portability", decision)
         self.assertIn("generated registries remain", decision)
         self.assertIn("evidence only", decision)
+
+    def test_distillation_agon_handoff_decision_is_discoverable(self) -> None:
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-03-distillation-agon-candidate-handoff.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Distillation Agon Candidate Handoff", decision)
+        self.assertIn("cover all `22`", decision)
+        self.assertIn("current Agon technique-side candidates", decision)
+        self.assertIn("Agon remains the source route", decision)
+        self.assertIn("The generated handoff index is evidence only", decision)
 
     def test_mechanics_boundary_language_correction_is_discoverable(self) -> None:
         decision = (

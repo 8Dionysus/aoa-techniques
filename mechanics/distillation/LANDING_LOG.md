@@ -209,3 +209,34 @@ Not moved:
 - no cross-layer candidate was promoted, dropped, or reclassified
 - no generated registry became authority
 - no landed wave was reopened
+
+## 2026-05-03 - Agon candidate handoff lanes
+
+Changed:
+
+- added [parts/agon-candidate-handoff](parts/agon-candidate-handoff/README.md)
+  as the Distillation lane map for Agon requested-only practice candidates
+- added a part-local seed registry, schemas, example, builder, validator, tests,
+  and generated compact index
+- mapped all `22` current Agon technique-side candidates: `12` Wave IV
+  move-binding candidates and `10` Wave XV epistemic candidates
+- kept `first_narrowing_watch`, `source_boundary_hold`, and `owner_route_hold`
+  as Distillation lanes, not technique statuses
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology tests.test_agon_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Agon candidate became a technique bundle
+- no Agon candidate status changed
+- no Agon lawful move, proof, scar, rank, KAG, ToS, runtime, or skill authority
+  moved into `aoa-techniques`

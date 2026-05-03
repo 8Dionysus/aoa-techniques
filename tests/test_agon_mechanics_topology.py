@@ -92,6 +92,25 @@ class AgonMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("mechanics/agon/parts/epistemic-technique-candidates/", decision)
         self.assertIn("mechanics/agon/parts/recurrence-adapter/", decision)
 
+    def test_agon_routes_candidate_narrowing_through_distillation_handoff(self) -> None:
+        readme = (REPO_ROOT / "mechanics" / "agon" / "README.md").read_text(
+            encoding="utf-8"
+        )
+        direction = (REPO_ROOT / "mechanics" / "agon" / "DIRECTION.md").read_text(
+            encoding="utf-8"
+        )
+        parts = (REPO_ROOT / "mechanics" / "agon" / "PARTS.md").read_text(
+            encoding="utf-8"
+        )
+
+        for text in (readme, direction, parts):
+            with self.subTest(surface=text.splitlines()[0]):
+                self.assertIn("Distillation Agon Candidate Handoff", text)
+                self.assertIn("agon-candidate-handoff", text)
+
+        self.assertIn("it still cannot accept Agon\ncandidates or define Agon law", direction)
+        self.assertIn("does not change\ncandidate status", parts)
+
 
 if __name__ == "__main__":
     unittest.main()
