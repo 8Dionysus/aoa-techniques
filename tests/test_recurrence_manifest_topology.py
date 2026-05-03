@@ -67,7 +67,9 @@ class RecurrenceManifestTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "mechanics"
             / "recurrence"
-            / "RECURRENCE_LIVE_OBSERVATION_PRODUCERS.md"
+            / "parts"
+            / "live-observation-producers"
+            / "README.md"
         ).read_text(encoding="utf-8")
         decision = (
             REPO_ROOT

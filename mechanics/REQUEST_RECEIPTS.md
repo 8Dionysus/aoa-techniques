@@ -125,6 +125,15 @@ or candidate lanes without a direct AoA owner-request ID targeting
   preserve technique-layer harvest, feat-reader, questbook, and
   promotion-readiness pressure without claiming center request acceptance.
 
+### [recurrence](recurrence/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Recurrence request queue has no direct
+  `ORQ-RECURRENCE-TECHNIQUES-*` request. Local Recurrence surfaces preserve
+  technique-layer observation and review-closure pressure without claiming
+  center request acceptance, recurrence law ownership, runtime return, memory
+  recall, routing dispatch, proof verdicts, or automatic technique promotion.
+
 ## Update Discipline
 
 When AoA adds, supersedes, or lands an owner request targeting
