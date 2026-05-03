@@ -16,6 +16,12 @@ source-to-active accounting, and its current raw inventory is empty.
 | Pre-split flat `QUESTBOOK_TECHNIQUE_INTEGRATION.md` | [parts/questbook-integration](parts/questbook-integration/README.md) | Questbook remains a deferred-obligation route, not a donor backlog. |
 | Pre-split flat `REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md` | [parts/promotion-readiness-incubation](parts/promotion-readiness-incubation/README.md) | Reviewed closeout survivors remain incubation pressure, not canonical technique bundles. |
 
+## Center Stage Bridge
+
+| Context source | Current active home | Preservation note |
+|---|---|---|
+| AoA-center Growth Cycle `PARTS.md`, `OWNER_MAP.md`, `OWNER_REQUESTS.md`, and `docs/GROWTH_CYCLE_LAW.md` | [parts/stage-technique-anchors](parts/stage-technique-anchors/README.md) | Center stage order is used as route context only; existing technique bundles own reusable practice, and stronger owners keep implementation, proof, memory, runtime, route, stats, playbook, and owner-acceptance authority. |
+
 ## AoA Center Relation
 
 `Agents-of-Abyss` owns Growth Cycle stage law, owner split, and request packet
