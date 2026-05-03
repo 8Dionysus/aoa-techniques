@@ -37,6 +37,9 @@ receipt route, not a copy of the AoA request queue and not proof of acceptance.
 - [checkpoint](checkpoint/README.md): phase handoff, handoff packet,
   compaction, re-entry, and checkpoint-bound repair pressure that stays
   candidate-only until a technique bundle owns the atomic move.
+- [boundary-bridge](boundary-bridge/README.md): owner-boundary,
+  derived-projection, and proof-claim practice pressure that keeps technique
+  canon, generated surfaces, sibling owners, and public claims distinct.
 
 ## Boundary
 

@@ -128,6 +128,21 @@ or candidate lanes without a direct AoA owner-request ID targeting
   technique promotion. Existing antifragility-recovery technique bundles remain
   canonical only through their `techniques/**/TECHNIQUE.md` homes.
 
+### [boundary-bridge](boundary-bridge/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Boundary Bridge owner-request queue
+  has no direct `ORQ-BRIDGE-TECHNIQUES-*` request. Local Boundary-bridge
+  surfaces preserve owner-boundary, derived-projection, and proof-claim
+  practice pressure without claiming owner acceptance, identity between bridged
+  surfaces, AoA-authored Tree-of-Sophia canon, source interpretation, derived
+  projection as source truth, routing authority, SDK authority, memory
+  authority, runtime authority, public projection authority, proof before
+  `aoa-evals` or the source owner lands evidence, generated companion
+  authority, or automatic technique promotion. Existing boundary-related
+  technique bundles remain canonical only through their
+  `techniques/**/TECHNIQUE.md` homes.
+
 ### [checkpoint](checkpoint/README.md)
 
 - Current status: `candidate-only`
