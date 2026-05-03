@@ -5,7 +5,66 @@ mechanic: moving repeated practice toward explicit technique adoption, owner
 landing, retention, pruning, or technique-to-skill handoff without confusing
 practice meaning with execution authority.
 
-Start with:
+## Mechanic card
+
+Status: mapped-with-local-evidence route for `ORQ-METHOD-TECHNIQUES-001`.
+
+### Trigger
+
+Use this package when repeated practice needs an adoption, retention,
+obsolescence, owner-consent, rollback, or technique-to-skill handoff route
+before it becomes a technique bundle or skill proposal.
+
+### Local owns
+
+This package owns technique-side adoption posture, pattern adoption, retention
+checks, obsolescence routes, technique-to-skill handoff boundaries, and
+pre-split v0.7 provenance.
+
+### Stronger owner split
+
+`Agents-of-Abyss` owns center Method-growth law and owner-request grammar.
+`aoa-skills` owns executable workflow packages, `aoa-evals` owns proof
+verdicts, `aoa-routing` owns route behavior, `aoa-memo` owns memory objects,
+and each sibling owner keeps acceptance of its own operational truth.
+
+### Inputs
+
+- repeated local or sibling practice
+- adoption, retention, rollback, or obsolescence pressure
+- technique-to-skill handoff candidates
+- owner-consent and readiness notes
+- pre-split downstream adoption surfaces through provenance
+
+### Outputs
+
+- adoption or handoff route
+- retention or obsolescence posture
+- owner consent and rollback reminder
+- technique bundle or skill proposal candidate after stronger review
+
+### Must not claim
+
+- sibling owner acceptance
+- skill activation
+- proof verdicts
+- route behavior
+- memory truth
+- automatic technique promotion
+- deprecation without source-linked evidence
+
+### Validation
+
+Use [AGENTS](AGENTS.md#verify) for the package validation lane.
+
+### Next route
+
+Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part
+README. Use [REQUEST_RECEIPTS](../REQUEST_RECEIPTS.md) when the ORQ route
+matters and [PROVENANCE](PROVENANCE.md) when auditing pre-split adoption
+lineage.
+
+## Active route
 
 - [Direction](DIRECTION.md): current intent, boundaries, and route posture.
 - [Parts](PARTS.md): active part map.
@@ -14,7 +73,7 @@ Start with:
 - [Landing Log](LANDING_LOG.md): dated accounting for structural landings.
 - [Roadmap](ROADMAP.md): next honest passes.
 
-Current active parts:
+## Functioning parts
 
 - [Technique To Skill Handoff](parts/technique-to-skill-handoff/README.md):
   handoff posture between reusable technique canon and bounded skill workflows.

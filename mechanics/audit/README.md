@@ -4,7 +4,64 @@ This package owns the `aoa-techniques` side of the cross-project Audit mechanic:
 making promotion pressure, evidence gaps, searched lanes, and canonical
 readiness legible enough to route the next honest move.
 
-Start with:
+## Mechanic card
+
+Status: active promotion and evidence route.
+
+### Trigger
+
+Use this package when technique promotion pressure, evidence gaps, searched
+lanes, canonical-readiness posture, or external proof routes need to be made
+legible before a bundle status or queue changes.
+
+### Local owns
+
+This package owns readiness queues, evidence-sprint runbooks, searched-lane
+memory, active audit parts, and provenance bridges for technique-canon audit
+pressure.
+
+### Stronger owner split
+
+`techniques/**/TECHNIQUE.md` and bundle-local notes own technique status
+evidence. `aoa-evals` owns proof verdicts. `Agents-of-Abyss` owns center Audit
+doctrine and owner-request grammar. Sibling repos own their own downstream
+evidence before it can be treated as accepted use.
+
+### Inputs
+
+- bundle-local evidence notes and review state
+- external or downstream proof surfaces
+- searched-lane records
+- promotion-readiness blockers or closure signals
+- audit provenance from pre-split surfaces
+
+### Outputs
+
+- readiness posture
+- evidence sprint route
+- searched-lane ledger entry
+- owner-local follow-up route
+- no status change unless bundle-local evidence also moves
+
+### Must not claim
+
+- proof verdicts
+- canonical promotion by queue pressure alone
+- sibling owner acceptance
+- generated or ledger authority over authored bundle meaning
+- donor import ownership, which routes to Distillation
+
+### Validation
+
+Use [AGENTS](AGENTS.md#verify) for the package validation lane.
+
+### Next route
+
+Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part
+README. Use [PROVENANCE](PROVENANCE.md) only when auditing source lineage. If a
+bundle status would move, update the bundle-local evidence route first.
+
+## Active route
 
 - [Direction](DIRECTION.md): current intent, boundaries, and route posture.
 - [Parts](PARTS.md): active part map.
@@ -12,7 +69,7 @@ Start with:
 - [Landing Log](LANDING_LOG.md): dated accounting for structural landings.
 - [Roadmap](ROADMAP.md): next honest passes.
 
-Current active parts:
+## Functioning parts
 
 - [Promotion Readiness Matrix](parts/promotion-readiness-matrix/README.md):
   active readiness queues and owner-local promotion posture.
