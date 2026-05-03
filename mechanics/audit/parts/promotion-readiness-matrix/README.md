@@ -11,12 +11,12 @@ For the current actionable first wave, open [Promotion Wave A Runbook](../promot
 ## Current Posture
 
 - current promoted corpus: `79` techniques
-- matrix categorization status: `49` promoted techniques are explicitly categorized in the pack matrix below; `30` newer `v0.4` / session-harvest / recovery-wave / Method-growth-extraction promoted techniques (`AOA-T-0075` through `AOA-T-0104`) are tracked in generated promotion readiness and need one matrix-expansion pass before canonical-promotion debate
+- matrix categorization status: `79` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0104`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
 - latest graduation wave: [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../../../../techniques/history/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
-- fresh extraction watch: [AOA-T-0046](../../../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../../../../techniques/docs/github-review-template-lift/TECHNIQUE.md), and [AOA-T-0048](../../../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) are earlier than the rest and still need second-context plus canonical-readiness scaffolding before canonical discussion is honest
+- fresh extraction watch: [AOA-T-0046](../../../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../../../../techniques/docs/github-review-template-lift/TECHNIQUE.md), [AOA-T-0048](../../../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md), [AOA-T-0097](../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0098](../../../../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md), [AOA-T-0099](../../../../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md), and [AOA-T-0100](../../../../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) still need second-context or canonical-readiness scaffolding before canonical discussion is honest
 
 ## Manual-first questbook pilot lane
 
@@ -56,9 +56,9 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
 | `external live-adopter lane` | `34` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
-| `internal-origin second-consumer lane` | `9` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
-| `fresh extraction lane` | `3` | Has origin evidence only. The next step is second-context plus canonical-readiness scaffolding, not promotion debate. |
-| `v0.4 matrix-expansion lane` | `30` | Newer `v0.4`, session-harvest, recovery-wave, and Method-growth-extraction promoted bundles `AOA-T-0075` through `AOA-T-0104` are present in generated promotion readiness; the maintainer-facing pack matrix still needs bundle-by-bundle categorization before canonical-promotion debate. |
+| `internal-origin second-consumer lane` | `35` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
+| `fresh extraction lane` | `7` | Has origin evidence only or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
+| `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
 
 ## Swarm Rule
 
@@ -335,24 +335,121 @@ Shared blocker: the donor Telegram family and repo-local adaptation both show a 
 |---|---|---|
 | [AOA-T-0074](../../../../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) | Telegram-normalization sibling that keeps stable local objects, media references, provenance, and resume state explicit with clear exclusions around auth bootstrap, session conversion, and memory doctrine. | One second public workflow surface where Telegram-derived messages and media become a resumable local object store with visible provenance before later routing, recall, or memory actions, without widening into auth policy, session bridging, or archive-product doctrine. |
 
+### Pack 32 - Reviewed Session Harvest Spine
+
+Shared blocker: the session-harvest family is internally coherent and already source-backed, but still needs another live consumer so harvest packets read as portable post-session practice rather than one AoA skill-lineage export.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0075](../../../../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | Strong donor extraction contract for reviewed session artifacts, with explicit candidate units and evidence anchors. | One second live workflow where a reviewed artifact produces a bounded donor pack that later owner placement can consume without reopening live session memory. |
+| [AOA-T-0077](../../../../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) | Packet spine is useful beside session donor harvest, but still origin-lineage shaped. | One second consumer that reads a `HARVEST_PACKET` as a bounded handoff into routing, diagnosis, repair, progression, or quest work without letting the packet become memory canon or routing authority. |
+
+### Pack 33 - Owner Route Fork Discipline
+
+Shared blocker: these bundles keep adjacent owner targets and branch choices distinct, but still need another downstream use where the rejection and fork discipline changes the outcome of real work.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0076](../../../../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) | Central owner-placement primitive for one bounded reusable unit, already reinforced by several mechanics anchors. | One second non-origin owner-placement pass where a candidate chooses one primary owner, one next artifact, and one nearest wrong target. |
+| [AOA-T-0078](../../../../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) | Fork-card shape is clear, but still session-harvest-family heavy. | One live route where materially different next choices are captured as fork cards with gains, costs, owner targets, and stop conditions before action. |
+| [AOA-T-0079](../../../../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) | Risk passport keeps branch risk readable, but still needs an independent route choosing or rejecting work because of the passport. | One second workflow where route selection or defer posture depends on an explicit risk passport rather than a vague risk paragraph. |
+| [AOA-T-0090](../../../../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | Strong boundary companion to owner-layer triage and quest promotion. | One second owner-boundary review where explicitly rejecting the nearest wrong target prevents misplaced technique, skill, playbook, proof, memory, or route promotion. |
+
+### Pack 34 - Diagnosis And Repair Loop
+
+Shared blocker: diagnosis and repair are already split cleanly, but the family needs another reviewed failure route proving the order matters outside the originating session-repair skill line.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0080](../../../../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) | Drift labels give diagnosis a bounded input layer without becoming full cause analysis. | One second reviewed friction case where taxonomy labels improve later diagnosis without becoming a repair plan. |
+| [AOA-T-0081](../../../../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | Diagnosis packet separates symptoms, probable causes, owner hints, and unknowns. | One second reviewed evidence packet where diagnosis is produced before repair and remains read-only until a separate repair shape lands. |
+| [AOA-T-0082](../../../../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) | Repair shaping stays smaller than rollout and starts only after diagnosis. | One second route where a diagnosis produces the smallest owner-facing repair artifact plus validation plan instead of general self-improvement prose. |
+| [AOA-T-0083](../../../../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) | Checkpoint posture protects meaningful repair with approval, rollback, health check, iteration limit, and log visibility. | One second repair route where checkpoint posture governs the repair before mutation and catches overreach without widening into autonomous self-modification. |
+
+### Pack 35 - Progression And Quest Reflection
+
+Shared blocker: the progression family is useful as a reader layer, but still needs one independent context proving it improves legibility without granting rank, proof, route authority, or owner acceptance.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0084](../../../../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) | Multi-axis progression delta stays descriptive, evidence-backed, and smaller than a universal score. | One second reviewed session or route where explicit axes, holds, downgrades, or small unlock hints improve future work without becoming authority. |
+| [AOA-T-0085](../../../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | Quest or RPG reflection remains adjunct over a progression base. | One second reader surface where quest-shaped reflection improves legibility while the underlying owner truth, proof, and memory seams remain elsewhere. |
+
+### Pack 36 - Automation Opportunity Gates
+
+Shared blocker: the automation family names fit, first landing, and approval burden well, but still needs another recurring manual route where the matrix blocks or redirects premature automation.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0086](../../../../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) | Fit matrix converts automation desire into evidence-backed readiness posture. | One second recurring route where determinism, proof posture, reversibility, or approval sensitivity changes the automation verdict. |
+| [AOA-T-0087](../../../../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) | First-landing verdict keeps skill, playbook seed, technique candidate, repair quest, and defer outcomes distinct. | One second automation-facing route where a recurring human loop lands in the smallest honest next artifact instead of becoming hidden scheduling pressure. |
+| [AOA-T-0088](../../../../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | Approval burden check downgrades seed-ready enthusiasm when checkpoint posture is missing. | One second automation candidate where rollback, self-change, or approval sensitivity forces checkpoint-required posture before any seed claim. |
+
+### Pack 37 - Quest Promotion Verdict
+
+Shared blocker: the quest verdict is clear, but still needs one repeated reviewed unit outside the originating quest-harvest skill line before canonical promotion is honest.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0089](../../../../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) | Good final verdict technique for one repeated reviewed quest-shaped unit. | One second repeated quest unit where the review keeps, defers, or promotes the unit with one owner target and one reason rather than collapsing repetition into generic reuse pressure. |
+
+### Pack 38 - Workspace Boundary And Proof Loop
+
+Shared blocker: these bundles are strong internal boundary tools for public repo work, but each still needs another owner-surface use beyond the current AoA workspace lineage.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0091](../../../../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | Workspace ingress plus mutation guard is already used in live AoA work, but remains workspace-lineage heavy. | One second federated or multi-root workspace where ingress and guard evidence prevents route confusion or unsafe mutation before edits. |
+| [AOA-T-0092](../../../../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) | Strong bridge from audit findings to live-confirmed closeout proof. | One second audit-remediation route where proof-backed closeout rests on named evidence instead of audit wording alone. |
+| [AOA-T-0093](../../../../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | Useful boundary between correct recommendation and executable host action. | One second host or tool context where a true recommendation remains visible even though host actionability is blocked or routed elsewhere. |
+| [AOA-T-0094](../../../../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) | Clean canonical-owner plus validated-mirror docs contract. | One second cross-repo mirror where explicit parity validation preserves owner metadata and vocabulary without making the mirror source truth. |
+| [AOA-T-0095](../../../../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | GitHub-only owner endcap is clear for remote-owned issues and PRs. | One second remote-only owner route where merged GitHub anchors rebind staging state and prevent local seed truth from outliving reality. |
+| [AOA-T-0096](../../../../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | Pinned validation protects generated publish from local/CI ref drift. | One second generated-publish route where workflow-pinned refs are checked before publication and catch a merge-readiness overclaim. |
+
+### Pack 39 - Antifragility Recovery Fresh Scaffolding
+
+Shared blocker: the recovery-wave bundles have strong technique bodies but currently fail generated promotion-readiness because their canonical-readiness notes are missing. The next move is scaffolding and second-context review, not promotion debate.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0097](../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) | Recovery contract is useful, but canonical-readiness scaffolding is missing. | Add bundle-local canonical-readiness and second-context review, then seek one second degraded-mode use that regrounds against stronger sources without hidden repair theater. |
+| [AOA-T-0098](../../../../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) | Receipt-first failure reading is promising, but readiness scaffolding is missing. | Add bundle-local canonical-readiness and second-context review, then seek one second failure route that starts from receipts and separates facts from hypotheses. |
+| [AOA-T-0099](../../../../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | Isolated stop contract is bounded, but readiness scaffolding is missing. | Add bundle-local canonical-readiness and second-context review, then seek one second shared-substrate stop where target absence and substrate continuity are both verified. |
+| [AOA-T-0100](../../../../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) | Stress closeout contract is promising, but readiness scaffolding is missing. | Add bundle-local canonical-readiness and second-context review, then seek one second stress event that records, regrounds, routes owners, and closes out from reviewed evidence. |
+
+### Pack 40 - Method-Growth Extraction Family
+
+Shared blocker: Method-growth extraction produced clean technique bundles, but they remain new internal-origin practice and need live reuse outside the extraction branch before canonical promotion is honest.
+
+| technique | current posture | next honest promotion trigger |
+|---|---|---|
+| [AOA-T-0101](../../../../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | Good local adoption guardrail with explicit consent, compatibility, rollback, and retention watch. | One second local adoption route where upstream usefulness is held short of adoption until owner consent, compatibility, rollback, and retention are explicit. |
+| [AOA-T-0102](../../../../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) | Clean technique-to-skill handoff packet that does not imply skill acceptance. | One second route where a technique-side review emits a bounded skill proposal and `aoa-skills` acceptance remains separate. |
+| [AOA-T-0103](../../../../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) | Retention review keeps adopted practice active only while evidence, usefulness, drift, and rollback stay visible. | One second adopted-practice review where keep, revise, quarantine, or retire posture changes because retention evidence is explicit. |
+| [AOA-T-0104](../../../../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) | Obsolescence route preserves owner receipt, retained lesson, and provenance during supersession or deprecation review. | One second practice replacement where supersede, merge, reanchor, defer, drop, or deprecation review happens without losing provenance. |
+
 ## Suggested Wave Order
 
-1. `Wave 0 - v0.4 matrix expansion`
-   - `AOA-T-0075` through `AOA-T-0104`
-   - goal: categorize newer promoted bundles from generated promotion readiness into this maintainer-facing pack matrix before any canonical-promotion debate
-2. `Wave A - evidence-prep leaders`
+Closed wave:
+
+- `Wave 0 - v0.4 matrix expansion` is complete for `AOA-T-0075` through
+  `AOA-T-0104`; the rows above categorize every newer promoted bundle without
+  changing status.
+
+1. `Wave A - evidence-prep leaders`
    - `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`
    - goal: close the smallest honest blocker for the strongest current candidates without flipping status yet
-3. `Wave B - pack proof waves`
+2. `Wave B - pack proof waves`
    - shell-agent fast path
    - runtime operator stack
    - instruction-surface cluster
    - history artifacts
    - goal: secure one more live adopter per coherent pack, then reopen bundle-local canonical reviews
-4. `Wave C - fresh extraction follow-through`
-   - `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
+3. `Wave C - fresh extraction follow-through`
+   - `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`, `AOA-T-0097`,
+     `AOA-T-0098`, `AOA-T-0099`, `AOA-T-0100`
    - goal: add second-context and canonical-readiness scaffolding only after a real non-origin consumer exists
-5. `Wave D - narrow status-transition PRs`
+4. `Wave D - narrow status-transition PRs`
    - open one `promoted -> canonical` PR per technique only after that bundle's own `canonical-readiness.md` can honestly switch to `approve for canonical promotion`
 
 ## Notes

@@ -45,3 +45,31 @@ Not changed:
 - no technique status changed
 - no promotion queue or evidence verdict changed
 - no active Audit part became root authority
+
+## 2026-05-03 - Wave 0 Matrix Expansion
+
+Changed:
+
+- categorized all newer promoted bundles `AOA-T-0075` through `AOA-T-0104` in
+  the promotion-readiness matrix
+- moved the `v0.4 matrix-expansion lane` from `30` open rows to `0`
+- raised the `internal-origin second-consumer lane` to include the session
+  harvest, route-fork, diagnosis, progression, automation, quest, workspace
+  boundary, and Method-growth extraction families
+- raised the `fresh extraction lane` to include the recovery-wave bundles that
+  still lack canonical-readiness notes
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_audit_mechanics_topology
+python -m unittest tests.test_roadmap_parity
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not changed:
+
+- no technique status changed
+- no bundle-local canonical-readiness verdict changed
+- no generated promotion-readiness surface became authority

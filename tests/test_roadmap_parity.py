@@ -40,10 +40,12 @@ class RoadmapParityTestCase(unittest.TestCase):
 
         self.assertEqual(promoted_count, 79)
         self.assertIn(f"current promoted corpus: `{promoted_count}` techniques", readiness_matrix)
-        self.assertIn("`49` promoted techniques are explicitly categorized", readiness_matrix)
-        self.assertIn("`30` newer `v0.4`", readiness_matrix)
-        self.assertIn("`v0.4 matrix-expansion lane` | `30`", readiness_matrix)
+        self.assertIn("`79` promoted techniques are explicitly categorized", readiness_matrix)
+        self.assertIn("Wave 0 matrix expansion is closed", readiness_matrix)
+        self.assertIn("`v0.4 matrix-expansion lane` | `0`", readiness_matrix)
         self.assertIn("`AOA-T-0075` through `AOA-T-0104`", readiness_matrix)
+        for technique_num in range(75, 105):
+            self.assertIn(f"AOA-T-{technique_num:04d}", readiness_matrix)
 
     def test_roadmap_matches_current_direction_contour(self) -> None:
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
