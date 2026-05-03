@@ -118,7 +118,9 @@ or candidate lanes without a direct AoA owner-request ID targeting
 - Why it stays separate: the current AoA Agon request queue has no direct
   `ORQ-AGON-TECHNIQUES-*` request. Local Agon surfaces preserve Wave IV and Wave
   XV technique-side pressure as requested-only practice candidates, not
-  owner-request acceptance.
+  owner-request acceptance. Candidate narrowing now routes through
+  [Distillation Agon Candidate Handoff](distillation/parts/agon-candidate-handoff/README.md)
+  before any bundle draft.
 
 ### [antifragility](antifragility/README.md)
 

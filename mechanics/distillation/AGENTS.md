@@ -69,6 +69,14 @@ python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validat
 python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
 ```
 
+For the Agon candidate handoff registry:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+```
+
 For repository-level safety after structure changes:
 
 ```bash

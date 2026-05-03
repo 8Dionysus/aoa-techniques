@@ -32,6 +32,7 @@ owns ToS-authored meaning and compost, not AoA operational distillation.
 
 - external donors
 - sibling-repo candidate notes
+- Agon requested-only technique-side candidates
 - pre-split or legacy receipts
 - long-gap promoted material
 - candidate registries and generated counts as evidence
@@ -41,6 +42,7 @@ owns ToS-authored meaning and compost, not AoA operational distillation.
 - candidate, hold, exclusion, or incubation lane
 - source and owner boundary note
 - compact gate packet for possible bundle drafting
+- Agon-to-Distillation handoff lane without status promotion
 - no technique promotion without bundle-local review
 
 ### Must not claim
@@ -83,6 +85,8 @@ only after the atom and topology questions can be named.
   public-safe external candidate inventory.
 - [Cross-Layer Candidate Ledger](parts/cross-layer-candidate-ledger/README.md):
   candidate capture across AoA sibling repos.
+- [Agon Candidate Handoff](parts/agon-candidate-handoff/README.md): complete
+  lane map for Agon requested-only practice candidates before atom extraction.
 - [Long-Gap Reentry](parts/long-gap-reentry/README.md): design posture for older
   practice material that needs careful re-entry.
 

@@ -10,6 +10,13 @@ raw source inventory.
 | `epistemic-technique-candidates` | Holds requested-only practice candidates behind epistemic move extensions. | [parts/epistemic-technique-candidates](parts/epistemic-technique-candidates/README.md), `parts/epistemic-technique-candidates/config/agon_epistemic_technique_candidates.seed.json`, `parts/epistemic-technique-candidates/generated/agon_epistemic_technique_candidates.min.json` | [legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md](legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md) |
 | `recurrence-adapter` | Exposes Agon technique-side surfaces to recurrence observation without runtime or authority effects. | [parts/recurrence-adapter](parts/recurrence-adapter/README.md), `parts/recurrence-adapter/manifests/recurrence/component.agon.*.json` | Wave IV and Wave XV routes through [PROVENANCE](PROVENANCE.md) |
 
+## Downstream Distillation Route
+
+[Distillation Agon Candidate Handoff](../distillation/parts/agon-candidate-handoff/README.md)
+maps the current Agon candidate registries into technique-side narrowing lanes.
+It reads Agon requested-only candidates as source evidence; it does not change
+candidate status, define lawful moves, or promote technique bundles.
+
 ## Part rule
 
 If a part starts carrying stable reusable practice with inputs, outputs, risks,

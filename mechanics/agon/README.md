@@ -30,6 +30,8 @@ writeback, and `Tree-of-Sophia` owns ToS-authored meaning.
 
 Part-local candidate surfaces translate center-owned move pressure into
 public-safe technique review. They do not import center authority.
+Distillation lane accounting for those candidates lives in
+[Distillation Agon Candidate Handoff](../distillation/parts/agon-candidate-handoff/README.md).
 
 ### Inputs
 
@@ -37,6 +39,7 @@ public-safe technique review. They do not import center authority.
 - Agon epistemic move extension pressure
 - repo-local seed registries and generated candidate indexes
 - recurrence observations over Agon technique-side surfaces
+- Distillation handoff lanes for atom/topology narrowing
 - preserved Wave IV and Wave XV landing receipts through provenance
 
 ### Outputs
@@ -45,6 +48,7 @@ public-safe technique review. They do not import center authority.
 - active part contracts for technique-side intake
 - recurrence observation signals such as `hint`, `watch`, `candidate`, or
   `review_ready`
+- downstream Distillation lane evidence without candidate acceptance
 - no canonical technique until bundle-local review lands it
 
 ### Must not claim
@@ -98,7 +102,8 @@ candidates as promoted techniques.
 ## Growth posture
 
 Grow this package one active part at a time. When a candidate becomes a reusable
-practice bundle, first name the atomic move, likely `domain`, primary `kind`,
-family posture, capability, substrate, execution profile, risk posture, and
-nearest relation or conflict points. Then land it under `techniques/` through
-the normal review path and record the source route here.
+practice bundle, first route it through the Distillation handoff lane and name
+the atomic move, likely `domain`, primary `kind`, family posture, capability,
+substrate, execution profile, risk posture, and nearest relation or conflict
+points. Then land it under `techniques/` through the normal review path and
+record the source route here.

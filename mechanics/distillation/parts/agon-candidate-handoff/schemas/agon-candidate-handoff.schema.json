@@ -1,0 +1,52 @@
+{
+  "$id": "https://github.com/8Dionysus/aoa-techniques/mechanics/distillation/parts/agon-candidate-handoff/schemas/agon-candidate-handoff.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "entries": {
+      "items": {
+        "$ref": "agon-candidate-handoff-entry.schema.json"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "registry_id": {
+      "const": "distillation.agon_candidate_handoff.v1"
+    },
+    "schema_version": {
+      "const": "distillation-agon-candidate-handoff.seed/0.1"
+    },
+    "source_surfaces": {
+      "additionalProperties": false,
+      "properties": {
+        "epistemic_technique_candidates": {
+          "const": "mechanics/agon/parts/epistemic-technique-candidates/generated/agon_epistemic_technique_candidates.min.json"
+        },
+        "move_technique_bridge": {
+          "const": "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json"
+        }
+      },
+      "required": [
+        "move_technique_bridge",
+        "epistemic_technique_candidates"
+      ],
+      "type": "object"
+    },
+    "status": {
+      "const": "candidate_lane_map"
+    },
+    "title": {
+      "const": "Distillation Agon candidate handoff lanes"
+    }
+  },
+  "required": [
+    "registry_id",
+    "schema_version",
+    "status",
+    "title",
+    "source_surfaces",
+    "entries"
+  ],
+  "title": "Agon candidate handoff registry",
+  "type": "object"
+}

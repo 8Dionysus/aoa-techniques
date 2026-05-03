@@ -44,6 +44,7 @@ class MechanicsRequestReceiptsTestCase(unittest.TestCase):
         self.assertIn("### [rpg](rpg/README.md)", non_orq_section)
         self.assertIn("Current status: `candidate-only`", non_orq_section)
         self.assertIn("no direct\n  `ORQ-AGON-TECHNIQUES-*` request", non_orq_section)
+        self.assertIn("Distillation Agon Candidate Handoff", non_orq_section)
         self.assertIn("no\n  direct `ORQ-GROWTHCYCLE-TECHNIQUES-*` request", non_orq_section)
         self.assertIn("no direct\n  `ORQ-RPG-TECHNIQUES-*` request", non_orq_section)
         self.assertNotIn("ORQ-AGON-TECHNIQUES", receipts.split("## Non-ORQ Center Pressure", 1)[0])

@@ -8,6 +8,8 @@ Active Distillation parts:
   part-local structured registry for current candidate accounting
 - [cross-layer-candidate-ledger](cross-layer-candidate-ledger/README.md) with
   a part-local structured registry for wave and verdict accounting
+- [agon-candidate-handoff](agon-candidate-handoff/README.md) with a part-local
+  structured registry for Agon requested-only candidate lanes
 - [long-gap-reentry](long-gap-reentry/README.md)
 
 Use [../PARTS.md](../PARTS.md) for the role map and

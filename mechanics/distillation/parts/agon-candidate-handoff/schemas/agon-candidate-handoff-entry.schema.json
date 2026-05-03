@@ -1,0 +1,143 @@
+{
+  "$id": "https://github.com/8Dionysus/aoa-techniques/mechanics/distillation/parts/agon-candidate-handoff/schemas/agon-candidate-handoff-entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bridge": {
+      "additionalProperties": false,
+      "properties": {
+        "bridge_stop_line": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "higher_law": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "local_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "nearest_wrong_owner": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "higher_law",
+        "local_route",
+        "nearest_wrong_owner",
+        "bridge_stop_line"
+      ],
+      "type": "object"
+    },
+    "candidate_ref": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "distillation_gate": {
+      "additionalProperties": false,
+      "properties": {
+        "atomic_move_note": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "atomic_move_status": {
+          "enum": [
+            "candidate_named",
+            "not_named_cleanly",
+            "owner_route_needed"
+          ],
+          "type": "string"
+        },
+        "capability_class": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "execution_profile": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "family_posture": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "likely_domain": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "portable_core": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "primary_kind": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk_posture": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "substrate": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "atomic_move_status",
+        "atomic_move_note",
+        "likely_domain",
+        "primary_kind",
+        "family_posture",
+        "capability_class",
+        "substrate",
+        "execution_profile",
+        "risk_posture",
+        "portable_core"
+      ],
+      "type": "object"
+    },
+    "distillation_lane": {
+      "enum": [
+        "first_narrowing_watch",
+        "owner_route_hold",
+        "source_boundary_hold"
+      ],
+      "type": "string"
+    },
+    "next_move": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_label": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_part": {
+      "enum": [
+        "epistemic-technique-candidates",
+        "move-technique-bridge"
+      ],
+      "type": "string"
+    },
+    "source_status": {
+      "enum": [
+        "requested_not_landed",
+        "requested_only_candidate"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidate_ref",
+    "source_part",
+    "source_status",
+    "source_label",
+    "distillation_lane",
+    "distillation_gate",
+    "bridge",
+    "next_move"
+  ],
+  "title": "Agon candidate handoff entry",
+  "type": "object"
+}
