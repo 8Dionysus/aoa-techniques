@@ -35,6 +35,10 @@ The move has four fields:
 - why that object matters
 - return condition after the object appears or stays absent
 
+## Gate Example
+
+- [request-evidence-minimal-public-safe](examples/request-evidence-minimal-public-safe.md)
+
 ## Topology Read
 
 | Axis | Read |
@@ -89,7 +93,6 @@ hand motion, not the law of the arena.
 
 ## Next Move
 
-Draft a minimal public-safe example where a small agent asks for one missing
-receipt and records the return condition. If that example stays compact, the
-candidate can move to a one-bundle drafting pass without changing Agon source
-status.
+Draft a checklist plus evidence note for this candidate. If those stay compact,
+the candidate can move to a one-bundle drafting pass without changing Agon
+source status.

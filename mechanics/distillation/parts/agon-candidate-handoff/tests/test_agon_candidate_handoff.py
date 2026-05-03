@@ -69,8 +69,13 @@ def test_agon_candidate_handoff_shape() -> None:
     assert data["gate_cards"] == {
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md"
     }
+    assert data["gate_examples"] == {
+        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md"
+    }
     gate_card_rows = [
-        candidate for candidate in data["candidates"] if "gate_card" in candidate
+        candidate
+        for candidate in data["candidates"]
+        if "gate_card" in candidate or "gate_example" in candidate
     ]
     assert gate_card_rows == [
         {
@@ -78,6 +83,7 @@ def test_agon_candidate_handoff_shape() -> None:
             "candidate_ref": "candidate:aoa-techniques:agon/request-evidence-practice",
             "distillation_lane": "first_narrowing_watch",
             "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
+            "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
             "likely_domain": "agent-workflows",
             "nearest_wrong_owner": "aoa-evals",
             "primary_kind": "evidence-request",
@@ -148,4 +154,49 @@ def test_builder_rejects_gate_card_on_hold_lane() -> None:
     with case.assertRaisesRegex(
         builder.ValidationError, "only first_narrowing_watch entries may carry gate_card"
     ):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_gate_card_pointing_to_example() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_card = next(entry for entry in config["entries"] if "gate_card" in entry)
+    with_card["gate_card"] = with_card["gate_example"]
+    del with_card["gate_example"]
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "gate_card must not point"):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_gate_example_without_gate_card() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_example = next(entry for entry in config["entries"] if "gate_example" in entry)
+    del with_example["gate_card"]
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "gate_example requires gate_card"):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_missing_gate_example() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_example = next(entry for entry in config["entries"] if "gate_example" in entry)
+    with_example["gate_example"] = (
+        "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/missing.md"
+    )
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "gate_example path does not exist"):
         builder.validate_config(config)

@@ -86,6 +86,10 @@ STOP_LINE_AUTHORITY_TERMS = (
     "doctrine",
     "route",
 )
+GATE_CARD_PREFIX = "mechanics/distillation/parts/agon-candidate-handoff/gates/"
+GATE_EXAMPLE_PREFIX = (
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/"
+)
 
 
 class ValidationError(Exception):
@@ -187,15 +191,33 @@ def validate_entry(entry: dict[str, Any], source_map: dict[str, dict[str, str]])
 
     gate_card = entry.get("gate_card")
     if gate_card is not None:
-        if not isinstance(gate_card, str) or not gate_card.startswith(
-            "mechanics/distillation/parts/agon-candidate-handoff/gates/"
-        ):
+        if not isinstance(gate_card, str) or not gate_card.startswith(GATE_CARD_PREFIX):
             raise ValidationError(f"{ref}: gate_card must stay under the handoff gates directory")
+        if gate_card.startswith(GATE_EXAMPLE_PREFIX):
+            raise ValidationError(f"{ref}: gate_card must not point to a gate example")
         gate_path = REPO_ROOT / gate_card
         if not gate_path.is_file():
             raise ValidationError(f"{ref}: gate_card path does not exist")
         if lane != "first_narrowing_watch":
             raise ValidationError(f"{ref}: only first_narrowing_watch entries may carry gate_card")
+
+    gate_example = entry.get("gate_example")
+    if gate_example is not None:
+        if gate_card is None:
+            raise ValidationError(f"{ref}: gate_example requires gate_card")
+        if not isinstance(gate_example, str) or not gate_example.startswith(
+            GATE_EXAMPLE_PREFIX
+        ):
+            raise ValidationError(
+                f"{ref}: gate_example must stay under the handoff gate examples directory"
+            )
+        example_path = REPO_ROOT / gate_example
+        if not example_path.is_file():
+            raise ValidationError(f"{ref}: gate_example path does not exist")
+        if lane != "first_narrowing_watch":
+            raise ValidationError(
+                f"{ref}: only first_narrowing_watch entries may carry gate_example"
+            )
 
 
 def validate_config(config: dict[str, Any]) -> None:
@@ -257,6 +279,8 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
         }
         if "gate_card" in entry:
             row["gate_card"] = entry["gate_card"]
+        if "gate_example" in entry:
+            row["gate_example"] = entry["gate_example"]
         candidate_rows.append(row)
     return {
         "schema_version": EXPECTED_INDEX_SCHEMA,
@@ -280,6 +304,11 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             entry["candidate_ref"]: entry["gate_card"]
             for entry in entries
             if "gate_card" in entry
+        },
+        "gate_examples": {
+            entry["candidate_ref"]: entry["gate_example"]
+            for entry in entries
+            if "gate_example" in entry
         },
         "candidates": candidate_rows,
         "stop_line": (

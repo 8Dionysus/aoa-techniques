@@ -9,3 +9,7 @@ status, define Agon law, or draft the bundle.
 Current gate cards:
 
 - [request-evidence-practice](request-evidence-practice.md)
+
+Current gate examples:
+
+- [request-evidence-minimal-public-safe](examples/request-evidence-minimal-public-safe.md)

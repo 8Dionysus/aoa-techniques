@@ -91,6 +91,10 @@ Current landed gate:
 
 - [request-evidence-practice](gates/request-evidence-practice.md)
 
+Current landed gate example:
+
+- [request-evidence-minimal-public-safe](gates/examples/request-evidence-minimal-public-safe.md)
+
 ## Stop Line
 
 This part must not define Agon law, create skill workflows, issue proof
