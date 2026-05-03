@@ -4353,6 +4353,210 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0101",
+      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md",
+          "title": "local-pattern-adoption-gate checklist",
+          "intro_markdown": "",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] one shared pattern is named explicitly"
+            },
+            {
+              "order": 2,
+              "text": "[ ] one local owner and behavior surface are named explicitly"
+            },
+            {
+              "order": 3,
+              "text": "[ ] owner consent is explicit, or the result stays short of `adopt`"
+            },
+            {
+              "order": 4,
+              "text": "[ ] compatibility evidence is visible"
+            },
+            {
+              "order": 5,
+              "text": "[ ] rollback or quarantine is concrete enough to use"
+            },
+            {
+              "order": 6,
+              "text": "[ ] retention watch is named"
+            },
+            {
+              "order": 7,
+              "text": "[ ] the result does not imply skill, route, proof, runtime, memory, or sibling owner activation"
+            },
+            {
+              "order": 8,
+              "text": "[ ] the public wording stays reusable and sanitized"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0102",
+      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md",
+          "title": "skill-proposal-handoff-packet checklist",
+          "intro_markdown": "Use this checklist before sending a technique-side skill proposal to a receiving\nskill owner.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One reusable practice, technique, or technique candidate is named."
+            },
+            {
+              "order": 2,
+              "text": "[ ] One receiving skill owner or skill-owning surface is named."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The execution pressure for skill packaging is explicit."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The proposed trigger boundary is visible."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Inputs, outputs, and workflow shape are sketched without becoming a skill body."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Technique dependencies are referenced instead of copied or redefined."
+            },
+            {
+              "order": 7,
+              "text": "[ ] Risks, approval seams, rollback needs, and verification hints are visible."
+            },
+            {
+              "order": 8,
+              "text": "[ ] Nearest wrong owner targets or defer conditions are named."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The packet states that it does not create, accept, or activate a skill."
+            },
+            {
+              "order": 10,
+              "text": "[ ] Proof, scenario, memory, runtime, and command concerns route away when they are the real owner problem."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0103",
+      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md",
+          "title": "adopted-practice-retention-review checklist",
+          "intro_markdown": "Use this checklist before keeping an adopted or shadowed practice active.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One adopted or shadowed practice is named."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The original adoption or shadow-use record is visible."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The owner and active behavior surface are named."
+            },
+            {
+              "order": 4,
+              "text": "[ ] Current evidence is compared against the original adoption reason."
+            },
+            {
+              "order": 5,
+              "text": "[ ] Drift, negative effects, owner discomfort, and support cost were checked."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Rollback, quarantine, or obsolescence route is concrete enough to use."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The verdict is one of `retain`, `revise`, `quarantine`, `defer`, or `route_to_obsolescence`."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The verdict does not imply new adoption, deletion, proof, memory, skill, or runtime activation."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The next review interval or reason to stop watching is explicit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0104",
+      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md",
+          "title": "superseded-practice-obsolescence-route checklist",
+          "intro_markdown": "Use this checklist before sending an adopted or shadowed practice toward\nobsolescence, supersession, merge, reanchor, defer, drop, or deprecation review.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One adopted or shadowed practice is named."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The current stage or status is visible."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The owner receipt target is named."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The reason the practice should not remain active as-is is explicit."
+            },
+            {
+              "order": 5,
+              "text": "[ ] The route label is one of `supersede`, `merge`, `reanchor`, `defer`, `drop`, or `deprecation_review`."
+            },
+            {
+              "order": 6,
+              "text": "[ ] Replacement, merge target, reanchor target, defer condition, drop reason, or explicit absence of target is stated."
+            },
+            {
+              "order": 7,
+              "text": "[ ] Source evidence and provenance remain reachable."
+            },
+            {
+              "order": 8,
+              "text": "[ ] Rollback, quarantine, or restoration path is concrete enough to use."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The smallest retained lesson is recorded."
+            },
+            {
+              "order": 10,
+              "text": "[ ] Memory, stats, proof, skill, routing, or runtime consequences are only downstream hints."
+            },
+            {
+              "order": 11,
+              "text": "[ ] The packet does not delete, deprecate, erase evidence, prove failure, write memory truth, activate a skill, change routing, or mutate runtime behavior."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -98,3 +98,8 @@ AOA-T-0096,pinned-validation-matrix-before-generated-publish,agent-workflows,pro
 AOA-T-0097,degrade-reground-recover,system-recovery,promoted,recovery,antifragility-recovery
 AOA-T-0098,receipt-first-failure-analysis,validation-patterns,promoted,validation,antifragility-recovery
 AOA-T-0099,isolated-service-stop-on-shared-substrate,system-recovery,promoted,recovery,antifragility-recovery
+AOA-T-0100,stress-receipt-reground-closeout,system-recovery,promoted,recovery,antifragility-recovery
+AOA-T-0101,local-pattern-adoption-gate,agent-workflows,promoted,guardrail,automation-governance
+AOA-T-0102,skill-proposal-handoff-packet,agent-workflows,promoted,handoff,automation-governance
+AOA-T-0103,adopted-practice-retention-review,agent-workflows,promoted,assessment,automation-governance
+AOA-T-0104,superseded-practice-obsolescence-route,agent-workflows,promoted,handoff,automation-governance

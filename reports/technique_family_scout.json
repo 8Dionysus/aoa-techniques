@@ -1805,11 +1805,11 @@
         "guardrail"
       ],
       "counts": {
-        "total": 5,
+        "total": 9,
         "canonical": 0,
-        "promoted": 5,
+        "promoted": 9,
         "by_domain": {
-          "agent-workflows": 5,
+          "agent-workflows": 9,
           "docs": 0,
           "evaluation": 0,
           "system-recovery": 0,
@@ -1818,16 +1818,16 @@
         },
         "by_kind": {
           "workflow": 0,
-          "guardrail": 1,
+          "guardrail": 2,
           "validation": 0,
           "composition": 0,
           "distribution": 0,
           "artifact": 0,
           "lift": 0,
           "discovery": 0,
-          "handoff": 0,
+          "handoff": 2,
           "ingest": 0,
-          "assessment": 4,
+          "assessment": 5,
           "recovery": 0
         }
       },
@@ -1836,7 +1836,11 @@
         "AOA-T-0087",
         "AOA-T-0088",
         "AOA-T-0089",
-        "AOA-T-0090"
+        "AOA-T-0090",
+        "AOA-T-0101",
+        "AOA-T-0102",
+        "AOA-T-0103",
+        "AOA-T-0104"
       ],
       "techniques": [
         {
@@ -1883,6 +1887,42 @@
           "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
           "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
           "kind": "guardrail"
+        },
+        {
+          "id": "AOA-T-0101",
+          "name": "local-pattern-adoption-gate",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
+          "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+          "kind": "guardrail"
+        },
+        {
+          "id": "AOA-T-0102",
+          "name": "skill-proposal-handoff-packet",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.",
+          "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+          "kind": "handoff"
+        },
+        {
+          "id": "AOA-T-0103",
+          "name": "adopted-practice-retention-review",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
+          "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+          "kind": "assessment"
+        },
+        {
+          "id": "AOA-T-0104",
+          "name": "superseded-practice-obsolescence-route",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
+          "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+          "kind": "handoff"
         }
       ]
     },

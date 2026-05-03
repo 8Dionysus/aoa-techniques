@@ -322,6 +322,30 @@ See also:
 |---|---|---|---|---|
 | pinned-validation-matrix-before-generated-publish checklist | `absent` | `7` | `techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
 
+### [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| local-pattern-adoption-gate checklist | `absent` | `8` | `techniques/agent-workflows/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) |
+
+### [AOA-T-0102](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| skill-proposal-handoff-packet checklist | `present` | `10` | `techniques/agent-workflows/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) |
+
+### [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| adopted-practice-retention-review checklist | `present` | `9` | `techniques/agent-workflows/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) |
+
+### [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| superseded-practice-obsolescence-route checklist | `present` | `11` | `techniques/agent-workflows/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

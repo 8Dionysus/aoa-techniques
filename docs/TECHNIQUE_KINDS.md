@@ -21,16 +21,16 @@ See also:
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
 | `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `11` | `4` | `7` |
-| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `11` | `4` | `7` |
+| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `12` | `4` | `8` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `2` | `5` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `6` | `8` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `11` | `4` | `7` |
 | `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `0` | `2` |
-| `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `0` | `11` |
+| `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `13` | `0` | `13` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
-| `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `9` | `0` | `9` |
+| `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `10` | `0` | `10` |
 | `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `5` | `0` | `5` |
 
 ## `workflow`
@@ -82,11 +82,11 @@ Do not use this when:
 - the technique mostly verifies correctness after the fact
 - the primary value is assembling or publishing artifacts
 
-Counts: `total` 11, `canonical` 4, `promoted` 7.
+Counts: `total` 12, `canonical` 4, `promoted` 8.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `6` |
+| `agent-workflows` | `7` |
 | `docs` | `3` |
 | `evaluation` | `2` |
 | `system-recovery` | `0` |
@@ -101,6 +101,7 @@ Counts: `total` 11, `canonical` 4, `promoted` 7.
 | [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | `agent-workflows` | `promoted` | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. | [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) |
 | [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `agent-workflows` | `promoted` | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. | [TECHNIQUE.md](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
 | [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
+| [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | `agent-workflows` | `promoted` | Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior. | [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) |
 | [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `docs` | `canonical` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
 | [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) | `docs` | `promoted` | Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy. | [TECHNIQUE.md](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) |
 | [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) | `docs` | `promoted` | Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine. | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
@@ -323,11 +324,11 @@ Do not use this when:
 - the technique is mainly the work loop itself
 - the technique only stores history without a transfer or continuation seam
 
-Counts: `total` 11, `canonical` 0, `promoted` 11.
+Counts: `total` 13, `canonical` 0, `promoted` 13.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `11` |
+| `agent-workflows` | `13` |
 | `docs` | `0` |
 | `evaluation` | `0` |
 | `system-recovery` | `0` |
@@ -347,6 +348,8 @@ Counts: `total` 11, `canonical` 0, `promoted` 11.
 | [AOA-T-0062](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) | `agent-workflows` | `promoted` | Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy. | [TECHNIQUE.md](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) |
 | [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform. | [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) |
 | [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another. | [TECHNIQUE.md](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) |
+| [AOA-T-0102](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) | `agent-workflows` | `promoted` | Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication. | [TECHNIQUE.md](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) |
+| [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) | `agent-workflows` | `promoted` | Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact. | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
 
 ## `ingest`
 
@@ -391,11 +394,11 @@ Do not use this when:
 - the technique is a hard proof or integrity check
 - the technique directly performs repair, mutation, or guarded execution
 
-Counts: `total` 9, `canonical` 0, `promoted` 9.
+Counts: `total` 10, `canonical` 0, `promoted` 10.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `9` |
+| `agent-workflows` | `10` |
 | `docs` | `0` |
 | `evaluation` | `0` |
 | `system-recovery` | `0` |
@@ -413,6 +416,7 @@ Counts: `total` 9, `canonical` 0, `promoted` 9.
 | [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) | `agent-workflows` | `promoted` | Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred. | [TECHNIQUE.md](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) |
 | [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | `agent-workflows` | `promoted` | Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible. | [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) |
 | [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) | `agent-workflows` | `promoted` | Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure. | [TECHNIQUE.md](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) |
+| [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) | `agent-workflows` | `promoted` | Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit. | [TECHNIQUE.md](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) |
 
 ## `recovery`
 

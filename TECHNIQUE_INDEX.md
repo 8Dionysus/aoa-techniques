@@ -111,6 +111,10 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0098 | receipt-first-failure-analysis | validation-patterns | promoted | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. |
 | AOA-T-0099 | isolated-service-stop-on-shared-substrate | system-recovery | promoted | Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown. |
 | AOA-T-0100 | stress-receipt-reground-closeout | system-recovery | promoted | Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading. |
+| AOA-T-0101 | local-pattern-adoption-gate | agent-workflows | promoted | Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior. |
+| AOA-T-0102 | skill-proposal-handoff-packet | agent-workflows | promoted | Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication. |
+| AOA-T-0103 | adopted-practice-retention-review | agent-workflows | promoted | Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit. |
+| AOA-T-0104 | superseded-practice-obsolescence-route | agent-workflows | promoted | Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact. |
 
 ## Deprecated techniques
 

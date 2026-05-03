@@ -80,6 +80,113 @@ class MethodGrowthMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("skill acceptance", method_section)
         self.assertIn("technique canon lands only", method_section)
 
+    def test_pattern_adoption_routes_to_extracted_atom_without_lifecycle_collapse(self) -> None:
+        pattern = (
+            REPO_ROOT
+            / "mechanics"
+            / "method-growth"
+            / "parts"
+            / "pattern-adoption"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        provenance = (
+            REPO_ROOT / "mechanics" / "method-growth" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        technique = (
+            REPO_ROOT
+            / "techniques"
+            / "agent-workflows"
+            / "local-pattern-adoption-gate"
+            / "TECHNIQUE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("AOA-T-0101 local-pattern-adoption-gate", pattern)
+        self.assertIn("request, readiness,\nshadow, decision, activation, and retention", pattern)
+        self.assertIn("The wider Method-growth lifecycle", provenance)
+        self.assertIn("upstream approval or useful precedent is not local adoption", technique)
+        self.assertIn("does not grant skill activation", technique)
+
+    def test_technique_to_skill_handoff_routes_to_packet_without_skill_acceptance(self) -> None:
+        handoff = (
+            REPO_ROOT
+            / "mechanics"
+            / "method-growth"
+            / "parts"
+            / "technique-to-skill-handoff"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        provenance = (
+            REPO_ROOT / "mechanics" / "method-growth" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        technique = (
+            REPO_ROOT
+            / "techniques"
+            / "agent-workflows"
+            / "skill-proposal-handoff-packet"
+            / "TECHNIQUE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("AOA-T-0102 skill-proposal-handoff-packet", handoff)
+        self.assertIn("does not create, accept, install, or activate a skill", handoff)
+        self.assertIn("proposal packet sent from technique-side review", provenance)
+        self.assertIn("Skill acceptance, skill workflow meaning, and activation", provenance)
+        self.assertIn("a packet may reference technique dependencies", technique)
+        self.assertIn("not skill acceptance, skill creation, skill activation", technique)
+
+    def test_retention_checks_route_to_review_without_obsolescence_collapse(self) -> None:
+        retention = (
+            REPO_ROOT
+            / "mechanics"
+            / "method-growth"
+            / "parts"
+            / "retention-checks"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        provenance = (
+            REPO_ROOT / "mechanics" / "method-growth" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        technique = (
+            REPO_ROOT
+            / "techniques"
+            / "agent-workflows"
+            / "adopted-practice-retention-review"
+            / "TECHNIQUE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("AOA-T-0103 adopted-practice-retention-review", retention)
+        self.assertIn("does not adopt, delete, deprecate", retention)
+        self.assertIn("decides whether one adopted or shadowed practice should remain active", provenance)
+        self.assertIn("Obsolescence, proof, memory writeback", provenance)
+        self.assertIn("past adoption does not guarantee current retention", technique)
+        self.assertIn("does not adopt a new practice, delete an old practice", technique)
+
+    def test_obsolescence_routes_to_packet_without_erasure_or_deletion(self) -> None:
+        obsolescence = (
+            REPO_ROOT
+            / "mechanics"
+            / "method-growth"
+            / "parts"
+            / "obsolescence"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        provenance = (
+            REPO_ROOT / "mechanics" / "method-growth" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        technique = (
+            REPO_ROOT
+            / "techniques"
+            / "agent-workflows"
+            / "superseded-practice-obsolescence-route"
+            / "TECHNIQUE.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("AOA-T-0104 superseded-practice-obsolescence-route", obsolescence)
+        self.assertIn("does not delete, deprecate, erase evidence", obsolescence)
+        self.assertIn("owner-aware\n  route packet", provenance)
+        self.assertIn("Actual\n  deletion, deprecation execution", provenance)
+        self.assertIn("obsolescence is not erasure", technique)
+        self.assertIn("a dropped route is not owner-local deletion", technique)
+
 
 if __name__ == "__main__":
     unittest.main()

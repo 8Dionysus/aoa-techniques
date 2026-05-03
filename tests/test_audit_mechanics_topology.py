@@ -130,9 +130,9 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             / "README.md"
         ).read_text(encoding="utf-8")
 
-        self.assertIn("current promoted corpus: `75` techniques", readiness)
+        self.assertIn("current promoted corpus: `79` techniques", readiness)
         self.assertIn("`49` promoted techniques are explicitly categorized", readiness)
-        self.assertIn("`26` newer `v0.4`", readiness)
+        self.assertIn("`30` newer `v0.4`", readiness)
         self.assertIn("no status flips during the first pass", wave)
         self.assertIn("Active Lead Ledger", ledger)
         self.assertIn("AOA-T-0032", ledger)
