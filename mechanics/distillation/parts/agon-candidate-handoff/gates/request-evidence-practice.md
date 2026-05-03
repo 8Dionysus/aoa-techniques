@@ -47,13 +47,17 @@ The move has four fields:
 
 - [request-evidence-gate-evidence-note](evidence-notes/request-evidence-gate-evidence-note.md)
 
+## Bundle Readiness Review
+
+- [request-evidence-bundle-readiness-review](bundle-reviews/request-evidence-bundle-readiness-review.md)
+
 ## Topology Read
 
 | Axis | Read |
 |---|---|
 | likely domain | `agent-workflows` |
-| primary kind | `evidence-request` |
-| family posture | evidence and review-state practice; not yet a bundle family |
+| primary kind | `guardrail` |
+| family posture | evidence-request and review-state practice; not yet a bundle family |
 | capability class | request-evidence |
 | substrate | review state, claim text, citation gap, or missing receipt |
 | execution profile | small-agent when the claim and review state are already bounded |
@@ -101,6 +105,6 @@ hand motion, not the law of the arena.
 
 ## Next Move
 
-Run a bundle-readiness review for this candidate. If the review stays compact,
-the candidate can move to a one-bundle drafting pass without changing Agon
-source status.
+Draft one technique bundle under the normal `techniques/` path only if the
+bundle keeps `guardrail` as current `kind` and keeps Agon source status
+unchanged.

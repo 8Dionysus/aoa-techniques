@@ -21,3 +21,7 @@ Current gate checklists:
 Current gate evidence notes:
 
 - [request-evidence-gate-evidence-note](evidence-notes/request-evidence-gate-evidence-note.md)
+
+Current bundle readiness reviews:
+
+- [request-evidence-bundle-readiness-review](bundle-reviews/request-evidence-bundle-readiness-review.md)
