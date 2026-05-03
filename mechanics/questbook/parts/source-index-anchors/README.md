@@ -11,7 +11,7 @@ It does not change quest source state or technique status.
 | Surface | Questbook relevance | Boundary |
 |---|---|---|
 | [QUESTBOOK.md](../../../../QUESTBOOK.md) | Human index for deferred canon-hardening, donor-refinery, generated/source alignment, and harvest obligations. | Does not become a second roadmap or full quest history. |
-| [`quests/*.yaml`](../../../../quests/) | Repo-local `work_quest_v1` source quest objects such as `AOA-TECH-Q-0003` through `AOA-TECH-Q-0007`. | Source objects do not prove owner acceptance, closure, or technique promotion. |
+| [`quests/<lane>/<state>/`](../../../../quests/) | Repo-local `work_quest_v1` YAML source quest objects such as `AOA-TECH-Q-0003` through `AOA-TECH-Q-0007`, plus `quest_markdown_contract_v1` Agon requested-practice Markdown quests. | Source objects do not prove owner acceptance, closure, or technique promotion. |
 | [quest schema](../../../../schemas/quest.schema.json) | Contract for source quest objects. | Does not import AoA center lane law or sibling owner truth. |
 | [quest dispatch schema](../../../../schemas/quest_dispatch.schema.json) | Contract for thin dispatch projections. | Does not create routing authority. |
 | [quest catalog](../../../../generated/quest_catalog.min.json) | Generated compact catalog from source quest files. | Does not author quest meaning. |
@@ -28,8 +28,8 @@ existing quest validators and generated-surface checks through
 
 ## Stop-lines
 
-- Do not move `QUESTBOOK.md`, `quests/`, schemas, or generated projections
-  into this package.
+- Do not move `QUESTBOOK.md`, root `quests/`, schemas, or generated
+  projections into this package.
 - Do not treat generated quest views as source truth.
 - Do not use source quest existence as closure proof, owner acceptance,
   routing authority, or automatic technique promotion.

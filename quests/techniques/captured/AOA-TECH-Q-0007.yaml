@@ -5,6 +5,7 @@ summary: Keep the Agents-of-Abyss v0.4.0 closeout technique-shaped growth trail
   visible at the technique layer without promoting one release closeout into a
   new technique bundle or skill workflow.
 repo: aoa-techniques
+lane: techniques
 owner_surface: mechanics/growth-cycle/parts/promotion-readiness-incubation/README.md
 theme_ref: ''
 milestone_ref: ''

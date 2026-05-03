@@ -7,7 +7,7 @@ law, technique status, or validator behavior by itself.
 ## Current State
 
 - `source-index-anchors` is the local home for the `QUESTBOOK.md`,
-  `quests/*.yaml`, schema, and generated projection boundary.
+  lane-first `quests/`, schema, and generated projection boundary.
 - `technique-obligation-anchors` is the local home for canon-hardening,
   donor-refinery follow-through, generated/source drift, promotion-readiness,
   and feat-reflection obligation pressure.
@@ -18,8 +18,8 @@ law, technique status, or validator behavior by itself.
 
 ## Next Honest Moves
 
-- Keep `QUESTBOOK.md`, `quests/*.yaml`, schemas, and generated quest
-  projections in their current source/projection homes.
+- Keep `QUESTBOOK.md`, root `quests/`, schemas, and generated quest
+  projections in their source/projection homes.
 - Add a new part only if repeated technique-layer quest signals no longer fit
   source-index anchors, technique-obligation anchors, or harvest-promotion
   anchors.
@@ -42,5 +42,5 @@ law, technique status, or validator behavior by itself.
   playable reading authority, runtime activation, or owner acceptance into
   this package.
 - Do not allow automatic technique promotion from quest-shaped pressure.
-- Do not move `QUESTBOOK.md`, `quests/`, schemas, or generated projections into
-  this package as part of mechanics cleanup.
+- Do not move `QUESTBOOK.md`, root `quests/`, schemas, or generated
+  projections into this package as part of mechanics cleanup.

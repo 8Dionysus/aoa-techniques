@@ -14,7 +14,7 @@ integration.
 
 | Source pressure | Current active home | Preservation note |
 |---|---|---|
-| Repo-local Questbook index, source quest files, schemas, and generated projections | [parts/source-index-anchors](parts/source-index-anchors/README.md) | Source quest meaning stays in `quests/*.yaml`; generated projections remain derived. |
+| Repo-local Questbook index, source quest files, schemas, and generated projections | [parts/source-index-anchors](parts/source-index-anchors/README.md) | Source quest meaning stays in lane-first `quests/`; generated projections remain derived. |
 | Technique-layer durable obligations | [parts/technique-obligation-anchors](parts/technique-obligation-anchors/README.md) | Canon hardening, donor follow-through, generated/source drift, promotion-readiness, and feat reflection stay anchored to existing owner surfaces. |
 | Harvest and promotion-review pressure | [parts/harvest-promotion-anchors](parts/harvest-promotion-anchors/README.md) | Existing bundles keep harvest and promotion verdicts in technique canon rather than mechanics prose. |
 

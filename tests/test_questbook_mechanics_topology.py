@@ -104,8 +104,9 @@ class QuestbookMechanicsTopologyTestCase(unittest.TestCase):
 
         for expected in (
             "QUESTBOOK.md",
-            "quests/*.yaml",
+            "quests/<lane>/<state>/",
             "work_quest_v1",
+            "quest_markdown_contract_v1",
             "quest.schema.json",
             "quest_dispatch.schema.json",
             "quest_catalog.min.json",
@@ -213,10 +214,19 @@ class QuestbookMechanicsTopologyTestCase(unittest.TestCase):
         )
 
         self.assertTrue((REPO_ROOT / "QUESTBOOK.md").is_file())
-        self.assertTrue((REPO_ROOT / "quests" / "AOA-TECH-Q-0003.yaml").is_file())
+        self.assertTrue(
+            (
+                REPO_ROOT
+                / "quests"
+                / "techniques"
+                / "captured"
+                / "AOA-TECH-Q-0003.yaml"
+            ).is_file()
+        )
+        self.assertTrue((REPO_ROOT / "quests" / "README.md").is_file())
         self.assertTrue((REPO_ROOT / "schemas" / "quest.schema.json").is_file())
         self.assertTrue((REPO_ROOT / "generated" / "quest_catalog.min.json").is_file())
-        self.assertIn("Do not move `QUESTBOOK.md`, `quests/`", roadmap)
+        self.assertIn("Do not move `QUESTBOOK.md`, root `quests/`", roadmap)
         self.assertIn("already-landed local Questbook source", readme)
 
 

@@ -672,6 +672,7 @@ SHADOW_REVIEW_MANIFEST_SOURCE_OF_TRUTH = "markdown-shadow-reviews-v1"
 REPO_DOC_SURFACE_MANIFEST_VERSION = 1
 REPO_DOC_SURFACE_MANIFEST_SOURCE_OF_TRUTH = "markdown-repo-doc-surfaces-v1"
 QUESTBOOK_PATH = Path("QUESTBOOK.md")
+QUESTS_PATH = Path("quests")
 QUESTBOOK_INTEGRATION_PATH = (
     Path("mechanics")
     / "growth-cycle"
@@ -685,6 +686,30 @@ QUEST_CATALOG_PATH = Path("generated") / "quest_catalog.min.json"
 QUEST_DISPATCH_PATH = Path("generated") / "quest_dispatch.min.json"
 QUEST_CATALOG_EXAMPLE_PATH = Path("generated") / "quest_catalog.min.example.json"
 QUEST_DISPATCH_EXAMPLE_PATH = Path("generated") / "quest_dispatch.min.example.json"
+QUEST_SOURCE_LANES = ("techniques", "agon")
+QUEST_LIFECYCLE_STATES = (
+    "captured",
+    "triaged",
+    "ready",
+    "active",
+    "blocked",
+    "reanchor",
+    "done",
+    "dropped",
+)
+QUEST_MARKDOWN_CONTRACT_MARKER = "source_contract: quest_markdown_contract_v1"
+QUEST_MARKDOWN_REQUIRED_HEADINGS = (
+    "## Quest",
+    "## Owner Route",
+    "## Next Action",
+    "## Acceptance Evidence",
+    "## Stop-lines",
+)
+QUEST_MARKDOWN_ID_LANES = {
+    "AOT-Q-AGON-": "agon",
+}
+QUEST_MARKDOWN_KEY_RE = re.compile(r"^(AOT-Q-[A-Z]+-\d+)")
+QUEST_H1_RE = re.compile(r"^[ ]{0,3}# (.+)$", re.MULTILINE)
 FOUNDATION_QUEST_IDS = (
     "AOA-TECH-Q-0001",
     "AOA-TECH-Q-0002",
@@ -695,6 +720,7 @@ QUEST_IDS = FOUNDATION_QUEST_IDS
 QUESTBOOK_REQUIRED_INDEX_TOKENS = (
     "donor-refinery",
     "generated/source alignment",
+    "quests/<lane>/<state>/",
     "Frontier",
     "Near",
     "Harvest candidates",
@@ -717,6 +743,7 @@ QUEST_SCHEMA_REQUIRED_FIELDS = (
     "id",
     "title",
     "repo",
+    "lane",
     "owner_surface",
     "kind",
     "state",
@@ -765,16 +792,7 @@ def quest_id_sort_key(quest_id: str) -> tuple[int, str]:
 
 
 def discover_quest_ids(repo_root: Path) -> tuple[str, ...]:
-    quest_ids = tuple(
-        sorted(
-            (
-                path.stem
-                for path in (repo_root / "quests").glob("AOA-TECH-Q-*.yaml")
-                if path.is_file()
-            ),
-            key=quest_id_sort_key,
-        )
-    )
+    quest_ids = tuple(discover_quest_source_paths(repo_root))
     if not quest_ids:
         return FOUNDATION_QUEST_IDS
     return quest_ids
@@ -783,6 +801,151 @@ def discover_quest_ids(repo_root: Path) -> tuple[str, ...]:
 def missing_foundation_quest_ids(quest_ids: tuple[str, ...]) -> tuple[str, ...]:
     quest_id_set = set(quest_ids)
     return tuple(quest_id for quest_id in FOUNDATION_QUEST_IDS if quest_id not in quest_id_set)
+
+
+def quest_source_route(relative_path: Path) -> tuple[str, str]:
+    parts = relative_path.parts
+    if len(parts) != 4 or parts[0] != QUESTS_PATH.as_posix():
+        fail(
+            f"{questbook_relative(relative_path)}: quest source must live under quests/<lane>/<state>/"
+        )
+    lane = parts[1]
+    state = parts[2]
+    if lane not in QUEST_SOURCE_LANES:
+        fail(
+            f"{questbook_relative(relative_path)}: unsupported quest lane '{lane}'"
+        )
+    if state not in QUEST_LIFECYCLE_STATES:
+        fail(
+            f"{questbook_relative(relative_path)}: unsupported quest lifecycle state '{state}'"
+        )
+    return lane, state
+
+
+def markdown_quest_key(quest_id: str) -> str:
+    match = QUEST_MARKDOWN_KEY_RE.match(quest_id)
+    return match.group(1) if match else quest_id
+
+
+def expected_markdown_quest_lane(quest_id: str) -> str | None:
+    for prefix, lane in QUEST_MARKDOWN_ID_LANES.items():
+        if quest_id.startswith(prefix):
+            return lane
+    return None
+
+
+def markdown_heading_sections(text: str) -> dict[str, str]:
+    matches = list(SECTION_RE.finditer(text))
+    sections: dict[str, str] = {}
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        sections[f"## {match.group(1).strip()}"] = text[start:end].strip()
+    return sections
+
+
+def validate_quest_markdown_contract(relative_path: Path, text: str) -> None:
+    lane, _state = quest_source_route(relative_path)
+    quest_id = relative_path.stem
+    expected_lane = expected_markdown_quest_lane(quest_id)
+    if expected_lane is None:
+        fail(
+            f"{questbook_relative(relative_path)}: Markdown quest id must use a known lane prefix"
+        )
+    if expected_lane != lane:
+        fail(
+            f"{questbook_relative(relative_path)}: quest id routes to lane '{expected_lane}', not '{lane}'"
+        )
+
+    h1_match = QUEST_H1_RE.search(text)
+    if h1_match is None:
+        fail(f"{questbook_relative(relative_path)}: Markdown quest must start with an H1 title")
+    if markdown_quest_key(quest_id) not in h1_match.group(1):
+        fail(
+            f"{questbook_relative(relative_path)}: H1 title must include the quest key"
+        )
+
+    if QUEST_MARKDOWN_CONTRACT_MARKER not in text:
+        fail(
+            f"{questbook_relative(relative_path)}: missing {QUEST_MARKDOWN_CONTRACT_MARKER}"
+        )
+    sections = markdown_heading_sections(text)
+    for heading in QUEST_MARKDOWN_REQUIRED_HEADINGS:
+        if heading not in sections:
+            fail(
+                f"{questbook_relative(relative_path)}: strict Markdown contract must include {heading}"
+            )
+        if heading in sections and not sections[heading]:
+            fail(
+                f"{questbook_relative(relative_path)}: strict Markdown contract section {heading} must not be empty"
+            )
+
+
+def validate_questbook_source_topology(repo_root: Path) -> None:
+    quests_dir = repo_root / QUESTS_PATH
+    if not quests_dir.is_dir():
+        fail(f"{questbook_relative(QUESTS_PATH)}: missing required directory")
+
+    for relative_path in (QUESTS_PATH / "README.md", QUESTS_PATH / "AGENTS.md"):
+        if not (repo_root / relative_path).is_file():
+            fail(f"{questbook_relative(relative_path)}: missing required file")
+
+    for pattern in ("AOA-TECH-Q-*.yaml", "AOT-Q-*.md"):
+        for path in sorted(quests_dir.glob(pattern)):
+            if path.is_file():
+                fail(
+                    f"{questbook_relative(path.relative_to(repo_root))}: root-level quest aliases are not allowed"
+                )
+
+    for state in QUEST_LIFECYCLE_STATES:
+        if (quests_dir / state).exists():
+            fail(
+                f"{questbook_relative(QUESTS_PATH / state)}: root lifecycle directories are not allowed"
+            )
+
+    for lane in QUEST_SOURCE_LANES:
+        lane_dir = quests_dir / lane
+        if lane_dir.exists() and not (lane_dir / "README.md").is_file():
+            fail(f"{questbook_relative(QUESTS_PATH / lane / 'README.md')}: missing required file")
+
+    for path in sorted(quests_dir.rglob("*.yaml")):
+        if not path.is_file():
+            continue
+        relative_path = path.relative_to(repo_root)
+        lane, _state = quest_source_route(relative_path)
+        if lane != "techniques":
+            fail(
+                f"{questbook_relative(relative_path)}: YAML work quests belong in the techniques lane"
+            )
+        if not path.name.startswith("AOA-TECH-Q-"):
+            fail(
+                f"{questbook_relative(relative_path)}: YAML quest source must use AOA-TECH-Q-*"
+            )
+
+    for path in sorted(quests_dir.rglob("*.md")):
+        if not path.is_file() or path.name in {"README.md", "AGENTS.md"}:
+            continue
+        relative_path = path.relative_to(repo_root)
+        quest_source_route(relative_path)
+        validate_quest_markdown_contract(relative_path, read_text(path))
+
+
+def discover_quest_source_paths(repo_root: Path) -> dict[str, Path]:
+    quest_paths = sorted(
+        (
+            path
+            for path in (repo_root / QUESTS_PATH).glob("**/AOA-TECH-Q-*.yaml")
+            if path.is_file()
+        ),
+        key=lambda path: quest_id_sort_key(path.stem),
+    )
+    discovered: dict[str, Path] = {}
+    for path in quest_paths:
+        quest_id = path.stem
+        if quest_id in discovered:
+            fail(f"{quest_id}: duplicate quest id in quests/")
+        discovered[quest_id] = path.relative_to(repo_root)
+    return discovered
 NOTE_SHAPE_TYPED = "typed_sections"
 NOTE_SHAPE_OPAQUE = "opaque_body"
 NOTE_PAYLOAD_FIELDS = "fields"
@@ -6799,9 +6962,14 @@ def validate_quest_schema_envelope(
         )
 
 
-def validate_quest_payload_for_projection(quest_id: str, payload: dict[str, Any]) -> None:
+def validate_quest_payload_for_projection(
+    quest_id: str,
+    payload: dict[str, Any],
+    source_path: str,
+) -> None:
     required_scalar_fields = (
         "title",
+        "lane",
         "state",
         "band",
         "kind",
@@ -6815,19 +6983,19 @@ def validate_quest_payload_for_projection(quest_id: str, payload: dict[str, Any]
     for field in required_scalar_fields:
         value = payload.get(field)
         if not isinstance(value, str) or not value:
-            fail(f"quests/{quest_id}.yaml: quest must define string field '{field}'")
+            fail(f"{source_path}: quest must define string field '{field}'")
 
     activation = payload.get("activation")
     if not isinstance(activation, dict):
-        fail(f"quests/{quest_id}.yaml: quest must define object field 'activation'")
+        fail(f"{source_path}: quest must define object field 'activation'")
     activation_mode = activation.get("mode")
     if not isinstance(activation_mode, str) or not activation_mode:
-        fail(f"quests/{quest_id}.yaml: quest must define string field 'activation.mode'")
+        fail(f"{source_path}: quest must define string field 'activation.mode'")
 
     harvest = payload.get("harvest")
     if harvest is not None:
         if not isinstance(harvest, dict):
-            fail(f"quests/{quest_id}.yaml: harvest must be an object when present")
+            fail(f"{source_path}: harvest must be an object when present")
         target = harvest.get("target")
         allowed_targets = {
             "none",
@@ -6841,7 +7009,7 @@ def validate_quest_payload_for_projection(quest_id: str, payload: dict[str, Any]
         }
         if not isinstance(target, str) or target not in allowed_targets:
             fail(
-                f"quests/{quest_id}.yaml: harvest.target must be one of "
+                f"{source_path}: harvest.target must be one of "
                 f"{', '.join(sorted(allowed_targets))}"
             )
 
@@ -6903,7 +7071,11 @@ def validate_dispatch_entry_against_schema(
             fail(f"{location}.{field}: value must be one of {formatted}")
 
 
-def build_expected_quest_catalog_entry(quest_id: str, payload: dict[str, Any]) -> dict[str, Any]:
+def build_expected_quest_catalog_entry(
+    quest_id: str,
+    payload: dict[str, Any],
+    source_path: str,
+) -> dict[str, Any]:
     return {
         "id": quest_id,
         "title": payload["title"],
@@ -6916,13 +7088,17 @@ def build_expected_quest_catalog_entry(quest_id: str, payload: dict[str, Any]) -
         "difficulty": payload["difficulty"],
         "risk": payload["risk"],
         "owner_surface": payload["owner_surface"],
-        "source_path": f"quests/{quest_id}.yaml",
+        "source_path": source_path,
         "public_safe": payload["public_safe"],
     }
 
 
-def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) -> dict[str, Any]:
-    validate_quest_payload_for_projection(quest_id, payload)
+def build_expected_quest_dispatch_entry(
+    quest_id: str,
+    payload: dict[str, Any],
+    source_path: str,
+) -> dict[str, Any]:
+    validate_quest_payload_for_projection(quest_id, payload, source_path)
     requires_artifacts = QUEST_DISPATCH_ARTIFACTS.get(quest_id)
     if requires_artifacts is None:
         if payload.get("kind") == "harvest":
@@ -6943,7 +7119,7 @@ def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) 
         "write_scope": payload["write_scope"],
         "requires_artifacts": requires_artifacts,
         "activation_mode": payload["activation"]["mode"],
-        "source_path": f"quests/{quest_id}.yaml",
+        "source_path": source_path,
         "public_safe": payload["public_safe"],
     }
     if "fallback_tier" in payload:
@@ -6955,19 +7131,22 @@ def build_expected_quest_dispatch_entry(quest_id: str, payload: dict[str, Any]) 
 
 def collect_questbook_payloads(
     repo_root: Path,
-) -> tuple[dict[str, dict[str, Any]], list[str], list[str]]:
-    quest_ids = discover_quest_ids(repo_root)
+) -> tuple[dict[str, dict[str, Any]], dict[str, Path], list[str], list[str]]:
+    validate_questbook_source_topology(repo_root)
+    quest_source_paths = discover_quest_source_paths(repo_root)
+    quest_ids = tuple(quest_source_paths)
     missing_foundation_ids = missing_foundation_quest_ids(quest_ids)
     if missing_foundation_ids:
         missing_quest_id = missing_foundation_ids[0]
-        missing_path = Path("quests") / f"{missing_quest_id}.yaml"
-        fail(f"{questbook_relative(missing_path)}: missing required file")
+        fail(f"{missing_quest_id}.yaml: missing required file")
 
     quest_payloads: dict[str, dict[str, Any]] = {}
     active_quest_ids: list[str] = []
     closed_quest_ids: list[str] = []
     for quest_id in quest_ids:
-        quest_path = repo_root / "quests" / f"{quest_id}.yaml"
+        relative_path = quest_source_paths[quest_id]
+        lane, state = quest_source_route(relative_path)
+        quest_path = repo_root / relative_path
         if not quest_path.is_file():
             fail(f"{questbook_relative(quest_path.relative_to(repo_root))}: missing required file")
         payload = read_yaml(quest_path)
@@ -6983,6 +7162,14 @@ def collect_questbook_payloads(
             fail(
                 f"{questbook_relative(quest_path.relative_to(repo_root))}: repo must be 'aoa-techniques'"
             )
+        if payload.get("lane") != lane:
+            fail(
+                f"{questbook_relative(quest_path.relative_to(repo_root))}: lane must match path lane"
+            )
+        if payload.get("state") != state:
+            fail(
+                f"{questbook_relative(quest_path.relative_to(repo_root))}: state must match path state"
+            )
         if payload.get("public_safe") is not True:
             fail(
                 f"{questbook_relative(quest_path.relative_to(repo_root))}: public_safe must be true"
@@ -6992,21 +7179,29 @@ def collect_questbook_payloads(
             closed_quest_ids.append(quest_id)
         else:
             active_quest_ids.append(quest_id)
-    return quest_payloads, active_quest_ids, closed_quest_ids
+    return quest_payloads, quest_source_paths, active_quest_ids, closed_quest_ids
 
 
 def build_quest_catalog_projection(repo_root: Path) -> list[dict[str, Any]]:
-    quest_payloads, _, _ = collect_questbook_payloads(repo_root)
+    quest_payloads, quest_source_paths, _, _ = collect_questbook_payloads(repo_root)
     return [
-        build_expected_quest_catalog_entry(quest_id, quest_payloads[quest_id])
+        build_expected_quest_catalog_entry(
+            quest_id,
+            quest_payloads[quest_id],
+            questbook_relative(quest_source_paths[quest_id]),
+        )
         for quest_id in discover_quest_ids(repo_root)
     ]
 
 
 def build_quest_dispatch_projection(repo_root: Path) -> list[dict[str, Any]]:
-    quest_payloads, _, _ = collect_questbook_payloads(repo_root)
+    quest_payloads, quest_source_paths, _, _ = collect_questbook_payloads(repo_root)
     return [
-        build_expected_quest_dispatch_entry(quest_id, quest_payloads[quest_id])
+        build_expected_quest_dispatch_entry(
+            quest_id,
+            quest_payloads[quest_id],
+            questbook_relative(quest_source_paths[quest_id]),
+        )
         for quest_id in discover_quest_ids(repo_root)
     ]
 
@@ -7055,7 +7250,7 @@ def validate_questbook_surface(repo_root: Path) -> None:
                 f"{questbook_relative(QUESTBOOK_INTEGRATION_PATH)}: must mention '{token}' explicitly"
             )
 
-    quest_payloads, active_quest_ids, closed_quest_ids = collect_questbook_payloads(repo_root)
+    quest_payloads, _quest_source_paths, active_quest_ids, closed_quest_ids = collect_questbook_payloads(repo_root)
 
     questbook_text = read_text(questbook_path)
     for token in QUESTBOOK_REQUIRED_INDEX_TOKENS:
@@ -7074,7 +7269,7 @@ def validate_questbook_surface(repo_root: Path) -> None:
         fail(f"{questbook_relative(QUEST_CATALOG_PATH)}: payload must be a JSON array")
     if live_catalog_payload != expected_catalog:
         fail(
-            f"{questbook_relative(QUEST_CATALOG_PATH)}: live catalog must stay aligned with quests/*.yaml"
+            f"{questbook_relative(QUEST_CATALOG_PATH)}: live catalog must stay aligned with quests/<lane>/<state>/*.yaml"
         )
 
     catalog_payload = read_json(catalog_path)
@@ -7082,7 +7277,7 @@ def validate_questbook_surface(repo_root: Path) -> None:
         fail(f"{questbook_relative(QUEST_CATALOG_EXAMPLE_PATH)}: payload must be a JSON array")
     if catalog_payload != expected_catalog:
         fail(
-            f"{questbook_relative(QUEST_CATALOG_EXAMPLE_PATH)}: example catalog must stay aligned with quests/*.yaml"
+            f"{questbook_relative(QUEST_CATALOG_EXAMPLE_PATH)}: example catalog must stay aligned with quests/<lane>/<state>/*.yaml"
         )
     if catalog_payload != live_catalog_payload:
         fail(
@@ -7117,7 +7312,7 @@ def validate_questbook_surface(repo_root: Path) -> None:
         expected_entry = expected_dispatch_by_id[quest_id]
         if entry != expected_entry:
             fail(
-                f"{questbook_relative(QUEST_DISPATCH_PATH)}: dispatch entry '{quest_id}' must stay aligned with quests/*.yaml"
+                f"{questbook_relative(QUEST_DISPATCH_PATH)}: dispatch entry '{quest_id}' must stay aligned with quests/<lane>/<state>/*.yaml"
             )
 
     dispatch_payload = read_json(dispatch_path)
@@ -7131,7 +7326,7 @@ def validate_questbook_surface(repo_root: Path) -> None:
         )
     if dispatch_payload != expected_dispatch:
         fail(
-            f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: example dispatch must stay aligned with quests/*.yaml"
+            f"{questbook_relative(QUEST_DISPATCH_EXAMPLE_PATH)}: example dispatch must stay aligned with quests/<lane>/<state>/*.yaml"
         )
     if dispatch_payload != live_dispatch_payload:
         fail(
