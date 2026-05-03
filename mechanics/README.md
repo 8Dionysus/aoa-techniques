@@ -24,6 +24,9 @@ receipt route, not a copy of the AoA request queue and not proof of acceptance.
   ledgers, and canonical-pressure visibility.
 - [growth-cycle](growth-cycle/README.md): mastery harvest, feat reflection,
   questbook integration, and reviewed closeout incubation.
+- [questbook](questbook/README.md): repo-local durable technique obligations,
+  quest source/index/projection posture, and harvest/promotion routing around
+  canon hardening.
 - [agon](agon/README.md): Agon practice-candidate bridges, active parts,
   provenance, and preserved wave receipts.
 - [recurrence](recurrence/README.md): recurrence observation and closure

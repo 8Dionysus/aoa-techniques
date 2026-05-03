@@ -163,6 +163,20 @@ or candidate lanes without a direct AoA owner-request ID targeting
   preserve technique-layer harvest, feat-reader, questbook, and
   promotion-readiness pressure without claiming center request acceptance.
 
+### [questbook](questbook/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Questbook owner-request queue has no
+  direct `ORQ-QUESTBOOK-TECHNIQUES-*` request. Local Questbook surfaces
+  preserve repo-local durable technique obligations, source quest files,
+  generated quest projections, and harvest/promotion pressure without claiming
+  a second roadmap, private scratchpad, raw donor backlog, owner acceptance,
+  closure proof, proof verdicts, playbook choreography, memory canon, routing
+  authority, generated quest views as source truth, RPG playable reading
+  authority, or automatic technique promotion. Existing quest-related
+  technique bundles remain canonical only through their
+  `techniques/**/TECHNIQUE.md` homes.
+
 ### [recurrence](recurrence/README.md)
 
 - Current status: `candidate-only`

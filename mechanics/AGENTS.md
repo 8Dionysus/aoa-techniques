@@ -8,7 +8,7 @@ Route card for the `aoa-techniques/mechanics/` surface.
 These files describe how practice moves through the repo by participating in
 cross-project AoA mechanics: method-growth, distillation, audit, growth-cycle,
 Agon, recurrence, experience, release-support, antifragility, checkpoint, and
-boundary-bridge.
+boundary-bridge, and questbook.
 
 Mechanics are not canonical technique bundles. They shape the route into or
 around canon, while `techniques/` owns published technique content and
@@ -21,7 +21,7 @@ This surface owns:
 - owner-local movement grammar for candidate-to-technique flow inside the AoA
   mechanics vocabulary
 - bounded intake, promotion, adoption, mastery, recurrence, release-support,
-  experience, antifragility, checkpoint, and boundary-bridge routes
+  experience, antifragility, checkpoint, boundary-bridge, and questbook routes
 - public-safe stop-lines for deciding when a surface must hand off to another
   AoA repo
 - reusable precedent notes that are too procedural for general `docs/` but not
