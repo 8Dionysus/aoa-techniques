@@ -117,6 +117,17 @@ or candidate lanes without a direct AoA owner-request ID targeting
   XV technique-side pressure as requested-only practice candidates, not
   owner-request acceptance.
 
+### [antifragility](antifragility/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Antifragility request queue has no
+  direct `ORQ-ANTIFRAGILITY-TECHNIQUES-*` request. Local Antifragility surfaces
+  preserve bounded chaos, degraded-mode, regrounding, and recovery practice
+  pressure without claiming center request acceptance, one-score health, proof
+  verdicts, owner-local cleanup authority, runtime self-healing, or automatic
+  technique promotion. Existing antifragility-recovery technique bundles remain
+  canonical only through their `techniques/**/TECHNIQUE.md` homes.
+
 ### [growth-cycle](growth-cycle/README.md)
 
 - Current status: `candidate-only`
