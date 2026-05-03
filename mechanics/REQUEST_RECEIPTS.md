@@ -134,6 +134,16 @@ or candidate lanes without a direct AoA owner-request ID targeting
   center request acceptance, recurrence law ownership, runtime return, memory
   recall, routing dispatch, proof verdicts, or automatic technique promotion.
 
+### [release-support](release-support/README.md)
+
+- Current status: `candidate-only`
+- Why it stays separate: the current AoA Release-support request queue has no
+  direct `ORQ-RELEASE-TECHNIQUES-*` request. Local Release-support surfaces
+  preserve installation and sovereign-release practice pressure without
+  claiming center request acceptance, release authority, public-claim proof,
+  operator consent, runtime rollback, sibling acceptance, or automatic
+  technique promotion.
+
 ## Update Discipline
 
 When AoA adds, supersedes, or lands an owner request targeting
