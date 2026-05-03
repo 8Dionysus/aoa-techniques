@@ -1,6 +1,14 @@
 # QUESTBOOK.md — aoa-techniques
 
-This file is the public tracked surface for deferred canon-hardening, donor-refinery, and generated-source alignment obligations that belong to `aoa-techniques`.
+This file is the compact public index for durable technique-canon obligations
+that should survive the current diff.
+
+It holds repo-level obligations for canon hardening, donor-refinery follow-up,
+and generated/source alignment. It is not a second roadmap, not a donor dump,
+and not a substitute for technique meaning.
+
+Program direction belongs in [ROADMAP](ROADMAP.md). Technique meaning belongs in
+`techniques/**/TECHNIQUE.md`. Candidate movement belongs in `mechanics/`.
 
 Use it for:
 - promotion-readiness follow-through
@@ -13,6 +21,25 @@ Do not use it for:
 - snippet ideas that have not survived a bounded diff
 - private working chatter or local-only paths
 - re-explaining technique meaning that already lives in source docs
+- roadmap horizons, release history, or mechanic-local landing history
+
+## Update trigger
+
+Update this root index when an obligation should remain visible across future
+work and belongs to the technique canon as a repo-level follow-through.
+
+Use the nearest owner route instead when the obligation is local to one bundle,
+mechanic, generated surface, or release. Use:
+
+- `ROADMAP.md` for direction, horizon posture, and future trigger contours
+- `CHANGELOG.md` for released repository history
+- `mechanics/<slug>/LANDING_LOG.md` for checked mechanic landings
+- `mechanics/<slug>/ROADMAP.md` for mechanic-local future pressure
+- `docs/decisions/` for durable rationale
+- `techniques/**/notes/` for bundle-local evidence and review notes
+
+If a closeout leaves a durable obligation but this file stays unchanged, say why
+the obligation belongs to another owner route.
 
 ## Frontier
 - none yet
@@ -38,3 +65,9 @@ Do not use it for:
 - `schemas/quest_dispatch.schema.json`
 - `generated/quest_catalog.min.example.json`
 - `generated/quest_dispatch.min.example.json`
+
+## Rule
+
+A quest can survive in this root index only if it keeps repo-level technique
+canon follow-through visible without replacing roadmap direction, release
+history, mechanic-local ledgers, or bundle-local evidence.

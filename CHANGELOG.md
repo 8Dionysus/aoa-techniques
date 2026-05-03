@@ -6,6 +6,20 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Changed
+
+- added a root charter and root surface law to separate public entry,
+  repository authority, root placement, direction, obligations, and generated
+  repo-doc routing
+- slimmed root `ROADMAP.md` back to live repo direction while preserving the
+  previous closure-audit baseline under Audit legacy
+
+### Validation
+
+- `python scripts/validate_repo.py`
+- `python -m unittest discover -s tests`
+- `python scripts/release_check.py`
+
 ## [0.4.2] - 2026-04-23
 
 ### Summary

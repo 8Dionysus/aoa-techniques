@@ -25,6 +25,7 @@ into current behavior just because they once existed.
 | Pre-split flat `PROMOTION_WAVE_A_RUNBOOK.md` | [parts/promotion-wave-a-runbook](parts/promotion-wave-a-runbook/README.md) | The current promotion evidence-prep wave stays bounded to leading promoted candidates without status flips. |
 | Pre-split flat `EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md` | [parts/external-evidence-sprint-runbook](parts/external-evidence-sprint-runbook/README.md) | External proof searches have an execution path that rejects adjacent fits and avoids stale lane reruns. |
 | Pre-split flat `EXTERNAL_EVIDENCE_LEDGER.md` | [parts/external-evidence-ledger](parts/external-evidence-ledger/README.md) | Searched-lane memory and closure precedents stay visible without replacing bundle-local notes. |
+| Former root closure-audit `ROADMAP.md` | [legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md](legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md) plus active Audit parts | The root roadmap now owns live repo direction; the former closure-audit baseline remains preserved as historical audit evidence. |
 
 ## Legacy posture
 
@@ -33,9 +34,10 @@ rewriting promotion posture, evidence lanes, queue counts, or technique status.
 No raw pre-prune receipt was needed because no audit ledger was shortened in
 this slice.
 
-When a future pass compacts an audit ledger or runbook, preserve the pre-pruned
-accounting in `legacy/raw/`, update [legacy/INDEX.md](legacy/INDEX.md), and
-record the distillation in [legacy/DISTILLATION_LOG.md](legacy/DISTILLATION_LOG.md).
+When a future pass compacts an audit ledger, runbook, or root-facing audit
+surface, preserve the pre-pruned accounting in `legacy/raw/`, update
+[legacy/INDEX.md](legacy/INDEX.md), and record the distillation in
+[legacy/DISTILLATION_LOG.md](legacy/DISTILLATION_LOG.md).
 
 ## Audit rule
 

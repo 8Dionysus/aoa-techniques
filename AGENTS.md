@@ -29,18 +29,30 @@ It does not own:
 ## Start here
 
 1. `README.md`
-2. `ROADMAP.md`
+2. `CHARTER.md`
 3. `docs/START_HERE.md`
 4. `docs/TECHNIQUE_ATOM_CONTRACT.md`
 5. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-6. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
-7. `WALKTHROUGH.md`
-8. `docs/TECHNIQUE_SELECTION.md`
-9. `docs/TECHNIQUE_KIND_GUIDE.md`
-10. the target `techniques/**/TECHNIQUE.md`
-11. affected generated catalogs, capsules, feat cards, or source-lift outputs
-12. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
+6. `ROADMAP.md` when direction, horizons, or repo-level future triggers move
+7. `docs/ROOT_SURFACE_LAW.md` when root or docs-root placement changes
+8. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
+9. `WALKTHROUGH.md`
+10. `docs/TECHNIQUE_SELECTION.md`
+11. `docs/TECHNIQUE_KIND_GUIDE.md`
+12. the target `techniques/**/TECHNIQUE.md`
+13. affected generated catalogs, capsules, feat cards, or source-lift outputs
+14. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
 
+## Route modes
+
+| Route mode | Use when | Start surface |
+|---|---|---|
+| `first-reading` | you need the shortest public overview | `README.md` -> `CHARTER.md` -> `docs/START_HERE.md` |
+| `technique-authoring` | you will add, split, promote, or revise one technique | `docs/TECHNIQUE_ATOM_CONTRACT.md` -> `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` -> target bundle |
+| `root-editing` | you will add, move, delete, or rewrite a root or docs-root surface | `CHARTER.md` -> `docs/ROOT_SURFACE_LAW.md` |
+| `direction-change` | roadmap, corpus-scale pressure, portability posture, or future triggers change | `ROADMAP.md` |
+| `mechanic-change` | practice movement, donor intake, audit, recurrence, checkpoint, RPG, or release-support surfaces change | `mechanics/README.md` -> nearest mechanic `AGENTS.md` |
+| `generated-parity` | generated catalogs, capsules, source-lift, or repo-doc surfaces change | source doc -> builder -> generated output -> validator/test |
 
 ## AGENTS stack law
 

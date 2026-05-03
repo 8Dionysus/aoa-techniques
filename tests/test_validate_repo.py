@@ -1014,7 +1014,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
-        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         runbook = (
             REPO_ROOT
             / "mechanics"
@@ -1032,7 +1031,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             / "README.md"
         ).read_text(encoding="utf-8")
 
-        for content in (start_here, docs_readme, roadmap):
+        for content in (start_here, docs_readme):
             self.assertIn(
                 "parts/external-evidence-sprint-runbook/README.md", content
             )
@@ -1070,9 +1069,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
-        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
 
-        for content in (root_readme, docs_readme, start_here, roadmap):
+        for content in (root_readme, docs_readme, start_here):
             self.assertIn(
                 "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
                 content,
@@ -1300,9 +1298,14 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn(target, receipt)
 
     def test_deep_audit_roadmap_describes_swarm_future_import_execution_pack(self) -> None:
-        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(
-            encoding="utf-8"
-        )
+        roadmap = (
+            REPO_ROOT
+            / "mechanics"
+            / "audit"
+            / "legacy"
+            / "raw"
+            / "ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md"
+        ).read_text(encoding="utf-8")
 
         for target in (
             "main agent owns wave boundaries, final wording, intake/roadmap sync, shared generated surfaces, and `python scripts/release_check.py`",
@@ -1443,7 +1446,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         surfaces = validate_repo.parse_repo_doc_surfaces(REPO_ROOT)
         source_paths = {surface.doc_path for surface in surfaces}
 
-        self.assertEqual(12, len(surfaces))
+        self.assertEqual(18, len(surfaces))
         self.assertEqual(
             {spec["doc_path"] for spec in validate_repo.REPO_DOC_SURFACE_SPECS},
             source_paths,
@@ -1456,11 +1459,20 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             {
                 "TODO.md",
                 "PLANS.md",
-                "ROADMAP.md",
                 "docs/KAG_SOURCE_LIFT_GUIDE.md",
                 "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
                 "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
             }.isdisjoint(source_paths)
+        )
+        self.assertTrue(
+            {
+                "CHARTER.md",
+                "ROADMAP.md",
+                "QUESTBOOK.md",
+                "docs/ROOT_SURFACE_LAW.md",
+                "docs/TECHNIQUE_ATOM_CONTRACT.md",
+                "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
+            }.issubset(source_paths)
         )
         for surface in surfaces:
             self.assertTrue(surface.top_level_sections)
@@ -1472,6 +1484,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual(
             (
+                "What this repo does",
                 "Start here",
                 "Quick routes",
                 "Deeper routes",
@@ -1485,6 +1498,89 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 "License",
             ),
             surfaces_by_path["README.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
+                "Purpose",
+                "Authority Boundary",
+                "Mission",
+                "What This Repository Owns",
+                "Routed To Stronger Owners",
+                "Canon Discipline",
+                "Review Rule",
+            ),
+            surfaces_by_path["CHARTER.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
+                "Root Principle",
+                "Docs-Root Principle",
+                "Allowed Root Surfaces",
+                "Surfaces That Should Not Live In Root",
+                "Decision Procedure Before Adding A Root File",
+                "Current Root Decisions",
+                "Final Rule",
+            ),
+            surfaces_by_path["docs/ROOT_SURFACE_LAW.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
+                "Core Contract",
+                "Standalone Portability Target",
+                "Small-Agent Target",
+                "Scale Target",
+                "Not A Skill",
+                "Authoring Checks",
+                "Distillation Rule",
+                "Template And Capsule Implication",
+                "Review Outcome",
+            ),
+            surfaces_by_path["docs/TECHNIQUE_ATOM_CONTRACT.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
+                "Purpose",
+                "Topology Law",
+                "Axis Stack",
+                "Current Axes",
+                "Future Axes",
+                "Relation Topology",
+                "Growth Rules",
+                "Mechanics Interface",
+                "Next Honest Build Path",
+            ),
+            surfaces_by_path["docs/TECHNIQUE_TOPOLOGY_CONTRACT.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
+                "Authority",
+                "Update Rule",
+                "Current Direction",
+                "Current Checked Contour",
+                "Horizon: Root Clarity",
+                "Horizon: Technique Atom",
+                "Horizon: Corpus Topology",
+                "Horizon: Small-Agent Usability",
+                "Horizon: Mechanics To Canon",
+                "Horizon: Evidence And Promotion",
+                "Horizon: Standalone Portability",
+                "Horizon: Generated Companions",
+                "When The Time Comes",
+                "Standing Direction",
+            ),
+            surfaces_by_path["ROADMAP.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
+                "Update trigger",
+                "Frontier",
+                "Near",
+                "Latent / parked",
+                "Harvest candidates",
+                "Backing files",
+                "Rule",
+            ),
+            surfaces_by_path["QUESTBOOK.md"].top_level_sections,
         )
         self.assertEqual(
             (
@@ -1553,12 +1649,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             list(validate_repo.REPO_DOC_SURFACE_GROUP_ORDER),
             [group["group"] for group in actual_full["surface_groups"]],
         )
-        self.assertEqual(12, len(actual_full["docs"]))
+        self.assertEqual(18, len(actual_full["docs"]))
         docs_by_id = {doc["doc_id"]: doc for doc in actual_full["docs"]}
-        self.assertEqual(
-            "entrypoint/map",
-            docs_by_id["ecosystem_context"]["surface_group"],
-        )
+        self.assertEqual("canon/authority", docs_by_id["ecosystem_context"]["surface_group"])
+        self.assertEqual("canon/authority", docs_by_id["charter"]["surface_group"])
+        self.assertEqual("status/release", docs_by_id["roadmap"]["surface_group"])
 
     def test_repo_doc_surfaces_generated_reader_matches_builder_and_stays_bounded(self) -> None:
         validate_repo.validate_repo_doc_surface_reader(REPO_ROOT)
@@ -1571,16 +1666,20 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             repo_doc_surfaces,
         )
         self.assertIn("Entrypoint / Map", repo_doc_surfaces)
+        self.assertIn("Canon / Authority", repo_doc_surfaces)
         self.assertIn("Contribution / Policy", repo_doc_surfaces)
         self.assertIn("Walkthrough / Context", repo_doc_surfaces)
         self.assertIn("Status / Release", repo_doc_surfaces)
         self.assertIn("README.md", repo_doc_surfaces)
+        self.assertIn("CHARTER.md", repo_doc_surfaces)
         self.assertIn("docs/START_HERE.md", repo_doc_surfaces)
+        self.assertIn("docs/ROOT_SURFACE_LAW.md", repo_doc_surfaces)
+        self.assertIn("ROADMAP.md", repo_doc_surfaces)
+        self.assertIn("QUESTBOOK.md", repo_doc_surfaces)
         self.assertIn("docs/RELEASING.md", repo_doc_surfaces)
         self.assertIn("repo_doc_surface_manifest.json", repo_doc_surfaces)
         self.assertNotIn("](../TODO.md)", repo_doc_surfaces)
         self.assertNotIn("](../PLANS.md)", repo_doc_surfaces)
-        self.assertNotIn("](../ROADMAP.md)", repo_doc_surfaces)
         self.assertNotIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", repo_doc_surfaces)
 
     def test_repo_doc_surfaces_are_discoverable_from_docs_root_changelog_kag_and_release_docs(
@@ -1603,7 +1702,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("START_HERE.md", releasing)
         self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
         self.assertIn("repo_doc_surface_manifest.json", docs_readme)
-        self.assertIn("12 authoritative repo docs/status files", docs_readme)
+        self.assertIn("18 authoritative public route/canon/status files", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", readme)
@@ -1785,10 +1884,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
 
         self.assertIn(
-            "1. [README](../README.md)\n2. [Start Here](START_HERE.md)\n3. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)\n4. [Technique Selection](TECHNIQUE_SELECTION.md)",
+            "1. [README](../README.md)\n2. [Charter](../CHARTER.md)\n3. [Start Here](START_HERE.md)\n4. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)\n5. [Technique Selection](TECHNIQUE_SELECTION.md)",
             docs_readme,
         )
-        self.assertIn("12 authoritative repo docs/status files", docs_readme)
+        self.assertIn("18 authoritative public route/canon/status files", docs_readme)
         self.assertIn("one family guide such as", docs_readme)
         self.assertIn("one reader or manifest such as", docs_readme)
         self.assertIn("one reusable lift bundle in `../techniques/docs/`", docs_readme)

@@ -23,16 +23,36 @@ external reader who only wants the bounded practice.
 
 > Current release: `v0.4.2`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
+## What this repo does
+
+| Function | Surface |
+|---|---|
+| Names the practice-canon boundary | [CHARTER](CHARTER.md) |
+| Opens the shortest public route | [Start Here](docs/START_HERE.md) |
+| Defines what counts as one technique | [Technique Atom Contract](docs/TECHNIQUE_ATOM_CONTRACT.md) |
+| Defines the classification topology | [Technique Topology Contract](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) |
+| Maps the public corpus | [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md) |
+| Keeps root and docs placement legible | [Root Surface Law](docs/ROOT_SURFACE_LAW.md) |
+| Holds repo-level direction without becoming an audit ledger | [ROADMAP](ROADMAP.md) |
+| Tracks durable canon obligations | [QUESTBOOK](QUESTBOOK.md) |
+
+This repository is strongest when it keeps reusable practice small, portable,
+and well-classified. It is weakest when it tries to become the skill, proof,
+routing, memory, playbook, or runtime layer.
+
 ## Start here
 
 Use the shortest route by need:
 
 - repo-owned entrypoint: `docs/START_HERE.md`
+- authority boundary: `CHARTER.md`
 - atomic technique contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - classification topology contract: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+- root and docs placement law: `docs/ROOT_SURFACE_LAW.md`
 - one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
 - current technique map: `TECHNIQUE_INDEX.md`
-- current direction and hardening waves: `docs/START_HERE.md` and `ROADMAP.md`
+- current direction: `ROADMAP.md`
+- durable obligations: `QUESTBOOK.md`
 - AoA cross-mechanics for technique movement: `mechanics/README.md`
 - verify current repo state: `python scripts/validate_repo.py` and `python -m unittest discover -s tests`
 - release-prep parity path: `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
@@ -42,7 +62,7 @@ Use the shortest route by need:
 
 ## Quick routes
 
-- repo layer position and neighboring repos: `docs/ECOSYSTEM_CONTEXT.md`
+- repo authority, layer position, and neighboring repos: `CHARTER.md` and `docs/ECOSYSTEM_CONTEXT.md`
 - current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
 - via negativa pruning checklist: `docs/VIA_NEGATIVA_CHECKLIST.md`
 - frontmatter routing axes, topology, and kind doctrine: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `config/technique_family_seed.yaml`, `data/technique_kind_wave1.yaml`, `reports/technique_family_scout.md`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
@@ -60,7 +80,7 @@ Use the shortest route by need:
 - Agon owner-binding companion surfaces: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/PARTS.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json`, and `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
 - selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
 - runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
-- repo-doc routing and authoritative doc/status manifests: `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
+- root placement, repo-doc routing, and authoritative doc/status manifests: `docs/ROOT_SURFACE_LAW.md`, `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
 - source-lift, KAG, and section families: `docs/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json`, `docs/KAG_SOURCE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
 - review and shadow surfaces: `docs/SHADOW_PATTERNS.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
 - public readiness lens for the published corpus: `generated/technique_promotion_readiness.min.json`
@@ -96,6 +116,7 @@ Bad candidates:
 - public-safe reusable practice over project-local residue
 - atomic executable moves over chains disguised as techniques
 - faceted topology over overloaded buckets or one giant category tree
+- source-of-truth separation over root-file sprawl
 - bounded, reviewable contracts over vague lore
 - source-linked promotion over raw copying
 - linked docs and generated surfaces over oversized root inventories

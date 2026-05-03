@@ -362,6 +362,7 @@ SHADOW_COMMON_QUESTION_SPECS = (
 )
 REPO_DOC_SURFACE_GROUP_ORDER = (
     "entrypoint/map",
+    "canon/authority",
     "contribution/policy",
     "walkthrough/context",
     "status/release",
@@ -371,6 +372,11 @@ REPO_DOC_SURFACE_GROUP_SPECS = (
         "group": "entrypoint/map",
         "heading": "Entrypoint / Map",
         "note": "Open these first when the question is where to start or which public repo map or self-serve entrypoint should anchor the next read.",
+    },
+    {
+        "group": "canon/authority",
+        "heading": "Canon / Authority",
+        "note": "Use these when the question is what the repository may claim, how technique canon is shaped, where root surfaces belong, or which corpus map is authoritative.",
     },
     {
         "group": "contribution/policy",
@@ -391,8 +397,8 @@ REPO_DOC_SURFACE_GROUP_SPECS = (
 REPO_DOC_NAVIGATION_SPECS = (
     {
         "question": "Where should I start if I am new to the repository?",
-        "doc_ids": ("readme", "start_here", "technique_index"),
-        "note": "Start with the root README, then use Start Here and the technique index for bounded navigation.",
+        "doc_ids": ("readme", "charter", "start_here", "technique_index"),
+        "note": "Start with the root README, then use the Charter, Start Here, and technique index for bounded navigation.",
     },
     {
         "question": "Where is the repo-only self-serve route before deeper guides split out?",
@@ -401,8 +407,18 @@ REPO_DOC_NAVIGATION_SPECS = (
     },
     {
         "question": "Where is this repository positioned inside the AoA layer map?",
-        "doc_ids": ("ecosystem_context", "start_here"),
-        "note": "Use Ecosystem Context for the repo-owned layer-position note, then Start Here when you want the shortest bounded route through the rest of the public surface.",
+        "doc_ids": ("charter", "ecosystem_context", "start_here"),
+        "note": "Use the Charter for the repository authority boundary, Ecosystem Context for the layer-position note, then Start Here for the shortest bounded route through the rest of the public surface.",
+    },
+    {
+        "question": "Where do root and docs-root placement rules live?",
+        "doc_ids": ("root_surface_law", "charter", "docs_readme"),
+        "note": "Use Root Surface Law before adding or moving root or docs-root surfaces, with the Charter and docs map as supporting route context.",
+    },
+    {
+        "question": "Where do technique atom and topology contracts live?",
+        "doc_ids": ("technique_atom_contract", "technique_topology_contract", "technique_index"),
+        "note": "Use the atom contract to decide whether a candidate is one technique, the topology contract to classify it, and the technique index to inspect the live corpus.",
     },
     {
         "question": "Where do contribution rules and PR boundaries live?",
@@ -415,9 +431,9 @@ REPO_DOC_NAVIGATION_SPECS = (
         "note": "Use SECURITY for disclosure and hygiene, AGENTS for public-repo authoring discipline, and the Code of Conduct for collaboration expectations.",
     },
     {
-        "question": "Where do release flow and status history live?",
-        "doc_ids": ("changelog", "docs_releasing"),
-        "note": "Use CHANGELOG for current history and RELEASING for the bounded validation path behind public corpus updates.",
+        "question": "Where do direction, obligations, release flow, and status history live?",
+        "doc_ids": ("roadmap", "questbook", "changelog", "docs_releasing"),
+        "note": "Use ROADMAP for live direction, QUESTBOOK for durable obligations, CHANGELOG for release history, and RELEASING for the bounded validation path behind public corpus updates.",
     },
 )
 REPO_DOC_SURFACE_SPECS = (
@@ -428,6 +444,12 @@ REPO_DOC_SURFACE_SPECS = (
         "bounded_role": "root entrypoint for repository purpose, scope, and first-read routing",
     },
     {
+        "doc_id": "charter",
+        "doc_path": "CHARTER.md",
+        "surface_group": "canon/authority",
+        "bounded_role": "root authority boundary for the reusable practice canon and standalone plus AoA organ posture",
+    },
+    {
         "doc_id": "start_here",
         "doc_path": "docs/START_HERE.md",
         "surface_group": "entrypoint/map",
@@ -436,13 +458,31 @@ REPO_DOC_SURFACE_SPECS = (
     {
         "doc_id": "ecosystem_context",
         "doc_path": "docs/ECOSYSTEM_CONTEXT.md",
-        "surface_group": "entrypoint/map",
+        "surface_group": "canon/authority",
         "bounded_role": "repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks",
+    },
+    {
+        "doc_id": "root_surface_law",
+        "doc_path": "docs/ROOT_SURFACE_LAW.md",
+        "surface_group": "canon/authority",
+        "bounded_role": "root and docs-root placement law for keeping public entry surfaces compact and owner-routed",
+    },
+    {
+        "doc_id": "technique_atom_contract",
+        "doc_path": "docs/TECHNIQUE_ATOM_CONTRACT.md",
+        "surface_group": "canon/authority",
+        "bounded_role": "canonical contract for one atomic executable technique rather than a skill, playbook, chain, or workflow object",
+    },
+    {
+        "doc_id": "technique_topology_contract",
+        "doc_path": "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
+        "surface_group": "canon/authority",
+        "bounded_role": "classification topology contract for scaling the technique corpus beyond overloaded domains or flat categories",
     },
     {
         "doc_id": "technique_index",
         "doc_path": "TECHNIQUE_INDEX.md",
-        "surface_group": "entrypoint/map",
+        "surface_group": "canon/authority",
         "bounded_role": "public corpus map by status, technique id, and domain",
     },
     {
@@ -480,6 +520,18 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_path": "WALKTHROUGH.md",
         "surface_group": "walkthrough/context",
         "bounded_role": "one end-to-end example of origin practice, publication, reuse, and why the repo stores techniques this way",
+    },
+    {
+        "doc_id": "roadmap",
+        "doc_path": "ROADMAP.md",
+        "surface_group": "status/release",
+        "bounded_role": "live repo-level direction and horizon posture for technique-canon growth",
+    },
+    {
+        "doc_id": "questbook",
+        "doc_path": "QUESTBOOK.md",
+        "surface_group": "status/release",
+        "bounded_role": "compact root index for durable technique-canon obligations that should survive the current diff",
     },
     {
         "doc_id": "changelog",
@@ -969,7 +1021,7 @@ SHADOW_REVIEW_QUESTION_PREFIX = "Question: "
 SHADOW_REVIEW_OUTCOME_MARKER = "Outcome: "
 SHADOW_REVIEW_OVERALL_OUTCOME_PREFIX = "Overall outcome: "
 PUBLIC_HYGIENE_SCAN_DIRS = (".github", "docs", "generated", "mechanics", "techniques", "templates")
-PUBLIC_HYGIENE_EXCLUDED_ROOT_FILES = {"TODO.md", "PLANS.md", "ROADMAP.md"}
+PUBLIC_HYGIENE_EXCLUDED_ROOT_FILES = {"TODO.md", "PLANS.md"}
 PUBLIC_HYGIENE_ALLOWED_URL_PREFIXES = (
     "https://github.com/",
     "http://github.com/",
@@ -3220,8 +3272,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 12:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 12 authoritative docs/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 18:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 18 authoritative public route/canon/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 
@@ -6125,12 +6177,12 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
     lines = [
         "# Repo Doc Surfaces",
         "",
-        "This file is generated from the authoritative public docs/status layer only.",
+        "This file is generated from the authoritative public route, canon-law, contribution, example, and status layer only.",
         "Do not edit it by hand; run `python scripts/build_repo_doc_surface_manifest.py`.",
         "",
-        "Use this surface when the main question is which public repo doc to open next for orientation, contribution rules, public-safety expectations, or release/status context.",
+        "Use this surface when the main question is which public repo doc to open next for orientation, canon boundaries, contribution rules, public-safety expectations, direction, obligations, or release/status context.",
         "",
-        "It stays bounded to the current authored docs/status source set. It excludes local planning files such as `TODO.md`, `PLANS.md`, and `ROADMAP.md`, plus deeper guide/review docs that belong to later waves.",
+        "It stays bounded to the current authored public route/canon/status source set. It excludes local planning files such as `TODO.md` and `PLANS.md`, plus deeper guide/review docs outside the named bounded source set.",
         "",
         "See also:",
         "- [Start Here](START_HERE.md)",
@@ -6187,8 +6239,8 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
             "## Boundaries",
             "",
             "- The source of meaning stays in the authored docs themselves.",
-            "- The bounded source set is exactly the 12 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
-            "- This surface and its manifest are routing aids only. They do not become a new source of truth or a status-policy engine.",
+            "- The bounded source set is exactly the 18 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
+            "- This surface and its manifest are routing aids only. They do not become a new source of truth, root-authority replacement, or status-policy engine.",
             "",
         ]
     )

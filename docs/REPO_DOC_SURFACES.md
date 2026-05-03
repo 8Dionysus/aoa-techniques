@@ -1,11 +1,11 @@
 # Repo Doc Surfaces
 
-This file is generated from the authoritative public docs/status layer only.
+This file is generated from the authoritative public route, canon-law, contribution, example, and status layer only.
 Do not edit it by hand; run `python scripts/build_repo_doc_surface_manifest.py`.
 
-Use this surface when the main question is which public repo doc to open next for orientation, contribution rules, public-safety expectations, or release/status context.
+Use this surface when the main question is which public repo doc to open next for orientation, canon boundaries, contribution rules, public-safety expectations, direction, obligations, or release/status context.
 
-It stays bounded to the current authored docs/status source set. It excludes local planning files such as `TODO.md`, `PLANS.md`, and `ROADMAP.md`, plus deeper guide/review docs that belong to later waves.
+It stays bounded to the current authored public route/canon/status source set. It excludes local planning files such as `TODO.md` and `PLANS.md`, plus deeper guide/review docs outside the named bounded source set.
 
 See also:
 - [Start Here](START_HERE.md)
@@ -18,12 +18,14 @@ See also:
 
 | question | open | why |
 |---|---|---|
-| Where should I start if I am new to the repository? | [aoa-techniques](../README.md) (`README.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`), [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | Start with the root README, then use Start Here and the technique index for bounded navigation. |
+| Where should I start if I am new to the repository? | [aoa-techniques](../README.md) (`README.md`), [aoa-techniques Charter](../CHARTER.md) (`CHARTER.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`), [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | Start with the root README, then use the Charter, Start Here, and technique index for bounded navigation. |
 | Where is the repo-only self-serve route before deeper guides split out? | [Start Here](START_HERE.md) (`docs/START_HERE.md`), [Documentation Map](README.md) (`docs/README.md`) | Use Start Here for the shortest repo-owned route, then open the docs map only when you need the deeper guide and generated-surface tree. |
-| Where is this repository positioned inside the AoA layer map? | [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`) | Use Ecosystem Context for the repo-owned layer-position note, then Start Here when you want the shortest bounded route through the rest of the public surface. |
+| Where is this repository positioned inside the AoA layer map? | [aoa-techniques Charter](../CHARTER.md) (`CHARTER.md`), [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`) | Use the Charter for the repository authority boundary, Ecosystem Context for the layer-position note, then Start Here for the shortest bounded route through the rest of the public surface. |
+| Where do root and docs-root placement rules live? | [Root Surface Law](ROOT_SURFACE_LAW.md) (`docs/ROOT_SURFACE_LAW.md`), [aoa-techniques Charter](../CHARTER.md) (`CHARTER.md`), [Documentation Map](README.md) (`docs/README.md`) | Use Root Surface Law before adding or moving root or docs-root surfaces, with the Charter and docs map as supporting route context. |
+| Where do technique atom and topology contracts live? | [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) (`docs/TECHNIQUE_ATOM_CONTRACT.md`), [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) (`docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`), [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | Use the atom contract to decide whether a candidate is one technique, the topology contract to classify it, and the technique index to inspect the live corpus. |
 | Where do contribution rules and PR boundaries live? | [Contributing to aoa-techniques](../CONTRIBUTING.md) (`CONTRIBUTING.md`), [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | Use CONTRIBUTING for the public PR path and AGENTS for the repo's public-safe PLAN -> DIFF -> VERIFY -> REPORT doctrine. |
 | Where do public-safety expectations and contributor conduct live? | [SECURITY.md](../SECURITY.md) (`SECURITY.md`), [AGENTS.md](../AGENTS.md) (`AGENTS.md`), [Code of Conduct](../CODE_OF_CONDUCT.md) (`CODE_OF_CONDUCT.md`) | Use SECURITY for disclosure and hygiene, AGENTS for public-repo authoring discipline, and the Code of Conduct for collaboration expectations. |
-| Where do release flow and status history live? | [Changelog](../CHANGELOG.md) (`CHANGELOG.md`), [Releasing `aoa-techniques`](RELEASING.md) (`docs/RELEASING.md`) | Use CHANGELOG for current history and RELEASING for the bounded validation path behind public corpus updates. |
+| Where do direction, obligations, release flow, and status history live? | [Roadmap](../ROADMAP.md) (`ROADMAP.md`), [QUESTBOOK.md — aoa-techniques](../QUESTBOOK.md) (`QUESTBOOK.md`), [Changelog](../CHANGELOG.md) (`CHANGELOG.md`), [Releasing `aoa-techniques`](RELEASING.md) (`docs/RELEASING.md`) | Use ROADMAP for live direction, QUESTBOOK for durable obligations, CHANGELOG for release history, and RELEASING for the bounded validation path behind public corpus updates. |
 
 ## Entrypoint / Map
 
@@ -31,11 +33,22 @@ Open these first when the question is where to start or which public repo map or
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `Start here`, `Quick routes`, `Deeper routes`, `What belongs here`, `Core principles`, `Maturity model`, `Repository structure`, `Intended users`, `What a good technique includes`, `Contribution model`, `License` |
+| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `What this repo does`, `Start here`, `Quick routes`, `Deeper routes`, `What belongs here`, `Core principles`, `Maturity model`, `Repository structure`, `Intended users`, `What a good technique includes`, `Contribution model`, `License` |
 | [Start Here](START_HERE.md) (`docs/START_HERE.md`) | repo-owned self-serve entrypoint for route selection, corpus posture, and stay-here versus leave-here decisions | `What This Repo Is`, `If You Need One Technique Now`, `If You Need To Understand Maturity And Review`, `If You Need Derived Surfaces`, `Current Corpus Posture`, `Repo-Only Operating Contract`, `When To Leave This Repo`, `Release And Validation` |
-| [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`) | repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks | `Why This Repo Exists`, `Ontology Spine Inheritance`, `Method And Neighboring Layers`, `Boundary Reminder` |
-| [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | public corpus map by status, technique id, and domain | `Canonical techniques`, `Promoted techniques`, `Deprecated techniques`, `Notes` |
 | [Documentation Map](README.md) (`docs/README.md`) | docs-layer map for deeper guides, generated surfaces, and recommended reading paths after the main entrypoint | `Start Here`, `Surface Types`, `Recommended Reading Paths`, `Companion Repository Surfaces`, `Notes` |
+
+## Canon / Authority
+
+Use these when the question is what the repository may claim, how technique canon is shaped, where root surfaces belong, or which corpus map is authoritative.
+
+| doc | bounded role | top-level sections |
+|---|---|---|
+| [aoa-techniques Charter](../CHARTER.md) (`CHARTER.md`) | root authority boundary for the reusable practice canon and standalone plus AoA organ posture | `Purpose`, `Authority Boundary`, `Mission`, `What This Repository Owns`, `Routed To Stronger Owners`, `Canon Discipline`, `Review Rule` |
+| [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`) | repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks | `Why This Repo Exists`, `Ontology Spine Inheritance`, `Method And Neighboring Layers`, `Boundary Reminder` |
+| [Root Surface Law](ROOT_SURFACE_LAW.md) (`docs/ROOT_SURFACE_LAW.md`) | root and docs-root placement law for keeping public entry surfaces compact and owner-routed | `Root Principle`, `Docs-Root Principle`, `Allowed Root Surfaces`, `Surfaces That Should Not Live In Root`, `Decision Procedure Before Adding A Root File`, `Current Root Decisions`, `Final Rule` |
+| [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) (`docs/TECHNIQUE_ATOM_CONTRACT.md`) | canonical contract for one atomic executable technique rather than a skill, playbook, chain, or workflow object | `Core Contract`, `Standalone Portability Target`, `Small-Agent Target`, `Scale Target`, `Not A Skill`, `Authoring Checks`, `Distillation Rule`, `Template And Capsule Implication`, `Review Outcome` |
+| [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) (`docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`) | classification topology contract for scaling the technique corpus beyond overloaded domains or flat categories | `Purpose`, `Topology Law`, `Axis Stack`, `Current Axes`, `Future Axes`, `Relation Topology`, `Growth Rules`, `Mechanics Interface`, `Next Honest Build Path` |
+| [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | public corpus map by status, technique id, and domain | `Canonical techniques`, `Promoted techniques`, `Deprecated techniques`, `Notes` |
 
 ## Contribution / Policy
 
@@ -43,7 +56,7 @@ Use these when the question is how to contribute safely, publicly, and within th
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | contributor doctrine for public-safe planning, focused diffs, verification, and reporting | `Purpose`, `Owner lane`, `Start here`, `AGENTS stack law`, `Route away when`, `Verify`, `Report`, `Full reference` |
+| [AGENTS.md](../AGENTS.md) (`AGENTS.md`) | contributor doctrine for public-safe planning, focused diffs, verification, and reporting | `Purpose`, `Owner lane`, `Start here`, `Route modes`, `AGENTS stack law`, `Route away when`, `Verify`, `Report`, `Full reference` |
 | [Contributing to aoa-techniques](../CONTRIBUTING.md) (`CONTRIBUTING.md`) | public contribution path, review criteria, and status-transition rules | `What belongs here`, `Before opening a PR`, `External provenance`, `GitHub intake surfaces`, `Preferred PR scope`, `Recommended PR title format`, `Review criteria`, `Status transitions`, `Security` |
 | [SECURITY.md](../SECURITY.md) (`SECURITY.md`) | private reporting route and public-hygiene security expectations | `Purpose`, `Report privately if you find`, `Do not post publicly`, `Security expectations for contributors`, `Public hygiene checklist` |
 | [Code of Conduct](../CODE_OF_CONDUCT.md) (`CODE_OF_CONDUCT.md`) | public collaboration and enforcement expectations for contributors | `Our standard`, `Enforcement` |
@@ -62,11 +75,13 @@ Use these when the question is what changed, what is currently unreleased, and h
 
 | doc | bounded role | top-level sections |
 |---|---|---|
+| [Roadmap](../ROADMAP.md) (`ROADMAP.md`) | live repo-level direction and horizon posture for technique-canon growth | `Authority`, `Update Rule`, `Current Direction`, `Current Checked Contour`, `Horizon: Root Clarity`, `Horizon: Technique Atom`, `Horizon: Corpus Topology`, `Horizon: Small-Agent Usability`, `Horizon: Mechanics To Canon`, `Horizon: Evidence And Promotion`, `Horizon: Standalone Portability`, `Horizon: Generated Companions`, `When The Time Comes`, `Standing Direction` |
+| [QUESTBOOK.md — aoa-techniques](../QUESTBOOK.md) (`QUESTBOOK.md`) | compact root index for durable technique-canon obligations that should survive the current diff | `Update trigger`, `Frontier`, `Near`, `Latent / parked`, `Harvest candidates`, `Backing files`, `Rule` |
 | [Changelog](../CHANGELOG.md) (`CHANGELOG.md`) | release and unreleased status history for the public corpus | `[Unreleased]`, `[0.4.2] - 2026-04-23`, `[0.4.1] - 2026-04-19`, `[0.4.0] - 2026-04-10`, `[0.3.0] - 2026-04-01`, `[0.2.0] - 2026-03-23`, `[0.1.0] - 2026-03-17` |
 | [Releasing `aoa-techniques`](RELEASING.md) (`docs/RELEASING.md`) | bounded release flow and validation path for public docs and technique updates | `Release goals`, `Recommended release flow`, `Release note shape`, `Versioning guidance`, `What not to optimize yet`, `Current stance` |
 
 ## Boundaries
 
 - The source of meaning stays in the authored docs themselves.
-- The bounded source set is exactly the 12 authoritative public docs/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.
-- This surface and its manifest are routing aids only. They do not become a new source of truth or a status-policy engine.
+- The bounded source set is exactly the 18 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.
+- This surface and its manifest are routing aids only. They do not become a new source of truth, root-authority replacement, or status-policy engine.
