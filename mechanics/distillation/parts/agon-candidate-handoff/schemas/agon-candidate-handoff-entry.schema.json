@@ -105,6 +105,10 @@
       ],
       "type": "string"
     },
+    "gate_card": {
+      "pattern": "^mechanics/distillation/parts/agon-candidate-handoff/gates/.+\\.md$",
+      "type": "string"
+    },
     "next_move": {
       "minLength": 1,
       "type": "string"

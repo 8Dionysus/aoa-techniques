@@ -26,7 +26,8 @@ parts.
 4. Use [Cross-Layer Candidate Ledger](parts/cross-layer-candidate-ledger/README.md)
    for sibling-repo donor-note accounting.
 5. Use [Agon Candidate Handoff](parts/agon-candidate-handoff/README.md) when
-   Agon requested-only candidates need Distillation lanes before an atom card.
+   Agon requested-only candidates need Distillation lanes and gate cards before
+   any bundle draft.
 6. Use [Long-Gap Reentry](parts/long-gap-reentry/README.md) when old promoted
    material needs a new external contract before another honest canonical pass.
 

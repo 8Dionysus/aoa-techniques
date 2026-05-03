@@ -63,6 +63,8 @@ PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
 
 PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
     "mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/README.md",
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
     "mechanics/distillation/parts/agon-candidate-handoff/generated/agon_candidate_handoff.min.json",
     "mechanics/distillation/parts/agon-candidate-handoff/schemas/agon-candidate-handoff-entry.schema.json",
     "mechanics/distillation/parts/agon-candidate-handoff/schemas/agon-candidate-handoff.schema.json",
@@ -255,11 +257,53 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "candidate:aoa-techniques:agon/request-evidence-practice",
             registry["first_narrowing_watch"],
         )
+        self.assertEqual(
+            {
+                "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md"
+            },
+            registry["gate_cards"],
+        )
         self.assertIn(
             "agon.tech.epistemic.doctrine_revision_review_practice",
             registry["owner_route_holds"],
         )
         self.assertIn("does not define Agon law", registry["stop_line"])
+
+    def test_agon_candidate_gate_cards_are_bounded_and_link_clean(self) -> None:
+        gate_root = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "agon-candidate-handoff"
+            / "gates"
+        )
+
+        for gate_path in sorted(gate_root.glob("*.md")):
+            text = gate_path.read_text(encoding="utf-8")
+            with self.subTest(gate_path=gate_path.name):
+                for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", text):
+                    if re.match(r"^[a-z]+:", target) or target.startswith("#"):
+                        continue
+                    target_path = target.split("#", 1)[0]
+                    if not target_path:
+                        continue
+                    resolved = (gate_path.parent / target_path).resolve()
+                    self.assertTrue(
+                        resolved.is_relative_to(REPO_ROOT.resolve()),
+                        f"{gate_path.name} link leaves repo: {target}",
+                    )
+                    self.assertTrue(
+                        resolved.exists(),
+                        f"{gate_path.name} has broken link: {target}",
+                    )
+
+                if gate_path.name == "README.md":
+                    continue
+                self.assertIn("not a technique bundle", text)
+                self.assertIn("Do not define Agon", text)
+                self.assertIn("Do not issue proof", text)
+                self.assertNotIn("gate-card-landed, promoted", text)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

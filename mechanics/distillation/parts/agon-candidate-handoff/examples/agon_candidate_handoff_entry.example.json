@@ -3,6 +3,7 @@
   "source_part": "move-technique-bridge",
   "source_status": "requested_not_landed",
   "source_label": "request_evidence",
+  "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
   "distillation_lane": "first_narrowing_watch",
   "distillation_gate": {
     "atomic_move_status": "candidate_named",
@@ -22,5 +23,5 @@
     "nearest_wrong_owner": "aoa-evals",
     "bridge_stop_line": "Do not treat an evidence request as proof, verdict, or eval authority."
   },
-  "next_move": "Build a gate card around missing evidence, acceptable receipt, and return condition."
+  "next_move": "Use the landed gate card to draft a minimal public-safe example before any bundle pass."
 }

@@ -66,6 +66,26 @@ def test_agon_candidate_handoff_shape() -> None:
     assert "agon.tech.epistemic.doctrine_revision_review_practice" in data[
         "owner_route_holds"
     ]
+    assert data["gate_cards"] == {
+        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md"
+    }
+    gate_card_rows = [
+        candidate for candidate in data["candidates"] if "gate_card" in candidate
+    ]
+    assert gate_card_rows == [
+        {
+            "atomic_move_status": "candidate_named",
+            "candidate_ref": "candidate:aoa-techniques:agon/request-evidence-practice",
+            "distillation_lane": "first_narrowing_watch",
+            "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
+            "likely_domain": "agent-workflows",
+            "nearest_wrong_owner": "aoa-evals",
+            "primary_kind": "evidence-request",
+            "source_label": "request_evidence",
+            "source_part": "move-technique-bridge",
+            "source_status": "requested_not_landed",
+        }
+    ]
     assert "does not define Agon law" in data["stop_line"]
 
 
@@ -97,4 +117,35 @@ def test_builder_rejects_lane_atomic_status_drift() -> None:
     first["distillation_gate"]["atomic_move_status"] = "not_named_cleanly"
     case = unittest.TestCase()
     with case.assertRaisesRegex(builder.ValidationError, "must use atomic_move_status"):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_missing_gate_card() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_card = next(entry for entry in config["entries"] if "gate_card" in entry)
+    with_card["gate_card"] = "mechanics/distillation/parts/agon-candidate-handoff/gates/missing.md"
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "gate_card path does not exist"):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_gate_card_on_hold_lane() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_card = next(entry for entry in config["entries"] if "gate_card" in entry)
+    with_card["distillation_lane"] = "source_boundary_hold"
+    with_card["distillation_gate"]["atomic_move_status"] = "not_named_cleanly"
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(
+        builder.ValidationError, "only first_narrowing_watch entries may carry gate_card"
+    ):
         builder.validate_config(config)
