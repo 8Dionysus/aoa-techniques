@@ -39,6 +39,14 @@ The move has four fields:
 
 - [request-evidence-minimal-public-safe](examples/request-evidence-minimal-public-safe.md)
 
+## Gate Checklist
+
+- [request-evidence-gate-checklist](checklists/request-evidence-gate-checklist.md)
+
+## Gate Evidence Note
+
+- [request-evidence-gate-evidence-note](evidence-notes/request-evidence-gate-evidence-note.md)
+
 ## Topology Read
 
 | Axis | Read |
@@ -93,6 +101,6 @@ hand motion, not the law of the arena.
 
 ## Next Move
 
-Draft a checklist plus evidence note for this candidate. If those stay compact,
+Run a bundle-readiness review for this candidate. If the review stays compact,
 the candidate can move to a one-bundle drafting pass without changing Agon
 source status.

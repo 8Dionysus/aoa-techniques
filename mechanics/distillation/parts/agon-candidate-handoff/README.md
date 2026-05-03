@@ -95,6 +95,14 @@ Current landed gate example:
 
 - [request-evidence-minimal-public-safe](gates/examples/request-evidence-minimal-public-safe.md)
 
+Current landed gate checklist:
+
+- [request-evidence-gate-checklist](gates/checklists/request-evidence-gate-checklist.md)
+
+Current landed gate evidence note:
+
+- [request-evidence-gate-evidence-note](gates/evidence-notes/request-evidence-gate-evidence-note.md)
+
 ## Stop Line
 
 This part must not define Agon law, create skill workflows, issue proof

@@ -113,6 +113,14 @@
       "pattern": "^mechanics/distillation/parts/agon-candidate-handoff/gates/examples/.+\\.md$",
       "type": "string"
     },
+    "gate_checklist": {
+      "pattern": "^mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/.+\\.md$",
+      "type": "string"
+    },
+    "gate_evidence_note": {
+      "pattern": "^mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/.+\\.md$",
+      "type": "string"
+    },
     "next_move": {
       "minLength": 1,
       "type": "string"

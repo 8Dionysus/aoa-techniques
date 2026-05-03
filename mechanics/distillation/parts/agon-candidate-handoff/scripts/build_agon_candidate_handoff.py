@@ -90,6 +90,17 @@ GATE_CARD_PREFIX = "mechanics/distillation/parts/agon-candidate-handoff/gates/"
 GATE_EXAMPLE_PREFIX = (
     "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/"
 )
+GATE_CHECKLIST_PREFIX = (
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/"
+)
+GATE_EVIDENCE_NOTE_PREFIX = (
+    "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/"
+)
+GATE_CARD_EXCLUDED_PREFIXES = (
+    GATE_EXAMPLE_PREFIX,
+    GATE_CHECKLIST_PREFIX,
+    GATE_EVIDENCE_NOTE_PREFIX,
+)
 
 
 class ValidationError(Exception):
@@ -193,8 +204,8 @@ def validate_entry(entry: dict[str, Any], source_map: dict[str, dict[str, str]])
     if gate_card is not None:
         if not isinstance(gate_card, str) or not gate_card.startswith(GATE_CARD_PREFIX):
             raise ValidationError(f"{ref}: gate_card must stay under the handoff gates directory")
-        if gate_card.startswith(GATE_EXAMPLE_PREFIX):
-            raise ValidationError(f"{ref}: gate_card must not point to a gate example")
+        if gate_card.startswith(GATE_CARD_EXCLUDED_PREFIXES):
+            raise ValidationError(f"{ref}: gate_card must point to a gate card, not a child artifact")
         gate_path = REPO_ROOT / gate_card
         if not gate_path.is_file():
             raise ValidationError(f"{ref}: gate_card path does not exist")
@@ -217,6 +228,42 @@ def validate_entry(entry: dict[str, Any], source_map: dict[str, dict[str, str]])
         if lane != "first_narrowing_watch":
             raise ValidationError(
                 f"{ref}: only first_narrowing_watch entries may carry gate_example"
+            )
+
+    gate_checklist = entry.get("gate_checklist")
+    if gate_checklist is not None:
+        if gate_example is None:
+            raise ValidationError(f"{ref}: gate_checklist requires gate_example")
+        if not isinstance(gate_checklist, str) or not gate_checklist.startswith(
+            GATE_CHECKLIST_PREFIX
+        ):
+            raise ValidationError(
+                f"{ref}: gate_checklist must stay under the handoff gate checklists directory"
+            )
+        checklist_path = REPO_ROOT / gate_checklist
+        if not checklist_path.is_file():
+            raise ValidationError(f"{ref}: gate_checklist path does not exist")
+        if lane != "first_narrowing_watch":
+            raise ValidationError(
+                f"{ref}: only first_narrowing_watch entries may carry gate_checklist"
+            )
+
+    gate_evidence_note = entry.get("gate_evidence_note")
+    if gate_evidence_note is not None:
+        if gate_checklist is None:
+            raise ValidationError(f"{ref}: gate_evidence_note requires gate_checklist")
+        if not isinstance(gate_evidence_note, str) or not gate_evidence_note.startswith(
+            GATE_EVIDENCE_NOTE_PREFIX
+        ):
+            raise ValidationError(
+                f"{ref}: gate_evidence_note must stay under the handoff gate evidence-notes directory"
+            )
+        note_path = REPO_ROOT / gate_evidence_note
+        if not note_path.is_file():
+            raise ValidationError(f"{ref}: gate_evidence_note path does not exist")
+        if lane != "first_narrowing_watch":
+            raise ValidationError(
+                f"{ref}: only first_narrowing_watch entries may carry gate_evidence_note"
             )
 
 
@@ -281,6 +328,10 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             row["gate_card"] = entry["gate_card"]
         if "gate_example" in entry:
             row["gate_example"] = entry["gate_example"]
+        if "gate_checklist" in entry:
+            row["gate_checklist"] = entry["gate_checklist"]
+        if "gate_evidence_note" in entry:
+            row["gate_evidence_note"] = entry["gate_evidence_note"]
         candidate_rows.append(row)
     return {
         "schema_version": EXPECTED_INDEX_SCHEMA,
@@ -309,6 +360,16 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             entry["candidate_ref"]: entry["gate_example"]
             for entry in entries
             if "gate_example" in entry
+        },
+        "gate_checklists": {
+            entry["candidate_ref"]: entry["gate_checklist"]
+            for entry in entries
+            if "gate_checklist" in entry
+        },
+        "gate_evidence_notes": {
+            entry["candidate_ref"]: entry["gate_evidence_note"]
+            for entry in entries
+            if "gate_evidence_note" in entry
         },
         "candidates": candidate_rows,
         "stop_line": (
