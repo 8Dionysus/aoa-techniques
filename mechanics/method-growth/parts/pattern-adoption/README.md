@@ -8,6 +8,20 @@ Seed family: Experience Adoption Forge
 
 How shared patterns become reusable techniques.
 
+## Extracted Atom
+
+The atomic technique extracted from this part is
+[AOA-T-0101 local-pattern-adoption-gate](../../../../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md).
+
+That bundle owns one portable gate: before one shared pattern becomes durable
+local behavior, name local owner consent, compatibility evidence, rollback or
+quarantine, and retention watch.
+
+This part still owns the broader Method-growth route around request, readiness,
+shadow, decision, activation, and retention pressure. Do not use the promoted
+bundle as skill activation, proof verdict, route behavior, memory truth, runtime
+mutation, or sibling owner acceptance.
+
 ## Core Law
 
 - Adoption must be explicit.

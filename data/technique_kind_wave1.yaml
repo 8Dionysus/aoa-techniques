@@ -606,3 +606,27 @@ entries:
   status: promoted
   kind: recovery
   family: antifragility-recovery
+- id: AOA-T-0101
+  name: local-pattern-adoption-gate
+  domain: agent-workflows
+  status: promoted
+  kind: guardrail
+  family: automation-governance
+- id: AOA-T-0102
+  name: skill-proposal-handoff-packet
+  domain: agent-workflows
+  status: promoted
+  kind: handoff
+  family: automation-governance
+- id: AOA-T-0103
+  name: adopted-practice-retention-review
+  domain: agent-workflows
+  status: promoted
+  kind: assessment
+  family: automation-governance
+- id: AOA-T-0104
+  name: superseded-practice-obsolescence-route
+  domain: agent-workflows
+  status: promoted
+  kind: handoff
+  family: automation-governance

@@ -43,3 +43,16 @@ federation harvest has already approved a shared pattern, but it refuses to
 treat approval as automatic adoption. Adoption is a second sovereign act: local
 owner consent, compatibility, shadow proof, rollback path, retention watch, and
 kind-safe projection are required.
+
+## Extracted Atom
+
+[AOA-T-0104 superseded-practice-obsolescence-route](../../../../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md)
+carries the reusable route move: make supersession, merge, reanchor, defer,
+drop, or deprecation-review pressure explicit for one adopted or shadowed
+practice by naming the current stage, stop reason, owner receipt target, source
+evidence, rollback or quarantine posture, and smallest retained lesson.
+
+This part still owns broader Method-growth obsolescence pressure. The extracted
+atom does not delete, deprecate, erase evidence, write memory truth, prove
+failure, activate a skill, change routing, mutate runtime behavior, or mark
+owner-local retirement.

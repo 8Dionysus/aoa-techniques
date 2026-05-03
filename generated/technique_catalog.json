@@ -5462,6 +5462,234 @@
           "path": "notes/second-context-adaptation.md"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0101",
+      "name": "local-pattern-adoption-gate",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "promoted",
+      "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
+      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "mechanics/method-growth/parts/pattern-adoption/README.md + mechanics/method-growth/PROVENANCE.md",
+        "note": "Extracted from the Method-growth adoption surface where a shared pattern must pass a second local adoption act before it becomes durable behavior."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "method-growth",
+        "adoption",
+        "owner-consent",
+        "rollback"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-05-03",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0076"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0090"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0102",
+      "name": "skill-proposal-handoff-packet",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "promoted",
+      "summary": "Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.",
+      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "mechanics/method-growth/parts/technique-to-skill-handoff/README.md + mechanics/method-growth/PROVENANCE.md",
+        "note": "Extracted from the Method-growth handoff surface where technique-side adoption pressure may request a skill proposal while technique canon and skill execution remain separate owner truths."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "method-growth",
+        "skill-proposal",
+        "handoff",
+        "owner-boundary"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "easy",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-05-03",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0040"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0087"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0101"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0103",
+      "name": "adopted-practice-retention-review",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "promoted",
+      "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
+      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "mechanics/method-growth/parts/retention-checks/README.md + mechanics/method-growth/PROVENANCE.md",
+        "note": "Extracted from the Method-growth retention surface where adopted practice must remain active only while evidence, rollback, and retention posture stay reviewable."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "method-growth",
+        "retention",
+        "adoption",
+        "review"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-05-03",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "complements",
+          "target": "AOA-T-0101"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0090"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0104",
+      "name": "superseded-practice-obsolescence-route",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "promoted",
+      "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
+      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "origin": {
+        "project": "aoa-techniques",
+        "path": "mechanics/method-growth/parts/obsolescence/README.md + mechanics/method-growth/PROVENANCE.md",
+        "note": "Extracted from the Method-growth obsolescence surface, with the AoA center pruning contract used as boundary reinforcement for explicit supersession, drop, merge, defer, or reanchor routes."
+      },
+      "owners": [
+        "8Dionysus"
+      ],
+      "tags": [
+        "agent-workflows",
+        "method-growth",
+        "obsolescence",
+        "supersession",
+        "owner-boundary"
+      ],
+      "maturity_score": 3,
+      "rigor_level": "bounded",
+      "reversibility": "moderate",
+      "review_required": true,
+      "validation_strength": "source_backed",
+      "public_safety_reviewed_at": "2026-05-03",
+      "export_ready": true,
+      "relations": [
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0103"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0090"
+        },
+        {
+          "type": "complements",
+          "target": "AOA-T-0076"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "origin_evidence",
+          "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        }
+      ]
     }
   ]
 }

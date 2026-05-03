@@ -5613,6 +5613,230 @@
           "markdown": "What can vary across projects:\n\n- receipt schema names and storage locations\n- the exact routing, playbook, or KAG surfaces used for the next hop\n- whether the degraded continuation remains active or becomes an explicit hold\n- how reviewed closeout is recorded\n\nWhat should stay invariant:\n\n- one owner-local receipt comes first\n- degraded continuation stays weaker than the normal path\n- blocked widening remains explicit\n- reviewed closeout comes before stronger proof reading\n- eval bridge candidates stay weaker than verdicts"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0101",
+      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Gate one shared practice pattern before it becomes durable local behavior, so\napproval, precedent, or repeated usefulness does not silently turn into local\nadoption without owner consent, compatibility evidence, rollback, and retention\nwatch."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a shared practice pattern has already been noticed, approved upstream, or\n  proven useful elsewhere\n- a local repository, team, or owner surface is considering making that pattern\n  part of normal behavior\n- the pattern might change contributor instructions, review expectations,\n  generated surfaces, operating habits, or default workflow posture\n- the reviewer needs one adoption gate before drafting implementation or\n  activation changes\n- shadow use, quarantine, defer, or reject outcomes should remain honest\n  possibilities"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the source material is still several mixed patterns that have not been split\n- the real task is choosing the owner layer for an isolated reusable unit\n- the work only needs a nearest-wrong-target rejection beside an already chosen\n  verdict\n- the pattern already has explicit local adoption, rollback, and retention\n  evidence and only needs implementation\n- the request is to activate a skill, runtime, route, proof verdict, or memory\n  object that belongs to another owner"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one shared pattern proposed for local adoption\n- the local owner or surface that would change behavior\n- source or precedent evidence for the pattern\n- compatibility notes for the local context\n- owner consent state\n- rollback or quarantine option\n- retention watch or review interval"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one local adoption gate result such as `adopt`, `shadow`, `quarantine`,\n  `defer`, or `reject`\n- one owner-consent statement or missing-consent blocker\n- one compatibility and evidence note\n- one rollback or quarantine path\n- one retention watch note for later review"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one named shared pattern. Split or hold if several patterns are\n   still fused together.\n2. Name the local owner and the exact behavior surface that would change if the\n   pattern were adopted.\n3. Check whether local owner consent is explicit. If it is not, stop at\n   `defer` or `shadow` instead of adopting.\n4. Compare the pattern's source evidence with the local compatibility\n   conditions that matter for this surface.\n5. Require a rollback, quarantine, or removal path before any durable behavior\n   change is accepted.\n6. Require a retention watch so adoption can be revisited after real use.\n7. Emit one bounded adoption gate result. Keep the result smaller than the\n   implementation, skill proposal, proof verdict, route change, or runtime\n   activation that may follow."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one gate result covers one shared pattern and one local behavior surface\n- upstream approval or useful precedent is not local adoption\n- owner consent, compatibility evidence, rollback, and retention watch must all\n  stay visible\n- `shadow`, `quarantine`, `defer`, and `reject` are valid outcomes, not failed\n  adoption\n- the gate does not grant skill activation, proof authority, route behavior,\n  runtime mutation, memory truth, or sibling owner acceptance\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), this technique does not choose\nthe primary owner layer for any reusable unit; it assumes a local adoption\nsurface is already in view and gates whether that surface may change behavior.\nUnlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does\nnot only sharpen a chosen verdict by rejecting an adjacent target; it emits the\nlocal adopt, shadow, quarantine, defer, or reject posture itself."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- a broad method-growth lifecycle is squeezed into one gate result\n- owner consent is implied from usefulness or upstream approval\n- rollback and retention are named symbolically but cannot actually be used\n\n### Negative effects\n\n- too much adoption ceremony can slow clearly low-risk local conventions\n- a gate result can make tentative shadow practice look more settled than it is\n- local owners may overfit the pattern to one repo and weaken portability\n\n### Misuse patterns\n\n- treating the gate as permission to implement or activate the pattern\n- using upstream approval as a substitute for local owner consent\n- calling a pattern adopted because it appeared in one successful session\n- hiding missing rollback behind vague \"can revert later\" language\n\n### Detection signals\n\n- the adoption note cannot name the local behavior surface that changes\n- consent, rollback, or retention fields are blank or generic\n- the result jumps from precedent directly to implementation\n- reviewers cannot tell whether the posture is `adopt`, `shadow`, `quarantine`,\n  `defer`, or `reject`\n\n### Mitigations\n\n- keep the gate to one pattern and one local behavior surface\n- require explicit owner consent before `adopt`\n- prefer `shadow`, `quarantine`, or `defer` when compatibility or rollback is\n  weak\n- record a retention watch so adoption can be rechecked after real use"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one shared pattern is named explicitly\n- one local owner and behavior surface are named explicitly\n- owner consent is explicit or the result stops short of `adopt`\n- compatibility evidence is visible\n- rollback or quarantine is concrete enough to use\n- a retention watch exists\n- the result does not imply skill, route, proof, runtime, memory, or sibling\n  owner activation\n\nSee `checks/local-pattern-adoption-gate-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the names of local owners and behavior surfaces\n- the allowed gate result labels\n- whether shadow practice is recorded in prose, YAML, or a review packet\n- how retention watches are scheduled or reviewed\n\nWhat should stay invariant:\n- upstream approval does not equal local adoption\n- one pattern gates against one local behavior surface\n- owner consent, compatibility, rollback, and retention remain visible\n- the gate stays smaller than implementation or activation\n\nProject-shaped details that should not be treated as invariant:\n- one AoA repository map\n- one Method-growth vocabulary\n- one PR template or review checklist\n- one command, bot, or runtime activation path\n\nAoA adaptation example:\n- a pattern may originate from `Agents-of-Abyss`, `aoa-skills`, or another\n  sibling surface\n- `aoa-techniques` can adopt only the technique-layer practice posture it owns\n- skill execution, proof verdicts, route behavior, memory objects, and runtime\n  changes still require their own owners after the gate"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0102",
+      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Turn one technique-side adoption pressure into a bounded skill-proposal handoff\npacket, so the receiving skill owner gets enough trigger, workflow, dependency,\nrisk, and verification context without treating the packet as skill acceptance\nor activation."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a reusable technique or technique candidate is repeatedly needed as part of\n  agent-facing execution\n- an adoption review shows that the practice may need skill packaging, but the\n  skill owner has not accepted or authored a skill yet\n- reviewers need to preserve technique dependencies, trigger boundaries, risk\n  posture, and verification hints for the receiving owner\n- the next honest artifact is a proposal packet rather than a live skill,\n  playbook, eval, route, memory object, or runtime change\n- the handoff must stay portable for a skill-owning layer outside the origin\n  project"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the source material is still several unrelated practices or workflow needs\n- the real task is choosing whether the object is a technique, skill, playbook,\n  eval, route, memory object, or role contract\n- the receiving skill owner has already accepted the skill and only needs\n  implementation work\n- the request is to activate a skill, install a runtime command, or grant\n  durable agent behavior\n- the reusable practice still lacks enough evidence to justify a skill-shaped\n  proposal"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one technique, technique candidate, or adopted practice under review\n- the execution pressure that suggests skill packaging may help\n- technique dependency references or equivalent practice anchors\n- a proposed trigger boundary for when the skill would be selected\n- a sketch of inputs, outputs, and workflow shape\n- known risks, approval seams, rollback needs, and verification hints\n- the intended receiving owner or skill-owning surface"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one skill-proposal handoff packet\n- explicit technique dependency references\n- one proposed skill trigger boundary\n- one compact workflow-shape sketch with inputs and outputs\n- risk, approval, rollback, and verification notes for owner review\n- a non-acceptance stop-line stating that the packet does not create, approve,\n  or activate a skill"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one named reusable practice. Split or defer if several practices\n   are still fused together.\n2. State the execution pressure that makes a skill proposal plausible: repeated\n   agent-facing use, workflow packaging, tool choreography, approval posture, or\n   verification needs.\n3. Name the receiving skill owner and the nearest wrong owner target that should\n   not receive this packet.\n4. Draft the packet fields: technique dependencies, proposed trigger boundary,\n   inputs, outputs, workflow shape, risk notes, approval seams, rollback path,\n   and verification hints.\n5. Keep the procedure sketch smaller than the eventual skill. Do not author\n   skill wording, command syntax, install behavior, runtime policy, or proof\n   claims inside the packet.\n6. Add the non-acceptance stop-line: the packet is a proposal for owner review,\n   not skill acceptance, skill creation, or activation.\n7. If the packet cannot name a trigger, workflow shape, owner, and verification\n   hint, return `defer` instead of emitting a vague proposal."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../docs/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the packet quietly becomes a skill draft instead of a handoff\n- technique meaning is copied into the packet and drifts from the source bundle\n- a vague desire for automation is treated as enough evidence for a skill\n  proposal\n\n### Negative effects\n\n- extra handoff paperwork can slow a simple technique-only reuse path\n- receiving owners may overread the packet as approval pressure\n- too many proposal packets can create queue noise if `defer` is underused\n\n### Misuse patterns\n\n- calling the packet an accepted skill because it has trigger and workflow\n  fields\n- adding command syntax, installer steps, or runtime activation to the packet\n- hiding missing verification behind broad \"owner will decide later\" language\n- routing scenario composition or proof claims to a skill owner because the\n  packet format is convenient\n\n### Detection signals\n\n- reviewers cannot tell which owner must accept or reject the proposal\n- the packet lacks a trigger boundary, workflow shape, or verification hint\n- the proposal contains live activation wording\n- the packet repeats technique text instead of referencing technique IDs or\n  source anchors\n- no nearest wrong target or defer condition is visible\n\n### Mitigations\n\n- keep the packet to one proposed skill and one receiving owner\n- reference technique dependencies instead of copying their bodies\n- include an explicit non-acceptance stop-line in every packet\n- use `defer` when evidence, trigger boundary, or workflow shape is missing\n- route proof, scenario, memory, runtime, and command concerns to their owners"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one reusable practice or technique candidate is named\n- one receiving skill owner is named\n- trigger boundary, inputs, outputs, workflow shape, risks, and verification\n  hints are visible\n- technique dependencies are referenced instead of redefined\n- the packet states that it does not create, accept, or activate a skill\n- nearest wrong targets or defer conditions are explicit\n\nSee `checks/skill-proposal-handoff-packet-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the name and format of the receiving skill owner\n- the fields used for trigger, inputs, outputs, risks, and verification\n- whether proposal packets live as Markdown, YAML, issue templates, or review\n  notes\n- whether a local owner calls the result `proposal`, `candidate`, `request`, or\n  another bounded pre-acceptance state\n\nWhat should stay invariant:\n- technique meaning remains separate from skill workflow meaning\n- the handoff packet does not accept or activate the skill\n- one packet covers one proposed skill for one receiving owner\n- trigger boundary, workflow shape, risks, and verification hints remain\n  visible\n- weak proposals defer instead of becoming vague skill queue items\n\nProject-shaped details that should not be treated as invariant:\n- one repository map\n- one skill bundle template\n- one command system\n- one runtime activation path\n- one proof or evaluation pipeline\n\nAoA adaptation example:\n- `aoa-techniques` may emit a proposal packet when Method-growth pressure shows\n  that a technique should be considered by `aoa-skills`\n- `aoa-skills` owns any accepted skill bundle, trigger boundary, procedure,\n  verification, and activation discipline\n- proof claims still route to `aoa-evals`, scenario composition to\n  `aoa-playbooks`, and reusable practice meaning stays in `aoa-techniques`"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0103",
+      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Review one already-adopted practice to decide whether it should remain active,\nbe revised, be quarantined, be deferred for another review, or route toward\nobsolescence without silently treating past adoption as permanent approval."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a practice was previously adopted, shadowed, or made part of normal behavior\n- the adoption record included a retention watch, review interval, or rollback\n  expectation\n- evidence, usefulness, owner fit, or negative effects may have changed after\n  real use\n- reviewers need one explicit retention verdict before keeping the practice\n  active\n- the next route might be `retain`, `revise`, `quarantine`, `defer`, or\n  `route_to_obsolescence`"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the practice has not passed a local adoption gate yet\n- the real question is whether to adopt a new shared pattern\n- the current task is to deprecate, remove, or supersede the practice directly\n- the practice lacks enough real use to evaluate retention\n- the work is really a proof verdict, skill activation, route behavior, memory\n  writeback, or runtime rollback owned by another layer"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one adopted or shadowed practice under review\n- the original adoption note or equivalent owner record\n- current evidence of usefulness, fit, or harm\n- known drift, negative effects, or support cost\n- the active rollback, quarantine, or removal path\n- the owner who can confirm whether the practice should remain active\n- the next review interval or defer condition"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one retention verdict such as `retain`, `revise`, `quarantine`, `defer`, or\n  `route_to_obsolescence`\n- a current evidence note\n- a drift or negative-effects note\n- an owner-confirmation or missing-confirmation note\n- a rollback, quarantine, or obsolescence route reminder\n- a next review interval or explicit reason no further retention watch is\n  needed"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one adopted or shadowed practice. Stop if the object is still only\n   a proposal, donor candidate, or unreviewed habit.\n2. Reopen the original adoption record and name the owner, behavior surface,\n   rollback or quarantine path, and retention watch that were promised.\n3. Compare current evidence against the reason the practice was adopted:\n   usefulness, compatibility, repeated need, reduced risk, or clearer workflow.\n4. Look for drift, negative effects, support cost, stale assumptions, or owner\n   discomfort that could make retention dishonest.\n5. Check whether rollback, quarantine, or removal is still concrete enough to\n   use if the practice should stop being active.\n6. Emit one retention verdict. Use `retain` only when evidence, owner fit, and\n   rollback posture remain visible.\n7. Route `quarantine` or `route_to_obsolescence` without performing deletion,\n   deprecation, skill activation, proof claims, or memory writeback inside this\n   technique."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one review covers one adopted or shadowed practice and one owner surface\n- past adoption does not guarantee current retention\n- `retain` requires current evidence, owner fit, and usable rollback or\n  quarantine posture\n- `revise`, `quarantine`, `defer`, and `route_to_obsolescence` are honest\n  results, not failed retention\n- the review does not adopt a new practice, delete an old practice, activate a\n  skill, issue a proof verdict, write memory truth, or mutate runtime behavior\n- missing evidence, missing owner confirmation, or unusable rollback must stop\n  the result short of `retain`\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), this technique does\nnot decide whether a shared pattern may become local behavior; it reviews a\npractice after adoption or shadow use. Unlike\n[AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does not only\nreject an adjacent promotion target; it emits the retention verdict itself."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- retention review becomes a ceremonial renewal with no current evidence\n- `retain` is chosen because removing the practice feels inconvenient\n- drift, support cost, or owner discomfort is hidden behind old adoption notes\n\n### Negative effects\n\n- frequent retention reviews can burden simple low-risk conventions\n- a quarantine verdict can interrupt useful local practice if evidence is\n  under-collected\n- retention language can make a practice seem more permanent than the evidence\n  supports\n\n### Misuse patterns\n\n- using retention review to adopt a new practice without an adoption gate\n- using retention review to deprecate or delete without an obsolescence route\n- treating a retained practice as proof of quality or public default status\n- hiding missing rollback behind \"we have used it for a while\" language\n\n### Detection signals\n\n- reviewers cannot find the original adoption or shadow-use record\n- the write-up has old rationale but no current evidence\n- rollback, quarantine, or obsolescence route is vague or unusable\n- no owner can confirm that the practice still belongs on the active surface\n- the verdict jumps from stale use directly to permanent retention\n\n### Mitigations\n\n- require one current evidence note before `retain`\n- keep owner confirmation visible\n- prefer `defer`, `revise`, or `quarantine` when rollback or evidence is weak\n- route actual deprecation, removal, proof, memory, and runtime changes to their\n  owners\n- schedule the next review when active retention still needs a watch"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one adopted or shadowed practice is named\n- the original owner surface and adoption record are visible\n- current evidence is compared against the adoption reason\n- drift, negative effects, and support cost were checked\n- rollback, quarantine, or obsolescence route is concrete enough to use\n- the verdict does not imply new adoption, deletion, proof, memory, skill, or\n  runtime activation\n\nSee `checks/adopted-practice-retention-review-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- retention verdict labels\n- adoption-record format\n- retention interval\n- what counts as owner confirmation\n- whether the review is recorded in Markdown, YAML, issue comments, or a local\n  review packet\n\nWhat should stay invariant:\n- past adoption does not equal current retention\n- current evidence and owner fit are required before `retain`\n- rollback, quarantine, or obsolescence route remains visible\n- the review stops before deletion, proof, memory, runtime, or skill activation\n\nProject-shaped details that should not be treated as invariant:\n- one repository map\n- one retention schedule\n- one changelog or decision-note format\n- one runtime rollback mechanism\n- one proof or evaluation pipeline\n\nAoA adaptation example:\n- a Method-growth retention watch can ask whether an adopted technique-layer\n  practice should remain active in `aoa-techniques`\n- obsolescence or supersession routes stay in the Method-growth obsolescence\n  part until a separate atom is extracted\n- memory retention reasons route to `aoa-memo`, proof claims to `aoa-evals`,\n  and skill execution changes to `aoa-skills`"
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0104",
+      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Route one adopted or shadowed practice that should not remain active as-is\ntoward supersession, merge, reanchor, defer, drop, or deprecation review while\npreserving owner receipt, source evidence, rollback or quarantine posture, and\nthe smallest retained lesson."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- a retention review says an adopted or shadowed practice should route toward\n  obsolescence instead of staying active\n- a replacement, merge target, reanchor target, defer reason, or drop reason is\n  visible but has not been accepted by the object owner\n- reviewers need to prevent silent deletion while also preventing stale active\n  practice from lingering\n- the owner needs a compact route packet before any local retirement,\n  supersession, or deprecation action\n- the useful lesson from a failed, merged, or superseded route should survive\n  without turning into a memory object, proof verdict, skill, or route policy"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the practice has not passed a local adoption gate or shadow-use review yet\n- the only question is whether the practice should remain active\n- the owning surface has already performed and recorded local retirement\n- the real issue is proof failure that belongs first in an evaluation surface\n- the route should become a new technique, skill, playbook, memory object, role,\n  runtime behavior, or routing rule rather than an obsolescence packet"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one adopted or shadowed practice under obsolescence pressure\n- the current stage or status of that practice\n- the owner surface that can accept or reject the route\n- the reason the practice should not advance or remain active as-is\n- a replacement, merge target, reanchor target, defer condition, or explicit\n  note that no target is known\n- source evidence and provenance for the practice and the obsolescence pressure\n- rollback, quarantine, or restoration path if the route is later rejected\n- the smallest retained lesson worth preserving after the route closes"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one obsolescence route packet\n- one route label such as `supersede`, `merge`, `reanchor`, `defer`, `drop`, or\n  `deprecation_review`\n- the owner receipt target for any actual status change\n- the source evidence that must not be erased\n- the replacement, merge, reanchor, defer, or drop detail\n- one retained lesson and any downstream hint for memory, stats, proof, skill,\n  routing, or runtime owners\n- an explicit stop-line that the packet does not delete, deprecate, erase\n  evidence, write memory truth, prove failure, activate a skill, change routing,\n  or mutate runtime behavior"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Start from one adopted or shadowed practice. Stop if several practices are\n   fused together or if no adoption or shadow-use record exists.\n2. Name the current stage, owner surface, and active behavior or artifact that\n   would be affected if the practice stopped advancing as-is.\n3. State the reason for obsolescence pressure: superseded, merged elsewhere,\n   redundant, stale, harmful, unsupported, no longer owner-fit, or not worth\n   retaining as active practice.\n4. Choose one route label: `supersede`, `merge`, `reanchor`, `defer`, `drop`,\n   or `deprecation_review`. If the evidence cannot support one label, return\n   `defer`.\n5. Name the replacement, merge target, reanchor target, defer condition, drop\n   reason, or explicit absence of a target.\n6. Preserve source evidence, the rollback or quarantine path, and the smallest\n   retained lesson before any owner-local status change is considered.\n7. Emit the route packet to the owner receipt target and stop before deletion,\n   deprecation, proof, memory writeback, skill activation, route mutation, or\n   runtime change."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one route packet covers one adopted or shadowed practice and one owner receipt\n  target\n- obsolescence is not erasure\n- a dropped route is not owner-local deletion\n- a deprecation review packet is not the same as marking an object deprecated\n- a retained lesson is not memory authority, proof authority, or final landing\n- source evidence and rollback or quarantine posture must remain visible\n- `defer` is required when current stage, owner target, reason, or retained\n  lesson cannot be named\n\nRelationship to adjacent techniques: this technique normally follows\n[AOA-T-0103](../adopted-practice-retention-review/TECHNIQUE.md) when a\nretention verdict routes toward obsolescence. Unlike\n[AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does not only\nreject an adjacent target; it emits the obsolescence route packet. Unlike\n[AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not choose the first\nowner layer for a reusable unit; it sends one already-owned practice toward a\nreviewable owner receipt."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the route packet is misread as permission to delete or mark deprecated\n- source evidence disappears because the route is treated as cleanup\n- reviewers choose `drop` when the honest route is merge, reanchor, or defer\n\n### Negative effects\n\n- too much obsolescence routing can burden low-risk practice cleanup\n- stale active references may linger if the owner receipt is never reviewed\n- a retained lesson can look stronger than the evidence that produced it\n\n### Misuse patterns\n\n- using obsolescence routing to avoid a retention review\n- calling a route `supersede` without naming a real replacement\n- treating a memory or stats hint as the final owner receipt\n- using deprecation language as a proof verdict\n- deleting support files before provenance and rollback are preserved\n\n### Detection signals\n\n- the route packet cannot name the current stage\n- no owner receipt target is visible\n- replacement, merge, reanchor, defer, or drop detail is vague\n- retained lesson text is missing or reads like final authority\n- the write-up contains actual deletion, deprecation, proof, skill, routing, or\n  runtime actions\n\n### Mitigations\n\n- require one route label and one owner receipt target\n- require preserved source evidence before any cleanup work\n- name the rollback or quarantine path even when the route seems obvious\n- route memory, stats, proof, skill, routing, and runtime consequences to their\n  owners as downstream hints only\n- use `defer` when the route cannot be made reviewable yet"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- one adopted or shadowed practice is named\n- current stage and owner receipt target are visible\n- the reason it should not remain active as-is is explicit\n- exactly one route label is chosen or the result is `defer`\n- replacement, merge target, reanchor target, defer condition, drop reason, or\n  explicit absence of target is stated\n- source evidence, rollback or quarantine posture, and retained lesson remain\n  visible\n- no deletion, deprecation, proof, memory writeback, skill activation, route\n  mutation, or runtime change is performed inside the packet\n\nSee `checks/superseded-practice-obsolescence-route-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- route labels\n- owner receipt format\n- retention-review format that triggers the route\n- how rollback, quarantine, or restoration paths are recorded\n- whether the packet lives in Markdown, YAML, issue comments, or a review note\n\nWhat should stay invariant:\n- obsolescence routing stays separate from deletion and deprecation execution\n- one packet covers one practice and one owner receipt target\n- source evidence and retained lesson survive the route\n- owner-local retirement truth belongs to the object owner\n- downstream memory, stats, proof, skill, routing, and runtime effects remain\n  hints until accepted by their owners\n\nProject-shaped details that should not be treated as invariant:\n- one repository map\n- one Method-growth vocabulary\n- one deprecation policy\n- one memory or stats substrate\n- one release process\n\nAoA adaptation example:\n- `aoa-techniques` can emit an obsolescence route packet when Method-growth\n  retention says a technique-layer practice should stop being active as-is\n- `Agents-of-Abyss` center pruning language helps keep the route explicit:\n  name current stage, stop reason, owner receipt, and retained lesson\n- actual owner-local retirement, proof, memory, skill, routing, and runtime\n  changes remain outside this technique"
+        }
+      ]
     }
   ]
 }

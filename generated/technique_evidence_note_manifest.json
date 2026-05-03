@@ -46603,6 +46603,1506 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0101",
+      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/local-pattern-adoption-gate/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0101"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "local-pattern-adoption-gate"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps one bounded adoption gate rather than the full Method-growth lifecycle"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle has a checklist and a public-safe example, but live evidence is still concentrated in the `aoa-techniques` Method-growth extraction wave"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when a shared pattern has precedent but local behavior should not change until owner consent, compatibility, rollback, and retention are visible"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when repeated usefulness creates pressure for silent adoption"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default adoption guard outside the current Method-growth lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-03"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable adoption gate while stripping private session detail, local command wrappers, and sibling-owner activation claims"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from one second live context beyond Method-growth mechanics"
+                },
+                {
+                  "order": 2,
+                  "text": "future use should confirm the seam against owner-layer triage and nearest-wrong-target rejection stays clear"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0101` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after another local or external corpus proves the same consent, rollback, and retention gate before adoption"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/local-pattern-adoption-gate/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0101"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "local-pattern-adoption-gate"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `mechanics/method-growth/parts/pattern-adoption/README.md`\n- `mechanics/method-growth/parts/adoption-boundaries/README.md`\n- `mechanics/method-growth/PROVENANCE.md`\n- `mechanics/method-growth/README.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth pattern-adoption part states that adoption must be explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "the adoption-boundaries part names local owner consent as a stop-line before durable behavior changes"
+                },
+                {
+                  "order": 3,
+                  "text": "the Method-growth provenance bridge preserves the v0.7 downstream adoption signal: shared patterns need owner consent, evidence, rollback, and retention before adoption"
+                },
+                {
+                  "order": 4,
+                  "text": "the package README keeps technique-side adoption posture separate from skill activation, proof verdicts, route behavior, memory truth, and sibling owner acceptance"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is not the whole Method-growth lifecycle"
+                },
+                {
+                  "order": 2,
+                  "text": "the transferable atom is one local gate before a shared pattern becomes durable local behavior"
+                },
+                {
+                  "order": 3,
+                  "text": "the public technique can stay bounded by requiring consent, compatibility evidence, rollback or quarantine, and retention watch without importing AoA center doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/local-pattern-adoption-gate/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0101"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "local-pattern-adoption-gate"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique corpus with Method-growth mechanics and authored technique bundles"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent review workflow over portable technique documentation"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth adoption cycle was narrowed to one local gate before adoption"
+                },
+                {
+                  "order": 2,
+                  "text": "lifecycle hooks such as request, readiness, shadow, decision, activation, and retention stayed in mechanics"
+                },
+                {
+                  "order": 3,
+                  "text": "AoA owner names and downstream adoption-wave context moved into origin evidence and adaptation notes instead of the invariant core"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle was reduced to one `TECHNIQUE.md`, one checklist, one example, and three evidence notes"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "adoption remains explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "local owner consent remains required before durable behavior changes"
+                },
+                {
+                  "order": 3,
+                  "text": "evidence, rollback or quarantine, and retention watch remain visible"
+                },
+                {
+                  "order": 4,
+                  "text": "upstream approval does not become local adoption by itself"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the public technique can widen into a full adoption workflow if lifecycle hooks are pulled into the core procedure"
+                },
+                {
+                  "order": 2,
+                  "text": "the gate can drift into a generic approval policy if one local behavior surface is not named"
+                },
+                {
+                  "order": 3,
+                  "text": "the AoA example can look like required ecosystem structure unless public adaptation notes keep it optional"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one review-side guardrail over a local behavior change"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle's adjacent-technique notes keep owner-layer triage and nearest-wrong-target rejection separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the example uses Method-growth only as an adaptation example and does not require OS Abyss deployment"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one local adoption gate rather than a full Method-growth mechanic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0102",
+      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/skill-proposal-handoff-packet/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0102"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "skill-proposal-handoff-packet"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps one bounded proposal handoff rather than the full technique-to-skill lifecycle"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle has a checklist and a public-safe example, but live evidence is still concentrated in the `aoa-techniques` Method-growth extraction wave"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when technique-side adoption pressure suggests skill packaging but owner acceptance has not happened yet"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when repeated agent-facing use creates pressure to skip straight from reusable practice to a skill"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default skill-proposal handoff outside the current Method-growth lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-03"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable handoff packet while stripping sensitive session detail, local command wrappers, and sibling-owner activation claims"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from one second live context where a receiving skill owner consumes the packet without treating it as skill acceptance"
+                },
+                {
+                  "order": 2,
+                  "text": "future use should confirm that packet fields are sufficient without becoming a skill body"
+                },
+                {
+                  "order": 3,
+                  "text": "future use should verify that command, playbook, eval, runtime, proof, and memory concerns still route to their owners"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0102` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after one reviewed receiving-owner use proves the proposal packet can carry the handoff without becoming skill acceptance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/skill-proposal-handoff-packet/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0102"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "skill-proposal-handoff-packet"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `mechanics/method-growth/parts/technique-to-skill-handoff/README.md`\n- `mechanics/method-growth/PROVENANCE.md`\n- `mechanics/method-growth/README.md`\n- `mechanics/REQUEST_RECEIPTS.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth technique-to-skill-handoff part states that technique adoption may generate a skill proposal"
+                },
+                {
+                  "order": 2,
+                  "text": "the part keeps adoption explicit and names local owner consent, evidence, rollback, and retention as durable-change requirements"
+                },
+                {
+                  "order": 3,
+                  "text": "the Method-growth provenance bridge says technique adoption may request a skill proposal, but technique canon and skill execution remain separate owners"
+                },
+                {
+                  "order": 4,
+                  "text": "the mechanics request receipt keeps technique-to-skill movement in this part without making it skill acceptance"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is not the full technique-to-skill lifecycle"
+                },
+                {
+                  "order": 2,
+                  "text": "the transferable atom is one proposal packet from technique-side review to a skill-owning surface"
+                },
+                {
+                  "order": 3,
+                  "text": "the public technique can stay bounded by requiring trigger boundary, workflow shape, technique dependencies, risks, verification hints, and a non-acceptance stop-line"
+                },
+                {
+                  "order": 4,
+                  "text": "skill acceptance, skill workflow meaning, proof verdicts, runtime activation, and scenario composition remain with their receiving owners"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/skill-proposal-handoff-packet/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0102"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "skill-proposal-handoff-packet"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-skills"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "bounded skill corpus that may consume technique dependencies"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent review workflow over skill bundle proposals"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth handoff was narrowed to one proposal packet before skill acceptance"
+                },
+                {
+                  "order": 2,
+                  "text": "trigger boundary, workflow shape, risk, approval, rollback, and verification fields were retained as proposal context"
+                },
+                {
+                  "order": 3,
+                  "text": "accepted skill wording, command syntax, install behavior, and activation discipline were excluded from the technique"
+                },
+                {
+                  "order": 4,
+                  "text": "AoA repo names moved into adaptation examples rather than the invariant core"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "technique canon remains separate from skill workflow meaning"
+                },
+                {
+                  "order": 2,
+                  "text": "the receiving owner decides whether any skill exists"
+                },
+                {
+                  "order": 3,
+                  "text": "technique dependencies are referenced rather than copied or redefined"
+                },
+                {
+                  "order": 4,
+                  "text": "the packet must state that it does not create, accept, install, or activate a skill"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the packet can look like a skill draft if workflow fields become too detailed"
+                },
+                {
+                  "order": 2,
+                  "text": "receiving owners can overread a proposal as pressure to accept"
+                },
+                {
+                  "order": 3,
+                  "text": "proof, scenario, memory, runtime, or command concerns can be misrouted to the skill owner because the packet format is convenient"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one handoff move"
+                },
+                {
+                  "order": 2,
+                  "text": "the adjacent-technique notes keep skill-command boundary, first automation landing, and local adoption gate separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the example uses generic owner names and does not require OS Abyss deployment"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as a proposal packet rather than skill acceptance or activation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0103",
+      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/adopted-practice-retention-review/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0103"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "adopted-practice-retention-review"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps one bounded retention review rather than the full Method-growth lifecycle"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle has a checklist and a public-safe example, but live evidence is still concentrated in the `aoa-techniques` Method-growth extraction wave"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when an adopted practice needs to prove it should stay active after real use"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when old adoption rationale may be stale, drifted, costly, or unsupported by current owner fit"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default retention review outside the current Method-growth lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-03"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable retention review while stripping sensitive session detail, local command wrappers, and sibling-owner activation claims"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from one second live context beyond Method-growth mechanics"
+                },
+                {
+                  "order": 2,
+                  "text": "future use should confirm the retention verdict does not collapse into obsolescence or deletion"
+                },
+                {
+                  "order": 3,
+                  "text": "future use should verify that proof, memory, skill, route, and runtime concerns still route to their owners"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0103` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after another local or external corpus proves the same current-evidence retention review over an adopted practice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/adopted-practice-retention-review/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0103"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "adopted-practice-retention-review"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `mechanics/method-growth/parts/retention-checks/README.md`\n- `mechanics/method-growth/PROVENANCE.md`\n- `mechanics/method-growth/PARTS.md`\n- `mechanics/method-growth/README.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth retention-checks part says retention checks govern practice-level adoption"
+                },
+                {
+                  "order": 2,
+                  "text": "the Method-growth parts map says retention keeps adoption active only while evidence, rollback, and retention posture remain reviewable"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance bridge preserves the v0.7 downstream adoption signal: adopted practice needs evidence, rollback, and retention checks to remain active"
+                },
+                {
+                  "order": 4,
+                  "text": "the package README keeps retention and obsolescence posture separate from automatic technique promotion, proof verdicts, skill activation, route behavior, memory truth, and sibling owner acceptance"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is not the whole Method-growth lifecycle"
+                },
+                {
+                  "order": 2,
+                  "text": "the transferable atom is one review of an already adopted or shadowed practice"
+                },
+                {
+                  "order": 3,
+                  "text": "the public technique can stay bounded by requiring current evidence, owner fit, drift review, rollback or quarantine posture, and one retention verdict"
+                },
+                {
+                  "order": 4,
+                  "text": "obsolescence, proof, memory writeback, skill activation, route behavior, and runtime mutation remain with their receiving owners"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/adopted-practice-retention-review/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0103"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "adopted-practice-retention-review"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique corpus with Method-growth mechanics and promoted technique bundles"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent review workflow over adopted practice posture"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth retention cycle was narrowed to one post-adoption review"
+                },
+                {
+                  "order": 2,
+                  "text": "lifecycle hooks such as request, readiness, shadow, decision, activation, and obsolescence stayed in mechanics"
+                },
+                {
+                  "order": 3,
+                  "text": "the review output became an assessment verdict rather than an activation, deletion, or proof action"
+                },
+                {
+                  "order": 4,
+                  "text": "AoA owner names moved into adaptation examples instead of the invariant core"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "adopted practice still needs current evidence before it remains active"
+                },
+                {
+                  "order": 2,
+                  "text": "owner fit and reviewability remain visible"
+                },
+                {
+                  "order": 3,
+                  "text": "rollback, quarantine, or obsolescence route remains concrete"
+                },
+                {
+                  "order": 4,
+                  "text": "`retain` stays weaker than canonical promotion, proof claims, skill activation, memory writeback, or runtime change"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the retention review can become a ceremonial rubber stamp if current evidence is weak"
+                },
+                {
+                  "order": 2,
+                  "text": "the review can drift into obsolescence or deletion if the stop-line is not visible"
+                },
+                {
+                  "order": 3,
+                  "text": "the AoA example can look like required ecosystem structure unless public adaptation notes keep it optional"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is one review-side assessment over an active practice"
+                },
+                {
+                  "order": 2,
+                  "text": "the adjacent-technique notes keep local adoption gate and nearest-wrong-target rejection separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the example uses Method-growth only as an adaptation example and does not require OS Abyss deployment"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one retention assessment rather than adoption, obsolescence, or skill activation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AOA-T-0104",
+      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0104"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "superseded-practice-obsolescence-route"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the adapted bundle keeps one bounded obsolescence route packet rather than\nthe full Method-growth lifecycle"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle has a checklist and a public-safe example, but live evidence is\nstill concentrated in the `aoa-techniques` Method-growth extraction wave"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when an adopted or shadowed practice should stop advancing\nas-is without erasing its source evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when a retention review has already identified supersession,\nmerge, reanchor, defer, drop, or deprecation-review pressure"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default obsolescence route outside the current\nMethod-growth lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-03"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable route packet while\nstripping sensitive session detail, local command wrappers, and owner-local\nacceptance mechanics"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the bundle would benefit from one second live context beyond Method-growth\nmechanics"
+                },
+                {
+                  "order": 2,
+                  "text": "future use should confirm the route packet does not collapse into deletion or\ndeprecation execution"
+                },
+                {
+                  "order": 3,
+                  "text": "future use should verify that proof, memory, skill, routing, and runtime\nconsequences still route to their owners"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0104` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after another local or external corpus proves\nthe same owner-aware obsolescence route over an adopted or shadowed practice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0104"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "superseded-practice-obsolescence-route"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `mechanics/method-growth/parts/obsolescence/README.md`\n- `mechanics/method-growth/PROVENANCE.md`\n- `mechanics/method-growth/PARTS.md`\n- `mechanics/method-growth/README.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth obsolescence part says adopted techniques can be superseded\nor made obsolete only inside explicit adoption boundaries"
+                },
+                {
+                  "order": 2,
+                  "text": "the Method-growth parts map says obsolescence routes supersession,\ndeprecation, and removal without erasing owner evidence or rollback routes"
+                },
+                {
+                  "order": 3,
+                  "text": "the provenance bridge preserves the v0.7 downstream adoption signal:\nobsolescence and supersession must be explicit instead of silently deleting\nowner evidence"
+                },
+                {
+                  "order": 4,
+                  "text": "the package README rejects deprecation without source-linked evidence and\nkeeps proof, memory, skill, routing, runtime, and sibling acceptance outside\n`aoa-techniques`"
+                },
+                {
+                  "order": 5,
+                  "text": "AoA center Method-growth pruning part names the reusable route check: current\nstage, stop reason, owner receipt, and smallest retained lesson"
+                },
+                {
+                  "order": 6,
+                  "text": "AoA center pruning contract says pruning is not erasure and does not delete\nowner history or write owner-local retirement truth"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the reusable object is not actual deletion, retirement, proof, or deprecation"
+                },
+                {
+                  "order": 2,
+                  "text": "the transferable atom is one route packet that sends an adopted or shadowed\npractice toward supersession, merge, reanchor, defer, drop, or deprecation\nreview"
+                },
+                {
+                  "order": 3,
+                  "text": "the public technique can stay bounded by requiring current stage, reason,\nowner receipt target, source evidence, rollback or quarantine posture, and\nretained lesson"
+                },
+                {
+                  "order": 4,
+                  "text": "owner-local status changes remain with the object owner"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0104"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "superseded-practice-obsolescence-route"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "environment",
+                  "value_markdown": "public technique corpus with Method-growth mechanics and\npromoted technique bundles"
+                },
+                {
+                  "order": 3,
+                  "key": "runtime",
+                  "value_markdown": "human and agent review workflow over adopted practice posture"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the Method-growth obsolescence cycle was narrowed to one owner-aware route\npacket"
+                },
+                {
+                  "order": 2,
+                  "text": "deletion, deprecation execution, proof, memory writeback, skill activation,\nroute behavior, and runtime change stayed outside the atom"
+                },
+                {
+                  "order": 3,
+                  "text": "AoA center pruning wording became boundary reinforcement rather than a hidden\nruntime dependency"
+                },
+                {
+                  "order": 4,
+                  "text": "route labels became portable review labels: `supersede`, `merge`, `reanchor`,\n`defer`, `drop`, and `deprecation_review`"
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "obsolescence and supersession remain explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "source evidence and rollback or quarantine posture stay visible"
+                },
+                {
+                  "order": 3,
+                  "text": "owner receipt is required before any local status change"
+                },
+                {
+                  "order": 4,
+                  "text": "the smallest retained lesson survives even when the active practice does not"
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "readers may overread the packet as permission to delete or mark deprecated"
+                },
+                {
+                  "order": 2,
+                  "text": "route labels can look like final verdicts if owner receipt is missing"
+                },
+                {
+                  "order": 3,
+                  "text": "retained lessons can drift into memory or proof authority if downstream hints\nare not bounded"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the adapted bundle stays in `agent-workflows` because the reusable object is a\nreview-side handoff packet to the owner"
+                },
+                {
+                  "order": 2,
+                  "text": "the adjacent-technique notes keep retention review, nearest-wrong-target\nrejection, and owner-layer triage separate"
+                },
+                {
+                  "order": 3,
+                  "text": "the example uses a portable shadowed-template case and does not require OS\nAbyss deployment"
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "verdict",
+                  "value_markdown": "works"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "the adapted bundle stays readable as one obsolescence route packet\nrather than deletion, deprecation execution, proof, memory, skill, routing, or\nruntime authority"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

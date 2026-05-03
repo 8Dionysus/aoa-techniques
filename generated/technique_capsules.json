@@ -1401,6 +1401,62 @@
       "main_risk_short": "Main risk: a symbolic receipt is emitted without real evidence refs.",
       "validation_short": "Validate by checking another reviewer can see exactly what degraded and what stayed visible; the degraded continuation or hold is explicit, not...",
       "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0101",
+      "name": "local-pattern-adoption-gate",
+      "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
+      "one_line_intent": "Gate one shared practice pattern before it becomes durable local behavior, so approval, precedent...",
+      "use_when_short": "Use when a shared practice pattern has already been noticed, approved upstream, or or a local repository, team, or owner...",
+      "do_not_use_short": "Avoid when the source material is still several mixed patterns that have not been split or the real task is...",
+      "inputs_short": "Needs one shared pattern proposed for local adoption; the local owner or surface that would change behavior; source...",
+      "outputs_short": "Produces one local adoption gate result such as adopt, shadow, quarantine,; one owner-consent statement or missing-consent blocker; one...",
+      "core_contract_short": "Core contract: one gate result covers one shared pattern and one local behavior surface; upstream approval or useful precedent is...",
+      "main_risk_short": "Main risk: a broad method-growth lifecycle is squeezed into one gate result.",
+      "validation_short": "Validate by checking one shared pattern is named explicitly; one local owner and behavior surface are named explicitly; owner consent is explicit...",
+      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0102",
+      "name": "skill-proposal-handoff-packet",
+      "summary": "Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.",
+      "one_line_intent": "Turn one technique-side adoption pressure into a bounded skill-proposal handoff packet, so the receiving...",
+      "use_when_short": "Use when a reusable technique or technique candidate is repeatedly needed as part of or an adoption review shows that...",
+      "do_not_use_short": "Avoid when the source material is still several unrelated practices or workflow needs or the real task is choosing whether...",
+      "inputs_short": "Needs one technique, technique candidate, or adopted practice under review; the execution pressure that suggests skill packaging may...",
+      "outputs_short": "Produces one skill-proposal handoff packet; explicit technique dependency references; one proposed skill trigger boundary.",
+      "core_contract_short": "Core contract: one packet carries one skill proposal for one receiving owner; technique canon remains the source of reusable practice...",
+      "main_risk_short": "Main risk: the packet quietly becomes a skill draft instead of a handoff.",
+      "validation_short": "Validate by checking one reusable practice or technique candidate is named; one receiving skill owner is named; trigger boundary, inputs, outputs, workflow...",
+      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0103",
+      "name": "adopted-practice-retention-review",
+      "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
+      "one_line_intent": "Review one already-adopted practice to decide whether it should remain active, be revised, be...",
+      "use_when_short": "Use when a practice was previously adopted, shadowed, or made part of normal behavior or the adoption record included a...",
+      "do_not_use_short": "Avoid when the practice has not passed a local adoption gate yet or the real question is whether to adopt...",
+      "inputs_short": "Needs one adopted or shadowed practice under review; the original adoption note or equivalent owner record; current evidence...",
+      "outputs_short": "Produces one retention verdict such as retain, revise, quarantine, defer, or; a current evidence note; a drift or...",
+      "core_contract_short": "Core contract: one review covers one adopted or shadowed practice and one owner surface; past adoption does not guarantee current...",
+      "main_risk_short": "Main risk: retention review becomes a ceremonial renewal with no current evidence.",
+      "validation_short": "Validate by checking one adopted or shadowed practice is named; the original owner surface and adoption record are visible; current evidence is...",
+      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0104",
+      "name": "superseded-practice-obsolescence-route",
+      "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
+      "one_line_intent": "Route one adopted or shadowed practice that should not remain active as-is toward supersession...",
+      "use_when_short": "Use when a retention review says an adopted or shadowed practice should route toward or a replacement, merge target, reanchor...",
+      "do_not_use_short": "Avoid when the practice has not passed a local adoption gate or shadow-use review yet or the only question is...",
+      "inputs_short": "Needs one adopted or shadowed practice under obsolescence pressure; the current stage or status of that practice; the...",
+      "outputs_short": "Produces one obsolescence route packet; one route label such as supersede, merge, reanchor, defer, drop, or; the owner...",
+      "core_contract_short": "Core contract: one route packet covers one adopted or shadowed practice and one owner receipt; obsolescence is not erasure.",
+      "main_risk_short": "Main risk: the route packet is misread as permission to delete or mark deprecated.",
+      "validation_short": "Validate by checking one adopted or shadowed practice is named; current stage and owner receipt target are visible; the reason it should...",
+      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md"
     }
   ]
 }

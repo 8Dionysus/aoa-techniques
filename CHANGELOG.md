@@ -6,6 +6,20 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Added
+
+- promoted `AOA-T-0101 local-pattern-adoption-gate` from the Method-growth
+  pattern-adoption part as one atomic guardrail before durable local adoption
+- promoted `AOA-T-0102 skill-proposal-handoff-packet` from the Method-growth
+  technique-to-skill handoff part as one atomic proposal packet that does not
+  imply skill acceptance or activation
+- promoted `AOA-T-0103 adopted-practice-retention-review` from the Method-growth
+  retention-checks part as one atomic post-adoption review before keeping a
+  practice active
+- promoted `AOA-T-0104 superseded-practice-obsolescence-route` from the
+  Method-growth obsolescence part as one atomic owner-aware route packet before
+  supersession, merge, reanchor, defer, drop, or deprecation review
+
 ### Changed
 
 - added a root charter and root surface law to separate public entry,
@@ -13,6 +27,18 @@ The format is intentionally simple and human-first.
   repo-doc routing
 - slimmed root `ROADMAP.md` back to live repo direction while preserving the
   previous closure-audit baseline under Audit legacy
+- linked Method-growth `pattern-adoption` provenance and roadmap surfaces back
+  to the extracted atom while keeping the broader lifecycle in mechanics
+- linked Method-growth `technique-to-skill-handoff` provenance and roadmap
+  surfaces back to the extracted proposal-packet atom while keeping skill
+  acceptance outside `aoa-techniques`
+- linked Method-growth `retention-checks` provenance and roadmap surfaces back
+  to the extracted retention-review atom while keeping obsolescence and owner
+  authority outside the technique
+- linked Method-growth `obsolescence` provenance and roadmap surfaces back to
+  the extracted route-packet atom while keeping deletion, deprecation
+  execution, proof, memory, skill, routing, runtime, and owner-local retirement
+  authority outside the technique
 
 ### Validation
 

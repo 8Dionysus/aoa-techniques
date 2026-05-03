@@ -43,3 +43,15 @@ federation harvest has already approved a shared pattern, but it refuses to
 treat approval as automatic adoption. Adoption is a second sovereign act: local
 owner consent, compatibility, shadow proof, rollback path, retention watch, and
 kind-safe projection are required.
+
+## Extracted Atom
+
+[AOA-T-0103 adopted-practice-retention-review](../../../../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md)
+carries the reusable retention move from this part: review one already adopted
+or shadowed practice against current evidence, owner fit, drift, negative
+effects, and rollback or quarantine posture before letting it remain active.
+
+This part still owns the broader Method-growth retention pressure around
+request, readiness, shadow, decision, activation, retention watch, and later
+obsolescence routing. The extracted atom does not adopt, delete, deprecate,
+prove, remember, activate, or mutate anything by itself.
