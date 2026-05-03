@@ -240,3 +240,32 @@ Not moved:
 - no Agon candidate status changed
 - no Agon lawful move, proof, scar, rank, KAG, ToS, runtime, or skill authority
   moved into `aoa-techniques`
+
+## 2026-05-03 - Request evidence gate card
+
+Changed:
+
+- added the first Agon handoff gate card for
+  `candidate:aoa-techniques:agon/request-evidence-practice`
+- registered the card in the part-local Agon candidate handoff seed and compact
+  generated index
+- kept the card as a one-candidate atom/topology check, not a technique bundle
+  or Agon acceptance
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Agon candidate became a technique bundle
+- no Agon candidate status changed
+- no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime, rank,
+  or scar authority moved into `aoa-techniques`

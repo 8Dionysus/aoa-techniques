@@ -82,6 +82,15 @@ For each, the next work is one gate card: atomic move, likely domain, primary
 kind, family posture, capability, substrate, execution profile, risk posture,
 portable core, AoA-only context, nearest overlaps, proof route, and stop-line.
 
+## Gate Cards
+
+Gate cards live in [gates](gates/README.md). They are one-candidate checks, not
+technique bundles.
+
+Current landed gate:
+
+- [request-evidence-practice](gates/request-evidence-practice.md)
+
 ## Stop Line
 
 This part must not define Agon law, create skill workflows, issue proof
