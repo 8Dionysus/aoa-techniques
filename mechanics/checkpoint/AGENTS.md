@@ -1,0 +1,48 @@
+# AGENTS.md
+
+Route card for `mechanics/checkpoint/`.
+
+## Purpose
+
+This package owns the `aoa-techniques` side of Checkpoint: local practice
+pressure around phase handoff, handoff packets, compaction/re-entry,
+checkpoint-bound repair, and candidate narrowing that may feed future technique
+canon.
+
+It does not own AoA checkpoint law, checkpoint controls, checkpoint-note
+protocol, memory writeback, proof verdicts, runtime activation, route
+authority, stats truth, owner acceptance, hidden scheduling, autonomous
+self-repair, or technique status changes.
+
+## Start here
+
+1. Root `AGENTS.md`.
+2. `mechanics/AGENTS.md`.
+3. `mechanics/checkpoint/README.md`.
+4. `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and the touched part README.
+5. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
+
+## Local law
+
+- Keep checkpoint here technique-layered: reusable practice pressure, not
+  checkpoint implementation authority.
+- Do not import `Agents-of-Abyss` checkpoint law as local implementation
+  authority.
+- Do not treat checkpoint notes, session artifacts, handoff packets, receipts,
+  or repair posture as memory canon, proof verdicts, runtime truth, owner
+  acceptance, or route authority.
+- Keep sibling owner truth with its owner: controls in `aoa-sdk`, protocol in
+  `aoa-skills`, actor posture in `aoa-agents`, memory/relaunch in `aoa-memo`,
+  proof in `aoa-evals`, routing in `aoa-routing`, stats in `aoa-stats`, runtime
+  exports in `abyss-stack`, and center law in `Agents-of-Abyss`.
+- If a stable reusable practice emerges, route it into `techniques/` through
+  the normal technique review path.
+
+## Verify
+
+Use the root validation path after changes:
+
+```bash
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```

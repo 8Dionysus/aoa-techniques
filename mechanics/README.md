@@ -34,6 +34,9 @@ receipt route, not a copy of the AoA request queue and not proof of acceptance.
   release support surfaces that remain bounded by owner consent.
 - [antifragility](antifragility/README.md): stress, chaos, degraded-mode, and
   recovery-oriented practice routes.
+- [checkpoint](checkpoint/README.md): phase handoff, handoff packet,
+  compaction, re-entry, and checkpoint-bound repair pressure that stays
+  candidate-only until a technique bundle owns the atomic move.
 
 ## Boundary
 
