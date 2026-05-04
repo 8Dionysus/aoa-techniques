@@ -27,6 +27,7 @@ Use the stronger surface when the change is narrower:
 - technique meaning: `techniques/**/TECHNIQUE.md`
 - atomicity and portability: `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - classification topology: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+- corpus path architecture: `docs/TECHNIQUE_TREE_CONTRACT.md`
 - root and docs placement: `docs/ROOT_SURFACE_LAW.md`
 - promotion readiness and evidence lanes: `mechanics/audit/parts/`
 - donor intake and candidate extraction: `mechanics/distillation/parts/`
@@ -62,7 +63,8 @@ The current direction is:
 
 - keep `CHARTER.md`, `README.md`, `docs/START_HERE.md`,
   `docs/TECHNIQUE_ATOM_CONTRACT.md`, `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`,
-  and `docs/ROOT_SURFACE_LAW.md` aligned as the root route
+  `docs/TECHNIQUE_TREE_CONTRACT.md`, and `docs/ROOT_SURFACE_LAW.md` aligned as
+  the root route
 - keep the repository usable as a standalone public technique library, not only
   as an OS Abyss organ
 - keep each technique as one atomic executable move suitable for templating,
@@ -90,6 +92,7 @@ Current anchors:
 | Root placement law | `docs/ROOT_SURFACE_LAW.md` |
 | Technique atom contract | `docs/TECHNIQUE_ATOM_CONTRACT.md` |
 | Technique topology contract | `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` |
+| Technique tree contract | `docs/TECHNIQUE_TREE_CONTRACT.md` |
 | Corpus map | `TECHNIQUE_INDEX.md`, `generated/technique_catalog.min.json` |
 | Small runtime cards | `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.min.json` |
 | Mechanics atlas | `mechanics/README.md`, `mechanics/*/README.md` |
@@ -125,6 +128,14 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 | Current posture | `domain` and `kind` are authoritative frontmatter; family, capability, substrate, execution profile, risk posture, and richer relations are explicit design axes. |
 | Next honest move | Enter future classification reform through `mechanics/distillation/parts/technique-reform-ingress/README.md`, use `config/technique_topology_axes.yaml` as the scout value registry and `reports/technique_topology_scout.md` as the generated readout, then strengthen `family` or generated scout axes only after the chosen slice has tests, docs, and a decision note. |
 | Guardrail | Do not turn `agent-workflows`, `docs`, or tags into junk drawers for missing topology. |
+
+## Horizon: Corpus Tree
+
+| Field | Direction |
+|---|---|
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles while leaving the current domain-folder layout in place. |
+| Next honest move | Build a non-authoritative tree projection over the current `107` bundles, review family shelves for tree fitness, and pilot one bounded subtree before any broad path migration. |
+| Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 ## Horizon: Small-Agent Usability
 
@@ -173,6 +184,8 @@ trigger is real.
 
 - Promote `family` from scout-only to optional reviewed frontmatter only after
   examples and tie-break rules stay stable across multiple technique waves.
+- Add a generated tree projection only after the kind-audit hold review and
+  family shelf review show a stable enough trunk/shelf draft.
 - Add generated projections for `capability_class`, `substrate`,
   `execution_profile`, and `risk_posture` from
   `config/technique_topology_axes.yaml` only after mechanics candidates prove

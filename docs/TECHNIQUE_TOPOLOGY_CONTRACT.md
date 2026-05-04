@@ -6,6 +6,10 @@ Use it when the question is not only whether a candidate is one atomic
 technique, but where that technique should live in a corpus that must scale
 beyond hundreds or thousands of entries.
 
+Use [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when "where it should
+live" means the authored `techniques/` directory path rather than selector
+classification.
+
 ## Purpose
 
 The technique corpus should become a large, navigable library of small agentic
@@ -16,13 +20,16 @@ The topology must support:
 - coding, documentation, validation, recovery, history, media, tool use,
   dialogue, planning, observation, and other agent-capability surfaces
 - `1000+` techniques as an early scale target, not a ceiling
+- a root tree that stays browsable without forcing every selector axis into the
+  directory path
 - small-agent execution after orchestration has selected and packed context
 - future cross-repo consumers in skills, evals, routing, playbooks, memory, KAG,
   agents, runtime, and stats without moving technique meaning out of this repo
 
 ## Topology Law
 
-Classification is faceted, not a single tree.
+Classification is faceted, not a single tree. The authored directory tree is a
+separate placement spine, not the whole classification model.
 
 No one axis should carry all meaning. A technique is routed through several
 orthogonal questions:
@@ -40,10 +47,16 @@ The first two axes are current frontmatter truth. Other axes are design
 contracts and scout surfaces until they are intentionally promoted into schema,
 generated catalogs, and validators.
 
+The directory tree should use these axes as evidence, especially family, but it
+must not replace them. A path can make the corpus easier to browse while
+`domain`, `kind`, scout axes, and relations still answer their own routing
+questions.
+
 ## Axis Stack
 
 | axis | current status | role | current or future source |
 |---|---|---|---|
+| `tree_path` | architecture contract | authored placement spine for trunks, shelves, and leaf bundles | `docs/TECHNIQUE_TREE_CONTRACT.md`, future projection |
 | `domain` | authoritative frontmatter | first owner and review route | `docs/DOMAIN_MAP.md`, schema, validators |
 | `kind` | authoritative frontmatter | atomic move shape | `docs/TECHNIQUE_KIND_GUIDE.md`, `config/technique_kind_registry.yaml`, schema, validators |
 | `family` | scout-only | stable semantic shelf spanning domains or kinds | `config/technique_family_seed.yaml`, `reports/technique_family_scout.md` |
@@ -250,6 +263,8 @@ fact that each technique remains one atomic move.
 
 ## Growth Rules
 
+- Keep the tree deliberate and shallow enough to browse; use trunks and shelves
+  for path architecture, then use facets for selector detail.
 - Add new topology axes as config and generated projections before requiring
   them in every technique bundle.
 - Keep authored bundle meaning stronger than generated classifications.
