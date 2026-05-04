@@ -111,6 +111,7 @@ Current landed gate evidence note:
 Current landed bundle readiness review:
 
 - [request-evidence-bundle-readiness-review](gates/bundle-reviews/request-evidence-bundle-readiness-review.md)
+- [offer-evidence-reference-bundle-readiness-review](gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md)
 
 Current landed technique bundle:
 

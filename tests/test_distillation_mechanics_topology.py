@@ -295,7 +295,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
-                "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md"
+                "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
+                "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md",
             },
             registry["bundle_readiness_reviews"],
         )
@@ -364,7 +365,11 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 if "bundle-reviews" in gate_path.parts:
                     self.assertIn("Verdict", text)
                     self.assertIn("ready for one-bundle draft", text)
-                    self.assertIn("draft kind: `guardrail`", text)
+                    if gate_path.name == "request-evidence-bundle-readiness-review.md":
+                        self.assertIn("draft kind: `guardrail`", text)
+                    if gate_path.name == "offer-evidence-reference-bundle-readiness-review.md":
+                        self.assertIn("draft kind: `artifact`", text)
+                        self.assertIn("Reform Thread", text)
                     self.assertIn("What This Does Not Support", text)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
