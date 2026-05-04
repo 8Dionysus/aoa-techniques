@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - AOA-T-0054 kind remap
+
+Changed:
+
+- remapped
+  [compaction-resilient-skill-loading](../../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md)
+  from `handoff` to `recovery`
+- kept the bundle at `agent-workflows`, `promoted`, and `source_backed`
+  posture with the same ID, evidence, relations, and public-safety state
+- added a destination-check review comparing `handoff`, `workflow`, and
+  `recovery`
+- added a decision note for the public kind-frontmatter correction
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no `kind` value was added, removed, or renamed
+- no technique status changed
+- no domain, relation, evidence note, or owner boundary changed
+- no broad classification migration was claimed
+
 ## 2026-05-04 - Second kind ambiguity review pack
 
 Changed:

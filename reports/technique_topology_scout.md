@@ -21,14 +21,14 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 | `communicate` | `3` |
 | `compare` | `10` |
 | `coordinate` | `11` |
-| `handoff` | `13` |
+| `handoff` | `12` |
 | `interpret` | `8` |
 | `learn-from-artifact` | `3` |
 | `mutate` | `12` |
 | `observe` | `36` |
 | `plan` | `21` |
 | `read` | `47` |
-| `recover` | `9` |
+| `recover` | `10` |
 | `summarize` | `16` |
 | `transform` | `25` |
 | `validate` | `21` |
@@ -61,8 +61,8 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 | value | count |
 |---|---:|
 | `medium-agent` | `21` |
-| `orchestration-required` | `52` |
-| `small-agent` | `34` |
+| `orchestration-required` | `53` |
+| `small-agent` | `33` |
 
 ## `risk_posture` Counts
 
@@ -94,7 +94,7 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 | [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `workflow` | `ready-work-graphs` | `plan`, `read`, `choose` | `conversation`, `tool-surfaces`, `memory-adjacent-artifacts`, `graph-adjacent-artifacts` | `medium-agent` | `read-only` |
 | [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) | `agent-workflows` | `workflow` | `review-compaction` | `plan`, `observe`, `write` | `conversation`, `tool-surfaces`, `history`, `human-approval-surfaces` | `medium-agent` | `read-only` |
 | [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) | `agent-workflows` | `workflow` | `review-compaction` | `plan`, `observe`, `validate` | `conversation`, `tool-surfaces`, `code`, `tests` | `medium-agent` | `read-only` |
-| [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `handoff` | `review-compaction` | `handoff`, `read`, `summarize` | `conversation`, `tool-surfaces`, `instructions`, `human-approval-surfaces` | `small-agent` | `read-only`, `degraded-mode` |
+| [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `recovery` | `review-compaction` | `recover`, `read`, `summarize` | `conversation`, `tool-surfaces`, `instructions`, `human-approval-surfaces` | `orchestration-required` | `read-only`, `degraded-mode` |
 | [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) | `agent-workflows` | `workflow` | `ready-work-graphs` | `plan`, `read`, `write` | `conversation`, `tool-surfaces`, `code`, `ui` | `medium-agent` | `read-only` |
 | [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) | `agent-workflows` | `handoff` | `handoff-continuation` | `handoff` | `conversation`, `tool-surfaces`, `history` | `small-agent` | `read-only` |
 | [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) | `agent-workflows` | `handoff` | `handoff-continuation` | `handoff`, `plan`, `write` | `conversation`, `tool-surfaces`, `history`, `memory-adjacent-artifacts` | `small-agent` | `read-only` |

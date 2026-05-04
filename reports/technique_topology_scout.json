@@ -24,14 +24,14 @@
       "communicate": 3,
       "compare": 10,
       "coordinate": 11,
-      "handoff": 13,
+      "handoff": 12,
       "interpret": 8,
       "learn-from-artifact": 3,
       "mutate": 12,
       "observe": 36,
       "plan": 21,
       "read": 47,
-      "recover": 9,
+      "recover": 10,
       "summarize": 16,
       "transform": 25,
       "validate": 21,
@@ -58,8 +58,8 @@
     },
     "execution_profile": {
       "medium-agent": 21,
-      "orchestration-required": 52,
-      "small-agent": 34
+      "orchestration-required": 53,
+      "small-agent": 33
     },
     "risk_posture": {
       "approval-required": 14,
@@ -418,14 +418,14 @@
       "id": "AOA-T-0054",
       "name": "compaction-resilient-skill-loading",
       "domain": "agent-workflows",
-      "kind": "handoff",
+      "kind": "recovery",
       "status": "promoted",
       "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
       "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
       "topology": {
         "family": "review-compaction",
         "capability_class": [
-          "handoff",
+          "recover",
           "read",
           "summarize"
         ],
@@ -435,7 +435,7 @@
           "instructions",
           "human-approval-surfaces"
         ],
-        "execution_profile": "small-agent",
+        "execution_profile": "orchestration-required",
         "risk_posture": [
           "read-only",
           "degraded-mode"

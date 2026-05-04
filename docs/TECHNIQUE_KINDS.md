@@ -28,10 +28,10 @@ See also:
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `6` | `8` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
 | `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `0` | `2` |
-| `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `12` | `0` | `12` |
+| `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `0` | `11` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
 | `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `10` | `0` | `10` |
-| `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `5` | `0` | `5` |
+| `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `6` | `0` | `6` |
 
 ## `workflow`
 
@@ -328,11 +328,11 @@ Do not use this when:
 - the technique is mainly the work loop itself
 - the technique only stores history without a transfer or continuation seam
 
-Counts: `total` 12, `canonical` 0, `promoted` 12.
+Counts: `total` 11, `canonical` 0, `promoted` 11.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `12` |
+| `agent-workflows` | `11` |
 | `docs` | `0` |
 | `evaluation` | `0` |
 | `system-recovery` | `0` |
@@ -341,7 +341,6 @@ Counts: `total` 12, `canonical` 0, `promoted` 12.
 
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
-| [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `promoted` | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. | [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) |
 | [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack. | [TECHNIQUE.md](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) |
 | [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) | `agent-workflows` | `promoted` | Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay. | [TECHNIQUE.md](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) |
 | [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) | `agent-workflows` | `promoted` | Require an explicit receipt state for a handoff packet before the receiving side continues so ownership transfer stays reviewable instead of being inferred from delivery or silence. | [TECHNIQUE.md](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) |
@@ -433,11 +432,11 @@ Do not use this when:
 - the technique only diagnoses a problem without shaping recovery or repair
 - the technique is a steady-state workflow with no degraded or repair posture
 
-Counts: `total` 5, `canonical` 0, `promoted` 5.
+Counts: `total` 6, `canonical` 0, `promoted` 6.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `2` |
+| `agent-workflows` | `3` |
 | `docs` | `0` |
 | `evaluation` | `0` |
 | `system-recovery` | `3` |
@@ -446,6 +445,7 @@ Counts: `total` 5, `canonical` 0, `promoted` 5.
 
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
+| [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `promoted` | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. | [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) |
 | [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) | `agent-workflows` | `promoted` | Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout. | [TECHNIQUE.md](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) |
 | [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. | [TECHNIQUE.md](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) |
 | [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) | `system-recovery` | `promoted` | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |

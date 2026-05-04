@@ -2930,7 +2930,7 @@
       "id": "AOA-T-0054",
       "name": "compaction-resilient-skill-loading",
       "domain": "agent-workflows",
-      "kind": "handoff",
+      "kind": "recovery",
       "status": "promoted",
       "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
       "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
