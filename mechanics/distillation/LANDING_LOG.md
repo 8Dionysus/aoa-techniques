@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - AOA-T-0005 kind remap
+
+Changed:
+
+- remapped
+  [new-intent-rollout-checklist](../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+  from `guardrail` to `workflow`
+- kept the bundle at `agent-workflows`, `promoted`, and `source_backed`
+  posture with the same ID, evidence, relations, and public-safety state
+- updated the technique reform ingress review pack so `AOA-T-0005` is landed
+  and `AOA-T-0052` becomes the next narrow destination-check candidate
+- added a decision note for the public kind-frontmatter correction
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no `kind` value was added, removed, or renamed
+- no technique status changed
+- no domain, relation, evidence note, or owner boundary changed
+- no broad classification migration was claimed
+
 ## 2026-05-04 - AOA-T-0085 kind remap
 
 Changed:

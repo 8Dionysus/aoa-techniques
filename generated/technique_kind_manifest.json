@@ -32,11 +32,11 @@
         "the technique is mainly about durable artifact shape, not the work loop"
       ],
       "counts": {
-        "total": 11,
+        "total": 12,
         "canonical": 4,
-        "promoted": 7,
+        "promoted": 8,
         "by_domain": {
-          "agent-workflows": 11,
+          "agent-workflows": 12,
           "docs": 0,
           "evaluation": 0,
           "system-recovery": 0,
@@ -76,6 +76,14 @@
           "status": "canonical",
           "summary": "Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default.",
           "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0005",
+          "name": "new-intent-rollout-checklist",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
+          "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0038",
@@ -147,11 +155,11 @@
         "the primary value is assembling or publishing artifacts"
       ],
       "counts": {
-        "total": 14,
+        "total": 13,
         "canonical": 4,
-        "promoted": 10,
+        "promoted": 9,
         "by_domain": {
-          "agent-workflows": 9,
+          "agent-workflows": 8,
           "docs": 3,
           "evaluation": 2,
           "system-recovery": 0,
@@ -167,14 +175,6 @@
           "status": "canonical",
           "summary": "Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop.",
           "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0005",
-          "name": "new-intent-rollout-checklist",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
-          "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0068",

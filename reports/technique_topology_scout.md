@@ -17,7 +17,7 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 
 | value | count |
 |---|---:|
-| `choose` | `34` |
+| `choose` | `33` |
 | `communicate` | `3` |
 | `compare` | `10` |
 | `coordinate` | `11` |
@@ -60,9 +60,9 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 
 | value | count |
 |---|---:|
-| `medium-agent` | `19` |
+| `medium-agent` | `20` |
 | `orchestration-required` | `52` |
-| `small-agent` | `36` |
+| `small-agent` | `35` |
 
 ## `risk_posture` Counts
 
@@ -87,7 +87,7 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `agent-workflows` | `workflow` | `agent-workflows-core` | `plan` | `conversation`, `tool-surfaces`, `shell`, `memory-adjacent-artifacts` | `medium-agent` | `read-only` |
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `agent-workflows-core` | `choose`, `read`, `plan` | `conversation`, `tool-surfaces`, `shell`, `ui` | `small-agent` | `read-only`, `approval-required` |
 | [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | `agent-workflows` | `composition` | `agent-workflows-core` | `coordinate`, `transform` | `conversation`, `tool-surfaces`, `shell` | `medium-agent` | `read-only` |
-| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `intent-chain` | `choose`, `plan`, `validate` | `conversation`, `tool-surfaces` | `small-agent` | `read-only` |
+| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `workflow` | `intent-chain` | `plan`, `validate` | `conversation`, `tool-surfaces` | `medium-agent` | `read-only` |
 | [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | `composition` | `runtime-truth-lifecycle` | `coordinate`, `transform`, `mutate` | `conversation`, `tool-surfaces`, `instructions`, `config` | `orchestration-required` | `mutating` |
 | [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | `workflow` | `runtime-truth-lifecycle` | `plan`, `observe`, `interpret` | `conversation`, `tool-surfaces`, `docs`, `shell` | `orchestration-required` | `mutating` |
 | [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `workflow` | `ready-work-graphs` | `plan`, `read`, `communicate` | `conversation`, `tool-surfaces`, `memory-adjacent-artifacts`, `graph-adjacent-artifacts` | `medium-agent` | `read-only` |

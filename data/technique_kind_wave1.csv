@@ -3,7 +3,7 @@ AOA-T-0001,plan-diff-apply-verify-report,agent-workflows,canonical,workflow,agen
 AOA-T-0002,source-of-truth-layout,docs,canonical,artifact,docs-boundary
 AOA-T-0003,contract-first-smoke-summary,evaluation,canonical,validation,evaluation-chain
 AOA-T-0004,intent-plan-dry-run-contract-chain,agent-workflows,canonical,workflow,intent-chain
-AOA-T-0005,new-intent-rollout-checklist,agent-workflows,promoted,guardrail,intent-chain
+AOA-T-0005,new-intent-rollout-checklist,agent-workflows,promoted,workflow,intent-chain
 AOA-T-0006,latest-alias-plus-history-copy,evaluation,canonical,artifact,published-summary
 AOA-T-0007,signal-first-gate-promotion,evaluation,canonical,guardrail,evaluation-chain
 AOA-T-0008,published-summary-remediation-snapshot,evaluation,canonical,lift,published-summary

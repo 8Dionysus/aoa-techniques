@@ -125,8 +125,8 @@
           "history": 0
         },
         "by_kind": {
-          "workflow": 1,
-          "guardrail": 1,
+          "workflow": 2,
+          "guardrail": 0,
           "validation": 0,
           "composition": 0,
           "distribution": 0,
@@ -160,7 +160,7 @@
           "status": "promoted",
           "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
           "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
-          "kind": "guardrail"
+          "kind": "workflow"
         }
       ]
     },
