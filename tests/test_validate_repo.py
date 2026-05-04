@@ -1447,7 +1447,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         surfaces = validate_repo.parse_repo_doc_surfaces(REPO_ROOT)
         source_paths = {surface.doc_path for surface in surfaces}
 
-        self.assertEqual(18, len(surfaces))
+        self.assertEqual(19, len(surfaces))
         self.assertEqual(
             {spec["doc_path"] for spec in validate_repo.REPO_DOC_SURFACE_SPECS},
             source_paths,
@@ -1473,6 +1473,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 "docs/ROOT_SURFACE_LAW.md",
                 "docs/TECHNIQUE_ATOM_CONTRACT.md",
                 "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
+                "docs/TECHNIQUE_TREE_CONTRACT.md",
             }.issubset(source_paths)
         )
         for surface in surfaces:
@@ -1554,6 +1555,21 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         self.assertEqual(
             (
+                "Purpose",
+                "Tree Law",
+                "Tree Stack",
+                "Trunk Draft",
+                "Tree Versus Facets",
+                "Migration Rules",
+                "Leaf Bundle Rules",
+                "Generated Projection Path",
+                "Stop Lines",
+                "Next Honest Build Path",
+            ),
+            surfaces_by_path["docs/TECHNIQUE_TREE_CONTRACT.md"].top_level_sections,
+        )
+        self.assertEqual(
+            (
                 "Authority",
                 "Update Rule",
                 "Current Direction",
@@ -1561,6 +1577,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 "Horizon: Root Clarity",
                 "Horizon: Technique Atom",
                 "Horizon: Corpus Topology",
+                "Horizon: Corpus Tree",
                 "Horizon: Small-Agent Usability",
                 "Horizon: Mechanics To Canon",
                 "Horizon: Evidence And Promotion",
@@ -1650,7 +1667,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             list(validate_repo.REPO_DOC_SURFACE_GROUP_ORDER),
             [group["group"] for group in actual_full["surface_groups"]],
         )
-        self.assertEqual(18, len(actual_full["docs"]))
+        self.assertEqual(19, len(actual_full["docs"]))
         docs_by_id = {doc["doc_id"]: doc for doc in actual_full["docs"]}
         self.assertEqual("canon/authority", docs_by_id["ecosystem_context"]["surface_group"])
         self.assertEqual("canon/authority", docs_by_id["charter"]["surface_group"])
@@ -1703,7 +1720,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("START_HERE.md", releasing)
         self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
         self.assertIn("repo_doc_surface_manifest.json", docs_readme)
-        self.assertIn("18 authoritative public route/canon/status files", docs_readme)
+        self.assertIn("19 authoritative public route/canon/status files", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", readme)
@@ -1970,7 +1987,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "1. [README](../README.md)\n2. [Charter](../CHARTER.md)\n3. [Start Here](START_HERE.md)\n4. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)\n5. [Technique Selection](TECHNIQUE_SELECTION.md)",
             docs_readme,
         )
-        self.assertIn("18 authoritative public route/canon/status files", docs_readme)
+        self.assertIn("19 authoritative public route/canon/status files", docs_readme)
         self.assertIn("one family guide such as", docs_readme)
         self.assertIn("one reader or manifest such as", docs_readme)
         self.assertIn("one reusable lift bundle in `../techniques/docs/`", docs_readme)

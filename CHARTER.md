@@ -18,7 +18,8 @@ This charter answers what `aoa-techniques` may claim about the practice canon.
 
 Operational editing routes live in `AGENTS.md`, contribution rules live in
 `CONTRIBUTING.md`, and detailed authoring contracts live in
-`docs/TECHNIQUE_ATOM_CONTRACT.md` and `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`.
+`docs/TECHNIQUE_ATOM_CONTRACT.md`, `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and
+`docs/TECHNIQUE_TREE_CONTRACT.md`.
 This charter gives those routes their repository boundary. It does not replace
 them.
 
@@ -47,6 +48,7 @@ It should:
 | Technique IDs | stable public identifiers and source paths for reusable practice |
 | Technique atom law | the rule that one technique is one compact executable move |
 | Technique topology | current `domain` and `kind` truth plus reviewed future axes such as family, capability, substrate, execution profile, risk posture, and relations |
+| Technique tree | scalable root path architecture for corpus trunks, shelves, and leaf bundles, kept distinct from frontmatter truth |
 | Public-safe wording | sanitized technique text, examples, checks, notes, and route docs |
 | Adaptation evidence | origin, reuse, adverse-effect, promotion, and external-origin notes at the technique layer |
 | Mechanics participation | owner-local movement around donor intake, audit, promotion, recurrence, checkpoint, release support, RPG reflection, and other AoA mechanics before a practice becomes canon |
@@ -97,10 +99,11 @@ public route map, check:
 3. `docs/START_HERE.md` for the shortest current route
 4. `docs/TECHNIQUE_ATOM_CONTRACT.md` for atomicity
 5. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` for classification topology
-6. `docs/ECOSYSTEM_CONTEXT.md` for AoA layer boundaries
-7. `mechanics/README.md` when the change concerns practice movement before or
+6. `docs/TECHNIQUE_TREE_CONTRACT.md` for corpus path architecture
+7. `docs/ECOSYSTEM_CONTEXT.md` for AoA layer boundaries
+8. `mechanics/README.md` when the change concerns practice movement before or
    around canon
-8. generated surfaces, builders, validators, and tests before claiming parity
+9. generated surfaces, builders, validators, and tests before claiming parity
 
 If the change belongs to another AoA repo, this repository should route to that
 owner rather than absorbing the object.

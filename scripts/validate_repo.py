@@ -421,8 +421,13 @@ REPO_DOC_NAVIGATION_SPECS = (
     },
     {
         "question": "Where do technique atom and topology contracts live?",
-        "doc_ids": ("technique_atom_contract", "technique_topology_contract", "technique_index"),
-        "note": "Use the atom contract to decide whether a candidate is one technique, the topology contract to classify it, and the technique index to inspect the live corpus.",
+        "doc_ids": (
+            "technique_atom_contract",
+            "technique_topology_contract",
+            "technique_tree_contract",
+            "technique_index",
+        ),
+        "note": "Use the atom contract to decide whether a candidate is one technique, the topology contract to classify it, the tree contract to reason about path architecture, and the technique index to inspect the live corpus.",
     },
     {
         "question": "Where do contribution rules and PR boundaries live?",
@@ -482,6 +487,12 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_path": "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
         "surface_group": "canon/authority",
         "bounded_role": "classification topology contract for scaling the technique corpus beyond overloaded domains or flat categories",
+    },
+    {
+        "doc_id": "technique_tree_contract",
+        "doc_path": "docs/TECHNIQUE_TREE_CONTRACT.md",
+        "surface_group": "canon/authority",
+        "bounded_role": "corpus tree contract for scalable technique path architecture across trunks, shelves, and leaf bundles",
     },
     {
         "doc_id": "technique_index",
@@ -3465,8 +3476,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 18:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 18 authoritative public route/canon/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 19:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 19 authoritative public route/canon/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 
@@ -6664,7 +6675,7 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
             "## Boundaries",
             "",
             "- The source of meaning stays in the authored docs themselves.",
-            "- The bounded source set is exactly the 18 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
+            "- The bounded source set is exactly the 19 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
             "- This surface and its manifest are routing aids only. They do not become a new source of truth, root-authority replacement, or status-policy engine.",
             "",
         ]

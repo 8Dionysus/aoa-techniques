@@ -18,6 +18,7 @@ Choose the path that matches your question:
 - I need to pick a technique now:
   - [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
   - [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
+  - [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md)
   - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
   - [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
   - [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
@@ -173,7 +174,7 @@ These are small local derived cards for runtime lookup. They stay subordinate to
 ### Generated docs/status manifests
 
 These are derived public route/canon/status source-lift surfaces. They stay
-subordinate to the 18 authoritative public route/canon/status files and do not
+subordinate to the 19 authoritative public route/canon/status files and do not
 replace those docs as the source of truth.
 
 - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
@@ -200,6 +201,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
 - [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
 - [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
+- [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md)
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Mechanics](../mechanics/README.md)
@@ -344,6 +346,7 @@ These are outside `docs/` but matter when navigating the repo:
 - Prefer [Root Surface Law](ROOT_SURFACE_LAW.md) when the question is "does this file belong in root, docs root, mechanics, generated, decisions, or a bundle?"
 - Prefer [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is "what counts as one technique instead of a skill, playbook, or chain?"
 - Prefer [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is "which classes, families, categories, or axes should organize a large technique corpus?"
+- Prefer [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when the question is "where should technique bundles live in a scalable root tree?"
 - Prefer generated reader surfaces when the question is "what should I inspect next?"
 - Prefer `TECHNIQUE_SECTIONS.md` when the question is "which published techniques expose this lifted section heading?"
 - Prefer `../generated/technique_sections.full.json` when the question is "which exact technique section should I expand next?"

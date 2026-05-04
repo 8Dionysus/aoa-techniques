@@ -31,6 +31,7 @@ external reader who only wants the bounded practice.
 | Opens the shortest public route | [Start Here](docs/START_HERE.md) |
 | Defines what counts as one technique | [Technique Atom Contract](docs/TECHNIQUE_ATOM_CONTRACT.md) |
 | Defines the classification topology | [Technique Topology Contract](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) |
+| Defines the scalable corpus tree shape | [Technique Tree Contract](docs/TECHNIQUE_TREE_CONTRACT.md) |
 | Maps the public corpus | [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md) |
 | Keeps root and docs placement legible | [Root Surface Law](docs/ROOT_SURFACE_LAW.md) |
 | Holds repo-level direction without becoming an audit ledger | [ROADMAP](ROADMAP.md) |
@@ -48,6 +49,7 @@ Use the shortest route by need:
 - authority boundary: `CHARTER.md`
 - atomic technique contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - classification topology contract: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+- scalable corpus tree contract: `docs/TECHNIQUE_TREE_CONTRACT.md`
 - root and docs placement law: `docs/ROOT_SURFACE_LAW.md`
 - one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
 - current technique map: `TECHNIQUE_INDEX.md`
@@ -65,7 +67,7 @@ Use the shortest route by need:
 - repo authority, layer position, and neighboring repos: `CHARTER.md` and `docs/ECOSYSTEM_CONTEXT.md`
 - current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
 - via negativa pruning checklist: `docs/VIA_NEGATIVA_CHECKLIST.md`
-- frontmatter routing axes, topology, and kind doctrine: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `config/technique_family_seed.yaml`, `config/technique_topology_axes.yaml`, `data/technique_kind_wave1.yaml`, `reports/technique_family_scout.md`, `reports/technique_topology_scout.md`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
+- frontmatter routing axes, topology, tree architecture, and kind doctrine: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `docs/TECHNIQUE_TREE_CONTRACT.md`, `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `config/technique_family_seed.yaml`, `config/technique_topology_axes.yaml`, `data/technique_kind_wave1.yaml`, `reports/technique_family_scout.md`, `reports/technique_topology_scout.md`, `reports/wave1_kind_counts.md`, and `docs/TECHNIQUE_KINDS_SEED.md`
 - atomicity and small-agent authoring contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - feat-reader and runtime-card surfaces: `mechanics/growth-cycle/parts/technique-feat-model/README.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
 - status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `mechanics/audit/parts/promotion-readiness-matrix/README.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
@@ -115,7 +117,7 @@ Bad candidates:
 - AoA organ fidelity without hiding local dependencies inside portable practice
 - public-safe reusable practice over project-local residue
 - atomic executable moves over chains disguised as techniques
-- faceted topology over overloaded buckets or one giant category tree
+- deliberate tree architecture plus faceted topology over overloaded buckets
 - source-of-truth separation over root-file sprawl
 - bounded, reviewable contracts over vague lore
 - source-linked promotion over raw copying

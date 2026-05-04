@@ -14,6 +14,7 @@ permission slip to remap techniques automatically.
 
 - public corpus: `107` bundles, `25` canonical, `82` promoted
 - authoritative frontmatter axes: `domain`, `kind`
+- corpus tree: design contract only, not migrated path truth
 - scout or design axes: `family`, `capability_class`, `substrate`,
   `execution_profile`, `risk_posture`, richer `relations`
 - family seed: `26` scout families, still weaker than bundle frontmatter
@@ -33,6 +34,7 @@ permission slip to remap techniques automatically.
 |---|---|---|
 | [Technique Atom Contract](../../../../docs/TECHNIQUE_ATOM_CONTRACT.md) | technique unit is one atomic executable move, portable and small-agent shaped | which future classification axis should become schema truth |
 | [Technique Topology Contract](../../../../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) | classification is faceted and `domain + kind` are current truth | readiness to migrate every bundle frontmatter field |
+| [Technique Tree Contract](../../../../docs/TECHNIQUE_TREE_CONTRACT.md) | future root path architecture should be a tree of trunks, shelves, and leaf bundles | authority to move every bundle or make `tree_path` required frontmatter |
 | [Technique Kind Registry](../../../../config/technique_kind_registry.yaml) | current `kind` values and tie-break rules | that Agon handoff labels like `trace-probe` or `review` are valid kind values |
 | [Technique Family Seed](../../../../config/technique_family_seed.yaml) | scout shelf candidates and family constraints | authoritative family assignment for every bundle |
 | [Technique Topology Axes Registry](../../../../config/technique_topology_axes.yaml) | scout values for `capability_class`, `substrate`, `execution_profile`, and `risk_posture` | required frontmatter fields or automatic bundle remapping |
@@ -61,13 +63,16 @@ It should start with one bounded slice:
 1. `family` optional shelf review
 2. generated `capability_class` / `substrate` / `execution_profile` /
    `risk_posture` scout projection
-3. one kind tie-break review pack from `reports/kind_ambiguity_audit.md`
-4. relation topology guidance only after direct relations repeatedly help
+3. non-authoritative `tree_path` projection after family shelves are reviewed
+4. one kind tie-break review pack from `reports/kind_ambiguity_audit.md`
+5. relation topology guidance only after direct relations repeatedly help
    composition, conflict, sequence, or prerequisite routing
 
 ## Stop Lines
 
 - Do not add new required frontmatter fields in the first ingress pass.
+- Do not migrate the `techniques/` directory tree before a projection-first
+  review identifies one bounded pilot subtree.
 - Do not add new `kind` values from handoff cues like `trace-probe`,
   `diagnosis`, `review`, `comparison`, `boundary`, or `stress-case`.
 - Do not remap bundle frontmatter from generated reports without reading the
