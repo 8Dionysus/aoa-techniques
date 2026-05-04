@@ -67,18 +67,22 @@ def test_agon_candidate_handoff_shape() -> None:
         "owner_route_holds"
     ]
     assert data["gate_cards"] == {
+        "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md",
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
     }
     assert data["gate_examples"] == {
+        "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md",
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md",
     }
     assert data["gate_checklists"] == {
+        "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md",
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md",
     }
     assert data["gate_evidence_notes"] == {
+        "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md",
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md",
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md",
     }
@@ -103,6 +107,21 @@ def test_agon_candidate_handoff_shape() -> None:
         )
     ]
     assert gate_card_rows == [
+        {
+            "atomic_move_status": "candidate_named",
+            "candidate_ref": "candidate:aoa-techniques:agon/challenge-claim-practice",
+            "distillation_lane": "first_narrowing_watch",
+            "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md",
+            "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md",
+            "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md",
+            "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md",
+            "likely_domain": "agent-workflows",
+            "nearest_wrong_owner": "aoa-evals",
+            "primary_kind": "challenge",
+            "source_label": "challenge_claim",
+            "source_part": "move-technique-bridge",
+            "source_status": "requested_not_landed",
+        },
         {
             "atomic_move_status": "candidate_named",
             "bundle_readiness_review": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
@@ -179,7 +198,11 @@ def test_builder_rejects_missing_gate_card() -> None:
             encoding="utf-8"
         )
     )
-    with_card = next(entry for entry in config["entries"] if "gate_card" in entry)
+    with_card = next(
+        entry
+        for entry in config["entries"]
+        if "gate_card" in entry and "bundle_readiness_review" in entry
+    )
     with_card["gate_card"] = "mechanics/distillation/parts/agon-candidate-handoff/gates/missing.md"
     case = unittest.TestCase()
     with case.assertRaisesRegex(builder.ValidationError, "gate_card path does not exist"):
@@ -210,7 +233,11 @@ def test_builder_rejects_gate_card_pointing_to_child_artifact() -> None:
             encoding="utf-8"
         )
     )
-    with_card = next(entry for entry in config["entries"] if "gate_card" in entry)
+    with_card = next(
+        entry
+        for entry in config["entries"]
+        if "gate_card" in entry and "bundle_readiness_review" in entry
+    )
     with_card["gate_card"] = with_card["gate_checklist"]
     del with_card["gate_example"]
     del with_card["gate_checklist"]

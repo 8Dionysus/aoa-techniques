@@ -267,6 +267,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
+                "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md",
                 "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
                 "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
             },
@@ -274,6 +275,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
+                "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md",
                 "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
                 "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md",
             },
@@ -281,6 +283,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
+                "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md",
                 "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
                 "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md",
             },
@@ -288,6 +291,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
+                "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md",
                 "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md",
                 "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md",
             },
@@ -357,6 +361,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                     if gate_path.name == "offer-evidence-reference-minimal-public-safe.md":
                         self.assertIn("one evidence reference", text)
                         self.assertIn("Review condition", text)
+                    if gate_path.name == "challenge-claim-minimal-public-safe.md":
+                        self.assertIn("one challenged claim", text)
+                        self.assertIn("Vulnerable locus", text)
                     self.assertIn("no private logs", text)
                 if "checklists" in gate_path.parts:
                     self.assertIn("Pass Conditions", text)
@@ -365,6 +372,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                         self.assertIn("exactly one missing evidence object", text)
                     if gate_path.name == "offer-evidence-reference-gate-checklist.md":
                         self.assertIn("exactly one evidence reference", text)
+                    if gate_path.name == "challenge-claim-gate-checklist.md":
+                        self.assertIn("exactly one target claim", text)
                 if "evidence-notes" in gate_path.parts:
                     self.assertIn("Evidence Read", text)
                     self.assertIn("What This Does Not Support", text)

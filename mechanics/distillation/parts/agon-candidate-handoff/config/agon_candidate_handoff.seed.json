@@ -39,13 +39,17 @@
       "source_part": "move-technique-bridge",
       "source_status": "requested_not_landed",
       "source_label": "challenge_claim",
+      "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md",
+      "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md",
+      "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md",
+      "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md",
       "distillation_lane": "first_narrowing_watch",
       "distillation_gate": {
         "atomic_move_status": "candidate_named",
         "atomic_move_note": "challenge one claim by naming the challenged statement, the pressure reason, and the evidence needed next",
         "likely_domain": "agent-workflows",
         "primary_kind": "challenge",
-        "family_posture": "evidence and claim-pressure practice; not yet a bundle",
+        "family_posture": "claim-pressure and review-evidence practice; gate packet landed locally",
         "capability_class": "challenge",
         "substrate": "claim text",
         "execution_profile": "small-agent",
@@ -54,11 +58,11 @@
       },
       "bridge": {
         "higher_law": "Agents-of-Abyss mechanics/agon owns lawful challenge vocabulary.",
-        "local_route": "Run one Distillation atom/topology card before any technique draft.",
+        "local_route": "Run one gate card focused on target claim, challenged locus, pressure reason, and next support question.",
         "nearest_wrong_owner": "aoa-evals",
         "bridge_stop_line": "Do not make the challenge a proof verdict, rank effect, scar, or live arena move."
       },
-      "next_move": "Draft a gate card that separates bounded claim challenge from eval verdict and debate choreography."
+      "next_move": "Run one bundle-readiness review only if the challenge maps to a registry-backed kind before any technique draft."
     },
     {
       "candidate_ref": "candidate:aoa-techniques:agon/request-evidence-practice",
