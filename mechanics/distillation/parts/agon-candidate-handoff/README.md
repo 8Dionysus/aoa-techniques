@@ -114,11 +114,13 @@ Current landed gate evidence note:
 
 Current landed bundle readiness review:
 
+- [challenge-claim-bundle-readiness-review](gates/bundle-reviews/challenge-claim-bundle-readiness-review.md)
 - [request-evidence-bundle-readiness-review](gates/bundle-reviews/request-evidence-bundle-readiness-review.md)
 - [offer-evidence-reference-bundle-readiness-review](gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md)
 
 Current landed technique bundle:
 
+- [single-locus-claim-challenge](../../../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
 - [single-missing-evidence-request](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
 - [single-scoped-evidence-reference](../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
 

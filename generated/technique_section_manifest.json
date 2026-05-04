@@ -5949,6 +5949,62 @@
           "markdown": "What can vary across projects:\n- the reference form\n- whether the reference appears as prose, YAML, checklist item, review comment,\n  citation note, or compact artifact card\n- who inspects the reference\n- whether reliance means cite, defer, rerun, quote, or request a stronger source\n\nWhat should stay invariant:\n- one bounded review state\n- one evidence reference\n- one relevance statement\n- one support scope\n- one support limit\n- one reliance condition\n- no proof, route, memory, skill, KAG, ToS, runtime, eval, or Agon authority\n\nProject-shaped details that should not be treated as invariant:\n- AoA repository names\n- Agon move labels\n- local generated-output paths\n- local command receipts\n- one handoff packet format\n\nAoA adaptation example:\n- a Distillation candidate may offer one generated index path to support that a\n  handoff pointer landed, while saying it does not prove canonical readiness\n- a technique review may offer one source line to support an origin claim,\n  while routing proof adequacy to a separate check\n- a docs review may offer one sanitized excerpt for public sharing, while\n  keeping private logs outside the public artifact"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0107",
+      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and\nnext support question so review can apply pressure without turning challenge\ninto proof, tone, or adjudication."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- one claim, assertion, generated summary, route statement, or review sentence\n  is already in view\n- the claim may be too broad, unsupported, overconfident, underspecified, or\n  resting on the wrong support surface\n- the reviewer needs to apply pressure before asking for evidence, diagnosing\n  contradiction, or accepting closure\n- one vulnerable locus can be named inside the claim\n- a small agent needs a compact challenge pattern instead of a debate plan"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real task is to prove or disprove the claim\n- several claims need to be compared, ranked, or synthesized\n- the vulnerable locus cannot be named\n- the issue is already a localized contradiction needing contradiction\n  handling\n- challenging the claim would mutate routing, runtime, memory, skill\n  activation, KAG state, ToS canon, Agon law, actor eligibility, or proof\n  authority"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one target claim\n- the current review state\n- one vulnerable locus inside the claim\n- one pressure reason showing why that locus is vulnerable\n- one next evidence, scope, or revision question\n- one non-verdict stop condition"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one challenged claim statement\n- one vulnerable-locus statement\n- one pressure-reason statement\n- one next-support question\n- one non-verdict stop condition\n- no proof verdict, no personal attack, no debate plan, and no owner-law\n  mutation"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Quote or name the single target claim.\n2. Identify the smallest vulnerable locus inside the claim.\n3. State why that locus is under pressure.\n4. Ask the next evidence, scope, or revision question that would answer the\n   pressure.\n5. State the stop condition that keeps the challenge below proof, diagnosis,\n   adjudication, route change, memory write, or Agon move.\n6. Stop after the one challenge. Do not widen into broad debate, proof verdict,\n   tone critique, contradiction resolution, or workflow assignment."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one use of the technique challenges one target claim\n- the challenged locus is smaller than the whole topic, actor, repo, or route\n- the pressure reason addresses support, scope, or wording rather than tone\n- the next support question is concrete enough to answer, narrow, or defer\n- the stop condition makes clear that the challenge does not prove the claim\n  false\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, actor, or Agon authority\n- the technique does not define Agon challenge law; it only distills a portable\n  claim-pressure guardrail for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../single-missing-evidence-request/TECHNIQUE.md), this technique\nnames the vulnerable claim locus before asking for a specific missing evidence\nobject. Unlike\n[AOA-T-0106](../../docs/single-scoped-evidence-reference/TECHNIQUE.md), it does\nnot offer an available reference; it applies pressure to the claim that may need\nsupport. Unlike\n[AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), it does not\ndiagnose from reviewed evidence or name probable causes."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the challenge targets a broad topic instead of one claim\n- the vulnerable locus is vague or missing\n- the pressure reason becomes tone critique rather than support pressure\n- the next support question is too broad to answer\n- the challenge implies a verdict without proof\n\n### Negative effects\n\n- overuse can make ordinary review feel adversarial\n- vague challenges can slow work without improving evidence quality\n- a challenge can be mistaken for rejection if the non-verdict stop condition\n  is missing\n\n### Misuse patterns\n\n- challenging a person, team, repo, or worldview instead of a claim\n- using \"challenge\" language to smuggle adjudication authority\n- demanding all evidence instead of naming one next support question\n- escalating into debate choreography, role pressure, or arena language\n- importing proof, eval, rank, scar, route, memory, KAG, ToS, runtime, skill, or\n  actor authority into a small read-only challenge\n\n### Detection signals\n\n- the output contains multiple target claims\n- reviewers cannot point to the challenged locus\n- the challenge says or implies that the claim is false\n- the next question is \"prove everything\" or \"give more context\"\n- the output starts assigning routes, verdicts, actors, or workflow tasks\n\n### Mitigations\n\n- force the output to one claim, one locus, one pressure reason, one next\n  support question, and one stop condition\n- quote or name the exact claim before applying pressure\n- prefer support, scope, or wording pressure over tone critique\n- say explicitly that the challenge is not proof or adjudication\n- route proof, evaluation, memory, KAG, ToS, runtime, skill, actor, and Agon\n  questions to their own owner surfaces"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- exactly one target claim is named\n- exactly one vulnerable locus is named inside that claim\n- the pressure reason explains why the locus is vulnerable\n- the next support question is concrete enough to answer, narrow, or defer\n- the stop condition says the challenge is not proof, verdict, or adjudication\n- the output does not issue proof, evaluation, route, memory, runtime, skill,\n  KAG, ToS, actor, or Agon effects\n\nSee `checks/single-locus-claim-challenge-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the form of the target claim\n- whether the challenge is written as prose, YAML, checklist item, review\n  comment, or compact artifact card\n- who answers the next support question\n- whether the next support question asks for evidence, scope narrowing, wording\n  revision, or explicit deferment\n\nWhat should stay invariant:\n- one target claim\n- one vulnerable locus\n- one pressure reason\n- one next support question\n- one non-verdict stop condition\n- no proof, route, memory, skill, KAG, ToS, runtime, eval, actor, or Agon\n  authority\n\nProject-shaped details that should not be treated as invariant:\n- AoA repository names\n- Agon move labels\n- local generated-output paths\n- local release-check receipts\n- one handoff packet format\n\nAoA adaptation example:\n- a Distillation candidate may challenge the claim that a generated index is\n  \"complete\" by asking which reader or manifest entry exposes the new unit\n- a technique review may challenge a summary that says \"validated\" when the\n  support only proves schema validity\n- an agent handoff may challenge a continuation claim that lacks a visible git\n  or artifact anchor"
+        }
+      ]
     }
   ]
 }

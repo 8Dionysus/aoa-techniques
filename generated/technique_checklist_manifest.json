@@ -4663,6 +4663,51 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0107",
+      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/single-locus-claim-challenge/checks/single-locus-claim-challenge-checklist.md",
+          "title": "single-locus-claim-challenge checklist",
+          "intro_markdown": "Use this checklist before challenging a claim inside a bounded review.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One target claim is named."
+            },
+            {
+              "order": 2,
+              "text": "[ ] Exactly one vulnerable locus is named inside the claim."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The pressure reason explains why that locus is vulnerable."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The next support question is concrete enough to answer, narrow, or defer."
+            },
+            {
+              "order": 5,
+              "text": "[ ] The stop condition says the challenge is not proof, verdict, or adjudication."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The challenge does not target a person, team, repo, or worldview."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The output does not ask for broad research."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The output does not issue route, memory, runtime, skill, actor, rank, scar, KAG, ToS, eval, or Agon law effects."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

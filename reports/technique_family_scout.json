@@ -1481,11 +1481,11 @@
         "assessment"
       ],
       "counts": {
-        "total": 2,
+        "total": 3,
         "canonical": 0,
-        "promoted": 2,
+        "promoted": 3,
         "by_domain": {
-          "agent-workflows": 1,
+          "agent-workflows": 2,
           "docs": 1,
           "evaluation": 0,
           "system-recovery": 0,
@@ -1494,7 +1494,7 @@
         },
         "by_kind": {
           "workflow": 0,
-          "guardrail": 1,
+          "guardrail": 2,
           "validation": 0,
           "composition": 0,
           "distribution": 0,
@@ -1509,6 +1509,7 @@
       },
       "technique_ids": [
         "AOA-T-0105",
+        "AOA-T-0107",
         "AOA-T-0106"
       ],
       "techniques": [
@@ -1519,6 +1520,15 @@
           "status": "promoted",
           "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
           "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+          "kind": "guardrail"
+        },
+        {
+          "id": "AOA-T-0107",
+          "name": "single-locus-claim-challenge",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.",
+          "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
           "kind": "guardrail"
         },
         {

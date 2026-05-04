@@ -21,7 +21,7 @@ See also:
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
 | `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `11` | `4` | `7` |
-| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `4` | `9` |
+| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `14` | `4` | `10` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `2` | `5` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
@@ -82,11 +82,11 @@ Do not use this when:
 - the technique mostly verifies correctness after the fact
 - the primary value is assembling or publishing artifacts
 
-Counts: `total` 13, `canonical` 4, `promoted` 9.
+Counts: `total` 14, `canonical` 4, `promoted` 10.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `8` |
+| `agent-workflows` | `9` |
 | `docs` | `3` |
 | `evaluation` | `2` |
 | `system-recovery` | `0` |
@@ -103,6 +103,7 @@ Counts: `total` 13, `canonical` 4, `promoted` 9.
 | [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
 | [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | `agent-workflows` | `promoted` | Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior. | [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) |
 | [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) | `agent-workflows` | `promoted` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. | [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) |
+| [AOA-T-0107](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) | `agent-workflows` | `promoted` | Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication. | [TECHNIQUE.md](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) |
 | [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `docs` | `canonical` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
 | [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) | `docs` | `promoted` | Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy. | [TECHNIQUE.md](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) |
 | [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) | `docs` | `promoted` | Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine. | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |

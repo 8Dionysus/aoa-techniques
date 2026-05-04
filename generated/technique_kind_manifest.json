@@ -147,11 +147,11 @@
         "the primary value is assembling or publishing artifacts"
       ],
       "counts": {
-        "total": 13,
+        "total": 14,
         "canonical": 4,
-        "promoted": 9,
+        "promoted": 10,
         "by_domain": {
-          "agent-workflows": 8,
+          "agent-workflows": 9,
           "docs": 3,
           "evaluation": 2,
           "system-recovery": 0,
@@ -223,6 +223,14 @@
           "status": "promoted",
           "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
           "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0107",
+          "name": "single-locus-claim-challenge",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.",
+          "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0034",

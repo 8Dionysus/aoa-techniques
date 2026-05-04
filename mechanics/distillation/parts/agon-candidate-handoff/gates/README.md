@@ -32,5 +32,6 @@ Current gate evidence notes:
 
 Current bundle readiness reviews:
 
+- [challenge-claim-bundle-readiness-review](bundle-reviews/challenge-claim-bundle-readiness-review.md)
 - [request-evidence-bundle-readiness-review](bundle-reviews/request-evidence-bundle-readiness-review.md)
 - [offer-evidence-reference-bundle-readiness-review](bundle-reviews/offer-evidence-reference-bundle-readiness-review.md)

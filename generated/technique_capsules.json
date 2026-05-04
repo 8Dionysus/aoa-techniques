@@ -1485,6 +1485,20 @@
       "main_risk_short": "Main risk: the reference is vague and cannot be inspected.",
       "validation_short": "Validate by checking exactly one claim or decision point is named; exactly one evidence reference is offered; the reference is concrete enough...",
       "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0107",
+      "name": "single-locus-claim-challenge",
+      "summary": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.",
+      "one_line_intent": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support...",
+      "use_when_short": "Use when one claim, assertion, generated summary, route statement, or review sentence or the claim may be too broad, unsupported...",
+      "do_not_use_short": "Avoid when the real task is to prove or disprove the claim or several claims need to be compared, ranked...",
+      "inputs_short": "Needs one target claim; the current review state; one vulnerable locus inside the claim.",
+      "outputs_short": "Produces one challenged claim statement; one vulnerable-locus statement; one pressure-reason statement.",
+      "core_contract_short": "Core contract: one use of the technique challenges one target claim; the challenged locus is smaller than the whole topic...",
+      "main_risk_short": "Main risk: the challenge targets a broad topic instead of one claim.",
+      "validation_short": "Validate by checking exactly one target claim is named; exactly one vulnerable locus is named inside that claim; the pressure reason explains...",
+      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md"
     }
   ]
 }

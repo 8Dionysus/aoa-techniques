@@ -87,10 +87,12 @@ def test_agon_candidate_handoff_shape() -> None:
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md",
     }
     assert data["bundle_readiness_reviews"] == {
+        "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md",
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md",
     }
     assert data["technique_bundles"] == {
+        "candidate:aoa-techniques:agon/challenge-claim-practice": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
         "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
     }
@@ -109,6 +111,7 @@ def test_agon_candidate_handoff_shape() -> None:
     assert gate_card_rows == [
         {
             "atomic_move_status": "candidate_named",
+            "bundle_readiness_review": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md",
             "candidate_ref": "candidate:aoa-techniques:agon/challenge-claim-practice",
             "distillation_lane": "first_narrowing_watch",
             "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md",
@@ -117,10 +120,11 @@ def test_agon_candidate_handoff_shape() -> None:
             "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md",
             "likely_domain": "agent-workflows",
             "nearest_wrong_owner": "aoa-evals",
-            "primary_kind": "challenge",
+            "primary_kind": "guardrail",
             "source_label": "challenge_claim",
             "source_part": "move-technique-bridge",
             "source_status": "requested_not_landed",
+            "technique_bundle": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
         },
         {
             "atomic_move_status": "candidate_named",

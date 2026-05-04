@@ -454,6 +454,40 @@ Not moved:
   rank, scar, or skill authority moved into `aoa-techniques`
 - no current `kind` registry value was added or changed
 
+## 2026-05-03 - Challenge claim technique bundle
+
+Changed:
+
+- added
+  [single-locus-claim-challenge](../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
+  as the third normal technique bundle grown from the Agon candidate handoff
+- added the challenge-claim bundle-readiness review and registered the bundle
+  pointer in the part-local seed and generated compact index
+- mapped `challenge` from handoff-facing posture to the registry-backed
+  `guardrail` kind for the public technique bundle
+- updated the offer-evidence and challenge gate cards so their landed bundle
+  bridges are visible from the gate packet itself
+- extended the Audit promotion-readiness matrix so the new bundle enters the
+  fresh extraction lane instead of becoming hidden corpus drift
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity tests.test_audit_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Agon candidate source status changed
+- no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime,
+  rank, or scar authority moved into `aoa-techniques`
+- no canonical promotion was claimed
+
 ## 2026-05-03 - Offer evidence reference technique bundle
 
 Changed:

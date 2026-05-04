@@ -17,13 +17,15 @@ intake.
 
 ## Gate Posture
 
-Status: gate-packet-landed, not a technique bundle.
+Status: gate-packet-landed, with one linked technique bundle landed separately.
 
 Lane: `first_narrowing_watch`.
 
 This card proves only that the candidate can be offered as one portable
 practice move. It does not define Agon evidence law, create a skill, issue a
 proof verdict, write memory, or start arena behavior.
+It remains a gate card, not a technique bundle; the linked bundle carries the
+reusable technique surface.
 
 ## Atom
 
@@ -50,13 +52,21 @@ The move has five fields:
 
 - [offer-evidence-reference-gate-evidence-note](evidence-notes/offer-evidence-reference-gate-evidence-note.md)
 
+## Bundle Readiness Review
+
+- [offer-evidence-reference-bundle-readiness-review](bundle-reviews/offer-evidence-reference-bundle-readiness-review.md)
+
+## Landed Technique Bundle
+
+- [single-scoped-evidence-reference](../../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+
 ## Topology Read
 
 | Axis | Read |
 |---|---|
 | likely domain | `docs` |
 | primary kind | `artifact` |
-| family posture | review-evidence reference practice; gate packet landed locally |
+| family posture | review-evidence reference practice; first bundle landed locally |
 | capability class | offer-evidence-reference |
 | substrate | source reference, artifact pointer, citation, or excerpt boundary |
 | execution profile | small-agent when the claim and acceptable reference form are supplied |
@@ -107,9 +117,11 @@ hand motion, not the law of the arena.
   arena effects.
 - Do not treat a reference as final proof or source truth transfer.
 - Do not offer a bundle of references when one scoped reference is enough.
+- Do not treat the linked technique bundle as Agon source acceptance or proof
+  authority.
 
 ## Next Move
 
-Run one bundle-readiness review only if the gate packet keeps `artifact` as the
-current draft kind, keeps `review-evidence` as family posture, and keeps Agon
-source status unchanged.
+Keep the landed technique bundle at promoted/source-backed posture. Collect
+second-context evidence before any canonical review and keep Agon source status
+unchanged.

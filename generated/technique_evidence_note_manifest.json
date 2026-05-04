@@ -48571,6 +48571,240 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0107",
+      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/single-locus-claim-challenge/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0107"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-locus-claim-challenge"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the gate card, example, checklist, evidence note, and bundle-readiness review\nagree on the same small move"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle keeps the move portable outside OS Abyss and outside Agon when it\nstays a read-only claim-pressure guardrail"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence is still concentrated in the Distillation Agon handoff\npacket"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when one claim is overbroad, underspecified, or resting on a\nsupport surface that has not been named yet"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when a reviewer would otherwise accept a vague claim, demand\nbroad research, or turn pressure into a verdict"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default claim-challenge guardrail outside the\ncurrent handoff lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-03"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable one-locus challenge\nwhile excluding private session detail, Agon law, proof effects, actor\neligibility, route mutation, memory writes, runtime behavior, KAG promotion,\nToS canon, and skill activation"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "no second-context adaptation has been captured yet"
+                },
+                {
+                  "order": 2,
+                  "text": "small-agent use still needs observation outside the handoff packet"
+                },
+                {
+                  "order": 3,
+                  "text": "the boundary with evaluation relevance checks should be watched before\ndefault use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0107` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after a second live context shows the same\none-locus challenge working without Agon vocabulary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/single-locus-claim-challenge/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0107"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-locus-claim-challenge"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the handoff seed names `challenge_claim` as a first-narrowing candidate with\n`guardrail` as current bundle-facing kind after readiness review"
+                },
+                {
+                  "order": 2,
+                  "text": "the gate card narrows the portable atom to one target claim, one vulnerable\nlocus, one pressure reason, one next support question, and one non-verdict\nstop condition"
+                },
+                {
+                  "order": 3,
+                  "text": "the public-safe example demonstrates the atom without Agon law, proof,\nruntime, rank, scar, memory, KAG, ToS, actor, or skill authority"
+                },
+                {
+                  "order": 4,
+                  "text": "the checklist rejects broad debate, tone-as-evidence, hidden verdicts, and\nmulti-claim pressure"
+                },
+                {
+                  "order": 5,
+                  "text": "the bundle-readiness review finds the candidate ready for one bundle draft\nwhile keeping canonical promotion and Agon source acceptance out of scope"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the transferable object is not the full Agon `challenge_claim` move"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique atom is one read-only claim-pressure guardrail inside a bounded\nreview state"
+                },
+                {
+                  "order": 3,
+                  "text": "challenge wording belongs to family, capability, substrate, and topology\nreform posture, not to current `kind` frontmatter"
+                },
+                {
+                  "order": 4,
+                  "text": "the origin supports a promoted, source-backed bundle but not canonical\npromotion, proof authority, eval verdict authority, actor eligibility, or\nAgon source mutation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

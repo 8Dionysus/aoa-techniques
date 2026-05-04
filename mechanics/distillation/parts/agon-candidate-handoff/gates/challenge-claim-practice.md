@@ -16,13 +16,15 @@ with no live protocol or runtime effect.
 
 ## Gate Posture
 
-Status: gate-packet-landed, not a technique bundle.
+Status: gate-packet-landed, with one linked technique bundle landed separately.
 
 Lane: `first_narrowing_watch`.
 
 This card proves only that the candidate can be challenged as one portable
 practice move. It does not define Agon stance law, create a skill, issue a
 proof verdict, write memory, or start arena behavior.
+It remains a gate card, not a technique bundle; the linked bundle carries the
+reusable technique surface.
 
 ## Atom
 
@@ -49,21 +51,29 @@ The move has five fields:
 
 - [challenge-claim-gate-evidence-note](evidence-notes/challenge-claim-gate-evidence-note.md)
 
+## Bundle Readiness Review
+
+- [challenge-claim-bundle-readiness-review](bundle-reviews/challenge-claim-bundle-readiness-review.md)
+
+## Landed Technique Bundle
+
+- [single-locus-claim-challenge](../../../../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
+
 ## Topology Read
 
 | Axis | Read |
 |---|---|
 | likely domain | `agent-workflows` |
-| primary kind | `challenge` as handoff-facing posture; later bundle must map to a registry kind |
-| family posture | claim-pressure and review-evidence practice; gate packet landed locally |
+| primary kind | `guardrail` |
+| family posture | claim-pressure and review-evidence practice; first bundle landed locally |
 | capability class | challenge-claim |
 | substrate | claim text, asserted summary, generated statement, or review claim |
 | execution profile | small-agent when the target claim is already bounded |
 | risk posture | argument escalation, tone-as-evidence, hidden verdict drift |
 
 The `challenge` wording is useful as a family or capability posture. It is not
-currently a frontmatter `kind`; any later bundle must choose an existing kind
-such as `guardrail` or `assessment` before promotion.
+currently a frontmatter `kind`; the landed bundle uses `guardrail` because the
+atom blocks overclaim and false closure without becoming proof or diagnosis.
 
 ## Portable Core
 
@@ -104,11 +114,11 @@ hand motion, not the law of the arena.
 - Do not turn challenge into tone, personal attack, debate theater, or final
   adjudication.
 - Do not treat `challenge` as a current frontmatter kind.
-- Do not draft a technique bundle until the readiness review chooses a
-  registry-backed kind.
+- Do not treat the linked technique bundle as Agon source acceptance or proof
+  authority.
 
 ## Next Move
 
-Run one bundle-readiness review only if the challenge stays one claim, one
-locus, one pressure reason, one next support question, and one non-verdict stop
-condition.
+Keep the landed technique bundle at promoted/source-backed posture. Collect
+second-context evidence before any canonical review and keep Agon source status
+unchanged.

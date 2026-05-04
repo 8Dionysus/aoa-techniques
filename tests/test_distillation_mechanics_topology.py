@@ -299,6 +299,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
+                "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md",
                 "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
                 "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md",
             },
@@ -306,6 +307,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
+                "candidate:aoa-techniques:agon/challenge-claim-practice": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
                 "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
                 "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
             },
