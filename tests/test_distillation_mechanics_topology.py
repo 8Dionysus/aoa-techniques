@@ -91,6 +91,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/0054-kind-destination-check.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/post-0054-kind-audit-hold-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-family-shelf-review-pack.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/first-tree-projection-review-pack.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -812,9 +813,70 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("family shelf review: landed", ingress)
         self.assertIn("non-authoritative tree projection", ingress)
         self.assertIn("First Family Shelf Review Pack", ingress)
-        self.assertIn("family shelf review pack is also landed", distillation_roadmap)
-        self.assertIn("landed family shelf review pack", root_roadmap)
-        self.assertIn("landed kind-audit hold review and family shelf review", tree_contract)
+        self.assertIn("first family shelf review pack", distillation_roadmap)
+        self.assertIn("technique_tree_projection.md", root_roadmap)
+        self.assertIn("family shelf review", tree_contract)
+
+    def test_tree_projection_review_pack_selects_direct_read_pilot_without_migration(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "first-tree-projection-review-pack.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("First Tree Projection Review Pack", review)
+        self.assertIn("review-pack-landed", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not `tree_path` frontmatter", review)
+        self.assertIn("all `107` current bundles", review)
+        self.assertIn("`34` `pilot-candidate`", review)
+        self.assertIn("`41` `candidate`", review)
+        self.assertIn("`22` `boundary-watch`", review)
+        self.assertIn("| `split-review-needed` | `9` |", review)
+        self.assertIn("| `singleton-hold` | `1` |", review)
+        self.assertIn("Choose `review-compaction`", review)
+        self.assertIn("`AOA-T-0051`", review)
+        self.assertIn("`AOA-T-0052`", review)
+        self.assertIn("`AOA-T-0054`", review)
+        self.assertIn("Backup Pilot", review)
+        self.assertIn("Do not move `review-compaction` from this review alone", review)
+        self.assertIn("direct-read migration review", review)
+
+        self.assertIn("first-tree-projection-review-pack", reviews_index)
+        self.assertIn("tree projection: landed", ingress)
+        self.assertIn("first tree projection review: landed", ingress)
+        self.assertIn("review-compaction", ingress)
+        self.assertIn("direct-read migration review", distillation_roadmap)
+        self.assertIn("review-compaction", root_roadmap)
+        self.assertIn("reports/technique_tree_projection.md", tree_contract)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

@@ -149,6 +149,14 @@ The first build path should add a projection that maps:
 That projection should stay weaker than authored bundle meaning until a reviewed
 migration wave lands.
 
+The current projection surfaces are:
+
+- [Technique Tree Projection](../reports/technique_tree_projection.md)
+- [Technique Tree Projection JSON](../reports/technique_tree_projection.json)
+
+They are generated review surfaces only. They do not make future paths current
+links, do not add `tree_path` frontmatter, and do not authorize path movement.
+
 ## Stop Lines
 
 - Do not move all technique bundles in one wave.
@@ -164,10 +172,11 @@ migration wave lands.
 
 The next reform slice should:
 
-1. use the landed kind-audit hold review and family shelf review as input
-2. add a non-authoritative tree projection over all current bundles
-3. choose one pilot shelf or trunk for direct-read migration review
-4. only then move files, update links, and regenerate derived surfaces
+1. use the landed kind-audit hold review, family shelf review, generated tree
+   projection, and first tree projection review pack as input
+2. run a direct-read migration review for the `review-compaction` shelf
+3. only then move files, update links, and regenerate derived surfaces if the
+   pilot review proves the move is clearer than current placement
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

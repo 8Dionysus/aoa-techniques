@@ -72,6 +72,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_catalog.py"),
                 ("python", "scripts/build_kind_manifest.py"),
                 ("python", "scripts/build_topology_scout.py"),
+                ("python", "scripts/build_tree_projection.py"),
                 ("python", "scripts/build_capsules.py"),
                 ("python", "scripts/build_sections.py"),
                 ("python", "scripts/build_section_manifest.py"),
@@ -1961,6 +1962,49 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("bundle frontmatter remains stronger", report_markdown)
         for axis in validate_repo.TOPOLOGY_SCOUT_AXIS_ORDER:
             self.assertIn(axis, report["axis_value_counts"])
+
+    def test_tree_projection_report_is_builder_aligned_and_non_authoritative(self) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        wave1_overlay = validate_repo.load_wave1_kind_overlay(REPO_ROOT)
+        report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_tree_projection.json")
+        report_markdown = (
+            REPO_ROOT / "reports" / "technique_tree_projection.md"
+        ).read_text(encoding="utf-8")
+
+        expected_report = validate_repo.build_tree_projection_payload(catalog, wave1_overlay)
+        expected_markdown = validate_repo.build_tree_projection_markdown(expected_report)
+
+        self.assertEqual(expected_report, report)
+        self.assertEqual(expected_markdown, report_markdown)
+        self.assertEqual("projection-only-non-authoritative", report["status"])
+        self.assertEqual(validate_repo.TREE_PROJECTION_AUTHORITY_NOTE, report["authority_note"])
+        self.assertEqual(["domain", "kind"], report["frontmatter_truth_axes"])
+        self.assertEqual(
+            validate_repo.TREE_PROJECTION_TARGET_PATH_SHAPE,
+            report["target_path_shape"],
+        )
+        self.assertEqual(107, len(report["techniques"]))
+        self.assertIn("non-authoritative", report_markdown)
+        self.assertIn("bundle directories remain unmoved", report_markdown)
+        self.assertIn("pilot-candidate", report["review_status_counts"])
+        self.assertIn("split-review-needed", report["review_status_counts"])
+        self.assertIn("singleton-hold", report["review_status_counts"])
+        self.assertEqual(
+            "split-review-needed",
+            next(
+                entry
+                for entry in report["techniques"]
+                if entry["family"] == "automation-governance"
+            )["review_status"],
+        )
+        self.assertEqual(
+            "singleton-hold",
+            next(
+                entry
+                for entry in report["techniques"]
+                if entry["family"] == "tool-gateway"
+            )["review_status"],
+        )
 
     def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")

@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Tree projection and first review pack
+
+Changed:
+
+- added generated
+  [technique_tree_projection](../../reports/technique_tree_projection.md)
+  reports over all `107` bundles
+- added `scripts/build_tree_projection.py` and validator parity for the
+  projection surface
+- added
+  [first-tree-projection-review-pack](parts/technique-reform-ingress/reviews/first-tree-projection-review-pack.md)
+  as the human review layer over the generated placement projection
+- selected `review-compaction` for the next direct-read migration review
+
+Verification lane:
+
+```bash
+python scripts/build_tree_projection.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no technique frontmatter changed
+- no `tree_path`, `family`, or scout topology axis became required schema truth
+- no future projected path became a current valid link
+
 ## 2026-05-04 - Family shelf review pack
 
 Changed:
