@@ -590,6 +590,20 @@ DOMAIN_ORDER = (
     "validation-patterns",
     "history",
 )
+TREE_TRUNK_ORDER = (
+    "execution",
+    "instruction",
+    "proof",
+    "continuity",
+    "governance",
+    "knowledge-lift",
+    "ingest",
+    "recovery",
+    "history",
+    "tool-use",
+)
+TREE_TRUNK_VALUES = set(TREE_TRUNK_ORDER)
+TECHNIQUE_BUNDLE_SOURCE_GLOB = "techniques/**/TECHNIQUE.md"
 KIND_ORDER = (
     "workflow",
     "guardrail",
@@ -628,7 +642,7 @@ KIND_MANIFEST_VERSION = 1
 KIND_MANIFEST_SOURCE_OF_TRUTH = {
     "kind_registry": TECHNIQUE_KIND_REGISTRY_PATH,
     "catalog": "generated/technique_catalog.json",
-    "bundles": "techniques/*/*/TECHNIQUE.md",
+    "bundles": TECHNIQUE_BUNDLE_SOURCE_GLOB,
 }
 FAMILY_SCOUT_REPORT_VERSION = 1
 FAMILY_SCOUT_SOURCE_OF_TRUTH = {
@@ -861,7 +875,7 @@ SECTION_MANIFEST_VERSION = 1
 SECTION_MANIFEST_SOURCE_OF_TRUTH = "markdown-technique-sections-v1"
 SECTION_SURFACE_VERSION = 1
 SECTION_SURFACE_SOURCE_OF_TRUTH = {
-    "technique_markdown": "techniques/*/*/TECHNIQUE.md",
+    "technique_markdown": TECHNIQUE_BUNDLE_SOURCE_GLOB,
     "sections": list(REQUIRED_SECTIONS),
 }
 SECTION_KEY_BY_HEADING = {
@@ -3968,7 +3982,7 @@ def validate_tree_report_files(repo_root: Path) -> None:
 
 
 def validate_technique_bundle(
-    repo_root: Path, technique_dir: Path, expected_domain: str, schema_store: dict[str, Any]
+    repo_root: Path, technique_dir: Path, expected_domain: str | None, schema_store: dict[str, Any]
 ) -> TechniqueRecord:
     technique_path = technique_dir / "TECHNIQUE.md"
     if not technique_path.is_file():
@@ -3985,7 +3999,7 @@ def validate_technique_bundle(
     notes = parse_notes(repo_root, technique_dir)
     validate_support_references(body, technique_dir, technique_path)
 
-    if frontmatter["domain"] != expected_domain:
+    if expected_domain is not None and frontmatter["domain"] != expected_domain:
         fail(
             f"{technique_path}: frontmatter domain '{frontmatter['domain']}' does not match parent directory '{expected_domain}'"
         )
@@ -4008,6 +4022,33 @@ def validate_technique_bundle(
     )
 
 
+def expected_parent_domain_for_technique(repo_root: Path, technique_dir: Path) -> str | None:
+    techniques_dir = repo_root / "techniques"
+    try:
+        relative_parts = technique_dir.relative_to(techniques_dir).parts
+    except ValueError:
+        fail(f"{technique_dir}: technique bundle must live under techniques/")
+
+    if len(relative_parts) == 2:
+        domain, _slug = relative_parts
+        if domain not in DOMAIN_VALUES:
+            fail(f"{technique_dir}: unsupported domain directory '{domain}'")
+        return domain
+
+    if len(relative_parts) == 3:
+        trunk, shelf, _slug = relative_parts
+        if trunk not in TREE_TRUNK_VALUES:
+            fail(f"{technique_dir}: unsupported tree trunk directory '{trunk}'")
+        if not shelf:
+            fail(f"{technique_dir}: tree technique path must include a shelf directory")
+        return None
+
+    fail(
+        f"{technique_dir}: technique bundle path must match "
+        "techniques/<domain>/<slug>/ or techniques/<trunk>/<shelf>/<slug>/"
+    )
+
+
 def collect_techniques(repo_root: Path, schema_store: dict[str, Any]) -> list[TechniqueRecord]:
     techniques_dir = repo_root / "techniques"
     if not techniques_dir.is_dir():
@@ -4016,16 +4057,18 @@ def collect_techniques(repo_root: Path, schema_store: dict[str, Any]) -> list[Te
     records: list[TechniqueRecord] = []
     seen_ids: set[str] = set()
 
-    for domain_dir in sorted(path for path in techniques_dir.iterdir() if path.is_dir()):
-        if domain_dir.name not in DOMAIN_VALUES:
-            fail(f"{domain_dir}: unsupported domain directory '{domain_dir.name}'")
+    for top_level_dir in sorted(path for path in techniques_dir.iterdir() if path.is_dir()):
+        if top_level_dir.name not in DOMAIN_VALUES and top_level_dir.name not in TREE_TRUNK_VALUES:
+            fail(f"{top_level_dir}: unsupported technique root directory '{top_level_dir.name}'")
 
-        for technique_dir in sorted(path for path in domain_dir.iterdir() if path.is_dir()):
-            record = validate_technique_bundle(repo_root, technique_dir, domain_dir.name, schema_store)
-            if record.id in seen_ids:
-                fail(f"duplicate technique id '{record.id}' at {record.technique_dir}")
-            seen_ids.add(record.id)
-            records.append(record)
+    for technique_path in sorted(techniques_dir.rglob("TECHNIQUE.md")):
+        technique_dir = technique_path.parent
+        expected_domain = expected_parent_domain_for_technique(repo_root, technique_dir)
+        record = validate_technique_bundle(repo_root, technique_dir, expected_domain, schema_store)
+        if record.id in seen_ids:
+            fail(f"duplicate technique id '{record.id}' at {record.technique_dir}")
+        seen_ids.add(record.id)
+        records.append(record)
 
     if not records:
         fail(f"{repo_root}: no technique bundles found under techniques/")
@@ -4981,7 +5024,7 @@ def build_promotion_readiness_payload(repo_root: Path, records: list[TechniqueRe
         "scope": "published-non-deprecated",
         "source_of_truth": {
             "catalog": "generated/technique_catalog.min.json",
-            "bundles": "techniques/*/*/TECHNIQUE.md",
+            "bundles": TECHNIQUE_BUNDLE_SOURCE_GLOB,
             "canonical_readiness_note": "notes/canonical-readiness.md",
             "adverse_effects_review": "notes/adverse-effects-review.md",
         },
@@ -7077,7 +7120,7 @@ def validate_promotion_readiness_surface(repo_root: Path, records: list[Techniqu
         fail(f"{path}: must declare scope 'published-non-deprecated'")
     expected_source_of_truth = {
         "catalog": "generated/technique_catalog.min.json",
-        "bundles": "techniques/*/*/TECHNIQUE.md",
+        "bundles": TECHNIQUE_BUNDLE_SOURCE_GLOB,
         "canonical_readiness_note": "notes/canonical-readiness.md",
         "adverse_effects_review": "notes/adverse-effects-review.md",
     }

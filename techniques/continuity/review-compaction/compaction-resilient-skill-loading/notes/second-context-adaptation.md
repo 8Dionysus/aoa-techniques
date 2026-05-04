@@ -21,7 +21,7 @@
 - safety rules: canonical skill sources stay authoritative, and the technique remains outside full context composition, marketplace, and memory semantics
 
 ## Risks introduced by adaptation
-- the pattern can collapse back into [AOA-T-0012](../../docs/deterministic-context-composition/TECHNIQUE.md) or [AOA-T-0030](../../docs/fragmented-agent-context/TECHNIQUE.md) if repositories cannot explain what recovery adds after context has already been authored
+- the pattern can collapse back into [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) or [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md) if repositories cannot explain what recovery adds after context has already been authored
 - teams may over-associate the technique with general skill discovery because the donor plugin also handles discovery, matching, and tool exposure
 - the public bundle could drift into hidden-state replay if contributors forget that the donor explicitly resets ephemeral loaded-skill bookkeeping after compaction
 

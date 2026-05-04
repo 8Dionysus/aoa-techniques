@@ -169,6 +169,42 @@ relations:
                     technique_dir / "TECHNIQUE.md",
                 )
 
+    def test_expected_parent_domain_accepts_legacy_domain_layout(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            technique_dir = repo_root / "techniques" / "agent-workflows" / "demo"
+            technique_dir.mkdir(parents=True)
+
+            self.assertEqual(
+                "agent-workflows",
+                validate_repo.expected_parent_domain_for_technique(repo_root, technique_dir),
+            )
+
+    def test_expected_parent_domain_accepts_tree_trunk_layout(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            technique_dir = (
+                repo_root
+                / "techniques"
+                / "continuity"
+                / "review-compaction"
+                / "demo"
+            )
+            technique_dir.mkdir(parents=True)
+
+            self.assertIsNone(
+                validate_repo.expected_parent_domain_for_technique(repo_root, technique_dir)
+            )
+
+    def test_expected_parent_domain_rejects_unsupported_tree_root(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            technique_dir = repo_root / "techniques" / "misc" / "review-compaction" / "demo"
+            technique_dir.mkdir(parents=True)
+
+            with self.assertRaises(validate_repo.ValidationError):
+                validate_repo.expected_parent_domain_for_technique(repo_root, technique_dir)
+
     def test_selection_surface_escapes_summary_table_cells(self) -> None:
         full_catalog = {
             "techniques": [

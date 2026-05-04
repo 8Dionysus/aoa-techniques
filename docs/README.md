@@ -75,6 +75,10 @@ Choose the path that matches your question:
   - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
   - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
   - [Root Surface Law](ROOT_SURFACE_LAW.md)
+- I need repo-wide legacy provenance, archive, or migration receipts:
+  - [Root Legacy](../legacy/README.md)
+  - [Root Legacy Index](../legacy/INDEX.md)
+  - [Root Surface Law](ROOT_SURFACE_LAW.md)
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
   - [KAG Export](KAG_EXPORT.md)

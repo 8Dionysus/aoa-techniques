@@ -9,10 +9,10 @@ compares `AOA-T-0054 compaction-resilient-skill-loading` against `handoff`,
 
 ## Sources Read
 
-- [AOA-T-0054 TECHNIQUE.md](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md)
-- [AOA-T-0054 checklist](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md)
-- [AOA-T-0054 example](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md)
-- [AOA-T-0054 notes](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/notes/canonical-readiness.md)
+- [AOA-T-0054 TECHNIQUE.md](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
+- [AOA-T-0054 checklist](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md)
+- [AOA-T-0054 example](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md)
+- [AOA-T-0054 notes](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/canonical-readiness.md)
 - [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)
 - neighboring `handoff` and `recovery` bundles:
   [AOA-T-0057](../../../../../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md),
@@ -45,8 +45,8 @@ bookkeeping.
 
 ## Boundary Notes
 
-- Keep `AOA-T-0054` in `agent-workflows`; this is still an agent-session
-  practice, not a `system-recovery` domain move.
+- Keep `AOA-T-0054` under `domain: agent-workflows`; this is still an
+  agent-session practice, not a `system-recovery` domain move.
 - Keep `AOA-T-0057` as the pre-compaction handoff sibling.
 - Keep context composition, marketplace discovery, installation, memory recall,
   and full prompt reconstruction outside this bundle.

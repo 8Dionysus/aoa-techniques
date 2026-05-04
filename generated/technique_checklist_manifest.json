@@ -2250,10 +2250,10 @@
     },
     {
       "id": "AOA-T-0051",
-      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md",
+          "check_path": "techniques/continuity/review-compaction/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md",
           "title": "commit-triggered-background-review checklist",
           "intro_markdown": "Use this checklist when reviewing whether a post-commit review loop still behaves like a bounded artifact-producing review surface instead of drifting into remediation or CI governance.",
           "items": [
@@ -2295,10 +2295,10 @@
     },
     {
       "id": "AOA-T-0052",
-      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/review-findings-compaction/checks/review-findings-compaction-checklist.md",
+          "check_path": "techniques/continuity/review-compaction/review-findings-compaction/checks/review-findings-compaction-checklist.md",
           "title": "review-findings-compaction checklist",
           "intro_markdown": "Use this checklist when reviewing whether a findings compaction pass still behaves like a bounded verification-and-consolidation surface instead of drifting into issue management or remediation policy.",
           "items": [
@@ -2385,10 +2385,10 @@
     },
     {
       "id": "AOA-T-0054",
-      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md",
+          "check_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md",
           "title": "compaction-resilient-skill-loading checklist",
           "intro_markdown": "",
           "items": [

@@ -39,6 +39,12 @@ The format is intentionally simple and human-first.
   the extracted route-packet atom while keeping deletion, deprecation
   execution, proof, memory, skill, routing, runtime, and owner-local retirement
   authority outside the technique
+- added root `legacy/` as a public-safe provenance district with `raw/`,
+  `archive/`, and `receipts/`
+- moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into the first technique
+  tree pilot shelf at `techniques/continuity/review-compaction/` while keeping
+  `domain`, `kind`, IDs, status, evidence, and `tree_path` frontmatter
+  unchanged
 
 ### Validation
 

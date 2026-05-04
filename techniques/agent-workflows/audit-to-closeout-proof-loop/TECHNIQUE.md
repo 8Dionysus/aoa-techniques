@@ -98,7 +98,7 @@ Turn a reviewed audit finding set into a proof-backed closeout loop by requiring
 - deferred, uncertain, and follow-on outcomes remain visible
 - the technique stays smaller than incident response, release cutover, and generic issue-management doctrine
 
-Relationship to adjacent techniques: unlike [AOA-T-0052](../review-findings-compaction/TECHNIQUE.md), this technique starts after the findings are already reviewed and focuses on proof-backed closure rather than dedupe and stale-finding reduction. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it adds a stricter finding-first proof loop where live confirmation, targeted regression evidence, and final closeout must all attach to named audit findings before closure is credible.
+Relationship to adjacent techniques: unlike [AOA-T-0052](../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), this technique starts after the findings are already reviewed and focuses on proof-backed closure rather than dedupe and stale-finding reduction. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it adds a stricter finding-first proof loop where live confirmation, targeted regression evidence, and final closeout must all attach to named audit findings before closure is credible.
 
 ## Risks
 

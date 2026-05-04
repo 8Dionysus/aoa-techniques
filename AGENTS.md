@@ -19,6 +19,7 @@ This repository owns:
 - public-safe technique wording and topology selection, including current
   domain/kind truth and future family/capability/substrate/risk axes
 - owner-local participation in AoA cross-mechanics around reusable practice movement
+- root-level public-safe legacy provenance, archive, and migration receipts for repo-wide technique-canon history
 - generated technique catalogs, capsules, feat-card reader surfaces, and source-lift surfaces
 
 It does not own:
@@ -36,13 +37,14 @@ It does not own:
 6. `docs/TECHNIQUE_TREE_CONTRACT.md` when corpus path architecture, tree projection, or bundle moves matter
 7. `ROADMAP.md` when direction, horizons, or repo-level future triggers move
 8. `docs/ROOT_SURFACE_LAW.md` when root or docs-root placement changes
-9. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
-10. `WALKTHROUGH.md`
-11. `docs/TECHNIQUE_SELECTION.md`
-12. `docs/TECHNIQUE_KIND_GUIDE.md`
-13. the target `techniques/**/TECHNIQUE.md`
-14. affected generated catalogs, capsules, feat cards, or source-lift outputs
-15. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
+9. `legacy/README.md` when root-wide raw, archive, or receipt provenance changes
+10. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
+11. `WALKTHROUGH.md`
+12. `docs/TECHNIQUE_SELECTION.md`
+13. `docs/TECHNIQUE_KIND_GUIDE.md`
+14. the target `techniques/**/TECHNIQUE.md`
+15. affected generated catalogs, capsules, feat cards, or source-lift outputs
+16. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
 
 ## Route modes
 
@@ -52,6 +54,7 @@ It does not own:
 | `technique-authoring` | you will add, split, promote, or revise one technique | `docs/TECHNIQUE_ATOM_CONTRACT.md` -> `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` -> target bundle |
 | `tree-structure` | you will design, project, or migrate corpus path architecture | `docs/TECHNIQUE_TREE_CONTRACT.md` -> `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` -> affected generated surfaces |
 | `root-editing` | you will add, move, delete, or rewrite a root or docs-root surface | `CHARTER.md` -> `docs/ROOT_SURFACE_LAW.md` |
+| `legacy-provenance` | you will preserve repo-wide raw packets, archived tails, or path-migration receipts | `legacy/README.md` -> `legacy/INDEX.md` -> active owner route |
 | `direction-change` | roadmap, corpus-scale pressure, portability posture, or future triggers change | `ROADMAP.md` |
 | `mechanic-change` | practice movement, donor intake, audit, recurrence, checkpoint, RPG, or release-support surfaces change | `mechanics/README.md` -> nearest mechanic `AGENTS.md` |
 | `generated-parity` | generated catalogs, capsules, source-lift, or repo-doc surfaces change | source doc -> builder -> generated output -> validator/test |

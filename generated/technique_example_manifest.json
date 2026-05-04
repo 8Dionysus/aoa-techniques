@@ -679,10 +679,10 @@
     },
     {
       "id": "AOA-T-0051",
-      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md",
+          "example_path": "techniques/continuity/review-compaction/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md",
           "title": "Minimal commit-triggered-background-review example",
           "body_markdown": "Trigger:\n\n- commit `abc1234`\n\nReview artifact fields:\n\n- `commit_ref`\n- `review_scope`\n- `findings[]`\n- `generated_at`\n\nMinimal contract:\n\n- the commit boundary is visible\n- the review runs after that boundary\n- findings remain read-only output\n- any later fix step is separate from this artifact\n\nThe point of the example is that the review output is an artifact tied to a visible commit boundary, not an automatic rewrite or merge loop."
         }
@@ -690,10 +690,10 @@
     },
     {
       "id": "AOA-T-0052",
-      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/review-findings-compaction/examples/minimal-review-findings-compaction.md",
+          "example_path": "techniques/continuity/review-compaction/review-findings-compaction/examples/minimal-review-findings-compaction.md",
           "title": "Minimal review-findings-compaction example",
           "body_markdown": "Input findings:\n\n- `unused import in app.ts`\n- `app.ts has dead import`\n- `stale line reference in old diff`\n\nCompacted output:\n\n- one current finding for the dead import\n- one stale marker for the old diff reference\n\nWhy this works:\n\n- the first two findings point to the same underlying issue and can be represented once\n- the third finding no longer matches live code and should not survive as current truth\n\nThe point of the example is that compaction preserves the real issue while dropping invalidated duplicates."
         }
@@ -712,10 +712,10 @@
     },
     {
       "id": "AOA-T-0054",
-      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md",
+          "example_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md",
           "title": "Minimal compaction-resilient skill loading",
           "body_markdown": "Before compaction:\n\n- the session has already seen an `<available-skills>` block listing `checks` and `release-notes`\n- the agent previously loaded `checks`\n\nAfter compaction:\n\n- older injected context is no longer safe to assume\n- the session receives a fresh `<available-skills>` block derived from canonical skill sources\n\nRecovery step:\n\n- the agent re-evaluates which skills are needed\n- the agent reloads `checks` from its canonical skill source\n\nThe recovery surface is intentionally smaller than replaying the whole prior prompt history."
         }

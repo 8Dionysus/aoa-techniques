@@ -15,8 +15,8 @@
 
 ## Default-use rationale
 - this is the right promoted default when the main problem is keeping skill availability recoverable after compaction without silently replaying full prompt state
-- it remains narrower than [AOA-T-0012](../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../docs/fragmented-agent-context/TECHNIQUE.md) because it only owns post-compaction recovery, not source-layer authoring or composition
-- it also remains narrower than [AOA-T-0027](../../docs/cross-agent-skill-propagation/TECHNIQUE.md) because it restores one session's ability to reload skills instead of propagating a canonical source to many managed targets
+- it remains narrower than [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md) because it only owns post-compaction recovery, not source-layer authoring or composition
+- it also remains narrower than [AOA-T-0027](../../../docs/cross-agent-skill-propagation/TECHNIQUE.md) because it restores one session's ability to reload skills instead of propagating a canonical source to many managed targets
 
 ## Fresh public-safety check
 - review date: 2026-03-28

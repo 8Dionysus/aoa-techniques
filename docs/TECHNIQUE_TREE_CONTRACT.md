@@ -109,9 +109,11 @@ A future tree migration should happen in projection-first waves:
 2. review trunk and shelf assignments against authored bundle meaning
 3. choose one pilot trunk or shelf
 4. move only that bounded subtree
-5. update bundle links, generated catalogs, capsules, docs, validators, and
+5. preserve a compact migration receipt in root `legacy/receipts/` when
+   authored paths change
+6. update bundle links, generated catalogs, capsules, docs, validators, and
    decision records in the same wave
-6. repeat only after validation stays green and the resulting path feels easier
+7. repeat only after validation stays green and the resulting path feels easier
    to read
 
 Moving paths is allowed only after the tree projection and review pack make the
@@ -135,6 +137,9 @@ directories.
 
 Before migration, the tree belongs in generated or review surfaces, not in
 required frontmatter.
+
+The first family shelf review remains the pressure test for whether a proposed
+shelf is real enough to browse before any file movement.
 
 The first build path should add a projection that maps:
 
@@ -160,6 +165,8 @@ links, do not add `tree_path` frontmatter, and do not authorize path movement.
 ## Stop Lines
 
 - Do not move all technique bundles in one wave.
+- Do not move active technique bundles through root `legacy/`; preserve the
+  receipt there and move bundles directly between authored homes.
 - Do not make `tree_path` required frontmatter before projection review proves
   value.
 - Do not treat `domain` folders as the final tree or as junk drawers.
@@ -170,22 +177,23 @@ links, do not add `tree_path` frontmatter, and do not authorize path movement.
 
 ## Next Honest Build Path
 
-The current pilot review is
+The current landed pilot review is
 [Review-Compaction Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/review-compaction-direct-read-migration-review.md).
-The review-compaction direct-read review accepts the first pilot shelf.
+The review-compaction direct-read review accepted the first pilot shelf.
 
-It accepts `review-compaction` as the first migration pilot without moving files
-or adding `tree_path` frontmatter.
+The first pilot migration moves `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054`
+into `techniques/continuity/review-compaction/` without changing `domain`,
+`kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-review-compaction-tree-pilot.md`](../legacy/receipts/2026-05-04-review-compaction-tree-pilot.md).
 
 The next reform slice should:
 
-1. use the landed kind-audit hold review, family shelf review, generated tree
-   projection, first tree projection review pack, and review-compaction
-   direct-read review as input
-2. move exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into
-   `techniques/continuity/review-compaction/`
-3. repair authored links, regenerate derived surfaces, and run the release
-   check before considering any broader tree migration
+1. inspect the landed `review-compaction` pilot after validation
+2. confirm whether the new path is easier to read than the old broad domain
+   placement
+3. choose one next shelf only through projection-first review
+4. preserve a root legacy receipt and run the release check before considering
+   any broader tree migration
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

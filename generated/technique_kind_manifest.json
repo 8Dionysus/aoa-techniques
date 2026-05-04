@@ -3,7 +3,7 @@
   "source_of_truth": {
     "kind_registry": "config/technique_kind_registry.yaml",
     "catalog": "generated/technique_catalog.json",
-    "bundles": "techniques/*/*/TECHNIQUE.md"
+    "bundles": "techniques/**/TECHNIQUE.md"
   },
   "selection_order": [
     "workflow",
@@ -115,7 +115,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.",
-          "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md"
+          "technique_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0052",
@@ -123,7 +123,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.",
-          "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md"
+          "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0055",
@@ -1156,7 +1156,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
-          "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md"
+          "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0082",
