@@ -1468,6 +1468,61 @@
       ]
     },
     {
+      "family": "review-evidence",
+      "summary": "Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority.",
+      "typical_domains": [
+        "agent-workflows",
+        "docs",
+        "evaluation"
+      ],
+      "typical_kinds": [
+        "guardrail",
+        "artifact",
+        "assessment"
+      ],
+      "counts": {
+        "total": 1,
+        "canonical": 0,
+        "promoted": 1,
+        "by_domain": {
+          "agent-workflows": 1,
+          "docs": 0,
+          "evaluation": 0,
+          "system-recovery": 0,
+          "validation-patterns": 0,
+          "history": 0
+        },
+        "by_kind": {
+          "workflow": 0,
+          "guardrail": 1,
+          "validation": 0,
+          "composition": 0,
+          "distribution": 0,
+          "artifact": 0,
+          "lift": 0,
+          "discovery": 0,
+          "handoff": 0,
+          "ingest": 0,
+          "assessment": 0,
+          "recovery": 0
+        }
+      },
+      "technique_ids": [
+        "AOA-T-0105"
+      ],
+      "techniques": [
+        {
+          "id": "AOA-T-0105",
+          "name": "single-missing-evidence-request",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
+          "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+          "kind": "guardrail"
+        }
+      ]
+    },
+    {
       "family": "media-ingest",
       "summary": "OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs.",
       "typical_domains": [

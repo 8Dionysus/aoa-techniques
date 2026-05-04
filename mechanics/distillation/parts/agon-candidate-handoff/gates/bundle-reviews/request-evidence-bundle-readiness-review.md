@@ -27,6 +27,9 @@ future bundle, change Agon source status, or promote this candidate.
 
 Suggested draft slug: `single-missing-evidence-request`.
 
+Landed bundle:
+[single-missing-evidence-request](../../../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+
 ## Atom Contract Read
 
 - Atomic move: ask for exactly one missing evidence object that could change
@@ -74,8 +77,8 @@ authority.
 
 ## What This Does Not Support
 
-- It does not promote the candidate into `techniques/`.
-- It does not approve a future bundle before the draft exists.
+- This review by itself does not promote the candidate into `techniques/`.
+- It did not approve a future bundle before the draft existed.
 - It does not change Agon source status or accept an owner request.
 - It does not prove a claim or evaluate correctness.
 - It does not authorize route, memory, KAG, runtime, rank, scar, skill, or arena

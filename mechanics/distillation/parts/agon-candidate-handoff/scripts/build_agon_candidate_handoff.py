@@ -99,6 +99,7 @@ GATE_EVIDENCE_NOTE_PREFIX = (
 BUNDLE_READINESS_REVIEW_PREFIX = (
     "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/"
 )
+TECHNIQUE_BUNDLE_PREFIX = "techniques/"
 GATE_CARD_EXCLUDED_PREFIXES = (
     GATE_EXAMPLE_PREFIX,
     GATE_CHECKLIST_PREFIX,
@@ -290,6 +291,24 @@ def validate_entry(entry: dict[str, Any], source_map: dict[str, dict[str, str]])
                 f"{ref}: only first_narrowing_watch entries may carry bundle_readiness_review"
             )
 
+    technique_bundle = entry.get("technique_bundle")
+    if technique_bundle is not None:
+        if bundle_readiness_review is None:
+            raise ValidationError(f"{ref}: technique_bundle requires bundle_readiness_review")
+        if (
+            not isinstance(technique_bundle, str)
+            or not technique_bundle.startswith(TECHNIQUE_BUNDLE_PREFIX)
+            or not technique_bundle.endswith("/TECHNIQUE.md")
+        ):
+            raise ValidationError(f"{ref}: technique_bundle must point to a technique bundle")
+        bundle_path = REPO_ROOT / technique_bundle
+        if not bundle_path.is_file():
+            raise ValidationError(f"{ref}: technique_bundle path does not exist")
+        if lane != "first_narrowing_watch":
+            raise ValidationError(
+                f"{ref}: only first_narrowing_watch entries may carry technique_bundle"
+            )
+
 
 def validate_config(config: dict[str, Any]) -> None:
     if config.get("schema_version") != EXPECTED_SCHEMA_VERSION:
@@ -358,6 +377,8 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             row["gate_evidence_note"] = entry["gate_evidence_note"]
         if "bundle_readiness_review" in entry:
             row["bundle_readiness_review"] = entry["bundle_readiness_review"]
+        if "technique_bundle" in entry:
+            row["technique_bundle"] = entry["technique_bundle"]
         candidate_rows.append(row)
     return {
         "schema_version": EXPECTED_INDEX_SCHEMA,
@@ -402,10 +423,15 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             for entry in entries
             if "bundle_readiness_review" in entry
         },
+        "technique_bundles": {
+            entry["candidate_ref"]: entry["technique_bundle"]
+            for entry in entries
+            if "technique_bundle" in entry
+        },
         "candidates": candidate_rows,
         "stop_line": (
             "Agon candidate handoff does not define Agon law, create skills, issue proof, "
-            "write scars, start arena runtime, promote KAG, write ToS canon, or promote techniques"
+            "write scars, start arena runtime, promote KAG, write ToS canon, or itself promote techniques"
         ),
     }
 

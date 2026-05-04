@@ -8548,6 +8548,88 @@
           "content_markdown": "- add one second live context where a non-Method-growth practice is merged,\n  reanchored, deferred, or dropped by the same route packet\n- consider typed obsolescence route fields only after several projects reuse\n  the same output shape\n- keep actual status flips and retirement procedures in owner-local surfaces"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0105",
+      "name": "single-missing-evidence-request",
+      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+      "sections": [
+        {
+          "key": "intent",
+          "heading": "Intent",
+          "content_markdown": "Ask for exactly one missing evidence object that could change a bounded review\nstate, so review can narrow without broad research, verdict overclaim, or proof\ntheater."
+        },
+        {
+          "key": "when_to_use",
+          "heading": "When to use",
+          "content_markdown": "- one claim, decision, generated artifact, route, or review state is already in\n  view\n- the current blocker is a missing evidence object, not a missing full\n  investigation\n- the object can be supplied, linked, quoted, rerun, or honestly declared absent\n- the reviewer needs to keep work moving without pretending the absent object is\n  a verdict\n- a small agent needs a compact request pattern instead of a broad research plan"
+        },
+        {
+          "key": "when_not_to_use",
+          "heading": "When not to use",
+          "content_markdown": "- the real task is to prove correctness, score quality, or issue an evaluation\n  verdict\n- the review surface is not bounded to one claim or decision\n- several different evidence objects are equally necessary\n- the missing item is not concrete enough for another agent or human to provide\n- asking for evidence would mutate routing, runtime, memory, skill activation,\n  KAG state, ToS canon, Agon law, or proof authority"
+        },
+        {
+          "key": "inputs",
+          "heading": "Inputs",
+          "content_markdown": "- one reviewed claim, decision, artifact, or route state\n- the current review state or evidence gap\n- one missing evidence object that might change, narrow, or reopen the review\n- the acceptable form of that object, such as a command receipt, source line,\n  linked artifact, saved note, or explicit absence statement\n- the reason that this object matters now\n- the return condition for both present and absent evidence"
+        },
+        {
+          "key": "outputs",
+          "heading": "Outputs",
+          "content_markdown": "- one evidence request naming the reviewed claim or decision\n- one concrete missing evidence object\n- one short reason the object matters to the review state\n- one return condition if the object appears\n- one return condition if the object remains unavailable\n- no proof verdict, no broad research assignment, and no owner-law mutation"
+        },
+        {
+          "key": "core_procedure",
+          "heading": "Core procedure",
+          "content_markdown": "1. Name the single claim, decision, artifact, or route state under review.\n2. State the current evidence gap in one sentence.\n3. Choose the smallest missing evidence object that could change or narrow the\n   review.\n4. Name the acceptable form of the object so it can be supplied or declared\n   absent.\n5. Explain how the object would change, narrow, or reopen the review state.\n6. State what happens if the object appears and what remains blocked if it is\n   absent.\n7. Stop after the one request. Do not widen into a full research plan, proof\n   verdict, route change, memory write, or Agon move."
+        },
+        {
+          "key": "contracts",
+          "heading": "Contracts",
+          "content_markdown": "- one use of the technique asks for one missing evidence object\n- the request is tied to one bounded review state\n- the object must be concrete enough to supply, rerun, cite, or declare absent\n- missing evidence may block or narrow review, but it is not proof of failure\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-request atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique\ndoes not turn reviewed evidence into a diagnosis packet; it asks for one missing\nobject before diagnosis or closure. Unlike\n[AOA-T-0032](../context-report-for-ci/TECHNIQUE.md), it does not emit a broad\nCI-facing context report; it names the one object whose presence or absence\nmatters now."
+        },
+        {
+          "key": "risks",
+          "heading": "Risks",
+          "content_markdown": "### Failure modes\n\n- the request names a vague category instead of one concrete object\n- the agent asks for several items and hides a research plan inside the request\n- the absent object is treated as proof rather than as a review-state blocker\n- the request does not explain how the object would affect the review\n\n### Negative effects\n\n- overuse can slow work by asking for receipts when current evidence is already\n  enough\n- a poorly scoped request can push burden onto another agent without improving\n  the review\n- the technique can make missing-evidence language feel more authoritative than\n  it is\n\n### Misuse patterns\n\n- asking for \"all evidence\" or \"more context\" instead of one object\n- demanding a source that cannot reasonably exist for the current surface\n- using the request as a disguised verdict against the current claim\n- importing Agon, proof, rank, scar, route, memory, or evaluation authority into\n  a small read-only evidence request\n\n### Detection signals\n\n- the output contains more than one requested object\n- reviewers cannot tell what would change if the object appears\n- the request has no explicit absent-evidence return condition\n- the wording says or implies that the missing object proves the claim false\n- the request starts mutating owner state instead of narrowing review\n\n### Mitigations\n\n- force the request to one claim, one object, one reason, and two return\n  conditions\n- prefer the smallest rerunnable or inspectable object over broad context\n- say explicitly that absence blocks or narrows review but does not prove\n  failure\n- route proof, evaluation, memory, KAG, ToS, runtime, skill, and Agon questions\n  to their own owner surfaces"
+        },
+        {
+          "key": "validation",
+          "heading": "Validation",
+          "content_markdown": "Verify the technique by confirming that:\n- exactly one claim or decision point is named\n- exactly one missing evidence object is requested\n- the object is concrete enough to provide or declare absent\n- the request explains why the object matters to the current review state\n- both present and absent return conditions are explicit\n- the output does not issue a proof verdict, broad research plan, route change,\n  memory write, skill activation, KAG promotion, ToS canon change, or Agon law\n\nSee `checks/single-missing-evidence-request-checklist.md`."
+        },
+        {
+          "key": "adaptation_notes",
+          "heading": "Adaptation notes",
+          "content_markdown": "What can vary across projects:\n- the accepted evidence form\n- whether the request is written as prose, YAML, checklist item, or review\n  comment\n- who supplies the object\n- whether absence means defer, hold, rerun, or narrow the claim\n\nWhat should stay invariant:\n- one bounded review state\n- one missing evidence object\n- one reason the object matters\n- one present-evidence return condition\n- one absent-evidence return condition\n- no proof, route, memory, skill, KAG, ToS, runtime, or Agon authority\n\nProject-shaped details that should not be treated as invariant:\n- AoA repository names\n- Agon move labels\n- local CI commands\n- local generated-output receipts\n- one handoff packet format\n\nAoA adaptation example:\n- a Distillation candidate may request one builder receipt before trusting a\n  generated handoff index\n- a technique review may request one source line before accepting an origin\n  claim\n- an agent handoff may request one git-visible artifact before continuing a\n  resumed thread"
+        },
+        {
+          "key": "public_sanitization_notes",
+          "heading": "Public sanitization notes",
+          "content_markdown": "This public bundle keeps only the reusable evidence-request atom. Agon move law,\narena effects, rank/scar language, private session details, and local proof\nauthority stay outside the technique. The source project names are retained only\nas provenance and adaptation context."
+        },
+        {
+          "key": "example",
+          "heading": "Example",
+          "content_markdown": "See `examples/minimal-single-missing-evidence-request.md`."
+        },
+        {
+          "key": "checks",
+          "heading": "Checks",
+          "content_markdown": "See `checks/single-missing-evidence-request-checklist.md`."
+        },
+        {
+          "key": "promotion_history",
+          "heading": "Promotion history",
+          "content_markdown": "- born in the Distillation Agon candidate handoff as a `request_evidence`\n  first-narrowing candidate\n- shaped through a gate card, public-safe example, checklist, evidence note,\n  and bundle-readiness review\n- promoted in `aoa-techniques` on 2026-05-03 as a source-backed guardrail bundle\n  without changing the source Agon status"
+        },
+        {
+          "key": "future_evolution",
+          "heading": "Future evolution",
+          "content_markdown": "- collect a second-context adaptation from ordinary code review, documentation\n  review, or generated-output review\n- revisit canonical readiness only after second-context evidence shows the same\n  atom outside the Agon handoff\n- watch the boundary with evaluation so missing evidence does not become a\n  proof verdict by habit"
+        }
+      ]
     }
   ]
 }

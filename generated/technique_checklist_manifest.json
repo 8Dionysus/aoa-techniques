@@ -4557,6 +4557,59 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0105",
+      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/agent-workflows/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md",
+          "title": "single-missing-evidence-request checklist",
+          "intro_markdown": "Use this checklist before asking for missing evidence inside a bounded review.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One reviewed claim or decision point is named."
+            },
+            {
+              "order": 2,
+              "text": "[ ] The current review state or evidence gap is visible."
+            },
+            {
+              "order": 3,
+              "text": "[ ] Exactly one missing evidence object is requested."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The object is concrete enough to provide or declare absent."
+            },
+            {
+              "order": 5,
+              "text": "[ ] The request explains how the object would change, narrow, or reopen review."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The return condition says what happens if the object appears."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The return condition says what happens if the object remains unavailable."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The request does not ask for broad research or every possible source."
+            },
+            {
+              "order": 9,
+              "text": "[ ] Missing evidence is not treated as proof of failure."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The output does not issue proof, verdict, route, memory, runtime, skill, rank, scar, KAG, ToS, or Agon law effects."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

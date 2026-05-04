@@ -1,7 +1,7 @@
 # Agon Candidate Handoff
 
 This part maps Agon requested-only practice pressure into Distillation lanes
-before any technique bundle is drafted.
+before or beside any technique bundle draft.
 
 Use it when the question is:
 
@@ -10,9 +10,10 @@ Use it when the question is:
 - which candidate must route to a stronger owner before `aoa-techniques` can
   honestly extract a technique.
 
-It is a handoff and narrowing surface. It does not promote Agon candidates,
-create technique bundles, accept an AoA owner request, or import Agon law into
-portable technique canon.
+It is a handoff and narrowing surface. It does not itself promote Agon
+candidates, accept an AoA owner request, or import Agon law into portable
+technique canon. When a local bundle lands, this part may point to it as
+traceability evidence while keeping the Agon source status unchanged.
 
 ## Scope
 
@@ -107,8 +108,13 @@ Current landed bundle readiness review:
 
 - [request-evidence-bundle-readiness-review](gates/bundle-reviews/request-evidence-bundle-readiness-review.md)
 
+Current landed technique bundle:
+
+- [single-missing-evidence-request](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+
 ## Stop Line
 
 This part must not define Agon law, create skill workflows, issue proof
 verdicts, write scars, mutate rank or trust, start arena runtime, promote KAG,
-write ToS canon, or turn requested candidates into promoted techniques.
+write ToS canon, or by itself turn requested candidates into promoted
+techniques.

@@ -353,6 +353,12 @@ See also:
 |---|---|---|---|
 | Minimal superseded-practice obsolescence route | `present` | `techniques/agent-workflows/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md` | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
 
+### [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal single-missing-evidence request | `present` | `techniques/agent-workflows/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

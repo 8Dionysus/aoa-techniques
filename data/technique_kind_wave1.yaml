@@ -630,3 +630,9 @@ entries:
   status: promoted
   kind: handoff
   family: automation-governance
+- id: AOA-T-0105
+  name: single-missing-evidence-request
+  domain: agent-workflows
+  status: promoted
+  kind: guardrail
+  family: review-evidence

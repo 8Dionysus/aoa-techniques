@@ -145,6 +145,17 @@ families:
   typical_kinds:
   - guardrail
   - handoff
+- id: review-evidence
+  summary: Bounded review-state evidence requests, evidence references, and trace probes that narrow
+    review without becoming proof or evaluation authority.
+  typical_domains:
+  - agent-workflows
+  - docs
+  - evaluation
+  typical_kinds:
+  - guardrail
+  - artifact
+  - assessment
 - id: media-ingest
   summary: OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs.
   typical_domains:

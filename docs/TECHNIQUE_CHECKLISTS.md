@@ -346,6 +346,12 @@ See also:
 |---|---|---|---|---|
 | superseded-practice-obsolescence-route checklist | `present` | `11` | `techniques/agent-workflows/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
 
+### [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| single-missing-evidence-request checklist | `present` | `10` | `techniques/agent-workflows/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

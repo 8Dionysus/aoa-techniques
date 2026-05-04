@@ -48103,6 +48103,240 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0105",
+      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+      "notes": [
+        {
+          "note_path": "techniques/agent-workflows/single-missing-evidence-request/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0105"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-missing-evidence-request"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "not approved for canonical promotion yet"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "origin evidence is strong enough to justify a promoted public bundle"
+                },
+                {
+                  "order": 2,
+                  "text": "the gate card, example, checklist, evidence note, and bundle-readiness review\nagree on the same small move"
+                },
+                {
+                  "order": 3,
+                  "text": "the bundle keeps the move portable outside OS Abyss and outside Agon when it\nstays a read-only evidence request"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence is still concentrated in the Distillation Agon handoff\npacket"
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "this is useful when one concrete object would change, narrow, or reopen a\nbounded review state"
+                },
+                {
+                  "order": 2,
+                  "text": "it is strongest when a reviewer would otherwise ask for broad research or\nclose with an unsupported verdict"
+                },
+                {
+                  "order": 3,
+                  "text": "it is not yet proven as the default missing-evidence guard outside the\ncurrent handoff lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-03"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps the reusable one-object request\nwhile excluding private session detail, Agon law, proof effects, route\nmutation, memory writes, runtime behavior, KAG promotion, ToS canon, and skill\nactivation"
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "no second-context adaptation has been captured yet"
+                },
+                {
+                  "order": 2,
+                  "text": "small-agent use still needs observation outside the handoff packet"
+                },
+                {
+                  "order": 3,
+                  "text": "the boundary with evaluation verdicts should be watched before default use"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0105` as `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "revisit canonical readiness only after a second live context shows the same\none-object request working without Agon vocabulary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/agent-workflows/single-missing-evidence-request/notes/origin-evidence.md",
+          "kind": "origin_evidence",
+          "title": "Origin Evidence",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0105"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "single-missing-evidence-request"
+                }
+              ]
+            },
+            {
+              "heading": "Source project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "aoa-techniques"
+                },
+                {
+                  "order": 2,
+                  "key": "source files",
+                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md`"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the handoff seed names `request_evidence` as a first-narrowing candidate with\n`guardrail` as current bundle-facing kind"
+                },
+                {
+                  "order": 2,
+                  "text": "the gate card narrows the portable atom to one missing evidence object, one\nreview state, and one stop condition"
+                },
+                {
+                  "order": 3,
+                  "text": "the public-safe example demonstrates the atom without Agon law, proof,\nruntime, rank, scar, memory, KAG, ToS, or skill authority"
+                },
+                {
+                  "order": 4,
+                  "text": "the checklist rejects broad research, verdict overclaim, and evidence theater"
+                },
+                {
+                  "order": 5,
+                  "text": "the bundle-readiness review finds the candidate ready for one bundle draft\nwhile keeping canonical promotion and Agon source acceptance out of scope"
+                }
+              ]
+            },
+            {
+              "heading": "Interpretation",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the transferable object is not the full Agon `request_evidence` move"
+                },
+                {
+                  "order": 2,
+                  "text": "the technique atom is one read-only missing-evidence request inside a bounded\nreview state"
+                },
+                {
+                  "order": 3,
+                  "text": "the `evidence-request` wording belongs to family and capability posture, not\nto current `kind` frontmatter"
+                },
+                {
+                  "order": 4,
+                  "text": "the origin supports a promoted, source-backed bundle but not canonical\npromotion, proof authority, eval verdict authority, or Agon source mutation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
