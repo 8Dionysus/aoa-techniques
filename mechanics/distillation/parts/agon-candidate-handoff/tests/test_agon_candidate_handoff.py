@@ -67,16 +67,20 @@ def test_agon_candidate_handoff_shape() -> None:
         "owner_route_holds"
     ]
     assert data["gate_cards"] == {
-        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md"
+        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
+        "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
     }
     assert data["gate_examples"] == {
-        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md"
+        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md",
+        "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md",
     }
     assert data["gate_checklists"] == {
-        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md"
+        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
+        "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md",
     }
     assert data["gate_evidence_notes"] == {
-        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md"
+        "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md",
+        "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md",
     }
     assert data["bundle_readiness_reviews"] == {
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md"
@@ -113,6 +117,21 @@ def test_agon_candidate_handoff_shape() -> None:
             "source_part": "move-technique-bridge",
             "source_status": "requested_not_landed",
             "technique_bundle": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+        },
+        {
+            "atomic_move_status": "candidate_named",
+            "candidate_ref": "candidate:aoa-techniques:agon/offer-evidence-reference-practice",
+            "distillation_lane": "first_narrowing_watch",
+            "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
+            "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md",
+            "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md",
+            "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md",
+            "likely_domain": "docs",
+            "nearest_wrong_owner": "aoa-evals",
+            "primary_kind": "artifact",
+            "source_label": "offer_evidence_reference",
+            "source_part": "move-technique-bridge",
+            "source_status": "requested_not_landed",
         }
     ]
     assert "does not define Agon law" in data["stop_line"]

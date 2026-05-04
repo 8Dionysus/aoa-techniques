@@ -97,13 +97,17 @@
       "source_part": "move-technique-bridge",
       "source_status": "requested_not_landed",
       "source_label": "offer_evidence_reference",
+      "gate_card": "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
+      "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md",
+      "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md",
+      "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md",
       "distillation_lane": "first_narrowing_watch",
       "distillation_gate": {
         "atomic_move_status": "candidate_named",
         "atomic_move_note": "offer one evidence reference with scope, relevance, and limit before relying on it",
         "likely_domain": "docs",
-        "primary_kind": "evidence-reference",
-        "family_posture": "evidence citation practice; not yet a bundle",
+        "primary_kind": "artifact",
+        "family_posture": "review-evidence reference practice; gate packet landed locally",
         "capability_class": "cite",
         "substrate": "evidence reference",
         "execution_profile": "small-agent",
@@ -116,7 +120,7 @@
         "nearest_wrong_owner": "aoa-evals",
         "bridge_stop_line": "Do not turn a reference into proof verdict, source truth transfer, or KAG promotion."
       },
-      "next_move": "Write a gate card that forces scope and relevance before an evidence reference is used."
+      "next_move": "Run bundle-readiness review around one scoped evidence reference, keeping artifact as current draft kind and Agon source status unchanged."
     },
     {
       "candidate_ref": "candidate:aoa-techniques:agon/probe-trace-practice",
