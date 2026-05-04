@@ -422,7 +422,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born in `atm10-agent`\n- validated through canonical fixtures, dry-run smoke, contract-checks, and regression tests\n- promoted to `aoa-techniques` on 2026-03-13"
+          "content_markdown": "- born in `atm10-agent`\n- validated through canonical fixtures, dry-run smoke, contract-checks, and regression tests\n- promoted to `aoa-techniques` on 2026-03-13\n- remapped from `guardrail` to `workflow` on 2026-05-04 after direct kind\n  review confirmed that the reusable object is the rollout procedure for one\n  new intent path on an existing chain"
         },
         {
           "key": "future_evolution",

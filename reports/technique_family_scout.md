@@ -69,7 +69,7 @@ Counts: `total` 2, `canonical` 1, `promoted` 1.
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) | `agent-workflows` | `workflow` | `canonical` | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists. |
-| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
+| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
 
 ## `docs-boundary`
 

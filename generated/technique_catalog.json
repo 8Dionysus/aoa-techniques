@@ -230,7 +230,7 @@
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
-      "kind": "guardrail",
+      "kind": "workflow",
       "status": "promoted",
       "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
       "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",

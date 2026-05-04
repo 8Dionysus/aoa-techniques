@@ -20,7 +20,7 @@
   ],
   "axis_value_counts": {
     "capability_class": {
-      "choose": 34,
+      "choose": 33,
       "communicate": 3,
       "compare": 10,
       "coordinate": 11,
@@ -57,9 +57,9 @@
       "ui": 13
     },
     "execution_profile": {
-      "medium-agent": 19,
+      "medium-agent": 20,
       "orchestration-required": 52,
-      "small-agent": 36
+      "small-agent": 35
     },
     "risk_posture": {
       "approval-required": 14,
@@ -232,14 +232,13 @@
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
-      "kind": "guardrail",
+      "kind": "workflow",
       "status": "promoted",
       "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
       "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
       "topology": {
         "family": "intent-chain",
         "capability_class": [
-          "choose",
           "plan",
           "validate"
         ],
@@ -247,7 +246,7 @@
           "conversation",
           "tool-surfaces"
         ],
-        "execution_profile": "small-agent",
+        "execution_profile": "medium-agent",
         "risk_posture": [
           "read-only"
         ]

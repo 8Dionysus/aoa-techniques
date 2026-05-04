@@ -20,8 +20,8 @@ See also:
 
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
-| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `11` | `4` | `7` |
-| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `14` | `4` | `10` |
+| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `12` | `4` | `8` |
+| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `4` | `9` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `2` | `5` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
@@ -45,11 +45,11 @@ Do not use this when:
 - the primary value is blocking unsafe actions
 - the technique is mainly about durable artifact shape, not the work loop
 
-Counts: `total` 11, `canonical` 4, `promoted` 7.
+Counts: `total` 12, `canonical` 4, `promoted` 8.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `11` |
+| `agent-workflows` | `12` |
 | `docs` | `0` |
 | `evaluation` | `0` |
 | `system-recovery` | `0` |
@@ -62,6 +62,7 @@ Counts: `total` 11, `canonical` 4, `promoted` 7.
 | [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) | `agent-workflows` | `canonical` | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists. | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 | [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) | `agent-workflows` | `canonical` | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `agent-workflows` | `canonical` | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
+| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `promoted` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | `promoted` | Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine. | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
 | [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. | [TECHNIQUE.md](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) |
 | [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
@@ -82,11 +83,11 @@ Do not use this when:
 - the technique mostly verifies correctness after the fact
 - the primary value is assembling or publishing artifacts
 
-Counts: `total` 14, `canonical` 4, `promoted` 10.
+Counts: `total` 13, `canonical` 4, `promoted` 9.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `9` |
+| `agent-workflows` | `8` |
 | `docs` | `3` |
 | `evaluation` | `2` |
 | `system-recovery` | `0` |
@@ -96,7 +97,6 @@ Counts: `total` 14, `canonical` 4, `promoted` 10.
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
 | [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | `agent-workflows` | `canonical` | Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop. | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
-| [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `promoted` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
 | [AOA-T-0068](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) | `agent-workflows` | `promoted` | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. | [TECHNIQUE.md](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) |
 | [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | `agent-workflows` | `promoted` | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. | [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) |
 | [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `agent-workflows` | `promoted` | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. | [TECHNIQUE.md](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |

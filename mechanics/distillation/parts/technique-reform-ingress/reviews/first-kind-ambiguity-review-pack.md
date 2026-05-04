@@ -14,30 +14,31 @@ and
 Preceding review:
 [First Topology Scout Review Pack](first-topology-scout-review-pack.md)
 
-Status: review-pack-landed, first shortlist item remapped.
+Status: review-pack-landed, first shortlist items remapped.
 
 ## Verdict
 
 The first direct-read kind ambiguity pass confirms that the generated audit is
 useful for choosing review targets, but too broad to drive remaps by itself.
 
-The remaining strongest later remap candidates are:
+The remaining strongest later remap candidate is:
 
-- `AOA-T-0005` from `guardrail` toward `workflow`
 - `AOA-T-0052` away from `handoff`, with `workflow` as the current closest
   registry-backed target
 
 This review did not change bundle frontmatter by itself, did not add a new
 `kind`, and did not claim every remap was ready to land. The first follow-up
 remap wave landed `AOA-T-0085` as `lift` after moving bundle frontmatter,
-generated surfaces, tests, route notes, and a decision note together.
+generated surfaces, tests, route notes, and a decision note together. The next
+follow-up remap wave landed `AOA-T-0005` as `workflow` with the same bounded
+publication path.
 
 ## Direct Reads
 
 | Technique | Current `kind` | Audit cue | Direct-read verdict |
 |---|---|---|---|
 | [AOA-T-0028](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) | `guardrail` | `candidate remap` to `workflow` | Keep `guardrail`. The confirmation seam is the center of the contract; procedure exists to protect the gate. |
-| [AOA-T-0005](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `guardrail` | `candidate remap` to `workflow` | Strong remap candidate. The bundle's reusable object is the rollout path through fixtures, smoke, contract check, publication, and regression. Dry-run safety is risk posture, not the primary kind. |
+| [AOA-T-0005](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `workflow` | second shortlist remap landed | Landed. The bundle's reusable object is the rollout path through fixtures, smoke, contract check, publication, and regression. Dry-run safety is risk posture, not the primary kind. |
 | [AOA-T-0093](../../../../../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `guardrail` | `candidate remap` to `workflow` | Keep `guardrail`. The technique preserves a boundary between recommendation truth and host executability; the boundary law is stronger than the procedure. |
 | [AOA-T-0091](../../../../../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `guardrail` | `revisit later` | Keep `guardrail` for now. Ingress and guard are procedural, but `must_confirm` and `blocked_actions` posture is the primary reusable object. |
 | [AOA-T-0075](../../../../../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | `lift` | `candidate remap` to `artifact` | Keep `lift`. The donor pack is derived from a reviewed artifact and stays weaker than owner placement or promotion. |
@@ -72,17 +73,15 @@ than the actual center of gravity.
 
 ## Shortlist For Later Remap Work
 
-Do not remap remaining candidates in one broad sweep unless the remap wave has explicit
-scope, tests, generated-surface sync, and reviewer focus. The cleaner order is:
+Do not remap the remaining candidate in a broad sweep unless the remap wave has
+explicit scope, tests, generated-surface sync, and reviewer focus. The cleaner
+next order is:
 
-1. `AOA-T-0005`: `guardrail` -> `workflow`
-2. `AOA-T-0052`: `handoff` -> likely `workflow`, after one extra check against
+1. `AOA-T-0052`: `handoff` -> likely `workflow`, after one extra check against
    `validation` and `lift`
 
 Why this order:
 
-- `AOA-T-0005` is a straightforward rollout procedure, but it is already
-  source-backed and promoted, so the remap should be visible and narrow.
 - `AOA-T-0052` is probably not `handoff`, but the destination deserves one more
   tie-break read before frontmatter changes.
 
@@ -97,7 +96,7 @@ Why this order:
 
 ## Next Honest Move
 
-Prepare the next narrow remap wave with `AOA-T-0005`, only if the pass updates
-bundle frontmatter, generated surfaces, tests, and route notes together.
-If the next pass should stay review-only, read `AOA-T-0052` against
-`validation` and `lift` before choosing its destination.
+Prepare the next narrow remap wave by rereading `AOA-T-0052` against
+`workflow`, `validation`, and `lift` before choosing its destination. Land a
+frontmatter change only if the pass updates bundle frontmatter, generated
+surfaces, tests, and route notes together.

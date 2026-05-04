@@ -2,7 +2,7 @@
 id: AOA-T-0005
 name: new-intent-rollout-checklist
 domain: agent-workflows
-kind: guardrail
+kind: workflow
 status: promoted
 origin:
   project: atm10-agent
@@ -186,6 +186,9 @@ See `checks/intent-rollout-checklist.md`.
 - born in `atm10-agent`
 - validated through canonical fixtures, dry-run smoke, contract-checks, and regression tests
 - promoted to `aoa-techniques` on 2026-03-13
+- remapped from `guardrail` to `workflow` on 2026-05-04 after direct kind
+  review confirmed that the reusable object is the rollout procedure for one
+  new intent path on an existing chain
 
 ## Future evolution
 

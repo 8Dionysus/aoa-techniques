@@ -34,7 +34,7 @@ entries:
   name: new-intent-rollout-checklist
   domain: agent-workflows
   status: promoted
-  kind: guardrail
+  kind: workflow
   family: intent-chain
 - id: AOA-T-0006
   name: latest-alias-plus-history-copy
