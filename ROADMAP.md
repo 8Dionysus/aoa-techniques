@@ -123,7 +123,7 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 | Field | Direction |
 |---|---|
 | Current posture | `domain` and `kind` are authoritative frontmatter; family, capability, substrate, execution profile, risk posture, and richer relations are explicit design axes. |
-| Next honest move | Strengthen `family` as a reviewed optional shelf only after scout reports and examples prove stable tie-breaks. |
+| Next honest move | Enter future classification reform through `mechanics/distillation/parts/technique-reform-ingress/README.md`, then strengthen `family` or generated scout axes only after the chosen slice has tests, docs, and a decision note. |
 | Guardrail | Do not turn `agent-workflows`, `docs`, or tags into junk drawers for missing topology. |
 
 ## Horizon: Small-Agent Usability
@@ -176,6 +176,8 @@ trigger is real.
 - Add generated projections for `capability_class`, `substrate`,
   `execution_profile`, and `risk_posture` only after mechanics candidates prove
   the axes help selection without false precision.
+- Use the technique reform ingress packet before any broad classification
+  change so the first reform pass stays bounded and evidence-linked.
 - Add richer typed relation guidance only when direct relations are repeatedly
   useful for composition, conflict, sequence, or prerequisite routing.
 - Split `WALKTHROUGH.md` into a docs or examples district only if one root

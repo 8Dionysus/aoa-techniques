@@ -454,6 +454,36 @@ Not moved:
   rank, scar, or skill authority moved into `aoa-techniques`
 - no current `kind` registry value was added or changed
 
+## 2026-05-03 - Technique reform ingress packet
+
+Changed:
+
+- added `technique-reform-ingress` as the Distillation entry packet for future
+  classification reform
+- gathered the atom/topology contracts, kind registry, family scout, kind
+  ambiguity audit, and Agon first-narrowing frontier into one route
+- updated Distillation direction, part map, provenance, roadmap, root roadmap,
+  and Start Here so broad reform starts from evidence instead of a schema jump
+- recorded the structural decision in
+  [Technique Reform Ingress Packet](../../docs/decisions/2026-05-03-technique-reform-ingress-packet.md)
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no schema, template, or validator contract changed
+- no bundle frontmatter was remapped
+- no new `kind`, `family`, capability, substrate, execution, or risk axis became
+  required
+- no generated report gained authority over authored bundle meaning
+
 ## 2026-05-03 - Agon first-narrowing frontier review
 
 Changed:

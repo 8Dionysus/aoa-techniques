@@ -23,6 +23,9 @@
    `first_narrowing_frontier` lens to choose one atom/topology gate card at a
    time; do not draft a bundle until the gate proves standalone portability and
    nearest owner stop-lines.
+8. Before any broad classification reform, enter through the technique reform
+   ingress packet and keep the first pass as scout/generated projection unless a
+   decision note, schema update, templates, validators, and docs move together.
 
 ## Hold line
 

@@ -36,6 +36,7 @@ PART_LOCAL_DISTILLATION_READMES = (
     "mechanics/distillation/parts/external-candidate-ledger/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/agon-candidate-handoff/README.md",
+    "mechanics/distillation/parts/technique-reform-ingress/README.md",
     "mechanics/distillation/parts/long-gap-reentry/README.md",
 )
 
@@ -126,6 +127,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "external-candidate-ledger",
             "cross-layer-candidate-ledger",
             "agon-candidate-handoff",
+            "technique-reform-ingress",
             "long-gap-reentry",
         ):
             with self.subTest(part_name=part_name):
@@ -455,6 +457,39 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("not a technique bundle", frontier)
         self.assertIn("Do not define Agon", frontier)
         self.assertIn("Do not issue proof", frontier)
+
+    def test_technique_reform_ingress_is_bounded_before_schema_change(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-03-technique-reform-ingress-packet.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("not a schema migration", ingress)
+        self.assertIn("public corpus: `107` bundles, `25` canonical, `82` promoted", ingress)
+        self.assertIn("authoritative frontmatter axes: `domain`, `kind`", ingress)
+        self.assertIn("first_narrowing_frontier", ingress)
+        for axis in (
+            "family",
+            "capability_class",
+            "substrate",
+            "execution_profile",
+            "risk_posture",
+        ):
+            self.assertIn(axis, ingress)
+        self.assertIn("Do not add new required frontmatter fields", ingress)
+        self.assertIn("Do not add new `kind` values from handoff cues", ingress)
+        self.assertIn("prevents generated evidence", decision)
+        self.assertIn("remapping bundle meaning", decision)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

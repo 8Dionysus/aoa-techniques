@@ -28,7 +28,10 @@ parts.
 5. Use [Agon Candidate Handoff](parts/agon-candidate-handoff/README.md) when
    Agon requested-only candidates need Distillation lanes and gate cards before
    any bundle draft.
-6. Use [Long-Gap Reentry](parts/long-gap-reentry/README.md) when old promoted
+6. Use [Technique Reform Ingress](parts/technique-reform-ingress/README.md)
+   when accumulated topology evidence needs a bounded entry route before future
+   classification reform.
+7. Use [Long-Gap Reentry](parts/long-gap-reentry/README.md) when old promoted
    material needs a new external contract before another honest canonical pass.
 
 ## Boundaries
