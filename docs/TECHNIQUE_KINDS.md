@@ -20,7 +20,7 @@ See also:
 
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
-| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `12` | `4` | `8` |
+| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `4` | `9` |
 | `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `4` | `9` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `2` | `5` |
@@ -28,7 +28,7 @@ See also:
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `6` | `8` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
 | `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `0` | `2` |
-| `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `13` | `0` | `13` |
+| `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `12` | `0` | `12` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
 | `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `10` | `0` | `10` |
 | `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `5` | `0` | `5` |
@@ -45,11 +45,11 @@ Do not use this when:
 - the primary value is blocking unsafe actions
 - the technique is mainly about durable artifact shape, not the work loop
 
-Counts: `total` 12, `canonical` 4, `promoted` 8.
+Counts: `total` 13, `canonical` 4, `promoted` 9.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `12` |
+| `agent-workflows` | `13` |
 | `docs` | `0` |
 | `evaluation` | `0` |
 | `system-recovery` | `0` |
@@ -67,6 +67,7 @@ Counts: `total` 12, `canonical` 4, `promoted` 8.
 | [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. | [TECHNIQUE.md](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) |
 | [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
 | [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) | `agent-workflows` | `promoted` | Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance. | [TECHNIQUE.md](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) |
+| [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) | `agent-workflows` | `promoted` | Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface. | [TECHNIQUE.md](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) |
 | [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) | `agent-workflows` | `promoted` | Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack. | [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) |
 | [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) | `agent-workflows` | `promoted` | Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone. | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
 | [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | `agent-workflows` | `promoted` | Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing. | [TECHNIQUE.md](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
@@ -327,11 +328,11 @@ Do not use this when:
 - the technique is mainly the work loop itself
 - the technique only stores history without a transfer or continuation seam
 
-Counts: `total` 13, `canonical` 0, `promoted` 13.
+Counts: `total` 12, `canonical` 0, `promoted` 12.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `13` |
+| `agent-workflows` | `12` |
 | `docs` | `0` |
 | `evaluation` | `0` |
 | `system-recovery` | `0` |
@@ -340,7 +341,6 @@ Counts: `total` 13, `canonical` 0, `promoted` 13.
 
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
-| [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) | `agent-workflows` | `promoted` | Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface. | [TECHNIQUE.md](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) |
 | [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `promoted` | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. | [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) |
 | [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack. | [TECHNIQUE.md](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) |
 | [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) | `agent-workflows` | `promoted` | Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay. | [TECHNIQUE.md](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) |

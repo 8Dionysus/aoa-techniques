@@ -25,10 +25,11 @@
    nearest owner stop-lines.
 8. Before any broad classification reform, enter through the technique reform
    ingress packet. The topology scout projection, topology review pack, and
-   kind ambiguity direct-read review are now landed. `AOA-T-0085` has moved
-   from `artifact` to `lift`, and `AOA-T-0005` has moved from `guardrail` to
-   `workflow`. The next honest pass is a destination check for `AOA-T-0052`
-   against `workflow`, `validation`, and `lift` before any frontmatter change.
+   kind ambiguity direct-read review are now landed. The first shortlist remap
+   wave moved `AOA-T-0085` from `artifact` to `lift`, `AOA-T-0005` from
+   `guardrail` to `workflow`, and `AOA-T-0052` from `handoff` to `workflow`.
+   The next honest pass is a fresh kind ambiguity read over the updated audit
+   before any further frontmatter change.
 
 ## Hold line
 

@@ -2,7 +2,7 @@
 id: AOA-T-0052
 name: review-findings-compaction
 domain: agent-workflows
-kind: handoff
+kind: workflow
 status: promoted
 origin:
   project: roborev-dev/roborev
@@ -176,6 +176,9 @@ See `checks/review-findings-compaction-checklist.md`.
 - adapted from open-source `roborev-dev/roborev`
 - staged through the chat wave 2 graph-review-mailbox lane inside `aoa-techniques`
 - promoted into `aoa-techniques` on 2026-03-27 as a bounded external-import technique for findings verification and consolidation
+- remapped from `handoff` to `workflow` on 2026-05-04 after direct destination
+  review confirmed that the reusable object is the dedupe, revalidation, and
+  consolidation pass rather than the later continuation surface
 
 ## Future evolution
 

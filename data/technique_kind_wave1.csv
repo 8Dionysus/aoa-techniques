@@ -50,7 +50,7 @@ AOA-T-0048,semantic-review-surface-lift,docs,promoted,lift,kag-source-lift
 AOA-T-0049,dependency-aware-task-graph,agent-workflows,promoted,workflow,ready-work-graphs
 AOA-T-0050,ready-work-from-blocker-graph,agent-workflows,promoted,workflow,ready-work-graphs
 AOA-T-0051,commit-triggered-background-review,agent-workflows,promoted,workflow,review-compaction
-AOA-T-0052,review-findings-compaction,agent-workflows,promoted,handoff,review-compaction
+AOA-T-0052,review-findings-compaction,agent-workflows,promoted,workflow,review-compaction
 AOA-T-0053,local-first-session-index,history,canonical,artifact,history-artifacts
 AOA-T-0054,compaction-resilient-skill-loading,agent-workflows,promoted,handoff,review-compaction
 AOA-T-0055,requirements-design-tasks-ladder,agent-workflows,promoted,workflow,ready-work-graphs

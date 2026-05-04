@@ -316,7 +316,7 @@ entries:
   name: review-findings-compaction
   domain: agent-workflows
   status: promoted
-  kind: handoff
+  kind: workflow
   family: review-compaction
 - id: AOA-T-0053
   name: local-first-session-index

@@ -24,12 +24,12 @@
       "communicate": 3,
       "compare": 10,
       "coordinate": 11,
-      "handoff": 14,
+      "handoff": 13,
       "interpret": 8,
       "learn-from-artifact": 3,
       "mutate": 12,
       "observe": 36,
-      "plan": 20,
+      "plan": 21,
       "read": 47,
       "recover": 9,
       "summarize": 16,
@@ -57,9 +57,9 @@
       "ui": 13
     },
     "execution_profile": {
-      "medium-agent": 20,
+      "medium-agent": 21,
       "orchestration-required": 52,
-      "small-agent": 35
+      "small-agent": 34
     },
     "risk_posture": {
       "approval-required": 14,
@@ -391,14 +391,14 @@
       "id": "AOA-T-0052",
       "name": "review-findings-compaction",
       "domain": "agent-workflows",
-      "kind": "handoff",
+      "kind": "workflow",
       "status": "promoted",
       "summary": "Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.",
       "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
       "topology": {
         "family": "review-compaction",
         "capability_class": [
-          "handoff",
+          "plan",
           "observe",
           "validate"
         ],
@@ -408,7 +408,7 @@
           "code",
           "tests"
         ],
-        "execution_profile": "small-agent",
+        "execution_profile": "medium-agent",
         "risk_posture": [
           "read-only"
         ]

@@ -59,7 +59,7 @@ Tie-break rule: pick `handoff` when transfer, checkpoint, or resume is the cente
 - [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `receipt`, `packet`, `continuation`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
 - [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `continuation`, `mailbox`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
 - [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `resume`, `continuation`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
-- [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`agent-workflows`, current `handoff`): current-kind cues none; opposing `workflow` cues `workflow`. Seed family `review-compaction` already spans both `handoff` and `workflow`. Verdict: `candidate remap`.
+- [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`agent-workflows`, current `handoff`): current-kind cues none; opposing `workflow` cues `workflow`. Seed family `review-compaction` already spans both `handoff` and `workflow`. Verdict: `candidate remap`.
 
 ## Boundaries
 

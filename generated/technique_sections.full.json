@@ -4276,7 +4276,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `roborev-dev/roborev`\n- staged through the chat wave 2 graph-review-mailbox lane inside `aoa-techniques`\n- promoted into `aoa-techniques` on 2026-03-27 as a bounded external-import technique for findings verification and consolidation"
+          "content_markdown": "- adapted from open-source `roborev-dev/roborev`\n- staged through the chat wave 2 graph-review-mailbox lane inside `aoa-techniques`\n- promoted into `aoa-techniques` on 2026-03-27 as a bounded external-import technique for findings verification and consolidation\n- remapped from `handoff` to `workflow` on 2026-05-04 after direct destination\n  review confirmed that the reusable object is the dedupe, revalidation, and\n  consolidation pass rather than the later continuation surface"
         },
         {
           "key": "future_evolution",
