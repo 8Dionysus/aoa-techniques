@@ -1,6 +1,6 @@
 # Second Kind Ambiguity Review Pack
 
-Status: review-pack-landed, no frontmatter remap.
+Status: review-pack-landed, no frontmatter remap by itself.
 
 This packet is the fresh read after the first kind ambiguity shortlist closed.
 It starts from the updated `reports/kind_ambiguity_audit.md`, then checks the
@@ -31,8 +31,12 @@ The only fresh pressure point is `AOA-T-0054`
 compaction, which is continuation across loss, not an ordinary steady-state work
 loop.
 
-Next move: run one destination check for `AOA-T-0054` against `handoff`,
-`workflow`, and `recovery`. Do not remap it from this packet alone.
+Packet-time next move: run one destination check for `AOA-T-0054` against
+`handoff`, `workflow`, and `recovery`. Do not remap it from this packet alone.
+
+Follow-up: [0054-kind-destination-check](0054-kind-destination-check.md)
+landed the destination check and recommended remapping `AOA-T-0054` from
+`handoff` to `recovery`.
 
 ## Direct Reads
 
@@ -55,12 +59,13 @@ Next move: run one destination check for `AOA-T-0054` against `handoff`,
 - Repeated audit candidates are now review holds, not automatic next remaps.
 - `AOA-T-0054` should be read with the registry definition of `recovery`, not
   only with the audit's `handoff` vs `workflow` tie-break.
-- A destination check may still keep `AOA-T-0054` as `handoff`; the point is to
-  name the real fork before touching bundle frontmatter.
+- At packet time, the destination check could still have kept `AOA-T-0054` as
+  `handoff`; the point was to name the real fork before touching bundle
+  frontmatter.
 
 ## Next Honest Move
 
-Perform a narrow `AOA-T-0054` destination check:
+The landed narrow `AOA-T-0054` destination check followed this sequence:
 
 1. read the bundle, example, checks, and notes again;
 2. compare the primary reusable object against `handoff`, `workflow`, and

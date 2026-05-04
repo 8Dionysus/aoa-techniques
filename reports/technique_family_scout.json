@@ -1202,10 +1202,10 @@
           "artifact": 0,
           "lift": 0,
           "discovery": 0,
-          "handoff": 1,
+          "handoff": 0,
           "ingest": 0,
           "assessment": 0,
-          "recovery": 0
+          "recovery": 1
         }
       },
       "technique_ids": [
@@ -1239,7 +1239,7 @@
           "status": "promoted",
           "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
           "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
-          "kind": "handoff"
+          "kind": "recovery"
         }
       ]
     },

@@ -22,6 +22,8 @@ permission slip to remap techniques automatically.
   authority
 - second kind ambiguity review pack: landed as the updated-audit read; it holds
   old false positives and routes `AOA-T-0054` to a destination check
+- `AOA-T-0054` destination check: landed as a bounded correction from
+  `handoff` to `recovery`
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -40,6 +42,7 @@ permission slip to remap techniques automatically.
 | [Kind Ambiguity Audit](../../../../reports/kind_ambiguity_audit.md) | tie-break seams that deserve human review | automatic remap authority |
 | [First Kind Ambiguity Review Pack](reviews/first-kind-ambiguity-review-pack.md) | direct-read shortlist for later narrow remap work | frontmatter mutation, new kind authority, or status change |
 | [Second Kind Ambiguity Review Pack](reviews/second-kind-ambiguity-review-pack.md) | updated-audit read that routes `AOA-T-0054` to a `handoff` / `workflow` / `recovery` destination check | frontmatter mutation or proof that `AOA-T-0054` must move |
+| [AOA-T-0054 Kind Destination Check](reviews/0054-kind-destination-check.md) | direct-read destination verdict for `AOA-T-0054` from `handoff` toward `recovery` | schema migration, status promotion, or sibling-owner authority |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -90,10 +93,10 @@ It should start with one bounded slice:
 
 ## Next Honest Move
 
-Use the landed second kind ambiguity review pack before any further frontmatter
-candidate. The first remaps landed for `AOA-T-0085` (`artifact` to `lift`) and
-`AOA-T-0005` (`guardrail` to `workflow`), and the final shortlist remap landed
-for `AOA-T-0052` (`handoff` to `workflow`). The next move is a narrow
-`AOA-T-0054` destination check against `handoff`, `workflow`, and `recovery`.
-That check may still keep current `handoff`; do not remap from the review pack
-alone.
+Use the landed `AOA-T-0054` destination check as the close of this remap lane.
+The first remaps landed for `AOA-T-0085` (`artifact` to `lift`) and
+`AOA-T-0005` (`guardrail` to `workflow`), the final first-shortlist remap
+landed for `AOA-T-0052` (`handoff` to `workflow`), and the second-pack
+destination check landed `AOA-T-0054` (`handoff` to `recovery`). The next move
+is an updated kind-audit hold review before choosing any further frontmatter
+candidate; do not recycle already-held false positives as automatic remaps.

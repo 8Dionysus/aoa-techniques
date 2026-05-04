@@ -328,7 +328,7 @@ entries:
   name: compaction-resilient-skill-loading
   domain: agent-workflows
   status: promoted
-  kind: handoff
+  kind: recovery
   family: review-compaction
 - id: AOA-T-0055
   name: requirements-design-tasks-ladder

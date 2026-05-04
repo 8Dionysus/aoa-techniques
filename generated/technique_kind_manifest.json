@@ -848,11 +848,11 @@
         "the technique only stores history without a transfer or continuation seam"
       ],
       "counts": {
-        "total": 12,
+        "total": 11,
         "canonical": 0,
-        "promoted": 12,
+        "promoted": 11,
         "by_domain": {
-          "agent-workflows": 12,
+          "agent-workflows": 11,
           "docs": 0,
           "evaluation": 0,
           "system-recovery": 0,
@@ -861,14 +861,6 @@
         }
       },
       "techniques": [
-        {
-          "id": "AOA-T-0054",
-          "name": "compaction-resilient-skill-loading",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
-          "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md"
-        },
         {
           "id": "AOA-T-0056",
           "name": "channelized-agent-mailbox",
@@ -1145,11 +1137,11 @@
         "the technique is a steady-state workflow with no degraded or repair posture"
       ],
       "counts": {
-        "total": 5,
+        "total": 6,
         "canonical": 0,
-        "promoted": 5,
+        "promoted": 6,
         "by_domain": {
-          "agent-workflows": 2,
+          "agent-workflows": 3,
           "docs": 0,
           "evaluation": 0,
           "system-recovery": 3,
@@ -1158,6 +1150,14 @@
         }
       },
       "techniques": [
+        {
+          "id": "AOA-T-0054",
+          "name": "compaction-resilient-skill-loading",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
+          "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md"
+        },
         {
           "id": "AOA-T-0082",
           "name": "repair-shape-from-diagnosis",
