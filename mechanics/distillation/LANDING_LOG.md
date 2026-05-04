@@ -391,3 +391,34 @@ Not moved:
 - no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime, rank,
   scar, or skill authority moved into the technique bundle
 - no canonical promotion was claimed
+
+## 2026-05-03 - Offer evidence reference gate packet
+
+Changed:
+
+- added a gate card, public-safe example, checklist, and evidence note for
+  `candidate:aoa-techniques:agon/offer-evidence-reference-practice`
+- registered the packet in the Agon candidate handoff seed and compact
+  generated index
+- aligned the candidate's current bundle-facing `primary_kind` from
+  `evidence-reference` to the registry-backed `artifact`, leaving
+  evidence-reference as family/capability posture under `review-evidence`
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Agon candidate became a technique bundle
+- no Agon candidate source status changed
+- no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime, rank,
+  scar, or skill authority moved into `aoa-techniques`
+- no current `kind` registry value was added or changed
