@@ -32,10 +32,12 @@
    post-`AOA-T-0054` kind-audit hold review are now landed; `AOA-T-0054` moved
    from `handoff` to `recovery`, and the remaining generated kind pressure is
    held as stale false-positive or calibration evidence.
-   The first family shelf review pack, generated tree projection, and first
-   tree projection review pack are also landed. The next honest pass is a
-   direct-read migration review for the `review-compaction` shelf before any
-   path migration, `tree_path` frontmatter, or schema migration.
+   The first family shelf review pack, generated tree projection, first tree
+   projection review pack, and review-compaction direct-read migration review
+   are also landed. The review-compaction direct-read migration review is landed
+   as `accepted-for-first-migration-pilot`. The next honest pass is the
+   first pilot migration for exactly `AOA-T-0051`, `AOA-T-0052`, and
+   `AOA-T-0054`, with no `tree_path` frontmatter or schema migration.
 
 ## Hold line
 

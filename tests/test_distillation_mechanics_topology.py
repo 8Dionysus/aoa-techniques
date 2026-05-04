@@ -92,6 +92,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/post-0054-kind-audit-hold-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-family-shelf-review-pack.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-tree-projection-review-pack.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/review-compaction-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -877,6 +878,67 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("direct-read migration review", distillation_roadmap)
         self.assertIn("review-compaction", root_roadmap)
         self.assertIn("reports/technique_tree_projection.md", tree_contract)
+
+    def test_review_compaction_direct_read_review_accepts_pilot_without_path_move(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "review-compaction-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Review-Compaction Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-first-migration-pilot", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not `tree_path` frontmatter", review)
+        self.assertIn("AOA-T-0051", review)
+        self.assertIn("AOA-T-0052", review)
+        self.assertIn("AOA-T-0054", review)
+        self.assertIn("commit-triggered-background-review", review)
+        self.assertIn("review-findings-compaction", review)
+        self.assertIn("compaction-resilient-skill-loading", review)
+        self.assertIn("techniques/continuity/review-compaction/", review)
+        self.assertIn("The move is clearer than current placement", review)
+        self.assertIn("Move exactly these three bundles", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("Do not add `family` or `tree_path` frontmatter", review)
+        self.assertIn("Create a minimal `techniques/continuity/AGENTS.md`", review)
+        self.assertIn("Run `python scripts/release_check.py`", review)
+
+        self.assertIn("review-compaction-direct-read-migration-review", reviews_index)
+        self.assertIn("review-compaction direct-read review: landed", ingress)
+        self.assertIn("accepted-for-first-migration-pilot", ingress)
+        self.assertIn("Move exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054`", ingress)
+        self.assertIn("review-compaction direct-read migration review is landed", distillation_roadmap)
+        self.assertIn("pilot migration", root_roadmap)
+        self.assertIn("review-compaction direct-read review", tree_contract)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

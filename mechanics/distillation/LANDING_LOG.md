@@ -3,6 +3,33 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Review-compaction direct-read migration review
+
+Changed:
+
+- added
+  [review-compaction-direct-read-migration-review](parts/technique-reform-ingress/reviews/review-compaction-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054`
+- accepted `review-compaction` as the first migration pilot while keeping the
+  review itself non-mutating
+- recorded the migration blast radius and the next exact pilot scope:
+  `techniques/continuity/review-compaction/`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no technique frontmatter changed
+- no `tree_path`, `family`, or scout topology axis became schema truth
+- no generated future path became a current valid link
+
 ## 2026-05-04 - Tree projection and first review pack
 
 Changed:

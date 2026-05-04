@@ -170,13 +170,22 @@ links, do not add `tree_path` frontmatter, and do not authorize path movement.
 
 ## Next Honest Build Path
 
+The current pilot review is
+[Review-Compaction Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/review-compaction-direct-read-migration-review.md).
+The review-compaction direct-read review accepts the first pilot shelf.
+
+It accepts `review-compaction` as the first migration pilot without moving files
+or adding `tree_path` frontmatter.
+
 The next reform slice should:
 
 1. use the landed kind-audit hold review, family shelf review, generated tree
-   projection, and first tree projection review pack as input
-2. run a direct-read migration review for the `review-compaction` shelf
-3. only then move files, update links, and regenerate derived surfaces if the
-   pilot review proves the move is clearer than current placement
+   projection, first tree projection review pack, and review-compaction
+   direct-read review as input
+2. move exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into
+   `techniques/continuity/review-compaction/`
+3. repair authored links, regenerate derived surfaces, and run the release
+   check before considering any broader tree migration
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

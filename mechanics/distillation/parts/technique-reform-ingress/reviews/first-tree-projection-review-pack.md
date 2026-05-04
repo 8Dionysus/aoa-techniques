@@ -122,10 +122,13 @@ is easy for a human reader to understand. It tests a narrow trunk, while
 ## Next Honest Move
 
 Run a direct-read migration review for the `review-compaction` shelf.
+This has now landed as
+[Review-Compaction Direct-Read Migration Review](review-compaction-direct-read-migration-review.md).
 
 That review should open the three bundles, inspect local links, generated
 surface blast radius, capsule/catalog assumptions, and docs references, then
 decide whether the first pilot move is actually clearer than the current
 `techniques/agent-workflows/*` placement.
 
-Only after that review should a later wave move files.
+That review accepted `review-compaction` for the first pilot migration. Only
+the later migration wave should move files.
