@@ -132,6 +132,10 @@ That registry names allowed scout values only. It does not add required
 frontmatter fields, does not replace `domain` or `kind`, and does not authorize
 generated reports to remap bundle meaning automatically.
 
+The current generated readout is `reports/technique_topology_scout.md`, built
+by `python scripts/build_topology_scout.py`. Use it for review pressure before
+schema or frontmatter migration, not as a source of technique meaning.
+
 ### Capability Class
 
 `capability_class` should answer what the agent is doing at the capability

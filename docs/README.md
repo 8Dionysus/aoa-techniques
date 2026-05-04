@@ -23,6 +23,8 @@ Choose the path that matches your question:
   - [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
   - [`../config/technique_topology_axes.yaml`](../config/technique_topology_axes.yaml)
     - scout value registry for capability, substrate, execution profile, and risk posture; not frontmatter truth
+  - [`../reports/technique_topology_scout.md`](../reports/technique_topology_scout.md)
+    - generated scout projection over those axes; use for review pressure, not migration authority
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
   - [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)

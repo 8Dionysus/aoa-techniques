@@ -20,6 +20,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is whether a candidate is one atomic technique or a skill/playbook/chain wearing technique clothing
 - open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is how a technique should be classified beyond the first `domain` and `kind`
 - open `../config/technique_topology_axes.yaml` when the question is which scout values currently exist for capability, substrate, execution profile, or risk posture; these values are not frontmatter truth
+- open `../reports/technique_topology_scout.md` when you need the current generated projection over those scout axes before proposing any migration
 - open [Charter](../CHARTER.md) when the question is what this repository may claim or own
 - open [Root Surface Law](ROOT_SURFACE_LAW.md) before adding, moving, or rewriting a root or docs-root surface
 - open [`plan-diff-apply-verify-report`](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface

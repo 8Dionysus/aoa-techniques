@@ -55,6 +55,7 @@ REQUIRED_STAGE1_FILES = (
     "schemas/index-entry.schema.json",
     "scripts/build_catalog.py",
     "scripts/build_kind_manifest.py",
+    "scripts/build_topology_scout.py",
     "scripts/build_capsules.py",
     "scripts/build_sections.py",
     "scripts/build_section_manifest.py",
@@ -131,6 +132,8 @@ REQUIRED_KIND_REPORT_FILES = (
     "reports/technique_family_scout.md",
     "reports/technique_family_scout.json",
     "reports/kind_ambiguity_audit.md",
+    "reports/technique_topology_scout.md",
+    "reports/technique_topology_scout.json",
 )
 KAG_EXPORT_TECHNIQUE_ID = "AOA-T-0043"
 KAG_EXPORT_SECTION_HANDLES = (
@@ -626,6 +629,17 @@ KIND_AMBIGUITY_AUTHORITY_NOTE = (
     "This audit is scout-only, non-authoritative, and weaker than bundle frontmatter. "
     "Use it to review tie-break seams, not to remap techniques automatically."
 )
+TOPOLOGY_SCOUT_REPORT_VERSION = 1
+TOPOLOGY_SCOUT_SOURCE_OF_TRUTH = {
+    "axis_registry": TECHNIQUE_TOPOLOGY_AXES_PATH,
+    "family_seed": TECHNIQUE_FAMILY_SEED_PATH,
+    "wave1_mapping": TECHNIQUE_KIND_WAVE1_PATH,
+    "catalog": "generated/technique_catalog.json",
+}
+TOPOLOGY_SCOUT_AUTHORITY_NOTE = (
+    "This projection is scout-only, non-authoritative, and weaker than bundle frontmatter. "
+    "It must not be treated as schema truth, frontmatter truth, or automatic remap authority."
+)
 KIND_AMBIGUITY_SEAMS = (
     ("workflow", "guardrail"),
     ("validation", "assessment"),
@@ -653,6 +667,90 @@ KIND_AMBIGUITY_KEYWORDS = {
     ("handoff", "workflow"): {
         "handoff": ("handoff", "checkpoint", "receipt", "packet", "resume", "continuation", "mailbox", "episode"),
         "workflow": ("workflow", "step", "steps", "plan", "loop", "process", "procedure", "execute"),
+    },
+}
+TOPOLOGY_CAPABILITY_BY_KIND = {
+    "workflow": ("plan",),
+    "guardrail": ("choose",),
+    "validation": ("validate",),
+    "composition": ("coordinate", "transform"),
+    "distribution": ("coordinate",),
+    "artifact": ("write",),
+    "lift": ("transform", "summarize"),
+    "discovery": ("read", "choose"),
+    "handoff": ("handoff",),
+    "ingest": ("read", "transform"),
+    "assessment": ("compare", "choose"),
+    "recovery": ("recover",),
+}
+TOPOLOGY_SUBSTRATE_BY_DOMAIN = {
+    "agent-workflows": ("conversation", "tool-surfaces"),
+    "docs": ("docs",),
+    "evaluation": ("tests",),
+    "system-recovery": ("runtime-state",),
+    "validation-patterns": ("tests",),
+    "history": ("history",),
+}
+TOPOLOGY_EXECUTION_PROFILE_BY_KIND = {
+    "workflow": "medium-agent",
+    "guardrail": "small-agent",
+    "validation": "small-agent",
+    "composition": "medium-agent",
+    "distribution": "orchestration-required",
+    "artifact": "small-agent",
+    "lift": "small-agent",
+    "discovery": "tiny-card",
+    "handoff": "small-agent",
+    "ingest": "orchestration-required",
+    "assessment": "medium-agent",
+    "recovery": "orchestration-required",
+}
+TOPOLOGY_KEYWORD_RULES = {
+    "capability_class": {
+        "observe": ("observe", "inspect", "surface", "visibility", "visible"),
+        "read": ("read", "source", "lookup", "discover"),
+        "interpret": ("interpret", "explain", "meaning", "doctrine"),
+        "plan": ("plan", "queue", "graph", "next", "roadmap", "task"),
+        "choose": ("choose", "select", "route", "triage", "gate", "approval"),
+        "transform": ("transform", "normalize", "convert", "derive", "lift", "render"),
+        "write": ("write", "record", "artifact", "note", "spec", "template", "card"),
+        "mutate": ("mutate", "change", "edit", "apply", "start", "stop", "publish"),
+        "validate": ("validate", "check", "proof", "smoke", "integrity", "health"),
+        "compare": ("compare", "contrast", "matrix", "versus", "taxonomy"),
+        "summarize": ("summary", "summarize", "compact", "snapshot", "capsule"),
+        "handoff": ("handoff", "checkpoint", "resume", "packet", "continuation"),
+        "recover": ("recover", "repair", "rollback", "degraded", "reground", "failure"),
+        "coordinate": ("coordinate", "parity", "mirror", "distribution", "propagate"),
+        "communicate": ("request", "message", "ask", "public", "share", "answer"),
+        "learn-from-artifact": ("harvest", "donor", "progression", "retention", "adoption"),
+    },
+    "substrate": {
+        "code": ("code", "implementation", "patch"),
+        "tests": ("test", "tests", "smoke", "validation", "invariant", "health"),
+        "docs": ("doc", "docs", "markdown", "guide", "readme"),
+        "instructions": ("instruction", "context", "prompt", "rule", "profile"),
+        "config": ("config", "schema", "manifest", "frontmatter", "registry"),
+        "shell": ("shell", "command", "cli", "startup"),
+        "api": ("api", "endpoint", "service", "connector"),
+        "data": ("data", "dataset", "row", "store", "ledger", "registry"),
+        "media": ("media", "ocr", "image", "screenshot", "vision", "telegram"),
+        "ui": ("ui", "interface", "layout", "screen"),
+        "conversation": ("conversation", "chat", "message", "comment", "request"),
+        "history": ("history", "transcript", "session", "commit", "lineage"),
+        "memory-adjacent-artifacts": ("memory", "recall", "memo"),
+        "graph-adjacent-artifacts": ("graph", "relations", "dependency", "topology"),
+        "tool-surfaces": ("tool", "mcp", "capability", "registry", "command"),
+        "runtime-state": ("runtime", "service", "host", "startup", "stop", "degraded"),
+        "human-approval-surfaces": ("approval", "consent", "review", "public-share"),
+    },
+    "risk_posture": {
+        "mutating": ("mutate", "change", "edit", "apply", "start", "stop", "publish"),
+        "public-share": ("public", "share", "publish", "release", "sanitization"),
+        "security-sensitive": ("secret", "auth", "credential", "security"),
+        "irreversible": ("irreversible", "delete", "drop", "permanent"),
+        "approval-required": ("approval", "consent", "gate", "public-share"),
+        "degraded-mode": ("degraded", "failure", "recover", "repair", "rollback"),
+        "external-evidence": ("external", "donor", "web", "upstream", "source-backed"),
     },
 }
 RELATION_TYPE_ORDER = (
@@ -5521,6 +5619,238 @@ def build_kind_ambiguity_audit_markdown(
     return "\n".join(lines)
 
 
+def topology_axis_value_ids(axis_registry: dict[str, Any]) -> dict[str, set[str]]:
+    values_by_axis: dict[str, set[str]] = {}
+    for axis in axis_registry["axes"]:
+        values_by_axis[axis["id"]] = {value["id"] for value in axis["values"]}
+    return values_by_axis
+
+
+def append_unique_values(target: list[str], values: tuple[str, ...] | list[str]) -> None:
+    for value in values:
+        if value not in target:
+            target.append(value)
+
+
+def filtered_axis_values(values: list[str], allowed_values: set[str]) -> list[str]:
+    return [value for value in values if value in allowed_values]
+
+
+def topology_signal_text(entry: dict[str, Any], overlay_entry: dict[str, Any] | None) -> str:
+    return catalog_entry_signal_text(entry, overlay_entry)
+
+
+def infer_capability_class(
+    entry: dict[str, Any], overlay_entry: dict[str, Any] | None, allowed_values: set[str]
+) -> list[str]:
+    values: list[str] = []
+    append_unique_values(values, TOPOLOGY_CAPABILITY_BY_KIND.get(entry["kind"], ()))
+    signal_text = topology_signal_text(entry, overlay_entry)
+    for value, keywords in TOPOLOGY_KEYWORD_RULES["capability_class"].items():
+        if matched_keywords(signal_text, keywords):
+            values.append(value)
+    values = filtered_axis_values(values, allowed_values)
+    if not values:
+        values = ["interpret"]
+    return list(dict.fromkeys(values))[:3]
+
+
+def infer_substrate(
+    entry: dict[str, Any], overlay_entry: dict[str, Any] | None, allowed_values: set[str]
+) -> list[str]:
+    values: list[str] = []
+    append_unique_values(values, TOPOLOGY_SUBSTRATE_BY_DOMAIN.get(entry["domain"], ()))
+    signal_text = topology_signal_text(entry, overlay_entry)
+    for value, keywords in TOPOLOGY_KEYWORD_RULES["substrate"].items():
+        if matched_keywords(signal_text, keywords):
+            values.append(value)
+    values = filtered_axis_values(values, allowed_values)
+    if not values:
+        values = ["docs"]
+    return list(dict.fromkeys(values))[:4]
+
+
+def infer_risk_posture(
+    entry: dict[str, Any], overlay_entry: dict[str, Any] | None, allowed_values: set[str]
+) -> list[str]:
+    values: list[str] = []
+    signal_text = topology_signal_text(entry, overlay_entry)
+    for value, keywords in TOPOLOGY_KEYWORD_RULES["risk_posture"].items():
+        if matched_keywords(signal_text, keywords):
+            values.append(value)
+    if entry.get("reversibility") == "hard":
+        values.append("irreversible")
+    if not any(value in values for value in ("mutating", "public-share", "security-sensitive", "irreversible")):
+        values.insert(0, "read-only")
+    values = filtered_axis_values(values, allowed_values)
+    return list(dict.fromkeys(values))[:4] or ["read-only"]
+
+
+def infer_execution_profile(
+    entry: dict[str, Any], risk_posture: list[str], allowed_values: set[str]
+) -> str:
+    high_risk = {"mutating", "public-share", "security-sensitive", "irreversible"}
+    if high_risk.intersection(risk_posture):
+        value = "orchestration-required"
+    elif entry["kind"] in TOPOLOGY_EXECUTION_PROFILE_BY_KIND:
+        value = TOPOLOGY_EXECUTION_PROFILE_BY_KIND[entry["kind"]]
+    else:
+        value = "small-agent"
+    if value not in allowed_values:
+        value = "small-agent"
+    return value
+
+
+def topology_scout_entry(
+    entry: dict[str, Any],
+    overlay_entry: dict[str, Any] | None,
+    allowed_values_by_axis: dict[str, set[str]],
+) -> dict[str, Any]:
+    risk_posture = infer_risk_posture(entry, overlay_entry, allowed_values_by_axis["risk_posture"])
+    topology = {
+        "family": overlay_entry.get("family") if isinstance(overlay_entry, dict) else None,
+        "capability_class": infer_capability_class(
+            entry, overlay_entry, allowed_values_by_axis["capability_class"]
+        ),
+        "substrate": infer_substrate(entry, overlay_entry, allowed_values_by_axis["substrate"]),
+        "execution_profile": infer_execution_profile(
+            entry, risk_posture, allowed_values_by_axis["execution_profile"]
+        ),
+        "risk_posture": risk_posture,
+    }
+    return {
+        "id": entry["id"],
+        "name": entry["name"],
+        "domain": entry["domain"],
+        "kind": entry["kind"],
+        "status": entry["status"],
+        "summary": entry["summary"],
+        "technique_path": entry["technique_path"],
+        "topology": topology,
+    }
+
+
+def count_scalar_values(entries: list[dict[str, Any]], axis: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for entry in entries:
+        value = entry["topology"][axis]
+        counts[value] = counts.get(value, 0) + 1
+    return dict(sorted(counts.items()))
+
+
+def count_list_values(entries: list[dict[str, Any]], axis: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for entry in entries:
+        for value in entry["topology"][axis]:
+            counts[value] = counts.get(value, 0) + 1
+    return dict(sorted(counts.items()))
+
+
+def build_topology_scout_payload(
+    catalog: dict[str, Any],
+    axis_registry: dict[str, Any],
+    wave1_overlay: dict[str, Any],
+) -> dict[str, Any]:
+    catalog_entries = catalog.get("techniques")
+    if not isinstance(catalog_entries, list):
+        fail("generated/technique_catalog.json: techniques must be a list")
+    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+    allowed_values_by_axis = topology_axis_value_ids(axis_registry)
+    entries = [
+        topology_scout_entry(entry, overlay_entries.get(entry["id"]), allowed_values_by_axis)
+        for entry in sorted(catalog_entries, key=kind_group_sort_key)
+    ]
+
+    return {
+        "report_version": TOPOLOGY_SCOUT_REPORT_VERSION,
+        "status": "scout-only-non-authoritative",
+        "source_of_truth": TOPOLOGY_SCOUT_SOURCE_OF_TRUTH,
+        "authority_note": TOPOLOGY_SCOUT_AUTHORITY_NOTE,
+        "frontmatter_truth_axes": list(axis_registry["frontmatter_truth_axes"]),
+        "axis_order": list(TOPOLOGY_SCOUT_AXIS_ORDER),
+        "axis_value_counts": {
+            "capability_class": count_list_values(entries, "capability_class"),
+            "substrate": count_list_values(entries, "substrate"),
+            "execution_profile": count_scalar_values(entries, "execution_profile"),
+            "risk_posture": count_list_values(entries, "risk_posture"),
+        },
+        "techniques": entries,
+    }
+
+
+def markdown_value_list(values: list[str]) -> str:
+    return ", ".join(f"`{value}`" for value in values)
+
+
+def build_topology_scout_markdown(report: dict[str, Any]) -> str:
+    lines = [
+        "# Technique Topology Scout",
+        "",
+        "This file is generated from the topology axis registry, wave1 family overlay, and generated catalog.",
+        "Do not edit it by hand; run `python scripts/build_topology_scout.py`.",
+        "",
+        TOPOLOGY_SCOUT_AUTHORITY_NOTE,
+        "",
+        "Use this report to inspect likely capability, substrate, execution, and risk contours before proposing schema, template, or frontmatter migration.",
+        "",
+        "## Scout Scope",
+        "",
+        f"- Techniques covered: `{len(report['techniques'])}`",
+        f"- Frontmatter truth axes: {markdown_value_list(report['frontmatter_truth_axes'])}",
+        f"- Scout axes: {markdown_value_list(report['axis_order'])}",
+        "",
+    ]
+
+    for axis in report["axis_order"]:
+        lines.extend(
+            [
+                f"## `{axis}` Counts",
+                "",
+                "| value | count |",
+                "|---|---:|",
+            ]
+        )
+        for value, count in report["axis_value_counts"][axis].items():
+            lines.append(f"| `{value}` | `{count}` |")
+        lines.append("")
+
+    lines.extend(
+        [
+            "## Technique Projection",
+            "",
+            "| technique | domain | kind | family | capability | substrate | execution | risk |",
+            "|---|---|---|---|---|---|---|---|",
+        ]
+    )
+    for entry in report["techniques"]:
+        topology = entry["topology"]
+        family = topology["family"] or "unassigned"
+        lines.append(
+            "| "
+            f"{selection_technique_link(entry)} | "
+            f"`{entry['domain']}` | "
+            f"`{entry['kind']}` | "
+            f"`{family}` | "
+            f"{markdown_value_list(topology['capability_class'])} | "
+            f"{markdown_value_list(topology['substrate'])} | "
+            f"`{topology['execution_profile']}` | "
+            f"{markdown_value_list(topology['risk_posture'])} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Boundaries",
+            "",
+            f"- {TOPOLOGY_SCOUT_AUTHORITY_NOTE}",
+            "- This projection may guide review packs, but bundle frontmatter remains stronger.",
+            "- A later migration must still read bundle meaning directly before changing schema, templates, validators, or frontmatter.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def selection_technique_link(entry: dict[str, Any]) -> str:
     return f"[{entry['id']}](../{entry['technique_path']})"
 
@@ -7004,6 +7334,38 @@ def validate_kind_scout_reports(repo_root: Path) -> None:
         fail(f"{repo_root}: kind scout reports must stay explicitly non-authoritative")
 
 
+def validate_topology_scout_reports(repo_root: Path) -> None:
+    json_path = repo_root / "reports" / "technique_topology_scout.json"
+    markdown_path = repo_root / "reports" / "technique_topology_scout.md"
+    catalog = read_json(repo_root / "generated" / "technique_catalog.json")
+    axis_registry = load_topology_axes_registry(repo_root)
+    wave1_overlay = load_wave1_kind_overlay(repo_root)
+
+    expected_report = build_topology_scout_payload(catalog, axis_registry, wave1_overlay)
+    expected_markdown = build_topology_scout_markdown(expected_report)
+    actual_report = read_json(json_path)
+    actual_markdown = read_text(markdown_path)
+
+    if actual_report != expected_report:
+        fail(
+            f"{json_path}: generated topology scout report is out of date; run "
+            f"'python scripts/build_topology_scout.py'"
+        )
+    if actual_markdown != expected_markdown:
+        fail(
+            f"{markdown_path}: generated topology scout markdown is out of date; run "
+            f"'python scripts/build_topology_scout.py'"
+        )
+    if actual_report.get("status") != "scout-only-non-authoritative":
+        fail(f"{json_path}: status must stay 'scout-only-non-authoritative'")
+    if actual_report.get("authority_note") != TOPOLOGY_SCOUT_AUTHORITY_NOTE:
+        fail(f"{json_path}: authority_note must stay stable")
+    if actual_report.get("frontmatter_truth_axes") != ["domain", "kind"]:
+        fail(f"{json_path}: frontmatter_truth_axes must stay ['domain', 'kind']")
+    if "non-authoritative" not in actual_markdown or "bundle frontmatter remains stronger" not in actual_markdown:
+        fail(f"{markdown_path}: topology scout report must stay explicitly non-authoritative")
+
+
 def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -7518,6 +7880,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_repo_doc_surface_manifests(repo_root)
     validate_kind_manifests(repo_root)
     validate_kind_scout_reports(repo_root)
+    validate_topology_scout_reports(repo_root)
     validate_selection_surface(repo_root, records)
     validate_repo_doc_surface_reader(repo_root)
     validate_kag_export(repo_root, records)
@@ -7549,6 +7912,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated kind manifest parity and reader surface")
     print("[ok] validated topology scout axis registry")
     print("[ok] validated wave1 family scout and ambiguity audit parity")
+    print("[ok] validated topology scout projection parity")
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated generated repo doc surface parity")
     print("[ok] validated generated source-owned KAG export parity")

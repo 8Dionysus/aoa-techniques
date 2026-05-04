@@ -71,6 +71,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_repo_doc_surface_manifest.py"),
                 ("python", "scripts/build_catalog.py"),
                 ("python", "scripts/build_kind_manifest.py"),
+                ("python", "scripts/build_topology_scout.py"),
                 ("python", "scripts/build_capsules.py"),
                 ("python", "scripts/build_sections.py"),
                 ("python", "scripts/build_section_manifest.py"),
@@ -1835,6 +1836,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "`execution_profile` | design axis",
             "`risk_posture` | design axis",
             "`config/technique_topology_axes.yaml`",
+            "`reports/technique_topology_scout.md`",
             "coding, documentation, validation, recovery, history, media, tool use",
             "The goal is a corpus that can grow very large",
         ):
@@ -1916,6 +1918,32 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("config/technique_topology_axes.yaml", roadmap)
         self.assertIn("not add required frontmatter fields", registry_text)
         self.assertIn("below bundle frontmatter", decision)
+
+    def test_topology_scout_report_is_builder_aligned_and_non_authoritative(self) -> None:
+        catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
+        axis_registry = validate_repo.load_topology_axes_registry(REPO_ROOT)
+        wave1_overlay = validate_repo.load_wave1_kind_overlay(REPO_ROOT)
+        report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_topology_scout.json")
+        report_markdown = (
+            REPO_ROOT / "reports" / "technique_topology_scout.md"
+        ).read_text(encoding="utf-8")
+
+        expected_report = validate_repo.build_topology_scout_payload(
+            catalog, axis_registry, wave1_overlay
+        )
+        expected_markdown = validate_repo.build_topology_scout_markdown(expected_report)
+
+        self.assertEqual(expected_report, report)
+        self.assertEqual(expected_markdown, report_markdown)
+        self.assertEqual("scout-only-non-authoritative", report["status"])
+        self.assertEqual(validate_repo.TOPOLOGY_SCOUT_AUTHORITY_NOTE, report["authority_note"])
+        self.assertEqual(["domain", "kind"], report["frontmatter_truth_axes"])
+        self.assertEqual(list(validate_repo.TOPOLOGY_SCOUT_AXIS_ORDER), report["axis_order"])
+        self.assertEqual(107, len(report["techniques"]))
+        self.assertIn("non-authoritative", report_markdown)
+        self.assertIn("bundle frontmatter remains stronger", report_markdown)
+        for axis in validate_repo.TOPOLOGY_SCOUT_AXIS_ORDER:
+            self.assertIn(axis, report["axis_value_counts"])
 
     def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
