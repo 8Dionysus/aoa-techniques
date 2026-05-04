@@ -5893,6 +5893,62 @@
           "markdown": "What can vary across projects:\n- the accepted evidence form\n- whether the request is written as prose, YAML, checklist item, or review\n  comment\n- who supplies the object\n- whether absence means defer, hold, rerun, or narrow the claim\n\nWhat should stay invariant:\n- one bounded review state\n- one missing evidence object\n- one reason the object matters\n- one present-evidence return condition\n- one absent-evidence return condition\n- no proof, route, memory, skill, KAG, ToS, runtime, or Agon authority\n\nProject-shaped details that should not be treated as invariant:\n- AoA repository names\n- Agon move labels\n- local CI commands\n- local generated-output receipts\n- one handoff packet format\n\nAoA adaptation example:\n- a Distillation candidate may request one builder receipt before trusting a\n  generated handoff index\n- a technique review may request one source line before accepting an origin\n  claim\n- an agent handoff may request one git-visible artifact before continuing a\n  resumed thread"
         }
       ]
+    },
+    {
+      "id": "AOA-T-0106",
+      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+      "sections": [
+        {
+          "heading": "Intent",
+          "order": 1,
+          "markdown": "Offer exactly one scoped evidence reference with relevance, support limit, and\nreliance condition so review can use a source without treating it as proof,\nverdict, or source-truth transfer."
+        },
+        {
+          "heading": "When to use",
+          "order": 2,
+          "markdown": "- one claim, decision, review state, or documentation statement is already in\n  view\n- one available source, line, artifact, excerpt, command receipt, or citation\n  can help a reviewer inspect the current claim\n- the useful move is to provide a reference and its limits, not to prove the\n  claim\n- the reviewer needs to know how the reference may be used before relying on it\n- a small agent needs a compact citation artifact instead of multi-source\n  provenance or an evaluation check"
+        },
+        {
+          "heading": "When not to use",
+          "order": 3,
+          "markdown": "- the real task is to prove correctness, score adequacy, or issue an evaluation\n  verdict\n- the review needs several sources ordered by priority\n- the source is not inspectable, quotable, rerunnable, or rejectable\n- the reference would expose private logs, credentials, user data, or sensitive\n  operational detail\n- offering the reference would mutate routing, runtime, memory, skill\n  activation, KAG state, ToS canon, Agon law, or proof authority"
+        },
+        {
+          "heading": "Inputs",
+          "order": 4,
+          "markdown": "- one reviewed claim, decision point, artifact statement, or route state\n- one available evidence reference\n- the exact form of the reference, such as path, line, receipt, quoted excerpt,\n  artifact pointer, or stable citation\n- one reason the reference is relevant to the reviewed claim\n- the support scope the reference can honestly carry\n- the support limit the reference cannot carry\n- the reliance condition before the reference is used in review"
+        },
+        {
+          "heading": "Outputs",
+          "order": 5,
+          "markdown": "- one scoped evidence reference\n- one relevance statement\n- one support-scope statement\n- one support-limit statement\n- one reliance condition for review\n- no proof verdict, no source-truth transfer, no multi-source provenance pack,\n  and no owner-law mutation"
+        },
+        {
+          "heading": "Core procedure",
+          "order": 6,
+          "markdown": "1. Name the single claim, decision, artifact statement, or route state under\n   review.\n2. Choose one inspectable evidence reference already available to the review.\n3. State why the reference is relevant to that one claim or decision.\n4. State the narrow support scope the reference can honestly carry.\n5. State the support limit the reference cannot carry.\n6. State the reliance condition before the reference is cited, accepted, or used\n   downstream.\n7. Stop after the one reference. Do not widen into a citation bundle, proof\n   verdict, eval adequacy check, route change, memory write, or Agon move."
+        },
+        {
+          "heading": "Contracts",
+          "order": 7,
+          "markdown": "- one use of the technique offers one evidence reference\n- the reference is tied to one bounded review state\n- the reference must be inspectable enough for another reviewer to accept,\n  reject, quote, rerun, or ask for a different source\n- the support scope and support limit are both explicit\n- reliance is conditional until the reviewer inspects the reference\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-reference atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../../agent-workflows/single-missing-evidence-request/TECHNIQUE.md),\nthis technique offers one available reference instead of asking for one missing\nevidence object. Unlike\n[AOA-T-0043](../multi-source-primary-input-provenance/TECHNIQUE.md), it does not\norder multiple primary and supporting inputs. Unlike\n[AOA-T-0034](../public-safe-artifact-sanitization/TECHNIQUE.md), it does not\ntransform or sanitize the referenced artifact."
+        },
+        {
+          "heading": "Risks",
+          "order": 8,
+          "markdown": "### Failure modes\n\n- the reference is vague and cannot be inspected\n- the agent offers several references and hides a provenance bundle inside the\n  output\n- the reference is treated as proof instead of one bounded support object\n- the support limit is missing, so reviewers overread what the reference proves\n- the reliance condition is missing, so downstream work treats the citation as\n  already accepted\n\n### Negative effects\n\n- overuse can clutter reviews with narrow citations when the issue is already\n  settled\n- a poorly scoped reference can make weak support look stronger than it is\n- the technique can slow review if it becomes a citation ritual rather than a\n  focused support artifact\n\n### Misuse patterns\n\n- linking to a broad page and calling it evidence without a relevance statement\n- using one source to smuggle a proof verdict\n- laundering source-truth authority from an owning repo into a derived note\n- treating the reference as evaluation adequacy, route permission, memory\n  intake, KAG promotion, ToS canon, or Agon law\n- citing private or sensitive material without public-safety review\n\n### Detection signals\n\n- the output contains more than one reference\n- reviewers cannot tell what the reference can and cannot support\n- the reference is not inspectable by the intended reviewer\n- wording says or implies that the reference settles the full claim\n- the output starts mutating owner state instead of supporting review\n\n### Mitigations\n\n- force the output to one claim, one reference, one relevance statement, one\n  support scope, one support limit, and one reliance condition\n- prefer the smallest stable pointer or excerpt that can be reviewed\n- say explicitly that the reference is not proof, verdict, or source-truth\n  transfer\n- route proof, evaluation, memory, KAG, ToS, runtime, skill, and Agon questions\n  to their own owner surfaces\n- sanitize or withhold references that expose private or sensitive detail"
+        },
+        {
+          "heading": "Validation",
+          "order": 9,
+          "markdown": "Verify the technique by confirming that:\n- exactly one claim or decision point is named\n- exactly one evidence reference is offered\n- the reference is concrete enough to inspect, quote, rerun, or reject\n- the relevance statement explains why the reference matters to the review\n- the support scope and support limit are both explicit\n- the reliance condition is explicit\n- the output does not issue proof, evaluation, route, memory, runtime, skill,\n  KAG, ToS, or Agon effects\n\nSee `checks/single-scoped-evidence-reference-checklist.md`."
+        },
+        {
+          "heading": "Adaptation notes",
+          "order": 10,
+          "markdown": "What can vary across projects:\n- the reference form\n- whether the reference appears as prose, YAML, checklist item, review comment,\n  citation note, or compact artifact card\n- who inspects the reference\n- whether reliance means cite, defer, rerun, quote, or request a stronger source\n\nWhat should stay invariant:\n- one bounded review state\n- one evidence reference\n- one relevance statement\n- one support scope\n- one support limit\n- one reliance condition\n- no proof, route, memory, skill, KAG, ToS, runtime, eval, or Agon authority\n\nProject-shaped details that should not be treated as invariant:\n- AoA repository names\n- Agon move labels\n- local generated-output paths\n- local command receipts\n- one handoff packet format\n\nAoA adaptation example:\n- a Distillation candidate may offer one generated index path to support that a\n  handoff pointer landed, while saying it does not prove canonical readiness\n- a technique review may offer one source line to support an origin claim,\n  while routing proof adequacy to a separate check\n- a docs review may offer one sanitized excerpt for public sharing, while\n  keeping private logs outside the public artifact"
+        }
+      ]
     }
   ]
 }

@@ -300,6 +300,13 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             },
             registry["bundle_readiness_reviews"],
         )
+        self.assertEqual(
+            {
+                "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+                "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+            },
+            registry["technique_bundles"],
+        )
         self.assertIn(
             "agon.tech.epistemic.doctrine_revision_review_practice",
             registry["owner_route_holds"],

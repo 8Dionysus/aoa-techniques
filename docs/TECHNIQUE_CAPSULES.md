@@ -1096,6 +1096,19 @@ See also:
 - Validate by: the shared contract names exactly one canonical owner; each mirror carries explicit canonical-reference metadata; parity validation fails when owner...
 - Source: [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md)
 
+### [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
+
+- Summary: Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.
+- Intent: Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so...
+- Use when: one claim, decision, review state, or documentation statement is already in or one available source, line, artifact, excerpt...
+- Avoid when: the real task is to prove correctness, score adequacy, or issue an evaluation or the review needs several...
+- Needs: one reviewed claim, decision point, artifact statement, or route state; one available evidence reference; the exact form...
+- Produces: one scoped evidence reference; one relevance statement; one support-scope statement.
+- Core contract: one use of the technique offers one evidence reference; the reference is tied to one bounded review state.
+- Main risk: the reference is vague and cannot be inspected.
+- Validate by: exactly one claim or decision point is named; exactly one evidence reference is offered; the reference is concrete enough...
+- Source: [TECHNIQUE.md](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

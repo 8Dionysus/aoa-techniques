@@ -102,13 +102,14 @@
       "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md",
       "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md",
       "bundle_readiness_review": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md",
+      "technique_bundle": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
       "distillation_lane": "first_narrowing_watch",
       "distillation_gate": {
         "atomic_move_status": "candidate_named",
         "atomic_move_note": "offer one evidence reference with scope, relevance, and limit before relying on it",
         "likely_domain": "docs",
         "primary_kind": "artifact",
-        "family_posture": "review-evidence reference practice; bundle-readiness review landed locally",
+        "family_posture": "review-evidence reference practice; first bundle landed locally",
         "capability_class": "cite",
         "substrate": "evidence reference",
         "execution_profile": "small-agent",
@@ -121,7 +122,7 @@
         "nearest_wrong_owner": "aoa-evals",
         "bridge_stop_line": "Do not turn a reference into proof verdict, source truth transfer, or KAG promotion."
       },
-      "next_move": "Draft one technique bundle around a single scoped evidence reference, keeping artifact as current kind and Agon source status unchanged."
+      "next_move": "Keep the landed bundle at promoted/source-backed posture and collect second-context evidence before any canonical review, without changing Agon source status."
     },
     {
       "candidate_ref": "candidate:aoa-techniques:agon/probe-trace-practice",

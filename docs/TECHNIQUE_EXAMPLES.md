@@ -532,6 +532,12 @@ See also:
 |---|---|---|---|
 | Minimal Canonical Owner With Validated Mirror | `present` | `techniques/docs/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
 
+### [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal single-scoped evidence reference | `present` | `techniques/docs/single-scoped-evidence-reference/examples/minimal-single-scoped-evidence-reference.md` | [TECHNIQUE.md](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

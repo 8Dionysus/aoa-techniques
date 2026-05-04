@@ -516,6 +516,12 @@ See also:
 |---|---|---|---|---|
 | Canonical Owner With Validated Mirror Checklist | `absent` | `7` | `techniques/docs/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
 
+### [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| single-scoped-evidence-reference checklist | `present` | `10` | `techniques/docs/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md` | [TECHNIQUE.md](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) |
+
 ## `evaluation`
 
 ### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)

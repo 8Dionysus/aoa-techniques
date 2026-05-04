@@ -116,6 +116,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0103 | adopted-practice-retention-review | agent-workflows | promoted | Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit. |
 | AOA-T-0104 | superseded-practice-obsolescence-route | agent-workflows | promoted | Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact. |
 | AOA-T-0105 | single-missing-evidence-request | agent-workflows | promoted | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
+| AOA-T-0106 | single-scoped-evidence-reference | docs | promoted | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
 
 ## Deprecated techniques
 

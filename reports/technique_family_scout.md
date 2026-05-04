@@ -29,7 +29,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `handoff-continuation` | Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams. | `7` | `0` | `7` |
 | `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `0` | `1` |
 | `approval-evidence` | Approval-gated mutation and durable work with explicit allow or block evidence. | `2` | `0` | `2` |
-| `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `1` | `0` | `1` |
+| `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `2` | `0` | `2` |
 | `media-ingest` | OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs. | `5` | `0` | `5` |
 | `donor-harvest` | Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay artifacts without forced promotion. | `4` | `0` | `4` |
 | `decision-routing` | Owner-layer routing, explicit fork cards, and route risk posture for next-step choice. | `3` | `0` | `3` |
@@ -333,11 +333,12 @@ Bounded review-state evidence requests, evidence references, and trace probes th
 Typical domains: `agent-workflows`, `docs`, `evaluation`.
 Typical kinds: `guardrail`, `artifact`, `assessment`.
 
-Counts: `total` 1, `canonical` 0, `promoted` 1.
+Counts: `total` 2, `canonical` 0, `promoted` 2.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
+| [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
 
 ## `media-ingest`
 

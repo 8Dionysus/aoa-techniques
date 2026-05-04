@@ -527,12 +527,12 @@
         "the main promise is stepwise execution or approval gating"
       ],
       "counts": {
-        "total": 14,
+        "total": 15,
         "canonical": 6,
-        "promoted": 8,
+        "promoted": 9,
         "by_domain": {
           "agent-workflows": 1,
-          "docs": 6,
+          "docs": 7,
           "evaluation": 1,
           "system-recovery": 0,
           "validation-patterns": 0,
@@ -595,6 +595,14 @@
           "status": "promoted",
           "summary": "Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.",
           "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0106",
+          "name": "single-scoped-evidence-reference",
+          "domain": "docs",
+          "status": "promoted",
+          "summary": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.",
+          "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0006",

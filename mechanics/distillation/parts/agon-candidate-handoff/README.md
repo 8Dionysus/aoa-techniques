@@ -116,6 +116,7 @@ Current landed bundle readiness review:
 Current landed technique bundle:
 
 - [single-missing-evidence-request](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+- [single-scoped-evidence-reference](../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
 
 ## Stop Line
 

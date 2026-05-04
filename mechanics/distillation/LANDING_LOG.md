@@ -423,6 +423,39 @@ Not moved:
   scar, or skill authority moved into `aoa-techniques`
 - no current `kind` registry value was added or changed
 
+## 2026-05-03 - Offer evidence reference technique bundle
+
+Changed:
+
+- added
+  [single-scoped-evidence-reference](../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+  as the second normal technique bundle grown from the Agon candidate handoff
+- registered a traceability pointer from
+  `candidate:aoa-techniques:agon/offer-evidence-reference-practice` to the
+  landed bundle in the part-local seed and generated compact index
+- kept the bundle at `promoted`, `artifact`, and `source_backed` posture with
+  origin evidence and a non-canonical readiness note
+- extended the Audit promotion-readiness matrix so the new bundle enters the
+  fresh extraction lane instead of becoming hidden corpus drift
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Agon candidate source status changed
+- no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime,
+  rank, or scar authority moved into `aoa-techniques`
+- no canonical promotion was claimed
+
 ## 2026-05-03 - Offer evidence reference bundle-readiness review
 
 Changed:
