@@ -29,10 +29,10 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 | `plan` | `20` |
 | `read` | `47` |
 | `recover` | `9` |
-| `summarize` | `15` |
-| `transform` | `24` |
-| `validate` | `22` |
-| `write` | `24` |
+| `summarize` | `16` |
+| `transform` | `25` |
+| `validate` | `21` |
+| `write` | `23` |
 
 ## `substrate` Counts
 
@@ -121,7 +121,7 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 | [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) | `agent-workflows` | `recovery` | `diagnosis-repair` | `recover`, `plan`, `write` | `conversation`, `tool-surfaces`, `history`, `human-approval-surfaces` | `orchestration-required` | `mutating`, `degraded-mode` |
 | [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) | `agent-workflows` | `recovery` | `diagnosis-repair` | `recover`, `observe`, `choose` | `conversation`, `tool-surfaces`, `tests`, `human-approval-surfaces` | `orchestration-required` | `read-only`, `approval-required`, `degraded-mode` |
 | [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) | `agent-workflows` | `lift` | `donor-harvest` | `transform`, `summarize`, `learn-from-artifact` | `conversation`, `tool-surfaces`, `data`, `history` | `small-agent` | `read-only`, `external-evidence` |
-| [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `artifact` | `donor-harvest` | `write`, `choose`, `validate` | `conversation`, `tool-surfaces` | `orchestration-required` | `security-sensitive`, `external-evidence` |
+| [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `lift` | `donor-harvest` | `transform`, `summarize`, `choose` | `conversation`, `tool-surfaces` | `orchestration-required` | `security-sensitive`, `external-evidence` |
 | [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `validate` | `conversation`, `tool-surfaces`, `human-approval-surfaces` | `medium-agent` | `read-only`, `approval-required` |
 | [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `read` | `conversation`, `tool-surfaces`, `history` | `medium-agent` | `read-only`, `degraded-mode` |
 | [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `read` | `conversation`, `tool-surfaces`, `ui`, `human-approval-surfaces` | `orchestration-required` | `mutating`, `approval-required`, `degraded-mode` |

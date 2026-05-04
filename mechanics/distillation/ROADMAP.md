@@ -25,9 +25,10 @@
    nearest owner stop-lines.
 8. Before any broad classification reform, enter through the technique reform
    ingress packet. The topology scout projection, topology review pack, and
-   kind ambiguity direct-read review are now landed, so the next honest pass is
-   one narrow `kind` remap wave, starting with `AOA-T-0085` if the change moves
-   bundle frontmatter, generated surfaces, tests, and route notes together.
+   kind ambiguity direct-read review are now landed, and `AOA-T-0085` has moved
+   from `artifact` to `lift`. The next honest pass is one narrow `kind` remap
+   wave for `AOA-T-0005`, only if the change moves bundle frontmatter,
+   generated surfaces, tests, and route notes together.
 
 ## Hold line
 

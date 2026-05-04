@@ -14,23 +14,23 @@ and
 Preceding review:
 [First Topology Scout Review Pack](first-topology-scout-review-pack.md)
 
-Status: review-pack-landed, not a remap wave.
+Status: review-pack-landed, first shortlist item remapped.
 
 ## Verdict
 
 The first direct-read kind ambiguity pass confirms that the generated audit is
 useful for choosing review targets, but too broad to drive remaps by itself.
 
-The strongest later remap candidates are:
+The remaining strongest later remap candidates are:
 
 - `AOA-T-0005` from `guardrail` toward `workflow`
-- `AOA-T-0085` from `artifact` toward `lift`
 - `AOA-T-0052` away from `handoff`, with `workflow` as the current closest
   registry-backed target
 
-This review does not change bundle frontmatter, does not add a new `kind`, and
-does not claim those remaps are ready to land. It only narrows the next honest
-candidate set after reading the bundles directly.
+This review did not change bundle frontmatter by itself, did not add a new
+`kind`, and did not claim every remap was ready to land. The first follow-up
+remap wave landed `AOA-T-0085` as `lift` after moving bundle frontmatter,
+generated surfaces, tests, route notes, and a decision note together.
 
 ## Direct Reads
 
@@ -41,7 +41,7 @@ candidate set after reading the bundles directly.
 | [AOA-T-0093](../../../../../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `guardrail` | `candidate remap` to `workflow` | Keep `guardrail`. The technique preserves a boundary between recommendation truth and host executability; the boundary law is stronger than the procedure. |
 | [AOA-T-0091](../../../../../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `guardrail` | `revisit later` | Keep `guardrail` for now. Ingress and guard are procedural, but `must_confirm` and `blocked_actions` posture is the primary reusable object. |
 | [AOA-T-0075](../../../../../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | `lift` | `candidate remap` to `artifact` | Keep `lift`. The donor pack is derived from a reviewed artifact and stays weaker than owner placement or promotion. |
-| [AOA-T-0085](../../../../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `artifact` | `candidate remap` to `lift` | Strong remap candidate. The overlay is an adjunct derived surface over reviewed progression or route evidence, and it must stay weaker than owner truth. |
+| [AOA-T-0085](../../../../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `lift` | first shortlist remap landed | Landed. The overlay is an adjunct derived surface over reviewed progression or route evidence, and it must stay weaker than owner truth. |
 | [AOA-T-0008](../../../../../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) | `lift` | `candidate remap` to `artifact` | Keep `lift`. The snapshot is durable, but it is a downstream read-only view over already-published summaries. |
 | [AOA-T-0052](../../../../../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) | `handoff` | `candidate remap` to `workflow` | Strong remap candidate away from `handoff`. Transfer is not the center; the reusable move is dedupe, revalidation, and consolidation. `workflow` is the nearest current target, though a future review should still check `validation` and `lift` before editing frontmatter. |
 | [AOA-T-0088](../../../../../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | `assessment` | `revisit later` | Keep `assessment`. The output is a classification verdict over approval burden, not proof that execution is allowed. |
@@ -72,17 +72,15 @@ than the actual center of gravity.
 
 ## Shortlist For Later Remap Work
 
-Do not remap all three in one broad sweep unless the remap wave has explicit
+Do not remap remaining candidates in one broad sweep unless the remap wave has explicit
 scope, tests, generated-surface sync, and reviewer focus. The cleaner order is:
 
-1. `AOA-T-0085`: `artifact` -> `lift`
-2. `AOA-T-0005`: `guardrail` -> `workflow`
-3. `AOA-T-0052`: `handoff` -> likely `workflow`, after one extra check against
+1. `AOA-T-0005`: `guardrail` -> `workflow`
+2. `AOA-T-0052`: `handoff` -> likely `workflow`, after one extra check against
    `validation` and `lift`
 
 Why this order:
 
-- `AOA-T-0085` is the cleanest source-weaker-than-derived-surface case.
 - `AOA-T-0005` is a straightforward rollout procedure, but it is already
   source-backed and promoted, so the remap should be visible and narrow.
 - `AOA-T-0052` is probably not `handoff`, but the destination deserves one more
@@ -99,7 +97,7 @@ Why this order:
 
 ## Next Honest Move
 
-Prepare one narrow remap wave, starting with `AOA-T-0085`, only if the pass
-updates bundle frontmatter, generated surfaces, tests, and route notes together.
+Prepare the next narrow remap wave with `AOA-T-0005`, only if the pass updates
+bundle frontmatter, generated surfaces, tests, and route notes together.
 If the next pass should stay review-only, read `AOA-T-0052` against
 `validation` and `lift` before choosing its destination.

@@ -83,7 +83,7 @@ AOA-T-0081,diagnosis-from-reviewed-evidence,agent-workflows,promoted,assessment,
 AOA-T-0082,repair-shape-from-diagnosis,agent-workflows,promoted,recovery,diagnosis-repair
 AOA-T-0083,checkpoint-bound-self-repair,agent-workflows,promoted,recovery,diagnosis-repair
 AOA-T-0084,progression-evidence-lift,agent-workflows,promoted,lift,donor-harvest
-AOA-T-0085,multi-axis-quest-overlay,agent-workflows,promoted,artifact,donor-harvest
+AOA-T-0085,multi-axis-quest-overlay,agent-workflows,promoted,lift,donor-harvest
 AOA-T-0086,automation-fit-matrix,agent-workflows,promoted,assessment,automation-governance
 AOA-T-0087,human-loop-to-seed-lift,agent-workflows,promoted,assessment,automation-governance
 AOA-T-0088,approval-sensitivity-check,agent-workflows,promoted,assessment,automation-governance

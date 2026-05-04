@@ -535,11 +535,11 @@
         "the main promise is stepwise execution or approval gating"
       ],
       "counts": {
-        "total": 15,
+        "total": 14,
         "canonical": 6,
-        "promoted": 9,
+        "promoted": 8,
         "by_domain": {
-          "agent-workflows": 1,
+          "agent-workflows": 0,
           "docs": 7,
           "evaluation": 1,
           "system-recovery": 0,
@@ -548,14 +548,6 @@
         }
       },
       "techniques": [
-        {
-          "id": "AOA-T-0085",
-          "name": "multi-axis-quest-overlay",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
-          "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md"
-        },
         {
           "id": "AOA-T-0002",
           "name": "source-of-truth-layout",
@@ -682,11 +674,11 @@
         "the technique is mainly about raw input ingestion from external sources"
       ],
       "counts": {
-        "total": 11,
+        "total": 12,
         "canonical": 4,
-        "promoted": 7,
+        "promoted": 8,
         "by_domain": {
-          "agent-workflows": 2,
+          "agent-workflows": 3,
           "docs": 8,
           "evaluation": 1,
           "system-recovery": 0,
@@ -710,6 +702,14 @@
           "status": "promoted",
           "summary": "Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.",
           "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0085",
+          "name": "multi-axis-quest-overlay",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
+          "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0018",

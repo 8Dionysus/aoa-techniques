@@ -88,6 +88,6 @@ It should start with one bounded slice:
 ## Next Honest Move
 
 Use the landed kind ambiguity review pack to choose one narrow remap wave. The
-cleanest first candidate is `AOA-T-0085` (`artifact` toward `lift`), followed by
-`AOA-T-0005` (`guardrail` toward `workflow`) and then `AOA-T-0052` only after
-one extra destination check.
+first remap landed for `AOA-T-0085` (`artifact` to `lift`). The next candidate
+is `AOA-T-0005` (`guardrail` toward `workflow`), followed by `AOA-T-0052` only
+after one extra destination check.
