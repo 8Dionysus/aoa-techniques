@@ -743,6 +743,19 @@ See also:
 - Validate by: exactly one claim or decision point is named; exactly one missing evidence object is requested; the object is concrete...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
 
+### [AOA-T-0107](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
+
+- Summary: Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.
+- Intent: Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support...
+- Use when: one claim, assertion, generated summary, route statement, or review sentence or the claim may be too broad, unsupported...
+- Avoid when: the real task is to prove or disprove the claim or several claims need to be compared, ranked...
+- Needs: one target claim; the current review state; one vulnerable locus inside the claim.
+- Produces: one challenged claim statement; one vulnerable-locus statement; one pressure-reason statement.
+- Core contract: one use of the technique challenges one target claim; the challenged locus is smaller than the whole topic...
+- Main risk: the challenge targets a broad topic instead of one claim.
+- Validate by: exactly one target claim is named; exactly one vulnerable locus is named inside that claim; the pressure reason explains...
+- Source: [TECHNIQUE.md](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

@@ -642,3 +642,9 @@ entries:
   status: promoted
   kind: artifact
   family: review-evidence
+- id: AOA-T-0107
+  name: single-locus-claim-challenge
+  domain: agent-workflows
+  status: promoted
+  kind: guardrail
+  family: review-evidence

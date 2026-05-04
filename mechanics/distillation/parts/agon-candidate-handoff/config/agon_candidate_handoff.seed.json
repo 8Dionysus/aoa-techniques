@@ -43,13 +43,15 @@
       "gate_example": "mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md",
       "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md",
       "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md",
+      "bundle_readiness_review": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md",
+      "technique_bundle": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
       "distillation_lane": "first_narrowing_watch",
       "distillation_gate": {
         "atomic_move_status": "candidate_named",
         "atomic_move_note": "challenge one claim by naming the challenged statement, the pressure reason, and the evidence needed next",
         "likely_domain": "agent-workflows",
-        "primary_kind": "challenge",
-        "family_posture": "claim-pressure and review-evidence practice; gate packet landed locally",
+        "primary_kind": "guardrail",
+        "family_posture": "claim-pressure and review-evidence practice; first bundle landed locally",
         "capability_class": "challenge",
         "substrate": "claim text",
         "execution_profile": "small-agent",
@@ -58,11 +60,11 @@
       },
       "bridge": {
         "higher_law": "Agents-of-Abyss mechanics/agon owns lawful challenge vocabulary.",
-        "local_route": "Run one gate card focused on target claim, challenged locus, pressure reason, and next support question.",
+        "local_route": "Use the landed bundle focused on target claim, challenged locus, pressure reason, and next support question.",
         "nearest_wrong_owner": "aoa-evals",
         "bridge_stop_line": "Do not make the challenge a proof verdict, rank effect, scar, or live arena move."
       },
-      "next_move": "Run one bundle-readiness review only if the challenge maps to a registry-backed kind before any technique draft."
+      "next_move": "Keep the landed bundle at promoted/source-backed posture and collect second-context evidence before any canonical review, without changing Agon source status."
     },
     {
       "candidate_ref": "candidate:aoa-techniques:agon/request-evidence-practice",

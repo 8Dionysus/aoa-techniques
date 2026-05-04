@@ -359,6 +359,12 @@ See also:
 |---|---|---|---|
 | Minimal single-missing-evidence request | `present` | `techniques/agent-workflows/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) |
 
+### [AOA-T-0107](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal single-locus claim challenge | `present` | `techniques/agent-workflows/single-locus-claim-challenge/examples/minimal-single-locus-claim-challenge.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) |
+
 ## `docs`
 
 ### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)

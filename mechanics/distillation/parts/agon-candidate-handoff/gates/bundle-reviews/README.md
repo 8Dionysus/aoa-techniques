@@ -5,5 +5,6 @@ one-bundle drafting pass. They are review gates, not bundle promotion.
 
 Current reviews:
 
+- [challenge-claim-bundle-readiness-review](challenge-claim-bundle-readiness-review.md)
 - [request-evidence-bundle-readiness-review](request-evidence-bundle-readiness-review.md)
 - [offer-evidence-reference-bundle-readiness-review](offer-evidence-reference-bundle-readiness-review.md)

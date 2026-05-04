@@ -117,6 +117,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0104 | superseded-practice-obsolescence-route | agent-workflows | promoted | Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact. |
 | AOA-T-0105 | single-missing-evidence-request | agent-workflows | promoted | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
 | AOA-T-0106 | single-scoped-evidence-reference | docs | promoted | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
+| AOA-T-0107 | single-locus-claim-challenge | agent-workflows | promoted | Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication. |
 
 ## Deprecated techniques
 
