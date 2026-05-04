@@ -8,13 +8,14 @@
   "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
   "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md",
   "bundle_readiness_review": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
+  "technique_bundle": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
   "distillation_lane": "first_narrowing_watch",
   "distillation_gate": {
     "atomic_move_status": "candidate_named",
     "atomic_move_note": "ask for the smallest missing evidence object that would change the review state",
     "likely_domain": "agent-workflows",
     "primary_kind": "guardrail",
-    "family_posture": "evidence-request and review-state practice; not yet a bundle",
+    "family_posture": "evidence-request and review-state practice; first bundle landed locally",
     "capability_class": "request-evidence",
     "substrate": "review state",
     "execution_profile": "small-agent",
@@ -27,5 +28,5 @@
     "nearest_wrong_owner": "aoa-evals",
     "bridge_stop_line": "Do not treat an evidence request as proof, verdict, or eval authority."
   },
-  "next_move": "Draft one normal technique bundle with current kind guardrail, without changing Agon source status."
+  "next_move": "Keep the landed bundle at promoted/source-backed posture and collect second-context evidence before any canonical review, without changing Agon source status."
 }

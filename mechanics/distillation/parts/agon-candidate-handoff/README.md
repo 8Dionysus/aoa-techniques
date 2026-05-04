@@ -35,12 +35,23 @@ traceability evidence while keeping the Agon source status unchanged.
 No lane means "ready to promote." The strongest lane means "write the next
 Distillation gate card and prove the atom is portable."
 
+Current frontier read:
+
+- `3` first-narrowing candidates have complete gate-to-bundle traceability:
+  `request_evidence`, `offer_evidence_reference`, and `challenge_claim`.
+- `8` first-narrowing candidates remain ungated and are exposed in
+  `first_narrowing_frontier` in the generated index.
+- [first-narrowing-frontier-review](gates/frontier/first-narrowing-frontier-review.md)
+  names the next-gate order and kind-registry watch without promoting any
+  candidate.
+
 ## Structured Registry
 
 - [config/agon_candidate_handoff.seed.json](config/agon_candidate_handoff.seed.json)
   carries the complete handoff lane map.
 - [generated/agon_candidate_handoff.min.json](generated/agon_candidate_handoff.min.json)
-  is derived evidence for counts, source coverage, and first-narrowing watch.
+  is derived evidence for counts, source coverage, first-narrowing watch, and
+  the remaining ungated frontier.
 - [schemas/](schemas/) and [examples/](examples/) document the expected shape.
 - [scripts/build_agon_candidate_handoff.py](scripts/build_agon_candidate_handoff.py)
   builds the derived index and verifies every entry still exists in the Agon
@@ -82,6 +93,11 @@ Start with small moves that can be described outside live Agon protocol:
 For each, the next work is one gate card: atomic move, likely domain, primary
 kind, family posture, capability, substrate, execution profile, risk posture,
 portable core, AoA-only context, nearest overlaps, proof route, and stop-line.
+
+The current remaining frontier is `probe_trace`, `localize_contradiction`,
+`deny_closure`, `inference_chain_attack_practice`,
+`explanatory_power_comparison_practice`, `concept_boundary_probe_practice`,
+`counterfactual_pressure_practice`, and `false_consensus_breaking_practice`.
 
 ## Gate Cards
 

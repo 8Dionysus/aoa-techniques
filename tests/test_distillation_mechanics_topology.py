@@ -267,6 +267,41 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
+                "bundle_readiness_reviews": 3,
+                "gate_cards": 3,
+                "gate_checklists": 3,
+                "gate_evidence_notes": 3,
+                "gate_examples": 3,
+                "technique_bundles": 3,
+            },
+            registry["gate_pipeline_counts"],
+        )
+        self.assertEqual(8, registry["first_narrowing_frontier_counts"]["total"])
+        self.assertEqual(
+            [
+                "probe_trace",
+                "localize_contradiction",
+                "deny_closure",
+                "inference_chain_attack_practice",
+                "explanatory_power_comparison_practice",
+                "concept_boundary_probe_practice",
+                "counterfactual_pressure_practice",
+                "false_consensus_breaking_practice",
+            ],
+            [row["source_label"] for row in registry["first_narrowing_frontier"]],
+        )
+        self.assertEqual(
+            {
+                "Tree-of-Sophia": 1,
+                "aoa-agents": 1,
+                "aoa-evals": 4,
+                "aoa-memo": 1,
+                "aoa-routing": 1,
+            },
+            registry["first_narrowing_frontier_counts"]["by_nearest_wrong_owner"],
+        )
+        self.assertEqual(
+            {
                 "candidate:aoa-techniques:agon/challenge-claim-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md",
                 "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
                 "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
@@ -389,6 +424,37 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                         self.assertIn("draft kind: `artifact`", text)
                         self.assertIn("Reform Thread", text)
                     self.assertIn("What This Does Not Support", text)
+
+    def test_agon_first_narrowing_frontier_review_matches_remaining_candidates(self) -> None:
+        frontier = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "agon-candidate-handoff"
+            / "gates"
+            / "frontier"
+            / "first-narrowing-frontier-review.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Remaining ungated first-narrowing candidates: `8`", frontier)
+        for source_label in (
+            "probe_trace",
+            "localize_contradiction",
+            "deny_closure",
+            "inference_chain_attack_practice",
+            "explanatory_power_comparison_practice",
+            "concept_boundary_probe_practice",
+            "counterfactual_pressure_practice",
+            "false_consensus_breaking_practice",
+        ):
+            self.assertIn(f"`{source_label}`", frontier)
+        self.assertNotIn("| `challenge_claim` |", frontier)
+        self.assertNotIn("| `request_evidence` |", frontier)
+        self.assertNotIn("| `offer_evidence_reference` |", frontier)
+        self.assertIn("not a technique bundle", frontier)
+        self.assertIn("Do not define Agon", frontier)
+        self.assertIn("Do not issue proof", frontier)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

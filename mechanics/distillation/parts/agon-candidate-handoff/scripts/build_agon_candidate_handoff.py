@@ -355,16 +355,18 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
     lane_counts = Counter(entry["distillation_lane"] for entry in entries)
     source_counts = Counter(entry["source_part"] for entry in entries)
     candidate_rows = []
+    frontier_rows = []
     for entry in entries:
+        gate = entry["distillation_gate"]
         row = {
             "candidate_ref": entry["candidate_ref"],
             "source_part": entry["source_part"],
             "source_status": entry["source_status"],
             "source_label": entry["source_label"],
             "distillation_lane": entry["distillation_lane"],
-            "atomic_move_status": entry["distillation_gate"]["atomic_move_status"],
-            "likely_domain": entry["distillation_gate"]["likely_domain"],
-            "primary_kind": entry["distillation_gate"]["primary_kind"],
+            "atomic_move_status": gate["atomic_move_status"],
+            "likely_domain": gate["likely_domain"],
+            "primary_kind": gate["primary_kind"],
             "nearest_wrong_owner": entry["bridge"]["nearest_wrong_owner"],
         }
         if "gate_card" in entry:
@@ -380,6 +382,28 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
         if "technique_bundle" in entry:
             row["technique_bundle"] = entry["technique_bundle"]
         candidate_rows.append(row)
+        if entry["distillation_lane"] == "first_narrowing_watch" and "gate_card" not in entry:
+            frontier_rows.append(
+                {
+                    "candidate_ref": entry["candidate_ref"],
+                    "source_part": entry["source_part"],
+                    "source_status": entry["source_status"],
+                    "source_label": entry["source_label"],
+                    "likely_domain": gate["likely_domain"],
+                    "primary_kind": gate["primary_kind"],
+                    "family_posture": gate["family_posture"],
+                    "capability_class": gate["capability_class"],
+                    "substrate": gate["substrate"],
+                    "execution_profile": gate["execution_profile"],
+                    "risk_posture": gate["risk_posture"],
+                    "nearest_wrong_owner": entry["bridge"]["nearest_wrong_owner"],
+                    "next_move": entry["next_move"],
+                }
+            )
+
+    def count_by(rows: list[dict[str, Any]], key: str) -> dict[str, int]:
+        return dict(sorted(Counter(row[key] for row in rows).items()))
+
     return {
         "schema_version": EXPECTED_INDEX_SCHEMA,
         "registry_id": "distillation.agon_candidate_handoff.index.v1",
@@ -398,6 +422,26 @@ def build_index(config: dict[str, Any]) -> dict[str, Any]:
             for entry in entries
             if entry["distillation_lane"] == "owner_route_hold"
         ],
+        "first_narrowing_frontier": frontier_rows,
+        "first_narrowing_frontier_counts": {
+            "total": len(frontier_rows),
+            "by_source_part": count_by(frontier_rows, "source_part"),
+            "by_likely_domain": count_by(frontier_rows, "likely_domain"),
+            "by_nearest_wrong_owner": count_by(frontier_rows, "nearest_wrong_owner"),
+            "by_execution_profile": count_by(frontier_rows, "execution_profile"),
+        },
+        "gate_pipeline_counts": {
+            "gate_cards": sum(1 for entry in entries if "gate_card" in entry),
+            "gate_examples": sum(1 for entry in entries if "gate_example" in entry),
+            "gate_checklists": sum(1 for entry in entries if "gate_checklist" in entry),
+            "gate_evidence_notes": sum(
+                1 for entry in entries if "gate_evidence_note" in entry
+            ),
+            "bundle_readiness_reviews": sum(
+                1 for entry in entries if "bundle_readiness_review" in entry
+            ),
+            "technique_bundles": sum(1 for entry in entries if "technique_bundle" in entry),
+        },
         "gate_cards": {
             entry["candidate_ref"]: entry["gate_card"]
             for entry in entries

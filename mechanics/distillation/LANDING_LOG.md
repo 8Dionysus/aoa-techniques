@@ -454,6 +454,39 @@ Not moved:
   rank, scar, or skill authority moved into `aoa-techniques`
 - no current `kind` registry value was added or changed
 
+## 2026-05-03 - Agon first-narrowing frontier review
+
+Changed:
+
+- added a frontier review for the remaining `8` ungated Agon first-narrowing
+  candidates after the request, offer, and challenge gate-to-bundle paths landed
+- extended the part-local generated index with `first_narrowing_frontier`,
+  `first_narrowing_frontier_counts`, and `gate_pipeline_counts`
+- exposed family, capability, substrate, execution profile, and risk posture in
+  the frontier lens as evidence for the later technique classification reform
+- updated the handoff README, gates README, Distillation parts/provenance/roadmap
+  surfaces, and schema example so future passes choose the next gate from
+  current evidence rather than memory
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no new gate card or technique bundle was drafted
+- no Agon candidate source status changed
+- no `kind` registry value was added or changed
+- no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime,
+  rank, scar, or skill authority moved into `aoa-techniques`
+
 ## 2026-05-03 - Challenge claim technique bundle
 
 Changed:
