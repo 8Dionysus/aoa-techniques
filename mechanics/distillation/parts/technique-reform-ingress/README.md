@@ -89,5 +89,6 @@ It should start with one bounded slice:
 
 Use the landed kind ambiguity review pack to choose one narrow remap wave. The
 first remaps landed for `AOA-T-0085` (`artifact` to `lift`) and `AOA-T-0005`
-(`guardrail` to `workflow`). The next candidate is `AOA-T-0052`, only after one
-extra destination check against `workflow`, `validation`, and `lift`.
+(`guardrail` to `workflow`), and the final shortlist remap landed for
+`AOA-T-0052` (`handoff` to `workflow`). The next move is a fresh kind ambiguity
+read over the updated audit before choosing any further frontmatter candidate.

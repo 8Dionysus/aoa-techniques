@@ -541,19 +541,20 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "first-kind-ambiguity-review-pack.md"
         ).read_text(encoding="utf-8")
 
-        self.assertIn("first shortlist items remapped", review)
+        self.assertIn("first shortlist remap wave closed", review)
         self.assertIn("did not change bundle frontmatter by itself", review)
         self.assertIn("direct-read", review)
         self.assertIn("`AOA-T-0005`", review)
         self.assertIn("second shortlist remap landed", review)
         self.assertIn("`AOA-T-0085`", review)
         self.assertIn("first shortlist remap landed", review)
-        self.assertIn("`AOA-T-0052` away from `handoff`", review)
+        self.assertIn("`AOA-T-0052`", review)
+        self.assertIn("final shortlist remap landed", review)
         self.assertIn("Keep `guardrail`", review)
         self.assertIn("Keep `lift`", review)
         self.assertIn("Keep `assessment`", review)
         self.assertIn("Do not change frontmatter from this review alone", review)
-        self.assertIn("rereading `AOA-T-0052`", review)
+        self.assertIn("fresh kind ambiguity read", review)
 
     def test_0085_kind_remap_landed_without_status_change(self) -> None:
         catalog = json.loads(
@@ -598,6 +599,30 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertEqual("promoted", technique["status"])
         self.assertIn("Remap `AOA-T-0005` from `guardrail` to `workflow`", decision)
         self.assertIn("classification correction only", decision)
+
+    def test_0052_kind_remap_landed_without_status_change(self) -> None:
+        catalog = json.loads(
+            (REPO_ROOT / "generated" / "technique_catalog.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        technique = next(
+            entry for entry in catalog["techniques"] if entry["id"] == "AOA-T-0052"
+        )
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-04-0052-kind-remap.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertEqual("agent-workflows", technique["domain"])
+        self.assertEqual("workflow", technique["kind"])
+        self.assertEqual("promoted", technique["status"])
+        self.assertIn("Remap `AOA-T-0052` from `handoff` to `workflow`", decision)
+        self.assertIn("classification correction only", decision)
+        self.assertIn("`validation`", decision)
+        self.assertIn("`lift`", decision)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
