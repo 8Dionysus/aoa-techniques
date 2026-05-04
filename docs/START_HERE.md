@@ -24,6 +24,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [`plan-diff-apply-verify-report`](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
 - open [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md) when the question is how the selection family stays bounded before you trust any chooser surface
 - open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) before proposing new classes, families, categories, or schema axes
+- open [Technique Reform Ingress](../mechanics/distillation/parts/technique-reform-ingress/README.md) when preparing a bounded classification reform pass rather than changing one technique
 - open [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md) when the second selector axis or a kind tie-break matters
 - open [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md) when a neighboring AoA repo needs the bounded `domain + kind` handoff
 - open [Technique Selection](TECHNIQUE_SELECTION.md) for one bounded pick by domain and current defaults

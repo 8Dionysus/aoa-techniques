@@ -11,15 +11,16 @@ Status: mapped-with-local-evidence candidate-intake route for `ORQ-DISTILLATION-
 
 ### Trigger
 
-Use this package when donor, sibling-repo, legacy, or long-gap material needs
-to be preserved, pruned, narrowed, held, or handed toward one atomic technique
-candidate without becoming canon by summary.
+Use this package when donor, sibling-repo, legacy, long-gap, or topology-reform
+material needs to be preserved, pruned, narrowed, held, or handed toward one
+atomic technique candidate or bounded reform slice without becoming canon by
+summary.
 
 ### Local owns
 
 This package owns donor refinery rules, external import runbooks, candidate
-ledgers, long-gap re-entry posture, active extraction routes, and provenance
-bridges for technique-shaped intake.
+ledgers, topology-reform ingress, long-gap re-entry posture, active extraction
+routes, and provenance bridges for technique-shaped intake.
 
 ### Stronger owner split
 
@@ -35,6 +36,7 @@ owns ToS-authored meaning and compost, not AoA operational distillation.
 - Agon requested-only technique-side candidates
 - pre-split or legacy receipts
 - long-gap promoted material
+- accumulated topology evidence before classification reform
 - candidate registries and generated counts as evidence
 
 ### Outputs
@@ -43,6 +45,7 @@ owns ToS-authored meaning and compost, not AoA operational distillation.
 - source and owner boundary note
 - compact gate packet for possible bundle drafting
 - Agon-to-Distillation handoff lane without status promotion
+- technique-reform ingress packet without schema migration
 - no technique promotion without bundle-local review
 
 ### Must not claim
@@ -54,6 +57,7 @@ owns ToS-authored meaning and compost, not AoA operational distillation.
 - runtime activation
 - memory canon
 - generated registry authority over authored routes
+- schema migration from scout evidence alone
 
 ### Validation
 
@@ -87,6 +91,9 @@ only after the atom and topology questions can be named.
   candidate capture across AoA sibling repos.
 - [Agon Candidate Handoff](parts/agon-candidate-handoff/README.md): complete
   lane map for Agon requested-only practice candidates before atom extraction.
+- [Technique Reform Ingress](parts/technique-reform-ingress/README.md): entry
+  packet for bounded classification reform before schema or bulk frontmatter
+  changes.
 - [Long-Gap Reentry](parts/long-gap-reentry/README.md): design posture for older
   practice material that needs careful re-entry.
 

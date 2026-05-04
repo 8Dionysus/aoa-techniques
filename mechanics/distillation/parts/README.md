@@ -10,6 +10,8 @@ Active Distillation parts:
   a part-local structured registry for wave and verdict accounting
 - [agon-candidate-handoff](agon-candidate-handoff/README.md) with a part-local
   structured registry for Agon requested-only candidate lanes
+- [technique-reform-ingress](technique-reform-ingress/README.md) for entering
+  future classification reform from current topology evidence
 - [long-gap-reentry](long-gap-reentry/README.md)
 
 Use [../PARTS.md](../PARTS.md) for the role map and
