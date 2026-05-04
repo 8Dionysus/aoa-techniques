@@ -90,6 +90,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/second-kind-ambiguity-review-pack.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/0054-kind-destination-check.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/post-0054-kind-audit-hold-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/first-family-shelf-review-pack.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -740,6 +741,80 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("post-0054-kind-audit-hold-review", reviews_index)
         self.assertIn("Post-0054 Kind Audit Hold Review", ingress)
         self.assertIn("family shelf review", roadmap)
+
+    def test_family_shelf_review_pack_prepares_tree_projection_without_migration(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "first-family-shelf-review-pack.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("First Family Shelf Review Pack", review)
+        self.assertIn("review-pack-landed", review)
+        self.assertIn("not frontmatter truth", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("`26` scout families", review)
+        self.assertIn("Stable Shelf Candidates", review)
+        self.assertIn("Boundary Watch", review)
+        self.assertIn("Split Pressure", review)
+        self.assertIn("singleton-hold", review)
+        self.assertIn("`automation-governance`", review)
+        self.assertIn("split-review-needed", review)
+        self.assertIn("non-authoritative tree projection", review)
+        self.assertIn("Do not add `family` frontmatter", review)
+        self.assertIn("Do not move bundle directories", review)
+        self.assertIn("proposed `trunk`", review)
+        self.assertIn("proposed `shelf`", review)
+        for trunk in (
+            "`execution`",
+            "`instruction`",
+            "`proof`",
+            "`continuity`",
+            "`governance`",
+            "`knowledge-lift`",
+            "`ingest`",
+            "`recovery`",
+            "`history`",
+            "`tool-use`",
+        ):
+            with self.subTest(trunk=trunk):
+                self.assertIn(trunk, review)
+
+        self.assertIn("first-family-shelf-review-pack", reviews_index)
+        self.assertIn("family shelf review: landed", ingress)
+        self.assertIn("non-authoritative tree projection", ingress)
+        self.assertIn("First Family Shelf Review Pack", ingress)
+        self.assertIn("family shelf review pack is also landed", distillation_roadmap)
+        self.assertIn("landed family shelf review pack", root_roadmap)
+        self.assertIn("landed kind-audit hold review and family shelf review", tree_contract)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

@@ -31,9 +31,10 @@
    The second kind ambiguity review pack, `AOA-T-0054` destination check, and
    post-`AOA-T-0054` kind-audit hold review are now landed; `AOA-T-0054` moved
    from `handoff` to `recovery`, and the remaining generated kind pressure is
-   held as stale false-positive or calibration evidence. The next honest pass
-   is family shelf review before any further frontmatter candidate, tree
-   projection, or schema migration.
+   held as stale false-positive or calibration evidence.
+   The first family shelf review pack is also landed; the next honest pass is
+   a non-authoritative tree projection over all `107` bundles before any
+   further frontmatter candidate, path migration, or schema migration.
 
 ## Hold line
 

@@ -134,7 +134,7 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 | Field | Direction |
 |---|---|
 | Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles while leaving the current domain-folder layout in place. |
-| Next honest move | Build a non-authoritative tree projection over the current `107` bundles, review family shelves for tree fitness, and pilot one bounded subtree before any broad path migration. |
+| Next honest move | Use the landed family shelf review pack to build a non-authoritative tree projection over the current `107` bundles, then pilot one bounded subtree before any broad path migration. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 ## Horizon: Small-Agent Usability
@@ -184,8 +184,8 @@ trigger is real.
 
 - Promote `family` from scout-only to optional reviewed frontmatter only after
   examples and tie-break rules stay stable across multiple technique waves.
-- Add a generated tree projection only after the kind-audit hold review and
-  family shelf review show a stable enough trunk/shelf draft.
+- Add a generated tree projection as the next bounded reform slice now that
+  the kind-audit hold review and family shelf review have landed.
 - Add generated projections for `capability_class`, `substrate`,
   `execution_profile`, and `risk_posture` from
   `config/technique_topology_axes.yaml` only after mechanics candidates prove

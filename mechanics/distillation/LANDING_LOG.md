@@ -3,6 +3,36 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Family shelf review pack
+
+Changed:
+
+- added
+  [first-family-shelf-review-pack](parts/technique-reform-ingress/reviews/first-family-shelf-review-pack.md)
+  as the review layer over all `26` scout families before tree projection
+- sorted families into stable shelf candidates, boundary-watch families,
+  split pressure, and singleton hold posture without promoting `family` into
+  frontmatter
+- updated the technique reform ingress packet and Distillation roadmap so the
+  next route is a non-authoritative tree projection over all `107` bundles
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no technique frontmatter changed
+- no `family`, `tree_path`, or scout topology axis became required schema truth
+- no `domain`, `kind`, status, relation, owner, or generated catalog authority
+  changed
+
 ## 2026-05-04 - Post-0054 kind-audit hold review
 
 Changed:

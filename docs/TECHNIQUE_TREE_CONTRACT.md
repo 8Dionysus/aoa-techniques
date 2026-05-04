@@ -164,11 +164,10 @@ migration wave lands.
 
 The next reform slice should:
 
-1. close the current kind-audit hold review
-2. review family shelves for tree fitness
-3. add a non-authoritative tree projection over all current bundles
-4. choose one pilot shelf or trunk for direct-read migration review
-5. only then move files, update links, and regenerate derived surfaces
+1. use the landed kind-audit hold review and family shelf review as input
+2. add a non-authoritative tree projection over all current bundles
+3. choose one pilot shelf or trunk for direct-read migration review
+4. only then move files, update links, and regenerate derived surfaces
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
