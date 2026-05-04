@@ -422,3 +422,35 @@ Not moved:
 - no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime, rank,
   scar, or skill authority moved into `aoa-techniques`
 - no current `kind` registry value was added or changed
+
+## 2026-05-03 - Offer evidence reference bundle-readiness review
+
+Changed:
+
+- added a bundle-readiness review for
+  `candidate:aoa-techniques:agon/offer-evidence-reference-practice`
+- registered the review in the Agon candidate handoff seed and compact
+  generated index
+- kept the candidate's bundle-facing `primary_kind` at the registry-backed
+  `artifact`, leaving evidence-reference as family, capability, substrate, and
+  reform-thread posture
+- marked the next move as one technique bundle draft around a single scoped
+  evidence reference
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+```
+
+Not moved:
+
+- no Agon candidate became a technique bundle
+- no Agon candidate source status changed
+- no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime, rank,
+  scar, or skill authority moved into `aoa-techniques`
+- no current `kind` registry value was added or changed
