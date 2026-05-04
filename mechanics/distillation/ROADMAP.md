@@ -28,10 +28,12 @@
    kind ambiguity direct-read review are now landed. The first shortlist remap
    wave moved `AOA-T-0085` from `artifact` to `lift`, `AOA-T-0005` from
    `guardrail` to `workflow`, and `AOA-T-0052` from `handoff` to `workflow`.
-   The second kind ambiguity review pack and `AOA-T-0054` destination check are
-   now landed; `AOA-T-0054` moved from `handoff` to `recovery`. The next honest
-   pass is an updated kind-audit hold review before choosing any further
-   frontmatter candidate.
+   The second kind ambiguity review pack, `AOA-T-0054` destination check, and
+   post-`AOA-T-0054` kind-audit hold review are now landed; `AOA-T-0054` moved
+   from `handoff` to `recovery`, and the remaining generated kind pressure is
+   held as stale false-positive or calibration evidence. The next honest pass
+   is family shelf review before any further frontmatter candidate, tree
+   projection, or schema migration.
 
 ## Hold line
 

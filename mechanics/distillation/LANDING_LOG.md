@@ -3,6 +3,34 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Post-0054 kind-audit hold review
+
+Changed:
+
+- added
+  [post-0054-kind-audit-hold-review](parts/technique-reform-ingress/reviews/post-0054-kind-audit-hold-review.md)
+  as the explicit close of the current kind remap lane
+- classified remaining generated audit pressure as already-reviewed holds or
+  tie-break calibration rather than fresh remap candidates
+- updated the technique reform ingress packet and Distillation roadmap so the
+  next route is family shelf review before frontmatter, tree, or schema work
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique frontmatter changed
+- no `kind` value was added, removed, or renamed
+- no technique status, domain, owner, relation, or evidence surface changed
+- no family, tree, schema, or path migration was claimed
+
 ## 2026-05-04 - AOA-T-0054 kind remap
 
 Changed:

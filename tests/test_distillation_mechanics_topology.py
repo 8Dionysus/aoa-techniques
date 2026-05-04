@@ -89,6 +89,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-kind-ambiguity-review-pack.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/second-kind-ambiguity-review-pack.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/0054-kind-destination-check.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/post-0054-kind-audit-hold-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -695,6 +696,50 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`workflow`", decision)
         self.assertIn("Remap `AOA-T-0054` from `handoff` to `recovery`", destination_check)
         self.assertIn("`AOA-T-0057`", destination_check)
+
+    def test_post_0054_kind_audit_hold_review_closes_remap_lane(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "post-0054-kind-audit-hold-review.md"
+        ).read_text(encoding="utf-8")
+        roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Post-0054 Kind Audit Hold Review", review)
+        self.assertIn("No new `kind` frontmatter candidate", review)
+        self.assertIn("remap lane closed", review)
+        self.assertIn("family shelf review", review)
+        self.assertIn("Do not reopen a candidate merely because", review)
+        self.assertIn("`workflow` vs `guardrail`", review)
+        self.assertIn("`validation` vs `assessment`", review)
+        self.assertIn("`artifact` vs `lift`", review)
+        self.assertIn("`handoff` vs `workflow`", review)
+        self.assertIn("post-0054-kind-audit-hold-review", reviews_index)
+        self.assertIn("Post-0054 Kind Audit Hold Review", ingress)
+        self.assertIn("family shelf review", roadmap)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
