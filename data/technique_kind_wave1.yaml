@@ -514,7 +514,7 @@ entries:
   name: multi-axis-quest-overlay
   domain: agent-workflows
   status: promoted
-  kind: artifact
+  kind: lift
   family: donor-harvest
 - id: AOA-T-0086
   name: automation-fit-matrix

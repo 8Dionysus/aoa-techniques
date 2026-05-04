@@ -25,8 +25,8 @@ See also:
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `2` | `5` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
-| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `15` | `6` | `9` |
-| `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `11` | `4` | `7` |
+| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `6` | `8` |
+| `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
 | `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `0` | `2` |
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `13` | `0` | `13` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
@@ -221,11 +221,11 @@ Do not use this when:
 - the technique mainly derives a secondary lookup surface from another authoritative source
 - the main promise is stepwise execution or approval gating
 
-Counts: `total` 15, `canonical` 6, `promoted` 9.
+Counts: `total` 14, `canonical` 6, `promoted` 8.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `1` |
+| `agent-workflows` | `0` |
 | `docs` | `7` |
 | `evaluation` | `1` |
 | `system-recovery` | `0` |
@@ -234,7 +234,6 @@ Counts: `total` 15, `canonical` 6, `promoted` 9.
 
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
-| [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `promoted` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. | [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) |
 | [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | `docs` | `canonical` | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | `docs` | `canonical` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) | `docs` | `canonical` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work. | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
@@ -262,11 +261,11 @@ Do not use this when:
 - the artifact being defined is itself the primary source of truth
 - the technique is mainly about raw input ingestion from external sources
 
-Counts: `total` 11, `canonical` 4, `promoted` 7.
+Counts: `total` 12, `canonical` 4, `promoted` 8.
 
 | domain | entries |
 |---|---|
-| `agent-workflows` | `2` |
+| `agent-workflows` | `3` |
 | `docs` | `8` |
 | `evaluation` | `1` |
 | `system-recovery` | `0` |
@@ -277,6 +276,7 @@ Counts: `total` 11, `canonical` 4, `promoted` 7.
 |---|---|---|---|---|
 | [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | `agent-workflows` | `promoted` | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. | [TECHNIQUE.md](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) |
 | [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) | `agent-workflows` | `promoted` | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. | [TECHNIQUE.md](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) |
+| [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `promoted` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. | [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) |
 | [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `docs` | `canonical` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
 | [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) | `docs` | `canonical` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs. | [TECHNIQUE.md](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) |
 | [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `docs` | `canonical` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |

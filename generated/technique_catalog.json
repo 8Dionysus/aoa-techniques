@@ -4609,7 +4609,7 @@
       "id": "AOA-T-0085",
       "name": "multi-axis-quest-overlay",
       "domain": "agent-workflows",
-      "kind": "artifact",
+      "kind": "lift",
       "status": "promoted",
       "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
       "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",

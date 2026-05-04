@@ -1662,8 +1662,8 @@
           "validation": 0,
           "composition": 0,
           "distribution": 0,
-          "artifact": 1,
-          "lift": 2,
+          "artifact": 0,
+          "lift": 3,
           "discovery": 0,
           "handoff": 1,
           "ingest": 0,
@@ -1712,7 +1712,7 @@
           "status": "promoted",
           "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
           "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
-          "kind": "artifact"
+          "kind": "lift"
         }
       ]
     },

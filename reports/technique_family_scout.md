@@ -372,7 +372,7 @@ Counts: `total` 4, `canonical` 0, `promoted` 4.
 | [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. |
 | [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another. |
 | [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. |
-| [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `artifact` | `promoted` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
+| [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
 
 ## `decision-routing`
 

@@ -541,17 +541,40 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "first-kind-ambiguity-review-pack.md"
         ).read_text(encoding="utf-8")
 
-        self.assertIn("not a remap wave", review)
-        self.assertIn("does not change bundle frontmatter", review)
+        self.assertIn("first shortlist item remapped", review)
+        self.assertIn("did not change bundle frontmatter by itself", review)
         self.assertIn("direct-read", review)
         self.assertIn("`AOA-T-0005` from `guardrail` toward `workflow`", review)
-        self.assertIn("`AOA-T-0085` from `artifact` toward `lift`", review)
+        self.assertIn("`AOA-T-0085`", review)
+        self.assertIn("first shortlist remap landed", review)
         self.assertIn("`AOA-T-0052` away from `handoff`", review)
         self.assertIn("Keep `guardrail`", review)
         self.assertIn("Keep `lift`", review)
         self.assertIn("Keep `assessment`", review)
         self.assertIn("Do not change frontmatter from this review alone", review)
-        self.assertIn("starting with `AOA-T-0085`", review)
+        self.assertIn("next narrow remap wave with `AOA-T-0005`", review)
+
+    def test_0085_kind_remap_landed_without_status_change(self) -> None:
+        catalog = json.loads(
+            (REPO_ROOT / "generated" / "technique_catalog.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        technique = next(
+            entry for entry in catalog["techniques"] if entry["id"] == "AOA-T-0085"
+        )
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-04-0085-kind-remap.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertEqual("agent-workflows", technique["domain"])
+        self.assertEqual("lift", technique["kind"])
+        self.assertEqual("promoted", technique["status"])
+        self.assertIn("Remap `AOA-T-0085` from `artifact` to `lift`", decision)
+        self.assertIn("classification correction only", decision)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

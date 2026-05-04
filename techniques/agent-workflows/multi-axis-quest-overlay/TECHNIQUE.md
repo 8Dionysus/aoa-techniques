@@ -2,7 +2,7 @@
 id: AOA-T-0085
 name: multi-axis-quest-overlay
 domain: agent-workflows
-kind: artifact
+kind: lift
 status: promoted
 origin:
   project: aoa-skills
@@ -178,6 +178,9 @@ See `checks/multi-axis-quest-overlay-checklist.md`.
 
 - born in `aoa-skills` as the reflective-overlay half of `aoa-session-progression-lift` and the family-wide RPG reflection posture
 - extracted into `aoa-techniques` on 2026-04-05 as a bounded adjunct quest-overlay technique
+- remapped from `artifact` to `lift` on 2026-05-04 after direct kind review
+  confirmed that the overlay is a derived surface over stronger reviewed
+  progression or route evidence
 
 ## Future evolution
 
