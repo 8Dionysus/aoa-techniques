@@ -11,7 +11,9 @@ Active Distillation parts:
 - [agon-candidate-handoff](agon-candidate-handoff/README.md) with a part-local
   structured registry for Agon requested-only candidate lanes
 - [technique-reform-ingress](technique-reform-ingress/README.md) for entering
-  future classification reform from current topology evidence
+  future classification reform from current topology evidence, with
+  [review packets](technique-reform-ingress/reviews/README.md) for human
+  readouts before schema movement
 - [long-gap-reentry](long-gap-reentry/README.md)
 
 Use [../PARTS.md](../PARTS.md) for the role map and

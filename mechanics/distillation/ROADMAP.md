@@ -24,8 +24,9 @@
    time; do not draft a bundle until the gate proves standalone portability and
    nearest owner stop-lines.
 8. Before any broad classification reform, enter through the technique reform
-   ingress packet and keep the first pass as scout/generated projection unless a
-   decision note, schema update, templates, validators, and docs move together.
+   ingress packet. The topology scout projection and first human review pack
+   are now landed, so the next honest pass is a kind ambiguity review from
+   direct bundle reading, still without schema or frontmatter migration.
 
 ## Hold line
 
