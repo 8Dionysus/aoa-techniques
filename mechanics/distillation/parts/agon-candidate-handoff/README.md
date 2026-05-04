@@ -90,21 +90,25 @@ technique bundles.
 
 Current landed gate:
 
+- [challenge-claim-practice](gates/challenge-claim-practice.md)
 - [request-evidence-practice](gates/request-evidence-practice.md)
 - [offer-evidence-reference-practice](gates/offer-evidence-reference-practice.md)
 
 Current landed gate example:
 
+- [challenge-claim-minimal-public-safe](gates/examples/challenge-claim-minimal-public-safe.md)
 - [request-evidence-minimal-public-safe](gates/examples/request-evidence-minimal-public-safe.md)
 - [offer-evidence-reference-minimal-public-safe](gates/examples/offer-evidence-reference-minimal-public-safe.md)
 
 Current landed gate checklist:
 
+- [challenge-claim-gate-checklist](gates/checklists/challenge-claim-gate-checklist.md)
 - [request-evidence-gate-checklist](gates/checklists/request-evidence-gate-checklist.md)
 - [offer-evidence-reference-gate-checklist](gates/checklists/offer-evidence-reference-gate-checklist.md)
 
 Current landed gate evidence note:
 
+- [challenge-claim-gate-evidence-note](gates/evidence-notes/challenge-claim-gate-evidence-note.md)
 - [request-evidence-gate-evidence-note](gates/evidence-notes/request-evidence-gate-evidence-note.md)
 - [offer-evidence-reference-gate-evidence-note](gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md)
 
