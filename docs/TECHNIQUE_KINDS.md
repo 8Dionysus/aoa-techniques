@@ -25,7 +25,7 @@ See also:
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `2` | `5` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
-| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `6` | `8` |
+| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `15` | `6` | `9` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `11` | `4` | `7` |
 | `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `0` | `2` |
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `13` | `0` | `13` |
@@ -220,12 +220,12 @@ Do not use this when:
 - the technique mainly derives a secondary lookup surface from another authoritative source
 - the main promise is stepwise execution or approval gating
 
-Counts: `total` 14, `canonical` 6, `promoted` 8.
+Counts: `total` 15, `canonical` 6, `promoted` 9.
 
 | domain | entries |
 |---|---|
 | `agent-workflows` | `1` |
-| `docs` | `6` |
+| `docs` | `7` |
 | `evaluation` | `1` |
 | `system-recovery` | `0` |
 | `validation-patterns` | `0` |
@@ -240,6 +240,7 @@ Counts: `total` 14, `canonical` 6, `promoted` 8.
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `docs` | `promoted` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | `docs` | `promoted` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
 | [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) | `docs` | `promoted` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. | [TECHNIQUE.md](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) |
+| [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `promoted` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. | [TECHNIQUE.md](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) | `evaluation` | `canonical` | Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation. | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) | `history` | `canonical` | Package already-saved AI session transcripts as readable, versionable Markdown artifacts so review, handoff, and selective sharing stay possible without reopening capture semantics or turning transcript history into memory or instruction authority. | [TECHNIQUE.md](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) | `history` | `canonical` | Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine. | [TECHNIQUE.md](../techniques/history/local-first-session-index/TECHNIQUE.md) |

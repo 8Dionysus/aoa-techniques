@@ -1471,6 +1471,20 @@
       "main_risk_short": "Main risk: the request names a vague category instead of one concrete object.",
       "validation_short": "Validate by checking exactly one claim or decision point is named; exactly one missing evidence object is requested; the object is concrete...",
       "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md"
+    },
+    {
+      "id": "AOA-T-0106",
+      "name": "single-scoped-evidence-reference",
+      "summary": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.",
+      "one_line_intent": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so...",
+      "use_when_short": "Use when one claim, decision, review state, or documentation statement is already in or one available source, line, artifact, excerpt...",
+      "do_not_use_short": "Avoid when the real task is to prove correctness, score adequacy, or issue an evaluation or the review needs several...",
+      "inputs_short": "Needs one reviewed claim, decision point, artifact statement, or route state; one available evidence reference; the exact form...",
+      "outputs_short": "Produces one scoped evidence reference; one relevance statement; one support-scope statement.",
+      "core_contract_short": "Core contract: one use of the technique offers one evidence reference; the reference is tied to one bounded review state.",
+      "main_risk_short": "Main risk: the reference is vague and cannot be inspected.",
+      "validation_short": "Validate by checking exactly one claim or decision point is named; exactly one evidence reference is offered; the reference is concrete enough...",
+      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md"
     }
   ]
 }

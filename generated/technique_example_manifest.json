@@ -1281,6 +1281,17 @@
           "body_markdown": "```yaml\nsingle_missing_evidence_request:\n  claim_or_decision: generated compact index was rebuilt after the seed registry changed\n  current_review_state: diff shows seed and generated files changed, but no builder receipt is visible\n  requested_object: one command receipt or CI line for `python path/to/build_registry.py --check` on the current branch\n  why_it_matters: the receipt distinguishes generated parity from hand-edited generated output\n  if_object_appears: mark generation parity observed and continue normal review\n  if_object_absent: keep generated index under review and do not treat it as validated\n  stop_line: do not issue proof or verdict; ask for this one object and stop\n```\n\nThis example asks for one object, not a full investigation. If the receipt is\nprovided, review can continue with observed generation parity. If it is absent,\nthe generated output remains under review, but the absence does not prove the\noutput is wrong."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0106",
+      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/docs/single-scoped-evidence-reference/examples/minimal-single-scoped-evidence-reference.md",
+          "title": "Minimal single-scoped evidence reference",
+          "body_markdown": "```yaml\nsingle_scoped_evidence_reference:\n  claim_or_decision: public CLI docs declare a dry-run flag for write actions\n  current_review_state: a reviewer needs one source before citing the interface\n  evidence_reference: docs/cli.md#write-actions, the line documenting `--dry-run`\n  relevance: the reference supports the claim that the public CLI interface declares the flag\n  support_scope: documented interface availability\n  support_limit: does not prove implementation behavior, test coverage, or runtime enforcement\n  reliance_condition: inspect or quote this one reference before relying on it; route runtime behavior to a separate validation check\n  stop_line: do not treat this reference as proof or as a bundle of sources\n```\n\nThis example offers one reference, names what it can and cannot support, and\nstops before proof or runtime validation. If the review later needs behavior\nevidence, that later question belongs to a separate validation check."
+        }
+      ]
     }
   ]
 }

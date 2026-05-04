@@ -153,6 +153,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md): `complements` [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md), [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
 - [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md): `complements` [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md); `used_together_for` [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md)
 - [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md): `complements` [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md), [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+- [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md): `complements` [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md), [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md), [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -240,6 +241,7 @@ Within each domain, techniques are ordered by `kind`, then by status, then by ID
 | [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `artifact` | `promoted` | `source_backed` | `bounded` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
 | [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | `artifact` | `promoted` | `source_backed` | `bounded` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
 | [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) | `artifact` | `promoted` | `source_backed` | `bounded` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. |
+| [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) | `artifact` | `promoted` | `source_backed` | `bounded` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
 | [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `lift` | `canonical` | `cross_context` | `bounded` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
 | [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) | `lift` | `canonical` | `cross_context` | `bounded` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs. |
 | [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `lift` | `canonical` | `cross_context` | `bounded` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
@@ -295,7 +297,7 @@ Within each domain, techniques are ordered by `kind`, then by status, then by ID
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 105/105 techniques.
+- `export_ready` is currently `true` for 106/106 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

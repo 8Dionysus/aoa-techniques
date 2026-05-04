@@ -4610,6 +4610,59 @@
           ]
         }
       ]
+    },
+    {
+      "id": "AOA-T-0106",
+      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+      "checklists": [
+        {
+          "check_path": "techniques/docs/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md",
+          "title": "single-scoped-evidence-reference checklist",
+          "intro_markdown": "Use this checklist before offering a reference inside a bounded review.",
+          "items": [
+            {
+              "order": 1,
+              "text": "[ ] One reviewed claim or decision point is named."
+            },
+            {
+              "order": 2,
+              "text": "[ ] Exactly one evidence reference is offered."
+            },
+            {
+              "order": 3,
+              "text": "[ ] The reference is concrete enough to inspect, quote, rerun, or reject."
+            },
+            {
+              "order": 4,
+              "text": "[ ] The relevance statement explains why the reference matters to the claim."
+            },
+            {
+              "order": 5,
+              "text": "[ ] The scope statement says what the reference can support."
+            },
+            {
+              "order": 6,
+              "text": "[ ] The limit statement says what the reference cannot support."
+            },
+            {
+              "order": 7,
+              "text": "[ ] The reliance condition says what must happen before the reference is used."
+            },
+            {
+              "order": 8,
+              "text": "[ ] The output does not offer a bundle of references."
+            },
+            {
+              "order": 9,
+              "text": "[ ] The reference is not treated as proof, verdict, or source-truth transfer."
+            },
+            {
+              "order": 10,
+              "text": "[ ] The output does not issue route, memory, runtime, skill, rank, scar, KAG, ToS, eval, or Agon law effects."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -87,7 +87,8 @@ def test_agon_candidate_handoff_shape() -> None:
         "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md",
     }
     assert data["technique_bundles"] == {
-        "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md"
+        "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+        "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
     }
     gate_card_rows = [
         candidate
@@ -134,6 +135,7 @@ def test_agon_candidate_handoff_shape() -> None:
             "source_label": "offer_evidence_reference",
             "source_part": "move-technique-bridge",
             "source_status": "requested_not_landed",
+            "technique_bundle": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
         }
     ]
     assert "does not define Agon law" in data["stop_line"]

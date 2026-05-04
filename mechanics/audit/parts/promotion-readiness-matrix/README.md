@@ -10,13 +10,13 @@ For the current actionable first wave, open [Promotion Wave A Runbook](../promot
 
 ## Current Posture
 
-- current promoted corpus: `80` techniques
-- matrix categorization status: `80` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0105`
+- current promoted corpus: `81` techniques
+- matrix categorization status: `81` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0106`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
 - latest graduation wave: [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../../../../techniques/history/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
-- fresh extraction watch: [AOA-T-0046](../../../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../../../../techniques/docs/github-review-template-lift/TECHNIQUE.md), [AOA-T-0048](../../../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md), [AOA-T-0097](../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0098](../../../../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md), [AOA-T-0099](../../../../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md), [AOA-T-0100](../../../../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md), and [AOA-T-0105](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) still need second-context or canonical-readiness scaffolding before canonical discussion is honest
+- fresh extraction watch: [AOA-T-0046](../../../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../../../../techniques/docs/github-review-template-lift/TECHNIQUE.md), [AOA-T-0048](../../../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md), [AOA-T-0097](../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0098](../../../../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md), [AOA-T-0099](../../../../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md), [AOA-T-0100](../../../../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md), [AOA-T-0105](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md), and [AOA-T-0106](../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) still need second-context evidence before canonical discussion is honest
 
 ## Manual-first questbook pilot lane
 
@@ -57,7 +57,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
 | `external live-adopter lane` | `34` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `35` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
-| `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
+| `fresh extraction lane` | `9` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
 
 ## Swarm Rule
@@ -437,13 +437,14 @@ canonical promotion is honest.
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0105](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) | Good one-object evidence-request guardrail with clear boundaries from proof, evaluation, and Agon law. | One second review context where asking for exactly one missing evidence object narrows review without broad research, verdict overclaim, or proof theater. |
+| [AOA-T-0106](../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) | Good one-reference artifact with clear boundaries from proof, evaluation adequacy, source-truth transfer, and Agon law. | One second docs, code-review, or generated-output context where offering exactly one scoped reference improves review without proof-by-link or source laundering. |
 
 ## Suggested Wave Order
 
 Closed wave:
 
 - `Wave 0 - v0.4 matrix expansion` is complete for `AOA-T-0075` through
-  `AOA-T-0105`; the rows above categorize every newer promoted bundle without
+  `AOA-T-0106`; the rows above categorize every newer promoted bundle without
   changing status.
 
 1. `Wave A - evidence-prep leaders`

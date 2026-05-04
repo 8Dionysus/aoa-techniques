@@ -636,3 +636,9 @@ entries:
   status: promoted
   kind: guardrail
   family: review-evidence
+- id: AOA-T-0106
+  name: single-scoped-evidence-reference
+  domain: docs
+  status: promoted
+  kind: artifact
+  family: review-evidence

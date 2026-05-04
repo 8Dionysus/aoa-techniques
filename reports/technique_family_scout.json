@@ -1481,12 +1481,12 @@
         "assessment"
       ],
       "counts": {
-        "total": 1,
+        "total": 2,
         "canonical": 0,
-        "promoted": 1,
+        "promoted": 2,
         "by_domain": {
           "agent-workflows": 1,
-          "docs": 0,
+          "docs": 1,
           "evaluation": 0,
           "system-recovery": 0,
           "validation-patterns": 0,
@@ -1498,7 +1498,7 @@
           "validation": 0,
           "composition": 0,
           "distribution": 0,
-          "artifact": 0,
+          "artifact": 1,
           "lift": 0,
           "discovery": 0,
           "handoff": 0,
@@ -1508,7 +1508,8 @@
         }
       },
       "technique_ids": [
-        "AOA-T-0105"
+        "AOA-T-0105",
+        "AOA-T-0106"
       ],
       "techniques": [
         {
@@ -1519,6 +1520,15 @@
           "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
           "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
           "kind": "guardrail"
+        },
+        {
+          "id": "AOA-T-0106",
+          "name": "single-scoped-evidence-reference",
+          "domain": "docs",
+          "status": "promoted",
+          "summary": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.",
+          "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+          "kind": "artifact"
         }
       ]
     },

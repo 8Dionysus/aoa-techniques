@@ -74,3 +74,29 @@ Not changed:
 - no technique status changed
 - no bundle-local canonical-readiness verdict changed
 - no generated promotion-readiness surface became authority
+
+## 2026-05-03 - Agon Handoff Matrix Extension
+
+Changed:
+
+- categorized [AOA-T-0106](../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+  in the promotion-readiness matrix as part of the Agon handoff extraction
+  family
+- moved the promoted queue count from `80` to `81`
+- extended the fresh extraction watch without changing canonical-readiness
+  verdicts
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_audit_mechanics_topology
+python -m unittest tests.test_roadmap_parity
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not changed:
+
+- no existing technique status changed
+- no canonical-readiness verdict changed
+- no generated promotion surface became authority
