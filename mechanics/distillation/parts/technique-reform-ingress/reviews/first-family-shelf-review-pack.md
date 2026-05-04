@@ -187,6 +187,9 @@ review status.
 ## Next Honest Move
 
 Add a non-authoritative tree projection over all current bundles.
+This has now landed as
+[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+and its first human review pack.
 
 That projection should map technique ID, current source path, proposed `trunk`,
 proposed `shelf`, proposed future path, and review status such as `candidate`,

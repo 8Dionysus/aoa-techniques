@@ -56,6 +56,7 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_catalog.py",
     "scripts/build_kind_manifest.py",
     "scripts/build_topology_scout.py",
+    "scripts/build_tree_projection.py",
     "scripts/build_capsules.py",
     "scripts/build_sections.py",
     "scripts/build_section_manifest.py",
@@ -134,6 +135,10 @@ REQUIRED_KIND_REPORT_FILES = (
     "reports/kind_ambiguity_audit.md",
     "reports/technique_topology_scout.md",
     "reports/technique_topology_scout.json",
+)
+REQUIRED_TREE_REPORT_FILES = (
+    "reports/technique_tree_projection.md",
+    "reports/technique_tree_projection.json",
 )
 KAG_EXPORT_TECHNIQUE_ID = "AOA-T-0043"
 KAG_EXPORT_SECTION_HANDLES = (
@@ -651,6 +656,64 @@ TOPOLOGY_SCOUT_AUTHORITY_NOTE = (
     "This projection is scout-only, non-authoritative, and weaker than bundle frontmatter. "
     "It must not be treated as schema truth, frontmatter truth, or automatic remap authority."
 )
+TREE_PROJECTION_REPORT_VERSION = 1
+TREE_PROJECTION_TARGET_PATH_SHAPE = "techniques/<trunk>/<shelf>/<technique-slug>/TECHNIQUE.md"
+TREE_PROJECTION_SOURCE_OF_TRUTH = {
+    "tree_contract": "docs/TECHNIQUE_TREE_CONTRACT.md",
+    "family_review": "mechanics/distillation/parts/technique-reform-ingress/reviews/first-family-shelf-review-pack.md",
+    "family_seed": TECHNIQUE_FAMILY_SEED_PATH,
+    "wave1_mapping": TECHNIQUE_KIND_WAVE1_PATH,
+    "catalog": "generated/technique_catalog.json",
+}
+TREE_PROJECTION_AUTHORITY_NOTE = (
+    "This projection is non-authoritative and weaker than authored bundle meaning. "
+    "It is a placement review surface only; it must not be treated as frontmatter truth, "
+    "schema truth, or automatic path migration authority."
+)
+TREE_PROJECTION_REVIEW_STATUS_ORDER = (
+    "pilot-candidate",
+    "candidate",
+    "boundary-watch",
+    "split-review-needed",
+    "singleton-hold",
+    "unassigned-hold",
+)
+TREE_FAMILY_PLACEMENT = {
+    "agent-workflows-core": ("execution", "candidate"),
+    "intent-chain": ("execution", "candidate"),
+    "docs-boundary": ("instruction", "candidate"),
+    "instruction-surface": ("instruction", "pilot-candidate"),
+    "evaluation-chain": ("proof", "candidate"),
+    "published-summary": ("proof", "candidate"),
+    "skill-support": ("proof", "candidate"),
+    "kag-source-lift": ("knowledge-lift", "pilot-candidate"),
+    "history-artifacts": ("history", "candidate"),
+    "runtime-truth-lifecycle": ("execution", "boundary-watch"),
+    "capability-registry": ("instruction", "boundary-watch"),
+    "capability-boundary": ("instruction", "boundary-watch"),
+    "skill-discovery": ("instruction", "boundary-watch"),
+    "ready-work-graphs": ("execution", "candidate"),
+    "review-compaction": ("continuity", "pilot-candidate"),
+    "handoff-continuation": ("continuity", "pilot-candidate"),
+    "tool-gateway": ("tool-use", "singleton-hold"),
+    "approval-evidence": ("governance", "boundary-watch"),
+    "review-evidence": ("proof", "boundary-watch"),
+    "media-ingest": ("ingest", "pilot-candidate"),
+    "donor-harvest": ("continuity", "candidate"),
+    "decision-routing": ("governance", "candidate"),
+    "diagnosis-repair": ("recovery", "pilot-candidate"),
+    "automation-governance": ("governance", "split-review-needed"),
+    "owner-truth-closeout": ("proof", "boundary-watch"),
+    "antifragility-recovery": ("recovery", "candidate"),
+}
+TREE_REVIEW_STATUS_STOP_LINES = {
+    "pilot-candidate": "Candidate for first direct-read migration review; do not move paths from projection alone.",
+    "candidate": "Use as placement evidence only; direct bundle reading is required before migration.",
+    "boundary-watch": "Review split, merge, owner, proof, or governance boundary before migration.",
+    "split-review-needed": "Split or merge this shelf before accepting it as a tree migration pilot.",
+    "singleton-hold": "Hold until more neighboring techniques land or direct review justifies a singleton shelf.",
+    "unassigned-hold": "Hold until the family assignment is reviewed; do not infer a path automatically.",
+}
 KIND_AMBIGUITY_SEAMS = (
     ("workflow", "guardrail"),
     ("validation", "assessment"),
@@ -3897,6 +3960,13 @@ def validate_kind_report_files(repo_root: Path) -> None:
             fail(f"{repo_root}: missing required kind scout report '{relative_path}'")
 
 
+def validate_tree_report_files(repo_root: Path) -> None:
+    for relative_path in REQUIRED_TREE_REPORT_FILES:
+        target = repo_root / relative_path
+        if not target.exists():
+            fail(f"{repo_root}: missing required tree projection report '{relative_path}'")
+
+
 def validate_technique_bundle(
     repo_root: Path, technique_dir: Path, expected_domain: str, schema_store: dict[str, Any]
 ) -> TechniqueRecord:
@@ -5862,6 +5932,157 @@ def build_topology_scout_markdown(report: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def count_entry_field(entries: list[dict[str, Any]], field_name: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for entry in entries:
+        value = entry[field_name]
+        counts[value] = counts.get(value, 0) + 1
+    return dict(sorted(counts.items()))
+
+
+def tree_projection_entry(entry: dict[str, Any], overlay_entry: dict[str, Any] | None) -> dict[str, Any]:
+    family = overlay_entry.get("family") if isinstance(overlay_entry, dict) else None
+    if isinstance(family, str) and family in TREE_FAMILY_PLACEMENT:
+        proposed_trunk, review_status = TREE_FAMILY_PLACEMENT[family]
+        proposed_shelf = family
+    else:
+        proposed_trunk = "unassigned"
+        proposed_shelf = "unassigned"
+        review_status = "unassigned-hold"
+
+    proposed_future_path = (
+        f"techniques/{proposed_trunk}/{proposed_shelf}/{entry['name']}/TECHNIQUE.md"
+    )
+    rationale_cues = [
+        f"family:{family or 'unassigned'}",
+        f"domain:{entry['domain']}",
+        f"kind:{entry['kind']}",
+        f"status:{entry['status']}",
+        f"review_status:{review_status}",
+    ]
+
+    return {
+        "id": entry["id"],
+        "name": entry["name"],
+        "domain": entry["domain"],
+        "kind": entry["kind"],
+        "status": entry["status"],
+        "summary": entry["summary"],
+        "current_path": entry["technique_path"],
+        "family": family,
+        "proposed_trunk": proposed_trunk,
+        "proposed_shelf": proposed_shelf,
+        "proposed_future_path": proposed_future_path,
+        "review_status": review_status,
+        "rationale_cues": rationale_cues,
+        "stop_line": TREE_REVIEW_STATUS_STOP_LINES[review_status],
+    }
+
+
+def build_tree_projection_payload(
+    catalog: dict[str, Any],
+    wave1_overlay: dict[str, Any],
+) -> dict[str, Any]:
+    catalog_entries = catalog.get("techniques")
+    if not isinstance(catalog_entries, list):
+        fail("generated/technique_catalog.json: techniques must be a list")
+    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+    entries = [
+        tree_projection_entry(entry, overlay_entries.get(entry["id"]))
+        for entry in sorted(catalog_entries, key=kind_group_sort_key)
+    ]
+    raw_review_status_counts = count_entry_field(entries, "review_status")
+
+    return {
+        "report_version": TREE_PROJECTION_REPORT_VERSION,
+        "status": "projection-only-non-authoritative",
+        "source_of_truth": TREE_PROJECTION_SOURCE_OF_TRUTH,
+        "authority_note": TREE_PROJECTION_AUTHORITY_NOTE,
+        "frontmatter_truth_axes": ["domain", "kind"],
+        "target_path_shape": TREE_PROJECTION_TARGET_PATH_SHAPE,
+        "review_status_order": list(TREE_PROJECTION_REVIEW_STATUS_ORDER),
+        "trunk_counts": count_entry_field(entries, "proposed_trunk"),
+        "shelf_counts": count_entry_field(entries, "proposed_shelf"),
+        "review_status_counts": {
+            status: raw_review_status_counts.get(status, 0)
+            for status in TREE_PROJECTION_REVIEW_STATUS_ORDER
+        },
+        "techniques": entries,
+    }
+
+
+def build_tree_projection_markdown(report: dict[str, Any]) -> str:
+    lines = [
+        "# Technique Tree Projection",
+        "",
+        "This file is generated from the technique tree contract, family shelf review, wave1 family overlay, and generated catalog.",
+        "Do not edit it by hand; run `python scripts/build_tree_projection.py`.",
+        "",
+        TREE_PROJECTION_AUTHORITY_NOTE,
+        "",
+        "Use this projection to review future trunk and shelf placement before any directory move.",
+        "",
+        "## Projection Scope",
+        "",
+        f"- Techniques covered: `{len(report['techniques'])}`",
+        f"- Frontmatter truth axes: {markdown_value_list(report['frontmatter_truth_axes'])}",
+        f"- Target path shape: `{report['target_path_shape']}`",
+        "",
+        "## Review Status Counts",
+        "",
+        "| review status | count |",
+        "|---|---:|",
+    ]
+
+    for status in report["review_status_order"]:
+        count = report["review_status_counts"].get(status, 0)
+        lines.append(f"| `{status}` | `{count}` |")
+
+    lines.extend(["", "## Trunk Counts", "", "| trunk | count |", "|---|---:|"])
+    for trunk, count in report["trunk_counts"].items():
+        lines.append(f"| `{trunk}` | `{count}` |")
+
+    lines.extend(["", "## Shelf Counts", "", "| shelf | count |", "|---|---:|"])
+    for shelf, count in report["shelf_counts"].items():
+        lines.append(f"| `{shelf}` | `{count}` |")
+
+    lines.extend(
+        [
+            "",
+            "## Technique Projection",
+            "",
+            "| technique | current path | family | proposed trunk | proposed shelf | review status | proposed future path |",
+            "|---|---|---|---|---|---|---|",
+        ]
+    )
+    for entry in report["techniques"]:
+        family = entry["family"] or "unassigned"
+        lines.append(
+            "| "
+            f"{selection_technique_link({'id': entry['id'], 'technique_path': entry['current_path']})} | "
+            f"`{entry['current_path']}` | "
+            f"`{family}` | "
+            f"`{entry['proposed_trunk']}` | "
+            f"`{entry['proposed_shelf']}` | "
+            f"`{entry['review_status']}` | "
+            f"`{entry['proposed_future_path']}` |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Boundaries",
+            "",
+            f"- {TREE_PROJECTION_AUTHORITY_NOTE}",
+            "- This projection can choose review targets, but bundle directories remain unmoved.",
+            "- A later migration must read bundle meaning directly, choose one bounded pilot subtree, and update links, generated surfaces, validators, docs, and decision records together.",
+            "- `family` remains scout-only; `domain` and `kind` remain current frontmatter truth.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def selection_technique_link(entry: dict[str, Any]) -> str:
     return f"[{entry['id']}](../{entry['technique_path']})"
 
@@ -7377,6 +7598,39 @@ def validate_topology_scout_reports(repo_root: Path) -> None:
         fail(f"{markdown_path}: topology scout report must stay explicitly non-authoritative")
 
 
+def validate_tree_projection_reports(repo_root: Path) -> None:
+    json_path = repo_root / "reports" / "technique_tree_projection.json"
+    markdown_path = repo_root / "reports" / "technique_tree_projection.md"
+    catalog = read_json(repo_root / "generated" / "technique_catalog.json")
+    wave1_overlay = load_wave1_kind_overlay(repo_root)
+
+    expected_report = build_tree_projection_payload(catalog, wave1_overlay)
+    expected_markdown = build_tree_projection_markdown(expected_report)
+    actual_report = read_json(json_path)
+    actual_markdown = read_text(markdown_path)
+
+    if actual_report != expected_report:
+        fail(
+            f"{json_path}: generated tree projection report is out of date; run "
+            f"'python scripts/build_tree_projection.py'"
+        )
+    if actual_markdown != expected_markdown:
+        fail(
+            f"{markdown_path}: generated tree projection markdown is out of date; run "
+            f"'python scripts/build_tree_projection.py'"
+        )
+    if actual_report.get("status") != "projection-only-non-authoritative":
+        fail(f"{json_path}: status must stay 'projection-only-non-authoritative'")
+    if actual_report.get("authority_note") != TREE_PROJECTION_AUTHORITY_NOTE:
+        fail(f"{json_path}: authority_note must stay stable")
+    if actual_report.get("frontmatter_truth_axes") != ["domain", "kind"]:
+        fail(f"{json_path}: frontmatter_truth_axes must stay ['domain', 'kind']")
+    if actual_report.get("target_path_shape") != TREE_PROJECTION_TARGET_PATH_SHAPE:
+        fail(f"{json_path}: target_path_shape must stay stable")
+    if "non-authoritative" not in actual_markdown or "bundle directories remain unmoved" not in actual_markdown:
+        fail(f"{markdown_path}: tree projection report must stay explicitly non-authoritative")
+
+
 def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
     selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
     patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
@@ -7866,6 +8120,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_kind_data_files(repo_root)
     validate_kind_surface_files(repo_root)
     validate_kind_report_files(repo_root)
+    validate_tree_report_files(repo_root)
     schema_store = load_schema_store(repo_root)
     validate_kind_axis_alignment(repo_root, schema_store)
     records = collect_techniques(repo_root, schema_store)
@@ -7892,6 +8147,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_kind_manifests(repo_root)
     validate_kind_scout_reports(repo_root)
     validate_topology_scout_reports(repo_root)
+    validate_tree_projection_reports(repo_root)
     validate_selection_surface(repo_root, records)
     validate_repo_doc_surface_reader(repo_root)
     validate_kag_export(repo_root, records)
@@ -7924,6 +8180,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated topology scout axis registry")
     print("[ok] validated wave1 family scout and ambiguity audit parity")
     print("[ok] validated topology scout projection parity")
+    print("[ok] validated tree projection parity")
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated generated repo doc surface parity")
     print("[ok] validated generated source-owned KAG export parity")

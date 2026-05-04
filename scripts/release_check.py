@@ -11,6 +11,7 @@ RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/build_catalog.py"),
     ("python", "scripts/build_kind_manifest.py"),
     ("python", "scripts/build_topology_scout.py"),
+    ("python", "scripts/build_tree_projection.py"),
     ("python", "scripts/build_capsules.py"),
     ("python", "scripts/build_sections.py"),
     ("python", "scripts/build_section_manifest.py"),
