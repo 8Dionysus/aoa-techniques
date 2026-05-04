@@ -28,8 +28,10 @@
    kind ambiguity direct-read review are now landed. The first shortlist remap
    wave moved `AOA-T-0085` from `artifact` to `lift`, `AOA-T-0005` from
    `guardrail` to `workflow`, and `AOA-T-0052` from `handoff` to `workflow`.
-   The next honest pass is a fresh kind ambiguity read over the updated audit
-   before any further frontmatter change.
+   The second kind ambiguity review pack is now landed. The next honest pass is
+   an `AOA-T-0054` destination check against `handoff`, `workflow`, and
+   `recovery`; keep current frontmatter unless that check proves a stronger
+   destination.
 
 ## Hold line
 

@@ -87,6 +87,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/README.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-topology-scout-review-pack.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-kind-ambiguity-review-pack.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/second-kind-ambiguity-review-pack.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -555,6 +556,41 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Keep `assessment`", review)
         self.assertIn("Do not change frontmatter from this review alone", review)
         self.assertIn("fresh kind ambiguity read", review)
+
+    def test_second_kind_ambiguity_review_pack_routes_0054_without_remap(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "second-kind-ambiguity-review-pack.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Second Kind Ambiguity Review Pack", review)
+        self.assertIn("updated `reports/kind_ambiguity_audit.md`", review)
+        self.assertIn("does not change frontmatter", review)
+        self.assertIn("`AOA-T-0054`", review)
+        self.assertIn("compaction-resilient-skill-loading", review)
+        self.assertIn("`handoff`", review)
+        self.assertIn("`workflow`", review)
+        self.assertIn("`recovery`", review)
+        self.assertIn("destination check", review)
+        self.assertIn("first shortlist remap wave is closed", review)
+        self.assertIn("Keep `guardrail`", review)
+        self.assertIn("Keep `lift`", review)
+        self.assertIn("Keep `assessment`", review)
+        self.assertIn("Second Kind Ambiguity Review Pack", ingress)
+        self.assertIn("`AOA-T-0054`", ingress)
 
     def test_0085_kind_remap_landed_without_status_change(self) -> None:
         catalog = json.loads(

@@ -3,6 +3,33 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Second kind ambiguity review pack
+
+Changed:
+
+- added
+  [second-kind-ambiguity-review-pack](parts/technique-reform-ingress/reviews/second-kind-ambiguity-review-pack.md)
+  as the updated-audit read after the first shortlist remap wave closed
+- kept repeated audit candidates as review holds where direct bundle reading
+  still supports `guardrail`, `lift`, or `assessment`
+- routed `AOA-T-0054` to a destination check against `handoff`, `workflow`, and
+  `recovery` before any frontmatter change
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique frontmatter changed
+- no `kind` value was added, removed, or renamed
+- no technique status, domain, owner, relation, or evidence surface changed
+- no broad classification migration was claimed
+
 ## 2026-05-04 - AOA-T-0052 kind remap
 
 Changed:
