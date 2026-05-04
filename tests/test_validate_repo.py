@@ -1821,6 +1821,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         family_seed = validate_repo.read_yaml(
             REPO_ROOT / "config" / "technique_family_seed.yaml"
         )
+        topology_axes = validate_repo.read_yaml(
+            REPO_ROOT / "config" / "technique_topology_axes.yaml"
+        )
 
         for target in (
             "Classification is faceted, not a single tree.",
@@ -1831,6 +1834,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "`substrate` | design axis",
             "`execution_profile` | design axis",
             "`risk_posture` | design axis",
+            "`config/technique_topology_axes.yaml`",
             "coding, documentation, validation, recovery, history, media, tool use",
             "The goal is a corpus that can grow very large",
         ):
@@ -1860,7 +1864,58 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "Use family as a library shelf",
             "\n".join(family_seed["core_rules"]),
         )
+        self.assertEqual("scout-foundation", topology_axes["status"])
+        self.assertEqual(["domain", "kind"], topology_axes["frontmatter_truth_axes"])
+        self.assertEqual(
+            list(validate_repo.TOPOLOGY_SCOUT_AXIS_ORDER),
+            [axis["id"] for axis in topology_axes["axes"]],
+        )
         self.assertIn("faceted rather than a single tree", decision)
+
+    def test_topology_scout_axis_registry_stays_below_frontmatter_truth(self) -> None:
+        registry = validate_repo.load_topology_axes_registry(REPO_ROOT)
+        registry_text = (
+            REPO_ROOT / "config" / "technique_topology_axes.yaml"
+        ).read_text(encoding="utf-8")
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(
+            encoding="utf-8"
+        )
+        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-04-topology-scout-axis-registry.md"
+        ).read_text(encoding="utf-8")
+
+        validate_repo.validate_topology_axes_registry(REPO_ROOT)
+        self.assertEqual("technique_topology_scout_axes", registry["axis_name"])
+        self.assertEqual("scout-foundation", registry["status"])
+        self.assertEqual(["domain", "kind"], registry["frontmatter_truth_axes"])
+        self.assertIn(
+            "does not add required frontmatter fields",
+            registry["authority_note"],
+        )
+        self.assertIn(
+            "must not remap bundle meaning automatically",
+            registry["authority_note"],
+        )
+
+        axes = {axis["id"]: axis for axis in registry["axes"]}
+        self.assertEqual(set(validate_repo.TOPOLOGY_SCOUT_AXIS_ORDER), set(axes))
+        self.assertEqual("exactly-one", axes["execution_profile"]["cardinality"])
+        for axis_id in ("capability_class", "substrate", "risk_posture"):
+            self.assertEqual("one-or-more", axes[axis_id]["cardinality"])
+
+        self.assertIn("small-agent", [value["id"] for value in axes["execution_profile"]["values"]])
+        self.assertIn("public-share", [value["id"] for value in axes["risk_posture"]["values"]])
+        self.assertIn("human-approval-surfaces", [value["id"] for value in axes["substrate"]["values"]])
+        self.assertIn("learn-from-artifact", [value["id"] for value in axes["capability_class"]["values"]])
+
+        self.assertIn("not frontmatter truth", start_here)
+        self.assertIn("config/technique_topology_axes.yaml", roadmap)
+        self.assertIn("not add required frontmatter fields", registry_text)
+        self.assertIn("below bundle frontmatter", decision)
 
     def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
