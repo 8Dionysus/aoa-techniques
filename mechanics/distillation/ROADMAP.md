@@ -24,9 +24,10 @@
    time; do not draft a bundle until the gate proves standalone portability and
    nearest owner stop-lines.
 8. Before any broad classification reform, enter through the technique reform
-   ingress packet. The topology scout projection and first human review pack
-   are now landed, so the next honest pass is a kind ambiguity review from
-   direct bundle reading, still without schema or frontmatter migration.
+   ingress packet. The topology scout projection, topology review pack, and
+   kind ambiguity direct-read review are now landed, so the next honest pass is
+   one narrow `kind` remap wave, starting with `AOA-T-0085` if the change moves
+   bundle frontmatter, generated surfaces, tests, and route notes together.
 
 ## Hold line
 

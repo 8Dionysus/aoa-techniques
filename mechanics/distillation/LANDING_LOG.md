@@ -35,6 +35,36 @@ Not moved:
 - no public, approval, security, or migration proof was claimed from the scout
   report
 
+## 2026-05-04 - Kind ambiguity direct-read review pack
+
+Changed:
+
+- added
+  [first-kind-ambiguity-review-pack](parts/technique-reform-ingress/reviews/first-kind-ambiguity-review-pack.md)
+  as the first direct-read review over generated kind ambiguity pressure
+- read the strongest generated remap and revisit candidates directly from their
+  bundle files before naming a shortlist
+- narrowed the later remap shortlist to `AOA-T-0085`, `AOA-T-0005`, and
+  `AOA-T-0052`, while keeping generated false positives as current-kind holds
+- updated the technique reform ingress packet and Distillation roadmap so the
+  next route is one narrow remap wave rather than broad classification churn
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no bundle frontmatter changed
+- no `kind` value was added, removed, or renamed
+- no technique status changed
+- no generated audit verdict became stronger than direct bundle meaning
+
 ## 2026-05-01 - Active parts split
 
 Changed:
