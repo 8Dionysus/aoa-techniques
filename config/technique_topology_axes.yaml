@@ -1,0 +1,234 @@
+schema_version: 1
+axis_name: technique_topology_scout_axes
+status: scout-foundation
+authority_note: >
+  This registry defines scout values for non-authoritative topology projection.
+  It does not add required frontmatter fields, does not replace domain or kind,
+  and must not remap bundle meaning automatically.
+source_of_truth:
+  - docs/TECHNIQUE_TOPOLOGY_CONTRACT.md
+  - mechanics/distillation/parts/technique-reform-ingress/README.md
+frontmatter_truth_axes:
+  - domain
+  - kind
+axes:
+  - id: capability_class
+    status: design-axis-scout
+    cardinality: one-or-more
+    purpose: What agent capability the atomic move exercises after orchestration selects it.
+    values:
+      - id: observe
+        summary: Notice, inspect, or surface a bounded state without changing it.
+        choose_when:
+          - the move gathers or exposes current state
+          - the output is an observation cue rather than a verdict or mutation
+      - id: read
+        summary: Extract meaning from an existing source without transforming ownership.
+        choose_when:
+          - the move depends on reading a bounded source surface
+          - the output preserves source priority and scope
+      - id: interpret
+        summary: Explain or frame source meaning without claiming proof or ownership.
+        choose_when:
+          - the move turns evidence into an interpretation
+          - uncertainty and source limits remain visible
+      - id: plan
+        summary: Shape a bounded next action or sequence before mutation.
+        choose_when:
+          - the move prepares a plan, queue, graph, or next-step frame
+          - execution remains outside the atomic move
+      - id: choose
+        summary: Select one route, option, or boundary from explicit alternatives.
+        choose_when:
+          - the move narrows choice without performing the chosen action
+          - the output is a route, verdict aid, or decision packet
+      - id: transform
+        summary: Convert one bounded artifact or representation into another.
+        choose_when:
+          - the move changes shape while preserving source limits
+          - the result is a derived or normalized artifact
+      - id: write
+        summary: Produce a bounded authored artifact, note, template, or patch surface.
+        choose_when:
+          - the move creates or updates text or structured content
+          - the core value is the authored output
+      - id: mutate
+        summary: Change a live repo, runtime, config, or external state.
+        choose_when:
+          - the move performs state change
+          - rollback, approval, or verification posture matters
+      - id: validate
+        summary: Check a claim, contract, invariant, or generated parity surface.
+        choose_when:
+          - the move emits explicit pass/fail or evidence
+          - correctness, integrity, or readiness is central
+      - id: compare
+        summary: Contrast options, variants, routes, claims, or adjacent techniques.
+        choose_when:
+          - the move derives value from difference and tradeoff
+          - the result stays descriptive or decision-supporting
+      - id: summarize
+        summary: Compress a bounded source into a readable smaller form.
+        choose_when:
+          - the move preserves key facts while reducing size
+          - the summary remains weaker than the source
+      - id: handoff
+        summary: Package work for continuation across agents, runs, or context boundaries.
+        choose_when:
+          - the move preserves resume state or transfer context
+          - continuation is the center of gravity
+      - id: recover
+        summary: Reground, repair, roll back, or continue safely under degraded conditions.
+        choose_when:
+          - the move exists because the normal path is weakened
+          - the output names repair or continuation posture
+      - id: coordinate
+        summary: Align several bounded surfaces, actors, or lanes without owning their meaning.
+        choose_when:
+          - the move arranges interaction or parity among owners
+          - authority stays with the source surfaces
+      - id: communicate
+        summary: Produce a bounded message, request, answer, or public-safe explanation.
+        choose_when:
+          - the move is mainly a communication act
+          - the recipient and requested response shape matter
+      - id: learn-from-artifact
+        summary: Extract reusable practice or future guidance from reviewed evidence.
+        choose_when:
+          - the move turns evidence into reusable learning pressure
+          - the output remains reviewable and reversible
+  - id: substrate
+    status: design-axis-scout
+    cardinality: one-or-more
+    purpose: What object, medium, or surface the atomic move acts on.
+    values:
+      - id: code
+        summary: Source code, code review surfaces, or implementation units.
+        choose_when:
+          - the move inspects, changes, or routes source code
+      - id: tests
+        summary: Test suites, smoke checks, fixtures, or invariant checks.
+        choose_when:
+          - the move centers on executable or reviewable verification artifacts
+      - id: docs
+        summary: Human-authored documentation, guides, notes, or route cards.
+        choose_when:
+          - the move primarily operates on prose documentation
+      - id: instructions
+        summary: Agent instructions, prompts, rule layers, or context fragments.
+        choose_when:
+          - the move shapes an instruction surface rather than ordinary docs
+      - id: config
+        summary: Configuration, manifests, schemas, or build inputs.
+        choose_when:
+          - the move changes or validates policy-like structured inputs
+      - id: shell
+        summary: Shell commands, command output, local process state, or CLI routes.
+        choose_when:
+          - the move depends on command-line execution or shell composition
+      - id: api
+        summary: API contracts, service endpoints, connectors, or external calls.
+        choose_when:
+          - the move depends on a service or typed request/response boundary
+      - id: data
+        summary: Datasets, rows, exports, structured records, or normalized stores.
+        choose_when:
+          - the move primarily reshapes or validates data
+      - id: media
+        summary: Images, screenshots, OCR inputs, audio, video, or mixed media.
+        choose_when:
+          - the move begins from media or multimodal source material
+      - id: ui
+        summary: User interfaces, visual states, layouts, or interaction surfaces.
+        choose_when:
+          - the move inspects or changes user-facing interface behavior
+      - id: conversation
+        summary: Chat, comments, messages, review threads, or dialogue turns.
+        choose_when:
+          - the move acts on conversational context or response shape
+      - id: history
+        summary: Transcripts, commits, changelogs, ledgers, or lineage artifacts.
+        choose_when:
+          - the move preserves or reads historical evidence
+      - id: memory-adjacent-artifacts
+        summary: Recall candidates, saved notes, or memory-like evidence that remains outside memory authority.
+        choose_when:
+          - the move touches recall-shaped material without owning memory semantics
+      - id: graph-adjacent-artifacts
+        summary: Relations, edges, dependency graphs, route graphs, or topology hints.
+        choose_when:
+          - the move uses graph shape without becoming graph doctrine
+      - id: tool-surfaces
+        summary: Tool manifests, tool outputs, connector capability surfaces, or local tool wrappers.
+        choose_when:
+          - the move routes or validates tool-facing material
+      - id: runtime-state
+        summary: Live services, process state, deployment state, or operational health.
+        choose_when:
+          - the move acts on current running state
+      - id: human-approval-surfaces
+        summary: Approval prompts, review confirmations, consent receipts, or public-share gates.
+        choose_when:
+          - the move depends on explicit human authorization or review consent
+  - id: execution_profile
+    status: design-axis-scout
+    cardinality: exactly-one
+    purpose: What execution envelope can perform the selected atomic move.
+    values:
+      - id: tiny-card
+        summary: Executable from a compact card or short section with obvious inputs.
+        choose_when:
+          - a small packed prompt can carry the whole move
+          - local context and stop line are simple
+      - id: small-agent
+        summary: Suitable for a 2-4B model after orchestration supplies facts, frame, and output shape.
+        choose_when:
+          - the move needs local reasoning but stays narrow
+          - selection and context packing happen outside the technique
+      - id: medium-agent
+        summary: Requires broader comparison, multi-file awareness, or careful judgment while staying one move.
+        choose_when:
+          - the move is still atomic but too context-sensitive for a tiny card
+          - review or synthesis depth matters
+      - id: orchestration-required
+        summary: Atomic in meaning, but safe execution requires an outer workflow, approval gate, or tool choreography.
+        choose_when:
+          - the move crosses risky, multi-tool, public-share, or owner-boundary surfaces
+          - a larger agent or skill must supply gating and sequencing
+  - id: risk_posture
+    status: design-axis-scout
+    cardinality: one-or-more
+    purpose: What operational risk posture selectors and reviewers should see before use.
+    values:
+      - id: read-only
+        summary: Does not mutate source, runtime, repo, or public state.
+        choose_when:
+          - the move only inspects, summarizes, compares, or reports
+      - id: mutating
+        summary: Changes files, configuration, data, runtime, or external state.
+        choose_when:
+          - the move performs or prepares state change
+      - id: public-share
+        summary: Produces or publishes material that may leave the private workspace.
+        choose_when:
+          - public safety, sanitization, or disclosure boundaries matter
+      - id: security-sensitive
+        summary: Touches secrets, auth, credentials, private infrastructure, or abuse-sensitive surfaces.
+        choose_when:
+          - misuse could expose sensitive material or access
+      - id: irreversible
+        summary: Cannot be cheaply undone or has durable external effects.
+        choose_when:
+          - rollback is hard, incomplete, or unavailable
+      - id: approval-required
+        summary: Needs explicit human approval before action or publication.
+        choose_when:
+          - the move crosses a consent, policy, or owner-boundary gate
+      - id: degraded-mode
+        summary: Used when ordinary validation, tooling, source access, or runtime state is weakened.
+        choose_when:
+          - the move exists to continue safely while conditions are degraded
+      - id: external-evidence
+        summary: Depends on outside sources, donor material, web evidence, or third-party artifacts.
+        choose_when:
+          - source freshness, provenance, or trust boundaries matter

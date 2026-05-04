@@ -117,6 +117,7 @@ REQUIRED_KIND_DOCTRINE_FILES = (
 REQUIRED_KIND_DATA_FILES = (
     "config/technique_kind_registry.yaml",
     "config/technique_family_seed.yaml",
+    "config/technique_topology_axes.yaml",
     "data/technique_kind_wave1.yaml",
     "data/technique_kind_wave1.csv",
     "reports/wave1_kind_counts.md",
@@ -588,9 +589,22 @@ KIND_VALUES = set(KIND_ORDER)
 KIND_INDEX = {kind: index for index, kind in enumerate(KIND_ORDER)}
 TECHNIQUE_KIND_REGISTRY_PATH = "config/technique_kind_registry.yaml"
 TECHNIQUE_FAMILY_SEED_PATH = "config/technique_family_seed.yaml"
+TECHNIQUE_TOPOLOGY_AXES_PATH = "config/technique_topology_axes.yaml"
 TECHNIQUE_KIND_WAVE1_PATH = "data/technique_kind_wave1.yaml"
 TECHNIQUE_KIND_WAVE1_CSV_PATH = "data/technique_kind_wave1.csv"
 WAVE1_KIND_COUNTS_REPORT_PATH = "reports/wave1_kind_counts.md"
+TOPOLOGY_SCOUT_AXIS_ORDER = (
+    "capability_class",
+    "substrate",
+    "execution_profile",
+    "risk_posture",
+)
+TOPOLOGY_SCOUT_AXIS_CARDINALITY = {
+    "capability_class": "one-or-more",
+    "substrate": "one-or-more",
+    "execution_profile": "exactly-one",
+    "risk_posture": "one-or-more",
+}
 KIND_MANIFEST_VERSION = 1
 KIND_MANIFEST_SOURCE_OF_TRUTH = {
     "kind_registry": TECHNIQUE_KIND_REGISTRY_PATH,
@@ -1427,6 +1441,16 @@ def load_family_seed(repo_root: Path) -> dict[str, Any]:
     return seed
 
 
+def load_topology_axes_registry(repo_root: Path) -> dict[str, Any]:
+    registry_path = repo_root / TECHNIQUE_TOPOLOGY_AXES_PATH
+    if not registry_path.is_file():
+        fail(f"{repo_root}: missing topology axis registry '{TECHNIQUE_TOPOLOGY_AXES_PATH}'")
+    registry = read_yaml(registry_path)
+    if not isinstance(registry, dict):
+        fail(f"{registry_path}: topology axis registry payload must be a mapping")
+    return registry
+
+
 def load_wave1_kind_overlay(repo_root: Path) -> dict[str, Any]:
     overlay_path = repo_root / TECHNIQUE_KIND_WAVE1_PATH
     if not overlay_path.is_file():
@@ -1860,6 +1884,77 @@ def validate_family_seed_alignment(repo_root: Path) -> None:
     if seed.get("status") != "scout-foundation":
         fail(f"{seed_path}: status must stay 'scout-foundation'")
     family_seed_entries_by_id(seed, seed_path)
+
+
+def validate_topology_axes_registry(repo_root: Path) -> None:
+    registry_path = repo_root / TECHNIQUE_TOPOLOGY_AXES_PATH
+    registry = load_topology_axes_registry(repo_root)
+    if registry.get("schema_version") != 1:
+        fail(f"{registry_path}: schema_version must be 1")
+    if registry.get("axis_name") != "technique_topology_scout_axes":
+        fail(f"{registry_path}: axis_name must stay 'technique_topology_scout_axes'")
+    if registry.get("status") != "scout-foundation":
+        fail(f"{registry_path}: status must stay 'scout-foundation'")
+    authority_note = registry.get("authority_note")
+    if not isinstance(authority_note, str) or "does not add required frontmatter fields" not in authority_note:
+        fail(f"{registry_path}: authority_note must keep the non-frontmatter boundary explicit")
+    if "must not remap bundle meaning automatically" not in authority_note:
+        fail(f"{registry_path}: authority_note must reject automatic remap authority")
+    if registry.get("frontmatter_truth_axes") != ["domain", "kind"]:
+        fail(f"{registry_path}: frontmatter_truth_axes must stay ['domain', 'kind']")
+
+    source_of_truth = registry.get("source_of_truth")
+    if not isinstance(source_of_truth, list) or not source_of_truth:
+        fail(f"{registry_path}: source_of_truth must be a non-empty list")
+    for source_path in source_of_truth:
+        if not isinstance(source_path, str) or not source_path:
+            fail(f"{registry_path}: source_of_truth entries must be non-empty strings")
+        if not (repo_root / source_path).is_file():
+            fail(f"{registry_path}: source_of_truth entry '{source_path}' must exist")
+
+    axes = registry.get("axes")
+    if not isinstance(axes, list):
+        fail(f"{registry_path}: axes must be a list")
+    axis_ids = [axis.get("id") for axis in axes if isinstance(axis, dict)]
+    if axis_ids != list(TOPOLOGY_SCOUT_AXIS_ORDER):
+        fail(f"{registry_path}: axes must follow TOPOLOGY_SCOUT_AXIS_ORDER exactly")
+
+    for axis_index, axis in enumerate(axes):
+        location = f"{registry_path}.axes[{axis_index}]"
+        if not isinstance(axis, dict):
+            fail(f"{location}: axis entry must be an object")
+        axis_id = axis["id"]
+        if axis.get("status") != "design-axis-scout":
+            fail(f"{location}: status must stay 'design-axis-scout'")
+        if axis.get("cardinality") != TOPOLOGY_SCOUT_AXIS_CARDINALITY[axis_id]:
+            fail(
+                f"{location}: cardinality must stay '{TOPOLOGY_SCOUT_AXIS_CARDINALITY[axis_id]}'"
+            )
+        purpose = axis.get("purpose")
+        if not isinstance(purpose, str) or not purpose.strip():
+            fail(f"{location}: purpose must be a non-empty string")
+        values = axis.get("values")
+        if not isinstance(values, list) or not values:
+            fail(f"{location}: values must be a non-empty list")
+        seen_values: set[str] = set()
+        for value_index, value in enumerate(values):
+            value_location = f"{location}.values[{value_index}]"
+            if not isinstance(value, dict):
+                fail(f"{value_location}: value must be an object")
+            value_id = value.get("id")
+            if not isinstance(value_id, str) or not re.fullmatch(r"[a-z][a-z0-9-]*", value_id):
+                fail(f"{value_location}: id must be kebab-case")
+            if value_id in seen_values:
+                fail(f"{value_location}: duplicate value id '{value_id}'")
+            seen_values.add(value_id)
+            summary = value.get("summary")
+            if not isinstance(summary, str) or not summary.strip():
+                fail(f"{value_location}: summary must be a non-empty string")
+            choose_when = value.get("choose_when")
+            if not isinstance(choose_when, list) or not choose_when:
+                fail(f"{value_location}: choose_when must be a non-empty list")
+            if not all(isinstance(item, str) and item.strip() for item in choose_when):
+                fail(f"{value_location}: choose_when must contain only non-empty strings")
 
 
 def validate_wave1_kind_overlay(repo_root: Path, records: list[TechniqueRecord]) -> None:
@@ -7402,6 +7497,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_kind_axis_alignment(repo_root, schema_store)
     records = collect_techniques(repo_root, schema_store)
     validate_family_seed_alignment(repo_root)
+    validate_topology_axes_registry(repo_root)
     validate_wave1_kind_overlay(repo_root, records)
     validate_selection_navigation_specs(records, repo_root)
     validate_repo_doc_navigation_specs(repo_root)
@@ -7451,6 +7547,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated shadow review manifest parity")
     print("[ok] validated generated repo doc surface manifest parity")
     print("[ok] validated generated kind manifest parity and reader surface")
+    print("[ok] validated topology scout axis registry")
     print("[ok] validated wave1 family scout and ambiguity audit parity")
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated generated repo doc surface parity")

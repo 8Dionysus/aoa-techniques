@@ -47,10 +47,10 @@ generated catalogs, and validators.
 | `domain` | authoritative frontmatter | first owner and review route | `docs/DOMAIN_MAP.md`, schema, validators |
 | `kind` | authoritative frontmatter | atomic move shape | `docs/TECHNIQUE_KIND_GUIDE.md`, `config/technique_kind_registry.yaml`, schema, validators |
 | `family` | scout-only | stable semantic shelf spanning domains or kinds | `config/technique_family_seed.yaml`, `reports/technique_family_scout.md` |
-| `capability_class` | design axis | what agent capability the move exercises | future config and generated catalog field |
-| `substrate` | design axis | what object or medium the move operates on | future config and generated catalog field |
-| `execution_profile` | design axis | what size or orchestration level can execute it | future capsule/catalog field |
-| `risk_posture` | design axis | mutation, public-share, safety, reversibility, and approval posture | future review/catalog field |
+| `capability_class` | design axis | what agent capability the move exercises | `config/technique_topology_axes.yaml`, future generated projection |
+| `substrate` | design axis | what object or medium the move operates on | `config/technique_topology_axes.yaml`, future generated projection |
+| `execution_profile` | design axis | what size or orchestration level can execute it | `config/technique_topology_axes.yaml`, future capsule/catalog field |
+| `risk_posture` | design axis | mutation, public-share, safety, reversibility, and approval posture | `config/technique_topology_axes.yaml`, future review/catalog field |
 | `relations` | current bounded frontmatter plus future strengthening | direct composition, conflict, sequence, prerequisite, or alternative hints | current `relations` plus future typed relation guidance |
 
 ## Current Axes
@@ -123,6 +123,14 @@ only after the family registry has clear ownership, examples, and tie-break
 rules.
 
 ## Future Axes
+
+The scout value registry for `capability_class`, `substrate`,
+`execution_profile`, and `risk_posture` lives in
+`config/technique_topology_axes.yaml`.
+
+That registry names allowed scout values only. It does not add required
+frontmatter fields, does not replace `domain` or `kind`, and does not authorize
+generated reports to remap bundle meaning automatically.
 
 ### Capability Class
 

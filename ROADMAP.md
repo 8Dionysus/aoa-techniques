@@ -123,7 +123,7 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 | Field | Direction |
 |---|---|
 | Current posture | `domain` and `kind` are authoritative frontmatter; family, capability, substrate, execution profile, risk posture, and richer relations are explicit design axes. |
-| Next honest move | Enter future classification reform through `mechanics/distillation/parts/technique-reform-ingress/README.md`, then strengthen `family` or generated scout axes only after the chosen slice has tests, docs, and a decision note. |
+| Next honest move | Enter future classification reform through `mechanics/distillation/parts/technique-reform-ingress/README.md`, use `config/technique_topology_axes.yaml` as the scout value registry, then strengthen `family` or generated scout axes only after the chosen slice has tests, docs, and a decision note. |
 | Guardrail | Do not turn `agent-workflows`, `docs`, or tags into junk drawers for missing topology. |
 
 ## Horizon: Small-Agent Usability
@@ -174,7 +174,8 @@ trigger is real.
 - Promote `family` from scout-only to optional reviewed frontmatter only after
   examples and tie-break rules stay stable across multiple technique waves.
 - Add generated projections for `capability_class`, `substrate`,
-  `execution_profile`, and `risk_posture` only after mechanics candidates prove
+  `execution_profile`, and `risk_posture` from
+  `config/technique_topology_axes.yaml` only after mechanics candidates prove
   the axes help selection without false precision.
 - Use the technique reform ingress packet before any broad classification
   change so the first reform pass stays bounded and evidence-linked.
