@@ -83,6 +83,11 @@ PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
     "mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py",
 )
 
+PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/README.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/first-topology-scout-review-pack.md",
+)
+
 OLD_FLAT_DISTILLATION_FILES = (
     "mechanics/distillation/DONOR_REFINERY_RUBRIC.md",
     "mechanics/distillation/EXTERNAL_IMPORT_RUNBOOK.md",
@@ -100,6 +105,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             + PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS
             + PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS
             + PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS
+            + PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS
         ):
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
@@ -490,6 +496,38 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add new `kind` values from handoff cues", ingress)
         self.assertIn("prevents generated evidence", decision)
         self.assertIn("remapping bundle meaning", decision)
+
+    def test_technique_reform_review_pack_preserves_scout_boundary(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "first-topology-scout-review-pack.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("topology scout review pack", ingress)
+        self.assertIn("not a schema migration", review)
+        self.assertIn("Technique Topology Scout", review)
+        self.assertIn("`107` techniques", review)
+        self.assertIn("`orchestration-required` has `52`", review)
+        self.assertIn("`small-agent` has `36`", review)
+        self.assertIn("`medium-agent` has `19`", review)
+        self.assertIn("`read-only` appears on `65`", review)
+        self.assertIn("`mutating` on `25`", review)
+        self.assertIn("does not remap any bundle", review)
+        self.assertIn("direct bundle reading", review)
+        self.assertIn("kind ambiguity review pack", review)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

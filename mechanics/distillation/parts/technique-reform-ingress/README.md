@@ -17,6 +17,7 @@ permission slip to remap techniques automatically.
 - scout or design axes: `family`, `capability_class`, `substrate`,
   `execution_profile`, `risk_posture`, richer `relations`
 - family seed: `26` scout families, still weaker than bundle frontmatter
+- topology scout review pack: landed as a human review layer, not schema truth
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -30,6 +31,7 @@ permission slip to remap techniques automatically.
 | [Technique Family Seed](../../../../config/technique_family_seed.yaml) | scout shelf candidates and family constraints | authoritative family assignment for every bundle |
 | [Technique Topology Axes Registry](../../../../config/technique_topology_axes.yaml) | scout values for `capability_class`, `substrate`, `execution_profile`, and `risk_posture` | required frontmatter fields or automatic bundle remapping |
 | [Technique Topology Scout](../../../../reports/technique_topology_scout.md) | current generated projection over scout axes for review pressure | schema truth, migration authority, or bundle meaning |
+| [First Topology Scout Review Pack](reviews/first-topology-scout-review-pack.md) | first human readout from the scout projection and the next review lane | schema migration, bundle remap authority, or proof of generated correctness |
 | [Technique Family Scout](../../../../reports/technique_family_scout.md) | generated family counts and likely clusters | automatic frontmatter migration authority |
 | [Kind Ambiguity Audit](../../../../reports/kind_ambiguity_audit.md) | tie-break seams that deserve human review | automatic remap authority |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
@@ -82,7 +84,7 @@ It should start with one bounded slice:
 
 ## Next Honest Move
 
-Prepare the first reform slice as a generated scout projection, not a schema
-requirement. The strongest current candidate is to expose capability, substrate,
-execution profile, and risk posture as non-required generated/readable fields
-before asking every technique bundle to carry them.
+Use the landed topology scout review pack to build the kind ambiguity review
+pack from direct bundle reading. The next pass should decide which ambiguities
+are true `kind` questions and which are better carried by family, capability,
+substrate, execution, risk, or relation axes.

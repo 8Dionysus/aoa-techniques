@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Technique topology scout review pack
+
+Changed:
+
+- added
+  [first-topology-scout-review-pack](parts/technique-reform-ingress/reviews/first-topology-scout-review-pack.md)
+  as the first human review layer over the generated topology scout
+- linked the review pack from the technique reform ingress packet, Distillation
+  part map, and part index
+- recorded that the generated projection covers `107` techniques, with `52`
+  `orchestration-required`, `36` `small-agent`, `19` `medium-agent`, `65`
+  `read-only`, and `25` `mutating` readouts
+- moved the next route from generated projection creation to direct bundle
+  reading for the kind ambiguity review pack
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no generated scout axis became schema or frontmatter truth
+- no technique bundle was remapped
+- no `kind` registry value was added or changed
+- no public, approval, security, or migration proof was claimed from the scout
+  report
+
 ## 2026-05-01 - Active parts split
 
 Changed:
