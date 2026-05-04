@@ -81,6 +81,9 @@ def test_agon_candidate_handoff_shape() -> None:
     assert data["bundle_readiness_reviews"] == {
         "candidate:aoa-techniques:agon/request-evidence-practice": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md"
     }
+    assert data["technique_bundles"] == {
+        "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md"
+    }
     gate_card_rows = [
         candidate
         for candidate in data["candidates"]
@@ -90,6 +93,7 @@ def test_agon_candidate_handoff_shape() -> None:
             or "gate_checklist" in candidate
             or "gate_evidence_note" in candidate
             or "bundle_readiness_review" in candidate
+            or "technique_bundle" in candidate
         )
     ]
     assert gate_card_rows == [
@@ -108,6 +112,7 @@ def test_agon_candidate_handoff_shape() -> None:
             "source_label": "request_evidence",
             "source_part": "move-technique-bridge",
             "source_status": "requested_not_landed",
+            "technique_bundle": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
         }
     ]
     assert "does not define Agon law" in data["stop_line"]
@@ -322,4 +327,36 @@ def test_builder_rejects_missing_bundle_readiness_review() -> None:
     with case.assertRaisesRegex(
         builder.ValidationError, "bundle_readiness_review path does not exist"
     ):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_technique_bundle_without_bundle_readiness_review() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_bundle = next(entry for entry in config["entries"] if "technique_bundle" in entry)
+    del with_bundle["bundle_readiness_review"]
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(
+        builder.ValidationError, "technique_bundle requires bundle_readiness_review"
+    ):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_missing_technique_bundle() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_bundle = next(entry for entry in config["entries"] if "technique_bundle" in entry)
+    with_bundle["technique_bundle"] = (
+        "techniques/agent-workflows/missing-technique-bundle/TECHNIQUE.md"
+    )
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "technique_bundle path does not exist"):
         builder.validate_config(config)

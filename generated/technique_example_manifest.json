@@ -1270,6 +1270,17 @@
           "body_markdown": "```yaml\nroute_type: superseded_practice_obsolescence_route\npractice: draft-wide-adoption-template\ncurrent_stage: shadowed_after_two_reviews\nowner_receipt_target: technique authoring workflow owner\nreason_not_active_as_is: the template combines adoption, retention, and skill proposal fields, so small-agent execution keeps drifting\nroute_label: reanchor\nreanchor_target: split the reusable adoption gate, retention review, and skill proposal packet into separate technique candidates\nreplacement_or_target_known: true\nsource_evidence:\n  - shadow review notes show repeated confusion between adoption and activation\n  - later bundle extractions succeeded after the fields were split\nrollback_or_quarantine_path: keep the draft template quarantined as source evidence until the split techniques are reviewed\nretained_lesson: broad lifecycle templates hide owner boundaries unless each reusable move has its own stop-line\ndownstream_hints:\n  memory: optional retained lesson after owner review\n  stats: count as reanchored, not deleted\n  proof: no proof verdict claimed\nstop_line: this packet routes the practice; it does not delete the draft, mark it deprecated, or accept the replacement\n```\n\nThe route names why the shadowed practice should not stay active and where it\nshould go next. It preserves the evidence and lesson without performing the\nowner-local retirement action."
         }
       ]
+    },
+    {
+      "id": "AOA-T-0105",
+      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+      "examples": [
+        {
+          "example_path": "techniques/agent-workflows/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md",
+          "title": "Minimal single-missing-evidence request",
+          "body_markdown": "```yaml\nsingle_missing_evidence_request:\n  claim_or_decision: generated compact index was rebuilt after the seed registry changed\n  current_review_state: diff shows seed and generated files changed, but no builder receipt is visible\n  requested_object: one command receipt or CI line for `python path/to/build_registry.py --check` on the current branch\n  why_it_matters: the receipt distinguishes generated parity from hand-edited generated output\n  if_object_appears: mark generation parity observed and continue normal review\n  if_object_absent: keep generated index under review and do not treat it as validated\n  stop_line: do not issue proof or verdict; ask for this one object and stop\n```\n\nThis example asks for one object, not a full investigation. If the receipt is\nprovided, review can continue with observed generation parity. If it is absent,\nthe generated output remains under review, but the absence does not prove the\noutput is wrong."
+        }
+      ]
     }
   ]
 }

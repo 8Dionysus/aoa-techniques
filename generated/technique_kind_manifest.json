@@ -147,11 +147,11 @@
         "the primary value is assembling or publishing artifacts"
       ],
       "counts": {
-        "total": 12,
+        "total": 13,
         "canonical": 4,
-        "promoted": 8,
+        "promoted": 9,
         "by_domain": {
-          "agent-workflows": 7,
+          "agent-workflows": 8,
           "docs": 3,
           "evaluation": 2,
           "system-recovery": 0,
@@ -215,6 +215,14 @@
           "status": "promoted",
           "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
           "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0105",
+          "name": "single-missing-evidence-request",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
+          "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0034",

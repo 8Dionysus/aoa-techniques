@@ -360,3 +360,34 @@ Not moved:
 - no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime, rank,
   or scar authority moved into `aoa-techniques`
 - no current `kind` registry value was added or changed
+
+## 2026-05-03 - Request evidence technique bundle
+
+Changed:
+
+- added
+  [single-missing-evidence-request](../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+  as the first normal technique bundle grown from the Agon candidate handoff
+- registered a traceability pointer from
+  `candidate:aoa-techniques:agon/request-evidence-practice` to the landed
+  bundle in the part-local seed and generated compact index
+- kept the bundle at `promoted`, `guardrail`, and `source_backed` posture with
+  origin evidence and a non-canonical readiness note
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
+python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
+python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Agon candidate source status changed
+- no Agon law, proof, workflow, routing, actor, memory, KAG, ToS, runtime, rank,
+  scar, or skill authority moved into the technique bundle
+- no canonical promotion was claimed

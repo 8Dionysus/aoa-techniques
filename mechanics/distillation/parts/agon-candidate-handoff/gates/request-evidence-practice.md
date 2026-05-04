@@ -15,13 +15,16 @@ owners, with no live protocol or runtime effect.
 
 ## Gate Posture
 
-Status: gate-card-landed, not a technique bundle.
+Status: gate-card-landed, with one linked technique bundle landed separately.
 
 Lane: `first_narrowing_watch`.
 
 This card proves only that the candidate can be asked as one portable practice
-move. It does not promote the candidate, define Agon evidence law, create a
-skill, issue a proof verdict, write memory, or start arena behavior.
+move. It does not define Agon evidence law, create a skill, issue a proof
+verdict, write memory, or start arena behavior.
+
+This card is still not a technique bundle; the linked bundle owns its own
+technique-local evidence and review posture.
 
 ## Atom
 
@@ -51,13 +54,17 @@ The move has four fields:
 
 - [request-evidence-bundle-readiness-review](bundle-reviews/request-evidence-bundle-readiness-review.md)
 
+## Landed Technique Bundle
+
+- [single-missing-evidence-request](../../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+
 ## Topology Read
 
 | Axis | Read |
 |---|---|
 | likely domain | `agent-workflows` |
 | primary kind | `guardrail` |
-| family posture | evidence-request and review-state practice; not yet a bundle family |
+| family posture | evidence-request and review-state practice; first bundle landed locally |
 | capability class | request-evidence |
 | substrate | review state, claim text, citation gap, or missing receipt |
 | execution profile | small-agent when the claim and review state are already bounded |
@@ -100,11 +107,11 @@ hand motion, not the law of the arena.
 - Do not issue proof, verdict, rank, scar, memory, KAG, ToS, runtime, or route
   effects.
 - Do not ask for broad research when one missing object is enough.
-- Do not draft a technique bundle until an example, checklist, evidence notes,
-  and bundle-local review exist.
+- Do not treat the linked technique bundle as Agon source acceptance or proof
+  authority.
 
 ## Next Move
 
-Draft one technique bundle under the normal `techniques/` path only if the
-bundle keeps `guardrail` as current `kind` and keeps Agon source status
+Keep the landed technique bundle at promoted/source-backed posture. Collect
+second-context evidence before any canonical review and keep Agon source status
 unchanged.

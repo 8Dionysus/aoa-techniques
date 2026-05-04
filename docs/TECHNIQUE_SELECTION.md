@@ -152,6 +152,7 @@ If you still need repo-level orientation before choosing a technique, open `STAR
 - [AOA-T-0102](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md): `complements` [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md), [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md)
 - [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md): `complements` [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md), [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
 - [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md): `complements` [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md), [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md); `used_together_for` [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md)
+- [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md): `complements` [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md), [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
 
 ## Browse By Domain
 
@@ -179,6 +180,7 @@ Within each domain, techniques are ordered by `kind`, then by status, then by ID
 | [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `guardrail` | `promoted` | `source_backed` | `bounded` | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. |
 | [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `guardrail` | `promoted` | `source_backed` | `bounded` | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. |
 | [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | `guardrail` | `promoted` | `source_backed` | `bounded` | Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior. |
+| [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) | `guardrail` | `promoted` | `source_backed` | `bounded` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
 | [AOA-T-0096](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | `validation` | `promoted` | `source_backed` | `bounded` | Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness. |
 | [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | `composition` | `canonical` | `cross_context` | `bounded` | Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops. |
 | [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `composition` | `promoted` | `source_backed` | `bounded` | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. |
@@ -293,7 +295,7 @@ Within each domain, techniques are ordered by `kind`, then by status, then by ID
 
 ## Current Catalog Audit
 
-- `export_ready` is currently `true` for 104/104 techniques.
+- `export_ready` is currently `true` for 105/105 techniques.
 - For the current corpus, that uniform `true` is intentional: every tracked bundle is considered safe for Stage 1 catalog publication.
 - Treat `export_ready` as the current Stage 1 catalog-publication safety floor, not as a meaningful selector yet.
 - A future `export_ready: false` should mean one bounded thing only: the markdown bundle may still exist, but structured catalog publication would currently overstate its safety, trustworthiness, or stability.

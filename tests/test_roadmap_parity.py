@@ -38,13 +38,13 @@ class RoadmapParityTestCase(unittest.TestCase):
 
         readiness_matrix = (REPO_ROOT / "mechanics/audit/parts/promotion-readiness-matrix/README.md").read_text(encoding="utf-8")
 
-        self.assertEqual(promoted_count, 79)
+        self.assertEqual(promoted_count, 80)
         self.assertIn(f"current promoted corpus: `{promoted_count}` techniques", readiness_matrix)
-        self.assertIn("`79` promoted techniques are explicitly categorized", readiness_matrix)
+        self.assertIn("`80` promoted techniques are explicitly categorized", readiness_matrix)
         self.assertIn("Wave 0 matrix expansion is closed", readiness_matrix)
         self.assertIn("`v0.4 matrix-expansion lane` | `0`", readiness_matrix)
-        self.assertIn("`AOA-T-0075` through `AOA-T-0104`", readiness_matrix)
-        for technique_num in range(75, 105):
+        self.assertIn("`AOA-T-0075` through `AOA-T-0105`", readiness_matrix)
+        for technique_num in range(75, 106):
             self.assertIn(f"AOA-T-{technique_num:04d}", readiness_matrix)
 
     def test_roadmap_matches_current_direction_contour(self) -> None:
@@ -56,7 +56,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         self.assertIn("Current release: `v0.4.2`", readme)
         self.assertIn("## [0.4.0]", changelog)
         self.assertIn("`v0.4.2`", roadmap)
-        self.assertIn("`104` bundles", roadmap)
+        self.assertIn("`105` bundles", roadmap)
         self.assertIn("repo-level direction", roadmap)
         self.assertIn("mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md", roadmap)
         self.assertIn("does not own technique status by itself", roadmap)
@@ -72,6 +72,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         self.assertIn("AOA-T-0102", technique_index)
         self.assertIn("AOA-T-0103", technique_index)
         self.assertIn("AOA-T-0104", technique_index)
+        self.assertIn("AOA-T-0105", technique_index)
 
         for surface in CURRENT_RELEASE_SURFACES:
             with self.subTest(surface=surface):

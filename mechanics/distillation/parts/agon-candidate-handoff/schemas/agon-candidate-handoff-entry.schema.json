@@ -125,6 +125,10 @@
       "pattern": "^mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/.+\\.md$",
       "type": "string"
     },
+    "technique_bundle": {
+      "pattern": "^techniques/[a-z0-9-]+/[a-z0-9-]+/TECHNIQUE\\.md$",
+      "type": "string"
+    },
     "next_move": {
       "minLength": 1,
       "type": "string"

@@ -103,3 +103,4 @@ AOA-T-0101,local-pattern-adoption-gate,agent-workflows,promoted,guardrail,automa
 AOA-T-0102,skill-proposal-handoff-packet,agent-workflows,promoted,handoff,automation-governance
 AOA-T-0103,adopted-practice-retention-review,agent-workflows,promoted,assessment,automation-governance
 AOA-T-0104,superseded-practice-obsolescence-route,agent-workflows,promoted,handoff,automation-governance
+AOA-T-0105,single-missing-evidence-request,agent-workflows,promoted,guardrail,review-evidence
