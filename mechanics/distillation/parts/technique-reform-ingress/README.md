@@ -29,6 +29,7 @@ permission slip to remap techniques automatically.
 | [Technique Kind Registry](../../../../config/technique_kind_registry.yaml) | current `kind` values and tie-break rules | that Agon handoff labels like `trace-probe` or `review` are valid kind values |
 | [Technique Family Seed](../../../../config/technique_family_seed.yaml) | scout shelf candidates and family constraints | authoritative family assignment for every bundle |
 | [Technique Topology Axes Registry](../../../../config/technique_topology_axes.yaml) | scout values for `capability_class`, `substrate`, `execution_profile`, and `risk_posture` | required frontmatter fields or automatic bundle remapping |
+| [Technique Topology Scout](../../../../reports/technique_topology_scout.md) | current generated projection over scout axes for review pressure | schema truth, migration authority, or bundle meaning |
 | [Technique Family Scout](../../../../reports/technique_family_scout.md) | generated family counts and likely clusters | automatic frontmatter migration authority |
 | [Kind Ambiguity Audit](../../../../reports/kind_ambiguity_audit.md) | tie-break seams that deserve human review | automatic remap authority |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |

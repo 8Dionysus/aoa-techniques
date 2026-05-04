@@ -123,7 +123,7 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 | Field | Direction |
 |---|---|
 | Current posture | `domain` and `kind` are authoritative frontmatter; family, capability, substrate, execution profile, risk posture, and richer relations are explicit design axes. |
-| Next honest move | Enter future classification reform through `mechanics/distillation/parts/technique-reform-ingress/README.md`, use `config/technique_topology_axes.yaml` as the scout value registry, then strengthen `family` or generated scout axes only after the chosen slice has tests, docs, and a decision note. |
+| Next honest move | Enter future classification reform through `mechanics/distillation/parts/technique-reform-ingress/README.md`, use `config/technique_topology_axes.yaml` as the scout value registry and `reports/technique_topology_scout.md` as the generated readout, then strengthen `family` or generated scout axes only after the chosen slice has tests, docs, and a decision note. |
 | Guardrail | Do not turn `agent-workflows`, `docs`, or tags into junk drawers for missing topology. |
 
 ## Horizon: Small-Agent Usability
