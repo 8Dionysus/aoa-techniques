@@ -63,6 +63,62 @@ def test_agon_candidate_handoff_shape() -> None:
     assert "candidate:aoa-techniques:agon/request-evidence-practice" in data[
         "first_narrowing_watch"
     ]
+    assert data["gate_pipeline_counts"] == {
+        "bundle_readiness_reviews": 3,
+        "gate_cards": 3,
+        "gate_checklists": 3,
+        "gate_evidence_notes": 3,
+        "gate_examples": 3,
+        "technique_bundles": 3,
+    }
+    assert data["first_narrowing_frontier_counts"] == {
+        "by_execution_profile": {"medium-agent": 3, "small-agent": 5},
+        "by_likely_domain": {
+            "agent-workflows": 3,
+            "docs": 1,
+            "evaluation": 3,
+            "history": 1,
+        },
+        "by_nearest_wrong_owner": {
+            "Tree-of-Sophia": 1,
+            "aoa-agents": 1,
+            "aoa-evals": 4,
+            "aoa-memo": 1,
+            "aoa-routing": 1,
+        },
+        "by_source_part": {
+            "epistemic-technique-candidates": 5,
+            "move-technique-bridge": 3,
+        },
+        "total": 8,
+    }
+    assert [
+        row["source_label"] for row in data["first_narrowing_frontier"]
+    ] == [
+        "probe_trace",
+        "localize_contradiction",
+        "deny_closure",
+        "inference_chain_attack_practice",
+        "explanatory_power_comparison_practice",
+        "concept_boundary_probe_practice",
+        "counterfactual_pressure_practice",
+        "false_consensus_breaking_practice",
+    ]
+    assert data["first_narrowing_frontier"][0] == {
+        "candidate_ref": "candidate:aoa-techniques:agon/probe-trace-practice",
+        "capability_class": "inspect",
+        "execution_profile": "medium-agent",
+        "family_posture": "trace review practice; not yet a bundle",
+        "likely_domain": "history",
+        "nearest_wrong_owner": "aoa-memo",
+        "next_move": "Draft a gate card around one trace link, inspected artifact, and explicit unknown.",
+        "primary_kind": "trace-probe",
+        "risk_posture": "trace-closure-overclaim",
+        "source_label": "probe_trace",
+        "source_part": "move-technique-bridge",
+        "source_status": "requested_not_landed",
+        "substrate": "trace artifact",
+    }
     assert "agon.tech.epistemic.doctrine_revision_review_practice" in data[
         "owner_route_holds"
     ]
