@@ -158,7 +158,7 @@ See also:
 - Validate by: only blocker-free eligible nodes appear in the queue; blocked reasons remain visible for excluded tasks; queue updates track graph...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md)
 
-### [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
+### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 
 - Summary: Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.
 - Intent: Launch a bounded review pass after a visible commit boundary and preserve the result...
@@ -169,9 +169,9 @@ See also:
 - Core contract: review runs after a visible commit boundary; findings remain inspectable artifacts rather than hidden transient output.
 - Main risk: stale findings outlive the code they reviewed.
 - Validate by: the review artifact names the triggering commit or diff; findings survive as read-only output; no automatic merge or rewrite...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md)
 
-### [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
+### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
 
 - Summary: Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.
 - Intent: Turn a noisy or repeated findings set into a smaller current review surface by...
@@ -182,9 +182,9 @@ See also:
 - Core contract: compaction never invents new findings; current code is checked before a finding survives as current truth.
 - Main risk: real distinct findings are merged incorrectly.
 - Validate by: duplicate findings collapse into one representative; invalidated findings are removed or marked stale; current references still point to live...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md)
 
-### [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
+### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
 
 - Summary: Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.
 - Intent: Restore a bounded skill-availability surface after context compaction so the session can rediscover and...
@@ -195,7 +195,7 @@ See also:
 - Core contract: canonical skill sources remain authoritative; compaction recovery is explicit rather than hidden.
 - Main risk: the wrong skill list is reintroduced after compaction.
 - Validate by: a compaction event can happen without permanently losing skill discoverability; post-compaction sessions can still identify or reload needed skills...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
 
 ### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 

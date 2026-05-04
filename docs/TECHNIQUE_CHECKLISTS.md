@@ -82,23 +82,23 @@ See also:
 |---|---|---|---|---|
 | ready-work-from-blocker-graph checklist | `present` | `8` | `techniques/agent-workflows/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
 
-### [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
+### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| commit-triggered-background-review checklist | `present` | `8` | `techniques/agent-workflows/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) |
+| commit-triggered-background-review checklist | `present` | `8` | `techniques/continuity/review-compaction/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) |
 
-### [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| review-findings-compaction checklist | `present` | `8` | `techniques/agent-workflows/review-findings-compaction/checks/review-findings-compaction-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) |
-
-### [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
+### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| compaction-resilient-skill-loading checklist | `absent` | `8` | `techniques/agent-workflows/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) |
+| review-findings-compaction checklist | `present` | `8` | `techniques/continuity/review-compaction/review-findings-compaction/checks/review-findings-compaction-checklist.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) |
+
+### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| compaction-resilient-skill-loading checklist | `absent` | `8` | `techniques/continuity/review-compaction/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
 
 ### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 

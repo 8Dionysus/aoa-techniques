@@ -89,23 +89,23 @@ See also:
 |---|---|---|---|
 | Minimal ready-work-from-blocker-graph example | `present` | `techniques/agent-workflows/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md` | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
 
-### [AOA-T-0051](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
+### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal commit-triggered-background-review example | `present` | `techniques/agent-workflows/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md` | [TECHNIQUE.md](../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) |
+| Minimal commit-triggered-background-review example | `present` | `techniques/continuity/review-compaction/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) |
 
-### [AOA-T-0052](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal review-findings-compaction example | `present` | `techniques/agent-workflows/review-findings-compaction/examples/minimal-review-findings-compaction.md` | [TECHNIQUE.md](../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) |
-
-### [AOA-T-0054](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
+### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal compaction-resilient skill loading | `present` | `techniques/agent-workflows/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md` | [TECHNIQUE.md](../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) |
+| Minimal review-findings-compaction example | `present` | `techniques/continuity/review-compaction/review-findings-compaction/examples/minimal-review-findings-compaction.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) |
+
+### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal compaction-resilient skill loading | `present` | `techniques/continuity/review-compaction/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
 
 ### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 

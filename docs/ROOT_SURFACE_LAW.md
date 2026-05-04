@@ -21,6 +21,9 @@ A root surface is allowed only when it serves at least one durable role:
 5. **Agent lane**: it gives agents a stable route card.
 6. **Tooling or machine district**: it is a top-level directory expected by
    tooling, builders, validators, or source layout.
+7. **Public-safe provenance district**: it preserves repo-wide raw, archive, or
+   receipt material after active distillation without making that history the
+   current route.
 
 A surface that is historical, mechanic-local, generated, experimental,
 future-looking, raw donor material, or interesting only because it was created
@@ -35,6 +38,11 @@ Historical receipts, audit baselines, mechanic-specific raw records, movement
 traces, and durable rationale need named homes:
 
 - `docs/decisions/` for why a structural or workflow choice was made
+- `legacy/` for public-safe repo-wide raw, archive, and receipt material
+  after active distillation
+- `legacy/raw/` for root-level source packets or pre-prune snapshots
+- `legacy/archive/` for retired repo-wide tail surfaces
+- `legacy/receipts/` for root-level migration and compaction accounting
 - `mechanics/<slug>/legacy/` for preserved mechanic lineage
 - `mechanics/<slug>/legacy/raw/` for raw receipts and pre-prune evidence
 - `mechanics/<slug>/parts/` for current mechanic-owned operating surfaces
@@ -54,7 +62,7 @@ legacy route.
 | Release history | `CHANGELOG.md` | release history belongs at root for public readers | do not store future direction or audit baselines here |
 | Thin example | `WALKTHROUGH.md` | one first example helps readers understand the canon path | stay one example; move broader tutorials into docs or examples |
 | Agent lane | `AGENTS.md`, `.agents/` | agent-facing route cards need stable local entry | do not replace civic docs or owner contracts |
-| Tooling and machine districts | `.github/`, `config/`, `data/`, `docs/`, `examples/`, `generated/`, `incoming/`, `mechanics/`, `quests/`, `reports/`, `schemas/`, `scripts/`, `templates/`, `tests/`, `techniques/` | source layout and tooling expect stable directories | each active district should keep local route guidance when needed |
+| Tooling, provenance, and machine districts | `.github/`, `config/`, `data/`, `docs/`, `examples/`, `generated/`, `incoming/`, `legacy/`, `mechanics/`, `quests/`, `reports/`, `schemas/`, `scripts/`, `templates/`, `tests/`, `techniques/` | source layout, provenance accounting, and tooling expect stable directories | each active district should keep local route guidance when needed; `legacy/` must stay indexed and subordinate to active routes |
 | Development requirements | `.gitignore`, `requirements-dev.txt` | development hygiene | stay technical and small |
 
 ## Surfaces That Should Not Live In Root
@@ -62,9 +70,10 @@ legacy route.
 | Surface kind | Better home | Reason |
 |---|---|---|
 | Deep audit baseline, closure packet, or searched-lane ledger | `mechanics/audit/legacy/raw/` plus `mechanics/audit/PROVENANCE.md` | audit evidence is useful, but root direction should stay live and compact |
+| Repo-wide pre-migration receipt, pre-prune snapshot, or retired tail surface | `legacy/raw/`, `legacy/archive/`, or `legacy/receipts/` plus `legacy/INDEX.md` | root-wide history should stay auditable without becoming active canon, current direction, or candidate quarantine |
 | Mechanic runbook or part-local operating surface | `mechanics/<slug>/parts/<part>/README.md` | current mechanic behavior belongs with its package and part |
 | Mechanic landing history | `mechanics/<slug>/LANDING_LOG.md` | landings are checked history, not root direction |
-| Donor intake notes, raw external records, or pre-prune candidate lists | `mechanics/distillation/legacy/raw/` or the owning candidate ledger | donor evidence should be inspectable without becoming canon |
+| Donor intake notes, raw external records, or pre-prune candidate lists | `mechanics/distillation/legacy/raw/`, root `legacy/raw/` only for repo-wide non-mechanic preservation, or the owning candidate ledger | donor evidence should be inspectable without becoming canon or a second `incoming/` |
 | Generated catalog, capsule, or projection | `generated/` | generated surfaces are reproducible companions, not authored root truth |
 | Technique meaning | `techniques/**/TECHNIQUE.md` | root may route to technique meaning but must not re-author it |
 | Decision rationale | `docs/decisions/` | decisions explain why; current source docs define what |
@@ -102,6 +111,7 @@ cannot stay compact, route it to the owner surface that can carry the detail.
 | `TECHNIQUE_INDEX.md` | keep | public corpus map by ID, status, domain, and summary is root-worthy |
 | `WALKTHROUGH.md` | keep for now as one thin example | broader examples should move into `docs/` or `examples/` if this grows |
 | `AGENTS.md` | keep as agent route card | agent route law complements, but does not replace, public canon docs |
+| `legacy/` | add as root provenance district | preserves public-safe repo-wide raw, archive, and migration receipts while keeping `incoming/`, active bundles, generated surfaces, and mechanic-local legacy distinct |
 
 ## Final Rule
 

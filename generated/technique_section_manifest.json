@@ -2816,7 +2816,7 @@
     },
     {
       "id": "AOA-T-0051",
-      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -2872,7 +2872,7 @@
     },
     {
       "id": "AOA-T-0052",
-      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -2984,7 +2984,7 @@
     },
     {
       "id": "AOA-T-0054",
-      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -3019,7 +3019,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- canonical skill sources remain authoritative\n- compaction recovery is explicit rather than hidden\n- the recovered surface restores discoverability or bounded bootstrap context, not arbitrary full session state\n- needed skills can be reloaded from canonical sources after compaction\n- post-compaction capability state remains more reviewable than silent prompt stuffing\n- the technique stays smaller than full context reconstruction, memory recall, or product-width skill management\n\nRelationship to adjacent techniques: unlike [AOA-T-0012](../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../docs/fragmented-agent-context/TECHNIQUE.md), this technique does not own how context or skill files are authored and composed before runtime. Unlike [AOA-T-0027](../../docs/cross-agent-skill-propagation/TECHNIQUE.md), it does not fan one canonical skill source out to many managed targets. Unlike [AOA-T-0040](../../docs/skill-vs-command-boundary/TECHNIQUE.md), it does not define what a skill is; it assumes bounded skill artifacts already exist and keeps them reloadable after compaction."
+          "markdown": "- canonical skill sources remain authoritative\n- compaction recovery is explicit rather than hidden\n- the recovered surface restores discoverability or bounded bootstrap context, not arbitrary full session state\n- needed skills can be reloaded from canonical sources after compaction\n- post-compaction capability state remains more reviewable than silent prompt stuffing\n- the technique stays smaller than full context reconstruction, memory recall, or product-width skill management\n\nRelationship to adjacent techniques: unlike [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md), this technique does not own how context or skill files are authored and composed before runtime. Unlike [AOA-T-0027](../../../docs/cross-agent-skill-propagation/TECHNIQUE.md), it does not fan one canonical skill source out to many managed targets. Unlike [AOA-T-0040](../../../docs/skill-vs-command-boundary/TECHNIQUE.md), it does not define what a skill is; it assumes bounded skill artifacts already exist and keeps them reloadable after compaction."
         },
         {
           "heading": "Risks",
@@ -3187,7 +3187,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the handoff artifact exists before compaction or rollover completes\n- the artifact distinguishes completed work, in-progress or blocked work, and the next intended step\n- the artifact includes enough concrete references that continuation does not depend on hidden memory\n- the next session is expected to read the artifact before continuing\n- the technique stays smaller than transcript packaging, mailbox transport, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique does not package an already-saved transcript into a readable history artifact. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller witness trace for later audit. Unlike [AOA-T-0054](../compaction-resilient-skill-loading/TECHNIQUE.md), it records pre-compaction continuation state rather than reloading skills after compaction. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own delivery, replay, or acknowledgment semantics for the handoff packet. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules across a general phase system."
+          "markdown": "- the handoff artifact exists before compaction or rollover completes\n- the artifact distinguishes completed work, in-progress or blocked work, and the next intended step\n- the artifact includes enough concrete references that continuation does not depend on hidden memory\n- the next session is expected to read the artifact before continuing\n- the technique stays smaller than transcript packaging, mailbox transport, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique does not package an already-saved transcript into a readable history artifact. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller witness trace for later audit. Unlike [AOA-T-0054](../../continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md), it records pre-compaction continuation state rather than reloading skills after compaction. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own delivery, replay, or acknowledgment semantics for the handoff packet. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules across a general phase system."
         },
         {
           "heading": "Risks",
@@ -4027,7 +4027,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the technique groups and flags near-duplicates; it does not own file deletion policy\n- thresholds stay explicit and tunable\n- uncertain matches remain visible instead of being silently resolved\n- grouping remains reviewable and explainable\n- the technique stays smaller than semantic media taxonomy, cleanup automation, or quality-ranking doctrine\n- downstream systems receive duplicate groups and review signals rather than donor CLI behavior or storage policy\n\nRelationship to adjacent techniques: unlike `semantic-media-bucketing-with-vision-plus-ocr`, this bundle does not classify media into receipt, meme, screenshot, or other semantic buckets; it only groups likely duplicates. Unlike [AOA-T-0052](../review-findings-compaction/TECHNIQUE.md), it deduplicates media artifacts rather than review findings. It also stays smaller than any delete-or-archive policy because it stops at grouping plus review."
+          "markdown": "- the technique groups and flags near-duplicates; it does not own file deletion policy\n- thresholds stay explicit and tunable\n- uncertain matches remain visible instead of being silently resolved\n- grouping remains reviewable and explainable\n- the technique stays smaller than semantic media taxonomy, cleanup automation, or quality-ranking doctrine\n- downstream systems receive duplicate groups and review signals rather than donor CLI behavior or storage policy\n\nRelationship to adjacent techniques: unlike `semantic-media-bucketing-with-vision-plus-ocr`, this bundle does not classify media into receipt, meme, screenshot, or other semantic buckets; it only groups likely duplicates. Unlike [AOA-T-0052](../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), it deduplicates media artifacts rather than review findings. It also stays smaller than any delete-or-archive policy because it stops at grouping plus review."
         },
         {
           "heading": "Risks",
@@ -5147,7 +5147,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- no finding closes without live confirmation or an explicit non-repro explanation\n- fixes land in the owning source repository or source checkout\n- each closed finding names a targeted proof surface that matches the failure mode\n- targeted proof does not replace owner-level closeout\n- owner-level closeout does not replace targeted proof\n- deferred, uncertain, and follow-on outcomes remain visible\n- the technique stays smaller than incident response, release cutover, and generic issue-management doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0052](../review-findings-compaction/TECHNIQUE.md), this technique starts after the findings are already reviewed and focuses on proof-backed closure rather than dedupe and stale-finding reduction. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it adds a stricter finding-first proof loop where live confirmation, targeted regression evidence, and final closeout must all attach to named audit findings before closure is credible."
+          "markdown": "- no finding closes without live confirmation or an explicit non-repro explanation\n- fixes land in the owning source repository or source checkout\n- each closed finding names a targeted proof surface that matches the failure mode\n- targeted proof does not replace owner-level closeout\n- owner-level closeout does not replace targeted proof\n- deferred, uncertain, and follow-on outcomes remain visible\n- the technique stays smaller than incident response, release cutover, and generic issue-management doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0052](../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), this technique starts after the findings are already reviewed and focuses on proof-backed closure rather than dedupe and stale-finding reduction. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it adds a stricter finding-first proof loop where live confirmation, targeted regression evidence, and final closeout must all attach to named audit findings before closure is credible."
         },
         {
           "heading": "Risks",

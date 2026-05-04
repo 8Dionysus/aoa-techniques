@@ -44,8 +44,8 @@ together:
 |---|---|---|
 | [AOA-T-0085](../../../../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `artifact` -> `lift` | closed |
 | [AOA-T-0005](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | `guardrail` -> `workflow` | closed |
-| [AOA-T-0052](../../../../../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) | `handoff` -> `workflow` | closed |
-| [AOA-T-0054](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | `handoff` -> `recovery` | closed |
+| [AOA-T-0052](../../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | `handoff` -> `workflow` | closed |
+| [AOA-T-0054](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | `handoff` -> `recovery` | closed |
 
 ## Current Audit Disposition
 

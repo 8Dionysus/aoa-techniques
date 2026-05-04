@@ -31,18 +31,18 @@ cards move together.
 
 ## Sources Read
 
-- [AOA-T-0051 commit-triggered-background-review](../../../../../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md)
-- [AOA-T-0051 checklist](../../../../../techniques/agent-workflows/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md)
-- [AOA-T-0051 example](../../../../../techniques/agent-workflows/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md)
-- [AOA-T-0051 canonical readiness](../../../../../techniques/agent-workflows/commit-triggered-background-review/notes/canonical-readiness.md)
-- [AOA-T-0052 review-findings-compaction](../../../../../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md)
-- [AOA-T-0052 checklist](../../../../../techniques/agent-workflows/review-findings-compaction/checks/review-findings-compaction-checklist.md)
-- [AOA-T-0052 example](../../../../../techniques/agent-workflows/review-findings-compaction/examples/minimal-review-findings-compaction.md)
-- [AOA-T-0052 canonical readiness](../../../../../techniques/agent-workflows/review-findings-compaction/notes/canonical-readiness.md)
-- [AOA-T-0054 compaction-resilient-skill-loading](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md)
-- [AOA-T-0054 checklist](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md)
-- [AOA-T-0054 example](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md)
-- [AOA-T-0054 canonical readiness](../../../../../techniques/agent-workflows/compaction-resilient-skill-loading/notes/canonical-readiness.md)
+- [AOA-T-0051 commit-triggered-background-review](../../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md)
+- [AOA-T-0051 checklist](../../../../../techniques/continuity/review-compaction/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md)
+- [AOA-T-0051 example](../../../../../techniques/continuity/review-compaction/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md)
+- [AOA-T-0051 canonical readiness](../../../../../techniques/continuity/review-compaction/commit-triggered-background-review/notes/canonical-readiness.md)
+- [AOA-T-0052 review-findings-compaction](../../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md)
+- [AOA-T-0052 checklist](../../../../../techniques/continuity/review-compaction/review-findings-compaction/checks/review-findings-compaction-checklist.md)
+- [AOA-T-0052 example](../../../../../techniques/continuity/review-compaction/review-findings-compaction/examples/minimal-review-findings-compaction.md)
+- [AOA-T-0052 canonical readiness](../../../../../techniques/continuity/review-compaction/review-findings-compaction/notes/canonical-readiness.md)
+- [AOA-T-0054 compaction-resilient-skill-loading](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
+- [AOA-T-0054 checklist](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md)
+- [AOA-T-0054 example](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md)
+- [AOA-T-0054 canonical readiness](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/canonical-readiness.md)
 - [AOA-T-0054 Kind Destination Check](0054-kind-destination-check.md)
 - current references found by `rg` across authored docs, generated docs,
   reports, mechanics reviews, and related technique bundles

@@ -59,7 +59,7 @@ permission slip to remap techniques automatically.
 | [Post-0054 Kind Audit Hold Review](reviews/post-0054-kind-audit-hold-review.md) | closes the current kind-audit remap lane and classifies remaining generated pressure as holds or calibration | frontmatter mutation, family promotion, tree migration, or proof of generated correctness |
 | [First Family Shelf Review Pack](reviews/first-family-shelf-review-pack.md) | reviews all `26` scout families for stable shelf candidates, boundary watch, split pressure, singleton holds, and trunk fitness | `family` frontmatter truth, path migration, schema change, or proof that the draft tree is final |
 | [First Tree Projection Review Pack](reviews/first-tree-projection-review-pack.md) | accepts the generated projection as a review surface and chooses `review-compaction` for direct-read pilot review | path movement, `tree_path` frontmatter, bulk migration, or trunk finality |
-| [Review-Compaction Direct-Read Migration Review](reviews/review-compaction-direct-read-migration-review.md) | reads `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` directly and accepts the shelf as the first migration pilot | file movement, `tree_path` frontmatter, domain change, or permission to move any other shelf |
+| [Review-Compaction Direct-Read Migration Review](reviews/review-compaction-direct-read-migration-review.md) | reads `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` directly and accepts the shelf as the first migration pilot | `tree_path` frontmatter, domain change, or permission to move any other shelf |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -115,7 +115,10 @@ It should continue one bounded slice at a time:
 
 ## Next Honest Move
 
-Use the review-compaction direct-read review as the close of the first pilot
-selection pass. The three target bundles have now been read directly, and the
-shelf is `accepted-for-first-migration-pilot` without moving files or changing
-frontmatter. The next move is the first pilot migration: Move exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/`, repair links, regenerate derived surfaces, and validate the full release path.
+The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
+`AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
+frontmatter, adding `tree_path`, or moving another shelf.
+
+The next move is to review the landed pilot results after release validation,
+then choose the next bounded shelf only if the new tree path proves clearer
+than the old broad domain placement.

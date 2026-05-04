@@ -34,6 +34,7 @@ external reader who only wants the bounded practice.
 | Defines the scalable corpus tree shape | [Technique Tree Contract](docs/TECHNIQUE_TREE_CONTRACT.md) |
 | Maps the public corpus | [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md) |
 | Keeps root and docs placement legible | [Root Surface Law](docs/ROOT_SURFACE_LAW.md) |
+| Preserves repo-wide provenance after active distillation | [Root Legacy](legacy/README.md) |
 | Holds repo-level direction without becoming an audit ledger | [ROADMAP](ROADMAP.md) |
 | Tracks durable canon obligations | [QUESTBOOK](QUESTBOOK.md) |
 
@@ -51,6 +52,7 @@ Use the shortest route by need:
 - classification topology contract: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 - scalable corpus tree contract: `docs/TECHNIQUE_TREE_CONTRACT.md`
 - root and docs placement law: `docs/ROOT_SURFACE_LAW.md`
+- repo-wide provenance, archives, and migration receipts: `legacy/README.md`
 - one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
 - current technique map: `TECHNIQUE_INDEX.md`
 - current direction: `ROADMAP.md`
@@ -82,7 +84,7 @@ Use the shortest route by need:
 - Agon owner-binding companion surfaces: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/PARTS.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json`, and `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
 - selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
 - runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
-- root placement, repo-doc routing, and authoritative doc/status manifests: `docs/ROOT_SURFACE_LAW.md`, `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
+- root placement, root legacy, repo-doc routing, and authoritative doc/status manifests: `docs/ROOT_SURFACE_LAW.md`, `legacy/README.md`, `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
 - source-lift, KAG, and section families: `docs/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json`, `docs/KAG_SOURCE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
 - review and shadow surfaces: `docs/SHADOW_PATTERNS.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
 - public readiness lens for the published corpus: `generated/technique_promotion_readiness.min.json`
@@ -135,6 +137,7 @@ full intake history.
 - `techniques/` for published technique bundles
 - `templates/` for technique authoring and promotion scaffolds
 - `generated/` for derived catalogs, capsules, source-lift, and review surfaces
+- `legacy/` for public-safe repo-wide provenance, archive, and migration receipts
 - `mechanics/` for AoA cross-mechanic movement surfaces around technique canon
 - `docs/` for orientation, review doctrine, release, selection, generated-reader interpretation, and shadow surfaces
 - `scripts/` and `tests/` for validation and generation helpers

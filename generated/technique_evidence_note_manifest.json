@@ -24395,10 +24395,10 @@
     },
     {
       "id": "AOA-T-0051",
-      "technique_path": "techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/commit-triggered-background-review/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/review-compaction/commit-triggered-background-review/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -24542,7 +24542,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/commit-triggered-background-review/notes/external-import-review.md",
+          "note_path": "techniques/continuity/review-compaction/commit-triggered-background-review/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -24705,7 +24705,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/commit-triggered-background-review/notes/external-origin.md",
+          "note_path": "techniques/continuity/review-compaction/commit-triggered-background-review/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -24803,7 +24803,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/commit-triggered-background-review/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/review-compaction/commit-triggered-background-review/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -24920,7 +24920,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -24946,10 +24946,10 @@
     },
     {
       "id": "AOA-T-0052",
-      "technique_path": "techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/review-findings-compaction/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/review-compaction/review-findings-compaction/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -25093,7 +25093,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/review-findings-compaction/notes/external-import-review.md",
+          "note_path": "techniques/continuity/review-compaction/review-findings-compaction/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -25256,7 +25256,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/review-findings-compaction/notes/external-origin.md",
+          "note_path": "techniques/continuity/review-compaction/review-findings-compaction/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -25354,7 +25354,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/review-findings-compaction/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/review-compaction/review-findings-compaction/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -25471,7 +25471,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -26207,10 +26207,10 @@
     },
     {
       "id": "AOA-T-0054",
-      "technique_path": "techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/compaction-resilient-skill-loading/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -26282,11 +26282,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0012](../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../docs/fragmented-agent-context/TECHNIQUE.md) because it only owns post-compaction recovery, not source-layer authoring or composition"
+                  "text": "it remains narrower than [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md) because it only owns post-compaction recovery, not source-layer authoring or composition"
                 },
                 {
                   "order": 3,
-                  "text": "it also remains narrower than [AOA-T-0027](../../docs/cross-agent-skill-propagation/TECHNIQUE.md) because it restores one session's ability to reload skills instead of propagating a canonical source to many managed targets"
+                  "text": "it also remains narrower than [AOA-T-0027](../../../docs/cross-agent-skill-propagation/TECHNIQUE.md) because it restores one session's ability to reload skills instead of propagating a canonical source to many managed targets"
                 }
               ]
             },
@@ -26350,7 +26350,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/compaction-resilient-skill-loading/notes/external-import-review.md",
+          "note_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -26509,7 +26509,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/compaction-resilient-skill-loading/notes/external-origin.md",
+          "note_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -26607,7 +26607,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/compaction-resilient-skill-loading/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -26708,7 +26708,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse back into [AOA-T-0012](../../docs/deterministic-context-composition/TECHNIQUE.md) or [AOA-T-0030](../../docs/fragmented-agent-context/TECHNIQUE.md) if repositories cannot explain what recovery adds after context has already been authored"
+                  "text": "the pattern can collapse back into [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) or [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md) if repositories cannot explain what recovery adds after context has already been authored"
                 },
                 {
                   "order": 2,

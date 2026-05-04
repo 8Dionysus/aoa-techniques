@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Review-compaction tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` from
+  `techniques/agent-workflows/` into
+  `techniques/continuity/review-compaction/`
+- added `techniques/continuity/AGENTS.md` as the minimal tree-trunk route card
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-review-compaction-tree-pilot.md`
+- repaired authored links from adjacent bundles and reform review surfaces
+- kept `domain`, `kind`, status, IDs, evidence, and public-safety posture
+  unchanged
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_root_legacy_topology tests.test_review_compaction_tree_pilot
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no other shelf migrated
+- no `tree_path` frontmatter was added
+- no `family` or scout topology axis became schema truth
+- active bundles did not pass through root `legacy/`
+
 ## 2026-05-04 - Review-compaction direct-read migration review
 
 Changed:
@@ -124,9 +155,9 @@ Not moved:
 Changed:
 
 - remapped
-  [compaction-resilient-skill-loading](../../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md)
+  [compaction-resilient-skill-loading](../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
   from `handoff` to `recovery`
-- kept the bundle at `agent-workflows`, `promoted`, and `source_backed`
+- kept the bundle at `domain: agent-workflows`, `promoted`, and `source_backed`
   posture with the same ID, evidence, relations, and public-safety state
 - added a destination-check review comparing `handoff`, `workflow`, and
   `recovery`
@@ -180,9 +211,9 @@ Not moved:
 Changed:
 
 - remapped
-  [review-findings-compaction](../../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md)
+  [review-findings-compaction](../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md)
   from `handoff` to `workflow`
-- kept the bundle at `agent-workflows`, `promoted`, and `source_backed`
+- kept the bundle at `domain: agent-workflows`, `promoted`, and `source_backed`
   posture with the same ID, evidence, relations, and public-safety state
 - updated the technique reform ingress review pack so the first kind ambiguity
   shortlist is closed after three narrow remap waves

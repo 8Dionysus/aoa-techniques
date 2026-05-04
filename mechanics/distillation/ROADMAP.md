@@ -35,9 +35,11 @@
    The first family shelf review pack, generated tree projection, first tree
    projection review pack, and review-compaction direct-read migration review
    are also landed. The review-compaction direct-read migration review is landed
-   as `accepted-for-first-migration-pilot`. The next honest pass is the
-   first pilot migration for exactly `AOA-T-0051`, `AOA-T-0052`, and
-   `AOA-T-0054`, with no `tree_path` frontmatter or schema migration.
+   as `accepted-for-first-migration-pilot`. The first pilot migration for
+   exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` is now landed under
+   `techniques/continuity/review-compaction/`, with root legacy receipt
+   accounting and no `tree_path` frontmatter or schema migration. The next
+   honest pass is a landed-pilot review before choosing any second shelf.
 
 ## Hold line
 

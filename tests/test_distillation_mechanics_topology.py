@@ -879,7 +879,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("review-compaction", root_roadmap)
         self.assertIn("reports/technique_tree_projection.md", tree_contract)
 
-    def test_review_compaction_direct_read_review_accepts_pilot_without_path_move(self) -> None:
+    def test_review_compaction_pilot_migration_is_landed_after_direct_read(self) -> None:
         ingress = (
             REPO_ROOT
             / "mechanics"
@@ -935,10 +935,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("review-compaction-direct-read-migration-review", reviews_index)
         self.assertIn("review-compaction direct-read review: landed", ingress)
         self.assertIn("accepted-for-first-migration-pilot", ingress)
-        self.assertIn("Move exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054`", ingress)
+        self.assertIn("The first pilot migration has moved exactly", ingress)
+        self.assertIn("techniques/continuity/review-compaction/", ingress)
         self.assertIn("review-compaction direct-read migration review is landed", distillation_roadmap)
-        self.assertIn("pilot migration", root_roadmap)
-        self.assertIn("review-compaction direct-read review", tree_contract)
+        self.assertIn("first pilot migration", distillation_roadmap)
+        self.assertIn("landed `review-compaction` pilot", root_roadmap)
+        self.assertIn("current landed pilot review", tree_contract)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

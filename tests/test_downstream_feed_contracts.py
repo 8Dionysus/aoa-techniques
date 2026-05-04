@@ -62,7 +62,7 @@ class DownstreamFeedContractsTests(unittest.TestCase):
         )
         self.assertEqual(
             sections["source_of_truth"]["technique_markdown"],
-            "techniques/*/*/TECHNIQUE.md",
+            "techniques/**/TECHNIQUE.md",
         )
         self.assertIn("sections", sections["source_of_truth"])
         self.assertEqual(catalog_pairs, capsule_pairs)
@@ -85,7 +85,7 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             readiness["source_of_truth"],
             {
                 "catalog": "generated/technique_catalog.min.json",
-                "bundles": "techniques/*/*/TECHNIQUE.md",
+                "bundles": "techniques/**/TECHNIQUE.md",
                 "canonical_readiness_note": "notes/canonical-readiness.md",
                 "adverse_effects_review": "notes/adverse-effects-review.md",
             },
@@ -140,7 +140,7 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             {
                 "kind_registry": "config/technique_kind_registry.yaml",
                 "catalog": "generated/technique_catalog.json",
-                "bundles": "techniques/*/*/TECHNIQUE.md",
+                "bundles": "techniques/**/TECHNIQUE.md",
             },
         )
         self.assertEqual(

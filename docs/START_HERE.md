@@ -25,6 +25,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open `../reports/technique_topology_scout.md` when you need the current generated projection over those scout axes before proposing any migration
 - open [Charter](../CHARTER.md) when the question is what this repository may claim or own
 - open [Root Surface Law](ROOT_SURFACE_LAW.md) before adding, moving, or rewriting a root or docs-root surface
+- open [Root Legacy](../legacy/README.md) when preserving repo-wide raw packets, retired tail surfaces, or path-migration receipts after active distillation
 - open [`plan-diff-apply-verify-report`](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
 - open [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md) when the question is how the selection family stays bounded before you trust any chooser surface
 - open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) before proposing new classes, families, categories, or schema axes
@@ -71,6 +72,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open `TECHNIQUE_SELECTION.md` for the live domain/kind/status split before you trust any snapshot count
 - use `../generated/technique_catalog.min.json` when you need the current machine-readable corpus view
 - use [Roadmap](../ROADMAP.md) for repo-level direction rather than historical closure-audit accounting; historical root audit baseline now lives under Audit legacy
+- use [Root Legacy](../legacy/README.md) for repo-wide public-safe receipts, archives, and raw snapshots that no longer belong in `incoming/` or active docs
 - the intended growth shape is `1000+` compact, well-classified, template-backed techniques as an early target, with a faceted topology that can grow beyond that without turning `agent-workflows` or `docs` into junk drawers
 - the intended directory shape should move toward a tree of trunks, shelves, and leaf bundles only after projection-first review proves the path clearer than the current domain-folder layout
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`

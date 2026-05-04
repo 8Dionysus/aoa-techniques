@@ -31,7 +31,7 @@
 
 ## Evidence
 
-- source paths: `incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md`
+- source paths: `incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result

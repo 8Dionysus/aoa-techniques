@@ -164,8 +164,8 @@ Shared blocker: the donor and repo-local adaptation both show a clean post-commi
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0051](../../../../techniques/agent-workflows/commit-triggered-background-review/TECHNIQUE.md) | Commit-bound asynchronous review sibling with clear exclusions around fix loops, queue UI, and CI governance. | One second public workflow surface where commits trigger bounded asynchronous review artifacts without widening into remediation, merge automation, or full CI policy. |
-| [AOA-T-0052](../../../../techniques/agent-workflows/review-findings-compaction/TECHNIQUE.md) | Findings-hygiene sibling that verifies and consolidates current review output before action. | One second public workflow surface where repeated or stale findings are revalidated and consolidated without widening into backlog policy, remediation, or generic issue management. |
+| [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | Commit-bound asynchronous review sibling with clear exclusions around fix loops, queue UI, and CI governance. | One second public workflow surface where commits trigger bounded asynchronous review artifacts without widening into remediation, merge automation, or full CI policy. |
+| [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | Findings-hygiene sibling that verifies and consolidates current review output before action. | One second public workflow surface where repeated or stale findings are revalidated and consolidated without widening into backlog policy, remediation, or generic issue management. |
 
 ### Pack 11 - Post-Compaction Skill Recovery
 
@@ -173,7 +173,7 @@ Shared blocker: the donor and repo-local adaptation both show a bounded post-com
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0054](../../../../techniques/agent-workflows/compaction-resilient-skill-loading/TECHNIQUE.md) | Post-compaction skill-availability recovery sibling with clear exclusions around full context reconstruction, marketplace discovery, and install doctrine. | One second public workflow surface where compaction triggers bounded skill rediscovery or reload from canonical sources without widening into general context restoration, memory recall, or plugin product semantics. |
+| [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | Post-compaction skill-availability recovery sibling with clear exclusions around full context reconstruction, marketplace discovery, and install doctrine. | One second public workflow surface where compaction triggers bounded skill rediscovery or reload from canonical sources without widening into general context restoration, memory recall, or plugin product semantics. |
 
 ### Pack 12 - Planning Ladder
 
