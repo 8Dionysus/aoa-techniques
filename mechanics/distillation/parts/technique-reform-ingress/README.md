@@ -18,6 +18,8 @@ permission slip to remap techniques automatically.
   `execution_profile`, `risk_posture`, richer `relations`
 - family seed: `26` scout families, still weaker than bundle frontmatter
 - topology scout review pack: landed as a human review layer, not schema truth
+- kind ambiguity review pack: landed from direct bundle reading, not remap
+  authority
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -34,6 +36,7 @@ permission slip to remap techniques automatically.
 | [First Topology Scout Review Pack](reviews/first-topology-scout-review-pack.md) | first human readout from the scout projection and the next review lane | schema migration, bundle remap authority, or proof of generated correctness |
 | [Technique Family Scout](../../../../reports/technique_family_scout.md) | generated family counts and likely clusters | automatic frontmatter migration authority |
 | [Kind Ambiguity Audit](../../../../reports/kind_ambiguity_audit.md) | tie-break seams that deserve human review | automatic remap authority |
+| [First Kind Ambiguity Review Pack](reviews/first-kind-ambiguity-review-pack.md) | direct-read shortlist for later narrow remap work | frontmatter mutation, new kind authority, or status change |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -84,7 +87,7 @@ It should start with one bounded slice:
 
 ## Next Honest Move
 
-Use the landed topology scout review pack to build the kind ambiguity review
-pack from direct bundle reading. The next pass should decide which ambiguities
-are true `kind` questions and which are better carried by family, capability,
-substrate, execution, risk, or relation axes.
+Use the landed kind ambiguity review pack to choose one narrow remap wave. The
+cleanest first candidate is `AOA-T-0085` (`artifact` toward `lift`), followed by
+`AOA-T-0005` (`guardrail` toward `workflow`) and then `AOA-T-0052` only after
+one extra destination check.

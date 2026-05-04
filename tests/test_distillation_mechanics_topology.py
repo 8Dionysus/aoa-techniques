@@ -86,6 +86,7 @@ PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
 PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/README.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-topology-scout-review-pack.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/first-kind-ambiguity-review-pack.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -528,6 +529,29 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("does not remap any bundle", review)
         self.assertIn("direct bundle reading", review)
         self.assertIn("kind ambiguity review pack", review)
+
+    def test_kind_ambiguity_review_pack_uses_direct_bundle_reading(self) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "first-kind-ambiguity-review-pack.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("not a remap wave", review)
+        self.assertIn("does not change bundle frontmatter", review)
+        self.assertIn("direct-read", review)
+        self.assertIn("`AOA-T-0005` from `guardrail` toward `workflow`", review)
+        self.assertIn("`AOA-T-0085` from `artifact` toward `lift`", review)
+        self.assertIn("`AOA-T-0052` away from `handoff`", review)
+        self.assertIn("Keep `guardrail`", review)
+        self.assertIn("Keep `lift`", review)
+        self.assertIn("Keep `assessment`", review)
+        self.assertIn("Do not change frontmatter from this review alone", review)
+        self.assertIn("starting with `AOA-T-0085`", review)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
