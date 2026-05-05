@@ -12701,10 +12701,10 @@
     },
     {
       "id": "AOA-T-0025",
-      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/capability-spec-versioning/notes/canonical-readiness.md",
+          "note_path": "techniques/instruction/capability-registry/capability-spec-versioning/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -12840,7 +12840,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/capability-spec-versioning/notes/external-import-review.md",
+          "note_path": "techniques/instruction/capability-registry/capability-spec-versioning/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -12999,7 +12999,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/capability-spec-versioning/notes/external-origin.md",
+          "note_path": "techniques/instruction/capability-registry/capability-spec-versioning/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -13097,7 +13097,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/capability-spec-versioning/notes/second-context-adaptation.md",
+          "note_path": "techniques/instruction/capability-registry/capability-spec-versioning/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -31161,10 +31161,10 @@
     },
     {
       "id": "AOA-T-0063",
-      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/versioned-agent-registry-contract/notes/canonical-readiness.md",
+          "note_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -31236,7 +31236,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md) because it owns the publication contract for a registry entry rather than the full capability spec, and it remains narrower than [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md) because it does not curate discovery or selection"
+                  "text": "it remains narrower than [AOA-T-0025](../../capability-spec-versioning/TECHNIQUE.md) because it owns the publication contract for a registry entry rather than the full capability spec, and it remains narrower than [AOA-T-0041](../../../../docs/skill-marketplace-curation/TECHNIQUE.md) because it does not curate discovery or selection"
                 }
               ]
             },
@@ -31300,7 +31300,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/versioned-agent-registry-contract/notes/external-import-review.md",
+          "note_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -31459,7 +31459,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/versioned-agent-registry-contract/notes/external-origin.md",
+          "note_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -31562,7 +31562,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/versioned-agent-registry-contract/notes/second-context-adaptation.md",
+          "note_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -31707,10 +31707,10 @@
     },
     {
       "id": "AOA-T-0064",
-      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/capability-discovery/notes/canonical-readiness.md",
+          "note_path": "techniques/instruction/capability-registry/capability-discovery/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -31782,7 +31782,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0063](../versioned-agent-registry-contract/TECHNIQUE.md) because it does not publish the entry contract, and it remains narrower than [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md) because it does not curate or rank discovery"
+                  "text": "it remains narrower than [AOA-T-0063](../../versioned-agent-registry-contract/TECHNIQUE.md) because it does not publish the entry contract, and it remains narrower than [AOA-T-0041](../../../../docs/skill-marketplace-curation/TECHNIQUE.md) because it does not curate or rank discovery"
                 }
               ]
             },
@@ -31846,7 +31846,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/capability-discovery/notes/external-import-review.md",
+          "note_path": "techniques/instruction/capability-registry/capability-discovery/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -32005,7 +32005,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/capability-discovery/notes/external-origin.md",
+          "note_path": "techniques/instruction/capability-registry/capability-discovery/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -32108,7 +32108,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/capability-discovery/notes/second-context-adaptation.md",
+          "note_path": "techniques/instruction/capability-registry/capability-discovery/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

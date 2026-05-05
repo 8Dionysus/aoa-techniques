@@ -217,9 +217,9 @@ Counts: `total` 3, `canonical` 0, `promoted` 3.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
-| [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. |
-| [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) | `docs` | `discovery` | `promoted` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. |
+| [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
+| [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. |
+| [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | `docs` | `discovery` | `promoted` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. |
 
 ## `capability-boundary`
 

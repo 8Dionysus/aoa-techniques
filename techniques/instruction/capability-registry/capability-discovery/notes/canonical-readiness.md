@@ -15,7 +15,7 @@
 
 ## Default-use rationale
 - this is the right promoted default when the main problem is making capability lookup explicit and reviewable over already-published entries instead of hiding discovery semantics in server code or registry product behavior
-- it remains narrower than [AOA-T-0063](../versioned-agent-registry-contract/TECHNIQUE.md) because it does not publish the entry contract, and it remains narrower than [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md) because it does not curate or rank discovery
+- it remains narrower than [AOA-T-0063](../../versioned-agent-registry-contract/TECHNIQUE.md) because it does not publish the entry contract, and it remains narrower than [AOA-T-0041](../../../../docs/skill-marketplace-curation/TECHNIQUE.md) because it does not curate or rank discovery
 
 ## Fresh public-safety check
 - review date: 2026-03-28

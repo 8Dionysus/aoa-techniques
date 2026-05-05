@@ -432,11 +432,11 @@ See also:
 |---|---|---|---|---|
 | Upstream Mirroring With Provenance Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
-### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
+### [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Capability Spec Versioning Checklist | `absent` | `7` | `techniques/docs/capability-spec-versioning/checks/capability-spec-versioning-checklist.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
+| Capability Spec Versioning Checklist | `absent` | `7` | `techniques/instruction/capability-registry/capability-spec-versioning/checks/capability-spec-versioning-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
 
 ### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
 
@@ -504,17 +504,17 @@ See also:
 |---|---|---|---|---|
 | Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
 
-### [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
+### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| versioned-agent-registry-contract checklist | `absent` | `8` | `techniques/docs/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md` | [TECHNIQUE.md](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) |
+| versioned-agent-registry-contract checklist | `absent` | `8` | `techniques/instruction/capability-registry/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
 
-### [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
+### [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| capability-discovery checklist | `absent` | `8` | `techniques/docs/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/docs/capability-discovery/TECHNIQUE.md) |
+| capability-discovery checklist | `absent` | `8` | `techniques/instruction/capability-registry/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
 ### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
 

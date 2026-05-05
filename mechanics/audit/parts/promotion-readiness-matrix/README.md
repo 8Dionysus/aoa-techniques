@@ -115,7 +115,7 @@ Shared blocker: each bundle needs another live consumer so the family stays edit
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | Mirror-plus-provenance contract is clear, but still donor-shaped. | One second curated mirror context preserving upstream ownership and explicit provenance. |
-| [AOA-T-0025](../../../../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | Versioned capability contract stays bounded, but has only one live lineage. | One second public agent-facing surface using a versioned capability spec as a real contract. |
+| [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | Versioned capability contract stays bounded, but has only one live lineage. | One second public agent-facing surface using a versioned capability spec as a real contract. |
 | [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) | Reusable ownership split between shared skill meaning and user-facing command syntax. | One second live context proving the same skill/command split outside the current plugin-oriented lineage. |
 | [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) | Editorial discovery layer is clean, but still thinly proven. | One second live context proving curated discoverability stays bounded and does not drift into registry or installer behavior. |
 | [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) | Pre-surface readiness verdict is bounded, but still ecosystem-specific. | One second downstream consumer using the same pre-surface readiness boundary. |
@@ -245,7 +245,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded r
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0063](../../../../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) | Registry-entry sibling that keeps named versioned publication records explicit with clear exclusions around discovery policy, trust services, and registry product doctrine. | One second public workflow surface where named versioned registry entries remain explicit and reviewable without widening into marketplace curation, search policy, or directory-platform semantics. |
+| [AOA-T-0063](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | Registry-entry sibling that keeps named versioned publication records explicit with clear exclusions around discovery policy, trust services, and registry product doctrine. | One second public workflow surface where named versioned registry entries remain explicit and reviewable without widening into marketplace curation, search policy, or directory-platform semantics. |
 
 ### Pack 21 - Capability Discovery
 
@@ -253,7 +253,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded d
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0064](../../../../techniques/docs/capability-discovery/TECHNIQUE.md) | Discovery-query sibling that keeps capability lookup explicit through bounded fields, match rules, and result shape with clear exclusions around ranking, trust policy, and registry product doctrine. | One second public workflow surface where published capability records are discovered through explicit bounded queries without widening into marketplace curation, graph semantics, or directory-platform semantics. |
+| [AOA-T-0064](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | Discovery-query sibling that keeps capability lookup explicit through bounded fields, match rules, and result shape with clear exclusions around ranking, trust policy, and registry product doctrine. | One second public workflow surface where published capability records are discovered through explicit bounded queries without widening into marketplace curation, graph semantics, or directory-platform semantics. |
 
 ### Pack 22 - MCP Gateway Proxy
 

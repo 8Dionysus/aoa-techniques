@@ -350,7 +350,7 @@
       "core_contract_short": "Core contract: one capability spec stays the authoritative contract for the named capability; version changes are explicit and reviewable rather...",
       "main_risk_short": "Main risk: a version number changes without any real contract review, so the spec stops signaling meaningful change.",
       "validation_short": "Validate by checking one capability has one explicit versioned spec; the spec names inputs, outputs, and invariants clearly enough to review without...",
-      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0026",
@@ -882,7 +882,7 @@
       "core_contract_short": "Core contract: one registry-facing entry has explicit identity through name, version, and record reference; metadata needed to interpret the entry...",
       "main_risk_short": "Main risk: entry versions change without any contract review, so the entry surface stops signaling meaningful publication changes.",
       "validation_short": "Validate by checking one registry entry has explicit name, version, and record reference; schema version and other bounded metadata remain readable without...",
-      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0064",
@@ -896,7 +896,7 @@
       "core_contract_short": "Core contract: discovery works over already-published entries or records rather than hidden runtime state; query fields and match rules remain...",
       "main_risk_short": "Main risk: query behavior changes without contract review, so discovery semantics drift silently.",
       "validation_short": "Validate by checking discovery uses one explicit bounded query surface over published entries; query fields and match behavior are readable without opening...",
-      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0065",

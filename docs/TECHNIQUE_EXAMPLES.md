@@ -443,12 +443,12 @@ See also:
 | Concrete Curated Mirror With Attribution | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | Minimal Upstream Mirroring With Provenance | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
-### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
+### [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Capability Upgrade With Compat Window | `present` | `techniques/docs/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
-| Minimal Capability Spec Versioning | `present` | `techniques/docs/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
+| Concrete Capability Upgrade With Compat Window | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
+| Minimal Capability Spec Versioning | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
 
 ### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
 
@@ -520,17 +520,17 @@ See also:
 |---|---|---|---|
 | Minimal Semantic Review Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
 
-### [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
+### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal versioned agent-registry contract | `present` | `techniques/docs/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md` | [TECHNIQUE.md](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) |
+| minimal versioned agent-registry contract | `present` | `techniques/instruction/capability-registry/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
 
-### [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
+### [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal capability discovery | `present` | `techniques/docs/capability-discovery/examples/minimal-capability-discovery.md` | [TECHNIQUE.md](../techniques/docs/capability-discovery/TECHNIQUE.md) |
+| minimal capability discovery | `present` | `techniques/instruction/capability-registry/capability-discovery/examples/minimal-capability-discovery.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
 ### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
 

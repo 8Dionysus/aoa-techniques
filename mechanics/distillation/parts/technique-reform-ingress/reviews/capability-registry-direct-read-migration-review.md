@@ -33,19 +33,19 @@ cards, root legacy receipts, links, generated surfaces, and validation.
 
 ## Sources Read
 
-- [AOA-T-0025 capability-spec-versioning](../../../../../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
-- [AOA-T-0025 checklist](../../../../../techniques/docs/capability-spec-versioning/checks/capability-spec-versioning-checklist.md)
-- [AOA-T-0025 minimal example](../../../../../techniques/docs/capability-spec-versioning/examples/minimal-capability-spec-versioning.md)
-- [AOA-T-0025 compatibility example](../../../../../techniques/docs/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md)
-- [AOA-T-0025 evidence notes](../../../../../techniques/docs/capability-spec-versioning/notes/canonical-readiness.md)
-- [AOA-T-0063 versioned-agent-registry-contract](../../../../../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md)
-- [AOA-T-0063 checklist](../../../../../techniques/docs/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md)
-- [AOA-T-0063 minimal example](../../../../../techniques/docs/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md)
-- [AOA-T-0063 evidence notes](../../../../../techniques/docs/versioned-agent-registry-contract/notes/canonical-readiness.md)
-- [AOA-T-0064 capability-discovery](../../../../../techniques/docs/capability-discovery/TECHNIQUE.md)
-- [AOA-T-0064 checklist](../../../../../techniques/docs/capability-discovery/checks/capability-discovery-checklist.md)
-- [AOA-T-0064 minimal example](../../../../../techniques/docs/capability-discovery/examples/minimal-capability-discovery.md)
-- [AOA-T-0064 evidence notes](../../../../../techniques/docs/capability-discovery/notes/canonical-readiness.md)
+- [AOA-T-0025 capability-spec-versioning](../../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md)
+- [AOA-T-0025 checklist](../../../../../techniques/instruction/capability-registry/capability-spec-versioning/checks/capability-spec-versioning-checklist.md)
+- [AOA-T-0025 minimal example](../../../../../techniques/instruction/capability-registry/capability-spec-versioning/examples/minimal-capability-spec-versioning.md)
+- [AOA-T-0025 compatibility example](../../../../../techniques/instruction/capability-registry/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md)
+- [AOA-T-0025 evidence notes](../../../../../techniques/instruction/capability-registry/capability-spec-versioning/notes/canonical-readiness.md)
+- [AOA-T-0063 versioned-agent-registry-contract](../../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md)
+- [AOA-T-0063 checklist](../../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md)
+- [AOA-T-0063 minimal example](../../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md)
+- [AOA-T-0063 evidence notes](../../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/notes/canonical-readiness.md)
+- [AOA-T-0064 capability-discovery](../../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md)
+- [AOA-T-0064 checklist](../../../../../techniques/instruction/capability-registry/capability-discovery/checks/capability-discovery-checklist.md)
+- [AOA-T-0064 minimal example](../../../../../techniques/instruction/capability-registry/capability-discovery/examples/minimal-capability-discovery.md)
+- [AOA-T-0064 evidence notes](../../../../../techniques/instruction/capability-registry/capability-discovery/notes/canonical-readiness.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
 - [Landed docs-boundary pilot review](landed-docs-boundary-pilot-review.md)
@@ -54,7 +54,7 @@ cards, root legacy receipts, links, generated surfaces, and validation.
 
 ## Direct Bundle Read
 
-| technique | current path | kind | direct-read result |
+| technique | review-time path | kind | direct-read result |
 |---|---|---|---|
 | `AOA-T-0025` | `techniques/docs/capability-spec-versioning/` | `artifact` | one named capability stays explicit through a versioned spec with inputs, outputs, invariants, and compatibility notes |
 | `AOA-T-0063` | `techniques/docs/versioned-agent-registry-contract/` | `artifact` | one registry-facing entry publishes a named versioned record with stable reference and bounded metadata |
@@ -87,12 +87,12 @@ published, and how lookup asks for records. They are documentation-domain
 techniques today, but their browsing question is capability instruction and
 registry surface legibility rather than generic documentation craft.
 
-The `docs/` route card remains correct for their current home until migration.
-It already warns against smuggling graph semantics, runtime orchestration, and
-repo-specific workflow into docs techniques. The `instruction/` route card is
-also ready to host a new shelf if the migration wave adds a compact local scope
-bullet and keeps this trunk from becoming skill marketplace policy or runtime
-role law.
+The `docs/` route card remained correct for their review-time home until
+migration. It already warned against smuggling graph semantics, runtime
+orchestration, and repo-specific workflow into docs techniques. The
+`instruction/` route card was also ready to host a new shelf if the migration
+wave added a compact local scope bullet and kept this trunk from becoming skill
+marketplace policy or runtime role law.
 
 ## Boundary Watch Accepted
 

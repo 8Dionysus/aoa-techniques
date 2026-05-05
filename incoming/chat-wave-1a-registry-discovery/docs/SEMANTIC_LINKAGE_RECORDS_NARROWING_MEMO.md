@@ -13,8 +13,8 @@ It does not create a canonical bundle or authorize import by itself.
 ## Overlap watch
 
 - [AOA-T-0021](../../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
-- [AOA-T-0063](../../../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md)
-- [AOA-T-0064](../../../techniques/docs/capability-discovery/TECHNIQUE.md)
+- [AOA-T-0063](../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md)
+- [AOA-T-0064](../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md)
 
 ## Boundary statement
 

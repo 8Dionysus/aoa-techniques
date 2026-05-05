@@ -94,7 +94,7 @@ Front multiple configured MCP servers through one bounded gateway proxy so calle
 - the technique stays smaller than local stack lifecycle, registry publication, capability discovery policy, and security-scanner doctrine
 - upstream servers remain upstream; the gateway does not absorb their whole runtime or product semantics
 
-Relationship to adjacent techniques: unlike [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md), this technique does not own starting and stopping a local service stack; it owns the mediation seam once a proxy surface exists. Unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), it does not score or preflight external sources before surfacing them; it fronts configured upstream servers at runtime. Unlike [AOA-T-0064](../../docs/capability-discovery/TECHNIQUE.md), it does not define publication-time discovery queries over registry entries; it exposes a runtime proxy surface over already-configured upstream tools.
+Relationship to adjacent techniques: unlike [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md), this technique does not own starting and stopping a local service stack; it owns the mediation seam once a proxy surface exists. Unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), it does not score or preflight external sources before surfacing them; it fronts configured upstream servers at runtime. Unlike [AOA-T-0064](../../instruction/capability-registry/capability-discovery/TECHNIQUE.md), it does not define publication-time discovery queries over registry entries; it exposes a runtime proxy surface over already-configured upstream tools.
 
 ## Risks
 
