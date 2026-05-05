@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Capability-registry direct-read migration review
+
+Changed:
+
+- added
+  [capability-registry-direct-read-migration-review](parts/technique-reform-ingress/reviews/capability-registry-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064`
+- accepted `capability-registry` as the eighth bounded migration pilot because
+  direct reading confirmed the spec-entry-query chain
+- kept the review non-mutating: no technique bundle moved, no frontmatter
+  changed, and no generated projection became authority
+- kept `capability-boundary`, `skill-discovery`, proof, governance, runtime,
+  and owner-closeout shelves outside the migration wave
+- kept registry product doctrine, discovery ranking, marketplace curation,
+  trust policy, graph semantics, runtime resolution, skill acceptance, and
+  agent-role authority outside `capability-registry`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no eighth shelf migration happened from the review alone
+
 ## 2026-05-04 - Landed docs-boundary pilot review
 
 Changed:
