@@ -15,8 +15,8 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 | technique | current role | current shadow seam |
 |---|---|---|
-| [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | default summary-contract producer for runnable smoke and probe paths | green-looking summary publication can still hide thin failure context or drift back toward log scraping |
-| [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | default staged-promotion pattern for moving one observed signal toward one narrow strict enforcement surface | staged rollout language can look disciplined while strictness leaks early or telemetry starts masking an undecided enforcement boundary |
+| [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) | default summary-contract producer for runnable smoke and probe paths | green-looking summary publication can still hide thin failure context or drift back toward log scraping |
+| [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) | default staged-promotion pattern for moving one observed signal toward one narrow strict enforcement surface | staged rollout language can look disciplined while strictness leaks early or telemetry starts masking an undecided enforcement boundary |
 
 ## Seam Review
 
@@ -24,7 +24,7 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 Question: when does a summary producer keep publishing "success" while diagnosability is already degrading underneath it?
 
-- Invariant shadow seam: [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) owns one stable machine-readable producer contract across success and failure paths. Its main shadow is false confidence from summary publication continuing while failure context gets too thin and downstream readers quietly return to log scraping.
+- Invariant shadow seam: [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) owns one stable machine-readable producer contract across success and failure paths. Its main shadow is false confidence from summary publication continuing while failure context gets too thin and downstream readers quietly return to log scraping.
 - Successful-failure pattern: the summary still lands at the expected path, but error cases collapse into sparse status fields, supporting details move back into logs, and the contract keeps looking healthy only because the file still exists.
 - Wording check: the bundle and note keep the watch seam on thin failure context, log-scrape relapse, and producer drift into storage or rollout language rather than generic "more detail would be nice" commentary. Outcome: `clear`.
 
@@ -32,7 +32,7 @@ Question: when does a summary producer keep publishing "success" while diagnosab
 
 Question: when does staged promotion stop being one explicit rollout path and start acting like hidden strictness with too much telemetry theater?
 
-- Invariant shadow seam: [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) owns history-backed promotion from observation to one narrow strict surface. Its main shadow is that shallow readiness history, leaking strict behavior, or ever-richer telemetry vocabulary make the rollout look governed even when the real enforcement boundary is still unclear.
+- Invariant shadow seam: [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) owns history-backed promotion from observation to one narrow strict surface. Its main shadow is that shallow readiness history, leaking strict behavior, or ever-richer telemetry vocabulary make the rollout look governed even when the real enforcement boundary is still unclear.
 - Successful-failure pattern: dashboards and summaries multiply, but operators cannot state which surface is actually strict, strict consequences appear earlier than intended, or the pair stays stuck in performative observation without a real decision.
 - Wording check: the bundle and note keep the watch seam on premature strictness from shallow history, strict-surface leakage, and telemetry-rich rollout theater rather than broad governance-stack skepticism. Outcome: `clear`.
 

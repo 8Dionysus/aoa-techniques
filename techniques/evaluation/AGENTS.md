@@ -6,9 +6,10 @@ Guidance for coding agents and humans working under `techniques/evaluation/`.
 
 This domain stores reusable evaluation and validation techniques.
 
-Representative bundles here include `signal-first-gate-promotion`,
-`telemetry-integrity-snapshot`, `contract-first-smoke-summary`,
-`context-report-for-ci`, and published-summary integrity techniques.
+Representative bundles here include `latest-alias-plus-history-copy`,
+`published-summary-remediation-snapshot`, `telemetry-integrity-snapshot`,
+`required-vs-optional-source-rendering`, and published-summary integrity
+techniques.
 
 ## Domain rules
 

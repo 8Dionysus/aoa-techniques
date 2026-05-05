@@ -188,7 +188,7 @@
     {
       "id": "AOA-T-0003",
       "name": "contract-first-smoke-summary",
-      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -516,7 +516,7 @@
     {
       "id": "AOA-T-0007",
       "name": "signal-first-gate-promotion",
-      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2566,7 +2566,7 @@
     {
       "id": "AOA-T-0032",
       "name": "context-report-for-ci",
-      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",

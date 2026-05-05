@@ -134,7 +134,7 @@ landed anchors remain useful for route memory:
   [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md),
   [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md),
   [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md),
-  [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md),
+  [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md),
   [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md),
   [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md),
   and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)

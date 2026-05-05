@@ -90,7 +90,7 @@ hand motion, not the law of the arena.
 
 ## Nearest Overlaps
 
-- [context-report-for-ci](../../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md):
+- [context-report-for-ci](../../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md):
   reports environment or CI context; it does not ask for one missing evidence
   object inside a live review state.
 - [diagnosis-from-reviewed-evidence](../../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md):

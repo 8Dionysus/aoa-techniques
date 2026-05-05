@@ -15,8 +15,8 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 | technique | current role |
 |---|---|
-| [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | summary-contract producer for runnable smoke or probe paths |
-| [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | staged rollout pattern that promotes one observed signal from non-blocking publication to one narrow strict enforcement surface |
+| [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) | summary-contract producer for runnable smoke or probe paths |
+| [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) | staged rollout pattern that promotes one observed signal from non-blocking publication to one narrow strict enforcement surface |
 
 ## Seam Review
 
@@ -24,7 +24,7 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 Question: where does summary-contract production stop and staged promotion semantics begin?
 
-- Invariant boundary: [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) owns the existence and shape of one stable machine-readable summary per smoke path, including exit-code alignment and basic diagnosability. [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) begins only after that contract already exists and governs how one observed signal moves from `signal_only` publication to a narrow strict surface through readiness, governance, progress, and transition layers.
+- Invariant boundary: [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) owns the existence and shape of one stable machine-readable summary per smoke path, including exit-code alignment and basic diagnosability. [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) begins only after that contract already exists and governs how one observed signal moves from `signal_only` publication to a narrow strict surface through readiness, governance, progress, and transition layers.
 - Default-use trigger: use `0003` when a runnable smoke or probe path still needs a real summary contract that CI, dashboards, or agents can consume without log scraping. Use `0007` when an already-summary-producing check must be promoted gradually into enforcement without losing diagnostics or widening strict failure too early.
 - Relation check: `AOA-T-0007 -> requires -> AOA-T-0003` helps and reads correctly as "rollout depends on a stable summary producer." `AOA-T-0003 -> used_together_for -> AOA-T-0007` also helps because the producer can exist independently, while the rollout pattern is only one downstream use of that contract. The current relation pair is bounded and does not yet look noisy.
 - Evidence check: `0003` example and checklist remain contract-centric: summary emission, machine-readable status, stable discovery, and no log scraping. `0007` example and checklist remain rollout-centric: signal-only mode, readiness over history, explicit `go|hold`, progress telemetry, narrow strict enforcement, and preserved diagnostics. The support surfaces reinforce separation rather than collapse the pair into one technique. Outcome: `clear`.

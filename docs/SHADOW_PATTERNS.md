@@ -30,14 +30,14 @@ See also:
 
 ### Evaluation-chain shadow pair
 
-- Techniques: [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md)
+- Techniques: [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md)
 - Review: [EVALUATION_CHAIN_SHADOW_REVIEW.md](EVALUATION_CHAIN_SHADOW_REVIEW.md)
 - Why grouped: Canonical producer-contract and staged-enforcement techniques whose caution language now shares one bounded evaluation-chain shadow watch surface.
 
 | technique | current role | watch seam | main failure mode | note |
 |---|---|---|---|---|
-| [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | default summary-contract producer for runnable smoke and probe paths | keep storage and rollout semantics downstream so the producer contract does not collapse into the broader evaluation chain | failure paths emit bare `error` signals with too little observed context to diagnose quickly | [Adverse Effects Review](../techniques/evaluation/contract-first-smoke-summary/notes/adverse-effects-review.md) |
-| [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | default staged-promotion pattern for moving one observed signal toward one narrow strict enforcement surface | keep storage-layout dependency detail subordinate to rollout semantics and keep one strict surface explicit | promotion happens from a shallow or noisy history window and strict mode arrives too early | [Adverse Effects Review](../techniques/evaluation/signal-first-gate-promotion/notes/adverse-effects-review.md) |
+| [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) | default summary-contract producer for runnable smoke and probe paths | keep storage and rollout semantics downstream so the producer contract does not collapse into the broader evaluation chain | failure paths emit bare `error` signals with too little observed context to diagnose quickly | [Adverse Effects Review](../techniques/proof/evaluation-chain/contract-first-smoke-summary/notes/adverse-effects-review.md) |
+| [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) | default staged-promotion pattern for moving one observed signal toward one narrow strict enforcement surface | keep storage-layout dependency detail subordinate to rollout semantics and keep one strict surface explicit | promotion happens from a shallow or noisy history window and strict mode arrives too early | [Adverse Effects Review](../techniques/proof/evaluation-chain/signal-first-gate-promotion/notes/adverse-effects-review.md) |
 
 ## Common Shadow Questions
 
@@ -47,8 +47,8 @@ See also:
 | I need to stop remediation output from drifting into integrity or rendering policy | [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) | Inspect the bounded remediation rollup before widening backlog language into trust verdicts or renderer instructions. |
 | I need to keep a diagnostic helper from turning into an implicit enforcement gate | [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) | Inspect the diagnostic-only trust layer and its optional-check noise seam before any stricter rollout decision. |
 | I need optional-source warnings to stay visible without becoming noisy or package-shaped | [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | Inspect the required-versus-optional rendering policy and its warning-fatigue plus package-appendix seam. |
-| I need a summary producer to stay diagnostic instead of collapsing back into log scraping | [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | Inspect the summary-contract producer and its false-success plus thin-failure-context seam before widening storage or rollout detail. |
-| I need staged enforcement to stay narrow instead of leaking into hidden strictness | [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | Inspect the staged-promotion pattern and its shallow-history plus strict-surface leakage seam before adding more rollout telemetry. |
+| I need a summary producer to stay diagnostic instead of collapsing back into log scraping | [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) | Inspect the summary-contract producer and its false-success plus thin-failure-context seam before widening storage or rollout detail. |
+| I need staged enforcement to stay narrow instead of leaking into hidden strictness | [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) | Inspect the staged-promotion pattern and its shallow-history plus strict-surface leakage seam before adding more rollout telemetry. |
 
 ## Boundaries
 

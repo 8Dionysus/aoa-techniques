@@ -407,7 +407,7 @@
           "domain": "evaluation",
           "status": "canonical",
           "summary": "Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract.",
-          "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+          "technique_path": "techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md",
           "kind": "validation"
         },
         {
@@ -416,7 +416,7 @@
           "domain": "evaluation",
           "status": "canonical",
           "summary": "Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early.",
-          "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+          "technique_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md",
           "kind": "guardrail"
         },
         {
@@ -425,7 +425,7 @@
           "domain": "evaluation",
           "status": "promoted",
           "summary": "Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself.",
-          "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+          "technique_path": "techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md",
           "kind": "validation"
         }
       ]
