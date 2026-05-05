@@ -119,6 +119,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/published-summary-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-published-summary-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/history-artifacts-direct-read-migration-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/donor-harvest-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -5204,6 +5205,94 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("chooses `continuity/donor-harvest`", tree_contract)
         self.assertIn(
             "accepted the landed `agent-workflows-core` pilot review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0075",
+                "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0077",
+                "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0084",
+                "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0085",
+                "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
+    def test_donor_harvest_direct_read_review_accepts_nineteenth_pilot(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "donor-harvest-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Donor-Harvest Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-nineteenth-migration-pilot", review)
+        self.assertIn("Accept `continuity/donor-harvest`", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("memory authority, playbook quest authority", review)
+        self.assertIn("Run the nineteenth migration pilot", review)
+        self.assertIn("donor-harvest-direct-read-migration-review", reviews_index)
+        self.assertIn("donor-harvest direct-read review: landed", ingress)
+        self.assertIn("accepted-for-nineteenth-migration-pilot", ingress)
+        self.assertIn("Donor-harvest direct-read migration review", landing_log)
+        self.assertIn("accepted-for-nineteenth-migration-pilot", distillation_roadmap)
+        self.assertIn("Migrate exactly `AOA-T-0075`", root_roadmap)
+        self.assertIn("Donor-Harvest Direct-Read Migration Review", tree_contract)
+        self.assertIn(
+            "accepted the `donor-harvest` direct-read migration review",
             changelog,
         )
 

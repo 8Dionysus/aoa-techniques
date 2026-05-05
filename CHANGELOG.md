@@ -208,6 +208,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `agent-workflows-core` pilot review and selected
   `continuity/donor-harvest` for the next direct-read migration review without
   moving a nineteenth shelf yet
+- accepted the `donor-harvest` direct-read migration review over `AOA-T-0075`,
+  `AOA-T-0077`, `AOA-T-0084`, and `AOA-T-0085` as the nineteenth tree pilot
+  while keeping the review itself non-mutating
 
 ### Validation
 

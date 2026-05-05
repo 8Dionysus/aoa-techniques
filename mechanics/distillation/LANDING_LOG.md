@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Donor-harvest direct-read migration review
+
+Changed:
+
+- added
+  [donor-harvest-direct-read-migration-review](parts/technique-reform-ingress/reviews/donor-harvest-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0075`, `AOA-T-0077`, `AOA-T-0084`,
+  and `AOA-T-0085`
+- accepted `continuity/donor-harvest` as the nineteenth bounded migration
+  pilot without moving files
+- kept the shelf centered on reviewed-session continuity: donor candidates,
+  one harvest packet contract, progression evidence, and an adjunct quest
+  overlay
+- preserved all four bundles as `status: promoted` and kept `domain`, `kind`,
+  IDs, evidence, relations, support files, maturity, validation-strength
+  metadata, and public-safety posture unchanged
+- kept memory authority, playbook quest authority, progression doctrine, owner
+  routing, role progression, stats ownership, session-closeout automation, and
+  neighboring continuity or governance shelves outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no nineteenth shelf migration landed from the review alone
+
 ## 2026-05-05 - Landed agent-workflows-core pilot review
 
 Changed:

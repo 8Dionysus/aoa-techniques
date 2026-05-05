@@ -494,8 +494,17 @@ progression doctrine, owner routing, role progression, stats ownership,
 session-closeout automation, and neighboring continuity or governance shelves
 outside the next move.
 
-The next reform slice should run that direct-read review before any nineteenth
-shelf migration.
+The nineteenth direct-read review is
+[Donor-Harvest Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/donor-harvest-direct-read-migration-review.md).
+It accepts exactly `AOA-T-0075`, `AOA-T-0077`, `AOA-T-0084`, and
+`AOA-T-0085` for `techniques/continuity/donor-harvest/`, preserves all four as
+promoted bundles, and keeps memory authority, playbook quest authority,
+progression doctrine, owner routing, role progression, stats ownership,
+session-closeout automation, neighboring continuity or governance shelves, and
+all remaining `agent-workflows` leaves outside the shelf.
+
+The next reform slice should migrate exactly those four bundles before any
+other nineteenth shelf movement.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
