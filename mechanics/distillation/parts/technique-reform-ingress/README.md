@@ -42,6 +42,8 @@ permission slip to remap techniques automatically.
 - handoff-continuation migration: landed exactly `AOA-T-0056` through
   `AOA-T-0062` under `techniques/continuity/handoff-continuation/`
   without frontmatter changes
+- landed handoff-continuation pilot review: landed as `pilot-validated`, with
+  `media-ingest` chosen for the next direct-read migration review
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -69,6 +71,7 @@ permission slip to remap techniques automatically.
 | [Review-Compaction Direct-Read Migration Review](reviews/review-compaction-direct-read-migration-review.md) | reads `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` directly and accepts the shelf as the first migration pilot | `tree_path` frontmatter, domain change, or permission to move any other shelf |
 | [Landed Review-Compaction Pilot Review](reviews/landed-review-compaction-pilot-review.md) | confirms the first migrated shelf stayed clearer, validated, and bounded after landing | movement of `handoff-continuation`, `tree_path` frontmatter, or proof that all continuity shelves are safe |
 | [Handoff-Continuation Direct-Read Migration Review](reviews/handoff-continuation-direct-read-migration-review.md) | reads `AOA-T-0056` through `AOA-T-0062` directly and accepts the shelf as the second migration pilot | path movement, `tree_path` frontmatter, domain change, or permission to move any other shelf |
+| [Landed Handoff-Continuation Pilot Review](reviews/landed-handoff-continuation-pilot-review.md) | confirms the second migrated shelf stayed clearer, validates the continuity trunk machinery, and chooses `media-ingest` for the next direct-read review | movement of `media-ingest`, `tree_path` frontmatter, or proof that every trunk is ready |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -132,6 +135,11 @@ The second pilot migration moved exactly `AOA-T-0056` through `AOA-T-0062`
 into `techniques/continuity/handoff-continuation/` without changing
 frontmatter or adding `tree_path`.
 
-The next move is to review the landed `handoff-continuation` shelf against the
-direct-read review, generated rebuilds, root legacy receipt, and link repair
-before choosing any third tree migration candidate.
+The landed `handoff-continuation` shelf review is now complete and chooses
+`media-ingest` as the next tree candidate.
+
+The next move is to run a direct-read migration review for `media-ingest`.
+Read `AOA-T-0070` through `AOA-T-0074`, inspect whether OCR staging, post-OCR
+field extraction, perceptual dedupe, semantic media bucketing, and Telegram
+normalization belong in one `ingest/media-ingest` shelf, and only then decide
+whether those exact bundles should move.

@@ -194,14 +194,20 @@ The second pilot migration moves `AOA-T-0056` through `AOA-T-0062` into
 `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md`](../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md).
 
+The landed second pilot review is
+[Landed Handoff-Continuation Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-handoff-continuation-pilot-review.md).
+It validates the `handoff-continuation` migration and chooses `media-ingest`
+for the next direct-read migration review.
+
 The next reform slice should:
 
-1. review the landed `handoff-continuation` shelf against its direct-read
-   migration review
-2. confirm generated surfaces, root legacy receipt accounting, and authored
-   links stayed coherent after the move
-3. choose a third tree candidate only after the landed second pilot review
-   proves the shelf remained clearer than the old broad placement
+1. directly read `AOA-T-0070` through `AOA-T-0074`
+2. test whether `ingest/media-ingest` is clearer than the old broad
+   `agent-workflows` placement
+3. decide whether OCR staging, post-OCR field extraction, perceptual dedupe,
+   semantic media bucketing, and Telegram normalization belong in one shelf
+4. keep any later path move separate from the review, with no `tree_path`
+   frontmatter or bulk migration
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

@@ -27,7 +27,7 @@ It does not create a canonical bundle or authorize import by itself.
 | `local-first-session-index` | [AOA-T-0053](../../../techniques/history/local-first-session-index/TECHNIQUE.md) | local searchable index over already-saved session artifacts with stable source references | session capture, transcript packaging, dashboard doctrine, cloud memory or hosted sync posture |
 | `compaction-resilient-skill-loading` | [AOA-T-0054](../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | re-seed a bounded skills-availability surface after compaction so needed skills can be reloaded from canonical sources | full context reconstruction, prompt stuffing, marketplace or install doctrine |
 | `requirements-design-tasks-ladder` | [AOA-T-0055](../../../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) | keep requirements, design, and tasks visibly separate before implementation | full methodology import, template ecosystems, planning religion |
-| `channelized-agent-mailbox` | [AOA-T-0056](../../../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) | durable named-channel mailbox with replay and explicit acknowledgment | handoff authorization, transcript history, full messaging-platform doctrine |
+| `channelized-agent-mailbox` | [AOA-T-0056](../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | durable named-channel mailbox with replay and explicit acknowledgment | handoff authorization, transcript history, full messaging-platform doctrine |
 
 ## Active Seed Lane
 
