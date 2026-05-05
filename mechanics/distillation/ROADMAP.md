@@ -53,9 +53,10 @@
    migration is landed exactly for `AOA-T-0070` through `AOA-T-0074` under
    `techniques/ingest/media-ingest/`, with the first non-continuity route card,
    root legacy receipt accounting, link repair, generated rebuilds, and
-   release-check validation in the same wave. The next tree move is a
-   landed-pilot review over `media-ingest` before choosing any fourth
-   candidate.
+   release-check validation in the same wave. The landed `media-ingest` pilot
+   review is also landed as `pilot-validated`, and `diagnosis-repair` is now
+   chosen for the next direct-read migration review before any fourth shelf
+   moves.
 
 ## Hold line
 

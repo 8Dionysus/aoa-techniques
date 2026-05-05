@@ -63,6 +63,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0070` through `AOA-T-0074` into
   `techniques/ingest/media-ingest/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `media-ingest` pilot review and selected
+  `diagnosis-repair` for the next direct-read migration review without moving
+  a fourth shelf yet
 
 ### Validation
 

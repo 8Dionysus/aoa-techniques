@@ -3,6 +3,34 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Landed media-ingest pilot review
+
+Changed:
+
+- added
+  [landed-media-ingest-pilot-review](parts/technique-reform-ingress/reviews/landed-media-ingest-pilot-review.md)
+  as the post-migration review over the third tree pilot
+- accepted the landed `media-ingest` shelf as clearer after validation and as
+  the first successful non-continuity trunk test
+- chose `diagnosis-repair` for the next direct-read migration review without
+  moving another shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `telegram-account-auth-and-session-bridge` outside the migrated shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fourth shelf migration was authorized without direct-read review
+
 ## 2026-05-04 - Media-ingest tree pilot migration
 
 Changed:

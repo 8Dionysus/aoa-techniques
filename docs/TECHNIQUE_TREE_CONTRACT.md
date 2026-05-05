@@ -209,15 +209,20 @@ The third pilot migration moves `AOA-T-0070` through `AOA-T-0074` into
 `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-media-ingest-tree-pilot.md`](../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md).
 
+The landed third pilot review is
+[Landed Media-Ingest Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-media-ingest-pilot-review.md).
+It validates the `media-ingest` migration as the first successful
+non-continuity trunk test and chooses `diagnosis-repair` for the next
+direct-read migration review.
+
 The next reform slice should:
 
-1. review the landed `media-ingest` shelf against its direct-read migration
-   review
-2. confirm generated surfaces, root legacy receipt accounting, the `ingest/`
-   route card, and authored links stayed coherent after the move
-3. choose a fourth tree candidate only after the landed third pilot review
-   proves the first non-continuity shelf remained clearer than the old broad
-   placement
+1. read `AOA-T-0080` through `AOA-T-0083` directly
+2. decide whether `diagnosis-repair` is clearer under
+   `techniques/recovery/diagnosis-repair/` than under the broad
+   `agent-workflows` folder
+3. preserve frontmatter, generated-surface parity, and root legacy accounting
+   if a fourth migration later lands
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
