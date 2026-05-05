@@ -233,29 +233,29 @@ See also:
 |---|---|---|---|
 | minimal risk-passport-lift | `present` | `techniques/agent-workflows/risk-passport-lift/examples/minimal-risk-passport-lift.md` | [TECHNIQUE.md](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) |
 
-### [AOA-T-0080](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
+### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal session-drift-taxonomy | `present` | `techniques/agent-workflows/session-drift-taxonomy/examples/minimal-session-drift-taxonomy.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) |
+| minimal session-drift-taxonomy | `present` | `techniques/recovery/diagnosis-repair/session-drift-taxonomy/examples/minimal-session-drift-taxonomy.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) |
 
-### [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal diagnosis-from-reviewed-evidence | `present` | `techniques/agent-workflows/diagnosis-from-reviewed-evidence/examples/minimal-diagnosis-from-reviewed-evidence.md` | [TECHNIQUE.md](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) |
-
-### [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
+### [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal repair-shape-from-diagnosis | `present` | `techniques/agent-workflows/repair-shape-from-diagnosis/examples/minimal-repair-shape-from-diagnosis.md` | [TECHNIQUE.md](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) |
+| minimal diagnosis-from-reviewed-evidence | `present` | `techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/examples/minimal-diagnosis-from-reviewed-evidence.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) |
 
-### [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
+### [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal checkpoint-bound-self-repair | `present` | `techniques/agent-workflows/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md` | [TECHNIQUE.md](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) |
+| minimal repair-shape-from-diagnosis | `present` | `techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/examples/minimal-repair-shape-from-diagnosis.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) |
+
+### [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal checkpoint-bound-self-repair | `present` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
 
 ### [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
 

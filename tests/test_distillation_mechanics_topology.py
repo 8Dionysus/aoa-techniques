@@ -1203,7 +1203,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`media-ingest` direct-read review is now", distillation_roadmap)
         self.assertIn("Landed handoff-continuation pilot review", landing_log)
         self.assertIn("selected\n  `media-ingest`", changelog)
-        self.assertIn("Land the fourth pilot migration", root_roadmap)
+        self.assertIn("Review the landed `diagnosis-repair` shelf", root_roadmap)
         self.assertIn("Landed Handoff-Continuation Pilot Review", tree_contract)
         self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", incoming_wave2)
         self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", incoming_wave3)
@@ -1368,7 +1368,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("diagnosis-repair` is now", distillation_roadmap)
         self.assertIn("Landed media-ingest pilot review", landing_log)
         self.assertIn("selected\n  `diagnosis-repair`", changelog)
-        self.assertIn("Land the fourth pilot migration", root_roadmap)
+        self.assertIn("Review the landed `diagnosis-repair` shelf", root_roadmap)
         self.assertIn("Landed Media-Ingest Pilot Review", tree_contract)
         self.assertIn("techniques/recovery/diagnosis-repair/", tree_contract)
 
@@ -1435,23 +1435,30 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("diagnosis-repair-direct-read-migration-review", reviews_index)
         self.assertIn("diagnosis-repair direct-read review: landed", ingress)
         self.assertIn("accepted-for-fourth-migration-pilot", ingress)
+        self.assertIn("diagnosis-repair migration: landed", ingress)
         self.assertIn("fourth pilot migration", ingress)
         self.assertIn("accepted-for-fourth-migration-pilot", distillation_roadmap)
+        self.assertIn("fourth pilot migration is", distillation_roadmap)
+        self.assertIn("techniques/recovery/diagnosis-repair/", distillation_roadmap)
         self.assertIn("Diagnosis-repair direct-read migration review", landing_log)
+        self.assertIn("Diagnosis-repair tree pilot migration", landing_log)
         self.assertIn("accepted the `diagnosis-repair` direct-read migration review", changelog)
-        self.assertIn("Land the fourth pilot migration", root_roadmap)
+        self.assertIn("moved `AOA-T-0080` through `AOA-T-0083`", changelog)
+        self.assertIn("fourth landed pilot", root_roadmap)
+        self.assertIn("Review the landed `diagnosis-repair` shelf", root_roadmap)
         self.assertIn("Diagnosis-Repair Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0080` through `AOA-T-0083", tree_contract)
+        self.assertIn("2026-05-04-diagnosis-repair-tree-pilot.md", tree_contract)
         self.assertTrue(
             (
                 REPO_ROOT
                 / "techniques"
-                / "agent-workflows"
+                / "recovery"
+                / "diagnosis-repair"
                 / "session-drift-taxonomy"
                 / "TECHNIQUE.md"
             ).is_file()
         )
-        self.assertFalse((REPO_ROOT / "techniques" / "recovery").exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

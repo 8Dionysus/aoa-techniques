@@ -35,10 +35,10 @@ generated surfaces, and validation move together.
 
 ## Sources Read
 
-- [AOA-T-0080 session-drift-taxonomy](../../../../../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md)
-- [AOA-T-0081 diagnosis-from-reviewed-evidence](../../../../../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md)
-- [AOA-T-0082 repair-shape-from-diagnosis](../../../../../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md)
-- [AOA-T-0083 checkpoint-bound-self-repair](../../../../../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md)
+- [AOA-T-0080 session-drift-taxonomy](../../../../../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md)
+- [AOA-T-0081 diagnosis-from-reviewed-evidence](../../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md)
+- [AOA-T-0082 repair-shape-from-diagnosis](../../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md)
+- [AOA-T-0083 checkpoint-bound-self-repair](../../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md)
 - canonical-readiness notes for `AOA-T-0080` through `AOA-T-0083`
 - origin-evidence notes for `AOA-T-0080` through `AOA-T-0083`
 - checklists and minimal examples for `AOA-T-0080` through `AOA-T-0083`

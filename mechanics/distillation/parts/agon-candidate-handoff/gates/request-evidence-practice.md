@@ -93,7 +93,7 @@ hand motion, not the law of the arena.
 - [context-report-for-ci](../../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md):
   reports environment or CI context; it does not ask for one missing evidence
   object inside a live review state.
-- [diagnosis-from-reviewed-evidence](../../../../../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md):
+- [diagnosis-from-reviewed-evidence](../../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md):
   diagnoses from evidence already reviewed; this candidate asks for the missing
   evidence before diagnosis.
 - [harvest-packet-contract](../../../../../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md):

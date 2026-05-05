@@ -470,7 +470,7 @@ See also:
 - Validate by: each passport belongs to one explicit route; the field set stays small and reviewable; difficulty, risk, control mode, delegate...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md)
 
-### [AOA-T-0080](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
+### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
 
 - Summary: Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape.
 - Intent: Classify repeated post-session friction into bounded drift types so a later diagnosis pass can...
@@ -481,9 +481,9 @@ See also:
 - Core contract: taxonomy is read-only; drift type is not the same thing as probable cause.
 - Main risk: vague labels replace real classification.
 - Validate by: the source evidence is reviewed; drift labels stay bounded and reusable; symptom, drift type, and probable cause remain distinct.
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md)
 
-### [AOA-T-0081](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
+### [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
 
 - Summary: Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet.
 - Intent: Turn reviewed friction evidence into a bounded diagnosis packet so symptoms, probable causes, owner...
@@ -494,9 +494,9 @@ See also:
 - Core contract: diagnosis starts from reviewed evidence; symptom and probable-cause layers stay distinct.
 - Main risk: symptoms and causes collapse into one vague narrative.
 - Validate by: the source evidence is reviewed and bounded; symptoms and probable causes stay distinct; likely owner hints remain explicit but...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md)
 
-### [AOA-T-0082](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
+### [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
 
 - Summary: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout.
 - Intent: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next...
@@ -507,9 +507,9 @@ See also:
 - Core contract: diagnosis is a prerequisite; the chosen repair shape stays smaller than a scenario rollout.
 - Main risk: the chosen repair shape is larger than the diagnosis justifies.
 - Validate by: a reviewed diagnosis exists; the chosen repair shape is the smallest honest shape; one primary owner target is explicit.
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md)
 
-### [AOA-T-0083](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
+### [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
 
 - Summary: Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification.
 - Intent: Keep self-repair behind explicit checkpoint posture so bounded repair stays reviewable and reversible instead...
@@ -520,7 +520,7 @@ See also:
 - Core contract: self-repair is not free self-modification; important mutations require checkpoint posture.
 - Main risk: checkpoint posture is partial and one critical field is missing.
 - Validate by: a bounded repair shape exists first; checkpoint fields are all explicit; rollback and health-check posture are present.
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md)
 
 ### [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
 

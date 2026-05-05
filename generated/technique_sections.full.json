@@ -6502,7 +6502,7 @@
     {
       "id": "AOA-T-0080",
       "name": "session-drift-taxonomy",
-      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6537,7 +6537,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- taxonomy is read-only\n- drift type is not the same thing as probable cause\n- one odd anecdote is not enough for structural classification\n- bounded labels should help later diagnosis rather than replace it\n- the taxonomy stays smaller than a full diagnosis packet\n\nRelationship to adjacent techniques: unlike [AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique does not claim probable causes, owner hints, or repair shapes over the whole packet; it only classifies the type of drift. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not place one reusable unit into one owner layer."
+          "content_markdown": "- taxonomy is read-only\n- drift type is not the same thing as probable cause\n- one odd anecdote is not enough for structural classification\n- bounded labels should help later diagnosis rather than replace it\n- the taxonomy stays smaller than a full diagnosis packet\n\nRelationship to adjacent techniques: unlike [AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique does not claim probable causes, owner hints, or repair shapes over the whole packet; it only classifies the type of drift. Unlike [AOA-T-0076](../../../agent-workflows/owner-layer-triage/TECHNIQUE.md), it does not place one reusable unit into one owner layer."
         },
         {
           "key": "risks",
@@ -6584,7 +6584,7 @@
     {
       "id": "AOA-T-0081",
       "name": "diagnosis-from-reviewed-evidence",
-      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6666,7 +6666,7 @@
     {
       "id": "AOA-T-0082",
       "name": "repair-shape-from-diagnosis",
-      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6748,7 +6748,7 @@
     {
       "id": "AOA-T-0083",
       "name": "checkpoint-bound-self-repair",
-      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6783,7 +6783,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- self-repair is not free self-modification\n- important mutations require checkpoint posture\n- rollback and health-check cues remain explicit\n- bounded iteration limits prevent hidden retry loops\n- improvement logging remains part of the repair contract\n- role-law and proof-law changes may need handoff to other owner layers\n\nRelationship to adjacent techniques: unlike [AOA-T-0082](../repair-shape-from-diagnosis/TECHNIQUE.md), this technique does not choose the repair shape itself; it governs the checkpoint posture around an already chosen repair. Unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), it is narrower and more specialized: it governs a self-repair packet with rollback, health-check, and improvement-log posture rather than a general confirmation seam before any mutation."
+          "content_markdown": "- self-repair is not free self-modification\n- important mutations require checkpoint posture\n- rollback and health-check cues remain explicit\n- bounded iteration limits prevent hidden retry loops\n- improvement logging remains part of the repair contract\n- role-law and proof-law changes may need handoff to other owner layers\n\nRelationship to adjacent techniques: unlike [AOA-T-0082](../repair-shape-from-diagnosis/TECHNIQUE.md), this technique does not choose the repair shape itself; it governs the checkpoint posture around an already chosen repair. Unlike [AOA-T-0028](../../../agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), it is narrower and more specialized: it governs a self-repair packet with rollback, health-check, and improvement-log posture rather than a general confirmation seam before any mutation."
         },
         {
           "key": "risks",

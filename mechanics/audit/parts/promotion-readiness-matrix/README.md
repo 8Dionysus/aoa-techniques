@@ -361,10 +361,10 @@ Shared blocker: diagnosis and repair are already split cleanly, but the family n
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0080](../../../../techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md) | Drift labels give diagnosis a bounded input layer without becoming full cause analysis. | One second reviewed friction case where taxonomy labels improve later diagnosis without becoming a repair plan. |
-| [AOA-T-0081](../../../../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | Diagnosis packet separates symptoms, probable causes, owner hints, and unknowns. | One second reviewed evidence packet where diagnosis is produced before repair and remains read-only until a separate repair shape lands. |
-| [AOA-T-0082](../../../../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md) | Repair shaping stays smaller than rollout and starts only after diagnosis. | One second route where a diagnosis produces the smallest owner-facing repair artifact plus validation plan instead of general self-improvement prose. |
-| [AOA-T-0083](../../../../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md) | Checkpoint posture protects meaningful repair with approval, rollback, health check, iteration limit, and log visibility. | One second repair route where checkpoint posture governs the repair before mutation and catches overreach without widening into autonomous self-modification. |
+| [AOA-T-0080](../../../../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | Drift labels give diagnosis a bounded input layer without becoming full cause analysis. | One second reviewed friction case where taxonomy labels improve later diagnosis without becoming a repair plan. |
+| [AOA-T-0081](../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | Diagnosis packet separates symptoms, probable causes, owner hints, and unknowns. | One second reviewed evidence packet where diagnosis is produced before repair and remains read-only until a separate repair shape lands. |
+| [AOA-T-0082](../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | Repair shaping stays smaller than rollout and starts only after diagnosis. | One second route where a diagnosis produces the smallest owner-facing repair artifact plus validation plan instead of general self-improvement prose. |
+| [AOA-T-0083](../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | Checkpoint posture protects meaningful repair with approval, rollback, health check, iteration limit, and log visibility. | One second repair route where checkpoint posture governs the repair before mutation and catches overreach without widening into autonomous self-modification. |
 
 ### Pack 35 - Progression And Quest Reflection
 

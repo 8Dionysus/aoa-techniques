@@ -97,7 +97,7 @@ reviewable and reversible instead of feeling like silent self-modification.
 - improvement logging remains part of the repair contract
 - role-law and proof-law changes may need handoff to other owner layers
 
-Relationship to adjacent techniques: unlike [AOA-T-0082](../repair-shape-from-diagnosis/TECHNIQUE.md), this technique does not choose the repair shape itself; it governs the checkpoint posture around an already chosen repair. Unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), it is narrower and more specialized: it governs a self-repair packet with rollback, health-check, and improvement-log posture rather than a general confirmation seam before any mutation.
+Relationship to adjacent techniques: unlike [AOA-T-0082](../repair-shape-from-diagnosis/TECHNIQUE.md), this technique does not choose the repair shape itself; it governs the checkpoint posture around an already chosen repair. Unlike [AOA-T-0028](../../../agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), it is narrower and more specialized: it governs a self-repair packet with rollback, health-check, and improvement-log posture rather than a general confirmation seam before any mutation.
 
 ## Risks
 

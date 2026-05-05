@@ -102,7 +102,7 @@ hand motion, not the law of the arena.
 - `localize_contradiction-practice`:
   narrows a contradiction after conflicting claims are already in view; this
   candidate can challenge one claim before a contradiction is established.
-- [diagnosis-from-reviewed-evidence](../../../../../techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md):
+- [diagnosis-from-reviewed-evidence](../../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md):
   diagnoses from reviewed evidence; this candidate only applies pressure to one
   claim and names the next support question.
 

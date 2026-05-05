@@ -3,6 +3,42 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Diagnosis-repair tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0080` through `AOA-T-0083` from
+  `techniques/agent-workflows/` into
+  `techniques/recovery/diagnosis-repair/`
+- added `techniques/recovery/AGENTS.md` as the minimal route card for the
+  recovery trunk
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md`
+- repaired authored links from mechanics anchors, Agon gate overlap notes, and
+  reform review surfaces
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_diagnosis_repair_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
+git diff --check
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no other shelf migrated
+- no `tree_path` frontmatter was added
+- no `family` or scout topology axis became schema truth
+- active bundles did not pass through root `legacy/`
+- recovery was not widened into self-improvement, role-law, proof-law, or
+  scenario rollout
+
 ## 2026-05-04 - Diagnosis-repair direct-read migration review
 
 Changed:

@@ -1120,7 +1120,7 @@
       "core_contract_short": "Core contract: taxonomy is read-only; drift type is not the same thing as probable cause.",
       "main_risk_short": "Main risk: vague labels replace real classification.",
       "validation_short": "Validate by checking the source evidence is reviewed; drift labels stay bounded and reusable; symptom, drift type, and probable cause remain distinct.",
-      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md"
+      "technique_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0081",
@@ -1134,7 +1134,7 @@
       "core_contract_short": "Core contract: diagnosis starts from reviewed evidence; symptom and probable-cause layers stay distinct.",
       "main_risk_short": "Main risk: symptoms and causes collapse into one vague narrative.",
       "validation_short": "Validate by checking the source evidence is reviewed and bounded; symptoms and probable causes stay distinct; likely owner hints remain explicit but...",
-      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md"
+      "technique_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0082",
@@ -1148,7 +1148,7 @@
       "core_contract_short": "Core contract: diagnosis is a prerequisite; the chosen repair shape stays smaller than a scenario rollout.",
       "main_risk_short": "Main risk: the chosen repair shape is larger than the diagnosis justifies.",
       "validation_short": "Validate by checking a reviewed diagnosis exists; the chosen repair shape is the smallest honest shape; one primary owner target is explicit.",
-      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md"
+      "technique_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0083",
@@ -1162,7 +1162,7 @@
       "core_contract_short": "Core contract: self-repair is not free self-modification; important mutations require checkpoint posture.",
       "main_risk_short": "Main risk: checkpoint posture is partial and one critical field is missing.",
       "validation_short": "Validate by checking a bounded repair shape exists first; checkpoint fields are all explicit; rollback and health-check posture are present.",
-      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md"
+      "technique_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0084",
