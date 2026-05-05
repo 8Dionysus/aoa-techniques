@@ -82,7 +82,11 @@
    landed exactly for those eight bundles under
    `techniques/knowledge-lift/kag-source-lift/`, with the knowledge-lift route
    card, root legacy receipt accounting, link repair, generated rebuilds, and
-   release-check validation in the same wave.
+   release-check validation in the same wave. The landed `kag-source-lift`
+   pilot review is also landed as `pilot-validated`, keeps KAG owner
+   authority, graph semantics, scoring, proof authority, policy, and automatic
+   verdicts outside the shelf, and chooses `docs-boundary` for the next
+   direct-read migration review before any seventh shelf moves.
 
 ## Hold line
 
