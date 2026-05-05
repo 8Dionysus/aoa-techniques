@@ -340,7 +340,7 @@ See also:
 - Validate by: a stable job identity survives across pause and resume; checkpoint or status state remains inspectable at the approval seam...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md)
 
-### [AOA-T-0070](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
+### [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
 
 - Summary: Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step.
 - Intent: Turn screenshots, scans, or document images into a bounded OCR handoff by keeping text-region...
@@ -351,9 +351,9 @@ See also:
 - Core contract: OCR staging stays separate from downstream field extraction and app logic; region, line, or layout ambiguity remains visible...
 - Main risk: skewed, cropped, or noisy inputs lose important text regions before recognition.
 - Validate by: OCR handoff remains distinct from downstream extraction logic; region or layout references survive into the handoff; low-confidence spans remain...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md)
 
-### [AOA-T-0071](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
+### [AOA-T-0071](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
 
 - Summary: Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser.
 - Intent: Turn OCR handoff text into a bounded field object such as merchant, date, amount...
@@ -364,9 +364,9 @@ See also:
 - Core contract: OCR staging and field extraction remain separate steps; the target field set stays explicit and bounded.
 - Main risk: amount, subtotal, tax, or tip lines are confused.
 - Validate by: OCR handoff is the only bounded parsing input; the extracted field set is explicit and small enough to review...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md)
 
-### [AOA-T-0072](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
+### [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
 
 - Summary: Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.
 - Intent: Make screenshot, meme, or photo deduplication reviewable by grouping near-duplicate media through perceptual similarity...
@@ -377,9 +377,9 @@ See also:
 - Core contract: the technique groups and flags near-duplicates; it does not own file deletion policy; thresholds stay explicit and tunable.
 - Main risk: edited memes collapse into the wrong groups.
 - Validate by: the corpus includes exact duplicates, crops, and edited variants; high-confidence groups and uncertain groups are visibly separated; thresholds can...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
 
-### [AOA-T-0073](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
+### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
 
 - Summary: Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.
 - Intent: Provide one bounded classification route for mixed media by combining visual semantics with OCR...
@@ -390,9 +390,9 @@ See also:
 - Core contract: taxonomy stays bounded and explicit; OCR remains a side-channel, not hidden truth.
 - Main risk: memes and screenshots collide in the same bucket.
 - Validate by: the golden set includes memes, receipts, screenshots, and an other class; bucket labels stay inside the bounded taxonomy; low-confidence...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
 
-### [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
+### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
 
 - Summary: Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.
 - Intent: Turn Telegram export or sync output into a bounded, provenance-preserving local store so later...
@@ -403,7 +403,7 @@ See also:
 - Core contract: auth posture stays separate from normalization; message provenance remains visible.
 - Main risk: media references lose source linkage.
 - Validate by: a sample export with replies and media retains source ids and media references; resume after interruption preserves progress without...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 
 ### [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
 

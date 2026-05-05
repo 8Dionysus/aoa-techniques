@@ -36,11 +36,11 @@ generated surfaces, and validation move together.
 
 ## Sources Read
 
-- [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md)
-- [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md)
-- [AOA-T-0072 perceptual-media-dedupe-with-threshold-review](../../../../../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
-- [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
-- [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md)
+- [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md)
+- [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md)
+- [AOA-T-0072 perceptual-media-dedupe-with-threshold-review](../../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
+- [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
+- [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 - supporting `checks/`, `examples/`, and `notes/` files for the five bundles,
   scanned for invariant, adjacency, public-safety, and drift-pressure cues
 - [Personal Ingest Wave 2](../../../../../incoming/personal-ingest-wave-2/README.md)

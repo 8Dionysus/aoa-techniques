@@ -15,7 +15,7 @@ It does not create a canonical bundle or authorize import by itself.
 
 ## Overlap watch
 
-- [AOA-T-0074](../../../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md)
+- [AOA-T-0074](../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 - auth and runtime control-plane doctrine
 
 ## Boundary statement
@@ -50,7 +50,7 @@ Even that smaller target is not stable enough yet, because the donor family stil
 - `Telethon` exposes Telegram client login and session handling as a live account-access surface rather than a small neutral handoff object
 - `opentele` centers on moving between Telegram Desktop account material and Telethon session state, which keeps the seam close to session conversion and secret-bearing runtime posture
 - `telegram-mcp` presents an authenticated Telegram surface as a runtime tool/control layer rather than as one bounded reusable session-bridge artifact
-- [AOA-T-0074](../../../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) already owns the smaller normalized-local-store seam, so any future bridge candidate must stay clearly upstream of storage normalization and clearly downstream of auth/bootstrap doctrine
+- [AOA-T-0074](../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) already owns the smaller normalized-local-store seam, so any future bridge candidate must stay clearly upstream of storage normalization and clearly downstream of auth/bootstrap doctrine
 
 ## Verdict
 

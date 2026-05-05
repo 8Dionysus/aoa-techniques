@@ -90,7 +90,7 @@ Turn Telegram export or sync output into a bounded, provenance-preserving local 
 - the technique does not auto-promote content into memory, canon, or downstream action policy
 - downstream systems consume one stable local object contract rather than donor-specific API or export internals
 
-Relationship to adjacent techniques: unlike [AOA-T-0026](../../history/session-capture-as-repo-artifact/TECHNIQUE.md), this bundle does not claim general project-scoped history capture ownership; it owns Telegram-source normalization into a resumable local store. Unlike `telegram-account-auth-and-session-bridge`, it does not handle credentials, session conversion, or bootstrap approval. It also stays smaller than transcript packaging, recall, or memory-ingestion surfaces because it stops at normalized storage.
+Relationship to adjacent techniques: unlike [AOA-T-0026](../../../history/session-capture-as-repo-artifact/TECHNIQUE.md), this bundle does not claim general project-scoped history capture ownership; it owns Telegram-source normalization into a resumable local store. Unlike `telegram-account-auth-and-session-bridge`, it does not handle credentials, session conversion, or bootstrap approval. It also stays smaller than transcript packaging, recall, or memory-ingestion surfaces because it stops at normalized storage.
 
 ## Risks
 

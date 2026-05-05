@@ -17,7 +17,7 @@
 ## Default-use rationale
 
 - this is the right promoted default when the main problem is turning Telegram-origin data into stable local objects with visible provenance and resumable storage
-- it remains narrower than [AOA-T-0026](../../history/session-capture-as-repo-artifact/TECHNIQUE.md) because it does not own general project history capture or publication as review artifacts
+- it remains narrower than [AOA-T-0026](../../../../history/session-capture-as-repo-artifact/TECHNIQUE.md) because it does not own general project history capture or publication as review artifacts
 - it also remains narrower than `telegram-account-auth-and-session-bridge` because it does not handle credentials, session conversion, or bootstrap approval
 
 ## Fresh public-safety check

@@ -980,7 +980,7 @@
       "core_contract_short": "Core contract: OCR staging stays separate from downstream field extraction and app logic; region, line, or layout ambiguity remains visible...",
       "main_risk_short": "Main risk: skewed, cropped, or noisy inputs lose important text regions before recognition.",
       "validation_short": "Validate by checking OCR handoff remains distinct from downstream extraction logic; region or layout references survive into the handoff; low-confidence spans remain...",
-      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md"
+      "technique_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0071",
@@ -994,7 +994,7 @@
       "core_contract_short": "Core contract: OCR staging and field extraction remain separate steps; the target field set stays explicit and bounded.",
       "main_risk_short": "Main risk: amount, subtotal, tax, or tip lines are confused.",
       "validation_short": "Validate by checking OCR handoff is the only bounded parsing input; the extracted field set is explicit and small enough to review...",
-      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md"
+      "technique_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0072",
@@ -1008,7 +1008,7 @@
       "core_contract_short": "Core contract: the technique groups and flags near-duplicates; it does not own file deletion policy; thresholds stay explicit and tunable.",
       "main_risk_short": "Main risk: edited memes collapse into the wrong groups.",
       "validation_short": "Validate by checking the corpus includes exact duplicates, crops, and edited variants; high-confidence groups and uncertain groups are visibly separated; thresholds can...",
-      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md"
+      "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0073",
@@ -1022,7 +1022,7 @@
       "core_contract_short": "Core contract: taxonomy stays bounded and explicit; OCR remains a side-channel, not hidden truth.",
       "main_risk_short": "Main risk: memes and screenshots collide in the same bucket.",
       "validation_short": "Validate by checking the golden set includes memes, receipts, screenshots, and an other class; bucket labels stay inside the bounded taxonomy; low-confidence...",
-      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md"
+      "technique_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0074",
@@ -1036,7 +1036,7 @@
       "core_contract_short": "Core contract: auth posture stays separate from normalization; message provenance remains visible.",
       "main_risk_short": "Main risk: media references lose source linkage.",
       "validation_short": "Validate by checking a sample export with replies and media retains source ids and media references; resume after interruption preserves progress without...",
-      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md"
+      "technique_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0075",

@@ -5682,7 +5682,7 @@
     {
       "id": "AOA-T-0070",
       "name": "two-stage-document-ocr-pipeline",
-      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5764,7 +5764,7 @@
     {
       "id": "AOA-T-0071",
       "name": "template-backed-field-extraction-after-ocr",
-      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5846,7 +5846,7 @@
     {
       "id": "AOA-T-0072",
       "name": "perceptual-media-dedupe-with-threshold-review",
-      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5881,7 +5881,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the technique groups and flags near-duplicates; it does not own file deletion policy\n- thresholds stay explicit and tunable\n- uncertain matches remain visible instead of being silently resolved\n- grouping remains reviewable and explainable\n- the technique stays smaller than semantic media taxonomy, cleanup automation, or quality-ranking doctrine\n- downstream systems receive duplicate groups and review signals rather than donor CLI behavior or storage policy\n\nRelationship to adjacent techniques: unlike `semantic-media-bucketing-with-vision-plus-ocr`, this bundle does not classify media into receipt, meme, screenshot, or other semantic buckets; it only groups likely duplicates. Unlike [AOA-T-0052](../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), it deduplicates media artifacts rather than review findings. It also stays smaller than any delete-or-archive policy because it stops at grouping plus review."
+          "content_markdown": "- the technique groups and flags near-duplicates; it does not own file deletion policy\n- thresholds stay explicit and tunable\n- uncertain matches remain visible instead of being silently resolved\n- grouping remains reviewable and explainable\n- the technique stays smaller than semantic media taxonomy, cleanup automation, or quality-ranking doctrine\n- downstream systems receive duplicate groups and review signals rather than donor CLI behavior or storage policy\n\nRelationship to adjacent techniques: unlike `semantic-media-bucketing-with-vision-plus-ocr`, this bundle does not classify media into receipt, meme, screenshot, or other semantic buckets; it only groups likely duplicates. Unlike [AOA-T-0052](../../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), it deduplicates media artifacts rather than review findings. It also stays smaller than any delete-or-archive policy because it stops at grouping plus review."
         },
         {
           "key": "risks",
@@ -5928,7 +5928,7 @@
     {
       "id": "AOA-T-0073",
       "name": "semantic-media-bucketing-with-vision-plus-ocr",
-      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6010,7 +6010,7 @@
     {
       "id": "AOA-T-0074",
       "name": "telegram-export-normalization-to-local-store",
-      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6045,7 +6045,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- auth posture stays separate from normalization\n- message provenance remains visible\n- the local store is resumable\n- normalized objects preserve reply edges and media references\n- the technique does not auto-promote content into memory, canon, or downstream action policy\n- downstream systems consume one stable local object contract rather than donor-specific API or export internals\n\nRelationship to adjacent techniques: unlike [AOA-T-0026](../../history/session-capture-as-repo-artifact/TECHNIQUE.md), this bundle does not claim general project-scoped history capture ownership; it owns Telegram-source normalization into a resumable local store. Unlike `telegram-account-auth-and-session-bridge`, it does not handle credentials, session conversion, or bootstrap approval. It also stays smaller than transcript packaging, recall, or memory-ingestion surfaces because it stops at normalized storage."
+          "content_markdown": "- auth posture stays separate from normalization\n- message provenance remains visible\n- the local store is resumable\n- normalized objects preserve reply edges and media references\n- the technique does not auto-promote content into memory, canon, or downstream action policy\n- downstream systems consume one stable local object contract rather than donor-specific API or export internals\n\nRelationship to adjacent techniques: unlike [AOA-T-0026](../../../history/session-capture-as-repo-artifact/TECHNIQUE.md), this bundle does not claim general project-scoped history capture ownership; it owns Telegram-source normalization into a resumable local store. Unlike `telegram-account-auth-and-session-bridge`, it does not handle credentials, session conversion, or bootstrap approval. It also stays smaller than transcript packaging, recall, or memory-ingestion surfaces because it stops at normalized storage."
         },
         {
           "key": "risks",

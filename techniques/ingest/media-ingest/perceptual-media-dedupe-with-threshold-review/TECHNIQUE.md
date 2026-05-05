@@ -90,7 +90,7 @@ Make screenshot, meme, or photo deduplication reviewable by grouping near-duplic
 - the technique stays smaller than semantic media taxonomy, cleanup automation, or quality-ranking doctrine
 - downstream systems receive duplicate groups and review signals rather than donor CLI behavior or storage policy
 
-Relationship to adjacent techniques: unlike `semantic-media-bucketing-with-vision-plus-ocr`, this bundle does not classify media into receipt, meme, screenshot, or other semantic buckets; it only groups likely duplicates. Unlike [AOA-T-0052](../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), it deduplicates media artifacts rather than review findings. It also stays smaller than any delete-or-archive policy because it stops at grouping plus review.
+Relationship to adjacent techniques: unlike `semantic-media-bucketing-with-vision-plus-ocr`, this bundle does not classify media into receipt, meme, screenshot, or other semantic buckets; it only groups likely duplicates. Unlike [AOA-T-0052](../../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), it deduplicates media artifacts rather than review findings. It also stays smaller than any delete-or-archive policy because it stops at grouping plus review.
 
 ## Risks
 

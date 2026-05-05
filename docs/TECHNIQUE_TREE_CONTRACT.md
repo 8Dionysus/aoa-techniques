@@ -204,16 +204,20 @@ The third migration review is
 It accepts `media-ingest` as the first non-continuity migration pilot after
 directly reading `AOA-T-0070` through `AOA-T-0074`.
 
+The third pilot migration moves `AOA-T-0070` through `AOA-T-0074` into
+`techniques/ingest/media-ingest/` without changing `domain`, `kind`, or
+`tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-media-ingest-tree-pilot.md`](../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md).
+
 The next reform slice should:
 
-1. move exactly `AOA-T-0070` through `AOA-T-0074` into
-   `techniques/ingest/media-ingest/`
-2. add a minimal `techniques/ingest/AGENTS.md` route card for the first
-   non-continuity migrated trunk
-3. repair authored links, incoming staging links, generated surfaces, and root
-   legacy receipt accounting in the same wave
-4. keep `domain`, `kind`, status, evidence, and `tree_path` frontmatter
-   unchanged
+1. review the landed `media-ingest` shelf against its direct-read migration
+   review
+2. confirm generated surfaces, root legacy receipt accounting, the `ingest/`
+   route card, and authored links stayed coherent after the move
+3. choose a fourth tree candidate only after the landed third pilot review
+   proves the first non-continuity shelf remained clearer than the old broad
+   placement
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

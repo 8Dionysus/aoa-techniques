@@ -49,9 +49,13 @@
    legacy receipt accounting, generated rebuilds, and release-check validation
    in the same wave. The landed `handoff-continuation` pilot review is also
    landed as `pilot-validated`. The `media-ingest` direct-read review is now
-   landed as `accepted-for-third-migration-pilot`, and the next tree move is
-   the third pilot migration for exactly `AOA-T-0070` through `AOA-T-0074`
-   before any other shelf moves.
+   landed as `accepted-for-third-migration-pilot`, and the third pilot
+   migration is landed exactly for `AOA-T-0070` through `AOA-T-0074` under
+   `techniques/ingest/media-ingest/`, with the first non-continuity route card,
+   root legacy receipt accounting, link repair, generated rebuilds, and
+   release-check validation in the same wave. The next tree move is a
+   landed-pilot review over `media-ingest` before choosing any fourth
+   candidate.
 
 ## Hold line
 
