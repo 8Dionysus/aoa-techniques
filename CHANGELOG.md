@@ -121,6 +121,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` into
   `techniques/instruction/capability-boundary/` while keeping `domain`,
   `kind`, IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `capability-boundary` pilot review and selected
+  `skill-discovery` for the next direct-read migration review without moving a
+  tenth shelf yet
 
 ### Validation
 

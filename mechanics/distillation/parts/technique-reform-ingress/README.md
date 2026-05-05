@@ -91,6 +91,8 @@ permission slip to remap techniques automatically.
 - capability-boundary migration: landed exactly `AOA-T-0040`, `AOA-T-0043`,
   and `AOA-T-0093` under
   `techniques/instruction/capability-boundary/` without frontmatter changes
+- landed capability-boundary pilot review: landed as `pilot-validated`, with
+  `skill-discovery` chosen for the next direct-read migration review
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -134,6 +136,7 @@ permission slip to remap techniques automatically.
 | [Landed Capability-Registry Pilot Review](reviews/landed-capability-registry-pilot-review.md) | confirms the eighth migrated shelf stayed clearer, validates the third instruction trunk shelf, and chooses `capability-boundary` for the next direct-read review | movement of `capability-boundary`, `tree_path` frontmatter, skill marketplace curation, upstream health validation, routing policy, KAG graph semantics, runtime execution doctrine, host inventory policy, or agent-role authority |
 | [Capability-Boundary Direct-Read Migration Review](reviews/capability-boundary-direct-read-migration-review.md) | reads `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` directly and accepts the shelf as the ninth migration pilot | path movement by review alone, `tree_path` frontmatter, skill marketplace curation, upstream health validation, routing policy, recommendation ranking, KAG graph semantics, runtime execution doctrine, host inventory policy, command product design, shell doctrine, registry product doctrine, or agent-role authority |
 | [Capability-Boundary Tree Pilot Receipt](../../../../legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md) | preserves the ninth accepted path migration into `techniques/instruction/capability-boundary/` | active technique provenance, `tree_path` frontmatter, skill marketplace curation, upstream health validation, routing policy, recommendation ranking, KAG graph semantics, runtime execution doctrine, host inventory policy, command product design, shell doctrine, registry product doctrine, or agent-role authority |
+| [Landed Capability-Boundary Pilot Review](reviews/landed-capability-boundary-pilot-review.md) | confirms the ninth migrated shelf stayed clearer, validates the fourth instruction trunk shelf, and chooses `skill-discovery` for the next direct-read review | movement of `skill-discovery`, `tree_path` frontmatter, registry product doctrine, routing policy, installer behavior, sync substrate, trust scoring, security scanning, generic monitoring, capability ownership, command doctrine, or agent-role authority |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -272,5 +275,9 @@ The ninth pilot migration is now landed: those three bundles live under
 and root legacy receipt are in place, authored links were repaired, generated
 surfaces were rebuilt, and frontmatter stayed unchanged.
 
-The next move is the landed `capability-boundary` pilot review before any
-tenth shelf moves.
+The landed `capability-boundary` pilot review is now landed as
+`pilot-validated` and chooses `skill-discovery` for the next direct-read
+migration review.
+
+The next move is a direct-read migration review for `skill-discovery` before
+any tenth shelf moves.

@@ -307,8 +307,13 @@ The ninth pilot migration moves exactly `AOA-T-0040`, `AOA-T-0043`, and
 changing `domain`, `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md`](../legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md).
 
-The next reform slice should review the landed `capability-boundary` shelf
-before moving any tenth shelf.
+The landed ninth pilot review is
+[Landed Capability-Boundary Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-capability-boundary-pilot-review.md).
+It validates `capability-boundary` as the fourth successful instruction trunk
+shelf and chooses `skill-discovery` for the next direct-read migration review.
+
+The next reform slice should run the `skill-discovery` direct-read migration
+review before moving any tenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

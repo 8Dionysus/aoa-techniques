@@ -122,8 +122,14 @@
    `techniques/instruction/capability-boundary/`, with the instruction route
    card extended for the fourth shelf, root legacy receipt accounting, link
    repair, generated rebuilds, and release-check validation in the same wave.
-   The next bounded step is the landed `capability-boundary` pilot review
-   before any tenth shelf moves.
+   The landed `capability-boundary` pilot review is also landed as
+   `pilot-validated`, validates the fourth instruction trunk shelf, and chooses
+   `skill-discovery` for the next direct-read migration review while keeping
+   registry product doctrine, routing policy, installer behavior, sync
+   substrate, trust scoring, security scanning, generic monitoring, capability
+   ownership, command doctrine, and agent-role authority outside the next move.
+   The next bounded step is the direct-read migration review for
+   `skill-discovery` before any tenth shelf moves.
 
 ## Hold line
 
