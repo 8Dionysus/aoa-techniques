@@ -1318,9 +1318,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         for target in (
             "## Landed Wave Anchors",
             "If future work needs exact wave execution order, use the preserved raw receipt.",
-            "[AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)",
-            "[AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)",
-            "[AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)",
+            "[AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md)",
+            "[AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md)",
+            "[AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)",
         ):
             self.assertIn(target, candidates)
 

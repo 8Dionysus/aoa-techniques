@@ -632,41 +632,41 @@ See also:
 
 ## `history`
 
-### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
+### [AOA-T-0044](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Versionable Session Transcripts Checklist | `absent` | `9` | `techniques/history/versionable-session-transcripts/checks/versionable-session-transcripts-checklist.md` | [TECHNIQUE.md](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) |
+| Versionable Session Transcripts Checklist | `absent` | `9` | `techniques/history/history-artifacts/versionable-session-transcripts/checks/versionable-session-transcripts-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) |
 
-### [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| local-first-session-index checklist | `absent` | `8` | `techniques/history/local-first-session-index/checks/local-first-session-index-checklist.md` | [TECHNIQUE.md](../techniques/history/local-first-session-index/TECHNIQUE.md) |
-
-### [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
+### [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Session Capture As Repo Artifact Checklist | `absent` | `7` | `techniques/history/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
+| local-first-session-index checklist | `absent` | `8` | `techniques/history/history-artifacts/local-first-session-index/checks/local-first-session-index-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 
-### [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Witness Trace As Reviewable Artifact Checklist | `absent` | `9` | `techniques/history/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
-
-### [AOA-T-0066](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+### [AOA-T-0026](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| transcript-replay-artifact checklist | `absent` | `8` | `techniques/history/transcript-replay-artifact/checks/transcript-replay-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) |
+| Session Capture As Repo Artifact Checklist | `absent` | `7` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
-### [AOA-T-0067](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| transcript-linked-code-lineage checklist | `absent` | `8` | `techniques/history/transcript-linked-code-lineage/checks/transcript-linked-code-lineage-checklist.md` | [TECHNIQUE.md](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) |
+| Witness Trace As Reviewable Artifact Checklist | `absent` | `9` | `techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| transcript-replay-artifact checklist | `absent` | `8` | `techniques/history/history-artifacts/transcript-replay-artifact/checks/transcript-replay-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| transcript-linked-code-lineage checklist | `absent` | `8` | `techniques/history/history-artifacts/transcript-linked-code-lineage/checks/transcript-linked-code-lineage-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## Boundaries
 

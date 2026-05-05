@@ -2074,7 +2074,7 @@
     {
       "id": "AOA-T-0026",
       "name": "session-capture-as-repo-artifact",
-      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -3550,7 +3550,7 @@
     {
       "id": "AOA-T-0044",
       "name": "versionable-session-transcripts",
-      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -3632,7 +3632,7 @@
     {
       "id": "AOA-T-0045",
       "name": "witness-trace-as-reviewable-artifact",
-      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4288,7 +4288,7 @@
     {
       "id": "AOA-T-0053",
       "name": "local-first-session-index",
-      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4569,7 +4569,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- channels are named explicitly and remain stable enough for replay\n- message order is reviewable through a visible sequence or cursor surface\n- replay starts from an explicit cursor, offset, or equivalent last-seen marker rather than hidden memory\n- acknowledgment is explicit and inspectable instead of being implied by silence\n- mailbox transport stays smaller than a full messaging platform, orchestration stack, or handoff-governance contract\n- transcript packaging, history indexing, and handoff authorization remain separate sibling concerns\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../../history/versionable-session-transcripts/TECHNIQUE.md), this technique owns live mailbox transport with replay and acknowledgment rather than post-capture transcript packaging. Unlike [AOA-T-0053](../../../history/local-first-session-index/TECHNIQUE.md), it keeps active channel traffic inspectable but does not build a derived search index over saved history. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide when a receiving agent is permitted to continue, stop, return, or escalate."
+          "content_markdown": "- channels are named explicitly and remain stable enough for replay\n- message order is reviewable through a visible sequence or cursor surface\n- replay starts from an explicit cursor, offset, or equivalent last-seen marker rather than hidden memory\n- acknowledgment is explicit and inspectable instead of being implied by silence\n- mailbox transport stays smaller than a full messaging platform, orchestration stack, or handoff-governance contract\n- transcript packaging, history indexing, and handoff authorization remain separate sibling concerns\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../../history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), this technique owns live mailbox transport with replay and acknowledgment rather than post-capture transcript packaging. Unlike [AOA-T-0053](../../../history/history-artifacts/local-first-session-index/TECHNIQUE.md), it keeps active channel traffic inspectable but does not build a derived search index over saved history. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide when a receiving agent is permitted to continue, stop, return, or escalate."
         },
         {
           "key": "risks",
@@ -4651,7 +4651,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the handoff artifact exists before compaction or rollover completes\n- the artifact distinguishes completed work, in-progress or blocked work, and the next intended step\n- the artifact includes enough concrete references that continuation does not depend on hidden memory\n- the next session is expected to read the artifact before continuing\n- the technique stays smaller than transcript packaging, mailbox transport, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../../history/versionable-session-transcripts/TECHNIQUE.md), this technique does not package an already-saved transcript into a readable history artifact. Unlike [AOA-T-0045](../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller witness trace for later audit. Unlike [AOA-T-0054](../../review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md), it records pre-compaction continuation state rather than reloading skills after compaction. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own delivery, replay, or acknowledgment semantics for the handoff packet. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules across a general phase system."
+          "content_markdown": "- the handoff artifact exists before compaction or rollover completes\n- the artifact distinguishes completed work, in-progress or blocked work, and the next intended step\n- the artifact includes enough concrete references that continuation does not depend on hidden memory\n- the next session is expected to read the artifact before continuing\n- the technique stays smaller than transcript packaging, mailbox transport, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../../history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), this technique does not package an already-saved transcript into a readable history artifact. Unlike [AOA-T-0045](../../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller witness trace for later audit. Unlike [AOA-T-0054](../../review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md), it records pre-compaction continuation state rather than reloading skills after compaction. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own delivery, replay, or acknowledgment semantics for the handoff packet. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules across a general phase system."
         },
         {
           "key": "risks",
@@ -4815,7 +4815,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- concrete handoff claims are checked against visible git evidence before continuation\n- the verification output distinguishes verified, mismatched, and unverifiable claims explicitly\n- the git evidence used for the check stays reviewable enough that another reader can understand the verdict\n- continuation trusts repo-backed state over handoff narration when they diverge\n- the technique stays smaller than generic code review, witness artifacts, and broad provenance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not create the handoff packet; it verifies packet claims after the packet already exists. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record that a receiver accepted the handoff; it checks whether the handoff's concrete repo claims are true. Unlike [AOA-T-0045](../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state deltas. It also stays smaller than a generic code-review workflow because it only verifies handoff claims that matter for immediate continuation."
+          "content_markdown": "- concrete handoff claims are checked against visible git evidence before continuation\n- the verification output distinguishes verified, mismatched, and unverifiable claims explicitly\n- the git evidence used for the check stays reviewable enough that another reader can understand the verdict\n- continuation trusts repo-backed state over handoff narration when they diverge\n- the technique stays smaller than generic code review, witness artifacts, and broad provenance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not create the handoff packet; it verifies packet claims after the packet already exists. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record that a receiver accepted the handoff; it checks whether the handoff's concrete repo claims are true. Unlike [AOA-T-0045](../../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state deltas. It also stays smaller than a generic code-review workflow because it only verifies handoff claims that matter for immediate continuation."
         },
         {
           "key": "risks",
@@ -5354,7 +5354,7 @@
     {
       "id": "AOA-T-0066",
       "name": "transcript-replay-artifact",
-      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5436,7 +5436,7 @@
     {
       "id": "AOA-T-0067",
       "name": "transcript-linked-code-lineage",
-      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5471,7 +5471,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- code anchors link back to already-saved evidence artifacts\n- the lineage link is stable enough that another reviewer can reopen the source evidence later\n- saved session evidence stays authoritative when lineage is inspected\n- the technique stays smaller than generic repo analytics, hosted search, or memory-product doctrine\n- the technique does not own performance telemetry, authorship scoring, or free-form Q and A products\n\nRelationship to adjacent techniques: unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), this technique does not preserve a fuller run artifact with ordered steps and state deltas; it links code anchors back to evidence that already exists. Unlike [AOA-T-0059](../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md), it does not verify present-tense handoff claims against git state; it preserves lineage from code history back to prior evidence. It also stays smaller than generic blame analytics because the center of gravity is the stable code-to-evidence link itself."
+          "content_markdown": "- code anchors link back to already-saved evidence artifacts\n- the lineage link is stable enough that another reviewer can reopen the source evidence later\n- saved session evidence stays authoritative when lineage is inspected\n- the technique stays smaller than generic repo analytics, hosted search, or memory-product doctrine\n- the technique does not own performance telemetry, authorship scoring, or free-form Q and A products\n\nRelationship to adjacent techniques: unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), this technique does not preserve a fuller run artifact with ordered steps and state deltas; it links code anchors back to evidence that already exists. Unlike [AOA-T-0059](../../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md), it does not verify present-tense handoff claims against git state; it preserves lineage from code history back to prior evidence. It also stays smaller than generic blame analytics because the center of gravity is the stable code-to-evidence link itself."
         },
         {
           "key": "risks",
@@ -5553,7 +5553,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the gate sits directly in front of mutating execution\n- non-allow verdicts block side effects rather than merely warning\n- one evidence artifact survives the verdict for later review\n- explicit allow is required for execution to continue\n- the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics\n- the evidence artifact supports review but does not itself become the whole trace or governance system\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself."
+          "content_markdown": "- the gate sits directly in front of mutating execution\n- non-allow verdicts block side effects rather than merely warning\n- one evidence artifact survives the verdict for later review\n- explicit allow is required for execution to continue\n- the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics\n- the evidence artifact supports review but does not itself become the whole trace or governance system\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself."
         },
         {
           "key": "risks",
@@ -6045,7 +6045,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- auth posture stays separate from normalization\n- message provenance remains visible\n- the local store is resumable\n- normalized objects preserve reply edges and media references\n- the technique does not auto-promote content into memory, canon, or downstream action policy\n- downstream systems consume one stable local object contract rather than donor-specific API or export internals\n\nRelationship to adjacent techniques: unlike [AOA-T-0026](../../../history/session-capture-as-repo-artifact/TECHNIQUE.md), this bundle does not claim general project-scoped history capture ownership; it owns Telegram-source normalization into a resumable local store. Unlike `telegram-account-auth-and-session-bridge`, it does not handle credentials, session conversion, or bootstrap approval. It also stays smaller than transcript packaging, recall, or memory-ingestion surfaces because it stops at normalized storage."
+          "content_markdown": "- auth posture stays separate from normalization\n- message provenance remains visible\n- the local store is resumable\n- normalized objects preserve reply edges and media references\n- the technique does not auto-promote content into memory, canon, or downstream action policy\n- downstream systems consume one stable local object contract rather than donor-specific API or export internals\n\nRelationship to adjacent techniques: unlike [AOA-T-0026](../../../history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md), this bundle does not claim general project-scoped history capture ownership; it owns Telegram-source normalization into a resumable local store. Unlike `telegram-account-auth-and-session-bridge`, it does not handle credentials, session conversion, or bootstrap approval. It also stays smaller than transcript packaging, recall, or memory-ingestion surfaces because it stops at normalized storage."
         },
         {
           "key": "risks",
@@ -6127,7 +6127,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- invocation is explicit and post-session\n- the technique starts from a reviewed artifact rather than raw live session state\n- one candidate record names one reusable unit\n- every kept candidate keeps visible evidence anchors\n- the donor pack stays smaller than owner placement, promotion verdict, or writeback\n- session history remains source evidence, not memory canon or instruction authority\n- derivative routing or graph surfaces do not become first-authoring targets for source-owned meaning\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique assumes the transcript or equivalent reviewed artifact already exists and only owns donor extraction after review. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide the final primary owner layer for each candidate. It should also stay narrower than final quest promotion triage because it can emit several candidate units from one session instead of one promotion verdict."
+          "content_markdown": "- invocation is explicit and post-session\n- the technique starts from a reviewed artifact rather than raw live session state\n- one candidate record names one reusable unit\n- every kept candidate keeps visible evidence anchors\n- the donor pack stays smaller than owner placement, promotion verdict, or writeback\n- session history remains source evidence, not memory canon or instruction authority\n- derivative routing or graph surfaces do not become first-authoring targets for source-owned meaning\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), this technique assumes the transcript or equivalent reviewed artifact already exists and only owns donor extraction after review. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide the final primary owner layer for each candidate. It should also stay narrower than final quest promotion triage because it can emit several candidate units from one session instead of one promotion verdict."
         },
         {
           "key": "risks",

@@ -759,7 +759,7 @@
           "domain": "history",
           "status": "canonical",
           "summary": "Package already-saved AI session transcripts as readable, versionable Markdown artifacts so review, handoff, and selective sharing stay possible without reopening capture semantics or turning transcript history into memory or instruction authority.",
-          "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+          "technique_path": "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md",
           "kind": "artifact"
         },
         {
@@ -768,7 +768,7 @@
           "domain": "history",
           "status": "canonical",
           "summary": "Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.",
-          "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+          "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
           "kind": "artifact"
         },
         {
@@ -777,7 +777,7 @@
           "domain": "history",
           "status": "promoted",
           "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
-          "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+          "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
           "kind": "artifact"
         },
         {
@@ -786,7 +786,7 @@
           "domain": "history",
           "status": "promoted",
           "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
-          "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+          "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
           "kind": "artifact"
         },
         {
@@ -795,7 +795,7 @@
           "domain": "history",
           "status": "promoted",
           "summary": "Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine.",
-          "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+          "technique_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
           "kind": "artifact"
         },
         {
@@ -804,7 +804,7 @@
           "domain": "history",
           "status": "promoted",
           "summary": "Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine.",
-          "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+          "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
           "kind": "artifact"
         }
       ]

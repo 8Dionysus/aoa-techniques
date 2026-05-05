@@ -91,7 +91,7 @@ Link code history back to saved session evidence so reviewers can reopen the ori
 - the technique stays smaller than generic repo analytics, hosted search, or memory-product doctrine
 - the technique does not own performance telemetry, authorship scoring, or free-form Q and A products
 
-Relationship to adjacent techniques: unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), this technique does not preserve a fuller run artifact with ordered steps and state deltas; it links code anchors back to evidence that already exists. Unlike [AOA-T-0059](../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md), it does not verify present-tense handoff claims against git state; it preserves lineage from code history back to prior evidence. It also stays smaller than generic blame analytics because the center of gravity is the stable code-to-evidence link itself.
+Relationship to adjacent techniques: unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), this technique does not preserve a fuller run artifact with ordered steps and state deltas; it links code anchors back to evidence that already exists. Unlike [AOA-T-0059](../../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md), it does not verify present-tense handoff claims against git state; it preserves lineage from code history back to prior evidence. It also stays smaller than generic blame analytics because the center of gravity is the stable code-to-evidence link itself.
 
 ## Risks
 

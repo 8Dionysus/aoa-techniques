@@ -801,7 +801,6 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
         ).read_text(encoding="utf-8")
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
-        flat_distillation_roadmap = " ".join(distillation_roadmap.split())
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
         ).read_text(encoding="utf-8")
@@ -3725,18 +3724,37 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             changelog,
         )
 
-        for current_path in (
-            "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
-            "techniques/history/local-first-session-index/TECHNIQUE.md",
-            "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
-            "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
-            "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
-            "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+        for old_path, current_path in (
+            (
+                "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+                "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/local-first-session-index/TECHNIQUE.md",
+                "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+                "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+                "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+                "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+                "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
+            ),
         ):
             with self.subTest(current_path=current_path):
+                self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / current_path).is_file())
 
-        self.assertFalse((REPO_ROOT / "techniques" / "history" / "history-artifacts").exists())
+        self.assertTrue((REPO_ROOT / "techniques" / "history" / "history-artifacts").is_dir())
 
     def test_history_artifacts_direct_read_review_accepts_fourteenth_pilot(
         self,
@@ -3830,9 +3848,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "Run the `history-artifacts` direct-read migration review",
             root_roadmap,
         )
-        self.assertIn("Run the fourteenth pilot migration", root_roadmap)
+        self.assertIn("Review the landed `history-artifacts` pilot", root_roadmap)
         self.assertIn("History-Artifacts Direct-Read Migration Review", tree_contract)
-        self.assertIn("move exactly those six bundles", tree_contract)
+        self.assertIn(
+            "fourteenth pilot migration moves exactly those six bundles",
+            tree_contract,
+        )
         self.assertIn(
             "accepted the `history-artifacts` direct-read migration review",
             changelog,
@@ -3865,10 +3886,110 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ),
         ):
             with self.subTest(current_path=current_path):
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
 
-        self.assertFalse((REPO_ROOT / "techniques" / "history" / "history-artifacts").exists())
+        self.assertTrue((REPO_ROOT / "techniques" / "history" / "history-artifacts").is_dir())
+
+    def test_history_artifacts_tree_pilot_migration_is_recorded(self) -> None:
+        history_agents = (
+            REPO_ROOT / "techniques" / "history" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        receipt = (
+            REPO_ROOT
+            / "legacy"
+            / "receipts"
+            / "2026-05-05-history-artifacts-tree-pilot.md"
+        ).read_text(encoding="utf-8")
+        legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
+            encoding="utf-8"
+        )
+        receipts_index = (
+            REPO_ROOT / "legacy" / "receipts" / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        flat_history_distillation_roadmap = " ".join(distillation_roadmap.split())
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("history-artifacts/", history_agents)
+        self.assertIn("memory objects and recall surfaces still stay outside", history_agents)
+        self.assertIn("private transcripts", history_agents)
+        self.assertIn("transcript-linked-code-lineage", history_agents)
+        self.assertIn("history-artifacts migration: landed", ingress)
+        self.assertIn("History-Artifacts Tree Pilot Receipt", receipt)
+        self.assertIn("They did not pass through root `legacy/`.", receipt)
+        self.assertIn("Do not add `tree_path` frontmatter.", receipt)
+        self.assertIn("six separate leaf", receipt)
+        self.assertIn("generic history platform", receipt)
+        self.assertIn("fourteen receipts", legacy_index)
+        self.assertIn("2026-05-05-history-artifacts-tree-pilot.md", legacy_index)
+        self.assertIn("fourteen technique tree pilot receipts", receipts_index)
+        self.assertIn("History-artifacts tree pilot migration", landing_log)
+        self.assertIn("kept capture, transcript packaging", landing_log)
+        self.assertIn(
+            "fourteenth pilot migration is now landed",
+            flat_history_distillation_roadmap,
+        )
+        self.assertIn("fourteenth landed pilot moved", root_roadmap)
+        self.assertIn("Review the landed `history-artifacts` pilot", root_roadmap)
+        self.assertIn("2026-05-05-history-artifacts-tree-pilot", tree_contract)
+        self.assertIn("moved `AOA-T-0044`", changelog)
+
+        for technique_id, old_path, new_path in (
+            (
+                "AOA-T-0044",
+                "techniques/history/versionable-session-transcripts/",
+                "techniques/history/history-artifacts/versionable-session-transcripts/",
+            ),
+            (
+                "AOA-T-0053",
+                "techniques/history/local-first-session-index/",
+                "techniques/history/history-artifacts/local-first-session-index/",
+            ),
+            (
+                "AOA-T-0026",
+                "techniques/history/session-capture-as-repo-artifact/",
+                "techniques/history/history-artifacts/session-capture-as-repo-artifact/",
+            ),
+            (
+                "AOA-T-0045",
+                "techniques/history/witness-trace-as-reviewable-artifact/",
+                "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/",
+            ),
+            (
+                "AOA-T-0066",
+                "techniques/history/transcript-replay-artifact/",
+                "techniques/history/history-artifacts/transcript-replay-artifact/",
+            ),
+            (
+                "AOA-T-0067",
+                "techniques/history/transcript-linked-code-lineage/",
+                "techniques/history/history-artifacts/transcript-linked-code-lineage/",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, receipt)
+                self.assertIn(old_path, receipt)
+                self.assertIn(new_path, receipt)
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

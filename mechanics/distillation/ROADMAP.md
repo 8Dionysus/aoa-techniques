@@ -198,9 +198,13 @@
    `AOA-T-0067` while keeping memory doctrine, instruction authority, private
    transcript publication, hidden capture policy, hosted viewer product
    doctrine, repo analytics, retention policy, recall substrate, proof
-   authority, and neighboring shelves outside the move. The next bounded step
-   is the fourteenth pilot migration into
-   `techniques/history/history-artifacts/`.
+   authority, and neighboring shelves outside the move. The fourteenth pilot
+   migration is now landed exactly for those six bundles under
+   `techniques/history/history-artifacts/`, with the history route card, root
+   legacy receipt accounting, link repair, generated rebuilds, and
+   release-check validation in the same wave. The next bounded step is the
+   landed-pilot review for `history-artifacts` before choosing any fifteenth
+   shelf.
 
 ## Hold line
 

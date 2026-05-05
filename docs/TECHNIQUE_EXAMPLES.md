@@ -656,42 +656,42 @@ See also:
 
 ## `history`
 
-### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
+### [AOA-T-0044](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Versionable Session Transcripts | `present` | `techniques/history/versionable-session-transcripts/examples/minimal-versionable-session-transcripts.md` | [TECHNIQUE.md](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) |
+| Minimal Versionable Session Transcripts | `present` | `techniques/history/history-artifacts/versionable-session-transcripts/examples/minimal-versionable-session-transcripts.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) |
 
-### [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal local-first session index | `present` | `techniques/history/local-first-session-index/examples/minimal-local-first-session-index.md` | [TECHNIQUE.md](../techniques/history/local-first-session-index/TECHNIQUE.md) |
-
-### [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
+### [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Local-First Session History | `present` | `techniques/history/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
-| Minimal Session Capture As Repo Artifact | `present` | `techniques/history/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md` | [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) |
+| Minimal local-first session index | `present` | `techniques/history/history-artifacts/local-first-session-index/examples/minimal-local-first-session-index.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 
-### [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Witness Trace As Reviewable Artifact | `present` | `techniques/history/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md` | [TECHNIQUE.md](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
-
-### [AOA-T-0066](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+### [AOA-T-0026](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal transcript-replay-artifact | `present` | `techniques/history/transcript-replay-artifact/examples/minimal-transcript-replay-artifact.md` | [TECHNIQUE.md](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) |
+| Concrete Local-First Session History | `present` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
+| Minimal Session Capture As Repo Artifact | `present` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
-### [AOA-T-0067](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal transcript-linked-code-lineage | `present` | `techniques/history/transcript-linked-code-lineage/examples/minimal-transcript-linked-code-lineage.md` | [TECHNIQUE.md](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) |
+| Minimal Witness Trace As Reviewable Artifact | `present` | `techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal transcript-replay-artifact | `present` | `techniques/history/history-artifacts/transcript-replay-artifact/examples/minimal-transcript-replay-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
+
+### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal transcript-linked-code-lineage | `present` | `techniques/history/history-artifacts/transcript-linked-code-lineage/examples/minimal-transcript-linked-code-lineage.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## Boundaries
 

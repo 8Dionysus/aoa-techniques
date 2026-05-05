@@ -55,5 +55,5 @@ Relevant local candidate and technique surfaces:
 - [receipt-confirmed-handoff-packet](../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md)
 - [episode-bounded-agent-loop](../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md)
 - [checkpoint-bound-self-repair](../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md)
-- [session-capture-as-repo-artifact](../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-- [witness-trace-as-reviewable-artifact](../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
+- [session-capture-as-repo-artifact](../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
+- [witness-trace-as-reviewable-artifact](../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md)

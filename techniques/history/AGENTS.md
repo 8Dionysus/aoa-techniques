@@ -6,7 +6,16 @@ Guidance for coding agents and humans working under `techniques/history/`.
 
 This domain stores reusable techniques for preserving reviewable history, witness material, and bounded session capture.
 
-Representative bundles here include `session-capture-as-repo-artifact`, `versionable-session-transcripts`, and `witness-trace-as-reviewable-artifact`.
+Current compact shelf:
+
+- `history-artifacts/`: session capture, transcript packaging, derivative
+  local indexing, witness trace review, transcript replay, and code-lineage
+  links over already-saved history artifacts.
+
+Leaf bundles stay separate: `session-capture-as-repo-artifact`,
+`versionable-session-transcripts`, `local-first-session-index`,
+`witness-trace-as-reviewable-artifact`, `transcript-replay-artifact`, and
+`transcript-linked-code-lineage`.
 
 ## Domain rules
 

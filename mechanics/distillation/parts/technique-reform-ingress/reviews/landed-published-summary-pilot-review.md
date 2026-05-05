@@ -57,12 +57,12 @@ six history bundles directly before any path movement.
 - [Landed evaluation-chain pilot review](landed-evaluation-chain-pilot-review.md)
 - [Published-summary semantic review](../../../../../docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
 - [Published-summary shadow review](../../../../../docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
-- [AOA-T-0044 versionable-session-transcripts](../../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
-- [AOA-T-0053 local-first-session-index](../../../../../techniques/history/local-first-session-index/TECHNIQUE.md)
-- [AOA-T-0026 session-capture-as-repo-artifact](../../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
-- [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
-- [AOA-T-0066 transcript-replay-artifact](../../../../../techniques/history/transcript-replay-artifact/TECHNIQUE.md)
-- [AOA-T-0067 transcript-linked-code-lineage](../../../../../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md)
+- [AOA-T-0044 versionable-session-transcripts](../../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md)
+- [AOA-T-0053 local-first-session-index](../../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md)
+- [AOA-T-0026 session-capture-as-repo-artifact](../../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
+- [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
+- [AOA-T-0066 transcript-replay-artifact](../../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md)
+- [AOA-T-0067 transcript-linked-code-lineage](../../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read

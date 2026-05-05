@@ -103,8 +103,8 @@ python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/te
 | `skill-vs-command-boundary` | [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | `docs` | Wave B opening step now lands as a bounded docs technique for keeping reusable skill meaning distinct from user-facing command wrappers without widening into propagation, marketplace policy, routing, or slash-command product semantics. |
 | `upstream-skill-health-checking` | [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | `evaluation` | Wave B third step now lands as a bounded source-readiness technique for checking upstream availability and manifest shape before selector surfacing without widening into monitoring, registry governance, or security scanning doctrine. |
 | `multi-source-primary-input-provenance` | [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | `docs` | Wave B closing step now lands as a bounded provenance-ordering technique for keeping one combined surface explicit about primary versus supporting inputs without widening into note-provenance lift, relation semantics, ranking, or bridge architecture. |
-| `versionable-session-transcripts` | [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md) | `history` | Wave C first step now lands as a bounded post-capture transcript-packaging technique for readable Markdown export, review, and commit without reopening capture semantics or widening into memory or instruction authority. |
-| `witness-trace-as-reviewable-artifact` | [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | `history` | Wave C closing step now lands as a bounded witness-export and review technique for structured trace inspection, citation, and summary without widening into runtime witness behavior, memory writeback, or a new memory-object kind. |
+| `versionable-session-transcripts` | [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) | `history` | Wave C first step now lands as a bounded post-capture transcript-packaging technique for readable Markdown export, review, and commit without reopening capture semantics or widening into memory or instruction authority. |
+| `witness-trace-as-reviewable-artifact` | [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | `history` | Wave C closing step now lands as a bounded witness-export and review technique for structured trace inspection, citation, and summary without widening into runtime witness behavior, memory writeback, or a new memory-object kind. |
 
 ## Future Import Here
 
@@ -132,9 +132,9 @@ Keep these compact anchors active:
   as the external companion; keep curation, boundary, upstream-readiness, and
   primary-input provenance separate from registry governance, routing policy,
   retrieval ranking, and graph semantics.
-- Wave C landed [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
-  and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md);
-  [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- Wave C landed [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md)
+  and [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md);
+  [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
   still owns session capture, persistence, and artifact-layer availability.
 
 If future work needs exact wave execution order, use the preserved raw receipt.
