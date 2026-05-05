@@ -399,8 +399,19 @@ completes the previous step to review the landed `history-artifacts` pilot
 before choosing any fifteenth shelf, and chooses
 `recovery/antifragility-recovery` for the next direct-read migration review.
 
-The next reform slice should run the `recovery/antifragility-recovery`
-direct-read migration review before any fifteenth shelf migration.
+The fifteenth direct-read review is
+[Antifragility-Recovery Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/antifragility-recovery-direct-read-migration-review.md).
+It accepts exactly `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098`
+as the next bounded migration pilot while keeping the review non-mutating,
+preserving `AOA-T-0098` as `domain: validation-patterns` and
+`kind: validation`, and leaving Agents-of-Abyss Antifragility doctrine,
+incident response doctrine, runtime ownership, proof authority, rollback
+policy, deployment lifecycle law, service catalog ownership, KAG authority,
+stats meaning, playbook choreography, and generic resilience platform
+authority outside the shelf.
+
+The next reform slice should run the fifteenth pilot migration for exactly
+those four bundles before choosing any sixteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

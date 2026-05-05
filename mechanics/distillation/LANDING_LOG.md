@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Antifragility-recovery direct-read migration review
+
+Changed:
+
+- added
+  [antifragility-recovery-direct-read-migration-review](parts/technique-reform-ingress/reviews/antifragility-recovery-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`,
+  and `AOA-T-0098`
+- accepted `recovery/antifragility-recovery` as the fifteenth bounded
+  migration pilot without moving files
+- kept `AOA-T-0098` readable as a validation-shaped leaf even though the
+  proposed path is under `recovery/`
+- kept Agents-of-Abyss Antifragility doctrine, via negativa law,
+  fragile-pattern source truth, incident response doctrine, runtime
+  self-healing, runtime ownership, proof authority, rollback policy,
+  deployment lifecycle law, service catalog ownership, KAG authority, stats
+  meaning, playbook choreography, and generic resilience platform authority
+  outside the shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fifteenth shelf migration landed from the review alone
+
 ## 2026-05-05 - Landed history-artifacts pilot review
 
 Changed:

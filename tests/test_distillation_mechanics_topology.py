@@ -4120,6 +4120,134 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
 
         self.assertTrue((REPO_ROOT / "techniques" / "history" / "history-artifacts").is_dir())
 
+    def test_antifragility_recovery_direct_read_review_accepts_fifteenth_pilot(
+        self,
+    ) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "antifragility-recovery-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Antifragility-Recovery Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-fifteenth-migration-pilot", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not\n`tree_path` frontmatter", review)
+        self.assertIn("Accept `recovery/antifragility-recovery`", review)
+        self.assertIn("Direct Bundle Read", review)
+        self.assertIn("Why The Shelf Holds", review)
+        self.assertIn("Cross-Domain Decision", review)
+        self.assertIn("Recovery Trunk Fit", review)
+        self.assertIn("Boundary Watch Accepted", review)
+        self.assertIn("Proposed Move", review)
+
+        for technique_id in (
+            "AOA-T-0097",
+            "AOA-T-0099",
+            "AOA-T-0100",
+            "AOA-T-0098",
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+
+        for current_path in (
+            "techniques/system-recovery/degrade-reground-recover/",
+            "techniques/system-recovery/isolated-service-stop-on-shared-substrate/",
+            "techniques/system-recovery/stress-receipt-reground-closeout/",
+            "techniques/validation-patterns/receipt-first-failure-analysis/",
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertIn(current_path, review)
+
+        self.assertIn("techniques/recovery/antifragility-recovery/", review)
+        self.assertIn("Move exactly these four bundles", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("Do not add `tree_path`", review)
+        self.assertIn("Do not change `domain` or `kind`", review)
+        self.assertIn("Do not erase `AOA-T-0098` as a validation pattern", review)
+        self.assertIn("Run the fifteenth pilot migration", review)
+        self.assertIn(
+            "antifragility-recovery-direct-read-migration-review",
+            reviews_index,
+        )
+        self.assertIn("antifragility-recovery direct-read review: landed", ingress)
+        self.assertIn("accepted-for-fifteenth-migration-pilot", ingress)
+        self.assertIn(
+            "Antifragility-recovery direct-read migration review",
+            landing_log,
+        )
+        self.assertIn("validation-shaped leaf", landing_log)
+        self.assertIn("accepted-for-fifteenth-migration-pilot", distillation_roadmap)
+        self.assertIn("AOA-T-0098` as `domain: validation-patterns`", distillation_roadmap)
+        self.assertIn(
+            "Run the `recovery/antifragility-recovery` direct-read migration review",
+            root_roadmap,
+        )
+        self.assertIn("Move exactly `AOA-T-0097`", root_roadmap)
+        self.assertIn(
+            "Antifragility-Recovery Direct-Read Migration Review",
+            tree_contract,
+        )
+        self.assertIn("preserving `AOA-T-0098`", tree_contract)
+        self.assertIn(
+            "accepted the `antifragility-recovery` direct-read migration review",
+            changelog,
+        )
+
+        for current_path, future_path in (
+            (
+                "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
+            ),
+            (
+                "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+            ),
+            (
+                "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+            ),
+            (
+                "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT
