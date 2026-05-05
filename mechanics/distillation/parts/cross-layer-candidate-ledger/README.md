@@ -95,7 +95,7 @@ python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/te
 
 | candidate | landed technique | domain | landing note |
 |---|---|---|---|
-| `profile-preset-composition` | [AOA-T-0035](../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md) | `docs` | Wave A lead now lands as a bounded docs technique for module-profile-preset composition without widening into render, doctor, or lifecycle semantics. |
+| `profile-preset-composition` | [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | `docs` | Wave A lead now lands as a bounded docs technique for module-profile-preset composition without widening into render, doctor, or lifecycle semantics. |
 | `render-truth-before-startup` | [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | Wave A second step now lands as a bounded pre-start rendered-truth workflow without widening into readiness checks, lifecycle control, or config publication. |
 | `contextual-host-doctor` | [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | Wave A third step now lands as a bounded selector-aware preflight diagnostic without widening into monitoring, smoke, or lifecycle control. |
 | `one-command-service-lifecycle` | [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | Wave A external anchor now lands as a bounded local lifecycle technique for one-entrypoint startup and shutdown without widening into launcher doctrine, install flows, or memory semantics. |
@@ -118,7 +118,7 @@ are preserved in the pre-prune receipt.
 
 Keep these compact anchors active:
 
-- Wave A landed [AOA-T-0035](../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md),
+- Wave A landed [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md),
   [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md),
   [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md),
   [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md),

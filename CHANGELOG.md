@@ -79,6 +79,10 @@ The format is intentionally simple and human-first.
   `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`,
   `AOA-T-0030`, and `AOA-T-0035` as the fifth tree pilot while keeping the
   review itself non-mutating
+- moved `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`,
+  `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into
+  `techniques/instruction/instruction-surface/` while keeping `domain`, `kind`,
+  IDs, status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

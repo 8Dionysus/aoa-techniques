@@ -35,13 +35,13 @@ generated surfaces, and validation move together.
 
 ## Sources Read
 
-- [AOA-T-0012 deterministic-context-composition](../../../../../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
-- [AOA-T-0013 single-source-rule-distribution](../../../../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
-- [AOA-T-0024 upstream-mirroring-with-provenance](../../../../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
-- [AOA-T-0027 cross-agent-skill-propagation](../../../../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
-- [AOA-T-0029 nested-rule-loading](../../../../../techniques/docs/nested-rule-loading/TECHNIQUE.md)
-- [AOA-T-0030 fragmented-agent-context](../../../../../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
-- [AOA-T-0035 profile-preset-composition](../../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md)
+- [AOA-T-0012 deterministic-context-composition](../../../../../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md)
+- [AOA-T-0013 single-source-rule-distribution](../../../../../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md)
+- [AOA-T-0024 upstream-mirroring-with-provenance](../../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md)
+- [AOA-T-0027 cross-agent-skill-propagation](../../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md)
+- [AOA-T-0029 nested-rule-loading](../../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md)
+- [AOA-T-0030 fragmented-agent-context](../../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md)
+- [AOA-T-0035 profile-preset-composition](../../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md)
 - canonical-readiness notes for `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
   `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035`
 - checklists for all seven bundles

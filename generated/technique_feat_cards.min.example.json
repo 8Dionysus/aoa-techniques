@@ -40,7 +40,7 @@
       "feat_id": "feat.AOA-T-0013",
       "technique_id": "AOA-T-0013",
       "technique_name": "single-source-rule-distribution",
-      "source_technique_ref": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "source_technique_ref": "techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md",
       "summary": "Guardrail feat that keeps one canonical rule source legible while distributing safe reader-facing copies.",
       "feat_kind": "guardrail",
       "source_status": "canonical",

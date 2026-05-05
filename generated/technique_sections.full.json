@@ -926,7 +926,7 @@
     {
       "id": "AOA-T-0012",
       "name": "deterministic-context-composition",
-      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1008,7 +1008,7 @@
     {
       "id": "AOA-T-0013",
       "name": "single-source-rule-distribution",
-      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1910,7 +1910,7 @@
     {
       "id": "AOA-T-0024",
       "name": "upstream-mirroring-with-provenance",
-      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2156,7 +2156,7 @@
     {
       "id": "AOA-T-0027",
       "name": "cross-agent-skill-propagation",
-      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2320,7 +2320,7 @@
     {
       "id": "AOA-T-0029",
       "name": "nested-rule-loading",
-      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2402,7 +2402,7 @@
     {
       "id": "AOA-T-0030",
       "name": "fragmented-agent-context",
-      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2812,7 +2812,7 @@
     {
       "id": "AOA-T-0035",
       "name": "profile-preset-composition",
-      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",

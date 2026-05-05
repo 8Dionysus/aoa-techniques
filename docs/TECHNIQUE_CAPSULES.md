@@ -784,7 +784,7 @@ See also:
 - Validate by: README remains short and human-facing; MANIFEST, when used, remains a compact snapshot rather than a long log; detailed run...
 - Source: [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md)
 
-### [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
+### [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
 
 - Summary: Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability.
 - Intent: Keep agent context scalable by composing it from smaller source fragments into a stable...
@@ -795,9 +795,9 @@ See also:
 - Core contract: source fragments remain the canonical editable inputs; the output artifact is generated and should not become the hand-edited...
 - Main risk: ordering and priority rules become implicit, so the generated artifact changes in ways contributors cannot predict from the...
 - Validate by: the generated artifact can be recreated from source fragments without manual merge steps; higher-priority fragments surface earlier and stable...
-- Source: [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md)
 
-### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
+### [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
 
 - Summary: Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth.
 - Intent: Reduce drift and duplicated maintenance by keeping one canonical rule source and propagating it...
@@ -808,7 +808,7 @@ See also:
 - Core contract: one canonical rule source owns the shared instruction content; target instruction files are managed or derived outputs, not...
 - Main risk: target instruction surfaces drift away from the canonical rule source because local edits or wrapper changes are applied...
 - Validate by: one canonical rule source is named explicitly; at least two target instruction surfaces receive the same shared rule core...
-- Source: [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md)
 
 ### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
@@ -901,7 +901,7 @@ See also:
 - Validate by: the source bundle keeps Failure modes, Negative effects, Misuse patterns, Detection signals, and Mitigations inside ## Risks; caution lookup...
 - Source: [TECHNIQUE.md](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 
-### [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
+### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
 
 - Summary: Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source.
 - Intent: Reuse externally maintained content in a local curated collection without losing origin ownership, attribution...
@@ -912,7 +912,7 @@ See also:
 - Core contract: the upstream source remains the canonical origin of the mirrored content; the local copy stays subordinate to explicit...
 - Main risk: mirrored content drifts because local edits accumulate without a clear resync path back to upstream.
 - Validate by: each mirrored item is named in one explicit source manifest; the local mirror carries adjacent provenance or attribution metadata...
-- Source: [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md)
 
 ### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
 
@@ -927,7 +927,7 @@ See also:
 - Validate by: one capability has one explicit versioned spec; the spec names inputs, outputs, and invariants clearly enough to review without...
 - Source: [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
 
-### [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
+### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
 
 - Summary: Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.
 - Intent: Keep one canonical skill or rule source and propagate it to multiple agent-facing targets...
@@ -938,9 +938,9 @@ See also:
 - Core contract: one canonical skill or rule source owns the shared meaning; target files are managed or derived outputs, not...
 - Main risk: target surfaces drift because local edits are applied without flowing back through the canonical source.
 - Validate by: one canonical skill or rule source is named explicitly; at least two agent-facing targets receive the same shared core...
-- Source: [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md)
 
-### [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
+### [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
 
 - Summary: Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.
 - Intent: Load rule content through a hierarchy of layers so shared defaults, scoped overrides, and...
@@ -951,9 +951,9 @@ See also:
 - Core contract: one canonical source owns the shared meaning; nested layers are scoped additions, not independent canonical homes.
 - Main risk: precedence becomes implicit, so nested layers override parent meaning in ways reviewers cannot predict.
 - Validate by: one canonical source is still the owner of shared meaning; nested layers resolve in the documented precedence order; removing...
-- Source: [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md)
 
-### [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
+### [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
 
 - Summary: Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.
 - Intent: Keep agent context authored in smaller bounded fragments so source partitioning, local ownership, and...
@@ -964,7 +964,7 @@ See also:
 - Core contract: fragments remain the editable source of truth for the partitioned context layer; each fragment carries bounded scope rather...
 - Main risk: fragment boundaries become arbitrary, so the context is split across files without clearer ownership.
 - Validate by: the fragment set is the editable source of truth; each fragment has bounded scope that a reviewer can explain...
-- Source: [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md)
 
 ### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
@@ -979,7 +979,7 @@ See also:
 - Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the not-chosen option and the...
 - Source: [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md)
 
-### [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
+### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 
 - Summary: Compose small reusable profiles into named presets so runtime posture stays reviewable without flattening composition into one opaque config or launcher doctrine.
 - Intent: Keep runtime posture reviewable by separating atomic modules, ordered profiles, and named presets into...
@@ -990,7 +990,7 @@ See also:
 - Core contract: the module, profile, and preset layers each have explicit ownership; profiles own ordered module lists; presets own ordered...
 - Main risk: unrelated concerns get stuffed into one oversized profile or preset.
 - Validate by: module, profile, and preset ownership are all explicit; preset-expanded profiles resolve before direct profile additions; duplicate profiles and modules...
-- Source: [TECHNIQUE.md](../techniques/docs/profile-preset-composition/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md)
 
 ### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
 

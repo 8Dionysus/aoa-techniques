@@ -97,9 +97,9 @@ Nearest overlap watch:
 
 | seed candidate | donor | suggested technique name | tentative domain | overlap watch |
 |---|---|---|---|---|
-| `external_sync_manifest` | `n-skills` | `external-sync-manifest` | `docs` | too close to [AOA-T-0024](../../../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) unless sync control separates from provenance-backed mirroring |
+| `external_sync_manifest` | `n-skills` | `external-sync-manifest` | `docs` | too close to [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) unless sync control separates from provenance-backed mirroring |
 | `project_memory_bootstrap` | `OpenMemory-Code` | `project-history-bootstrap` | `history` | too close to [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) unless it narrows to history bootstrap without memory substrate semantics |
-| `context_injection_for_coding_agents` | `agents-md` | `bounded-context-injection-for-coding-agents` | `docs` | overlaps [AOA-T-0012](../../../../techniques/docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) until injection becomes the distinct contract |
+| `context_injection_for_coding_agents` | `agents-md` | `bounded-context-injection-for-coding-agents` | `docs` | overlaps [AOA-T-0012](../../../../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) until injection becomes the distinct contract |
 | `single_step_agent` | `qqqa` | `single-step-confirmed-agent-action` | `agent-workflows` | too close to [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) unless the center becomes one-step mutating confirmation |
 
 ### Needs Layer Incubation Before Distillation Here
@@ -129,10 +129,10 @@ landed anchors remain useful for route memory:
 - Wave B external anchor: [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
 - Wave C external anchor: [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
 - adjacent landed imports from the earlier external backlog include
-  [AOA-T-0027](../../../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md),
+  [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md),
   [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md),
-  [AOA-T-0029](../../../../techniques/docs/nested-rule-loading/TECHNIQUE.md),
-  [AOA-T-0030](../../../../techniques/docs/fragmented-agent-context/TECHNIQUE.md),
+  [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md),
+  [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md),
   [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md),
   [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md),
   [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md),

@@ -507,10 +507,10 @@
     },
     {
       "id": "AOA-T-0012",
-      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/deterministic-context-composition/checks/deterministic-context-composition-checklist.md",
+          "check_path": "techniques/instruction/instruction-surface/deterministic-context-composition/checks/deterministic-context-composition-checklist.md",
           "title": "Deterministic Context Composition Checklist",
           "intro_markdown": "Use this checklist to validate whether a repository really follows `deterministic-context-composition`.",
           "items": [
@@ -548,10 +548,10 @@
     },
     {
       "id": "AOA-T-0013",
-      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md",
+          "check_path": "techniques/instruction/instruction-surface/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md",
           "title": "Single-Source Rule Distribution Checklist",
           "intro_markdown": "Use this checklist to validate whether a repository really follows `single-source-rule-distribution`.",
           "items": [
@@ -971,10 +971,10 @@
     },
     {
       "id": "AOA-T-0024",
-      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md",
+          "check_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md",
           "title": "Upstream Mirroring With Provenance Checklist",
           "intro_markdown": "",
           "items": [
@@ -1094,10 +1094,10 @@
     },
     {
       "id": "AOA-T-0027",
-      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md",
+          "check_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md",
           "title": "Cross-Agent Skill Propagation Checklist",
           "intro_markdown": "",
           "items": [
@@ -1172,10 +1172,10 @@
     },
     {
       "id": "AOA-T-0029",
-      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/nested-rule-loading/checks/nested-rule-loading-checklist.md",
+          "check_path": "techniques/instruction/instruction-surface/nested-rule-loading/checks/nested-rule-loading-checklist.md",
           "title": "Nested Rule Loading Checklist",
           "intro_markdown": "",
           "items": [
@@ -1213,10 +1213,10 @@
     },
     {
       "id": "AOA-T-0030",
-      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/fragmented-agent-context/checks/fragmented-agent-context-checklist.md",
+          "check_path": "techniques/instruction/instruction-surface/fragmented-agent-context/checks/fragmented-agent-context-checklist.md",
           "title": "Fragmented Agent Context Checklist",
           "intro_markdown": "",
           "items": [
@@ -1462,10 +1462,10 @@
     },
     {
       "id": "AOA-T-0035",
-      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/profile-preset-composition/checks/profile-preset-composition-checklist.md",
+          "check_path": "techniques/instruction/instruction-surface/profile-preset-composition/checks/profile-preset-composition-checklist.md",
           "title": "Profile Preset Composition Checklist",
           "intro_markdown": "",
           "items": [

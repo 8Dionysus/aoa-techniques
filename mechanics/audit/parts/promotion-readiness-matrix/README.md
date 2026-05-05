@@ -33,7 +33,7 @@ surviving donor and promotion debt forward without widening technique bodies.
   - [AOA-T-0018](../../../../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
     - `aoa-routing` confirms that source-owned section surfaces are real `expand` targets beyond the already-landed downstream evidence in `aoa-skills` and `aoa-evals`
 - adjacent or insufficient on the current local search lanes:
-  - [AOA-T-0013](../../../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md)
+  - [AOA-T-0013](../../../../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md)
   - [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
   - [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
   - [AOA-T-0034](../../../../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
@@ -89,7 +89,7 @@ Shared blocker: one more live consumer is needed so the stack reads as a portabl
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0035](../../../../techniques/docs/profile-preset-composition/TECHNIQUE.md) | Docs-side runtime composition contract with clear sibling boundaries. | One second downstream consumer using reviewable profile and preset layering. |
+| [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | Docs-side runtime composition contract with clear sibling boundaries. | One second downstream consumer using reviewable profile and preset layering. |
 | [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract and current lead candidate for this pack; the latest compose prestart lane remains adjacent because it proves a useful service preview before `up`, and the newer render-before-apply lane remains adjacent because Docker Compose `config` or `alpha dry-run` plus Helm `template` render or simulate commands without yet establishing a clearly bounded pre-start review seam over effective local runtime truth distinct from lifecycle, readiness, or deployment templating. | One second live context where rendered service or config truth is explicitly reviewed before startup as its own seam rather than as a helper command inside broader startup docs. |
 | [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) | Selector-aware preflight sibling. | One second live context proving preflight stays separate from render review and lifecycle control. |
 | [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | Lifecycle sibling with clear exclusions around launcher doctrine. | One second live operator surface using one-entrypoint lifecycle ownership in practice. |
@@ -97,13 +97,13 @@ Shared blocker: one more live consumer is needed so the stack reads as a portabl
 
 ### Pack 4 - Instruction-Surface Cluster
 
-Shared blocker: the cluster already reads coherently beside canonical [AOA-T-0012](../../../../techniques/docs/deterministic-context-composition/TECHNIQUE.md), but each promoted sibling still needs one more live contract outside donor documentation.
+Shared blocker: the cluster already reads coherently beside canonical [AOA-T-0012](../../../../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md), but each promoted sibling still needs one more live contract outside donor documentation.
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0027](../../../../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | Managed-target propagation sibling. | One second repo or surface family using shared-skill propagation as a real managed-target fan-out. |
-| [AOA-T-0029](../../../../techniques/docs/nested-rule-loading/TECHNIQUE.md) | Hierarchical loading sibling with bounded precedence rules. | One second repo or surface family using the same layered rule hierarchy in practice. |
-| [AOA-T-0030](../../../../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | Fragment-authoring sibling to canonical composition. | One second repo where fragment-first authoring is a real source-layer practice. |
+| [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | Managed-target propagation sibling. | One second repo or surface family using shared-skill propagation as a real managed-target fan-out. |
+| [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | Hierarchical loading sibling with bounded precedence rules. | One second repo or surface family using the same layered rule hierarchy in practice. |
+| [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | Fragment-authoring sibling to canonical composition. | One second repo where fragment-first authoring is a real source-layer practice. |
 | [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | Report-only sibling to canonical composition, not the composition engine itself; the latest public agent-markdown and prompt-eval CI lanes remain adjacent because they emit PR checks, eval matrices, before or after prompt reports, or repo activity summaries rather than the same read-only composition coverage-and-drift artifact. | One second repo or surface family using the same CI-facing context report as a read-only composition coverage/drift artifact rather than PR policy checks, prompt eval reports, or activity summaries. |
 
 `AOA-T-0013` now anchors the canonical local-source fan-out default for this cluster, while the promoted siblings below keep their narrower blockers.
@@ -114,7 +114,7 @@ Shared blocker: each bundle needs another live consumer so the family stays edit
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0024](../../../../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | Mirror-plus-provenance contract is clear, but still donor-shaped. | One second curated mirror context preserving upstream ownership and explicit provenance. |
+| [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | Mirror-plus-provenance contract is clear, but still donor-shaped. | One second curated mirror context preserving upstream ownership and explicit provenance. |
 | [AOA-T-0025](../../../../techniques/docs/capability-spec-versioning/TECHNIQUE.md) | Versioned capability contract stays bounded, but has only one live lineage. | One second public agent-facing surface using a versioned capability spec as a real contract. |
 | [AOA-T-0040](../../../../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) | Reusable ownership split between shared skill meaning and user-facing command syntax. | One second live context proving the same skill/command split outside the current plugin-oriented lineage. |
 | [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) | Editorial discovery layer is clean, but still thinly proven. | One second live context proving curated discoverability stays bounded and does not drift into registry or installer behavior. |

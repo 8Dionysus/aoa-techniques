@@ -1205,7 +1205,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`media-ingest` direct-read review is now", distillation_roadmap)
         self.assertIn("Landed handoff-continuation pilot review", landing_log)
         self.assertIn("selected\n  `media-ingest`", changelog)
-        self.assertIn("Land the fifth pilot migration", root_roadmap)
+        self.assertIn("Run the landed `instruction-surface` pilot review", root_roadmap)
         self.assertIn("Landed Handoff-Continuation Pilot Review", tree_contract)
         self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", incoming_wave2)
         self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", incoming_wave3)
@@ -1370,7 +1370,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("diagnosis-repair` is now", distillation_roadmap)
         self.assertIn("Landed media-ingest pilot review", landing_log)
         self.assertIn("selected\n  `diagnosis-repair`", changelog)
-        self.assertIn("Land the fifth pilot migration", root_roadmap)
+        self.assertIn("Run the landed `instruction-surface` pilot review", root_roadmap)
         self.assertIn("Landed Media-Ingest Pilot Review", tree_contract)
         self.assertIn("techniques/recovery/diagnosis-repair/", tree_contract)
 
@@ -1447,7 +1447,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("accepted the `diagnosis-repair` direct-read migration review", changelog)
         self.assertIn("moved `AOA-T-0080` through `AOA-T-0083`", changelog)
         self.assertIn("fourth landed pilot", root_roadmap)
-        self.assertIn("Land the fifth pilot migration", root_roadmap)
+        self.assertIn("Run the landed `instruction-surface` pilot review", root_roadmap)
         self.assertIn("Diagnosis-Repair Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0080` through `AOA-T-0083", tree_contract)
         self.assertIn("2026-05-04-diagnosis-repair-tree-pilot.md", tree_contract)
@@ -1535,7 +1535,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("accepted-for-fifth-migration-pilot", distillation_roadmap)
         self.assertIn("Landed diagnosis-repair pilot review", landing_log)
         self.assertIn("selected\n  `instruction-surface`", changelog)
-        self.assertIn("Land the fifth pilot migration", root_roadmap)
+        self.assertIn("Run the landed `instruction-surface` pilot review", root_roadmap)
         self.assertIn("Landed Diagnosis-Repair Pilot Review", tree_contract)
         self.assertIn("instruction-surface", tree_contract)
 
@@ -1605,26 +1605,40 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("instruction-surface-direct-read-migration-review", reviews_index)
         self.assertIn("instruction-surface direct-read review: landed", ingress)
         self.assertIn("accepted-for-fifth-migration-pilot", ingress)
+        self.assertIn("instruction-surface migration: landed", ingress)
         self.assertIn("fifth pilot migration", ingress)
         self.assertIn("accepted-for-fifth-migration-pilot", distillation_roadmap)
+        self.assertIn("fifth pilot migration is", distillation_roadmap)
+        self.assertIn("techniques/instruction/instruction-surface/", distillation_roadmap)
         self.assertIn("Instruction-surface direct-read migration review", landing_log)
+        self.assertIn("Instruction-surface tree pilot migration", landing_log)
         self.assertIn(
             "accepted the `instruction-surface` direct-read migration review",
             changelog,
         )
-        self.assertIn("Land the fifth pilot migration", root_roadmap)
+        self.assertIn("moved `AOA-T-0012`, `AOA-T-0013", changelog)
+        self.assertIn("Run the landed `instruction-surface` pilot review", root_roadmap)
         self.assertIn("Instruction-Surface Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0012`, `AOA-T-0013", tree_contract)
+        self.assertIn("2026-05-04-instruction-surface-tree-pilot.md", tree_contract)
         self.assertTrue(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "instruction"
+                / "instruction-surface"
+                / "deterministic-context-composition"
+                / "TECHNIQUE.md"
+            ).is_file()
+        )
+        self.assertFalse(
             (
                 REPO_ROOT
                 / "techniques"
                 / "docs"
                 / "deterministic-context-composition"
-                / "TECHNIQUE.md"
-            ).is_file()
+            ).exists()
         )
-        self.assertFalse((REPO_ROOT / "techniques" / "instruction").exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

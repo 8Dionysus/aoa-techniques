@@ -372,17 +372,17 @@ See also:
 |---|---|---|---|---|
 | lightweight-snapshot-checklist | `absent` | `7` | `techniques/docs/lightweight-status-snapshot/checks/lightweight-snapshot-checklist.md` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 
-### [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
+### [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Deterministic Context Composition Checklist | `present` | `7` | `techniques/docs/deterministic-context-composition/checks/deterministic-context-composition-checklist.md` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
+| Deterministic Context Composition Checklist | `present` | `7` | `techniques/instruction/instruction-surface/deterministic-context-composition/checks/deterministic-context-composition-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) |
 
-### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
+### [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Single-Source Rule Distribution Checklist | `present` | `7` | `techniques/docs/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
+| Single-Source Rule Distribution Checklist | `present` | `7` | `techniques/instruction/instruction-surface/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) |
 
 ### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
@@ -426,11 +426,11 @@ See also:
 |---|---|---|---|---|
 | Caution Lift Checklist | `present` | `5` | `techniques/docs/risk-and-negative-effect-lift/checks/caution-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) |
 
-### [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
+### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Upstream Mirroring With Provenance Checklist | `absent` | `7` | `techniques/docs/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
+| Upstream Mirroring With Provenance Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
 ### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
 
@@ -438,23 +438,23 @@ See also:
 |---|---|---|---|---|
 | Capability Spec Versioning Checklist | `absent` | `7` | `techniques/docs/capability-spec-versioning/checks/capability-spec-versioning-checklist.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 
-### [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
+### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Cross-Agent Skill Propagation Checklist | `absent` | `7` | `techniques/docs/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| Cross-Agent Skill Propagation Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
 
-### [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Nested Rule Loading Checklist | `absent` | `7` | `techniques/docs/nested-rule-loading/checks/nested-rule-loading-checklist.md` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
-
-### [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
+### [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Fragmented Agent Context Checklist | `absent` | `7` | `techniques/docs/fragmented-agent-context/checks/fragmented-agent-context-checklist.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
+| Nested Rule Loading Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/nested-rule-loading/checks/nested-rule-loading-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
+
+### [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Fragmented Agent Context Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/fragmented-agent-context/checks/fragmented-agent-context-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
 ### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
@@ -462,11 +462,11 @@ See also:
 |---|---|---|---|---|
 | Decision Rationale Recording Checklist | `absent` | `12` | `techniques/docs/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
 
-### [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
+### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Profile Preset Composition Checklist | `absent` | `12` | `techniques/docs/profile-preset-composition/checks/profile-preset-composition-checklist.md` | [TECHNIQUE.md](../techniques/docs/profile-preset-composition/TECHNIQUE.md) |
+| Profile Preset Composition Checklist | `absent` | `12` | `techniques/instruction/instruction-surface/profile-preset-composition/checks/profile-preset-composition-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
 
 ### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
 

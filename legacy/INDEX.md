@@ -3,7 +3,7 @@
 This index maps root-level legacy material to the active route or owner route
 that now carries the work.
 
-Current root legacy inventory: four receipts.
+Current root legacy inventory: five receipts.
 
 ## Inventory
 
@@ -13,6 +13,7 @@ Current root legacy inventory: four receipts.
 | `legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md` | `receipt` | `techniques/continuity/handoff-continuation/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Second accepted technique tree path migration receipt for `AOA-T-0056` through `AOA-T-0062`. |
 | `legacy/receipts/2026-05-04-media-ingest-tree-pilot.md` | `receipt` | `techniques/ingest/media-ingest/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Third accepted technique tree path migration receipt for `AOA-T-0070` through `AOA-T-0074`. |
 | `legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md` | `receipt` | `techniques/recovery/diagnosis-repair/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Fourth accepted technique tree path migration receipt for `AOA-T-0080` through `AOA-T-0083`. |
+| `legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md` | `receipt` | `techniques/instruction/instruction-surface/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Fifth accepted technique tree path migration receipt for `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035`. |
 
 ## Accounting Rule
 

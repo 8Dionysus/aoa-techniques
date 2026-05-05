@@ -3,6 +3,43 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Instruction-surface tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`,
+  `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` from `techniques/docs/` into
+  `techniques/instruction/instruction-surface/`
+- added `techniques/instruction/AGENTS.md` as the minimal route card for the
+  instruction trunk
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md`
+- repaired authored links from semantic review, Audit and Distillation active
+  parts, and reform review source rows
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_instruction_surface_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
+git diff --check
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/validate_semantic_agents.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no other shelf migrated
+- no `tree_path` frontmatter was added
+- no `family` or scout topology axis became schema truth
+- active bundles did not pass through root `legacy/`
+- `kag-source-lift`, docs-boundary, capability, proof, governance, and
+  runtime-authority shelves stayed outside the migrated shelf
+
 ## 2026-05-04 - Instruction-surface direct-read migration review
 
 Changed:

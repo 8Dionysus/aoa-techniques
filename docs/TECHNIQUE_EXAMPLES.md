@@ -379,19 +379,19 @@ See also:
 |---|---|---|---|
 | minimal-lightweight-snapshot | `present` | `techniques/docs/lightweight-status-snapshot/examples/minimal-lightweight-snapshot.md` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
 
-### [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
+### [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Skill Doc Composition | `present` | `techniques/docs/deterministic-context-composition/examples/concrete-skill-doc-composition.md` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
-| Minimal Deterministic Context Composition | `present` | `techniques/docs/deterministic-context-composition/examples/minimal-deterministic-context-composition.md` | [TECHNIQUE.md](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) |
+| Concrete Skill Doc Composition | `present` | `techniques/instruction/instruction-surface/deterministic-context-composition/examples/concrete-skill-doc-composition.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) |
+| Minimal Deterministic Context Composition | `present` | `techniques/instruction/instruction-surface/deterministic-context-composition/examples/minimal-deterministic-context-composition.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) |
 
-### [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
+### [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) - single-source-rule-distribution (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Multi-Agent Rule Sync | `present` | `techniques/docs/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
-| Minimal Single-Source Rule Distribution | `present` | `techniques/docs/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md` | [TECHNIQUE.md](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) |
+| Concrete Multi-Agent Rule Sync | `present` | `techniques/instruction/instruction-surface/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) |
+| Minimal Single-Source Rule Distribution | `present` | `techniques/instruction/instruction-surface/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) |
 
 ### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
@@ -436,12 +436,12 @@ See also:
 |---|---|---|---|
 | Minimal Risk And Negative-Effect Lift | `present` | `techniques/docs/risk-and-negative-effect-lift/examples/minimal-risk-and-negative-effect-lift.md` | [TECHNIQUE.md](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) |
 
-### [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
+### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Curated Mirror With Attribution | `present` | `techniques/docs/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
-| Minimal Upstream Mirroring With Provenance | `present` | `techniques/docs/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md` | [TECHNIQUE.md](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) |
+| Concrete Curated Mirror With Attribution | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
+| Minimal Upstream Mirroring With Provenance | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 
 ### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
 
@@ -450,27 +450,27 @@ See also:
 | Concrete Capability Upgrade With Compat Window | `present` | `techniques/docs/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 | Minimal Capability Spec Versioning | `present` | `techniques/docs/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) |
 
-### [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
+### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Multi-Target Skill Propagation | `present` | `techniques/docs/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
-| Minimal Cross-Agent Skill Propagation | `present` | `techniques/docs/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md` | [TECHNIQUE.md](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) |
+| Concrete Multi-Target Skill Propagation | `present` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
+| Minimal Cross-Agent Skill Propagation | `present` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
 
-### [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Hierarchical Rule Loading | `present` | `techniques/docs/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
-| Minimal Nested Rule Loading | `present` | `techniques/docs/nested-rule-loading/examples/minimal-nested-rule-loading.md` | [TECHNIQUE.md](../techniques/docs/nested-rule-loading/TECHNIQUE.md) |
-
-### [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
+### [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Fragment-First Assembly | `present` | `techniques/docs/fragmented-agent-context/examples/concrete-fragment-first-assembly.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
-| Concrete Subtree Fragmented Context | `present` | `techniques/docs/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
-| Minimal Fragmented Agent Context | `present` | `techniques/docs/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) |
+| Concrete Hierarchical Rule Loading | `present` | `techniques/instruction/instruction-surface/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
+| Minimal Nested Rule Loading | `present` | `techniques/instruction/instruction-surface/nested-rule-loading/examples/minimal-nested-rule-loading.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
+
+### [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Fragment-First Assembly | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-fragment-first-assembly.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
+| Concrete Subtree Fragmented Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
+| Minimal Fragmented Agent Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
 ### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
@@ -478,11 +478,11 @@ See also:
 |---|---|---|---|
 | Minimal Decision Rationale Note | `present` | `techniques/docs/decision-rationale-recording/examples/minimal-decision-rationale-note.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
 
-### [AOA-T-0035](../techniques/docs/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
+### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Profile Preset Composition | `present` | `techniques/docs/profile-preset-composition/examples/minimal-profile-preset-composition.md` | [TECHNIQUE.md](../techniques/docs/profile-preset-composition/TECHNIQUE.md) |
+| Minimal Profile Preset Composition | `present` | `techniques/instruction/instruction-surface/profile-preset-composition/examples/minimal-profile-preset-composition.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
 
 ### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
 
