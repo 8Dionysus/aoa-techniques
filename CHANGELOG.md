@@ -142,6 +142,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `skill-support` pilot review and selected
   `evaluation-chain` for the next direct-read migration review without moving
   a twelfth shelf yet
+- accepted the `evaluation-chain` direct-read migration review over
+  `AOA-T-0003`, `AOA-T-0007`, and `AOA-T-0032` as the twelfth tree pilot while
+  keeping the review itself non-mutating
 
 ### Validation
 
