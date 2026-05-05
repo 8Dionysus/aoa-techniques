@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Landed diagnosis-repair pilot review
+
+Changed:
+
+- added
+  [landed-diagnosis-repair-pilot-review](parts/technique-reform-ingress/reviews/landed-diagnosis-repair-pilot-review.md)
+  as the post-migration review over the fourth tree pilot
+- accepted the landed `diagnosis-repair` shelf as clearer after validation and
+  as the first successful recovery trunk test
+- chose `instruction-surface` for the next direct-read migration review without
+  moving another shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `kag-source-lift`, boundary-watch proof shelves, and
+  `automation-governance` outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fifth shelf migration was authorized without direct-read review
+
 ## 2026-05-04 - Diagnosis-repair tree pilot migration
 
 Changed:

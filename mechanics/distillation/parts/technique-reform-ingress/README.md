@@ -54,6 +54,8 @@ permission slip to remap techniques automatically.
   `accepted-for-fourth-migration-pilot`; still not path movement
 - diagnosis-repair migration: landed exactly `AOA-T-0080` through `AOA-T-0083`
   under `techniques/recovery/diagnosis-repair/` without frontmatter changes
+- landed diagnosis-repair pilot review: landed as `pilot-validated`, with
+  `instruction-surface` chosen for the next direct-read migration review
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -83,6 +85,9 @@ permission slip to remap techniques automatically.
 | [Handoff-Continuation Direct-Read Migration Review](reviews/handoff-continuation-direct-read-migration-review.md) | reads `AOA-T-0056` through `AOA-T-0062` directly and accepts the shelf as the second migration pilot | path movement, `tree_path` frontmatter, domain change, or permission to move any other shelf |
 | [Landed Handoff-Continuation Pilot Review](reviews/landed-handoff-continuation-pilot-review.md) | confirms the second migrated shelf stayed clearer, validates the continuity trunk machinery, and chooses `media-ingest` for the next direct-read review | movement of `media-ingest`, `tree_path` frontmatter, or proof that every trunk is ready |
 | [Media-Ingest Direct-Read Migration Review](reviews/media-ingest-direct-read-migration-review.md) | reads `AOA-T-0070` through `AOA-T-0074` directly and accepts the shelf as the third migration pilot | path movement, `tree_path` frontmatter, domain change, or permission to move another shelf |
+| [Landed Media-Ingest Pilot Review](reviews/landed-media-ingest-pilot-review.md) | confirms the third migrated shelf stayed clearer, validates the first non-continuity trunk test, and chooses `diagnosis-repair` for the next direct-read review | movement of `diagnosis-repair`, `tree_path` frontmatter, or proof that every non-continuity trunk is safe |
+| [Diagnosis-Repair Direct-Read Migration Review](reviews/diagnosis-repair-direct-read-migration-review.md) | reads `AOA-T-0080` through `AOA-T-0083` directly and accepts the shelf as the fourth migration pilot | path movement, `tree_path` frontmatter, domain change, or permission to move another shelf |
+| [Landed Diagnosis-Repair Pilot Review](reviews/landed-diagnosis-repair-pilot-review.md) | confirms the fourth migrated shelf stayed clearer, validates the recovery trunk machinery, and chooses `instruction-surface` for the next direct-read review | movement of `instruction-surface`, `tree_path` frontmatter, or proof that every docs-domain shelf is safe |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -161,5 +166,8 @@ The fourth pilot migration is now landed: those four bundles live under
 legacy receipt are in place, authored links were repaired, generated surfaces
 were rebuilt, and frontmatter stayed unchanged.
 
-The next move is a landed-pilot review over `diagnosis-repair` before choosing
-any fifth candidate shelf.
+The landed `diagnosis-repair` pilot review is now landed as `pilot-validated`
+and chooses `instruction-surface` for the next direct-read migration review.
+
+The next move is a direct-read migration review for `instruction-surface`
+before any fifth shelf moves.

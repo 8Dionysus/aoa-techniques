@@ -19,5 +19,6 @@ Current reviews:
 - [media-ingest-direct-read-migration-review](media-ingest-direct-read-migration-review.md)
 - [landed-media-ingest-pilot-review](landed-media-ingest-pilot-review.md)
 - [diagnosis-repair-direct-read-migration-review](diagnosis-repair-direct-read-migration-review.md)
+- [landed-diagnosis-repair-pilot-review](landed-diagnosis-repair-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

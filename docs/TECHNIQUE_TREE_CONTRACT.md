@@ -225,8 +225,13 @@ The fourth pilot migration moves `AOA-T-0080` through `AOA-T-0083` into
 `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md`](../legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md).
 
-The next reform slice should review the landed `diagnosis-repair` shelf before
-choosing any fifth migration candidate.
+The landed fourth pilot review is
+[Landed Diagnosis-Repair Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-diagnosis-repair-pilot-review.md).
+It validates the `diagnosis-repair` migration as the first successful recovery
+trunk test and chooses `instruction-surface` for the next direct-read review.
+
+The next reform slice should direct-read `instruction-surface` before moving
+any fifth migration candidate.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

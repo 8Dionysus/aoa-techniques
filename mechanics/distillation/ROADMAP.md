@@ -61,8 +61,10 @@
    landed exactly for `AOA-T-0080` through `AOA-T-0083` under
    `techniques/recovery/diagnosis-repair/`, with the recovery route card,
    root legacy receipt accounting, link repair, generated rebuilds, and
-   release-check validation in the same wave. The next tree move is a landed
-   `diagnosis-repair` pilot review before any fifth shelf is chosen.
+   release-check validation in the same wave. The landed `diagnosis-repair`
+   pilot review is also landed as `pilot-validated`, and
+   `instruction-surface` is now chosen for the next direct-read migration
+   review before any fifth shelf moves.
 
 ## Hold line
 
