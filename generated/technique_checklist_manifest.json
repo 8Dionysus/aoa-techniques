@@ -127,10 +127,10 @@
     },
     {
       "id": "AOA-T-0004",
-      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "technique_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md",
+          "check_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md",
           "title": "Chain Contract Checklist",
           "intro_markdown": "Use this checklist to validate whether a workflow really follows `intent-plan-dry-run-contract-chain`.",
           "items": [
@@ -180,10 +180,10 @@
     },
     {
       "id": "AOA-T-0005",
-      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/new-intent-rollout-checklist/checks/intent-rollout-checklist.md",
+          "check_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md",
           "title": "intent-rollout-checklist",
           "intro_markdown": "",
           "items": [

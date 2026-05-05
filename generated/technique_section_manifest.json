@@ -184,7 +184,7 @@
     },
     {
       "id": "AOA-T-0004",
-      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "technique_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -240,7 +240,7 @@
     },
     {
       "id": "AOA-T-0005",
-      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",

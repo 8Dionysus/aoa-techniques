@@ -1454,10 +1454,10 @@
     },
     {
       "id": "AOA-T-0004",
-      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+      "technique_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/adverse-effects-review.md",
+          "note_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -1586,14 +1586,14 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/bounded-transfer.md",
+          "note_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/bounded-transfer.md",
           "kind": "support_note",
           "title": "Bounded Transfer",
           "note_shape": "opaque_body",
           "body_markdown": "This note explains what transfers cleanly from the ATM10 origin and what should not be mistaken for the core of `AOA-T-0004`.\n\n## What transfers cleanly\n\n- a stable intent payload is normalized into a plan artifact before any execution layer runs\n- the execution layer is dry-run only and emits explicit artifacts rather than relying on logs\n- a contract-check reads those artifacts and produces a machine-readable verdict\n- routing and traceability data can be surfaced in the contract summary when policy requires it\n- the contract result is the stop signal that prevents premature progression to real execution\n\n## What is not the core technique\n\n- exact ATM10 script names such as `intent_to_automation_plan.py` or `automation_intent_chain_smoke.py`\n- exact artifact names such as `automation_plan.json`, `chain_summary.json`, or `contract_summary.json`\n- exact CI workflow layout, summary-table labels, or artifact-upload conventions\n- exact thresholds such as minimum action count or minimum step count\n- UI-automation specifics, keyboard actions, or other donor-specific payload shapes\n\n## Minimum portability bar\n\nA project can reasonably claim this technique only if all of the following hold:\n\n- the plan artifact is written before dry-run execution\n- the dry-run path is side-effect free in the same sense that the project documents and enforces\n- the contract-check reads artifacts directly and returns an explicit pass or fail verdict\n- routing expectations are checked explicitly instead of being inferred from human log review\n- failing the contract blocks progression to any real execution path\n\n## Misreadings to avoid\n\n- adding an adapter with side effects is not this technique\n- emitting logs without stable artifacts is not this technique\n- carrying trace IDs without checking or publishing them when policy requires them is not this technique\n- copying ATM10 filenames or commands without preserving the artifact-first contract misses the transferable core\n\n## Source backing\n\nThe transfer boundary comes from the ATM10 sequence around `M6.3`, `M6.4`, `M6.6`, and the 2026-02-24 traceability hardening: the durable pattern is the artifact-first chain plus explicit contract verdict, not the donor repository's exact script or CI layout."
         },
         {
-          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -1730,7 +1730,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/origin-evidence.md",
+          "note_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -1815,7 +1815,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -1965,10 +1965,10 @@
     },
     {
       "id": "AOA-T-0005",
-      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -2110,7 +2110,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/origin-evidence.md",
+          "note_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -2191,14 +2191,14 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/rollout-failure-triage.md",
+          "note_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/notes/rollout-failure-triage.md",
           "kind": "support_note",
           "title": "Rollout Failure Triage",
           "note_shape": "opaque_body",
           "body_markdown": "This note generalizes the rollout-debugging path behind `AOA-T-0005` so a new intent can be repaired without widening scope or bypassing the shared chain.\n\n## Triage order\n\nCheck failures in this order:\n\n1. canonical fixture\n2. smoke path\n3. contract-check\n4. artifact publishing\n5. regression coverage\n\nThat order keeps the diagnosis close to the source of truth and avoids debugging summary surfaces before the underlying rollout path is valid.\n\n## 1. Fixture problems\n\nLook here first when:\n\n- the new intent never appears in the smoke run\n- the contract summary shows the wrong `intent_type`\n- required `trace_id` or `intent_id` fields are missing from the observed data\n\nTypical fix:\n\n- repair the canonical fixture before touching CI or summary wiring\n\n## 2. Smoke path problems\n\nLook here when:\n\n- the fixture exists but the run directory or expected artifacts are missing\n- the rollout path uses a one-off helper instead of the shared intent-chain flow\n- the smoke step fails before any contract summary is produced\n\nTypical fix:\n\n- reproduce the dry-run smoke locally against the canonical fixture and confirm it writes the same artifact family expected by existing intent paths\n\n## 3. Contract-check problems\n\nLook here when:\n\n- `expected_intent_type` does not match the new route\n- summary `violations` show missing artifact, routing mismatch, or missing traceability fields\n- the smoke run succeeds but the contract verdict is failing\n\nTypical fix:\n\n- adjust the strict routing or traceability assertions so they match the intended contract of the new rollout, not the previous intent path\n\n## 4. Artifact publishing problems\n\nLook here when:\n\n- `contract_summary.json` exists locally but is absent from the main review surface\n- the new intent path runs, but there is no summary row or stable artifact path for reviewers\n- humans can only discover the result by opening raw logs\n\nTypical fix:\n\n- wire the new summary and artifact path into the same surface already used for existing intents\n\n## 5. Regression coverage problems\n\nLook here when:\n\n- the rollout appears green in smoke and contract checks, but there is no targeted regression proof\n- future refactors can silently remove the new intent path without an obvious failure signal\n\nTypical fix:\n\n- add at least one automated test that exercises the new intent through normalization, dry-run, and contract-check\n\n## Source backing\n\nThis triage shape is generalized from the ATM10 material around `M6.8` troubleshooting guidance, `M6.19` rollout policy, the 2026-02-24 traceability hardening, and the 2026-03-03 `open_world_map` rollout."
         },
         {
-          "note_path": "techniques/agent-workflows/new-intent-rollout-checklist/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

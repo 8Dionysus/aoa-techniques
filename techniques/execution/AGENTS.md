@@ -19,6 +19,9 @@ Accepted pilot shelves:
 - `ready-work-graphs/`: dependency graph authoring, blocker-free ready frontier
   derivation, and requirement-to-design-to-task layering that make the next
   bounded work slice visible before execution.
+- `intent-chain/`: artifact-first intent normalization, dry-run contract
+  checking, and one-new-intent rollout discipline before any real action path
+  is trusted.
 
 ## Domain rules
 
@@ -31,7 +34,8 @@ Keep execution-facing techniques narrow and explicit:
 
 Do not turn an execution technique into project-management doctrine, staffing
 policy, backlog governance, hidden agent scheduling, runtime lifecycle law,
-proof authority, or a broad methodology stack.
+proof authority, router ownership, API contract authority, real-action
+permission, automation governance, CI policy, or a broad methodology stack.
 
 ## Boundary
 
