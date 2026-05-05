@@ -998,10 +998,10 @@
     },
     {
       "id": "AOA-T-0080",
-      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/session-drift-taxonomy/examples/minimal-session-drift-taxonomy.md",
+          "example_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/examples/minimal-session-drift-taxonomy.md",
           "title": "minimal session-drift-taxonomy",
           "body_markdown": "```yaml\nsession_drift_types:\n  - type: boundary_drift\n    evidence: \"technique language and skill language kept collapsing together\"\n  - type: proof_debt\n    evidence: \"review claims were repeated without stable proof anchors\"\n  - type: route_collapse\n    evidence: \"several possible follow-ups kept being compressed into one vague next step\"\n```\n\nWhy this example stays bounded:\n\n- it classifies drift types before claiming one probable cause\n- it keeps the output smaller than a full diagnosis packet\n- it leaves owner hints and repair shapes for later seams"
         }
@@ -1009,10 +1009,10 @@
     },
     {
       "id": "AOA-T-0081",
-      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/examples/minimal-diagnosis-from-reviewed-evidence.md",
+          "example_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/examples/minimal-diagnosis-from-reviewed-evidence.md",
           "title": "minimal diagnosis-from-reviewed-evidence",
           "body_markdown": "```yaml\ndiagnosis_packet:\n  symptoms:\n    - \"technique and skill language repeatedly collapsed together\"\n    - \"review claims were made without stable proof anchors\"\n  probable_causes:\n    - \"owner-layer boundaries are being treated as convenience rather than law\"\n    - \"review evidence is being compressed too early during recap\"\n  likely_owner_hints:\n    - aoa-skills\n    - aoa-evals\n  suggested_repair_shape: bounded repair packet for owner-law and proof-law separation\n  unknowns:\n    - \"unclear whether the root cause is one missing template or broader review habit drift\"\n```\n\nWhy this example stays bounded:\n\n- it keeps symptoms, causes, and unknowns separate\n- it names owner hints without treating them as final verdicts\n- it suggests a repair shape without performing the repair"
         }
@@ -1020,10 +1020,10 @@
     },
     {
       "id": "AOA-T-0082",
-      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/repair-shape-from-diagnosis/examples/minimal-repair-shape-from-diagnosis.md",
+          "example_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/examples/minimal-repair-shape-from-diagnosis.md",
           "title": "minimal repair-shape-from-diagnosis",
           "body_markdown": "```yaml\nrepair_shape:\n  diagnosis_ref: reviewed-diagnosis-2026-04-05.md\n  primary_owner_target: aoa-skills\n  target_artifact: SKILL.md delta\n  validation_plan:\n    - rerun release check\n    - verify the route no longer collapses diagnosis into repair\n  escalation_cue: \"escalate to a playbook note if the fix needs several coordinated repo changes\"\n```\n\nWhy this example stays bounded:\n\n- it starts from diagnosis instead of aspiration\n- it chooses one owner-facing artifact\n- it keeps escalation explicit if the repair would widen"
         }
@@ -1031,10 +1031,10 @@
     },
     {
       "id": "AOA-T-0083",
-      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md",
+          "example_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md",
           "title": "minimal checkpoint-bound-self-repair",
           "body_markdown": "```yaml\ncheckpoint_bound_repair:\n  repair_shape_ref: bounded-repair-shape-2026-04-05.md\n  policy_check: constitution-fit-confirmed\n  approval_gate: explicit-review-required\n  rollback_marker: pre-repair-session-harvest-family\n  health_check: release-check\n  iteration_limit: 1\n  improvement_log_stub: docs/improvement-log/session-harvest-family.md\n```\n\nWhy this example stays bounded:\n\n- it wraps an existing repair shape instead of inventing one\n- it makes rollback and health-check posture explicit\n- it prevents silent retries from masquerading as safe self-repair"
         }

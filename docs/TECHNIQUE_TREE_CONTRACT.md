@@ -220,13 +220,13 @@ The fourth migration review is
 It accepts `diagnosis-repair` as the fourth migration pilot after directly
 reading `AOA-T-0080` through `AOA-T-0083`.
 
-The next reform slice should:
+The fourth pilot migration moves `AOA-T-0080` through `AOA-T-0083` into
+`techniques/recovery/diagnosis-repair/` without changing `domain`, `kind`, or
+`tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md`](../legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md).
 
-1. move exactly `AOA-T-0080` through `AOA-T-0083` into
-   `techniques/recovery/diagnosis-repair/`
-2. add the minimal `recovery/` route card and root legacy receipt
-3. repair authored links, rebuild generated surfaces, and keep frontmatter
-   unchanged
+The next reform slice should review the landed `diagnosis-repair` shelf before
+choosing any fifth migration candidate.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

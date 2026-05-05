@@ -52,6 +52,8 @@ permission slip to remap techniques automatically.
   `diagnosis-repair` chosen for the next direct-read migration review
 - diagnosis-repair direct-read review: landed as
   `accepted-for-fourth-migration-pilot`; still not path movement
+- diagnosis-repair migration: landed exactly `AOA-T-0080` through `AOA-T-0083`
+  under `techniques/recovery/diagnosis-repair/` without frontmatter changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -154,7 +156,10 @@ chooses `diagnosis-repair` for the next direct-read migration review.
 The `diagnosis-repair` direct-read review is now landed and accepts exactly
 `AOA-T-0080` through `AOA-T-0083` as the fourth migration pilot.
 
-The next move is the fourth pilot migration: move those four bundles into
-`techniques/recovery/diagnosis-repair/`, add the minimal `recovery/` route
-card, repair authored links, preserve a root legacy receipt, rebuild generated
-surfaces, and keep frontmatter unchanged.
+The fourth pilot migration is now landed: those four bundles live under
+`techniques/recovery/diagnosis-repair/`, the `recovery/` route card and root
+legacy receipt are in place, authored links were repaired, generated surfaces
+were rebuilt, and frontmatter stayed unchanged.
+
+The next move is a landed-pilot review over `diagnosis-repair` before choosing
+any fifth candidate shelf.

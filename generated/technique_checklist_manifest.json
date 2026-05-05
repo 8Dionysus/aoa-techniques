@@ -3507,10 +3507,10 @@
     },
     {
       "id": "AOA-T-0080",
-      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/session-drift-taxonomy/checks/session-drift-taxonomy-checklist.md",
+          "check_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/checks/session-drift-taxonomy-checklist.md",
           "title": "session-drift-taxonomy checklist",
           "intro_markdown": "",
           "items": [
@@ -3548,10 +3548,10 @@
     },
     {
       "id": "AOA-T-0081",
-      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/checks/diagnosis-from-reviewed-evidence-checklist.md",
+          "check_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/checks/diagnosis-from-reviewed-evidence-checklist.md",
           "title": "diagnosis-from-reviewed-evidence checklist",
           "intro_markdown": "",
           "items": [
@@ -3589,10 +3589,10 @@
     },
     {
       "id": "AOA-T-0082",
-      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/repair-shape-from-diagnosis/checks/repair-shape-from-diagnosis-checklist.md",
+          "check_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/checks/repair-shape-from-diagnosis-checklist.md",
           "title": "repair-shape-from-diagnosis checklist",
           "intro_markdown": "",
           "items": [
@@ -3630,10 +3630,10 @@
     },
     {
       "id": "AOA-T-0083",
-      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/checkpoint-bound-self-repair/checks/checkpoint-bound-self-repair-checklist.md",
+          "check_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/checks/checkpoint-bound-self-repair-checklist.md",
           "title": "checkpoint-bound-self-repair checklist",
           "intro_markdown": "",
           "items": [

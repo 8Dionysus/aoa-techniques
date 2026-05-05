@@ -39700,10 +39700,10 @@
     },
     {
       "id": "AOA-T-0080",
-      "technique_path": "techniques/agent-workflows/session-drift-taxonomy/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/session-drift-taxonomy/notes/canonical-readiness.md",
+          "note_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -39834,7 +39834,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/session-drift-taxonomy/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -39915,7 +39915,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/session-drift-taxonomy/notes/second-context-adaptation.md",
+          "note_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -40063,10 +40063,10 @@
     },
     {
       "id": "AOA-T-0081",
-      "technique_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/notes/canonical-readiness.md",
+          "note_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -40197,7 +40197,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -40278,7 +40278,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/diagnosis-from-reviewed-evidence/notes/second-context-adaptation.md",
+          "note_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -40430,10 +40430,10 @@
     },
     {
       "id": "AOA-T-0082",
-      "technique_path": "techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/repair-shape-from-diagnosis/notes/canonical-readiness.md",
+          "note_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -40564,7 +40564,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/repair-shape-from-diagnosis/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -40645,7 +40645,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/repair-shape-from-diagnosis/notes/second-context-adaptation.md",
+          "note_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -40797,10 +40797,10 @@
     },
     {
       "id": "AOA-T-0083",
-      "technique_path": "techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/checkpoint-bound-self-repair/notes/canonical-readiness.md",
+          "note_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -40931,7 +40931,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/checkpoint-bound-self-repair/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -41012,7 +41012,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/checkpoint-bound-self-repair/notes/second-context-adaptation.md",
+          "note_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
