@@ -54,6 +54,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0056` through `AOA-T-0062` into
   `techniques/continuity/handoff-continuation/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `handoff-continuation` pilot review and selected
+  `media-ingest` for the next direct-read migration review while repairing
+  staging links in `incoming/` to current authored paths
 
 ### Validation
 
