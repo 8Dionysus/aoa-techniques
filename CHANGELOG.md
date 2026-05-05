@@ -103,6 +103,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` into
   `techniques/instruction/docs-boundary/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `docs-boundary` pilot review and selected
+  `capability-registry` for the next direct-read migration review without
+  moving an eighth shelf yet
 
 ### Validation
 

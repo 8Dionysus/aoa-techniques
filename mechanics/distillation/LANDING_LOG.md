@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Landed docs-boundary pilot review
+
+Changed:
+
+- added
+  [landed-docs-boundary-pilot-review](parts/technique-reform-ingress/reviews/landed-docs-boundary-pilot-review.md)
+  as the post-migration review over the seventh tree pilot
+- accepted the landed `docs-boundary` shelf as clearer after validation and as
+  the second successful instruction trunk shelf
+- chose `capability-registry` for the next direct-read migration review without
+  moving another shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `capability-boundary`, `skill-discovery`, proof, governance, runtime,
+  and owner-closeout shelves outside the next move
+- kept registry product doctrine, discovery ranking, trust policy, marketplace
+  curation, graph semantics, runtime resolution, and agent-role authority
+  outside `capability-registry`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no eighth shelf migration was authorized without direct-read review
+
 ## 2026-05-04 - Docs-boundary tree pilot migration
 
 Changed:
