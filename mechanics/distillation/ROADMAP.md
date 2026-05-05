@@ -159,7 +159,15 @@
    and chooses `evaluation-chain` for the next direct-read migration review
    while keeping CI ownership, release policy, eval-suite authority, proof
    verdict law, mandatory testing doctrine, generic quality gate doctrine, and
-   neighboring proof-side shelves outside the next move.
+   neighboring proof-side shelves outside the next move. The
+   `evaluation-chain` direct-read review is now landed as
+   `accepted-for-twelfth-migration-pilot`; it accepts exactly `AOA-T-0003`,
+   `AOA-T-0007`, and `AOA-T-0032` while keeping CI ownership, release policy,
+   eval-suite authority, proof verdict law, mandatory testing doctrine,
+   generic quality gate doctrine, owner acceptance, and neighboring proof-side
+   shelves outside the move. The next bounded step is the twelfth pilot
+   migration for `evaluation-chain`, with no `tree_path` frontmatter or schema
+   migration.
 
 ## Hold line
 

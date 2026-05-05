@@ -342,8 +342,13 @@ The landed eleventh pilot review is
 It validates `skill-support` as the first successful proof trunk shelf and
 chooses `evaluation-chain` for the next direct-read migration review.
 
-The next reform slice should run a direct-read migration review for
-`evaluation-chain` before moving any twelfth shelf.
+The twelfth migration review is
+[Evaluation-Chain Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/evaluation-chain-direct-read-migration-review.md).
+It accepts `evaluation-chain` as the twelfth migration pilot after directly
+reading `AOA-T-0003`, `AOA-T-0007`, and `AOA-T-0032`.
+
+The next reform slice should run the twelfth pilot migration for
+`evaluation-chain` before reviewing any thirteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Evaluation-chain direct-read migration review
+
+Changed:
+
+- added
+  [evaluation-chain-direct-read-migration-review](parts/technique-reform-ingress/reviews/evaluation-chain-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0003`, `AOA-T-0007`, and
+  `AOA-T-0032`
+- accepted `evaluation-chain` as the twelfth bounded migration pilot because
+  direct reading confirmed the proof-facing chain: machine-readable validation
+  summary, staged signal promotion, and read-only CI context reporting
+- kept the review non-mutating: no technique bundle moved, no frontmatter
+  changed, and no generated projection became authority
+- kept CI ownership, release policy, eval-suite authority, proof verdict law,
+  mandatory testing doctrine, generic quality gate doctrine, owner
+  acceptance, and neighboring proof-side shelves outside the migration wave
+- kept `AOA-T-0032` promoted rather than treating path placement as canonical
+  status promotion
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no twelfth shelf migration happened from the review alone
+
 ## 2026-05-05 - Landed skill-support pilot review
 
 Changed:
