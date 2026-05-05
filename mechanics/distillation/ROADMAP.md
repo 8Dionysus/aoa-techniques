@@ -221,8 +221,14 @@
    under `techniques/recovery/antifragility-recovery/`, with the recovery route
    card extended for the second shelf, root legacy receipt accounting, link
    repair, generated rebuilds, and release-check validation in the same wave.
-   The next bounded step is the landed-pilot review for
-   `antifragility-recovery` before choosing any sixteenth shelf.
+   The landed `antifragility-recovery` pilot review is now complete as
+   `pilot-validated`, validating the second `recovery` trunk shelf and choosing
+   `execution/ready-work-graphs` for the next direct-read migration review
+   while keeping project-management doctrine, scheduling, staffing, dispatch
+   policy, memory substrate, graph database doctrine, hidden orchestration,
+   proof authority, and neighboring execution shelves outside the next move.
+   The next bounded step is the `execution/ready-work-graphs` direct-read
+   migration review before any sixteenth shelf migration.
 
 ## Hold line
 

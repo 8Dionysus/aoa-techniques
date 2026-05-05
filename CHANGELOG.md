@@ -177,6 +177,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098` into
   `techniques/recovery/antifragility-recovery/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `antifragility-recovery` pilot review and selected
+  `execution/ready-work-graphs` for the next direct-read migration review
+  without moving a sixteenth shelf yet
 
 ### Validation
 

@@ -3,6 +3,36 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed antifragility-recovery pilot review
+
+Changed:
+
+- added
+  [landed-antifragility-recovery-pilot-review](parts/technique-reform-ingress/reviews/landed-antifragility-recovery-pilot-review.md)
+  as the landed review after the fifteenth path migration
+- validated `antifragility-recovery` as the second successful recovery trunk
+  shelf after `diagnosis-repair`
+- confirmed `AOA-T-0098` remains `domain: validation-patterns` and
+  `kind: validation` even though it now lives under the recovery tree path
+- chose `execution/ready-work-graphs` for the next direct-read migration review
+  without moving files
+- kept project-management doctrine, scheduling, staffing, dispatch policy,
+  memory substrate, graph database doctrine, hidden orchestration, proof
+  authority, and neighboring execution shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `tree_path` frontmatter was added
+
 ## 2026-05-05 - Antifragility-recovery tree pilot migration
 
 Changed:

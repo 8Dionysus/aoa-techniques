@@ -4303,7 +4303,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("fifteenth landed pilot moved", root_roadmap)
         self.assertIn("Review the landed `antifragility-recovery` pilot", root_roadmap)
         self.assertIn("2026-05-05-antifragility-recovery-tree-pilot", tree_contract)
-        self.assertIn("review the landed `antifragility-recovery` pilot", tree_contract)
+        self.assertIn("review the landed", tree_contract)
+        self.assertIn("`antifragility-recovery` pilot", tree_contract)
         self.assertIn("moved `AOA-T-0097`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -4334,6 +4335,119 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+
+    def test_landed_antifragility_recovery_review_selects_ready_work_graphs(
+        self,
+    ) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-antifragility-recovery-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Antifragility-Recovery Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn("choose `execution/ready-work-graphs`", review)
+        self.assertIn("second successful shelf under the `recovery` trunk", review)
+        self.assertIn("AOA-T-0098` remains `domain: validation-patterns`", review)
+        self.assertIn("What The Fifteenth Pilot Proved", review)
+        self.assertIn("Remaining Weaknesses", review)
+        self.assertIn("Sixteenth Shelf Choice", review)
+        self.assertIn("Why direct-read first", review)
+        self.assertIn("Do not move `execution/ready-work-graphs`", review)
+        self.assertIn("do not move any files until that", review)
+        self.assertIn("review lands", review)
+        self.assertIn("landed-antifragility-recovery-pilot-review", reviews_index)
+        self.assertIn("landed antifragility-recovery pilot review: landed", ingress)
+        self.assertIn("execution/ready-work-graphs", ingress)
+        self.assertIn("Landed antifragility-recovery pilot review", landing_log)
+        self.assertIn("second successful recovery trunk", landing_log)
+        self.assertIn("shelf after `diagnosis-repair`", landing_log)
+        self.assertIn("The landed `antifragility-recovery` pilot review is now complete", distillation_roadmap)
+        self.assertIn("Run the `execution/ready-work-graphs` direct-read", root_roadmap)
+        self.assertIn("Landed Antifragility-Recovery Pilot Review", tree_contract)
+        self.assertIn("chooses `execution/ready-work-graphs`", tree_contract)
+        self.assertIn(
+            "accepted the landed `antifragility-recovery` pilot review",
+            changelog,
+        )
+
+        for technique_id, path in (
+            (
+                "AOA-T-0097",
+                "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0099",
+                "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0100",
+                "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0098",
+                "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertTrue((REPO_ROOT / path).is_file())
+
+        for current_path, future_dir, future_path in (
+            (
+                "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+                "techniques/execution/ready-work-graphs/dependency-aware-task-graph/",
+                "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+                "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/",
+                "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+                "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/",
+                "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertIn(current_path, review)
+                self.assertIn(future_dir, review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
