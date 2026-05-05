@@ -154,9 +154,12 @@
    migration is now landed exactly for those three bundles under
    `techniques/proof/skill-support/`, with the proof route card, root legacy
    receipt accounting, link repair, generated rebuilds, and release-check
-   validation in the same wave. The next bounded step is the landed
-   `skill-support` pilot review before any twelfth shelf moves or enters
-   direct-read review.
+   validation in the same wave. The landed `skill-support` pilot review is
+   also landed as `pilot-validated`, validates the first proof trunk shelf,
+   and chooses `evaluation-chain` for the next direct-read migration review
+   while keeping CI ownership, release policy, eval-suite authority, proof
+   verdict law, mandatory testing doctrine, generic quality gate doctrine, and
+   neighboring proof-side shelves outside the next move.
 
 ## Hold line
 
