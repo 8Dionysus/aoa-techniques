@@ -3,6 +3,36 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed history-artifacts pilot review
+
+Changed:
+
+- added
+  [landed-history-artifacts-pilot-review](parts/technique-reform-ingress/reviews/landed-history-artifacts-pilot-review.md)
+  as the post-migration review over the fourteenth tree pilot
+- accepted the landed `history-artifacts` shelf as clearer after validation
+  and as the first successful history trunk shelf
+- chose `recovery/antifragility-recovery` for the next direct-read migration
+  review without moving a fifteenth shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept incident response doctrine, runtime ownership, validation-patterns
+  erasure, proof authority, rollback policy, deployment lifecycle law, service
+  catalog ownership, and generic resilience platform authority outside the
+  next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fifteenth shelf migration was authorized without direct-read review
+
 ## 2026-05-05 - History-artifacts tree pilot migration
 
 Changed:

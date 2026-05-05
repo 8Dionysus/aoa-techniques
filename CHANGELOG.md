@@ -168,6 +168,9 @@ The format is intentionally simple and human-first.
   `AOA-T-0066`, and `AOA-T-0067` into
   `techniques/history/history-artifacts/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `history-artifacts` pilot review and selected
+  `recovery/antifragility-recovery` for the next direct-read migration review
+  without moving a fifteenth shelf yet
 
 ### Validation
 

@@ -126,6 +126,9 @@ permission slip to remap techniques automatically.
 - history-artifacts migration: landed exactly `AOA-T-0044`, `AOA-T-0053`,
   `AOA-T-0026`, `AOA-T-0045`, `AOA-T-0066`, and `AOA-T-0067` under
   `techniques/history/history-artifacts/` without frontmatter changes
+- landed history-artifacts pilot review: landed as `pilot-validated`, with
+  `recovery/antifragility-recovery` chosen for the next direct-read migration
+  review
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -184,6 +187,7 @@ permission slip to remap techniques automatically.
 | [Landed Published-Summary Pilot Review](reviews/landed-published-summary-pilot-review.md) | confirms the thirteenth migrated shelf stayed clearer, validates the third proof trunk shelf, and chooses `history-artifacts` for the next direct-read review | movement of `history-artifacts`, `tree_path` frontmatter, memory doctrine, instruction authority, private transcript publication, hosted viewer product doctrine, repo analytics, retention policy, recall substrate, or neighboring proof-side shelves |
 | [History-Artifacts Direct-Read Migration Review](reviews/history-artifacts-direct-read-migration-review.md) | reads `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`, `AOA-T-0066`, and `AOA-T-0067` directly and accepts the shelf as the fourteenth migration pilot | path movement by review alone, `tree_path` frontmatter, memory doctrine, instruction authority, private transcript publication, hidden capture policy, hosted viewer product doctrine, repo analytics, retention policy, recall substrate, proof authority, or neighboring shelves |
 | [History-Artifacts Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md) | preserves the fourteenth accepted path migration into `techniques/history/history-artifacts/` | active technique provenance, `tree_path` frontmatter, memory doctrine, instruction authority, private transcript publication, hidden capture policy, hosted viewer product doctrine, repo analytics, retention policy, recall substrate, proof authority, or neighboring shelves |
+| [Landed History-Artifacts Pilot Review](reviews/landed-history-artifacts-pilot-review.md) | confirms the fourteenth migrated shelf stayed clearer, validates the first history trunk shelf, and chooses `recovery/antifragility-recovery` for the next direct-read review | movement of `recovery/antifragility-recovery`, `tree_path` frontmatter, incident response doctrine, runtime ownership, validation-patterns erasure, proof authority, rollback policy, deployment lifecycle law, service catalog ownership, or generic resilience platform |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -381,5 +385,6 @@ The fourteenth pilot migration is now landed: those six bundles live under
 legacy receipt are in place, authored links were repaired, generated surfaces
 were rebuilt, and frontmatter stayed unchanged.
 
-The next move is to review the landed `history-artifacts` pilot before choosing
-any fifteenth shelf.
+The landed `history-artifacts` pilot review is now landed as `pilot-validated`
+and chooses `recovery/antifragility-recovery` for the next direct-read
+migration review.
