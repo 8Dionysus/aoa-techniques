@@ -312,8 +312,13 @@ The landed ninth pilot review is
 It validates `capability-boundary` as the fourth successful instruction trunk
 shelf and chooses `skill-discovery` for the next direct-read migration review.
 
-The next reform slice should run the `skill-discovery` direct-read migration
-review before moving any tenth shelf.
+The tenth migration review is
+[Skill-Discovery Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/skill-discovery-direct-read-migration-review.md).
+It accepts `skill-discovery` as the tenth migration pilot after directly
+reading `AOA-T-0041` and `AOA-T-0042`.
+
+The next reform slice should run the tenth pilot migration for
+`skill-discovery` without changing frontmatter.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
