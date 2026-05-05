@@ -210,7 +210,13 @@
    while keeping incident response doctrine, runtime ownership,
    validation-patterns erasure, proof authority, rollback policy, deployment
    lifecycle law, service catalog ownership, and generic resilience platform
-   authority outside the next move.
+   authority outside the next move. The `antifragility-recovery` direct-read
+   review is now landed as `accepted-for-fifteenth-migration-pilot`; it accepts
+   exactly `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098` while
+   preserving `AOA-T-0098` as `domain: validation-patterns` and
+   `kind: validation`, keeping the review non-mutating, and routing the next
+   bounded step to the fifteenth pilot migration only after route-card,
+   receipt, link-repair, generated-surface, and validation work move together.
 
 ## Hold line
 

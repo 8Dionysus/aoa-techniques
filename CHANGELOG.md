@@ -171,6 +171,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `history-artifacts` pilot review and selected
   `recovery/antifragility-recovery` for the next direct-read migration review
   without moving a fifteenth shelf yet
+- accepted the `antifragility-recovery` direct-read migration review over
+  `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098` as the fifteenth
+  tree pilot while keeping the review itself non-mutating
 
 ### Validation
 
