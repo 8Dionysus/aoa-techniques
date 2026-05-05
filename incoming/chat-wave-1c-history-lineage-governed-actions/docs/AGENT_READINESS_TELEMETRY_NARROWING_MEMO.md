@@ -13,7 +13,7 @@ It does not create a canonical bundle or authorize import by itself.
 ## Overlap watch
 
 - [AOA-T-0032](../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
-- [AOA-T-0010](../../../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md)
+- [AOA-T-0010](../../../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md)
 - [AOA-T-0067](../../../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md)
 
 ## Boundary statement

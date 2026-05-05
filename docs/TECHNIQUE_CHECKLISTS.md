@@ -536,11 +536,11 @@ See also:
 |---|---|---|---|---|
 | Summary Contract Checklist | `present` | `7` | `techniques/proof/evaluation-chain/contract-first-smoke-summary/checks/summary-contract-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) |
 
-### [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
+### [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| dual-write-history-checklist | `absent` | `8` | `techniques/evaluation/latest-alias-plus-history-copy/checks/dual-write-history-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
+| dual-write-history-checklist | `absent` | `8` | `techniques/proof/published-summary/latest-alias-plus-history-copy/checks/dual-write-history-checklist.md` | [TECHNIQUE.md](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) |
 
 ### [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
 
@@ -548,23 +548,23 @@ See also:
 |---|---|---|---|---|
 | gate-promotion-checklist | `absent` | `7` | `techniques/proof/evaluation-chain/signal-first-gate-promotion/checks/gate-promotion-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) |
 
-### [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
+### [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| remediation-snapshot-checklist | `absent` | `9` | `techniques/evaluation/published-summary-remediation-snapshot/checks/remediation-snapshot-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
+| remediation-snapshot-checklist | `absent` | `9` | `techniques/proof/published-summary/published-summary-remediation-snapshot/checks/remediation-snapshot-checklist.md` | [TECHNIQUE.md](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) |
 
-### [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot (`canonical`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| telemetry-integrity-checklist | `absent` | `9` | `techniques/evaluation/telemetry-integrity-snapshot/checks/telemetry-integrity-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
-
-### [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering (`canonical`)
+### [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| required-vs-optional-rendering-checklist | `absent` | `8` | `techniques/evaluation/required-vs-optional-source-rendering/checks/required-vs-optional-rendering-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
+| telemetry-integrity-checklist | `absent` | `9` | `techniques/proof/published-summary/telemetry-integrity-snapshot/checks/telemetry-integrity-checklist.md` | [TECHNIQUE.md](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) |
+
+### [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| required-vs-optional-rendering-checklist | `absent` | `8` | `techniques/proof/published-summary/required-vs-optional-source-rendering/checks/required-vs-optional-rendering-checklist.md` | [TECHNIQUE.md](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
 ### [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 

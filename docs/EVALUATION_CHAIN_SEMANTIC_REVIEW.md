@@ -31,7 +31,7 @@ Question: where does summary-contract production stop and staged promotion seman
 
 ## Adjacent Technique Note: `AOA-T-0006`
 
-[AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) matters here as an adjacent dependency, but not as a third full review target in this pilot.
+[AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) matters here as an adjacent dependency, but not as a third full review target in this pilot.
 
 - `AOA-T-0007` currently `requires` `AOA-T-0006` because staged promotion becomes stronger once history and latest-alias layout are trustworthy across repeated runs.
 - That adjacency does not make `AOA-T-0007` a storage-layout technique. The semantic core of `0007` is still staged enforcement policy over an existing signal, not dual-write layout or anti-double-count behavior.

@@ -3,6 +3,42 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Published-summary tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011`
+  into `techniques/proof/published-summary/`
+- extended `techniques/proof/AGENTS.md` for the third proof trunk shelf
+  without turning it into telemetry owner doctrine, dashboard ownership,
+  runtime storage policy, archive governance, remediation execution, integrity
+  verdict law, release policy, proof verdict law, or a generic reporting
+  platform
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-published-summary-tree-pilot.md`
+- repaired authored links from published-summary semantic and shadow reviews,
+  evaluation-chain adjacency, active review sources, and incoming overlap notes
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept latest alias storage, remediation snapshot, integrity diagnosis, and
+  required-versus-optional rendering as separate leaf bundles
+- kept `AOA-T-0011` readable as reusable consumer policy, not only a package
+  appendix
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_published_summary_tree_pilot
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no review-evidence, owner-truth-closeout, runtime, governance, or automation
+  shelf moved
+- no generated projection became authority
+
 ## 2026-05-05 - Published-summary direct-read migration review
 
 Changed:

@@ -1137,7 +1137,7 @@ See also:
 - Validate by: the summary file is always written on success and is written on failure whenever possible; the summary is valid...
 - Source: [TECHNIQUE.md](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md)
 
-### [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
+### [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
 
 - Summary: Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation.
 - Intent: Keep machine-readable summaries easy to discover for consumers while also preserving a trustworthy run-by-run...
@@ -1148,7 +1148,7 @@ See also:
 - Core contract: the latest alias path is stable and consumer-facing; the history copy lives under run_dir.
 - Main risk: the latest alias looks healthy while nested history parity or reader precedence is already drifting, so accumulation trust...
 - Validate by: the latest alias exists at the stable expected path; the history copy exists under run_dir; the history copy differs...
-- Source: [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md)
 
 ### [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
 
@@ -1163,7 +1163,7 @@ See also:
 - Validate by: the observational mode always publishes machine-readable output; the same summary contract is still readable after strict mode is introduced...
 - Source: [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md)
 
-### [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
+### [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
 
 - Summary: Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior.
 - Intent: Create one reviewable remediation snapshot from already-published latest summaries, so operators, dashboards, and agents...
@@ -1174,9 +1174,9 @@ See also:
 - Core contract: the helper reads latest published summaries only; the helper does not replay history or recompute trend state.
 - Main risk: remediation output starts reading like an integrity verdict or rendering instruction, so operators infer more than the backlog...
 - Validate by: only latest published summary aliases are read; no history replay or trend recomputation is required; the bucket set is...
-- Source: [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md)
 
-### [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot (`canonical`)
+### [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot (`canonical`)
 
 - Summary: Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface.
 - Intent: Provide one machine-readable diagnostic verdict over published summary invariants, so operators can quickly tell...
@@ -1187,9 +1187,9 @@ See also:
 - Core contract: the helper reads latest published summaries only; the helper is read-only with respect to upstream summaries and runtime...
 - Main risk: optional consistency noise starts crowding out required-source health, so the snapshot stops pointing attention at the bounded contract...
 - Validate by: required source presence and schema health are checked explicitly; telemetry counters or mismatch counters are surfaced in the snapshot...
-- Source: [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md)
 
-### [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering (`canonical`)
+### [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering (`canonical`)
 
 - Summary: Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures.
 - Intent: Keep summary-driven surfaces resilient by enforcing strict behavior for required sources while letting optional...
@@ -1200,7 +1200,7 @@ See also:
 - Core contract: required and optional source sets are explicit; required-source failure can trigger smoke or strict contract failure.
 - Main risk: an actually critical source is misclassified as optional and stays there long enough to distort operator interpretation.
 - Validate by: required missing sources and optional missing sources are reported separately; missing required sources fail the strict smoke or contract...
-- Source: [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md)
 
 ### [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 

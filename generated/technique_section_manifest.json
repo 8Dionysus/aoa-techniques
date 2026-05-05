@@ -296,7 +296,7 @@
     },
     {
       "id": "AOA-T-0006",
-      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -408,7 +408,7 @@
     },
     {
       "id": "AOA-T-0008",
-      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -520,7 +520,7 @@
     },
     {
       "id": "AOA-T-0010",
-      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -576,7 +576,7 @@
     },
     {
       "id": "AOA-T-0011",
-      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",

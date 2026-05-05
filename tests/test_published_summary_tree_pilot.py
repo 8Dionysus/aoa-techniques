@@ -11,42 +11,55 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 PILOT_BUNDLES = (
     (
-        "AOA-T-0003",
-        "contract-first-smoke-summary",
+        "AOA-T-0006",
+        "latest-alias-plus-history-copy",
+        "evaluation",
+        "artifact",
+        "canonical",
+        "techniques/evaluation/latest-alias-plus-history-copy",
+        "techniques/proof/published-summary/latest-alias-plus-history-copy",
+    ),
+    (
+        "AOA-T-0008",
+        "published-summary-remediation-snapshot",
+        "evaluation",
+        "lift",
+        "canonical",
+        "techniques/evaluation/published-summary-remediation-snapshot",
+        "techniques/proof/published-summary/published-summary-remediation-snapshot",
+    ),
+    (
+        "AOA-T-0010",
+        "telemetry-integrity-snapshot",
         "evaluation",
         "validation",
         "canonical",
-        "techniques/evaluation/contract-first-smoke-summary",
-        "techniques/proof/evaluation-chain/contract-first-smoke-summary",
+        "techniques/evaluation/telemetry-integrity-snapshot",
+        "techniques/proof/published-summary/telemetry-integrity-snapshot",
     ),
     (
-        "AOA-T-0007",
-        "signal-first-gate-promotion",
+        "AOA-T-0011",
+        "required-vs-optional-source-rendering",
         "evaluation",
         "guardrail",
         "canonical",
-        "techniques/evaluation/signal-first-gate-promotion",
-        "techniques/proof/evaluation-chain/signal-first-gate-promotion",
-    ),
-    (
-        "AOA-T-0032",
-        "context-report-for-ci",
-        "evaluation",
-        "validation",
-        "promoted",
-        "techniques/evaluation/context-report-for-ci",
-        "techniques/proof/evaluation-chain/context-report-for-ci",
+        "techniques/evaluation/required-vs-optional-source-rendering",
+        "techniques/proof/published-summary/required-vs-optional-source-rendering",
     ),
 )
 
 LIVE_LINK_SURFACES = (
+    "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
+    "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
     "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
-    "mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md",
-    "mechanics/distillation/parts/external-candidate-ledger/README.md",
+    "incoming/chat-wave-1c-history-lineage-governed-actions/docs/AGENT_READINESS_TELEMETRY_NARROWING_MEMO.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/first-kind-ambiguity-review-pack.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/second-kind-ambiguity-review-pack.md",
 )
 
 REVIEW_SURFACES_WITH_ACCOUNTING = (
-    "mechanics/distillation/parts/technique-reform-ingress/reviews/evaluation-chain-direct-read-migration-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-evaluation-chain-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/published-summary-direct-read-migration-review.md",
 )
 
 
@@ -58,8 +71,8 @@ def read_frontmatter(path: Path) -> dict[str, object]:
     return yaml.safe_load(match.group(1))
 
 
-class EvaluationChainTreePilotTestCase(unittest.TestCase):
-    def test_pilot_bundles_live_under_proof_evaluation_chain_tree(self) -> None:
+class PublishedSummaryTreePilotTestCase(unittest.TestCase):
+    def test_pilot_bundles_live_under_proof_published_summary_tree(self) -> None:
         for (
             technique_id,
             slug,
@@ -96,18 +109,20 @@ class EvaluationChainTreePilotTestCase(unittest.TestCase):
                 self.assertEqual(status, frontmatter["status"])
                 self.assertNotIn("tree_path", frontmatter)
 
-    def test_proof_route_card_names_evaluation_chain_without_overclaiming(self) -> None:
+    def test_proof_route_card_names_published_summary_without_overclaiming(self) -> None:
         text = (REPO_ROOT / "techniques" / "proof" / "AGENTS.md").read_text(
             encoding="utf-8"
         )
         flat_text = re.sub(r"\s+", " ", text)
 
-        self.assertIn("evaluation-chain/", text)
-        self.assertIn("machine-readable validation summaries", flat_text)
-        self.assertIn("staged signal promotion", flat_text)
-        self.assertIn("read-only CI context reporting", flat_text)
-        self.assertIn("CI ownership", text)
-        self.assertIn("proof verdict law", text)
+        self.assertIn("published-summary/", text)
+        self.assertIn("stable latest alias storage", flat_text)
+        self.assertIn("bounded remediation snapshots", flat_text)
+        self.assertIn("diagnostic integrity snapshots", flat_text)
+        self.assertIn("required-versus-optional summary-source rendering", flat_text)
+        self.assertIn("dashboard ownership", text)
+        self.assertIn("runtime storage policy", text)
+        self.assertIn("generic reporting platform", text)
         self.assertIn("aoa-evals", text)
 
     def test_evaluation_route_card_no_longer_names_moved_representatives(self) -> None:
@@ -115,18 +130,21 @@ class EvaluationChainTreePilotTestCase(unittest.TestCase):
             REPO_ROOT / "techniques" / "evaluation" / "AGENTS.md"
         ).read_text(encoding="utf-8")
 
-        self.assertNotIn("contract-first-smoke-summary", evaluation)
-        self.assertNotIn("signal-first-gate-promotion", evaluation)
-        self.assertNotIn("context-report-for-ci", evaluation)
+        self.assertNotIn("latest-alias-plus-history-copy", evaluation)
+        self.assertNotIn("published-summary-remediation-snapshot", evaluation)
+        self.assertNotIn("telemetry-integrity-snapshot", evaluation)
+        self.assertNotIn("required-vs-optional-source-rendering", evaluation)
         self.assertIn("contextual-host-doctor", evaluation)
+        self.assertIn("baseline-first-additive-profile-benchmarks", evaluation)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
         receipt = (
             REPO_ROOT
             / "legacy"
             / "receipts"
-            / "2026-05-05-evaluation-chain-tree-pilot.md"
+            / "2026-05-05-published-summary-tree-pilot.md"
         ).read_text(encoding="utf-8")
+        flat_receipt = re.sub(r"\s+", " ", receipt)
 
         for (
             technique_id,
@@ -143,9 +161,10 @@ class EvaluationChainTreePilotTestCase(unittest.TestCase):
 
         self.assertIn("They did not pass through root `legacy/`.", receipt)
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
-        self.assertIn("CI ownership", receipt)
+        self.assertIn("dashboard ownership", flat_receipt)
+        self.assertIn("runtime storage policy", flat_receipt)
         self.assertIn("separate leaf bundles", receipt)
-        self.assertIn("Keep `AOA-T-0032` promoted", receipt)
+        self.assertIn("AOA-T-0011", receipt)
 
     def test_live_links_point_to_current_paths(self) -> None:
         text = "\n".join(
@@ -163,9 +182,11 @@ class EvaluationChainTreePilotTestCase(unittest.TestCase):
             new_path,
         ) in PILOT_BUNDLES:
             with self.subTest(technique_id=technique_id):
-                if technique_id in {"AOA-T-0003", "AOA-T-0007", "AOA-T-0032"}:
+                if technique_id == "AOA-T-0006" or technique_id == "AOA-T-0008":
                     self.assertIn(f"{new_path}/TECHNIQUE.md", text)
-                    self.assertNotIn(f"{old_path}/TECHNIQUE.md", text)
+                if technique_id in {"AOA-T-0010", "AOA-T-0011"}:
+                    self.assertIn(f"{new_path}/TECHNIQUE.md", text)
+                self.assertNotIn(f"{old_path}/TECHNIQUE.md", text)
 
     def test_review_sources_point_to_current_paths_but_keep_pilot_accounting(self) -> None:
         review_texts = "\n".join(

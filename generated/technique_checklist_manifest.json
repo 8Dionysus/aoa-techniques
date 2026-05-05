@@ -237,10 +237,10 @@
     },
     {
       "id": "AOA-T-0006",
-      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/latest-alias-plus-history-copy/checks/dual-write-history-checklist.md",
+          "check_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/checks/dual-write-history-checklist.md",
           "title": "dual-write-history-checklist",
           "intro_markdown": "",
           "items": [
@@ -323,10 +323,10 @@
     },
     {
       "id": "AOA-T-0008",
-      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/published-summary-remediation-snapshot/checks/remediation-snapshot-checklist.md",
+          "check_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/checks/remediation-snapshot-checklist.md",
           "title": "remediation-snapshot-checklist",
           "intro_markdown": "",
           "items": [
@@ -413,10 +413,10 @@
     },
     {
       "id": "AOA-T-0010",
-      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/telemetry-integrity-snapshot/checks/telemetry-integrity-checklist.md",
+          "check_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/checks/telemetry-integrity-checklist.md",
           "title": "telemetry-integrity-checklist",
           "intro_markdown": "",
           "items": [
@@ -462,10 +462,10 @@
     },
     {
       "id": "AOA-T-0011",
-      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/required-vs-optional-source-rendering/checks/required-vs-optional-rendering-checklist.md",
+          "check_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/checks/required-vs-optional-rendering-checklist.md",
           "title": "required-vs-optional-rendering-checklist",
           "intro_markdown": "",
           "items": [

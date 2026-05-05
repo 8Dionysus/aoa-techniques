@@ -364,8 +364,14 @@ The thirteenth migration review is
 It accepts `published-summary` as the thirteenth migration pilot after
 directly reading `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011`.
 
-The next reform slice should run the thirteenth pilot migration before any
-other shelf movement.
+The thirteenth pilot migration moves exactly `AOA-T-0006`, `AOA-T-0008`,
+`AOA-T-0010`, and `AOA-T-0011` into
+`techniques/proof/published-summary/` without changing `domain`, `kind`, or
+`tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-published-summary-tree-pilot.md`](../legacy/receipts/2026-05-05-published-summary-tree-pilot.md).
+
+The next reform slice should review the landed `published-summary` pilot
+before choosing any fourteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
