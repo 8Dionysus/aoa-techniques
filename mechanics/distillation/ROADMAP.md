@@ -39,7 +39,9 @@
    exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` is now landed under
    `techniques/continuity/review-compaction/`, with root legacy receipt
    accounting and no `tree_path` frontmatter or schema migration. The next
-   honest pass is a landed-pilot review before choosing any second shelf.
+   landed-pilot review is also landed as `pilot-validated`: the
+   `review-compaction` migration held its shape after validation, and
+   `handoff-continuation` is the next direct-read migration review target.
 
 ## Hold line
 

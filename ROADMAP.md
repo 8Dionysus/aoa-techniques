@@ -133,8 +133,8 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 
 | Field | Direction |
 |---|---|
-| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing frontmatter. |
-| Next honest move | Review the landed `review-compaction` pilot after validation, then choose one next bounded shelf only if the new tree path proves clearer than the old broad domain placement. |
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing frontmatter, and the landed-pilot review accepted the result as clearer after validation. |
+| Next honest move | Run a direct-read migration review for `handoff-continuation` over `AOA-T-0056` through `AOA-T-0062`; move nothing until that review proves the shelf is clearer than broad `agent-workflows` placement. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 ## Horizon: Small-Agent Usability
@@ -184,8 +184,9 @@ trigger is real.
 
 - Promote `family` from scout-only to optional reviewed frontmatter only after
   examples and tie-break rules stay stable across multiple technique waves.
-- Use the landed `review-compaction` pilot as the review target before any
-  second tree migration wave.
+- Use the landed `review-compaction` pilot review as the precedent for the
+  `handoff-continuation` direct-read review before any second tree migration
+  wave.
 - Add generated projections for `capability_class`, `substrate`,
   `execution_profile`, and `risk_posture` from
   `config/technique_topology_axes.yaml` only after mechanics candidates prove
