@@ -23,5 +23,6 @@ Current reviews:
 - [instruction-surface-direct-read-migration-review](instruction-surface-direct-read-migration-review.md)
 - [landed-instruction-surface-pilot-review](landed-instruction-surface-pilot-review.md)
 - [kag-source-lift-direct-read-migration-review](kag-source-lift-direct-read-migration-review.md)
+- [landed-kag-source-lift-pilot-review](landed-kag-source-lift-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

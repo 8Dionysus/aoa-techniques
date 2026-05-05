@@ -260,8 +260,13 @@ The sixth pilot migration moves `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`,
 `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md`](../legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md).
 
-The next reform slice should review the landed `kag-source-lift` pilot before
-moving another shelf.
+The landed sixth pilot review is
+[Landed Kag-Source-Lift Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-kag-source-lift-pilot-review.md).
+It validates `kag-source-lift` as the first successful `knowledge-lift` trunk
+test and chooses `docs-boundary` for the next direct-read migration review.
+
+The next reform slice should run the `docs-boundary` direct-read migration
+review before moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

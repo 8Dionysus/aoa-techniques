@@ -94,6 +94,9 @@ The format is intentionally simple and human-first.
   `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` into
   `techniques/knowledge-lift/kag-source-lift/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `kag-source-lift` pilot review and selected
+  `docs-boundary` for the next direct-read migration review without moving a
+  seventh shelf yet
 
 ### Validation
 
