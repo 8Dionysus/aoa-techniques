@@ -145,8 +145,14 @@
    eval-suite ownership, mandatory testing doctrine, DDD formalism,
    architecture taxonomy, runtime, governance, owner-closeout,
    review-evidence, automation-governance, and other proof-adjacent shelves
-   outside the next move. The next bounded step is a direct-read migration
-   review for `skill-support`, with no frontmatter change.
+   outside the next move. The `skill-support` direct-read review is now landed
+   as `accepted-for-eleventh-migration-pilot`; it accepts exactly
+   `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017` while keeping proof
+   authority, eval-suite ownership, mandatory testing doctrine, architecture
+   taxonomy, runtime readiness, owner-truth law, policy enforcement, and
+   neighboring proof-side shelves outside the move. The next bounded step is
+   the eleventh pilot migration for `skill-support`, with no frontmatter
+   change.
 
 ## Hold line
 

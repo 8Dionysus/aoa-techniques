@@ -327,8 +327,13 @@ The landed tenth pilot review is
 It validates `skill-discovery` as the fifth successful instruction trunk shelf
 and chooses `skill-support` for the next direct-read migration review.
 
-The next reform slice should run a direct-read migration review for
-`skill-support` before moving any eleventh shelf.
+The eleventh migration review is
+[Skill-Support Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/skill-support-direct-read-migration-review.md).
+It accepts `skill-support` as the eleventh migration pilot after directly
+reading `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017`.
+
+The next reform slice should run the eleventh pilot migration for
+`skill-support` before reviewing any twelfth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
