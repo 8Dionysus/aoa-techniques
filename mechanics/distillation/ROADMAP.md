@@ -246,6 +246,15 @@
    real-action permission, automation governance, CI policy, broad rollout
    doctrine, and neighboring execution shelves outside the next move. The next
    bounded step is that direct-read review before moving any seventeenth shelf.
+   The `intent-chain` direct-read review is now landed as
+   `accepted-for-seventeenth-migration-pilot`; it accepts exactly `AOA-T-0004`
+   and `AOA-T-0005` while keeping the review non-mutating, preserving
+   `AOA-T-0005` as `promoted`, and keeping router ownership, API contract
+   authority, runtime dispatch, real-action permission, automation governance,
+   CI policy, broad rollout doctrine, and neighboring execution shelves outside
+   the shelf. The next bounded step is to migrate those two bundles only after
+   path movement, support-file carry, receipt, link-repair, generated surface,
+   and validation work move together.
 
 ## Hold line
 

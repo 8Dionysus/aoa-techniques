@@ -189,6 +189,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `ready-work-graphs` pilot review and selected
   `execution/intent-chain` for the next direct-read migration review without
   moving a seventeenth shelf yet
+- accepted the `intent-chain` direct-read migration review over `AOA-T-0004`
+  and `AOA-T-0005` as the seventeenth tree pilot while keeping the review
+  itself non-mutating
 
 ### Validation
 
