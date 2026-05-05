@@ -51,10 +51,10 @@ slice should run a direct-read review for `continuity/donor-harvest`.
 - [Technique topology scout rows for `agent-workflows-core` and `donor-harvest`](../../../../../reports/technique_topology_scout.md)
 - [Technique tree projection rows for `agent-workflows-core` and `donor-harvest`](../../../../../reports/technique_tree_projection.md)
 - [Continuity route card](../../../../../techniques/continuity/AGENTS.md)
-- [AOA-T-0075 session-donor-harvest](../../../../../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md)
-- [AOA-T-0077 harvest-packet-contract](../../../../../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md)
-- [AOA-T-0084 progression-evidence-lift](../../../../../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md)
-- [AOA-T-0085 multi-axis-quest-overlay](../../../../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md)
+- [AOA-T-0075 session-donor-harvest](../../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md)
+- [AOA-T-0077 harvest-packet-contract](../../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md)
+- [AOA-T-0084 progression-evidence-lift](../../../../../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md)
+- [AOA-T-0085 multi-axis-quest-overlay](../../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md)
 
 ## Landed Shape Read
 

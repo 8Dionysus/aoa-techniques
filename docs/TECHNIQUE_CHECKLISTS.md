@@ -196,11 +196,11 @@ See also:
 |---|---|---|---|---|
 | telegram-export-normalization-to-local-store checklist | `absent` | `6` | `techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
 
-### [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
+### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| session-donor-harvest checklist | `absent` | `8` | `techniques/agent-workflows/session-donor-harvest/checks/session-donor-harvest-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) |
+| session-donor-harvest checklist | `absent` | `8` | `techniques/continuity/donor-harvest/session-donor-harvest/checks/session-donor-harvest-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
 
 ### [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
@@ -208,11 +208,11 @@ See also:
 |---|---|---|---|---|
 | owner-layer-triage checklist | `absent` | `8` | `techniques/agent-workflows/owner-layer-triage/checks/owner-layer-triage-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) |
 
-### [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
+### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| harvest-packet-contract checklist | `absent` | `7` | `techniques/agent-workflows/harvest-packet-contract/checks/harvest-packet-contract-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) |
+| harvest-packet-contract checklist | `absent` | `7` | `techniques/continuity/donor-harvest/harvest-packet-contract/checks/harvest-packet-contract-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
 
 ### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 
@@ -250,17 +250,17 @@ See also:
 |---|---|---|---|---|
 | checkpoint-bound-self-repair checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/checks/checkpoint-bound-self-repair-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
 
-### [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
+### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| progression-evidence-lift checklist | `absent` | `7` | `techniques/agent-workflows/progression-evidence-lift/checks/progression-evidence-lift-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) |
+| progression-evidence-lift checklist | `absent` | `7` | `techniques/continuity/donor-harvest/progression-evidence-lift/checks/progression-evidence-lift-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) |
 
-### [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
+### [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| multi-axis-quest-overlay checklist | `absent` | `6` | `techniques/agent-workflows/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) |
+| multi-axis-quest-overlay checklist | `absent` | `6` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
 
 ### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
 

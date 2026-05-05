@@ -42,7 +42,7 @@ together:
 
 | Technique | Landed correction | Current state |
 |---|---|---|
-| [AOA-T-0085](../../../../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | `artifact` -> `lift` | closed |
+| [AOA-T-0085](../../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | `artifact` -> `lift` | closed |
 | [AOA-T-0005](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | `guardrail` -> `workflow` | closed |
 | [AOA-T-0052](../../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | `handoff` -> `workflow` | closed |
 | [AOA-T-0054](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | `handoff` -> `recovery` | closed |

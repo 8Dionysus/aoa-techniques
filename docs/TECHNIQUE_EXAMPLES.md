@@ -203,11 +203,11 @@ See also:
 |---|---|---|---|
 | minimal-telegram-export-normalization-to-local-store | `present` | `techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/examples/minimal-telegram-export-normalization-to-local-store.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
 
-### [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
+### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal session-donor-harvest | `present` | `techniques/agent-workflows/session-donor-harvest/examples/minimal-session-donor-harvest.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) |
+| minimal session-donor-harvest | `present` | `techniques/continuity/donor-harvest/session-donor-harvest/examples/minimal-session-donor-harvest.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
 
 ### [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
@@ -215,11 +215,11 @@ See also:
 |---|---|---|---|
 | minimal owner-layer-triage | `present` | `techniques/agent-workflows/owner-layer-triage/examples/minimal-owner-layer-triage.md` | [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) |
 
-### [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
+### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal harvest-packet-contract | `present` | `techniques/agent-workflows/harvest-packet-contract/examples/minimal-harvest-packet-contract.md` | [TECHNIQUE.md](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) |
+| minimal harvest-packet-contract | `present` | `techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
 
 ### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 
@@ -257,17 +257,17 @@ See also:
 |---|---|---|---|
 | minimal checkpoint-bound-self-repair | `present` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
 
-### [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
+### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal progression-evidence-lift | `present` | `techniques/agent-workflows/progression-evidence-lift/examples/minimal-progression-evidence-lift.md` | [TECHNIQUE.md](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) |
+| minimal progression-evidence-lift | `present` | `techniques/continuity/donor-harvest/progression-evidence-lift/examples/minimal-progression-evidence-lift.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) |
 
-### [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
+### [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal multi-axis-quest-overlay | `present` | `techniques/agent-workflows/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md` | [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) |
+| minimal multi-axis-quest-overlay | `present` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
 
 ### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
 

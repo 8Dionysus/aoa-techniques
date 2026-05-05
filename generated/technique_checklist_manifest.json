@@ -3290,10 +3290,10 @@
     },
     {
       "id": "AOA-T-0075",
-      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/session-donor-harvest/checks/session-donor-harvest-checklist.md",
+          "check_path": "techniques/continuity/donor-harvest/session-donor-harvest/checks/session-donor-harvest-checklist.md",
           "title": "session-donor-harvest checklist",
           "intro_markdown": "",
           "items": [
@@ -3380,10 +3380,10 @@
     },
     {
       "id": "AOA-T-0077",
-      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/harvest-packet-contract/checks/harvest-packet-contract-checklist.md",
+          "check_path": "techniques/continuity/donor-harvest/harvest-packet-contract/checks/harvest-packet-contract-checklist.md",
           "title": "harvest-packet-contract checklist",
           "intro_markdown": "",
           "items": [
@@ -3671,10 +3671,10 @@
     },
     {
       "id": "AOA-T-0084",
-      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/progression-evidence-lift/checks/progression-evidence-lift-checklist.md",
+          "check_path": "techniques/continuity/donor-harvest/progression-evidence-lift/checks/progression-evidence-lift-checklist.md",
           "title": "progression-evidence-lift checklist",
           "intro_markdown": "",
           "items": [
@@ -3712,10 +3712,10 @@
     },
     {
       "id": "AOA-T-0085",
-      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md",
+          "check_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md",
           "title": "multi-axis-quest-overlay checklist",
           "intro_markdown": "",
           "items": [

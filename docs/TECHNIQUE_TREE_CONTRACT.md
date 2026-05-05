@@ -503,8 +503,14 @@ progression doctrine, owner routing, role progression, stats ownership,
 session-closeout automation, neighboring continuity or governance shelves, and
 all remaining `agent-workflows` leaves outside the shelf.
 
-The next reform slice should migrate exactly those four bundles before any
-other nineteenth shelf movement.
+The nineteenth pilot migration moves exactly those four bundles into
+`techniques/continuity/donor-harvest/` without changing `domain`, `kind`,
+status, relations, evidence, support files, or `tree_path` frontmatter. The
+root receipt is
+[`legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md`](../legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md).
+
+The next reform slice should review the landed `continuity/donor-harvest`
+shelf before choosing the twentieth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

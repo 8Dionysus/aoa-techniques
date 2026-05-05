@@ -6092,7 +6092,7 @@
     {
       "id": "AOA-T-0075",
       "name": "session-donor-harvest",
-      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6127,7 +6127,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- invocation is explicit and post-session\n- the technique starts from a reviewed artifact rather than raw live session state\n- one candidate record names one reusable unit\n- every kept candidate keeps visible evidence anchors\n- the donor pack stays smaller than owner placement, promotion verdict, or writeback\n- session history remains source evidence, not memory canon or instruction authority\n- derivative routing or graph surfaces do not become first-authoring targets for source-owned meaning\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), this technique assumes the transcript or equivalent reviewed artifact already exists and only owns donor extraction after review. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide the final primary owner layer for each candidate. It should also stay narrower than final quest promotion triage because it can emit several candidate units from one session instead of one promotion verdict."
+          "content_markdown": "- invocation is explicit and post-session\n- the technique starts from a reviewed artifact rather than raw live session state\n- one candidate record names one reusable unit\n- every kept candidate keeps visible evidence anchors\n- the donor pack stays smaller than owner placement, promotion verdict, or writeback\n- session history remains source evidence, not memory canon or instruction authority\n- derivative routing or graph surfaces do not become first-authoring targets for source-owned meaning\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../../history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), this technique assumes the transcript or equivalent reviewed artifact already exists and only owns donor extraction after review. Unlike [AOA-T-0076](../../../agent-workflows/owner-layer-triage/TECHNIQUE.md), it does not decide the final primary owner layer for each candidate. It should also stay narrower than final quest promotion triage because it can emit several candidate units from one session instead of one promotion verdict."
         },
         {
           "key": "risks",
@@ -6209,7 +6209,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one candidate unit maps to one primary owner layer\n- usefulness is a reuse signal, not an owner layer by itself\n- the nearest wrong target is named explicitly rather than left implicit\n- derivative routing or graph layers do not become first-authoring targets for source-owned meaning\n- the technique owns one placement verdict, not the whole donor-extraction workflow\n- the technique stays smaller than final promotion review for an already repeated quest unit\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not extract candidate units from a reviewed session artifact; it only places one already-isolated unit. Unlike [AOA-T-0016](../../proof/skill-support/bounded-context-map/TECHNIQUE.md), it does not define the full context map or interface structure of a system; it makes one bounded owner verdict over one candidate unit. It should also stay narrower than final quest promotion triage because it can return `hold` or a first owner layer without deciding whether the unit is already ready for canon promotion."
+          "content_markdown": "- one candidate unit maps to one primary owner layer\n- usefulness is a reuse signal, not an owner layer by itself\n- the nearest wrong target is named explicitly rather than left implicit\n- derivative routing or graph layers do not become first-authoring targets for source-owned meaning\n- the technique owns one placement verdict, not the whole donor-extraction workflow\n- the technique stays smaller than final promotion review for an already repeated quest unit\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../../continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md), this technique does not extract candidate units from a reviewed session artifact; it only places one already-isolated unit. Unlike [AOA-T-0016](../../proof/skill-support/bounded-context-map/TECHNIQUE.md), it does not define the full context map or interface structure of a system; it makes one bounded owner verdict over one candidate unit. It should also stay narrower than final quest promotion triage because it can return `hold` or a first owner layer without deciding whether the unit is already ready for canon promotion."
         },
         {
           "key": "risks",
@@ -6256,7 +6256,7 @@
     {
       "id": "AOA-T-0077",
       "name": "harvest-packet-contract",
-      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6291,7 +6291,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the packet starts after review\n- the required spine stays small and explicit\n- each extract remains one bounded reusable unit\n- optional fields can point to later family seams but must not replace them\n- the packet is a source-owned post-session nucleus, not memory canon or routing authority\n- later family seams may consume the packet, but they still own their own verdicts\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not decide which reusable units survive donor extraction; it only keeps the resulting packet shape bounded. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide one owner verdict over one bounded unit. It should stay smaller than any later fork, diagnosis, repair, progression, or quest seam that the packet may reference."
+          "content_markdown": "- the packet starts after review\n- the required spine stays small and explicit\n- each extract remains one bounded reusable unit\n- optional fields can point to later family seams but must not replace them\n- the packet is a source-owned post-session nucleus, not memory canon or routing authority\n- later family seams may consume the packet, but they still own their own verdicts\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not decide which reusable units survive donor extraction; it only keeps the resulting packet shape bounded. Unlike [AOA-T-0076](../../../agent-workflows/owner-layer-triage/TECHNIQUE.md), it does not decide one owner verdict over one bounded unit. It should stay smaller than any later fork, diagnosis, repair, progression, or quest seam that the packet may reference."
         },
         {
           "key": "risks",
@@ -6373,7 +6373,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- fork cards describe choices; they do not decide authority\n- each card must represent one materially distinct route\n- visible downside is required, not optional polish\n- stop conditions remain first-class for risky routes\n- a default route may be suggested, but alternatives must remain visible\n\nRelationship to adjacent techniques: unlike [AOA-T-0077](../harvest-packet-contract/TECHNIQUE.md), this technique does not define the nucleus packet shape; it assumes the source packet or reviewed artifact already exists. Unlike [AOA-T-0079](../risk-passport-lift/TECHNIQUE.md), it owns the branch cards themselves rather than the smaller per-route passport fields. It should stay narrower than playbook design because it keeps next-route choices legible without authoring a full recurring scenario."
+          "content_markdown": "- fork cards describe choices; they do not decide authority\n- each card must represent one materially distinct route\n- visible downside is required, not optional polish\n- stop conditions remain first-class for risky routes\n- a default route may be suggested, but alternatives must remain visible\n\nRelationship to adjacent techniques: unlike [AOA-T-0077](../../continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md), this technique does not define the nucleus packet shape; it assumes the source packet or reviewed artifact already exists. Unlike [AOA-T-0079](../risk-passport-lift/TECHNIQUE.md), it owns the branch cards themselves rather than the smaller per-route passport fields. It should stay narrower than playbook design because it keeps next-route choices legible without authoring a full recurring scenario."
         },
         {
           "key": "risks",
@@ -6830,7 +6830,7 @@
     {
       "id": "AOA-T-0084",
       "name": "progression-evidence-lift",
-      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6912,7 +6912,7 @@
     {
       "id": "AOA-T-0085",
       "name": "multi-axis-quest-overlay",
-      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -6947,7 +6947,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the overlay always rests on reviewed evidence\n- the overlay remains adjunct, not sovereign\n- quest or RPG language does not replace owner-layer truth\n- flavor does not grant authority rights\n- the overlay remains smaller than the underlying progression or route-reading object\n\nRelationship to adjacent techniques: unlike [AOA-T-0084](../progression-evidence-lift/TECHNIQUE.md), this technique does not decide the progression verdict or multi-axis movement; it only adds adjunct reflective framing. Unlike [AOA-T-0078](../decision-fork-cards/TECHNIQUE.md), it does not define the explicit route cards themselves; it can only make an already bounded route-reading surface more legible."
+          "content_markdown": "- the overlay always rests on reviewed evidence\n- the overlay remains adjunct, not sovereign\n- quest or RPG language does not replace owner-layer truth\n- flavor does not grant authority rights\n- the overlay remains smaller than the underlying progression or route-reading object\n\nRelationship to adjacent techniques: unlike [AOA-T-0084](../progression-evidence-lift/TECHNIQUE.md), this technique does not decide the progression verdict or multi-axis movement; it only adds adjunct reflective framing. Unlike [AOA-T-0078](../../../agent-workflows/decision-fork-cards/TECHNIQUE.md), it does not define the explicit route cards themselves; it can only make an already bounded route-reading surface more legible."
         },
         {
           "key": "risks",

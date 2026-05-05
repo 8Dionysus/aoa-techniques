@@ -9,7 +9,7 @@ permission, status law, or technique promotion.
 ## Local Anchors
 
 - `AOA-T-0084`
-  (`techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md`) owns
+  (`techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md`) owns
   bounded multi-axis progression deltas from reviewed evidence.
 - `mechanics/growth-cycle/parts/technique-feat-model/README.md` defines the
   Technique Feat Model: feat cards as derived reader surfaces over technique

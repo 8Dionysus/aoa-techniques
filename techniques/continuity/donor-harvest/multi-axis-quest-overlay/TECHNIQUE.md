@@ -90,7 +90,7 @@ overwrite owner truth, proof posture, or routing authority.
 - flavor does not grant authority rights
 - the overlay remains smaller than the underlying progression or route-reading object
 
-Relationship to adjacent techniques: unlike [AOA-T-0084](../progression-evidence-lift/TECHNIQUE.md), this technique does not decide the progression verdict or multi-axis movement; it only adds adjunct reflective framing. Unlike [AOA-T-0078](../decision-fork-cards/TECHNIQUE.md), it does not define the explicit route cards themselves; it can only make an already bounded route-reading surface more legible.
+Relationship to adjacent techniques: unlike [AOA-T-0084](../progression-evidence-lift/TECHNIQUE.md), this technique does not decide the progression verdict or multi-axis movement; it only adds adjunct reflective framing. Unlike [AOA-T-0078](../../../agent-workflows/decision-fork-cards/TECHNIQUE.md), it does not define the explicit route cards themselves; it can only make an already bounded route-reading surface more legible.
 
 ## Risks
 

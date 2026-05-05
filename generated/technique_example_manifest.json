@@ -943,10 +943,10 @@
     },
     {
       "id": "AOA-T-0075",
-      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/session-donor-harvest/examples/minimal-session-donor-harvest.md",
+          "example_path": "techniques/continuity/donor-harvest/session-donor-harvest/examples/minimal-session-donor-harvest.md",
           "title": "minimal session-donor-harvest",
           "body_markdown": "## Reviewed session artifact cues\n\n- one repeated post-session move for turning review notes into a bounded donor packet\n- one explicit operator workflow for harvesting reusable units after review\n- one broader recurring rollout route that spans drafting, review, and later proof updates\n\n## Minimal donor pack\n\n```yaml\nsession_donor_pack:\n  source_artifact: reviewed-session-2026-04-05.md\n  kept_candidates:\n    - unit_name: reviewed-session donor packet\n      reuse_kind: pattern\n      evidence_anchors:\n        - \"the review note repeatedly turns raw recap into a bounded candidate pack\"\n    - unit_name: explicit post-session donor harvest workflow\n      reuse_kind: mechanic\n      evidence_anchors:\n        - \"the operator runs one bounded post-session harvesting workflow after review\"\n    - unit_name: recurring harvest-to-promotion route\n      reuse_kind: route\n      evidence_anchors:\n        - \"the route spans drafting, review, and later proof refresh\"\n  hold_or_defer:\n    - \"theme-level morale notes with no bounded reusable unit\"\n```\n\nWhy this example stays bounded:\n\n- it starts from a reviewed artifact instead of a live session\n- it emits candidate records with evidence anchors rather than a promotion verdict\n- it preserves several reusable units without collapsing them into one recap or one owner-layer answer"
         }
@@ -965,10 +965,10 @@
     },
     {
       "id": "AOA-T-0077",
-      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/harvest-packet-contract/examples/minimal-harvest-packet-contract.md",
+          "example_path": "techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md",
           "title": "minimal harvest-packet-contract",
           "body_markdown": "```yaml\nharvest_packet:\n  session_ref: reviewed-session-2026-04-05\n  reviewed_artifacts:\n    - compaction-note-2026-04-05.md\n  extracts:\n    - title: explicit post-session donor harvest workflow\n      kind: mechanic\n      summary: keep donor extraction visible before later placement or promotion\n      evidence_refs:\n        - \"the reviewed note repeatedly turns raw recap into bounded reusable extracts\"\n      repeat_signal: repeated in the reviewed session artifact\n      owner_hint: aoa-skills\n      chosen_next_surface: SKILL.md\n      nearest_wrong_target: aoa-routing\n  fork_cards:\n    - \"optional later branch analysis\"\n  progression:\n    - \"optional later progression overlay\"\n```\n\nWhy this example stays bounded:\n\n- it keeps the required packet spine small\n- it records one bounded extract instead of one long recap\n- it treats later family fields as optional pointers rather than replacements for sibling seams"
         }
@@ -1042,10 +1042,10 @@
     },
     {
       "id": "AOA-T-0084",
-      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/progression-evidence-lift/examples/minimal-progression-evidence-lift.md",
+          "example_path": "techniques/continuity/donor-harvest/progression-evidence-lift/examples/minimal-progression-evidence-lift.md",
           "title": "minimal progression-evidence-lift",
           "body_markdown": "```yaml\nprogression_delta:\n  movement:\n    boundary_integrity: advance\n    review_sharpness: advance\n    proof_discipline: hold\n    deep_readiness: reanchor\n  verdict: advance-with-caution\n  unlock_hints:\n    - \"safe to widen one session-harvest seam next\"\n```\n\nWhy this example stays bounded:\n\n- it stays multi-axis instead of collapsing into one score\n- it allows mixed movement across different axes\n- it keeps unlock hints small and descriptive"
         }
@@ -1053,10 +1053,10 @@
     },
     {
       "id": "AOA-T-0085",
-      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md",
+          "example_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md",
           "title": "minimal multi-axis-quest-overlay",
           "body_markdown": "```yaml\nquest_overlay:\n  base_progression_ref: progression-delta-2026-04-05.md\n  quest_residue: \"the route now supports one deeper harvest-family extraction quest\"\n  chronicle_stub: \"boundary discipline improved, but proof discipline still needs reanchor\"\n  unlock_hint: \"safe to widen one seam, not the whole family\"\n  boundary_note: owner truth and routing authority remain outside this overlay\n```\n\nWhy this example stays bounded:\n\n- it rests on an explicit underlying progression delta\n- it keeps flavor small and descriptive\n- it says plainly that authority remains elsewhere"
         }
