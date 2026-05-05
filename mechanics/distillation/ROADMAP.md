@@ -41,7 +41,13 @@
    accounting and no `tree_path` frontmatter or schema migration. The next
    landed-pilot review is also landed as `pilot-validated`: the
    `review-compaction` migration held its shape after validation, and
-   `handoff-continuation` is the next direct-read migration review target.
+   `handoff-continuation` became the next direct-read migration review target.
+   The `handoff-continuation` direct-read migration review is now landed as
+   `accepted-for-second-migration-pilot`: the next tree move is exactly
+   `AOA-T-0056` through `AOA-T-0062` into
+   `techniques/continuity/handoff-continuation/`, with link repair, root
+   legacy receipt accounting, generated rebuilds, and release-check validation
+   in the same wave.
 
 ## Hold line
 

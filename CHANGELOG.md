@@ -48,6 +48,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `review-compaction` pilot review and selected
   `handoff-continuation` for the next direct-read migration review without
   moving a second shelf yet
+- accepted the `handoff-continuation` direct-read migration review over
+  `AOA-T-0056` through `AOA-T-0062` as the second tree pilot while keeping the
+  review itself non-mutating
 
 ### Validation
 

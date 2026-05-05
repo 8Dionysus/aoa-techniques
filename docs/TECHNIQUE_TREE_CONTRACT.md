@@ -177,25 +177,27 @@ links, do not add `tree_path` frontmatter, and do not authorize path movement.
 
 ## Next Honest Build Path
 
-The current landed pilot review is
-[Review-Compaction Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/review-compaction-direct-read-migration-review.md).
-The review-compaction direct-read review accepted the first pilot shelf.
-
 The first pilot migration moves `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054`
 into `techniques/continuity/review-compaction/` without changing `domain`,
 `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-review-compaction-tree-pilot.md`](../legacy/receipts/2026-05-04-review-compaction-tree-pilot.md).
-The landed pilot review is
+The current landed pilot review is
 [Landed Review-Compaction Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-review-compaction-pilot-review.md).
+
+The current migration review is
+[Handoff-Continuation Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/handoff-continuation-direct-read-migration-review.md).
+It accepts `handoff-continuation` as the second bounded migration pilot after
+directly reading `AOA-T-0056` through `AOA-T-0062`.
 
 The next reform slice should:
 
-1. read `AOA-T-0056` through `AOA-T-0062` directly
-2. decide whether `handoff-continuation` is clearer than the old broad
-   `agent-workflows` placement
-3. move nothing from the review pack alone
-4. if accepted, migrate only that shelf, preserve a root legacy receipt, and
-   run the release check before considering any broader tree migration
+1. move exactly `AOA-T-0056` through `AOA-T-0062` into
+   `techniques/continuity/handoff-continuation/`
+2. update the continuity trunk route card and repair authored links
+3. preserve a root legacy receipt without passing active bundles through root
+   `legacy/`
+4. rebuild generated surfaces and run the release check
+5. review the landed second pilot before choosing any broader tree migration
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

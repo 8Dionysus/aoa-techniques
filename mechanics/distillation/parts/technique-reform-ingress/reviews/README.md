@@ -14,5 +14,6 @@ Current reviews:
 - [first-tree-projection-review-pack](first-tree-projection-review-pack.md)
 - [review-compaction-direct-read-migration-review](review-compaction-direct-read-migration-review.md)
 - [landed-review-compaction-pilot-review](landed-review-compaction-pilot-review.md)
+- [handoff-continuation-direct-read-migration-review](handoff-continuation-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
