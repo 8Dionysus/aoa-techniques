@@ -5138,6 +5138,104 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / current_path / "TECHNIQUE.md").is_file())
 
+    def test_landed_agent_workflows_core_review_selects_donor_harvest(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-agent-workflows-core-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Agent-Workflows-Core Pilot Review", review)
+        self.assertIn("third successful shelf under the `execution` trunk", review)
+        self.assertIn("mixed `workflow` / `guardrail` / `composition`", review)
+        self.assertIn("Choose `continuity/donor-harvest`", review)
+        self.assertIn("Do not move `continuity/donor-harvest`", review)
+        self.assertIn("memory authority, playbook quest authority", review)
+        self.assertIn(
+            "Run a direct-read migration review for `continuity/donor-harvest`",
+            review,
+        )
+        self.assertIn("landed-agent-workflows-core-pilot-review", reviews_index)
+        self.assertIn("landed agent-workflows-core pilot review: landed", ingress)
+        self.assertIn("continuity/donor-harvest", ingress)
+        self.assertIn("Landed agent-workflows-core pilot review", landing_log)
+        self.assertIn("third successful execution trunk", landing_log)
+        self.assertIn("continuity/donor-harvest` for the next", landing_log)
+        self.assertIn("The landed `agent-workflows-core` pilot\n   review", distillation_roadmap)
+        self.assertIn(
+            "Run the `continuity/donor-harvest` direct-read",
+            root_roadmap,
+        )
+        self.assertIn("Landed Agent-Workflows-Core Pilot Review", tree_contract)
+        self.assertIn("chooses `continuity/donor-harvest`", tree_contract)
+        self.assertIn(
+            "accepted the landed `agent-workflows-core` pilot review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0075",
+                "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0077",
+                "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0084",
+                "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0085",
+                "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+                "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT

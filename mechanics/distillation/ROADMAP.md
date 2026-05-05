@@ -284,7 +284,14 @@
    route-card accounting, root legacy receipt accounting, link repair,
    generated rebuilds, and release-check validation in the same wave. The next
    bounded step is to review the landed `agent-workflows-core` pilot before
-   choosing any nineteenth shelf.
+   choosing any nineteenth shelf. The landed `agent-workflows-core` pilot
+   review is now complete as `pilot-validated`, validating the third
+   `execution` trunk shelf and choosing `continuity/donor-harvest` for the
+   next direct-read migration review while keeping memory authority, playbook
+   quest authority, progression doctrine, owner routing, role progression,
+   stats ownership, session-closeout automation, and neighboring continuity or
+   governance shelves outside the next move. The next bounded step is that
+   direct-read review before moving any nineteenth shelf.
 
 ## Hold line
 

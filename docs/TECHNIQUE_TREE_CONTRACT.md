@@ -484,5 +484,18 @@ root receipt is
 The next reform slice should review the landed
 `execution/agent-workflows-core` shelf before choosing the nineteenth shelf.
 
+The landed eighteenth pilot review is
+[Landed Agent-Workflows-Core Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-agent-workflows-core-pilot-review.md).
+It validates `agent-workflows-core` as the third successful execution trunk
+shelf, preserves `AOA-T-0028` as `guardrail` and `AOA-T-0031` as
+`composition`, and chooses `continuity/donor-harvest` for the next direct-read
+migration review while keeping memory authority, playbook quest authority,
+progression doctrine, owner routing, role progression, stats ownership,
+session-closeout automation, and neighboring continuity or governance shelves
+outside the next move.
+
+The next reform slice should run that direct-read review before any nineteenth
+shelf migration.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

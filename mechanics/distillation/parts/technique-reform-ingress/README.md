@@ -161,6 +161,9 @@ permission slip to remap techniques automatically.
   `AOA-T-0023`, `AOA-T-0028`, and `AOA-T-0031` under
   `techniques/execution/agent-workflows-core/` without frontmatter, status, or
   kind changes
+- landed agent-workflows-core pilot review: landed as `pilot-validated`, with
+  `continuity/donor-harvest` chosen for direct-read review before any
+  nineteenth shelf movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -231,6 +234,7 @@ permission slip to remap techniques automatically.
 | [Landed Intent-Chain Pilot Review](reviews/landed-intent-chain-pilot-review.md) | confirms the seventeenth migrated shelf stayed compact, validates the second execution trunk shelf, and chooses `execution/agent-workflows-core` for direct-read review | movement of `execution/agent-workflows-core`, `tree_path` frontmatter, frontmatter remap, autonomous orchestration, hidden agent scheduling, runtime lifecycle law, shell doctrine, product policy, approval policy, broad methodology doctrine, or neighboring execution shelves |
 | [Agent-Workflows-Core Direct-Read Migration Review](reviews/agent-workflows-core-direct-read-migration-review.md) | reads `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`, `AOA-T-0028`, and `AOA-T-0031` directly and accepts the shelf as the eighteenth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, remapping `AOA-T-0028` from `guardrail`, generic agent doctrine, shell policy, product policy, approval policy, autonomous orchestration, hidden agent scheduling, runtime lifecycle law, broad methodology doctrine, or neighboring execution shelves |
 | [Agent-Workflows-Core Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md) | preserves the eighteenth accepted path migration into `techniques/execution/agent-workflows-core/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, remapping `AOA-T-0028` from `guardrail`, remapping `AOA-T-0031` from `composition`, generic agent doctrine, shell policy, product policy, approval policy, autonomous orchestration, hidden agent scheduling, runtime lifecycle law, broad methodology doctrine, or neighboring execution shelves |
+| [Landed Agent-Workflows-Core Pilot Review](reviews/landed-agent-workflows-core-pilot-review.md) | confirms the eighteenth migrated shelf stayed bounded as the third execution trunk shelf and chooses `continuity/donor-harvest` for direct-read review | movement of `continuity/donor-harvest`, `tree_path` frontmatter, frontmatter remap, memory authority, playbook quest authority, progression doctrine, owner routing, role progression, stats ownership, session-closeout automation, or neighboring continuity/governance shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -479,5 +483,9 @@ The eighteenth pilot migration is now landed: those five bundles live under
 root legacy receipt are updated, authored links were repaired, generated
 surfaces were rebuilt, and frontmatter stayed unchanged.
 
-The next move is to review the landed `agent-workflows-core` pilot before
-choosing the nineteenth shelf.
+The landed `agent-workflows-core` pilot review is now complete as
+`pilot-validated`. It validates the third execution trunk shelf and chooses
+`continuity/donor-harvest` for the next direct-read migration review.
+
+The next move is to run that direct-read review before moving any nineteenth
+shelf.
