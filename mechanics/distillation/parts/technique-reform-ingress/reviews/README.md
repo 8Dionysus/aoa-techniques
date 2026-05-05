@@ -42,5 +42,6 @@ Current reviews:
 - [landed-history-artifacts-pilot-review](landed-history-artifacts-pilot-review.md)
 - [antifragility-recovery-direct-read-migration-review](antifragility-recovery-direct-read-migration-review.md)
 - [landed-antifragility-recovery-pilot-review](landed-antifragility-recovery-pilot-review.md)
+- [ready-work-graphs-direct-read-migration-review](ready-work-graphs-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

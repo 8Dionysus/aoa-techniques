@@ -3,6 +3,34 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Ready-work-graphs direct-read migration review
+
+Changed:
+
+- added
+  [ready-work-graphs-direct-read-migration-review](parts/technique-reform-ingress/reviews/ready-work-graphs-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055`
+- accepted `execution/ready-work-graphs` as the sixteenth bounded migration
+  pilot without moving files
+- kept `AOA-T-0055` as a watch-line readiness ladder rather than treating it
+  as graph database doctrine, methodology, or execution workflow
+- kept project-management doctrine, scheduling, staffing, dispatch policy,
+  backlog governance, graph database doctrine, memory substrate, hidden
+  orchestration, proof of readiness, and execution validation outside the shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no sixteenth shelf migration landed from the review alone
+
 ## 2026-05-05 - Landed antifragility-recovery pilot review
 
 Changed:
