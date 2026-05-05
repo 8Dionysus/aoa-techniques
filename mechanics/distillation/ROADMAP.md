@@ -190,9 +190,17 @@
    the next direct-read migration review while keeping memory doctrine,
    instruction authority, private transcript publication, hosted viewer
    product doctrine, repo analytics, retention policy, recall substrate, and
-   neighboring shelves outside the next move. The next bounded step is the
-   `history-artifacts` direct-read review before any fourteenth shelf
-   migration.
+   neighboring shelves outside the next move. The `history-artifacts` direct-read review
+   before any fourteenth shelf migration is complete. The `history-artifacts`
+   direct-read review is now landed as
+   `accepted-for-fourteenth-migration-pilot`; it accepts exactly
+   `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`, `AOA-T-0066`, and
+   `AOA-T-0067` while keeping memory doctrine, instruction authority, private
+   transcript publication, hidden capture policy, hosted viewer product
+   doctrine, repo analytics, retention policy, recall substrate, proof
+   authority, and neighboring shelves outside the move. The next bounded step
+   is the fourteenth pilot migration into
+   `techniques/history/history-artifacts/`.
 
 ## Hold line
 

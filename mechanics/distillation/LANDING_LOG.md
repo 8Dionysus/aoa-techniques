@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - History-artifacts direct-read migration review
+
+Changed:
+
+- added
+  [history-artifacts-direct-read-migration-review](parts/technique-reform-ingress/reviews/history-artifacts-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`,
+  `AOA-T-0045`, `AOA-T-0066`, and `AOA-T-0067`
+- accepted `history-artifacts` as the fourteenth bounded migration pilot
+  without moving files
+- kept capture, transcript packaging, indexing, witness tracing, replay, and
+  code lineage as six separate leaf moves under one history shelf
+- kept memory doctrine, instruction authority, private transcript publication,
+  hidden capture policy, hosted viewer product doctrine, repo analytics,
+  retention policy, recall substrate, and proof authority outside the shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fourteenth shelf migration landed from the review alone
+
 ## 2026-05-05 - Landed published-summary pilot review
 
 Changed:

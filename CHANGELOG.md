@@ -160,6 +160,10 @@ The format is intentionally simple and human-first.
 - accepted the landed `published-summary` pilot review and selected
   `history-artifacts` for the next direct-read migration review without
   moving a fourteenth shelf yet
+- accepted the `history-artifacts` direct-read migration review over
+  `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`, `AOA-T-0066`, and
+  `AOA-T-0067` as the fourteenth tree pilot while keeping the review itself
+  non-mutating
 
 ### Validation
 
