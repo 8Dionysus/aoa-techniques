@@ -392,8 +392,15 @@ The fourteenth pilot migration moves exactly those six bundles into
 `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md`](../legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md).
 
-The next reform slice should review the landed `history-artifacts` pilot before
-choosing any fifteenth shelf.
+The landed fourteenth pilot review is
+[Landed History-Artifacts Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-history-artifacts-pilot-review.md).
+It validates `history-artifacts` as the first successful history trunk shelf,
+completes the previous step to review the landed `history-artifacts` pilot
+before choosing any fifteenth shelf, and chooses
+`recovery/antifragility-recovery` for the next direct-read migration review.
+
+The next reform slice should run the `recovery/antifragility-recovery`
+direct-read migration review before any fifteenth shelf migration.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

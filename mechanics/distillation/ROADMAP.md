@@ -204,7 +204,13 @@
    legacy receipt accounting, link repair, generated rebuilds, and
    release-check validation in the same wave. The next bounded step is the
    landed-pilot review for `history-artifacts` before choosing any fifteenth
-   shelf.
+   shelf. That landed review is now complete as `pilot-validated`, validating
+   the first `history` trunk shelf and choosing
+   `recovery/antifragility-recovery` for the next direct-read migration review
+   while keeping incident response doctrine, runtime ownership,
+   validation-patterns erasure, proof authority, rollback policy, deployment
+   lifecycle law, service catalog ownership, and generic resilience platform
+   authority outside the next move.
 
 ## Hold line
 

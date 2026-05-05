@@ -3991,6 +3991,135 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
+    def test_landed_history_artifacts_review_selects_antifragility_recovery(
+        self,
+    ) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-history-artifacts-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed History-Artifacts Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn("first successful shelf under the `history` trunk", review)
+        self.assertIn("What The Fourteenth Pilot Proved", review)
+        self.assertIn("Remaining Weaknesses", review)
+        self.assertIn("Fifteenth Shelf Choice", review)
+        self.assertIn("Choose `recovery/antifragility-recovery`", review)
+
+        for technique_id in (
+            "AOA-T-0044",
+            "AOA-T-0053",
+            "AOA-T-0026",
+            "AOA-T-0045",
+            "AOA-T-0066",
+            "AOA-T-0067",
+            "AOA-T-0097",
+            "AOA-T-0099",
+            "AOA-T-0100",
+            "AOA-T-0098",
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+
+        self.assertIn("techniques/history/history-artifacts/", review)
+        self.assertIn(
+            "Do not move `recovery/antifragility-recovery` from this review alone",
+            review,
+        )
+        self.assertIn("Do not add `tree_path`", review)
+        self.assertIn("Do not treat `history-artifacts` as memory doctrine", review)
+        self.assertIn(
+            "Do not treat `recovery/antifragility-recovery` as incident response",
+            review,
+        )
+        self.assertIn("validation-patterns erasure", review)
+        self.assertIn(
+            "Run a direct-read migration review for `recovery/antifragility-recovery`",
+            review,
+        )
+        self.assertIn("landed-history-artifacts-pilot-review", reviews_index)
+        self.assertIn("landed history-artifacts pilot review: landed", ingress)
+        self.assertIn("recovery/antifragility-recovery` chosen", ingress)
+        self.assertIn("Landed history-artifacts pilot review", landing_log)
+        self.assertIn("first successful history trunk shelf", landing_log)
+        self.assertIn("validation-patterns\n  erasure", landing_log)
+        self.assertIn(
+            "recovery/antifragility-recovery` for the next direct-read",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "history-artifacts` pilot before choosing any fifteenth shelf",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Run the `recovery/antifragility-recovery` direct-read migration review",
+            root_roadmap,
+        )
+        self.assertIn("Landed History-Artifacts Pilot Review", tree_contract)
+        self.assertIn("chooses\n`recovery/antifragility-recovery`", tree_contract)
+        self.assertIn(
+            "accepted the landed `history-artifacts` pilot review",
+            changelog,
+        )
+
+        for current_path, future_path in (
+            (
+                "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
+            ),
+            (
+                "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+            ),
+            (
+                "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+            ),
+            (
+                "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+                "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
+        self.assertTrue((REPO_ROOT / "techniques" / "history" / "history-artifacts").is_dir())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT
