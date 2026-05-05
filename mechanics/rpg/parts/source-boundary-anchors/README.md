@@ -8,7 +8,7 @@ with owner truth, ontology, routing, or canon.
 
 ## Local Anchors
 
-- `AOA-T-0016` (`techniques/docs/bounded-context-map/TECHNIQUE.md`) keeps
+- `AOA-T-0016` (`techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md`) keeps
   overloaded terms and neighboring contexts explicit.
 - `AOA-T-0076`
   (`techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md`) chooses one

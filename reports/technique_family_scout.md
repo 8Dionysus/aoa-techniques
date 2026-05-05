@@ -148,9 +148,9 @@ Counts: `total` 3, `canonical` 3, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work. |
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
-| [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
+| [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work. |
+| [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. |
+| [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. |
 
 ## `kag-source-lift`
 

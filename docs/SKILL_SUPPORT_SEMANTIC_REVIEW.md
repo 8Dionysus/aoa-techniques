@@ -15,9 +15,9 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 | technique | current role |
 |---|---|
-| [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) | boundary-contract evaluation discipline |
-| [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) | invariant-oriented coverage broadening |
-| [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) | semantic scoping and handoff map |
+| [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) | boundary-contract evaluation discipline |
+| [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) | invariant-oriented coverage broadening |
+| [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) | semantic scoping and handoff map |
 
 ## Seam Review
 
@@ -25,7 +25,7 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 Question: where does contract-surface validation stop and invariant-oriented broad coverage begin?
 
-- Invariant boundary: [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) defines what a consumer-visible boundary promises through explicit inputs, outputs, and failure behavior. [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) defines stable truths that should hold across many cases, even when there is no single consumer-facing contract shape to anchor the check.
+- Invariant boundary: [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) defines what a consumer-visible boundary promises through explicit inputs, outputs, and failure behavior. [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) defines stable truths that should hold across many cases, even when there is no single consumer-facing contract shape to anchor the check.
 - Default-use trigger: use `0015` when a named boundary and its consumers must stay stable through refactor or interface change. Use `0017` when the main problem is that example coverage is too narrow and the stronger reusable move is to express one meaningful invariant across a wider input or state space.
 - Evidence check: `0015` example and checklist remain contract-surface oriented. `0017` example and checklist remain invariant-strength and bounded generator oriented. The current support surfaces still separate boundary design from coverage broadening.
 - Watch point: both techniques can appear in the same validation path, and both use testing language. Future wording drift could make `0017` sound like "better contract tests" or make `0015` sound like a generic broad-coverage pattern if later examples stop centering the consumer-visible boundary. Outcome: `watch`.
@@ -34,7 +34,7 @@ Question: where does contract-surface validation stop and invariant-oriented bro
 
 Question: where does semantic scoping, vocabulary, and handoff mapping stop and implementation or evaluation technique begin?
 
-- Invariant boundary: [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) owns the naming and scoping layer: clarify contexts, visible handoffs, and overloaded terms before work widens into the wrong area. It does not prescribe how implementation should be test-driven, how boundaries should be validated, or how broad invariants should be checked once the target area is already clear.
+- Invariant boundary: [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) owns the naming and scoping layer: clarify contexts, visible handoffs, and overloaded terms before work widens into the wrong area. It does not prescribe how implementation should be test-driven, how boundaries should be validated, or how broad invariants should be checked once the target area is already clear.
 - Default-use trigger: use `0016` when contributors or agents are confused about what belongs inside the target area at all. Use `0015` or `0017` only after the semantic target is already clear enough that evaluation discipline becomes the main problem.
 - Evidence check: `0016` checklist and example stay vocabulary-and-handoff centric rather than architectural-platform centric. The newer testing-oriented techniques stay rooted in execution or validation behavior, not repository mapping.
 - Watch point: because `0016` uses words like "bounded context," future examples could drift into generic architecture formalism. If that happens, it could stop reading like a practical docs/scoping pattern and start looking like a broader domain-model technique. Outcome: `watch`.

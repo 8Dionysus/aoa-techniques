@@ -43,7 +43,7 @@ Current local anchors include:
   (`AOA-T-0089`)
 - `techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md`
   (`AOA-T-0090`)
-- `techniques/docs/bounded-context-map/TECHNIQUE.md` (`AOA-T-0016`)
+- `techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md` (`AOA-T-0016`)
 - `mechanics/growth-cycle/parts/technique-feat-model/README.md`
 - `mechanics/growth-cycle/parts/mastery-harvest/README.md`
 - `mechanics/growth-cycle/parts/promotion-readiness-incubation/README.md`

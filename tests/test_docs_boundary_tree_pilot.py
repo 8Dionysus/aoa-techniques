@@ -59,12 +59,15 @@ LIVE_LINK_SURFACES = (
 )
 
 UNMOVED_DOCS_BUNDLES = (
-    "techniques/docs/bounded-context-map/TECHNIQUE.md",
     "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
 )
 
 LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBOR = (
     "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md"
+)
+
+LATER_MIGRATED_SKILL_SUPPORT_NEIGHBOR = (
+    "techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md"
 )
 
 
@@ -163,6 +166,7 @@ class DocsBoundaryTreePilotTestCase(unittest.TestCase):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
 
         self.assertTrue((REPO_ROOT / LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBOR).is_file())
+        self.assertTrue((REPO_ROOT / LATER_MIGRATED_SKILL_SUPPORT_NEIGHBOR).is_file())
 
 
 if __name__ == "__main__":

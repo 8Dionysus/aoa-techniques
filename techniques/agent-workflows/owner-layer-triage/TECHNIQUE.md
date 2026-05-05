@@ -96,7 +96,7 @@ Take one bounded reusable unit and assign it to one primary owner layer, one sma
 - the technique owns one placement verdict, not the whole donor-extraction workflow
 - the technique stays smaller than final promotion review for an already repeated quest unit
 
-Relationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not extract candidate units from a reviewed session artifact; it only places one already-isolated unit. Unlike [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md), it does not define the full context map or interface structure of a system; it makes one bounded owner verdict over one candidate unit. It should also stay narrower than final quest promotion triage because it can return `hold` or a first owner layer without deciding whether the unit is already ready for canon promotion.
+Relationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not extract candidate units from a reviewed session artifact; it only places one already-isolated unit. Unlike [AOA-T-0016](../../proof/skill-support/bounded-context-map/TECHNIQUE.md), it does not define the full context map or interface structure of a system; it makes one bounded owner verdict over one candidate unit. It should also stay narrower than final quest promotion triage because it can return `hold` or a first owner layer without deciding whether the unit is already ready for canon promotion.
 
 ## Risks
 

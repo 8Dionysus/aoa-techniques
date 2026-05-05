@@ -7,9 +7,8 @@ Guidance for coding agents and humans working under `techniques/docs/`.
 This domain stores documentation, provenance, boundary, and source-surface
 techniques whose current reviewed home is still the broad `docs` domain.
 
-Representative bundles here include `bounded-context-map`,
-`single-scoped-evidence-reference`, `skill-vs-command-boundary`,
-and `multi-source-primary-input-provenance`.
+Representative bundles here include `single-scoped-evidence-reference` and
+`canonical-owner-with-validated-mirror`.
 
 ## Domain rules
 

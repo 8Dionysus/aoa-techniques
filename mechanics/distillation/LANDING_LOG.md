@@ -3,6 +3,40 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Skill-support tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017` into
+  `techniques/proof/skill-support/`
+- added `techniques/proof/AGENTS.md` as a compact proof-trunk route card
+  without turning the shelf into proof authority, eval-suite ownership,
+  mandatory testing doctrine, DDD formalism, architecture taxonomy, runtime
+  readiness, owner-truth law, policy enforcement, or a neighboring proof-side
+  shelf
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-skill-support-tree-pilot.md`
+- repaired authored links from semantic reviews, mechanics parts,
+  review source rows, and adjacent-technique links
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept bounded-context vocabulary, consumer-visible contract validation, and
+  invariant-oriented coverage as separate leaf bundles
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_skill_support_tree_pilot
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no evaluation-chain, published-summary, review-evidence,
+  owner-truth-closeout, runtime, governance, or automation shelf moved
+- no generated projection became authority
+
 ## 2026-05-05 - Skill-support direct-read migration review
 
 Changed:
