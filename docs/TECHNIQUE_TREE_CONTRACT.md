@@ -439,8 +439,15 @@ The sixteenth pilot migration moves exactly those three bundles into
 `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md`](../legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md).
 
-The next reform slice should review the landed `ready-work-graphs` pilot
-before choosing any seventeenth shelf.
+The landed sixteenth pilot review is
+[Landed Ready-Work-Graphs Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-ready-work-graphs-pilot-review.md).
+It validates `ready-work-graphs` as the first successful execution trunk shelf,
+preserves `AOA-T-0055` as a readiness ladder rather than graph database,
+methodology, or execution workflow, and chooses `execution/intent-chain` for
+the next direct-read migration review.
+
+The next reform slice should run the `execution/intent-chain` direct-read
+review before moving any seventeenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

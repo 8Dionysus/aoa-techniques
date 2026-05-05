@@ -3,20 +3,23 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
-## 2026-05-05 - Ready-work-graphs direct-read migration review
+## 2026-05-05 - Landed ready-work-graphs pilot review
 
 Changed:
 
 - added
-  [ready-work-graphs-direct-read-migration-review](parts/technique-reform-ingress/reviews/ready-work-graphs-direct-read-migration-review.md)
-  as the direct-read review over `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055`
-- accepted `execution/ready-work-graphs` as the sixteenth bounded migration
-  pilot without moving files
-- kept `AOA-T-0055` as a watch-line readiness ladder rather than treating it
-  as graph database doctrine, methodology, or execution workflow
-- kept project-management doctrine, scheduling, staffing, dispatch policy,
-  backlog governance, graph database doctrine, memory substrate, hidden
-  orchestration, proof of readiness, and execution validation outside the shelf
+  [landed-ready-work-graphs-pilot-review](parts/technique-reform-ingress/reviews/landed-ready-work-graphs-pilot-review.md)
+  as the landed review after the sixteenth path migration
+- validated `ready-work-graphs` as the first successful execution trunk shelf
+- confirmed all three leaves remain `domain: agent-workflows` and
+  `kind: workflow` even though they now live under the execution tree path
+- preserved `AOA-T-0055` as a watch-line readiness ladder rather than a graph
+  database, methodology, or execution workflow
+- chose `execution/intent-chain` for the next direct-read migration review
+  without moving files
+- kept router ownership, API contract authority, runtime dispatch, real-action
+  permission, automation governance, CI policy, broad rollout doctrine, and
+  neighboring execution shelves outside the next move
 
 Verification lane:
 
@@ -29,7 +32,7 @@ Not moved:
 
 - no technique bundle was moved
 - no frontmatter changed
-- no sixteenth shelf migration landed from the review alone
+- no `tree_path` frontmatter was added
 
 ## 2026-05-05 - Ready-work-graphs tree pilot migration
 
@@ -62,6 +65,34 @@ Not changed:
 - no project-management, scheduling, staffing, dispatch, backlog governance,
   graph database, memory substrate, proof, validation, or hidden orchestration
   authority was imported into the shelf
+
+## 2026-05-05 - Ready-work-graphs direct-read migration review
+
+Changed:
+
+- added
+  [ready-work-graphs-direct-read-migration-review](parts/technique-reform-ingress/reviews/ready-work-graphs-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055`
+- accepted `execution/ready-work-graphs` as the sixteenth bounded migration
+  pilot without moving files
+- kept `AOA-T-0055` as a watch-line readiness ladder rather than treating it
+  as graph database doctrine, methodology, or execution workflow
+- kept project-management doctrine, scheduling, staffing, dispatch policy,
+  backlog governance, graph database doctrine, memory substrate, hidden
+  orchestration, proof of readiness, and execution validation outside the shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no sixteenth shelf migration landed from the review alone
 
 ## 2026-05-05 - Landed antifragility-recovery pilot review
 
