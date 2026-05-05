@@ -410,8 +410,13 @@ policy, deployment lifecycle law, service catalog ownership, KAG authority,
 stats meaning, playbook choreography, and generic resilience platform
 authority outside the shelf.
 
-The next reform slice should run the fifteenth pilot migration for exactly
-those four bundles before choosing any sixteenth shelf.
+The fifteenth pilot migration moves exactly those four bundles into
+`techniques/recovery/antifragility-recovery/` without changing `domain`,
+`kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md`](../legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md).
+
+The next reform slice should review the landed `antifragility-recovery` pilot
+before choosing any sixteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

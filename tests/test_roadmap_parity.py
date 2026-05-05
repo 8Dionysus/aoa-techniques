@@ -16,9 +16,9 @@ CURRENT_RELEASE_TECHNIQUES = (
     ("AOA-T-0094", "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md"),
     ("AOA-T-0095", "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md"),
     ("AOA-T-0096", "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md"),
-    ("AOA-T-0097", "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md"),
-    ("AOA-T-0098", "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md"),
-    ("AOA-T-0099", "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md"),
+    ("AOA-T-0097", "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md"),
+    ("AOA-T-0098", "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md"),
+    ("AOA-T-0099", "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md"),
 )
 
 

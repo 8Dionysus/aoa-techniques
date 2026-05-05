@@ -20,6 +20,9 @@ Accepted pilot shelves:
 - `diagnosis-repair/`: turns reviewed friction into drift taxonomy, diagnosis,
   repair-shape, and checkpoint-bound repair posture while keeping each leaf
   technique separate
+- `antifragility-recovery/`: degraded continuation, isolated service stop,
+  stress receipt closeout, and receipt-first failure analysis under bounded
+  recovery pressure while preserving validation-shaped leaves
 
 ## Domain rules
 
@@ -33,7 +36,8 @@ Keep the recovery object explicit:
 
 Do not turn a recovery technique into a live self-modifying loop, generic
 governance framework, incident-response playbook, role contract, proof verdict,
-or broad improvement doctrine.
+runtime self-healing, service catalog owner, generic resilience platform, or
+broad improvement doctrine.
 
 ## Boundary
 

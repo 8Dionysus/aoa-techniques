@@ -3,6 +3,41 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Antifragility-recovery tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098`
+  into `techniques/recovery/antifragility-recovery/`
+- extended `techniques/recovery/AGENTS.md` for the compact recovery shelf while
+  keeping incident response doctrine, runtime self-healing, runtime ownership,
+  proof authority, rollback policy, deployment lifecycle law, service catalog
+  ownership, KAG authority, stats meaning, playbook choreography, generic
+  resilience platform authority, and broad improvement doctrine outside the
+  shelf
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md`
+- repaired authored links from Antifragility mechanics, audit readiness,
+  experience overlap notes, active review sources, and root docs
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- preserved `AOA-T-0098` as `domain: validation-patterns` and
+  `kind: validation`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no Agents-of-Abyss Antifragility doctrine, runtime, proof, KAG, stats,
+  playbook, deployment, or service-catalog authority moved into the shelf
+- no neighboring shelf moved
+
 ## 2026-05-05 - Antifragility-recovery direct-read migration review
 
 Changed:

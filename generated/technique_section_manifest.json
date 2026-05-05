@@ -5392,7 +5392,7 @@
     },
     {
       "id": "AOA-T-0097",
-      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5448,7 +5448,7 @@
     },
     {
       "id": "AOA-T-0098",
-      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5504,7 +5504,7 @@
     },
     {
       "id": "AOA-T-0099",
-      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5560,7 +5560,7 @@
     },
     {
       "id": "AOA-T-0100",
-      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",

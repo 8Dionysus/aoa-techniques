@@ -604,31 +604,31 @@ See also:
 
 ## `system-recovery`
 
-### [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+### [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Degrade Reground Recover Checklist | `absent` | `5` | `techniques/system-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |
+| Degrade Reground Recover Checklist | `absent` | `5` | `techniques/recovery/antifragility-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) |
 
-### [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Isolated Service Stop On Shared Substrate Checklist | `present` | `6` | `techniques/system-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
-
-### [AOA-T-0100](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+### [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| stress-receipt-reground-closeout checklist | `present` | `8` | `techniques/system-recovery/stress-receipt-reground-closeout/checks/stress-receipt-reground-closeout-checklist.md` | [TECHNIQUE.md](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) |
+| Isolated Service Stop On Shared Substrate Checklist | `present` | `6` | `techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
+
+### [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| stress-receipt-reground-closeout checklist | `present` | `8` | `techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/checks/stress-receipt-reground-closeout-checklist.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) |
 
 ## `validation-patterns`
 
-### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+### [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Receipt First Failure Analysis Checklist | `absent` | `5` | `techniques/validation-patterns/receipt-first-failure-analysis/checks/receipt-first-failure-analysis-checklist.md` | [TECHNIQUE.md](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) |
+| Receipt First Failure Analysis Checklist | `absent` | `5` | `techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/checks/receipt-first-failure-analysis-checklist.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) |
 
 ## `history`
 

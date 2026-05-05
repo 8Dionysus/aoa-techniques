@@ -628,31 +628,31 @@ See also:
 
 ## `system-recovery`
 
-### [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+### [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Degraded Handoff | `present` | `techniques/system-recovery/degrade-reground-recover/examples/minimal-degraded-handoff.md` | [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) |
+| Minimal Degraded Handoff | `present` | `techniques/recovery/antifragility-recovery/degrade-reground-recover/examples/minimal-degraded-handoff.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) |
 
-### [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Isolated Service Stop | `present` | `techniques/system-recovery/isolated-service-stop-on-shared-substrate/examples/minimal-isolated-service-stop.md` | [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
-
-### [AOA-T-0100](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+### [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal stress closeout lane | `present` | `techniques/system-recovery/stress-receipt-reground-closeout/examples/minimal-stress-closeout-lane.md` | [TECHNIQUE.md](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) |
+| Minimal Isolated Service Stop | `present` | `techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/examples/minimal-isolated-service-stop.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
+
+### [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal stress closeout lane | `present` | `techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/examples/minimal-stress-closeout-lane.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) |
 
 ## `validation-patterns`
 
-### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+### [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Receipt Review | `present` | `techniques/validation-patterns/receipt-first-failure-analysis/examples/minimal-receipt-review.md` | [TECHNIQUE.md](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) |
+| Minimal Receipt Review | `present` | `techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/examples/minimal-receipt-review.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) |
 
 ## `history`
 

@@ -117,7 +117,7 @@ Choose the path that matches your question:
   - [Releasing `aoa-techniques`](RELEASING.md)
 - I need the bounded cross-layer stress program shape before opening owner repos:
   - [Chaos Wave Program](../mechanics/antifragility/parts/chaos-wave-program/README.md)
-  - [`stress-receipt-reground-closeout`](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
+  - [`stress-receipt-reground-closeout`](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
 
 ## Surface Types
 

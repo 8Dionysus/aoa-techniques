@@ -2147,7 +2147,7 @@
           "domain": "system-recovery",
           "status": "promoted",
           "summary": "Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater.",
-          "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+          "technique_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
           "kind": "recovery"
         },
         {
@@ -2156,7 +2156,7 @@
           "domain": "system-recovery",
           "status": "promoted",
           "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
-          "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+          "technique_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
           "kind": "recovery"
         },
         {
@@ -2165,7 +2165,7 @@
           "domain": "system-recovery",
           "status": "promoted",
           "summary": "Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.",
-          "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+          "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
           "kind": "recovery"
         },
         {
@@ -2174,7 +2174,7 @@
           "domain": "validation-patterns",
           "status": "promoted",
           "summary": "Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology.",
-          "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+          "technique_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
           "kind": "validation"
         }
       ]
