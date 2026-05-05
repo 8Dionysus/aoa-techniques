@@ -118,6 +118,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-evaluation-chain-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/published-summary-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-published-summary-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/history-artifacts-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -3734,6 +3735,138 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ):
             with self.subTest(current_path=current_path):
                 self.assertTrue((REPO_ROOT / current_path).is_file())
+
+        self.assertFalse((REPO_ROOT / "techniques" / "history" / "history-artifacts").exists())
+
+    def test_history_artifacts_direct_read_review_accepts_fourteenth_pilot(
+        self,
+    ) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "history-artifacts-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("History-Artifacts Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-fourteenth-migration-pilot", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not\n`tree_path` frontmatter", review)
+        self.assertIn("Accept `history-artifacts` as the fourteenth", review)
+        self.assertIn("Direct Bundle Read", review)
+        self.assertIn("Why The Shelf Holds", review)
+        self.assertIn("Split Decision", review)
+        self.assertIn("History Trunk Fit", review)
+        self.assertIn("Boundary Watch Accepted", review)
+        self.assertIn("Proposed Move", review)
+        for technique_id in (
+            "AOA-T-0044",
+            "AOA-T-0053",
+            "AOA-T-0026",
+            "AOA-T-0045",
+            "AOA-T-0066",
+            "AOA-T-0067",
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+
+        for current_path in (
+            "techniques/history/versionable-session-transcripts/",
+            "techniques/history/local-first-session-index/",
+            "techniques/history/session-capture-as-repo-artifact/",
+            "techniques/history/witness-trace-as-reviewable-artifact/",
+            "techniques/history/transcript-replay-artifact/",
+            "techniques/history/transcript-linked-code-lineage/",
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertIn(current_path, review)
+
+        self.assertIn("techniques/history/history-artifacts/", review)
+        self.assertIn("Move exactly these six bundles", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("Do not add `tree_path`", review)
+        self.assertIn("Do not treat `history-artifacts` as memory doctrine", review)
+        self.assertIn("hidden capture policy", review)
+        self.assertIn("repo analytics", review)
+        self.assertIn("Run the fourteenth pilot migration", review)
+        self.assertIn("history-artifacts-direct-read-migration-review", reviews_index)
+        self.assertIn("history-artifacts direct-read review: landed", ingress)
+        self.assertIn("accepted-for-fourteenth-migration-pilot", ingress)
+        self.assertIn("History-artifacts direct-read migration review", landing_log)
+        self.assertIn("fourteenth bounded migration pilot", landing_log)
+        self.assertIn("accepted-for-fourteenth-migration-pilot", distillation_roadmap)
+        self.assertIn(
+            "Run the `history-artifacts` direct-read migration review",
+            root_roadmap,
+        )
+        self.assertIn("Run the fourteenth pilot migration", root_roadmap)
+        self.assertIn("History-Artifacts Direct-Read Migration Review", tree_contract)
+        self.assertIn("move exactly those six bundles", tree_contract)
+        self.assertIn(
+            "accepted the `history-artifacts` direct-read migration review",
+            changelog,
+        )
+
+        for current_path, future_path in (
+            (
+                "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+                "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/local-first-session-index/TECHNIQUE.md",
+                "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+                "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+                "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+                "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
+            ),
+            (
+                "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+                "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
 
         self.assertFalse((REPO_ROOT / "techniques" / "history" / "history-artifacts").exists())
 

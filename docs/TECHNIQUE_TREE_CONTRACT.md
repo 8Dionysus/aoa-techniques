@@ -380,5 +380,19 @@ next direct-read migration review.
 The next reform slice should run the `history-artifacts` direct-read migration
 review before any fourteenth shelf migration.
 
+The fourteenth direct-read review is
+[History-Artifacts Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/history-artifacts-direct-read-migration-review.md).
+It accepts exactly `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`,
+`AOA-T-0066`, and `AOA-T-0067` as the next bounded migration pilot while
+keeping the review non-mutating, preserving flat `history/` paths for now, and
+leaving memory doctrine, instruction authority, private transcript
+publication, hidden capture policy, hosted viewer product doctrine, repo
+analytics, retention policy, recall substrate, and proof authority outside the
+shelf.
+
+The next reform slice should move exactly those six bundles into
+`techniques/history/history-artifacts/` without changing `domain`, `kind`, or
+`tree_path` frontmatter.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

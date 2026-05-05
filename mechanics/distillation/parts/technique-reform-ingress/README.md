@@ -120,6 +120,9 @@ permission slip to remap techniques automatically.
   `techniques/proof/published-summary/` without frontmatter changes
 - landed published-summary pilot review: landed as `pilot-validated`, with
   `history-artifacts` chosen for the next direct-read migration review
+- history-artifacts direct-read review: landed as
+  `accepted-for-fourteenth-migration-pilot`, with six history artifact bundles
+  accepted and no path movement yet
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -176,6 +179,7 @@ permission slip to remap techniques automatically.
 | [Published-Summary Direct-Read Migration Review](reviews/published-summary-direct-read-migration-review.md) | reads `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011` directly and accepts the shelf as the thirteenth migration pilot | path movement by review alone, `tree_path` frontmatter, telemetry owner doctrine, dashboard ownership, runtime storage policy, archive governance, remediation execution, integrity verdict law, release policy, proof verdict law, generic reporting platform, or neighboring proof-side shelves |
 | [Published-Summary Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-published-summary-tree-pilot.md) | preserves the thirteenth accepted path migration into `techniques/proof/published-summary/` | active technique provenance, `tree_path` frontmatter, telemetry owner doctrine, dashboard ownership, runtime storage policy, archive governance, remediation execution, integrity verdict law, release policy, proof verdict law, generic reporting platform, or neighboring proof-side shelves |
 | [Landed Published-Summary Pilot Review](reviews/landed-published-summary-pilot-review.md) | confirms the thirteenth migrated shelf stayed clearer, validates the third proof trunk shelf, and chooses `history-artifacts` for the next direct-read review | movement of `history-artifacts`, `tree_path` frontmatter, memory doctrine, instruction authority, private transcript publication, hosted viewer product doctrine, repo analytics, retention policy, recall substrate, or neighboring proof-side shelves |
+| [History-Artifacts Direct-Read Migration Review](reviews/history-artifacts-direct-read-migration-review.md) | reads `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`, `AOA-T-0066`, and `AOA-T-0067` directly and accepts the shelf as the fourteenth migration pilot | path movement by review alone, `tree_path` frontmatter, memory doctrine, instruction authority, private transcript publication, hidden capture policy, hosted viewer product doctrine, repo analytics, retention policy, recall substrate, proof authority, or neighboring shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -363,5 +367,10 @@ rebuilt, and frontmatter stayed unchanged.
 The landed `published-summary` pilot review is now landed as `pilot-validated`
 and chooses `history-artifacts` for the next direct-read migration review.
 
-The next move is to run the `history-artifacts` direct-read review before any
-fourteenth shelf migration.
+The `history-artifacts` direct-read review is now landed as
+`accepted-for-fourteenth-migration-pilot` and accepts exactly `AOA-T-0044`,
+`AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`, `AOA-T-0066`, and `AOA-T-0067`
+without moving files.
+
+The next move is to run the fourteenth pilot migration into
+`techniques/history/history-artifacts/`.
