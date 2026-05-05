@@ -108,7 +108,10 @@
    under `techniques/instruction/capability-registry/`, with the instruction
    route card extended for the third shelf, root legacy receipt accounting,
    link repair, generated rebuilds, and release-check validation in the same
-   wave. The next bounded step is a landed `capability-registry` pilot review
+   wave. The landed `capability-registry` pilot review is also landed as
+   `pilot-validated`, validates the third instruction trunk shelf, and chooses
+   `capability-boundary` for the next direct-read migration review. The next
+   bounded step is a direct-read migration review for `capability-boundary`
    before any other shelf moves.
 
 ## Hold line

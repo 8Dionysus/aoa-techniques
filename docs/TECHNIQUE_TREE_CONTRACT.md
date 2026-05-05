@@ -291,7 +291,13 @@ into `techniques/instruction/capability-registry/` without changing `domain`,
 `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-capability-registry-tree-pilot.md`](../legacy/receipts/2026-05-04-capability-registry-tree-pilot.md).
 
-The next reform slice should review the landed `capability-registry` pilot
+The landed eighth pilot review is
+[Landed Capability-Registry Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-capability-registry-pilot-review.md).
+It validates `capability-registry` as the third successful instruction trunk
+shelf and chooses `capability-boundary` for the next direct-read migration
+review.
+
+The next reform slice should run the `capability-boundary` direct-read review
 before moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
