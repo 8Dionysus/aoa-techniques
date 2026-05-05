@@ -347,8 +347,13 @@ The twelfth migration review is
 It accepts `evaluation-chain` as the twelfth migration pilot after directly
 reading `AOA-T-0003`, `AOA-T-0007`, and `AOA-T-0032`.
 
-The next reform slice should run the twelfth pilot migration for
-`evaluation-chain` before reviewing any thirteenth shelf.
+The twelfth pilot migration moves exactly `AOA-T-0003`, `AOA-T-0007`, and
+`AOA-T-0032` into `techniques/proof/evaluation-chain/` without changing
+`domain`, `kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md`](../legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md).
+
+The next reform slice should review the landed `evaluation-chain` pilot before
+choosing any thirteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

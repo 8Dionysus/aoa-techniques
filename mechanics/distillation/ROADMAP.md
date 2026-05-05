@@ -165,9 +165,12 @@
    `AOA-T-0007`, and `AOA-T-0032` while keeping CI ownership, release policy,
    eval-suite authority, proof verdict law, mandatory testing doctrine,
    generic quality gate doctrine, owner acceptance, and neighboring proof-side
-   shelves outside the move. The next bounded step is the twelfth pilot
-   migration for `evaluation-chain`, with no `tree_path` frontmatter or schema
-   migration.
+   shelves outside the move. The twelfth pilot migration is now landed exactly
+   for those three bundles under `techniques/proof/evaluation-chain/`, with
+   the proof route card extended for the second shelf, root legacy receipt
+   accounting, link repair, generated rebuilds, and release-check validation in
+   the same wave. The next bounded step is the landed `evaluation-chain` pilot
+   review before choosing any thirteenth shelf.
 
 ## Hold line
 

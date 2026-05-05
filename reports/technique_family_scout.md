@@ -117,9 +117,9 @@ Counts: `total` 3, `canonical` 2, `promoted` 1.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract. |
-| [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) | `evaluation` | `guardrail` | `canonical` | Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early. |
-| [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) | `evaluation` | `validation` | `promoted` | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. |
+| [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract. |
+| [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) | `evaluation` | `guardrail` | `canonical` | Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early. |
+| [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | `evaluation` | `validation` | `promoted` | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. |
 
 ## `published-summary`
 

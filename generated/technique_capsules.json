@@ -42,7 +42,7 @@
       "core_contract_short": "Core contract: each smoke path produces one machine-readable summary; the summary contains an explicit success or error status.",
       "main_risk_short": "Main risk: summaries collapse to a bare error signal without enough observed context to diagnose what failed.",
       "validation_short": "Validate by checking the summary file is always written on success and is written on failure whenever possible; the summary is valid...",
-      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md"
+      "technique_path": "techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0004",
@@ -98,7 +98,7 @@
       "core_contract_short": "Core contract: the same underlying summary contract is used in both signal_only and strict modes; signal_only returns success for valid...",
       "main_risk_short": "Main risk: promotion happens from a shallow or noisy history window, so strict mode is enabled before the signal is...",
       "validation_short": "Validate by checking the observational mode always publishes machine-readable output; the same summary contract is still readable after strict mode is introduced...",
-      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md"
+      "technique_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0008",
@@ -448,7 +448,7 @@
       "core_contract_short": "Core contract: the report stays read-only and CI-facing; source coverage is visible without exposing the composition engine as the technique.",
       "main_risk_short": "Main risk: the report starts acting like a hidden remediation engine instead of a read-only CI view.",
       "validation_short": "Validate by checking the CI output is readable without inspecting the composition engine; source coverage is visible and bounded; token-estimate drift is...",
-      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md"
+      "technique_path": "techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0033",

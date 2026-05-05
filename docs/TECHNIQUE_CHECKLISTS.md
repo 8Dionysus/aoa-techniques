@@ -530,11 +530,11 @@ See also:
 
 ## `evaluation`
 
-### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
+### [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Summary Contract Checklist | `present` | `7` | `techniques/evaluation/contract-first-smoke-summary/checks/summary-contract-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
+| Summary Contract Checklist | `present` | `7` | `techniques/proof/evaluation-chain/contract-first-smoke-summary/checks/summary-contract-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) |
 
 ### [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
 
@@ -542,11 +542,11 @@ See also:
 |---|---|---|---|---|
 | dual-write-history-checklist | `absent` | `8` | `techniques/evaluation/latest-alias-plus-history-copy/checks/dual-write-history-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 
-### [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
+### [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| gate-promotion-checklist | `absent` | `7` | `techniques/evaluation/signal-first-gate-promotion/checks/gate-promotion-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
+| gate-promotion-checklist | `absent` | `7` | `techniques/proof/evaluation-chain/signal-first-gate-promotion/checks/gate-promotion-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) |
 
 ### [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
 
@@ -578,11 +578,11 @@ See also:
 |---|---|---|---|---|
 | Property Invariants Checklist | `present` | `7` | `techniques/proof/skill-support/property-invariants/checks/property-invariants-checklist.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 
-### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
+### [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Context Report For CI Checklist | `absent` | `7` | `techniques/evaluation/context-report-for-ci/checks/context-report-for-ci-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
+| Context Report For CI Checklist | `absent` | `7` | `techniques/proof/evaluation-chain/context-report-for-ci/checks/context-report-for-ci-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
 
 ### [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
 

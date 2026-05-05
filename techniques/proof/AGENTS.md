@@ -21,6 +21,10 @@ Current landed shelves:
 - `skill-support/`: bounded-context vocabulary, consumer-visible contract
   validation, and invariant-oriented coverage around capability or subsystem
   boundaries.
+- `evaluation-chain/`: machine-readable validation summaries, staged signal
+  promotion, and read-only CI context reporting without becoming CI ownership,
+  release policy, eval-suite authority, proof verdict law, or generic quality
+  gate doctrine.
 
 ## Boundary
 
@@ -41,6 +45,8 @@ Do not:
   under `proof/`
 - collapse context mapping, contract testing, and invariant coverage into one
   combined proof technique
+- collapse summary-contract generation, staged signal promotion, and CI
+  context reporting into one combined gate technique
 - import sibling-owner authority into a portable technique bundle
 
 ## Validation

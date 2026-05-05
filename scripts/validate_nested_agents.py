@@ -50,9 +50,9 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "evaluation" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "`signal-first-gate-promotion`",
+            "`latest-alias-plus-history-copy`",
             "`telemetry-integrity-snapshot`",
-            "`contract-first-smoke-summary`",
+            "`published-summary-remediation-snapshot`",
             "proof posture",
             "`aoa-evals`",
         ),
@@ -62,8 +62,10 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         (
             "# AGENTS.md",
             "`skill-support/`",
+            "`evaluation-chain/`",
             "`aoa-evals`",
             "proof verdict authority",
+            "CI ownership",
             "Do not widen a proof technique",
         ),
     ),

@@ -26,10 +26,10 @@
     },
     {
       "id": "AOA-T-0003",
-      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/evaluation/contract-first-smoke-summary/examples/minimal-smoke-summary-flow.md",
+          "example_path": "techniques/proof/evaluation-chain/contract-first-smoke-summary/examples/minimal-smoke-summary-flow.md",
           "title": "Minimal Smoke Summary Flow",
           "body_markdown": "This example shows a generic smoke path that publishes a machine-readable summary instead of relying on console logs as the main contract.\n\n## Scenario\n\nA repository has a smoke script that checks whether a local service can start and respond to one request.\n\n## Flow\n\n1. Run the smoke entrypoint.\n2. Create normal run artifacts.\n3. Write `smoke_summary.json` with an explicit status.\n4. Exit with `0` when the summary contract is satisfied.\n5. Exit non-zero when the contract fails.\n6. Upload or read the same summary in CI, dashboards, or agent tooling.\n\n## Example summary shape\n\n```json\n{\n  \"checked_at_utc\": \"2026-03-13T12:00:00Z\",\n  \"ok\": true,\n  \"status\": \"ok\",\n  \"observed\": {\n    \"request_count\": 1,\n    \"latency_ms\": 120\n  },\n  \"violations\": []\n}\n```\n\n## Anti-drift rule\n\nIf downstream tooling must parse console logs to understand whether the smoke run passed, the summary contract is not strong enough yet."
         }
@@ -85,15 +85,15 @@
     },
     {
       "id": "AOA-T-0007",
-      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/evaluation/signal-first-gate-promotion/examples/concrete-repo-validation-rollout.md",
+          "example_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/examples/concrete-repo-validation-rollout.md",
           "title": "Concrete Repo-Validation Rollout",
           "body_markdown": "This example shows one concrete public-safe adaptation of `signal-first-gate-promotion` for a repository validation signal.\n\n## Scenario\n\nA repository already publishes one machine-readable validation summary on every pull request. The team wants to move that signal toward strict enforcement, but only on one narrow nightly surface until the rollout proves stable.\n\n## 1. Keep pull requests observational\n\nRun the validation check in observational mode on pull requests:\n\n```bash\npython scripts/check_repo_contracts.py --policy signal_only --summary-json runs/repo-validation/pr_summary.json\n```\n\n- the summary still publishes on failure\n- pull requests stay reviewable without turning every unstable failure into an immediate hard block\n\n## 2. Publish readiness from recent runs\n\nBuild a readiness summary from recent validation history:\n\n```bash\npython scripts/check_repo_contracts_readiness.py --history-dir runs/repo-validation-history --policy report_only --summary-json runs/repo-validation-readiness/readiness_summary.json\n```\n\nThe readiness summary should answer whether the signal is stable enough to consider narrow strict enforcement.\n\n## 3. Make governance explicit\n\nTurn readiness history into one visible promotion decision:\n\n```bash\npython scripts/check_repo_contracts_governance.py --readiness-dir runs/repo-validation-readiness --policy report_only --summary-json runs/repo-validation-governance/governance_summary.json\n```\n\nThe output should be one explicit `go` or `hold`, plus reason codes when promotion is still blocked.\n\n## 4. Publish progress and transition summaries\n\nKeep rollout telemetry visible even before strict activation:\n\n- `runs/repo-validation-progress/progress_summary.json`\n- `runs/repo-validation-transition/transition_summary.json`\n\nThese summaries should publish:\n\n- remaining stable runs needed\n- remaining streak needed\n- current strict-surface choice\n- any reasons why promotion is still incomplete\n\n## 5. Activate one narrow strict surface only\n\nWhen governance says `go`, switch only the nightly validation surface to strict mode:\n\n```bash\npython scripts/check_repo_contracts.py --policy fail_nightly --summary-json runs/repo-validation/nightly_summary.json\n```\n\nKeep other surfaces observational:\n\n- pull requests: `signal_only`\n- local debugging: `signal_only`\n- ad hoc triage runs: observational unless explicitly promoted later\n\n## 6. Preserve diagnostics after strict failure\n\nEven if the nightly strict run fails:\n\n- `nightly_summary.json` still publishes\n- readiness/governance/progress/transition summaries still publish\n- operators can see why the signal went red without scraping logs\n\n## Anti-drift rule\n\nIf the repository silently turns multiple surfaces strict at once, or stops publishing summaries once strict mode starts failing, the rollout is no longer following `signal-first-gate-promotion`."
         },
         {
-          "example_path": "techniques/evaluation/signal-first-gate-promotion/examples/minimal-signal-first-rollout.md",
+          "example_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/examples/minimal-signal-first-rollout.md",
           "title": "minimal-signal-first-rollout",
           "body_markdown": "This example shows a generic staged promotion path from observation to strict enforcement.\n\n## 1. Start in `signal_only`\n\nRun one summary-producing check in observational mode:\n\n```bash\npython scripts/check_service_health.py --policy signal_only --summary-json runs/health/latest_summary.json\n```\n\n- the summary is still published when the signal is bad\n- exit behavior stays non-blocking while the signal is being calibrated\n\n## 2. Add readiness over recent history\n\nBuild a readiness summary from recent published runs:\n\n```bash\npython scripts/check_service_health_readiness.py --history-dir runs/health-history --policy report_only --summary-json runs/health-readiness/readiness_summary.json\n```\n\nThe readiness layer asks whether the signal has been stable enough for a stricter rollout.\n\n## 3. Make governance explicit\n\nTurn readiness evidence into a formal decision:\n\n```bash\npython scripts/check_service_health_governance.py --readiness-dir runs/health-readiness --policy report_only --summary-json runs/health-governance/governance_summary.json\n```\n\nThe output should be a clear `go` or `hold`, not an implicit guess.\n\n## 4. Publish progress telemetry\n\nTrack the remaining gap:\n\n- runs still needed\n- streak still needed\n- reason codes explaining why promotion is not complete yet\n\n## 5. Promote one narrow strict surface\n\nWhen governance says `go`, enable strict behavior only on one narrow surface such as a nightly job:\n\n- nightly: strict `fail_nightly`\n- pull requests: still `signal_only`\n- local debugging: still observational\n\nDiagnostics should continue to publish even if the strict nightly run goes red."
         }
@@ -465,15 +465,15 @@
     },
     {
       "id": "AOA-T-0032",
-      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/evaluation/context-report-for-ci/examples/concrete-context-composition-ci-report.md",
+          "example_path": "techniques/proof/evaluation-chain/context-report-for-ci/examples/concrete-context-composition-ci-report.md",
           "title": "Concrete Context Composition CI Report",
           "body_markdown": "This example shows a CI job reporting on a composed context after fragment assembly completed elsewhere.\n\n## Inputs\n\n- expected source list:\n  - `docs/agent-guidance.md`\n  - `docs/selection-rules.md`\n  - `docs/validation-notes.md`\n- observed composed artifact:\n  - one markdown context bundle emitted by the build step\n- token baseline:\n  - one previously recorded estimate for the same bundle shape\n\n## Report\n\n```md\n# Context Composition CI Report\n\n## Source coverage\n\n- expected sources: 3\n- observed sources: 3\n- missing sources: none\n\n## Token drift\n\n- baseline tokens: 1,040\n- observed tokens: 1,118\n- delta: +7.5%\n\n## Composition checks\n\n- fragment ordering: pass\n- source traceability: pass\n- provider/runtime telemetry: not included\n\n## Follow-up\n\n- review the fragment set if the drift exceeds the current CI threshold\n```\n\n## What this proves\n\n- the CI artifact is a report about composition, not the composition engine\n- source coverage and token drift stay bounded and reviewable\n- follow-up remains a separate decision outside the report surface"
         },
         {
-          "example_path": "techniques/evaluation/context-report-for-ci/examples/minimal-context-report-for-ci.md",
+          "example_path": "techniques/proof/evaluation-chain/context-report-for-ci/examples/minimal-context-report-for-ci.md",
           "title": "Minimal Context Report For CI",
           "body_markdown": "Use one small CI report that describes source coverage and token drift without trying to fix anything.\n\n## Report\n\n```md\n# Context Composition Report\n\n- sources expected: 4\n- sources covered: 4\n- token estimate: 1,280\n- token delta from baseline: +3%\n- composition checks: pass\n- notes:\n  - no missing fragments\n  - no provider/runtime telemetry included\n```\n\n## What this proves\n\n- the report stays read-only\n- source coverage is visible\n- token drift is visible\n- the report does not become the composition engine or a remediation snapshot"
         }

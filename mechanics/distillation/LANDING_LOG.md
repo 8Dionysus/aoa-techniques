@@ -3,6 +3,41 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Evaluation-chain tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0003`, `AOA-T-0007`, and `AOA-T-0032` into
+  `techniques/proof/evaluation-chain/`
+- extended `techniques/proof/AGENTS.md` for the second proof trunk shelf
+  without turning it into CI ownership, release policy, eval-suite authority,
+  proof verdict law, mandatory testing doctrine, generic quality gate
+  doctrine, or owner acceptance
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md`
+- repaired authored links from the direct-read review, evaluation-chain
+  semantic review, active Distillation ledgers, and Agon handoff overlap notes
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept `AOA-T-0032` promoted rather than promoting it to canonical by path
+  placement
+- kept summary-contract generation, staged signal promotion, and read-only CI
+  context reporting as separate leaf bundles
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_evaluation_chain_tree_pilot
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no `published-summary`, `review-evidence`, `owner-truth-closeout`, runtime,
+  governance, or automation shelf moved
+- no generated projection became authority
+
 ## 2026-05-05 - Evaluation-chain direct-read migration review
 
 Changed:

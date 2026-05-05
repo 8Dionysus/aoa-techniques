@@ -546,11 +546,11 @@ See also:
 
 ## `evaluation`
 
-### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
+### [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Smoke Summary Flow | `present` | `techniques/evaluation/contract-first-smoke-summary/examples/minimal-smoke-summary-flow.md` | [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) |
+| Minimal Smoke Summary Flow | `present` | `techniques/proof/evaluation-chain/contract-first-smoke-summary/examples/minimal-smoke-summary-flow.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) |
 
 ### [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
 
@@ -559,12 +559,12 @@ See also:
 | minimal-latest-history-layout | `present` | `techniques/evaluation/latest-alias-plus-history-copy/examples/minimal-latest-history-layout.md` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 | object-store-latest-history-layout | `present` | `techniques/evaluation/latest-alias-plus-history-copy/examples/object-store-latest-history-layout.md` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
 
-### [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
+### [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Repo-Validation Rollout | `present` | `techniques/evaluation/signal-first-gate-promotion/examples/concrete-repo-validation-rollout.md` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
-| minimal-signal-first-rollout | `present` | `techniques/evaluation/signal-first-gate-promotion/examples/minimal-signal-first-rollout.md` | [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) |
+| Concrete Repo-Validation Rollout | `present` | `techniques/proof/evaluation-chain/signal-first-gate-promotion/examples/concrete-repo-validation-rollout.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) |
+| minimal-signal-first-rollout | `present` | `techniques/proof/evaluation-chain/signal-first-gate-promotion/examples/minimal-signal-first-rollout.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) |
 
 ### [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
 
@@ -601,12 +601,12 @@ See also:
 | Concrete Config Invariant Check | `present` | `techniques/proof/skill-support/property-invariants/examples/concrete-config-invariant-check.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 | Minimal Invariant Check | `present` | `techniques/proof/skill-support/property-invariants/examples/minimal-invariant-check.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 
-### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
+### [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Context Composition CI Report | `present` | `techniques/evaluation/context-report-for-ci/examples/concrete-context-composition-ci-report.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
-| Minimal Context Report For CI | `present` | `techniques/evaluation/context-report-for-ci/examples/minimal-context-report-for-ci.md` | [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) |
+| Concrete Context Composition CI Report | `present` | `techniques/proof/evaluation-chain/context-report-for-ci/examples/concrete-context-composition-ci-report.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
+| Minimal Context Report For CI | `present` | `techniques/proof/evaluation-chain/context-report-for-ci/examples/minimal-context-report-for-ci.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
 
 ### [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
 

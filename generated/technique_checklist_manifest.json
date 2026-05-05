@@ -86,10 +86,10 @@
     },
     {
       "id": "AOA-T-0003",
-      "technique_path": "techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/contract-first-smoke-summary/checks/summary-contract-checklist.md",
+          "check_path": "techniques/proof/evaluation-chain/contract-first-smoke-summary/checks/summary-contract-checklist.md",
           "title": "Summary Contract Checklist",
           "intro_markdown": "Use this checklist to validate whether a smoke path really follows `contract-first-smoke-summary`.",
           "items": [
@@ -282,10 +282,10 @@
     },
     {
       "id": "AOA-T-0007",
-      "technique_path": "techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/signal-first-gate-promotion/checks/gate-promotion-checklist.md",
+          "check_path": "techniques/proof/evaluation-chain/signal-first-gate-promotion/checks/gate-promotion-checklist.md",
           "title": "gate-promotion-checklist",
           "intro_markdown": "",
           "items": [
@@ -1295,10 +1295,10 @@
     },
     {
       "id": "AOA-T-0032",
-      "technique_path": "techniques/evaluation/context-report-for-ci/TECHNIQUE.md",
+      "technique_path": "techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/context-report-for-ci/checks/context-report-for-ci-checklist.md",
+          "check_path": "techniques/proof/evaluation-chain/context-report-for-ci/checks/context-report-for-ci-checklist.md",
           "title": "Context Report For CI Checklist",
           "intro_markdown": "",
           "items": [

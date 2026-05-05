@@ -1124,7 +1124,7 @@ See also:
 
 ## `evaluation`
 
-### [AOA-T-0003](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
+### [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) - contract-first-smoke-summary (`canonical`)
 
 - Summary: Runnable smoke pattern where each smoke path emits a machine-readable summary that becomes the primary validation contract.
 - Intent: Make smoke checks reviewable, automatable, and reusable by treating the machine-readable summary as the...
@@ -1135,7 +1135,7 @@ See also:
 - Core contract: each smoke path produces one machine-readable summary; the summary contains an explicit success or error status.
 - Main risk: summaries collapse to a bare error signal without enough observed context to diagnose what failed.
 - Validate by: the summary file is always written on success and is written on failure whenever possible; the summary is valid...
-- Source: [TECHNIQUE.md](../techniques/evaluation/contract-first-smoke-summary/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md)
 
 ### [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
 
@@ -1150,7 +1150,7 @@ See also:
 - Validate by: the latest alias exists at the stable expected path; the history copy exists under run_dir; the history copy differs...
 - Source: [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md)
 
-### [AOA-T-0007](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
+### [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
 
 - Summary: Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early.
 - Intent: Turn an observed validation signal into the default staged path toward a hard gate...
@@ -1161,7 +1161,7 @@ See also:
 - Core contract: the same underlying summary contract is used in both signal_only and strict modes; signal_only returns success for valid...
 - Main risk: promotion happens from a shallow or noisy history window, so strict mode is enabled before the signal is...
 - Validate by: the observational mode always publishes machine-readable output; the same summary contract is still readable after strict mode is introduced...
-- Source: [TECHNIQUE.md](../techniques/evaluation/signal-first-gate-promotion/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md)
 
 ### [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
 
@@ -1228,7 +1228,7 @@ See also:
 - Validate by: the property expresses a meaningful invariant rather than a vague expectation; the resulting check broadens coverage beyond a small...
 - Source: [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md)
 
-### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
+### [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
 - Summary: Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself.
 - Intent: Produce a bounded CI-facing report that tells reviewers how well a composed context covered...
@@ -1239,7 +1239,7 @@ See also:
 - Core contract: the report stays read-only and CI-facing; source coverage is visible without exposing the composition engine as the technique.
 - Main risk: the report starts acting like a hidden remediation engine instead of a read-only CI view.
 - Validate by: the CI output is readable without inspecting the composition engine; source coverage is visible and bounded; token-estimate drift is...
-- Source: [TECHNIQUE.md](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
 
 ### [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
 

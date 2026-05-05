@@ -36,7 +36,7 @@ If the problem is really donor intake or a new extraction, use [External Import 
 Run the external evidence queue in this order:
 
 1. lead queue:
-   - [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
+   - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
    - [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
    - [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 2. markdown-first and fresh-extraction follow-through:
