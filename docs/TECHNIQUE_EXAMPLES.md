@@ -16,11 +16,11 @@ See also:
 
 ## `agent-workflows`
 
-### [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report (`canonical`)
+### [AOA-T-0001](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Change Flow | `present` | `techniques/agent-workflows/plan-diff-apply-verify-report/examples/minimal-change-flow.md` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
+| Minimal Change Flow | `present` | `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/examples/minimal-change-flow.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) |
 
 ### [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
@@ -29,34 +29,34 @@ See also:
 | Concrete Non-UI Intent Chain | `present` | `techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/examples/concrete-non-ui-intent-chain.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 | Minimal Intent Chain | `present` | `techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/examples/minimal-intent-chain.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 
-### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
+### [AOA-T-0014](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Application Handler Slice | `present` | `techniques/agent-workflows/tdd-slice/examples/concrete-application-handler-slice.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
-| Minimal TDD Slice | `present` | `techniques/agent-workflows/tdd-slice/examples/minimal-tdd-slice.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
+| Concrete Application Handler Slice | `present` | `techniques/execution/agent-workflows-core/tdd-slice/examples/concrete-application-handler-slice.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) |
+| Minimal TDD Slice | `present` | `techniques/execution/agent-workflows-core/tdd-slice/examples/minimal-tdd-slice.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) |
 
-### [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`canonical`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Confirmed Single-Step Action | `present` | `techniques/agent-workflows/stateless-single-shot-agent/examples/confirmed-single-step-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
-| Minimal Stateless Single-Shot Agent | `present` | `techniques/agent-workflows/stateless-single-shot-agent/examples/minimal-stateless-single-shot-agent.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
-
-### [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`canonical`)
+### [AOA-T-0023](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Confirmed Mutating Action | `present` | `techniques/agent-workflows/confirmation-gated-mutating-action/examples/concrete-confirmed-mutating-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
-| Minimal Confirmation Gated Mutating Action | `present` | `techniques/agent-workflows/confirmation-gated-mutating-action/examples/minimal-confirmation-gated-mutating-action.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| Confirmed Single-Step Action | `present` | `techniques/execution/agent-workflows-core/stateless-single-shot-agent/examples/confirmed-single-step-action.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) |
+| Minimal Stateless Single-Shot Agent | `present` | `techniques/execution/agent-workflows-core/stateless-single-shot-agent/examples/minimal-stateless-single-shot-agent.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) |
 
-### [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`canonical`)
+### [AOA-T-0028](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Pipe-First Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-pipe-first-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
-| Concrete Shell Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
-| Minimal Shell-Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
+| Concrete Confirmed Mutating Action | `present` | `techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/examples/concrete-confirmed-mutating-action.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| Minimal Confirmation Gated Mutating Action | `present` | `techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/examples/minimal-confirmation-gated-mutating-action.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) |
+
+### [AOA-T-0031](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Pipe-First Agent Invocation | `present` | `techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/concrete-pipe-first-agent-invocation.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
+| Concrete Shell Composable Agent Invocation | `present` | `techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
+| Minimal Shell-Composable Agent Invocation | `present` | `techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 

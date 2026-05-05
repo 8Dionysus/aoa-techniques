@@ -126,7 +126,7 @@ Relationship to adjacent techniques: unlike
 [AOA-T-0092](../audit-to-closeout-proof-loop/TECHNIQUE.md), this technique is
 not about finding-first remediation proof across live source checkouts. It
 begins later, when one bounded owner-side endcap must land through GitHub
-rather than a local checkout. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md),
+rather than a local checkout. Unlike [AOA-T-0001](../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md),
 it adds a stricter owner-truth rule: the coordination layer must rebind itself
 to merged owner anchors immediately after the GitHub-native landing.
 

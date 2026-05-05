@@ -80,7 +80,7 @@
       "kind": "workflow",
       "status": "canonical",
       "summary": "Safe workflow for agent-driven changes using explicit planning, scoped diffs, explicit validation, and concise reporting.",
-      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
       "topology": {
         "family": "agent-workflows-core",
         "capability_class": [
@@ -131,7 +131,7 @@
       "kind": "workflow",
       "status": "canonical",
       "summary": "Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits.",
-      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md",
       "topology": {
         "family": "agent-workflows-core",
         "capability_class": [
@@ -157,7 +157,7 @@
       "kind": "workflow",
       "status": "canonical",
       "summary": "Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default.",
-      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md",
       "topology": {
         "family": "agent-workflows-core",
         "capability_class": [
@@ -182,7 +182,7 @@
       "kind": "guardrail",
       "status": "canonical",
       "summary": "Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop.",
-      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md",
       "topology": {
         "family": "agent-workflows-core",
         "capability_class": [
@@ -210,7 +210,7 @@
       "kind": "composition",
       "status": "canonical",
       "summary": "Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops.",
-      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md",
       "topology": {
         "family": "agent-workflows-core",
         "capability_class": [

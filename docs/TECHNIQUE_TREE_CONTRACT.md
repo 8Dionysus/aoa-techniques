@@ -475,8 +475,14 @@ product policy, approval policy, autonomous orchestration, hidden agent
 scheduling, runtime lifecycle law, broad methodology doctrine, and neighboring
 execution shelves outside the shelf.
 
-The next reform slice should migrate those five bundles into
-`techniques/execution/agent-workflows-core/` before reviewing the landed shelf.
+The eighteenth pilot migration moves exactly those five bundles into
+`techniques/execution/agent-workflows-core/` without changing `domain`, `kind`,
+status, relations, evidence, support files, or `tree_path` frontmatter. The
+root receipt is
+[`legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md`](../legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md).
+
+The next reform slice should review the landed
+`execution/agent-workflows-core` shelf before choosing the nineteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

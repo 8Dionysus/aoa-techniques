@@ -22,6 +22,9 @@ Accepted pilot shelves:
 - `intent-chain/`: artifact-first intent normalization, dry-run contract
   checking, and one-new-intent rollout discipline before any real action path
   is trusted.
+- `agent-workflows-core/`: visible, bounded, reviewable agent-work backbone,
+  bounded implementation slices, stateless single-shot fast paths, explicit
+  confirmation seams, and shell-composable one-shot invocation.
 
 ## Domain rules
 
@@ -33,9 +36,11 @@ Keep execution-facing techniques narrow and explicit:
   surface remains outside the bundle
 
 Do not turn an execution technique into project-management doctrine, staffing
-policy, backlog governance, hidden agent scheduling, runtime lifecycle law,
-proof authority, router ownership, API contract authority, real-action
-permission, automation governance, CI policy, or a broad methodology stack.
+policy, backlog governance, generic agent doctrine, shell policy, product
+policy, approval policy, autonomous orchestration, hidden agent scheduling,
+runtime lifecycle law, proof authority, router ownership, API contract
+authority, real-action permission, automation governance, CI policy, or a broad
+methodology stack.
 
 ## Boundary
 

@@ -47,48 +47,48 @@ task's center changes.
 
 ## Sources Read
 
-- [AOA-T-0001 plan-diff-apply-verify-report](../../../../../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
-- [AOA-T-0001 checklist](../../../../../techniques/agent-workflows/plan-diff-apply-verify-report/checks/review-checklist.md)
+- [AOA-T-0001 plan-diff-apply-verify-report](../../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md)
+- [AOA-T-0001 checklist](../../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/checks/review-checklist.md)
 - AOA-T-0001 support notes:
-  [canonical readiness](../../../../../techniques/agent-workflows/plan-diff-apply-verify-report/notes/canonical-readiness.md),
-  [second context](../../../../../techniques/agent-workflows/plan-diff-apply-verify-report/notes/second-context-adaptation.md),
+  [canonical readiness](../../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/canonical-readiness.md),
+  [second context](../../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/second-context-adaptation.md),
   and
-  [adverse effects](../../../../../techniques/agent-workflows/plan-diff-apply-verify-report/notes/adverse-effects-review.md)
-- [AOA-T-0014 tdd-slice](../../../../../techniques/agent-workflows/tdd-slice/TECHNIQUE.md)
-- [AOA-T-0014 checklist](../../../../../techniques/agent-workflows/tdd-slice/checks/tdd-slice-checklist.md)
+  [adverse effects](../../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/adverse-effects-review.md)
+- [AOA-T-0014 tdd-slice](../../../../../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md)
+- [AOA-T-0014 checklist](../../../../../techniques/execution/agent-workflows-core/tdd-slice/checks/tdd-slice-checklist.md)
 - AOA-T-0014 support notes:
-  [origin evidence](../../../../../techniques/agent-workflows/tdd-slice/notes/origin-evidence.md),
-  [second context](../../../../../techniques/agent-workflows/tdd-slice/notes/second-context-adaptation.md),
-  [canonical readiness](../../../../../techniques/agent-workflows/tdd-slice/notes/canonical-readiness.md),
+  [origin evidence](../../../../../techniques/execution/agent-workflows-core/tdd-slice/notes/origin-evidence.md),
+  [second context](../../../../../techniques/execution/agent-workflows-core/tdd-slice/notes/second-context-adaptation.md),
+  [canonical readiness](../../../../../techniques/execution/agent-workflows-core/tdd-slice/notes/canonical-readiness.md),
   and
-  [adverse effects](../../../../../techniques/agent-workflows/tdd-slice/notes/adverse-effects-review.md)
-- [AOA-T-0023 stateless-single-shot-agent](../../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
-- [AOA-T-0023 checklist](../../../../../techniques/agent-workflows/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md)
+  [adverse effects](../../../../../techniques/execution/agent-workflows-core/tdd-slice/notes/adverse-effects-review.md)
+- [AOA-T-0023 stateless-single-shot-agent](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md)
+- [AOA-T-0023 checklist](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md)
 - AOA-T-0023 support notes:
-  [external origin](../../../../../techniques/agent-workflows/stateless-single-shot-agent/notes/external-origin.md),
-  [second context](../../../../../techniques/agent-workflows/stateless-single-shot-agent/notes/second-context-adaptation.md),
-  [external import review](../../../../../techniques/agent-workflows/stateless-single-shot-agent/notes/external-import-review.md),
-  [canonical readiness](../../../../../techniques/agent-workflows/stateless-single-shot-agent/notes/canonical-readiness.md),
+  [external origin](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/external-origin.md),
+  [second context](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/second-context-adaptation.md),
+  [external import review](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/external-import-review.md),
+  [canonical readiness](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/canonical-readiness.md),
   and
-  [adverse effects](../../../../../techniques/agent-workflows/stateless-single-shot-agent/notes/adverse-effects-review.md)
-- [AOA-T-0028 confirmation-gated-mutating-action](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
-- [AOA-T-0028 checklist](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md)
+  [adverse effects](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/adverse-effects-review.md)
+- [AOA-T-0028 confirmation-gated-mutating-action](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md)
+- [AOA-T-0028 checklist](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md)
 - AOA-T-0028 support notes:
-  [external origin](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/notes/external-origin.md),
-  [second context](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/notes/second-context-adaptation.md),
-  [external import review](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/notes/external-import-review.md),
-  [canonical readiness](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/notes/canonical-readiness.md),
+  [external origin](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/external-origin.md),
+  [second context](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/second-context-adaptation.md),
+  [external import review](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/external-import-review.md),
+  [canonical readiness](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/canonical-readiness.md),
   and
-  [adverse effects](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/notes/adverse-effects-review.md)
-- [AOA-T-0031 shell-composable-agent-invocation](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
-- [AOA-T-0031 checklist](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md)
+  [adverse effects](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/adverse-effects-review.md)
+- [AOA-T-0031 shell-composable-agent-invocation](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md)
+- [AOA-T-0031 checklist](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md)
 - AOA-T-0031 support notes:
-  [external origin](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/notes/external-origin.md),
-  [second context](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/notes/second-context-adaptation.md),
-  [external import review](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/notes/external-import-review.md),
-  [canonical readiness](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/notes/canonical-readiness.md),
+  [external origin](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/external-origin.md),
+  [second context](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/second-context-adaptation.md),
+  [external import review](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/external-import-review.md),
+  [canonical readiness](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/canonical-readiness.md),
   and
-  [adverse effects](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/notes/adverse-effects-review.md)
+  [adverse effects](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/adverse-effects-review.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
 - [Agent-workflows core semantic review](../../../../../docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)

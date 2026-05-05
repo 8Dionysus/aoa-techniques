@@ -278,7 +278,13 @@
    broad methodology doctrine, and neighboring execution shelves outside the
    shelf. The next bounded step is to migrate those five bundles only after
    path movement, support-file carry, receipt, link-repair, generated surface,
-   and validation work move together.
+   and validation work move together. The eighteenth pilot migration is now
+   landed exactly for those five bundles under
+   `techniques/execution/agent-workflows-core/`, with updated execution
+   route-card accounting, root legacy receipt accounting, link repair,
+   generated rebuilds, and release-check validation in the same wave. The next
+   bounded step is to review the landed `agent-workflows-core` pilot before
+   choosing any nineteenth shelf.
 
 ## Hold line
 

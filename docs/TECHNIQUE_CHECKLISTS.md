@@ -16,11 +16,11 @@ See also:
 
 ## `agent-workflows`
 
-### [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report (`canonical`)
+### [AOA-T-0001](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Review Checklist | `present` | `6` | `techniques/agent-workflows/plan-diff-apply-verify-report/checks/review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
+| Review Checklist | `present` | `6` | `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/checks/review-checklist.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) |
 
 ### [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
@@ -28,29 +28,29 @@ See also:
 |---|---|---|---|---|
 | Chain Contract Checklist | `present` | `10` | `techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 
-### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
+### [AOA-T-0014](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| TDD Slice Checklist | `present` | `8` | `techniques/agent-workflows/tdd-slice/checks/tdd-slice-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) |
+| TDD Slice Checklist | `present` | `8` | `techniques/execution/agent-workflows-core/tdd-slice/checks/tdd-slice-checklist.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) |
 
-### [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`canonical`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Stateless Single-Shot Agent Checklist | `absent` | `7` | `techniques/agent-workflows/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) |
-
-### [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`canonical`)
+### [AOA-T-0023](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Confirmation Gated Mutating Action Checklist | `absent` | `6` | `techniques/agent-workflows/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) |
+| Stateless Single-Shot Agent Checklist | `absent` | `7` | `techniques/execution/agent-workflows-core/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) |
 
-### [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`canonical`)
+### [AOA-T-0028](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Shell-Composable Agent Invocation Checklist | `absent` | `7` | `techniques/agent-workflows/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
+| Confirmation Gated Mutating Action Checklist | `absent` | `6` | `techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) |
+
+### [AOA-T-0031](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Shell-Composable Agent Invocation Checklist | `absent` | `7` | `techniques/execution/agent-workflows-core/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 

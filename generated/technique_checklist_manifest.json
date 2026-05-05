@@ -4,10 +4,10 @@
   "techniques": [
     {
       "id": "AOA-T-0001",
-      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/plan-diff-apply-verify-report/checks/review-checklist.md",
+          "check_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/checks/review-checklist.md",
           "title": "Review Checklist",
           "intro_markdown": "Use this checklist to validate whether a change actually followed `plan-diff-apply-verify-report`.",
           "items": [
@@ -589,10 +589,10 @@
     },
     {
       "id": "AOA-T-0014",
-      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/tdd-slice/checks/tdd-slice-checklist.md",
+          "check_path": "techniques/execution/agent-workflows-core/tdd-slice/checks/tdd-slice-checklist.md",
           "title": "TDD Slice Checklist",
           "intro_markdown": "Use this checklist to verify that a change really stayed inside a bounded `tdd-slice`.",
           "items": [
@@ -930,10 +930,10 @@
     },
     {
       "id": "AOA-T-0023",
-      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md",
+          "check_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/checks/stateless-single-shot-agent-checklist.md",
           "title": "Stateless Single-Shot Agent Checklist",
           "intro_markdown": "",
           "items": [
@@ -1135,10 +1135,10 @@
     },
     {
       "id": "AOA-T-0028",
-      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md",
+          "check_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/checks/confirmation-gated-mutating-action-checklist.md",
           "title": "Confirmation Gated Mutating Action Checklist",
           "intro_markdown": "",
           "items": [
@@ -1254,10 +1254,10 @@
     },
     {
       "id": "AOA-T-0031",
-      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md",
+          "check_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md",
           "title": "Shell-Composable Agent Invocation Checklist",
           "intro_markdown": "",
           "items": [

@@ -74,10 +74,10 @@
   "techniques": [
     {
       "id": "AOA-T-0001",
-      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/plan-diff-apply-verify-report/notes/adverse-effects-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -226,7 +226,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/plan-diff-apply-verify-report/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -353,7 +353,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/plan-diff-apply-verify-report/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -6926,10 +6926,10 @@
     },
     {
       "id": "AOA-T-0014",
-      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/tdd-slice/notes/adverse-effects-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/tdd-slice/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -7082,7 +7082,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/tdd-slice/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/agent-workflows-core/tdd-slice/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -7214,7 +7214,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/tdd-slice/notes/origin-evidence.md",
+          "note_path": "techniques/execution/agent-workflows-core/tdd-slice/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -7291,7 +7291,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/tdd-slice/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/agent-workflows-core/tdd-slice/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -11442,10 +11442,10 @@
     },
     {
       "id": "AOA-T-0023",
-      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/adverse-effects-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -11602,7 +11602,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -11751,7 +11751,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/external-import-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -11910,7 +11910,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/external-origin.md",
+          "note_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -12008,7 +12008,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/stateless-single-shot-agent/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -14333,10 +14333,10 @@
     },
     {
       "id": "AOA-T-0028",
-      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/adverse-effects-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -14493,7 +14493,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -14637,7 +14637,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/external-import-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -14800,7 +14800,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/external-origin.md",
+          "note_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -14898,7 +14898,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/confirmation-gated-mutating-action/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -16147,10 +16147,10 @@
     },
     {
       "id": "AOA-T-0031",
-      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/adverse-effects-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -16307,7 +16307,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -16451,7 +16451,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/external-import-review.md",
+          "note_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -16610,7 +16610,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/external-origin.md",
+          "note_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -16708,7 +16708,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/shell-composable-agent-invocation/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -34006,7 +34006,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md) because it centers an execution-boundary verdict rather than a human confirmation seam"
+                  "text": "it remains narrower than [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) because it centers an execution-boundary verdict rather than a human confirmation seam"
                 },
                 {
                   "order": 3,
@@ -34437,7 +34437,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md) if teams stop distinguishing machine or contract verdicts from human confirmation seams"
+                  "text": "the pattern can collapse into [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) if teams stop distinguishing machine or contract verdicts from human confirmation seams"
                 },
                 {
                   "order": 2,

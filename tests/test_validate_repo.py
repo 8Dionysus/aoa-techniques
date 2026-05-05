@@ -1046,7 +1046,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
 
         self.assertIn(
-            "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+            "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
             readme,
         )
         self.assertIn("python scripts/validate_repo.py", readme)
@@ -1054,7 +1054,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("python scripts/release_check.py", readme)
         self.assertIn("git status -sb", readme)
         self.assertLess(
-            readme.index("techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md"),
+            readme.index("techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md"),
             readme.index("docs/README.md"),
         )
 

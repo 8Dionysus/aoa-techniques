@@ -13,7 +13,7 @@ It does not create a canonical bundle or authorize import by itself.
 ## Overlap watch
 
 - [AOA-T-0055](../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md)
-- [AOA-T-0001](../../../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
+- [AOA-T-0001](../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md)
 
 ## Boundary statement
 

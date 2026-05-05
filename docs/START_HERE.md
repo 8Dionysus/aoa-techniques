@@ -26,7 +26,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Charter](../CHARTER.md) when the question is what this repository may claim or own
 - open [Root Surface Law](ROOT_SURFACE_LAW.md) before adding, moving, or rewriting a root or docs-root surface
 - open [Root Legacy](../legacy/README.md) when preserving repo-wide raw packets, retired tail surfaces, or path-migration receipts after active distillation
-- open [`plan-diff-apply-verify-report`](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
+- open [`plan-diff-apply-verify-report`](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
 - open [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md) when the question is how the selection family stays bounded before you trust any chooser surface
 - open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) before proposing new classes, families, categories, or schema axes
 - open [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) before proposing new root technique folders, tree trunks, shelves, or bundle moves

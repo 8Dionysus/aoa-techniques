@@ -51,11 +51,11 @@ now-projected shelf and `AOA-T-0004` has already landed under `intent-chain`.
 - [Technique family scout rows for `agent-workflows-core` and `intent-chain`](../../../../../reports/technique_family_scout.md)
 - [Technique topology scout rows for `agent-workflows-core`](../../../../../reports/technique_topology_scout.md)
 - [Technique tree projection rows for `agent-workflows-core`](../../../../../reports/technique_tree_projection.md)
-- [AOA-T-0001 plan-diff-apply-verify-report](../../../../../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
-- [AOA-T-0014 tdd-slice](../../../../../techniques/agent-workflows/tdd-slice/TECHNIQUE.md)
-- [AOA-T-0023 stateless-single-shot-agent](../../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
-- [AOA-T-0028 confirmation-gated-mutating-action](../../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
-- [AOA-T-0031 shell-composable-agent-invocation](../../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
+- [AOA-T-0001 plan-diff-apply-verify-report](../../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md)
+- [AOA-T-0014 tdd-slice](../../../../../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md)
+- [AOA-T-0023 stateless-single-shot-agent](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md)
+- [AOA-T-0028 confirmation-gated-mutating-action](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md)
+- [AOA-T-0031 shell-composable-agent-invocation](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read

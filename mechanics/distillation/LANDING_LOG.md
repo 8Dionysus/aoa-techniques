@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Agent-workflows-core tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`, `AOA-T-0028`,
+  and `AOA-T-0031` into
+  `techniques/execution/agent-workflows-core/`
+- extended the compact `techniques/execution/AGENTS.md` route card with the
+  third execution shelf
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md`
+- repaired authored links from semantic reviews, audit evidence surfaces,
+  active review sources, root docs, and current selection surfaces
+- kept `domain`, `kind`, status, IDs, evidence, relations, support files,
+  maturity, validation-strength metadata, and public-safety posture unchanged
+- preserved `AOA-T-0028` as `kind: guardrail` and `AOA-T-0031` as
+  `kind: composition`; path movement did not imply kind remap
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no remaining `agent-workflows` shelf was moved
+- no generic agent doctrine, shell policy, product policy, approval policy,
+  autonomous orchestration, hidden agent scheduling, runtime lifecycle law,
+  broad methodology doctrine, or neighboring execution shelf was imported
+
 ## 2026-05-05 - Agent-workflows-core direct-read migration review
 
 Changed:
