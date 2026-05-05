@@ -186,6 +186,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055` into
   `techniques/execution/ready-work-graphs/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `ready-work-graphs` pilot review and selected
+  `execution/intent-chain` for the next direct-read migration review without
+  moving a seventeenth shelf yet
 
 ### Validation
 

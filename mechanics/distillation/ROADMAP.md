@@ -239,7 +239,13 @@
    card, root legacy receipt accounting, link repair, generated rebuilds, and
    release-check validation in the same wave. The next bounded step is to
    review the landed `ready-work-graphs` pilot before choosing any seventeenth
-   shelf.
+   shelf. The landed `ready-work-graphs` pilot review is now complete as
+   `pilot-validated`, validating the first `execution` trunk shelf and choosing
+   `execution/intent-chain` for the next direct-read migration review while
+   keeping router ownership, API contract authority, runtime dispatch,
+   real-action permission, automation governance, CI policy, broad rollout
+   doctrine, and neighboring execution shelves outside the next move. The next
+   bounded step is that direct-read review before moving any seventeenth shelf.
 
 ## Hold line
 

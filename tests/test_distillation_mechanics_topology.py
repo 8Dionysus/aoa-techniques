@@ -4515,7 +4515,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn("AOA-T-0055` as a watch-line readiness ladder", landing_log)
         self.assertIn("accepted-for-sixteenth-migration-pilot", distillation_roadmap)
-        self.assertIn("Review the landed `ready-work-graphs` pilot", root_roadmap)
+        self.assertIn("Run the `execution/intent-chain` direct-read", root_roadmap)
         self.assertIn("Ready-Work-Graphs Direct-Read Migration Review", tree_contract)
         self.assertIn("preserving\n`AOA-T-0055` as a readiness ladder", tree_contract)
         self.assertIn(
@@ -4612,6 +4612,108 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(current_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / current_path / "TECHNIQUE.md").is_file())
+
+    def test_landed_ready_work_graphs_review_selects_intent_chain(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-ready-work-graphs-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Ready-Work-Graphs Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn("choose `execution/intent-chain`", review)
+        self.assertIn("first successful shelf under the `execution` trunk", review)
+        self.assertIn("AOA-T-0055` remains the shelf watch line", review)
+        self.assertIn("What The Sixteenth Pilot Proved", review)
+        self.assertIn("Remaining Weaknesses", review)
+        self.assertIn("Seventeenth Shelf Choice", review)
+        self.assertIn("Why direct-read first", review)
+        self.assertIn("Do not move `execution/intent-chain`", review)
+        self.assertIn("do not move any\nfiles until that", review)
+        self.assertIn("review lands", review)
+        self.assertIn("landed-ready-work-graphs-pilot-review", reviews_index)
+        self.assertIn("landed ready-work-graphs pilot review: landed", ingress)
+        self.assertIn("execution/intent-chain", ingress)
+        self.assertIn("Landed ready-work-graphs pilot review", landing_log)
+        self.assertIn("first successful execution trunk shelf", landing_log)
+        self.assertIn("execution/intent-chain` for the next", landing_log)
+        self.assertIn("The landed `ready-work-graphs` pilot review is now complete", distillation_roadmap)
+        self.assertIn("Run the `execution/intent-chain` direct-read", root_roadmap)
+        self.assertIn("Landed Ready-Work-Graphs Pilot Review", tree_contract)
+        self.assertIn("chooses `execution/intent-chain`", tree_contract)
+        self.assertIn(
+            "accepted the landed `ready-work-graphs` pilot review",
+            changelog,
+        )
+
+        for technique_id, path in (
+            (
+                "AOA-T-0049",
+                "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0050",
+                "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0055",
+                "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertTrue((REPO_ROOT / path).is_file())
+
+        for current_path, future_dir, future_path in (
+            (
+                "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+                "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/",
+                "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+                "techniques/execution/intent-chain/new-intent-rollout-checklist/",
+                "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertIn(current_path, review)
+                self.assertIn(future_dir, review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
