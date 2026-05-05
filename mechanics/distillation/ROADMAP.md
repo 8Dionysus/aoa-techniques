@@ -48,8 +48,10 @@
    `techniques/continuity/handoff-continuation/`, with link repair, root
    legacy receipt accounting, generated rebuilds, and release-check validation
    in the same wave. The landed `handoff-continuation` pilot review is also
-   landed as `pilot-validated`, and `media-ingest` is now the next direct-read
-   migration review target before any third path move.
+   landed as `pilot-validated`. The `media-ingest` direct-read review is now
+   landed as `accepted-for-third-migration-pilot`, and the next tree move is
+   the third pilot migration for exactly `AOA-T-0070` through `AOA-T-0074`
+   before any other shelf moves.
 
 ## Hold line
 

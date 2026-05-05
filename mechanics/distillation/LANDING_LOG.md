@@ -3,6 +3,34 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Media-ingest direct-read migration review
+
+Changed:
+
+- added
+  [media-ingest-direct-read-migration-review](parts/technique-reform-ingress/reviews/media-ingest-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0070` through `AOA-T-0074`
+- accepted `media-ingest` as the third bounded tree migration pilot and the
+  first non-continuity trunk test
+- recorded the exact next migration scope:
+  `techniques/ingest/media-ingest/`
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `telegram-account-auth-and-session-bridge` outside the accepted shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no third shelf migration happened before direct-read review
+
 ## 2026-05-04 - Landed handoff-continuation pilot review
 
 Changed:

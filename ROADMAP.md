@@ -133,8 +133,8 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 
 | Field | Direction |
 |---|---|
-| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing frontmatter, the second landed pilot moved `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/` without changing frontmatter, and the landed second-pilot review chooses `media-ingest` for the next direct-read review. |
-| Next honest move | Directly read `AOA-T-0070` through `AOA-T-0074` before deciding whether the third tree wave should move them into `techniques/ingest/media-ingest/`. |
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing frontmatter, the second landed pilot moved `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/` without changing frontmatter, and the `media-ingest` direct-read review accepts the first non-continuity pilot. |
+| Next honest move | Move exactly `AOA-T-0070` through `AOA-T-0074` into `techniques/ingest/media-ingest/` with an `ingest/` route card, root legacy receipt, generated rebuilds, and unchanged frontmatter. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 ## Horizon: Small-Agent Usability

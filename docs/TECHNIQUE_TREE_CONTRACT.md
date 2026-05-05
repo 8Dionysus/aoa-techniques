@@ -199,15 +199,21 @@ The landed second pilot review is
 It validates the `handoff-continuation` migration and chooses `media-ingest`
 for the next direct-read migration review.
 
+The third migration review is
+[Media-Ingest Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/media-ingest-direct-read-migration-review.md).
+It accepts `media-ingest` as the first non-continuity migration pilot after
+directly reading `AOA-T-0070` through `AOA-T-0074`.
+
 The next reform slice should:
 
-1. directly read `AOA-T-0070` through `AOA-T-0074`
-2. test whether `ingest/media-ingest` is clearer than the old broad
-   `agent-workflows` placement
-3. decide whether OCR staging, post-OCR field extraction, perceptual dedupe,
-   semantic media bucketing, and Telegram normalization belong in one shelf
-4. keep any later path move separate from the review, with no `tree_path`
-   frontmatter or bulk migration
+1. move exactly `AOA-T-0070` through `AOA-T-0074` into
+   `techniques/ingest/media-ingest/`
+2. add a minimal `techniques/ingest/AGENTS.md` route card for the first
+   non-continuity migrated trunk
+3. repair authored links, incoming staging links, generated surfaces, and root
+   legacy receipt accounting in the same wave
+4. keep `domain`, `kind`, status, evidence, and `tree_path` frontmatter
+   unchanged
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
