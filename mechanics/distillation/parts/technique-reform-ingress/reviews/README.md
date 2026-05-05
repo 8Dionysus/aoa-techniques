@@ -13,5 +13,6 @@ Current reviews:
 - [first-family-shelf-review-pack](first-family-shelf-review-pack.md)
 - [first-tree-projection-review-pack](first-tree-projection-review-pack.md)
 - [review-compaction-direct-read-migration-review](review-compaction-direct-read-migration-review.md)
+- [landed-review-compaction-pilot-review](landed-review-compaction-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

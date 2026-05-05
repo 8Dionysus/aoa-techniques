@@ -3,6 +3,32 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Landed review-compaction pilot review
+
+Changed:
+
+- added
+  [landed-review-compaction-pilot-review](parts/technique-reform-ingress/reviews/landed-review-compaction-pilot-review.md)
+  as the post-migration review over the first tree pilot
+- accepted the landed `review-compaction` shelf as clearer after validation
+- chose `handoff-continuation` for the next direct-read migration review
+  without moving any new bundles
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no second shelf migration was authorized without direct-read review
+
 ## 2026-05-04 - Review-compaction tree pilot migration
 
 Changed:

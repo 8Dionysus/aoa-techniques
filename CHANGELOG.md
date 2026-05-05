@@ -45,6 +45,9 @@ The format is intentionally simple and human-first.
   tree pilot shelf at `techniques/continuity/review-compaction/` while keeping
   `domain`, `kind`, IDs, status, evidence, and `tree_path` frontmatter
   unchanged
+- accepted the landed `review-compaction` pilot review and selected
+  `handoff-continuation` for the next direct-read migration review without
+  moving a second shelf yet
 
 ### Validation
 

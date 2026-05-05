@@ -942,6 +942,65 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("landed `review-compaction` pilot", root_roadmap)
         self.assertIn("current landed pilot review", tree_contract)
 
+    def test_landed_review_compaction_pilot_review_selects_next_direct_read_shelf(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-review-compaction-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Landed Review-Compaction Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not `tree_path` frontmatter", review)
+        self.assertIn("The pilot improved browsability", review)
+        self.assertIn("Root `legacy/receipts/`", review)
+        self.assertIn("Choose `handoff-continuation`", review)
+        self.assertIn("AOA-T-0056", review)
+        self.assertIn("AOA-T-0062", review)
+        self.assertIn("Do not move `handoff-continuation` from this review alone", review)
+        self.assertIn("Run a direct-read migration review for `handoff-continuation`", review)
+
+        self.assertIn("landed-review-compaction-pilot-review", reviews_index)
+        self.assertIn("landed review-compaction pilot review: landed", ingress)
+        self.assertIn("pilot-validated", ingress)
+        self.assertIn("handoff-continuation", ingress)
+        self.assertIn("direct-read migration review", distillation_roadmap)
+        self.assertIn("Landed review-compaction pilot review", landing_log)
+        self.assertIn("handoff-continuation", root_roadmap)
+        self.assertIn("Landed Review-Compaction Pilot Review", tree_contract)
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT
