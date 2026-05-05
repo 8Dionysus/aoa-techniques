@@ -151,7 +151,7 @@ The goal is to reduce uncertainty and tighten evidence quality, not to force a c
 
 | technique | pass 1 result | note |
 |---|---|---|
-| [AOA-T-0013](../../../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-agents`, `aoa-routing`, and `aoa-playbooks` show projection and validation discipline, while `aoa-skills` overlay branches stay same-lineage, but none of them prove one-source -> many-managed-target instruction distribution in a second independent context. |
+| [AOA-T-0013](../../../../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-agents`, `aoa-routing`, and `aoa-playbooks` show projection and validation discipline, while `aoa-skills` overlay branches stay same-lineage, but none of them prove one-source -> many-managed-target instruction distribution in a second independent context. |
 | [AOA-T-0018](../../../../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `exact-fit evidence found` | `aoa-routing` confirms section surfaces as real `expand` targets beyond the already-strengthened `aoa-skills` and `aoa-evals` evidence. |
 | [AOA-T-0034](../../../../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-playbooks` and `aoa-skills` keep sanitization as a prerequisite or origin-lineage surface, not as a second exact-fit live consumer. |
 | [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `adjacent but insufficient` | checkpointed or swarm-governed flows exist, but not the same shell-side single-shot fast path. |

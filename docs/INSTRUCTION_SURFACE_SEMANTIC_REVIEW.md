@@ -15,12 +15,12 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 | technique | current role |
 |---|---|
-| [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) | many-fragment deterministic composition into one generated context artifact |
-| [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) | one canonical rule source distributed to multiple agent-facing instruction surfaces |
-| [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) | one canonical skill or rule source propagated into multiple managed agent-facing targets |
-| [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) | upstream-owned content mirrored into a curated local collection with explicit source manifest and adjacent provenance |
-| [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) | one canonical rule hierarchy loaded through explicit precedence and subordinate nested layers |
-| [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) | bounded fragment-first context authoring before deterministic assembly |
+| [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) | many-fragment deterministic composition into one generated context artifact |
+| [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) | one canonical rule source distributed to multiple agent-facing instruction surfaces |
+| [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | one canonical skill or rule source propagated into multiple managed agent-facing targets |
+| [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | upstream-owned content mirrored into a curated local collection with explicit source manifest and adjacent provenance |
+| [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | one canonical rule hierarchy loaded through explicit precedence and subordinate nested layers |
+| [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | bounded fragment-first context authoring before deterministic assembly |
 
 ## Seam Review
 
@@ -28,7 +28,7 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 Question: where does many-source composition into one generated artifact stop and one-source fan-out into many managed instruction targets begin?
 
-- Invariant boundary: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) owns the case where many source fragments compose into one generated context artifact with deterministic ordering and traceable fragment authority. [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) begins when one canonical rule source already exists and the main problem is fanning that shared rule core out to multiple managed instruction targets without drift.
+- Invariant boundary: [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) owns the case where many source fragments compose into one generated context artifact with deterministic ordering and traceable fragment authority. [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) begins when one canonical rule source already exists and the main problem is fanning that shared rule core out to multiple managed instruction targets without drift.
 - Default-use trigger: use `0012` when the system needs fragment-first authoring and one stable generated output. Use `0013` when the system already has one canonical rule source and the main problem is keeping several agent-facing targets synchronized from it.
 - Relation check: the current relation set does not justify cleanup in this review wave. `0012` stays readable without direct relation wiring because its bounded contract is already about many inputs narrowing into one output. `0013` keeps its current `AOA-T-0002` complement without collapsing into `0012`, because its contract is still source fan-out rather than fragment composition.
 - Evidence check: `0012` support surfaces stay one-output composition centric, focusing on deterministic ordering, source annotations, and fragment traceability. `0013` support surfaces stay one-source distribution centric, focusing on canonical-source authority, managed targets, and wrapper-minimal fan-out. The pair stays distinct so long as future wording keeps source cardinality and output shape explicit. Outcome: `clear`.
@@ -37,7 +37,7 @@ Question: where does many-source composition into one generated artifact stop an
 
 Question: where does one local canonical rule source fanning out to many targets stop and one upstream-owned source being mirrored into a local curated collection begin?
 
-- Invariant boundary: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) owns the case where the canonical source already lives locally and the main problem is fan-out to multiple managed instruction targets. [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) begins when the source of truth stays upstream and external, and the local problem is mirroring with explicit provenance rather than local canonical-source fan-out.
+- Invariant boundary: [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) owns the case where the canonical source already lives locally and the main problem is fan-out to multiple managed instruction targets. [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) begins when the source of truth stays upstream and external, and the local problem is mirroring with explicit provenance rather than local canonical-source fan-out.
 - Default-use trigger: use `0013` when one local canonical rule source must update several managed instruction surfaces. Use `0024` when one upstream-owned source must be mirrored locally with explicit attribution and a repeatable resync path.
 - Relation check: `0024` complements `0013` without collapsing into it, because provenance-first mirroring still leaves upstream ownership outside the local repository. `0013` remains a local-source anti-drift technique, not a mirror-and-attribution technique. Outcome: `clear`.
 
@@ -45,7 +45,7 @@ Question: where does one local canonical rule source fanning out to many targets
 
 Question: where does one local canonical rule source fanning out across instruction surfaces stop and one canonical skill or rule core propagating into managed agent-facing targets begin?
 
-- Invariant boundary: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) owns the broader local-source distribution story where one canonical rule source fans out to several instruction surfaces. [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) begins when the center of gravity is the narrower managed-target propagation contract for one shared skill or rule core and the main risk is target drift rather than general instruction-surface governance.
+- Invariant boundary: [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) owns the broader local-source distribution story where one canonical rule source fans out to several instruction surfaces. [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) begins when the center of gravity is the narrower managed-target propagation contract for one shared skill or rule core and the main risk is target drift rather than general instruction-surface governance.
 - Default-use trigger: use `0013` when the main question is one local canonical source synchronizing several instruction surfaces. Use `0027` when the main question is how one shared skill or rule core propagates into multiple managed agent-facing targets without widening into marketplace, role, or orchestration semantics.
 - Relation check: `0027` complements `0013` without replacing it, because the newer bundle is a narrower sibling centered on managed-target propagation rather than a broader source-distribution default. Outcome: `clear with one watch seam`.
 
@@ -53,7 +53,7 @@ Question: where does one local canonical rule source fanning out across instruct
 
 Question: where does many-fragment composition into one generated artifact stop and manifest-driven upstream mirroring with provenance begin?
 
-- Invariant boundary: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) owns many local source fragments collapsing into one generated context artifact. [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) owns one upstream-owned source or bundle being mirrored locally with explicit provenance and without claiming local authorship.
+- Invariant boundary: [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) owns many local source fragments collapsing into one generated context artifact. [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) owns one upstream-owned source or bundle being mirrored locally with explicit provenance and without claiming local authorship.
 - Default-use trigger: use `0012` when the main question is how local fragments become one stable output. Use `0024` when the main question is how a local curated mirror stays subordinate to upstream ownership and readable provenance.
 - Evidence check: `0012` examples stay composition-centric, while `0024` examples stay source-manifest, attribution, and resync centric. The pair stays distinct so long as future wording keeps local composition separate from upstream mirroring. Outcome: `clear`.
 
@@ -61,7 +61,7 @@ Question: where does many-fragment composition into one generated artifact stop 
 
 Question: where does managed target propagation from one local canonical skill or rule core stop and upstream-owned mirroring with provenance begin?
 
-- Invariant boundary: [AOA-T-0027](../techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md) owns local canonical source propagation into managed agent-facing targets. [AOA-T-0024](../techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md) owns local curation of upstream-owned content with explicit provenance and repeatable resync.
+- Invariant boundary: [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) owns local canonical source propagation into managed agent-facing targets. [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) owns local curation of upstream-owned content with explicit provenance and repeatable resync.
 - Default-use trigger: use `0027` when source ownership is already local and the problem is keeping managed targets synchronized. Use `0024` when source ownership stays upstream and the local question is how to mirror that source without hiding origin ownership.
 - Evidence check: `0027` examples stay managed-target and anti-drift centric, while `0024` examples stay manifest, attribution, and resync centric. Outcome: `clear`.
 
@@ -69,7 +69,7 @@ Question: where does managed target propagation from one local canonical skill o
 
 Question: where does many-fragment composition into one generated artifact stop and fragment-first authoring before assembly begin?
 
-- Invariant boundary: [AOA-T-0012](../techniques/docs/deterministic-context-composition/TECHNIQUE.md) owns many source fragments composing into one generated context artifact with deterministic ordering and traceable fragment authority. [AOA-T-0030](../techniques/docs/fragmented-agent-context/TECHNIQUE.md) begins earlier, when the main problem is keeping the fragment layer itself bounded, locally legible, and reviewable before any generated aggregate becomes the center of gravity.
+- Invariant boundary: [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) owns many source fragments composing into one generated context artifact with deterministic ordering and traceable fragment authority. [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) begins earlier, when the main problem is keeping the fragment layer itself bounded, locally legible, and reviewable before any generated aggregate becomes the center of gravity.
 - Default-use trigger: use `0012` when the system needs deterministic assembly into one stable output. Use `0030` when the system first needs fragment-first authoring and source partitioning before deciding whether a generated output should even exist.
 - Evidence check: `0030` examples stay source-layer and ownership centric, while `0012` examples stay generated-artifact and ordering centric. The pair stays distinct so long as `0030` does not widen into composition mechanics and `0012` does not collapse back into generic fragment hygiene. Outcome: `clear`.
 
@@ -77,7 +77,7 @@ Question: where does many-fragment composition into one generated artifact stop 
 
 Question: where does one local canonical rule source fanning out to many managed targets stop and hierarchical loading with explicit precedence begin?
 
-- Invariant boundary: [AOA-T-0013](../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) owns one local canonical rule source fanning out across multiple managed instruction surfaces. [AOA-T-0029](../techniques/docs/nested-rule-loading/TECHNIQUE.md) begins when one canonical rule hierarchy already exists and the main problem is explicit precedence among parent and nested layers rather than multi-target distribution.
+- Invariant boundary: [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) owns one local canonical rule source fanning out across multiple managed instruction surfaces. [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) begins when one canonical rule hierarchy already exists and the main problem is explicit precedence among parent and nested layers rather than multi-target distribution.
 - Default-use trigger: use `0013` when one local source must refresh several agent-facing targets. Use `0029` when one layered source tree must resolve parent and nested rule layers in a repeatable precedence order without turning nested layers into independent canonical homes.
 - Evidence check: `0013` examples stay fan-out and managed-target centric, while `0029` examples stay hierarchical-loading and precedence centric. The pair stays distinct so long as `0029` does not widen into target propagation and `0013` does not absorb nested precedence as if it were the same contract. Outcome: `clear`.
 

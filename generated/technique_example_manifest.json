@@ -160,15 +160,15 @@
     },
     {
       "id": "AOA-T-0012",
-      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/deterministic-context-composition/examples/concrete-skill-doc-composition.md",
+          "example_path": "techniques/instruction/instruction-surface/deterministic-context-composition/examples/concrete-skill-doc-composition.md",
           "title": "Concrete Skill Doc Composition",
           "body_markdown": "This example shows several instruction fragments composing into one generated `AGENTS.md`-style artifact with deterministic ordering and explicit source annotations.\n\n## Source fragments\n\n`fragments/00-repo-policy.agents.md`\n\n```md\n<!-- priority: 100 -->\n## Repository policy\n\n- Keep diffs focused and reviewable.\n- Validate generated surfaces after changing source fragments.\n```\n\n`fragments/10-safety.agents.md`\n\n```md\n<!-- priority: 80 -->\n## Safety checks\n\n- Confirm destructive actions before execution.\n- Do not treat generated outputs as hand-edited sources of truth.\n```\n\n`fragments/20-skill-routing.agents.md`\n\n```md\n<!-- priority: 40 -->\n## Skill routing\n\n- Use the skill index to choose the smallest applicable workflow.\n- Prefer fragment edits over patching the generated instruction artifact directly.\n```\n\n## Composition rules\n\n- Fragments are discovered from `fragments/*.agents.md`.\n- Ordering is deterministic: higher numeric `priority` first, then stable path order.\n- Every rendered section keeps a source annotation so reviewers can trace output back to the fragment that produced it.\n- Contributors review the fragment files, not the generated output, as the canonical source of truth.\n\n## Generated `AGENTS.md`-style artifact\n\n```md\n<!-- Generated file. Edit fragments/*.agents.md instead. -->\n<!-- source: fragments/00-repo-policy.agents.md priority=100 -->\n## Repository policy\n\n- Keep diffs focused and reviewable.\n- Validate generated surfaces after changing source fragments.\n<!-- /source: fragments/00-repo-policy.agents.md -->\n\n<!-- source: fragments/10-safety.agents.md priority=80 -->\n## Safety checks\n\n- Confirm destructive actions before execution.\n- Do not treat generated outputs as hand-edited sources of truth.\n<!-- /source: fragments/10-safety.agents.md -->\n\n<!-- source: fragments/20-skill-routing.agents.md priority=40 -->\n## Skill routing\n\n- Use the skill index to choose the smallest applicable workflow.\n- Prefer fragment edits over patching the generated instruction artifact directly.\n<!-- /source: fragments/20-skill-routing.agents.md -->\n```\n\n## What this proves\n\n- several source fragments can compose into one generated context artifact without manual merge steps\n- deterministic ordering stays explainable from a small rule set instead of hidden tribal knowledge\n- source annotations preserve traceability from each rendered section back to the fragment that produced it\n- the bounded contract stays centered on many fragments narrowing into one output, not on one canonical source fanning out to many targets"
         },
         {
-          "example_path": "techniques/docs/deterministic-context-composition/examples/minimal-deterministic-context-composition.md",
+          "example_path": "techniques/instruction/instruction-surface/deterministic-context-composition/examples/minimal-deterministic-context-composition.md",
           "title": "Minimal Deterministic Context Composition",
           "body_markdown": "This example shows a small fragment set that composes into one stable generated context artifact.\n\n## Source fragments\n\n`security.agents.md`\n\n```md\n<!-- priority: 10 -->\nAlways confirm destructive actions before execution.\n```\n\n`workflow.agents.md`\n\n```md\nPlan before apply.\nState validation clearly in the final report.\n```\n\n## Generated context artifact\n\n```md\n<!-- Generated file. Edit source fragments instead. -->\n<!-- source: security.agents.md priority=10 -->\nAlways confirm destructive actions before execution.\n<!-- /source: security.agents.md -->\n<!-- source: workflow.agents.md priority=0 -->\nPlan before apply.\nState validation clearly in the final report.\n<!-- /source: workflow.agents.md -->\n```\n\n## Deterministic behavior\n\n- the higher-priority fragment surfaces first\n- the output keeps explicit source annotations\n- contributors update fragment files rather than editing the generated artifact directly"
         }
@@ -176,15 +176,15 @@
     },
     {
       "id": "AOA-T-0013",
-      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md",
+          "example_path": "techniques/instruction/instruction-surface/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md",
           "title": "Concrete Multi-Agent Rule Sync",
           "body_markdown": "This example shows one canonical instruction source distributing the same shared rule core to several managed agent-facing targets.\n\n## Canonical rule source\n\n`rules/shared-agent-guidance.md`\n\n```md\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Route shared instruction changes through this file first.\n- Treat generated instruction targets as managed outputs.\n- Re-run distribution after changing the canonical rule source.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Route shared instruction changes through this file first.\n- Treat generated instruction targets as managed outputs.\n- Re-run distribution after changing the canonical rule source.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Route shared instruction changes through this file first.\n- Treat generated instruction targets as managed outputs.\n- Re-run distribution after changing the canonical rule source.\n```\n\n`GEMINI.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Route shared instruction changes through this file first.\n- Treat generated instruction targets as managed outputs.\n- Re-run distribution after changing the canonical rule source.\n```\n\n## Distribution contract\n\n- `rules/shared-agent-guidance.md` is the only canonical location for the shared rule core.\n- The target files may add minimal destination-specific wrappers, but they do not become separate sources of truth.\n- Re-applying the distribution step must refresh all managed targets without duplicating or silently reshaping the shared rules.\n- Review starts with the canonical source diff and uses the target files only to confirm synchronized distribution.\n\n## What this proves\n\n- one canonical rule source can keep several agent-facing instruction targets aligned\n- the pattern stays bounded to one-source fan-out rather than many-fragment composition into one artifact\n- target-specific wrappers can stay minimal without changing the shared rule intent\n- contributors can tell that edits belong in the canonical source, not in each managed target"
         },
         {
-          "example_path": "techniques/docs/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md",
+          "example_path": "techniques/instruction/instruction-surface/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md",
           "title": "Minimal Single-Source Rule Distribution",
           "body_markdown": "This example shows one canonical rule source being propagated to two agent-facing instruction files.\n\n## Canonical rule source\n\n`rules/agent-guidance.md`\n\n```md\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Generated from rules/agent-guidance.md. Edit the source file instead. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed instruction file derived from rules/agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat generated instruction files as derived outputs.\n- Route updates through the canonical rule source first.\n```\n\n## What this proves\n\n- one canonical source owns the shared rule content\n- more than one target surface can stay aligned without copy-paste maintenance\n- the target files are clearly marked as managed rather than canonical"
         }
@@ -327,15 +327,15 @@
     },
     {
       "id": "AOA-T-0024",
-      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md",
+          "example_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md",
           "title": "Concrete Curated Mirror With Attribution",
           "body_markdown": "Scenario: a public collection wants to mirror one externally maintained skill into a local curated directory.\n\n1. Add one source-manifest entry naming the upstream repository, upstream path, and local destination.\n2. Sync the upstream skill into the local collection.\n3. Write one adjacent provenance file that preserves origin attribution.\n4. Keep any local curation note in a separate file instead of editing the mirrored payload inline.\n5. On refresh, re-run the sync path first and only then review whether local wrapper notes still make sense.\n\nThis stays inside the technique because the local collection mirrors upstream-owned content with explicit provenance rather than turning the mirror into a new canonical source."
         },
         {
-          "example_path": "techniques/docs/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md",
+          "example_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md",
           "title": "Minimal Upstream Mirroring With Provenance",
           "body_markdown": "Use one small source manifest entry plus one adjacent provenance file.\n\n- source manifest entry:\n  - names the upstream repository\n  - names the upstream source path\n  - names the local mirror destination\n- mirrored local copy:\n  - is refreshed from upstream\n  - does not become the new canonical source\n- provenance file:\n  - preserves the upstream origin\n  - stays adjacent to the mirrored copy\n\nIf the local collection now wants registry policy, installer behavior, or ranking logic, treat that as a separate technique."
         }
@@ -375,15 +375,15 @@
     },
     {
       "id": "AOA-T-0027",
-      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md",
+          "example_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md",
           "title": "Concrete Multi-Target Skill Propagation",
           "body_markdown": "This example shows one canonical shared rule core moving cleanly into several managed agent-facing targets.\n\n## Canonical source\n\n`rules/shared-agent-skill.md`\n\n```md\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-skill.md. -->\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-skill.md. -->\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n`GEMINI.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-skill.md. -->\n# Shared Agent Skill Core\n\n- Prefer small, reviewable diffs.\n- Keep shared guidance in one canonical source.\n- Treat target instruction files as managed outputs.\n- Re-apply propagation after every shared-source change.\n```\n\n## What this proves\n\n- one canonical source can keep several agent-facing targets synchronized\n- the targets remain derived outputs instead of competing sources of truth\n- the technique stays bounded to propagation, not to role generation, MCP propagation, or marketplace policy"
         },
         {
-          "example_path": "techniques/docs/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md",
+          "example_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md",
           "title": "Minimal Cross-Agent Skill Propagation",
           "body_markdown": "Use one canonical rule source and propagate the same shared core to several managed agent-facing targets.\n\n## Canonical source\n\n`rules/shared-agent-guidance.md`\n\n```md\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat agent-facing target files as managed outputs.\n- Route shared instruction changes through the canonical source first.\n- Re-apply propagation after editing the source.\n```\n\n## Managed targets\n\n`AGENTS.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat agent-facing target files as managed outputs.\n- Route shared instruction changes through the canonical source first.\n- Re-apply propagation after editing the source.\n```\n\n`CLAUDE.md`\n\n```md\n<!-- Managed output derived from rules/shared-agent-guidance.md. -->\n# Shared Agent Guidance\n\n- Prefer small, reviewable diffs.\n- Treat agent-facing target files as managed outputs.\n- Route shared instruction changes through the canonical source first.\n- Re-apply propagation after editing the source.\n```\n\n## What this proves\n\n- one canonical skill or rule source can fan out to multiple agent-facing targets\n- managed targets can stay aligned without copy-paste maintenance\n- the shared core remains readable even when wrapper text is destination-specific"
         }
@@ -407,15 +407,15 @@
     },
     {
       "id": "AOA-T-0029",
-      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md",
+          "example_path": "techniques/instruction/instruction-surface/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md",
           "title": "Concrete Hierarchical Rule Loading",
           "body_markdown": "This example shows one parent source with two nested layers that resolve through explicit precedence.\n\n## Parent source\n\n`rules/global-rule-set.md`\n\n```md\n# Global Rule Set\n\n- Prefer small, reviewable diffs.\n- Keep one canonical source for shared guidance.\n- Treat nested layers as scoped and subordinate.\n- Make precedence explicit before loading.\n```\n\n## Nested layers\n\n`rules/teams/team-a/rules.md`\n\n```md\n<!-- Derived output from rules/global-rule-set.md plus team-a additions. -->\n# Global Rule Set\n\n- Prefer small, reviewable diffs.\n- Keep one canonical source for shared guidance.\n- Treat nested layers as scoped and subordinate.\n- Make precedence explicit before loading.\n\n## Team A addition\n\n- Add one team-specific override for approval wording.\n```\n\n`rules/teams/team-a/feature-x/rules.md`\n\n```md\n<!-- Derived output from rules/global-rule-set.md plus team-a and feature-x additions. -->\n# Global Rule Set\n\n- Prefer small, reviewable diffs.\n- Keep one canonical source for shared guidance.\n- Treat nested layers as scoped and subordinate.\n- Make precedence explicit before loading.\n\n## Team A addition\n\n- Add one team-specific override for approval wording.\n\n## Feature X addition\n\n- Add one feature-specific override for file naming.\n```\n\n## What this proves\n\n- parent and child layers can be resolved in a declared order\n- nested additions stay visible without becoming new canonical homes\n- explicit precedence keeps the hierarchy reviewable"
         },
         {
-          "example_path": "techniques/docs/nested-rule-loading/examples/minimal-nested-rule-loading.md",
+          "example_path": "techniques/instruction/instruction-surface/nested-rule-loading/examples/minimal-nested-rule-loading.md",
           "title": "Minimal Nested Rule Loading",
           "body_markdown": "Use one canonical parent source and one nested child layer with explicit precedence.\n\n## Canonical parent\n\n`rules/shared-rule-core.md`\n\n```md\n# Shared Rule Core\n\n- Prefer small, reviewable diffs.\n- Keep shared meaning in one canonical source.\n- Treat nested layers as subordinate additions.\n- Re-run loading when precedence rules change.\n```\n\n## Nested child layer\n\n`rules/projects/alpha/nested-rules.md`\n\n```md\n<!-- Nested output derived from rules/shared-rule-core.md plus scoped child additions. -->\n# Shared Rule Core\n\n- Prefer small, reviewable diffs.\n- Keep shared meaning in one canonical source.\n- Treat nested layers as subordinate additions.\n- Re-run loading when precedence rules change.\n\n## Project-specific addition\n\n- Allow one scoped override for alpha-only terminology.\n```\n\n## What this proves\n\n- the canonical source still owns the shared rule meaning\n- the nested layer stays subordinate and scoped\n- precedence is explicit rather than accidental"
         }
@@ -423,20 +423,20 @@
     },
     {
       "id": "AOA-T-0030",
-      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/fragmented-agent-context/examples/concrete-fragment-first-assembly.md",
+          "example_path": "techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-fragment-first-assembly.md",
           "title": "Concrete Fragment-First Assembly",
           "body_markdown": "Scenario: a public repository wants agent context to stay reviewable in small source fragments while still being able to publish one consolidated view.\n\n1. Write the context contract in small fragment files instead of one long hand-edited document.\n2. Give each fragment one bounded responsibility, such as intent, contracts, or review notes.\n3. Define a deterministic assembly order that combines the fragments without changing their meaning.\n4. Keep a traceability marker or equivalent mapping so each assembled section can be traced back to its source fragment.\n5. Treat the assembled view as a derived publication surface, not as the primary editable home.\n6. When meaning changes, edit the fragments and regenerate the assembled view from them.\n\nThis stays inside the technique because the fragments own the meaning and assembly stays subordinate to fragment-first authorship."
         },
         {
-          "example_path": "techniques/docs/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md",
+          "example_path": "techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md",
           "title": "Concrete Subtree Fragmented Context",
           "body_markdown": "This example keeps subtree-specific guidance close to the surfaces it explains, but still stops short of deterministic assembly.\n\n## Fragment layout\n\n`frontend/agents/context.md`\n\n```md\nPrefer intentional UI changes over generic layout churn.\n```\n\n`docs/agents/context.md`\n\n```md\nKeep public-safe wording explicit and avoid internal-only URLs.\n```\n\n`tests/agents/context.md`\n\n```md\nRun focused regression checks when a change touches generated surfaces.\n```\n\n## Review behavior\n\n- each fragment sits near its local ownership boundary\n- a reviewer can explain why a fragment belongs in that subtree\n- the repository can later compose these fragments, but the authoring contract is already usable on its own"
         },
         {
-          "example_path": "techniques/docs/fragmented-agent-context/examples/minimal-fragmented-agent-context.md",
+          "example_path": "techniques/instruction/instruction-surface/fragmented-agent-context/examples/minimal-fragmented-agent-context.md",
           "title": "Minimal Fragmented Agent Context",
           "body_markdown": "This example shows fragment-first authoring before any generated aggregate exists.\n\n## Fragment set\n\n`docs/agent-context/review.md`\n\n```md\nAlways summarize the intended change before editing tracked files.\n```\n\n`docs/agent-context/validation.md`\n\n```md\nState the exact validation commands you actually ran.\n```\n\n## Why this already helps\n\n- each fragment owns one narrow topic\n- contributors can update one area without reopening a giant shared context file\n- deterministic assembly can be added later, but fragment ownership is already clear"
         }
@@ -503,10 +503,10 @@
     },
     {
       "id": "AOA-T-0035",
-      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/profile-preset-composition/examples/minimal-profile-preset-composition.md",
+          "example_path": "techniques/instruction/instruction-surface/profile-preset-composition/examples/minimal-profile-preset-composition.md",
           "title": "Minimal Profile Preset Composition",
           "body_markdown": "## Layout\n\n```text\ncompose/modules/10-core.yml\ncompose/modules/20-api.yml\ncompose/modules/50-observability.yml\n\ncompose/profiles/app.txt\ncompose/profiles/ops.txt\n\ncompose/presets/app-full.txt\n```\n\n## Profile Definitions\n\n```text\n# compose/profiles/app.txt\n10-core.yml\n20-api.yml\n```\n\n```text\n# compose/profiles/ops.txt\n50-observability.yml\n```\n\n## Preset Definition\n\n```text\n# compose/presets/app-full.txt\napp\nops\n```\n\n## Inspection-First Use\n\n```bash\nstack-preset-profiles --preset app-full --paths\nstack-profile-modules --preset app-full --paths\nstack-profile-endpoints --preset app-full\n```\n\n## What The Contract Shows\n\n- `app-full` expands to `app` and then `ops`\n- the resolved module order becomes `10-core.yml`, `20-api.yml`, `50-observability.yml`\n- if a direct `--profile debug` is added later, it should append after preset expansion rather than rewriting the preset\n- duplicate profiles or modules should be kept only once, at first appearance"
         }

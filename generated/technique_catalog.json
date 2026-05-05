@@ -651,7 +651,7 @@
       "kind": "composition",
       "status": "canonical",
       "summary": "Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability.",
-      "technique_path": "techniques/docs/deterministic-context-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md",
       "origin": {
         "project": "agents-md",
         "path": "README.md",
@@ -705,7 +705,7 @@
       "kind": "distribution",
       "status": "canonical",
       "summary": "Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth.",
-      "technique_path": "techniques/docs/single-source-rule-distribution/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md",
       "origin": {
         "project": "ruler",
         "path": "README.md",
@@ -1326,7 +1326,7 @@
       "kind": "distribution",
       "status": "promoted",
       "summary": "Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source.",
-      "technique_path": "techniques/docs/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
       "origin": {
         "project": "n-skills",
         "path": "README.md",
@@ -1491,7 +1491,7 @@
       "kind": "distribution",
       "status": "promoted",
       "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
-      "technique_path": "techniques/docs/cross-agent-skill-propagation/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
       "origin": {
         "project": "ruler",
         "path": "README.md",
@@ -1605,7 +1605,7 @@
       "kind": "composition",
       "status": "promoted",
       "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
-      "technique_path": "techniques/docs/nested-rule-loading/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
       "origin": {
         "project": "ruler",
         "path": "README.md",
@@ -1660,7 +1660,7 @@
       "kind": "composition",
       "status": "promoted",
       "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
-      "technique_path": "techniques/docs/fragmented-agent-context/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
       "origin": {
         "project": "agents-md",
         "path": "README.md",
@@ -1924,7 +1924,7 @@
       "kind": "composition",
       "status": "promoted",
       "summary": "Compose small reusable profiles into named presets so runtime posture stays reviewable without flattening composition into one opaque config or launcher doctrine.",
-      "technique_path": "techniques/docs/profile-preset-composition/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md",
       "origin": {
         "project": "abyss-stack",
         "path": "docs/PROFILES.md",

@@ -65,10 +65,12 @@
    pilot review is also landed as `pilot-validated`, and
    `instruction-surface` is now chosen for the next direct-read migration
    review. The `instruction-surface` direct-read review is now landed as
-   `accepted-for-fifth-migration-pilot`, and the next tree move is the fifth
-   pilot migration for exactly `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
-   `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` before any
-   other shelf moves.
+   `accepted-for-fifth-migration-pilot`, and the fifth pilot migration is
+   landed exactly for `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
+   `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` under
+   `techniques/instruction/instruction-surface/`, with the instruction route
+   card, root legacy receipt accounting, link repair, generated rebuilds, and
+   release-check validation in the same wave.
 
 ## Hold line
 

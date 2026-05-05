@@ -236,14 +236,14 @@ It accepts `instruction-surface` as the fifth migration pilot after directly
 reading `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`,
 `AOA-T-0030`, and `AOA-T-0035`.
 
-The next reform slice should:
+The fifth pilot migration moves `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
+`AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into
+`techniques/instruction/instruction-surface/` without changing `domain`,
+`kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md`](../legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md).
 
-1. move exactly `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`,
-   `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into
-   `techniques/instruction/instruction-surface/`
-2. add the minimal `instruction/` route card and root legacy receipt
-3. repair authored links, rebuild generated surfaces, and keep frontmatter
-   unchanged
+The next reform slice should review the landed `instruction-surface` pilot
+before moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

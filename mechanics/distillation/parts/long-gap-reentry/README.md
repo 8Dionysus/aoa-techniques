@@ -17,7 +17,7 @@ This design wave covers:
 - [AOA-T-0005](../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
 - [AOA-T-0022](../../../../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
 
-It does not reopen [AOA-T-0013](../../../../techniques/docs/single-source-rule-distribution/TECHNIQUE.md) or [AOA-T-0018](../../../../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), because those bundles have now graduated through follow-up canonical review, or [AOA-T-0020](../../../../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), because that remains an evidence-prep question rather than a long-gap design problem.
+It does not reopen [AOA-T-0013](../../../../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) or [AOA-T-0018](../../../../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), because those bundles have now graduated through follow-up canonical review, or [AOA-T-0020](../../../../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), because that remains an evidence-prep question rather than a long-gap design problem.
 
 ## `AOA-T-0005` - New Intent Rollout Checklist
 
