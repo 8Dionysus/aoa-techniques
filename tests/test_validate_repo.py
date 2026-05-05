@@ -822,14 +822,16 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         technique = (
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "telemetry-integrity-snapshot"
             / "TECHNIQUE.md"
         ).read_text(encoding="utf-8")
         checklist = (
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "telemetry-integrity-snapshot"
             / "checks"
             / "telemetry-integrity-checklist.md"
@@ -837,7 +839,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         minimal_example = (
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "telemetry-integrity-snapshot"
             / "examples"
             / "minimal-telemetry-integrity-snapshot.md"
@@ -845,7 +848,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         object_store_example = (
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "telemetry-integrity-snapshot"
             / "examples"
             / "object-store-telemetry-integrity-snapshot.md"
@@ -884,25 +888,29 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         note_paths = [
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "latest-alias-plus-history-copy"
             / "notes"
             / "canonical-readiness.md",
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "published-summary-remediation-snapshot"
             / "notes"
             / "canonical-readiness.md",
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "required-vs-optional-source-rendering"
             / "notes"
             / "canonical-readiness.md",
             REPO_ROOT
             / "techniques"
-            / "evaluation"
+            / "proof"
+            / "published-summary"
             / "telemetry-integrity-snapshot"
             / "notes"
             / "canonical-readiness.md",

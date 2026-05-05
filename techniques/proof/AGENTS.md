@@ -25,6 +25,12 @@ Current landed shelves:
   promotion, and read-only CI context reporting without becoming CI ownership,
   release policy, eval-suite authority, proof verdict law, or generic quality
   gate doctrine.
+- `published-summary/`: stable latest alias storage, bounded remediation
+  snapshots, diagnostic integrity snapshots, and required-versus-optional
+  summary-source rendering without becoming telemetry owner doctrine,
+  dashboard ownership, runtime storage policy, archive governance, remediation
+  execution, integrity verdict law, release policy, proof verdict law, or a
+  generic reporting platform.
 
 ## Boundary
 
@@ -47,6 +53,9 @@ Do not:
   combined proof technique
 - collapse summary-contract generation, staged signal promotion, and CI
   context reporting into one combined gate technique
+- collapse latest alias storage, remediation snapshot, integrity diagnosis,
+  and required-versus-optional rendering into one published-summary package
+  technique
 - import sibling-owner authority into a portable technique bundle
 
 ## Validation

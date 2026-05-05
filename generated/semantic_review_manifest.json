@@ -183,7 +183,7 @@
         {
           "heading": "Adjacent Technique Note: `AOA-T-0006`",
           "order": 1,
-          "markdown": "[AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) matters here as an adjacent dependency, but not as a third full review target in this pilot.\n\n- `AOA-T-0007` currently `requires` `AOA-T-0006` because staged promotion becomes stronger once history and latest-alias layout are trustworthy across repeated runs.\n- That adjacency does not make `AOA-T-0007` a storage-layout technique. The semantic core of `0007` is still staged enforcement policy over an existing signal, not dual-write layout or anti-double-count behavior.\n- This dependency is worth watching later only if rollout wording starts absorbing too much latest/history implementation detail. At the moment, the boundary still reads cleanly. Outcome: `watch`.",
+          "markdown": "[AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) matters here as an adjacent dependency, but not as a third full review target in this pilot.\n\n- `AOA-T-0007` currently `requires` `AOA-T-0006` because staged promotion becomes stronger once history and latest-alias layout are trustworthy across repeated runs.\n- That adjacency does not make `AOA-T-0007` a storage-layout technique. The semantic core of `0007` is still staged enforcement policy over an existing signal, not dual-write layout or anti-double-count behavior.\n- This dependency is worth watching later only if rollout wording starts absorbing too much latest/history implementation detail. At the moment, the boundary still reads cleanly. Outcome: `watch`.",
           "outcome": "`watch`."
         }
       ],
@@ -529,25 +529,25 @@
         {
           "order": 1,
           "technique_id": "AOA-T-0006",
-          "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+          "technique_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
           "current_role": "storage contract for stable latest alias plus immutable history copy"
         },
         {
           "order": 2,
           "technique_id": "AOA-T-0008",
-          "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+          "technique_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
           "current_role": "bounded remediation rollup over latest published summaries"
         },
         {
           "order": 3,
           "technique_id": "AOA-T-0010",
-          "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+          "technique_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
           "current_role": "diagnostic trust layer over published summaries and downstream rollups"
         },
         {
           "order": 4,
           "technique_id": "AOA-T-0011",
-          "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+          "technique_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
           "current_role": "rendering and contract policy for required versus optional summary sources"
         }
       ],
@@ -556,21 +556,21 @@
           "heading": "`AOA-T-0006` vs `AOA-T-0008` / `AOA-T-0010`",
           "order": 1,
           "question": "where does the storage contract end and the downstream consumer layer begin?",
-          "analysis_markdown": "- Invariant boundary: [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) owns alias/history layout, dual-write invariants, and anti-double-count reader behavior. [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) and [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) begin only after stable latest published summaries already exist.\n- Default-use trigger: use `0006` when a producer must publish discoverable current state and trustworthy history. Use `0008` when several published summaries need one bounded remediation backlog. Use `0010` when several published summaries or rollups need one reusable trust verdict.\n- Relation check: current `shares_contract_with` from `0006` to `0008` and `0010` helps. It correctly reads as shared dependency on the latest-summary contract rather than semantic duplication.\n- Evidence check: `0006` examples and checklist stay focused on alias/history layout, not downstream rollups. The object-store example reinforces storage invariants without bleeding into remediation or integrity semantics. Outcome: `clear`.",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) owns alias/history layout, dual-write invariants, and anti-double-count reader behavior. [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) and [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) begin only after stable latest published summaries already exist.\n- Default-use trigger: use `0006` when a producer must publish discoverable current state and trustworthy history. Use `0008` when several published summaries need one bounded remediation backlog. Use `0010` when several published summaries or rollups need one reusable trust verdict.\n- Relation check: current `shares_contract_with` from `0006` to `0008` and `0010` helps. It correctly reads as shared dependency on the latest-summary contract rather than semantic duplication.\n- Evidence check: `0006` examples and checklist stay focused on alias/history layout, not downstream rollups. The object-store example reinforces storage invariants without bleeding into remediation or integrity semantics. Outcome: `clear`.",
           "outcome": "`clear`."
         },
         {
           "heading": "`AOA-T-0008` vs `AOA-T-0010`",
           "order": 2,
           "question": "are remediation rollup and integrity verdict still distinct, or are they drifting toward one combined downstream helper?",
-          "analysis_markdown": "- Invariant boundary: [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) answers \"what needs follow-up?\" through bounded buckets and source references. [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) answers \"are these published summaries trustworthy enough to interpret?\" through diagnostic invariants and reason codes.\n- Default-use trigger: choose `0008` when operators or agents need one reviewable backlog instead of reading each latest summary directly. Choose `0010` when multiple consumers should not duplicate source-health, dual-write, and anti-double-count checks independently.\n- Relation check: mutual `complements` is appropriate and still minimal. Anything stronger than `complements` would risk implying one technique subsumes the other.\n- Evidence check: `0008` checklist and object-store example stay bucket-and-source-reference centric; `0010` checklist and object-store example stay trust-and-integrity centric. The support surfaces currently reinforce separation rather than blur it. Outcome: `clear`.",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) answers \"what needs follow-up?\" through bounded buckets and source references. [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) answers \"are these published summaries trustworthy enough to interpret?\" through diagnostic invariants and reason codes.\n- Default-use trigger: choose `0008` when operators or agents need one reviewable backlog instead of reading each latest summary directly. Choose `0010` when multiple consumers should not duplicate source-health, dual-write, and anti-double-count checks independently.\n- Relation check: mutual `complements` is appropriate and still minimal. Anything stronger than `complements` would risk implying one technique subsumes the other.\n- Evidence check: `0008` checklist and object-store example stay bucket-and-source-reference centric; `0010` checklist and object-store example stay trust-and-integrity centric. The support surfaces currently reinforce separation rather than blur it. Outcome: `clear`.",
           "outcome": "`clear`."
         },
         {
           "heading": "`AOA-T-0008` / `AOA-T-0010` vs `AOA-T-0011`",
           "order": 3,
           "question": "where do downstream summary surfaces stop and rendering policy begin?",
-          "analysis_markdown": "- Invariant boundary: [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) and [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) define optional downstream summary artifacts. [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) defines how a consumer treats those artifacts once they exist or are missing.\n- Default-use trigger: use `0008` or `0010` when the project needs the remediation or integrity artifact at all. Use `0011` when a UI, CLI report, or smoke summary must stay useful while optional supporting artifacts remain observable but non-fatal.\n- Relation check: `0008 -> complements -> 0011` and `0010 -> complements -> 0011` are helpful because they point from optional published artifacts to the rendering policy that consumes them. The current relation set is enough; adding `requires` here would overstate dependency.\n- Evidence check: `0008` and `0010` examples focus on emitting optional downstream artifacts; `0011` example and checklist focus on required/optional handling in a consumer, including non-UI output. That keeps producer semantics separate from rendering semantics. Outcome: `watch`.\n\nWhy `watch` instead of `clear`:\n\n- `AOA-T-0011` uses remediation and integrity as its clearest optional-source examples, so future wording drift could accidentally make `0011` read like a bundle-specific rendering appendix instead of a general summary-consumer policy.\n- The current support surfaces are still strong enough, but this seam is the most likely place for future overlap if later examples become too package-shaped.",
+          "analysis_markdown": "- Invariant boundary: [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) and [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) define optional downstream summary artifacts. [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) defines how a consumer treats those artifacts once they exist or are missing.\n- Default-use trigger: use `0008` or `0010` when the project needs the remediation or integrity artifact at all. Use `0011` when a UI, CLI report, or smoke summary must stay useful while optional supporting artifacts remain observable but non-fatal.\n- Relation check: `0008 -> complements -> 0011` and `0010 -> complements -> 0011` are helpful because they point from optional published artifacts to the rendering policy that consumes them. The current relation set is enough; adding `requires` here would overstate dependency.\n- Evidence check: `0008` and `0010` examples focus on emitting optional downstream artifacts; `0011` example and checklist focus on required/optional handling in a consumer, including non-UI output. That keeps producer semantics separate from rendering semantics. Outcome: `watch`.\n\nWhy `watch` instead of `clear`:\n\n- `AOA-T-0011` uses remediation and integrity as its clearest optional-source examples, so future wording drift could accidentally make `0011` read like a bundle-specific rendering appendix instead of a general summary-consumer policy.\n- The current support surfaces are still strong enough, but this seam is the most likely place for future overlap if later examples become too package-shaped.",
           "outcome": "`watch`."
         }
       ],

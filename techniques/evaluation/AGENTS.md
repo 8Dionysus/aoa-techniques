@@ -4,12 +4,13 @@ Guidance for coding agents and humans working under `techniques/evaluation/`.
 
 ## Purpose
 
-This domain stores reusable evaluation and validation techniques.
+This domain stores reusable evaluation and validation techniques whose
+frontmatter `domain` remains `evaluation`.
 
-Representative bundles here include `latest-alias-plus-history-copy`,
-`published-summary-remediation-snapshot`, `telemetry-integrity-snapshot`,
-`required-vs-optional-source-rendering`, and published-summary integrity
-techniques.
+Representative bundles still living here include `contextual-host-doctor` and
+`baseline-first-additive-profile-benchmarks`. Proof-facing evaluation bundles
+may live under `techniques/proof/` when a reviewed tree migration places them
+there without changing their frontmatter domain.
 
 ## Domain rules
 

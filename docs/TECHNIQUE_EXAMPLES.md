@@ -552,12 +552,12 @@ See also:
 |---|---|---|---|
 | Minimal Smoke Summary Flow | `present` | `techniques/proof/evaluation-chain/contract-first-smoke-summary/examples/minimal-smoke-summary-flow.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md) |
 
-### [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
+### [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) - latest-alias-plus-history-copy (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal-latest-history-layout | `present` | `techniques/evaluation/latest-alias-plus-history-copy/examples/minimal-latest-history-layout.md` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
-| object-store-latest-history-layout | `present` | `techniques/evaluation/latest-alias-plus-history-copy/examples/object-store-latest-history-layout.md` | [TECHNIQUE.md](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) |
+| minimal-latest-history-layout | `present` | `techniques/proof/published-summary/latest-alias-plus-history-copy/examples/minimal-latest-history-layout.md` | [TECHNIQUE.md](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) |
+| object-store-latest-history-layout | `present` | `techniques/proof/published-summary/latest-alias-plus-history-copy/examples/object-store-latest-history-layout.md` | [TECHNIQUE.md](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) |
 
 ### [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) - signal-first-gate-promotion (`canonical`)
 
@@ -566,26 +566,26 @@ See also:
 | Concrete Repo-Validation Rollout | `present` | `techniques/proof/evaluation-chain/signal-first-gate-promotion/examples/concrete-repo-validation-rollout.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) |
 | minimal-signal-first-rollout | `present` | `techniques/proof/evaluation-chain/signal-first-gate-promotion/examples/minimal-signal-first-rollout.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) |
 
-### [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
+### [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) - published-summary-remediation-snapshot (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal-remediation-snapshot | `present` | `techniques/evaluation/published-summary-remediation-snapshot/examples/minimal-remediation-snapshot.md` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
-| object-store-remediation-snapshot | `present` | `techniques/evaluation/published-summary-remediation-snapshot/examples/object-store-remediation-snapshot.md` | [TECHNIQUE.md](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) |
+| minimal-remediation-snapshot | `present` | `techniques/proof/published-summary/published-summary-remediation-snapshot/examples/minimal-remediation-snapshot.md` | [TECHNIQUE.md](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) |
+| object-store-remediation-snapshot | `present` | `techniques/proof/published-summary/published-summary-remediation-snapshot/examples/object-store-remediation-snapshot.md` | [TECHNIQUE.md](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) |
 
-### [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot (`canonical`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal-telemetry-integrity-snapshot | `present` | `techniques/evaluation/telemetry-integrity-snapshot/examples/minimal-telemetry-integrity-snapshot.md` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
-| object-store-telemetry-integrity-snapshot | `present` | `techniques/evaluation/telemetry-integrity-snapshot/examples/object-store-telemetry-integrity-snapshot.md` | [TECHNIQUE.md](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) |
-
-### [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering (`canonical`)
+### [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) - telemetry-integrity-snapshot (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal-required-vs-optional-rendering | `present` | `techniques/evaluation/required-vs-optional-source-rendering/examples/minimal-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
-| non-ui-required-vs-optional-rendering | `present` | `techniques/evaluation/required-vs-optional-source-rendering/examples/non-ui-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
+| minimal-telemetry-integrity-snapshot | `present` | `techniques/proof/published-summary/telemetry-integrity-snapshot/examples/minimal-telemetry-integrity-snapshot.md` | [TECHNIQUE.md](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) |
+| object-store-telemetry-integrity-snapshot | `present` | `techniques/proof/published-summary/telemetry-integrity-snapshot/examples/object-store-telemetry-integrity-snapshot.md` | [TECHNIQUE.md](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) |
+
+### [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) - required-vs-optional-source-rendering (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-required-vs-optional-rendering | `present` | `techniques/proof/published-summary/required-vs-optional-source-rendering/examples/minimal-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) |
+| non-ui-required-vs-optional-rendering | `present` | `techniques/proof/published-summary/required-vs-optional-source-rendering/examples/non-ui-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
 ### [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 

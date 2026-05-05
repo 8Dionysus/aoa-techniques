@@ -291,7 +291,7 @@
       "kind": "artifact",
       "status": "canonical",
       "summary": "Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation.",
-      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
       "origin": {
         "project": "atm10-agent",
         "path": "docs/RUNBOOK.md",
@@ -415,7 +415,7 @@
       "kind": "lift",
       "status": "canonical",
       "summary": "Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior.",
-      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
       "origin": {
         "project": "atm10-agent",
         "path": "docs/RUNBOOK.md",
@@ -531,7 +531,7 @@
       "kind": "validation",
       "status": "canonical",
       "summary": "Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface.",
-      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
       "origin": {
         "project": "atm10-agent",
         "path": "docs/RUNBOOK.md",
@@ -593,7 +593,7 @@
       "kind": "guardrail",
       "status": "canonical",
       "summary": "Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures.",
-      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
       "origin": {
         "project": "atm10-agent",
         "path": "docs/RUNBOOK.md",

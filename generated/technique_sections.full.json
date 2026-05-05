@@ -434,7 +434,7 @@
     {
       "id": "AOA-T-0006",
       "name": "latest-alias-plus-history-copy",
-      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -598,7 +598,7 @@
     {
       "id": "AOA-T-0008",
       "name": "published-summary-remediation-snapshot",
-      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -762,7 +762,7 @@
     {
       "id": "AOA-T-0010",
       "name": "telemetry-integrity-snapshot",
-      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -844,7 +844,7 @@
     {
       "id": "AOA-T-0011",
       "name": "required-vs-optional-source-rendering",
-      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",

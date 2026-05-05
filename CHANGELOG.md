@@ -154,6 +154,9 @@ The format is intentionally simple and human-first.
 - accepted the `published-summary` direct-read migration review over
   `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011` as the
   thirteenth tree pilot while keeping the review itself non-mutating
+- moved `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011` into
+  `techniques/proof/published-summary/` while keeping `domain`, `kind`, IDs,
+  status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

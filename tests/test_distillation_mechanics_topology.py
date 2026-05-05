@@ -3495,7 +3495,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Landed evaluation-chain pilot review", landing_log)
         self.assertIn("second successful proof trunk shelf", landing_log)
         self.assertIn("published-summary` direct-read review", distillation_roadmap)
-        self.assertIn("Run the `published-summary` direct-read", root_roadmap)
+        self.assertIn("published-summary` pilot before choosing", root_roadmap)
         self.assertIn("Landed Evaluation-Chain Pilot Review", tree_contract)
         self.assertIn("chooses `published-summary`", tree_contract)
         self.assertIn(
@@ -3503,16 +3503,29 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             changelog,
         )
 
-        for old_path in (
-            "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
-            "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
-            "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
-            "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+        for old_path, current_path in (
+            (
+                "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+                "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
+            ),
+            (
+                "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+                "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
+            ),
+            (
+                "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+                "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
+            ),
+            (
+                "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+                "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
+            ),
         ):
             with self.subTest(old_path=old_path):
-                self.assertTrue((REPO_ROOT / old_path).is_file())
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / current_path).is_file())
 
-        self.assertFalse((REPO_ROOT / "techniques" / "proof" / "published-summary").exists())
+        self.assertTrue((REPO_ROOT / "techniques" / "proof" / "published-summary").is_dir())
 
     def test_published_summary_direct_read_review_accepts_thirteenth_pilot(
         self,
@@ -3595,7 +3608,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Published-summary direct-read migration review", landing_log)
         self.assertIn("proof-facing package", landing_log)
         self.assertIn("accepted-for-thirteenth-migration-pilot", distillation_roadmap)
-        self.assertIn("Run the thirteenth `published-summary` pilot", root_roadmap)
+        self.assertIn("published-summary` pilot before choosing", root_roadmap)
         self.assertIn("Published-Summary Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011", tree_contract)
         self.assertIn(
@@ -3603,16 +3616,29 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             changelog,
         )
 
-        for current_path in (
-            "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
-            "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
-            "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
-            "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+        for old_path, current_path in (
+            (
+                "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+                "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
+            ),
+            (
+                "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+                "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
+            ),
+            (
+                "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+                "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
+            ),
+            (
+                "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+                "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
+            ),
         ):
             with self.subTest(current_path=current_path):
+                self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / current_path).is_file())
 
-        self.assertFalse((REPO_ROOT / "techniques" / "proof" / "published-summary").exists())
+        self.assertTrue((REPO_ROOT / "techniques" / "proof" / "published-summary").is_dir())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

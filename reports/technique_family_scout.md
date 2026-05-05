@@ -132,10 +132,10 @@ Counts: `total` 4, `canonical` 4, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0006](../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md) | `evaluation` | `artifact` | `canonical` | Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation. |
-| [AOA-T-0008](../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md) | `evaluation` | `lift` | `canonical` | Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior. |
-| [AOA-T-0010](../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface. |
-| [AOA-T-0011](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) | `evaluation` | `guardrail` | `canonical` | Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures. |
+| [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) | `evaluation` | `artifact` | `canonical` | Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation. |
+| [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) | `evaluation` | `lift` | `canonical` | Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior. |
+| [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface. |
+| [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) | `evaluation` | `guardrail` | `canonical` | Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures. |
 
 ## `skill-support`
 

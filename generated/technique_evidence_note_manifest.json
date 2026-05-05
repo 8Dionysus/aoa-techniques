@@ -2355,10 +2355,10 @@
     },
     {
       "id": "AOA-T-0006",
-      "technique_path": "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/adverse-effects-review.md",
+          "note_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -2499,7 +2499,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -2631,7 +2631,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/origin-evidence.md",
+          "note_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -2716,7 +2716,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/latest-alias-plus-history-copy/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -3397,10 +3397,10 @@
     },
     {
       "id": "AOA-T-0008",
-      "technique_path": "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/adverse-effects-review.md",
+          "note_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -3541,7 +3541,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -3673,7 +3673,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/origin-evidence.md",
+          "note_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -3770,7 +3770,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/published-summary-remediation-snapshot/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/published-summary/published-summary-remediation-snapshot/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -4434,10 +4434,10 @@
     },
     {
       "id": "AOA-T-0010",
-      "technique_path": "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/adverse-effects-review.md",
+          "note_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -4574,7 +4574,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -4706,7 +4706,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/origin-evidence.md",
+          "note_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -4811,7 +4811,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/telemetry-integrity-snapshot/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/published-summary/telemetry-integrity-snapshot/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -4969,10 +4969,10 @@
     },
     {
       "id": "AOA-T-0011",
-      "technique_path": "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+      "technique_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/adverse-effects-review.md",
+          "note_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -5113,7 +5113,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -5245,7 +5245,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/origin-evidence.md",
+          "note_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -5330,7 +5330,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/required-vs-optional-source-rendering/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/published-summary/required-vs-optional-source-rendering/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

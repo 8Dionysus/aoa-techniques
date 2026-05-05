@@ -180,8 +180,12 @@
    keeping telemetry owner doctrine, dashboard ownership, runtime storage
    policy, archive governance, remediation execution, integrity verdict law,
    release policy, proof verdict law, generic reporting platform, and
-   neighboring shelves outside the move. The next bounded step is the
-   thirteenth pilot migration before any other shelf movement.
+   neighboring shelves outside the move. The thirteenth pilot migration is now
+   landed exactly for those four bundles under
+   `techniques/proof/published-summary/`, with the proof route card extended
+   for the third shelf, root legacy receipt accounting, link repair, generated
+   rebuilds, and release-check validation in the same wave. The next bounded
+   step is a landed-pilot review before any other shelf movement.
 
 ## Hold line
 

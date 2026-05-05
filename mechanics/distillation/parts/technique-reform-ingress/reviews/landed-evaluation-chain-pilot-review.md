@@ -54,10 +54,10 @@ four published-summary bundles directly before any path movement.
 - [Landed skill-support pilot review](landed-skill-support-pilot-review.md)
 - [Published-summary semantic review](../../../../../docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
 - [Published-summary shadow review](../../../../../docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
-- [AOA-T-0006 latest-alias-plus-history-copy](../../../../../techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md)
-- [AOA-T-0008 published-summary-remediation-snapshot](../../../../../techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md)
-- [AOA-T-0010 telemetry-integrity-snapshot](../../../../../techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md)
-- [AOA-T-0011 required-vs-optional-source-rendering](../../../../../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md)
+- [AOA-T-0006 latest-alias-plus-history-copy](../../../../../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md)
+- [AOA-T-0008 published-summary-remediation-snapshot](../../../../../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md)
+- [AOA-T-0010 telemetry-integrity-snapshot](../../../../../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md)
+- [AOA-T-0011 required-vs-optional-source-rendering](../../../../../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read
