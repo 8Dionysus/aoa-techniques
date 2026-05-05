@@ -7896,7 +7896,7 @@
     {
       "id": "AOA-T-0097",
       "name": "degrade-reground-recover",
-      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -7978,7 +7978,7 @@
     {
       "id": "AOA-T-0098",
       "name": "receipt-first-failure-analysis",
-      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8060,7 +8060,7 @@
     {
       "id": "AOA-T-0099",
       "name": "isolated-service-stop-on-shared-substrate",
-      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8142,7 +8142,7 @@
     {
       "id": "AOA-T-0100",
       "name": "stress-receipt-reground-closeout",
-      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",

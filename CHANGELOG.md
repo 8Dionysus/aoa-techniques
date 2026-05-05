@@ -174,6 +174,9 @@ The format is intentionally simple and human-first.
 - accepted the `antifragility-recovery` direct-read migration review over
   `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098` as the fifteenth
   tree pilot while keeping the review itself non-mutating
+- moved `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098` into
+  `techniques/recovery/antifragility-recovery/` while keeping `domain`, `kind`,
+  IDs, status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

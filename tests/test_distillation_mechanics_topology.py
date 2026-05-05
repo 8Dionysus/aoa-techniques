@@ -3938,9 +3938,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("six separate leaf", receipt)
         self.assertIn("generic history platform", receipt)
-        self.assertIn("fourteen receipts", legacy_index)
+        self.assertIn("fifteen receipts", legacy_index)
         self.assertIn("2026-05-05-history-artifacts-tree-pilot.md", legacy_index)
-        self.assertIn("fourteen technique tree pilot receipts", receipts_index)
+        self.assertIn("fifteen technique tree pilot receipts", receipts_index)
         self.assertIn("History-artifacts tree pilot migration", landing_log)
         self.assertIn("kept capture, transcript packaging", landing_log)
         self.assertIn(
@@ -4115,8 +4115,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ),
         ):
             with self.subTest(current_path=current_path):
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
 
         self.assertTrue((REPO_ROOT / "techniques" / "history" / "history-artifacts").is_dir())
 
@@ -4215,7 +4215,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "Run the `recovery/antifragility-recovery` direct-read migration review",
             root_roadmap,
         )
-        self.assertIn("Move exactly `AOA-T-0097`", root_roadmap)
+        self.assertIn("accepted exactly `AOA-T-0097`", root_roadmap)
         self.assertIn(
             "Antifragility-Recovery Direct-Read Migration Review",
             tree_contract,
@@ -4245,8 +4245,95 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ),
         ):
             with self.subTest(current_path=current_path):
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
+
+    def test_antifragility_recovery_tree_pilot_migration_is_recorded(self) -> None:
+        recovery_agents = (
+            REPO_ROOT / "techniques" / "recovery" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        receipt = (
+            REPO_ROOT
+            / "legacy"
+            / "receipts"
+            / "2026-05-05-antifragility-recovery-tree-pilot.md"
+        ).read_text(encoding="utf-8")
+        legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
+            encoding="utf-8"
+        )
+        receipts_index = (
+            REPO_ROOT / "legacy" / "receipts" / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("antifragility-recovery/", recovery_agents)
+        self.assertIn("validation-shaped leaves", recovery_agents)
+        self.assertIn("runtime self-healing", recovery_agents)
+        self.assertIn("antifragility-recovery migration: landed", ingress)
+        self.assertIn("Antifragility-Recovery Tree Pilot Receipt", receipt)
+        self.assertIn("They did not pass through root `legacy/`.", receipt)
+        self.assertIn("Preserve `AOA-T-0098` as `domain: validation-patterns`", receipt)
+        self.assertIn("Do not add `tree_path` frontmatter.", receipt)
+        self.assertIn("four separate leaf bundles", receipt)
+        self.assertIn("generic resilience platform", receipt)
+        self.assertIn("fifteen receipts", legacy_index)
+        self.assertIn("2026-05-05-antifragility-recovery-tree-pilot.md", legacy_index)
+        self.assertIn("fifteen technique tree pilot receipts", receipts_index)
+        self.assertIn("Antifragility-recovery tree pilot migration", landing_log)
+        self.assertIn("preserved `AOA-T-0098`", landing_log)
+        self.assertIn("fifteenth pilot migration is now landed", distillation_roadmap)
+        self.assertIn("fifteenth landed pilot moved", root_roadmap)
+        self.assertIn("Review the landed `antifragility-recovery` pilot", root_roadmap)
+        self.assertIn("2026-05-05-antifragility-recovery-tree-pilot", tree_contract)
+        self.assertIn("review the landed `antifragility-recovery` pilot", tree_contract)
+        self.assertIn("moved `AOA-T-0097`", changelog)
+
+        for technique_id, old_path, new_path in (
+            (
+                "AOA-T-0097",
+                "techniques/system-recovery/degrade-reground-recover/",
+                "techniques/recovery/antifragility-recovery/degrade-reground-recover/",
+            ),
+            (
+                "AOA-T-0099",
+                "techniques/system-recovery/isolated-service-stop-on-shared-substrate/",
+                "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/",
+            ),
+            (
+                "AOA-T-0100",
+                "techniques/system-recovery/stress-receipt-reground-closeout/",
+                "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/",
+            ),
+            (
+                "AOA-T-0098",
+                "techniques/validation-patterns/receipt-first-failure-analysis/",
+                "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, receipt)
+                self.assertIn(old_path, receipt)
+                self.assertIn(new_path, receipt)
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

@@ -4208,10 +4208,10 @@
     },
     {
       "id": "AOA-T-0097",
-      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/system-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md",
+          "check_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md",
           "title": "Degrade Reground Recover Checklist",
           "intro_markdown": "",
           "items": [
@@ -4241,10 +4241,10 @@
     },
     {
       "id": "AOA-T-0098",
-      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/validation-patterns/receipt-first-failure-analysis/checks/receipt-first-failure-analysis-checklist.md",
+          "check_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/checks/receipt-first-failure-analysis-checklist.md",
           "title": "Receipt First Failure Analysis Checklist",
           "intro_markdown": "",
           "items": [
@@ -4274,10 +4274,10 @@
     },
     {
       "id": "AOA-T-0099",
-      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md",
+          "check_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md",
           "title": "Isolated Service Stop On Shared Substrate Checklist",
           "intro_markdown": "Use this checklist to confirm that the bounded stop stayed smaller than full teardown and still produced explicit evidence.",
           "items": [
@@ -4311,10 +4311,10 @@
     },
     {
       "id": "AOA-T-0100",
-      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/system-recovery/stress-receipt-reground-closeout/checks/stress-receipt-reground-closeout-checklist.md",
+          "check_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/checks/stress-receipt-reground-closeout-checklist.md",
           "title": "stress-receipt-reground-closeout checklist",
           "intro_markdown": "Use this checklist to verify that a bounded stress event stayed honest from\nreceipt through reviewed closeout.",
           "items": [

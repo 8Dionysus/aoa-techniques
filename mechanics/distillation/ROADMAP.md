@@ -217,6 +217,12 @@
    `kind: validation`, keeping the review non-mutating, and routing the next
    bounded step to the fifteenth pilot migration only after route-card,
    receipt, link-repair, generated-surface, and validation work move together.
+   The fifteenth pilot migration is now landed exactly for those four bundles
+   under `techniques/recovery/antifragility-recovery/`, with the recovery route
+   card extended for the second shelf, root legacy receipt accounting, link
+   repair, generated rebuilds, and release-check validation in the same wave.
+   The next bounded step is the landed-pilot review for
+   `antifragility-recovery` before choosing any sixteenth shelf.
 
 ## Hold line
 

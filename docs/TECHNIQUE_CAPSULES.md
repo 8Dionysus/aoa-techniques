@@ -1282,7 +1282,7 @@ See also:
 
 ## `system-recovery`
 
-### [AOA-T-0097](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+### [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
 
 - Summary: Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater.
 - Intent: Keep partial failure honest and useful by moving through one bounded sequence: degrade safely...
@@ -1293,9 +1293,9 @@ See also:
 - Core contract: degraded mode must stay weaker than the normal mode; blocked actions stay blocked during degradation.
 - Main risk: degraded continuation quietly broadens authority or claims equivalent quality to the normal path.
 - Validate by: the degraded result or stop condition stayed bounded; the reground source stayed stronger than speculative completion; one source-owned receipt...
-- Source: [TECHNIQUE.md](../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md)
 
-### [AOA-T-0099](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
+### [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
 
 - Summary: Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.
 - Intent: Stop one bounded service in a shared local stack without needlessly tearing down the...
@@ -1306,9 +1306,9 @@ See also:
 - Core contract: the target stop stays singular and named; the shared substrate set is explicit before the stop happens.
 - Main risk: operators stop more than the named target service and silently widen the route.
 - Validate by: the target service and shared substrate were named before the stop; the stop affected only the target service; one...
-- Source: [TECHNIQUE.md](../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md)
 
-### [AOA-T-0100](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+### [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
 
 - Summary: Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.
 - Intent: Provide a reusable workflow for bounded chaos or stress events where the right move...
@@ -1319,11 +1319,11 @@ See also:
 - Core contract: one bounded stress family and owner surface stay named explicitly; owner-local evidence comes before routing, playbook, stats, or...
 - Main risk: a symbolic receipt is emitted without real evidence refs.
 - Validate by: another reviewer can see exactly what degraded and what stayed visible; the degraded continuation or hold is explicit, not...
-- Source: [TECHNIQUE.md](../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
 
 ## `validation-patterns`
 
-### [AOA-T-0098](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+### [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
 
 - Summary: Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology.
 - Intent: Turn failure review into bounded evidence-led iteration by starting from source-owned receipts, separating facts...
@@ -1334,7 +1334,7 @@ See also:
 - Core contract: source-owned receipts remain the first trustworthy object after the stress event; facts and hypotheses stay explicitly separated.
 - Main risk: dashboards, memory, or retrospective summaries replace source-owned evidence.
 - Validate by: the originating receipts are named explicitly; facts and hypotheses remain separate in the review; the proposed change is narrower...
-- Source: [TECHNIQUE.md](../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md)
 
 ## `history`
 

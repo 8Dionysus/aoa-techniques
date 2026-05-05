@@ -45863,10 +45863,10 @@
     },
     {
       "id": "AOA-T-0097",
-      "technique_path": "techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/system-recovery/degrade-reground-recover/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -45947,7 +45947,7 @@
           ]
         },
         {
-          "note_path": "techniques/system-recovery/degrade-reground-recover/notes/second-context-adaptation.md",
+          "note_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -46078,10 +46078,10 @@
     },
     {
       "id": "AOA-T-0098",
-      "technique_path": "techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/validation-patterns/receipt-first-failure-analysis/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -46162,7 +46162,7 @@
           ]
         },
         {
-          "note_path": "techniques/validation-patterns/receipt-first-failure-analysis/notes/second-context-adaptation.md",
+          "note_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -46293,10 +46293,10 @@
     },
     {
       "id": "AOA-T-0099",
-      "technique_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/system-recovery/isolated-service-stop-on-shared-substrate/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -46376,10 +46376,10 @@
     },
     {
       "id": "AOA-T-0100",
-      "technique_path": "techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
+      "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/system-recovery/stress-receipt-reground-closeout/notes/origin-evidence.md",
+          "note_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -46470,7 +46470,7 @@
           ]
         },
         {
-          "note_path": "techniques/system-recovery/stress-receipt-reground-closeout/notes/second-context-adaptation.md",
+          "note_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

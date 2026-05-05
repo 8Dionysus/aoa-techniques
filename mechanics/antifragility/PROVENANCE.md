@@ -40,10 +40,10 @@ candidate-only practice pressure, not direct owner-request acceptance.
 Existing antifragility-recovery bundles are canonical only through their
 `techniques/**/TECHNIQUE.md` homes:
 
-- `AOA-T-0097` `techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md`
-- `AOA-T-0098` `techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md`
-- `AOA-T-0099` `techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md`
-- `AOA-T-0100` `techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md`
+- `AOA-T-0097` `techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md`
+- `AOA-T-0098` `techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md`
+- `AOA-T-0099` `techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md`
+- `AOA-T-0100` `techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md`
 
 This package may cite those bundles as anchors, but it does not change their
 status or validation strength.

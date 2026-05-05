@@ -19,7 +19,7 @@ compares `AOA-T-0054 compaction-resilient-skill-loading` against `handoff`,
   [AOA-T-0062](../../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md),
   [AOA-T-0082](../../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md),
   [AOA-T-0083](../../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md),
-  and [AOA-T-0097](../../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md)
+  and [AOA-T-0097](../../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md)
 
 ## Verdict
 

@@ -57,10 +57,10 @@ read the four recovery bundles directly before any path movement.
 - [Technique topology scout rows for `history-artifacts` and `antifragility-recovery`](../../../../../reports/technique_topology_scout.md)
 - [History-artifacts direct-read migration review](history-artifacts-direct-read-migration-review.md)
 - [Landed published-summary pilot review](landed-published-summary-pilot-review.md)
-- [AOA-T-0097 degrade-reground-recover](../../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md)
-- [AOA-T-0099 isolated-service-stop-on-shared-substrate](../../../../../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md)
-- [AOA-T-0100 stress-receipt-reground-closeout](../../../../../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
-- [AOA-T-0098 receipt-first-failure-analysis](../../../../../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md)
+- [AOA-T-0097 degrade-reground-recover](../../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md)
+- [AOA-T-0099 isolated-service-stop-on-shared-substrate](../../../../../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md)
+- [AOA-T-0100 stress-receipt-reground-closeout](../../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
+- [AOA-T-0098 receipt-first-failure-analysis](../../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read
