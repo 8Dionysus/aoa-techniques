@@ -657,10 +657,10 @@
     },
     {
       "id": "AOA-T-0049",
-      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md",
+          "example_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md",
           "title": "Minimal dependency-aware-task-graph example",
           "body_markdown": "Suppose a landing workflow has four bounded tasks:\n\n- `review-overlap`\n- `draft-bundle`\n- `sync-shared-surfaces`\n- `run-release-check`\n\nDependencies:\n\n- `draft-bundle` depends on `review-overlap`\n- `sync-shared-surfaces` depends on `draft-bundle`\n- `run-release-check` depends on `sync-shared-surfaces`\n\nCurrent state:\n\n- `review-overlap`: open\n- `draft-bundle`: open\n- `sync-shared-surfaces`: open\n- `run-release-check`: open\n\nDerived ready frontier:\n\n- `review-overlap`\n\nAfter `review-overlap` completes, the graph changes:\n\n- `review-overlap`: done\n- `draft-bundle`: open\n- `sync-shared-surfaces`: open\n- `run-release-check`: open\n\nNew derived ready frontier:\n\n- `draft-bundle`\n\nThe point of the example is that the next safe step comes from explicit dependency state, not from whoever remembers the workflow best."
         }
@@ -668,10 +668,10 @@
     },
     {
       "id": "AOA-T-0050",
-      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md",
+          "example_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md",
           "title": "Minimal ready-work-from-blocker-graph example",
           "body_markdown": "Suppose a landing queue is derived from this current state:\n\n- `review-overlap`: done\n- `draft-technique`: open and blocker-free\n- `sync-shared-docs`: open but blocked by `draft-technique`\n- `run-release-check`: open but blocked by `sync-shared-docs`\n\nDerived ready queue:\n\n- `draft-technique`\n\nBlocked exclusions:\n\n- `sync-shared-docs` because `draft-technique` is not done\n- `run-release-check` because `sync-shared-docs` is not done\n\nAfter `draft-technique` completes, the derived frontier changes:\n\n- `sync-shared-docs`\n\nThe point of the example is that the queue stays explainable from blocker state instead of being rebuilt from memory or open-task sprawl."
         }
@@ -723,10 +723,10 @@
     },
     {
       "id": "AOA-T-0055",
-      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md",
+          "example_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md",
           "title": "Minimal requirements-design-tasks ladder",
           "body_markdown": "Requirement:\n\n- keep review findings searchable after the review run\n\nDesign:\n\n- store findings in one bounded artifact with stable references and a small query surface\n\nTasks:\n\n- define artifact fields\n- write one artifact example\n- validate stale-finding handling\n\nEach layer constrains the next one without collapsing requirement, design, and tasks into one planning blob."
         }

@@ -2646,7 +2646,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
-      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "origin": {
         "project": "steveyegge/beads",
         "path": "README.md",
@@ -2701,7 +2701,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
-      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "origin": {
         "project": "steveyegge/beads",
         "path": "cmd/bd/ready.go",
@@ -2988,7 +2988,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
-      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
       "origin": {
         "project": "gotalab/cc-sdd",
         "path": "README.md + .kiro/specs/photo-albums-en/requirements.md + .kiro/specs/photo-albums-en/design.md + .kiro/specs/photo-albums-en/tasks.md",

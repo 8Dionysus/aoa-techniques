@@ -434,9 +434,13 @@ dispatch policy, backlog governance, graph database doctrine, memory
 substrate, hidden orchestration, proof of readiness, and execution validation
 outside the shelf.
 
-The next reform slice should run the sixteenth pilot migration into
-`techniques/execution/ready-work-graphs/` before reviewing any seventeenth
-shelf.
+The sixteenth pilot migration moves exactly those three bundles into
+`techniques/execution/ready-work-graphs/` without changing `domain`, `kind`, or
+`tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md`](../legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md).
+
+The next reform slice should review the landed `ready-work-graphs` pilot
+before choosing any seventeenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

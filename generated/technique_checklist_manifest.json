@@ -2160,10 +2160,10 @@
     },
     {
       "id": "AOA-T-0049",
-      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/dependency-aware-task-graph/checks/dependency-aware-task-graph-checklist.md",
+          "check_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/checks/dependency-aware-task-graph-checklist.md",
           "title": "dependency-aware-task-graph checklist",
           "intro_markdown": "Use this checklist when reviewing whether a dependency-aware task graph is still a bounded working surface instead of a drifting tracker or memory layer.",
           "items": [
@@ -2205,10 +2205,10 @@
     },
     {
       "id": "AOA-T-0050",
-      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md",
+          "check_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md",
           "title": "ready-work-from-blocker-graph checklist",
           "intro_markdown": "Use this checklist when reviewing whether a ready-work frontier still reflects blocker truth instead of slipping into hidden overrides or broad prioritization policy.",
           "items": [
@@ -2430,10 +2430,10 @@
     },
     {
       "id": "AOA-T-0055",
-      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md",
+          "check_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md",
           "title": "requirements-design-tasks-ladder checklist",
           "intro_markdown": "",
           "items": [

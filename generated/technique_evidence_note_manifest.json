@@ -23293,10 +23293,10 @@
     },
     {
       "id": "AOA-T-0049",
-      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/dependency-aware-task-graph/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -23440,7 +23440,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/dependency-aware-task-graph/notes/external-import-review.md",
+          "note_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -23603,7 +23603,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/dependency-aware-task-graph/notes/external-origin.md",
+          "note_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -23701,7 +23701,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/dependency-aware-task-graph/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -23818,7 +23818,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -23844,10 +23844,10 @@
     },
     {
       "id": "AOA-T-0050",
-      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/ready-work-from-blocker-graph/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -23991,7 +23991,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/ready-work-from-blocker-graph/notes/external-import-review.md",
+          "note_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -24154,7 +24154,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/ready-work-from-blocker-graph/notes/external-origin.md",
+          "note_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -24252,7 +24252,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/ready-work-from-blocker-graph/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -24369,7 +24369,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -26760,10 +26760,10 @@
     },
     {
       "id": "AOA-T-0055",
-      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/requirements-design-tasks-ladder/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -26835,7 +26835,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report"
+                  "text": "it remains narrower than [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report"
                 },
                 {
                   "order": 3,
@@ -26903,7 +26903,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/requirements-design-tasks-ladder/notes/external-import-review.md",
+          "note_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -27062,7 +27062,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/requirements-design-tasks-ladder/notes/external-origin.md",
+          "note_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -27160,7 +27160,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/requirements-design-tasks-ladder/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -27261,7 +27261,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse back into [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts"
+                  "text": "the pattern can collapse back into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts"
                 },
                 {
                   "order": 2,

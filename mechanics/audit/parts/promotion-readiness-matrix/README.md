@@ -155,8 +155,8 @@ Shared blocker: the donor and repo-local adaptation both show the graph as a bou
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0049](../../../../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) | Explicit blocker-aware graph contract with clear exclusions around memory, tracker product breadth, and project-management doctrine. | One second public workflow surface where real task dependencies determine ready work in practice without widening into a full tracker or memory system. |
-| [AOA-T-0050](../../../../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) | Frontier-derivation sibling that keeps blocker truth ahead of ranking or tracker policy. | One second public workflow surface where blocker-free state determines the next honest work queue without widening into project-management or ranking doctrine. |
+| [AOA-T-0049](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | Explicit blocker-aware graph contract with clear exclusions around memory, tracker product breadth, and project-management doctrine. | One second public workflow surface where real task dependencies determine ready work in practice without widening into a full tracker or memory system. |
+| [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | Frontier-derivation sibling that keeps blocker truth ahead of ranking or tracker policy. | One second public workflow surface where blocker-free state determines the next honest work queue without widening into project-management or ranking doctrine. |
 
 ### Pack 10 - Background Review Loop
 
@@ -181,7 +181,7 @@ Shared blocker: the donor and repo-local adaptation both show a bounded requirem
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0055](../../../../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) | Pre-execution planning sibling that keeps requirements, design, and tasks visibly separate with clear exclusions around templates, steering, and full methodology doctrine. | One second public workflow surface where requirement, design, and task layers remain visibly distinct before implementation without widening into a full spec-driven methodology stack. |
+| [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | Pre-execution planning sibling that keeps requirements, design, and tasks visibly separate with clear exclusions around templates, steering, and full methodology doctrine. | One second public workflow surface where requirement, design, and task layers remain visibly distinct before implementation without widening into a full spec-driven methodology stack. |
 
 ### Pack 13 - Channelized Mailbox
 

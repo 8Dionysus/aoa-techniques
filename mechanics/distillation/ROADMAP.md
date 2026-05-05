@@ -233,8 +233,13 @@
    preserving `AOA-T-0055` as a readiness ladder rather than methodology or
    execution workflow, and routing the next bounded step to the sixteenth pilot
    migration only after execution route-card, receipt, link-repair, generated
-   surface, and validation work move together. The next bounded step is that
-   sixteenth pilot migration before reviewing any seventeenth shelf.
+   surface, and validation work move together. The sixteenth pilot migration is
+   now landed exactly for those three bundles under
+   `techniques/execution/ready-work-graphs/`, with the new execution route
+   card, root legacy receipt accounting, link repair, generated rebuilds, and
+   release-check validation in the same wave. The next bounded step is to
+   review the landed `ready-work-graphs` pilot before choosing any seventeenth
+   shelf.
 
 ## Hold line
 

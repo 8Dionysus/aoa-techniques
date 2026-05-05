@@ -31,6 +31,38 @@ Not moved:
 - no frontmatter changed
 - no sixteenth shelf migration landed from the review alone
 
+## 2026-05-05 - Ready-work-graphs tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055` into
+  `techniques/execution/ready-work-graphs/`
+- added the compact `techniques/execution/AGENTS.md` route card for the first
+  execution trunk shelf
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md`
+- repaired authored links from ready-work notes, active review sources, audit
+  readiness, and root docs
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- preserved `AOA-T-0055` as a readiness ladder rather than treating it as
+  graph database doctrine, methodology, or execution workflow
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no neighboring execution shelf was moved
+- no project-management, scheduling, staffing, dispatch, backlog governance,
+  graph database, memory substrate, proof, validation, or hidden orchestration
+  authority was imported into the shelf
+
 ## 2026-05-05 - Landed antifragility-recovery pilot review
 
 Changed:
