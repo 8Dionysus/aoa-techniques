@@ -3,6 +3,36 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Instruction-surface direct-read migration review
+
+Changed:
+
+- added
+  [instruction-surface-direct-read-migration-review](parts/technique-reform-ingress/reviews/instruction-surface-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
+  `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035`
+- accepted `instruction-surface` as the fifth bounded tree migration pilot and
+  the next instruction trunk test
+- recorded the exact next migration scope:
+  `techniques/instruction/instruction-surface/`
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `kag-source-lift`, docs-boundary, capability, proof, governance, and
+  runtime-authority shelves outside the accepted move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fifth shelf migration happened before direct-read review
+
 ## 2026-05-04 - Landed diagnosis-repair pilot review
 
 Changed:
