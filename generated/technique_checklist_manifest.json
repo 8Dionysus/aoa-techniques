@@ -3105,10 +3105,10 @@
     },
     {
       "id": "AOA-T-0070",
-      "technique_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md",
+          "check_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md",
           "title": "two-stage-document-ocr-pipeline checklist",
           "intro_markdown": "",
           "items": [
@@ -3142,10 +3142,10 @@
     },
     {
       "id": "AOA-T-0071",
-      "technique_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md",
+          "check_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md",
           "title": "template-backed-field-extraction-after-ocr checklist",
           "intro_markdown": "",
           "items": [
@@ -3179,10 +3179,10 @@
     },
     {
       "id": "AOA-T-0072",
-      "technique_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md",
+          "check_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md",
           "title": "perceptual-media-dedupe-with-threshold-review checklist",
           "intro_markdown": "",
           "items": [
@@ -3216,10 +3216,10 @@
     },
     {
       "id": "AOA-T-0073",
-      "technique_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md",
+          "check_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md",
           "title": "semantic-media-bucketing-with-vision-plus-ocr checklist",
           "intro_markdown": "",
           "items": [
@@ -3253,10 +3253,10 @@
     },
     {
       "id": "AOA-T-0074",
-      "technique_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "technique_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md",
+          "check_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md",
           "title": "telegram-export-normalization-to-local-store checklist",
           "intro_markdown": "",
           "items": [

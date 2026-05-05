@@ -301,7 +301,7 @@ Shared blocker: the donor OCR pair and repo-local adaptation both show a bounded
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0070](../../../../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) | OCR-staging sibling that keeps detect or layout and recognize explicit before downstream extraction with clear exclusions around serving posture, benchmark doctrine, and receipt-specific field logic. | One second public workflow surface where OCR remains an explicit staged handoff with visible confidence and region references before later extraction or review without widening into a full document-understanding or automation stack. |
+| [AOA-T-0070](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | OCR-staging sibling that keeps detect or layout and recognize explicit before downstream extraction with clear exclusions around serving posture, benchmark doctrine, and receipt-specific field logic. | One second public workflow surface where OCR remains an explicit staged handoff with visible confidence and region references before later extraction or review without widening into a full document-understanding or automation stack. |
 
 ### Pack 28 - Post-OCR Template Field Extraction
 
@@ -309,7 +309,7 @@ Shared blocker: the donor parser family and repo-local adaptation both show a bo
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0071](../../../../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | Post-OCR extraction sibling that keeps one bounded field object explicit through templates or heuristics with clear exclusions around OCR-stage ownership, locale doctrine, and bookkeeping automation. | One second public workflow surface where OCR-derived text becomes a bounded field object through visible templates or heuristics with explicit missing or conflicting fields, without widening into receipt schema law, locale policy, or end-to-end document automation. |
+| [AOA-T-0071](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | Post-OCR extraction sibling that keeps one bounded field object explicit through templates or heuristics with clear exclusions around OCR-stage ownership, locale doctrine, and bookkeeping automation. | One second public workflow surface where OCR-derived text becomes a bounded field object through visible templates or heuristics with explicit missing or conflicting fields, without widening into receipt schema law, locale policy, or end-to-end document automation. |
 
 ### Pack 29 - Perceptual Media Dedupe
 
@@ -317,7 +317,7 @@ Shared blocker: the donor dedupe family and repo-local adaptation both show a bo
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0072](../../../../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | Media-dedupe sibling that keeps perceptual grouping and review buckets explicit with clear exclusions around cleanup policy, semantic taxonomy, and quality-ranking doctrine. | One second public workflow surface where near-duplicate media are grouped through explicit thresholds and review buckets before later cleanup actions, without widening into semantic classification, archive policy, or bulk-delete automation. |
+| [AOA-T-0072](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | Media-dedupe sibling that keeps perceptual grouping and review buckets explicit with clear exclusions around cleanup policy, semantic taxonomy, and quality-ranking doctrine. | One second public workflow surface where near-duplicate media are grouped through explicit thresholds and review buckets before later cleanup actions, without widening into semantic classification, archive policy, or bulk-delete automation. |
 
 ### Pack 30 - Semantic Media Bucketing
 
@@ -325,7 +325,7 @@ Shared blocker: the donor classification family and repo-local adaptation both s
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0073](../../../../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | Media-bucketing sibling that keeps bounded taxonomy, OCR side text, and review gates explicit with clear exclusions around duplicate grouping, moderation policy, identity inference, and downstream action doctrine. | One second public workflow surface where mixed media are bucketed through bounded visual semantics plus OCR side text under explicit confidence gates before later routing or cleanup actions, without widening into moderation, identity inference, or open-ended multimodal automation. |
+| [AOA-T-0073](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | Media-bucketing sibling that keeps bounded taxonomy, OCR side text, and review gates explicit with clear exclusions around duplicate grouping, moderation policy, identity inference, and downstream action doctrine. | One second public workflow surface where mixed media are bucketed through bounded visual semantics plus OCR side text under explicit confidence gates before later routing or cleanup actions, without widening into moderation, identity inference, or open-ended multimodal automation. |
 
 ### Pack 31 - Telegram Export Normalization
 
@@ -333,7 +333,7 @@ Shared blocker: the donor Telegram family and repo-local adaptation both show a 
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0074](../../../../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) | Telegram-normalization sibling that keeps stable local objects, media references, provenance, and resume state explicit with clear exclusions around auth bootstrap, session conversion, and memory doctrine. | One second public workflow surface where Telegram-derived messages and media become a resumable local object store with visible provenance before later routing, recall, or memory actions, without widening into auth policy, session bridging, or archive-product doctrine. |
+| [AOA-T-0074](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | Telegram-normalization sibling that keeps stable local objects, media references, provenance, and resume state explicit with clear exclusions around auth bootstrap, session conversion, and memory doctrine. | One second public workflow surface where Telegram-derived messages and media become a resumable local object store with visible provenance before later routing, recall, or memory actions, without widening into auth policy, session bridging, or archive-product doctrine. |
 
 ### Pack 32 - Reviewed Session Harvest Spine
 

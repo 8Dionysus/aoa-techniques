@@ -46,6 +46,8 @@ permission slip to remap techniques automatically.
   `media-ingest` chosen for the next direct-read migration review
 - media-ingest direct-read review: landed as
   `accepted-for-third-migration-pilot`; still not path movement
+- media-ingest migration: landed exactly `AOA-T-0070` through `AOA-T-0074`
+  under `techniques/ingest/media-ingest/` without frontmatter changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -138,10 +140,11 @@ The second pilot migration moved exactly `AOA-T-0056` through `AOA-T-0062`
 into `techniques/continuity/handoff-continuation/` without changing
 frontmatter or adding `tree_path`.
 
-The `media-ingest` direct-read review is now landed and accepts exactly
-`AOA-T-0070` through `AOA-T-0074` as the third migration pilot.
+The third pilot migration moved exactly `AOA-T-0070` through `AOA-T-0074`
+into `techniques/ingest/media-ingest/` without changing frontmatter or adding
+`tree_path`.
 
-The next move is the third pilot migration: move those five bundles into
-`techniques/ingest/media-ingest/`, add the minimal `ingest/` route card, repair
-authored and staging links, preserve a root legacy receipt, rebuild generated
-surfaces, and keep frontmatter unchanged.
+The next move is to review the landed `media-ingest` shelf against the
+direct-read review, generated rebuilds, root legacy receipt, new `ingest/`
+route card, and link repair before choosing any fourth tree migration
+candidate.

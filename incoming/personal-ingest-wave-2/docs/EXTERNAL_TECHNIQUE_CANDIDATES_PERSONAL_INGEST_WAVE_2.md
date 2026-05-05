@@ -62,7 +62,7 @@ It does **not** change technique status, create a canonical bundle, or authorize
    - tentative domain: `agent-workflows`
    - verdict: `landed from this wave`
    - landed bundle:
-     - [AOA-T-0070](../../../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md)
+     - [AOA-T-0070](../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md)
    - donor spine:
      - `PaddleOCR`
      - `docTR`
@@ -80,7 +80,7 @@ It does **not** change technique status, create a canonical bundle, or authorize
    - tentative domain: `agent-workflows`
    - verdict: `landed from this wave`
    - landed bundle:
-     - [AOA-T-0071](../../../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md)
+     - [AOA-T-0071](../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md)
    - donor spine:
      - `invoice2data`
      - `receiptparser`
@@ -100,7 +100,7 @@ It does **not** change technique status, create a canonical bundle, or authorize
    - tentative domain: `agent-workflows`
    - verdict: `landed from this wave`
    - landed bundle:
-     - [AOA-T-0072](../../../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
+     - [AOA-T-0072](../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
    - donor spine:
      - `imagededup`
      - `imgdupes`
@@ -117,7 +117,7 @@ It does **not** change technique status, create a canonical bundle, or authorize
    - tentative domain: `agent-workflows`
    - verdict: `landed from this wave`
    - landed bundle:
-     - [AOA-T-0073](../../../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
+     - [AOA-T-0073](../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
    - donor spine:
      - `CLIP`
      - `PaddleOCR`
@@ -136,7 +136,7 @@ It does **not** change technique status, create a canonical bundle, or authorize
    - tentative domain: `agent-workflows`
    - verdict: `landed from this wave`
    - landed bundle:
-     - [AOA-T-0074](../../../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md)
+     - [AOA-T-0074](../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
    - donor spine:
      - `Telethon`
      - `TDLib`

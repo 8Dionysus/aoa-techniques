@@ -17,7 +17,7 @@
 ## Default-use rationale
 
 - this is the right promoted default when the main problem is turning OCR-derived text into a small explicit field object without hiding uncertainty inside a parser implementation
-- it remains narrower than [AOA-T-0070](../two-stage-document-ocr-pipeline/TECHNIQUE.md) because it starts after OCR handoff already exists
+- it remains narrower than [AOA-T-0070](../../two-stage-document-ocr-pipeline/TECHNIQUE.md) because it starts after OCR handoff already exists
 - it also remains narrower than later ingestion or taxonomy techniques because it owns only bounded field extraction plus review fallback
 
 ## Fresh public-safety check

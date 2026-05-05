@@ -17,8 +17,8 @@
 ## Default-use rationale
 
 - this is the right promoted default when the main problem is assigning a small explicit media taxonomy while keeping low-confidence or conflicting items visible for review
-- it remains narrower than [AOA-T-0072](../perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) because it does not group duplicates
-- it also remains narrower than [AOA-T-0070](../two-stage-document-ocr-pipeline/TECHNIQUE.md) because it uses OCR only as side text rather than owning OCR staging itself
+- it remains narrower than [AOA-T-0072](../../perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) because it does not group duplicates
+- it also remains narrower than [AOA-T-0070](../../two-stage-document-ocr-pipeline/TECHNIQUE.md) because it uses OCR only as side text rather than owning OCR staging itself
 
 ## Fresh public-safety check
 

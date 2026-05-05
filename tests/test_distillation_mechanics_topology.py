@@ -1201,7 +1201,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`media-ingest` direct-read review is now", distillation_roadmap)
         self.assertIn("Landed handoff-continuation pilot review", landing_log)
         self.assertIn("selected\n  `media-ingest`", changelog)
-        self.assertIn("`media-ingest` direct-read review accepts", root_roadmap)
+        self.assertIn("Review the landed `media-ingest` shelf", root_roadmap)
         self.assertIn("Landed Handoff-Continuation Pilot Review", tree_contract)
         self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", incoming_wave2)
         self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", incoming_wave3)
@@ -1214,7 +1214,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             incoming_wave3,
         )
 
-    def test_media_ingest_direct_read_review_accepts_third_pilot_without_migration(self) -> None:
+    def test_media_ingest_direct_read_review_accepts_third_pilot(self) -> None:
         ingress = (
             REPO_ROOT
             / "mechanics"
@@ -1279,22 +1279,28 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("media-ingest-direct-read-migration-review", reviews_index)
         self.assertIn("media-ingest direct-read review: landed", ingress)
         self.assertIn("accepted-for-third-migration-pilot", ingress)
+        self.assertIn("media-ingest migration: landed", ingress)
         self.assertIn("third pilot migration", ingress)
         self.assertIn("media-ingest` direct-read review is now", distillation_roadmap)
+        self.assertIn("third pilot\n   migration is landed", distillation_roadmap)
         self.assertIn("Media-ingest direct-read migration review", landing_log)
+        self.assertIn("Media-ingest tree pilot migration", landing_log)
         self.assertIn("accepted the `media-ingest` direct-read migration review", changelog)
-        self.assertIn("first non-continuity pilot", root_roadmap)
+        self.assertIn("moved `AOA-T-0070` through `AOA-T-0074`", changelog)
+        self.assertIn("first non-continuity migrated shelf", root_roadmap)
+        self.assertIn("third landed pilot, the first non-continuity", root_roadmap)
         self.assertIn("Media-Ingest Direct-Read Migration Review", tree_contract)
+        self.assertIn("2026-05-04-media-ingest-tree-pilot.md", tree_contract)
         self.assertTrue(
             (
                 REPO_ROOT
                 / "techniques"
-                / "agent-workflows"
+                / "ingest"
+                / "media-ingest"
                 / "two-stage-document-ocr-pipeline"
                 / "TECHNIQUE.md"
             ).is_file()
         )
-        self.assertFalse((REPO_ROOT / "techniques" / "ingest").exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

@@ -166,35 +166,35 @@ See also:
 |---|---|---|---|---|
 | approval-bound-durable-jobs checklist | `absent` | `8` | `techniques/agent-workflows/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) |
 
-### [AOA-T-0070](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
+### [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| two-stage-document-ocr-pipeline checklist | `absent` | `6` | `techniques/agent-workflows/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/two-stage-document-ocr-pipeline/TECHNIQUE.md) |
+| two-stage-document-ocr-pipeline checklist | `absent` | `6` | `techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) |
 
-### [AOA-T-0071](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| template-backed-field-extraction-after-ocr checklist | `absent` | `6` | `techniques/agent-workflows/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
-
-### [AOA-T-0072](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
+### [AOA-T-0071](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| perceptual-media-dedupe-with-threshold-review checklist | `absent` | `6` | `techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) |
+| template-backed-field-extraction-after-ocr checklist | `absent` | `6` | `techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
 
-### [AOA-T-0073](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| semantic-media-bucketing-with-vision-plus-ocr checklist | `absent` | `6` | `techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) |
-
-### [AOA-T-0074](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
+### [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| telegram-export-normalization-to-local-store checklist | `absent` | `6` | `techniques/agent-workflows/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
+| perceptual-media-dedupe-with-threshold-review checklist | `absent` | `6` | `techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) |
+
+### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| semantic-media-bucketing-with-vision-plus-ocr checklist | `absent` | `6` | `techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) |
+
+### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| telegram-export-normalization-to-local-store checklist | `absent` | `6` | `techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
 
 ### [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
 
