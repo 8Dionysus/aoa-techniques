@@ -290,8 +290,17 @@
    next direct-read migration review while keeping memory authority, playbook
    quest authority, progression doctrine, owner routing, role progression,
    stats ownership, session-closeout automation, and neighboring continuity or
-   governance shelves outside the next move. The next bounded step is that
-   direct-read review before moving any nineteenth shelf.
+   governance shelves outside the next move. The `donor-harvest` direct-read
+   review is now landed as `accepted-for-nineteenth-migration-pilot`; it
+   accepts exactly `AOA-T-0075`, `AOA-T-0077`, `AOA-T-0084`, and
+   `AOA-T-0085` while keeping the review non-mutating, preserving all four as
+   promoted bundles, and keeping memory authority, playbook quest authority,
+   progression doctrine, owner routing, role progression, stats ownership,
+   session-closeout automation, neighboring continuity or governance shelves,
+   and all remaining `agent-workflows` leaves outside the shelf. The next
+   bounded step is to migrate those four bundles only after path movement,
+   support-file carry, receipt, link-repair, generated surface, and validation
+   work move together.
 
 ## Hold line
 
