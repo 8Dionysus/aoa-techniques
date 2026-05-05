@@ -91,7 +91,6 @@ LIVE_LINK_SURFACES = (
 )
 
 UNMOVED_DOCS_SHELVES = (
-    "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
     "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
     "techniques/docs/capability-discovery/TECHNIQUE.md",
     "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",

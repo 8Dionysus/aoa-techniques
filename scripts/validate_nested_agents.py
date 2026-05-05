@@ -43,7 +43,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "# AGENTS.md",
             "`nested-rule-loading`",
             "`single-source-rule-distribution`",
-            "`source-of-truth-layout`",
+            "`bounded-context-map`",
             "documentation posture",
         ),
     ),

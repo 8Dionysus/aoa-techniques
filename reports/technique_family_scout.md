@@ -82,10 +82,10 @@ Counts: `total` 4, `canonical` 3, `promoted` 1.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. |
-| [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
-| [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) | `docs` | `guardrail` | `canonical` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. |
-| [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
+| [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. |
+| [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
+| [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) | `docs` | `guardrail` | `canonical` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. |
+| [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
 
 ## `instruction-surface`
 

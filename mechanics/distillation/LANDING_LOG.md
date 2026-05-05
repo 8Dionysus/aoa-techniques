@@ -3,6 +3,47 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Docs-boundary tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033`
+  from `techniques/docs/` into `techniques/instruction/docs-boundary/`
+- extended `techniques/instruction/AGENTS.md` for the second instruction trunk
+  shelf without turning the route card into governance doctrine
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md`
+- repaired authored links from docs guides, semantic review surfaces, Audit
+  active parts, Experience candidate bridge notes, Agon candidate handoff
+  notes, and the reform review source rows
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept `docs-boundary` bounded to document truth, status snapshots,
+  public-share artifacts, and decision rationale rather than source-of-truth
+  governance, approval policy, proof authority, runtime role law, or
+  architecture taxonomy
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_docs_boundary_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
+git diff --check
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/validate_semantic_agents.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no other shelf migrated
+- no `tree_path` frontmatter was added
+- no `family` or scout topology axis became schema truth
+- active bundles did not pass through root `legacy/`
+- capability, skill-discovery, proof, governance, runtime, owner-closeout, and
+  knowledge-lift shelves stayed outside the migrated shelf
+
 ## 2026-05-04 - Docs-boundary direct-read migration review
 
 Changed:

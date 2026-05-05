@@ -15,8 +15,8 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 | technique | current role |
 |---|---|
-| [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |
-| [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |
+| [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |
+| [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |
 
 ## Seam Review
 
@@ -24,7 +24,7 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 Question: where does the broader document-role layout stop and the narrower snapshot discipline begin?
 
-- Invariant boundary: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map, update-routing rules, and separation of active work, decisions, runbooks, and long history. [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) begins only after that broader layout exists and constrains how `README` and optional `MANIFEST` stay short, readable, and link-driven.
+- Invariant boundary: [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map, update-routing rules, and separation of active work, decisions, runbooks, and long history. [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) begins only after that broader layout exists and constrains how `README` and optional `MANIFEST` stay short, readable, and link-driven.
 - Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class and explicit routing rules for updates. Use `0009` when those canonical homes already exist and the remaining problem is that top-level status docs are growing into mini-archives or duplicate summaries.
 - Relation check: mutual `complements` is appropriate and still bounded. It communicates that the snapshot discipline strengthens the broader layout without replacing it. A stronger relation such as `requires` would overstate dependency because a repository can apply lightweight snapshot discipline in a simpler form without adopting the full role map verbatim.
 - Evidence check: `0002` checklist remains role-map centric, covering document roles, routing, and keeping long history out of `README` and `TODO`. `0009` checklist remains snapshot centric, covering short entrypoints, outward links, absent run-history blocks, and one-screen readability. The pair's support surfaces reinforce separation rather than blur it. Outcome: `clear`.

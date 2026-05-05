@@ -37,10 +37,10 @@ generated surfaces, and validation move together.
 
 ## Sources Read
 
-- [AOA-T-0002 source-of-truth-layout](../../../../../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
-- [AOA-T-0009 lightweight-status-snapshot](../../../../../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md)
-- [AOA-T-0034 public-safe-artifact-sanitization](../../../../../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
-- [AOA-T-0033 decision-rationale-recording](../../../../../techniques/docs/decision-rationale-recording/TECHNIQUE.md)
+- [AOA-T-0002 source-of-truth-layout](../../../../../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md)
+- [AOA-T-0009 lightweight-status-snapshot](../../../../../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md)
+- [AOA-T-0034 public-safe-artifact-sanitization](../../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md)
+- [AOA-T-0033 decision-rationale-recording](../../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
 - [Docs domain route card](../../../../../techniques/docs/AGENTS.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
 - `reports/technique_tree_projection.md` rows for `docs-boundary`,

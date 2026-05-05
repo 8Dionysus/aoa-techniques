@@ -9,8 +9,8 @@ This example shows how an authored semantic-review doc can be surfaced as a boun
 
 | technique | current role |
 |---|---|
-| [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |
-| [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |
+| [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |
+| [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |
 
 ## Seam Review
 
@@ -18,7 +18,7 @@ This example shows how an authored semantic-review doc can be surfaced as a boun
 
 Question: where does the broader document-role layout stop and the narrower snapshot discipline begin?
 
-- Invariant boundary: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map.
+- Invariant boundary: [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map.
 - Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class.
 ```
 

@@ -92,6 +92,12 @@
    `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` for the seventh pilot while
    keeping source-of-truth governance, approval policy, skill acceptance, proof
    authority, runtime role law, and architecture taxonomy outside the move.
+   The seventh pilot migration is now landed exactly for those four bundles
+   under `techniques/instruction/docs-boundary/`, with the instruction route
+   card extended for the second shelf, root legacy receipt accounting, link
+   repair, generated rebuilds, and release-check validation in the same wave.
+   The next bounded step is the landed `docs-boundary` pilot review before any
+   eighth shelf moves.
 
 ## Hold line
 

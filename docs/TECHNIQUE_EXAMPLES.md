@@ -367,17 +367,17 @@ See also:
 
 ## `docs`
 
-### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
+### [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Doc Routing | `present` | `techniques/docs/source-of-truth-layout/examples/minimal-doc-routing.md` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
+| Minimal Doc Routing | `present` | `techniques/instruction/docs-boundary/source-of-truth-layout/examples/minimal-doc-routing.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) |
 
-### [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot (`canonical`)
+### [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal-lightweight-snapshot | `present` | `techniques/docs/lightweight-status-snapshot/examples/minimal-lightweight-snapshot.md` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
+| minimal-lightweight-snapshot | `present` | `techniques/instruction/docs-boundary/lightweight-status-snapshot/examples/minimal-lightweight-snapshot.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) |
 
 ### [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
 
@@ -418,11 +418,11 @@ See also:
 |---|---|---|---|
 | Direct Relation To Selection Hint | `present` | `techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
-### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
+### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Scenario | `present` | `techniques/docs/public-safe-artifact-sanitization/examples/minimal-public-safe-artifact-sanitization.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
+| Scenario | `present` | `techniques/instruction/docs-boundary/public-safe-artifact-sanitization/examples/minimal-public-safe-artifact-sanitization.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
@@ -472,11 +472,11 @@ See also:
 | Concrete Subtree Fragmented Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 | Minimal Fragmented Agent Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
-### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
+### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Decision Rationale Note | `present` | `techniques/docs/decision-rationale-recording/examples/minimal-decision-rationale-note.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
+| Minimal Decision Rationale Note | `present` | `techniques/instruction/docs-boundary/decision-rationale-recording/examples/minimal-decision-rationale-note.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
 
 ### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 

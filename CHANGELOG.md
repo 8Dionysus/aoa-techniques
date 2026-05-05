@@ -100,6 +100,9 @@ The format is intentionally simple and human-first.
 - accepted the `docs-boundary` direct-read migration review over `AOA-T-0002`,
   `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` as the seventh tree pilot while
   keeping the review itself non-mutating
+- moved `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` into
+  `techniques/instruction/docs-boundary/` while keeping `domain`, `kind`, IDs,
+  status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

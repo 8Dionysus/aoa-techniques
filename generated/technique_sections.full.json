@@ -106,7 +106,7 @@
     {
       "id": "AOA-T-0002",
       "name": "source-of-truth-layout",
-      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -680,7 +680,7 @@
     {
       "id": "AOA-T-0009",
       "name": "lightweight-status-snapshot",
-      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2648,7 +2648,7 @@
     {
       "id": "AOA-T-0033",
       "name": "decision-rationale-recording",
-      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2730,7 +2730,7 @@
     {
       "id": "AOA-T-0034",
       "name": "public-safe-artifact-sanitization",
-      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8669,7 +8669,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one use of the technique offers one evidence reference\n- the reference is tied to one bounded review state\n- the reference must be inspectable enough for another reviewer to accept,\n  reject, quote, rerun, or ask for a different source\n- the support scope and support limit are both explicit\n- reliance is conditional until the reviewer inspects the reference\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-reference atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../../agent-workflows/single-missing-evidence-request/TECHNIQUE.md),\nthis technique offers one available reference instead of asking for one missing\nevidence object. Unlike\n[AOA-T-0043](../multi-source-primary-input-provenance/TECHNIQUE.md), it does not\norder multiple primary and supporting inputs. Unlike\n[AOA-T-0034](../public-safe-artifact-sanitization/TECHNIQUE.md), it does not\ntransform or sanitize the referenced artifact."
+          "content_markdown": "- one use of the technique offers one evidence reference\n- the reference is tied to one bounded review state\n- the reference must be inspectable enough for another reviewer to accept,\n  reject, quote, rerun, or ask for a different source\n- the support scope and support limit are both explicit\n- reliance is conditional until the reviewer inspects the reference\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-reference atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../../agent-workflows/single-missing-evidence-request/TECHNIQUE.md),\nthis technique offers one available reference instead of asking for one missing\nevidence object. Unlike\n[AOA-T-0043](../multi-source-primary-input-provenance/TECHNIQUE.md), it does not\norder multiple primary and supporting inputs. Unlike\n[AOA-T-0034](../../instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md), it does not\ntransform or sanitize the referenced artifact."
         },
         {
           "key": "risks",

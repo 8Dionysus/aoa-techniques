@@ -41,10 +41,10 @@
     },
     {
       "id": "AOA-T-0002",
-      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/source-of-truth-layout/checks/doc-role-checklist.md",
+          "check_path": "techniques/instruction/docs-boundary/source-of-truth-layout/checks/doc-role-checklist.md",
           "title": "Doc Role Checklist",
           "intro_markdown": "Use this checklist to validate whether a repository really follows `source-of-truth-layout`.",
           "items": [
@@ -372,10 +372,10 @@
     },
     {
       "id": "AOA-T-0009",
-      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/lightweight-status-snapshot/checks/lightweight-snapshot-checklist.md",
+          "check_path": "techniques/instruction/docs-boundary/lightweight-status-snapshot/checks/lightweight-snapshot-checklist.md",
           "title": "lightweight-snapshot-checklist",
           "intro_markdown": "",
           "items": [
@@ -1336,10 +1336,10 @@
     },
     {
       "id": "AOA-T-0033",
-      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/decision-rationale-recording/checks/decision-rationale-recording-checklist.md",
+          "check_path": "techniques/instruction/docs-boundary/decision-rationale-recording/checks/decision-rationale-recording-checklist.md",
           "title": "Decision Rationale Recording Checklist",
           "intro_markdown": "",
           "items": [
@@ -1397,10 +1397,10 @@
     },
     {
       "id": "AOA-T-0034",
-      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md",
+          "check_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md",
           "title": "Public Safe Artifact Sanitization Checklist",
           "intro_markdown": "Use this checklist when reviewing a shareable artifact that claims to have removed or generalized sensitive technical detail.",
           "items": [

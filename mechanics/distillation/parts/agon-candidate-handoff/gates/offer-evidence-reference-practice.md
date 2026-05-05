@@ -105,7 +105,7 @@ hand motion, not the law of the arena.
 - [multi-source-primary-input-provenance](../../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md):
   orders several inputs by priority; this candidate offers one reference before
   multi-source synthesis.
-- [public-safe-artifact-sanitization](../../../../../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md):
+- [public-safe-artifact-sanitization](../../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md):
   sanitizes a shareable artifact; this candidate only scopes one reference and
   does not transform the artifact.
 

@@ -123,7 +123,7 @@ this technique offers one available reference instead of asking for one missing
 evidence object. Unlike
 [AOA-T-0043](../multi-source-primary-input-provenance/TECHNIQUE.md), it does not
 order multiple primary and supporting inputs. Unlike
-[AOA-T-0034](../public-safe-artifact-sanitization/TECHNIQUE.md), it does not
+[AOA-T-0034](../../instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md), it does not
 transform or sanitize the referenced artifact.
 
 ## Risks
