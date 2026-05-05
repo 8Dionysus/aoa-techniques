@@ -384,11 +384,11 @@ See also:
 |---|---|---|---|---|
 | Single-Source Rule Distribution Checklist | `present` | `7` | `techniques/instruction/instruction-surface/single-source-rule-distribution/checks/single-source-rule-distribution-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) |
 
-### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
+### [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Bounded Context Map Checklist | `present` | `7` | `techniques/docs/bounded-context-map/checks/bounded-context-map-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
+| Bounded Context Map Checklist | `present` | `7` | `techniques/proof/skill-support/bounded-context-map/checks/bounded-context-map-checklist.md` | [TECHNIQUE.md](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) |
 
 ### [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
 
@@ -566,17 +566,17 @@ See also:
 |---|---|---|---|---|
 | required-vs-optional-rendering-checklist | `absent` | `8` | `techniques/evaluation/required-vs-optional-source-rendering/checks/required-vs-optional-rendering-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
-### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
+### [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Contract Test Design Checklist | `present` | `8` | `techniques/evaluation/contract-test-design/checks/contract-test-design-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| Contract Test Design Checklist | `present` | `8` | `techniques/proof/skill-support/contract-test-design/checks/contract-test-design-checklist.md` | [TECHNIQUE.md](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) |
 
-### [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
+### [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Property Invariants Checklist | `present` | `7` | `techniques/evaluation/property-invariants/checks/property-invariants-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| Property Invariants Checklist | `present` | `7` | `techniques/proof/skill-support/property-invariants/checks/property-invariants-checklist.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 
 ### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 

@@ -332,8 +332,13 @@ The eleventh migration review is
 It accepts `skill-support` as the eleventh migration pilot after directly
 reading `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017`.
 
-The next reform slice should run the eleventh pilot migration for
-`skill-support` before reviewing any twelfth shelf.
+The eleventh pilot migration moves exactly `AOA-T-0016`, `AOA-T-0015`, and
+`AOA-T-0017` into `techniques/proof/skill-support/` without changing
+`domain`, `kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-skill-support-tree-pilot.md`](../legacy/receipts/2026-05-05-skill-support-tree-pilot.md).
+
+The next reform slice should review the landed `skill-support` pilot before
+moving or reviewing any twelfth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

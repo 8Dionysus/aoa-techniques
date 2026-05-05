@@ -41,9 +41,8 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "docs" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "`nested-rule-loading`",
-            "`single-source-rule-distribution`",
-            "`bounded-context-map`",
+            "`single-scoped-evidence-reference`",
+            "`canonical-owner-with-validated-mirror`",
             "documentation posture",
         ),
     ),
@@ -51,11 +50,21 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "evaluation" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "`contract-test-design`",
-            "`property-invariants`",
             "`signal-first-gate-promotion`",
+            "`telemetry-integrity-snapshot`",
+            "`contract-first-smoke-summary`",
             "proof posture",
             "`aoa-evals`",
+        ),
+    ),
+    AgentsDocSpec(
+        Path("techniques") / "proof" / "AGENTS.md",
+        (
+            "# AGENTS.md",
+            "`skill-support/`",
+            "`aoa-evals`",
+            "proof verdict authority",
+            "Do not widen a proof technique",
         ),
     ),
     AgentsDocSpec(

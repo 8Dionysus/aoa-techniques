@@ -17,7 +17,7 @@
 ## Default-use rationale
 
 - this is the right promoted default when the main problem is how to start a cross-repo task from one explicit map of repos and relevant surfaces
-- it remains narrower than [AOA-T-0016](../../../../docs/bounded-context-map/TECHNIQUE.md) and [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md) because it owns only the task-bounded cross-repo map object
+- it remains narrower than [AOA-T-0016](../../../../proof/skill-support/bounded-context-map/TECHNIQUE.md) and [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md) because it owns only the task-bounded cross-repo map object
 - it also remains smaller than total workspace-platform doctrine because it does not define infrastructure catalogs, project-board semantics, or a whole boot-sequence stack
 
 ## Fresh public-safety check

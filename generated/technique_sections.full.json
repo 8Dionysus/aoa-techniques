@@ -1172,7 +1172,7 @@
     {
       "id": "AOA-T-0015",
       "name": "contract-test-design",
-      "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+      "technique_path": "techniques/proof/skill-support/contract-test-design/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1254,7 +1254,7 @@
     {
       "id": "AOA-T-0016",
       "name": "bounded-context-map",
-      "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+      "technique_path": "techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1336,7 +1336,7 @@
     {
       "id": "AOA-T-0017",
       "name": "property-invariants",
-      "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+      "technique_path": "techniques/proof/skill-support/property-invariants/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4979,7 +4979,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the map names real repositories and real resource surfaces\n- each listed repo has an explicit role tied to the current task or handoff\n- the next session can identify where to look first across repo boundaries\n- the map stays task-bounded instead of expanding into a general architecture inventory\n- the technique stays smaller than semantic context mapping, platform-wide topology docs, and full startup or orchestration stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0016](../../../docs/bounded-context-map/TECHNIQUE.md), this technique does not define conceptual bounded contexts or handoff interfaces across a system; it names only the repositories and concrete resource surfaces needed to start a specific cross-repo task safely. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not define the generic pre-mutation ritual for every resumed session; it owns the cross-repo map object used when one session-start surface must span multiple repos. Unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), it does not write the full continuation packet; it only gives the next session a bounded cross-repo index for where to look first."
+          "content_markdown": "- the map names real repositories and real resource surfaces\n- each listed repo has an explicit role tied to the current task or handoff\n- the next session can identify where to look first across repo boundaries\n- the map stays task-bounded instead of expanding into a general architecture inventory\n- the technique stays smaller than semantic context mapping, platform-wide topology docs, and full startup or orchestration stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0016](../../../proof/skill-support/bounded-context-map/TECHNIQUE.md), this technique does not define conceptual bounded contexts or handoff interfaces across a system; it names only the repositories and concrete resource surfaces needed to start a specific cross-repo task safely. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not define the generic pre-mutation ritual for every resumed session; it owns the cross-repo map object used when one session-start surface must span multiple repos. Unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), it does not write the full continuation packet; it only gives the next session a bounded cross-repo index for where to look first."
         },
         {
           "key": "risks",
@@ -6209,7 +6209,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one candidate unit maps to one primary owner layer\n- usefulness is a reuse signal, not an owner layer by itself\n- the nearest wrong target is named explicitly rather than left implicit\n- derivative routing or graph layers do not become first-authoring targets for source-owned meaning\n- the technique owns one placement verdict, not the whole donor-extraction workflow\n- the technique stays smaller than final promotion review for an already repeated quest unit\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not extract candidate units from a reviewed session artifact; it only places one already-isolated unit. Unlike [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md), it does not define the full context map or interface structure of a system; it makes one bounded owner verdict over one candidate unit. It should also stay narrower than final quest promotion triage because it can return `hold` or a first owner layer without deciding whether the unit is already ready for canon promotion."
+          "content_markdown": "- one candidate unit maps to one primary owner layer\n- usefulness is a reuse signal, not an owner layer by itself\n- the nearest wrong target is named explicitly rather than left implicit\n- derivative routing or graph layers do not become first-authoring targets for source-owned meaning\n- the technique owns one placement verdict, not the whole donor-extraction workflow\n- the technique stays smaller than final promotion review for an already repeated quest unit\n\nRelationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not extract candidate units from a reviewed session artifact; it only places one already-isolated unit. Unlike [AOA-T-0016](../../proof/skill-support/bounded-context-map/TECHNIQUE.md), it does not define the full context map or interface structure of a system; it makes one bounded owner verdict over one candidate unit. It should also stay narrower than final quest promotion triage because it can return `hold` or a first owner layer without deciding whether the unit is already ready for canon promotion."
         },
         {
           "key": "risks",

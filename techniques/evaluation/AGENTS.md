@@ -6,7 +6,9 @@ Guidance for coding agents and humans working under `techniques/evaluation/`.
 
 This domain stores reusable evaluation and validation techniques.
 
-Representative bundles here include `contract-test-design`, `property-invariants`, `signal-first-gate-promotion`, `telemetry-integrity-snapshot`, and `contract-first-smoke-summary`.
+Representative bundles here include `signal-first-gate-promotion`,
+`telemetry-integrity-snapshot`, `contract-first-smoke-summary`,
+`context-report-for-ci`, and published-summary integrity techniques.
 
 ## Domain rules
 

@@ -13,7 +13,7 @@ inside each `techniques/**/TECHNIQUE.md` file.
 |---|---|---|
 | [AOA-T-0076 owner-layer-triage](../../../../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) | Places one bounded reusable unit in one primary owner layer and rejects one nearest wrong target. | Does not extract donor units, finish promotion review, or make derivative routing a first-authoring owner. |
 | [AOA-T-0090 nearest-wrong-target-rejection](../../../../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | Makes the closest wrong owner or promotion target explicit so adjacent layers stay distinct. | Does not choose the full placement verdict or author the next surface. |
-| [AOA-T-0016 bounded-context-map](../../../../techniques/docs/bounded-context-map/TECHNIQUE.md) | Names contexts, responsibilities, and handoff interfaces before changes cross the wrong boundary. | Does not define a full architecture program or replace interface cleanup. |
+| [AOA-T-0016 bounded-context-map](../../../../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) | Names contexts, responsibilities, and handoff interfaces before changes cross the wrong boundary. | Does not define a full architecture program or replace interface cleanup. |
 | [AOA-T-0094 canonical-owner-with-validated-mirror](../../../../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) | Keeps one canonical cross-repo owner while allowing mirrors only through explicit parity validation. | Does not make mirrors new primary sources or own rollout choreography. |
 
 ## Use

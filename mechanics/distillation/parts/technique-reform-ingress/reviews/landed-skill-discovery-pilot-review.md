@@ -54,9 +54,9 @@ and practical, but they must not become one vague proof doctrine.
 - [Technique tree projection rows for `skill-discovery` and `skill-support`](../../../../../reports/technique_tree_projection.md)
 - [Technique family scout rows for `skill-discovery` and `skill-support`](../../../../../reports/technique_family_scout.md)
 - [Technique topology scout rows for `skill-discovery` and `skill-support`](../../../../../reports/technique_topology_scout.md)
-- [AOA-T-0016 bounded-context-map](../../../../../techniques/docs/bounded-context-map/TECHNIQUE.md)
-- [AOA-T-0015 contract-test-design](../../../../../techniques/evaluation/contract-test-design/TECHNIQUE.md)
-- [AOA-T-0017 property-invariants](../../../../../techniques/evaluation/property-invariants/TECHNIQUE.md)
+- [AOA-T-0016 bounded-context-map](../../../../../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md)
+- [AOA-T-0015 contract-test-design](../../../../../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md)
+- [AOA-T-0017 property-invariants](../../../../../techniques/proof/skill-support/property-invariants/TECHNIQUE.md)
 - [Landed capability-boundary pilot review](landed-capability-boundary-pilot-review.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 

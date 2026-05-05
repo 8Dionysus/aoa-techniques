@@ -810,7 +810,7 @@ See also:
 - Validate by: one canonical rule source is named explicitly; at least two target instruction surfaces receive the same shared rule core...
 - Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md)
 
-### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
+### [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
 - Summary: Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work.
 - Intent: Reduce semantic confusion and misplaced changes by naming bounded contexts, clarifying their responsibilities, and...
@@ -821,7 +821,7 @@ See also:
 - Core contract: context boundaries should reduce semantic confusion rather than create taxonomy for its own sake; neighboring contexts should be...
 - Main risk: too many contexts are invented for a small problem.
 - Validate by: the main ambiguity or vocabulary drift was reduced; contexts or subsystems were named with clearer responsibility boundaries; handoff or...
-- Source: [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md)
 
 ### [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
 
@@ -1202,7 +1202,7 @@ See also:
 - Validate by: required missing sources and optional missing sources are reported separately; missing required sources fail the strict smoke or contract...
 - Source: [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md)
 
-### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
+### [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 
 - Summary: Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals.
 - Intent: Reduce breakage at boundaries by expressing the expected interface behavior explicitly and verifying it...
@@ -1213,9 +1213,9 @@ See also:
 - Core contract: the contract should be visible and reviewable by another human or agent; validation should target the boundary surface...
 - Main risk: the contract is too vague or fixture-shaped to constrain the actual consumer-visible boundary.
 - Validate by: the boundary and consumers were named explicitly; tests or checks target observable contract behavior; at least one check exercises...
-- Source: [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md)
 
-### [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
+### [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
 
 - Summary: Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set.
 - Intent: Reduce weak example-only validation by expressing stable system or domain truths as invariant-oriented checks...
@@ -1226,7 +1226,7 @@ See also:
 - Core contract: each property should express a meaningful invariant; the technique should broaden coverage beyond a tiny fixed example set.
 - Main risk: the chosen invariant is too weak or too generic to constrain real behavior.
 - Validate by: the property expresses a meaningful invariant rather than a vague expectation; the resulting check broadens coverage beyond a small...
-- Source: [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md)
 
 ### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 

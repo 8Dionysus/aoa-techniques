@@ -564,7 +564,7 @@
           "domain": "docs",
           "status": "canonical",
           "summary": "Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work.",
-          "technique_path": "techniques/docs/bounded-context-map/TECHNIQUE.md",
+          "technique_path": "techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md",
           "kind": "artifact"
         },
         {
@@ -573,7 +573,7 @@
           "domain": "evaluation",
           "status": "canonical",
           "summary": "Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals.",
-          "technique_path": "techniques/evaluation/contract-test-design/TECHNIQUE.md",
+          "technique_path": "techniques/proof/skill-support/contract-test-design/TECHNIQUE.md",
           "kind": "validation"
         },
         {
@@ -582,7 +582,7 @@
           "domain": "evaluation",
           "status": "canonical",
           "summary": "Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set.",
-          "technique_path": "techniques/evaluation/property-invariants/TECHNIQUE.md",
+          "technique_path": "techniques/proof/skill-support/property-invariants/TECHNIQUE.md",
           "kind": "validation"
         }
       ]

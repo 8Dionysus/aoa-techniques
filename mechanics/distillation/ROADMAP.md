@@ -150,9 +150,13 @@
    `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017` while keeping proof
    authority, eval-suite ownership, mandatory testing doctrine, architecture
    taxonomy, runtime readiness, owner-truth law, policy enforcement, and
-   neighboring proof-side shelves outside the move. The next bounded step is
-   the eleventh pilot migration for `skill-support`, with no frontmatter
-   change.
+   neighboring proof-side shelves outside the move. The eleventh pilot
+   migration is now landed exactly for those three bundles under
+   `techniques/proof/skill-support/`, with the proof route card, root legacy
+   receipt accounting, link repair, generated rebuilds, and release-check
+   validation in the same wave. The next bounded step is the landed
+   `skill-support` pilot review before any twelfth shelf moves or enters
+   direct-read review.
 
 ## Hold line
 

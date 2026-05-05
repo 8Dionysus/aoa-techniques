@@ -393,12 +393,12 @@ See also:
 | Concrete Multi-Agent Rule Sync | `present` | `techniques/instruction/instruction-surface/single-source-rule-distribution/examples/concrete-multi-agent-rule-sync.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) |
 | Minimal Single-Source Rule Distribution | `present` | `techniques/instruction/instruction-surface/single-source-rule-distribution/examples/minimal-single-source-rule-distribution.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) |
 
-### [AOA-T-0016](../techniques/docs/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
+### [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) - bounded-context-map (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Infra Context Map | `present` | `techniques/docs/bounded-context-map/examples/concrete-infra-context-map.md` | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
-| Minimal Context Boundary Map | `present` | `techniques/docs/bounded-context-map/examples/minimal-context-boundary-map.md` | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
+| Concrete Infra Context Map | `present` | `techniques/proof/skill-support/bounded-context-map/examples/concrete-infra-context-map.md` | [TECHNIQUE.md](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) |
+| Minimal Context Boundary Map | `present` | `techniques/proof/skill-support/bounded-context-map/examples/minimal-context-boundary-map.md` | [TECHNIQUE.md](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) |
 
 ### [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
 
@@ -587,19 +587,19 @@ See also:
 | minimal-required-vs-optional-rendering | `present` | `techniques/evaluation/required-vs-optional-source-rendering/examples/minimal-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 | non-ui-required-vs-optional-rendering | `present` | `techniques/evaluation/required-vs-optional-source-rendering/examples/non-ui-required-vs-optional-rendering.md` | [TECHNIQUE.md](../techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
-### [AOA-T-0015](../techniques/evaluation/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
+### [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) - contract-test-design (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete API Contract Boundary | `present` | `techniques/evaluation/contract-test-design/examples/concrete-api-contract-boundary.md` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
-| Minimal Contract Boundary | `present` | `techniques/evaluation/contract-test-design/examples/minimal-contract-boundary.md` | [TECHNIQUE.md](../techniques/evaluation/contract-test-design/TECHNIQUE.md) |
+| Concrete API Contract Boundary | `present` | `techniques/proof/skill-support/contract-test-design/examples/concrete-api-contract-boundary.md` | [TECHNIQUE.md](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) |
+| Minimal Contract Boundary | `present` | `techniques/proof/skill-support/contract-test-design/examples/minimal-contract-boundary.md` | [TECHNIQUE.md](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) |
 
-### [AOA-T-0017](../techniques/evaluation/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
+### [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) - property-invariants (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Config Invariant Check | `present` | `techniques/evaluation/property-invariants/examples/concrete-config-invariant-check.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
-| Minimal Invariant Check | `present` | `techniques/evaluation/property-invariants/examples/minimal-invariant-check.md` | [TECHNIQUE.md](../techniques/evaluation/property-invariants/TECHNIQUE.md) |
+| Concrete Config Invariant Check | `present` | `techniques/proof/skill-support/property-invariants/examples/concrete-config-invariant-check.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
+| Minimal Invariant Check | `present` | `techniques/proof/skill-support/property-invariants/examples/minimal-invariant-check.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 
 ### [AOA-T-0032](../techniques/evaluation/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
