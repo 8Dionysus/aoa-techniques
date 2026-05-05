@@ -130,6 +130,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0041` and `AOA-T-0042` into
   `techniques/instruction/skill-discovery/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `skill-discovery` pilot review and selected
+  `skill-support` for the next direct-read migration review without moving an
+  eleventh shelf yet
 
 ### Validation
 

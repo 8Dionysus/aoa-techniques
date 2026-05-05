@@ -138,9 +138,15 @@
    now landed exactly for `AOA-T-0041` and `AOA-T-0042` under
    `techniques/instruction/skill-discovery/`, with the instruction route card
    extended for the fifth shelf, root legacy receipt accounting, link repair,
-   generated rebuilds, and release-check validation in the same wave. The next
-   bounded step is a landed `skill-discovery` pilot review before any eleventh
-   shelf moves.
+   generated rebuilds, and release-check validation in the same wave. The
+   landed `skill-discovery` pilot review is also landed as `pilot-validated`,
+   validates the fifth instruction trunk shelf, and chooses `skill-support` for
+   the next direct-read migration review while keeping proof authority,
+   eval-suite ownership, mandatory testing doctrine, DDD formalism,
+   architecture taxonomy, runtime, governance, owner-closeout,
+   review-evidence, automation-governance, and other proof-adjacent shelves
+   outside the next move. The next bounded step is a direct-read migration
+   review for `skill-support`, with no frontmatter change.
 
 ## Hold line
 
