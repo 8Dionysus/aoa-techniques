@@ -297,8 +297,15 @@ It validates `capability-registry` as the third successful instruction trunk
 shelf and chooses `capability-boundary` for the next direct-read migration
 review.
 
-The next reform slice should run the `capability-boundary` direct-read review
-before moving another shelf.
+The ninth migration review is
+[Capability-Boundary Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/capability-boundary-direct-read-migration-review.md).
+It accepts `capability-boundary` as the ninth migration pilot after directly
+reading `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093`.
+
+The next reform slice should run the ninth pilot migration by moving exactly
+`AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` into
+`techniques/instruction/capability-boundary/` without changing `domain`,
+`kind`, or `tree_path` frontmatter.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
