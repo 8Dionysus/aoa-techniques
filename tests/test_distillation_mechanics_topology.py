@@ -97,6 +97,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/handoff-continuation-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-handoff-continuation-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/media-ingest-direct-read-migration-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-media-ingest-pilot-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -1201,7 +1202,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`media-ingest` direct-read review is now", distillation_roadmap)
         self.assertIn("Landed handoff-continuation pilot review", landing_log)
         self.assertIn("selected\n  `media-ingest`", changelog)
-        self.assertIn("Review the landed `media-ingest` shelf", root_roadmap)
+        self.assertIn("Run a direct-read migration review for `diagnosis-repair`", root_roadmap)
         self.assertIn("Landed Handoff-Continuation Pilot Review", tree_contract)
         self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", incoming_wave2)
         self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", incoming_wave3)
@@ -1301,6 +1302,74 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 / "TECHNIQUE.md"
             ).is_file()
         )
+
+    def test_landed_media_ingest_pilot_review_selects_diagnosis_repair(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-media-ingest-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Media-Ingest Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not `tree_path` frontmatter", review)
+        self.assertIn("Accept the landed `media-ingest` pilot", review)
+        self.assertIn("first non-continuity trunk test", review)
+        self.assertIn("Telegram edge remained bounded", review)
+        self.assertIn("Choose `diagnosis-repair`", review)
+        for technique_id in (
+            "AOA-T-0080",
+            "AOA-T-0081",
+            "AOA-T-0082",
+            "AOA-T-0083",
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+
+        self.assertIn("Do not move `diagnosis-repair` from this review alone", review)
+        self.assertIn("Run a direct-read migration review for `diagnosis-repair`", review)
+        self.assertIn("landed-media-ingest-pilot-review", reviews_index)
+        self.assertIn("landed media-ingest pilot review: landed", ingress)
+        self.assertIn("diagnosis-repair", ingress)
+        self.assertIn("diagnosis-repair` is now", distillation_roadmap)
+        self.assertIn("Landed media-ingest pilot review", landing_log)
+        self.assertIn("selected\n  `diagnosis-repair`", changelog)
+        self.assertIn("Run a direct-read migration review for `diagnosis-repair`", root_roadmap)
+        self.assertIn("Landed Media-Ingest Pilot Review", tree_contract)
+        self.assertIn("techniques/recovery/diagnosis-repair/", tree_contract)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
