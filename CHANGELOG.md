@@ -112,6 +112,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064` into
   `techniques/instruction/capability-registry/` while keeping `domain`,
   `kind`, IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `capability-registry` pilot review and selected
+  `capability-boundary` for the next direct-read migration review without
+  moving a ninth shelf yet
 
 ### Validation
 

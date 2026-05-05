@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Landed capability-registry pilot review
+
+Changed:
+
+- added
+  [landed-capability-registry-pilot-review](parts/technique-reform-ingress/reviews/landed-capability-registry-pilot-review.md)
+  as the post-migration review over the eighth tree pilot
+- accepted the landed `capability-registry` shelf as clearer after validation
+  and as the third successful instruction trunk shelf
+- chose `capability-boundary` for the next direct-read migration review without
+  moving another shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `skill-discovery`, proof, governance, runtime, owner-closeout, and
+  other capability-adjacent shelves outside the next move
+- kept skill marketplace curation, upstream health validation, routing policy,
+  KAG graph semantics, runtime execution doctrine, host inventory policy, and
+  agent-role authority outside `capability-boundary`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no ninth shelf migration was authorized without direct-read review
+
 ## 2026-05-04 - Capability-registry tree pilot migration
 
 Changed:
