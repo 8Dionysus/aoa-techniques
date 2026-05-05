@@ -61,7 +61,6 @@ LIVE_LINK_SURFACES = (
 UNMOVED_DOCS_BUNDLES = (
     "techniques/docs/bounded-context-map/TECHNIQUE.md",
     "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
-    "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
     "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
 )
 

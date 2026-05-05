@@ -560,7 +560,7 @@
       "core_contract_short": "Core contract: the skill owns reusable capability meaning; the command owns invocation syntax, arguments, workflow steps, and output format.",
       "main_risk_short": "Main risk: command files become the only place where reusable capability meaning actually lives.",
       "validation_short": "Validate by checking one skill artifact and one command artifact are named separately; the skill still makes sense without reading a specific...",
-      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0041",
@@ -602,7 +602,7 @@
       "core_contract_short": "Core contract: one source input is primary and the rest are supporting when the bridge needs a priority order; the...",
       "main_risk_short": "Main risk: all source inputs get flattened into equal status and the primary signal disappears.",
       "validation_short": "Validate by checking the bridge surface names one primary input and at least one supporting input when multiple sources are combined; the...",
-      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0044",
@@ -1302,7 +1302,7 @@
       "core_contract_short": "Core contract: router recommendation truth is computed separately from host executability; host inventory source and precedence remain explicit.",
       "main_risk_short": "Main risk: host actionability leaks back into recommendation truth, so relevant items disappear when they are merely unavailable.",
       "validation_short": "Validate by checking a recommendation can remain visible even when it is not directly executable on the host; activate_now contains only host-executable...",
-      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0094",

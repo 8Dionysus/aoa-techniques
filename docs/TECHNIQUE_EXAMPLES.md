@@ -311,11 +311,11 @@ See also:
 |---|---|---|---|
 | Minimal audit-to-closeout-proof-loop example | `present` | `techniques/agent-workflows/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
 
-### [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
+### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal recommendation-truth-vs-host-actionability | `present` | `techniques/agent-workflows/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md` | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
+| minimal recommendation-truth-vs-host-actionability | `present` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
 
 ### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
 
@@ -484,11 +484,11 @@ See also:
 |---|---|---|---|
 | Minimal Profile Preset Composition | `present` | `techniques/instruction/instruction-surface/profile-preset-composition/examples/minimal-profile-preset-composition.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
 
-### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
+### [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Skill Vs Command Boundary | `present` | `techniques/docs/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md` | [TECHNIQUE.md](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) |
+| Minimal Skill Vs Command Boundary | `present` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
 
 ### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
 
@@ -496,11 +496,11 @@ See also:
 |---|---|---|---|
 | Minimal Skill Marketplace Curation | `present` | `techniques/docs/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md` | [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) |
 
-### [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
+### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Multi-Source Primary Input Provenance | `present` | `techniques/docs/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
+| Minimal Multi-Source Primary Input Provenance | `present` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
 ### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
 

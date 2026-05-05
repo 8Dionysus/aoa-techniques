@@ -2187,7 +2187,7 @@
       "kind": "guardrail",
       "status": "promoted",
       "summary": "Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy.",
-      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
       "origin": {
         "project": "agentic-dev-team",
         "path": "docs/skills.md",
@@ -2344,7 +2344,7 @@
       "kind": "guardrail",
       "status": "promoted",
       "summary": "Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine.",
-      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
       "origin": {
         "project": "aoa-kag + Tree-of-Sophia bridge contracts",
         "path": "docs/README.md",
@@ -5056,7 +5056,7 @@
       "kind": "guardrail",
       "status": "promoted",
       "summary": "Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice.",
-      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
       "origin": {
         "project": "aoa-sdk + Dionysus",
         "path": "src/aoa_sdk/skills/detector.py + src/aoa_sdk/models.py + src/aoa_sdk/cli/main.py + docs/skill-runtime-recommendation-gap.md + docs/skill-runtime-recommendation-gap-fix-spec.md + Dionysus/reports/ecosystem-audits/2026-04-06.aoa-sdk.skill-runtime-recommendation-gap-fix-session-harvest.md",

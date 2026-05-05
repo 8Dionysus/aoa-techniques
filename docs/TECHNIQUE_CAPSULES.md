@@ -639,7 +639,7 @@ See also:
 - Validate by: at least one finding was re-confirmed against live code or explicitly marked non-repro; each closed finding names a targeted...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md)
 
-### [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
+### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
 
 - Summary: Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice.
 - Intent: Keep router recommendation truth and host actionability separate so control-plane reports stay honest, activation...
@@ -650,7 +650,7 @@ See also:
 - Core contract: router recommendation truth is computed separately from host executability; host inventory source and precedence remain explicit.
 - Main risk: host actionability leaks back into recommendation truth, so relevant items disappear when they are merely unavailable.
 - Validate by: a recommendation can remain visible even when it is not directly executable on the host; activate_now contains only host-executable...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md)
 
 ### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
 
@@ -992,7 +992,7 @@ See also:
 - Validate by: module, profile, and preset ownership are all explicit; preset-expanded profiles resolve before direct profile additions; duplicate profiles and modules...
 - Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md)
 
-### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
+### [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
 
 - Summary: Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy.
 - Intent: Keep reusable capability meaning in a skill artifact and keep user-facing invocation behavior in...
@@ -1003,7 +1003,7 @@ See also:
 - Core contract: the skill owns reusable capability meaning; the command owns invocation syntax, arguments, workflow steps, and output format.
 - Main risk: command files become the only place where reusable capability meaning actually lives.
 - Validate by: one skill artifact and one command artifact are named separately; the skill still makes sense without reading a specific...
-- Source: [TECHNIQUE.md](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md)
 
 ### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
 
@@ -1018,7 +1018,7 @@ See also:
 - Validate by: curated entries still show upstream ownership clearly; the local surface adds editorial discoverability beyond plain mirroring; installer, sync, registry...
 - Source: [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
 
-### [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
+### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
 
 - Summary: Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine.
 - Intent: Keep the order of source inputs explicit when one bridge or docs surface combines...
@@ -1029,7 +1029,7 @@ See also:
 - Core contract: one source input is primary and the rest are supporting when the bridge needs a priority order; the...
 - Main risk: all source inputs get flattened into equal status and the primary signal disappears.
 - Validate by: the bridge surface names one primary input and at least one supporting input when multiple sources are combined; the...
-- Source: [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md)
 
 ### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
 

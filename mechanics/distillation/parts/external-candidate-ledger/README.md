@@ -136,7 +136,7 @@ landed anchors remain useful for route memory:
   [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md),
   [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md),
   [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md),
-  [AOA-T-0043](../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md),
+  [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md),
   and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
 
 For exact wave execution roles, public donor-read details, and the old expected
