@@ -3,6 +3,47 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Kag-source-lift tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`,
+  `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` from
+  `techniques/docs/` into `techniques/knowledge-lift/kag-source-lift/`
+- added `techniques/knowledge-lift/AGENTS.md` as the minimal route card for
+  the knowledge-lift trunk
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md`
+- repaired authored links from KAG/source-lift guides, Audit and Distillation
+  active parts, Boundary-bridge active parts, incoming staging notes, and the
+  reform review source rows
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept `knowledge-lift` bounded to reusable source-lift practice rather than
+  KAG owner doctrine, graph semantics, retrieval policy, scoring, generated
+  truth, or automatic verdicts
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_kag_source_lift_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
+git diff --check
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/validate_semantic_agents.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no other shelf migrated
+- no `tree_path` frontmatter was added
+- no `family` or scout topology axis became schema truth
+- active bundles did not pass through root `legacy/`
+- docs-boundary, capability, skill-discovery, proof, governance, runtime, and
+  owner-closeout shelves stayed outside the migrated shelf
+
 ## 2026-05-04 - Kag-source-lift direct-read migration review
 
 Changed:

@@ -192,7 +192,7 @@ derived index as evidence only.
 | candidate | donor or source layer | tentative domain | overlap note | next move |
 |---|---|---|---|---|
 | `progressive-skill-discovery` | `n-skills`, MCP Gateway Registry, repo-owned selector surfaces | `docs` | too close to `skill-marketplace-curation` plus the repo's current `pick -> inspect -> expand -> object use` discovery posture to count as a separate technique contract yet | reopen only if progressive disclosure itself becomes the distinct invariant rather than a restatement of curated discovery and selector behavior |
-| `bounded-counterpart-edge-projection` | `aoa-kag`, `Tree-of-Sophia` bridge contracts | `docs` | too close to [AOA-T-0021](../../../../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) unless counterpart-specific non-identity semantics become a distinct reusable contract | reopen only if the counterpart edge can stay clearly narrower than generic bounded relation lift and carry a stable non-collapse contract of its own |
+| `bounded-counterpart-edge-projection` | `aoa-kag`, `Tree-of-Sophia` bridge contracts | `docs` | too close to [AOA-T-0021](../../../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) unless counterpart-specific non-identity semantics become a distinct reusable contract | reopen only if the counterpart edge can stay clearly narrower than generic bounded relation lift and carry a stable non-collapse contract of its own |
 
 ## Needs Layer Incubation Before Distillation Here
 

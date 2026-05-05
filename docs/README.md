@@ -68,7 +68,7 @@ Choose the path that matches your question:
   - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
   - [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
   - [Evaluation-Chain Shadow Review](EVALUATION_CHAIN_SHADOW_REVIEW.md)
-  - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+  - [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
   - one canonical bundle plus its `notes/adverse-effects-review.md`
 - I need to navigate the authoritative repo docs/status layer:
   - [Repo Doc Surfaces](REPO_DOC_SURFACES.md)
@@ -94,14 +94,14 @@ Choose the path that matches your question:
   - [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
   - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 - I need the current reusable KAG/source-lift techniques:
-  - [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
-  - [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
-  - [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
-  - [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
-  - [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
-  - [`repo-doc-surface-lift`](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
-  - [`github-review-template-lift`](../techniques/docs/github-review-template-lift/TECHNIQUE.md)
-  - [`semantic-review-surface-lift`](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+  - [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
+  - [`frontmatter-metadata-spine`](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
+  - [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
+  - [`bounded-relation-lift-for-kag`](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
+  - [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
+  - [`repo-doc-surface-lift`](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
+  - [`github-review-template-lift`](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
+  - [`semantic-review-surface-lift`](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 - I need to inspect the semantic-review pilots:
   - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
   - [Agent-Workflows Core Semantic Review](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
@@ -253,21 +253,21 @@ These guides explain what the repo can already support as a future lift surface 
 
 These are reusable technique bundles extracted from the repo's current generated and caution layers without widening into a graph platform or policy engine.
 
-- [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+- [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
   - use when stable markdown sections should become one bounded derived lookup surface
-- [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+- [`frontmatter-metadata-spine`](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
   - use when bundle routing needs the canonical shallow metadata spine plus a derived catalog, not richer schema
-- [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+- [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
   - use when typed supporting notes should act as provenance handles without becoming a note graph
-- [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [`bounded-relation-lift-for-kag`](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
   - use when direct relations should power bounded adjacency hints without graph semantics
-- [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
   - use when richer `Risks` language should act as bounded caution lookup without becoming metadata or scoring
-- [`repo-doc-surface-lift`](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
+- [`repo-doc-surface-lift`](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
   - use when the authoritative public repo docs/status layer should become one bounded derived routing surface
-- [`github-review-template-lift`](../techniques/docs/github-review-template-lift/TECHNIQUE.md)
+- [`github-review-template-lift`](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
   - use when authored GitHub issue and pull-request templates should become one bounded intake lookup surface
-- [`semantic-review-surface-lift`](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+- [`semantic-review-surface-lift`](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
   - use when authored semantic-review docs should become one bounded review-knowledge lookup surface without automation
 
 ### KAG/source-lift family review

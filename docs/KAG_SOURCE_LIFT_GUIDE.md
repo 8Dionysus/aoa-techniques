@@ -9,14 +9,14 @@ This guide is source-first. It allows a small bounded set of generated lift surf
 See also:
 - [Start Here](START_HERE.md)
 - [Documentation Map](README.md)
-- [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
-- [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
-- [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
-- [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
-- [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
-- [`repo-doc-surface-lift`](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
-- [`github-review-template-lift`](../techniques/docs/github-review-template-lift/TECHNIQUE.md)
-- [`semantic-review-surface-lift`](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+- [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
+- [`frontmatter-metadata-spine`](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
+- [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
+- [`bounded-relation-lift-for-kag`](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [`repo-doc-surface-lift`](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
+- [`github-review-template-lift`](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
+- [`semantic-review-surface-lift`](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
 - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
 
@@ -34,7 +34,7 @@ The current repository is already strong enough for `technique-as-node` KAG beca
 
 That is enough to treat the repo as a strong upstream source. It is not yet a finished `section-level` KAG schema.
 
-Within the current reusable family, [`frontmatter-metadata-spine`](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) is now the canonical bundle-level metadata entrypoint and [`bounded-relation-lift-for-kag`](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) is now the canonical direct-relation hint companion. [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md), [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md), and [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) remain narrower promoted companions.
+Within the current reusable family, [`frontmatter-metadata-spine`](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) is now the canonical bundle-level metadata entrypoint and [`bounded-relation-lift-for-kag`](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) is now the canonical direct-relation hint companion. [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md), [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md), and [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) remain narrower promoted companions.
 
 The current note templates now reinforce that same family boundary at the authored-note layer: origin, adaptation, promotion, caution, external-origin provenance, and external review notes stay bounded, path-addressable, and reviewable without becoming a new note schema.
 
@@ -168,7 +168,7 @@ Treat sections like these as the current lift candidates:
 - `Detection signals`
 - `Mitigations`
 
-That makes shadow/caution lifting a bounded reusable companion surface now captured in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles can now add one typed adverse-effects review note as a bounded review supplement. It is still not a reason to add machine-readable shadow fields or generated caution outputs.
+That makes shadow/caution lifting a bounded reusable companion surface now captured in [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles can now add one typed adverse-effects review note as a bounded review supplement. It is still not a reason to add machine-readable shadow fields or generated caution outputs.
 
 ## Explicitly Deferred
 

@@ -12,7 +12,7 @@ See also:
 - [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
 - [Documentation Map](README.md)
 - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-- [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 This family uses one stable shape:
 
@@ -95,7 +95,7 @@ The current repository now requires the top-level `## Risks` section to stay str
 
 This is the current markdown-first authoring contract across the published corpus. It strengthens review language without changing frontmatter or introducing machine-readable shadow fields.
 
-The same shadow-language contract is also the current upstream for bounded caution/source-lift work. The first reusable implementation surface for that lift now lives in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles now pair it with one typed `notes/adverse-effects-review.md` supplement when the repo needs a bounded shadow watch surface beyond the main `Risks` section.
+The same shadow-language contract is also the current upstream for bounded caution/source-lift work. The first reusable implementation surface for that lift now lives in [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles now pair it with one typed `notes/adverse-effects-review.md` supplement when the repo needs a bounded shadow watch surface beyond the main `Risks` section.
 
 ## Choosing The Right Shadow Surface
 

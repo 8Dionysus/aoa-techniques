@@ -10,7 +10,7 @@ See also:
 - [Documentation Map](README.md)
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-- [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 ## Role Split
 
@@ -31,7 +31,7 @@ That split is the current caution-layer contract.
 
 The current repository already has enough structure to support bounded caution lookup by technique.
 
-The first reusable technique surface for that bounded lift now lives in [`risk-and-negative-effect-lift`](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md).
+The first reusable technique surface for that bounded lift now lives in [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md).
 
 Canonical bundles now also use one typed `notes/adverse-effects-review.md` supplement as a review-only caution watch surface over the same markdown-first contract.
 

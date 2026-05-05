@@ -8,7 +8,7 @@ See also:
 - [Start Here](START_HERE.md)
 - [Technique Sections](TECHNIQUE_SECTIONS.md)
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-- [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+- [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
 - [Documentation Map](README.md)
 
 This family uses one stable shape:

@@ -823,7 +823,7 @@ See also:
 - Validate by: the main ambiguity or vocabulary drift was reduced; contexts or subsystems were named with clearer responsibility boundaries; handoff or...
 - Source: [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md)
 
-### [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
+### [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
 
 - Summary: Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative.
 - Intent: Lift stable TECHNIQUE.md section boundaries into a derived section-level surface so retrieval and review...
@@ -834,9 +834,9 @@ See also:
 - Core contract: the markdown bundle remains the authoritative source of section meaning; lifted sections stay bounded to an explicit stable...
 - Main risk: unstable or project-shaped headings are lifted too early, so the derived surface changes shape faster than consumers can...
 - Validate by: lifted sections come from one authoritative TECHNIQUE.md bundle; the derived output preserves the expected section order; the selected headings...
-- Source: [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
 
-### [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) - frontmatter-metadata-spine (`canonical`)
+### [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) - frontmatter-metadata-spine (`canonical`)
 
 - Summary: Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs.
 - Intent: Use shallow frontmatter and derived catalog outputs as a stable metadata spine for bundle...
@@ -847,9 +847,9 @@ See also:
 - Core contract: frontmatter stays shallow and bounded; the catalog remains fully derived from authoritative markdown-frontmatter.
 - Main risk: frontmatter widens until it starts carrying section meaning or policy semantics that belong in markdown.
 - Validate by: bundle identity and routing fields are visible in frontmatter; derived catalog entries match source frontmatter; the catalog helps answer...
-- Source: [TECHNIQUE.md](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
 
-### [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`canonical`)
+### [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`canonical`)
 
 - Summary: Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics.
 - Intent: Use a small typed set of direct bundle relations as bounded edge hints for...
@@ -860,7 +860,7 @@ See also:
 - Core contract: relations stay direct and typed; edge meaning is bounded to one-step adjacency hints.
 - Main risk: relations multiply until the signal-to-noise ratio drops and adjacency hints stop helping.
 - Validate by: each relation points to a real direct target; current consumers use the edges for one-step navigation rather than inference...
-- Source: [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
 
 ### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
@@ -875,7 +875,7 @@ See also:
 - Validate by: obvious sensitive surfaces were checked deliberately; the resulting artifact is still understandable; the sanitization level matches the intended audience.
 - Source: [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
 
-### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
+### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 - Summary: Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph.
 - Intent: Lift typed evidence notes into a bounded provenance surface so readers and tooling can...
@@ -886,9 +886,9 @@ See also:
 - Core contract: note paths and note kinds remain explicit; note meaning stays in authored markdown.
 - Main risk: note kinds drift until the manifest can no longer tell which provenance kind a note is meant to...
 - Validate by: bundles point to supporting notes through explicit evidence.kind and evidence.path; note kinds remain understandable and bounded; the derived provenance...
-- Source: [TECHNIQUE.md](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
 
-### [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) - risk-and-negative-effect-lift (`promoted`)
+### [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) - risk-and-negative-effect-lift (`promoted`)
 
 - Summary: Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy.
 - Intent: Lift richer Risks language into bounded caution-oriented lookup and reuse so reviewers and later...
@@ -899,7 +899,7 @@ See also:
 - Core contract: TECHNIQUE.md Risks remains the primary caution source; the five shadow-language distinctions stay explicit and bounded.
 - Main risk: reviewers can mistake the presence of five caution subsections for proof that the technique's shadow is already fully...
 - Validate by: the source bundle keeps Failure modes, Negative effects, Misuse patterns, Detection signals, and Mitigations inside ## Risks; caution lookup...
-- Source: [TECHNIQUE.md](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 ### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
 
@@ -1031,7 +1031,7 @@ See also:
 - Validate by: the bridge surface names one primary input and at least one supporting input when multiple sources are combined; the...
 - Source: [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md)
 
-### [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
+### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
 
 - Summary: Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.
 - Intent: Lift the repository's bounded public docs/status layer into derived routing knowledge so readers and...
@@ -1042,9 +1042,9 @@ See also:
 - Core contract: the authored docs remain the source of meaning; the derived surface stays bounded to the explicit public docs/status...
 - Main risk: the bounded docs/status set widens until the surface stops being a clear routing aid.
 - Validate by: the docs/status source set is bounded and explicit; the derived surface points back to the authored repo docs; local...
-- Source: [TECHNIQUE.md](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
 
-### [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
+### [AOA-T-0047](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
 
 - Summary: Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring.
 - Intent: Lift authored GitHub issue and pull-request review templates into a bounded derived intake surface...
@@ -1055,9 +1055,9 @@ See also:
 - Core contract: authored GitHub templates remain the source of review prompt meaning; the derived manifest stays bounded to prompt shape...
 - Main risk: template scopes drift from the authored .github files and the manifest stops matching the real intake shape.
 - Validate by: the derived surface matches the authored GitHub templates; the template scopes stay bounded to prompt shape and section inventory...
-- Source: [TECHNIQUE.md](../techniques/docs/github-review-template-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
 
-### [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
+### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
 
 - Summary: Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.
 - Intent: Lift authored _SEMANTIC_REVIEW.md docs into one derived boundary-review surface so readers and tooling can...
@@ -1068,7 +1068,7 @@ See also:
 - Core contract: authored semantic-review docs remain the source of review meaning; the derived surface stays cluster-bounded and review-shaped.
 - Main risk: clusters expand until the derived surface stops reflecting one real bounded seam.
 - Validate by: the authored semantic-review doc exists and stays readable as the source of review meaning; the derived surface can be...
-- Source: [TECHNIQUE.md](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 
 ### [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
 

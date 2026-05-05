@@ -163,14 +163,14 @@ Counts: `total` 8, `canonical` 3, `promoted` 5.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
-| [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs. |
-| [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
-| [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
-| [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
-| [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy. |
-| [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring. |
-| [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts. |
+| [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
+| [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs. |
+| [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
+| [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
+| [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
+| [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy. |
+| [AOA-T-0047](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring. |
+| [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts. |
 
 ## `history-artifacts`
 

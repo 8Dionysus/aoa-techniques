@@ -17,7 +17,7 @@ See also:
 - [`../templates/ADVERSE_EFFECTS_REVIEW.template.md`](../templates/ADVERSE_EFFECTS_REVIEW.template.md)
 - [`../templates/EXTERNAL_ORIGIN.template.md`](../templates/EXTERNAL_ORIGIN.template.md)
 - [`../templates/EXTERNAL_REVIEW.template.md`](../templates/EXTERNAL_REVIEW.template.md)
-- [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
+- [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
 
 This family uses one stable shape:
 
@@ -187,7 +187,7 @@ Not part of this wave:
 - no flattened top-level note semantics like `verdict`, `source_project`, or note scoring
 - no bundle or generated catalog changes beyond the bounded evidence note manifest
 
-The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context across origin, transfer, readiness, external provenance, external review, and canonical adverse-effects review notes.
+The current job is to keep the evidence-note provenance layer explicit and bounded, and the reusable technique now lives in [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) while the derived manifest still preserves note-level authorship and context across origin, transfer, readiness, external provenance, external review, and canonical adverse-effects review notes.
 
 This guide remains the authoritative contract doc for both the evidence-note manifest family and `EVIDENCE_NOTE_SURFACES.md`.
 

@@ -4,9 +4,13 @@ Guidance for coding agents and humans working under `techniques/docs/`.
 
 ## Purpose
 
-This domain stores documentation and source-lift techniques: how rules are distributed, how provenance is preserved, and how bounded reader surfaces are formed from authored sources.
+This domain stores documentation, provenance, boundary, and source-surface
+techniques whose current reviewed home is still the broad `docs` domain.
 
-Representative bundles here include `nested-rule-loading`, `single-source-rule-distribution`, `source-of-truth-layout`, `markdown-technique-section-lift`, `repo-doc-surface-lift`, and `semantic-review-surface-lift`.
+Representative bundles here include `source-of-truth-layout`,
+`lightweight-status-snapshot`, `bounded-context-map`,
+`public-safe-artifact-sanitization`, `single-scoped-evidence-reference`, and
+`skill-vs-command-boundary`.
 
 ## Domain rules
 
@@ -18,6 +22,8 @@ Keep examples public-safe and sanitized, especially when the technique touches p
 
 Do not smuggle hidden execution policy into a docs technique.
 Do not widen a documentation technique into graph semantics, runtime orchestration, or a repo-specific workflow unless the authored bundle already states that contract clearly.
+If the placement question is derived source-lift into bounded reader knowledge,
+check `techniques/knowledge-lift/AGENTS.md` before adding or moving a bundle.
 If the change is really about live repo docs or generated manifests, edit those surfaces directly and keep the technique reusable.
 
 ## Hard NO

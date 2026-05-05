@@ -254,8 +254,14 @@ It accepts `kag-source-lift` as the first `knowledge-lift` migration pilot after
 directly reading `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`,
 `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048`.
 
-The next reform slice should run the sixth pilot migration before moving
-another shelf.
+The sixth pilot migration moves `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`,
+`AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` into
+`techniques/knowledge-lift/kag-source-lift/` without changing `domain`,
+`kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md`](../legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md).
+
+The next reform slice should review the landed `kag-source-lift` pilot before
+moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

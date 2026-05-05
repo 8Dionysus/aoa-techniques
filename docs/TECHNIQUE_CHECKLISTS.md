@@ -390,23 +390,23 @@ See also:
 |---|---|---|---|---|
 | Bounded Context Map Checklist | `present` | `7` | `techniques/docs/bounded-context-map/checks/bounded-context-map-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-context-map/TECHNIQUE.md) |
 
-### [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
+### [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) - markdown-technique-section-lift (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Section Lift Checklist | `present` | `6` | `techniques/docs/markdown-technique-section-lift/checks/section-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) |
+| Section Lift Checklist | `present` | `6` | `techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/checks/section-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) |
 
-### [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) - frontmatter-metadata-spine (`canonical`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Metadata Spine Checklist | `present` | `5` | `techniques/docs/frontmatter-metadata-spine/checks/metadata-spine-checklist.md` | [TECHNIQUE.md](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) |
-
-### [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`canonical`)
+### [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) - frontmatter-metadata-spine (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Relation Lift Checklist | `present` | `5` | `techniques/docs/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) |
+| Metadata Spine Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/checks/metadata-spine-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) |
+
+### [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) - bounded-relation-lift-for-kag (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Relation Lift Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
 ### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
@@ -414,17 +414,17 @@ See also:
 |---|---|---|---|---|
 | Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
-### [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
+### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Evidence Note Provenance Checklist | `present` | `5` | `techniques/docs/evidence-note-provenance-lift/checks/evidence-note-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) |
+| Evidence Note Provenance Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/checks/evidence-note-provenance-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) |
 
-### [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) - risk-and-negative-effect-lift (`promoted`)
+### [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) - risk-and-negative-effect-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Caution Lift Checklist | `present` | `5` | `techniques/docs/risk-and-negative-effect-lift/checks/caution-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) |
+| Caution Lift Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/checks/caution-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
 
@@ -486,23 +486,23 @@ See also:
 |---|---|---|---|---|
 | multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/docs/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
-### [AOA-T-0046](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
+### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Repo Doc Surface Lift Checklist | `present` | `7` | `techniques/docs/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md) |
+| Repo Doc Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
 
-### [AOA-T-0047](../techniques/docs/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| GitHub Review Template Lift Checklist | `present` | `6` | `techniques/docs/github-review-template-lift/checks/github-review-template-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/github-review-template-lift/TECHNIQUE.md) |
-
-### [AOA-T-0048](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
+### [AOA-T-0047](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/docs/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md) |
+| GitHub Review Template Lift Checklist | `present` | `6` | `techniques/knowledge-lift/kag-source-lift/github-review-template-lift/checks/github-review-template-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) |
+
+### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
 

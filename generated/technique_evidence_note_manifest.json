@@ -9058,10 +9058,10 @@
     },
     {
       "id": "AOA-T-0018",
-      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/markdown-technique-section-lift/notes/adverse-effects-review.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -9218,7 +9218,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/markdown-technique-section-lift/notes/canonical-readiness.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -9371,7 +9371,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/markdown-technique-section-lift/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -9448,7 +9448,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/markdown-technique-section-lift/notes/second-context-adaptation.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -9501,7 +9501,7 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the source bundle is `techniques/docs/markdown-technique-section-lift/TECHNIQUE.md`; the derived surface is the section manifest and reader companion, not a new authored section store"
+                  "value_markdown": "the source bundle is `techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md`; the derived surface is the section manifest and reader companion, not a new authored section store"
                 },
                 {
                   "order": 2,
@@ -9616,10 +9616,10 @@
     },
     {
       "id": "AOA-T-0019",
-      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/adverse-effects-review.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -9776,7 +9776,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/canonical-readiness.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -9911,7 +9911,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -9988,7 +9988,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/frontmatter-metadata-spine/notes/second-context-adaptation.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -10145,10 +10145,10 @@
     },
     {
       "id": "AOA-T-0020",
-      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/evidence-note-provenance-lift/notes/canonical-readiness.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -10287,7 +10287,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/evidence-note-provenance-lift/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -10364,7 +10364,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/evidence-note-provenance-lift/notes/second-context-adaptation.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -10521,10 +10521,10 @@
     },
     {
       "id": "AOA-T-0021",
-      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/adverse-effects-review.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -10693,7 +10693,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/canonical-readiness.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -10833,7 +10833,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -10910,7 +10910,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/bounded-relation-lift-for-kag/notes/second-context-adaptation.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -11070,10 +11070,10 @@
     },
     {
       "id": "AOA-T-0022",
-      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/risk-and-negative-effect-lift/notes/canonical-readiness.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -11208,7 +11208,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/risk-and-negative-effect-lift/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -11289,7 +11289,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/risk-and-negative-effect-lift/notes/second-context-adaptation.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -23044,10 +23044,10 @@
     },
     {
       "id": "AOA-T-0046",
-      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/repo-doc-surface-lift/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -23127,10 +23127,10 @@
     },
     {
       "id": "AOA-T-0047",
-      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/github-review-template-lift/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -23210,10 +23210,10 @@
     },
     {
       "id": "AOA-T-0048",
-      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/semantic-review-surface-lift/notes/origin-evidence.md",
+          "note_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",

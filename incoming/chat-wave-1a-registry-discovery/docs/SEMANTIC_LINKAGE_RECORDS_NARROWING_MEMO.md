@@ -12,7 +12,7 @@ It does not create a canonical bundle or authorize import by itself.
 
 ## Overlap watch
 
-- [AOA-T-0021](../../../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [AOA-T-0021](../../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [AOA-T-0063](../../../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md)
 - [AOA-T-0064](../../../techniques/docs/capability-discovery/TECHNIQUE.md)
 
@@ -39,7 +39,7 @@ Even that smaller target is not stable enough yet, because the donor still prese
 ## What stays out
 
 - broad graph semantics, ontology expansion, and KAG architecture
-- generic relation doctrine already covered by [AOA-T-0021](../../../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- generic relation doctrine already covered by [AOA-T-0021](../../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - trust, signature, and public-key verification flows
 - directory product semantics, runtime routing, and distributed-network claims
 - speculative claims that semantic linkage is already a reusable public contract when the donor surface is still mostly platform substrate

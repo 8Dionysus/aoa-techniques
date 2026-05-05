@@ -90,6 +90,10 @@ The format is intentionally simple and human-first.
   `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`,
   `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` as the sixth tree pilot while
   keeping the review itself non-mutating
+- moved `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`,
+  `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` into
+  `techniques/knowledge-lift/kag-source-lift/` while keeping `domain`, `kind`,
+  IDs, status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

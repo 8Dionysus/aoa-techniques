@@ -40,13 +40,13 @@ Run the external evidence queue in this order:
    - [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
    - [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 2. markdown-first and fresh-extraction follow-through:
-   - [AOA-T-0020](../../../../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
-   - [AOA-T-0046](../../../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
-   - [AOA-T-0047](../../../../techniques/docs/github-review-template-lift/TECHNIQUE.md)
-   - [AOA-T-0048](../../../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+   - [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
+   - [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
+   - [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
+   - [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 3. long-gap holds:
    - [AOA-T-0005](../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
-   - [AOA-T-0022](../../../../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
+   - [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 Closed shell-agent precedents:
 

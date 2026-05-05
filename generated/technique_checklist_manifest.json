@@ -761,10 +761,10 @@
     },
     {
       "id": "AOA-T-0018",
-      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/markdown-technique-section-lift/checks/section-lift-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/checks/section-lift-checklist.md",
           "title": "Section Lift Checklist",
           "intro_markdown": "Use this checklist to confirm that a section-level lift still behaves like a derived markdown surface rather than a second authored source.",
           "items": [
@@ -798,10 +798,10 @@
     },
     {
       "id": "AOA-T-0019",
-      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/frontmatter-metadata-spine/checks/metadata-spine-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/checks/metadata-spine-checklist.md",
           "title": "Metadata Spine Checklist",
           "intro_markdown": "Use this checklist to confirm that frontmatter still behaves like a bounded metadata spine rather than a shadow copy of the full technique.",
           "items": [
@@ -831,10 +831,10 @@
     },
     {
       "id": "AOA-T-0020",
-      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/evidence-note-provenance-lift/checks/evidence-note-provenance-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/checks/evidence-note-provenance-checklist.md",
           "title": "Evidence Note Provenance Checklist",
           "intro_markdown": "Use this checklist to confirm that note-level provenance stays bounded and markdown-first.",
           "items": [
@@ -864,10 +864,10 @@
     },
     {
       "id": "AOA-T-0021",
-      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md",
           "title": "Relation Lift Checklist",
           "intro_markdown": "Use this checklist to confirm that direct relations still behave like bounded adjacency hints.",
           "items": [
@@ -897,10 +897,10 @@
     },
     {
       "id": "AOA-T-0022",
-      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/risk-and-negative-effect-lift/checks/caution-lift-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/checks/caution-lift-checklist.md",
           "title": "Caution Lift Checklist",
           "intro_markdown": "Use this checklist to confirm that a caution-oriented lift still behaves like bounded markdown-first lookup rather than a new policy or metadata layer.",
           "items": [
@@ -2041,10 +2041,10 @@
     },
     {
       "id": "AOA-T-0046",
-      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md",
           "title": "Repo Doc Surface Lift Checklist",
           "intro_markdown": "Use this checklist to confirm the repo-doc surface still behaves like bounded routing knowledge.",
           "items": [
@@ -2082,10 +2082,10 @@
     },
     {
       "id": "AOA-T-0047",
-      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/github-review-template-lift/checks/github-review-template-lift-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/checks/github-review-template-lift-checklist.md",
           "title": "GitHub Review Template Lift Checklist",
           "intro_markdown": "Use this checklist to confirm that GitHub review templates still behave like a derived intake surface rather than a decision engine.",
           "items": [
@@ -2119,10 +2119,10 @@
     },
     {
       "id": "AOA-T-0048",
-      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md",
+          "check_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md",
           "title": "Semantic Review Surface Lift Checklist",
           "intro_markdown": "Use this checklist to confirm that the review surface still behaves like a derived markdown lookup aid rather than a new decision engine.",
           "items": [
