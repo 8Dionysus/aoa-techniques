@@ -359,8 +359,13 @@ completes the previous step to review the landed `evaluation-chain` pilot
 before choosing any thirteenth shelf, and chooses `published-summary` for the
 next direct-read migration review.
 
-The next reform slice should run that `published-summary` direct-read review
-before any thirteenth shelf migration.
+The thirteenth migration review is
+[Published-Summary Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/published-summary-direct-read-migration-review.md).
+It accepts `published-summary` as the thirteenth migration pilot after
+directly reading `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011`.
+
+The next reform slice should run the thirteenth pilot migration before any
+other shelf movement.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

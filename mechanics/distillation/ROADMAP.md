@@ -173,8 +173,15 @@
    `pilot-validated`, completing the previous step to review the landed
    `evaluation-chain` pilot before choosing any thirteenth shelf and choosing
    `published-summary` for the next direct-read migration review. The next
-   bounded step is that `published-summary` direct-read review before any
-   thirteenth shelf migration.
+   planned step was to run that `published-summary` direct-read review before
+   any thirteenth shelf migration. The `published-summary` direct-read review
+   is now landed as `accepted-for-thirteenth-migration-pilot`; it accepts
+   exactly `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011` while
+   keeping telemetry owner doctrine, dashboard ownership, runtime storage
+   policy, archive governance, remediation execution, integrity verdict law,
+   release policy, proof verdict law, generic reporting platform, and
+   neighboring shelves outside the move. The next bounded step is the
+   thirteenth pilot migration before any other shelf movement.
 
 ## Hold line
 

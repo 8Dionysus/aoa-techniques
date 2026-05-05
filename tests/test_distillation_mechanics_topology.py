@@ -116,6 +116,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-skill-support-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/evaluation-chain-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-evaluation-chain-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/published-summary-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -3510,6 +3511,106 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ):
             with self.subTest(old_path=old_path):
                 self.assertTrue((REPO_ROOT / old_path).is_file())
+
+        self.assertFalse((REPO_ROOT / "techniques" / "proof" / "published-summary").exists())
+
+    def test_published_summary_direct_read_review_accepts_thirteenth_pilot(
+        self,
+    ) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "published-summary-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Published-Summary Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-thirteenth-migration-pilot", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not\n`tree_path` frontmatter", review)
+        self.assertIn("Accept `published-summary` as the thirteenth", review)
+        self.assertIn("Direct Bundle Read", review)
+        self.assertIn("Why The Shelf Holds", review)
+        self.assertIn("Proof Trunk Fit", review)
+        self.assertIn("Boundary Watch Accepted", review)
+        for technique_id in (
+            "AOA-T-0006",
+            "AOA-T-0008",
+            "AOA-T-0010",
+            "AOA-T-0011",
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+
+        for old_path in (
+            "techniques/evaluation/latest-alias-plus-history-copy/",
+            "techniques/evaluation/published-summary-remediation-snapshot/",
+            "techniques/evaluation/telemetry-integrity-snapshot/",
+            "techniques/evaluation/required-vs-optional-source-rendering/",
+        ):
+            with self.subTest(old_path=old_path):
+                self.assertIn(old_path, review)
+
+        self.assertIn("techniques/proof/published-summary/", review)
+        self.assertIn("Move exactly these four bundles", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("Do not add `tree_path`", review)
+        self.assertIn("Do not treat `published-summary` as telemetry owner doctrine", review)
+        self.assertIn("Do not let `AOA-T-0011` become only a package appendix", review)
+        self.assertIn("Run the thirteenth pilot migration", review)
+        self.assertIn("published-summary-direct-read-migration-review", reviews_index)
+        self.assertIn("published-summary direct-read review: landed", ingress)
+        self.assertIn("accepted-for-thirteenth-migration-pilot", ingress)
+        self.assertIn("Published-summary direct-read migration review", landing_log)
+        self.assertIn("proof-facing package", landing_log)
+        self.assertIn("accepted-for-thirteenth-migration-pilot", distillation_roadmap)
+        self.assertIn("Run the thirteenth `published-summary` pilot", root_roadmap)
+        self.assertIn("Published-Summary Direct-Read Migration Review", tree_contract)
+        self.assertIn("AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011", tree_contract)
+        self.assertIn(
+            "accepted the `published-summary` direct-read migration review",
+            changelog,
+        )
+
+        for current_path in (
+            "techniques/evaluation/latest-alias-plus-history-copy/TECHNIQUE.md",
+            "techniques/evaluation/published-summary-remediation-snapshot/TECHNIQUE.md",
+            "techniques/evaluation/telemetry-integrity-snapshot/TECHNIQUE.md",
+            "techniques/evaluation/required-vs-optional-source-rendering/TECHNIQUE.md",
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
 
         self.assertFalse((REPO_ROOT / "techniques" / "proof" / "published-summary").exists())
 

@@ -3,6 +3,41 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Published-summary direct-read migration review
+
+Changed:
+
+- added
+  [published-summary-direct-read-migration-review](parts/technique-reform-ingress/reviews/published-summary-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`,
+  and `AOA-T-0011`
+- accepted `published-summary` as the thirteenth bounded migration pilot
+  because direct reading confirmed the proof-facing package: latest/history
+  storage, bounded remediation snapshot, diagnostic integrity snapshot, and
+  required-versus-optional summary-source rendering
+- kept the review non-mutating: no technique bundle moved, no frontmatter
+  changed, and no generated projection became authority
+- kept telemetry owner doctrine, dashboard ownership, runtime storage policy,
+  archive governance, remediation execution, integrity verdict law, release
+  policy, proof verdict law, generic reporting platform, and neighboring
+  shelves outside the migration wave
+- preserved the `AOA-T-0011` watch seam: rendering remains reusable consumer
+  policy, not only a package appendix
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no thirteenth shelf migration happened from the review alone
+
 ## 2026-05-05 - Landed evaluation-chain pilot review
 
 Changed:
