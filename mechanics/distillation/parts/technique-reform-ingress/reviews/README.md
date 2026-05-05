@@ -47,5 +47,6 @@ Current reviews:
 - [intent-chain-direct-read-migration-review](intent-chain-direct-read-migration-review.md)
 - [landed-intent-chain-pilot-review](landed-intent-chain-pilot-review.md)
 - [agent-workflows-core-direct-read-migration-review](agent-workflows-core-direct-read-migration-review.md)
+- [landed-agent-workflows-core-pilot-review](landed-agent-workflows-core-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

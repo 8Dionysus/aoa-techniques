@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed agent-workflows-core pilot review
+
+Changed:
+
+- added
+  [landed-agent-workflows-core-pilot-review](parts/technique-reform-ingress/reviews/landed-agent-workflows-core-pilot-review.md)
+  as the landed review after the eighteenth path migration
+- validated `agent-workflows-core` as the third successful execution trunk
+  shelf
+- confirmed the shelf remains a bounded mixed-kind execution backbone rather
+  than generic agent doctrine, shell policy, autonomous orchestration, or broad
+  methodology
+- preserved `AOA-T-0028` as `kind: guardrail` and `AOA-T-0031` as
+  `kind: composition`
+- chose `continuity/donor-harvest` for the next direct-read migration review
+  without moving files
+- kept memory authority, playbook quest authority, progression doctrine, owner
+  routing, role progression, stats ownership, session-closeout automation, and
+  neighboring continuity or governance shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `tree_path` frontmatter was added
+
 ## 2026-05-05 - Agent-workflows-core tree pilot migration
 
 Changed:

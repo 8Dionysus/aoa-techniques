@@ -205,6 +205,9 @@ The format is intentionally simple and human-first.
   `AOA-T-0031` into `techniques/execution/agent-workflows-core/` while
   keeping `domain`, `kind`, IDs, status, evidence, and `tree_path`
   frontmatter unchanged
+- accepted the landed `agent-workflows-core` pilot review and selected
+  `continuity/donor-harvest` for the next direct-read migration review without
+  moving a nineteenth shelf yet
 
 ### Validation
 
