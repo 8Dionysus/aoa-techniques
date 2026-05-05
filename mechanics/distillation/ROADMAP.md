@@ -64,7 +64,11 @@
    release-check validation in the same wave. The landed `diagnosis-repair`
    pilot review is also landed as `pilot-validated`, and
    `instruction-surface` is now chosen for the next direct-read migration
-   review before any fifth shelf moves.
+   review. The `instruction-surface` direct-read review is now landed as
+   `accepted-for-fifth-migration-pilot`, and the next tree move is the fifth
+   pilot migration for exactly `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
+   `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` before any
+   other shelf moves.
 
 ## Hold line
 

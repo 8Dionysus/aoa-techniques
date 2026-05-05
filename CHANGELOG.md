@@ -75,6 +75,10 @@ The format is intentionally simple and human-first.
 - accepted the landed `diagnosis-repair` pilot review and selected
   `instruction-surface` for the next direct-read migration review without
   moving a fifth shelf yet
+- accepted the `instruction-surface` direct-read migration review over
+  `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`,
+  `AOA-T-0030`, and `AOA-T-0035` as the fifth tree pilot while keeping the
+  review itself non-mutating
 
 ### Validation
 

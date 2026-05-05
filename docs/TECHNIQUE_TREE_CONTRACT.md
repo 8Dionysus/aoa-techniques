@@ -230,8 +230,20 @@ The landed fourth pilot review is
 It validates the `diagnosis-repair` migration as the first successful recovery
 trunk test and chooses `instruction-surface` for the next direct-read review.
 
-The next reform slice should direct-read `instruction-surface` before moving
-any fifth migration candidate.
+The fifth migration review is
+[Instruction-Surface Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/instruction-surface-direct-read-migration-review.md).
+It accepts `instruction-surface` as the fifth migration pilot after directly
+reading `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`,
+`AOA-T-0030`, and `AOA-T-0035`.
+
+The next reform slice should:
+
+1. move exactly `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`,
+   `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into
+   `techniques/instruction/instruction-surface/`
+2. add the minimal `instruction/` route card and root legacy receipt
+3. repair authored links, rebuild generated surfaces, and keep frontmatter
+   unchanged
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
