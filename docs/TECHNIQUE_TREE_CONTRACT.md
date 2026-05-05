@@ -454,8 +454,14 @@ keeps router ownership, API contract authority, runtime dispatch, real-action
 permission, automation governance, CI policy, broad rollout doctrine, and
 neighboring execution shelves outside the shelf.
 
-The next reform slice should migrate those two bundles into
-`techniques/execution/intent-chain/` before reviewing the landed shelf.
+The seventeenth pilot migration moves exactly those two bundles into
+`techniques/execution/intent-chain/` without changing `domain`, `kind`, status,
+relations, evidence, support files, or `tree_path` frontmatter. The root
+receipt is
+[`legacy/receipts/2026-05-05-intent-chain-tree-pilot.md`](../legacy/receipts/2026-05-05-intent-chain-tree-pilot.md).
+
+The next reform slice should review the landed `intent-chain` pilot before
+choosing any eighteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

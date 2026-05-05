@@ -45,7 +45,7 @@ Run the external evidence queue in this order:
    - [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
    - [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 3. long-gap holds:
-   - [AOA-T-0005](../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+   - [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
    - [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 Closed shell-agent precedents:

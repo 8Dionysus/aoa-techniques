@@ -22,12 +22,12 @@ See also:
 |---|---|---|---|
 | Minimal Change Flow | `present` | `techniques/agent-workflows/plan-diff-apply-verify-report/examples/minimal-change-flow.md` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
 
-### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
+### [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Non-UI Intent Chain | `present` | `techniques/agent-workflows/intent-plan-dry-run-contract-chain/examples/concrete-non-ui-intent-chain.md` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
-| Minimal Intent Chain | `present` | `techniques/agent-workflows/intent-plan-dry-run-contract-chain/examples/minimal-intent-chain.md` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| Concrete Non-UI Intent Chain | `present` | `techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/examples/concrete-non-ui-intent-chain.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| Minimal Intent Chain | `present` | `techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/examples/minimal-intent-chain.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 
 ### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
 
@@ -58,12 +58,12 @@ See also:
 | Concrete Shell Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 | Minimal Shell-Composable Agent Invocation | `present` | `techniques/agent-workflows/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 
-### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Concrete Non-UI Intent Rollout | `present` | `techniques/agent-workflows/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
-| minimal-intent-rollout | `present` | `techniques/agent-workflows/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
+| Concrete Non-UI Intent Rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
+| minimal-intent-rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 
 ### [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
 

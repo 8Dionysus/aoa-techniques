@@ -150,7 +150,7 @@
           "domain": "agent-workflows",
           "status": "canonical",
           "summary": "Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists.",
-          "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+          "technique_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
           "kind": "workflow"
         },
         {
@@ -159,7 +159,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
-          "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+          "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
           "kind": "workflow"
         }
       ]

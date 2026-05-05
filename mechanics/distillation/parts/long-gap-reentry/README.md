@@ -14,7 +14,7 @@ What remains is not donor selection, but one more independent reinforcement beyo
 
 This design wave covers:
 
-- [AOA-T-0005](../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+- [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 - [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 It does not reopen [AOA-T-0013](../../../../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) or [AOA-T-0018](../../../../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md), because those bundles have now graduated through follow-up canonical review, or [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md), because that remains an evidence-prep question rather than a long-gap design problem.

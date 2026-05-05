@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Intent-chain tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0004` and `AOA-T-0005` into
+  `techniques/execution/intent-chain/`
+- extended the compact `techniques/execution/AGENTS.md` route card with the
+  second execution shelf
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-intent-chain-tree-pilot.md`
+- repaired authored links from semantic reviews, audit evidence surfaces,
+  long-gap reentry, active review sources, and root docs
+- kept `domain`, `kind`, status, IDs, evidence, relations, support files,
+  maturity, validation-strength metadata, and public-safety posture unchanged
+- preserved `AOA-T-0005` as `promoted`; path movement did not imply canonical
+  promotion
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no neighboring execution shelf was moved
+- no router ownership, API contract authority, runtime dispatch, real-action
+  permission, automation governance, CI policy, broad rollout doctrine, or
+  proof of real-execution safety was imported into the shelf
+
 ## 2026-05-05 - Intent-chain direct-read migration review
 
 Changed:
@@ -1752,9 +1784,9 @@ Not moved:
 Changed:
 
 - remapped
-  [new-intent-rollout-checklist](../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+  [new-intent-rollout-checklist](../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
   from `guardrail` to `workflow`
-- kept the bundle at `agent-workflows`, `promoted`, and `source_backed`
+- kept the bundle at `domain: agent-workflows`, `promoted`, and `source_backed`
   posture with the same ID, evidence, relations, and public-safety state
 - updated the technique reform ingress review pack so `AOA-T-0005` is landed
   and `AOA-T-0052` becomes the next narrow destination-check candidate

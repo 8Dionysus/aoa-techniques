@@ -40,29 +40,29 @@ and checking an intent-shaped execution chain before live action.
 
 ## Sources Read
 
-- [AOA-T-0004 intent-plan-dry-run-contract-chain](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md)
-- [AOA-T-0004 checklist](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md)
-- [AOA-T-0004 examples](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/examples/minimal-intent-chain.md)
+- [AOA-T-0004 intent-plan-dry-run-contract-chain](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md)
+- [AOA-T-0004 checklist](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md)
+- [AOA-T-0004 examples](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/examples/minimal-intent-chain.md)
   and
-  [concrete example](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/examples/concrete-non-ui-intent-chain.md)
+  [concrete example](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/examples/concrete-non-ui-intent-chain.md)
 - AOA-T-0004 support notes:
-  [bounded transfer](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/bounded-transfer.md),
-  [origin evidence](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/origin-evidence.md),
-  [second context](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/second-context-adaptation.md),
-  [canonical readiness](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/canonical-readiness.md),
+  [bounded transfer](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/bounded-transfer.md),
+  [origin evidence](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/origin-evidence.md),
+  [second context](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/second-context-adaptation.md),
+  [canonical readiness](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/canonical-readiness.md),
   and
-  [adverse effects](../../../../../techniques/agent-workflows/intent-plan-dry-run-contract-chain/notes/adverse-effects-review.md)
-- [AOA-T-0005 new-intent-rollout-checklist](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
-- [AOA-T-0005 checklist](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/checks/intent-rollout-checklist.md)
-- [AOA-T-0005 examples](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/examples/minimal-intent-rollout.md)
+  [adverse effects](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/notes/adverse-effects-review.md)
+- [AOA-T-0005 new-intent-rollout-checklist](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
+- [AOA-T-0005 checklist](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md)
+- [AOA-T-0005 examples](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md)
   and
-  [concrete example](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md)
+  [concrete example](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md)
 - AOA-T-0005 support notes:
-  [rollout-failure triage](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/notes/rollout-failure-triage.md),
-  [origin evidence](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/notes/origin-evidence.md),
-  [second context](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/notes/second-context-adaptation.md),
+  [rollout-failure triage](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/notes/rollout-failure-triage.md),
+  [origin evidence](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/notes/origin-evidence.md),
+  [second context](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/notes/second-context-adaptation.md),
   and
-  [canonical readiness](../../../../../techniques/agent-workflows/new-intent-rollout-checklist/notes/canonical-readiness.md)
+  [canonical readiness](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/notes/canonical-readiness.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
 - [Intent-chain semantic review](../../../../../docs/INTENT_CHAIN_SEMANTIC_REVIEW.md)

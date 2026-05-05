@@ -254,7 +254,12 @@
    CI policy, broad rollout doctrine, and neighboring execution shelves outside
    the shelf. The next bounded step is to migrate those two bundles only after
    path movement, support-file carry, receipt, link-repair, generated surface,
-   and validation work move together.
+   and validation work move together. The seventeenth pilot migration is now
+   landed exactly for those two bundles under
+   `techniques/execution/intent-chain/`, with updated execution route-card
+   accounting, root legacy receipt accounting, link repair, generated rebuilds,
+   and release-check validation in the same wave. The next bounded step is to
+   review the landed `intent-chain` pilot before choosing any eighteenth shelf.
 
 ## Hold line
 

@@ -47,7 +47,7 @@ These bundles still need external evidence, but no new bounded lane note is wort
 | technique | current blocker | next honest trigger |
 |---|---|---|
 | [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | still needs one second markdown-first corpus beyond the current donor family | one committed non-eval corpus that reuses typed note-kind and note-path provenance |
-| [AOA-T-0005](../../../../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) | remains a long-gap donor lane, not an active sprint target | one non-origin rollout record proving the same checklist on a real new-intent extension path |
+| [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | remains a long-gap donor lane, not an active sprint target | one non-origin rollout record proving the same checklist on a real new-intent extension path |
 | [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | remains a long-gap donor lane, not an active sprint target | one second committed corpus using the exact five-part `Risks` split |
 
 ## Notes

@@ -56,7 +56,7 @@
       "core_contract_short": "Core contract: the adapter does not perform real input events or equivalent side effects; the planning step emits a plan...",
       "main_risk_short": "Main risk: dry-run artifacts look complete but do not reflect real execution constraints, creating false confidence.",
       "validation_short": "Validate by checking the intent payload is accepted or rejected by explicit normalization rules; the normalized plan is written as an artifact...",
-      "technique_path": "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md"
+      "technique_path": "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0005",
@@ -70,7 +70,7 @@
       "core_contract_short": "Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.",
       "main_risk_short": "Main risk: fixture drift makes the rollout look green while real inputs have already diverged.",
       "validation_short": "Validate by checking the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...",
-      "technique_path": "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md"
+      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0006",

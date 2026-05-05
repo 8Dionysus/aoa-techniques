@@ -22,11 +22,11 @@ See also:
 |---|---|---|---|---|
 | Review Checklist | `present` | `6` | `techniques/agent-workflows/plan-diff-apply-verify-report/checks/review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) |
 
-### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
+### [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Chain Contract Checklist | `present` | `10` | `techniques/agent-workflows/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
+| Chain Contract Checklist | `present` | `10` | `techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/checks/chain-contract-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 
 ### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
 
@@ -52,11 +52,11 @@ See also:
 |---|---|---|---|---|
 | Shell-Composable Agent Invocation Checklist | `absent` | `7` | `techniques/agent-workflows/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) |
 
-### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| intent-rollout-checklist | `absent` | `11` | `techniques/agent-workflows/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) |
+| intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 
 ### [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
 

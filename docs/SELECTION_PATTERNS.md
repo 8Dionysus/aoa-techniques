@@ -22,7 +22,7 @@ If you still need repo-level orientation before following a working set or commo
 
 | domain | canonical defaults | start here |
 |---|---|---|
-| `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md), [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md), [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized. |
+| `agent-workflows` | [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md), [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md), [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) | Start with the canonical workflow contract, then add narrower chain helpers only when the path gets more specialized. |
 | `docs` | [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md), [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md), [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md), [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md), [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md), [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md), [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) | Start with the canonical document-role layout, then inspect the docs boundary pair or instruction-surface cluster when generation, source ownership, and entrypoint discipline become the next bounded question. |
 | `evaluation` | [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md), [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md), [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md), [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) | Start with the canonical summary/storage backbone, then move into remediation, integrity, or rendering policy as downstream needs appear. |
 | `system-recovery` | - | Start with bounded degraded continuation and regrounding posture before inventing wider repair or runtime-control doctrine. |
@@ -33,7 +33,7 @@ If you still need repo-level orientation before following a working set or commo
 
 ### Agent-workflows canonical core
 
-- Techniques: [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md)
+- Techniques: [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md)
 - Review: [AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - Why grouped: Canonical workflow backbone, intent-chain specialization, and bounded execution slicing for the current agent-workflows core.
 
@@ -57,7 +57,7 @@ If you still need repo-level orientation before following a working set or commo
 
 ### Intent-chain pair
 
-- Techniques: [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+- Techniques: [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 - Review: [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md)
 - Why grouped: Artifact-first intent normalization and dry-run contract validation plus safe rollout of one new intent type on top of that chain.
 

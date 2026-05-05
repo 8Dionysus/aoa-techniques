@@ -28,7 +28,7 @@ See also:
 - Validate by: a concrete plan exists before apply; the diff stays inside the declared scope; at least one explicit validation method...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
 
-### [AOA-T-0004](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
+### [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
 - Summary: Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists.
 - Intent: Turn high-level intent into a traceable, reviewable, dry-run-only chain that emits explicit artifacts and...
@@ -39,7 +39,7 @@ See also:
 - Core contract: the adapter does not perform real input events or equivalent side effects; the planning step emits a plan...
 - Main risk: dry-run artifacts look complete but do not reflect real execution constraints, creating false confidence.
 - Validate by: the intent payload is accepted or rejected by explicit normalization rules; the normalized plan is written as an artifact...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md)
 
 ### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
 
@@ -93,7 +93,7 @@ See also:
 - Validate by: the run behaves like one shell-visible invocation; inputs and outputs can move through stdin, stdout, files, or pipes; the...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
 
-### [AOA-T-0005](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 - Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
 - Intent: Extend an existing intent -> plan -> dry-run -> contract-check pipeline with one new...
@@ -104,7 +104,7 @@ See also:
 - Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.
 - Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
 - Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 
 ### [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
 
