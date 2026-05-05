@@ -96,7 +96,9 @@
    under `techniques/instruction/docs-boundary/`, with the instruction route
    card extended for the second shelf, root legacy receipt accounting, link
    repair, generated rebuilds, and release-check validation in the same wave.
-   The next bounded step is the landed `docs-boundary` pilot review before any
+   The landed `docs-boundary` pilot review is also landed as
+   `pilot-validated`, validates the second instruction trunk shelf, and chooses
+   `capability-registry` for the next direct-read migration review before any
    eighth shelf moves.
 
 ## Hold line
