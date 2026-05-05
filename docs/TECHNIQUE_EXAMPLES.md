@@ -490,11 +490,11 @@ See also:
 |---|---|---|---|
 | Minimal Skill Vs Command Boundary | `present` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
 
-### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
+### [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Skill Marketplace Curation | `present` | `techniques/docs/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md` | [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) |
+| Minimal Skill Marketplace Curation | `present` | `techniques/instruction/skill-discovery/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
 
 ### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
 
@@ -620,11 +620,11 @@ See also:
 |---|---|---|---|
 | Minimal Baseline First Additive Profile Benchmarks | `present` | `techniques/evaluation/baseline-first-additive-profile-benchmarks/examples/minimal-baseline-first-additive-profile-benchmarks.md` | [TECHNIQUE.md](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 
-### [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
+### [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Upstream Skill Health Checking | `present` | `techniques/evaluation/upstream-skill-health-checking/examples/minimal-upstream-skill-health-checking.md` | [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) |
+| Minimal Upstream Skill Health Checking | `present` | `techniques/instruction/skill-discovery/upstream-skill-health-checking/examples/minimal-upstream-skill-health-checking.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) |
 
 ## `system-recovery`
 

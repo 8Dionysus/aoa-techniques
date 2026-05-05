@@ -107,11 +107,12 @@ class InstructionSurfaceTreePilotTestCase(unittest.TestCase):
         text = (REPO_ROOT / "techniques" / "instruction" / "AGENTS.md").read_text(
             encoding="utf-8"
         )
+        flat_text = " ".join(text.split())
 
         self.assertIn("This is a tree trunk, not a frontmatter domain.", text)
         self.assertIn("instruction-surface", text)
         self.assertIn("Do not add `tree_path` frontmatter", text)
-        self.assertIn("generated context authority", text)
+        self.assertIn("generated context authority", flat_text)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
         receipt = (

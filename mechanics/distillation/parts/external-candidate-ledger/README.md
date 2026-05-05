@@ -126,7 +126,7 @@ The old wave notes are no longer active execution instructions, but their
 landed anchors remain useful for route memory:
 
 - Wave A external anchor: [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
-- Wave B external anchor: [AOA-T-0041](../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
+- Wave B external anchor: [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md)
 - Wave C external anchor: [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
 - adjacent landed imports from the earlier external backlog include
   [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md),
@@ -135,7 +135,7 @@ landed anchors remain useful for route memory:
   [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md),
   [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md),
   [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md),
-  [AOA-T-0042](../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md),
+  [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md),
   [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md),
   and [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
 

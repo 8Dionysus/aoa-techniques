@@ -12,7 +12,7 @@ It does not create a canonical bundle or authorize import by itself.
 
 ## Overlap watch
 
-- [AOA-T-0042](../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md)
+- [AOA-T-0042](../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
 - [AOA-T-0065](../../../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md)
 
 ## Boundary statement
@@ -32,7 +32,7 @@ The narrowest plausible extraction target is:
 
 - a pre-load source-risk verdict that runs before a proxied tool surface is trusted
 
-Even that smaller target is not stable enough yet, because the donor still presents it mainly as scanner-platform behavior rather than as one reusable readiness or risk-check contract smaller than [AOA-T-0042](../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md).
+Even that smaller target is not stable enough yet, because the donor still presents it mainly as scanner-platform behavior rather than as one reusable readiness or risk-check contract smaller than [AOA-T-0042](../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md).
 
 ## What stays out
 
@@ -47,7 +47,7 @@ Even that smaller target is not stable enough yet, because the donor still prese
 - the donor README frames scanning as a security mode of the gateway rather than as an isolated readiness technique
 - the scan path combines reputation-style checks with broader malicious-description and risk analysis
 - the same donor keeps scanner posture close to runtime proxy product behavior instead of showing a distinct standalone contract
-- the already-landed [AOA-T-0042](../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) is still the cleaner bounded readiness sibling for now
+- the already-landed [AOA-T-0042](../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) is still the cleaner bounded readiness sibling for now
 
 ## Verdict
 

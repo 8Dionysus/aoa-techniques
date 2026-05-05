@@ -134,8 +134,13 @@
    product doctrine, registry governance, access control, routing policy,
    recommendation ranking, trust scoring, security scanning, compliance
    review, generic monitoring, capability ownership, command doctrine, runtime
-   law, and agent-role authority outside the move. The next bounded step is
-   the tenth pilot migration for `skill-discovery`, with no frontmatter change.
+   law, and agent-role authority outside the move. The tenth pilot migration is
+   now landed exactly for `AOA-T-0041` and `AOA-T-0042` under
+   `techniques/instruction/skill-discovery/`, with the instruction route card
+   extended for the fifth shelf, root legacy receipt accounting, link repair,
+   generated rebuilds, and release-check validation in the same wave. The next
+   bounded step is a landed `skill-discovery` pilot review before any eleventh
+   shelf moves.
 
 ## Hold line
 

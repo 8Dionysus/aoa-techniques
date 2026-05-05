@@ -117,7 +117,7 @@ Relationship to adjacent techniques: unlike
 [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), this technique is
 not the whole change protocol; it adds one stricter publish rule around pinned
 validation inputs for generated outputs. Unlike
-[AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), it
+[AOA-T-0042](../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md), it
 does not score upstream readiness in the abstract; it reproduces the exact
 publish-time matrix that generated-surface CI will read. Unlike
 [AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does

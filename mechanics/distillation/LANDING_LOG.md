@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Skill-discovery tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0041` and `AOA-T-0042` into
+  `techniques/instruction/skill-discovery/`
+- extended `techniques/instruction/AGENTS.md` for curated skill discovery and
+  pre-surface upstream source readiness without turning the shelf into
+  installer behavior, sync substrate, registry governance, trust scoring,
+  security scanning, routing policy, runtime law, or agent-role authority
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-skill-discovery-tree-pilot.md`
+- repaired authored links from active mechanics parts, review source rows,
+  incoming staging notes, and adjacent-technique links
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept curated marketplace discoverability and upstream source-readiness as
+  separate leaf bundles
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_skill_discovery_tree_pilot
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no proof, skill-support, governance, runtime, owner-closeout, or
+  automation-governance shelf moved
+- no generated projection became authority
+
 ## 2026-05-05 - Skill-discovery direct-read migration review
 
 Changed:

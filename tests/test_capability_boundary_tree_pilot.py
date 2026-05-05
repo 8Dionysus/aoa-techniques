@@ -53,9 +53,9 @@ LIVE_LINK_SURFACES = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/second-kind-ambiguity-review-pack.md",
 )
 
-UNMOVED_SKILL_DISCOVERY_NEIGHBORS = (
-    "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
-    "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBORS = (
+    "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
+    "techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md",
 )
 
 
@@ -165,8 +165,8 @@ class CapabilityBoundaryTreePilotTestCase(unittest.TestCase):
                 self.assertIn(new_path, direct_review)
                 self.assertIn(new_path, landed_review)
 
-    def test_skill_discovery_neighbor_shelf_was_not_moved_with_the_pilot(self) -> None:
-        for relative_path in UNMOVED_SKILL_DISCOVERY_NEIGHBORS:
+    def test_skill_discovery_neighbor_shelf_has_current_landed_paths(self) -> None:
+        for relative_path in LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBORS:
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
 

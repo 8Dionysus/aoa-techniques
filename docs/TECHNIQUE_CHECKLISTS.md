@@ -474,11 +474,11 @@ See also:
 |---|---|---|---|---|
 | Skill Vs Command Boundary Checklist | `absent` | `9` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
 
-### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
+### [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Skill Marketplace Curation Checklist | `absent` | `9` | `techniques/docs/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md` | [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) |
+| Skill Marketplace Curation Checklist | `absent` | `9` | `techniques/instruction/skill-discovery/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
 
 ### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
 
@@ -596,11 +596,11 @@ See also:
 |---|---|---|---|---|
 | Baseline First Additive Profile Benchmarks Checklist | `absent` | `10` | `techniques/evaluation/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 
-### [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
+### [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Upstream Skill Health Checking Checklist | `absent` | `10` | `techniques/evaluation/upstream-skill-health-checking/checks/upstream-skill-health-checking-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) |
+| Upstream Skill Health Checking Checklist | `absent` | `10` | `techniques/instruction/skill-discovery/upstream-skill-health-checking/checks/upstream-skill-health-checking-checklist.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) |
 
 ## `system-recovery`
 

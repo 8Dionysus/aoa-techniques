@@ -569,10 +569,10 @@
     },
     {
       "id": "AOA-T-0041",
-      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md",
+          "example_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md",
           "title": "Minimal Skill Marketplace Curation",
           "body_markdown": "Use one small local discovery surface over upstream-owned skills.\n\n```text\nskills/\n  workflow/\n    orchestration/\n      SKILL.md\n  tools/\n    dev-browser/\n      SKILL.md\n\ndocs/skill-marketplace.md\n```\n\n```md\n## Workflow\n- `orchestration`\n  - summary: multi-agent task coordination\n  - source: upstream-owned skill\n\n## Tools\n- `dev-browser`\n  - summary: browser automation with persistent page state\n  - source: upstream-owned skill\n```\n\nWhat the contract shows:\n\n- the local surface groups and summarizes skills for discovery\n- upstream ownership stays visible\n- sync or provenance artifacts may exist elsewhere, but they are not the center of this curated surface\n- installer, registry, and command syntax details stay outside the example"
         }
@@ -580,10 +580,10 @@
     },
     {
       "id": "AOA-T-0042",
-      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/evaluation/upstream-skill-health-checking/examples/minimal-upstream-skill-health-checking.md",
+          "example_path": "techniques/instruction/skill-discovery/upstream-skill-health-checking/examples/minimal-upstream-skill-health-checking.md",
           "title": "Minimal Upstream Skill Health Checking",
           "body_markdown": "Check upstream-backed skill entries before they appear in a local selector.\n\n```bash\nskills-source-check sources.yaml --before-selector\n```\n\nExample result:\n\n```text\nready   github/team/skill-a      SKILL.md reachable and minimally parseable\nreview  github/team/skill-b      source reachable; metadata shape needs manual review\nblocked github/team/skill-c      declared manifest missing at source path\n```\n\nThe important behavior is bounded:\n\n- `ready` means the source is reachable and minimally shaped enough to surface for inspection or selection\n- `review` means the source is present but ambiguous enough that a human should look before it is surfaced\n- `blocked` means the source should stay out of the selector until the declared path or manifest is fixed\n- this step does not mirror the source, curate categories, assign trust scores, or run security scans"
         }

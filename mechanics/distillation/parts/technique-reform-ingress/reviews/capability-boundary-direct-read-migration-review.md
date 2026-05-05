@@ -56,8 +56,8 @@ validation.
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
-- [AOA-T-0041 skill-marketplace-curation](../../../../../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
-- [AOA-T-0042 upstream-skill-health-checking](../../../../../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md)
+- [AOA-T-0041 skill-marketplace-curation](../../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md)
+- [AOA-T-0042 upstream-skill-health-checking](../../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
 - [Technique family scout rows for `capability-boundary` and
   `skill-discovery`](../../../../../reports/technique_family_scout.md)
 - [Technique topology scout rows for `capability-boundary`](../../../../../reports/technique_topology_scout.md)
