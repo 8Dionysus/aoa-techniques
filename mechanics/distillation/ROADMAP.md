@@ -260,6 +260,15 @@
    accounting, root legacy receipt accounting, link repair, generated rebuilds,
    and release-check validation in the same wave. The next bounded step is to
    review the landed `intent-chain` pilot before choosing any eighteenth shelf.
+   The landed `intent-chain` pilot review is now complete as
+   `pilot-validated`, validating the second `execution` trunk shelf, preserving
+   `AOA-T-0005` as promoted, and choosing
+   `execution/agent-workflows-core` for the next direct-read migration review
+   while keeping autonomous orchestration, hidden agent scheduling, runtime
+   lifecycle law, shell doctrine, product policy, approval policy, broad
+   methodology doctrine, and neighboring execution shelves outside the next
+   move. The next bounded step is that direct-read review before moving any
+   eighteenth shelf.
 
 ## Hold line
 

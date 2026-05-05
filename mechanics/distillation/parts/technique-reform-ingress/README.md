@@ -151,6 +151,9 @@ permission slip to remap techniques automatically.
   bundles accepted and no path movement yet
 - intent-chain migration: landed exactly `AOA-T-0004` and `AOA-T-0005` under
   `techniques/execution/intent-chain/` without frontmatter or status changes
+- landed intent-chain pilot review: landed as `pilot-validated`, with
+  `execution/agent-workflows-core` chosen for direct-read review before any
+  eighteenth shelf movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -218,6 +221,7 @@ permission slip to remap techniques automatically.
 | [Landed Ready-Work-Graphs Pilot Review](reviews/landed-ready-work-graphs-pilot-review.md) | confirms the sixteenth migrated shelf stayed clearer, validates the first execution trunk shelf, and chooses `execution/intent-chain` for the next direct-read review | movement of `execution/intent-chain`, `tree_path` frontmatter, frontmatter remap, router ownership, API contract authority, runtime dispatch, real-action permission, automation governance, CI policy, broad rollout doctrine, or neighboring execution shelves |
 | [Intent-Chain Direct-Read Migration Review](reviews/intent-chain-direct-read-migration-review.md) | reads `AOA-T-0004` and `AOA-T-0005` directly and accepts the shelf as the seventeenth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion of `AOA-T-0005`, router ownership, API contract authority, runtime dispatch, real-action permission, automation governance, CI policy, broad rollout doctrine, or neighboring execution shelves |
 | [Intent-Chain Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-intent-chain-tree-pilot.md) | preserves the seventeenth accepted path migration into `techniques/execution/intent-chain/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion of `AOA-T-0005`, router ownership, API contract authority, runtime dispatch, real-action permission, automation governance, CI policy, broad rollout doctrine, proof of real-execution safety, or neighboring execution shelves |
+| [Landed Intent-Chain Pilot Review](reviews/landed-intent-chain-pilot-review.md) | confirms the seventeenth migrated shelf stayed compact, validates the second execution trunk shelf, and chooses `execution/agent-workflows-core` for direct-read review | movement of `execution/agent-workflows-core`, `tree_path` frontmatter, frontmatter remap, autonomous orchestration, hidden agent scheduling, runtime lifecycle law, shell doctrine, product policy, approval policy, broad methodology doctrine, or neighboring execution shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -452,5 +456,8 @@ The seventeenth pilot migration is now landed: those two bundles live under
 legacy receipt are updated, authored links were repaired, generated surfaces
 were rebuilt, and frontmatter stayed unchanged.
 
-The next move is to review the landed `intent-chain` pilot before choosing any
-eighteenth shelf.
+The landed `intent-chain` pilot review is now complete as `pilot-validated`.
+It validates the second execution trunk shelf and chooses
+`execution/agent-workflows-core` for the next direct-read migration review.
+
+The next move is that direct-read review before moving any eighteenth shelf.

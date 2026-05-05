@@ -4867,6 +4867,103 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / current_path / "TECHNIQUE.md").is_file())
 
+    def test_landed_intent_chain_review_selects_agent_workflows_core(self) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-intent-chain-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Intent-Chain Pilot Review", review)
+        self.assertIn("second successful shelf under the `execution` trunk", review)
+        self.assertIn("`AOA-T-0005` can stay promoted after path migration", review)
+        self.assertIn("Choose `execution/agent-workflows-core`", review)
+        self.assertIn("current projected five-leaf shelf", review)
+        self.assertIn("whether the shell-facing cluster should\nsplit", review)
+        self.assertIn("Do not move `execution/agent-workflows-core`", review)
+        self.assertIn("landed-intent-chain-pilot-review", reviews_index)
+        self.assertIn("landed intent-chain pilot review: landed", ingress)
+        self.assertIn("execution/agent-workflows-core", ingress)
+        self.assertIn("Landed intent-chain pilot review", landing_log)
+        self.assertIn("second successful execution trunk shelf", landing_log)
+        self.assertIn("The landed `intent-chain` pilot review is now complete", distillation_roadmap)
+        self.assertIn(
+            "Run the `execution/agent-workflows-core` direct-read",
+            root_roadmap,
+        )
+        self.assertIn("Landed Intent-Chain Pilot Review", tree_contract)
+        self.assertIn("execution/agent-workflows-core", tree_contract)
+        self.assertIn(
+            "accepted the landed `intent-chain` pilot review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0001",
+                "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+                "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0014",
+                "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+                "techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0023",
+                "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+                "techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0028",
+                "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+                "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0031",
+                "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+                "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT
