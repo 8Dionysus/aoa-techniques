@@ -37,6 +37,8 @@ permission slip to remap techniques automatically.
   `accepted-for-first-migration-pilot`; still not path movement
 - landed review-compaction pilot review: landed as `pilot-validated`, with
   `handoff-continuation` chosen for the next direct-read migration review
+- handoff-continuation direct-read review: landed as
+  `accepted-for-second-migration-pilot`; still not path movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -63,6 +65,7 @@ permission slip to remap techniques automatically.
 | [First Tree Projection Review Pack](reviews/first-tree-projection-review-pack.md) | accepts the generated projection as a review surface and chooses `review-compaction` for direct-read pilot review | path movement, `tree_path` frontmatter, bulk migration, or trunk finality |
 | [Review-Compaction Direct-Read Migration Review](reviews/review-compaction-direct-read-migration-review.md) | reads `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` directly and accepts the shelf as the first migration pilot | `tree_path` frontmatter, domain change, or permission to move any other shelf |
 | [Landed Review-Compaction Pilot Review](reviews/landed-review-compaction-pilot-review.md) | confirms the first migrated shelf stayed clearer, validated, and bounded after landing | movement of `handoff-continuation`, `tree_path` frontmatter, or proof that all continuity shelves are safe |
+| [Handoff-Continuation Direct-Read Migration Review](reviews/handoff-continuation-direct-read-migration-review.md) | reads `AOA-T-0056` through `AOA-T-0062` directly and accepts the shelf as the second migration pilot | path movement, `tree_path` frontmatter, domain change, or permission to move any other shelf |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -122,10 +125,11 @@ The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
 frontmatter, adding `tree_path`, or moving another shelf.
 
-The landed pilot review accepted the first migrated shelf as clearer after
-validation and chose `handoff-continuation` for the next direct-read migration
-review.
+The handoff-continuation direct-read review accepted `AOA-T-0056` through
+`AOA-T-0062` as the second bounded migration pilot while keeping the review
+itself non-mutating.
 
-The next move is to read `AOA-T-0056` through `AOA-T-0062` directly and decide
-whether `techniques/continuity/handoff-continuation/` should become the second
-bounded tree migration wave.
+The next move is to move exactly those seven bundles into
+`techniques/continuity/handoff-continuation/`, repair authored links, preserve a
+root legacy receipt, rebuild generated surfaces, and run the release check
+before choosing any broader tree migration.

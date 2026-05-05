@@ -3,6 +3,33 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Handoff-continuation direct-read migration review
+
+Changed:
+
+- added
+  [handoff-continuation-direct-read-migration-review](parts/technique-reform-ingress/reviews/handoff-continuation-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0056` through `AOA-T-0062`
+- accepted `handoff-continuation` as the second bounded tree migration pilot
+  while keeping the review itself non-mutating
+- recorded the exact next migration scope:
+  `techniques/continuity/handoff-continuation/`
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no second shelf migration happened before direct-read review
+
 ## 2026-05-04 - Landed review-compaction pilot review
 
 Changed:
