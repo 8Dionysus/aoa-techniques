@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Skill-support direct-read migration review
+
+Changed:
+
+- added
+  [skill-support-direct-read-migration-review](parts/technique-reform-ingress/reviews/skill-support-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0016`, `AOA-T-0015`, and
+  `AOA-T-0017`
+- accepted `skill-support` as the eleventh bounded migration pilot because
+  direct reading confirmed the proof-side support triangle: bounded-context
+  vocabulary, consumer-visible contract validation, and invariant-oriented
+  coverage
+- kept the review non-mutating: no technique bundle moved, no frontmatter
+  changed, and no generated projection became authority
+- kept proof authority, eval-suite ownership, mandatory testing doctrine,
+  DDD formalism, architecture taxonomy, runtime readiness, owner-truth law,
+  policy enforcement, and neighboring proof-side shelves outside the
+  migration wave
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no eleventh shelf migration happened from the review alone
+
 ## 2026-05-05 - Landed skill-discovery pilot review
 
 Changed:

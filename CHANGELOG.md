@@ -133,6 +133,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `skill-discovery` pilot review and selected
   `skill-support` for the next direct-read migration review without moving an
   eleventh shelf yet
+- accepted the `skill-support` direct-read migration review over `AOA-T-0016`,
+  `AOA-T-0015`, and `AOA-T-0017` as the eleventh tree pilot while keeping the
+  review itself non-mutating
 
 ### Validation
 
