@@ -215,14 +215,18 @@ It validates the `media-ingest` migration as the first successful
 non-continuity trunk test and chooses `diagnosis-repair` for the next
 direct-read migration review.
 
+The fourth migration review is
+[Diagnosis-Repair Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/diagnosis-repair-direct-read-migration-review.md).
+It accepts `diagnosis-repair` as the fourth migration pilot after directly
+reading `AOA-T-0080` through `AOA-T-0083`.
+
 The next reform slice should:
 
-1. read `AOA-T-0080` through `AOA-T-0083` directly
-2. decide whether `diagnosis-repair` is clearer under
-   `techniques/recovery/diagnosis-repair/` than under the broad
-   `agent-workflows` folder
-3. preserve frontmatter, generated-surface parity, and root legacy accounting
-   if a fourth migration later lands
+1. move exactly `AOA-T-0080` through `AOA-T-0083` into
+   `techniques/recovery/diagnosis-repair/`
+2. add the minimal `recovery/` route card and root legacy receipt
+3. repair authored links, rebuild generated surfaces, and keep frontmatter
+   unchanged
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

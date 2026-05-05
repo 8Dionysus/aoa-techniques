@@ -18,5 +18,6 @@ Current reviews:
 - [landed-handoff-continuation-pilot-review](landed-handoff-continuation-pilot-review.md)
 - [media-ingest-direct-read-migration-review](media-ingest-direct-read-migration-review.md)
 - [landed-media-ingest-pilot-review](landed-media-ingest-pilot-review.md)
+- [diagnosis-repair-direct-read-migration-review](diagnosis-repair-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

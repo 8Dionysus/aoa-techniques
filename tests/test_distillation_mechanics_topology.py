@@ -98,6 +98,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-handoff-continuation-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/media-ingest-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-media-ingest-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/diagnosis-repair-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -1202,7 +1203,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`media-ingest` direct-read review is now", distillation_roadmap)
         self.assertIn("Landed handoff-continuation pilot review", landing_log)
         self.assertIn("selected\n  `media-ingest`", changelog)
-        self.assertIn("Run a direct-read migration review for `diagnosis-repair`", root_roadmap)
+        self.assertIn("Land the fourth pilot migration", root_roadmap)
         self.assertIn("Landed Handoff-Continuation Pilot Review", tree_contract)
         self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", incoming_wave2)
         self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", incoming_wave3)
@@ -1367,9 +1368,90 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("diagnosis-repair` is now", distillation_roadmap)
         self.assertIn("Landed media-ingest pilot review", landing_log)
         self.assertIn("selected\n  `diagnosis-repair`", changelog)
-        self.assertIn("Run a direct-read migration review for `diagnosis-repair`", root_roadmap)
+        self.assertIn("Land the fourth pilot migration", root_roadmap)
         self.assertIn("Landed Media-Ingest Pilot Review", tree_contract)
         self.assertIn("techniques/recovery/diagnosis-repair/", tree_contract)
+
+    def test_diagnosis_repair_direct_read_review_accepts_fourth_pilot(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "diagnosis-repair-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Diagnosis-Repair Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-fourth-migration-pilot", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("not\n`tree_path` frontmatter", review)
+        self.assertIn("Accept `diagnosis-repair` as the fourth migration pilot", review)
+        for technique_id in (
+            "AOA-T-0080",
+            "AOA-T-0081",
+            "AOA-T-0082",
+            "AOA-T-0083",
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+
+        self.assertIn("Mixed Kind Stress", review)
+        self.assertIn("Move exactly these four bundles", review)
+        self.assertIn("techniques/recovery/diagnosis-repair/", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("Do not add `family` or `tree_path` frontmatter", review)
+        self.assertIn("Run the fourth pilot migration", review)
+
+        self.assertIn("diagnosis-repair-direct-read-migration-review", reviews_index)
+        self.assertIn("diagnosis-repair direct-read review: landed", ingress)
+        self.assertIn("accepted-for-fourth-migration-pilot", ingress)
+        self.assertIn("fourth pilot migration", ingress)
+        self.assertIn("accepted-for-fourth-migration-pilot", distillation_roadmap)
+        self.assertIn("Diagnosis-repair direct-read migration review", landing_log)
+        self.assertIn("accepted the `diagnosis-repair` direct-read migration review", changelog)
+        self.assertIn("Land the fourth pilot migration", root_roadmap)
+        self.assertIn("Diagnosis-Repair Direct-Read Migration Review", tree_contract)
+        self.assertIn("AOA-T-0080` through `AOA-T-0083", tree_contract)
+        self.assertTrue(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "agent-workflows"
+                / "session-drift-taxonomy"
+                / "TECHNIQUE.md"
+            ).is_file()
+        )
+        self.assertFalse((REPO_ROOT / "techniques" / "recovery").exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

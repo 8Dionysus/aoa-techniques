@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Diagnosis-repair direct-read migration review
+
+Changed:
+
+- added
+  [diagnosis-repair-direct-read-migration-review](parts/technique-reform-ingress/reviews/diagnosis-repair-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0080` through `AOA-T-0083`
+- accepted `diagnosis-repair` as the fourth bounded tree migration pilot and
+  the next recovery trunk test
+- recorded the exact next migration scope:
+  `techniques/recovery/diagnosis-repair/`
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept self-improvement, hidden doctrine edits, role-law, proof-law, and
+  scenario rollout outside the accepted shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fourth shelf migration happened before direct-read review
+
 ## 2026-05-04 - Landed media-ingest pilot review
 
 Changed:

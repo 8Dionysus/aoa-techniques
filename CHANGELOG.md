@@ -66,6 +66,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `media-ingest` pilot review and selected
   `diagnosis-repair` for the next direct-read migration review without moving
   a fourth shelf yet
+- accepted the `diagnosis-repair` direct-read migration review over
+  `AOA-T-0080` through `AOA-T-0083` as the fourth tree pilot while keeping the
+  review itself non-mutating
 
 ### Validation
 
