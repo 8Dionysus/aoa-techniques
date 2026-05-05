@@ -73,7 +73,12 @@
    release-check validation in the same wave. The landed
    `instruction-surface` pilot review is also landed as `pilot-validated`, and
    `kag-source-lift` is now chosen for the next direct-read migration review
-   without moving a sixth shelf yet.
+   without moving a sixth shelf yet. The `kag-source-lift` direct-read review
+   is now landed as `accepted-for-sixth-migration-pilot`; it accepts exactly
+   `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`,
+   `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` for the sixth pilot while
+   keeping KAG owner authority, graph semantics, scoring, policy, and
+   automatic verdicts outside the move.
 
 ## Hold line
 

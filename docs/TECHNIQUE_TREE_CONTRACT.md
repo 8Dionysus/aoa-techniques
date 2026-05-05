@@ -248,8 +248,14 @@ It validates the `instruction-surface` migration as the first successful
 instruction trunk test and chooses `kag-source-lift` for the next direct-read
 migration review.
 
-The next reform slice should run the `kag-source-lift` direct-read review before
-moving another shelf.
+The sixth migration review is
+[Kag-Source-Lift Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/kag-source-lift-direct-read-migration-review.md).
+It accepts `kag-source-lift` as the first `knowledge-lift` migration pilot after
+directly reading `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`,
+`AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048`.
+
+The next reform slice should run the sixth pilot migration before moving
+another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

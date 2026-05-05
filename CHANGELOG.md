@@ -86,6 +86,10 @@ The format is intentionally simple and human-first.
 - accepted the landed `instruction-surface` pilot review and selected
   `kag-source-lift` for the next direct-read migration review without moving a
   sixth shelf yet
+- accepted the `kag-source-lift` direct-read migration review over
+  `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`,
+  `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` as the sixth tree pilot while
+  keeping the review itself non-mutating
 
 ### Validation
 

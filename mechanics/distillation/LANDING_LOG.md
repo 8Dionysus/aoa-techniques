@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Kag-source-lift direct-read migration review
+
+Changed:
+
+- added
+  [kag-source-lift-direct-read-migration-review](parts/technique-reform-ingress/reviews/kag-source-lift-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`,
+  `AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048`
+- accepted `kag-source-lift` as the sixth bounded tree migration pilot and the
+  first `knowledge-lift` trunk test
+- recorded the exact next migration scope:
+  `techniques/knowledge-lift/kag-source-lift/`
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `docs-boundary`, capability, skill-discovery, proof, governance,
+  runtime, and owner-closeout shelves outside the accepted move
+- kept `knowledge-lift` bounded to source-lift technique placement rather than
+  KAG owner doctrine, graph semantics, scoring, policy, or automatic verdicts
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no sixth shelf migration happened before direct-read review
+
 ## 2026-05-04 - Landed instruction-surface pilot review
 
 Changed:
