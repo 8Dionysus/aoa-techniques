@@ -35,5 +35,6 @@ Current reviews:
 - [skill-support-direct-read-migration-review](skill-support-direct-read-migration-review.md)
 - [landed-skill-support-pilot-review](landed-skill-support-pilot-review.md)
 - [evaluation-chain-direct-read-migration-review](evaluation-chain-direct-read-migration-review.md)
+- [landed-evaluation-chain-pilot-review](landed-evaluation-chain-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

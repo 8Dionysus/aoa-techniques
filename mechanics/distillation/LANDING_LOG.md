@@ -3,6 +3,36 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed evaluation-chain pilot review
+
+Changed:
+
+- added
+  [landed-evaluation-chain-pilot-review](parts/technique-reform-ingress/reviews/landed-evaluation-chain-pilot-review.md)
+  as the post-migration review over the twelfth tree pilot
+- accepted the landed `evaluation-chain` shelf as clearer after validation and
+  as the second successful proof trunk shelf
+- chose `published-summary` for the next direct-read migration review without
+  moving a thirteenth shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept proof authority, release policy, remediation execution, integrity
+  verdict law, telemetry platform, rendering product policy, archive
+  governance, generic observability doctrine, and neighboring proof-side
+  shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no thirteenth shelf migration was authorized without direct-read review
+
 ## 2026-05-05 - Evaluation-chain tree pilot migration
 
 Changed:

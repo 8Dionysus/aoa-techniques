@@ -352,8 +352,15 @@ The twelfth pilot migration moves exactly `AOA-T-0003`, `AOA-T-0007`, and
 `domain`, `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md`](../legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md).
 
-The next reform slice should review the landed `evaluation-chain` pilot before
-choosing any thirteenth shelf.
+The landed twelfth pilot review is
+[Landed Evaluation-Chain Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-evaluation-chain-pilot-review.md).
+It validates `evaluation-chain` as the second successful proof trunk shelf,
+completes the previous step to review the landed `evaluation-chain` pilot
+before choosing any thirteenth shelf, and chooses `published-summary` for the
+next direct-read migration review.
+
+The next reform slice should run that `published-summary` direct-read review
+before any thirteenth shelf migration.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
