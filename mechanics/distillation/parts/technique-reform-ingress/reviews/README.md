@@ -37,5 +37,6 @@ Current reviews:
 - [evaluation-chain-direct-read-migration-review](evaluation-chain-direct-read-migration-review.md)
 - [landed-evaluation-chain-pilot-review](landed-evaluation-chain-pilot-review.md)
 - [published-summary-direct-read-migration-review](published-summary-direct-read-migration-review.md)
+- [landed-published-summary-pilot-review](landed-published-summary-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
