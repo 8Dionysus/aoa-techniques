@@ -70,17 +70,17 @@ See also:
 |---|---|---|---|---|
 | One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/agent-workflows/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
 
-### [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
+### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| dependency-aware-task-graph checklist | `present` | `8` | `techniques/agent-workflows/dependency-aware-task-graph/checks/dependency-aware-task-graph-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) |
+| dependency-aware-task-graph checklist | `present` | `8` | `techniques/execution/ready-work-graphs/dependency-aware-task-graph/checks/dependency-aware-task-graph-checklist.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
 
-### [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
+### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| ready-work-from-blocker-graph checklist | `present` | `8` | `techniques/agent-workflows/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
+| ready-work-from-blocker-graph checklist | `present` | `8` | `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 
 ### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 
@@ -100,11 +100,11 @@ See also:
 |---|---|---|---|---|
 | compaction-resilient-skill-loading checklist | `absent` | `8` | `techniques/continuity/review-compaction/compaction-resilient-skill-loading/checks/compaction-resilient-skill-loading-checklist.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
 
-### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
+### [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| requirements-design-tasks-ladder checklist | `absent` | `8` | `techniques/agent-workflows/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) |
+| requirements-design-tasks-ladder checklist | `absent` | `8` | `techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) |
 
 ### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
 

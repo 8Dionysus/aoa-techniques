@@ -3938,9 +3938,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("six separate leaf", receipt)
         self.assertIn("generic history platform", receipt)
-        self.assertIn("fifteen receipts", legacy_index)
+        self.assertIn("sixteen receipts", legacy_index)
         self.assertIn("2026-05-05-history-artifacts-tree-pilot.md", legacy_index)
-        self.assertIn("fifteen technique tree pilot receipts", receipts_index)
+        self.assertIn("sixteen technique tree pilot receipts", receipts_index)
         self.assertIn("History-artifacts tree pilot migration", landing_log)
         self.assertIn("kept capture, transcript packaging", landing_log)
         self.assertIn(
@@ -4294,9 +4294,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("four separate leaf bundles", receipt)
         self.assertIn("generic resilience platform", receipt)
-        self.assertIn("fifteen receipts", legacy_index)
+        self.assertIn("sixteen receipts", legacy_index)
         self.assertIn("2026-05-05-antifragility-recovery-tree-pilot.md", legacy_index)
-        self.assertIn("fifteen technique tree pilot receipts", receipts_index)
+        self.assertIn("sixteen technique tree pilot receipts", receipts_index)
         self.assertIn("Antifragility-recovery tree pilot migration", landing_log)
         self.assertIn("preserved `AOA-T-0098`", landing_log)
         self.assertIn("fifteenth pilot migration is now landed", distillation_roadmap)
@@ -4426,28 +4426,28 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(technique_id, review)
                 self.assertTrue((REPO_ROOT / path).is_file())
 
-        for current_path, future_dir, future_path in (
+        for old_path, current_dir, current_path in (
             (
-                "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+                "techniques/agent-workflows/dependency-aware-task-graph/",
                 "techniques/execution/ready-work-graphs/dependency-aware-task-graph/",
                 "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
             ),
             (
-                "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+                "techniques/agent-workflows/ready-work-from-blocker-graph/",
                 "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/",
                 "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
             ),
             (
-                "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+                "techniques/agent-workflows/requirements-design-tasks-ladder/",
                 "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/",
                 "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
             ),
         ):
-            with self.subTest(current_path=current_path):
-                self.assertIn(current_path, review)
-                self.assertIn(future_dir, review)
+            with self.subTest(old_path=old_path):
+                self.assertIn(old_path, review)
+                self.assertIn(current_dir, review)
+                self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
 
     def test_ready_work_graphs_direct_read_review_accepts_sixteenth_pilot(
         self,
@@ -4515,7 +4515,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn("AOA-T-0055` as a watch-line readiness ladder", landing_log)
         self.assertIn("accepted-for-sixteenth-migration-pilot", distillation_roadmap)
-        self.assertIn("run the accepted `execution/ready-work-graphs`", root_roadmap)
+        self.assertIn("Review the landed `ready-work-graphs` pilot", root_roadmap)
         self.assertIn("Ready-Work-Graphs Direct-Read Migration Review", tree_contract)
         self.assertIn("preserving\n`AOA-T-0055` as a readiness ladder", tree_contract)
         self.assertIn(
@@ -4523,7 +4523,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             changelog,
         )
 
-        for technique_id, current_path, future_path in (
+        for technique_id, old_path, current_path in (
             (
                 "AOA-T-0049",
                 "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
@@ -4542,10 +4542,76 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ):
             with self.subTest(technique_id=technique_id):
                 self.assertIn(technique_id, review)
+                self.assertIn(old_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
-                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+
+    def test_ready_work_graphs_tree_pilot_migration_landed(self) -> None:
+        receipt = (
+            REPO_ROOT
+            / "legacy"
+            / "receipts"
+            / "2026-05-05-ready-work-graphs-tree-pilot.md"
+        ).read_text(encoding="utf-8")
+        execution_agents = (
+            REPO_ROOT / "techniques" / "execution" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Ready-Work-Graphs Tree Pilot Receipt", receipt)
+        self.assertIn("sixteenth authored path migration", receipt)
+        self.assertIn("Preserve `AOA-T-0055` as a readiness ladder", receipt)
+        self.assertIn("This is a tree trunk, not a frontmatter domain", execution_agents)
+        self.assertIn("ready-work-graphs/", execution_agents)
+        self.assertIn("ready-work-graphs migration: landed", ingress)
+        self.assertIn("Ready-work-graphs tree pilot migration", landing_log)
+        self.assertIn("sixteenth pilot migration is\n   now landed", distillation_roadmap)
+        self.assertIn("sixteenth landed pilot moved", root_roadmap)
+        self.assertIn("2026-05-05-ready-work-graphs-tree-pilot", tree_contract)
+        self.assertIn("moved `AOA-T-0049`", changelog)
+
+        for technique_id, old_path, current_path in (
+            (
+                "AOA-T-0049",
+                "techniques/agent-workflows/dependency-aware-task-graph/",
+                "techniques/execution/ready-work-graphs/dependency-aware-task-graph/",
+            ),
+            (
+                "AOA-T-0050",
+                "techniques/agent-workflows/ready-work-from-blocker-graph/",
+                "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/",
+            ),
+            (
+                "AOA-T-0055",
+                "techniques/agent-workflows/requirements-design-tasks-ladder/",
+                "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, receipt)
+                self.assertIn(old_path, receipt)
+                self.assertIn(current_path, receipt)
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / current_path / "TECHNIQUE.md").is_file())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

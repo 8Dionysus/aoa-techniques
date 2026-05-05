@@ -132,7 +132,7 @@ See also:
 - Validate by: one explicit operator-facing entrypoint starts the bounded local stack; prerequisite or build checks fail early or are reported clearly...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
 
-### [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
+### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
 
 - Summary: Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.
 - Intent: Represent multi-step coding work as an explicit dependency graph so blocked state, ready state...
@@ -143,9 +143,9 @@ See also:
 - Core contract: dependency edges are explicit; ready work is derived from graph state, not guessed from memory or inferred from...
 - Main risk: stale edges keep work blocked after the blocker is gone.
 - Validate by: a known blocked node becomes ready only when its prerequisite flips; blocked tasks can point to a real unmet...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md)
 
-### [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
+### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
 
 - Summary: Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.
 - Intent: Turn an existing blocker graph into a bounded next-work queue so the next step...
@@ -156,7 +156,7 @@ See also:
 - Core contract: ready work depends on blocker-free state; blocked tasks are not silently promoted into the queue.
 - Main risk: stale blocker state yields a wrong ready queue.
 - Validate by: only blocker-free eligible nodes appear in the queue; blocked reasons remain visible for excluded tasks; queue updates track graph...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md)
 
 ### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 
@@ -197,7 +197,7 @@ See also:
 - Validate by: a compaction event can happen without permanently losing skill discoverability; post-compaction sessions can still identify or reload needed skills...
 - Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
 
-### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
+### [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 
 - Summary: Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.
 - Intent: Keep requirements, design, and tasks as visibly separate planning layers so work can move...
@@ -208,7 +208,7 @@ See also:
 - Core contract: requirements, design, and tasks remain distinct layers; design responds to a visible requirement instead of standing alone.
 - Main risk: design stays too vague to produce bounded tasks.
 - Validate by: tasks can be traced back to a visible design choice; design responds to a visible requirement; the three layers...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md)
 
 ### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
 

@@ -2704,7 +2704,7 @@
     },
     {
       "id": "AOA-T-0049",
-      "technique_path": "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -2760,7 +2760,7 @@
     },
     {
       "id": "AOA-T-0050",
-      "technique_path": "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -3040,7 +3040,7 @@
     },
     {
       "id": "AOA-T-0055",
-      "technique_path": "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -3075,7 +3075,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- requirements, design, and tasks remain distinct layers\n- design responds to a visible requirement instead of standing alone\n- tasks are derived from visible design choices rather than invented in isolation\n- each layer may constrain the next layer, but should not silently replace it\n- the ladder stays smaller than a full methodology, template ecosystem, or governance process\n- implementation, validation, and runtime coordination remain outside this bounded planning contract\n\nRelationship to adjacent techniques: unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), this technique stops before apply, verify, and report. Unlike [AOA-T-0004](../intent-plan-dry-run-contract-chain/TECHNIQUE.md), it does not normalize intent into dry-run and contract artifacts. Unlike [AOA-T-0049](../dependency-aware-task-graph/TECHNIQUE.md), it does not coordinate task dependencies through a graph; it only keeps the requirement-to-design-to-task ladder explicit before execution begins."
+          "markdown": "- requirements, design, and tasks remain distinct layers\n- design responds to a visible requirement instead of standing alone\n- tasks are derived from visible design choices rather than invented in isolation\n- each layer may constrain the next layer, but should not silently replace it\n- the ladder stays smaller than a full methodology, template ecosystem, or governance process\n- implementation, validation, and runtime coordination remain outside this bounded planning contract\n\nRelationship to adjacent techniques: unlike [AOA-T-0001](../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), this technique stops before apply, verify, and report. Unlike [AOA-T-0004](../../../agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md), it does not normalize intent into dry-run and contract artifacts. Unlike [AOA-T-0049](../dependency-aware-task-graph/TECHNIQUE.md), it does not coordinate task dependencies through a graph; it only keeps the requirement-to-design-to-task ladder explicit before execution begins."
         },
         {
           "heading": "Risks",

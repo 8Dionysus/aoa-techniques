@@ -77,17 +77,17 @@ See also:
 |---|---|---|---|
 | Minimal One-Command Service Lifecycle | `present` | `techniques/agent-workflows/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md` | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
 
-### [AOA-T-0049](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
+### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal dependency-aware-task-graph example | `present` | `techniques/agent-workflows/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md` | [TECHNIQUE.md](../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) |
+| Minimal dependency-aware-task-graph example | `present` | `techniques/execution/ready-work-graphs/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
 
-### [AOA-T-0050](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
+### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal ready-work-from-blocker-graph example | `present` | `techniques/agent-workflows/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md` | [TECHNIQUE.md](../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md) |
+| Minimal ready-work-from-blocker-graph example | `present` | `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 
 ### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 
@@ -107,11 +107,11 @@ See also:
 |---|---|---|---|
 | Minimal compaction-resilient skill loading | `present` | `techniques/continuity/review-compaction/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
 
-### [AOA-T-0055](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
+### [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal requirements-design-tasks ladder | `present` | `techniques/agent-workflows/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md` | [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) |
+| Minimal requirements-design-tasks ladder | `present` | `techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) |
 
 ### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
 

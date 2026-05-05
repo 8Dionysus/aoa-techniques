@@ -54,9 +54,9 @@ trunk is accepted only from projection rows.
 - [Technique tree projection rows for `antifragility-recovery` and `ready-work-graphs`](../../../../../reports/technique_tree_projection.md)
 - [Technique family scout rows for `ready-work-graphs`](../../../../../reports/technique_family_scout.md)
 - [Technique topology scout rows for `ready-work-graphs`](../../../../../reports/technique_topology_scout.md)
-- [AOA-T-0049 dependency-aware-task-graph](../../../../../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md)
-- [AOA-T-0050 ready-work-from-blocker-graph](../../../../../techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md)
-- [AOA-T-0055 requirements-design-tasks-ladder](../../../../../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md)
+- [AOA-T-0049 dependency-aware-task-graph](../../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md)
+- [AOA-T-0050 ready-work-from-blocker-graph](../../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md)
+- [AOA-T-0055 requirements-design-tasks-ladder](../../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read

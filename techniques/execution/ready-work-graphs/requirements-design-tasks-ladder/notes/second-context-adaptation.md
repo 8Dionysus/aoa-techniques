@@ -21,7 +21,7 @@
 - safety rules: the technique remains outside implementation workflow, runtime coordination, and wider methodology doctrine
 
 ## Risks introduced by adaptation
-- the pattern can collapse back into [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts
+- the pattern can collapse back into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts
 - teams may over-associate the ladder with a whole methodology because the donor also bundles steering, validation, templates, and multi-agent support
 - the public bundle could drift into command or template doctrine if layer boundaries stop being the real center of gravity
 

@@ -183,6 +183,9 @@ The format is intentionally simple and human-first.
 - accepted the `ready-work-graphs` direct-read migration review over
   `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055` as the sixteenth tree pilot
   while keeping the review itself non-mutating
+- moved `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055` into
+  `techniques/execution/ready-work-graphs/` while keeping `domain`, `kind`,
+  IDs, status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

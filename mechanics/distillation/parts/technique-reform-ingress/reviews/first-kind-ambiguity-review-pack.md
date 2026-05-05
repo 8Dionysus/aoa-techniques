@@ -46,7 +46,7 @@ after checking `workflow`, `validation`, and `lift` as possible destinations.
 | [AOA-T-0088](../../../../../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | `assessment` | `revisit later` | Keep `assessment`. The output is a classification verdict over approval burden, not proof that execution is allowed. |
 | [AOA-T-0089](../../../../../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) | `assessment` | `revisit later` | Keep `assessment`. The output is owner-placement decision support; it is not validation proof and not promotion completion. |
 | [AOA-T-0068](../../../../../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) | `guardrail` | `keep current kind` | Calibration read. The report is correct: non-allow blocking and explicit allow are the center. |
-| [AOA-T-0049](../../../../../techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md) | `workflow` | `keep current kind` | Calibration read. The graph supports a stepwise work loop; blocker cues do not make it a guardrail. |
+| [AOA-T-0049](../../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | `workflow` | `keep current kind` | Calibration read. The graph supports a stepwise work loop; blocker cues do not make it a guardrail. |
 
 ## What The Audit Got Right
 

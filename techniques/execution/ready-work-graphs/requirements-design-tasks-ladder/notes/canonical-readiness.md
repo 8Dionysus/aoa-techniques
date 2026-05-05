@@ -15,7 +15,7 @@
 
 ## Default-use rationale
 - this is the right promoted default when the main problem is keeping requirement, design, and task layers visibly distinct before execution starts
-- it remains narrower than [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report
+- it remains narrower than [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report
 - it also remains narrower than [AOA-T-0049](../../dependency-aware-task-graph/TECHNIQUE.md) because it derives tasks from design without taking on task dependency coordination
 
 ## Fresh public-safety check
