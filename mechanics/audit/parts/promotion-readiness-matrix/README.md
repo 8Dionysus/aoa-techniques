@@ -36,7 +36,7 @@ surviving donor and promotion debt forward without widening technique bodies.
   - [AOA-T-0013](../../../../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md)
   - [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
   - [AOA-T-0032](../../../../techniques/evaluation/context-report-for-ci/TECHNIQUE.md)
-  - [AOA-T-0034](../../../../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
+  - [AOA-T-0034](../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md)
   - [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
 - no second independent local runtime consumer found in the searched lane:
   - [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
@@ -147,7 +147,7 @@ Shared blocker: each bundle is internally strong, but still needs another live c
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0033](../../../../techniques/docs/decision-rationale-recording/TECHNIQUE.md) | Single-decision note contract is bounded and useful, but still narrow. | One second live consumer proving the same one-decision record pattern in practice. |
+| [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | Single-decision note contract is bounded and useful, but still narrow. | One second live consumer proving the same one-decision record pattern in practice. |
 
 ### Pack 9 - Graph Work Coordination
 

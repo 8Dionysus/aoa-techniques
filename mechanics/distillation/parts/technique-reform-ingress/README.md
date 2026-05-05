@@ -74,6 +74,9 @@ permission slip to remap techniques automatically.
   `docs-boundary` chosen for the next direct-read migration review
 - docs-boundary direct-read review: landed as
   `accepted-for-seventh-migration-pilot`; still not path movement
+- docs-boundary migration: landed exactly `AOA-T-0002`, `AOA-T-0009`,
+  `AOA-T-0034`, and `AOA-T-0033` under
+  `techniques/instruction/docs-boundary/` without frontmatter changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -221,4 +224,10 @@ The `docs-boundary` direct-read review is now landed and accepts exactly
 `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` as the seventh
 migration pilot.
 
-The next move is the seventh pilot migration before any other shelf moves.
+The seventh pilot migration is now landed: those four bundles live under
+`techniques/instruction/docs-boundary/`, the `instruction/` route card and
+root legacy receipt are in place, authored links were repaired, generated
+surfaces were rebuilt, and frontmatter stayed unchanged.
+
+The next move is the landed `docs-boundary` pilot review before any other shelf
+moves.

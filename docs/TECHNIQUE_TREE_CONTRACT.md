@@ -270,8 +270,13 @@ The seventh migration review is
 It accepts `docs-boundary` as the seventh migration pilot after directly
 reading `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033`.
 
-The next reform slice should run the seventh pilot migration before moving
-another shelf.
+The seventh pilot migration moves `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`,
+and `AOA-T-0033` into `techniques/instruction/docs-boundary/` without changing
+`domain`, `kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md`](../legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md).
+
+The next reform slice should review the landed `docs-boundary` pilot before
+moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

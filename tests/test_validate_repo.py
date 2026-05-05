@@ -860,7 +860,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         checklist = (
             REPO_ROOT
             / "techniques"
-            / "docs"
+            / "instruction"
+            / "docs-boundary"
             / "source-of-truth-layout"
             / "checks"
             / "doc-role-checklist.md"
@@ -868,7 +869,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         technique = (
             REPO_ROOT
             / "techniques"
-            / "docs"
+            / "instruction"
+            / "docs-boundary"
             / "source-of-truth-layout"
             / "TECHNIQUE.md"
         ).read_text(encoding="utf-8")

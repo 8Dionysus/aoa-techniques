@@ -15,10 +15,10 @@
     },
     {
       "id": "AOA-T-0002",
-      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/source-of-truth-layout/examples/minimal-doc-routing.md",
+          "example_path": "techniques/instruction/docs-boundary/source-of-truth-layout/examples/minimal-doc-routing.md",
           "title": "Minimal Doc Routing",
           "body_markdown": "This example shows how a repository can route common updates without duplicating status across many files.\n\n## Document map\n\n- `README` keeps a short project overview and links to canonical docs.\n- `MANIFEST` keeps a compact machine/human snapshot.\n- `TODO` tracks active work.\n- `PLANS` tracks goals, milestones, and risks.\n- `DECISIONS` records architecture and policy changes.\n- `RUNBOOK` stores runnable commands and operating procedures.\n- `SESSION_2026-03-13` stores detailed run history for the day.\n\n## Example routing\n\n- A new architectural rule is added: write it to `DECISIONS`.\n- The startup command changes: update `RUNBOOK`.\n- The team begins a new active task: update `TODO`.\n- A milestone moves from planned to complete: update `PLANS`.\n- A smoke run finishes and produces detailed notes: append the result to `SESSION_2026-03-13`.\n- The top-level project status changes: keep the summary short in `README` or `MANIFEST` and link to the detailed docs instead of copying long history.\n\n## Anti-drift rule\n\nIf the same status paragraph starts appearing in `README`, `TODO`, and `PLANS`, move the detail back to its canonical home and leave only short references elsewhere."
         }
@@ -117,10 +117,10 @@
     },
     {
       "id": "AOA-T-0009",
-      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/lightweight-status-snapshot/examples/minimal-lightweight-snapshot.md",
+          "example_path": "techniques/instruction/docs-boundary/lightweight-status-snapshot/examples/minimal-lightweight-snapshot.md",
           "title": "minimal-lightweight-snapshot",
           "body_markdown": "This example shows how a repository can keep top-level status docs lightweight without losing operational detail.\n\n## `README`\n\n- one-sentence project description\n- quick links to `TODO`, `PLANS`, `RUNBOOK`, `DECISIONS`, and the latest session snapshot\n- 5-10 short current-status bullets\n- no long run lists or copied metric history\n\n## `MANIFEST`\n\n- current date\n- target platform or runtime\n- active capabilities\n- canonical docs map\n- short data or commit policy\n\n## Canonical detail stays elsewhere\n\n- active execution state lives in `TODO`\n- goals and milestones live in `PLANS`\n- runnable commands live in `RUNBOOK`\n- architecture and policy changes live in `DECISIONS`\n- detailed chronology and run evidence live in `SESSION_*`\n\n## Anti-drift rule\n\nIf a top-level snapshot starts collecting long test counts, many run IDs, or detailed troubleshooting notes, move that detail back to its canonical document and leave only a short link or summary line."
         }
@@ -481,10 +481,10 @@
     },
     {
       "id": "AOA-T-0033",
-      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/decision-rationale-recording/examples/minimal-decision-rationale-note.md",
+          "example_path": "techniques/instruction/docs-boundary/decision-rationale-recording/examples/minimal-decision-rationale-note.md",
           "title": "Minimal Decision Rationale Note",
           "body_markdown": "## Decision\n\nUse one short reviewable note to capture the rationale for a meaningful docs change.\n\n## Context\n\nThis change affects future reviewers because it changes how the decision will be remembered.\n\n## Options\n\n- record the decision in a bounded note\n- leave the rationale only in chat or commit context\n\n## Not chosen\n\nLeave the rationale only in chat or commit context.\n\n## Rationale\n\nThe note keeps the choice reviewable without turning the change into governance or taxonomy work.\n\n## Consequences\n\n- future reviewers can see why the path was chosen\n- the note stays small enough to keep its own scope\n- trivial edits do not get inflated into decision records\n- the repo accepts one more bounded note instead of pretending the tradeoff will stay recoverable from commit history alone\n\n## Follow-up\n\nIf the change becomes a recurring pattern, split out a separate technique instead of widening this note."
         }
@@ -492,10 +492,10 @@
     },
     {
       "id": "AOA-T-0034",
-      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/public-safe-artifact-sanitization/examples/minimal-public-safe-artifact-sanitization.md",
+          "example_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/examples/minimal-public-safe-artifact-sanitization.md",
           "title": "Scenario",
           "body_markdown": "A support summary needs to share a command failure, but the raw output includes hostnames, private paths, and internal IDs.\n\n## Raw excerpt\n\n```text\nssh admin@ops-int.internal\ncat /srv/private/customer-a/run-4821/error.log\njob_id=INT-4821 service=payments-shadow-eu-west\n```\n\n## Shareable version\n\n```text\nssh <redacted-user>@<generalized-host>\ncat /srv/<generalized-path>/error.log\njob_id=<generalized-id> service=<generalized-service>\n```\n\n## Sanitization note\n\n- user, hostname, path segment, job ID, and service name were generalized\n- the lesson preserved is that the failure surfaced through remote shell plus log inspection\n- this artifact is safe to review as a sharing example only; it does not authorize the underlying action\n\n## Boundary notes\n\n- if the material is already public-safe, do not add unnecessary redaction\n- if the main task is deciding whether the underlying action should proceed, use the approval-gate workflow first\n- if the main task is to preview or execute the action, use the preview or safe-change workflow first"
         }
@@ -651,7 +651,7 @@
         {
           "example_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md",
           "title": "Minimal Semantic Review Surface Lift",
-          "body_markdown": "This example shows how an authored semantic-review doc can be surfaced as a bounded derived lookup aid without making the derived view the source of review meaning.\n\n## Source review excerpt\n\n```md\n## Cluster Map\n\n| technique | current role |\n|---|---|\n| [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |\n| [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |\n\n## Seam Review\n\n### `AOA-T-0002` vs `AOA-T-0009`\n\nQuestion: where does the broader document-role layout stop and the narrower snapshot discipline begin?\n\n- Invariant boundary: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map.\n- Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class.\n```\n\n## Derived lookup excerpt\n\n```json\n{\n  \"review_id\": \"docs_boundary\",\n  \"review_path\": \"docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md\",\n  \"title\": \"Docs Boundary Semantic Review\",\n  \"findings\": [\n    \"`AOA-T-0002` is semantically distinct as the broader source-of-truth layout pattern.\",\n    \"`AOA-T-0009` is semantically distinct as a lighter snapshot discipline layered on top of a broader document map.\"\n  ],\n  \"overall_outcome\": \"`clear`\"\n}\n```\n\nThe derived excerpt is intentionally routing-first. It helps a reader find the right authored review doc, but the meaning of the review still lives in that authored markdown.\n\n## Anti-Drift Rule\n\nIf maintainers need to edit the manifest directly to correct review meaning, the lift has stopped being markdown-first.\nIf the next question is scoring, status changes, or relation cleanup, this technique has been asked to do too much."
+          "body_markdown": "This example shows how an authored semantic-review doc can be surfaced as a bounded derived lookup aid without making the derived view the source of review meaning.\n\n## Source review excerpt\n\n```md\n## Cluster Map\n\n| technique | current role |\n|---|---|\n| [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |\n| [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |\n\n## Seam Review\n\n### `AOA-T-0002` vs `AOA-T-0009`\n\nQuestion: where does the broader document-role layout stop and the narrower snapshot discipline begin?\n\n- Invariant boundary: [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map.\n- Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class.\n```\n\n## Derived lookup excerpt\n\n```json\n{\n  \"review_id\": \"docs_boundary\",\n  \"review_path\": \"docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md\",\n  \"title\": \"Docs Boundary Semantic Review\",\n  \"findings\": [\n    \"`AOA-T-0002` is semantically distinct as the broader source-of-truth layout pattern.\",\n    \"`AOA-T-0009` is semantically distinct as a lighter snapshot discipline layered on top of a broader document map.\"\n  ],\n  \"overall_outcome\": \"`clear`\"\n}\n```\n\nThe derived excerpt is intentionally routing-first. It helps a reader find the right authored review doc, but the meaning of the review still lives in that authored markdown.\n\n## Anti-Drift Rule\n\nIf maintainers need to edit the manifest directly to correct review meaning, the lift has stopped being markdown-first.\nIf the next question is scoring, status changes, or relation cleanup, this technique has been asked to do too much."
         }
       ]
     },

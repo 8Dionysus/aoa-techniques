@@ -360,17 +360,17 @@ See also:
 
 ## `docs`
 
-### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
+### [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Doc Role Checklist | `present` | `8` | `techniques/docs/source-of-truth-layout/checks/doc-role-checklist.md` | [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) |
+| Doc Role Checklist | `present` | `8` | `techniques/instruction/docs-boundary/source-of-truth-layout/checks/doc-role-checklist.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) |
 
-### [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot (`canonical`)
+### [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| lightweight-snapshot-checklist | `absent` | `7` | `techniques/docs/lightweight-status-snapshot/checks/lightweight-snapshot-checklist.md` | [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) |
+| lightweight-snapshot-checklist | `absent` | `7` | `techniques/instruction/docs-boundary/lightweight-status-snapshot/checks/lightweight-snapshot-checklist.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) |
 
 ### [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
 
@@ -408,11 +408,11 @@ See also:
 |---|---|---|---|---|
 | Relation Lift Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
-### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
+### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/docs/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) |
+| Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/instruction/docs-boundary/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
@@ -456,11 +456,11 @@ See also:
 |---|---|---|---|---|
 | Fragmented Agent Context Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/fragmented-agent-context/checks/fragmented-agent-context-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
-### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
+### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Decision Rationale Recording Checklist | `absent` | `12` | `techniques/docs/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) |
+| Decision Rationale Recording Checklist | `absent` | `12` | `techniques/instruction/docs-boundary/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
 
 ### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 

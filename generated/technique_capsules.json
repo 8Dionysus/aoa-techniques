@@ -28,7 +28,7 @@
       "core_contract_short": "Core contract: each recurring information class has one canonical home; each meaningful change routes to exactly one primary document first.",
       "main_risk_short": "Main risk: the role map drifts after repo evolution, so real updates no longer route to one canonical home.",
       "validation_short": "Validate by checking each major document has an explicit role; a sample change can be routed to one primary document without ambiguity...",
-      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0003",
@@ -126,7 +126,7 @@
       "core_contract_short": "Core contract: README stays a short human-facing entrypoint; MANIFEST, when present, stays a short machine or mixed snapshot.",
       "main_risk_short": "Main risk: the snapshot becomes so thin that it no longer gives enough orientation to send readers to the right...",
       "validation_short": "Validate by checking README remains short and human-facing; MANIFEST, when used, remains a compact snapshot rather than a long log; detailed run...",
-      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0010",
@@ -462,7 +462,7 @@
       "core_contract_short": "Core contract: the note must preserve context, options, rationale, and consequences; the note must stay bounded to one decision rather...",
       "main_risk_short": "Main risk: the note captures a summary but not the actual decision tradeoff.",
       "validation_short": "Validate by checking one real decision is named clearly; context, options, rationale, and consequences are all visible; the not-chosen option and the...",
-      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0034",
@@ -476,7 +476,7 @@
       "core_contract_short": "Core contract: the shared artifact does not leak secrets or private infrastructure detail; sanitization preserves meaning where possible.",
       "main_risk_short": "Main risk: over-sanitizing until the artifact stops being useful.",
       "validation_short": "Validate by checking obvious sensitive surfaces were checked deliberately; the resulting artifact is still understandable; the sanitization level matches the intended audience.",
-      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0035",

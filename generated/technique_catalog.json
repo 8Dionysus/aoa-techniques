@@ -63,7 +63,7 @@
       "kind": "artifact",
       "status": "canonical",
       "summary": "Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes.",
-      "technique_path": "techniques/docs/source-of-truth-layout/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md",
       "origin": {
         "project": "atm10-agent",
         "path": "docs/SOURCE_OF_TRUTH.md",
@@ -477,7 +477,7 @@
       "kind": "artifact",
       "status": "canonical",
       "summary": "Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes.",
-      "technique_path": "techniques/docs/lightweight-status-snapshot/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md",
       "origin": {
         "project": "atm10-agent",
         "path": "docs/DECISIONS.md",
@@ -1829,7 +1829,7 @@
       "kind": "artifact",
       "status": "promoted",
       "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
-      "technique_path": "techniques/docs/decision-rationale-recording/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
       "origin": {
         "project": "aoa-skills",
         "path": "skills/aoa-adr-write/SKILL.md",
@@ -1874,7 +1874,7 @@
       "kind": "guardrail",
       "status": "canonical",
       "summary": "Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.",
-      "technique_path": "techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md",
       "origin": {
         "project": "aoa-skills",
         "path": "skills/aoa-sanitized-share/SKILL.md",

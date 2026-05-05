@@ -7,10 +7,9 @@ Guidance for coding agents and humans working under `techniques/docs/`.
 This domain stores documentation, provenance, boundary, and source-surface
 techniques whose current reviewed home is still the broad `docs` domain.
 
-Representative bundles here include `source-of-truth-layout`,
-`lightweight-status-snapshot`, `bounded-context-map`,
-`public-safe-artifact-sanitization`, `single-scoped-evidence-reference`, and
-`skill-vs-command-boundary`.
+Representative bundles here include `bounded-context-map`,
+`single-scoped-evidence-reference`, `skill-vs-command-boundary`,
+`capability-spec-versioning`, and `capability-discovery`.
 
 ## Domain rules
 

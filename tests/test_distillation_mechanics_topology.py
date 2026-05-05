@@ -1209,7 +1209,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`media-ingest` direct-read review is now", distillation_roadmap)
         self.assertIn("Landed handoff-continuation pilot review", landing_log)
         self.assertIn("selected\n  `media-ingest`", changelog)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Landed Handoff-Continuation Pilot Review", tree_contract)
         self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", incoming_wave2)
         self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", incoming_wave3)
@@ -1374,7 +1374,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("diagnosis-repair` is now", distillation_roadmap)
         self.assertIn("Landed media-ingest pilot review", landing_log)
         self.assertIn("selected\n  `diagnosis-repair`", changelog)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Landed Media-Ingest Pilot Review", tree_contract)
         self.assertIn("techniques/recovery/diagnosis-repair/", tree_contract)
 
@@ -1451,7 +1451,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("accepted the `diagnosis-repair` direct-read migration review", changelog)
         self.assertIn("moved `AOA-T-0080` through `AOA-T-0083`", changelog)
         self.assertIn("fourth landed pilot", root_roadmap)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Diagnosis-Repair Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0080` through `AOA-T-0083", tree_contract)
         self.assertIn("2026-05-04-diagnosis-repair-tree-pilot.md", tree_contract)
@@ -1539,7 +1539,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("accepted-for-fifth-migration-pilot", distillation_roadmap)
         self.assertIn("Landed diagnosis-repair pilot review", landing_log)
         self.assertIn("selected\n  `instruction-surface`", changelog)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Landed Diagnosis-Repair Pilot Review", tree_contract)
         self.assertIn("instruction-surface", tree_contract)
 
@@ -1621,7 +1621,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             changelog,
         )
         self.assertIn("moved `AOA-T-0012`, `AOA-T-0013", changelog)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Instruction-Surface Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0012`, `AOA-T-0013", tree_contract)
         self.assertIn("2026-05-04-instruction-surface-tree-pilot.md", tree_contract)
@@ -1715,7 +1715,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`kag-source-lift` is now chosen", distillation_roadmap)
         self.assertIn("Landed instruction-surface pilot review", landing_log)
         self.assertIn("selected\n  `kag-source-lift`", changelog)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Landed Instruction-Surface Pilot Review", tree_contract)
         self.assertIn("knowledge-lift", tree_contract)
         self.assertIn("kag-source-lift", tree_contract)
@@ -1797,7 +1797,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Kag-source-lift tree pilot migration", landing_log)
         self.assertIn("accepted the `kag-source-lift` direct-read migration review", changelog)
         self.assertIn("moved `AOA-T-0018`, `AOA-T-0019", changelog)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Kag-Source-Lift Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0018`, `AOA-T-0019", tree_contract)
         self.assertIn("2026-05-04-kag-source-lift-tree-pilot.md", tree_contract)
@@ -1832,7 +1832,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Kag-source-lift tree pilot migration", landing_log)
         self.assertIn("legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md", landing_log)
         self.assertIn("sixth landed pilot moved `AOA-T-0018`", root_roadmap)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("2026-05-04-kag-source-lift-tree-pilot.md", tree_contract)
         self.assertIn("moved `AOA-T-0018`, `AOA-T-0019", changelog)
         self.assertTrue(
@@ -1930,7 +1930,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Landed kag-source-lift pilot review", landing_log)
         self.assertIn("selected\n  `docs-boundary`", changelog)
         self.assertIn(
-            "Run the seventh `docs-boundary` pilot migration",
+            "Review the landed `docs-boundary` pilot",
             root_roadmap,
         )
         self.assertIn("Landed Kag-Source-Lift Pilot Review", tree_contract)
@@ -2002,21 +2002,85 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("docs-boundary-direct-read-migration-review", reviews_index)
         self.assertIn("docs-boundary direct-read review: landed", ingress)
         self.assertIn("accepted-for-seventh-migration-pilot", ingress)
-        self.assertIn("The next move is the seventh pilot migration", ingress)
+        self.assertIn("docs-boundary migration: landed", ingress)
         self.assertIn("accepted-for-seventh-migration-pilot", distillation_roadmap)
+        self.assertIn("The seventh pilot migration is now landed", distillation_roadmap)
         self.assertIn("Docs-boundary direct-read migration review", landing_log)
         self.assertIn("accepted the `docs-boundary` direct-read migration review", changelog)
-        self.assertIn("Run the seventh `docs-boundary` pilot migration", root_roadmap)
+        self.assertIn("moved `AOA-T-0002`, `AOA-T-0009", changelog)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
         self.assertIn("Docs-Boundary Direct-Read Migration Review", tree_contract)
         self.assertIn("AOA-T-0002`, `AOA-T-0009", tree_contract)
+        self.assertIn("2026-05-04-docs-boundary-tree-pilot.md", tree_contract)
         self.assertTrue(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "instruction"
+                / "docs-boundary"
+                / "source-of-truth-layout"
+                / "TECHNIQUE.md"
+            ).is_file()
+        )
+        self.assertFalse(
             (
                 REPO_ROOT
                 / "techniques"
                 / "docs"
                 / "source-of-truth-layout"
+            ).exists()
+        )
+
+    def test_docs_boundary_tree_pilot_migration_is_landed_after_direct_read(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("docs-boundary migration: landed", ingress)
+        self.assertIn("techniques/instruction/docs-boundary/", ingress)
+        self.assertIn("without frontmatter changes", ingress)
+        self.assertIn("landed `docs-boundary` pilot review", ingress)
+        self.assertIn("seventh pilot migration is now landed", distillation_roadmap)
+        self.assertIn("techniques/instruction/docs-boundary/", distillation_roadmap)
+        self.assertIn("Docs-boundary tree pilot migration", landing_log)
+        self.assertIn("legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md", landing_log)
+        self.assertIn("seventh landed pilot moved `AOA-T-0002`", root_roadmap)
+        self.assertIn("Review the landed `docs-boundary` pilot", root_roadmap)
+        self.assertIn("2026-05-04-docs-boundary-tree-pilot.md", tree_contract)
+        self.assertIn("moved `AOA-T-0002`, `AOA-T-0009", changelog)
+        self.assertTrue(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "instruction"
+                / "docs-boundary"
+                / "decision-rationale-recording"
                 / "TECHNIQUE.md"
             ).is_file()
+        )
+        self.assertFalse(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "docs"
+                / "decision-rationale-recording"
+            ).exists()
         )
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:

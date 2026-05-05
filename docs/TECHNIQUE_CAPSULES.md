@@ -758,7 +758,7 @@ See also:
 
 ## `docs`
 
-### [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
+### [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) - source-of-truth-layout (`canonical`)
 
 - Summary: Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes.
 - Intent: Reduce documentation drift by giving each recurring kind of project information one canonical document...
@@ -769,9 +769,9 @@ See also:
 - Core contract: each recurring information class has one canonical home; each meaningful change routes to exactly one primary document first.
 - Main risk: the role map drifts after repo evolution, so real updates no longer route to one canonical home.
 - Validate by: each major document has an explicit role; a sample change can be routed to one primary document without ambiguity...
-- Source: [TECHNIQUE.md](../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md)
 
-### [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot (`canonical`)
+### [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) - lightweight-status-snapshot (`canonical`)
 
 - Summary: Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes.
 - Intent: Keep repository entrypoint status easy to scan by turning top-level status docs into short...
@@ -782,7 +782,7 @@ See also:
 - Core contract: README stays a short human-facing entrypoint; MANIFEST, when present, stays a short machine or mixed snapshot.
 - Main risk: the snapshot becomes so thin that it no longer gives enough orientation to send readers to the right...
 - Validate by: README remains short and human-facing; MANIFEST, when used, remains a compact snapshot rather than a long log; detailed run...
-- Source: [TECHNIQUE.md](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md)
 
 ### [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) - deterministic-context-composition (`canonical`)
 
@@ -862,7 +862,7 @@ See also:
 - Validate by: each relation points to a real direct target; current consumers use the edges for one-step navigation rather than inference...
 - Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
 
-### [AOA-T-0034](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
+### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 - Summary: Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.
 - Intent: Convert potentially sensitive technical material into a shareable artifact that keeps the lesson while...
@@ -873,7 +873,7 @@ See also:
 - Core contract: the shared artifact does not leak secrets or private infrastructure detail; sanitization preserves meaning where possible.
 - Main risk: over-sanitizing until the artifact stops being useful.
 - Validate by: obvious sensitive surfaces were checked deliberately; the resulting artifact is still understandable; the sanitization level matches the intended audience.
-- Source: [TECHNIQUE.md](../techniques/docs/public-safe-artifact-sanitization/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md)
 
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
@@ -966,7 +966,7 @@ See also:
 - Validate by: the fragment set is the editable source of truth; each fragment has bounded scope that a reviewer can explain...
 - Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md)
 
-### [AOA-T-0033](../techniques/docs/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
+### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
 - Summary: Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.
 - Intent: Record one meaningful decision in a compact, reviewable note that preserves context, options, rationale...
@@ -977,7 +977,7 @@ See also:
 - Core contract: the note must preserve context, options, rationale, and consequences; the note must stay bounded to one decision rather...
 - Main risk: the note captures a summary but not the actual decision tradeoff.
 - Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the not-chosen option and the...
-- Source: [TECHNIQUE.md](../techniques/docs/decision-rationale-recording/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
 
 ### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 
