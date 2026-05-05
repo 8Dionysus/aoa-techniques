@@ -44,5 +44,6 @@ Current reviews:
 - [landed-antifragility-recovery-pilot-review](landed-antifragility-recovery-pilot-review.md)
 - [ready-work-graphs-direct-read-migration-review](ready-work-graphs-direct-read-migration-review.md)
 - [landed-ready-work-graphs-pilot-review](landed-ready-work-graphs-pilot-review.md)
+- [intent-chain-direct-read-migration-review](intent-chain-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

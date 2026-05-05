@@ -4715,6 +4715,95 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertTrue((REPO_ROOT / current_path).is_file())
                 self.assertFalse((REPO_ROOT / future_path).exists())
 
+    def test_intent_chain_direct_read_review_accepts_seventeenth_pilot(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "intent-chain-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Intent-Chain Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-seventeenth-migration-pilot", review)
+        self.assertIn("Accept `execution/intent-chain`", review)
+        self.assertIn("Move exactly `AOA-T-0004` and `AOA-T-0005`", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("Direct Bundle Read", review)
+        self.assertIn("Why The Earlier Small-Shelf Hold No Longer Blocks", review)
+        self.assertIn("Execution Trunk Fit", review)
+        self.assertIn("Proposed Move", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("Do not promote `AOA-T-0005` to canonical", review)
+        self.assertIn(
+            "router ownership, API contract authority,\n  runtime dispatch",
+            review,
+        )
+        self.assertIn("Run the seventeenth migration pilot", review)
+        self.assertIn("intent-chain-direct-read-migration-review", reviews_index)
+        self.assertIn("intent-chain direct-read review: landed", ingress)
+        self.assertIn("accepted-for-seventeenth-migration-pilot", ingress)
+        self.assertIn("Intent-chain direct-read migration review", landing_log)
+        self.assertIn("AOA-T-0004` as the base artifact-first intent chain", landing_log)
+        self.assertIn("AOA-T-0005` as `status: promoted`", landing_log)
+        self.assertIn("accepted-for-seventeenth-migration-pilot", distillation_roadmap)
+        self.assertIn("Migrate exactly `AOA-T-0004` and `AOA-T-0005`", root_roadmap)
+        self.assertIn("Intent-Chain Direct-Read Migration Review", tree_contract)
+        self.assertIn("preserves `AOA-T-0005` as promoted", tree_contract)
+        self.assertIn(
+            "accepted the `intent-chain` direct-read migration review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0004",
+                "techniques/agent-workflows/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+                "techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0005",
+                "techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md",
+                "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT

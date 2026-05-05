@@ -3,6 +3,36 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Intent-chain direct-read migration review
+
+Changed:
+
+- added
+  [intent-chain-direct-read-migration-review](parts/technique-reform-ingress/reviews/intent-chain-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0004` and `AOA-T-0005`
+- accepted `execution/intent-chain` as the seventeenth bounded migration pilot
+  without moving files
+- kept `AOA-T-0004` as the base artifact-first intent chain and `AOA-T-0005`
+  as the one-new-intent rollout checklist on top of that chain
+- preserved `AOA-T-0005` as `status: promoted`; path movement must not imply
+  canonical promotion
+- kept router ownership, API contract authority, runtime dispatch, real-action
+  permission, automation governance, CI policy, broad rollout doctrine, and
+  neighboring execution shelves outside the shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no seventeenth shelf migration landed from the review alone
+
 ## 2026-05-05 - Landed ready-work-graphs pilot review
 
 Changed:

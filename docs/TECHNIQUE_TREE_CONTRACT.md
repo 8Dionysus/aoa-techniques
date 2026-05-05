@@ -446,8 +446,16 @@ preserves `AOA-T-0055` as a readiness ladder rather than graph database,
 methodology, or execution workflow, and chooses `execution/intent-chain` for
 the next direct-read migration review.
 
-The next reform slice should run the `execution/intent-chain` direct-read
-review before moving any seventeenth shelf.
+The seventeenth direct-read review is
+[Intent-Chain Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/intent-chain-direct-read-migration-review.md).
+It accepts exactly `AOA-T-0004` and `AOA-T-0005` for
+`techniques/execution/intent-chain/`, preserves `AOA-T-0005` as promoted, and
+keeps router ownership, API contract authority, runtime dispatch, real-action
+permission, automation governance, CI policy, broad rollout doctrine, and
+neighboring execution shelves outside the shelf.
+
+The next reform slice should migrate those two bundles into
+`techniques/execution/intent-chain/` before reviewing the landed shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
