@@ -106,6 +106,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `docs-boundary` pilot review and selected
   `capability-registry` for the next direct-read migration review without
   moving an eighth shelf yet
+- accepted the `capability-registry` direct-read migration review over
+  `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064` as the eighth tree pilot while
+  keeping the review itself non-mutating
 
 ### Validation
 

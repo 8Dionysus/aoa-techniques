@@ -26,5 +26,6 @@ Current reviews:
 - [landed-kag-source-lift-pilot-review](landed-kag-source-lift-pilot-review.md)
 - [docs-boundary-direct-read-migration-review](docs-boundary-direct-read-migration-review.md)
 - [landed-docs-boundary-pilot-review](landed-docs-boundary-pilot-review.md)
+- [capability-registry-direct-read-migration-review](capability-registry-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

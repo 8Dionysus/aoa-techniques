@@ -98,8 +98,14 @@
    repair, generated rebuilds, and release-check validation in the same wave.
    The landed `docs-boundary` pilot review is also landed as
    `pilot-validated`, validates the second instruction trunk shelf, and chooses
-   `capability-registry` for the next direct-read migration review before any
-   eighth shelf moves.
+   `capability-registry` for the next direct-read migration review. The
+   `capability-registry` direct-read review is now landed as
+   `accepted-for-eighth-migration-pilot`; it accepts exactly `AOA-T-0025`,
+   `AOA-T-0063`, and `AOA-T-0064` while keeping registry product doctrine,
+   discovery ranking, marketplace curation, trust policy, graph semantics,
+   runtime resolution, skill acceptance, and agent-role authority outside the
+   move. The next bounded step is the eighth pilot migration before any other
+   shelf moves.
 
 ## Hold line
 

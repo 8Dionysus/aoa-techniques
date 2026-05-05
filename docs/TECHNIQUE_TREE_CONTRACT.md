@@ -281,7 +281,12 @@ It validates the `docs-boundary` migration as the second successful
 instruction trunk shelf and chooses `capability-registry` for the next
 direct-read migration review.
 
-The next reform slice should run a direct-read review for
+The eighth migration review is
+[Capability-Registry Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/capability-registry-direct-read-migration-review.md).
+It accepts `capability-registry` as the eighth migration pilot after directly
+reading `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064`.
+
+The next reform slice should run the eighth pilot migration for
 `capability-registry` before moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
