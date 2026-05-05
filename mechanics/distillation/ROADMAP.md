@@ -128,8 +128,14 @@
    registry product doctrine, routing policy, installer behavior, sync
    substrate, trust scoring, security scanning, generic monitoring, capability
    ownership, command doctrine, and agent-role authority outside the next move.
-   The next bounded step is the direct-read migration review for
-   `skill-discovery` before any tenth shelf moves.
+   The `skill-discovery` direct-read review is now landed as
+   `accepted-for-tenth-migration-pilot`; it accepts exactly `AOA-T-0041` and
+   `AOA-T-0042` while keeping installer behavior, sync substrate, registry
+   product doctrine, registry governance, access control, routing policy,
+   recommendation ranking, trust scoring, security scanning, compliance
+   review, generic monitoring, capability ownership, command doctrine, runtime
+   law, and agent-role authority outside the move. The next bounded step is
+   the tenth pilot migration for `skill-discovery`, with no frontmatter change.
 
 ## Hold line
 

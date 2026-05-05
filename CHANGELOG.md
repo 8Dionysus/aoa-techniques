@@ -124,6 +124,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `capability-boundary` pilot review and selected
   `skill-discovery` for the next direct-read migration review without moving a
   tenth shelf yet
+- accepted the `skill-discovery` direct-read migration review over
+  `AOA-T-0041` and `AOA-T-0042` as the tenth tree pilot while keeping the
+  review itself non-mutating
 
 ### Validation
 

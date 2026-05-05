@@ -3,6 +3,40 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Skill-discovery direct-read migration review
+
+Changed:
+
+- added
+  [skill-discovery-direct-read-migration-review](parts/technique-reform-ingress/reviews/skill-discovery-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0041` and `AOA-T-0042`
+- accepted `skill-discovery` as the tenth bounded migration pilot because
+  direct reading confirmed the shared skill-surfacing shelf
+- kept the review non-mutating: no technique bundle moved, no frontmatter
+  changed, and no generated projection became authority
+- kept proof, skill-support, governance, runtime, owner-closeout,
+  automation-governance, and other skill-adjacent shelves outside the
+  migration wave
+- kept installer behavior, sync substrate, registry product doctrine, registry
+  governance, access control, routing policy, recommendation ranking, trust
+  scoring, security scanning, compliance review, generic monitoring,
+  capability ownership, command doctrine, runtime law, and agent-role
+  authority outside `skill-discovery`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no tenth shelf migration happened from the review alone
+
 ## 2026-05-05 - Landed capability-boundary pilot review
 
 Changed:
