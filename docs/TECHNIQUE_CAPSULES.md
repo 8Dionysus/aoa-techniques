@@ -15,7 +15,7 @@ See also:
 
 ## `agent-workflows`
 
-### [AOA-T-0001](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report (`canonical`)
+### [AOA-T-0001](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) - plan-diff-apply-verify-report (`canonical`)
 
 - Summary: Safe workflow for agent-driven changes using explicit planning, scoped diffs, explicit validation, and concise reporting.
 - Intent: Reduce unsafe, opaque, or non-reviewable agent changes by requiring a visible workflow before and...
@@ -26,7 +26,7 @@ See also:
 - Core contract: changes must stay reviewable by another human or agent; validation must be named explicitly, not implied.
 - Main risk: VERIFY is named, the report looks complete, and review passes even though the validation was symbolic or never...
 - Validate by: a concrete plan exists before apply; the diff stays inside the declared scope; at least one explicit validation method...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md)
 
 ### [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) - intent-plan-dry-run-contract-chain (`canonical`)
 
@@ -41,7 +41,7 @@ See also:
 - Validate by: the intent payload is accepted or rejected by explicit normalization rules; the normalized plan is written as an artifact...
 - Source: [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md)
 
-### [AOA-T-0014](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
+### [AOA-T-0014](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) - tdd-slice (`canonical`)
 
 - Summary: Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits.
 - Intent: Reduce ambiguity and regression risk by expressing one bounded behavior slice as tests before...
@@ -52,9 +52,9 @@ See also:
 - Core contract: tests should express behavior rather than incidental implementation detail; the implementation should stay bounded to the declared slice.
 - Main risk: tests mirror the implementation instead of constraining it.
 - Validate by: tests were added or updated before implementation when the task was suitable for TDD; the implementation stayed inside the...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/tdd-slice/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md)
 
-### [AOA-T-0023](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`canonical`)
+### [AOA-T-0023](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) - stateless-single-shot-agent (`canonical`)
 
 - Summary: Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default.
 - Intent: Keep quick shell-side agent work bounded to one mostly independent invocation so the fast...
@@ -65,9 +65,9 @@ See also:
 - Core contract: each invocation stays mostly independent and reproducible by default; transient context is an input to one run, not...
 - Main risk: a supposedly single-shot invocation quietly expands into a multi-step loop with hidden state.
 - Validate by: one invocation handles one explicit question or one explicit action request; read-only question flows do not silently gain tool...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md)
 
-### [AOA-T-0028](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`canonical`)
+### [AOA-T-0028](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) - confirmation-gated-mutating-action (`canonical`)
 
 - Summary: Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop.
 - Intent: Keep the boundary between read or plan work and mutating work explicit so a...
@@ -78,9 +78,9 @@ See also:
 - Core contract: read or plan work stays distinct from mutating work; the confirmation seam is the center of the contract.
 - Main risk: the confirmation step becomes so weak that it no longer feels like a real gate.
 - Validate by: a read or plan flow can pause before mutation; the mutation is named explicitly before it runs; the confirmation...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md)
 
-### [AOA-T-0031](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`canonical`)
+### [AOA-T-0031](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) - shell-composable-agent-invocation (`canonical`)
 
 - Summary: Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops.
 - Intent: Keep agent invocations composable as shell tools so one-shot runs can read from stdin...
@@ -91,7 +91,7 @@ See also:
 - Core contract: the agent run stays one-shot and shell-visible; stdin, stdout, files, or pipes remain the primary composition boundary.
 - Main risk: the invocation stops behaving like a shell tool and starts depending on hidden session state.
 - Validate by: the run behaves like one shell-visible invocation; inputs and outputs can move through stdin, stdout, files, or pipes; the...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md)
 
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 

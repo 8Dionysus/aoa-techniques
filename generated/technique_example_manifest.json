@@ -4,10 +4,10 @@
   "techniques": [
     {
       "id": "AOA-T-0001",
-      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/plan-diff-apply-verify-report/examples/minimal-change-flow.md",
+          "example_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/examples/minimal-change-flow.md",
           "title": "Minimal Change Flow",
           "body_markdown": "This example shows the technique as a reusable outline for a small, reviewable change.\n\n## Scenario\n\nUpdate a public README section to clarify repository intent without changing repository structure or policy.\n\n## PLAN\n\n- Goal: make the README clearer for first-time readers\n- Touched surface: `README.md`\n- Main risk: accidentally changing meaning instead of clarifying wording\n- Rollback idea: revert the single documentation patch if the wording introduces ambiguity\n\n## DIFF\n\n- Prepare one focused patch that changes only the target section\n- Avoid unrelated formatting cleanup or additional document edits\n\n## APPLY\n\n- Apply the scoped README patch\n- Keep the change aligned with the stated goal\n\n## VERIFY\n\n- Re-read the updated section for clarity and consistency\n- Confirm that no other repository documents now contradict the new wording\n\n## REPORT\n\n- Changed: clarified the README intent statement\n- Verified: wording matches repository purpose and does not conflict with contribution rules\n- Rollback: restore the previous README wording if reviewers find the new text less precise"
         }
@@ -192,15 +192,15 @@
     },
     {
       "id": "AOA-T-0014",
-      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/tdd-slice/examples/concrete-application-handler-slice.md",
+          "example_path": "techniques/execution/agent-workflows-core/tdd-slice/examples/concrete-application-handler-slice.md",
           "title": "Concrete Application Handler Slice",
           "body_markdown": "This example shows a more concrete bounded behavior change handled through `tdd-slice`.\n\n## Scenario\n\nAn application handler returns a status summary for background imports. It currently collapses `partial_success` into `success`, which hides item-level failures from callers that only inspect the final handler result.\n\n## Flow\n\n1. State the bounded behavior slice explicitly: when some items succeed and some fail, the handler should return `partial_success` instead of `success`.\n2. Add one failing test at the handler boundary around the observable returned status and summary payload.\n3. Make the smallest implementation change needed in the nearby result-mapping logic.\n4. Refactor only the local status-mapping helper touched by that slice.\n5. Re-run the relevant tests and report that the handler now distinguishes partial success without widening the change into a broader import redesign.\n\n## Why this stays bounded\n\n- The example centers one observable behavior rule rather than a larger boundary or schema rewrite.\n- The test surface stays focused on handler output, not a wider API or downstream contract package.\n- Broader questions about retry policy, import orchestration, or payload redesign are explicitly deferred."
         },
         {
-          "example_path": "techniques/agent-workflows/tdd-slice/examples/minimal-tdd-slice.md",
+          "example_path": "techniques/execution/agent-workflows-core/tdd-slice/examples/minimal-tdd-slice.md",
           "title": "Minimal TDD Slice",
           "body_markdown": "This example shows a small bounded behavior change handled through `tdd-slice`.\n\n## Scenario\n\nA formatter should preserve leading `+` for international phone numbers instead of stripping it during normalization.\n\n## Flow\n\n1. State the bounded behavior change: \"`+15551234567` should remain prefixed with `+` after normalization.\"\n2. Add or update one failing test around that observable behavior.\n3. Make the smallest implementation change needed to satisfy the test.\n4. Refactor only the normalization helper touched by that slice.\n5. Re-run the relevant tests and report the result.\n\n## Why this stays bounded\n\n- The change is framed as one concrete behavior rule.\n- The tests constrain observable output rather than internal helper structure.\n- Any larger cleanup of phone-number parsing is explicitly left for a separate change."
         }
@@ -311,15 +311,15 @@
     },
     {
       "id": "AOA-T-0023",
-      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/stateless-single-shot-agent/examples/confirmed-single-step-action.md",
+          "example_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/examples/confirmed-single-step-action.md",
           "title": "Confirmed Single-Step Action",
           "body_markdown": "Scenario: a shell operator wants to rename one generated report file.\n\n1. Frame the request as one explicit action: rename `reports/today.json` to `reports/archive/today.json`.\n2. Provide only the transient context needed for that rename.\n3. Ask for one tool-using step.\n4. Show the exact mutating command before it runs.\n5. Require explicit confirmation.\n6. Run the command once.\n7. Return the result and stop.\n\nThis stays inside the technique because the flow remains one invocation, one confirmed action, and no hidden multi-step autonomy."
         },
         {
-          "example_path": "techniques/agent-workflows/stateless-single-shot-agent/examples/minimal-stateless-single-shot-agent.md",
+          "example_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/examples/minimal-stateless-single-shot-agent.md",
           "title": "Minimal Stateless Single-Shot Agent",
           "body_markdown": "Use one invocation for one narrow shell-side need.\n\n- question mode:\n  - ask one explicit question\n  - pass only the transient context needed for that answer\n  - return one answer without tool use\n- action mode:\n  - state one explicit action request\n  - allow one tool step only\n  - require confirmation before mutation\n  - stop after the result\n\nIf the task now needs several dependent actions or hidden continuity, leave this fast path and switch to a broader workflow."
         }
@@ -391,15 +391,15 @@
     },
     {
       "id": "AOA-T-0028",
-      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/confirmation-gated-mutating-action/examples/concrete-confirmed-mutating-action.md",
+          "example_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/examples/concrete-confirmed-mutating-action.md",
           "title": "Concrete Confirmed Mutating Action",
           "body_markdown": "Scenario: an agent has identified one file that needs a small text update.\n\n1. Read the file and describe the exact line-level change in plain language.\n2. Ask for a visible confirmation before changing the file.\n3. After confirmation, apply only that one bounded edit.\n4. Report the result and stop instead of chaining more edits into the same run.\n\nThis stays inside the technique because the confirmation seam is explicit and the mutating action remains bounded to one named change."
         },
         {
-          "example_path": "techniques/agent-workflows/confirmation-gated-mutating-action/examples/minimal-confirmation-gated-mutating-action.md",
+          "example_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/examples/minimal-confirmation-gated-mutating-action.md",
           "title": "Minimal Confirmation Gated Mutating Action",
           "body_markdown": "Use one read or plan step first, then pause for confirmation before mutation.\n\n- read or plan step:\n  - inspect the target file or target command\n  - state the proposed change in one sentence\n- confirmation step:\n  - ask for an explicit yes/no before any write runs\n- mutating step:\n  - perform only the confirmed bounded change\n  - stop after the confirmed action completes\n\nIf the task now needs multiple writes, diff review, or a longer verification chain, hand it off to a broader workflow technique."
         }
@@ -444,20 +444,20 @@
     },
     {
       "id": "AOA-T-0031",
-      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-pipe-first-agent-invocation.md",
+          "example_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/concrete-pipe-first-agent-invocation.md",
           "title": "Concrete Pipe-First Agent Invocation",
           "body_markdown": "This example keeps the agent invocation composable with ordinary shell tools.\n\n```powershell\ngit diff -- README.md |\n  qa \"extract one user-facing change summary and one reviewer watch point\" |\n  Set-Content review-note.txt\n```\n\nWhy this fits the technique:\n\n- the agent run is one shell-visible invocation\n- the input comes from a pipe\n- the result is captured into an explicit file\n- the shell flow stays inspectable without depending on hidden long-lived session state"
         },
         {
-          "example_path": "techniques/agent-workflows/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md",
+          "example_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md",
           "title": "Concrete Shell Composable Agent Invocation",
           "body_markdown": "Scenario: normalize a short task brief into a reusable text artifact.\n\n1. Write the brief to `stdin` or save it in `request.txt`.\n2. Run one shell-composable command that reads the brief and emits normalized output.\n3. Pipe the result into `stdout` or `result.txt`.\n4. Stop after the single invocation and use the output as the handoff artifact.\n\nThis stays inside the technique because the interaction remains one bounded shell step with explicit stream or file transport."
         },
         {
-          "example_path": "techniques/agent-workflows/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md",
+          "example_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md",
           "title": "Minimal Shell-Composable Agent Invocation",
           "body_markdown": "Use the agent as one more command in a shell pipeline.\n\n```powershell\nGet-Content TODO.md | qa \"summarize the next three safe cleanup steps\"\n```\n\nThe important part is not the exact wrapper name.\nThe important part is that:\n\n- the input arrives through stdin\n- the output returns through stdout\n- the run ends after one result\n- the next shell step can consume the result directly"
         }

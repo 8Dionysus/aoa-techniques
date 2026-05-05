@@ -114,7 +114,7 @@ before publish so local green does not overstate merge-readiness.
   doctrine, or CI platform design
 
 Relationship to adjacent techniques: unlike
-[AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), this technique is
+[AOA-T-0001](../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md), this technique is
 not the whole change protocol; it adds one stricter publish rule around pinned
 validation inputs for generated outputs. Unlike
 [AOA-T-0042](../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md), it

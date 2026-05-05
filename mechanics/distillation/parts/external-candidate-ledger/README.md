@@ -78,9 +78,9 @@ generation, registry behavior, and dashboard monitoring.
 
 Nearest overlap watch:
 
-- [AOA-T-0001](../../../../techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md)
+- [AOA-T-0001](../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md)
   owns the broader multi-step change loop.
-- [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
+- [AOA-T-0023](../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md)
   owns the single-shot fast path.
 - `bounded-specialist-generation` remains an adjacent incubation lane, not part
   of this handoff contract.
@@ -99,8 +99,8 @@ Nearest overlap watch:
 |---|---|---|---|---|
 | `external_sync_manifest` | `n-skills` | `external-sync-manifest` | `docs` | too close to [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) unless sync control separates from provenance-backed mirroring |
 | `project_memory_bootstrap` | `OpenMemory-Code` | `project-history-bootstrap` | `history` | too close to [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) unless it narrows to history bootstrap without memory substrate semantics |
-| `context_injection_for_coding_agents` | `agents-md` | `bounded-context-injection-for-coding-agents` | `docs` | overlaps [AOA-T-0012](../../../../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) until injection becomes the distinct contract |
-| `single_step_agent` | `qqqa` | `single-step-confirmed-agent-action` | `agent-workflows` | too close to [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) unless the center becomes one-step mutating confirmation |
+| `context_injection_for_coding_agents` | `agents-md` | `bounded-context-injection-for-coding-agents` | `docs` | overlaps [AOA-T-0012](../../../../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0023](../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) until injection becomes the distinct contract |
+| `single_step_agent` | `qqqa` | `single-step-confirmed-agent-action` | `agent-workflows` | too close to [AOA-T-0023](../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) unless the center becomes one-step mutating confirmation |
 
 ### Needs Layer Incubation Before Distillation Here
 
@@ -130,10 +130,10 @@ landed anchors remain useful for route memory:
 - Wave C external anchor: [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md)
 - adjacent landed imports from the earlier external backlog include
   [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md),
-  [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md),
+  [AOA-T-0028](../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md),
   [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md),
   [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md),
-  [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md),
+  [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md),
   [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md),
   [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md),
   [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md),

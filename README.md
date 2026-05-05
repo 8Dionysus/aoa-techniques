@@ -53,7 +53,7 @@ Use the shortest route by need:
 - scalable corpus tree contract: `docs/TECHNIQUE_TREE_CONTRACT.md`
 - root and docs placement law: `docs/ROOT_SURFACE_LAW.md`
 - repo-wide provenance, archives, and migration receipts: `legacy/README.md`
-- one full bundle end to end: `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
+- one full bundle end to end: `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md`
 - current technique map: `TECHNIQUE_INDEX.md`
 - current direction: `ROADMAP.md`
 - durable obligations: `QUESTBOOK.md`

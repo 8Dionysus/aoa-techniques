@@ -201,6 +201,10 @@ The format is intentionally simple and human-first.
 - accepted the `agent-workflows-core` direct-read migration review over
   `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`, `AOA-T-0028`, and `AOA-T-0031`
   as the eighteenth tree pilot while keeping the review itself non-mutating
+- moved `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`, `AOA-T-0028`, and
+  `AOA-T-0031` into `techniques/execution/agent-workflows-core/` while
+  keeping `domain`, `kind`, IDs, status, evidence, and `tree_path`
+  frontmatter unchanged
 
 ### Validation
 

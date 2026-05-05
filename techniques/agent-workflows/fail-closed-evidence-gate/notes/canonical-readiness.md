@@ -15,7 +15,7 @@
 
 ## Default-use rationale
 - this is the right promoted default when the main problem is blocking mutation on non-allow while preserving reviewable evidence at the boundary
-- it remains narrower than [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md) because it centers an execution-boundary verdict rather than a human confirmation seam
+- it remains narrower than [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) because it centers an execution-boundary verdict rather than a human confirmation seam
 - it also remains narrower than a durable-jobs surface because it does not own checkpoint, pause, and resume semantics across longer-running work
 
 ## Fresh public-safety check

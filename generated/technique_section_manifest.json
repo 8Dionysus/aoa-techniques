@@ -16,7 +16,7 @@
   "techniques": [
     {
       "id": "AOA-T-0001",
-      "technique_path": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -744,7 +744,7 @@
     },
     {
       "id": "AOA-T-0014",
-      "technique_path": "techniques/agent-workflows/tdd-slice/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -1248,7 +1248,7 @@
     },
     {
       "id": "AOA-T-0023",
-      "technique_path": "techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -1528,7 +1528,7 @@
     },
     {
       "id": "AOA-T-0028",
-      "technique_path": "techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -1696,7 +1696,7 @@
     },
     {
       "id": "AOA-T-0031",
-      "technique_path": "techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md",
+      "technique_path": "techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -3803,7 +3803,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the gate sits directly in front of mutating execution\n- non-allow verdicts block side effects rather than merely warning\n- one evidence artifact survives the verdict for later review\n- explicit allow is required for execution to continue\n- the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics\n- the evidence artifact supports review but does not itself become the whole trace or governance system\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself."
+          "markdown": "- the gate sits directly in front of mutating execution\n- non-allow verdicts block side effects rather than merely warning\n- one evidence artifact survives the verdict for later review\n- explicit allow is required for execution to continue\n- the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics\n- the evidence artifact supports review but does not itself become the whole trace or governance system\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself."
         },
         {
           "heading": "Risks",
@@ -4923,7 +4923,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the check classifies one candidate's approval burden; it does not approve execution\n- `checkpoint_required` is a boundary flag, not a scheduler or mutation grant\n- hidden authority, missing rollback, and missing health checks all count against seed-ready posture\n- later repair or approval systems still own the actual checkpoint stack\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not govern a general confirmation seam before mutation; it only classifies whether an automation candidate has crossed into checkpoint-required territory. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not build the full repair checkpoint packet; it only decides when automation-oriented lift must hand off to one."
+          "markdown": "- the check classifies one candidate's approval burden; it does not approve execution\n- `checkpoint_required` is a boundary flag, not a scheduler or mutation grant\n- hidden authority, missing rollback, and missing health checks all count against seed-ready posture\n- later repair or approval systems still own the actual checkpoint stack\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not govern a general confirmation seam before mutation; it only classifies whether an automation candidate has crossed into checkpoint-required territory. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not build the full repair checkpoint packet; it only decides when automation-oriented lift must hand off to one."
         },
         {
           "heading": "Risks",
@@ -5091,7 +5091,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the workspace root is explicit before ingress runs\n- one primary repo root is named for the current pass, even when it is temporarily the workspace root itself\n- ingress happens before substantial work\n- guard happens before risky mutation, not after\n- `must_confirm` and `blocked_actions` remain actionable gates\n- the technique stays smaller than workspace install doctrine, repo bootstrap, closeout routing, and owner-layer authorship\n\nRelationship to adjacent techniques: unlike [AOA-T-0060](../../continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md), this technique does not own the general \u201cread current state before work\u201d ritual for any resumed session; it owns the workspace-root posture where ingress and pre-mutation guard are explicit control-plane passes. Unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), it does not replace the local confirmation seam around one concrete mutation; it prepares the workspace-aware gate posture before mutation is even allowed. Unlike [AOA-T-0061](../../continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md), it does not author a cross-repo map artifact; it governs how an active session should enter and guard work once a federated workspace already exists."
+          "markdown": "- the workspace root is explicit before ingress runs\n- one primary repo root is named for the current pass, even when it is temporarily the workspace root itself\n- ingress happens before substantial work\n- guard happens before risky mutation, not after\n- `must_confirm` and `blocked_actions` remain actionable gates\n- the technique stays smaller than workspace install doctrine, repo bootstrap, closeout routing, and owner-layer authorship\n\nRelationship to adjacent techniques: unlike [AOA-T-0060](../../continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md), this technique does not own the general \u201cread current state before work\u201d ritual for any resumed session; it owns the workspace-root posture where ingress and pre-mutation guard are explicit control-plane passes. Unlike [AOA-T-0028](../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), it does not replace the local confirmation seam around one concrete mutation; it prepares the workspace-aware gate posture before mutation is even allowed. Unlike [AOA-T-0061](../../continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md), it does not author a cross-repo map artifact; it governs how an active session should enter and guard work once a federated workspace already exists."
         },
         {
           "heading": "Risks",
@@ -5147,7 +5147,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- no finding closes without live confirmation or an explicit non-repro explanation\n- fixes land in the owning source repository or source checkout\n- each closed finding names a targeted proof surface that matches the failure mode\n- targeted proof does not replace owner-level closeout\n- owner-level closeout does not replace targeted proof\n- deferred, uncertain, and follow-on outcomes remain visible\n- the technique stays smaller than incident response, release cutover, and generic issue-management doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0052](../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), this technique starts after the findings are already reviewed and focuses on proof-backed closure rather than dedupe and stale-finding reduction. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it adds a stricter finding-first proof loop where live confirmation, targeted regression evidence, and final closeout must all attach to named audit findings before closure is credible."
+          "markdown": "- no finding closes without live confirmation or an explicit non-repro explanation\n- fixes land in the owning source repository or source checkout\n- each closed finding names a targeted proof surface that matches the failure mode\n- targeted proof does not replace owner-level closeout\n- owner-level closeout does not replace targeted proof\n- deferred, uncertain, and follow-on outcomes remain visible\n- the technique stays smaller than incident response, release cutover, and generic issue-management doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0052](../../continuity/review-compaction/review-findings-compaction/TECHNIQUE.md), this technique starts after the findings are already reviewed and focuses on proof-backed closure rather than dedupe and stale-finding reduction. Unlike [AOA-T-0001](../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md), it adds a stricter finding-first proof loop where live confirmation, targeted regression evidence, and final closeout must all attach to named audit findings before closure is credible."
         },
         {
           "heading": "Risks",
@@ -5315,7 +5315,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the owner repository remains the source of truth for landed meaning\n- GitHub-native execution does not create a second hidden local source of truth\n- merge happens in the owner repo before coordination-layer truth is updated\n- post-merge reality sync happens in the same closeout pass rather than as an\n  optional later cleanup\n- public claims stay bounded to what the owner-side docs and checks actually\n  prove\n- the technique stays smaller than full remediation-wave choreography or\n  product support policy\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0092](../audit-to-closeout-proof-loop/TECHNIQUE.md), this technique is\nnot about finding-first remediation proof across live source checkouts. It\nbegins later, when one bounded owner-side endcap must land through GitHub\nrather than a local checkout. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md),\nit adds a stricter owner-truth rule: the coordination layer must rebind itself\nto merged owner anchors immediately after the GitHub-native landing."
+          "markdown": "- the owner repository remains the source of truth for landed meaning\n- GitHub-native execution does not create a second hidden local source of truth\n- merge happens in the owner repo before coordination-layer truth is updated\n- post-merge reality sync happens in the same closeout pass rather than as an\n  optional later cleanup\n- public claims stay bounded to what the owner-side docs and checks actually\n  prove\n- the technique stays smaller than full remediation-wave choreography or\n  product support policy\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0092](../audit-to-closeout-proof-loop/TECHNIQUE.md), this technique is\nnot about finding-first remediation proof across live source checkouts. It\nbegins later, when one bounded owner-side endcap must land through GitHub\nrather than a local checkout. Unlike [AOA-T-0001](../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md),\nit adds a stricter owner-truth rule: the coordination layer must rebind itself\nto merged owner anchors immediately after the GitHub-native landing."
         },
         {
           "heading": "Risks",
@@ -5371,7 +5371,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the workflow-pinned validation matrix is explicit before rebuild begins\n- local workspace state never silently substitutes for pinned refs\n- generated publish waits for the pinned-matrix pass, not just a workspace-only\n  green check\n- repairs stay bounded to the inputs that the workflow actually reads\n- the technique stays smaller than full release automation, split-wave playbook\n  doctrine, or CI platform design\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), this technique is\nnot the whole change protocol; it adds one stricter publish rule around pinned\nvalidation inputs for generated outputs. Unlike\n[AOA-T-0042](../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md), it\ndoes not score upstream readiness in the abstract; it reproduces the exact\npublish-time matrix that generated-surface CI will read. Unlike\n[AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does\nnot govern session start or mutation gating; it acts later, when generated\npublish honesty is on the line."
+          "markdown": "- the workflow-pinned validation matrix is explicit before rebuild begins\n- local workspace state never silently substitutes for pinned refs\n- generated publish waits for the pinned-matrix pass, not just a workspace-only\n  green check\n- repairs stay bounded to the inputs that the workflow actually reads\n- the technique stays smaller than full release automation, split-wave playbook\n  doctrine, or CI platform design\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0001](../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md), this technique is\nnot the whole change protocol; it adds one stricter publish rule around pinned\nvalidation inputs for generated outputs. Unlike\n[AOA-T-0042](../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md), it\ndoes not score upstream readiness in the abstract; it reproduces the exact\npublish-time matrix that generated-surface CI will read. Unlike\n[AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does\nnot govern session start or mutation gating; it acts later, when generated\npublish honesty is on the line."
         },
         {
           "heading": "Risks",

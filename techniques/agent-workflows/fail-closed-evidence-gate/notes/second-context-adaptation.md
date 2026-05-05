@@ -24,7 +24,7 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can collapse into [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md) if teams stop distinguishing machine or contract verdicts from human confirmation seams
+- the pattern can collapse into [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) if teams stop distinguishing machine or contract verdicts from human confirmation seams
 - the public bundle could drift into durable orchestration if pause, checkpoint, and resume semantics become central
 - contributors may over-associate the technique with broad governance platforms because the donor bundles the gate with larger policy surfaces
 

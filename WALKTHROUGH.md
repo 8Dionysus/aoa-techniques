@@ -7,7 +7,7 @@ This walkthrough shows how one real practice moved from an origin project into a
 `AOA-T-0001 plan-diff-apply-verify-report` started in `abyss-stack`, where a visible change protocol was used to keep non-trivial agent work reviewable and bounded.
 
 See:
-- `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
+- `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md`
 
 ## 2. Published technique
 
@@ -24,9 +24,9 @@ What was generalized for publication:
 - the workflow was rewritten as a repository-agnostic change protocol
 
 See:
-- `techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md`
-- `techniques/agent-workflows/plan-diff-apply-verify-report/examples/minimal-change-flow.md`
-- `techniques/agent-workflows/plan-diff-apply-verify-report/checks/review-checklist.md`
+- `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md`
+- `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/examples/minimal-change-flow.md`
+- `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/checks/review-checklist.md`
 
 ## 3. Reuse evidence
 
@@ -38,8 +38,8 @@ Its evidence stack includes:
 - a canonical-readiness review with explicit default-use rationale and fresh public-safety confirmation
 
 See:
-- `techniques/agent-workflows/plan-diff-apply-verify-report/notes/second-context-adaptation.md`
-- `techniques/agent-workflows/plan-diff-apply-verify-report/notes/canonical-readiness.md`
+- `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/second-context-adaptation.md`
+- `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/canonical-readiness.md`
 
 ## 4. Second-context adaptation
 
@@ -59,7 +59,7 @@ What changed:
 This is what makes the technique portable: the core contract survives while project-shaped details change.
 
 See:
-- `techniques/agent-workflows/plan-diff-apply-verify-report/notes/second-context-adaptation.md`
+- `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/notes/second-context-adaptation.md`
 - `AGENTS.md`
 - `CONTRIBUTING.md`
 
