@@ -2238,7 +2238,7 @@
       "kind": "discovery",
       "status": "promoted",
       "summary": "Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy.",
-      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
       "origin": {
         "project": "n-skills",
         "path": "README.md",
@@ -2293,7 +2293,7 @@
       "kind": "validation",
       "status": "promoted",
       "summary": "Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine.",
-      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md",
       "origin": {
         "project": "n-skills + MCP Gateway Registry",
         "path": "README.md",

@@ -1005,7 +1005,7 @@ See also:
 - Validate by: one skill artifact and one command artifact are named separately; the skill still makes sense without reading a specific...
 - Source: [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md)
 
-### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
+### [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
 
 - Summary: Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy.
 - Intent: Keep a local skill marketplace or catalog reviewable as a curated discovery layer over...
@@ -1016,7 +1016,7 @@ See also:
 - Core contract: the local marketplace or catalog is a discoverability layer, not the canonical source of the skills; upstream ownership...
 - Main risk: the curated layer quietly becomes a disguised sync engine or registry.
 - Validate by: curated entries still show upstream ownership clearly; the local surface adds editorial discoverability beyond plain mirroring; installer, sync, registry...
-- Source: [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md)
 
 ### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
 
@@ -1267,7 +1267,7 @@ See also:
 - Validate by: the baseline run happens before any additive run; the additive run uses the same measurement surface and artifact shape...
 - Source: [TECHNIQUE.md](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md)
 
-### [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
+### [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
 
 - Summary: Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine.
 - Intent: Expose whether an upstream-owned skill source is selectable enough before it reaches a catalog...
@@ -1278,7 +1278,7 @@ See also:
 - Core contract: the check stays upstream-source-facing and runs before catalog or selector surfacing; source availability and manifest-readiness remain the center...
 - Main risk: transient network issues get mistaken for permanent source invalidity.
 - Validate by: an unreachable source is distinguishable from a malformed but reachable source; the verdict stays tied to source availability and...
-- Source: [TECHNIQUE.md](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
 
 ## `system-recovery`
 

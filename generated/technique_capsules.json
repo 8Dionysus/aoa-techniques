@@ -574,7 +574,7 @@
       "core_contract_short": "Core contract: the local marketplace or catalog is a discoverability layer, not the canonical source of the skills; upstream ownership...",
       "main_risk_short": "Main risk: the curated layer quietly becomes a disguised sync engine or registry.",
       "validation_short": "Validate by checking curated entries still show upstream ownership clearly; the local surface adds editorial discoverability beyond plain mirroring; installer, sync, registry...",
-      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0042",
@@ -588,7 +588,7 @@
       "core_contract_short": "Core contract: the check stays upstream-source-facing and runs before catalog or selector surfacing; source availability and manifest-readiness remain the center...",
       "main_risk_short": "Main risk: transient network issues get mistaken for permanent source invalidity.",
       "validation_short": "Validate by checking an unreachable source is distinguishable from a malformed but reachable source; the verdict stays tied to source availability and...",
-      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md"
+      "technique_path": "techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0043",

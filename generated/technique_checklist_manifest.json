@@ -1784,10 +1784,10 @@
     },
     {
       "id": "AOA-T-0041",
-      "technique_path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md",
+          "check_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md",
           "title": "Skill Marketplace Curation Checklist",
           "intro_markdown": "",
           "items": [
@@ -1833,10 +1833,10 @@
     },
     {
       "id": "AOA-T-0042",
-      "technique_path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/upstream-skill-health-checking/checks/upstream-skill-health-checking-checklist.md",
+          "check_path": "techniques/instruction/skill-discovery/upstream-skill-health-checking/checks/upstream-skill-health-checking-checklist.md",
           "title": "Upstream Skill Health Checking Checklist",
           "intro_markdown": "",
           "items": [

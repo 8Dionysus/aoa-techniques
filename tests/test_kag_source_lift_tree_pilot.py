@@ -92,8 +92,11 @@ LIVE_LINK_SURFACES = (
 
 UNMOVED_DOCS_SHELVES = (
     "techniques/docs/bounded-context-map/TECHNIQUE.md",
-    "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
     "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+)
+
+LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBOR = (
+    "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md"
 )
 
 
@@ -190,6 +193,8 @@ class KagSourceLiftTreePilotTestCase(unittest.TestCase):
         for relative_path in UNMOVED_DOCS_SHELVES:
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
+
+        self.assertTrue((REPO_ROOT / LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBOR).is_file())
 
 
 if __name__ == "__main__":

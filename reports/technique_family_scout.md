@@ -247,8 +247,8 @@ Counts: `total` 2, `canonical` 0, `promoted` 2.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) | `docs` | `discovery` | `promoted` | Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy. |
-| [AOA-T-0042](../techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md) | `evaluation` | `validation` | `promoted` | Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine. |
+| [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | `docs` | `discovery` | `promoted` | Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy. |
+| [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | `evaluation` | `validation` | `promoted` | Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine. |
 
 ## `ready-work-graphs`
 

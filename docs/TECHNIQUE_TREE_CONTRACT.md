@@ -317,8 +317,13 @@ The tenth migration review is
 It accepts `skill-discovery` as the tenth migration pilot after directly
 reading `AOA-T-0041` and `AOA-T-0042`.
 
-The next reform slice should run the tenth pilot migration for
-`skill-discovery` without changing frontmatter.
+The tenth pilot migration moves exactly `AOA-T-0041` and `AOA-T-0042` into
+`techniques/instruction/skill-discovery/` without changing `domain`, `kind`,
+or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-skill-discovery-tree-pilot.md`](../legacy/receipts/2026-05-05-skill-discovery-tree-pilot.md).
+
+The next reform slice should review the landed `skill-discovery` pilot before
+moving any eleventh shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

@@ -44,9 +44,9 @@ LIVE_LINK_SURFACES = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/capability-registry-direct-read-migration-review.md",
 )
 
-UNMOVED_NEIGHBOR_BUNDLES = (
-    "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
-    "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
+LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBORS = (
+    "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
+    "techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md",
 )
 
 
@@ -142,8 +142,8 @@ class CapabilityRegistryTreePilotTestCase(unittest.TestCase):
                 self.assertIn(f"| `{technique_id}` | `{old_path}/`", review)
                 self.assertIn(new_path, review)
 
-    def test_neighbor_shelves_were_not_moved_with_the_pilot(self) -> None:
-        for relative_path in UNMOVED_NEIGHBOR_BUNDLES:
+    def test_neighbor_shelves_keep_current_paths_after_later_pilots(self) -> None:
+        for relative_path in LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBORS:
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
 

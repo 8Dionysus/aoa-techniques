@@ -20,7 +20,7 @@
       "landed_technique": {
         "domain": "docs",
         "id": "AOA-T-0041",
-        "path": "techniques/docs/skill-marketplace-curation/TECHNIQUE.md"
+        "path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not remap marketplace curation into cross-layer registry governance",
@@ -418,7 +418,7 @@
       "landed_technique": {
         "domain": "evaluation",
         "id": "AOA-T-0042",
-        "path": "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md"
+        "path": "techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into monitoring, registry governance, or security scanning doctrine",

@@ -25,7 +25,7 @@
 ## Risks introduced by adaptation
 
 - the pattern can collapse into [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md) if repositories let startup and shutdown mechanics overshadow the proxy seam
-- the public bundle could drift into [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md) if source trust or scanner verdicts become the main story
+- the public bundle could drift into [AOA-T-0042](../../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) if source trust or scanner verdicts become the main story
 - teams may over-associate MCP proxying with marketplace or registry discovery if publication-time and runtime-time surfaces are not kept distinct
 
 ## Evidence

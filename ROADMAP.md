@@ -133,8 +133,8 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 
 | Field | Direction |
 |---|---|
-| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/`, the second landed pilot moved `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/`, the third landed pilot, the first non-continuity migrated shelf, moved `AOA-T-0070` through `AOA-T-0074` into `techniques/ingest/media-ingest/`, the fourth landed pilot moved `AOA-T-0080` through `AOA-T-0083` into `techniques/recovery/diagnosis-repair/`, the fifth landed pilot moved `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into `techniques/instruction/instruction-surface/`, the sixth landed pilot moved `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, and `AOA-T-0048` into `techniques/knowledge-lift/kag-source-lift/`, the seventh landed pilot moved `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` into `techniques/instruction/docs-boundary/`, the eighth landed pilot moved `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064` into `techniques/instruction/capability-registry/`, and the ninth landed pilot moved `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` into `techniques/instruction/capability-boundary/`; all nine kept frontmatter unchanged, and the `skill-discovery` direct-read review now accepts `AOA-T-0041` and `AOA-T-0042` as the tenth migration pilot before any tenth move. |
-| Next honest move | Run the tenth pilot migration for `skill-discovery` without frontmatter changes. |
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/`, the second landed pilot moved `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/`, the third landed pilot, the first non-continuity migrated shelf, moved `AOA-T-0070` through `AOA-T-0074` into `techniques/ingest/media-ingest/`, the fourth landed pilot moved `AOA-T-0080` through `AOA-T-0083` into `techniques/recovery/diagnosis-repair/`, the fifth landed pilot moved `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into `techniques/instruction/instruction-surface/`, the sixth landed pilot moved `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, and `AOA-T-0048` into `techniques/knowledge-lift/kag-source-lift/`, the seventh landed pilot moved `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` into `techniques/instruction/docs-boundary/`, the eighth landed pilot moved `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064` into `techniques/instruction/capability-registry/`, the ninth landed pilot moved `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` into `techniques/instruction/capability-boundary/`, and the tenth landed pilot moved `AOA-T-0041` and `AOA-T-0042` into `techniques/instruction/skill-discovery/`; all ten kept frontmatter unchanged. |
+| Next honest move | Review the landed `skill-discovery` pilot before moving any eleventh shelf. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 ## Horizon: Small-Agent Usability
@@ -186,9 +186,9 @@ trigger is real.
   examples and tie-break rules stay stable across multiple technique waves.
 - Use the landed `review-compaction`, `handoff-continuation`, `media-ingest`,
   `diagnosis-repair`, `instruction-surface`, `kag-source-lift`,
-  `docs-boundary`, `capability-registry`, and `capability-boundary` pilots as
-  precedents, and run the `skill-discovery` tenth pilot migration before any
-  broader corpus move.
+  `docs-boundary`, `capability-registry`, `capability-boundary`, and
+  `skill-discovery` pilots as precedents, and review the landed
+  `skill-discovery` pilot before any broader corpus move.
 - Add generated projections for `capability_class`, `substrate`,
   `execution_profile`, and `risk_posture` from
   `config/technique_topology_axes.yaml` only after mechanics candidates prove
