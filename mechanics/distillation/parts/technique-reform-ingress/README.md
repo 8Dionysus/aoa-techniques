@@ -50,6 +50,8 @@ permission slip to remap techniques automatically.
   under `techniques/ingest/media-ingest/` without frontmatter changes
 - landed media-ingest pilot review: landed as `pilot-validated`, with
   `diagnosis-repair` chosen for the next direct-read migration review
+- diagnosis-repair direct-read review: landed as
+  `accepted-for-fourth-migration-pilot`; still not path movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -149,6 +151,10 @@ into `techniques/ingest/media-ingest/` without changing frontmatter or adding
 The landed `media-ingest` pilot review is now landed as `pilot-validated` and
 chooses `diagnosis-repair` for the next direct-read migration review.
 
-The next move is to read `AOA-T-0080` through `AOA-T-0083` directly and decide
-whether those four bundles should move into
-`techniques/recovery/diagnosis-repair/` without changing frontmatter.
+The `diagnosis-repair` direct-read review is now landed and accepts exactly
+`AOA-T-0080` through `AOA-T-0083` as the fourth migration pilot.
+
+The next move is the fourth pilot migration: move those four bundles into
+`techniques/recovery/diagnosis-repair/`, add the minimal `recovery/` route
+card, repair authored links, preserve a root legacy receipt, rebuild generated
+surfaces, and keep frontmatter unchanged.

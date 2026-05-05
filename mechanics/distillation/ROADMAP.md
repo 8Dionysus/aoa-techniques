@@ -55,8 +55,11 @@
    root legacy receipt accounting, link repair, generated rebuilds, and
    release-check validation in the same wave. The landed `media-ingest` pilot
    review is also landed as `pilot-validated`, and `diagnosis-repair` is now
-   chosen for the next direct-read migration review before any fourth shelf
-   moves.
+   chosen for the next direct-read migration review. The `diagnosis-repair`
+   direct-read review is now landed as
+   `accepted-for-fourth-migration-pilot`, and the next tree move is the fourth
+   pilot migration for exactly `AOA-T-0080` through `AOA-T-0083` before any
+   other shelf moves.
 
 ## Hold line
 
