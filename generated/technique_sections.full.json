@@ -1418,7 +1418,7 @@
     {
       "id": "AOA-T-0018",
       "name": "markdown-technique-section-lift",
-      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1500,7 +1500,7 @@
     {
       "id": "AOA-T-0019",
       "name": "frontmatter-metadata-spine",
-      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1582,7 +1582,7 @@
     {
       "id": "AOA-T-0020",
       "name": "evidence-note-provenance-lift",
-      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1664,7 +1664,7 @@
     {
       "id": "AOA-T-0021",
       "name": "bounded-relation-lift-for-kag",
-      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -1746,7 +1746,7 @@
     {
       "id": "AOA-T-0022",
       "name": "risk-and-negative-effect-lift",
-      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -3714,7 +3714,7 @@
     {
       "id": "AOA-T-0046",
       "name": "repo-doc-surface-lift",
-      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -3796,7 +3796,7 @@
     {
       "id": "AOA-T-0047",
       "name": "github-review-template-lift",
-      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -3878,7 +3878,7 @@
     {
       "id": "AOA-T-0048",
       "name": "semantic-review-surface-lift",
-      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",

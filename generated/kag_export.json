@@ -29,11 +29,11 @@
   "direct_relations": [
     {
       "relation_type": "complements",
-      "target_ref": "aoa-techniques/techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md"
+      "target_ref": "aoa-techniques/techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md"
     },
     {
       "relation_type": "complements",
-      "target_ref": "aoa-techniques/techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md"
+      "target_ref": "aoa-techniques/techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md"
     }
   ],
   "provenance_note": "Guide to source, not source replacement, built from source-owned technique surfaces.",

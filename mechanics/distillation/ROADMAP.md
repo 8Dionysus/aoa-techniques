@@ -78,7 +78,11 @@
    `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`,
    `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` for the sixth pilot while
    keeping KAG owner authority, graph semantics, scoring, policy, and
-   automatic verdicts outside the move.
+   automatic verdicts outside the move. The sixth pilot migration is now
+   landed exactly for those eight bundles under
+   `techniques/knowledge-lift/kag-source-lift/`, with the knowledge-lift route
+   card, root legacy receipt accounting, link repair, generated rebuilds, and
+   release-check validation in the same wave.
 
 ## Hold line
 

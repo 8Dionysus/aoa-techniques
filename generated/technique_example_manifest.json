@@ -256,21 +256,21 @@
     },
     {
       "id": "AOA-T-0018",
-      "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/markdown-technique-section-lift/examples/minimal-section-lift.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/examples/minimal-section-lift.md",
           "title": "Minimal Section Lift",
-          "body_markdown": "This example shows how a markdown-first technique bundle can expose a bounded section-level view without making the derived manifest the new source of truth.\n\n## Source bundle excerpt\n\n```md\n## Intent\n\nKeep the pattern bounded and reviewable.\n\n## Contracts\n\n- markdown stays authoritative\n- derived output stays rebuildable\n\n## Risks\n\n### Failure modes\n- consumers trust the manifest more than the bundle\n\n## Validation\n\n- rebuild the manifest from markdown\n```\n\n## Derived section-manifest excerpt\n\n```json\n{\n  \"id\": \"AOA-T-0018\",\n  \"technique_path\": \"techniques/docs/markdown-technique-section-lift/TECHNIQUE.md\",\n  \"sections\": [\n    {\n      \"heading\": \"Intent\",\n      \"order\": 1\n    },\n    {\n      \"heading\": \"Contracts\",\n      \"order\": 2\n    },\n    {\n      \"heading\": \"Risks\",\n      \"order\": 3\n    },\n    {\n      \"heading\": \"Validation\",\n      \"order\": 4\n    }\n  ]\n}\n```\n\nThis excerpt is intentionally routing-first. A full manifest may preserve more payload, but a reader-facing or review-facing projection should still route back to the authored bundle instead of becoming the place where section meaning is edited.\n\n## Anti-drift rule\n\nIf maintainers need to edit the manifest directly to correct section meaning, the lift has stopped being markdown-first.\nIf bundle-level metadata already answered the question, section lift should not have been opened in the first place."
+          "body_markdown": "This example shows how a markdown-first technique bundle can expose a bounded section-level view without making the derived manifest the new source of truth.\n\n## Source bundle excerpt\n\n```md\n## Intent\n\nKeep the pattern bounded and reviewable.\n\n## Contracts\n\n- markdown stays authoritative\n- derived output stays rebuildable\n\n## Risks\n\n### Failure modes\n- consumers trust the manifest more than the bundle\n\n## Validation\n\n- rebuild the manifest from markdown\n```\n\n## Derived section-manifest excerpt\n\n```json\n{\n  \"id\": \"AOA-T-0018\",\n  \"technique_path\": \"techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md\",\n  \"sections\": [\n    {\n      \"heading\": \"Intent\",\n      \"order\": 1\n    },\n    {\n      \"heading\": \"Contracts\",\n      \"order\": 2\n    },\n    {\n      \"heading\": \"Risks\",\n      \"order\": 3\n    },\n    {\n      \"heading\": \"Validation\",\n      \"order\": 4\n    }\n  ]\n}\n```\n\nThis excerpt is intentionally routing-first. A full manifest may preserve more payload, but a reader-facing or review-facing projection should still route back to the authored bundle instead of becoming the place where section meaning is edited.\n\n## Anti-drift rule\n\nIf maintainers need to edit the manifest directly to correct section meaning, the lift has stopped being markdown-first.\nIf bundle-level metadata already answered the question, section lift should not have been opened in the first place."
         }
       ]
     },
     {
       "id": "AOA-T-0019",
-      "technique_path": "techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/frontmatter-metadata-spine/examples/frontmatter-to-catalog-entry.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/examples/frontmatter-to-catalog-entry.md",
           "title": "Frontmatter To Catalog Entry",
           "body_markdown": "This example shows how bounded frontmatter can act as a metadata spine while the technique body still carries the real meaning.\n\n## Source frontmatter\n\n```yaml\nid: AOA-T-0019\nname: frontmatter-metadata-spine\ndomain: docs\nkind: lift\nstatus: promoted\nsummary: Treat bounded frontmatter and derived catalog outputs as a metadata spine.\nvalidation_strength: source_backed\nrelations:\n  - type: used_together_for\n    target: AOA-T-0020\nevidence:\n  - kind: origin_evidence\n    path: notes/origin-evidence.md\n```\n\n## Derived catalog excerpt\n\n```json\n{\n  \"id\": \"AOA-T-0019\",\n  \"domain\": \"docs\",\n  \"kind\": \"lift\",\n  \"status\": \"promoted\",\n  \"summary\": \"Treat bounded frontmatter and derived catalog outputs as a metadata spine.\",\n  \"validation_strength\": \"source_backed\",\n  \"relations\": [\n    {\n      \"type\": \"used_together_for\",\n      \"target\": \"AOA-T-0020\"\n    }\n  ],\n  \"evidence\": [\n    {\n      \"kind\": \"origin_evidence\",\n      \"path\": \"notes/origin-evidence.md\"\n    }\n  ]\n}\n```\n\n## Anti-drift rule\n\nIf the catalog must duplicate section prose to stay useful, the metadata problem is no longer bounded and the spine should not be widened casually."
         }
@@ -278,10 +278,10 @@
     },
     {
       "id": "AOA-T-0020",
-      "technique_path": "techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/evidence-note-provenance-lift/examples/evidence-note-to-manifest.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/examples/evidence-note-to-manifest.md",
           "title": "Evidence Note To Manifest",
           "body_markdown": "This example shows how one bundle can expose supporting provenance notes through explicit handles and a derived manifest without flattening the notes into one merged schema.\n\n## Source frontmatter excerpt\n\n```yaml\nevidence:\n  - kind: origin_evidence\n    path: notes/origin-evidence.md\n  - kind: second_context\n    path: notes/second-context-adaptation.md\n```\n\n## Supporting note roles\n\n- `notes/origin-evidence.md` explains where the technique was born and what in the source project proves the pattern is real.\n- `notes/second-context-adaptation.md` explains what changed in a second context and what stayed invariant.\n\n## Derived manifest excerpt\n\n```json\n{\n  \"technique_id\": \"AOA-T-0020\",\n  \"notes\": [\n    {\n      \"kind\": \"origin_evidence\",\n      \"path\": \"notes/origin-evidence.md\",\n      \"shape\": \"typed_sections\"\n    },\n    {\n      \"kind\": \"second_context\",\n      \"path\": \"notes/second-context-adaptation.md\",\n      \"shape\": \"typed_sections\"\n    }\n  ]\n}\n```\n\n## Anti-drift rule\n\nIf the manifest must summarize the argument well enough that nobody needs to open the supporting note, the provenance lift has widened too far."
         }
@@ -289,21 +289,21 @@
     },
     {
       "id": "AOA-T-0021",
-      "technique_path": "techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md",
           "title": "Direct Relation To Selection Hint",
-          "body_markdown": "This example shows how a bounded direct relation can help a generated navigation surface without turning the repository into a graph engine.\n\n## Source frontmatter excerpt\n\n```yaml\nrelations:\n  - type: requires\n    target: AOA-T-0019\n```\n\n## Derived selection hint\n\n```md\n- [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md): `requires` [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)\n```\n\n## Why this stays bounded\n\n- the edge says only that one direct contract depends on another existing contract\n- it does not explain the full rationale\n- it does not imply multi-hop traversal, scoring, or graph truth\n\n## Anti-drift rule\n\nIf the selection surface must infer extra edges or hidden rationale to stay useful, the relation lift has widened beyond direct adjacency."
+          "body_markdown": "This example shows how a bounded direct relation can help a generated navigation surface without turning the repository into a graph engine.\n\n## Source frontmatter excerpt\n\n```yaml\nrelations:\n  - type: requires\n    target: AOA-T-0019\n```\n\n## Derived selection hint\n\n```md\n- [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md): `requires` [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)\n```\n\n## Why this stays bounded\n\n- the edge says only that one direct contract depends on another existing contract\n- it does not explain the full rationale\n- it does not imply multi-hop traversal, scoring, or graph truth\n\n## Anti-drift rule\n\nIf the selection surface must infer extra edges or hidden rationale to stay useful, the relation lift has widened beyond direct adjacency."
         }
       ]
     },
     {
       "id": "AOA-T-0022",
-      "technique_path": "techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/risk-and-negative-effect-lift/examples/minimal-risk-and-negative-effect-lift.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/examples/minimal-risk-and-negative-effect-lift.md",
           "title": "Minimal Risk And Negative-Effect Lift",
           "body_markdown": "This example shows how a richer `Risks` section can support bounded caution lookup without creating a new caution metadata or scoring surface.\n\n## Source bundle excerpt\n\n```md\n## Risks\n\n### Failure modes\n- the summary surface can look complete even when a source silently stopped updating\n\n### Negative effects\n- operators can trust the report too early because it still renders cleanly\n\n### Misuse patterns\n- teams start treating the pattern as a generic health score instead of one bounded check\n\n### Detection signals\n- the report keeps rendering but freshness counters stop changing\n\n### Mitigations\n- route the reader back to the source checks and tighten the bounded contract\n```\n\n## Bounded caution-lift usage\n\n```md\nReview prompt for this technique:\n- Open `## Risks` first when you need to understand hidden downside before reuse.\n- Check `Failure modes` and `Detection signals` together for false-success risk.\n- Read `Mitigations` before widening the pattern into a new environment.\n```\n\n## Anti-drift rule\n\nIf a team needs caution IDs, scores, or generated caution outputs to answer the review question, this bounded lift is no longer the right technique."
         }
@@ -624,10 +624,10 @@
     },
     {
       "id": "AOA-T-0046",
-      "technique_path": "techniques/docs/repo-doc-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/repo-doc-surface-lift/examples/minimal-repo-doc-surface-lift.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/examples/minimal-repo-doc-surface-lift.md",
           "title": "Minimal Repo Doc Surface Lift",
           "body_markdown": "This example shows how a bounded public repo-doc set can become a derived routing surface without replacing the authored docs.\n\n## Bounded source set\n\n- `README.md`\n- `docs/START_HERE.md`\n- `TECHNIQUE_INDEX.md`\n- `AGENTS.md`\n- `CONTRIBUTING.md`\n- `SECURITY.md`\n- `WALKTHROUGH.md`\n- `CODE_OF_CONDUCT.md`\n- `CHANGELOG.md`\n- `docs/README.md`\n- `docs/RELEASING.md`\n\n## Example routing\n\n- A new contributor asks where to begin: open `README.md` or `docs/START_HERE.md`.\n- Someone wants to understand how to contribute: open `CONTRIBUTING.md`.\n- A safety question comes up: open `SECURITY.md`.\n- A release question comes up: open `docs/RELEASING.md`.\n- Someone wants the public history of changes: open `CHANGELOG.md`.\n- A deeper planning question appears: do not route it through this surface; keep it in `TODO.md`, `PLANS.md`, or `ROADMAP.md` outside the source class.\n\n## Anti-drift rule\n\nIf the surface starts pulling in planning docs or deeper review guides, it is no longer bounded repo-doc routing.\nIf a question needs the full meaning of a doc, the reader surface should point back to the authored markdown instead of trying to answer everything itself."
         }
@@ -635,10 +635,10 @@
     },
     {
       "id": "AOA-T-0047",
-      "technique_path": "techniques/docs/github-review-template-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/github-review-template-lift/examples/minimal-github-review-template-lift.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/examples/minimal-github-review-template-lift.md",
           "title": "Minimal GitHub Review Template Lift",
           "body_markdown": "This example shows how authored GitHub review templates can become a bounded derived intake surface without turning the manifest into workflow policy.\n\n## Source template excerpt\n\n```md\n## Review Contract\n\n- proposed outcome: approve for canonical promotion or defer for now\n- bounded scope where this would be the default:\n\n## Public-Safety Recheck\n\n- sanitization still holds:\n- private paths, URLs, or operational details removed:\n- remaining public-safety concerns:\n```\n\n## Derived manifest excerpt\n\n```json\n{\n  \"template_id\": \"canonical-promotion\",\n  \"template_type\": \"issue_template\",\n  \"section_scope\": [\n    \"Technique\",\n    \"Review Contract\",\n    \"Default-Use Rationale\",\n    \"Reuse Beyond Origin\",\n    \"Stronger Validation Than Initial Promotion Baseline\",\n    \"Adaptation Boundary Check\",\n    \"Public-Safety Recheck\",\n    \"Recommendation\"\n  ]\n}\n```\n\nThe same pattern can cover pull-request templates and external-import review templates, but the derived surface should stay inventory-first. If the manifest needs to decide the outcome, the technique has crossed into workflow policy."
         }
@@ -646,10 +646,10 @@
     },
     {
       "id": "AOA-T-0048",
-      "technique_path": "techniques/docs/semantic-review-surface-lift/TECHNIQUE.md",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md",
+          "example_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md",
           "title": "Minimal Semantic Review Surface Lift",
           "body_markdown": "This example shows how an authored semantic-review doc can be surfaced as a bounded derived lookup aid without making the derived view the source of review meaning.\n\n## Source review excerpt\n\n```md\n## Cluster Map\n\n| technique | current role |\n|---|---|\n| [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) | repository-wide document-role layout and update-routing pattern |\n| [AOA-T-0009](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md) | narrow discipline for keeping top-level status docs short, link-driven, and non-duplicative |\n\n## Seam Review\n\n### `AOA-T-0002` vs `AOA-T-0009`\n\nQuestion: where does the broader document-role layout stop and the narrower snapshot discipline begin?\n\n- Invariant boundary: [AOA-T-0002](../techniques/docs/source-of-truth-layout/TECHNIQUE.md) owns the full document-role map.\n- Default-use trigger: use `0002` when a repository needs one canonical home per recurring information class.\n```\n\n## Derived lookup excerpt\n\n```json\n{\n  \"review_id\": \"docs_boundary\",\n  \"review_path\": \"docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md\",\n  \"title\": \"Docs Boundary Semantic Review\",\n  \"findings\": [\n    \"`AOA-T-0002` is semantically distinct as the broader source-of-truth layout pattern.\",\n    \"`AOA-T-0009` is semantically distinct as a lighter snapshot discipline layered on top of a broader document map.\"\n  ],\n  \"overall_outcome\": \"`clear`\"\n}\n```\n\nThe derived excerpt is intentionally routing-first. It helps a reader find the right authored review doc, but the meaning of the review still lives in that authored markdown.\n\n## Anti-Drift Rule\n\nIf maintainers need to edit the manifest directly to correct review meaning, the lift has stopped being markdown-first.\nIf the next question is scoring, status changes, or relation cleanup, this technique has been asked to do too much."
         }

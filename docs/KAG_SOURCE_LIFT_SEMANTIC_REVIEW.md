@@ -15,11 +15,11 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 | technique | current role |
 |---|---|
-| [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) | section-first markdown lift for stable `TECHNIQUE.md` headings |
-| [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) | bounded metadata spine for bundle routing and derived catalog lookup |
-| [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) | typed evidence-note provenance handles without note-graph semantics |
-| [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) | direct relation hints without graph traversal or rationale expansion |
-| [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) | markdown-first caution lookup over `Risks` and adverse-effects review surfaces |
+| [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) | section-first markdown lift for stable `TECHNIQUE.md` headings |
+| [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) | bounded metadata spine for bundle routing and derived catalog lookup |
+| [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | typed evidence-note provenance handles without note-graph semantics |
+| [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) | direct relation hints without graph traversal or rationale expansion |
+| [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | markdown-first caution lookup over `Risks` and adverse-effects review surfaces |
 
 ## Seam Review
 
@@ -27,7 +27,7 @@ This doc is a human review surface. It does not change statuses, frontmatter, va
 
 Question: where does section lift stop and metadata-spine routing begin?
 
-- Invariant boundary: [AOA-T-0018](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md) owns the extraction of stable `TECHNIQUE.md` headings into one derived section-level surface while keeping the bundle markdown authoritative. [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) begins only after bundle meaning already exists and turns bounded frontmatter plus derived catalog outputs into one routing spine.
+- Invariant boundary: [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) owns the extraction of stable `TECHNIQUE.md` headings into one derived section-level surface while keeping the bundle markdown authoritative. [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) begins only after bundle meaning already exists and turns bounded frontmatter plus derived catalog outputs into one routing spine.
 - Default-use trigger: use `0018` when a reader or tool needs bounded lookup over stable sections such as `Intent`, `Contracts`, or `Validation`. Use `0019` when the question is bundle identity, status, review posture, or direct adjacency rather than section payload.
 - Relation check: `complements` is still the right signal. It says the metadata spine and section lift strengthen one another without turning into the same contract.
 - Evidence check: `0018` stays section-first and source-first. `0019` stays metadata-first and catalog-first. The support surfaces keep the boundary readable instead of making the two techniques look like one generic extraction layer. Outcome: `clear`.
@@ -36,7 +36,7 @@ Question: where does section lift stop and metadata-spine routing begin?
 
 Question: where does shallow routing metadata stop and note or edge lifting begin?
 
-- Invariant boundary: [AOA-T-0019](../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md) owns bundle identity and derived catalog routing. [AOA-T-0020](../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md) begins when supporting markdown notes need typed provenance handles. [AOA-T-0021](../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md) begins when direct relations need to power bounded adjacency hints.
+- Invariant boundary: [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) owns bundle identity and derived catalog routing. [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) begins when supporting markdown notes need typed provenance handles. [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) begins when direct relations need to power bounded adjacency hints.
 - Default-use trigger: use `0019` when the surface should remain shallow and bundle-level. Use `0020` when the question is "which supporting note should I open?" Use `0021` when the question is "which directly related technique should I inspect next?"
 - Relation check: `used_together_for` and `requires` are bounded here because the three techniques form a small source-lift stack, not a graph engine. The relation set says they commonly travel together without collapsing their different jobs.
 - Evidence check: `0020` keeps note meaning in authored markdown and avoids note IDs or note graphs. `0021` keeps edges direct and typed and avoids rationale or multi-hop inference. That preserves the boundary between metadata routing, provenance lookup, and adjacency hints. Outcome: `clear`.
@@ -45,7 +45,7 @@ Question: where does shallow routing metadata stop and note or edge lifting begi
 
 Question: where does markdown-first caution lift stop and shadow-policy semantics begin?
 
-- Invariant boundary: [AOA-T-0022](../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md) owns bounded caution lookup over authored `Risks` language and can supplement a canonical adverse-effects review note when a bundle is already canonical. It stops before shadow metadata, scoring, generated caution outputs, or any policy engine. The other four techniques stay on the source-lift side of sections, metadata, provenance, and relations.
+- Invariant boundary: [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) owns bounded caution lookup over authored `Risks` language and can supplement a canonical adverse-effects review note when a bundle is already canonical. It stops before shadow metadata, scoring, generated caution outputs, or any policy engine. The other four techniques stay on the source-lift side of sections, metadata, provenance, and relations.
 - Default-use trigger: use `0022` when a reviewer wants one bounded way to inspect failure, harm, misuse, detection, and mitigation language without leaving markdown-first contracts. Use shadow-review surfaces when the question is whether a canonical technique quietly makes a system worse at the cluster level.
 - Relation check: `complements` with `0018` is enough because both techniques lift from bundle markdown while still doing different work. A stronger relation would risk making caution lift look like shadow policy rather than a bounded companion.
 - Evidence check: the fixed five-part `Risks` contract, the canonical adverse-effects review supplement, and the current guide text keep `0022` markdown-first. The technique remains a companion to review, not a generated caution layer. Outcome: `clear`.

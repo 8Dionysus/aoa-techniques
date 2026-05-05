@@ -10,7 +10,7 @@
 - runtime: repository documentation and generated readers that need bounded section lookup without moving meaning out of markdown
 
 ## What changed
-- paths: the source bundle is `techniques/docs/markdown-technique-section-lift/TECHNIQUE.md`; the derived surface is the section manifest and reader companion, not a new authored section store
+- paths: the source bundle is `techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md`; the derived surface is the section manifest and reader companion, not a new authored section store
 - dependencies: the pattern depends on stable top-level headings and rebuildable derived outputs, not on graph behavior or section IDs
 - operating assumptions: a public docs repository can lift stable headings into a bounded lookup surface while keeping authored prose as the only semantic home
 

@@ -35,14 +35,14 @@ generated surfaces, and validation move together.
 
 ## Sources Read
 
-- [AOA-T-0018 markdown-technique-section-lift](../../../../../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
-- [AOA-T-0019 frontmatter-metadata-spine](../../../../../techniques/docs/frontmatter-metadata-spine/TECHNIQUE.md)
-- [AOA-T-0020 evidence-note-provenance-lift](../../../../../techniques/docs/evidence-note-provenance-lift/TECHNIQUE.md)
-- [AOA-T-0021 bounded-relation-lift-for-kag](../../../../../techniques/docs/bounded-relation-lift-for-kag/TECHNIQUE.md)
-- [AOA-T-0022 risk-and-negative-effect-lift](../../../../../techniques/docs/risk-and-negative-effect-lift/TECHNIQUE.md)
-- [AOA-T-0046 repo-doc-surface-lift](../../../../../techniques/docs/repo-doc-surface-lift/TECHNIQUE.md)
-- [AOA-T-0047 github-review-template-lift](../../../../../techniques/docs/github-review-template-lift/TECHNIQUE.md)
-- [AOA-T-0048 semantic-review-surface-lift](../../../../../techniques/docs/semantic-review-surface-lift/TECHNIQUE.md)
+- [AOA-T-0018 markdown-technique-section-lift](../../../../../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
+- [AOA-T-0019 frontmatter-metadata-spine](../../../../../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
+- [AOA-T-0020 evidence-note-provenance-lift](../../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
+- [AOA-T-0021 bounded-relation-lift-for-kag](../../../../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [AOA-T-0022 risk-and-negative-effect-lift](../../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [AOA-T-0046 repo-doc-surface-lift](../../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
+- [AOA-T-0047 github-review-template-lift](../../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
+- [AOA-T-0048 semantic-review-surface-lift](../../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 - [Docs domain route card](../../../../../techniques/docs/AGENTS.md)
 - `reports/technique_tree_projection.md` rows for `kag-source-lift`,
   `docs-boundary`, `instruction-surface`, `capability-registry`,

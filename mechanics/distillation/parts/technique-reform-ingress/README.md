@@ -66,6 +66,10 @@ permission slip to remap techniques automatically.
   `kag-source-lift` chosen for the next direct-read migration review
 - kag-source-lift direct-read review: landed as
   `accepted-for-sixth-migration-pilot`; still not path movement
+- kag-source-lift migration: landed exactly `AOA-T-0018`, `AOA-T-0019`,
+  `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`,
+  and `AOA-T-0048` under
+  `techniques/knowledge-lift/kag-source-lift/` without frontmatter changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -199,4 +203,10 @@ The `kag-source-lift` direct-read review is now landed and accepts exactly
 `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`,
 `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` as the sixth migration pilot.
 
-The next move is the sixth pilot migration before any other shelf moves.
+The sixth pilot migration is now landed: those eight bundles live under
+`techniques/knowledge-lift/kag-source-lift/`, the `knowledge-lift/` route card
+and root legacy receipt are in place, authored links were repaired, generated
+surfaces were rebuilt, and frontmatter stayed unchanged.
+
+The next move is a landed `kag-source-lift` pilot review before any other
+shelf moves.

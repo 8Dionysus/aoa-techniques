@@ -29,7 +29,7 @@ Keep the pattern bounded and reviewable.
 ```json
 {
   "id": "AOA-T-0018",
-  "technique_path": "techniques/docs/markdown-technique-section-lift/TECHNIQUE.md",
+  "technique_path": "techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md",
   "sections": [
     {
       "heading": "Intent",

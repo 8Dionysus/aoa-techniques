@@ -16,7 +16,7 @@ See also:
 - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
 - [`source-of-truth-layout`](../techniques/docs/source-of-truth-layout/TECHNIQUE.md)
 - [`lightweight-status-snapshot`](../techniques/docs/lightweight-status-snapshot/TECHNIQUE.md)
-- [`markdown-technique-section-lift`](../techniques/docs/markdown-technique-section-lift/TECHNIQUE.md)
+- [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
 
 This family uses one stable shape:
 
