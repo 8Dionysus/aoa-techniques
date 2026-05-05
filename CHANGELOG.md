@@ -198,6 +198,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `intent-chain` pilot review and selected
   `execution/agent-workflows-core` for the next direct-read migration review
   without moving an eighteenth shelf yet
+- accepted the `agent-workflows-core` direct-read migration review over
+  `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`, `AOA-T-0028`, and `AOA-T-0031`
+  as the eighteenth tree pilot while keeping the review itself non-mutating
 
 ### Validation
 

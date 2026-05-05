@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Agent-workflows-core direct-read migration review
+
+Changed:
+
+- added
+  [agent-workflows-core-direct-read-migration-review](parts/technique-reform-ingress/reviews/agent-workflows-core-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`,
+  `AOA-T-0028`, and `AOA-T-0031`
+- accepted `execution/agent-workflows-core` as the eighteenth bounded
+  migration pilot without moving files
+- kept the shelf centered on visible, bounded, reviewable agent work rather
+  than hidden autonomous loops
+- preserved `AOA-T-0028` as `kind: guardrail` and `AOA-T-0031` as
+  `kind: composition`; path movement must not imply kind remap
+- kept generic agent doctrine, shell policy, product policy, approval policy,
+  autonomous orchestration, hidden agent scheduling, runtime lifecycle law,
+  broad methodology doctrine, and neighboring execution shelves outside the
+  shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no eighteenth shelf migration landed from the review alone
+
 ## 2026-05-05 - Landed intent-chain pilot review
 
 Changed:

@@ -268,7 +268,17 @@
    lifecycle law, shell doctrine, product policy, approval policy, broad
    methodology doctrine, and neighboring execution shelves outside the next
    move. The next bounded step is that direct-read review before moving any
-   eighteenth shelf.
+   eighteenth shelf. The `agent-workflows-core` direct-read review is now
+   landed as `accepted-for-eighteenth-migration-pilot`; it accepts exactly
+   `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`, `AOA-T-0028`, and `AOA-T-0031`
+   while keeping the review non-mutating, preserving `AOA-T-0028` as
+   `kind: guardrail` and `AOA-T-0031` as `kind: composition`, and keeping
+   generic agent doctrine, shell policy, product policy, approval policy,
+   autonomous orchestration, hidden agent scheduling, runtime lifecycle law,
+   broad methodology doctrine, and neighboring execution shelves outside the
+   shelf. The next bounded step is to migrate those five bundles only after
+   path movement, support-file carry, receipt, link-repair, generated surface,
+   and validation work move together.
 
 ## Hold line
 

@@ -466,8 +466,17 @@ It validates `intent-chain` as the second successful execution trunk shelf,
 preserves `AOA-T-0005` as promoted, and chooses
 `execution/agent-workflows-core` for the next direct-read migration review.
 
-The next reform slice should run that direct-read review before moving any
-eighteenth shelf.
+The eighteenth direct-read review is
+[Agent-Workflows-Core Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/agent-workflows-core-direct-read-migration-review.md).
+It accepts exactly `AOA-T-0001`, `AOA-T-0014`, `AOA-T-0023`, `AOA-T-0028`,
+and `AOA-T-0031` for `techniques/execution/agent-workflows-core/`, preserves
+`AOA-T-0028` as `guardrail`, and keeps generic agent doctrine, shell policy,
+product policy, approval policy, autonomous orchestration, hidden agent
+scheduling, runtime lifecycle law, broad methodology doctrine, and neighboring
+execution shelves outside the shelf.
+
+The next reform slice should migrate those five bundles into
+`techniques/execution/agent-workflows-core/` before reviewing the landed shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
