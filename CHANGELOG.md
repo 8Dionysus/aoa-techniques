@@ -57,6 +57,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `handoff-continuation` pilot review and selected
   `media-ingest` for the next direct-read migration review while repairing
   staging links in `incoming/` to current authored paths
+- accepted the `media-ingest` direct-read migration review over `AOA-T-0070`
+  through `AOA-T-0074` as the third tree pilot while keeping the review itself
+  non-mutating
 
 ### Validation
 
