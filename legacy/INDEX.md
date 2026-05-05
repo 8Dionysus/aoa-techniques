@@ -3,13 +3,14 @@
 This index maps root-level legacy material to the active route or owner route
 that now carries the work.
 
-Current root legacy inventory: one receipt.
+Current root legacy inventory: two receipts.
 
 ## Inventory
 
 | Path | Kind | Active route or owner route | Status | Notes |
 |---|---|---|---|---|
 | `legacy/receipts/2026-05-04-review-compaction-tree-pilot.md` | `receipt` | `techniques/continuity/review-compaction/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | First accepted technique tree path migration receipt for `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054`. |
+| `legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md` | `receipt` | `techniques/continuity/handoff-continuation/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Second accepted technique tree path migration receipt for `AOA-T-0056` through `AOA-T-0062`. |
 
 ## Accounting Rule
 

@@ -90,7 +90,7 @@ Keep agent communication inside durable named channels with ordered replay and e
 - mailbox transport stays smaller than a full messaging platform, orchestration stack, or handoff-governance contract
 - transcript packaging, history indexing, and handoff authorization remain separate sibling concerns
 
-Relationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique owns live mailbox transport with replay and acknowledgment rather than post-capture transcript packaging. Unlike [AOA-T-0053](../../history/local-first-session-index/TECHNIQUE.md), it keeps active channel traffic inspectable but does not build a derived search index over saved history. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide when a receiving agent is permitted to continue, stop, return, or escalate.
+Relationship to adjacent techniques: unlike [AOA-T-0044](../../../history/versionable-session-transcripts/TECHNIQUE.md), this technique owns live mailbox transport with replay and acknowledgment rather than post-capture transcript packaging. Unlike [AOA-T-0053](../../../history/local-first-session-index/TECHNIQUE.md), it keeps active channel traffic inspectable but does not build a derived search index over saved history. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide when a receiving agent is permitted to continue, stop, return, or escalate.
 
 ## Risks
 

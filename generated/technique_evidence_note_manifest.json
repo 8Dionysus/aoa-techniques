@@ -27313,10 +27313,10 @@
     },
     {
       "id": "AOA-T-0056",
-      "technique_path": "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/channelized-agent-mailbox/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -27456,7 +27456,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/channelized-agent-mailbox/notes/external-import-review.md",
+          "note_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -27615,7 +27615,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/channelized-agent-mailbox/notes/external-origin.md",
+          "note_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -27713,7 +27713,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/channelized-agent-mailbox/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -27870,10 +27870,10 @@
     },
     {
       "id": "AOA-T-0057",
-      "technique_path": "techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/structured-handoff-before-compaction/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -28013,7 +28013,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/structured-handoff-before-compaction/notes/external-import-review.md",
+          "note_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -28172,7 +28172,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/structured-handoff-before-compaction/notes/external-origin.md",
+          "note_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -28270,7 +28270,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/structured-handoff-before-compaction/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -28423,10 +28423,10 @@
     },
     {
       "id": "AOA-T-0058",
-      "technique_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -28566,7 +28566,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/notes/external-import-review.md",
+          "note_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -28725,7 +28725,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/notes/external-origin.md",
+          "note_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -28823,7 +28823,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -28976,10 +28976,10 @@
     },
     {
       "id": "AOA-T-0059",
-      "technique_path": "techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/git-verified-handoff-claims/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -29119,7 +29119,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/git-verified-handoff-claims/notes/external-import-review.md",
+          "note_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -29278,7 +29278,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/git-verified-handoff-claims/notes/external-origin.md",
+          "note_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -29376,7 +29376,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/git-verified-handoff-claims/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -29481,7 +29481,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "the public bundle could drift into [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) if teams expect a full run artifact instead of one bounded trust check"
+                  "text": "the public bundle could drift into [AOA-T-0045](../../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) if teams expect a full run artifact instead of one bounded trust check"
                 },
                 {
                   "order": 3,
@@ -29529,10 +29529,10 @@
     },
     {
       "id": "AOA-T-0060",
-      "technique_path": "techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/session-opening-ritual-before-work/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -29604,7 +29604,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0059](../../git-verified-handoff-claims/TECHNIQUE.md), and [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the pre-mutation opening ritual"
+                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0059](../../git-verified-handoff-claims/TECHNIQUE.md), and [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the pre-mutation opening ritual"
                 },
                 {
                   "order": 3,
@@ -29672,7 +29672,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/session-opening-ritual-before-work/notes/external-import-review.md",
+          "note_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -29831,7 +29831,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/session-opening-ritual-before-work/notes/external-origin.md",
+          "note_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -29924,7 +29924,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/session-opening-ritual-before-work/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -30025,7 +30025,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the session-opening seam from the full change workflow"
+                  "text": "the pattern can collapse into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the session-opening seam from the full change workflow"
                 },
                 {
                   "order": 2,
@@ -30073,10 +30073,10 @@
     },
     {
       "id": "AOA-T-0061",
-      "technique_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -30148,7 +30148,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md) and [AOA-T-0060](../../agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) because it owns only the task-bounded cross-repo map object"
+                  "text": "it remains narrower than [AOA-T-0016](../../../../docs/bounded-context-map/TECHNIQUE.md) and [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md) because it owns only the task-bounded cross-repo map object"
                 },
                 {
                   "order": 3,
@@ -30216,7 +30216,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/notes/external-import-review.md",
+          "note_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -30375,7 +30375,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/notes/external-origin.md",
+          "note_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -30468,7 +30468,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -30569,7 +30569,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md) if repositories stop separating conceptual context boundaries from a task-bounded startup map"
+                  "text": "the pattern can collapse into [AOA-T-0016](../../../../docs/bounded-context-map/TECHNIQUE.md) if repositories stop separating conceptual context boundaries from a task-bounded startup map"
                 },
                 {
                   "order": 2,
@@ -30577,7 +30577,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the public bundle could drift into [AOA-T-0060](../../agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) if generic session-start ritual semantics become the real center of gravity"
+                  "text": "the public bundle could drift into [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md) if generic session-start ritual semantics become the real center of gravity"
                 }
               ]
             },
@@ -30617,10 +30617,10 @@
     },
     {
       "id": "AOA-T-0062",
-      "technique_path": "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/episode-bounded-agent-loop/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -30692,7 +30692,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md), and [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the longer-run segmentation seam"
+                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md), and [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the longer-run segmentation seam"
                 },
                 {
                   "order": 3,
@@ -30760,7 +30760,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/episode-bounded-agent-loop/notes/external-import-review.md",
+          "note_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -30919,7 +30919,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/episode-bounded-agent-loop/notes/external-origin.md",
+          "note_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -31012,7 +31012,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/episode-bounded-agent-loop/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -31113,7 +31113,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the long-run segmentation seam from the internal workflow of each episode"
+                  "text": "the pattern can collapse into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the long-run segmentation seam from the internal workflow of each episode"
                 },
                 {
                   "order": 2,
@@ -34564,7 +34564,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md) because it centers durable job identity and resume-from-state rather than narrative episode structuring"
+                  "text": "it remains narrower than [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) because it centers durable job identity and resume-from-state rather than narrative episode structuring"
                 },
                 {
                   "order": 3,
@@ -34999,7 +34999,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "the public bundle could drift into [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md) if narrative episode structure becomes more central than durable job identity"
+                  "text": "the public bundle could drift into [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) if narrative episode structure becomes more central than durable job identity"
                 },
                 {
                   "order": 3,

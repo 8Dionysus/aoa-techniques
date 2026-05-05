@@ -184,20 +184,24 @@ into `techniques/continuity/review-compaction/` without changing `domain`,
 The current landed pilot review is
 [Landed Review-Compaction Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-review-compaction-pilot-review.md).
 
-The current migration review is
+The second migration review is
 [Handoff-Continuation Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/handoff-continuation-direct-read-migration-review.md).
-It accepts `handoff-continuation` as the second bounded migration pilot after
+It accepted `handoff-continuation` as the second bounded migration pilot after
 directly reading `AOA-T-0056` through `AOA-T-0062`.
+
+The second pilot migration moves `AOA-T-0056` through `AOA-T-0062` into
+`techniques/continuity/handoff-continuation/` without changing `domain`,
+`kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md`](../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md).
 
 The next reform slice should:
 
-1. move exactly `AOA-T-0056` through `AOA-T-0062` into
-   `techniques/continuity/handoff-continuation/`
-2. update the continuity trunk route card and repair authored links
-3. preserve a root legacy receipt without passing active bundles through root
-   `legacy/`
-4. rebuild generated surfaces and run the release check
-5. review the landed second pilot before choosing any broader tree migration
+1. review the landed `handoff-continuation` shelf against its direct-read
+   migration review
+2. confirm generated surfaces, root legacy receipt accounting, and authored
+   links stayed coherent after the move
+3. choose a third tree candidate only after the landed second pilot review
+   proves the shelf remained clearer than the old broad placement
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

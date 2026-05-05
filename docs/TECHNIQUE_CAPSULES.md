@@ -210,7 +210,7 @@ See also:
 - Validate by: tasks can be traced back to a visible design choice; design responds to a visible requirement; the three layers...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md)
 
-### [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
+### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
 
 - Summary: Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack.
 - Intent: Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so...
@@ -221,9 +221,9 @@ See also:
 - Core contract: channels are named explicitly and remain stable enough for replay; message order is reviewable through a visible sequence...
 - Main risk: ack state drifts away from what receivers actually handled.
 - Validate by: a receiver can replay messages from a visible last-seen cursor or equivalent sequence marker; acknowledgment state is explicit and...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md)
 
-### [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
+### [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
 
 - Summary: Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.
 - Intent: Write one structured handoff artifact before compaction or session rollover so the next session...
@@ -234,9 +234,9 @@ See also:
 - Core contract: the handoff artifact exists before compaction or rollover completes; the artifact distinguishes completed work, in-progress or blocked work...
 - Main risk: the handoff artifact is written too late and context is already lost.
 - Validate by: a handoff artifact is written before the boundary that would reduce context; the artifact names completed work, in-progress or...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md)
 
-### [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
+### [AOA-T-0058](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
 
 - Summary: Require an explicit receipt state for a handoff packet before the receiving side continues so ownership transfer stays reviewable instead of being inferred from delivery or silence.
 - Intent: Require the receiving side to record explicit receipt of a handoff packet before continuing...
@@ -247,9 +247,9 @@ See also:
 - Core contract: the handoff packet exists before receipt is recorded; receipt links to a specific packet and a specific receiver...
 - Main risk: the receiver records receipt without actually reviewing the packet.
 - Validate by: a handoff packet exists before receipt is recorded; receipt state is visible and separate from delivery or assignment state...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md)
 
-### [AOA-T-0059](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
+### [AOA-T-0059](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
 
 - Summary: Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone.
 - Intent: Verify concrete handoff claims against visible git state before continuation so the next session...
@@ -260,9 +260,9 @@ See also:
 - Core contract: concrete handoff claims are checked against visible git evidence before continuation; the verification output distinguishes verified, mismatched, and...
 - Main risk: stale local git state produces a false sense of verification.
 - Validate by: at least one concrete handoff claim can be tied to visible git evidence; the verification result names the evidence...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md)
 
-### [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
+### [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
 
 - Summary: Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.
 - Intent: Start a resumed or handed-off session with one visible read-and-verify ritual before the first...
@@ -273,9 +273,9 @@ See also:
 - Core contract: the resumed session includes a visible read step before the first mutation; at least one current-state surface is...
 - Main risk: the ritual becomes a symbolic checklist and no real baseline is actually checked.
 - Validate by: the opening ritual happens before the first mutation; at least one explicit current-state surface is checked, not just reread...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md)
 
-### [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
+### [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
 
 - Summary: Bootstrap cross-repo work from one explicit resource map so the next session can see which repos and surfaces matter before deeper continuation begins.
 - Intent: Bootstrap cross-repo work from one explicit resource map so the next session can see...
@@ -286,9 +286,9 @@ See also:
 - Core contract: the map names real repositories and real resource surfaces; each listed repo has an explicit role tied to...
 - Main risk: the map includes too much inventory and the real first-look path disappears.
 - Validate by: every listed repo or resource has a stated role in the current task; a reader can tell where to...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md)
 
-### [AOA-T-0062](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
+### [AOA-T-0062](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
 
 - Summary: Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.
 - Intent: Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions...
@@ -299,7 +299,7 @@ See also:
 - Core contract: each episode has one bounded goal; each episode reaches a visible checkpoint or stop condition before the next...
 - Main risk: episodes are too large to review safely.
 - Validate by: each episode has a bounded goal; every episode ends at a checkpoint or stop condition; the continue, stop, or...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md)
 
 ### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
 

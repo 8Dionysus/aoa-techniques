@@ -133,8 +133,8 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 
 | Field | Direction |
 |---|---|
-| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing frontmatter, and the second direct-read review accepted `handoff-continuation` over `AOA-T-0056` through `AOA-T-0062` as the next bounded migration pilot. |
-| Next honest move | Move exactly `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/`, repair authored links, preserve root legacy receipt accounting, rebuild generated surfaces, and then review the landed second pilot before choosing a broader tree wave. |
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing frontmatter, and the second landed pilot moved `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/` without changing frontmatter. |
+| Next honest move | Review the landed `handoff-continuation` shelf against its direct-read review, link repairs, root legacy receipt, and generated rebuilds before choosing a third tree wave. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 ## Horizon: Small-Agent Usability
@@ -184,9 +184,9 @@ trigger is real.
 
 - Promote `family` from scout-only to optional reviewed frontmatter only after
   examples and tie-break rules stay stable across multiple technique waves.
-- Use the landed `review-compaction` pilot review and the accepted
-  `handoff-continuation` direct-read review as the precedent for a second tree
-  migration wave before considering any broader corpus move.
+- Use the landed `review-compaction` and `handoff-continuation` pilots as
+  precedents for the next direct-read shelf review before considering any
+  broader corpus move.
 - Add generated projections for `capability_class`, `substrate`,
   `execution_profile`, and `risk_posture` from
   `config/technique_topology_axes.yaml` only after mechanics candidates prove

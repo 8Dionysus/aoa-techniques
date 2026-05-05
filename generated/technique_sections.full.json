@@ -4534,7 +4534,7 @@
     {
       "id": "AOA-T-0056",
       "name": "channelized-agent-mailbox",
-      "technique_path": "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4569,7 +4569,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- channels are named explicitly and remain stable enough for replay\n- message order is reviewable through a visible sequence or cursor surface\n- replay starts from an explicit cursor, offset, or equivalent last-seen marker rather than hidden memory\n- acknowledgment is explicit and inspectable instead of being implied by silence\n- mailbox transport stays smaller than a full messaging platform, orchestration stack, or handoff-governance contract\n- transcript packaging, history indexing, and handoff authorization remain separate sibling concerns\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique owns live mailbox transport with replay and acknowledgment rather than post-capture transcript packaging. Unlike [AOA-T-0053](../../history/local-first-session-index/TECHNIQUE.md), it keeps active channel traffic inspectable but does not build a derived search index over saved history. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide when a receiving agent is permitted to continue, stop, return, or escalate."
+          "content_markdown": "- channels are named explicitly and remain stable enough for replay\n- message order is reviewable through a visible sequence or cursor surface\n- replay starts from an explicit cursor, offset, or equivalent last-seen marker rather than hidden memory\n- acknowledgment is explicit and inspectable instead of being implied by silence\n- mailbox transport stays smaller than a full messaging platform, orchestration stack, or handoff-governance contract\n- transcript packaging, history indexing, and handoff authorization remain separate sibling concerns\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../../history/versionable-session-transcripts/TECHNIQUE.md), this technique owns live mailbox transport with replay and acknowledgment rather than post-capture transcript packaging. Unlike [AOA-T-0053](../../../history/local-first-session-index/TECHNIQUE.md), it keeps active channel traffic inspectable but does not build a derived search index over saved history. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide when a receiving agent is permitted to continue, stop, return, or escalate."
         },
         {
           "key": "risks",
@@ -4616,7 +4616,7 @@
     {
       "id": "AOA-T-0057",
       "name": "structured-handoff-before-compaction",
-      "technique_path": "techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4651,7 +4651,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the handoff artifact exists before compaction or rollover completes\n- the artifact distinguishes completed work, in-progress or blocked work, and the next intended step\n- the artifact includes enough concrete references that continuation does not depend on hidden memory\n- the next session is expected to read the artifact before continuing\n- the technique stays smaller than transcript packaging, mailbox transport, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../history/versionable-session-transcripts/TECHNIQUE.md), this technique does not package an already-saved transcript into a readable history artifact. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller witness trace for later audit. Unlike [AOA-T-0054](../../continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md), it records pre-compaction continuation state rather than reloading skills after compaction. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own delivery, replay, or acknowledgment semantics for the handoff packet. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules across a general phase system."
+          "content_markdown": "- the handoff artifact exists before compaction or rollover completes\n- the artifact distinguishes completed work, in-progress or blocked work, and the next intended step\n- the artifact includes enough concrete references that continuation does not depend on hidden memory\n- the next session is expected to read the artifact before continuing\n- the technique stays smaller than transcript packaging, mailbox transport, and full handoff-governance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0044](../../../history/versionable-session-transcripts/TECHNIQUE.md), this technique does not package an already-saved transcript into a readable history artifact. Unlike [AOA-T-0045](../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller witness trace for later audit. Unlike [AOA-T-0054](../../review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md), it records pre-compaction continuation state rather than reloading skills after compaction. Unlike [AOA-T-0056](../channelized-agent-mailbox/TECHNIQUE.md), it does not own delivery, replay, or acknowledgment semantics for the handoff packet. It also stays smaller than the live `phase-synchronized-agent-handoff` narrowing lane because it does not decide continuation permission, stop, return, or escalation rules across a general phase system."
         },
         {
           "key": "risks",
@@ -4698,7 +4698,7 @@
     {
       "id": "AOA-T-0058",
       "name": "receipt-confirmed-handoff-packet",
-      "technique_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4780,7 +4780,7 @@
     {
       "id": "AOA-T-0059",
       "name": "git-verified-handoff-claims",
-      "technique_path": "techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4815,7 +4815,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- concrete handoff claims are checked against visible git evidence before continuation\n- the verification output distinguishes verified, mismatched, and unverifiable claims explicitly\n- the git evidence used for the check stays reviewable enough that another reader can understand the verdict\n- continuation trusts repo-backed state over handoff narration when they diverge\n- the technique stays smaller than generic code review, witness artifacts, and broad provenance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not create the handoff packet; it verifies packet claims after the packet already exists. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record that a receiver accepted the handoff; it checks whether the handoff's concrete repo claims are true. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state deltas. It also stays smaller than a generic code-review workflow because it only verifies handoff claims that matter for immediate continuation."
+          "content_markdown": "- concrete handoff claims are checked against visible git evidence before continuation\n- the verification output distinguishes verified, mismatched, and unverifiable claims explicitly\n- the git evidence used for the check stays reviewable enough that another reader can understand the verdict\n- continuation trusts repo-backed state over handoff narration when they diverge\n- the technique stays smaller than generic code review, witness artifacts, and broad provenance doctrine\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not create the handoff packet; it verifies packet claims after the packet already exists. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record that a receiver accepted the handoff; it checks whether the handoff's concrete repo claims are true. Unlike [AOA-T-0045](../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state deltas. It also stays smaller than a generic code-review workflow because it only verifies handoff claims that matter for immediate continuation."
         },
         {
           "key": "risks",
@@ -4862,7 +4862,7 @@
     {
       "id": "AOA-T-0060",
       "name": "session-opening-ritual-before-work",
-      "technique_path": "techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4897,7 +4897,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the resumed session includes a visible read step before the first mutation\n- at least one current-state surface is checked before continuation trusts the inherited baseline\n- mismatches between expected and actual state stay explicit\n- the first real move can be explained from the verified starting baseline\n- the technique stays smaller than handoff authoring, git-backed claim verification, task selection, test-gating doctrine, and full project boot stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not write the handoff packet; it consumes whatever starting context already exists. Unlike [AOA-T-0059](../git-verified-handoff-claims/TECHNIQUE.md), it does not perform a claim-by-claim git verdict on concrete handoff assertions; it owns the broader pre-mutation ritual that says a session must visibly re-read and re-check baseline state before acting. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it does not own the full change loop through apply, verify, and report. It also stays smaller than total startup doctrine because it does not choose tasks, manage budgets, run orchestration loops, or define a general mission protocol."
+          "content_markdown": "- the resumed session includes a visible read step before the first mutation\n- at least one current-state surface is checked before continuation trusts the inherited baseline\n- mismatches between expected and actual state stay explicit\n- the first real move can be explained from the verified starting baseline\n- the technique stays smaller than handoff authoring, git-backed claim verification, task selection, test-gating doctrine, and full project boot stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not write the handoff packet; it consumes whatever starting context already exists. Unlike [AOA-T-0059](../git-verified-handoff-claims/TECHNIQUE.md), it does not perform a claim-by-claim git verdict on concrete handoff assertions; it owns the broader pre-mutation ritual that says a session must visibly re-read and re-check baseline state before acting. Unlike [AOA-T-0001](../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), it does not own the full change loop through apply, verify, and report. It also stays smaller than total startup doctrine because it does not choose tasks, manage budgets, run orchestration loops, or define a general mission protocol."
         },
         {
           "key": "risks",
@@ -4944,7 +4944,7 @@
     {
       "id": "AOA-T-0061",
       "name": "cross-repo-resource-map-bootstrap",
-      "technique_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -4979,7 +4979,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the map names real repositories and real resource surfaces\n- each listed repo has an explicit role tied to the current task or handoff\n- the next session can identify where to look first across repo boundaries\n- the map stays task-bounded instead of expanding into a general architecture inventory\n- the technique stays smaller than semantic context mapping, platform-wide topology docs, and full startup or orchestration stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md), this technique does not define conceptual bounded contexts or handoff interfaces across a system; it names only the repositories and concrete resource surfaces needed to start a specific cross-repo task safely. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not define the generic pre-mutation ritual for every resumed session; it owns the cross-repo map object used when one session-start surface must span multiple repos. Unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), it does not write the full continuation packet; it only gives the next session a bounded cross-repo index for where to look first."
+          "content_markdown": "- the map names real repositories and real resource surfaces\n- each listed repo has an explicit role tied to the current task or handoff\n- the next session can identify where to look first across repo boundaries\n- the map stays task-bounded instead of expanding into a general architecture inventory\n- the technique stays smaller than semantic context mapping, platform-wide topology docs, and full startup or orchestration stacks\n\nRelationship to adjacent techniques: unlike [AOA-T-0016](../../../docs/bounded-context-map/TECHNIQUE.md), this technique does not define conceptual bounded contexts or handoff interfaces across a system; it names only the repositories and concrete resource surfaces needed to start a specific cross-repo task safely. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not define the generic pre-mutation ritual for every resumed session; it owns the cross-repo map object used when one session-start surface must span multiple repos. Unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), it does not write the full continuation packet; it only gives the next session a bounded cross-repo index for where to look first."
         },
         {
           "key": "risks",
@@ -5026,7 +5026,7 @@
     {
       "id": "AOA-T-0062",
       "name": "episode-bounded-agent-loop",
-      "technique_path": "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5061,7 +5061,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- each episode has one bounded goal\n- each episode reaches a visible checkpoint or stop condition before the next episode opens\n- continue, stop, or escalate decisions remain explicit\n- continuation reads from the checkpointed state rather than from hidden memory\n- the technique stays smaller than autonomous agent doctrine, orchestration runtimes, and total workflow governance\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not define the shape of the handoff artifact itself; it defines the bounded loop that says work proceeds in episodes separated by checkpoints. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not own the pre-mutation ritual at the start of an episode; it owns the fact that long work is broken into reviewable slices with explicit stop and continue decisions. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it does not define the internal workflow of each episode's change application; it constrains how longer work is segmented over time."
+          "content_markdown": "- each episode has one bounded goal\n- each episode reaches a visible checkpoint or stop condition before the next episode opens\n- continue, stop, or escalate decisions remain explicit\n- continuation reads from the checkpointed state rather than from hidden memory\n- the technique stays smaller than autonomous agent doctrine, orchestration runtimes, and total workflow governance\n\nRelationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not define the shape of the handoff artifact itself; it defines the bounded loop that says work proceeds in episodes separated by checkpoints. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not own the pre-mutation ritual at the start of an episode; it owns the fact that long work is broken into reviewable slices with explicit stop and continue decisions. Unlike [AOA-T-0001](../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), it does not define the internal workflow of each episode's change application; it constrains how longer work is segmented over time."
         },
         {
           "key": "risks",
@@ -5635,7 +5635,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the job has a stable identity across pause and resume\n- checkpoint or status state survives the approval seam\n- continuation does not happen until approval is explicit\n- resume depends on durable state rather than on hidden memory or silent background continuity\n- the technique stays smaller than scheduler platforms, queue products, and broad orchestration doctrine\n- the durable job surface remains reviewable enough that another reader can tell whether it is running, paused, waiting for approval, or completed\n\nRelationship to adjacent techniques: unlike `fail-closed-evidence-gate`, this technique does not own the immediate execution verdict at one side-effect boundary; it owns longer-running continuity across an approval seam. Unlike [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md), it does not divide work into narrative episodes with continue, stop, or escalate decisions; it keeps one durable job identity stable across pause and resume. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record receipt of a handoff packet; it preserves durable work state until approval allows continuation."
+          "content_markdown": "- the job has a stable identity across pause and resume\n- checkpoint or status state survives the approval seam\n- continuation does not happen until approval is explicit\n- resume depends on durable state rather than on hidden memory or silent background continuity\n- the technique stays smaller than scheduler platforms, queue products, and broad orchestration doctrine\n- the durable job surface remains reviewable enough that another reader can tell whether it is running, paused, waiting for approval, or completed\n\nRelationship to adjacent techniques: unlike `fail-closed-evidence-gate`, this technique does not own the immediate execution verdict at one side-effect boundary; it owns longer-running continuity across an approval seam. Unlike [AOA-T-0062](../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md), it does not divide work into narrative episodes with continue, stop, or escalate decisions; it keeps one durable job identity stable across pause and resume. Unlike [AOA-T-0058](../../continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record receipt of a handoff packet; it preserves durable work state until approval allows continuation."
         },
         {
           "key": "risks",
@@ -5675,7 +5675,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep `fail-closed-evidence-gate` as the immediate boundary-gate sibling rather than widening this bundle back into one-shot execution verdicts\n- keep [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md) as the episode-structuring sibling rather than folding all continuation doctrine into durable jobs\n- reopen signed or portable evidence as a separate sibling only if it survives without widening into broad orchestration or governance systems"
+          "content_markdown": "- keep `fail-closed-evidence-gate` as the immediate boundary-gate sibling rather than widening this bundle back into one-shot execution verdicts\n- keep [AOA-T-0062](../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) as the episode-structuring sibling rather than folding all continuation doctrine into durable jobs\n- reopen signed or portable evidence as a separate sibling only if it survives without widening into broad orchestration or governance systems"
         }
       ]
     },
@@ -7439,7 +7439,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the workspace root is explicit before ingress runs\n- one primary repo root is named for the current pass, even when it is temporarily the workspace root itself\n- ingress happens before substantial work\n- guard happens before risky mutation, not after\n- `must_confirm` and `blocked_actions` remain actionable gates\n- the technique stays smaller than workspace install doctrine, repo bootstrap, closeout routing, and owner-layer authorship\n\nRelationship to adjacent techniques: unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), this technique does not own the general \u201cread current state before work\u201d ritual for any resumed session; it owns the workspace-root posture where ingress and pre-mutation guard are explicit control-plane passes. Unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), it does not replace the local confirmation seam around one concrete mutation; it prepares the workspace-aware gate posture before mutation is even allowed. Unlike [AOA-T-0061](../cross-repo-resource-map-bootstrap/TECHNIQUE.md), it does not author a cross-repo map artifact; it governs how an active session should enter and guard work once a federated workspace already exists."
+          "content_markdown": "- the workspace root is explicit before ingress runs\n- one primary repo root is named for the current pass, even when it is temporarily the workspace root itself\n- ingress happens before substantial work\n- guard happens before risky mutation, not after\n- `must_confirm` and `blocked_actions` remain actionable gates\n- the technique stays smaller than workspace install doctrine, repo bootstrap, closeout routing, and owner-layer authorship\n\nRelationship to adjacent techniques: unlike [AOA-T-0060](../../continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md), this technique does not own the general \u201cread current state before work\u201d ritual for any resumed session; it owns the workspace-root posture where ingress and pre-mutation guard are explicit control-plane passes. Unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), it does not replace the local confirmation seam around one concrete mutation; it prepares the workspace-aware gate posture before mutation is even allowed. Unlike [AOA-T-0061](../../continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md), it does not author a cross-repo map artifact; it governs how an active session should enter and guard work once a federated workspace already exists."
         },
         {
           "key": "risks",

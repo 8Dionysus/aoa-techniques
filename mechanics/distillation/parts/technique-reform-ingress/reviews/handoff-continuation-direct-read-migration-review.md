@@ -34,13 +34,13 @@ and root legacy receipts move together.
 
 ## Sources Read
 
-- [AOA-T-0056 channelized-agent-mailbox](../../../../../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md)
-- [AOA-T-0057 structured-handoff-before-compaction](../../../../../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md)
-- [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md)
-- [AOA-T-0059 git-verified-handoff-claims](../../../../../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md)
-- [AOA-T-0060 session-opening-ritual-before-work](../../../../../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md)
-- [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md)
-- [AOA-T-0062 episode-bounded-agent-loop](../../../../../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md)
+- [AOA-T-0056 channelized-agent-mailbox](../../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md)
+- [AOA-T-0057 structured-handoff-before-compaction](../../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md)
+- [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md)
+- [AOA-T-0059 git-verified-handoff-claims](../../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md)
+- [AOA-T-0060 session-opening-ritual-before-work](../../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md)
+- [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md)
+- [AOA-T-0062 episode-bounded-agent-loop](../../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md)
 - supporting `checks/`, `examples/`, and `notes/` files for the seven bundles,
   scanned for invariant, adjacency, validation, and drift-pressure cues
 - current references found by `rg` across the seven source bundles

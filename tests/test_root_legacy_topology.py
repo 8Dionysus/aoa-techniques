@@ -27,11 +27,13 @@ class RootLegacyTopologyTestCase(unittest.TestCase):
         self.assertIn("Current root legacy inventory:", index)
         self.assertIn("Do not add placeholder receipts", index)
         self.assertIn("legacy/receipts/2026-05-04-review-compaction-tree-pilot.md", index)
+        self.assertIn("legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md", index)
 
         expected_files = {
             "raw": ["README.md"],
             "archive": ["README.md"],
             "receipts": [
+                "2026-05-04-handoff-continuation-tree-pilot.md",
                 "2026-05-04-review-compaction-tree-pilot.md",
                 "README.md",
             ],

@@ -15,8 +15,8 @@ compares `AOA-T-0054 compaction-resilient-skill-loading` against `handoff`,
 - [AOA-T-0054 notes](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/canonical-readiness.md)
 - [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)
 - neighboring `handoff` and `recovery` bundles:
-  [AOA-T-0057](../../../../../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md),
-  [AOA-T-0062](../../../../../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md),
+  [AOA-T-0057](../../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md),
+  [AOA-T-0062](../../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md),
   [AOA-T-0082](../../../../../techniques/agent-workflows/repair-shape-from-diagnosis/TECHNIQUE.md),
   [AOA-T-0083](../../../../../techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md),
   and [AOA-T-0097](../../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md)

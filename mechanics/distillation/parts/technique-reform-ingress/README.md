@@ -39,6 +39,9 @@ permission slip to remap techniques automatically.
   `handoff-continuation` chosen for the next direct-read migration review
 - handoff-continuation direct-read review: landed as
   `accepted-for-second-migration-pilot`; still not path movement
+- handoff-continuation migration: landed exactly `AOA-T-0056` through
+  `AOA-T-0062` under `techniques/continuity/handoff-continuation/`
+  without frontmatter changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -125,11 +128,10 @@ The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
 frontmatter, adding `tree_path`, or moving another shelf.
 
-The handoff-continuation direct-read review accepted `AOA-T-0056` through
-`AOA-T-0062` as the second bounded migration pilot while keeping the review
-itself non-mutating.
+The second pilot migration moved exactly `AOA-T-0056` through `AOA-T-0062`
+into `techniques/continuity/handoff-continuation/` without changing
+frontmatter or adding `tree_path`.
 
-The next move is to move exactly those seven bundles into
-`techniques/continuity/handoff-continuation/`, repair authored links, preserve a
-root legacy receipt, rebuild generated surfaces, and run the release check
-before choosing any broader tree migration.
+The next move is to review the landed `handoff-continuation` shelf against the
+direct-read review, generated rebuilds, root legacy receipt, and link repair
+before choosing any third tree migration candidate.

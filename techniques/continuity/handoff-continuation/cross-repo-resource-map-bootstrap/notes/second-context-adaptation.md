@@ -24,9 +24,9 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can collapse into [AOA-T-0016](../../docs/bounded-context-map/TECHNIQUE.md) if repositories stop separating conceptual context boundaries from a task-bounded startup map
+- the pattern can collapse into [AOA-T-0016](../../../../docs/bounded-context-map/TECHNIQUE.md) if repositories stop separating conceptual context boundaries from a task-bounded startup map
 - teams may over-associate the pattern with a whole multi-repo platform because the donor also bundles boot sequences, project boards, worktrees, and collaboration modes
-- the public bundle could drift into [AOA-T-0060](../../agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) if generic session-start ritual semantics become the real center of gravity
+- the public bundle could drift into [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md) if generic session-start ritual semantics become the real center of gravity
 
 ## Evidence
 

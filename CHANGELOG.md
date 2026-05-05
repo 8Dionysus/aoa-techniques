@@ -51,6 +51,9 @@ The format is intentionally simple and human-first.
 - accepted the `handoff-continuation` direct-read migration review over
   `AOA-T-0056` through `AOA-T-0062` as the second tree pilot while keeping the
   review itself non-mutating
+- moved `AOA-T-0056` through `AOA-T-0062` into
+  `techniques/continuity/handoff-continuation/` while keeping `domain`, `kind`,
+  IDs, status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 
