@@ -377,9 +377,6 @@ completes the previous step to review the landed `published-summary` pilot
 before choosing any fourteenth shelf, and chooses `history-artifacts` for the
 next direct-read migration review.
 
-The next reform slice should run the `history-artifacts` direct-read migration
-review before any fourteenth shelf migration.
-
 The fourteenth direct-read review is
 [History-Artifacts Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/history-artifacts-direct-read-migration-review.md).
 It accepts exactly `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`,
@@ -390,9 +387,13 @@ publication, hidden capture policy, hosted viewer product doctrine, repo
 analytics, retention policy, recall substrate, and proof authority outside the
 shelf.
 
-The next reform slice should move exactly those six bundles into
+The fourteenth pilot migration moves exactly those six bundles into
 `techniques/history/history-artifacts/` without changing `domain`, `kind`, or
-`tree_path` frontmatter.
+`tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md`](../legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md).
+
+The next reform slice should review the landed `history-artifacts` pilot before
+choosing any fifteenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

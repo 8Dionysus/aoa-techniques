@@ -14,7 +14,7 @@ This runbook is about strengthening existing `promoted` bundles without flipping
 Close the smallest honest blocker for the three remaining strongest current `promoted` candidates:
 
 - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
-- [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
 - [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 
 ## Non-Goals
@@ -74,7 +74,7 @@ If evidence lands, the preferred local update path is:
 | technique | why now | smallest blocker | evidence that counts | not enough | likely local files |
 |---|---|---|---|---|---|
 | [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | Clean companion to canonical `AOA-T-0012`. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family where the same CI-facing context report exists as a real read-only artifact over composition health. | Composition-engine docs, remediation logic, provider telemetry, or a report that owns fixes rather than reporting drift. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact shape becomes clearer. |
-| [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational `history` candidate. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family that persists local-first AI session history as a reviewable project artifact without widening into memory or instruction policy. | Memory systems, recall/search products, transcript-only packaging, or cloud-history wrappers. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact seam gets clearer. |
+| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational `history` candidate. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family that persists local-first AI session history as a reviewable project artifact without widening into memory or instruction policy. | Memory systems, recall/search products, transcript-only packaging, or cloud-history wrappers. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact seam gets clearer. |
 | [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract with one donor lineage only. | One second independent downstream consumer. | A local runtime surface where a pre-start rendered truth step is a real review seam over the effective composed runtime view. | Lifecycle wrappers, readiness-only checks, config publication without review, or a startup path where declared state and effective truth do not meaningfully diverge. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the render-review seam gets sharper. |
 
 ## Recommended Sequence
@@ -82,7 +82,7 @@ If evidence lands, the preferred local update path is:
 Run the wave in this order:
 
 1. [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
-2. [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+2. [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
 3. [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 
 Why this order:
@@ -156,7 +156,7 @@ The goal is to reduce uncertainty and tighten evidence quality, not to force a c
 | [AOA-T-0034](../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-playbooks` and `aoa-skills` keep sanitization as a prerequisite or origin-lineage surface, not as a second exact-fit live consumer. |
 | [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md) | `adjacent but insufficient` | checkpointed or swarm-governed flows exist, but not the same shell-side single-shot fast path. |
 | [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | `adjacent but insufficient` | drift reports, composition audits, and evaluation matrices exist, but not the same CI-facing context-report artifact. |
-| [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | `adjacent but insufficient` | downstream witness and artifact-transition consumers exist, but not a second capture-as-artifact contract. |
+| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | `adjacent but insufficient` | downstream witness and artifact-transition consumers exist, but not a second capture-as-artifact contract. |
 | [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `no exact-fit local consumer found` | the searched local lane shows origin and seed-soil, but not a second independent runtime consumer. |
 
 Current implication:

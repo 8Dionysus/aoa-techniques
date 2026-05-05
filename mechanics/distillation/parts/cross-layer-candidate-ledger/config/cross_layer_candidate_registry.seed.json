@@ -491,7 +491,7 @@
       "landed_technique": {
         "domain": "history",
         "id": "AOA-T-0044",
-        "path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md"
+        "path": "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not reopen capture semantics or widen into memory or instruction authority",
@@ -527,7 +527,7 @@
       "landed_technique": {
         "domain": "history",
         "id": "AOA-T-0045",
-        "path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md"
+        "path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into runtime witness behavior, memory writeback, or a new memory-object kind",

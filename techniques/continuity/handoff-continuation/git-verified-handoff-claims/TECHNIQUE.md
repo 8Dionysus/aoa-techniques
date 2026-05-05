@@ -88,7 +88,7 @@ Verify concrete handoff claims against visible git state before continuation so 
 - continuation trusts repo-backed state over handoff narration when they diverge
 - the technique stays smaller than generic code review, witness artifacts, and broad provenance doctrine
 
-Relationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not create the handoff packet; it verifies packet claims after the packet already exists. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record that a receiver accepted the handoff; it checks whether the handoff's concrete repo claims are true. Unlike [AOA-T-0045](../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state deltas. It also stays smaller than a generic code-review workflow because it only verifies handoff claims that matter for immediate continuation.
+Relationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not create the handoff packet; it verifies packet claims after the packet already exists. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record that a receiver accepted the handoff; it checks whether the handoff's concrete repo claims are true. Unlike [AOA-T-0045](../../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state deltas. It also stays smaller than a generic code-review workflow because it only verifies handoff claims that matter for immediate continuation.
 
 ## Risks
 

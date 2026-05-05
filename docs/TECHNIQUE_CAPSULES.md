@@ -1338,7 +1338,7 @@ See also:
 
 ## `history`
 
-### [AOA-T-0044](../techniques/history/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
+### [AOA-T-0044](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
 
 - Summary: Package already-saved AI session transcripts as readable, versionable Markdown artifacts so review, handoff, and selective sharing stay possible without reopening capture semantics or turning transcript history into memory or instruction authority.
 - Intent: Turn already-saved AI session history into readable, versionable transcript artifacts so teams can review...
@@ -1349,9 +1349,9 @@ See also:
 - Core contract: the technique begins after capture and does not own whether sessions get saved at all; one transcript artifact...
 - Main risk: the supposed transcript-export technique quietly re-owns capture because teams cannot explain what happens after the first save.
 - Validate by: the transcript package starts from already-saved session artifacts; one readable export or bundle exists for a bounded review or...
-- Source: [TECHNIQUE.md](../techniques/history/versionable-session-transcripts/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md)
 
-### [AOA-T-0053](../techniques/history/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
+### [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
 
 - Summary: Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.
 - Intent: Build a local searchable index over already-saved session artifacts so operators can find and...
@@ -1362,9 +1362,9 @@ See also:
 - Core contract: the index remains derivative and rebuildable from local source artifacts; source artifacts stay authoritative even when the index...
 - Main risk: the index drifts away from current source artifacts.
 - Validate by: session artifacts already exist before indexing starts; the index can be rebuilt from local artifacts without hidden memory state...
-- Source: [TECHNIQUE.md](../techniques/history/local-first-session-index/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md)
 
-### [AOA-T-0026](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
+### [AOA-T-0026](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
 
 - Summary: Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.
 - Intent: Preserve AI coding sessions as explicit project-scoped history artifacts so useful reasoning, decisions, and...
@@ -1375,9 +1375,9 @@ See also:
 - Core contract: session history stays project-scoped and artifact-based; local persistence remains available without requiring cloud sync.
 - Main risk: session artifacts quietly become the de facto instruction source because no stronger authored source stays visible.
 - Validate by: session history is saved as project-scoped artifacts; the local artifact path remains useful even without cloud sync; a reviewer...
-- Source: [TECHNIQUE.md](../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
 
-### [AOA-T-0045](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
+### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
 
 - Summary: Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.
 - Intent: Preserve a nontrivial run as one reviewable witness trace artifact so humans can inspect...
@@ -1388,9 +1388,9 @@ See also:
 - Core contract: WitnessTrace remains a trace export contract rather than a memory object; the witness trace is the reviewable source...
 - Main risk: the witness artifact quietly becomes a new memory-object kind because writeback mapping is not kept separate.
 - Validate by: the artifact names the bounded run and its goal; step order, tool visibility, and state deltas remain visible where...
-- Source: [TECHNIQUE.md](../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
 
-### [AOA-T-0066](../techniques/history/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
 
 - Summary: Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine.
 - Intent: Turn already-saved session history into a replayable artifact so reviewers can inspect message flow...
@@ -1401,9 +1401,9 @@ See also:
 - Core contract: replay begins after session capture and does not own first-save persistence; one replayable artifact is derivative from one...
 - Main risk: the replay artifact quietly re-owns capture because the saved source seam disappears.
 - Validate by: replay starts from an already-saved session artifact; message order or equivalent flow cues survive into the replay surface; the...
-- Source: [TECHNIQUE.md](../techniques/history/transcript-replay-artifact/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md)
 
-### [AOA-T-0067](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
 
 - Summary: Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine.
 - Intent: Link code history back to saved session evidence so reviewers can reopen the originating...
@@ -1414,7 +1414,7 @@ See also:
 - Core contract: code anchors link back to already-saved evidence artifacts; the lineage link is stable enough that another reviewer can...
 - Main risk: lineage links break because code anchors or evidence references are unstable.
 - Validate by: code anchors can be linked back to already-saved evidence artifacts; another reviewer can reopen the source evidence from the...
-- Source: [TECHNIQUE.md](../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md)
 
 ## Boundaries
 

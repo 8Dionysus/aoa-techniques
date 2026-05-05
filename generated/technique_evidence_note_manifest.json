@@ -13242,10 +13242,10 @@
     },
     {
       "id": "AOA-T-0026",
-      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/canonical-readiness.md",
+          "note_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -13381,7 +13381,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/external-import-review.md",
+          "note_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -13540,7 +13540,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/external-origin.md",
+          "note_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -13638,7 +13638,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/session-capture-as-repo-artifact/notes/second-context-adaptation.md",
+          "note_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -21967,10 +21967,10 @@
     },
     {
       "id": "AOA-T-0044",
-      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/history/versionable-session-transcripts/notes/adverse-effects-review.md",
+          "note_path": "techniques/history/history-artifacts/versionable-session-transcripts/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -22127,7 +22127,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/versionable-session-transcripts/notes/canonical-readiness.md",
+          "note_path": "techniques/history/history-artifacts/versionable-session-transcripts/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -22267,7 +22267,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/versionable-session-transcripts/notes/external-import-review.md",
+          "note_path": "techniques/history/history-artifacts/versionable-session-transcripts/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -22426,7 +22426,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/versionable-session-transcripts/notes/external-origin.md",
+          "note_path": "techniques/history/history-artifacts/versionable-session-transcripts/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -22524,7 +22524,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/versionable-session-transcripts/notes/second-context-adaptation.md",
+          "note_path": "techniques/history/history-artifacts/versionable-session-transcripts/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -22673,10 +22673,10 @@
     },
     {
       "id": "AOA-T-0045",
-      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/history/witness-trace-as-reviewable-artifact/notes/canonical-readiness.md",
+          "note_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -22807,7 +22807,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/witness-trace-as-reviewable-artifact/notes/origin-evidence.md",
+          "note_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -22892,7 +22892,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/witness-trace-as-reviewable-artifact/notes/second-context-adaptation.md",
+          "note_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -25497,10 +25497,10 @@
     },
     {
       "id": "AOA-T-0053",
-      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/history/local-first-session-index/notes/adverse-effects-review.md",
+          "note_path": "techniques/history/history-artifacts/local-first-session-index/notes/adverse-effects-review.md",
           "kind": "adverse_effects_review",
           "title": "Adverse Effects Review",
           "note_shape": "typed_sections",
@@ -25657,7 +25657,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/local-first-session-index/notes/canonical-readiness.md",
+          "note_path": "techniques/history/history-artifacts/local-first-session-index/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -25801,7 +25801,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/local-first-session-index/notes/external-import-review.md",
+          "note_path": "techniques/history/history-artifacts/local-first-session-index/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -25960,7 +25960,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/local-first-session-index/notes/external-origin.md",
+          "note_path": "techniques/history/history-artifacts/local-first-session-index/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -26058,7 +26058,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/local-first-session-index/notes/second-context-adaptation.md",
+          "note_path": "techniques/history/history-artifacts/local-first-session-index/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -29481,7 +29481,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "the public bundle could drift into [AOA-T-0045](../../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) if teams expect a full run artifact instead of one bounded trust check"
+                  "text": "the public bundle could drift into [AOA-T-0045](../../../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) if teams expect a full run artifact instead of one bounded trust check"
                 },
                 {
                   "order": 3,
@@ -32815,10 +32815,10 @@
     },
     {
       "id": "AOA-T-0066",
-      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/history/transcript-replay-artifact/notes/canonical-readiness.md",
+          "note_path": "techniques/history/history-artifacts/transcript-replay-artifact/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -32958,7 +32958,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/transcript-replay-artifact/notes/external-import-review.md",
+          "note_path": "techniques/history/history-artifacts/transcript-replay-artifact/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -33117,7 +33117,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/transcript-replay-artifact/notes/external-origin.md",
+          "note_path": "techniques/history/history-artifacts/transcript-replay-artifact/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -33220,7 +33220,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/transcript-replay-artifact/notes/second-context-adaptation.md",
+          "note_path": "techniques/history/history-artifacts/transcript-replay-artifact/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -33373,10 +33373,10 @@
     },
     {
       "id": "AOA-T-0067",
-      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/history/transcript-linked-code-lineage/notes/canonical-readiness.md",
+          "note_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -33452,7 +33452,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "it also remains narrower than [AOA-T-0059](../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) because it does not verify current handoff claims; it preserves historical lineage from code to saved evidence"
+                  "text": "it also remains narrower than [AOA-T-0059](../../../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) because it does not verify current handoff claims; it preserves historical lineage from code to saved evidence"
                 }
               ]
             },
@@ -33516,7 +33516,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/transcript-linked-code-lineage/notes/external-import-review.md",
+          "note_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -33675,7 +33675,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/transcript-linked-code-lineage/notes/external-origin.md",
+          "note_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -33778,7 +33778,7 @@
           ]
         },
         {
-          "note_path": "techniques/history/transcript-linked-code-lineage/notes/second-context-adaptation.md",
+          "note_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -37382,7 +37382,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0026](../../../../history/session-capture-as-repo-artifact/TECHNIQUE.md) because it does not own general project history capture or publication as review artifacts"
+                  "text": "it remains narrower than [AOA-T-0026](../../../../history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) because it does not own general project history capture or publication as review artifacts"
                 },
                 {
                   "order": 3,

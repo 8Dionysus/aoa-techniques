@@ -14,7 +14,7 @@ For the current actionable first wave, open [Promotion Wave A Runbook](../promot
 - matrix categorization status: `82` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../../../../techniques/history/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../../../../techniques/history/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
+- latest graduation wave: [AOA-T-0028](../../../../techniques/agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../../../../techniques/agent-workflows/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md), [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md), [AOA-T-0097](../../../../techniques/system-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0098](../../../../techniques/validation-patterns/receipt-first-failure-analysis/TECHNIQUE.md), [AOA-T-0099](../../../../techniques/system-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md), [AOA-T-0100](../../../../techniques/system-recovery/stress-receipt-reground-closeout/TECHNIQUE.md), [AOA-T-0105](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md), [AOA-T-0106](../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md), and [AOA-T-0107](../../../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) still need second-context evidence before canonical discussion is honest
 
@@ -37,7 +37,7 @@ surviving donor and promotion debt forward without widening technique bodies.
   - [AOA-T-0023](../../../../techniques/agent-workflows/stateless-single-shot-agent/TECHNIQUE.md)
   - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
   - [AOA-T-0034](../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md)
-  - [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md)
+  - [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
 - no second independent local runtime consumer found in the searched lane:
   - [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
 
@@ -138,8 +138,8 @@ Shared blocker: the remaining open history queue is now capture plus witness-tra
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0026](../../../../techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational history technique and current lead candidate for the domain; the latest public local session-store and session-browser/search lanes remain adjacent because they persist or index history under user-home state, workspace pointer files, or unified local search tools rather than project-scoped repo artifacts. | One second repo or surface family using local-first session capture as a real history-artifact layer inside a project-visible artifact path rather than a memory product, search UI, or home-directory session store. |
-| [AOA-T-0045](../../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging; the latest public transcript-log export lane remains adjacent because `claude-conversation-extractor` detailed exports and `claude-code-log` preserve tool use, terminal outputs, and summaries, but still package transcript or log review rather than a bounded witness trace with explicit state-delta review notes and pre-writeback summary posture. | One second downstream consumer outside the current witness/compost pilot lineage where a bounded run emits a structured trace artifact and human-readable summary before any writeback or promotion layer. |
+| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational history technique and current lead candidate for the domain; the latest public local session-store and session-browser/search lanes remain adjacent because they persist or index history under user-home state, workspace pointer files, or unified local search tools rather than project-scoped repo artifacts. | One second repo or surface family using local-first session capture as a real history-artifact layer inside a project-visible artifact path rather than a memory product, search UI, or home-directory session store. |
+| [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging; the latest public transcript-log export lane remains adjacent because `claude-conversation-extractor` detailed exports and `claude-code-log` preserve tool use, terminal outputs, and summaries, but still package transcript or log review rather than a bounded witness trace with explicit state-delta review notes and pre-writeback summary posture. | One second downstream consumer outside the current witness/compost pilot lineage where a bounded run emits a structured trace artifact and human-readable summary before any writeback or promotion layer. |
 
 ### Pack 8 - Internal Docs Practice
 
@@ -269,7 +269,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded p
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0066](../../../../techniques/history/transcript-replay-artifact/TECHNIQUE.md) | Replay-artifact sibling that keeps post-capture session replay explicit with clear exclusions around transcript packaging, witness export, and hosted viewer-platform doctrine. | One second public workflow surface where already-saved sessions are replayed as bounded review artifacts without widening into hosted sharing, dashboard products, or replay-platform semantics. |
+| [AOA-T-0066](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | Replay-artifact sibling that keeps post-capture session replay explicit with clear exclusions around transcript packaging, witness export, and hosted viewer-platform doctrine. | One second public workflow surface where already-saved sessions are replayed as bounded review artifacts without widening into hosted sharing, dashboard products, or replay-platform semantics. |
 
 ### Pack 24 - Transcript-Linked Code Lineage
 
@@ -277,7 +277,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded c
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0067](../../../../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) | Provenance-link sibling that keeps code anchors tied to saved session evidence with clear exclusions around dashboards, scorecards, and retrieval-product doctrine. | One second public workflow surface where code review or blame can reopen saved session evidence through stable code-to-evidence links without widening into analytics dashboards or hosted search product behavior. |
+| [AOA-T-0067](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | Provenance-link sibling that keeps code anchors tied to saved session evidence with clear exclusions around dashboards, scorecards, and retrieval-product doctrine. | One second public workflow surface where code review or blame can reopen saved session evidence through stable code-to-evidence links without widening into analytics dashboards or hosted search product behavior. |
 
 ### Pack 25 - Fail-Closed Evidence Gate
 

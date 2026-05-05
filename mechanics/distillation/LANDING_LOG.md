@@ -3,6 +3,42 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - History-artifacts tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`,
+  `AOA-T-0066`, and `AOA-T-0067` into
+  `techniques/history/history-artifacts/`
+- extended `techniques/history/AGENTS.md` for the compact history shelf while
+  keeping memory doctrine, instruction authority, private transcript
+  publication, hidden capture policy, hosted viewer product doctrine, repo
+  analytics, retention policy, recall substrate, and proof authority outside
+  the shelf
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md`
+- repaired authored links from history-adjacent techniques, checkpoint
+  provenance, active Distillation ledgers, and reform review sources
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept capture, transcript packaging, derivative local indexing, witness trace
+  review, transcript replay, and code-lineage links as separate leaf bundles
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_history_artifacts_tree_pilot
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no memory, instruction, retention, recall, hosted-viewer, analytics, or proof
+  authority moved into the shelf
+- no neighboring shelf moved
+
 ## 2026-05-05 - History-artifacts direct-read migration review
 
 Changed:

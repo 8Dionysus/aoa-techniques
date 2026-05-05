@@ -359,15 +359,15 @@
     },
     {
       "id": "AOA-T-0026",
-      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/history/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md",
+          "example_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md",
           "title": "Concrete Local-First Session History",
           "body_markdown": "Scenario: a repository wants its CLI agent sessions to stay inspectable after each terminal run.\n\n1. Launch the coding agent through one wrapper that saves each session locally.\n2. Write each session to `.specstory/history/` with a stable project-scoped path.\n3. Keep the saved session readable as a versioned artifact even when optional cloud sync is disabled.\n4. Run summaries or organization tools on top of that history later, instead of treating those tools as the source of truth.\n5. Keep repository instructions and decisions in authored docs, not in the captured transcript itself.\n\nThis preserves session knowledge as history without widening into memory substrate or instruction policy."
         },
         {
-          "example_path": "techniques/history/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md",
+          "example_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md",
           "title": "Minimal Session Capture As Repo Artifact",
           "body_markdown": "Use one project-scoped history directory for saved AI coding sessions.\n\n```text\n.specstory/\n  history/\n    2026-03-21-architecture-review.md\n    2026-03-21-bugfix-session.md\n```\n\nContract:\n- each session is saved locally as a project artifact\n- the history remains usable without cloud sync\n- later tools may summarize or organize the files, but the artifact layer stays primary\n- the captured sessions do not become the canonical instruction source for the repository"
         }
@@ -602,10 +602,10 @@
     },
     {
       "id": "AOA-T-0044",
-      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/history/versionable-session-transcripts/examples/minimal-versionable-session-transcripts.md",
+          "example_path": "techniques/history/history-artifacts/versionable-session-transcripts/examples/minimal-versionable-session-transcripts.md",
           "title": "Minimal Versionable Session Transcripts",
           "body_markdown": "Start from an already-saved session artifact and package only the transcript needed for one review thread.\n\nExisting saved history:\n\n```text\n.specstory/history/2026-03-23-codex-fix-session.md\n.specstory/history/2026-03-23-codex-followup-session.md\n```\n\nCurated export for one PR:\n\n```text\ndocs/review-transcripts/pr-118-auth-flow-transcript.md\n```\n\nExample transcript header:\n\n```md\n# PR 118 Transcript\n\n- source_sessions:\n  - 2026-03-23-codex-fix-session\n  - 2026-03-23-codex-followup-session\n- exported_at: 2026-03-23T18:40:00Z\n- purpose: review and handoff\n\n## Context\n\nThis transcript packages the two saved sessions that led to the auth-flow change.\nIrrelevant shell noise was removed, and one reviewer note was added before commit.\n```\n\nThe important behavior is post-capture transcript packaging:\n\n- the source sessions were already saved before this technique began\n- one review unit intentionally combines the two relevant conversations\n- the exported transcript carries stable metadata for commit and comparison\n- a reviewer can trim or annotate before sharing\n- repository rules and decisions still stay in authored docs instead of moving into the transcript"
         }
@@ -613,10 +613,10 @@
     },
     {
       "id": "AOA-T-0045",
-      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/history/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md",
+          "example_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md",
           "title": "Minimal Witness Trace As Reviewable Artifact",
           "body_markdown": "Use one structured trace plus one compact summary to preserve a nontrivial run before any downstream writeback.\n\nExample witness artifact:\n\n```json\n{\n  \"run_id\": \"run-2026-03-23-auth-fix\",\n  \"goal\": \"repair auth callback flow without losing provider fallback\",\n  \"bounded_status\": \"completed_with_review_flags\",\n  \"time_window\": \"2026-03-23T17:10:00Z/2026-03-23T17:42:00Z\",\n  \"steps\": [\n    {\n      \"index\": 1,\n      \"step_kind\": \"inspect\",\n      \"intent\": \"trace current callback handling\",\n      \"tool_visibility\": \"repo read\",\n      \"observation\": \"fallback branch skips nonce reset\",\n      \"state_delta\": null\n    },\n    {\n      \"index\": 2,\n      \"step_kind\": \"edit\",\n      \"intent\": \"restore nonce reset in fallback branch\",\n      \"tool_visibility\": \"file patch\",\n      \"observation\": \"callback path updated\",\n      \"state_delta\": \"auth callback logic changed\"\n    }\n  ],\n  \"review_notes\": [\n    \"manual provider fallback test still needed\"\n  ]\n}\n```\n\nExample summary:\n\n```md\n# Witness Summary\n\n- run goal: repair auth callback flow without losing provider fallback\n- main result: fallback branch now restores nonce reset\n- review flags: manual fallback test still needed\n- inspect next: callback path plus fallback provider behavior\n```\n\nThe important behavior is artifact-first review posture:\n\n- the trace preserves ordered steps, tool visibility, and state deltas\n- the summary tells a reviewer what to inspect next\n- the artifact survives before any memory writeback or promotion route\n- this is not a new memory object and not just a transcript export"
         }
@@ -701,10 +701,10 @@
     },
     {
       "id": "AOA-T-0053",
-      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/history/local-first-session-index/examples/minimal-local-first-session-index.md",
+          "example_path": "techniques/history/history-artifacts/local-first-session-index/examples/minimal-local-first-session-index.md",
           "title": "Minimal local-first session index",
           "body_markdown": "Saved artifacts:\n\n- `.history/sessions/2026-03-28T10-15-00_codex.jsonl`\n- `.history/sessions/2026-03-28T11-02-14_claude.jsonl`\n\nLocal index entry:\n\n- `session_id: 2026-03-28T10-15-00_codex`\n- `source_path: .history/sessions/2026-03-28T10-15-00_codex.jsonl`\n- `agent: codex`\n- `started_at: 2026-03-28T10:15:00Z`\n- `display_name: release check follow-up`\n- `keywords: [release_check, technique_index, validation]`\n\nQuery:\n\n- search for `release_check`\n\nResult:\n\n- one hit for `release check follow-up`\n- one snippet or metadata preview from the index\n- one link back to `.history/sessions/2026-03-28T10-15-00_codex.jsonl`\n\nThe index accelerates lookup, but the saved artifact remains the reviewable source of truth."
         }
@@ -844,10 +844,10 @@
     },
     {
       "id": "AOA-T-0066",
-      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/history/transcript-replay-artifact/examples/minimal-transcript-replay-artifact.md",
+          "example_path": "techniques/history/history-artifacts/transcript-replay-artifact/examples/minimal-transcript-replay-artifact.md",
           "title": "minimal transcript-replay-artifact",
           "body_markdown": "Saved source artifact:\n\n```text\nsessions/2026-03-28-parser-fix.jsonl\n```\n\nReplay artifact:\n\n```text\ndocs/replays/parser-fix-session.html\n```\n\nBounded replay metadata:\n\n```json\n{\n  \"source_session\": \"2026-03-28-parser-fix\",\n  \"message_count\": 42,\n  \"replay_format\": \"html\",\n  \"redacted\": true\n}\n```\n\nWhy this example stays bounded:\n\n- the replay starts from an already-saved session file\n- the replay artifact remains a derivative review object\n- the example does not depend on hosted sharing, live collaboration, or dashboard product behavior"
         }
@@ -855,10 +855,10 @@
     },
     {
       "id": "AOA-T-0067",
-      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/history/transcript-linked-code-lineage/examples/minimal-transcript-linked-code-lineage.md",
+          "example_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/examples/minimal-transcript-linked-code-lineage.md",
           "title": "minimal transcript-linked-code-lineage",
           "body_markdown": "Saved evidence artifact:\n\n```text\nsessions/2026-03-28-parser-refactor.md\n```\n\nCode anchor:\n\n```text\nsrc/parser.ts:120-168\n```\n\nLineage record:\n\n```json\n{\n  \"code_anchor\": \"src/parser.ts:120-168\",\n  \"evidence_ref\": \"sessions/2026-03-28-parser-refactor.md\",\n  \"session_id\": \"parser-refactor-2026-03-28\"\n}\n```\n\nWhy this example stays bounded:\n\n- the code anchor points back to one saved evidence artifact\n- reviewers can reopen provenance without a dashboard or analytics stack\n- the example does not turn lineage into search product or scorecard doctrine"
         }

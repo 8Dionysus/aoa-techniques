@@ -1053,10 +1053,10 @@
     },
     {
       "id": "AOA-T-0026",
-      "technique_path": "techniques/history/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/history/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md",
+          "check_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md",
           "title": "Session Capture As Repo Artifact Checklist",
           "intro_markdown": "",
           "items": [
@@ -1943,10 +1943,10 @@
     },
     {
       "id": "AOA-T-0044",
-      "technique_path": "techniques/history/versionable-session-transcripts/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/history/versionable-session-transcripts/checks/versionable-session-transcripts-checklist.md",
+          "check_path": "techniques/history/history-artifacts/versionable-session-transcripts/checks/versionable-session-transcripts-checklist.md",
           "title": "Versionable Session Transcripts Checklist",
           "intro_markdown": "",
           "items": [
@@ -1992,10 +1992,10 @@
     },
     {
       "id": "AOA-T-0045",
-      "technique_path": "techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/history/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md",
+          "check_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md",
           "title": "Witness Trace As Reviewable Artifact Checklist",
           "intro_markdown": "",
           "items": [
@@ -2340,10 +2340,10 @@
     },
     {
       "id": "AOA-T-0053",
-      "technique_path": "techniques/history/local-first-session-index/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/history/local-first-session-index/checks/local-first-session-index-checklist.md",
+          "check_path": "techniques/history/history-artifacts/local-first-session-index/checks/local-first-session-index-checklist.md",
           "title": "local-first-session-index checklist",
           "intro_markdown": "",
           "items": [
@@ -2925,10 +2925,10 @@
     },
     {
       "id": "AOA-T-0066",
-      "technique_path": "techniques/history/transcript-replay-artifact/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/history/transcript-replay-artifact/checks/transcript-replay-artifact-checklist.md",
+          "check_path": "techniques/history/history-artifacts/transcript-replay-artifact/checks/transcript-replay-artifact-checklist.md",
           "title": "transcript-replay-artifact checklist",
           "intro_markdown": "",
           "items": [
@@ -2970,10 +2970,10 @@
     },
     {
       "id": "AOA-T-0067",
-      "technique_path": "techniques/history/transcript-linked-code-lineage/TECHNIQUE.md",
+      "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/history/transcript-linked-code-lineage/checks/transcript-linked-code-lineage-checklist.md",
+          "check_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/checks/transcript-linked-code-lineage-checklist.md",
           "title": "transcript-linked-code-lineage checklist",
           "intro_markdown": "",
           "items": [

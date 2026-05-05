@@ -16,7 +16,7 @@
 ## Default-use rationale
 - this is the right promoted default when the main problem is reopening saved session provenance from code review without widening into analytics or retrieval-product doctrine
 - it remains narrower than [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md) because it owns one provenance link from code back to existing evidence rather than a fuller run artifact
-- it also remains narrower than [AOA-T-0059](../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) because it does not verify current handoff claims; it preserves historical lineage from code to saved evidence
+- it also remains narrower than [AOA-T-0059](../../../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) because it does not verify current handoff claims; it preserves historical lineage from code to saved evidence
 
 ## Fresh public-safety check
 - review date: 2026-03-28

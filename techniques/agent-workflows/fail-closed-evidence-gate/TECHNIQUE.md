@@ -92,7 +92,7 @@ Stop mutating execution at the boundary unless an explicit allow verdict exists,
 - the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics
 - the evidence artifact supports review but does not itself become the whole trace or governance system
 
-Relationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself.
+Relationship to adjacent techniques: unlike [AOA-T-0028](../confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself.
 
 ## Risks
 
