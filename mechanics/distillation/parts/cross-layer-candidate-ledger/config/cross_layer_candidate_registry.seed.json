@@ -381,7 +381,7 @@
       "landed_technique": {
         "domain": "docs",
         "id": "AOA-T-0040",
-        "path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md"
+        "path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into propagation, marketplace policy, routing, or slash-command product semantics",
@@ -455,7 +455,7 @@
       "landed_technique": {
         "domain": "docs",
         "id": "AOA-T-0043",
-        "path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md"
+        "path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into note-provenance lift, relation semantics, ranking, or bridge architecture",

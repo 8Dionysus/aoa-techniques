@@ -304,11 +304,11 @@ See also:
 |---|---|---|---|---|
 | audit-to-closeout-proof-loop checklist | `present` | `8` | `techniques/agent-workflows/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
 
-### [AOA-T-0093](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
+### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| recommendation-truth-vs-host-actionability checklist | `absent` | `8` | `techniques/agent-workflows/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
+| recommendation-truth-vs-host-actionability checklist | `absent` | `8` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
 
 ### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
 
@@ -468,11 +468,11 @@ See also:
 |---|---|---|---|---|
 | Profile Preset Composition Checklist | `absent` | `12` | `techniques/instruction/instruction-surface/profile-preset-composition/checks/profile-preset-composition-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
 
-### [AOA-T-0040](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
+### [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Skill Vs Command Boundary Checklist | `absent` | `9` | `techniques/docs/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md` | [TECHNIQUE.md](../techniques/docs/skill-vs-command-boundary/TECHNIQUE.md) |
+| Skill Vs Command Boundary Checklist | `absent` | `9` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
 
 ### [AOA-T-0041](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
 
@@ -480,11 +480,11 @@ See also:
 |---|---|---|---|---|
 | Skill Marketplace Curation Checklist | `absent` | `9` | `techniques/docs/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md` | [TECHNIQUE.md](../techniques/docs/skill-marketplace-curation/TECHNIQUE.md) |
 
-### [AOA-T-0043](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
+### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/docs/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md) |
+| multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
 ### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
 

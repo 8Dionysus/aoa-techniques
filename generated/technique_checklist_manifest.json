@@ -1735,10 +1735,10 @@
     },
     {
       "id": "AOA-T-0040",
-      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md",
+          "check_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md",
           "title": "Skill Vs Command Boundary Checklist",
           "intro_markdown": "",
           "items": [
@@ -1886,10 +1886,10 @@
     },
     {
       "id": "AOA-T-0043",
-      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md",
+          "check_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md",
           "title": "multi-source-primary-input-provenance Checklist",
           "intro_markdown": "",
           "items": [
@@ -4040,10 +4040,10 @@
     },
     {
       "id": "AOA-T-0093",
-      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md",
+          "check_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md",
           "title": "recommendation-truth-vs-host-actionability checklist",
           "intro_markdown": "",
           "items": [

@@ -20329,10 +20329,10 @@
     },
     {
       "id": "AOA-T-0040",
-      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/skill-vs-command-boundary/notes/canonical-readiness.md",
+          "note_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -20463,7 +20463,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/skill-vs-command-boundary/notes/origin-evidence.md",
+          "note_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -20548,7 +20548,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/skill-vs-command-boundary/notes/second-context-adaptation.md",
+          "note_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -21617,10 +21617,10 @@
     },
     {
       "id": "AOA-T-0043",
-      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/multi-source-primary-input-provenance/notes/canonical-readiness.md",
+          "note_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -21747,7 +21747,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/multi-source-primary-input-provenance/notes/origin-evidence.md",
+          "note_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -21828,7 +21828,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/multi-source-primary-input-provenance/notes/second-context-adaptation.md",
+          "note_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -44407,10 +44407,10 @@
     },
     {
       "id": "AOA-T-0093",
-      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/notes/canonical-readiness.md",
+          "note_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -44537,7 +44537,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/notes/origin-evidence.md",
+          "note_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -44622,7 +44622,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/notes/second-context-adaptation.md",
+          "note_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

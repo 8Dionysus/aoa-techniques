@@ -558,10 +558,10 @@
     },
     {
       "id": "AOA-T-0040",
-      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md",
+          "example_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md",
           "title": "Minimal Skill Vs Command Boundary",
           "body_markdown": "Keep reusable capability meaning in a skill file and keep user-facing invocation in a command file.\n\n## Reusable skill\n\n`skills/contract-test.md`\n\n```md\n# Contract Test\n\n## Guidelines\n\n- name the boundary first\n- state expected inputs and outputs\n- prefer contract-first checks over internal detail\n```\n\n## Agent-facing reuse\n\n`agents/backend-reviewer.md`\n\n```md\n## Skills\n\n- [Contract Test](../skills/contract-test.md) - invoke when reviewing interface changes\n```\n\n## User-facing command\n\n`commands/review-contract.md`\n\n```md\n---\nname: review-contract\nargument-hint: \" <path>\"\nuser-invocable: true\n---\n\n# Review Contract\n\n1. Parse the target path from the user request.\n2. Load the `contract-test` skill.\n3. Apply that skill to the selected boundary.\n4. Return structured findings for the named path.\n```\n\n## What The Contract Shows\n\n- the skill defines reusable review meaning\n- the command defines user entrypoint, argument shape, and structured workflow\n- the same skill can be used by an agent and by a command without rewriting it"
         }
@@ -591,10 +591,10 @@
     },
     {
       "id": "AOA-T-0043",
-      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md",
+          "example_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md",
           "title": "Minimal Multi-Source Primary Input Provenance",
           "body_markdown": "When combining inputs from multiple sources, name the one that should lead.\n\n```md\n# Bridge Notes\n\n- primary source: `source-a`\n- supporting source: `source-b`\n- supporting source: `source-c`\n\nThe summary below should preserve `source-a` as the primary input when readers cite or synthesize this bridge.\n\nIf `source-b` conflicts with `source-a`, keep the conflict visible and mark it for review instead of silently re-ranking the sources.\n```\n\nThe important behavior is bounded:\n\n- the primary input stays visible\n- supporting inputs stay visible\n- supporting inputs can add context or challenge the reading without quietly replacing the primary anchor\n- downstream readers do not need graph semantics to preserve the order\n- this step does not rank sources, infer trust, silently override the primary input, or turn the bridge into a graph"
         }
@@ -1141,10 +1141,10 @@
     },
     {
       "id": "AOA-T-0093",
-      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md",
+          "example_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md",
           "title": "minimal recommendation-truth-vs-host-actionability",
           "body_markdown": "```yaml\nskill_dispatch:\n  router_recommendations:\n    activate_now:\n      - aoa-change-protocol\n      - aoa-sanitized-share\n  host_inventory:\n    source: repo-install\n    roots_checked:\n      - /workspace/project/.agents/skills\n      - /workspace/.agents/skills\n      - /user-skill-root/.agents/skills\n    present_skills:\n      - aoa-change-protocol\n  annotated_result:\n    activate_now:\n      - skill_name: aoa-change-protocol\n        host_availability:\n          status: host-executable\n          source: repo-install\n    must_confirm:\n      - skill_name: aoa-sanitized-share\n        reason: strong router match; host inventory is router-only for this skill\n        host_availability:\n          status: router-only\n          source: repo-install\n          manual_fallback_allowed: true\n    actionability_gaps:\n      - aoa-sanitized-share\n```\n\nWhy this example stays bounded:\n\n- it separates recommendation truth from host actionability instead of blending them into one verdict\n- it demotes a non-executable auto-action instead of silently dropping it\n- it keeps install-root discovery explicit without widening into marketplace or registry policy"
         }

@@ -98,7 +98,7 @@ Keep router recommendation truth and host actionability separate so control-plan
 - `unknown` remains a visible state instead of collapsing into either success or absence
 - the technique stays smaller than discovery doctrine, marketplace curation, registry governance, or upstream-health policy
 
-Relationship to adjacent techniques: unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), this technique does not ask whether an upstream source is publishable or reachable; it governs local host actionability after recommendation already happened. Unlike [AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does not decide when ingress and guard run; it governs the truth split inside their reports. Unlike [AOA-T-0064](../../instruction/capability-registry/capability-discovery/TECHNIQUE.md), it does not own discovery-query semantics; it starts after one bounded recommendation set already exists.
+Relationship to adjacent techniques: unlike [AOA-T-0042](../../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), this technique does not ask whether an upstream source is publishable or reachable; it governs local host actionability after recommendation already happened. Unlike [AOA-T-0091](../../../agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does not decide when ingress and guard run; it governs the truth split inside their reports. Unlike [AOA-T-0064](../../capability-registry/capability-discovery/TECHNIQUE.md), it does not own discovery-query semantics; it starts after one bounded recommendation set already exists.
 
 ## Risks
 

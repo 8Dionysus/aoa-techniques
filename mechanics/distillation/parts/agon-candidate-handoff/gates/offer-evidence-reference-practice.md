@@ -102,7 +102,7 @@ hand motion, not the law of the arena.
 - [single-missing-evidence-request](../../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md):
   asks for one missing evidence object; this candidate offers one available
   reference with scope and limit.
-- [multi-source-primary-input-provenance](../../../../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md):
+- [multi-source-primary-input-provenance](../../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md):
   orders several inputs by priority; this candidate offers one reference before
   multi-source synthesis.
 - [public-safe-artifact-sanitization](../../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md):

@@ -302,10 +302,13 @@ The ninth migration review is
 It accepts `capability-boundary` as the ninth migration pilot after directly
 reading `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093`.
 
-The next reform slice should run the ninth pilot migration by moving exactly
-`AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` into
-`techniques/instruction/capability-boundary/` without changing `domain`,
-`kind`, or `tree_path` frontmatter.
+The ninth pilot migration moves exactly `AOA-T-0040`, `AOA-T-0043`, and
+`AOA-T-0093` into `techniques/instruction/capability-boundary/` without
+changing `domain`, `kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md`](../legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md).
+
+The next reform slice should review the landed `capability-boundary` shelf
+before moving any tenth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

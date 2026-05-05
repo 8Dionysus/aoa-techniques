@@ -3,7 +3,7 @@
 This index maps root-level legacy material to the active route or owner route
 that now carries the work.
 
-Current root legacy inventory: eight receipts.
+Current root legacy inventory: nine receipts.
 
 ## Inventory
 
@@ -17,6 +17,7 @@ Current root legacy inventory: eight receipts.
 | `legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md` | `receipt` | `techniques/knowledge-lift/kag-source-lift/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Sixth accepted technique tree path migration receipt for `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048`. |
 | `legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md` | `receipt` | `techniques/instruction/docs-boundary/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Seventh accepted technique tree path migration receipt for `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033`. |
 | `legacy/receipts/2026-05-04-capability-registry-tree-pilot.md` | `receipt` | `techniques/instruction/capability-registry/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Eighth accepted technique tree path migration receipt for `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064`. |
+| `legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md` | `receipt` | `techniques/instruction/capability-boundary/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Ninth accepted technique tree path migration receipt for `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093`. |
 
 ## Accounting Rule
 

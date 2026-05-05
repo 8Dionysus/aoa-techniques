@@ -45,9 +45,8 @@ LIVE_LINK_SURFACES = (
 )
 
 UNMOVED_NEIGHBOR_BUNDLES = (
-    "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
     "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
-    "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+    "techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md",
 )
 
 

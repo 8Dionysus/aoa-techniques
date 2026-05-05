@@ -59,7 +59,7 @@ Relevant local docs and technique surfaces:
 - [nearest-wrong-target-rejection](../../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
 - [bounded-context-map](../../techniques/docs/bounded-context-map/TECHNIQUE.md)
 - [canonical-owner-with-validated-mirror](../../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md)
-- [multi-source-primary-input-provenance](../../techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md)
+- [multi-source-primary-input-provenance](../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md)
 - [bounded-relation-lift-for-kag](../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [repo-doc-surface-lift](../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
 - [contract-test-design](../../techniques/evaluation/contract-test-design/TECHNIQUE.md)

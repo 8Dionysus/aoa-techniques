@@ -12,7 +12,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 CURRENT_RELEASE_TECHNIQUES = (
     ("AOA-T-0091", "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md"),
     ("AOA-T-0092", "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md"),
-    ("AOA-T-0093", "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md"),
+    ("AOA-T-0093", "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md"),
     ("AOA-T-0094", "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md"),
     ("AOA-T-0095", "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md"),
     ("AOA-T-0096", "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md"),

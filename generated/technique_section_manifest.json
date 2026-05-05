@@ -2200,7 +2200,7 @@
     },
     {
       "id": "AOA-T-0040",
-      "technique_path": "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -2368,7 +2368,7 @@
     },
     {
       "id": "AOA-T-0043",
-      "technique_path": "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5168,7 +5168,7 @@
     },
     {
       "id": "AOA-T-0093",
-      "technique_path": "techniques/agent-workflows/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5203,7 +5203,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- router recommendation truth is computed separately from host executability\n- host inventory source and precedence remain explicit\n- `activate_now` requires `host-executable`\n- `router-only` is not treated as invalid, irrelevant, or silently dropped\n- `must_confirm` remains visible and actionable even when an item is not directly executable\n- `unknown` remains a visible state instead of collapsing into either success or absence\n- the technique stays smaller than discovery doctrine, marketplace curation, registry governance, or upstream-health policy\n\nRelationship to adjacent techniques: unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), this technique does not ask whether an upstream source is publishable or reachable; it governs local host actionability after recommendation already happened. Unlike [AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does not decide when ingress and guard run; it governs the truth split inside their reports. Unlike [AOA-T-0064](../../instruction/capability-registry/capability-discovery/TECHNIQUE.md), it does not own discovery-query semantics; it starts after one bounded recommendation set already exists."
+          "markdown": "- router recommendation truth is computed separately from host executability\n- host inventory source and precedence remain explicit\n- `activate_now` requires `host-executable`\n- `router-only` is not treated as invalid, irrelevant, or silently dropped\n- `must_confirm` remains visible and actionable even when an item is not directly executable\n- `unknown` remains a visible state instead of collapsing into either success or absence\n- the technique stays smaller than discovery doctrine, marketplace curation, registry governance, or upstream-health policy\n\nRelationship to adjacent techniques: unlike [AOA-T-0042](../../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), this technique does not ask whether an upstream source is publishable or reachable; it governs local host actionability after recommendation already happened. Unlike [AOA-T-0091](../../../agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does not decide when ingress and guard run; it governs the truth split inside their reports. Unlike [AOA-T-0064](../../capability-registry/capability-discovery/TECHNIQUE.md), it does not own discovery-query semantics; it starts after one bounded recommendation set already exists."
         },
         {
           "heading": "Risks",

@@ -117,8 +117,13 @@
    upstream health validation, routing policy, recommendation ranking, KAG
    graph semantics, runtime execution doctrine, host inventory policy, command
    product design, shell doctrine, registry product doctrine, and agent-role
-   authority outside the move. The next bounded step is the ninth pilot
-   migration for `capability-boundary` before any other shelf moves.
+   authority outside the move. The ninth pilot migration is now landed exactly
+   for those three bundles under
+   `techniques/instruction/capability-boundary/`, with the instruction route
+   card extended for the fourth shelf, root legacy receipt accounting, link
+   repair, generated rebuilds, and release-check validation in the same wave.
+   The next bounded step is the landed `capability-boundary` pilot review
+   before any tenth shelf moves.
 
 ## Hold line
 

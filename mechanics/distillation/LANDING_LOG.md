@@ -3,6 +3,40 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Capability-boundary tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` into
+  `techniques/instruction/capability-boundary/`
+- extended `techniques/instruction/AGENTS.md` for the fourth instruction trunk
+  shelf without turning it into marketplace curation, upstream health
+  validation, routing policy, KAG graph semantics, runtime law, host inventory,
+  command product design, shell doctrine, registry product doctrine, or
+  agent-role authority
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md`
+- repaired authored links from active mechanics parts, review source rows, and
+  moved adjacent-technique links
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept skill-command ownership, primary source priority, and
+  recommendation/actionability as separate guardrail leaves
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_capability_boundary_tree_pilot
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no `skill-discovery`, proof, governance, runtime, owner-closeout, or
+  automation-governance shelf moved
+- no generated projection became authority
+
 ## 2026-05-04 - Capability-boundary direct-read migration review
 
 Changed:

@@ -118,6 +118,9 @@ The format is intentionally simple and human-first.
 - accepted the `capability-boundary` direct-read migration review over
   `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` as the ninth tree pilot while
   keeping the review itself non-mutating
+- moved `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` into
+  `techniques/instruction/capability-boundary/` while keeping `domain`,
+  `kind`, IDs, status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 
