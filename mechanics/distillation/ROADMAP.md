@@ -86,7 +86,12 @@
    pilot review is also landed as `pilot-validated`, keeps KAG owner
    authority, graph semantics, scoring, proof authority, policy, and automatic
    verdicts outside the shelf, and chooses `docs-boundary` for the next
-   direct-read migration review before any seventh shelf moves.
+   direct-read migration review before any seventh shelf moves. The
+   `docs-boundary` direct-read review is now landed as
+   `accepted-for-seventh-migration-pilot`; it accepts exactly `AOA-T-0002`,
+   `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` for the seventh pilot while
+   keeping source-of-truth governance, approval policy, skill acceptance, proof
+   authority, runtime role law, and architecture taxonomy outside the move.
 
 ## Hold line
 

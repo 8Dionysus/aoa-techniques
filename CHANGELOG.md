@@ -97,6 +97,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `kag-source-lift` pilot review and selected
   `docs-boundary` for the next direct-read migration review without moving a
   seventh shelf yet
+- accepted the `docs-boundary` direct-read migration review over `AOA-T-0002`,
+  `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` as the seventh tree pilot while
+  keeping the review itself non-mutating
 
 ### Validation
 
