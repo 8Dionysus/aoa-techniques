@@ -415,8 +415,17 @@ The fifteenth pilot migration moves exactly those four bundles into
 `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md`](../legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md).
 
-The next reform slice should review the landed `antifragility-recovery` pilot
-before choosing any sixteenth shelf.
+The landed fifteenth pilot review is
+[Landed Antifragility-Recovery Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-antifragility-recovery-pilot-review.md).
+It validates `antifragility-recovery` as the second successful recovery trunk
+shelf, completes the previous step to review the landed
+`antifragility-recovery` pilot before choosing any sixteenth shelf, preserves
+`AOA-T-0098` as `domain: validation-patterns` and `kind: validation`, and
+chooses `execution/ready-work-graphs` for the next direct-read migration
+review.
+
+The next reform slice should run the `execution/ready-work-graphs` direct-read
+migration review before any sixteenth shelf migration.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
