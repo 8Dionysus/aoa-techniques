@@ -21,5 +21,6 @@ Current reviews:
 - [diagnosis-repair-direct-read-migration-review](diagnosis-repair-direct-read-migration-review.md)
 - [landed-diagnosis-repair-pilot-review](landed-diagnosis-repair-pilot-review.md)
 - [instruction-surface-direct-read-migration-review](instruction-surface-direct-read-migration-review.md)
+- [landed-instruction-surface-pilot-review](landed-instruction-surface-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

@@ -242,8 +242,14 @@ The fifth pilot migration moves `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
 `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md`](../legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md).
 
-The next reform slice should review the landed `instruction-surface` pilot
-before moving another shelf.
+The landed fifth pilot review is
+[Landed Instruction-Surface Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-instruction-surface-pilot-review.md).
+It validates the `instruction-surface` migration as the first successful
+instruction trunk test and chooses `kag-source-lift` for the next direct-read
+migration review.
+
+The next reform slice should run the `kag-source-lift` direct-read review before
+moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

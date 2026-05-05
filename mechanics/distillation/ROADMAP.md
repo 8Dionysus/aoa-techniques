@@ -70,7 +70,10 @@
    `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` under
    `techniques/instruction/instruction-surface/`, with the instruction route
    card, root legacy receipt accounting, link repair, generated rebuilds, and
-   release-check validation in the same wave.
+   release-check validation in the same wave. The landed
+   `instruction-surface` pilot review is also landed as `pilot-validated`, and
+   `kag-source-lift` is now chosen for the next direct-read migration review
+   without moving a sixth shelf yet.
 
 ## Hold line
 

@@ -83,6 +83,9 @@ The format is intentionally simple and human-first.
   `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into
   `techniques/instruction/instruction-surface/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `instruction-surface` pilot review and selected
+  `kag-source-lift` for the next direct-read migration review without moving a
+  sixth shelf yet
 
 ### Validation
 

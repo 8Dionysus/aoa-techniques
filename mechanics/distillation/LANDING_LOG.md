@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Landed instruction-surface pilot review
+
+Changed:
+
+- added
+  [landed-instruction-surface-pilot-review](parts/technique-reform-ingress/reviews/landed-instruction-surface-pilot-review.md)
+  as the post-migration review over the fifth tree pilot
+- accepted the landed `instruction-surface` shelf as clearer after validation
+  and as the first successful instruction trunk test
+- chose `kag-source-lift` for the next direct-read migration review without
+  moving another shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept `docs-boundary`, capability, skill-discovery, proof, governance, and
+  runtime-authority shelves outside the next move
+- kept `knowledge-lift` bounded to technique-local source-lift rather than KAG
+  owner authority, graph truth, scoring, policy, or automatic verdicts
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no sixth shelf migration was authorized without direct-read review
+
 ## 2026-05-04 - Instruction-surface tree pilot migration
 
 Changed:
