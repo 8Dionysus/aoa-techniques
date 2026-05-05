@@ -133,8 +133,8 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 
 | Field | Direction |
 |---|---|
-| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/`, the second landed pilot moved `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/`, the third landed pilot, the first non-continuity migrated shelf, moved `AOA-T-0070` through `AOA-T-0074` into `techniques/ingest/media-ingest/`, the fourth landed pilot moved `AOA-T-0080` through `AOA-T-0083` into `techniques/recovery/diagnosis-repair/`, and the fifth landed pilot moved `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into `techniques/instruction/instruction-surface/`; all five kept frontmatter unchanged. |
-| Next honest move | Run the landed `instruction-surface` pilot review before moving any other shelf. |
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` names the future root tree as trunks, shelves, and leaf bundles; `reports/technique_tree_projection.md` gives a non-authoritative full-corpus placement projection; the first landed pilot moved `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into `techniques/continuity/review-compaction/`, the second landed pilot moved `AOA-T-0056` through `AOA-T-0062` into `techniques/continuity/handoff-continuation/`, the third landed pilot, the first non-continuity migrated shelf, moved `AOA-T-0070` through `AOA-T-0074` into `techniques/ingest/media-ingest/`, the fourth landed pilot moved `AOA-T-0080` through `AOA-T-0083` into `techniques/recovery/diagnosis-repair/`, and the fifth landed pilot moved `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into `techniques/instruction/instruction-surface/`; all five kept frontmatter unchanged, and the landed `instruction-surface` review selected `kag-source-lift` as the next direct-read review target. |
+| Next honest move | Run the `kag-source-lift` direct-read migration review before moving any sixth shelf. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 ## Horizon: Small-Agent Usability
@@ -186,7 +186,7 @@ trigger is real.
   examples and tie-break rules stay stable across multiple technique waves.
 - Use the landed `review-compaction`, `handoff-continuation`, `media-ingest`,
   `diagnosis-repair`, and `instruction-surface` pilots as precedents while
-  reviewing the fifth landed shelf before considering any broader corpus move.
+  direct-reading `kag-source-lift` before any sixth shelf moves.
 - Add generated projections for `capability_class`, `substrate`,
   `execution_profile`, and `risk_posture` from
   `config/technique_topology_axes.yaml` only after mechanics candidates prove
