@@ -184,8 +184,15 @@
    landed exactly for those four bundles under
    `techniques/proof/published-summary/`, with the proof route card extended
    for the third shelf, root legacy receipt accounting, link repair, generated
-   rebuilds, and release-check validation in the same wave. The next bounded
-   step is a landed-pilot review before any other shelf movement.
+   rebuilds, and release-check validation in the same wave. The landed
+   `published-summary` pilot review is now landed as `pilot-validated`,
+   validates the third proof trunk shelf, and chooses `history-artifacts` for
+   the next direct-read migration review while keeping memory doctrine,
+   instruction authority, private transcript publication, hosted viewer
+   product doctrine, repo analytics, retention policy, recall substrate, and
+   neighboring shelves outside the next move. The next bounded step is the
+   `history-artifacts` direct-read review before any fourteenth shelf
+   migration.
 
 ## Hold line
 

@@ -157,6 +157,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011` into
   `techniques/proof/published-summary/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `published-summary` pilot review and selected
+  `history-artifacts` for the next direct-read migration review without
+  moving a fourteenth shelf yet
 
 ### Validation
 

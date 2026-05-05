@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed published-summary pilot review
+
+Changed:
+
+- added
+  [landed-published-summary-pilot-review](parts/technique-reform-ingress/reviews/landed-published-summary-pilot-review.md)
+  as the post-migration review over the thirteenth tree pilot
+- accepted the landed `published-summary` shelf as clearer after validation
+  and as the third successful proof trunk shelf
+- chose `history-artifacts` for the next direct-read migration review without
+  moving a fourteenth shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept memory doctrine, instruction authority, private transcript
+  publication, hosted viewer product doctrine, repo analytics, retention
+  policy, recall substrate, and neighboring shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no fourteenth shelf migration was authorized without direct-read review
+
 ## 2026-05-05 - Published-summary tree pilot migration
 
 Changed:

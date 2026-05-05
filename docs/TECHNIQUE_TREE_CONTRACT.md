@@ -370,8 +370,15 @@ The thirteenth pilot migration moves exactly `AOA-T-0006`, `AOA-T-0008`,
 `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-published-summary-tree-pilot.md`](../legacy/receipts/2026-05-05-published-summary-tree-pilot.md).
 
-The next reform slice should review the landed `published-summary` pilot
-before choosing any fourteenth shelf.
+The landed thirteenth pilot review is
+[Landed Published-Summary Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-published-summary-pilot-review.md).
+It validates `published-summary` as the third successful proof trunk shelf,
+completes the previous step to review the landed `published-summary` pilot
+before choosing any fourteenth shelf, and chooses `history-artifacts` for the
+next direct-read migration review.
+
+The next reform slice should run the `history-artifacts` direct-read migration
+review before any fourteenth shelf migration.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
