@@ -941,7 +941,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("techniques/continuity/review-compaction/", ingress)
         self.assertIn("review-compaction direct-read migration review is landed", distillation_roadmap)
         self.assertIn("first pilot migration", distillation_roadmap)
-        self.assertIn("landed `review-compaction` pilot", root_roadmap)
+        self.assertIn("first landed pilot moved `AOA-T-0051`", root_roadmap)
         self.assertIn("current landed pilot review", tree_contract)
 
     def test_landed_review_compaction_pilot_review_selects_next_direct_read_shelf(self) -> None:
@@ -1080,12 +1080,45 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("handoff-continuation-direct-read-migration-review", reviews_index)
         self.assertIn("handoff-continuation direct-read review: landed", ingress)
         self.assertIn("accepted-for-second-migration-pilot", ingress)
-        self.assertIn("exactly those seven bundles", ingress)
+        self.assertIn("handoff-continuation migration: landed", ingress)
         self.assertIn("handoff-continuation` direct-read migration review is now landed", distillation_roadmap)
         self.assertIn("Handoff-continuation direct-read migration review", landing_log)
-        self.assertIn("second direct-read review accepted `handoff-continuation`", root_roadmap)
+        self.assertIn("second landed pilot moved `AOA-T-0056` through `AOA-T-0062`", root_roadmap)
         self.assertIn("Handoff-Continuation Direct-Read Migration Review", tree_contract)
         self.assertIn("accepted the `handoff-continuation` direct-read migration review", changelog)
+
+    def test_handoff_continuation_tree_pilot_migration_is_landed_after_direct_read(self) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("handoff-continuation migration: landed", ingress)
+        self.assertIn("techniques/continuity/handoff-continuation/", ingress)
+        self.assertIn("without frontmatter changes", ingress)
+        self.assertIn("review the landed `handoff-continuation` shelf", ingress)
+        self.assertIn("second pilot migration is", distillation_roadmap)
+        self.assertIn("Handoff-continuation tree pilot migration", landing_log)
+        self.assertIn("legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md", landing_log)
+        self.assertIn("second landed pilot moved `AOA-T-0056` through `AOA-T-0062`", root_roadmap)
+        self.assertIn("Handoff-Continuation Direct-Read Migration Review", tree_contract)
+        self.assertIn("2026-05-04-handoff-continuation-tree-pilot.md", tree_contract)
+        self.assertIn("moved `AOA-T-0056` through `AOA-T-0062`", changelog)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

@@ -189,7 +189,7 @@ Shared blocker: the donor and repo-local adaptation both show a bounded named-ch
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0056](../../../../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) | Durable mailbox sibling that keeps named channels, ordered replay, and explicit acknowledgment visible with clear exclusions around handoff governance and full messaging-platform doctrine. | One second public workflow surface where named channels, replay, and explicit acknowledgment survive session gaps in practice without widening into orchestration policy, transcript history, or messaging-platform breadth. |
+| [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | Durable mailbox sibling that keeps named channels, ordered replay, and explicit acknowledgment visible with clear exclusions around handoff governance and full messaging-platform doctrine. | One second public workflow surface where named channels, replay, and explicit acknowledgment survive session gaps in practice without widening into orchestration policy, transcript history, or messaging-platform breadth. |
 
 ### Pack 14 - Structured Handoff Before Compaction
 
@@ -197,7 +197,7 @@ Shared blocker: the donor pair and repo-local adaptation both show a bounded pre
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0057](../../../../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) | Pre-compaction handoff sibling that keeps one explicit continuation packet visible with clear exclusions around transcript packaging, mailbox delivery, and broad phase governance. | One second public workflow surface where a structured handoff packet is written and read before context loss in practice without widening into transcript doctrine, delivery protocol, or orchestration governance. |
+| [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | Pre-compaction handoff sibling that keeps one explicit continuation packet visible with clear exclusions around transcript packaging, mailbox delivery, and broad phase governance. | One second public workflow surface where a structured handoff packet is written and read before context loss in practice without widening into transcript doctrine, delivery protocol, or orchestration governance. |
 
 ### Pack 15 - Receipt-Confirmed Handoff Packet
 
@@ -205,7 +205,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded h
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0058](../../../../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) | Handoff-acceptance sibling that keeps receipt explicit and continuation gated with clear exclusions around packet authoring, mailbox transport, and broader approval workflow doctrine. | One second public workflow surface where a receiving side explicitly records acceptance of a handoff packet before continuation without widening into queue governance, mailbox platforms, or broad approval policy. |
+| [AOA-T-0058](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | Handoff-acceptance sibling that keeps receipt explicit and continuation gated with clear exclusions around packet authoring, mailbox transport, and broader approval workflow doctrine. | One second public workflow surface where a receiving side explicitly records acceptance of a handoff packet before continuation without widening into queue governance, mailbox platforms, or broad approval policy. |
 
 ### Pack 16 - Git-Verified Handoff Claims
 
@@ -213,7 +213,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded h
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0059](../../../../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) | Handoff-verification sibling that keeps concrete claims anchored to visible git evidence with clear exclusions around packet authoring, witness artifacts, and generic code-review doctrine. | One second public workflow surface where handoff claims are explicitly checked against recent repo state before continuation without widening into full review workflows, provenance systems, or orchestrator doctrine. |
+| [AOA-T-0059](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | Handoff-verification sibling that keeps concrete claims anchored to visible git evidence with clear exclusions around packet authoring, witness artifacts, and generic code-review doctrine. | One second public workflow surface where handoff claims are explicitly checked against recent repo state before continuation without widening into full review workflows, provenance systems, or orchestrator doctrine. |
 
 ### Pack 17 - Session Opening Ritual Before Work
 
@@ -221,7 +221,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded s
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0060](../../../../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) | Session-start sibling that keeps one visible pre-mutation read-and-verify ritual explicit with clear exclusions around task picking, startup test doctrine, and full boot or orchestration stacks. | One second public workflow surface where resumed sessions visibly re-read current context and verify baseline state before the first edit without widening into task routing, startup test suites, or mission-governance doctrine. |
+| [AOA-T-0060](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | Session-start sibling that keeps one visible pre-mutation read-and-verify ritual explicit with clear exclusions around task picking, startup test doctrine, and full boot or orchestration stacks. | One second public workflow surface where resumed sessions visibly re-read current context and verify baseline state before the first edit without widening into task routing, startup test suites, or mission-governance doctrine. |
 
 ### Pack 18 - Cross-Repo Resource Map Bootstrap
 
@@ -229,7 +229,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded c
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0061](../../../../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | Cross-repo bootstrap sibling that keeps one task-bounded repo-and-resource map explicit with clear exclusions around semantic context mapping, infrastructure inventory, and workspace-platform doctrine. | One second public workflow surface where multi-repo continuation begins from an explicit repo-and-resource startup map without widening into architecture inventories, topology stacks, or full workspace-platform doctrine. |
+| [AOA-T-0061](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | Cross-repo bootstrap sibling that keeps one task-bounded repo-and-resource map explicit with clear exclusions around semantic context mapping, infrastructure inventory, and workspace-platform doctrine. | One second public workflow surface where multi-repo continuation begins from an explicit repo-and-resource startup map without widening into architecture inventories, topology stacks, or full workspace-platform doctrine. |
 
 ### Pack 19 - Episode-Bounded Agent Loop
 
@@ -237,7 +237,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded e
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0062](../../../../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) | Episode-loop sibling that keeps longer work divided into explicit checkpointed slices with clear exclusions around startup ritual, handoff packet structure, and full autonomous-platform doctrine. | One second public workflow surface where longer work is segmented into checkpointed episodes with explicit continue, stop, or escalate decisions without widening into supervision stacks, budget systems, or total autonomous workflow governance. |
+| [AOA-T-0062](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | Episode-loop sibling that keeps longer work divided into explicit checkpointed slices with clear exclusions around startup ritual, handoff packet structure, and full autonomous-platform doctrine. | One second public workflow surface where longer work is segmented into checkpointed episodes with explicit continue, stop, or escalate decisions without widening into supervision stacks, budget systems, or total autonomous workflow governance. |
 
 ### Pack 20 - Versioned Agent Registry Contract
 

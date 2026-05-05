@@ -25,7 +25,7 @@
 ## Risks introduced by adaptation
 
 - the pattern can collapse into `fail-closed-evidence-gate` if repositories stop distinguishing one-shot boundary verdicts from longer-running durable continuity
-- the public bundle could drift into [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md) if narrative episode structure becomes more central than durable job identity
+- the public bundle could drift into [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) if narrative episode structure becomes more central than durable job identity
 - contributors may over-associate the technique with total workflow platforms because the donor bundles durable jobs with broader governed-execution surfaces
 
 ## Evidence

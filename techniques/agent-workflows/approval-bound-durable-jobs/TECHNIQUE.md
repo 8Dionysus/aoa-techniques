@@ -93,7 +93,7 @@ Keep longer-running work durable across one explicit approval seam so checkpoint
 - the technique stays smaller than scheduler platforms, queue products, and broad orchestration doctrine
 - the durable job surface remains reviewable enough that another reader can tell whether it is running, paused, waiting for approval, or completed
 
-Relationship to adjacent techniques: unlike `fail-closed-evidence-gate`, this technique does not own the immediate execution verdict at one side-effect boundary; it owns longer-running continuity across an approval seam. Unlike [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md), it does not divide work into narrative episodes with continue, stop, or escalate decisions; it keeps one durable job identity stable across pause and resume. Unlike [AOA-T-0058](../receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record receipt of a handoff packet; it preserves durable work state until approval allows continuation.
+Relationship to adjacent techniques: unlike `fail-closed-evidence-gate`, this technique does not own the immediate execution verdict at one side-effect boundary; it owns longer-running continuity across an approval seam. Unlike [AOA-T-0062](../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md), it does not divide work into narrative episodes with continue, stop, or escalate decisions; it keeps one durable job identity stable across pause and resume. Unlike [AOA-T-0058](../../continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record receipt of a handoff packet; it preserves durable work state until approval allows continuation.
 
 ## Risks
 
@@ -184,5 +184,5 @@ See `checks/approval-bound-durable-jobs-checklist.md`.
 ## Future evolution
 
 - keep `fail-closed-evidence-gate` as the immediate boundary-gate sibling rather than widening this bundle back into one-shot execution verdicts
-- keep [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md) as the episode-structuring sibling rather than folding all continuation doctrine into durable jobs
+- keep [AOA-T-0062](../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) as the episode-structuring sibling rather than folding all continuation doctrine into durable jobs
 - reopen signed or portable evidence as a separate sibling only if it survives without widening into broad orchestration or governance systems

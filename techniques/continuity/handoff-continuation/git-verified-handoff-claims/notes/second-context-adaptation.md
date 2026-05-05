@@ -25,7 +25,7 @@
 ## Risks introduced by adaptation
 
 - the pattern can collapse into [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md) if repositories stop separating packet creation from claim verification
-- the public bundle could drift into [AOA-T-0045](../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) if teams expect a full run artifact instead of one bounded trust check
+- the public bundle could drift into [AOA-T-0045](../../../../history/witness-trace-as-reviewable-artifact/TECHNIQUE.md) if teams expect a full run artifact instead of one bounded trust check
 - the technique could widen into generic code review if every code change is routed through it instead of only handoff claims that matter for immediate continuation
 
 ## Evidence

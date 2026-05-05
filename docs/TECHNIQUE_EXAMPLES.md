@@ -113,47 +113,47 @@ See also:
 |---|---|---|---|
 | Minimal requirements-design-tasks ladder | `present` | `techniques/agent-workflows/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md` | [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) |
 
-### [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
+### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal channelized-agent-mailbox | `present` | `techniques/agent-workflows/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md` | [TECHNIQUE.md](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) |
+| Minimal channelized-agent-mailbox | `present` | `techniques/continuity/handoff-continuation/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) |
 
-### [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal structured handoff before compaction | `present` | `techniques/agent-workflows/structured-handoff-before-compaction/examples/minimal-structured-handoff-before-compaction.md` | [TECHNIQUE.md](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) |
-
-### [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
+### [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal receipt-confirmed handoff packet | `present` | `techniques/agent-workflows/receipt-confirmed-handoff-packet/examples/minimal-receipt-confirmed-handoff-packet.md` | [TECHNIQUE.md](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) |
+| minimal structured handoff before compaction | `present` | `techniques/continuity/handoff-continuation/structured-handoff-before-compaction/examples/minimal-structured-handoff-before-compaction.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) |
 
-### [AOA-T-0059](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal git-verified handoff claims | `present` | `techniques/agent-workflows/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
+### [AOA-T-0058](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal session-opening ritual before work | `present` | `techniques/agent-workflows/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) |
+| minimal receipt-confirmed handoff packet | `present` | `techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/examples/minimal-receipt-confirmed-handoff-packet.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) |
 
-### [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal cross-repo resource-map bootstrap | `present` | `techniques/agent-workflows/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md` | [TECHNIQUE.md](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
-
-### [AOA-T-0062](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
+### [AOA-T-0059](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal episode-bounded agent loop | `present` | `techniques/agent-workflows/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md` | [TECHNIQUE.md](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) |
+| minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
+
+### [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal session-opening ritual before work | `present` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) |
+
+### [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal cross-repo resource-map bootstrap | `present` | `techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
+
+### [AOA-T-0062](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal episode-bounded agent loop | `present` | `techniques/continuity/handoff-continuation/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) |
 
 ### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
 

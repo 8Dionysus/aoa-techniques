@@ -24,7 +24,7 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can collapse into [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the session-opening seam from the full change workflow
+- the pattern can collapse into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the session-opening seam from the full change workflow
 - teams may over-associate the pattern with a total autonomous harness because the donor also bundles task picking, baseline testing, budgets, and orchestrator behavior
 - the public bundle could drift into [AOA-T-0059](../../git-verified-handoff-claims/TECHNIQUE.md) if concrete claim-by-claim git checks become the real center of gravity
 

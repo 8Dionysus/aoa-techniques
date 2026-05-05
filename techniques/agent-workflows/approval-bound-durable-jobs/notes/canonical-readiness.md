@@ -15,7 +15,7 @@
 
 ## Default-use rationale
 - this is the right promoted default when the main problem is preserving longer-running work across an explicit approval seam without falling back to hidden memory or widening into scheduler doctrine
-- it remains narrower than [AOA-T-0062](../episode-bounded-agent-loop/TECHNIQUE.md) because it centers durable job identity and resume-from-state rather than narrative episode structuring
+- it remains narrower than [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) because it centers durable job identity and resume-from-state rather than narrative episode structuring
 - it also remains narrower than a one-shot boundary gate because it owns pause and resume continuity across longer-running work
 
 ## Fresh public-safety check

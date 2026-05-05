@@ -88,7 +88,7 @@ Break longer work into explicit episodes with checkpoints and continue, stop, or
 - continuation reads from the checkpointed state rather than from hidden memory
 - the technique stays smaller than autonomous agent doctrine, orchestration runtimes, and total workflow governance
 
-Relationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not define the shape of the handoff artifact itself; it defines the bounded loop that says work proceeds in episodes separated by checkpoints. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not own the pre-mutation ritual at the start of an episode; it owns the fact that long work is broken into reviewable slices with explicit stop and continue decisions. Unlike [AOA-T-0001](../plan-diff-apply-verify-report/TECHNIQUE.md), it does not define the internal workflow of each episode's change application; it constrains how longer work is segmented over time.
+Relationship to adjacent techniques: unlike [AOA-T-0057](../structured-handoff-before-compaction/TECHNIQUE.md), this technique does not define the shape of the handoff artifact itself; it defines the bounded loop that says work proceeds in episodes separated by checkpoints. Unlike [AOA-T-0060](../session-opening-ritual-before-work/TECHNIQUE.md), it does not own the pre-mutation ritual at the start of an episode; it owns the fact that long work is broken into reviewable slices with explicit stop and continue decisions. Unlike [AOA-T-0001](../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md), it does not define the internal workflow of each episode's change application; it constrains how longer work is segmented over time.
 
 ## Risks
 

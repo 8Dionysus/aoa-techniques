@@ -734,10 +734,10 @@
     },
     {
       "id": "AOA-T-0056",
-      "technique_path": "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md",
+          "example_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md",
           "title": "Minimal channelized-agent-mailbox",
           "body_markdown": "Channel:\n\n- `review/findings`\n\nMessages:\n\n- `sequence=14`, `sender=review-agent`, `payload_ref=review-2026-03-28.md`\n- `sequence=15`, `sender=review-agent`, `payload_ref=review-2026-03-28-followup.md`\n\nReplay:\n\n- `fix-agent` reconnects with `last_seen=13`\n- it replays messages `14` and `15` in order\n\nAcknowledgment:\n\n- after handling both messages, `fix-agent` records `acked_through=15`\n\nThe mailbox contract is the visible named channel, ordered replay, and explicit ack state. It does not decide whether a later handoff is approved or what remediation policy follows."
         }
@@ -745,10 +745,10 @@
     },
     {
       "id": "AOA-T-0057",
-      "technique_path": "techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/structured-handoff-before-compaction/examples/minimal-structured-handoff-before-compaction.md",
+          "example_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/examples/minimal-structured-handoff-before-compaction.md",
           "title": "minimal structured handoff before compaction",
           "body_markdown": "Compaction boundary:\n- the current session is about to summarize older context and continue with a reduced window\n\nHandoff artifact:\n\n```markdown\n# Handoff\n\n## Summary\nFinished the parser refactor and isolated the remaining failure to one serializer branch.\n\n## Work Completed\n- Refactored `src/parser.ts` to use the new node walker\n- Updated parser tests for the new branch names\n\n## In-Progress Or Blocked\n- `src/serializer.ts` still fails on nested arrays\n- The failure appears in `tests/serializer.test.ts`\n\n## Next Step\n- Fix nested-array emission in `src/serializer.ts`\n- Re-run `npm test -- serializer`\n\n## References\n- files: `src/parser.ts`, `src/serializer.ts`, `tests/serializer.test.ts`\n- commit: `abc1234`\n```\n\nWhy this example stays bounded:\n- the packet is written before compaction\n- continuation does not depend on hidden memory\n- the artifact does not try to become a transcript, witness trace, or mailbox protocol"
         }
@@ -756,10 +756,10 @@
     },
     {
       "id": "AOA-T-0058",
-      "technique_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/receipt-confirmed-handoff-packet/examples/minimal-receipt-confirmed-handoff-packet.md",
+          "example_path": "techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/examples/minimal-receipt-confirmed-handoff-packet.md",
           "title": "minimal receipt-confirmed handoff packet",
           "body_markdown": "Handoff packet:\n\n```markdown\n# Handoff Packet\n- id: handoff-serializer-fix\n- summary: Parser refactor is done; serializer still fails on nested arrays\n- next_step: Fix nested-array emission in `src/serializer.ts`\n- references:\n  - `src/serializer.ts`\n  - `tests/serializer.test.ts`\n  - commit `abc1234`\n```\n\nReceipt record:\n\n```markdown\n# Handoff Receipt\n- handoff_id: handoff-serializer-fix\n- receiver: @review-agent\n- state: accepted\n- reviewed_at: 2026-03-28T18:10:00Z\n- first_next_step: Reproduce the nested-array failure in `tests/serializer.test.ts`\n```\n\nContinuation rule:\n- do not continue the serializer work until the receipt record exists\n\nWhy this example stays bounded:\n- the packet exists before receipt\n- receipt is not confused with delivery\n- the contract does not become a mailbox platform, queue system, or broad approval workflow"
         }
@@ -767,10 +767,10 @@
     },
     {
       "id": "AOA-T-0059",
-      "technique_path": "techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md",
+          "example_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md",
           "title": "minimal git-verified handoff claims",
           "body_markdown": "Handoff claim:\n\n```markdown\n# Handoff\n- summary: The parser refactor is finished and `src/parser.ts` was updated in commit `abc1234`\n- next_step: Continue in `src/serializer.ts`\n```\n\nGit evidence checked:\n- `git log --oneline -5 -- src/parser.ts`\n- `git diff -- src/parser.ts`\n\nVerification result:\n\n```markdown\n# Handoff Claim Verification\n- claim: `src/parser.ts` was updated in the refactor\n- evidence:\n  - `git log --oneline -5 -- src/parser.ts`\n  - `git diff -- src/parser.ts`\n- verdict: verified\n\n- claim: serializer work already landed\n- evidence:\n  - `git diff -- src/serializer.ts`\n- verdict: mismatch\n```\n\nContinuation rule:\n- continue from the verified repo-backed view, not from the mismatched serializer claim\n\nWhy this example stays bounded:\n- it checks only the handoff claims that matter for immediate continuation\n- it does not become a full review report or witness trace\n- trust is anchored to visible git evidence rather than memory"
         }
@@ -778,10 +778,10 @@
     },
     {
       "id": "AOA-T-0060",
-      "technique_path": "techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md",
+          "example_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md",
           "title": "minimal session-opening ritual before work",
           "body_markdown": "Before the first edit:\n\n- read the current handoff note or recent session summary\n- check `git status --short`\n- open the file or files named as the next work surface\n\nVisible opening note:\n\n```markdown\n# Opening Check\n- handoff_read: yes\n- baseline_checked: `git status --short` plus `src/parser.ts`\n- mismatch: handoff said the parser cleanup was complete, but `src/parser.ts` still has the unresolved normalization TODO\n- decision: restage the first task before editing\n```\n\nWhy this example stays bounded:\n\n- it uses one read step and one visible baseline check before mutation\n- it does not become a full git-verification report for every claim\n- it does not pick tasks, run a full startup test suite, or import an orchestrator protocol"
         }
@@ -789,10 +789,10 @@
     },
     {
       "id": "AOA-T-0061",
-      "technique_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md",
+          "example_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md",
           "title": "minimal cross-repo resource-map bootstrap",
           "body_markdown": "```markdown\n# Cross-Repo Resource Map\n\n- repo: `frontend`\n  role: consumes the changed API route\n  first_lookup: `src/app/routes.ts`\n\n- repo: `backend`\n  role: owns the request contract\n  resources:\n    - `api/openapi.yaml`\n    - `src/routes/widgets.ts`\n\n- repo: `docs`\n  role: holds the operator rollout note that the change must match\n  resources:\n    - `docs/DEPLOYMENT_FLOW.md`\n```\n\nWhy this example stays bounded:\n\n- it names only the repos and surfaces needed for the current cross-repo step\n- it shows where to look first without becoming a full architecture map\n- it does not import global workspace inventory, infrastructure catalogs, or a whole boot-sequence protocol"
         }
@@ -800,10 +800,10 @@
     },
     {
       "id": "AOA-T-0062",
-      "technique_path": "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md",
+          "example_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md",
           "title": "minimal episode-bounded agent loop",
           "body_markdown": "Episode goal:\n\n- draft one bounded seed bundle and record the remaining overlap question\n\nCheckpoint artifact:\n\n```markdown\n# Episode Checkpoint\n- completed: drafted the seed bundle skeleton\n- blocker: overlap with `AOA-T-0001` still needs boundary review\n- next_decision: `escalate`\n```\n\nWhy this example stays bounded:\n\n- the episode ends at one visible checkpoint instead of running indefinitely\n- the next move is explicit: continue, stop, or escalate\n- it does not import budgets, task trackers, launchd supervision, or a full autonomous mission runtime"
         }

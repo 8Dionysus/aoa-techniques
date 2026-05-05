@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Handoff-continuation tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0056` through `AOA-T-0062` from
+  `techniques/agent-workflows/` into
+  `techniques/continuity/handoff-continuation/`
+- updated `techniques/continuity/AGENTS.md` so the continuity trunk names both
+  accepted pilot shelves
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md`
+- repaired authored links from adjacent bundles, mechanics anchors, and reform
+  review surfaces
+- kept `domain`, `kind`, status, IDs, evidence, and public-safety posture
+  unchanged
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_root_legacy_topology tests.test_handoff_continuation_tree_pilot
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no other shelf migrated
+- no `tree_path` frontmatter was added
+- no `family` or scout topology axis became schema truth
+- active bundles did not pass through root `legacy/`
+
 ## 2026-05-04 - Handoff-continuation direct-read migration review
 
 Changed:

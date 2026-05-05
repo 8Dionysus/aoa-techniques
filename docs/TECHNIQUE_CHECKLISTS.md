@@ -106,47 +106,47 @@ See also:
 |---|---|---|---|---|
 | requirements-design-tasks-ladder checklist | `absent` | `8` | `techniques/agent-workflows/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md) |
 
-### [AOA-T-0056](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
+### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| channelized-agent-mailbox checklist | `absent` | `8` | `techniques/agent-workflows/channelized-agent-mailbox/checks/channelized-agent-mailbox-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md) |
+| channelized-agent-mailbox checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/channelized-agent-mailbox/checks/channelized-agent-mailbox-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) |
 
-### [AOA-T-0057](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| structured-handoff-before-compaction checklist | `absent` | `8` | `techniques/agent-workflows/structured-handoff-before-compaction/checks/structured-handoff-before-compaction-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/structured-handoff-before-compaction/TECHNIQUE.md) |
-
-### [AOA-T-0058](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
+### [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| receipt-confirmed-handoff-packet checklist | `absent` | `8` | `techniques/agent-workflows/receipt-confirmed-handoff-packet/checks/receipt-confirmed-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/receipt-confirmed-handoff-packet/TECHNIQUE.md) |
+| structured-handoff-before-compaction checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/structured-handoff-before-compaction/checks/structured-handoff-before-compaction-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) |
 
-### [AOA-T-0059](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| git-verified-handoff-claims checklist | `absent` | `8` | `techniques/agent-workflows/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0060](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
+### [AOA-T-0058](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| session-opening-ritual-before-work checklist | `absent` | `8` | `techniques/agent-workflows/session-opening-ritual-before-work/checks/session-opening-ritual-before-work-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/session-opening-ritual-before-work/TECHNIQUE.md) |
+| receipt-confirmed-handoff-packet checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/checks/receipt-confirmed-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) |
 
-### [AOA-T-0061](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| cross-repo-resource-map-bootstrap checklist | `absent` | `8` | `techniques/agent-workflows/cross-repo-resource-map-bootstrap/checks/cross-repo-resource-map-bootstrap-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
-
-### [AOA-T-0062](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
+### [AOA-T-0059](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| episode-bounded-agent-loop checklist | `absent` | `8` | `techniques/agent-workflows/episode-bounded-agent-loop/checks/episode-bounded-agent-loop-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md) |
+| git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
+
+### [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| session-opening-ritual-before-work checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/checks/session-opening-ritual-before-work-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) |
+
+### [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| cross-repo-resource-map-bootstrap checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/checks/cross-repo-resource-map-bootstrap-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
+
+### [AOA-T-0062](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| episode-bounded-agent-loop checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/episode-bounded-agent-loop/checks/episode-bounded-agent-loop-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) |
 
 ### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
 

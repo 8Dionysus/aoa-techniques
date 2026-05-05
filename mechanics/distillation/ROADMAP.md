@@ -43,11 +43,12 @@
    `review-compaction` migration held its shape after validation, and
    `handoff-continuation` became the next direct-read migration review target.
    The `handoff-continuation` direct-read migration review is now landed as
-   `accepted-for-second-migration-pilot`: the next tree move is exactly
-   `AOA-T-0056` through `AOA-T-0062` into
+   `accepted-for-second-migration-pilot`, and the second pilot migration is
+   landed exactly for `AOA-T-0056` through `AOA-T-0062` under
    `techniques/continuity/handoff-continuation/`, with link repair, root
    legacy receipt accounting, generated rebuilds, and release-check validation
-   in the same wave.
+   in the same wave. The next tree move is a landed-pilot review over
+   `handoff-continuation` before choosing any third candidate.
 
 ## Hold line
 

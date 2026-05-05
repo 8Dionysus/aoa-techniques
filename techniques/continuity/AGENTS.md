@@ -14,10 +14,13 @@ architecture.
 
 ## Current scope
 
-The first accepted pilot shelf is `review-compaction/`.
+Accepted pilot shelves:
 
-It contains techniques for preserving or restoring review and capability
-context across commit, compaction, or repeated-review boundaries.
+- `review-compaction/`: preserves or restores review and capability context
+  across commit, compaction, or repeated-review boundaries
+- `handoff-continuation/`: carries handoff, receipt, verification, startup,
+  resource-map, mailbox, and episode-checkpoint seams across session, agent,
+  repo, or episode boundaries
 
 ## Domain rules
 

@@ -17,7 +17,7 @@
 ## Default-use rationale
 
 - this is the right promoted default when the main problem is how a resumed session should re-read current context and verify baseline state before the first edit
-- it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0059](../../git-verified-handoff-claims/TECHNIQUE.md), and [AOA-T-0001](../../plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the pre-mutation opening ritual
+- it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0059](../../git-verified-handoff-claims/TECHNIQUE.md), and [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the pre-mutation opening ritual
 - it also remains smaller than total startup doctrine because it does not choose tasks, define baseline test policy, or ship an orchestrator contract
 
 ## Fresh public-safety check
