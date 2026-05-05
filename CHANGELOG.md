@@ -180,6 +180,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `antifragility-recovery` pilot review and selected
   `execution/ready-work-graphs` for the next direct-read migration review
   without moving a sixteenth shelf yet
+- accepted the `ready-work-graphs` direct-read migration review over
+  `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055` as the sixteenth tree pilot
+  while keeping the review itself non-mutating
 
 ### Validation
 

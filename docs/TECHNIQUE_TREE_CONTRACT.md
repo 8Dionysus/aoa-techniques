@@ -424,8 +424,19 @@ shelf, completes the previous step to review the landed
 chooses `execution/ready-work-graphs` for the next direct-read migration
 review.
 
-The next reform slice should run the `execution/ready-work-graphs` direct-read
-migration review before any sixteenth shelf migration.
+The sixteenth direct-read review is
+[Ready-Work-Graphs Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/ready-work-graphs-direct-read-migration-review.md).
+It accepts exactly `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055` as the next
+bounded migration pilot while keeping the review non-mutating, preserving
+`AOA-T-0055` as a readiness ladder rather than methodology or execution
+workflow, and leaving project-management doctrine, scheduling, staffing,
+dispatch policy, backlog governance, graph database doctrine, memory
+substrate, hidden orchestration, proof of readiness, and execution validation
+outside the shelf.
+
+The next reform slice should run the sixteenth pilot migration into
+`techniques/execution/ready-work-graphs/` before reviewing any seventeenth
+shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

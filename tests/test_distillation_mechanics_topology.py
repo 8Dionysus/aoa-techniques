@@ -4449,6 +4449,104 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertTrue((REPO_ROOT / current_path).is_file())
                 self.assertFalse((REPO_ROOT / future_path).exists())
 
+    def test_ready_work_graphs_direct_read_review_accepts_sixteenth_pilot(
+        self,
+    ) -> None:
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "ready-work-graphs-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Ready-Work-Graphs Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-sixteenth-migration-pilot", review)
+        self.assertIn("not path migration", review)
+        self.assertIn("Accept `execution/ready-work-graphs`", review)
+        self.assertIn("Direct Bundle Read", review)
+        self.assertIn("Watch Line For `AOA-T-0055`", review)
+        self.assertIn("Execution Trunk Fit", review)
+        self.assertIn("Boundary Watch Accepted", review)
+        self.assertIn("Proposed Move", review)
+        self.assertIn("Move exactly these three bundles", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("Do not change `domain` or `kind`", review)
+        self.assertIn("Run the sixteenth pilot migration", review)
+        self.assertIn(
+            "ready-work-graphs-direct-read-migration-review",
+            reviews_index,
+        )
+        self.assertIn("ready-work-graphs direct-read review: landed", ingress)
+        self.assertIn("accepted-for-sixteenth-migration-pilot", ingress)
+        self.assertIn(
+            "Ready-work-graphs direct-read migration review",
+            landing_log,
+        )
+        self.assertIn("AOA-T-0055` as a watch-line readiness ladder", landing_log)
+        self.assertIn("accepted-for-sixteenth-migration-pilot", distillation_roadmap)
+        self.assertIn("run the accepted `execution/ready-work-graphs`", root_roadmap)
+        self.assertIn("Ready-Work-Graphs Direct-Read Migration Review", tree_contract)
+        self.assertIn("preserving\n`AOA-T-0055` as a readiness ladder", tree_contract)
+        self.assertIn(
+            "accepted the `ready-work-graphs` direct-read migration review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0049",
+                "techniques/agent-workflows/dependency-aware-task-graph/TECHNIQUE.md",
+                "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0050",
+                "techniques/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.md",
+                "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0055",
+                "techniques/agent-workflows/requirements-design-tasks-ladder/TECHNIQUE.md",
+                "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT

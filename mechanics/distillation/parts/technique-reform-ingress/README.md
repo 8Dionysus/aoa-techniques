@@ -138,6 +138,9 @@ permission slip to remap techniques automatically.
 - landed antifragility-recovery pilot review: landed as `pilot-validated`,
   with `execution/ready-work-graphs` chosen for the next direct-read migration
   review
+- ready-work-graphs direct-read review: landed as
+  `accepted-for-sixteenth-migration-pilot`, with three execution-readiness
+  bundles accepted and no path movement yet
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -200,6 +203,7 @@ permission slip to remap techniques automatically.
 | [Antifragility-Recovery Direct-Read Migration Review](reviews/antifragility-recovery-direct-read-migration-review.md) | reads `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098` directly and accepts the shelf as the fifteenth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, Agents-of-Abyss Antifragility doctrine, incident response doctrine, runtime ownership, validation-patterns erasure, proof authority, rollback policy, deployment lifecycle law, service catalog ownership, KAG authority, stats meaning, playbook choreography, or generic resilience platform |
 | [Antifragility-Recovery Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md) | preserves the fifteenth accepted path migration into `techniques/recovery/antifragility-recovery/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, Agents-of-Abyss Antifragility doctrine, incident response doctrine, runtime ownership, validation-patterns erasure, proof authority, rollback policy, deployment lifecycle law, service catalog ownership, KAG authority, stats meaning, playbook choreography, or generic resilience platform |
 | [Landed Antifragility-Recovery Pilot Review](reviews/landed-antifragility-recovery-pilot-review.md) | confirms the fifteenth migrated shelf stayed clearer, validates the second recovery trunk shelf, and chooses `execution/ready-work-graphs` for the next direct-read review | movement of `execution/ready-work-graphs`, `tree_path` frontmatter, frontmatter remap, validation-patterns erasure, project-management doctrine, scheduling, staffing, dispatch policy, memory substrate, graph database doctrine, hidden orchestration, proof authority, or neighboring execution shelves |
+| [Ready-Work-Graphs Direct-Read Migration Review](reviews/ready-work-graphs-direct-read-migration-review.md) | reads `AOA-T-0049`, `AOA-T-0050`, and `AOA-T-0055` directly and accepts the shelf as the sixteenth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, project-management doctrine, scheduling, staffing, dispatch policy, backlog governance, graph database doctrine, memory substrate, hidden orchestration, proof of readiness, execution validation, or neighboring execution shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -414,5 +418,9 @@ The landed `antifragility-recovery` pilot review is now landed as
 `pilot-validated` and chooses `execution/ready-work-graphs` for the next
 direct-read migration review.
 
-The next move is to run the `execution/ready-work-graphs` direct-read migration
-review before any sixteenth shelf migration.
+The `ready-work-graphs` direct-read review is now landed as
+`accepted-for-sixteenth-migration-pilot` and accepts exactly `AOA-T-0049`,
+`AOA-T-0050`, and `AOA-T-0055` without moving files.
+
+The next move is to run the sixteenth pilot migration before reviewing any
+seventeenth shelf.

@@ -227,8 +227,14 @@
    while keeping project-management doctrine, scheduling, staffing, dispatch
    policy, memory substrate, graph database doctrine, hidden orchestration,
    proof authority, and neighboring execution shelves outside the next move.
-   The next bounded step is the `execution/ready-work-graphs` direct-read
-   migration review before any sixteenth shelf migration.
+   The `ready-work-graphs` direct-read review is now landed as
+   `accepted-for-sixteenth-migration-pilot`; it accepts exactly `AOA-T-0049`,
+   `AOA-T-0050`, and `AOA-T-0055` while keeping the review non-mutating,
+   preserving `AOA-T-0055` as a readiness ladder rather than methodology or
+   execution workflow, and routing the next bounded step to the sixteenth pilot
+   migration only after execution route-card, receipt, link-repair, generated
+   surface, and validation work move together. The next bounded step is that
+   sixteenth pilot migration before reviewing any seventeenth shelf.
 
 ## Hold line
 
