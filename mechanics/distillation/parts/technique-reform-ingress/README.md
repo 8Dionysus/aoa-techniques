@@ -72,6 +72,8 @@ permission slip to remap techniques automatically.
   `techniques/knowledge-lift/kag-source-lift/` without frontmatter changes
 - landed kag-source-lift pilot review: landed as `pilot-validated`, with
   `docs-boundary` chosen for the next direct-read migration review
+- docs-boundary direct-read review: landed as
+  `accepted-for-seventh-migration-pilot`; still not path movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -108,6 +110,7 @@ permission slip to remap techniques automatically.
 | [Landed Instruction-Surface Pilot Review](reviews/landed-instruction-surface-pilot-review.md) | confirms the fifth migrated shelf stayed clearer, validates the first instruction trunk machinery, and chooses `kag-source-lift` for the next direct-read review | movement of `kag-source-lift`, `tree_path` frontmatter, KAG owner authority, or proof that every docs-lift shelf is safe |
 | [Kag-Source-Lift Direct-Read Migration Review](reviews/kag-source-lift-direct-read-migration-review.md) | reads `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` directly and accepts the shelf as the sixth migration pilot | path movement by review alone, `tree_path` frontmatter, KAG owner doctrine, graph authority, scoring, policy, or generated verdicts |
 | [Landed Kag-Source-Lift Pilot Review](reviews/landed-kag-source-lift-pilot-review.md) | confirms the sixth migrated shelf stayed clearer, validates the first knowledge-lift trunk machinery, and chooses `docs-boundary` for the next direct-read review | movement of `docs-boundary`, `tree_path` frontmatter, KAG owner authority, or proof that every instruction boundary shelf is safe |
+| [Docs-Boundary Direct-Read Migration Review](reviews/docs-boundary-direct-read-migration-review.md) | reads `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` directly and accepts the shelf as the seventh migration pilot | path movement by review alone, `tree_path` frontmatter, source-of-truth governance, approval policy, skill acceptance, proof authority, runtime role law, or architecture taxonomy |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -214,5 +217,8 @@ surfaces were rebuilt, and frontmatter stayed unchanged.
 The landed `kag-source-lift` pilot review is now landed as `pilot-validated`
 and chooses `docs-boundary` for the next direct-read migration review.
 
-The next move is a direct-read migration review for `docs-boundary` before any
-other shelf moves.
+The `docs-boundary` direct-read review is now landed and accepts exactly
+`AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` as the seventh
+migration pilot.
+
+The next move is the seventh pilot migration before any other shelf moves.

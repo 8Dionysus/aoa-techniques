@@ -265,8 +265,13 @@ The landed sixth pilot review is
 It validates `kag-source-lift` as the first successful `knowledge-lift` trunk
 test and chooses `docs-boundary` for the next direct-read migration review.
 
-The next reform slice should run the `docs-boundary` direct-read migration
-review before moving another shelf.
+The seventh migration review is
+[Docs-Boundary Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/docs-boundary-direct-read-migration-review.md).
+It accepts `docs-boundary` as the seventh migration pilot after directly
+reading `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033`.
+
+The next reform slice should run the seventh pilot migration before moving
+another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

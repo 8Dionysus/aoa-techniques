@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Docs-boundary direct-read migration review
+
+Changed:
+
+- added
+  [docs-boundary-direct-read-migration-review](parts/technique-reform-ingress/reviews/docs-boundary-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`,
+  and `AOA-T-0033`
+- accepted `docs-boundary` as the seventh bounded tree migration pilot and the
+  next instruction trunk shelf test
+- recorded the exact next migration scope:
+  `techniques/instruction/docs-boundary/`
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept capability, skill-discovery, proof, governance, runtime,
+  owner-closeout, and knowledge-lift shelves outside the accepted move
+- kept source-of-truth governance, approval policy, skill acceptance, proof
+  authority, runtime role law, and architecture taxonomy outside the shelf
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no seventh shelf migration happened before direct-read review
+
 ## 2026-05-04 - Landed kag-source-lift pilot review
 
 Changed:
