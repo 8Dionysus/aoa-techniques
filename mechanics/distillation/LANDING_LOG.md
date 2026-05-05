@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed skill-support pilot review
+
+Changed:
+
+- added
+  [landed-skill-support-pilot-review](parts/technique-reform-ingress/reviews/landed-skill-support-pilot-review.md)
+  as the post-migration review over the eleventh tree pilot
+- accepted the landed `skill-support` shelf as clearer after validation and
+  as the first successful proof trunk shelf
+- chose `evaluation-chain` for the next direct-read migration review without
+  moving another shelf
+- kept `family`, `tree_path`, and scout topology axes out of frontmatter
+- kept CI ownership, release policy, eval-suite authority, proof verdict law,
+  mandatory testing doctrine, generic quality gate doctrine, and neighboring
+  proof-side shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no twelfth shelf migration was authorized without direct-read review
+
 ## 2026-05-05 - Skill-support tree pilot migration
 
 Changed:

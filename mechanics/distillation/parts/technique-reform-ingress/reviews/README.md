@@ -33,5 +33,6 @@ Current reviews:
 - [skill-discovery-direct-read-migration-review](skill-discovery-direct-read-migration-review.md)
 - [landed-skill-discovery-pilot-review](landed-skill-discovery-pilot-review.md)
 - [skill-support-direct-read-migration-review](skill-support-direct-read-migration-review.md)
+- [landed-skill-support-pilot-review](landed-skill-support-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

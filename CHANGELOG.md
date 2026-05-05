@@ -139,6 +139,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017` into
   `techniques/proof/skill-support/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `skill-support` pilot review and selected
+  `evaluation-chain` for the next direct-read migration review without moving
+  a twelfth shelf yet
 
 ### Validation
 

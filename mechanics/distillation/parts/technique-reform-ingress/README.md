@@ -104,6 +104,8 @@ permission slip to remap techniques automatically.
 - skill-support migration: landed exactly `AOA-T-0016`, `AOA-T-0015`, and
   `AOA-T-0017` under `techniques/proof/skill-support/` without frontmatter
   changes
+- landed skill-support pilot review: landed as `pilot-validated`, with
+  `evaluation-chain` chosen for the next direct-read migration review
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -153,6 +155,7 @@ permission slip to remap techniques automatically.
 | [Landed Skill-Discovery Pilot Review](reviews/landed-skill-discovery-pilot-review.md) | confirms the tenth migrated shelf stayed clearer, validates the fifth instruction trunk shelf, and chooses `skill-support` for the next direct-read review | movement of `skill-support`, `tree_path` frontmatter, proof authority, eval-suite ownership, mandatory testing doctrine, DDD formalism, architecture taxonomy, runtime, governance, owner-closeout, review-evidence, automation-governance, or proof-adjacent shelves |
 | [Skill-Support Direct-Read Migration Review](reviews/skill-support-direct-read-migration-review.md) | reads `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017` directly and accepts the shelf as the eleventh migration pilot | path movement by review alone, `tree_path` frontmatter, proof authority, eval-suite ownership, mandatory testing doctrine, DDD formalism, architecture taxonomy, runtime readiness, owner-truth law, policy enforcement, or neighboring proof-side shelves |
 | [Skill-Support Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-skill-support-tree-pilot.md) | preserves the eleventh accepted path migration into `techniques/proof/skill-support/` | active technique provenance, `tree_path` frontmatter, proof authority, eval-suite ownership, mandatory testing doctrine, DDD formalism, architecture taxonomy, runtime readiness, owner-truth law, policy enforcement, or neighboring proof-side shelves |
+| [Landed Skill-Support Pilot Review](reviews/landed-skill-support-pilot-review.md) | confirms the eleventh migrated shelf stayed clearer, validates the first proof trunk shelf, and chooses `evaluation-chain` for the next direct-read review | movement of `evaluation-chain`, `tree_path` frontmatter, CI ownership, release policy, eval-suite authority, proof verdict law, mandatory testing doctrine, generic quality gate doctrine, or neighboring proof-side shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -314,5 +317,8 @@ The eleventh pilot migration is now landed: those three bundles live under
 receipt are in place, authored links were repaired, generated surfaces were
 rebuilt, and frontmatter stayed unchanged.
 
-The next move is to review the landed `skill-support` pilot before moving or
-reviewing any twelfth shelf.
+The landed `skill-support` pilot review is now landed as `pilot-validated` and
+chooses `evaluation-chain` for the next direct-read migration review.
+
+The next move is to run a direct-read migration review for `evaluation-chain`
+before moving any twelfth shelf.

@@ -337,8 +337,13 @@ The eleventh pilot migration moves exactly `AOA-T-0016`, `AOA-T-0015`, and
 `domain`, `kind`, or `tree_path` frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-skill-support-tree-pilot.md`](../legacy/receipts/2026-05-05-skill-support-tree-pilot.md).
 
-The next reform slice should review the landed `skill-support` pilot before
-moving or reviewing any twelfth shelf.
+The landed eleventh pilot review is
+[Landed Skill-Support Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-skill-support-pilot-review.md).
+It validates `skill-support` as the first successful proof trunk shelf and
+chooses `evaluation-chain` for the next direct-read migration review.
+
+The next reform slice should run a direct-read migration review for
+`evaluation-chain` before moving any twelfth shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
