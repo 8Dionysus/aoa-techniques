@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed intent-chain pilot review
+
+Changed:
+
+- added
+  [landed-intent-chain-pilot-review](parts/technique-reform-ingress/reviews/landed-intent-chain-pilot-review.md)
+  as the landed review after the seventeenth path migration
+- validated `intent-chain` as the second successful execution trunk shelf
+- confirmed both leaves remain `domain: agent-workflows` and `kind: workflow`
+  even though they now live under the execution tree path
+- preserved `AOA-T-0005` as `promoted`; path movement still does not imply
+  canonical promotion
+- chose `execution/agent-workflows-core` for the next direct-read migration
+  review without moving files
+- kept autonomous orchestration, hidden agent scheduling, runtime lifecycle
+  law, shell doctrine, product policy, approval policy, broad methodology
+  doctrine, and neighboring execution shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `tree_path` frontmatter was added
+
 ## 2026-05-05 - Intent-chain tree pilot migration
 
 Changed:

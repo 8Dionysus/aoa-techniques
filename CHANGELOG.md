@@ -195,6 +195,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0004` and `AOA-T-0005` into
   `techniques/execution/intent-chain/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `intent-chain` pilot review and selected
+  `execution/agent-workflows-core` for the next direct-read migration review
+  without moving an eighteenth shelf yet
 
 ### Validation
 
