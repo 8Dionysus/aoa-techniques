@@ -1360,7 +1360,7 @@
     },
     {
       "id": "AOA-T-0025",
-      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -3488,7 +3488,7 @@
     },
     {
       "id": "AOA-T-0063",
-      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -3523,7 +3523,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- one registry-facing entry has explicit identity through name, version, and record reference\n- metadata needed to interpret the entry remains reviewable without opening runtime code first\n- the entry contract stays distinct from the underlying payload, discovery queries, and marketplace presentation\n- version changes are visible at the entry-contract layer rather than only through implementation drift\n- the technique does not own discovery ranking, registry governance, runtime synchronization, or signature-verification policy\n- the registry entry does not become a disguised marketplace page, search policy, or graph semantics surface\n\nRelationship to adjacent techniques: unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), this technique does not own the full internal capability contract; it owns the directory-facing entry that publishes a versioned record into a registry surface. Unlike [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md), it does not curate discovery or editorial grouping; it only makes the published entry contract explicit. Unlike [AOA-T-0021](../bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn entry metadata into graph semantics or typed relation doctrine."
+          "markdown": "- one registry-facing entry has explicit identity through name, version, and record reference\n- metadata needed to interpret the entry remains reviewable without opening runtime code first\n- the entry contract stays distinct from the underlying payload, discovery queries, and marketplace presentation\n- version changes are visible at the entry-contract layer rather than only through implementation drift\n- the technique does not own discovery ranking, registry governance, runtime synchronization, or signature-verification policy\n- the registry entry does not become a disguised marketplace page, search policy, or graph semantics surface\n\nRelationship to adjacent techniques: unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), this technique does not own the full internal capability contract; it owns the directory-facing entry that publishes a versioned record into a registry surface. Unlike [AOA-T-0041](../../../docs/skill-marketplace-curation/TECHNIQUE.md), it does not curate discovery or editorial grouping; it only makes the published entry contract explicit. Unlike [AOA-T-0021](../../../knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn entry metadata into graph semantics or typed relation doctrine."
         },
         {
           "heading": "Risks",
@@ -3544,7 +3544,7 @@
     },
     {
       "id": "AOA-T-0064",
-      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -3579,7 +3579,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- discovery works over already-published entries or records rather than hidden runtime state\n- query fields and match rules remain explicit and reviewable\n- result shape stays bounded to record identifiers and/or records, not execution or routing behavior\n- lookup semantics stay distinct from ranking, editorial curation, trust policy, and registry product doctrine\n- the technique does not own capability meaning, record publication, marketplace curation, graph semantics, or runtime resolution\n- discovery does not become a disguised policy engine for selection, reputation, or governance\n\nRelationship to adjacent techniques: unlike [AOA-T-0063](../versioned-agent-registry-contract/TECHNIQUE.md), this technique does not publish the registry-facing entry contract; it owns lookup over entries that are already published. Unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), it does not define the capability contract itself; it only defines how published records are queried. Unlike [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md), it does not add editorial grouping or featured discovery; it keeps lookup smaller than marketplace curation. Unlike [AOA-T-0021](../bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn discovery metadata into graph semantics."
+          "markdown": "- discovery works over already-published entries or records rather than hidden runtime state\n- query fields and match rules remain explicit and reviewable\n- result shape stays bounded to record identifiers and/or records, not execution or routing behavior\n- lookup semantics stay distinct from ranking, editorial curation, trust policy, and registry product doctrine\n- the technique does not own capability meaning, record publication, marketplace curation, graph semantics, or runtime resolution\n- discovery does not become a disguised policy engine for selection, reputation, or governance\n\nRelationship to adjacent techniques: unlike [AOA-T-0063](../versioned-agent-registry-contract/TECHNIQUE.md), this technique does not publish the registry-facing entry contract; it owns lookup over entries that are already published. Unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), it does not define the capability contract itself; it only defines how published records are queried. Unlike [AOA-T-0041](../../../docs/skill-marketplace-curation/TECHNIQUE.md), it does not add editorial grouping or featured discovery; it keeps lookup smaller than marketplace curation. Unlike [AOA-T-0021](../../../knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn discovery metadata into graph semantics."
         },
         {
           "heading": "Risks",
@@ -3635,7 +3635,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the gateway is an explicit intermediary rather than an invisible pass-through\n- callers interact with one bounded proxy surface instead of binding directly to each upstream server\n- proxied metadata or capability lookup remains visible enough for review\n- request or response sanitization happens at the gateway boundary when sanitization is part of the contract\n- the technique stays smaller than local stack lifecycle, registry publication, capability discovery policy, and security-scanner doctrine\n- upstream servers remain upstream; the gateway does not absorb their whole runtime or product semantics\n\nRelationship to adjacent techniques: unlike [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md), this technique does not own starting and stopping a local service stack; it owns the mediation seam once a proxy surface exists. Unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), it does not score or preflight external sources before surfacing them; it fronts configured upstream servers at runtime. Unlike [AOA-T-0064](../../docs/capability-discovery/TECHNIQUE.md), it does not define publication-time discovery queries over registry entries; it exposes a runtime proxy surface over already-configured upstream tools."
+          "markdown": "- the gateway is an explicit intermediary rather than an invisible pass-through\n- callers interact with one bounded proxy surface instead of binding directly to each upstream server\n- proxied metadata or capability lookup remains visible enough for review\n- request or response sanitization happens at the gateway boundary when sanitization is part of the contract\n- the technique stays smaller than local stack lifecycle, registry publication, capability discovery policy, and security-scanner doctrine\n- upstream servers remain upstream; the gateway does not absorb their whole runtime or product semantics\n\nRelationship to adjacent techniques: unlike [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md), this technique does not own starting and stopping a local service stack; it owns the mediation seam once a proxy surface exists. Unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), it does not score or preflight external sources before surfacing them; it fronts configured upstream servers at runtime. Unlike [AOA-T-0064](../../instruction/capability-registry/capability-discovery/TECHNIQUE.md), it does not define publication-time discovery queries over registry entries; it exposes a runtime proxy surface over already-configured upstream tools."
         },
         {
           "heading": "Risks",
@@ -5203,7 +5203,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- router recommendation truth is computed separately from host executability\n- host inventory source and precedence remain explicit\n- `activate_now` requires `host-executable`\n- `router-only` is not treated as invalid, irrelevant, or silently dropped\n- `must_confirm` remains visible and actionable even when an item is not directly executable\n- `unknown` remains a visible state instead of collapsing into either success or absence\n- the technique stays smaller than discovery doctrine, marketplace curation, registry governance, or upstream-health policy\n\nRelationship to adjacent techniques: unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), this technique does not ask whether an upstream source is publishable or reachable; it governs local host actionability after recommendation already happened. Unlike [AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does not decide when ingress and guard run; it governs the truth split inside their reports. Unlike [AOA-T-0064](../../docs/capability-discovery/TECHNIQUE.md), it does not own discovery-query semantics; it starts after one bounded recommendation set already exists."
+          "markdown": "- router recommendation truth is computed separately from host executability\n- host inventory source and precedence remain explicit\n- `activate_now` requires `host-executable`\n- `router-only` is not treated as invalid, irrelevant, or silently dropped\n- `must_confirm` remains visible and actionable even when an item is not directly executable\n- `unknown` remains a visible state instead of collapsing into either success or absence\n- the technique stays smaller than discovery doctrine, marketplace curation, registry governance, or upstream-health policy\n\nRelationship to adjacent techniques: unlike [AOA-T-0042](../../evaluation/upstream-skill-health-checking/TECHNIQUE.md), this technique does not ask whether an upstream source is publishable or reachable; it governs local host actionability after recommendation already happened. Unlike [AOA-T-0091](../workspace-root-ingress-and-mutation-gate/TECHNIQUE.md), it does not decide when ingress and guard run; it governs the truth split inside their reports. Unlike [AOA-T-0064](../../instruction/capability-registry/capability-discovery/TECHNIQUE.md), it does not own discovery-query semantics; it starts after one bounded recommendation set already exists."
         },
         {
           "heading": "Risks",

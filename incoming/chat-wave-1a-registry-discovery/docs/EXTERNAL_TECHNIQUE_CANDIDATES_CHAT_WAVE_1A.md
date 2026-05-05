@@ -21,8 +21,8 @@ It does not create a canonical bundle or authorize import by itself.
 
 | candidate | landed bundle | boundary kept | what stayed out |
 |---|---|---|---|
-| `versioned-agent-registry-contract` | [AOA-T-0063](../../../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) | reviewable contract for named versioned registry entries with explicit references and metadata | discovery queries, marketplace curation, semantic linkage, and registry product doctrine |
-| `capability-discovery` | [AOA-T-0064](../../../techniques/docs/capability-discovery/TECHNIQUE.md) | bounded discovery-query contract for looking up published capability records through explicit fields and result shape | ranking policy, marketplace curation, trust semantics, semantic linkage, and registry product doctrine |
+| `versioned-agent-registry-contract` | [AOA-T-0063](../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | reviewable contract for named versioned registry entries with explicit references and metadata | discovery queries, marketplace curation, semantic linkage, and registry product doctrine |
+| `capability-discovery` | [AOA-T-0064](../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | bounded discovery-query contract for looking up published capability records through explicit fields and result shape | ranking policy, marketplace curation, trust semantics, semantic linkage, and registry product doctrine |
 
 No remaining staged landing candidates in Wave 1A.
 

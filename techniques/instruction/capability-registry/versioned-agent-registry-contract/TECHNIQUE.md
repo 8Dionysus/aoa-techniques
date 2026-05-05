@@ -91,7 +91,7 @@ Keep registry-facing capability publication reviewable by expressing entries as 
 - the technique does not own discovery ranking, registry governance, runtime synchronization, or signature-verification policy
 - the registry entry does not become a disguised marketplace page, search policy, or graph semantics surface
 
-Relationship to adjacent techniques: unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), this technique does not own the full internal capability contract; it owns the directory-facing entry that publishes a versioned record into a registry surface. Unlike [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md), it does not curate discovery or editorial grouping; it only makes the published entry contract explicit. Unlike [AOA-T-0021](../bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn entry metadata into graph semantics or typed relation doctrine.
+Relationship to adjacent techniques: unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), this technique does not own the full internal capability contract; it owns the directory-facing entry that publishes a versioned record into a registry surface. Unlike [AOA-T-0041](../../../docs/skill-marketplace-curation/TECHNIQUE.md), it does not curate discovery or editorial grouping; it only makes the published entry contract explicit. Unlike [AOA-T-0021](../../../knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn entry metadata into graph semantics or typed relation doctrine.
 
 ## Risks
 

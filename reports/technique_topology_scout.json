@@ -1914,7 +1914,7 @@
       "kind": "artifact",
       "status": "promoted",
       "summary": "Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy.",
-      "technique_path": "techniques/docs/capability-spec-versioning/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md",
       "topology": {
         "family": "capability-registry",
         "capability_class": [
@@ -2227,7 +2227,7 @@
       "kind": "artifact",
       "status": "promoted",
       "summary": "Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.",
-      "technique_path": "techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md",
       "topology": {
         "family": "capability-registry",
         "capability_class": [
@@ -2254,7 +2254,7 @@
       "kind": "discovery",
       "status": "promoted",
       "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
-      "technique_path": "techniques/docs/capability-discovery/TECHNIQUE.md",
+      "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
       "topology": {
         "family": "capability-registry",
         "capability_class": [

@@ -286,8 +286,13 @@ The eighth migration review is
 It accepts `capability-registry` as the eighth migration pilot after directly
 reading `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064`.
 
-The next reform slice should run the eighth pilot migration for
-`capability-registry` before moving another shelf.
+The eighth pilot migration moves `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064`
+into `techniques/instruction/capability-registry/` without changing `domain`,
+`kind`, or `tree_path` frontmatter. The root receipt is
+[`legacy/receipts/2026-05-04-capability-registry-tree-pilot.md`](../legacy/receipts/2026-05-04-capability-registry-tree-pilot.md).
+
+The next reform slice should review the landed `capability-registry` pilot
+before moving another shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

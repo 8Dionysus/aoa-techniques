@@ -3,6 +3,46 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-04 - Capability-registry tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064` from
+  `techniques/docs/` into `techniques/instruction/capability-registry/`
+- extended `techniques/instruction/AGENTS.md` for the third instruction trunk
+  shelf without turning it into registry product doctrine, discovery ranking,
+  marketplace curation, trust policy, graph semantics, runtime resolution,
+  skill acceptance, or agent-role authority
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-04-capability-registry-tree-pilot.md`
+- repaired authored links from Audit active parts, incoming staging notes,
+  active adjacent techniques, and the reform review source rows
+- kept `domain`, `kind`, status, IDs, evidence, relations, and public-safety
+  posture unchanged
+- kept capability specs, registry-facing entries, and discovery queries as
+  separate leaves rather than merging them into one registry framework bundle
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_capability_registry_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology tests.test_docs_boundary_tree_pilot tests.test_kag_source_lift_tree_pilot
+git diff --check
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/validate_semantic_agents.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no other shelf migrated
+- no `tree_path` frontmatter was added
+- no `family` or scout topology axis became schema truth
+- active bundles did not pass through root `legacy/`
+- capability-boundary, skill-discovery, proof, governance, runtime,
+  owner-closeout, and knowledge-lift shelves stayed outside the migrated shelf
+
 ## 2026-05-04 - Capability-registry direct-read migration review
 
 Changed:

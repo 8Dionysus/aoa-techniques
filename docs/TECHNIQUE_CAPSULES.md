@@ -914,7 +914,7 @@ See also:
 - Validate by: each mirrored item is named in one explicit source manifest; the local mirror carries adjacent provenance or attribution metadata...
 - Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md)
 
-### [AOA-T-0025](../techniques/docs/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
+### [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
 
 - Summary: Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy.
 - Intent: Keep capability behavior reviewable by naming it in one versioned spec instead of letting...
@@ -925,7 +925,7 @@ See also:
 - Core contract: one capability spec stays the authoritative contract for the named capability; version changes are explicit and reviewable rather...
 - Main risk: a version number changes without any real contract review, so the spec stops signaling meaningful change.
 - Validate by: one capability has one explicit versioned spec; the spec names inputs, outputs, and invariants clearly enough to review without...
-- Source: [TECHNIQUE.md](../techniques/docs/capability-spec-versioning/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md)
 
 ### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
 
@@ -1070,7 +1070,7 @@ See also:
 - Validate by: the authored semantic-review doc exists and stays readable as the source of review meaning; the derived surface can be...
 - Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 
-### [AOA-T-0063](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
+### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
 
 - Summary: Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.
 - Intent: Keep registry-facing capability publication reviewable by expressing entries as named versioned records with explicit...
@@ -1081,9 +1081,9 @@ See also:
 - Core contract: one registry-facing entry has explicit identity through name, version, and record reference; metadata needed to interpret the entry...
 - Main risk: entry versions change without any contract review, so the entry surface stops signaling meaningful publication changes.
 - Validate by: one registry entry has explicit name, version, and record reference; schema version and other bounded metadata remain readable without...
-- Source: [TECHNIQUE.md](../techniques/docs/versioned-agent-registry-contract/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md)
 
-### [AOA-T-0064](../techniques/docs/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
+### [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
 
 - Summary: Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.
 - Intent: Keep capability discovery reviewable by expressing lookup as one explicit bounded query contract over...
@@ -1094,7 +1094,7 @@ See also:
 - Core contract: discovery works over already-published entries or records rather than hidden runtime state; query fields and match rules remain...
 - Main risk: query behavior changes without contract review, so discovery semantics drift silently.
 - Validate by: discovery uses one explicit bounded query surface over published entries; query fields and match behavior are readable without opening...
-- Source: [TECHNIQUE.md](../techniques/docs/capability-discovery/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md)
 
 ### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
 

@@ -104,8 +104,12 @@
    `AOA-T-0063`, and `AOA-T-0064` while keeping registry product doctrine,
    discovery ranking, marketplace curation, trust policy, graph semantics,
    runtime resolution, skill acceptance, and agent-role authority outside the
-   move. The next bounded step is the eighth pilot migration before any other
-   shelf moves.
+   move. The eighth pilot migration is landed exactly for those three bundles
+   under `techniques/instruction/capability-registry/`, with the instruction
+   route card extended for the third shelf, root legacy receipt accounting,
+   link repair, generated rebuilds, and release-check validation in the same
+   wave. The next bounded step is a landed `capability-registry` pilot review
+   before any other shelf moves.
 
 ## Hold line
 

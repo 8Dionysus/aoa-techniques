@@ -15,7 +15,7 @@
 
 ## Default-use rationale
 - this is the right promoted default when the main problem is making a registry-facing capability entry explicit and versioned instead of hiding publication meaning in runtime or directory internals
-- it remains narrower than [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md) because it owns the publication contract for a registry entry rather than the full capability spec, and it remains narrower than [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md) because it does not curate discovery or selection
+- it remains narrower than [AOA-T-0025](../../capability-spec-versioning/TECHNIQUE.md) because it owns the publication contract for a registry entry rather than the full capability spec, and it remains narrower than [AOA-T-0041](../../../../docs/skill-marketplace-curation/TECHNIQUE.md) because it does not curate discovery or selection
 
 ## Fresh public-safety check
 - review date: 2026-03-28

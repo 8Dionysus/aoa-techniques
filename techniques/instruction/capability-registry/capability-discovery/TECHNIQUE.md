@@ -92,7 +92,7 @@ Keep capability discovery reviewable by expressing lookup as one explicit bounde
 - the technique does not own capability meaning, record publication, marketplace curation, graph semantics, or runtime resolution
 - discovery does not become a disguised policy engine for selection, reputation, or governance
 
-Relationship to adjacent techniques: unlike [AOA-T-0063](../versioned-agent-registry-contract/TECHNIQUE.md), this technique does not publish the registry-facing entry contract; it owns lookup over entries that are already published. Unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), it does not define the capability contract itself; it only defines how published records are queried. Unlike [AOA-T-0041](../skill-marketplace-curation/TECHNIQUE.md), it does not add editorial grouping or featured discovery; it keeps lookup smaller than marketplace curation. Unlike [AOA-T-0021](../bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn discovery metadata into graph semantics.
+Relationship to adjacent techniques: unlike [AOA-T-0063](../versioned-agent-registry-contract/TECHNIQUE.md), this technique does not publish the registry-facing entry contract; it owns lookup over entries that are already published. Unlike [AOA-T-0025](../capability-spec-versioning/TECHNIQUE.md), it does not define the capability contract itself; it only defines how published records are queried. Unlike [AOA-T-0041](../../../docs/skill-marketplace-curation/TECHNIQUE.md), it does not add editorial grouping or featured discovery; it keeps lookup smaller than marketplace curation. Unlike [AOA-T-0021](../../../knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md), it does not turn discovery metadata into graph semantics.
 
 ## Risks
 

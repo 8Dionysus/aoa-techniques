@@ -9,7 +9,7 @@ techniques whose current reviewed home is still the broad `docs` domain.
 
 Representative bundles here include `bounded-context-map`,
 `single-scoped-evidence-reference`, `skill-vs-command-boundary`,
-`capability-spec-versioning`, and `capability-discovery`.
+`skill-marketplace-curation`, and `multi-source-primary-input-provenance`.
 
 ## Domain rules
 

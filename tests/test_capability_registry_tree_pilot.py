@@ -11,58 +11,43 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 PILOT_BUNDLES = (
     (
-        "AOA-T-0002",
-        "source-of-truth-layout",
-        "artifact",
-        "canonical",
-        "techniques/docs/source-of-truth-layout",
-        "techniques/instruction/docs-boundary/source-of-truth-layout",
-    ),
-    (
-        "AOA-T-0009",
-        "lightweight-status-snapshot",
-        "artifact",
-        "canonical",
-        "techniques/docs/lightweight-status-snapshot",
-        "techniques/instruction/docs-boundary/lightweight-status-snapshot",
-    ),
-    (
-        "AOA-T-0034",
-        "public-safe-artifact-sanitization",
-        "guardrail",
-        "canonical",
-        "techniques/docs/public-safe-artifact-sanitization",
-        "techniques/instruction/docs-boundary/public-safe-artifact-sanitization",
-    ),
-    (
-        "AOA-T-0033",
-        "decision-rationale-recording",
+        "AOA-T-0025",
+        "capability-spec-versioning",
         "artifact",
         "promoted",
-        "techniques/docs/decision-rationale-recording",
-        "techniques/instruction/docs-boundary/decision-rationale-recording",
+        "techniques/docs/capability-spec-versioning",
+        "techniques/instruction/capability-registry/capability-spec-versioning",
+    ),
+    (
+        "AOA-T-0063",
+        "versioned-agent-registry-contract",
+        "artifact",
+        "promoted",
+        "techniques/docs/versioned-agent-registry-contract",
+        "techniques/instruction/capability-registry/versioned-agent-registry-contract",
+    ),
+    (
+        "AOA-T-0064",
+        "capability-discovery",
+        "discovery",
+        "promoted",
+        "techniques/docs/capability-discovery",
+        "techniques/instruction/capability-registry/capability-discovery",
     ),
 )
 
 LIVE_LINK_SURFACES = (
-    "docs/REPO_DOC_SURFACE_LIFT_GUIDE.md",
-    "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
-    "docs/SELECTION_PATTERNS.md",
-    "docs/TECHNIQUE_SELECTION.md",
-    "mechanics/audit/parts/external-evidence-ledger/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "mechanics/audit/parts/promotion-wave-a-runbook/README.md",
-    "mechanics/experience/parts/technique-candidate-bridge/README.md",
-    "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
-    "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
-    "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md",
+    "incoming/chat-wave-1a-registry-discovery/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_1A.md",
+    "incoming/chat-wave-1a-registry-discovery/docs/SEMANTIC_LINKAGE_RECORDS_NARROWING_MEMO.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-docs-boundary-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/capability-registry-direct-read-migration-review.md",
 )
 
-UNMOVED_DOCS_BUNDLES = (
-    "techniques/docs/bounded-context-map/TECHNIQUE.md",
+UNMOVED_NEIGHBOR_BUNDLES = (
+    "techniques/docs/skill-vs-command-boundary/TECHNIQUE.md",
     "techniques/docs/skill-marketplace-curation/TECHNIQUE.md",
     "techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md",
-    "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
 )
 
 
@@ -74,8 +59,8 @@ def read_frontmatter(path: Path) -> dict[str, object]:
     return yaml.safe_load(match.group(1))
 
 
-class DocsBoundaryTreePilotTestCase(unittest.TestCase):
-    def test_pilot_bundles_live_under_instruction_docs_boundary_tree(self) -> None:
+class CapabilityRegistryTreePilotTestCase(unittest.TestCase):
+    def test_pilot_bundles_live_under_instruction_capability_registry_tree(self) -> None:
         for technique_id, slug, _kind, _status, old_path, new_path in PILOT_BUNDLES:
             with self.subTest(technique_id=technique_id):
                 self.assertFalse((REPO_ROOT / old_path).exists())
@@ -96,17 +81,20 @@ class DocsBoundaryTreePilotTestCase(unittest.TestCase):
                 self.assertEqual(status, frontmatter["status"])
                 self.assertNotIn("tree_path", frontmatter)
 
-    def test_instruction_route_card_names_docs_boundary_without_overclaiming(self) -> None:
+    def test_instruction_route_card_names_capability_registry_without_overclaiming(self) -> None:
         text = (REPO_ROOT / "techniques" / "instruction" / "AGENTS.md").read_text(
             encoding="utf-8"
         )
+        flat_text = re.sub(r"\s+", " ", text)
 
         self.assertIn("This is a tree trunk, not a frontmatter domain.", text)
-        self.assertIn("instruction-surface/", text)
-        self.assertIn("docs-boundary/", text)
-        self.assertIn("document truth", text)
-        self.assertIn("public-share", text)
-        self.assertIn("governance, approval, proof, runtime", text)
+        self.assertIn("capability-registry/", text)
+        self.assertIn("capability specs", text)
+        self.assertIn("registry-facing entries", text)
+        self.assertIn("discovery query", text)
+        self.assertIn("registry product doctrine", flat_text)
+        self.assertIn("runtime resolution", text)
+        self.assertIn("skill acceptance", text)
         self.assertIn("Do not add `tree_path` frontmatter", text)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
@@ -114,7 +102,7 @@ class DocsBoundaryTreePilotTestCase(unittest.TestCase):
             REPO_ROOT
             / "legacy"
             / "receipts"
-            / "2026-05-04-docs-boundary-tree-pilot.md"
+            / "2026-05-04-capability-registry-tree-pilot.md"
         ).read_text(encoding="utf-8")
 
         for technique_id, _slug, _kind, _status, old_path, new_path in PILOT_BUNDLES:
@@ -124,8 +112,8 @@ class DocsBoundaryTreePilotTestCase(unittest.TestCase):
 
         self.assertIn("They did not pass through root `legacy/`.", receipt)
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
-        self.assertIn("source-of-truth governance", receipt)
-        self.assertIn("architecture taxonomy", receipt)
+        self.assertIn("registry product doctrine", receipt)
+        self.assertIn("separate leaf bundles", receipt)
 
     def test_live_links_point_to_current_paths(self) -> None:
         text = "\n".join(
@@ -146,7 +134,7 @@ class DocsBoundaryTreePilotTestCase(unittest.TestCase):
             / "parts"
             / "technique-reform-ingress"
             / "reviews"
-            / "docs-boundary-direct-read-migration-review.md"
+            / "capability-registry-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
 
         for technique_id, _slug, _kind, _status, old_path, new_path in PILOT_BUNDLES:
@@ -155,8 +143,8 @@ class DocsBoundaryTreePilotTestCase(unittest.TestCase):
                 self.assertIn(f"| `{technique_id}` | `{old_path}/`", review)
                 self.assertIn(new_path, review)
 
-    def test_neighbor_docs_bundles_were_not_moved_with_the_pilot(self) -> None:
-        for relative_path in UNMOVED_DOCS_BUNDLES:
+    def test_neighbor_shelves_were_not_moved_with_the_pilot(self) -> None:
+        for relative_path in UNMOVED_NEIGHBOR_BUNDLES:
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
 
