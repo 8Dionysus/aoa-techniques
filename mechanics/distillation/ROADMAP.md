@@ -110,9 +110,15 @@
    link repair, generated rebuilds, and release-check validation in the same
    wave. The landed `capability-registry` pilot review is also landed as
    `pilot-validated`, validates the third instruction trunk shelf, and chooses
-   `capability-boundary` for the next direct-read migration review. The next
-   bounded step is a direct-read migration review for `capability-boundary`
-   before any other shelf moves.
+   `capability-boundary` for the next direct-read migration review. The
+   `capability-boundary` direct-read review is now landed as
+   `accepted-for-ninth-migration-pilot`; it accepts exactly `AOA-T-0040`,
+   `AOA-T-0043`, and `AOA-T-0093` while keeping skill marketplace curation,
+   upstream health validation, routing policy, recommendation ranking, KAG
+   graph semantics, runtime execution doctrine, host inventory policy, command
+   product design, shell doctrine, registry product doctrine, and agent-role
+   authority outside the move. The next bounded step is the ninth pilot
+   migration for `capability-boundary` before any other shelf moves.
 
 ## Hold line
 

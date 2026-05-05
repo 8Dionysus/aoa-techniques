@@ -28,5 +28,6 @@ Current reviews:
 - [landed-docs-boundary-pilot-review](landed-docs-boundary-pilot-review.md)
 - [capability-registry-direct-read-migration-review](capability-registry-direct-read-migration-review.md)
 - [landed-capability-registry-pilot-review](landed-capability-registry-pilot-review.md)
+- [capability-boundary-direct-read-migration-review](capability-boundary-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

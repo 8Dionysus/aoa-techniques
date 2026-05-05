@@ -115,6 +115,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `capability-registry` pilot review and selected
   `capability-boundary` for the next direct-read migration review without
   moving a ninth shelf yet
+- accepted the `capability-boundary` direct-read migration review over
+  `AOA-T-0040`, `AOA-T-0043`, and `AOA-T-0093` as the ninth tree pilot while
+  keeping the review itself non-mutating
 
 ### Validation
 
