@@ -72,6 +72,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0080` through `AOA-T-0083` into
   `techniques/recovery/diagnosis-repair/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `diagnosis-repair` pilot review and selected
+  `instruction-surface` for the next direct-read migration review without
+  moving a fifth shelf yet
 
 ### Validation
 
