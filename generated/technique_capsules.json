@@ -1050,7 +1050,7 @@
       "core_contract_short": "Core contract: invocation is explicit and post-session; the technique starts from a reviewed artifact rather than raw live session state.",
       "main_risk_short": "Main risk: mixed clusters survive and later owner placement has to guess what the unit really is.",
       "validation_short": "Validate by checking the source artifact is reviewed and bounded; each kept candidate names one reusable unit rather than one topic cluster...",
-      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md"
+      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0076",
@@ -1078,7 +1078,7 @@
       "core_contract_short": "Core contract: the packet starts after review; the required spine stays small and explicit.",
       "main_risk_short": "Main risk: the packet becomes a recap blob instead of a bounded extract container.",
       "validation_short": "Validate by checking the packet starts from reviewed material; the required fields are explicit and present; each extract record remains bounded and...",
-      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md"
+      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0078",
@@ -1176,7 +1176,7 @@
       "core_contract_short": "Core contract: progression remains evidence-backed; movement stays multi-axis rather than one-score.",
       "main_risk_short": "Main risk: movement is invented from vibe instead of evidence.",
       "validation_short": "Validate by checking meaningful axis claims cite reviewed evidence; the output stays multi-axis; the verdict matches the evidence.",
-      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md"
+      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0085",
@@ -1190,7 +1190,7 @@
       "core_contract_short": "Core contract: the overlay always rests on reviewed evidence; the overlay remains adjunct, not sovereign.",
       "main_risk_short": "Main risk: narrative flavor starts replacing the underlying evidence-backed result.",
       "validation_short": "Validate by checking the overlay rests on reviewed evidence; the underlying progression or route note remains explicit; flavor remains adjunct rather than...",
-      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md"
+      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0086",

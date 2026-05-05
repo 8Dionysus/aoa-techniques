@@ -9,7 +9,7 @@ proof, routing, memory, and quest source stay elsewhere.
 ## Local Anchors
 
 - `AOA-T-0085`
-  (`techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md`) owns
+  (`techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md`) owns
   adjunct quest-, RPG-, or chronicle-shaped reflection over a bounded reviewed
   base.
 - `AOA-T-0089`

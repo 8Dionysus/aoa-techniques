@@ -876,7 +876,7 @@
       "kind": "lift",
       "status": "promoted",
       "summary": "Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion.",
-      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
       "topology": {
         "family": "donor-harvest",
         "capability_class": [
@@ -930,7 +930,7 @@
       "kind": "handoff",
       "status": "promoted",
       "summary": "Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another.",
-      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
       "topology": {
         "family": "donor-harvest",
         "capability_class": [
@@ -1125,7 +1125,7 @@
       "kind": "lift",
       "status": "promoted",
       "summary": "Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.",
-      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
       "topology": {
         "family": "donor-harvest",
         "capability_class": [
@@ -1153,7 +1153,7 @@
       "kind": "lift",
       "status": "promoted",
       "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
-      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
       "topology": {
         "family": "donor-harvest",
         "capability_class": [

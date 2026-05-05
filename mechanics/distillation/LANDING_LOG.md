@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Donor-harvest tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0075`, `AOA-T-0077`, `AOA-T-0084`, and `AOA-T-0085`
+  into `techniques/continuity/donor-harvest/`
+- extended `techniques/continuity/AGENTS.md` with the third continuity shelf
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md`
+- repaired authored links from adjacent techniques and active review sources
+  to current paths
+- kept `domain`, `kind`, status, IDs, evidence, relations, support files,
+  maturity, validation-strength metadata, and public-safety posture unchanged
+- preserved all four bundles as `status: promoted`; path movement did not
+  imply canonical promotion
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no neighboring continuity, governance, questbook, playbook, RPG, memory,
+  stats, role, owner-route, or remaining `agent-workflows` shelf was moved
+- no memory authority, playbook quest authority, progression doctrine, owner
+  routing, role progression, stats ownership, or session-closeout automation
+  was imported into the shelf
+
 ## 2026-05-05 - Donor-harvest direct-read migration review
 
 Changed:
@@ -1975,7 +2007,7 @@ Not moved:
 Changed:
 
 - remapped
-  [multi-axis-quest-overlay](../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md)
+  [multi-axis-quest-overlay](../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md)
   from `artifact` to `lift`
 - kept the bundle at `agent-workflows`, `promoted`, and `source_backed`
   posture with the same ID, evidence, relations, and public-safety state

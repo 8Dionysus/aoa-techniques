@@ -99,7 +99,7 @@ Turn one reviewed session artifact into a bounded donor pack of reusable candida
 - session history remains source evidence, not memory canon or instruction authority
 - derivative routing or graph surfaces do not become first-authoring targets for source-owned meaning
 
-Relationship to adjacent techniques: unlike [AOA-T-0044](../../history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), this technique assumes the transcript or equivalent reviewed artifact already exists and only owns donor extraction after review. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide the final primary owner layer for each candidate. It should also stay narrower than final quest promotion triage because it can emit several candidate units from one session instead of one promotion verdict.
+Relationship to adjacent techniques: unlike [AOA-T-0044](../../../history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), this technique assumes the transcript or equivalent reviewed artifact already exists and only owns donor extraction after review. Unlike [AOA-T-0076](../../../agent-workflows/owner-layer-triage/TECHNIQUE.md), it does not decide the final primary owner layer for each candidate. It should also stay narrower than final quest promotion triage because it can emit several candidate units from one session instead of one promotion verdict.
 
 ## Risks
 

@@ -300,7 +300,12 @@
    and all remaining `agent-workflows` leaves outside the shelf. The next
    bounded step is to migrate those four bundles only after path movement,
    support-file carry, receipt, link-repair, generated surface, and validation
-   work move together.
+   work move together. The nineteenth pilot migration is now landed exactly for
+   those four bundles under `techniques/continuity/donor-harvest/`, with the
+   continuity route card extended for the third shelf, root legacy receipt
+   accounting, link repair, generated rebuilds, and release-check validation in
+   the same wave. The next bounded step is to review the landed
+   `donor-harvest` pilot before choosing any twentieth shelf.
 
 ## Hold line
 

@@ -21,6 +21,9 @@ Accepted pilot shelves:
 - `handoff-continuation/`: carries handoff, receipt, verification, startup,
   resource-map, mailbox, and episode-checkpoint seams across session, agent,
   repo, or episode boundaries
+- `donor-harvest/`: carries reviewed-session donor packs, harvest-packet
+  contracts, progression evidence deltas, and adjunct quest overlays across
+  session closeout without granting memory, playbook, or progression authority
 
 ## Domain rules
 

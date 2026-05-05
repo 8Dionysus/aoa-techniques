@@ -37873,10 +37873,10 @@
     },
     {
       "id": "AOA-T-0075",
-      "technique_path": "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/session-donor-harvest/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/donor-harvest/session-donor-harvest/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -38007,7 +38007,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/session-donor-harvest/notes/origin-evidence.md",
+          "note_path": "techniques/continuity/donor-harvest/session-donor-harvest/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -38088,7 +38088,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/session-donor-harvest/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/donor-harvest/session-donor-harvest/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -38607,10 +38607,10 @@
     },
     {
       "id": "AOA-T-0077",
-      "technique_path": "techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/harvest-packet-contract/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/donor-harvest/harvest-packet-contract/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -38741,7 +38741,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/harvest-packet-contract/notes/origin-evidence.md",
+          "note_path": "techniques/continuity/donor-harvest/harvest-packet-contract/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -38822,7 +38822,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/harvest-packet-contract/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/donor-harvest/harvest-packet-contract/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -41164,10 +41164,10 @@
     },
     {
       "id": "AOA-T-0084",
-      "technique_path": "techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/progression-evidence-lift/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/donor-harvest/progression-evidence-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -41298,7 +41298,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/progression-evidence-lift/notes/origin-evidence.md",
+          "note_path": "techniques/continuity/donor-harvest/progression-evidence-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -41379,7 +41379,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/progression-evidence-lift/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/donor-harvest/progression-evidence-lift/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -41531,10 +41531,10 @@
     },
     {
       "id": "AOA-T-0085",
-      "technique_path": "techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md",
+      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/multi-axis-quest-overlay/notes/canonical-readiness.md",
+          "note_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -41665,7 +41665,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/multi-axis-quest-overlay/notes/origin-evidence.md",
+          "note_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -41746,7 +41746,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/multi-axis-quest-overlay/notes/second-context-adaptation.md",
+          "note_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

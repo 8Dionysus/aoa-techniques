@@ -96,7 +96,7 @@ hand motion, not the law of the arena.
 - [diagnosis-from-reviewed-evidence](../../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md):
   diagnoses from evidence already reviewed; this candidate asks for the missing
   evidence before diagnosis.
-- [harvest-packet-contract](../../../../../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md):
+- [harvest-packet-contract](../../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md):
   packages reviewed session material; this candidate narrows one evidence gap
   before packet or harvest work.
 

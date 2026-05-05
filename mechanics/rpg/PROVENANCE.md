@@ -33,9 +33,9 @@ inside `aoa-techniques`.
 
 Current local anchors include:
 
-- `techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md`
+- `techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md`
   (`AOA-T-0084`)
-- `techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md`
+- `techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md`
   (`AOA-T-0085`)
 - `techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md`
   (`AOA-T-0076`)

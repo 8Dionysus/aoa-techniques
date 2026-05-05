@@ -211,6 +211,9 @@ The format is intentionally simple and human-first.
 - accepted the `donor-harvest` direct-read migration review over `AOA-T-0075`,
   `AOA-T-0077`, `AOA-T-0084`, and `AOA-T-0085` as the nineteenth tree pilot
   while keeping the review itself non-mutating
+- moved `AOA-T-0075`, `AOA-T-0077`, `AOA-T-0084`, and `AOA-T-0085` into
+  `techniques/continuity/donor-harvest/` while keeping `domain`, `kind`, IDs,
+  status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

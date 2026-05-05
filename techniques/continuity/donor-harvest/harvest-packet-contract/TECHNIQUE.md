@@ -93,7 +93,7 @@ chat memory or stuffing all post-session meaning into one oversized recap.
 - the packet is a source-owned post-session nucleus, not memory canon or routing authority
 - later family seams may consume the packet, but they still own their own verdicts
 
-Relationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not decide which reusable units survive donor extraction; it only keeps the resulting packet shape bounded. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not decide one owner verdict over one bounded unit. It should stay smaller than any later fork, diagnosis, repair, progression, or quest seam that the packet may reference.
+Relationship to adjacent techniques: unlike [AOA-T-0075](../session-donor-harvest/TECHNIQUE.md), this technique does not decide which reusable units survive donor extraction; it only keeps the resulting packet shape bounded. Unlike [AOA-T-0076](../../../agent-workflows/owner-layer-triage/TECHNIQUE.md), it does not decide one owner verdict over one bounded unit. It should stay smaller than any later fork, diagnosis, repair, progression, or quest seam that the packet may reference.
 
 ## Risks
 

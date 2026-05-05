@@ -341,8 +341,8 @@ Shared blocker: the session-harvest family is internally coherent and already so
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0075](../../../../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) | Strong donor extraction contract for reviewed session artifacts, with explicit candidate units and evidence anchors. | One second live workflow where a reviewed artifact produces a bounded donor pack that later owner placement can consume without reopening live session memory. |
-| [AOA-T-0077](../../../../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) | Packet spine is useful beside session donor harvest, but still origin-lineage shaped. | One second consumer that reads a `HARVEST_PACKET` as a bounded handoff into routing, diagnosis, repair, progression, or quest work without letting the packet become memory canon or routing authority. |
+| [AOA-T-0075](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | Strong donor extraction contract for reviewed session artifacts, with explicit candidate units and evidence anchors. | One second live workflow where a reviewed artifact produces a bounded donor pack that later owner placement can consume without reopening live session memory. |
+| [AOA-T-0077](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | Packet spine is useful beside session donor harvest, but still origin-lineage shaped. | One second consumer that reads a `HARVEST_PACKET` as a bounded handoff into routing, diagnosis, repair, progression, or quest work without letting the packet become memory canon or routing authority. |
 
 ### Pack 33 - Owner Route Fork Discipline
 
@@ -372,8 +372,8 @@ Shared blocker: the progression family is useful as a reader layer, but still ne
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0084](../../../../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) | Multi-axis progression delta stays descriptive, evidence-backed, and smaller than a universal score. | One second reviewed session or route where explicit axes, holds, downgrades, or small unlock hints improve future work without becoming authority. |
-| [AOA-T-0085](../../../../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) | Quest or RPG reflection remains adjunct over a progression base. | One second reader surface where quest-shaped reflection improves legibility while the underlying owner truth, proof, and memory seams remain elsewhere. |
+| [AOA-T-0084](../../../../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | Multi-axis progression delta stays descriptive, evidence-backed, and smaller than a universal score. | One second reviewed session or route where explicit axes, holds, downgrades, or small unlock hints improve future work without becoming authority. |
+| [AOA-T-0085](../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | Quest or RPG reflection remains adjunct over a progression base. | One second reader surface where quest-shaped reflection improves legibility while the underlying owner truth, proof, and memory seams remain elsewhere. |
 
 ### Pack 36 - Automation Opportunity Gates
 

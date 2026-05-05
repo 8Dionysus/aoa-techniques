@@ -405,7 +405,7 @@ See also:
 - Validate by: a sample export with replies and media retains source ids and media references; resume after interruption preserves progress without...
 - Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 
-### [AOA-T-0075](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
+### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
 
 - Summary: Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion.
 - Intent: Turn one reviewed session artifact into a bounded donor pack of reusable candidates so...
@@ -416,7 +416,7 @@ See also:
 - Core contract: invocation is explicit and post-session; the technique starts from a reviewed artifact rather than raw live session state.
 - Main risk: mixed clusters survive and later owner placement has to guess what the unit really is.
 - Validate by: the source artifact is reviewed and bounded; each kept candidate names one reusable unit rather than one topic cluster...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md)
 
 ### [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
@@ -431,7 +431,7 @@ See also:
 - Validate by: the candidate unit is bounded and singular; one primary owner layer is named explicitly; the nearest wrong target is...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
 
-### [AOA-T-0077](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
+### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
 
 - Summary: Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another.
 - Intent: Keep one bounded HARVEST_PACKET contract over a reviewed session artifact so later family seams...
@@ -442,7 +442,7 @@ See also:
 - Core contract: the packet starts after review; the required spine stays small and explicit.
 - Main risk: the packet becomes a recap blob instead of a bounded extract container.
 - Validate by: the packet starts from reviewed material; the required fields are explicit and present; each extract record remains bounded and...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/harvest-packet-contract/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md)
 
 ### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 
@@ -522,7 +522,7 @@ See also:
 - Validate by: a bounded repair shape exists first; checkpoint fields are all explicit; rollback and health-check posture are present.
 - Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md)
 
-### [AOA-T-0084](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
+### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
 
 - Summary: Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.
 - Intent: Lift reviewed session evidence into a bounded multi-axis progression delta so growth stays legible...
@@ -533,9 +533,9 @@ See also:
 - Core contract: progression remains evidence-backed; movement stays multi-axis rather than one-score.
 - Main risk: movement is invented from vibe instead of evidence.
 - Validate by: meaningful axis claims cite reviewed evidence; the output stays multi-axis; the verdict matches the evidence.
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/progression-evidence-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md)
 
-### [AOA-T-0085](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
+### [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
 
 - Summary: Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.
 - Intent: Add quest-, RPG-, or chronicle-shaped reflection to a bounded progression or route-reading surface so...
@@ -546,7 +546,7 @@ See also:
 - Core contract: the overlay always rests on reviewed evidence; the overlay remains adjunct, not sovereign.
 - Main risk: narrative flavor starts replacing the underlying evidence-backed result.
 - Validate by: the overlay rests on reviewed evidence; the underlying progression or route note remains explicit; flavor remains adjunct rather than...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/multi-axis-quest-overlay/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md)
 
 ### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
 

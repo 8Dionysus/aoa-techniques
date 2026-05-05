@@ -75,7 +75,7 @@ LIVE_LINK_SURFACES = (
     "mechanics/audit/parts/external-evidence-sprint-runbook/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/external-candidate-ledger/README.md",
-    "techniques/agent-workflows/session-donor-harvest/TECHNIQUE.md",
+    "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
     "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
     "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
     "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
