@@ -148,6 +148,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0003`, `AOA-T-0007`, and `AOA-T-0032` into
   `techniques/proof/evaluation-chain/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `evaluation-chain` pilot review and selected
+  `published-summary` for the next direct-read migration review without moving
+  a thirteenth shelf yet
 
 ### Validation
 

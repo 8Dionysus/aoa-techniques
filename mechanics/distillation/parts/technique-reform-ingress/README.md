@@ -111,6 +111,8 @@ permission slip to remap techniques automatically.
 - evaluation-chain migration: landed exactly `AOA-T-0003`, `AOA-T-0007`,
   and `AOA-T-0032` under `techniques/proof/evaluation-chain/` without
   frontmatter changes
+- landed evaluation-chain pilot review: landed as `pilot-validated`, with
+  `published-summary` chosen for the next direct-read migration review
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -163,6 +165,7 @@ permission slip to remap techniques automatically.
 | [Landed Skill-Support Pilot Review](reviews/landed-skill-support-pilot-review.md) | confirms the eleventh migrated shelf stayed clearer, validates the first proof trunk shelf, and chooses `evaluation-chain` for the next direct-read review | movement of `evaluation-chain`, `tree_path` frontmatter, CI ownership, release policy, eval-suite authority, proof verdict law, mandatory testing doctrine, generic quality gate doctrine, or neighboring proof-side shelves |
 | [Evaluation-Chain Direct-Read Migration Review](reviews/evaluation-chain-direct-read-migration-review.md) | reads `AOA-T-0003`, `AOA-T-0007`, and `AOA-T-0032` directly and accepts the shelf as the twelfth migration pilot | path movement by review alone, `tree_path` frontmatter, CI ownership, release policy, eval-suite authority, proof verdict law, mandatory testing doctrine, generic quality gate doctrine, owner acceptance, or neighboring proof-side shelves |
 | [Evaluation-Chain Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md) | preserves the twelfth accepted path migration into `techniques/proof/evaluation-chain/` | active technique provenance, `tree_path` frontmatter, CI ownership, release policy, eval-suite authority, proof verdict law, mandatory testing doctrine, generic quality gate doctrine, owner acceptance, or neighboring proof-side shelves |
+| [Landed Evaluation-Chain Pilot Review](reviews/landed-evaluation-chain-pilot-review.md) | confirms the twelfth migrated shelf stayed clearer, validates the second proof trunk shelf, and chooses `published-summary` for the next direct-read review | movement of `published-summary`, `tree_path` frontmatter, proof authority, release policy, remediation execution, integrity verdict law, telemetry platform, rendering product policy, archive governance, generic observability doctrine, or neighboring proof-side shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -335,5 +338,8 @@ The twelfth pilot migration is now landed: those three bundles live under
 receipt are in place, authored links were repaired, generated surfaces were
 rebuilt, and frontmatter stayed unchanged.
 
-The next move is to review the landed `evaluation-chain` pilot before choosing
-any thirteenth shelf.
+The landed `evaluation-chain` pilot review is now landed as `pilot-validated`
+and chooses `published-summary` for the next direct-read migration review.
+
+The next move is to run that `published-summary` direct-read review before any
+thirteenth shelf migration.

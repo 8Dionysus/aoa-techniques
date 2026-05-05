@@ -169,8 +169,12 @@
    for those three bundles under `techniques/proof/evaluation-chain/`, with
    the proof route card extended for the second shelf, root legacy receipt
    accounting, link repair, generated rebuilds, and release-check validation in
-   the same wave. The next bounded step is the landed `evaluation-chain` pilot
-   review before choosing any thirteenth shelf.
+   the same wave. The landed `evaluation-chain` pilot review is now landed as
+   `pilot-validated`, completing the previous step to review the landed
+   `evaluation-chain` pilot before choosing any thirteenth shelf and choosing
+   `published-summary` for the next direct-read migration review. The next
+   bounded step is that `published-summary` direct-read review before any
+   thirteenth shelf migration.
 
 ## Hold line
 
