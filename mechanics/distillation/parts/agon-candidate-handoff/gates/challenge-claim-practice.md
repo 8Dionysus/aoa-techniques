@@ -57,7 +57,7 @@ The move has five fields:
 
 ## Landed Technique Bundle
 
-- [single-locus-claim-challenge](../../../../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
+- [single-locus-claim-challenge](../../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md)
 
 ## Topology Read
 
@@ -96,7 +96,7 @@ hand motion, not the law of the arena.
 
 ## Nearest Overlaps
 
-- [single-missing-evidence-request](../../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md):
+- [single-missing-evidence-request](../../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md):
   asks for one missing evidence object; this candidate first names the claim
   locus that makes the request relevant.
 - `localize_contradiction-practice`:

@@ -583,9 +583,14 @@ It accepts `proof/review-evidence` as a bounded shelf over `AOA-T-0107`,
 `AOA-T-0105` as `kind: guardrail`, `AOA-T-0106` as `kind: artifact`, all three
 as promoted, and their current `domain` truth.
 
-The next reform slice should migrate exactly those three review-evidence
-bundles together, with proof route-card update, root legacy receipt, link
-repair, generated rebuild, and validation.
+The twenty-second pilot migration moves exactly those three bundles into
+`techniques/proof/review-evidence/` without changing `domain`, `kind`, status,
+relations, evidence, support files, or `tree_path` frontmatter. The root
+receipt is
+[`legacy/receipts/2026-05-05-review-evidence-tree-pilot.md`](../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md).
+
+The next reform slice should review the landed `proof/review-evidence` shelf
+before choosing the twenty-third shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

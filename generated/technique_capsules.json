@@ -1470,7 +1470,7 @@
       "core_contract_short": "Core contract: one use of the technique asks for one missing evidence object; the request is tied to one bounded...",
       "main_risk_short": "Main risk: the request names a vague category instead of one concrete object.",
       "validation_short": "Validate by checking exactly one claim or decision point is named; exactly one missing evidence object is requested; the object is concrete...",
-      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md"
+      "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0106",
@@ -1484,7 +1484,7 @@
       "core_contract_short": "Core contract: one use of the technique offers one evidence reference; the reference is tied to one bounded review state.",
       "main_risk_short": "Main risk: the reference is vague and cannot be inspected.",
       "validation_short": "Validate by checking exactly one claim or decision point is named; exactly one evidence reference is offered; the reference is concrete enough...",
-      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md"
+      "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0107",
@@ -1498,7 +1498,7 @@
       "core_contract_short": "Core contract: one use of the technique challenges one target claim; the challenged locus is smaller than the whole topic...",
       "main_risk_short": "Main risk: the challenge targets a broad topic instead of one claim.",
       "validation_short": "Validate by checking exactly one target claim is named; exactly one vulnerable locus is named inside that claim; the pressure reason explains...",
-      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md"
+      "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md"
     }
   ]
 }

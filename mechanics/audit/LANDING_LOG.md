@@ -79,7 +79,7 @@ Not changed:
 
 Changed:
 
-- categorized [AOA-T-0106](../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+- categorized [AOA-T-0106](../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md)
   in the promotion-readiness matrix as part of the Agon handoff extraction
   family
 - moved the promoted queue count from `80` to `81`
@@ -105,7 +105,7 @@ Not changed:
 
 Changed:
 
-- categorized [AOA-T-0107](../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
+- categorized [AOA-T-0107](../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md)
   in the promotion-readiness matrix as part of the Agon handoff extraction
   family
 - moved the promoted queue count from `81` to `82`

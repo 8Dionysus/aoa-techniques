@@ -136,9 +136,9 @@ Current landed bundle readiness review:
 
 Current landed technique bundle:
 
-- [single-locus-claim-challenge](../../../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
-- [single-missing-evidence-request](../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
-- [single-scoped-evidence-reference](../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+- [single-locus-claim-challenge](../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md)
+- [single-missing-evidence-request](../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md)
+- [single-scoped-evidence-reference](../../../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md)
 
 ## Stop Line
 

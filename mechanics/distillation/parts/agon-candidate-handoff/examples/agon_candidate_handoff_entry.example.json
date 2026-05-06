@@ -8,7 +8,7 @@
   "gate_checklist": "mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md",
   "gate_evidence_note": "mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md",
   "bundle_readiness_review": "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
-  "technique_bundle": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+  "technique_bundle": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
   "distillation_lane": "first_narrowing_watch",
   "distillation_gate": {
     "atomic_move_status": "candidate_named",

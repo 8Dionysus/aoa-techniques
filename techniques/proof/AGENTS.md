@@ -31,6 +31,10 @@ Current landed shelves:
   dashboard ownership, runtime storage policy, archive governance, remediation
   execution, integrity verdict law, release policy, proof verdict law, or a
   generic reporting platform.
+- `review-evidence/`: one-locus claim pressure, one missing-evidence request,
+  and one scoped evidence reference without becoming proof verdict authority,
+  eval-suite ownership, review-board workflow, Agon move law, actor
+  eligibility, source-truth transfer, or evidence adequacy scoring.
 
 ## Boundary
 
@@ -56,6 +60,8 @@ Do not:
 - collapse latest alias storage, remediation snapshot, integrity diagnosis,
   and required-versus-optional rendering into one published-summary package
   technique
+- collapse claim challenge, missing-evidence request, and scoped evidence
+  reference into one combined proof technique
 - import sibling-owner authority into a portable technique bundle
 
 ## Validation

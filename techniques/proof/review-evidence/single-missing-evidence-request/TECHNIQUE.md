@@ -110,12 +110,12 @@ theater.
   evidence-request atom for ordinary technique use
 
 Relationship to adjacent techniques: unlike
-[AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique
-does not turn reviewed evidence into a diagnosis packet; it asks for one missing
-object before diagnosis or closure. Unlike
-[AOA-T-0032](../context-report-for-ci/TECHNIQUE.md), it does not emit a broad
-CI-facing context report; it names the one object whose presence or absence
-matters now.
+[AOA-T-0081](../../../recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md),
+this technique does not turn reviewed evidence into a diagnosis packet; it asks
+for one missing object before diagnosis or closure. Unlike
+[AOA-T-0032](../../evaluation-chain/context-report-for-ci/TECHNIQUE.md), it
+does not emit a broad CI-facing context report; it names the one object whose
+presence or absence matters now.
 
 ## Risks
 

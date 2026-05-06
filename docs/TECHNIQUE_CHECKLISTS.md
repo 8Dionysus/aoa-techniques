@@ -346,17 +346,17 @@ See also:
 |---|---|---|---|---|
 | superseded-practice-obsolescence-route checklist | `present` | `11` | `techniques/agent-workflows/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
 
-### [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
+### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| single-missing-evidence-request checklist | `present` | `10` | `techniques/agent-workflows/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) |
+| single-missing-evidence-request checklist | `present` | `10` | `techniques/proof/review-evidence/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) |
 
-### [AOA-T-0107](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
+### [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| single-locus-claim-challenge checklist | `present` | `8` | `techniques/agent-workflows/single-locus-claim-challenge/checks/single-locus-claim-challenge-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) |
+| single-locus-claim-challenge checklist | `present` | `8` | `techniques/proof/review-evidence/single-locus-claim-challenge/checks/single-locus-claim-challenge-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) |
 
 ## `docs`
 
@@ -522,11 +522,11 @@ See also:
 |---|---|---|---|---|
 | Canonical Owner With Validated Mirror Checklist | `absent` | `7` | `techniques/docs/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
 
-### [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
+### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| single-scoped-evidence-reference checklist | `present` | `10` | `techniques/docs/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md` | [TECHNIQUE.md](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) |
+| single-scoped-evidence-reference checklist | `present` | `10` | `techniques/proof/review-evidence/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
 
 ## `evaluation`
 

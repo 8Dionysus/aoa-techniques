@@ -3,6 +3,40 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Review-evidence tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106` into
+  `techniques/proof/review-evidence/`
+- kept `AOA-T-0107` and `AOA-T-0105` as `domain: agent-workflows`,
+  `kind: guardrail`, `status: promoted`
+- kept `AOA-T-0106` as `domain: docs`, `kind: artifact`,
+  `status: promoted`
+- added
+  [2026-05-05-review-evidence-tree-pilot](../../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md)
+  as the root legacy receipt for the twenty-second migration
+- updated the proof route card to name `review-evidence/` as bounded review
+  evidence rather than proof verdict authority, eval-suite ownership,
+  review-board workflow, Agon move law, actor eligibility, source-truth
+  transfer, or evidence adequacy scoring
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no owner-truth, runtime, automation-governance, tool-use, or remaining
+  `agent-workflows` and `docs` shelf moved
+
 ## 2026-05-05 - Review-evidence direct-read migration review
 
 Changed:
@@ -2717,7 +2751,7 @@ Not moved:
 Changed:
 
 - added
-  [single-missing-evidence-request](../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+  [single-missing-evidence-request](../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md)
   as the first normal technique bundle grown from the Agon candidate handoff
 - registered a traceability pointer from
   `candidate:aoa-techniques:agon/request-evidence-practice` to the landed
@@ -2873,7 +2907,7 @@ Not moved:
 Changed:
 
 - added
-  [single-locus-claim-challenge](../../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
+  [single-locus-claim-challenge](../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md)
   as the third normal technique bundle grown from the Agon candidate handoff
 - added the challenge-claim bundle-readiness review and registered the bundle
   pointer in the part-local seed and generated compact index
@@ -2907,7 +2941,7 @@ Not moved:
 Changed:
 
 - added
-  [single-scoped-evidence-reference](../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+  [single-scoped-evidence-reference](../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md)
   as the second normal technique bundle grown from the Agon candidate handoff
 - registered a traceability pointer from
   `candidate:aoa-techniques:agon/offer-evidence-reference-practice` to the

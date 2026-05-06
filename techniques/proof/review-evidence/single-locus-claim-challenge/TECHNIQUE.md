@@ -117,11 +117,11 @@ Relationship to adjacent techniques: unlike
 [AOA-T-0105](../single-missing-evidence-request/TECHNIQUE.md), this technique
 names the vulnerable claim locus before asking for a specific missing evidence
 object. Unlike
-[AOA-T-0106](../../docs/single-scoped-evidence-reference/TECHNIQUE.md), it does
-not offer an available reference; it applies pressure to the claim that may need
+[AOA-T-0106](../single-scoped-evidence-reference/TECHNIQUE.md), it does not
+offer an available reference; it applies pressure to the claim that may need
 support. Unlike
-[AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), it does not
-diagnose from reviewed evidence or name probable causes.
+[AOA-T-0081](../../../recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md),
+it does not diagnose from reviewed evidence or name probable causes.
 
 ## Risks
 

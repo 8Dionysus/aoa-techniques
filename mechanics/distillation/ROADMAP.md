@@ -362,7 +362,13 @@
    law, actor eligibility, evidence adequacy scoring, source-truth transfer,
    route mutation, memory writes, runtime behavior, KAG promotion, ToS canon,
    skill activation, neighboring proof/runtime/governance shelves, and all
-   remaining `agent-workflows` and `docs` leaves outside the shelf.
+   remaining `agent-workflows` and `docs` leaves outside the shelf. The
+   twenty-second pilot migration is now landed exactly for those three bundles
+   under `techniques/proof/review-evidence/`, with support files moved, proof
+   route card updated, root legacy receipt accounting, link repair, generated
+   rebuilds, and release-check validation in the same wave. The next bounded
+   step is to review the landed `review-evidence` pilot before choosing any
+   twenty-third shelf.
 
 ## Hold line
 

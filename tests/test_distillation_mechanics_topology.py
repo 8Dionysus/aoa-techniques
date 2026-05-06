@@ -390,9 +390,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertEqual(
             {
-                "candidate:aoa-techniques:agon/challenge-claim-practice": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
-                "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
-                "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+                "candidate:aoa-techniques:agon/challenge-claim-practice": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
+                "candidate:aoa-techniques:agon/request-evidence-practice": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
+                "candidate:aoa-techniques:agon/offer-evidence-reference-practice": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
             },
             registry["technique_bundles"],
         )
@@ -3945,9 +3945,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("six separate leaf", receipt)
         self.assertIn("generic history platform", receipt)
-        self.assertIn("twenty-one receipts", legacy_index)
+        self.assertIn("twenty-two receipts", legacy_index)
         self.assertIn("2026-05-05-history-artifacts-tree-pilot.md", legacy_index)
-        self.assertIn("twenty-one technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-two technique tree pilot receipts", receipts_index)
         self.assertIn("History-artifacts tree pilot migration", landing_log)
         self.assertIn("kept capture, transcript packaging", landing_log)
         self.assertIn(
@@ -4303,9 +4303,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("four separate leaf bundles", receipt)
         self.assertIn("generic resilience platform", receipt)
-        self.assertIn("twenty-one receipts", legacy_index)
+        self.assertIn("twenty-two receipts", legacy_index)
         self.assertIn("2026-05-05-antifragility-recovery-tree-pilot.md", legacy_index)
-        self.assertIn("twenty-one technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-two technique tree pilot receipts", receipts_index)
         self.assertIn("Antifragility-recovery tree pilot migration", landing_log)
         self.assertIn("preserved `AOA-T-0098`", landing_log)
         self.assertIn("fifteenth pilot migration is now landed", distillation_roadmap)
@@ -5383,9 +5383,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("nineteenth pilot migration is now landed", distillation_roadmap)
         self.assertIn("Review the landed `donor-harvest` pilot", root_roadmap)
         self.assertIn("2026-05-05-donor-harvest-tree-pilot", tree_contract)
-        self.assertIn("twenty-one receipts", legacy_index)
+        self.assertIn("twenty-two receipts", legacy_index)
         self.assertIn("2026-05-05-donor-harvest-tree-pilot.md", legacy_index)
-        self.assertIn("twenty-one technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-two technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0075`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -5649,12 +5649,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn("Review the landed `decision-routing` pilot", root_roadmap)
         self.assertIn("2026-05-05-decision-routing-tree-pilot", tree_contract)
-        self.assertIn("twenty-one receipts", legacy_index)
+        self.assertIn("twenty-two receipts", legacy_index)
         self.assertIn(
             "2026-05-05-decision-routing-tree-pilot.md",
             legacy_index,
         )
-        self.assertIn("twenty-one technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-two technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0076`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -5925,12 +5925,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             root_roadmap,
         )
         self.assertIn("2026-05-05-approval-evidence-tree-pilot", tree_contract)
-        self.assertIn("twenty-one receipts", legacy_index)
+        self.assertIn("twenty-two receipts", legacy_index)
         self.assertIn(
             "2026-05-05-approval-evidence-tree-pilot.md",
             legacy_index,
         )
-        self.assertIn("twenty-one technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-two technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0068`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -6006,13 +6006,13 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("landed approval-evidence pilot review: landed", ingress)
         self.assertIn("proof/review-evidence", ingress)
         self.assertIn("Landed approval-evidence pilot review", landing_log)
-        self.assertIn("no `proof/review-evidence` route card", landing_log)
+        self.assertIn("Review-evidence tree pilot migration", landing_log)
         self.assertIn(
             "landed `approval-evidence` review is now complete",
             distillation_roadmap,
         )
         self.assertIn(
-            "Run the `proof/review-evidence` direct-read",
+            "Review the landed `proof/review-evidence` pilot",
             root_roadmap,
         )
         self.assertIn("Landed Approval-Evidence Pilot Review", tree_contract)
@@ -6024,10 +6024,10 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "accepted the landed `approval-evidence` pilot review",
             changelog,
         )
-        self.assertFalse(
+        self.assertTrue(
             (
                 REPO_ROOT / "techniques" / "proof" / "review-evidence"
-            ).exists()
+            ).is_dir()
         )
 
         for technique_id, current_path, future_path in (
@@ -6051,8 +6051,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(technique_id, review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
 
     def test_review_evidence_direct_read_review_accepts_twenty_second_pilot(
         self,
@@ -6106,28 +6106,29 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("review-evidence direct-read review: landed", ingress)
         self.assertIn("accepted-for-twenty-second-migration-pilot", ingress)
         self.assertIn("Review-evidence direct-read migration review", landing_log)
-        self.assertIn("no `proof/review-evidence` route card", landing_log)
+        self.assertIn("Review-evidence tree pilot migration", landing_log)
         self.assertIn(
             "The `review-evidence` direct-read review is now landed",
             distillation_roadmap,
         )
         self.assertIn(
-            "Migrate exactly `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106`",
+            "Review the landed `proof/review-evidence` pilot",
             root_roadmap,
         )
         self.assertIn("Review-Evidence Direct-Read Migration Review", tree_contract)
+        self.assertIn("2026-05-05-review-evidence-tree-pilot", tree_contract)
         self.assertIn(
-            "migrate exactly those three review-evidence\nbundles together",
+            "twenty-second pilot migration moves exactly those three bundles",
             tree_contract,
         )
         self.assertIn(
             "accepted the `review-evidence` direct-read migration review",
             changelog,
         )
-        self.assertFalse(
+        self.assertTrue(
             (
                 REPO_ROOT / "techniques" / "proof" / "review-evidence"
-            ).exists()
+            ).is_dir()
         )
 
         for technique_id, current_path, future_path in (
@@ -6151,8 +6152,98 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(technique_id, review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
+
+    def test_review_evidence_tree_pilot_migration_landed(self) -> None:
+        receipt = (
+            REPO_ROOT
+            / "legacy"
+            / "receipts"
+            / "2026-05-05-review-evidence-tree-pilot.md"
+        ).read_text(encoding="utf-8")
+        proof_agents = (REPO_ROOT / "techniques" / "proof" / "AGENTS.md").read_text(
+            encoding="utf-8"
+        )
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
+            encoding="utf-8"
+        )
+        receipts_index = (
+            REPO_ROOT / "legacy" / "receipts" / "README.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Review-Evidence Tree Pilot Receipt", receipt)
+        self.assertIn("Twenty-second authored path migration", receipt)
+        self.assertIn("`kind` stayed unchanged as `guardrail`", receipt)
+        self.assertIn("`kind` stayed unchanged as `artifact`", receipt)
+        self.assertIn("stayed `promoted`", receipt)
+        self.assertIn("review-evidence/", proof_agents)
+        self.assertIn("evidence adequacy scoring", proof_agents)
+        self.assertIn("review-evidence migration: landed", ingress)
+        self.assertIn("Review-evidence tree pilot migration", landing_log)
+        self.assertIn(
+            "legacy/receipts/2026-05-05-review-evidence-tree-pilot.md",
+            landing_log,
+        )
+        self.assertIn(
+            "twenty-second pilot migration is now landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Review the landed `proof/review-evidence` pilot",
+            root_roadmap,
+        )
+        self.assertIn("2026-05-05-review-evidence-tree-pilot", tree_contract)
+        self.assertIn("twenty-two receipts", legacy_index)
+        self.assertIn(
+            "2026-05-05-review-evidence-tree-pilot.md",
+            legacy_index,
+        )
+        self.assertIn("twenty-two technique tree pilot receipts", receipts_index)
+        self.assertIn("moved `AOA-T-0107`", changelog)
+
+        for technique_id, old_path, new_path in (
+            (
+                "AOA-T-0107",
+                "techniques/agent-workflows/single-locus-claim-challenge/",
+                "techniques/proof/review-evidence/single-locus-claim-challenge/",
+            ),
+            (
+                "AOA-T-0105",
+                "techniques/agent-workflows/single-missing-evidence-request/",
+                "techniques/proof/review-evidence/single-missing-evidence-request/",
+            ),
+            (
+                "AOA-T-0106",
+                "techniques/docs/single-scoped-evidence-reference/",
+                "techniques/proof/review-evidence/single-scoped-evidence-reference/",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, receipt)
+                self.assertIn(old_path, receipt)
+                self.assertIn(new_path, receipt)
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
