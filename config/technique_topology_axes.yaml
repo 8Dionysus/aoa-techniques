@@ -4,7 +4,9 @@ status: scout-foundation
 authority_note: >
   This registry defines scout values for non-authoritative topology projection.
   It does not add required frontmatter fields, does not replace domain or kind,
-  and must not remap bundle meaning automatically.
+  and must not remap bundle meaning automatically. Execution-profile values are
+  static suitability estimates from authored technique shape, not empirical
+  proof from a local small-agent harness.
 source_of_truth:
   - docs/TECHNIQUE_TOPOLOGY_CONTRACT.md
   - mechanics/distillation/parts/technique-reform-ingress/README.md
@@ -173,25 +175,26 @@ axes:
   - id: execution_profile
     status: design-axis-scout
     cardinality: exactly-one
-    purpose: What execution envelope can perform the selected atomic move.
+    purpose: What execution envelope appears suitable for the selected atomic move before empirical agent validation.
     values:
       - id: tiny-card
-        summary: Executable from a compact card or short section with obvious inputs.
+        summary: Scout-estimated executable from a compact card or short section with obvious inputs.
         choose_when:
           - a small packed prompt can carry the whole move
           - local context and stop line are simple
       - id: small-agent
-        summary: Suitable for a 2-4B model after orchestration supplies facts, frame, and output shape.
+        summary: Scout candidate for 2-4B model execution after orchestration supplies facts, frame, and output shape.
         choose_when:
           - the move needs local reasoning but stays narrow
           - selection and context packing happen outside the technique
+          - empirical small-agent success is not claimed unless a separate local eval records it
       - id: medium-agent
-        summary: Requires broader comparison, multi-file awareness, or careful judgment while staying one move.
+        summary: Scout-estimated to require broader comparison, multi-file awareness, or careful judgment while staying one move.
         choose_when:
           - the move is still atomic but too context-sensitive for a tiny card
           - review or synthesis depth matters
       - id: orchestration-required
-        summary: Atomic in meaning, but safe execution requires an outer workflow, approval gate, or tool choreography.
+        summary: Atomic in meaning, but safe execution appears to require an outer workflow, approval gate, or tool choreography.
         choose_when:
           - the move crosses risky, multi-tool, public-share, or owner-boundary surfaces
           - a larger agent or skill must supply gating and sequencing
