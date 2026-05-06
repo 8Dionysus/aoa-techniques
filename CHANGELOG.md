@@ -22,6 +22,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- continued the selector/relation long pass with Wave D over governance split
+  shelves, preserving the rejected broad automation-governance split and adding
+  `AOA-T-0103 used_together_for AOA-T-0104` so retention reviews can point to
+  the bounded obsolescence route packet without creating lifecycle law
 - continued the selector/relation long pass with Wave C over execution,
   owner-truth, and approval-evidence shelves, recording an explicit no-repair
   hold for operating-order relation pressure without changing frontmatter or

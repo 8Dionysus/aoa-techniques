@@ -5615,6 +5615,10 @@
         {
           "type": "complements",
           "target": "AOA-T-0090"
+        },
+        {
+          "type": "used_together_for",
+          "target": "AOA-T-0104"
         }
       ],
       "evidence": [
