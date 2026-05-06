@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed tool-gateway pilot review
+
+Changed:
+
+- added
+  [landed-tool-gateway-pilot-review](parts/technique-reform-ingress/reviews/landed-tool-gateway-pilot-review.md)
+  as the post-migration review for the first `tool-use` trunk shelf
+- confirmed `AOA-T-0065` stayed promoted, kept
+  `domain: agent-workflows`, and preserved `kind: composition` after landing
+- accepted the singleton as resolved by direct reading, not as a generic
+  leftover bucket
+- confirmed `techniques/agent-workflows/AGENTS.md` is now a retained
+  frontmatter review lane with no active direct leaf bundle
+- selected whole-tree closeout review as the next bounded reform step
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no runtime, connector, marketplace, scanner, trust, or skill authority moved
+
 ## 2026-05-05 - Tool-gateway tree pilot migration
 
 Changed:
