@@ -241,6 +241,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106` into
   `techniques/proof/review-evidence/` while keeping `domain`, `kind`, IDs,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `review-evidence` pilot review and selected
+  `execution/runtime-truth-lifecycle` for the next direct-read migration review
+  without moving a twenty-third shelf yet
 
 ### Validation
 

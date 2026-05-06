@@ -368,7 +368,11 @@
    route card updated, root legacy receipt accounting, link repair, generated
    rebuilds, and release-check validation in the same wave. The next bounded
    step is to review the landed `review-evidence` pilot before choosing any
-   twenty-third shelf.
+   twenty-third shelf. The landed `review-evidence` review is now complete as
+   `pilot-validated`; it validates the fourth proof trunk shelf, preserves
+   challenge, request, and reference as distinct one-atom review-evidence
+   leaves, and chooses `execution/runtime-truth-lifecycle` for direct-read
+   review before any twenty-third movement.
 
 ## Hold line
 

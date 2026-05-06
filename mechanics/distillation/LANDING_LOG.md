@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed review-evidence pilot review
+
+Changed:
+
+- added
+  [landed-review-evidence-pilot-review](parts/technique-reform-ingress/reviews/landed-review-evidence-pilot-review.md)
+  as the review over the landed `proof/review-evidence` migration
+- validated the fourth successful proof trunk shelf after `skill-support`,
+  `evaluation-chain`, and `published-summary`
+- kept `AOA-T-0107` as one claim-locus challenge, `AOA-T-0105` as one
+  missing-evidence request, and `AOA-T-0106` as one scoped evidence reference
+- preserved `AOA-T-0107` and `AOA-T-0105` as `kind: guardrail`, `AOA-T-0106`
+  as `kind: artifact`, and all three bundles as `status: promoted`
+- chose `execution/runtime-truth-lifecycle` for direct-read review before any
+  twenty-third shelf movement
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `execution/runtime-truth-lifecycle` route card or receipt was created
+- no `abyss-stack` runtime law, deployment ownership, monitoring platform
+  doctrine, host policy, smoke-test law, benchmark-suite governance, product
+  scoring, or `aoa-evals` verdict authority was imported
+
 ## 2026-05-05 - Review-evidence tree pilot migration
 
 Changed:

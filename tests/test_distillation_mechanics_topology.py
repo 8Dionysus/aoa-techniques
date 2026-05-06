@@ -6012,7 +6012,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Review the landed `proof/review-evidence` pilot",
+            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
             root_roadmap,
         )
         self.assertIn("Landed Approval-Evidence Pilot Review", tree_contract)
@@ -6112,7 +6112,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Review the landed `proof/review-evidence` pilot",
+            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
             root_roadmap,
         )
         self.assertIn("Review-Evidence Direct-Read Migration Review", tree_contract)
@@ -6209,7 +6209,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Review the landed `proof/review-evidence` pilot",
+            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
             root_roadmap,
         )
         self.assertIn("2026-05-05-review-evidence-tree-pilot", tree_contract)
@@ -6244,6 +6244,107 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+
+    def test_landed_review_evidence_pilot_review_selects_runtime_truth_lifecycle(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-review-evidence-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Review-Evidence Pilot Review", review)
+        self.assertIn("fourth successful shelf under the `proof` trunk", review)
+        self.assertIn("Choose `execution/runtime-truth-lifecycle`", review)
+        self.assertIn("Do not move `execution/runtime-truth-lifecycle`", review)
+        self.assertIn("abyss-stack` runtime law", review)
+        self.assertIn(
+            "Run a direct-read migration review for `execution/runtime-truth-lifecycle`",
+            review,
+        )
+        self.assertIn("landed-review-evidence-pilot-review", reviews_index)
+        self.assertIn("landed review-evidence pilot review: landed", ingress)
+        self.assertIn("execution/runtime-truth-lifecycle", ingress)
+        self.assertIn("Landed review-evidence pilot review", landing_log)
+        self.assertIn(
+            "landed `review-evidence` review is now complete",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
+            root_roadmap,
+        )
+        self.assertIn("Landed Review-Evidence Pilot Review", tree_contract)
+        self.assertIn(
+            "execution/runtime-truth-lifecycle",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the landed `review-evidence` pilot review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0036",
+                "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0038",
+                "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0037",
+                "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0039",
+                "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

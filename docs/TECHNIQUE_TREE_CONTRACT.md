@@ -589,8 +589,17 @@ relations, evidence, support files, or `tree_path` frontmatter. The root
 receipt is
 [`legacy/receipts/2026-05-05-review-evidence-tree-pilot.md`](../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md).
 
-The next reform slice should review the landed `proof/review-evidence` shelf
-before choosing the twenty-third shelf.
+The landed twenty-second pilot review is
+[Landed Review-Evidence Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-review-evidence-pilot-review.md).
+It validates the fourth proof trunk shelf and chooses
+`execution/runtime-truth-lifecycle` for the next direct-read migration review
+while keeping `abyss-stack` runtime law, deployment ownership, monitoring
+platform doctrine, host policy, smoke-test law, benchmark-suite governance,
+product scoring, `aoa-evals` verdict authority, and neighboring
+owner/governance/tool-use shelves outside the next move.
+
+The next reform slice should run the `execution/runtime-truth-lifecycle`
+direct-read migration review before any twenty-third shelf movement.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
