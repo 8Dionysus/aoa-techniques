@@ -68,6 +68,6 @@ Relevant local docs, source surfaces, and technique bundles:
 - [owner-layer-triage](../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md)
 - [harvest-packet-contract](../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md)
 - [decision-fork-cards](../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md)
-- [quest-unit-promotion-review](../../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md)
-- [nearest-wrong-target-rejection](../../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
+- [quest-unit-promotion-review](../../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md)
+- [nearest-wrong-target-rejection](../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md)
 - [multi-axis-quest-overlay](../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md)

@@ -18,9 +18,9 @@ Use this projection to review future trunk and shelf placement before any direct
 | review status | count |
 |---|---:|
 | `pilot-candidate` | `34` |
-| `candidate` | `44` |
+| `candidate` | `47` |
 | `boundary-watch` | `22` |
-| `split-review-needed` | `6` |
+| `split-review-needed` | `3` |
 | `singleton-hold` | `1` |
 | `unassigned-hold` | `0` |
 
@@ -46,7 +46,7 @@ Use this projection to review future trunk and shelf placement before any direct
 | `agent-workflows-core` | `5` |
 | `antifragility-recovery` | `4` |
 | `approval-evidence` | `2` |
-| `automation-governance` | `6` |
+| `automation-governance` | `3` |
 | `automation-readiness` | `3` |
 | `capability-boundary` | `3` |
 | `capability-registry` | `3` |
@@ -62,6 +62,7 @@ Use this projection to review future trunk and shelf placement before any direct
 | `kag-source-lift` | `8` |
 | `media-ingest` | `5` |
 | `owner-truth-closeout` | `5` |
+| `promotion-boundary` | `3` |
 | `published-summary` | `4` |
 | `ready-work-graphs` | `3` |
 | `review-compaction` | `3` |
@@ -119,15 +120,15 @@ Use this projection to review future trunk and shelf placement before any direct
 | [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | `techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-readiness` | `candidate` | `techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md` |
 | [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) | `techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-readiness` | `candidate` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md` |
 | [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) | `techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-readiness` | `candidate` | `techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md` |
-| [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) | `techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/quest-unit-promotion-review/TECHNIQUE.md` |
-| [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | `techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/nearest-wrong-target-rejection/TECHNIQUE.md` |
+| [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) | `techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md` | `automation-governance` | `governance` | `promotion-boundary` | `candidate` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md` |
+| [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md` | `automation-governance` | `governance` | `promotion-boundary` | `candidate` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md` |
 | [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md` | `owner-truth-closeout` | `proof` | `owner-truth-closeout` | `boundary-watch` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md` |
 | [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md` | `owner-truth-closeout` | `proof` | `owner-truth-closeout` | `boundary-watch` | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md` |
 | [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md` | `capability-boundary` | `instruction` | `capability-boundary` | `boundary-watch` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md` |
 | [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md` | `owner-truth-closeout` | `proof` | `owner-truth-closeout` | `boundary-watch` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md` |
 | [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md` | `owner-truth-closeout` | `proof` | `owner-truth-closeout` | `boundary-watch` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md` |
 | [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | `techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/local-pattern-adoption-gate/TECHNIQUE.md` |
-| [AOA-T-0102](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) | `techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/skill-proposal-handoff-packet/TECHNIQUE.md` |
+| [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md` | `automation-governance` | `governance` | `promotion-boundary` | `candidate` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md` |
 | [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) | `techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/adopted-practice-retention-review/TECHNIQUE.md` |
 | [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) | `techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/superseded-practice-obsolescence-route/TECHNIQUE.md` |
 | [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | `techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md` | `review-evidence` | `proof` | `review-evidence` | `boundary-watch` | `techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md` |

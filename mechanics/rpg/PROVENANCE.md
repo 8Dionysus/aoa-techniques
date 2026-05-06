@@ -39,9 +39,9 @@ Current local anchors include:
   (`AOA-T-0085`)
 - `techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md`
   (`AOA-T-0076`)
-- `techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md`
+- `techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md`
   (`AOA-T-0089`)
-- `techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md`
+- `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md`
   (`AOA-T-0090`)
 - `techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md` (`AOA-T-0016`)
 - `mechanics/growth-cycle/parts/technique-feat-model/README.md`

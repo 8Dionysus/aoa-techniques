@@ -3872,10 +3872,10 @@
     },
     {
       "id": "AOA-T-0089",
-      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md",
+          "check_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md",
           "title": "quest-unit-promotion-review checklist",
           "intro_markdown": "",
           "items": [
@@ -3913,10 +3913,10 @@
     },
     {
       "id": "AOA-T-0090",
-      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md",
+          "check_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md",
           "title": "nearest-wrong-target-rejection checklist",
           "intro_markdown": "",
           "items": [
@@ -4401,10 +4401,10 @@
     },
     {
       "id": "AOA-T-0102",
-      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md",
+          "check_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md",
           "title": "skill-proposal-handoff-packet checklist",
           "intro_markdown": "Use this checklist before sending a technique-side skill proposal to a receiving\nskill owner.",
           "items": [

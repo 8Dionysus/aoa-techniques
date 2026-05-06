@@ -13,7 +13,7 @@ proof, routing, memory, and quest source stay elsewhere.
   adjunct quest-, RPG-, or chronicle-shaped reflection over a bounded reviewed
   base.
 - `AOA-T-0089`
-  (`techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md`) owns
+  (`techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md`) owns
   one bounded promotion verdict for one repeated reviewed quest unit.
 - `AOA-T-0078`
   (`techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md`) keeps route

@@ -14,7 +14,7 @@ with owner truth, ontology, routing, or canon.
   (`techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md`) chooses one
   primary owner for one bounded reusable unit.
 - `AOA-T-0090`
-  (`techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md`)
+  (`techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md`)
   keeps the closest adjacent owner visibly rejected.
 - `mechanics/boundary-bridge/` keeps owner-boundary, derived-projection, and
   proof-claim pressure outside false identity.

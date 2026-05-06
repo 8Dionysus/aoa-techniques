@@ -4944,7 +4944,7 @@
     },
     {
       "id": "AOA-T-0089",
-      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -4979,7 +4979,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the technique starts after review and after the repeated unit is already isolated\n- one repeated unit receives one promotion verdict\n- verdicts stay bounded to owner placement, not authorship completion\n- `quest` and `defer` remain valid outputs\n- active quest state does not become canon merely because repetition exists\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), this technique starts from an already repeated quest unit and closes the final promotion verdict rather than performing a first owner-placement pass over any reusable unit. Unlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it owns the chosen promotion verdict itself rather than the explicit rejection pattern that keeps adjacent targets honest."
+          "markdown": "- the technique starts after review and after the repeated unit is already isolated\n- one repeated unit receives one promotion verdict\n- verdicts stay bounded to owner placement, not authorship completion\n- `quest` and `defer` remain valid outputs\n- active quest state does not become canon merely because repetition exists\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), this technique starts from an already repeated quest unit and closes the final promotion verdict rather than performing a first owner-placement pass over any reusable unit. Unlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it owns the chosen promotion verdict itself rather than the explicit rejection pattern that keeps adjacent targets honest."
         },
         {
           "heading": "Risks",
@@ -5000,7 +5000,7 @@
     },
     {
       "id": "AOA-T-0090",
-      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5035,7 +5035,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- the rejection stays paired to one chosen target\n- the rejected target must be adjacent and plausible, not theatrical\n- the reason for rejection stays boundary-focused\n- the technique strengthens one verdict; it does not replace the verdict workflow\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not decide the full placement verdict; it only strengthens that verdict by naming the nearest wrong target. Unlike [AOA-T-0089](../quest-unit-promotion-review/TECHNIQUE.md), it does not choose the final quest-promotion outcome; it makes the rejected adjacent outcome explicit once a chosen target already exists."
+          "markdown": "- the rejection stays paired to one chosen target\n- the rejected target must be adjacent and plausible, not theatrical\n- the reason for rejection stays boundary-focused\n- the technique strengthens one verdict; it does not replace the verdict workflow\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not decide the full placement verdict; it only strengthens that verdict by naming the nearest wrong target. Unlike [AOA-T-0089](../quest-unit-promotion-review/TECHNIQUE.md), it does not choose the final quest-promotion outcome; it makes the rejected adjacent outcome explicit once a chosen target already exists."
         },
         {
           "heading": "Risks",
@@ -5672,7 +5672,7 @@
     },
     {
       "id": "AOA-T-0102",
-      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5707,7 +5707,7 @@
         {
           "heading": "Contracts",
           "order": 7,
-          "markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../docs/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../../governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
+          "markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../../instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../../automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../../../agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
         },
         {
           "heading": "Risks",

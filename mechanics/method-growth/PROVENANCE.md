@@ -46,7 +46,7 @@ become hidden technique bundles.
   was extracted from the pattern-adoption part. It carries only the local gate
   over one shared pattern before adoption. The wider Method-growth lifecycle and
   owner-request route remain here.
-- [AOA-T-0102 skill-proposal-handoff-packet](../../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md)
+- [AOA-T-0102 skill-proposal-handoff-packet](../../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md)
   was extracted from the technique-to-skill-handoff part. It carries only the
   proposal packet sent from technique-side review to a skill-owning surface.
   Skill acceptance, skill workflow meaning, and activation remain outside

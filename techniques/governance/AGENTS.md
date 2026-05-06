@@ -24,6 +24,9 @@ Accepted pilot shelves:
 - `automation-readiness/`: keeps automation-fit, first honest landing, and
   approval-sensitivity posture visible before a route is treated as
   automation-ready
+- `promotion-boundary/`: keeps final promotion verdict, nearest-wrong-target
+  rejection, and skill-proposal handoff posture visible before a reusable unit
+  is authored in another owner surface
 
 ## Domain rules
 
@@ -37,7 +40,9 @@ Keep the governance object explicit:
 Do not turn a governance technique into AoA constitutional authority,
 `aoa-routing` ownership, role contract law, runtime dispatch, approval policy,
 playbook design, security framework authority, scheduler doctrine, queue
-ownership, broad orchestration governance, or hidden automation governance.
+ownership, broad orchestration governance, hidden automation governance, skill
+acceptance, skill activation, proof verdict authority, memory truth, or
+Method-growth law.
 
 ## Boundary
 

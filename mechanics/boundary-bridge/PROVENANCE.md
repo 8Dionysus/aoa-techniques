@@ -56,7 +56,7 @@ Relevant local docs and technique surfaces:
 - [KAG Export](../../docs/KAG_EXPORT.md)
 - [Technique Sections](../../docs/TECHNIQUE_SECTIONS.md)
 - [owner-layer-triage](../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md)
-- [nearest-wrong-target-rejection](../../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
+- [nearest-wrong-target-rejection](../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md)
 - [bounded-context-map](../../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md)
 - [canonical-owner-with-validated-mirror](../../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md)
 - [multi-source-primary-input-provenance](../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md)

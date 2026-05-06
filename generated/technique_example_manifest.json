@@ -1097,10 +1097,10 @@
     },
     {
       "id": "AOA-T-0089",
-      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/quest-unit-promotion-review/examples/minimal-quest-unit-promotion-review.md",
+          "example_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/examples/minimal-quest-unit-promotion-review.md",
           "title": "minimal quest-unit-promotion-review",
           "body_markdown": "```yaml\npromotion_review:\n  repeated_unit: reviewed closeout route\n  promotion_verdict: promote_to_playbook\n  owner_repo: aoa-playbooks\n  next_surface: PLAYBOOK.md\n  defer_allowed: true\n```\n\nWhy this example stays bounded:\n\n- it names one repeated unit instead of a whole session family\n- it emits one promotion verdict without drafting the destination\n- it keeps defer posture available instead of pretending promotion is mandatory"
         }
@@ -1108,10 +1108,10 @@
     },
     {
       "id": "AOA-T-0090",
-      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md",
+          "example_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md",
           "title": "minimal nearest-wrong-target-rejection",
           "body_markdown": "```yaml\ntarget_rejection:\n  chosen_target: promote_to_playbook\n  nearest_wrong_target: promote_to_skill\n  rejection_reason: repeated unit is route-shaped, not one leaf workflow\n```\n\nWhy this example stays bounded:\n\n- it rejects the closest wrong target instead of a distant strawman\n- it uses one boundary reason rather than a long essay\n- it clarifies the chosen verdict without replacing the verdict itself"
         }
@@ -1240,10 +1240,10 @@
     },
     {
       "id": "AOA-T-0102",
-      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/skill-proposal-handoff-packet/examples/minimal-skill-proposal-handoff-packet.md",
+          "example_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/examples/minimal-skill-proposal-handoff-packet.md",
           "title": "Minimal skill-proposal handoff packet",
           "body_markdown": "```yaml\npacket_type: skill_proposal_handoff\nproposal_name: reviewed-diff-closeout-skill\nreceiving_owner: skill-owning repository\nsource_practice:\n  technique_refs:\n    - AOA-T-0001\n    - AOA-T-0033\nexecution_pressure: >\n  Review sessions repeatedly need the same closeout move: summarize the diff,\n  name validation, record one decision if the boundary changed, and stop before\n  merge authority.\nproposed_trigger_boundary: >\n  Use when a bounded repository change is complete and the agent needs a\n  reviewable closeout workflow.\ninputs:\n  - changed files or diff summary\n  - validation results\n  - known unresolved risks\noutputs:\n  - closeout summary\n  - validation statement\n  - optional decision-note request\nworkflow_shape:\n  - read current diff\n  - compare against requested scope\n  - report validation and unresolved risks\n  - route decision-note need without writing it automatically\nrisks:\n  - packet could be mistaken for merge approval\n  - decision notes could be created for trivial edits\nverification_hints:\n  - check that the final skill keeps merge, release, and decision authority out\n    of the workflow unless explicitly owned\nnearest_wrong_targets:\n  - proof verdict\n  - playbook scenario\n  - runtime command\nnon_acceptance_stop_line: >\n  This packet is only a proposal for owner review. It does not create, accept,\n  install, or activate a skill.\n```\n\nAccept the packet only as a handoff object. The receiving owner must still\ndecide whether a real skill should exist, what its trigger should be, and how it\nis verified."
         }

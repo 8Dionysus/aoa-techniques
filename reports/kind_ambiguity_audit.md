@@ -26,7 +26,7 @@ Tie-break rule: pick `validation` when the output is proof, integrity, or correc
 - [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`agent-workflows`, current `assessment`): current-kind cues `classification`, `route`, `decision`; opposing `validation` cues `proof`. Verdict: `keep current kind`.
 - [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`agent-workflows`, current `validation`): current-kind cues `validation`, `validate`; opposing `assessment` cues `matrix`. Verdict: `keep current kind`.
 - [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`agent-workflows`, current `assessment`): current-kind cues `classify`; opposing `validation` cues `check`. Verdict: `revisit later`.
-- [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`agent-workflows`, current `assessment`): current-kind cues `route`; opposing `validation` cues `proof`. Verdict: `revisit later`.
+- [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`agent-workflows`, current `assessment`): current-kind cues `route`; opposing `validation` cues `proof`. Verdict: `revisit later`.
 
 ## `artifact` vs `lift`
 
