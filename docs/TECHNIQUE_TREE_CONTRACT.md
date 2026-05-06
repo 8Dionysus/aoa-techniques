@@ -680,5 +680,11 @@ The next reform slice should review the landed
 `governance/automation-readiness` shelf before choosing Candidate B or another
 split-route hold.
 
+The landed twenty-fifth pilot review is
+[Landed Automation-Readiness Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-automation-readiness-pilot-review.md).
+It validates `automation-readiness` as the first landed split shelf and
+chooses `governance/promotion-boundary` for direct-read review before any
+twenty-sixth movement.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

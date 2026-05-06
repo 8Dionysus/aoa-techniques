@@ -278,6 +278,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` into
   `techniques/governance/automation-readiness/` while keeping `domain`,
   `kind`, IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `automation-readiness` pilot review and selected
+  `governance/promotion-boundary` for direct-read review without moving a
+  twenty-sixth shelf yet
 
 ### Validation
 

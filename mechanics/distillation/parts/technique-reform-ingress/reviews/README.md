@@ -63,5 +63,6 @@ Current reviews:
 - [automation-governance-direct-read-split-review](automation-governance-direct-read-split-review.md)
 - [automation-governance-split-expansion-closeout](automation-governance-split-expansion-closeout.md)
 - [automation-readiness-direct-read-migration-review](automation-readiness-direct-read-migration-review.md)
+- [landed-automation-readiness-pilot-review](landed-automation-readiness-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
