@@ -3,6 +3,40 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Automation-governance split expansion closeout
+
+Changed:
+
+- added
+  [automation-governance-split-expansion-closeout](parts/technique-reform-ingress/reviews/automation-governance-split-expansion-closeout.md)
+  as the route closeout for the rejected bulk automation-governance shelf
+- activated Candidate A as `governance/automation-readiness` over
+  `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088`
+- kept Candidate B as `governance/promotion-boundary` over `AOA-T-0089`,
+  `AOA-T-0090`, and `AOA-T-0102`
+- kept Candidate C as `governance/practice-adoption-lifecycle` over
+  `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104`
+- preserved all nine bundles at current paths with no frontmatter changes
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no split candidate was accepted or migrated yet
+- no `tree_path`, `family`, capability, substrate, execution-profile, or risk
+  frontmatter was added
+- no automation policy authority, skill acceptance, skill activation,
+  Method-growth law, local owner consent, deletion, proof authority, memory
+  truth, routing policy, runtime behavior, or broad orchestration governance
+  moved
+
 ## 2026-05-05 - Automation-governance direct-read split review
 
 Changed:

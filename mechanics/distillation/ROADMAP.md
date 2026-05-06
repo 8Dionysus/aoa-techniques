@@ -424,7 +424,12 @@
    `AOA-T-0101`, `AOA-T-0102`, `AOA-T-0103`, and `AOA-T-0104`, and names
    `governance/automation-readiness`, `governance/promotion-boundary`, and
    `governance/practice-adoption-lifecycle` as the split candidates before
-   any automation-governance path movement.
+   any automation-governance path movement. The automation-governance split
+   expansion closeout is now landed as `split-expanded`; it keeps all nine
+   bundles in place, closes the rejected bulk shelf route, activates
+   `governance/automation-readiness` over `AOA-T-0086`, `AOA-T-0087`, and
+   `AOA-T-0088` as Candidate A, and keeps `governance/promotion-boundary` plus
+   `governance/practice-adoption-lifecycle` queued behind it.
 
 ## Hold line
 
