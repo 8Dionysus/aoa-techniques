@@ -686,5 +686,12 @@ It validates `automation-readiness` as the first landed split shelf and
 chooses `governance/promotion-boundary` for direct-read review before any
 twenty-sixth movement.
 
+The promotion-boundary direct-read review is
+[Promotion-Boundary Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/promotion-boundary-direct-read-migration-review.md).
+It accepts Candidate B as the twenty-sixth migration pilot over `AOA-T-0089`,
+`AOA-T-0090`, and `AOA-T-0102`, while preserving current frontmatter and
+keeping the review non-mutating. The next migration should move exactly those
+three bundles into `techniques/governance/promotion-boundary/`.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

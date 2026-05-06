@@ -281,6 +281,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `automation-readiness` pilot review and selected
   `governance/promotion-boundary` for direct-read review without moving a
   twenty-sixth shelf yet
+- accepted the `promotion-boundary` direct-read migration review over
+  `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102` as the twenty-sixth tree pilot
+  while keeping the review itself non-mutating
 
 ### Validation
 

@@ -444,7 +444,12 @@
    `automation-readiness` pilot review is now complete as `pilot-validated`;
    it confirms the first split shelf held after migration and chooses
    `governance/promotion-boundary` for direct-read review before any
-   twenty-sixth movement.
+   twenty-sixth movement. The promotion-boundary direct-read review is now
+   landed as `accepted-for-twenty-sixth-migration-pilot`; it accepts exactly
+   `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102` while keeping the review
+   non-mutating and preserving their current frontmatter. The next bounded
+   step is to migrate those three bundles into
+   `techniques/governance/promotion-boundary/`.
 
 ## Hold line
 
