@@ -85,5 +85,6 @@ Current reviews:
 - [bundle-anatomy-final-closeout-ledger](bundle-anatomy-final-closeout-ledger.md)
 - [execution-profile-truth-boundary-pilot](execution-profile-truth-boundary-pilot.md)
 - [execution-profile-small-agent-wave-a-review](execution-profile-small-agent-wave-a-review.md)
+- [execution-profile-small-agent-wave-b-review](execution-profile-small-agent-wave-b-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
