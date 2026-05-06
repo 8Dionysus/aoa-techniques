@@ -392,7 +392,21 @@
    execution trunk shelf, keeps render truth, local lifecycle, host readiness,
    and baseline-first comparison as distinct runtime-adjacent atoms, and
    chooses `proof/owner-truth-closeout` for direct-read review before any
-   twenty-fourth movement.
+   twenty-fourth movement. The owner-truth-closeout direct-read review is now
+   landed as `accepted-for-twenty-fourth-migration-pilot`; it accepts exactly
+   `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094`,
+   keeps the review non-mutating, preserves `AOA-T-0091` as `kind:
+   guardrail`, `AOA-T-0092` and `AOA-T-0095` as `kind: workflow`, `AOA-T-0096`
+   as `kind: validation`, and `AOA-T-0094` as `kind: distribution`, keeps AoA
+   constitutional authority, root `AGENTS.md` law, workspace install doctrine,
+   public-share approval policy, GitHub platform policy, release governance,
+   cross-repo mirror co-ownership, skill activation, checkpoint automation,
+   closeout automation, route mutation, memory write, runtime behavior, KAG
+   promotion, ToS canon, `aoa-evals` verdict authority, and neighboring
+   automation/tool-use shelves outside the move, and routes the next bounded
+   step to the twenty-fourth pilot migration only after support-file carry,
+   proof route-card update, root legacy receipt, link-repair, generated
+   surface, validation, PR checks, and merge move together.
 
 ## Hold line
 
