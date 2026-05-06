@@ -81,5 +81,6 @@ Current reviews:
 - [bundle-anatomy-capsule-gap-repair-cohort](bundle-anatomy-capsule-gap-repair-cohort.md)
 - [bundle-anatomy-template-contract-feedback](bundle-anatomy-template-contract-feedback.md)
 - [bundle-anatomy-post-repair-follow-through](bundle-anatomy-post-repair-follow-through.md)
+- [bundle-anatomy-legacy-provenance-hygiene](bundle-anatomy-legacy-provenance-hygiene.md)
 
 These files are review packets, not generated reports and not bundle authority.
