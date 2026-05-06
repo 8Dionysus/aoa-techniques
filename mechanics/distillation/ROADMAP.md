@@ -434,7 +434,13 @@
    `accepted-for-twenty-fifth-migration-pilot`; it accepts exactly
    `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` while keeping the review
    non-mutating and preserving all three as `domain: agent-workflows`,
-   `kind: assessment`, and `status: promoted`.
+   `kind: assessment`, and `status: promoted`. The twenty-fifth pilot
+   migration is now landed exactly for those three bundles under
+   `techniques/governance/automation-readiness/`, with support files moved,
+   governance route-card accounting, root legacy receipt accounting, link
+   repair, generated rebuilds, and release-check validation in the same wave.
+   The next bounded step is to review the landed `automation-readiness` pilot
+   before choosing Candidate B or another split-route hold.
 
 ## Hold line
 

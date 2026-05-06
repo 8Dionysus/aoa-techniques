@@ -92,7 +92,7 @@ explicit checkpoint posture instead of feeling like silent automation.
 - hidden authority, missing rollback, and missing health checks all count against seed-ready posture
 - later repair or approval systems still own the actual checkpoint stack
 
-Relationship to adjacent techniques: unlike [AOA-T-0028](../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not govern a general confirmation seam before mutation; it only classifies whether an automation candidate has crossed into checkpoint-required territory. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not build the full repair checkpoint packet; it only decides when automation-oriented lift must hand off to one.
+Relationship to adjacent techniques: unlike [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not govern a general confirmation seam before mutation; it only classifies whether an automation candidate has crossed into checkpoint-required territory. Unlike [AOA-T-0083](../../../recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md), it does not build the full repair checkpoint packet; it only decides when automation-oriented lift must hand off to one.
 
 ## Risks
 

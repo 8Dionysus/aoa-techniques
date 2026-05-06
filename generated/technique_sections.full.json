@@ -6994,7 +6994,7 @@
     {
       "id": "AOA-T-0086",
       "name": "automation-fit-matrix",
-      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -7076,7 +7076,7 @@
     {
       "id": "AOA-T-0087",
       "name": "human-loop-to-seed-lift",
-      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -7111,7 +7111,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the lift chooses the first honest landing; it does not grant live automation authority\n- schedule hints remain hints rather than runtime truth\n- one bounded skill must not hide a recurring scenario seed\n- repair or defer verdicts remain honorable outcomes rather than failures of ambition\n\nRelationship to adjacent techniques: unlike [AOA-T-0086](../automation-fit-matrix/TECHNIQUE.md), this technique does not classify the route across readiness rows; it starts after enough evidence exists to choose a first landing. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it is narrower and more automation-facing: it chooses the first honest lift from a human loop into an automation-oriented artifact rather than placing any reusable unit into any owner layer."
+          "content_markdown": "- the lift chooses the first honest landing; it does not grant live automation authority\n- schedule hints remain hints rather than runtime truth\n- one bounded skill must not hide a recurring scenario seed\n- repair or defer verdicts remain honorable outcomes rather than failures of ambition\n\nRelationship to adjacent techniques: unlike [AOA-T-0086](../automation-fit-matrix/TECHNIQUE.md), this technique does not classify the route across readiness rows; it starts after enough evidence exists to choose a first landing. Unlike [AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), it is narrower and more automation-facing: it chooses the first honest lift from a human loop into an automation-oriented artifact rather than placing any reusable unit into any owner layer."
         },
         {
           "key": "risks",
@@ -7158,7 +7158,7 @@
     {
       "id": "AOA-T-0088",
       "name": "approval-sensitivity-check",
-      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -7193,7 +7193,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the check classifies one candidate's approval burden; it does not approve execution\n- `checkpoint_required` is a boundary flag, not a scheduler or mutation grant\n- hidden authority, missing rollback, and missing health checks all count against seed-ready posture\n- later repair or approval systems still own the actual checkpoint stack\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not govern a general confirmation seam before mutation; it only classifies whether an automation candidate has crossed into checkpoint-required territory. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not build the full repair checkpoint packet; it only decides when automation-oriented lift must hand off to one."
+          "content_markdown": "- the check classifies one candidate's approval burden; it does not approve execution\n- `checkpoint_required` is a boundary flag, not a scheduler or mutation grant\n- hidden authority, missing rollback, and missing health checks all count against seed-ready posture\n- later repair or approval systems still own the actual checkpoint stack\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not govern a general confirmation seam before mutation; it only classifies whether an automation candidate has crossed into checkpoint-required territory. Unlike [AOA-T-0083](../../../recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md), it does not build the full repair checkpoint packet; it only decides when automation-oriented lift must hand off to one."
         },
         {
           "key": "risks",
@@ -7357,7 +7357,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the rejection stays paired to one chosen target\n- the rejected target must be adjacent and plausible, not theatrical\n- the reason for rejection stays boundary-focused\n- the technique strengthens one verdict; it does not replace the verdict workflow\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), this technique does not decide the full placement verdict; it only strengthens that verdict by naming the nearest wrong target. Unlike [AOA-T-0089](../quest-unit-promotion-review/TECHNIQUE.md), it does not choose the final quest-promotion outcome; it makes the rejected adjacent outcome explicit once a chosen target already exists."
+          "content_markdown": "- the rejection stays paired to one chosen target\n- the rejected target must be adjacent and plausible, not theatrical\n- the reason for rejection stays boundary-focused\n- the technique strengthens one verdict; it does not replace the verdict workflow\n\nRelationship to adjacent techniques: unlike [AOA-T-0076](../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not decide the full placement verdict; it only strengthens that verdict by naming the nearest wrong target. Unlike [AOA-T-0089](../quest-unit-promotion-review/TECHNIQUE.md), it does not choose the final quest-promotion outcome; it makes the rejected adjacent outcome explicit once a chosen target already exists."
         },
         {
           "key": "risks",
@@ -8259,7 +8259,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one gate result covers one shared pattern and one local behavior surface\n- upstream approval or useful precedent is not local adoption\n- owner consent, compatibility evidence, rollback, and retention watch must all\n  stay visible\n- `shadow`, `quarantine`, `defer`, and `reject` are valid outcomes, not failed\n  adoption\n- the gate does not grant skill activation, proof authority, route behavior,\n  runtime mutation, memory truth, or sibling owner acceptance\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), this technique does not choose\nthe primary owner layer for any reusable unit; it assumes a local adoption\nsurface is already in view and gates whether that surface may change behavior.\nUnlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does\nnot only sharpen a chosen verdict by rejecting an adjacent target; it emits the\nlocal adopt, shadow, quarantine, defer, or reject posture itself."
+          "content_markdown": "- one gate result covers one shared pattern and one local behavior surface\n- upstream approval or useful precedent is not local adoption\n- owner consent, compatibility evidence, rollback, and retention watch must all\n  stay visible\n- `shadow`, `quarantine`, `defer`, and `reject` are valid outcomes, not failed\n  adoption\n- the gate does not grant skill activation, proof authority, route behavior,\n  runtime mutation, memory truth, or sibling owner acceptance\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0076](../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not choose\nthe primary owner layer for any reusable unit; it assumes a local adoption\nsurface is already in view and gates whether that surface may change behavior.\nUnlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does\nnot only sharpen a chosen verdict by rejecting an adjacent target; it emits the\nlocal adopt, shadow, quarantine, defer, or reject posture itself."
         },
         {
           "key": "risks",
@@ -8341,7 +8341,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../docs/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
+          "content_markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../docs/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../../governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
         },
         {
           "key": "risks",

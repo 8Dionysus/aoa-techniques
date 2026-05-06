@@ -269,23 +269,23 @@ See also:
 |---|---|---|---|
 | minimal multi-axis-quest-overlay | `present` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
 
-### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
+### [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal automation-fit-matrix | `present` | `techniques/agent-workflows/automation-fit-matrix/examples/minimal-automation-fit-matrix.md` | [TECHNIQUE.md](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) |
+| minimal automation-fit-matrix | `present` | `techniques/governance/automation-readiness/automation-fit-matrix/examples/minimal-automation-fit-matrix.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
 
-### [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal human-loop-to-seed-lift | `present` | `techniques/agent-workflows/human-loop-to-seed-lift/examples/minimal-human-loop-to-seed-lift.md` | [TECHNIQUE.md](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) |
-
-### [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal approval-sensitivity-check | `present` | `techniques/agent-workflows/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) |
+| minimal human-loop-to-seed-lift | `present` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/examples/minimal-human-loop-to-seed-lift.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) |
+
+### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal approval-sensitivity-check | `present` | `techniques/governance/automation-readiness/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) |
 
 ### [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
 

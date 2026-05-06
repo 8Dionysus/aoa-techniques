@@ -21,6 +21,9 @@ Accepted pilot shelves:
 - `approval-evidence/`: keeps approval-shaped boundary evidence visible before
   mutation or continuation, while preserving the difference between one
   fail-closed gate and one durable approval seam
+- `automation-readiness/`: keeps automation-fit, first honest landing, and
+  approval-sensitivity posture visible before a route is treated as
+  automation-ready
 
 ## Domain rules
 

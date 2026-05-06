@@ -93,7 +93,7 @@ technique candidate, a repair quest, or a defer verdict.
 - one bounded skill must not hide a recurring scenario seed
 - repair or defer verdicts remain honorable outcomes rather than failures of ambition
 
-Relationship to adjacent techniques: unlike [AOA-T-0086](../automation-fit-matrix/TECHNIQUE.md), this technique does not classify the route across readiness rows; it starts after enough evidence exists to choose a first landing. Unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it is narrower and more automation-facing: it chooses the first honest lift from a human loop into an automation-oriented artifact rather than placing any reusable unit into any owner layer.
+Relationship to adjacent techniques: unlike [AOA-T-0086](../automation-fit-matrix/TECHNIQUE.md), this technique does not classify the route across readiness rows; it starts after enough evidence exists to choose a first landing. Unlike [AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), it is narrower and more automation-facing: it chooses the first honest lift from a human loop into an automation-oriented artifact rather than placing any reusable unit into any owner layer.
 
 ## Risks
 

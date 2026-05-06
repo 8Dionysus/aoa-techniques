@@ -1924,7 +1924,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.",
-          "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+          "technique_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
           "kind": "assessment"
         },
         {
@@ -1933,7 +1933,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
-          "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+          "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
           "kind": "assessment"
         },
         {
@@ -1942,7 +1942,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible.",
-          "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+          "technique_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
           "kind": "assessment"
         },
         {

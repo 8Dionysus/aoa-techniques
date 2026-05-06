@@ -2040,8 +2040,16 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             next(
                 entry
                 for entry in report["techniques"]
-                if entry["family"] == "automation-governance"
+                if entry["id"] == "AOA-T-0089"
             )["review_status"],
+        )
+        self.assertEqual(
+            "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+            next(
+                entry
+                for entry in report["techniques"]
+                if entry["id"] == "AOA-T-0086"
+            )["proposed_future_path"],
         )
         self.assertEqual(
             "singleton-hold",

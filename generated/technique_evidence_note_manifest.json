@@ -41898,10 +41898,10 @@
     },
     {
       "id": "AOA-T-0086",
-      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/automation-fit-matrix/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/automation-readiness/automation-fit-matrix/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -42032,7 +42032,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/automation-fit-matrix/notes/origin-evidence.md",
+          "note_path": "techniques/governance/automation-readiness/automation-fit-matrix/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -42113,7 +42113,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/automation-fit-matrix/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/automation-readiness/automation-fit-matrix/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -42261,10 +42261,10 @@
     },
     {
       "id": "AOA-T-0087",
-      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/human-loop-to-seed-lift/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -42395,7 +42395,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/human-loop-to-seed-lift/notes/origin-evidence.md",
+          "note_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -42476,7 +42476,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/human-loop-to-seed-lift/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -42624,10 +42624,10 @@
     },
     {
       "id": "AOA-T-0088",
-      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/approval-sensitivity-check/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/automation-readiness/approval-sensitivity-check/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -42758,7 +42758,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/approval-sensitivity-check/notes/origin-evidence.md",
+          "note_path": "techniques/governance/automation-readiness/approval-sensitivity-check/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -42839,7 +42839,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/approval-sensitivity-check/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/automation-readiness/approval-sensitivity-check/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

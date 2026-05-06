@@ -3945,9 +3945,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("six separate leaf", receipt)
         self.assertIn("generic history platform", receipt)
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn("2026-05-05-history-artifacts-tree-pilot.md", legacy_index)
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("History-artifacts tree pilot migration", landing_log)
         self.assertIn("kept capture, transcript packaging", landing_log)
         self.assertIn(
@@ -4303,9 +4303,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("four separate leaf bundles", receipt)
         self.assertIn("generic resilience platform", receipt)
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn("2026-05-05-antifragility-recovery-tree-pilot.md", legacy_index)
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("Antifragility-recovery tree pilot migration", landing_log)
         self.assertIn("preserved `AOA-T-0098`", landing_log)
         self.assertIn("fifteenth pilot migration is now landed", distillation_roadmap)
@@ -5383,9 +5383,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("nineteenth pilot migration is now landed", distillation_roadmap)
         self.assertIn("Review the landed `donor-harvest` pilot", root_roadmap)
         self.assertIn("2026-05-05-donor-harvest-tree-pilot", tree_contract)
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn("2026-05-05-donor-harvest-tree-pilot.md", legacy_index)
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0075`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -5649,12 +5649,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn("Review the landed `decision-routing` pilot", root_roadmap)
         self.assertIn("2026-05-05-decision-routing-tree-pilot", tree_contract)
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn(
             "2026-05-05-decision-routing-tree-pilot.md",
             legacy_index,
         )
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0076`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -5925,12 +5925,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             root_roadmap,
         )
         self.assertIn("2026-05-05-approval-evidence-tree-pilot", tree_contract)
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn(
             "2026-05-05-approval-evidence-tree-pilot.md",
             legacy_index,
         )
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0068`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -6213,12 +6213,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             root_roadmap,
         )
         self.assertIn("2026-05-05-review-evidence-tree-pilot", tree_contract)
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn(
             "2026-05-05-review-evidence-tree-pilot.md",
             legacy_index,
         )
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0107`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -6530,12 +6530,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "2026-05-05-runtime-truth-lifecycle-tree-pilot",
             tree_contract,
         )
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn(
             "2026-05-05-runtime-truth-lifecycle-tree-pilot.md",
             legacy_index,
         )
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0036`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -6863,12 +6863,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "2026-05-05-owner-truth-closeout-tree-pilot",
             tree_contract,
         )
-        self.assertIn("twenty-four receipts", legacy_index)
+        self.assertIn("twenty-five receipts", legacy_index)
         self.assertIn(
             "2026-05-05-owner-truth-closeout-tree-pilot.md",
             legacy_index,
         )
-        self.assertIn("twenty-four technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0091`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -6988,59 +6988,77 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             changelog,
         )
 
-        for technique_id, current_path, future_path in (
+        for technique_id, current_path, future_path, current_exists, future_exists in (
             (
                 "AOA-T-0086",
                 "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
                 "techniques/governance/automation-governance/automation-fit-matrix/TECHNIQUE.md",
+                False,
+                False,
             ),
             (
                 "AOA-T-0087",
                 "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
                 "techniques/governance/automation-governance/human-loop-to-seed-lift/TECHNIQUE.md",
+                False,
+                False,
             ),
             (
                 "AOA-T-0088",
                 "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
                 "techniques/governance/automation-governance/approval-sensitivity-check/TECHNIQUE.md",
+                False,
+                False,
             ),
             (
                 "AOA-T-0089",
                 "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
                 "techniques/governance/automation-governance/quest-unit-promotion-review/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0090",
                 "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
                 "techniques/governance/automation-governance/nearest-wrong-target-rejection/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0101",
                 "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
                 "techniques/governance/automation-governance/local-pattern-adoption-gate/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0102",
                 "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
                 "techniques/governance/automation-governance/skill-proposal-handoff-packet/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0103",
                 "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
                 "techniques/governance/automation-governance/adopted-practice-retention-review/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0104",
                 "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
                 "techniques/governance/automation-governance/superseded-practice-obsolescence-route/TECHNIQUE.md",
+                True,
+                False,
             ),
         ):
             with self.subTest(technique_id=technique_id):
                 self.assertIn(technique_id, review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertEqual(current_exists, (REPO_ROOT / current_path).is_file())
+                self.assertEqual(future_exists, (REPO_ROOT / future_path).is_file())
 
     def test_automation_governance_direct_read_split_review_rejects_bulk_shelf(
         self,
@@ -7124,59 +7142,77 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             changelog,
         )
 
-        for technique_id, current_path, future_path in (
+        for technique_id, current_path, future_path, current_exists, future_exists in (
             (
                 "AOA-T-0086",
                 "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
                 "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+                False,
+                True,
             ),
             (
                 "AOA-T-0087",
                 "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
                 "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+                False,
+                True,
             ),
             (
                 "AOA-T-0088",
                 "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
                 "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
+                False,
+                True,
             ),
             (
                 "AOA-T-0089",
                 "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
                 "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0090",
                 "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
                 "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0102",
                 "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
                 "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0101",
                 "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
                 "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0103",
                 "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
                 "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
+                True,
+                False,
             ),
             (
                 "AOA-T-0104",
                 "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
                 "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
+                True,
+                False,
             ),
         ):
             with self.subTest(technique_id=technique_id):
                 self.assertIn(technique_id, review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertEqual(current_exists, (REPO_ROOT / current_path).is_file())
+                self.assertEqual(future_exists, (REPO_ROOT / future_path).is_file())
 
     def test_automation_governance_split_expansion_closeout_activates_candidate_a(
         self,
@@ -7276,8 +7312,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ),
         ):
             with self.subTest(current_path=current_path):
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
 
     def test_automation_readiness_direct_read_review_accepts_twenty_fifth_pilot(
         self,
@@ -7387,8 +7423,104 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(technique_id, review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
+
+    def test_automation_readiness_tree_pilot_migration_landed(self) -> None:
+        receipt = (
+            REPO_ROOT
+            / "legacy"
+            / "receipts"
+            / "2026-05-05-automation-readiness-tree-pilot.md"
+        ).read_text(encoding="utf-8")
+        governance_agents = (
+            REPO_ROOT / "techniques" / "governance" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+        agent_workflows_agents = (
+            REPO_ROOT / "techniques" / "agent-workflows" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
+            encoding="utf-8"
+        )
+        receipts_index = (
+            REPO_ROOT / "legacy" / "receipts" / "README.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Automation-Readiness Tree Pilot Receipt", receipt)
+        self.assertIn("Twenty-fifth authored path migration", receipt)
+        self.assertIn("`domain` stayed unchanged as `agent-workflows`", receipt)
+        self.assertIn("`kind` stayed unchanged as `assessment`", receipt)
+        self.assertIn("automation-readiness/", governance_agents)
+        self.assertIn("automation-fit", governance_agents)
+        self.assertNotIn("automation-fit-matrix", agent_workflows_agents)
+        self.assertIn("automation-readiness migration: landed", ingress)
+        self.assertIn("Automation-readiness tree pilot migration", landing_log)
+        self.assertIn(
+            "2026-05-05-automation-readiness-tree-pilot",
+            landing_log,
+        )
+        self.assertIn(
+            "twenty-fifth pilot\n   migration is now landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Review the landed `governance/automation-readiness` pilot",
+            root_roadmap,
+        )
+        self.assertIn(
+            "2026-05-05-automation-readiness-tree-pilot",
+            tree_contract,
+        )
+        self.assertIn("twenty-five receipts", legacy_index)
+        self.assertIn(
+            "2026-05-05-automation-readiness-tree-pilot.md",
+            legacy_index,
+        )
+        self.assertIn("twenty-five technique tree pilot receipts", receipts_index)
+        self.assertIn("moved `AOA-T-0086`", changelog)
+
+        for technique_id, old_path, new_path in (
+            (
+                "AOA-T-0086",
+                "techniques/agent-workflows/automation-fit-matrix/",
+                "techniques/governance/automation-readiness/automation-fit-matrix/",
+            ),
+            (
+                "AOA-T-0087",
+                "techniques/agent-workflows/human-loop-to-seed-lift/",
+                "techniques/governance/automation-readiness/human-loop-to-seed-lift/",
+            ),
+            (
+                "AOA-T-0088",
+                "techniques/agent-workflows/approval-sensitivity-check/",
+                "techniques/governance/automation-readiness/approval-sensitivity-check/",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, receipt)
+                self.assertIn(old_path, receipt)
+                self.assertIn(new_path, receipt)
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

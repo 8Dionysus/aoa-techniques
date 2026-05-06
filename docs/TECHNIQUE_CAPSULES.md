@@ -548,7 +548,7 @@ See also:
 - Validate by: the overlay rests on reviewed evidence; the underlying progression or route note remains explicit; flavor remains adjunct rather than...
 - Source: [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md)
 
-### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
+### [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
 
 - Summary: Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.
 - Intent: Classify one recurring manual route with a small automation-fit matrix so the result says...
@@ -559,9 +559,9 @@ See also:
 - Core contract: the matrix classifies one route; it does not create automation authority; row descriptions stay evidence-backed and small.
 - Main risk: the matrix hides missing evidence behind confident labels.
 - Validate by: one reviewed recurring route is named explicitly; each row is evidence-backed or honestly marked unknown; the verdict matches the...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md)
 
-### [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
 
 - Summary: Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.
 - Intent: Lift one recurring human loop into the first honest automation-facing landing without skipping the...
@@ -572,9 +572,9 @@ See also:
 - Core contract: the lift chooses the first honest landing; it does not grant live automation authority; schedule hints remain hints...
 - Main risk: the route is forced into a skill when it really wants a scenario seed or defer verdict.
 - Validate by: one recurring reviewed loop is named; the first landing stays smaller than a full implementation; owner-layer and next-artifact posture...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md)
 
-### [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
+### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
 
 - Summary: Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible.
 - Intent: Classify whether one automation candidate crosses approval, rollback, hidden authority, or self-change boundaries so...
@@ -585,7 +585,7 @@ See also:
 - Core contract: the check classifies one candidate's approval burden; it does not approve execution; checkpoint_required is a boundary flag, not...
 - Main risk: approval-heavy candidates are mislabeled as safe or seed-ready.
 - Validate by: one automation candidate is named explicitly; mutation, authority, rollback, and health-check posture are visible; checkpoint_required is explicit when the...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md)
 
 ### [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
 
