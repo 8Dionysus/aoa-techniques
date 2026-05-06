@@ -561,9 +561,14 @@ It accepts `governance/approval-evidence` as a bounded shelf over
 guardrail`, `AOA-T-0069` as `kind: handoff`, both as promoted, and both under
 current `domain: agent-workflows`.
 
-The next reform slice should migrate exactly those two approval-evidence
-bundles together, with a governance route-card update, root legacy receipt,
-link repair, generated rebuild, and validation.
+The twenty-first pilot migration moves exactly those two bundles into
+`techniques/governance/approval-evidence/` without changing `domain`, `kind`,
+status, relations, evidence, support files, or `tree_path` frontmatter. The
+root receipt is
+[`legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md`](../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md).
+
+The next reform slice should review the landed `governance/approval-evidence`
+shelf before choosing the twenty-second shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

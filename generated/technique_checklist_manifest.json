@@ -3015,10 +3015,10 @@
     },
     {
       "id": "AOA-T-0068",
-      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md",
+          "check_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md",
           "title": "fail-closed-evidence-gate checklist",
           "intro_markdown": "",
           "items": [
@@ -3060,10 +3060,10 @@
     },
     {
       "id": "AOA-T-0069",
-      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md",
+          "check_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md",
           "title": "approval-bound-durable-jobs checklist",
           "intro_markdown": "",
           "items": [

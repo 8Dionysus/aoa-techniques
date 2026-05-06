@@ -3,6 +3,40 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Approval-evidence tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0068` and `AOA-T-0069` into
+  `techniques/governance/approval-evidence/`
+- kept `AOA-T-0068` as `domain: agent-workflows`, `kind: guardrail`,
+  `status: promoted`
+- kept `AOA-T-0069` as `domain: agent-workflows`, `kind: handoff`,
+  `status: promoted`
+- added
+  [2026-05-05-approval-evidence-tree-pilot](../../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
+  as the root legacy receipt for the twenty-first migration
+- updated the governance route card to name `approval-evidence/` as boundary
+  evidence rather than approval policy, security framework authority, runtime
+  job-runner ownership, scheduler doctrine, queue ownership, or broad
+  orchestration governance
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no proof, runtime, automation-governance, tool-use, or remaining
+  `agent-workflows` shelf moved
+
 ## 2026-05-05 - Approval-evidence direct-read migration review
 
 Changed:

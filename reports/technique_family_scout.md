@@ -323,8 +323,8 @@ Counts: `total` 2, `canonical` 0, `promoted` 2.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0068](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. |
-| [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform. |
+| [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. |
+| [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform. |
 
 ## `review-evidence`
 

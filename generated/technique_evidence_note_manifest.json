@@ -33931,10 +33931,10 @@
     },
     {
       "id": "AOA-T-0068",
-      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/fail-closed-evidence-gate/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -34006,7 +34006,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) because it centers an execution-boundary verdict rather than a human confirmation seam"
+                  "text": "it remains narrower than [AOA-T-0028](../../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) because it centers an execution-boundary verdict rather than a human confirmation seam"
                 },
                 {
                   "order": 3,
@@ -34074,7 +34074,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/fail-closed-evidence-gate/notes/external-import-review.md",
+          "note_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -34233,7 +34233,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/fail-closed-evidence-gate/notes/external-origin.md",
+          "note_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -34336,7 +34336,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/fail-closed-evidence-gate/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -34437,7 +34437,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) if teams stop distinguishing machine or contract verdicts from human confirmation seams"
+                  "text": "the pattern can collapse into [AOA-T-0028](../../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) if teams stop distinguishing machine or contract verdicts from human confirmation seams"
                 },
                 {
                   "order": 2,
@@ -34489,10 +34489,10 @@
     },
     {
       "id": "AOA-T-0069",
-      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/approval-bound-durable-jobs/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -34564,7 +34564,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) because it centers durable job identity and resume-from-state rather than narrative episode structuring"
+                  "text": "it remains narrower than [AOA-T-0062](../../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) because it centers durable job identity and resume-from-state rather than narrative episode structuring"
                 },
                 {
                   "order": 3,
@@ -34632,7 +34632,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/approval-bound-durable-jobs/notes/external-import-review.md",
+          "note_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -34791,7 +34791,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/approval-bound-durable-jobs/notes/external-origin.md",
+          "note_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -34894,7 +34894,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/approval-bound-durable-jobs/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -34995,11 +34995,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into `fail-closed-evidence-gate` if repositories stop distinguishing one-shot boundary verdicts from longer-running durable continuity"
+                  "text": "the pattern can collapse into [fail-closed-evidence-gate](../../fail-closed-evidence-gate/TECHNIQUE.md) if repositories stop distinguishing one-shot boundary verdicts from longer-running durable continuity"
                 },
                 {
                   "order": 2,
-                  "text": "the public bundle could drift into [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) if narrative episode structure becomes more central than durable job identity"
+                  "text": "the public bundle could drift into [AOA-T-0062](../../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) if narrative episode structure becomes more central than durable job identity"
                 },
                 {
                   "order": 3,

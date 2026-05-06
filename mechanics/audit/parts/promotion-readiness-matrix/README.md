@@ -285,7 +285,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded e
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0068](../../../../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) | Execution-gate sibling that keeps explicit allow versus blocked side effects plus reviewable evidence with clear exclusions around human confirmation, durable-job orchestration, and total policy-platform doctrine. | One second public workflow surface where non-allow outcomes truly block side effects and leave reviewable evidence without widening into full governance, trust, or platform-policy semantics. |
+| [AOA-T-0068](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | Execution-gate sibling that keeps explicit allow versus blocked side effects plus reviewable evidence with clear exclusions around human confirmation, durable-job orchestration, and total policy-platform doctrine. | One second public workflow surface where non-allow outcomes truly block side effects and leave reviewable evidence without widening into full governance, trust, or platform-policy semantics. |
 
 ### Pack 26 - Approval-Bound Durable Jobs
 
@@ -293,7 +293,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded d
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0069](../../../../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) | Durable-job sibling that keeps checkpoint, pause, approval, and resume explicit with clear exclusions around scheduler products, queue platforms, and broad orchestration doctrine. | One second public workflow surface where longer-running work survives across an explicit approval seam and resumes from durable state without widening into scheduler platforms or orchestration-product semantics. |
+| [AOA-T-0069](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | Durable-job sibling that keeps checkpoint, pause, approval, and resume explicit with clear exclusions around scheduler products, queue platforms, and broad orchestration doctrine. | One second public workflow surface where longer-running work survives across an explicit approval seam and resumes from durable state without widening into scheduler platforms or orchestration-product semantics. |
 
 ### Pack 27 - OCR Staged Handoff
 

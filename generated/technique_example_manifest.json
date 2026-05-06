@@ -866,10 +866,10 @@
     },
     {
       "id": "AOA-T-0068",
-      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/fail-closed-evidence-gate/examples/minimal-fail-closed-evidence-gate.md",
+          "example_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/examples/minimal-fail-closed-evidence-gate.md",
           "title": "minimal fail-closed-evidence-gate",
           "body_markdown": "Candidate action:\n\n- `delete temp cache directory`\n\nVerdict:\n\n```json\n{\n  \"status\": \"blocked\",\n  \"reason\": \"path policy not satisfied\",\n  \"evidence_ref\": \"artifacts/gate/delete-cache-verdict.json\"\n}\n```\n\nExecution behavior:\n\n- no deletion runs because the verdict is not `allow`\n\nWhy this example stays bounded:\n\n- the gate sits before the side effect\n- blocked execution still leaves reviewable evidence\n- the example does not depend on a full policy platform or durable job system"
         }
@@ -877,10 +877,10 @@
     },
     {
       "id": "AOA-T-0069",
-      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/approval-bound-durable-jobs/examples/minimal-approval-bound-durable-jobs.md",
+          "example_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/examples/minimal-approval-bound-durable-jobs.md",
           "title": "minimal approval-bound-durable-jobs",
           "body_markdown": "Durable job:\n\n```json\n{\n  \"job_id\": \"review-pack-42\",\n  \"status\": \"waiting_for_approval\",\n  \"checkpoint_ref\": \"jobs/review-pack-42/checkpoint.json\"\n}\n```\n\nApproval seam:\n\n- the job finished collection work and now waits for explicit approval before resume\n\nResume behavior:\n\n- after approval is recorded, the job resumes from `checkpoint_ref` instead of reconstructing state from memory\n\nWhy this example stays bounded:\n\n- one durable job identity survives the pause\n- continuation waits on explicit approval\n- the example does not require a scheduler platform or orchestration dashboard"
         }

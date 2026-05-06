@@ -952,7 +952,7 @@
       "core_contract_short": "Core contract: the gate sits directly in front of mutating execution; non-allow verdicts block side effects rather than merely warning.",
       "main_risk_short": "Main risk: the gate says non-allow but side effects still happen.",
       "validation_short": "Validate by checking the gate sits before a real mutating boundary; non-allow outcomes actually block side effects; one evidence artifact records the...",
-      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md"
+      "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0069",
@@ -966,7 +966,7 @@
       "core_contract_short": "Core contract: the job has a stable identity across pause and resume; checkpoint or status state survives the approval seam.",
       "main_risk_short": "Main risk: job state is not durable enough to support safe resume.",
       "validation_short": "Validate by checking a stable job identity survives across pause and resume; checkpoint or status state remains inspectable at the approval seam...",
-      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md"
+      "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0070",
