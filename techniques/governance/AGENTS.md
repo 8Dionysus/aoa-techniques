@@ -27,6 +27,9 @@ Accepted pilot shelves:
 - `promotion-boundary/`: keeps final promotion verdict, nearest-wrong-target
   rejection, and skill-proposal handoff posture visible before a reusable unit
   is authored in another owner surface
+- `practice-adoption-lifecycle/`: keeps local adoption, retention, and
+  obsolescence posture visible before a practice becomes durable, stays active,
+  or routes toward owner review
 
 ## Domain rules
 

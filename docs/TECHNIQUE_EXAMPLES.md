@@ -329,11 +329,11 @@ See also:
 |---|---|---|---|
 | minimal pinned-validation-matrix-before-generated-publish | `present` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
 
-### [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
+### [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal local-pattern-adoption-gate | `present` | `techniques/agent-workflows/local-pattern-adoption-gate/examples/minimal-local-pattern-adoption-gate.md` | [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) |
+| minimal local-pattern-adoption-gate | `present` | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/examples/minimal-local-pattern-adoption-gate.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) |
 
 ### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
 
@@ -341,17 +341,17 @@ See also:
 |---|---|---|---|
 | Minimal skill-proposal handoff packet | `present` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/examples/minimal-skill-proposal-handoff-packet.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) |
 
-### [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
+### [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal adopted-practice retention review | `present` | `techniques/agent-workflows/adopted-practice-retention-review/examples/minimal-adopted-practice-retention-review.md` | [TECHNIQUE.md](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) |
+| Minimal adopted-practice retention review | `present` | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/examples/minimal-adopted-practice-retention-review.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) |
 
-### [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
+### [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal superseded-practice obsolescence route | `present` | `techniques/agent-workflows/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md` | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
+| Minimal superseded-practice obsolescence route | `present` | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) |
 
 ### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
 

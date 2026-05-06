@@ -8224,7 +8224,7 @@
     {
       "id": "AOA-T-0101",
       "name": "local-pattern-adoption-gate",
-      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8259,7 +8259,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one gate result covers one shared pattern and one local behavior surface\n- upstream approval or useful precedent is not local adoption\n- owner consent, compatibility evidence, rollback, and retention watch must all\n  stay visible\n- `shadow`, `quarantine`, `defer`, and `reject` are valid outcomes, not failed\n  adoption\n- the gate does not grant skill activation, proof authority, route behavior,\n  runtime mutation, memory truth, or sibling owner acceptance\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0076](../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not choose\nthe primary owner layer for any reusable unit; it assumes a local adoption\nsurface is already in view and gates whether that surface may change behavior.\nUnlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does\nnot only sharpen a chosen verdict by rejecting an adjacent target; it emits the\nlocal adopt, shadow, quarantine, defer, or reject posture itself."
+          "content_markdown": "- one gate result covers one shared pattern and one local behavior surface\n- upstream approval or useful precedent is not local adoption\n- owner consent, compatibility evidence, rollback, and retention watch must all\n  stay visible\n- `shadow`, `quarantine`, `defer`, and `reject` are valid outcomes, not failed\n  adoption\n- the gate does not grant skill activation, proof authority, route behavior,\n  runtime mutation, memory truth, or sibling owner acceptance\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not choose\nthe primary owner layer for any reusable unit; it assumes a local adoption\nsurface is already in view and gates whether that surface may change behavior.\nUnlike [AOA-T-0090](../../promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md), it does\nnot only sharpen a chosen verdict by rejecting an adjacent target; it emits the\nlocal adopt, shadow, quarantine, defer, or reject posture itself."
         },
         {
           "key": "risks",
@@ -8341,7 +8341,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../../instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../../automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../../../agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
+          "content_markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../../instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../../automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../../practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
         },
         {
           "key": "risks",
@@ -8388,7 +8388,7 @@
     {
       "id": "AOA-T-0103",
       "name": "adopted-practice-retention-review",
-      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8423,7 +8423,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one review covers one adopted or shadowed practice and one owner surface\n- past adoption does not guarantee current retention\n- `retain` requires current evidence, owner fit, and usable rollback or\n  quarantine posture\n- `revise`, `quarantine`, `defer`, and `route_to_obsolescence` are honest\n  results, not failed retention\n- the review does not adopt a new practice, delete an old practice, activate a\n  skill, issue a proof verdict, write memory truth, or mutate runtime behavior\n- missing evidence, missing owner confirmation, or unusable rollback must stop\n  the result short of `retain`\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), this technique does\nnot decide whether a shared pattern may become local behavior; it reviews a\npractice after adoption or shadow use. Unlike\n[AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does not only\nreject an adjacent promotion target; it emits the retention verdict itself."
+          "content_markdown": "- one review covers one adopted or shadowed practice and one owner surface\n- past adoption does not guarantee current retention\n- `retain` requires current evidence, owner fit, and usable rollback or\n  quarantine posture\n- `revise`, `quarantine`, `defer`, and `route_to_obsolescence` are honest\n  results, not failed retention\n- the review does not adopt a new practice, delete an old practice, activate a\n  skill, issue a proof verdict, write memory truth, or mutate runtime behavior\n- missing evidence, missing owner confirmation, or unusable rollback must stop\n  the result short of `retain`\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), this technique does\nnot decide whether a shared pattern may become local behavior; it reviews a\npractice after adoption or shadow use. Unlike\n[AOA-T-0090](../../promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md), it does not only\nreject an adjacent promotion target; it emits the retention verdict itself."
         },
         {
           "key": "risks",
@@ -8470,7 +8470,7 @@
     {
       "id": "AOA-T-0104",
       "name": "superseded-practice-obsolescence-route",
-      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8505,7 +8505,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one route packet covers one adopted or shadowed practice and one owner receipt\n  target\n- obsolescence is not erasure\n- a dropped route is not owner-local deletion\n- a deprecation review packet is not the same as marking an object deprecated\n- a retained lesson is not memory authority, proof authority, or final landing\n- source evidence and rollback or quarantine posture must remain visible\n- `defer` is required when current stage, owner target, reason, or retained\n  lesson cannot be named\n\nRelationship to adjacent techniques: this technique normally follows\n[AOA-T-0103](../adopted-practice-retention-review/TECHNIQUE.md) when a\nretention verdict routes toward obsolescence. Unlike\n[AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does not only\nreject an adjacent target; it emits the obsolescence route packet. Unlike\n[AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not choose the first\nowner layer for a reusable unit; it sends one already-owned practice toward a\nreviewable owner receipt."
+          "content_markdown": "- one route packet covers one adopted or shadowed practice and one owner receipt\n  target\n- obsolescence is not erasure\n- a dropped route is not owner-local deletion\n- a deprecation review packet is not the same as marking an object deprecated\n- a retained lesson is not memory authority, proof authority, or final landing\n- source evidence and rollback or quarantine posture must remain visible\n- `defer` is required when current stage, owner target, reason, or retained\n  lesson cannot be named\n\nRelationship to adjacent techniques: this technique normally follows\n[AOA-T-0103](../adopted-practice-retention-review/TECHNIQUE.md) when a\nretention verdict routes toward obsolescence. Unlike\n[AOA-T-0090](../../promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md), it does not only\nreject an adjacent target; it emits the obsolescence route packet. Unlike\n[AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), it does not choose the first\nowner layer for a reusable unit; it sends one already-owned practice toward a\nreviewable owner receipt."
         },
         {
           "key": "risks",

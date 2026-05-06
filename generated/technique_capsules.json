@@ -1414,7 +1414,7 @@
       "core_contract_short": "Core contract: one gate result covers one shared pattern and one local behavior surface; upstream approval or useful precedent is...",
       "main_risk_short": "Main risk: a broad method-growth lifecycle is squeezed into one gate result.",
       "validation_short": "Validate by checking one shared pattern is named explicitly; one local owner and behavior surface are named explicitly; owner consent is explicit...",
-      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md"
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0102",
@@ -1442,7 +1442,7 @@
       "core_contract_short": "Core contract: one review covers one adopted or shadowed practice and one owner surface; past adoption does not guarantee current...",
       "main_risk_short": "Main risk: retention review becomes a ceremonial renewal with no current evidence.",
       "validation_short": "Validate by checking one adopted or shadowed practice is named; the original owner surface and adoption record are visible; current evidence is...",
-      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md"
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0104",
@@ -1456,7 +1456,7 @@
       "core_contract_short": "Core contract: one route packet covers one adopted or shadowed practice and one owner receipt; obsolescence is not erasure.",
       "main_risk_short": "Main risk: the route packet is misread as permission to delete or mark deprecated.",
       "validation_short": "Validate by checking one adopted or shadowed practice is named; current stage and owner receipt target are visible; the reason it should...",
-      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md"
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0105",

@@ -42,7 +42,7 @@ become hidden technique bundles.
 
 ## Extracted Technique Bridge
 
-- [AOA-T-0101 local-pattern-adoption-gate](../../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md)
+- [AOA-T-0101 local-pattern-adoption-gate](../../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md)
   was extracted from the pattern-adoption part. It carries only the local gate
   over one shared pattern before adoption. The wider Method-growth lifecycle and
   owner-request route remain here.
@@ -51,12 +51,12 @@ become hidden technique bundles.
   proposal packet sent from technique-side review to a skill-owning surface.
   Skill acceptance, skill workflow meaning, and activation remain outside
   `aoa-techniques`.
-- [AOA-T-0103 adopted-practice-retention-review](../../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md)
+- [AOA-T-0103 adopted-practice-retention-review](../../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md)
   was extracted from the retention-checks part. It carries only the review that
   decides whether one adopted or shadowed practice should remain active.
   Obsolescence, proof, memory writeback, skill activation, route behavior, and
   runtime changes remain outside this atom.
-- [AOA-T-0104 superseded-practice-obsolescence-route](../../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md)
+- [AOA-T-0104 superseded-practice-obsolescence-route](../../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md)
   was extracted from the obsolescence part. It carries only the owner-aware
   route packet for supersession, merge, reanchor, defer, drop, or
   deprecation-review pressure over one adopted or shadowed practice. Actual

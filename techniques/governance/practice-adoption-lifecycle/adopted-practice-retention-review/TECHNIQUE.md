@@ -123,7 +123,7 @@ Relationship to adjacent techniques: unlike
 [AOA-T-0101](../local-pattern-adoption-gate/TECHNIQUE.md), this technique does
 not decide whether a shared pattern may become local behavior; it reviews a
 practice after adoption or shadow use. Unlike
-[AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does not only
+[AOA-T-0090](../../promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md), it does not only
 reject an adjacent promotion target; it emits the retention verdict itself.
 
 ## Risks

@@ -423,10 +423,10 @@ Shared blocker: Method-growth extraction produced clean technique bundles, but t
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0101](../../../../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | Good local adoption guardrail with explicit consent, compatibility, rollback, and retention watch. | One second local adoption route where upstream usefulness is held short of adoption until owner consent, compatibility, rollback, and retention are explicit. |
+| [AOA-T-0101](../../../../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) | Good local adoption guardrail with explicit consent, compatibility, rollback, and retention watch. | One second local adoption route where upstream usefulness is held short of adoption until owner consent, compatibility, rollback, and retention are explicit. |
 | [AOA-T-0102](../../../../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | Clean technique-to-skill handoff packet that does not imply skill acceptance. | One second route where a technique-side review emits a bounded skill proposal and `aoa-skills` acceptance remains separate. |
-| [AOA-T-0103](../../../../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) | Retention review keeps adopted practice active only while evidence, usefulness, drift, and rollback stay visible. | One second adopted-practice review where keep, revise, quarantine, or retire posture changes because retention evidence is explicit. |
-| [AOA-T-0104](../../../../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) | Obsolescence route preserves owner receipt, retained lesson, and provenance during supersession or deprecation review. | One second practice replacement where supersede, merge, reanchor, defer, drop, or deprecation review happens without losing provenance. |
+| [AOA-T-0103](../../../../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) | Retention review keeps adopted practice active only while evidence, usefulness, drift, and rollback stay visible. | One second adopted-practice review where keep, revise, quarantine, or retire posture changes because retention evidence is explicit. |
+| [AOA-T-0104](../../../../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) | Obsolescence route preserves owner receipt, retained lesson, and provenance during supersession or deprecation review. | One second practice replacement where supersede, merge, reanchor, defer, drop, or deprecation review happens without losing provenance. |
 
 ### Pack 41 - Agon Handoff Extraction Family
 

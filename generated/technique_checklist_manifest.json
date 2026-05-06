@@ -4356,10 +4356,10 @@
     },
     {
       "id": "AOA-T-0101",
-      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md",
+          "check_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md",
           "title": "local-pattern-adoption-gate checklist",
           "intro_markdown": "",
           "items": [
@@ -4454,10 +4454,10 @@
     },
     {
       "id": "AOA-T-0103",
-      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md",
+          "check_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md",
           "title": "adopted-practice-retention-review checklist",
           "intro_markdown": "Use this checklist before keeping an adopted or shadowed practice active.",
           "items": [
@@ -4503,10 +4503,10 @@
     },
     {
       "id": "AOA-T-0104",
-      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md",
+          "check_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md",
           "title": "superseded-practice-obsolescence-route checklist",
           "intro_markdown": "Use this checklist before sending an adopted or shadowed practice toward\nobsolescence, supersession, merge, reanchor, defer, drop, or deprecation review.",
           "items": [

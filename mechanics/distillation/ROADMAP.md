@@ -464,7 +464,14 @@
    exactly `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` while keeping the
    review non-mutating and preserving their current frontmatter. The next
    bounded step is to migrate those three bundles into
-   `techniques/governance/practice-adoption-lifecycle/`.
+   `techniques/governance/practice-adoption-lifecycle/`. The twenty-seventh
+   pilot migration is now landed exactly for those three bundles under
+   `techniques/governance/practice-adoption-lifecycle/`, with support files
+   moved, governance route-card accounting, root legacy receipt accounting,
+   link repair, generated rebuilds, and release-check validation in the same
+   wave. The next bounded step is to review the landed
+   `practice-adoption-lifecycle` pilot before routing the tool-use singleton
+   or another discovered tail.
 
 ## Hold line
 

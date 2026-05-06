@@ -18,9 +18,9 @@ Use this projection to review future trunk and shelf placement before any direct
 | review status | count |
 |---|---:|
 | `pilot-candidate` | `34` |
-| `candidate` | `47` |
+| `candidate` | `50` |
 | `boundary-watch` | `22` |
-| `split-review-needed` | `3` |
+| `split-review-needed` | `0` |
 | `singleton-hold` | `1` |
 | `unassigned-hold` | `0` |
 
@@ -46,7 +46,6 @@ Use this projection to review future trunk and shelf placement before any direct
 | `agent-workflows-core` | `5` |
 | `antifragility-recovery` | `4` |
 | `approval-evidence` | `2` |
-| `automation-governance` | `3` |
 | `automation-readiness` | `3` |
 | `capability-boundary` | `3` |
 | `capability-registry` | `3` |
@@ -62,6 +61,7 @@ Use this projection to review future trunk and shelf placement before any direct
 | `kag-source-lift` | `8` |
 | `media-ingest` | `5` |
 | `owner-truth-closeout` | `5` |
+| `practice-adoption-lifecycle` | `3` |
 | `promotion-boundary` | `3` |
 | `published-summary` | `4` |
 | `ready-work-graphs` | `3` |
@@ -127,10 +127,10 @@ Use this projection to review future trunk and shelf placement before any direct
 | [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md` | `capability-boundary` | `instruction` | `capability-boundary` | `boundary-watch` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md` |
 | [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md` | `owner-truth-closeout` | `proof` | `owner-truth-closeout` | `boundary-watch` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md` |
 | [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md` | `owner-truth-closeout` | `proof` | `owner-truth-closeout` | `boundary-watch` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md` |
-| [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | `techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/local-pattern-adoption-gate/TECHNIQUE.md` |
+| [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md` | `automation-governance` | `governance` | `practice-adoption-lifecycle` | `candidate` | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md` |
 | [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md` | `automation-governance` | `governance` | `promotion-boundary` | `candidate` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md` |
-| [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) | `techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/adopted-practice-retention-review/TECHNIQUE.md` |
-| [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) | `techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/superseded-practice-obsolescence-route/TECHNIQUE.md` |
+| [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md` | `automation-governance` | `governance` | `practice-adoption-lifecycle` | `candidate` | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md` |
+| [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md` | `automation-governance` | `governance` | `practice-adoption-lifecycle` | `candidate` | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md` |
 | [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | `techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md` | `review-evidence` | `proof` | `review-evidence` | `boundary-watch` | `techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md` |
 | [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) | `techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md` | `review-evidence` | `proof` | `review-evidence` | `boundary-watch` | `techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md` |
 | [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) | `techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md` | `docs-boundary` | `instruction` | `docs-boundary` | `candidate` | `techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md` |

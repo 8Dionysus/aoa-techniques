@@ -249,6 +249,10 @@ permission slip to remap techniques automatically.
 - practice-adoption-lifecycle direct-read review: landed as
   `accepted-for-twenty-seventh-migration-pilot`, with `AOA-T-0101`,
   `AOA-T-0103`, and `AOA-T-0104` accepted and no path movement yet
+- practice-adoption-lifecycle migration: landed, with `AOA-T-0101`,
+  `AOA-T-0103`, and `AOA-T-0104` moved into
+  `techniques/governance/practice-adoption-lifecycle/` and frontmatter
+  preserved
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -739,3 +743,8 @@ The `practice-adoption-lifecycle` direct-read review is now landed as
 `accepted-for-twenty-seventh-migration-pilot`. It accepts exactly
 `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` as a bounded governance shelf for
 local adoption, retention, and obsolescence posture without moving files.
+
+The `practice-adoption-lifecycle` migration is now landed. It moves exactly
+`AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` into
+`techniques/governance/practice-adoption-lifecycle/`, preserves frontmatter,
+records the root legacy receipt, and leaves `tool-use/tool-gateway` queued.

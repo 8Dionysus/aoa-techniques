@@ -46,7 +46,7 @@ kind-safe projection are required.
 
 ## Extracted Atom
 
-[AOA-T-0104 superseded-practice-obsolescence-route](../../../../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md)
+[AOA-T-0104 superseded-practice-obsolescence-route](../../../../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md)
 carries the reusable route move: make supersession, merge, reanchor, defer,
 drop, or deprecation-review pressure explicit for one adopted or shadowed
 practice by naming the current stage, stop reason, owner receipt target, source

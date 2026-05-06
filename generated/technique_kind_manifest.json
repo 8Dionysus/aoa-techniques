@@ -222,7 +222,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
-          "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md"
+          "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0105",
@@ -947,7 +947,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
-          "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md"
+          "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md"
         }
       ]
     },
@@ -1121,7 +1121,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
-          "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md"
+          "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md"
         }
       ]
     },

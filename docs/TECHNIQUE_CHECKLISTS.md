@@ -322,11 +322,11 @@ See also:
 |---|---|---|---|---|
 | pinned-validation-matrix-before-generated-publish checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
 
-### [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
+### [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| local-pattern-adoption-gate checklist | `absent` | `8` | `techniques/agent-workflows/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) |
+| local-pattern-adoption-gate checklist | `absent` | `8` | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) |
 
 ### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
 
@@ -334,17 +334,17 @@ See also:
 |---|---|---|---|---|
 | skill-proposal-handoff-packet checklist | `present` | `10` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) |
 
-### [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
+### [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| adopted-practice-retention-review checklist | `present` | `9` | `techniques/agent-workflows/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) |
+| adopted-practice-retention-review checklist | `present` | `9` | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) |
 
-### [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
+### [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| superseded-practice-obsolescence-route checklist | `present` | `11` | `techniques/agent-workflows/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
+| superseded-practice-obsolescence-route checklist | `present` | `11` | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) |
 
 ### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
 

@@ -293,6 +293,10 @@ The format is intentionally simple and human-first.
 - accepted the `practice-adoption-lifecycle` direct-read migration review over
   `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` as the twenty-seventh tree
   pilot while keeping the review itself non-mutating
+- moved `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` into
+  `techniques/governance/practice-adoption-lifecycle/` while keeping
+  `domain`, `kind`, IDs, status, evidence, and `tree_path` frontmatter
+  unchanged
 
 ### Validation
 

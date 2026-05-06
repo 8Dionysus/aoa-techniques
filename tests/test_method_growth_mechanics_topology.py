@@ -95,7 +95,8 @@ class MethodGrowthMechanicsTopologyTestCase(unittest.TestCase):
         technique = (
             REPO_ROOT
             / "techniques"
-            / "agent-workflows"
+            / "governance"
+            / "practice-adoption-lifecycle"
             / "local-pattern-adoption-gate"
             / "TECHNIQUE.md"
         ).read_text(encoding="utf-8")
@@ -149,7 +150,8 @@ class MethodGrowthMechanicsTopologyTestCase(unittest.TestCase):
         technique = (
             REPO_ROOT
             / "techniques"
-            / "agent-workflows"
+            / "governance"
+            / "practice-adoption-lifecycle"
             / "adopted-practice-retention-review"
             / "TECHNIQUE.md"
         ).read_text(encoding="utf-8")
@@ -176,7 +178,8 @@ class MethodGrowthMechanicsTopologyTestCase(unittest.TestCase):
         technique = (
             REPO_ROOT
             / "techniques"
-            / "agent-workflows"
+            / "governance"
+            / "practice-adoption-lifecycle"
             / "superseded-practice-obsolescence-route"
             / "TECHNIQUE.md"
         ).read_text(encoding="utf-8")
