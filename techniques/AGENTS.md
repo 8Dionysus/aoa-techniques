@@ -6,7 +6,7 @@ Guidance for coding agents and humans working under `techniques/`.
 
 `techniques/` stores the published technique bundles of `aoa-techniques`.
 
-The authored bundle is the canonical meaning surface for a technique. The primary object is `techniques/*/*/TECHNIQUE.md`, with optional support directories such as `checks/`, `examples/`, and `notes/`.
+The authored bundle is the canonical meaning surface for a technique. The primary object is `techniques/<trunk>/<shelf>/<slug>/TECHNIQUE.md`, with optional support directories such as `checks/`, `examples/`, and `notes/`.
 
 ## Read this first
 
@@ -16,7 +16,7 @@ Before editing anything here, read in this order:
 2. `../README.md`
 3. `../TECHNIQUE_INDEX.md`
 4. `../docs/START_HERE.md`
-5. the relevant domain-level `AGENTS.md`
+5. the relevant trunk or retained frontmatter-lane `AGENTS.md`
 6. the target `TECHNIQUE.md`
 7. any touched `checks/`, `examples/`, and `notes/`
 8. any generated surfaces affected by the change
@@ -43,7 +43,8 @@ Safe, normal contributions here include:
 Use extra caution when:
 
 - changing a technique ID or directory name
-- changing domain placement under `techniques/`
+- changing trunk, shelf, slug, or retained frontmatter-lane placement under
+  `techniques/`
 - changing maturity posture such as `promoted`, `canonical`, or `deprecated`
 - changing wording that downstream skills, evals, or routing surfaces may rely on
 - removing evidence notes or support artifacts that explain current boundedness

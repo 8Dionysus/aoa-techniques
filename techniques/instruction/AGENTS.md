@@ -14,9 +14,9 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `instruction-surface/`: composes, distributes, mirrors, loads, fragments, or
   names agent-facing instruction/context surfaces while keeping source and
@@ -41,7 +41,7 @@ Accepted pilot shelves:
   scanning, generic monitoring, routing policy, runtime law, or agent-role
   authority
 
-## Domain rules
+## Trunk Rules
 
 Keep the instruction, document-boundary, capability-registry,
 capability-boundary, or skill-discovery object explicit:

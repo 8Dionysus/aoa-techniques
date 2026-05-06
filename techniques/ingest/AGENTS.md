@@ -13,15 +13,15 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `media-ingest/`: turns OCR inputs, post-OCR text, media sets, mixed media,
   and Telegram-derived messages or media into explicit handoff, field,
   grouping, bucket, or local-store objects
 
-## Domain rules
+## Trunk Rules
 
 Keep the ingest object explicit:
 

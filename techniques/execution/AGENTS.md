@@ -12,9 +12,9 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `ready-work-graphs/`: dependency graph authoring, blocker-free ready frontier
   derivation, and requirement-to-design-to-task layering that make the next
@@ -29,7 +29,7 @@ Accepted pilot shelves:
   local service lifecycle, selector-aware host readiness, and baseline-first
   additive profile comparison without becoming runtime owner law.
 
-## Domain rules
+## Trunk Rules
 
 Keep execution-facing techniques narrow and explicit:
 

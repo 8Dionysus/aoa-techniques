@@ -313,6 +313,9 @@ The format is intentionally simple and human-first.
   `107` bundles across `10` trunks and `28` shelves with `107/107` path
   parity, `28/28` root receipts, and no remaining split, singleton, or
   unassigned holds
+- consolidated tree route cards so every current trunk and retained
+  frontmatter lane is validator-backed, current-tree aware, and still weaker
+  than authored bundle meaning
 
 ### Validation
 

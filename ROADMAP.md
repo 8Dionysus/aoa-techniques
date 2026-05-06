@@ -133,8 +133,8 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 
 | Field | Direction |
 |---|---|
-| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` now names the current root tree as trunks, shelves, and leaf bundles. The first full pass landed all `107` bundles under `techniques/<trunk>/<shelf>/<slug>/`, across `10` trunks and `28` shelves, with `28/28` root legacy receipts, `107/107` current paths matching generated projection paths, and no remaining split, singleton, or unassigned hold rows. |
-| Next honest move | Run tree route-card consolidation before another path movement, schema promotion, or reform slice. |
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` now names the current root tree as trunks, shelves, and leaf bundles. The first full pass landed all `107` bundles under `techniques/<trunk>/<shelf>/<slug>/`, across `10` trunks and `28` shelves, with `28/28` root legacy receipts, `107/107` current paths matching generated projection paths, no remaining split, singleton, or unassigned hold rows, and validator-backed route cards for all current trunks plus retained frontmatter lanes. |
+| Next honest move | Run the final migration ledger and generated parity pass before another path movement, schema promotion, or reform slice. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 Historical tree migration breadcrumb row preserved for parity; current closeout above supersedes it as direction:
@@ -145,6 +145,13 @@ Current latest tree closeout: the whole-tree closeout review validates the
 current tree as `107` bundles, `10` trunks, `28` shelves, `107/107` current
 path parity, `28/28` root receipts, and zero split/singleton/unassigned holds.
 Previous closeout breadcrumb preserved for parity: Run the whole-tree closeout review before route-card consolidation or another reform slice.
+
+Current latest tree route-card consolidation: all current trunk route cards now
+name the tree posture as current path architecture, retained
+`agent-workflows`, `docs`, and `evaluation` cards now read as frontmatter lanes
+rather than direct leaf homes, and `scripts/validate_nested_agents.py` covers
+every current trunk plus retained lane.
+Previous route-card breadcrumb preserved for parity: Run tree route-card consolidation before another path movement, schema promotion, or reform slice.
 
 Current latest tree migration: the `tool-gateway` pilot moved exactly
 `AOA-T-0065` into `techniques/tool-use/tool-gateway/` without changing

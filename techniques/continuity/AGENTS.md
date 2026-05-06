@@ -12,9 +12,9 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `review-compaction/`: preserves or restores review and capability context
   across commit, compaction, or repeated-review boundaries
@@ -25,7 +25,7 @@ Accepted pilot shelves:
   contracts, progression evidence deltas, and adjunct quest overlays across
   session closeout without granting memory, playbook, or progression authority
 
-## Domain rules
+## Trunk Rules
 
 Keep the continuity object explicit:
 

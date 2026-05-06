@@ -13,16 +13,16 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `kag-source-lift/`: lifts markdown sections, frontmatter metadata, evidence
   notes, direct relations, caution language, repo-doc surfaces, review
   templates, and semantic-review docs into derived reader surfaces without
   replacing the authored source
 
-## Domain rules
+## Trunk Rules
 
 Keep the lifted source object explicit:
 
