@@ -119,10 +119,10 @@ watch.
   runtime mutation, memory truth, or sibling owner acceptance
 
 Relationship to adjacent techniques: unlike
-[AOA-T-0076](../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not choose
+[AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not choose
 the primary owner layer for any reusable unit; it assumes a local adoption
 surface is already in view and gates whether that surface may change behavior.
-Unlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does
+Unlike [AOA-T-0090](../../promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md), it does
 not only sharpen a chosen verdict by rejecting an adjacent target; it emits the
 local adopt, shadow, quarantine, defer, or reject posture itself.
 

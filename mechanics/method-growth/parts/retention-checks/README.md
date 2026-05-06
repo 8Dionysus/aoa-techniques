@@ -46,7 +46,7 @@ kind-safe projection are required.
 
 ## Extracted Atom
 
-[AOA-T-0103 adopted-practice-retention-review](../../../../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md)
+[AOA-T-0103 adopted-practice-retention-review](../../../../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md)
 carries the reusable retention move from this part: review one already adopted
 or shadowed practice against current evidence, owner fit, drift, negative
 effects, and rollback or quarantine posture before letting it remain active.

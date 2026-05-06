@@ -1229,10 +1229,10 @@
     },
     {
       "id": "AOA-T-0101",
-      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/local-pattern-adoption-gate/examples/minimal-local-pattern-adoption-gate.md",
+          "example_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/examples/minimal-local-pattern-adoption-gate.md",
           "title": "minimal local-pattern-adoption-gate",
           "body_markdown": "```yaml\nlocal_pattern_adoption_gate:\n  pattern: mechanics package card\n  local_owner: technique mechanics maintainers\n  behavior_surface: mechanics package README entry shape\n  source_evidence: reviewed package-card decision and live mechanics usage\n  owner_consent: explicit\n  compatibility: local card uses technique-layer ownership rather than center authority\n  rollback_or_quarantine: revert the package-card wording or keep the pattern in the mechanic roadmap\n  retention_watch: review after the next two mechanics package passes\n  result: shadow\n```\n\nWhy this example stays bounded:\n\n- it gates one pattern against one local behavior surface\n- it treats shadow as a real outcome rather than forced adoption\n- it does not activate a skill, route, proof verdict, runtime change, or sibling owner"
         }
@@ -1251,10 +1251,10 @@
     },
     {
       "id": "AOA-T-0103",
-      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/adopted-practice-retention-review/examples/minimal-adopted-practice-retention-review.md",
+          "example_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/examples/minimal-adopted-practice-retention-review.md",
           "title": "Minimal adopted-practice retention review",
           "body_markdown": "```yaml\nreview_type: adopted_practice_retention_review\npractice: local-pattern-adoption-gate\nowner_surface: technique authoring workflow\noriginal_adoption_record: decision-note-2026-05-03\ncurrent_evidence:\n  - two later mechanics extractions used the gate without widening into skill or proof authority\n  - reviewers could still identify owner consent, rollback, and retention watch fields\ndrift_or_negative_effects:\n  - review overhead is visible but still bounded\n  - no current evidence that the gate blocks low-risk wording fixes\nrollback_or_quarantine_path: keep the gate as promoted but stop using it for tiny local wording fixes\nowner_confirmation: maintainer review still wants the gate for mechanics-to-canon movement\nverdict: retain\nnext_review: after the next two Method-growth extractions\nstop_line: retention does not promote the technique to canonical status or activate any skill\n```\n\nThe review keeps the practice active because current evidence and owner fit are\nstill visible. It does not make the practice permanent, canonical, or\nautomatically applicable to unrelated work."
         }
@@ -1262,10 +1262,10 @@
     },
     {
       "id": "AOA-T-0104",
-      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md",
+          "example_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md",
           "title": "Minimal superseded-practice obsolescence route",
           "body_markdown": "```yaml\nroute_type: superseded_practice_obsolescence_route\npractice: draft-wide-adoption-template\ncurrent_stage: shadowed_after_two_reviews\nowner_receipt_target: technique authoring workflow owner\nreason_not_active_as_is: the template combines adoption, retention, and skill proposal fields, so small-agent execution keeps drifting\nroute_label: reanchor\nreanchor_target: split the reusable adoption gate, retention review, and skill proposal packet into separate technique candidates\nreplacement_or_target_known: true\nsource_evidence:\n  - shadow review notes show repeated confusion between adoption and activation\n  - later bundle extractions succeeded after the fields were split\nrollback_or_quarantine_path: keep the draft template quarantined as source evidence until the split techniques are reviewed\nretained_lesson: broad lifecycle templates hide owner boundaries unless each reusable move has its own stop-line\ndownstream_hints:\n  memory: optional retained lesson after owner review\n  stats: count as reanchored, not deleted\n  proof: no proof verdict claimed\nstop_line: this packet routes the practice; it does not delete the draft, mark it deprecated, or accept the replacement\n```\n\nThe route names why the shadowed practice should not stay active and where it\nshould go next. It preserves the evidence and lesson without performing the\nowner-local retirement action."
         }

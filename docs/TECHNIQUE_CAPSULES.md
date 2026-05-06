@@ -678,7 +678,7 @@ See also:
 - Validate by: the workflow-pinned sibling refs or mirrored inputs were named explicitly; the local rebuild or --check pass used that same...
 - Source: [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md)
 
-### [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
+### [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
 
 - Summary: Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.
 - Intent: Gate one shared practice pattern before it becomes durable local behavior, so approval, precedent...
@@ -689,7 +689,7 @@ See also:
 - Core contract: one gate result covers one shared pattern and one local behavior surface; upstream approval or useful precedent is...
 - Main risk: a broad method-growth lifecycle is squeezed into one gate result.
 - Validate by: one shared pattern is named explicitly; one local owner and behavior surface are named explicitly; owner consent is explicit...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md)
 
 ### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
 
@@ -704,7 +704,7 @@ See also:
 - Validate by: one reusable practice or technique candidate is named; one receiving skill owner is named; trigger boundary, inputs, outputs, workflow...
 - Source: [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md)
 
-### [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
+### [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
 
 - Summary: Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.
 - Intent: Review one already-adopted practice to decide whether it should remain active, be revised, be...
@@ -715,9 +715,9 @@ See also:
 - Core contract: one review covers one adopted or shadowed practice and one owner surface; past adoption does not guarantee current...
 - Main risk: retention review becomes a ceremonial renewal with no current evidence.
 - Validate by: one adopted or shadowed practice is named; the original owner surface and adoption record are visible; current evidence is...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md)
 
-### [AOA-T-0104](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
+### [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
 
 - Summary: Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.
 - Intent: Route one adopted or shadowed practice that should not remain active as-is toward supersession...
@@ -728,7 +728,7 @@ See also:
 - Core contract: one route packet covers one adopted or shadowed practice and one owner receipt; obsolescence is not erasure.
 - Main risk: the route packet is misread as permission to delete or mark deprecated.
 - Validate by: one adopted or shadowed practice is named; current stage and owner receipt target are visible; the reason it should...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md)
 
 ### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
 

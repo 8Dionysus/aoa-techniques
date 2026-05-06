@@ -46606,10 +46606,10 @@
     },
     {
       "id": "AOA-T-0101",
-      "technique_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/local-pattern-adoption-gate/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -46736,7 +46736,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/local-pattern-adoption-gate/notes/origin-evidence.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -46821,7 +46821,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/local-pattern-adoption-gate/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -47348,10 +47348,10 @@
     },
     {
       "id": "AOA-T-0103",
-      "technique_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/adopted-practice-retention-review/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -47482,7 +47482,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/adopted-practice-retention-review/notes/origin-evidence.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -47571,7 +47571,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/adopted-practice-retention-review/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -47723,10 +47723,10 @@
     },
     {
       "id": "AOA-T-0104",
-      "technique_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -47857,7 +47857,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/notes/origin-evidence.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -47954,7 +47954,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

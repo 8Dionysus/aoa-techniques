@@ -132,9 +132,9 @@ the smallest retained lesson.
 Relationship to adjacent techniques: this technique normally follows
 [AOA-T-0103](../adopted-practice-retention-review/TECHNIQUE.md) when a
 retention verdict routes toward obsolescence. Unlike
-[AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it does not only
+[AOA-T-0090](../../promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md), it does not only
 reject an adjacent target; it emits the obsolescence route packet. Unlike
-[AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), it does not choose the first
+[AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), it does not choose the first
 owner layer for a reusable unit; it sends one already-owned practice toward a
 reviewable owner receipt.
 

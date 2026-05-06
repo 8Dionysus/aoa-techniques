@@ -6,9 +6,9 @@ Guidance for coding agents and humans working under `techniques/agent-workflows/
 
 This domain stores reusable workflow techniques for bounded execution chains.
 
-Representative bundles here include `local-pattern-adoption-gate`,
-`adopted-practice-retention-review`,
-`superseded-practice-obsolescence-route`, and `mcp-gateway-proxy`.
+The remaining representative bundle here is `mcp-gateway-proxy`. The former
+local practice lifecycle representatives now live under
+`techniques/governance/practice-adoption-lifecycle/`.
 
 ## Domain rules
 

@@ -2060,6 +2060,22 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             )["proposed_future_path"],
         )
         self.assertEqual(
+            "candidate",
+            next(
+                entry
+                for entry in report["techniques"]
+                if entry["id"] == "AOA-T-0101"
+            )["review_status"],
+        )
+        self.assertEqual(
+            "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+            next(
+                entry
+                for entry in report["techniques"]
+                if entry["id"] == "AOA-T-0101"
+            )["proposed_future_path"],
+        )
+        self.assertEqual(
             "singleton-hold",
             next(
                 entry

@@ -717,5 +717,15 @@ frontmatter and keeping the review non-mutating. The next migration should
 move exactly those three bundles into
 `techniques/governance/practice-adoption-lifecycle/`.
 
+The twenty-seventh pilot migration moves exactly those three bundles into
+`techniques/governance/practice-adoption-lifecycle/` without changing
+`domain`, `kind`, status, relations, evidence, support files, or `tree_path`
+frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md`](../legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md).
+
+The next reform slice should review the landed
+`governance/practice-adoption-lifecycle` shelf before routing the
+`tool-use/tool-gateway` singleton or another discovered tail.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

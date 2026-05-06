@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Practice-adoption-lifecycle tree pilot migration
+
+Changed:
+
+- moved `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` from
+  `techniques/agent-workflows/` into
+  `techniques/governance/practice-adoption-lifecycle/`
+- added the root legacy receipt
+  [2026-05-05-practice-adoption-lifecycle-tree-pilot](../../legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md)
+- updated governance and agent-workflows route-card accounting for the new
+  shelf
+- repaired active adjacent links into the moved practice-adoption-lifecycle
+  leaves and existing decision-routing, promotion-boundary, audit,
+  experience, growth-cycle, and Method-growth surfaces
+- preserved all three bundles as `domain: agent-workflows`, while keeping
+  `kind: guardrail`, `kind: assessment`, and `kind: handoff` respectively
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no `tool-use/tool-gateway` shelf moved
+
 ## 2026-05-05 - Practice-adoption-lifecycle direct-read migration review
 
 Changed:

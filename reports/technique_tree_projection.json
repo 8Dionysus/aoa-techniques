@@ -38,7 +38,6 @@
     "agent-workflows-core": 5,
     "antifragility-recovery": 4,
     "approval-evidence": 2,
-    "automation-governance": 3,
     "automation-readiness": 3,
     "capability-boundary": 3,
     "capability-registry": 3,
@@ -54,6 +53,7 @@
     "kag-source-lift": 8,
     "media-ingest": 5,
     "owner-truth-closeout": 5,
+    "practice-adoption-lifecycle": 3,
     "promotion-boundary": 3,
     "published-summary": 4,
     "ready-work-graphs": 3,
@@ -66,9 +66,9 @@
   },
   "review_status_counts": {
     "pilot-candidate": 34,
-    "candidate": 47,
+    "candidate": 50,
     "boundary-watch": 22,
-    "split-review-needed": 3,
+    "split-review-needed": 0,
     "singleton-hold": 1,
     "unassigned-hold": 0
   },
@@ -1207,20 +1207,21 @@
       "kind": "guardrail",
       "status": "promoted",
       "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
-      "current_path": "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+      "current_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
       "family": "automation-governance",
       "proposed_trunk": "governance",
-      "proposed_shelf": "automation-governance",
-      "proposed_future_path": "techniques/governance/automation-governance/local-pattern-adoption-gate/TECHNIQUE.md",
-      "review_status": "split-review-needed",
+      "proposed_shelf": "practice-adoption-lifecycle",
+      "proposed_future_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+      "review_status": "candidate",
       "rationale_cues": [
         "family:automation-governance",
         "domain:agent-workflows",
         "kind:guardrail",
         "status:promoted",
-        "review_status:split-review-needed"
+        "review_status:candidate",
+        "tree_id_placement:governance/practice-adoption-lifecycle"
       ],
-      "stop_line": "Split or merge this shelf before accepting it as a tree migration pilot."
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0102",
@@ -1252,20 +1253,21 @@
       "kind": "assessment",
       "status": "promoted",
       "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
-      "current_path": "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+      "current_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
       "family": "automation-governance",
       "proposed_trunk": "governance",
-      "proposed_shelf": "automation-governance",
-      "proposed_future_path": "techniques/governance/automation-governance/adopted-practice-retention-review/TECHNIQUE.md",
-      "review_status": "split-review-needed",
+      "proposed_shelf": "practice-adoption-lifecycle",
+      "proposed_future_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
+      "review_status": "candidate",
       "rationale_cues": [
         "family:automation-governance",
         "domain:agent-workflows",
         "kind:assessment",
         "status:promoted",
-        "review_status:split-review-needed"
+        "review_status:candidate",
+        "tree_id_placement:governance/practice-adoption-lifecycle"
       ],
-      "stop_line": "Split or merge this shelf before accepting it as a tree migration pilot."
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0104",
@@ -1274,20 +1276,21 @@
       "kind": "handoff",
       "status": "promoted",
       "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
-      "current_path": "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "current_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
       "family": "automation-governance",
       "proposed_trunk": "governance",
-      "proposed_shelf": "automation-governance",
-      "proposed_future_path": "techniques/governance/automation-governance/superseded-practice-obsolescence-route/TECHNIQUE.md",
-      "review_status": "split-review-needed",
+      "proposed_shelf": "practice-adoption-lifecycle",
+      "proposed_future_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "review_status": "candidate",
       "rationale_cues": [
         "family:automation-governance",
         "domain:agent-workflows",
         "kind:handoff",
         "status:promoted",
-        "review_status:split-review-needed"
+        "review_status:candidate",
+        "tree_id_placement:governance/practice-adoption-lifecycle"
       ],
-      "stop_line": "Split or merge this shelf before accepting it as a tree migration pilot."
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0105",

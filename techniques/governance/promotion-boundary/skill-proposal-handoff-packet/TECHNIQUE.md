@@ -134,7 +134,7 @@ packages a technique-side proposal before a skill exists. Unlike
 [AOA-T-0087](../../automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the
 first honest automation landing from a recurring human loop; it assumes a
 skill proposal is plausible and emits the packet for owner review. Unlike
-[AOA-T-0101](../../../agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate
+[AOA-T-0101](../../practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate
 local adoption itself; it can follow that gate when adoption pressure exposes a
 skill-shaped need.
 

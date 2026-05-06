@@ -11,7 +11,7 @@ How shared patterns become reusable techniques.
 ## Extracted Atom
 
 The atomic technique extracted from this part is
-[AOA-T-0101 local-pattern-adoption-gate](../../../../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md).
+[AOA-T-0101 local-pattern-adoption-gate](../../../../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md).
 
 That bundle owns one portable gate: before one shared pattern becomes durable
 local behavior, name local owner consent, compatibility evidence, rollback or
