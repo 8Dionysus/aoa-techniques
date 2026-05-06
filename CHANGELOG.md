@@ -226,6 +226,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `decision-routing` pilot review and selected
   `governance/approval-evidence` for the next direct-read migration review
   without moving a twenty-first shelf yet
+- accepted the `approval-evidence` direct-read migration review over
+  `AOA-T-0068` and `AOA-T-0069` as the twenty-first tree pilot while keeping
+  the review itself non-mutating
 
 ### Validation
 
