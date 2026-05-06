@@ -177,6 +177,9 @@ permission slip to remap techniques automatically.
 - decision-routing direct-read review: landed as
   `accepted-for-twentieth-migration-pilot`, with three local
   decision-support bundles accepted and no path movement yet
+- decision-routing migration: landed exactly `AOA-T-0076`, `AOA-T-0078`, and
+  `AOA-T-0079` under `techniques/governance/decision-routing/` without
+  frontmatter, status, or kind changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -252,6 +255,7 @@ permission slip to remap techniques automatically.
 | [Donor-Harvest Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md) | preserves the nineteenth accepted path migration into `techniques/continuity/donor-harvest/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, memory authority, playbook quest authority, progression doctrine, owner routing, role progression, stats ownership, session-closeout automation, neighboring continuity/governance shelves, or all remaining `agent-workflows` leaves |
 | [Landed Donor-Harvest Pilot Review](reviews/landed-donor-harvest-pilot-review.md) | confirms the nineteenth migrated shelf stayed bounded as the third continuity trunk shelf and chooses `governance/decision-routing` for direct-read review | movement of `governance/decision-routing`, governance route-card creation, `tree_path` frontmatter, frontmatter remap, AoA constitutional authority, `aoa-routing` ownership, role contract law, runtime dispatch, approval policy, playbook design, hidden automation governance, or neighboring boundary-watch shelves |
 | [Decision-Routing Direct-Read Migration Review](reviews/decision-routing-direct-read-migration-review.md) | reads `AOA-T-0076`, `AOA-T-0078`, and `AOA-T-0079` directly and accepts the shelf as the twentieth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, `aoa-routing` ownership, role contract law, runtime dispatch, approval policy, playbook design, hidden automation governance, risk scoring doctrine, context-map doctrine, neighboring boundary-watch shelves, or all remaining `agent-workflows` leaves |
+| [Decision-Routing Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-decision-routing-tree-pilot.md) | preserves the twentieth accepted path migration into `techniques/governance/decision-routing/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, `aoa-routing` ownership, role contract law, runtime dispatch, approval policy, playbook design, hidden automation governance, risk scoring doctrine, context-map doctrine, neighboring boundary-watch shelves, or all remaining `agent-workflows` leaves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -520,3 +524,8 @@ It validates the third continuity trunk shelf and chooses
 The `decision-routing` direct-read review is now landed as
 `accepted-for-twentieth-migration-pilot`, accepting exactly `AOA-T-0076`,
 `AOA-T-0078`, and `AOA-T-0079` without moving files.
+
+The twentieth pilot migration is now landed: those three bundles live under
+`techniques/governance/decision-routing/`, the `governance/` route card and
+root legacy receipt are in place, authored links were repaired, generated
+surfaces were rebuilt, and frontmatter stayed unchanged.

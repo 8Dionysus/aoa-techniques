@@ -3941,9 +3941,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("six separate leaf", receipt)
         self.assertIn("generic history platform", receipt)
-        self.assertIn("nineteen receipts", legacy_index)
+        self.assertIn("twenty receipts", legacy_index)
         self.assertIn("2026-05-05-history-artifacts-tree-pilot.md", legacy_index)
-        self.assertIn("nineteen technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty technique tree pilot receipts", receipts_index)
         self.assertIn("History-artifacts tree pilot migration", landing_log)
         self.assertIn("kept capture, transcript packaging", landing_log)
         self.assertIn(
@@ -3992,7 +3992,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(old_path, receipt)
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
-                self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+                self.assertTrue(
+                    (REPO_ROOT / new_path / "TECHNIQUE.md").is_file()
+                )
 
     def test_landed_history_artifacts_review_selects_antifragility_recovery(
         self,
@@ -4297,9 +4299,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Do not add `tree_path` frontmatter.", receipt)
         self.assertIn("four separate leaf bundles", receipt)
         self.assertIn("generic resilience platform", receipt)
-        self.assertIn("nineteen receipts", legacy_index)
+        self.assertIn("twenty receipts", legacy_index)
         self.assertIn("2026-05-05-antifragility-recovery-tree-pilot.md", legacy_index)
-        self.assertIn("nineteen technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty technique tree pilot receipts", receipts_index)
         self.assertIn("Antifragility-recovery tree pilot migration", landing_log)
         self.assertIn("preserved `AOA-T-0098`", landing_log)
         self.assertIn("fifteenth pilot migration is now landed", distillation_roadmap)
@@ -4337,7 +4339,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(old_path, receipt)
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
-                self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+                self.assertTrue(
+                    (REPO_ROOT / new_path / "TECHNIQUE.md").is_file()
+                )
 
     def test_landed_antifragility_recovery_review_selects_ready_work_graphs(
         self,
@@ -5375,9 +5379,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("nineteenth pilot migration is now landed", distillation_roadmap)
         self.assertIn("Review the landed `donor-harvest` pilot", root_roadmap)
         self.assertIn("2026-05-05-donor-harvest-tree-pilot", tree_contract)
-        self.assertIn("nineteen receipts", legacy_index)
+        self.assertIn("twenty receipts", legacy_index)
         self.assertIn("2026-05-05-donor-harvest-tree-pilot.md", legacy_index)
-        self.assertIn("nineteen technique tree pilot receipts", receipts_index)
+        self.assertIn("twenty technique tree pilot receipts", receipts_index)
         self.assertIn("moved `AOA-T-0075`", changelog)
 
         for technique_id, old_path, new_path in (
@@ -5470,7 +5474,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "accepted the landed `donor-harvest` pilot review",
             changelog,
         )
-        self.assertFalse((REPO_ROOT / "techniques" / "governance").exists())
+        self.assertTrue(
+            (REPO_ROOT / "techniques" / "governance" / "AGENTS.md").is_file()
+        )
 
         for technique_id, current_path, future_path in (
             (
@@ -5493,8 +5499,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(technique_id, review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
 
     def test_decision_routing_direct_read_review_accepts_twentieth_pilot(
         self,
@@ -5554,7 +5560,9 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             "accepted the `decision-routing` direct-read migration review",
             changelog,
         )
-        self.assertFalse((REPO_ROOT / "techniques" / "governance").exists())
+        self.assertTrue(
+            (REPO_ROOT / "techniques" / "governance" / "AGENTS.md").is_file()
+        )
 
         for technique_id, current_path, future_path in (
             (
@@ -5577,8 +5585,97 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(technique_id, review)
                 self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
                 self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
-                self.assertTrue((REPO_ROOT / current_path).is_file())
-                self.assertFalse((REPO_ROOT / future_path).exists())
+                self.assertFalse((REPO_ROOT / current_path).exists())
+                self.assertTrue((REPO_ROOT / future_path).is_file())
+
+    def test_decision_routing_tree_pilot_migration_landed(self) -> None:
+        receipt = (
+            REPO_ROOT
+            / "legacy"
+            / "receipts"
+            / "2026-05-05-decision-routing-tree-pilot.md"
+        ).read_text(encoding="utf-8")
+        governance_agents = (
+            REPO_ROOT / "techniques" / "governance" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
+            encoding="utf-8"
+        )
+        receipts_index = (
+            REPO_ROOT / "legacy" / "receipts" / "README.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Decision-Routing Tree Pilot Receipt", receipt)
+        self.assertIn("Twentieth authored path migration", receipt)
+        self.assertIn("`kind` stayed unchanged as `assessment`", receipt)
+        self.assertIn("stayed `promoted`", receipt)
+        self.assertIn("decision-routing/", governance_agents)
+        self.assertIn(
+            "Do not turn a governance technique into AoA constitutional authority",
+            governance_agents,
+        )
+        self.assertIn("decision-routing migration: landed", ingress)
+        self.assertIn("Decision-routing tree pilot migration", landing_log)
+        self.assertIn(
+            "legacy/receipts/2026-05-05-decision-routing-tree-pilot.md",
+            landing_log,
+        )
+        self.assertIn(
+            "twentieth pilot migration is now landed",
+            distillation_roadmap,
+        )
+        self.assertIn("Review the landed `decision-routing` pilot", root_roadmap)
+        self.assertIn("2026-05-05-decision-routing-tree-pilot", tree_contract)
+        self.assertIn("twenty receipts", legacy_index)
+        self.assertIn(
+            "2026-05-05-decision-routing-tree-pilot.md",
+            legacy_index,
+        )
+        self.assertIn("twenty technique tree pilot receipts", receipts_index)
+        self.assertIn("moved `AOA-T-0076`", changelog)
+
+        for technique_id, old_path, new_path in (
+            (
+                "AOA-T-0076",
+                "techniques/agent-workflows/owner-layer-triage/",
+                "techniques/governance/decision-routing/owner-layer-triage/",
+            ),
+            (
+                "AOA-T-0078",
+                "techniques/agent-workflows/decision-fork-cards/",
+                "techniques/governance/decision-routing/decision-fork-cards/",
+            ),
+            (
+                "AOA-T-0079",
+                "techniques/agent-workflows/risk-passport-lift/",
+                "techniques/governance/decision-routing/risk-passport-lift/",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, receipt)
+                self.assertIn(old_path, receipt)
+                self.assertIn(new_path, receipt)
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

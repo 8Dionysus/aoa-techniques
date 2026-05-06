@@ -418,7 +418,7 @@ See also:
 - Validate by: the source artifact is reviewed and bounded; each kept candidate names one reusable unit rather than one topic cluster...
 - Source: [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md)
 
-### [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
+### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
 - Summary: Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.
 - Intent: Take one bounded reusable unit and assign it to one primary owner layer, one...
@@ -429,7 +429,7 @@ See also:
 - Core contract: one candidate unit maps to one primary owner layer; usefulness is a reuse signal, not an owner layer...
 - Main risk: one mixed unit is forced into one owner layer before it is actually split.
 - Validate by: the candidate unit is bounded and singular; one primary owner layer is named explicitly; the nearest wrong target is...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md)
 
 ### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
 
@@ -444,7 +444,7 @@ See also:
 - Validate by: the packet starts from reviewed material; the required fields are explicit and present; each extract record remains bounded and...
 - Source: [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md)
 
-### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
+### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 
 - Summary: Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.
 - Intent: Turn one reviewed session or harvest packet into explicit decision fork cards so materially...
@@ -455,9 +455,9 @@ See also:
 - Core contract: fork cards describe choices; they do not decide authority; each card must represent one materially distinct route.
 - Main risk: the cards describe variants of the same route instead of real forks.
 - Validate by: the source material is reviewed; each card represents a materially distinct route; each route names gains, costs, risks, and...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md)
 
-### [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
+### [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
 
 - Summary: Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.
 - Intent: Attach one small risk passport to each explicit next route so route choice keeps...
@@ -468,7 +468,7 @@ See also:
 - Core contract: one passport belongs to one route; the passport stays smaller than the branch card it complements.
 - Main risk: the passport becomes a hidden scorecard instead of a small posture summary.
 - Validate by: each passport belongs to one explicit route; the field set stays small and reviewable; difficulty, risk, control mode, delegate...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md)
 
 ### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
 

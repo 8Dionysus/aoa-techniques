@@ -11,7 +11,7 @@ with owner truth, ontology, routing, or canon.
 - `AOA-T-0016` (`techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md`) keeps
   overloaded terms and neighboring contexts explicit.
 - `AOA-T-0076`
-  (`techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md`) chooses one
+  (`techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md`) chooses one
   primary owner for one bounded reusable unit.
 - `AOA-T-0090`
   (`techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md`)

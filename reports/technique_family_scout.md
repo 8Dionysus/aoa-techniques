@@ -385,9 +385,9 @@ Counts: `total` 3, `canonical` 0, `promoted` 3.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse. |
-| [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation. |
-| [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy. |
+| [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse. |
+| [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation. |
+| [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy. |
 
 ## `diagnosis-repair`
 

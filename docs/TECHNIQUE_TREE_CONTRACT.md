@@ -536,5 +536,14 @@ The next reform slice should migrate exactly those three decision-routing
 bundles together, with a compact governance route card, root legacy receipt,
 link repair, generated rebuild, and validation.
 
+The twentieth pilot migration moves exactly those three bundles into
+`techniques/governance/decision-routing/` without changing `domain`, `kind`,
+status, relations, evidence, support files, or `tree_path` frontmatter. The
+root receipt is
+[`legacy/receipts/2026-05-05-decision-routing-tree-pilot.md`](../legacy/receipts/2026-05-05-decision-routing-tree-pilot.md).
+
+The next reform slice should review the landed `governance/decision-routing`
+shelf before choosing the twenty-first shelf.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

@@ -94,7 +94,7 @@ being buried in one favored recommendation.
 - stop conditions remain first-class for risky routes
 - a default route may be suggested, but alternatives must remain visible
 
-Relationship to adjacent techniques: unlike [AOA-T-0077](../../continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md), this technique does not define the nucleus packet shape; it assumes the source packet or reviewed artifact already exists. Unlike [AOA-T-0079](../risk-passport-lift/TECHNIQUE.md), it owns the branch cards themselves rather than the smaller per-route passport fields. It should stay narrower than playbook design because it keeps next-route choices legible without authoring a full recurring scenario.
+Relationship to adjacent techniques: unlike [AOA-T-0077](../../../continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md), this technique does not define the nucleus packet shape; it assumes the source packet or reviewed artifact already exists. Unlike [AOA-T-0079](../risk-passport-lift/TECHNIQUE.md), it owns the branch cards themselves rather than the smaller per-route passport fields. It should stay narrower than playbook design because it keeps next-route choices legible without authoring a full recurring scenario.
 
 ## Risks
 

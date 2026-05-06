@@ -3335,10 +3335,10 @@
     },
     {
       "id": "AOA-T-0076",
-      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/owner-layer-triage/checks/owner-layer-triage-checklist.md",
+          "check_path": "techniques/governance/decision-routing/owner-layer-triage/checks/owner-layer-triage-checklist.md",
           "title": "owner-layer-triage checklist",
           "intro_markdown": "",
           "items": [
@@ -3421,10 +3421,10 @@
     },
     {
       "id": "AOA-T-0078",
-      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/decision-fork-cards/checks/decision-fork-cards-checklist.md",
+          "check_path": "techniques/governance/decision-routing/decision-fork-cards/checks/decision-fork-cards-checklist.md",
           "title": "decision-fork-cards checklist",
           "intro_markdown": "",
           "items": [
@@ -3466,10 +3466,10 @@
     },
     {
       "id": "AOA-T-0079",
-      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/risk-passport-lift/checks/risk-passport-lift-checklist.md",
+          "check_path": "techniques/governance/decision-routing/risk-passport-lift/checks/risk-passport-lift-checklist.md",
           "title": "risk-passport-lift checklist",
           "intro_markdown": "",
           "items": [

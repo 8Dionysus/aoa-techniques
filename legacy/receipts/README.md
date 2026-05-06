@@ -3,7 +3,7 @@
 `legacy/receipts/` holds short dated accounting notes for repo-wide preservation
 moves, path migrations, and compactions.
 
-Current receipt inventory: nineteen technique tree pilot receipts:
+Current receipt inventory: twenty technique tree pilot receipts:
 
 - `2026-05-04-review-compaction-tree-pilot.md`
 - `2026-05-04-handoff-continuation-tree-pilot.md`
@@ -24,6 +24,7 @@ Current receipt inventory: nineteen technique tree pilot receipts:
 - `2026-05-05-intent-chain-tree-pilot.md`
 - `2026-05-05-agent-workflows-core-tree-pilot.md`
 - `2026-05-05-donor-harvest-tree-pilot.md`
+- `2026-05-05-decision-routing-tree-pilot.md`
 
 For technique tree migration, receipts may record old paths, new paths, reviewed
 packet references, regenerated surfaces, and validation commands. They do not
