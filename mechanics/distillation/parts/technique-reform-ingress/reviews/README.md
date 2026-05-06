@@ -93,5 +93,8 @@ Current reviews:
 - [execution-profile-repair-queue-review](execution-profile-repair-queue-review.md)
 - [execution-profile-empirical-harness-decision](execution-profile-empirical-harness-decision.md)
 - [execution-profile-long-pass-closeout-ledger](execution-profile-long-pass-closeout-ledger.md)
+- [topology-selector-handoff-continuation-mini-pilot](topology-selector-handoff-continuation-mini-pilot.md)
+- [relations-composition-handoff-continuation-pilot](relations-composition-handoff-continuation-pilot.md)
+- [handoff-continuation-direct-relation-repair](handoff-continuation-direct-relation-repair.md)
 
 These files are review packets, not generated reports and not bundle authority.

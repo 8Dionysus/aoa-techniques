@@ -290,6 +290,18 @@ permission slip to remap techniques automatically.
   `53/53` orchestration boundaries reviewed, `AOA-T-0095` carried as the only
   profile-pressure repair edge, and empirical model proof routed to
   `aoa-evals`
+- topology selector mini-pilot: landed over
+  `continuity/handoff-continuation`, confirming that dense shelves need a
+  second-stage selector read after `domain` and `kind`, with relation sequence
+  guidance carried as the next useful thread
+- relations/composition pilot: landed over
+  `continuity/handoff-continuation`, confirming that the sequence pressure
+  should first become a direct relation repair question for `AOA-T-0058` and
+  `AOA-T-0059`, not a new relation vocabulary or graph layer
+- handoff-continuation direct relation repair: landed, strengthening only
+  `AOA-T-0058` and `AOA-T-0059` from `complements AOA-T-0057` to
+  `requires AOA-T-0057`; no new relation types, graph behavior, status,
+  domain, kind, or path changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -406,6 +418,9 @@ permission slip to remap techniques automatically.
 | [Execution Profile Repair Queue Review](reviews/execution-profile-repair-queue-review.md) | carries `AOA-T-0095` as the single profile-pressure repair candidate and closes broad repair pressure | broad leaf rewrite, mass relabeling, or proof that GitHub-facing rows all require orchestration |
 | [Execution Profile Empirical Harness Decision](reviews/execution-profile-empirical-harness-decision.md) | routes real local small-agent proof to `aoa-evals` and names `AOA-T-0056` as the first future pilot | model verdicts, fixture execution, or eval bundle authority inside `aoa-techniques` |
 | [Execution Profile Long-Pass Closeout Ledger](reviews/execution-profile-long-pass-closeout-ledger.md) | closes the execution-profile long pass with `107/107` review coverage and temporary-plan distillation | frontmatter migration, generated scout mutation, technique leaf edits, or empirical small-agent proof |
+| [Topology Selector Handoff-Continuation Mini-Pilot](reviews/topology-selector-handoff-continuation-mini-pilot.md) | tests shelf-local selector prompts over `AOA-T-0056` through `AOA-T-0062` and identifies relation sequence guidance as the next useful thread | schema migration, frontmatter promotion, model proof, generated scout mutation, or bundle-local repair |
+| [Relations Composition Handoff-Continuation Pilot](reviews/relations-composition-handoff-continuation-pilot.md) | reads current relation contracts and the handoff-continuation shelf to separate strict packet dependency from ordinary adjacency | relation schema migration, new relation types, graph behavior, frontmatter mutation, generated catalog mutation, or model proof |
+| [Handoff-Continuation Direct Relation Repair](reviews/handoff-continuation-direct-relation-repair.md) | accepts `requires AOA-T-0057` for `AOA-T-0058` and `AOA-T-0059` from direct bundle contracts | new relation types, relation schema migration, graph behavior, broader shelf relation changes, status promotion, or model proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -473,11 +488,33 @@ kept current profile counts unchanged, produced fixture sketches for all `33`
 current `small-agent` rows, carried `AOA-T-0095` as the only profile-pressure
 repair edge, and routed empirical local model proof to `aoa-evals`.
 
-Next clean move: choose one bounded targeted slice from the closeout evidence.
-Do not restart a broad audit, do not mass-rewrite old-template bundles, do not
-promote scout axes into frontmatter without a separate decision and validator
-wave, and do not run local small-agent proof without an `aoa-evals` proof
-surface.
+Current latest selector mini-pilot: `continuity/handoff-continuation` is closed
+as the first shelf-local selector read. It confirmed that `domain` and `kind`
+remain correct but too shallow for dense shelf-local choice, that scout axes
+help only as review pressure, and that typed relation or sequence guidance is
+the next useful thread.
+
+Current latest relations/composition pilot:
+`continuity/handoff-continuation` is closed as the first direct relation read.
+It confirmed that the current relation vocabulary is enough for the next move:
+`AOA-T-0058` and `AOA-T-0059` are exact `requires AOA-T-0057` repair
+candidates, while `AOA-T-0056`, `AOA-T-0060`, `AOA-T-0061`, and
+`AOA-T-0062` should stay on hold.
+
+Current latest direct relation repair: `AOA-T-0058` and `AOA-T-0059` now
+`requires AOA-T-0057`, because receipt and git-claim verification both depend
+on an existing structured handoff packet. The rest of
+`continuity/handoff-continuation` remains held: no new relation types, no graph
+behavior, no status/domain/kind/path changes, and no model proof claim.
+
+Next clean move: move to the long selector/relation pass. Start from dense
+shelves where current `domain`, `kind`, and tree placement find the
+neighborhood but not the exact leaf. Use the rhythm proven here: selector
+prompts first, relation contract read second, direct repair only when bundle
+inputs and contracts justify one existing relation type. Do not restart a
+broad audit, do not add future relation names such as `follows`, do not promote
+scout axes into frontmatter without a separate decision and validator wave, and
+do not run local small-agent proof without an `aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
