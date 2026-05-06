@@ -3,6 +3,26 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-06 - Roadmap contour cleanup
+
+Changed:
+
+- slimmed `ROADMAP.md` back to future contour after the completed tree migration
+  program
+- left checked migration history in
+  [Technique Reform Ingress reviews](parts/technique-reform-ingress/reviews/),
+  especially the
+  [final tree migration ledger](parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md)
+- kept `LANDING_LOG.md`, `PROVENANCE.md`, and `legacy/` as the source route for
+  landed history and lineage instead of making the roadmap a ledger
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no generated output became source truth
+- no source receipt was deleted
+
 ## 2026-05-05 - Final tree migration ledger
 
 Changed:

@@ -86,6 +86,11 @@ It does not own:
 - When a package grows beyond a simple README, prefer the AoA split:
   `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`, `parts/`, and
   `legacy/`, one mechanic at a time.
+- Package `ROADMAP.md` files should name current contour, next work,
+  condition-based later triggers, and stop-lines without becoming landing logs
+  or raw ledgers.
+- Root `ROADMAP.md` owns repo-level mechanics-to-canon direction. Package
+  `ROADMAP.md` files own package-local future pressure.
 - New top-level mechanics should match the AoA cross-project mechanics unless a
   repo-local mechanic is explicitly justified in a decision note.
 - If a mechanics surface becomes a reusable practice unit with stable inputs,

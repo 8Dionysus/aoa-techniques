@@ -14,6 +14,17 @@ parallel axes.
 requests that target `aoa-techniques` to local response surfaces. It is a
 receipt route, not a copy of the AoA request queue and not proof of acceptance.
 
+## Root Mechanics Files
+
+The root of `mechanics/` is a dispatcher and organ route, not a second doctrine
+store.
+
+| File | Owns | Must not become |
+|---|---|---|
+| [`mechanics/AGENTS.md`](AGENTS.md) | local law for the mechanics tree, editing posture, validation, and closeout | package doctrine or technique bundle meaning |
+| [`mechanics/README.md`](README.md) | this atlas, package map, package-card standard, and active/legacy split | a duplicate of package `README.md`, `PARTS.md`, `PROVENANCE.md`, or `LANDING_LOG.md` |
+| [`mechanics/REQUEST_RECEIPTS.md`](REQUEST_RECEIPTS.md) | local receipt map for AoA center-side owner requests targeting this repo | request queue source, owner acceptance, or proof |
+
 ## Cross-Mechanics Map
 
 - [method-growth](method-growth/README.md): technique adoption, technique-skill
@@ -60,6 +71,9 @@ Mechanics can prepare canon. They do not replace canon.
 Cross-repo references stay light: point to the owner, preserve provenance, and
 keep AoA-only context outside the portable technique core.
 
+Use root [`ROADMAP.md`](../ROADMAP.md) for repo-level technique-canon direction.
+Use `mechanics/<slug>/ROADMAP.md` for package-local future pressure.
+
 ## Package Card Standard
 
 Each `mechanics/<slug>/README.md` is an agent-operable local card. It should let
@@ -86,6 +100,23 @@ center can say what the center owns. This repository says what the local
 technique-canon organ owns, then routes center law through
 `REQUEST_RECEIPTS.md`, package `PROVENANCE.md`, or a sibling owner only when
 that bridge is relevant.
+
+## Package Roadmap Standard
+
+Each `mechanics/<slug>/ROADMAP.md` should stay short enough for an agent to use
+before editing. It should answer:
+
+- current contour: what exists now and why it matters locally
+- next work: which near-term moves are valid without widening authority
+- when time comes: condition-based triggers for future depth
+- out of scope or stop-lines: what the package must not claim
+- update trigger: what kind of change should move the roadmap again
+
+The package roadmap is not a landing log, raw ledger, proof verdict, hidden
+backlog, package inventory, or substitute for the root roadmap. Update it when
+future-facing package meaning moves. Leave checked landings in `LANDING_LOG.md`,
+source lineage in `PROVENANCE.md` and `legacy/`, and repo-level direction in
+root `ROADMAP.md`.
 
 ## Candidate Gate
 

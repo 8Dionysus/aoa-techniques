@@ -1,8 +1,15 @@
 # Agon Roadmap
 
-## Current contour
+This roadmap names Agon future pressure for `aoa-techniques`. It is not Agon
+center law, candidate acceptance, proof, status mutation, or technique
+promotion by itself.
 
-The first Agon mechanics passes establish the AoA-style split:
+## Current Contour
+
+Agon is the local route for practice-candidate bridges, active parts,
+provenance, and preserved wave receipts.
+
+The first Agon mechanics passes established the active/legacy split:
 
 - active route in `README.md`, `DIRECTION.md`, `PARTS.md`, and `parts/`
 - preserved wave receipts in `legacy/raw/`
@@ -11,29 +18,35 @@ The first Agon mechanics passes establish the AoA-style split:
 - part-local technical artifacts for Wave IV binding candidates, Wave XV
   epistemic candidates, and recurrence observation manifests
 
-## Artifact topology
+The artifact-topology pass moved mechanic-owned technical artifacts into their
+nearest parts, including the move-technique bridge, epistemic candidates, and
+recurrence adapter manifests. See
+`docs/decisions/2026-05-01-agon-part-local-artifacts.md`.
 
-The Agon artifact-topology pass moved mechanic-owned technical artifacts out of
-root districts and into nearest owning parts:
+## Next Work
 
-- `parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json`
-- `parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
-- `parts/epistemic-technique-candidates/config/agon_epistemic_technique_candidates.seed.json`
-- `parts/epistemic-technique-candidates/generated/agon_epistemic_technique_candidates.min.json`
-- matching part-local schemas, examples, builders, validators, and tests
-- `parts/recurrence-adapter/manifests/recurrence/`
+1. Open promotion pressure only after one requested candidate passes through the
+   [Distillation Agon Candidate Handoff](../distillation/parts/agon-candidate-handoff/README.md)
+   lane.
+2. Keep the pass to one candidate family at a time.
+3. Require the atomic move, topology, portability, owner stop-lines, nearest
+   overlaps, examples, and validation before drafting a technique bundle.
+4. Keep active Agon registries paired with their part-local builders,
+   validators, schemas, examples, tests, and generated indexes.
 
-See `docs/decisions/2026-05-01-agon-part-local-artifacts.md` for the structural
-decision.
+## When Time Comes
 
-## Next Agon pass
+- Add a new Agon part only when repeated requested pressure no longer fits the
+  current move-technique bridge, epistemic candidates, or recurrence adapter.
+- Promote an Agon-shaped practice into `techniques/` only when it is one
+  portable move rather than a whole Agon candidate lane.
+- Route center acceptance, proof, recurrence authority, and generated projection
+  authority to their owning surfaces.
 
-Only open a promotion pass after one requested candidate has passed through the
-[Distillation Agon Candidate Handoff](../distillation/parts/agon-candidate-handoff/README.md)
-lane and can name the atomic move, topology, portability, owner stop-lines, and
-nearest overlaps. Keep that pass to one candidate family at a time.
+## Out Of Scope
 
-## Not now
-
-Do not promote all Agon candidates at once. Promotion still belongs to
-bundle-local technique review under `techniques/`.
+- Promoting all Agon candidates at once.
+- Treating Agon request evidence as local technique acceptance.
+- Turning generated Agon indexes into status truth.
+- Importing Agon center law, proof verdicts, recurrence authority, runtime
+  activation, or owner acceptance into this package.

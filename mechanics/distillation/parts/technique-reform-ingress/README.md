@@ -569,7 +569,7 @@ migration review.
 The `skill-discovery` direct-read review is now landed and accepts exactly
 `AOA-T-0041` and `AOA-T-0042` as the tenth migration pilot.
 
-The tenth pilot migration is now landed: those two bundles live under
+The tenth pilot migration is now landed exactly: those two bundles live under
 `techniques/instruction/skill-discovery/`, the `instruction/` route card and
 root legacy receipt are in place, authored links were repaired, generated
 surfaces were rebuilt, and frontmatter stayed unchanged.

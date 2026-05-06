@@ -68,6 +68,50 @@ It does not own:
 - Self-agency, recurrence, quest, progression, checkpoint, or growth language must stay bounded, reviewable, evidence-linked, and reversible.
 - Report what changed, what was verified, what was not verified, and where the next agent should resume.
 
+## GitHub landing workflow
+
+Root `AGENTS.md` owns the repository-wide branch, PR, CI, and merge route.
+`.github/AGENTS.md` owns the GitHub-native files that support it.
+
+When the user asks to commit, push, and merge in this repository, use this
+route:
+
+1. Start from a clean branch based on current `origin/main`.
+2. Commit only the intended diff with a message that names the changed surface.
+3. Push the branch and open a pull request with changed surfaces, validation,
+   skipped checks, generated parity, public-safety posture, and remaining risk.
+4. Wait for GitHub `Repo Validation` to finish. If it fails, fix the branch and
+   wait for the new result.
+5. Merge through GitHub after green validation. Use squash unless repository
+   settings require a different allowed method. If GitHub reports a different
+   allowed method, use that method and report which method landed.
+6. Return to `main`, fast-forward from `origin/main`, and confirm the worktree
+   is clean before closeout.
+
+If GitHub status or merge permissions cannot be observed, stop the landing route
+and report the exact blocker instead of guessing.
+
+## Post-change route review
+
+Before closeout, check whether the change actually affects these surfaces.
+Update only the ones that moved; otherwise say no update was needed.
+
+- `ROADMAP.md` when repo-level direction, corpus topology, standalone
+  portability, mechanics-to-canon interface, root source-of-truth posture, or a
+  concrete future trigger changed.
+- `CHANGELOG.md` when public docs, validation, repository structure, GitHub
+  intake, generated readers, or release-visible behavior changed.
+- `docs/decisions/` when future agents need the rationale for a route,
+  workflow, topology, validator, source-of-truth, or ownership choice.
+- generated surfaces, builders, validators, and tests when a source-backed
+  machine companion changed.
+- mechanic `ROADMAP.md`, `LANDING_LOG.md`, `REQUEST_RECEIPTS.md`, `PARTS.md`,
+  or `PROVENANCE.md` when mechanic direction, landing, owner-request receipt,
+  active part, or legacy bridge changed.
+- `QUESTBOOK.md` or `quests/` when a durable obligation should survive the diff.
+- neighboring owner repositories when the change routes or constrains their
+  truth.
+
 ## Route away when
 
 - the object is an executable workflow, not a reusable practice
@@ -88,7 +132,10 @@ Use release checks or Agon-specific checks from `docs/AGENTS_ROOT_REFERENCE.md` 
 
 ## Report
 
-State the technique or technique family changed, whether IDs, kind, domain, state, adaptation notes, or source-lift surfaces changed, and exactly what validation ran.
+State the technique, technique family, root surface, mechanic, or GitHub
+platform surface changed; whether IDs, kind, domain, state, adaptation notes,
+generated companions, or source-lift surfaces changed; and exactly what
+validation ran. If a PR was merged, name the GitHub merge method that landed.
 
 ## Full reference
 
