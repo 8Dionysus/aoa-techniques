@@ -98,5 +98,6 @@ Current reviews:
 - [handoff-continuation-direct-relation-repair](handoff-continuation-direct-relation-repair.md)
 - [selector-relation-wave-a-proof-execution-review](selector-relation-wave-a-proof-execution-review.md)
 - [ready-work-graphs-direct-relation-repair](ready-work-graphs-direct-relation-repair.md)
+- [selector-relation-wave-b-instruction-knowledge-review](selector-relation-wave-b-instruction-knowledge-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

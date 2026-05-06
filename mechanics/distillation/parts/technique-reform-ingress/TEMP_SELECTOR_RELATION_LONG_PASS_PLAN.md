@@ -178,8 +178,8 @@ Use statuses: `pending`, `active`, `blocked`, `landed`, `distilled`.
 | 01 re-entry inventory | landed | inventory section in Wave A review |
 | 02 Wave A selector/relation review | landed | [selector-relation-wave-a-proof-execution-review](reviews/selector-relation-wave-a-proof-execution-review.md) |
 | 03 Wave A repair gate | landed | [ready-work-graphs-direct-relation-repair](reviews/ready-work-graphs-direct-relation-repair.md) |
-| 04 Wave B selector/relation review | pending | Wave B review packet |
-| 05 Wave B repair gate | pending | direct repair packet or explicit no-repair hold |
+| 04 Wave B selector/relation review | landed | [selector-relation-wave-b-instruction-knowledge-review](reviews/selector-relation-wave-b-instruction-knowledge-review.md) |
+| 05 Wave B repair gate | landed | explicit no-repair hold in [selector-relation-wave-b-instruction-knowledge-review](reviews/selector-relation-wave-b-instruction-knowledge-review.md) |
 | 06 Wave C selector/relation review | pending | Wave C review packet |
 | 07 Wave C repair gate | pending | direct repair packet or explicit no-repair hold |
 | 08 Wave D selector/relation review | pending | Wave D review packet |
