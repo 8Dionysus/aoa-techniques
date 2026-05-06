@@ -35,6 +35,9 @@ Every capsule stays bounded to one frontmatter field plus a fixed section set fr
 - `## Validation`
 
 The generator may shorten or normalize those sections into runtime-card language, but it must stay derived from the authored bundle and route readers back to that bundle.
+Wrapped Markdown list items are treated as one source item when indented
+continuation lines belong to the same bullet, so short capsule fields do not
+drop the end of a wrapped sentence.
 
 ## Reader Companion And Derived Manifests
 
