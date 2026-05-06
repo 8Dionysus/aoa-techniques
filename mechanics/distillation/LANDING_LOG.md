@@ -3,6 +3,41 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Promotion-boundary direct-read migration review
+
+Changed:
+
+- added
+  [promotion-boundary-direct-read-migration-review](parts/technique-reform-ingress/reviews/promotion-boundary-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102`
+- accepted `governance/promotion-boundary` as the twenty-sixth bounded
+  migration pilot without moving files
+- kept the shelf centered on promotion verdict, nearest-wrong-target
+  rejection, and skill-proposal handoff boundaries
+- preserved all three bundles as `domain: agent-workflows` while keeping
+  `kind: assessment`, `kind: guardrail`, and `kind: handoff` respectively
+- kept skill acceptance, skill activation, quest/playbook promotion doctrine,
+  role contract law, proof verdict authority, memory write, routing policy,
+  Method-growth law, local owner consent, runtime behavior, KAG promotion,
+  ToS canon, broad orchestration governance, Candidate C, and the tool-use
+  singleton outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no `governance/practice-adoption-lifecycle` or `tool-use/tool-gateway`
+  shelf moved
+
 ## 2026-05-05 - Landed automation-readiness pilot review
 
 Changed:

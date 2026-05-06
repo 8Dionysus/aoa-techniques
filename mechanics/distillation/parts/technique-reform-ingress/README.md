@@ -236,6 +236,9 @@ permission slip to remap techniques automatically.
 - landed automation-readiness pilot review: landed as `pilot-validated`, with
   the first split shelf confirmed and `governance/promotion-boundary` chosen
   for direct-read review before any twenty-sixth movement
+- promotion-boundary direct-read review: landed as
+  `accepted-for-twenty-sixth-migration-pilot`, with `AOA-T-0089`,
+  `AOA-T-0090`, and `AOA-T-0102` accepted and no path movement yet
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -329,6 +332,7 @@ permission slip to remap techniques automatically.
 | [Automation-Governance Split Expansion Closeout](reviews/automation-governance-split-expansion-closeout.md) | closes the rejected bulk shelf route and activates Candidate A as `governance/automation-readiness` | path movement, Candidate A acceptance, Candidate B acceptance, Candidate C acceptance, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, quest/playbook promotion doctrine, Method-growth law, local owner consent, deletion, deprecation execution, proof authority, memory truth, routing policy, runtime behavior, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
 | [Automation-Readiness Direct-Read Migration Review](reviews/automation-readiness-direct-read-migration-review.md) | reads `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` directly and accepts Candidate A as the twenty-fifth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, scheduler doctrine, hidden automation governance, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, Candidate B, Candidate C, or the `tool-use/tool-gateway` singleton hold |
 | [Landed Automation-Readiness Pilot Review](reviews/landed-automation-readiness-pilot-review.md) | validates the first split shelf after migration and routes Candidate B to direct-read review | path movement, Candidate B acceptance, Candidate C acceptance, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, scheduler doctrine, hidden automation governance, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
+| [Promotion-Boundary Direct-Read Migration Review](reviews/promotion-boundary-direct-read-migration-review.md) | reads `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102` directly and accepts Candidate B as the twenty-sixth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, skill acceptance, skill activation, quest/playbook promotion doctrine, role contract law, proof verdict authority, memory write, routing policy, Method-growth law, local owner consent, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, Candidate C, or the `tool-use/tool-gateway` singleton hold |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -700,3 +704,9 @@ The landed `automation-readiness` pilot review is now complete as
 `pilot-validated`. It confirms the first split shelf held after migration and
 chooses `governance/promotion-boundary` for direct-read review before any
 twenty-sixth shelf movement.
+
+The `promotion-boundary` direct-read review is now landed as
+`accepted-for-twenty-sixth-migration-pilot`. It accepts exactly `AOA-T-0089`,
+`AOA-T-0090`, and `AOA-T-0102` as a bounded governance shelf for promotion
+verdict, nearest-wrong-target rejection, and skill-proposal handoff without
+moving files.

@@ -127,6 +127,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-approval-evidence-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/review-evidence-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-automation-readiness-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/promotion-boundary-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -7626,6 +7627,131 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             (
                 "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
                 "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
+    def test_promotion_boundary_direct_read_review_accepts_twenty_sixth_pilot(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "promotion-boundary-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Promotion-Boundary Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-twenty-sixth-migration-pilot", review)
+        self.assertIn("Accept `governance/promotion-boundary`", review)
+        self.assertIn("Candidate C remains queued", review)
+        self.assertIn("Run the twenty-sixth migration pilot", review)
+        self.assertIn(
+            "promotion-boundary-direct-read-migration-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "promotion-boundary direct-read review: landed",
+            ingress,
+        )
+        self.assertIn(
+            "accepted-for-twenty-sixth-migration-pilot",
+            ingress,
+        )
+        self.assertIn(
+            "Promotion-boundary direct-read migration review",
+            landing_log,
+        )
+        self.assertIn(
+            "promotion-boundary direct-read review is now\n   landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Migrate exactly `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102`",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Promotion-Boundary Direct-Read Migration Review",
+            tree_contract,
+        )
+        self.assertIn(
+            "migration should move exactly those\nthree bundles",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the `promotion-boundary` direct-read migration review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0089",
+                "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0090",
+                "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0102",
+                "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
+        for current_path, future_path in (
+            (
+                "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
             ),
         ):
             with self.subTest(current_path=current_path):
