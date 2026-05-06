@@ -720,6 +720,11 @@ TREE_FAMILY_PLACEMENT = {
     "owner-truth-closeout": ("proof", "boundary-watch"),
     "antifragility-recovery": ("recovery", "candidate"),
 }
+TREE_ID_PLACEMENT = {
+    "AOA-T-0086": ("governance", "automation-readiness", "candidate"),
+    "AOA-T-0087": ("governance", "automation-readiness", "candidate"),
+    "AOA-T-0088": ("governance", "automation-readiness", "candidate"),
+}
 TREE_REVIEW_STATUS_STOP_LINES = {
     "pilot-candidate": "Candidate for first direct-read migration review; do not move paths from projection alone.",
     "candidate": "Use as placement evidence only; direct bundle reading is required before migration.",
@@ -5985,7 +5990,10 @@ def count_entry_field(entries: list[dict[str, Any]], field_name: str) -> dict[st
 
 def tree_projection_entry(entry: dict[str, Any], overlay_entry: dict[str, Any] | None) -> dict[str, Any]:
     family = overlay_entry.get("family") if isinstance(overlay_entry, dict) else None
-    if isinstance(family, str) and family in TREE_FAMILY_PLACEMENT:
+    id_placement = TREE_ID_PLACEMENT.get(entry["id"])
+    if id_placement is not None:
+        proposed_trunk, proposed_shelf, review_status = id_placement
+    elif isinstance(family, str) and family in TREE_FAMILY_PLACEMENT:
         proposed_trunk, review_status = TREE_FAMILY_PLACEMENT[family]
         proposed_shelf = family
     else:
@@ -6003,6 +6011,8 @@ def tree_projection_entry(entry: dict[str, Any], overlay_entry: dict[str, Any] |
         f"status:{entry['status']}",
         f"review_status:{review_status}",
     ]
+    if id_placement is not None:
+        rationale_cues.append(f"tree_id_placement:{proposed_trunk}/{proposed_shelf}")
 
     return {
         "id": entry["id"],

@@ -275,6 +275,9 @@ The format is intentionally simple and human-first.
 - accepted the `automation-readiness` direct-read migration review over
   `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` as the twenty-fifth tree pilot
   while keeping the review itself non-mutating
+- moved `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` into
+  `techniques/governance/automation-readiness/` while keeping `domain`,
+  `kind`, IDs, status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

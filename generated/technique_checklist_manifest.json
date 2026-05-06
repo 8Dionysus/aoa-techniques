@@ -3749,10 +3749,10 @@
     },
     {
       "id": "AOA-T-0086",
-      "technique_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/automation-fit-matrix/checks/automation-fit-matrix-checklist.md",
+          "check_path": "techniques/governance/automation-readiness/automation-fit-matrix/checks/automation-fit-matrix-checklist.md",
           "title": "automation-fit-matrix checklist",
           "intro_markdown": "",
           "items": [
@@ -3790,10 +3790,10 @@
     },
     {
       "id": "AOA-T-0087",
-      "technique_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md",
+          "check_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md",
           "title": "human-loop-to-seed-lift checklist",
           "intro_markdown": "",
           "items": [
@@ -3831,10 +3831,10 @@
     },
     {
       "id": "AOA-T-0088",
-      "technique_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md",
+          "check_path": "techniques/governance/automation-readiness/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md",
           "title": "approval-sensitivity-check checklist",
           "intro_markdown": "",
           "items": [

@@ -73,7 +73,7 @@ migration.
 | `instruction` | instruction, documentation, capability contracts, and owner-facing surfaces | `docs-boundary`, `instruction-surface`, `capability-registry`, `capability-boundary`, `skill-discovery` |
 | `proof` | validation, review evidence, summary integrity, and owner-truth checks | `evaluation-chain`, `published-summary`, `skill-support`, `review-evidence`, `owner-truth-closeout` |
 | `continuity` | handoff, compaction, donor harvest, session carry, and return surfaces | `handoff-continuation`, `review-compaction`, `donor-harvest` |
-| `governance` | approval, decision routing, automation boundaries, and promotion caution | `approval-evidence`, `decision-routing`, `automation-governance` |
+| `governance` | approval, decision routing, automation boundaries, and promotion caution | `approval-evidence`, `decision-routing`, `automation-readiness`, `promotion-boundary`, `practice-adoption-lifecycle` |
 | `knowledge-lift` | source lift and bounded derived knowledge projection | `kag-source-lift` |
 | `ingest` | external media, document, and data intake moves | `media-ingest` |
 | `recovery` | diagnosis, repair, degraded mode, and antifragile continuation | `diagnosis-repair`, `antifragility-recovery` |
@@ -669,6 +669,16 @@ It accepts Candidate A as the twenty-fifth migration pilot over `AOA-T-0086`,
 agent-workflows`, `kind: assessment`, and `status: promoted`. The next
 migration should move exactly those three bundles into
 `techniques/governance/automation-readiness/` without changing frontmatter.
+
+The twenty-fifth pilot migration moves exactly those three bundles into
+`techniques/governance/automation-readiness/` without changing `domain`,
+`kind`, status, relations, evidence, support files, or `tree_path`
+frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-automation-readiness-tree-pilot.md`](../legacy/receipts/2026-05-05-automation-readiness-tree-pilot.md).
+
+The next reform slice should review the landed
+`governance/automation-readiness` shelf before choosing Candidate B or another
+split-route hold.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

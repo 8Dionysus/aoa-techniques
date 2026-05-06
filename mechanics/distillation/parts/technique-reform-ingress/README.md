@@ -230,6 +230,9 @@ permission slip to remap techniques automatically.
 - automation-readiness direct-read review: landed as
   `accepted-for-twenty-fifth-migration-pilot`, with `AOA-T-0086`,
   `AOA-T-0087`, and `AOA-T-0088` accepted and no path movement yet
+- automation-readiness migration: landed, with `AOA-T-0086`, `AOA-T-0087`,
+  and `AOA-T-0088` moved into
+  `techniques/governance/automation-readiness/` and frontmatter preserved
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -682,3 +685,9 @@ The `automation-readiness` direct-read review is now landed as
 `AOA-T-0087`, and `AOA-T-0088` as a bounded governance shelf for automation fit
 classification, first honest landing, and approval-sensitivity burden without
 moving files.
+
+The `automation-readiness` migration is now landed. It moves exactly
+`AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` into
+`techniques/governance/automation-readiness/`, preserves frontmatter, records
+the root legacy receipt, and keeps Candidate B plus Candidate C queued behind a
+landed-pilot review.

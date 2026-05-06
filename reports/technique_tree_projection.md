@@ -18,9 +18,9 @@ Use this projection to review future trunk and shelf placement before any direct
 | review status | count |
 |---|---:|
 | `pilot-candidate` | `34` |
-| `candidate` | `41` |
+| `candidate` | `44` |
 | `boundary-watch` | `22` |
-| `split-review-needed` | `9` |
+| `split-review-needed` | `6` |
 | `singleton-hold` | `1` |
 | `unassigned-hold` | `0` |
 
@@ -46,7 +46,8 @@ Use this projection to review future trunk and shelf placement before any direct
 | `agent-workflows-core` | `5` |
 | `antifragility-recovery` | `4` |
 | `approval-evidence` | `2` |
-| `automation-governance` | `9` |
+| `automation-governance` | `6` |
+| `automation-readiness` | `3` |
 | `capability-boundary` | `3` |
 | `capability-registry` | `3` |
 | `decision-routing` | `3` |
@@ -115,9 +116,9 @@ Use this projection to review future trunk and shelf placement before any direct
 | [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md` | `diagnosis-repair` | `recovery` | `diagnosis-repair` | `pilot-candidate` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md` |
 | [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | `techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md` | `donor-harvest` | `continuity` | `donor-harvest` | `candidate` | `techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md` |
 | [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md` | `donor-harvest` | `continuity` | `donor-harvest` | `candidate` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md` |
-| [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) | `techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/automation-fit-matrix/TECHNIQUE.md` |
-| [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) | `techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/human-loop-to-seed-lift/TECHNIQUE.md` |
-| [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | `techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/approval-sensitivity-check/TECHNIQUE.md` |
+| [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | `techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-readiness` | `candidate` | `techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md` |
+| [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) | `techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-readiness` | `candidate` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md` |
+| [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) | `techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-readiness` | `candidate` | `techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md` |
 | [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) | `techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/quest-unit-promotion-review/TECHNIQUE.md` |
 | [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | `techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md` | `automation-governance` | `governance` | `automation-governance` | `split-review-needed` | `techniques/governance/automation-governance/nearest-wrong-target-rejection/TECHNIQUE.md` |
 | [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md` | `owner-truth-closeout` | `proof` | `owner-truth-closeout` | `boundary-watch` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md` |

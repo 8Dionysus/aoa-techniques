@@ -262,23 +262,23 @@ See also:
 |---|---|---|---|---|
 | multi-axis-quest-overlay checklist | `absent` | `6` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
 
-### [AOA-T-0086](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
+### [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| automation-fit-matrix checklist | `absent` | `7` | `techniques/agent-workflows/automation-fit-matrix/checks/automation-fit-matrix-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) |
+| automation-fit-matrix checklist | `absent` | `7` | `techniques/governance/automation-readiness/automation-fit-matrix/checks/automation-fit-matrix-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
 
-### [AOA-T-0087](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| human-loop-to-seed-lift checklist | `absent` | `7` | `techniques/agent-workflows/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) |
-
-### [AOA-T-0088](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| approval-sensitivity-check checklist | `absent` | `7` | `techniques/agent-workflows/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) |
+| human-loop-to-seed-lift checklist | `absent` | `7` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) |
+
+### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| approval-sensitivity-check checklist | `absent` | `7` | `techniques/governance/automation-readiness/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) |
 
 ### [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
 

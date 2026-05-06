@@ -31,8 +31,8 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "agent-workflows" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "`automation-fit-matrix`",
-            "`approval-sensitivity-check`",
+            "`nearest-wrong-target-rejection`",
+            "`skill-proposal-handoff-packet`",
             "explicit dry-run",
             "small reversible slice",
         ),

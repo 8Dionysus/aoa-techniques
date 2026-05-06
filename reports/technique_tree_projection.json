@@ -38,7 +38,8 @@
     "agent-workflows-core": 5,
     "antifragility-recovery": 4,
     "approval-evidence": 2,
-    "automation-governance": 9,
+    "automation-governance": 6,
+    "automation-readiness": 3,
     "capability-boundary": 3,
     "capability-registry": 3,
     "decision-routing": 3,
@@ -64,9 +65,9 @@
   },
   "review_status_counts": {
     "pilot-candidate": 34,
-    "candidate": 41,
+    "candidate": 44,
     "boundary-watch": 22,
-    "split-review-needed": 9,
+    "split-review-needed": 6,
     "singleton-hold": 1,
     "unassigned-hold": 0
   },
@@ -980,20 +981,21 @@
       "kind": "assessment",
       "status": "promoted",
       "summary": "Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.",
-      "current_path": "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+      "current_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
       "family": "automation-governance",
       "proposed_trunk": "governance",
-      "proposed_shelf": "automation-governance",
-      "proposed_future_path": "techniques/governance/automation-governance/automation-fit-matrix/TECHNIQUE.md",
-      "review_status": "split-review-needed",
+      "proposed_shelf": "automation-readiness",
+      "proposed_future_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+      "review_status": "candidate",
       "rationale_cues": [
         "family:automation-governance",
         "domain:agent-workflows",
         "kind:assessment",
         "status:promoted",
-        "review_status:split-review-needed"
+        "review_status:candidate",
+        "tree_id_placement:governance/automation-readiness"
       ],
-      "stop_line": "Split or merge this shelf before accepting it as a tree migration pilot."
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0087",
@@ -1002,20 +1004,21 @@
       "kind": "assessment",
       "status": "promoted",
       "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
-      "current_path": "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+      "current_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
       "family": "automation-governance",
       "proposed_trunk": "governance",
-      "proposed_shelf": "automation-governance",
-      "proposed_future_path": "techniques/governance/automation-governance/human-loop-to-seed-lift/TECHNIQUE.md",
-      "review_status": "split-review-needed",
+      "proposed_shelf": "automation-readiness",
+      "proposed_future_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "review_status": "candidate",
       "rationale_cues": [
         "family:automation-governance",
         "domain:agent-workflows",
         "kind:assessment",
         "status:promoted",
-        "review_status:split-review-needed"
+        "review_status:candidate",
+        "tree_id_placement:governance/automation-readiness"
       ],
-      "stop_line": "Split or merge this shelf before accepting it as a tree migration pilot."
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0088",
@@ -1024,20 +1027,21 @@
       "kind": "assessment",
       "status": "promoted",
       "summary": "Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible.",
-      "current_path": "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+      "current_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
       "family": "automation-governance",
       "proposed_trunk": "governance",
-      "proposed_shelf": "automation-governance",
-      "proposed_future_path": "techniques/governance/automation-governance/approval-sensitivity-check/TECHNIQUE.md",
-      "review_status": "split-review-needed",
+      "proposed_shelf": "automation-readiness",
+      "proposed_future_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
+      "review_status": "candidate",
       "rationale_cues": [
         "family:automation-governance",
         "domain:agent-workflows",
         "kind:assessment",
         "status:promoted",
-        "review_status:split-review-needed"
+        "review_status:candidate",
+        "tree_id_placement:governance/automation-readiness"
       ],
-      "stop_line": "Split or merge this shelf before accepting it as a tree migration pilot."
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0089",
