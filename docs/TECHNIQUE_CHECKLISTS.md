@@ -148,11 +148,11 @@ See also:
 |---|---|---|---|---|
 | episode-bounded-agent-loop checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/episode-bounded-agent-loop/checks/episode-bounded-agent-loop-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) |
 
-### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
+### [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| mcp-gateway-proxy checklist | `absent` | `8` | `techniques/agent-workflows/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) |
+| mcp-gateway-proxy checklist | `absent` | `8` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md` | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
 
 ### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
 

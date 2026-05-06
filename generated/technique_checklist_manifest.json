@@ -2880,10 +2880,10 @@
     },
     {
       "id": "AOA-T-0065",
-      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md",
+          "check_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md",
           "title": "mcp-gateway-proxy checklist",
           "intro_markdown": "",
           "items": [

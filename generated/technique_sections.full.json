@@ -5272,7 +5272,7 @@
     {
       "id": "AOA-T-0065",
       "name": "mcp-gateway-proxy",
-      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5307,7 +5307,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the gateway is an explicit intermediary rather than an invisible pass-through\n- callers interact with one bounded proxy surface instead of binding directly to each upstream server\n- proxied metadata or capability lookup remains visible enough for review\n- request or response sanitization happens at the gateway boundary when sanitization is part of the contract\n- the technique stays smaller than local stack lifecycle, registry publication, capability discovery policy, and security-scanner doctrine\n- upstream servers remain upstream; the gateway does not absorb their whole runtime or product semantics\n\nRelationship to adjacent techniques: unlike [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md), this technique does not own starting and stopping a local service stack; it owns the mediation seam once a proxy surface exists. Unlike [AOA-T-0042](../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md), it does not score or preflight external sources before surfacing them; it fronts configured upstream servers at runtime. Unlike [AOA-T-0064](../../instruction/capability-registry/capability-discovery/TECHNIQUE.md), it does not define publication-time discovery queries over registry entries; it exposes a runtime proxy surface over already-configured upstream tools."
+          "content_markdown": "- the gateway is an explicit intermediary rather than an invisible pass-through\n- callers interact with one bounded proxy surface instead of binding directly to each upstream server\n- proxied metadata or capability lookup remains visible enough for review\n- request or response sanitization happens at the gateway boundary when sanitization is part of the contract\n- the technique stays smaller than local stack lifecycle, registry publication, capability discovery policy, and security-scanner doctrine\n- upstream servers remain upstream; the gateway does not absorb their whole runtime or product semantics\n\nRelationship to adjacent techniques: unlike [AOA-T-0038](../../../execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md), this technique does not own starting and stopping a local service stack; it owns the mediation seam once a proxy surface exists. Unlike [AOA-T-0042](../../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md), it does not score or preflight external sources before surfacing them; it fronts configured upstream servers at runtime. Unlike [AOA-T-0064](../../../instruction/capability-registry/capability-discovery/TECHNIQUE.md), it does not define publication-time discovery queries over registry entries; it exposes a runtime proxy surface over already-configured upstream tools."
         },
         {
           "key": "risks",
@@ -5347,7 +5347,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep lifecycle ownership separate rather than widening this bundle back into [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md)\n- keep registry publication and discovery doctrine separate rather than folding runtime proxying into `docs` techniques\n- reopen a narrower trust or preflight sibling only if it survives without scanner-platform breadth"
+          "content_markdown": "- keep lifecycle ownership separate rather than widening this bundle back into [AOA-T-0038](../../../execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md)\n- keep registry publication and discovery doctrine separate rather than folding runtime proxying into `docs` techniques\n- reopen a narrower trust or preflight sibling only if it survives without scanner-platform breadth"
         }
       ]
     },

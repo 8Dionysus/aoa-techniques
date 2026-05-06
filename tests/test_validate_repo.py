@@ -2075,13 +2075,15 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 if entry["id"] == "AOA-T-0101"
             )["proposed_future_path"],
         )
+        tool_gateway_entry = next(
+            entry
+            for entry in report["techniques"]
+            if entry["family"] == "tool-gateway"
+        )
+        self.assertEqual("candidate", tool_gateway_entry["review_status"])
         self.assertEqual(
-            "singleton-hold",
-            next(
-                entry
-                for entry in report["techniques"]
-                if entry["family"] == "tool-gateway"
-            )["review_status"],
+            "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
+            tool_gateway_entry["proposed_future_path"],
         )
 
     def test_selection_and_semantic_review_guides_are_discoverable_and_validator_backed(self) -> None:

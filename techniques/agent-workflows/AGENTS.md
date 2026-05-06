@@ -4,10 +4,13 @@ Guidance for coding agents and humans working under `techniques/agent-workflows/
 
 ## Purpose
 
-This domain stores reusable workflow techniques for bounded execution chains.
+This domain remains the frontmatter review lane for many reusable workflow
+techniques, but no active leaf bundle currently lives directly here after the
+tree pilots.
 
-The remaining representative bundle here is `mcp-gateway-proxy`. The former
-local practice lifecycle representatives now live under
+The former `mcp-gateway-proxy` representative now lives under
+`techniques/tool-use/tool-gateway/`. The former local practice lifecycle
+representatives now live under
 `techniques/governance/practice-adoption-lifecycle/`.
 
 ## Domain rules
@@ -32,7 +35,7 @@ Do not:
 
 ## Validation
 
-After changing an agent-workflow technique, run:
+After changing an agent-workflow technique or this retained route lane, run:
 
 - `python -m pip install -r requirements-dev.txt`
 - `python scripts/validate_nested_agents.py`

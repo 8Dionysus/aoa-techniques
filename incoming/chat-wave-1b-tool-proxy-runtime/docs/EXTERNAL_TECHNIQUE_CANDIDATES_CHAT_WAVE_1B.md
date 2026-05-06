@@ -20,7 +20,7 @@ It does not create a canonical bundle or authorize import by itself.
 
 | candidate | landed bundle | boundary kept | what stayed out |
 |---|---|---|---|---|
-| `mcp-gateway-proxy` | [AOA-T-0065](../../../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) | one explicit gateway proxy in front of configured MCP servers with bounded metadata lookup and mediated calls | scanner modes, reputation scoring, lifecycle doctrine, and broader gateway-product semantics |
+| `mcp-gateway-proxy` | [AOA-T-0065](../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | one explicit gateway proxy in front of configured MCP servers with bounded metadata lookup and mediated calls | scanner modes, reputation scoring, lifecycle doctrine, and broader gateway-product semantics |
 
 No remaining staged landing candidates in Wave 1B.
 

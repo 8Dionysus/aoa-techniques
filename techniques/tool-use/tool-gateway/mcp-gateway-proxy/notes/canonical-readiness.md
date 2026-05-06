@@ -15,8 +15,8 @@
 
 ## Default-use rationale
 - this is the right promoted default when the main problem is fronting several configured MCP servers through one explicit proxy seam instead of binding callers directly to each upstream surface
-- it remains narrower than [AOA-T-0038](../one-command-service-lifecycle/TECHNIQUE.md) because it does not own starting or stopping the runtime stack
-- it also remains narrower than [AOA-T-0042](../../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) because it does not score or preflight upstream trust or readiness before publication
+- it remains narrower than [AOA-T-0038](../../../../execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) because it does not own starting or stopping the runtime stack
+- it also remains narrower than [AOA-T-0042](../../../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) because it does not score or preflight upstream trust or readiness before publication
 
 ## Fresh public-safety check
 - review date: 2026-03-28

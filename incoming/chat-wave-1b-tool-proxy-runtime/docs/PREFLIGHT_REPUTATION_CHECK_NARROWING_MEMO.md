@@ -13,7 +13,7 @@ It does not create a canonical bundle or authorize import by itself.
 ## Overlap watch
 
 - [AOA-T-0042](../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
-- [AOA-T-0065](../../../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md)
+- [AOA-T-0065](../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md)
 
 ## Boundary statement
 
@@ -38,7 +38,7 @@ Even that smaller target is not stable enough yet, because the donor still prese
 
 - generic security governance and trust-platform doctrine
 - vulnerability or malicious-behavior scanner breadth
-- runtime proxy semantics already covered by [AOA-T-0065](../../../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md)
+- runtime proxy semantics already covered by [AOA-T-0065](../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md)
 - registry or marketplace policy
 - speculative claims that reputation scanning is already one cleanly bounded public contract
 

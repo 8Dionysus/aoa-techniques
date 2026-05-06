@@ -833,10 +833,10 @@
     },
     {
       "id": "AOA-T-0065",
-      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md",
+          "example_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md",
           "title": "minimal mcp-gateway-proxy",
           "body_markdown": "Configured upstreams:\n\n- `git-tools`\n- `docs-reader`\n\nGateway surface:\n\n- caller endpoint: `gateway`\n- metadata tool: `get_metadata`\n\nProxy behavior:\n\n```text\ncaller -> gateway.call_tool(\"git_status\", {})\ncaller -> gateway.call_tool(\"read_doc\", {\"path\": \"README.md\"})\n```\n\nVisible metadata:\n\n```json\n{\n  \"upstreams\": [\"git-tools\", \"docs-reader\"],\n  \"proxied_tools\": [\"git_status\", \"read_doc\"]\n}\n```\n\nWhy this example stays bounded:\n\n- the caller talks to one gateway surface\n- metadata and tool mediation are explicit\n- the example does not depend on scanner modes, lifecycle doctrine, or registry product behavior"
         }

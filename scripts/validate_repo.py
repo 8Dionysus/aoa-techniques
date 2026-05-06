@@ -730,6 +730,7 @@ TREE_ID_PLACEMENT = {
     "AOA-T-0101": ("governance", "practice-adoption-lifecycle", "candidate"),
     "AOA-T-0103": ("governance", "practice-adoption-lifecycle", "candidate"),
     "AOA-T-0104": ("governance", "practice-adoption-lifecycle", "candidate"),
+    "AOA-T-0065": ("tool-use", "tool-gateway", "candidate"),
 }
 TREE_REVIEW_STATUS_STOP_LINES = {
     "pilot-candidate": "Candidate for first direct-read migration review; do not move paths from projection alone.",

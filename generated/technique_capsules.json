@@ -910,7 +910,7 @@
       "core_contract_short": "Core contract: the gateway is an explicit intermediary rather than an invisible pass-through; callers interact with one bounded proxy surface...",
       "main_risk_short": "Main risk: the gateway quietly becomes a full security platform instead of one bounded proxy seam.",
       "validation_short": "Validate by checking more than one upstream server or tool surface can be fronted through one gateway seam; callers can inspect proxied...",
-      "technique_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md"
+      "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0066",

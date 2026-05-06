@@ -66,10 +66,10 @@
   },
   "review_status_counts": {
     "pilot-candidate": 34,
-    "candidate": 50,
+    "candidate": 51,
     "boundary-watch": 22,
     "split-review-needed": 0,
-    "singleton-hold": 1,
+    "singleton-hold": 0,
     "unassigned-hold": 0
   },
   "techniques": [
@@ -564,20 +564,21 @@
       "kind": "composition",
       "status": "promoted",
       "summary": "Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.",
-      "current_path": "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
+      "current_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
       "family": "tool-gateway",
       "proposed_trunk": "tool-use",
       "proposed_shelf": "tool-gateway",
       "proposed_future_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
-      "review_status": "singleton-hold",
+      "review_status": "candidate",
       "rationale_cues": [
         "family:tool-gateway",
         "domain:agent-workflows",
         "kind:composition",
         "status:promoted",
-        "review_status:singleton-hold"
+        "review_status:candidate",
+        "tree_id_placement:tool-use/tool-gateway"
       ],
-      "stop_line": "Hold until more neighboring techniques land or direct review justifies a singleton shelf."
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0068",

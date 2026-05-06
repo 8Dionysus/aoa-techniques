@@ -310,7 +310,7 @@ Counts: `total` 1, `canonical` 0, `promoted` 1.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) | `agent-workflows` | `composition` | `promoted` | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. |
+| [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | `agent-workflows` | `composition` | `promoted` | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. |
 
 ## `approval-evidence`
 

@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Tool-gateway tree pilot migration
+
+Changed:
+
+- moved `AOA-T-0065` from `techniques/agent-workflows/` into
+  `techniques/tool-use/tool-gateway/`
+- added the root legacy receipt
+  [2026-05-05-tool-gateway-tree-pilot](../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
+- added the compact `tool-use` trunk route card and updated
+  `agent-workflows` as a retained frontmatter review lane with no active
+  direct leaf bundles
+- repaired active adjacent links into runtime lifecycle, skill-discovery, and
+  capability-registry leaves
+- preserved the bundle as `domain: agent-workflows`, `kind: composition`,
+  `status: promoted`
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_validate_repo tests.test_skill_discovery_tree_pilot tests.test_roadmap_parity
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no runtime, connector, marketplace, scanner, trust, or skill authority moved
+
 ## 2026-05-05 - Tool-gateway direct-read singleton review
 
 Changed:

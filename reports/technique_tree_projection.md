@@ -18,10 +18,10 @@ Use this projection to review future trunk and shelf placement before any direct
 | review status | count |
 |---|---:|
 | `pilot-candidate` | `34` |
-| `candidate` | `50` |
+| `candidate` | `51` |
 | `boundary-watch` | `22` |
 | `split-review-needed` | `0` |
-| `singleton-hold` | `1` |
+| `singleton-hold` | `0` |
 | `unassigned-hold` | `0` |
 
 ## Trunk Counts
@@ -98,7 +98,7 @@ Use this projection to review future trunk and shelf placement before any direct
 | [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md` | `handoff-continuation` | `continuity` | `handoff-continuation` | `pilot-candidate` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md` |
 | [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | `techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md` | `handoff-continuation` | `continuity` | `handoff-continuation` | `pilot-candidate` | `techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md` |
 | [AOA-T-0062](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | `techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md` | `handoff-continuation` | `continuity` | `handoff-continuation` | `pilot-candidate` | `techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md` |
-| [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) | `techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md` | `tool-gateway` | `tool-use` | `tool-gateway` | `singleton-hold` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md` |
+| [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md` | `tool-gateway` | `tool-use` | `tool-gateway` | `candidate` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md` |
 | [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | `techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md` | `approval-evidence` | `governance` | `approval-evidence` | `boundary-watch` | `techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md` |
 | [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | `techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md` | `approval-evidence` | `governance` | `approval-evidence` | `boundary-watch` | `techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md` |
 | [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | `techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md` | `media-ingest` | `ingest` | `media-ingest` | `pilot-candidate` | `techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md` |
