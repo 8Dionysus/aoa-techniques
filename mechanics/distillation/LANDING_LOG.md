@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed approval-evidence pilot review
+
+Changed:
+
+- added
+  [landed-approval-evidence-pilot-review](parts/technique-reform-ingress/reviews/landed-approval-evidence-pilot-review.md)
+  as the review over the landed `governance/approval-evidence` migration
+- validated the second successful governance trunk shelf after
+  `decision-routing`
+- preserved `AOA-T-0068` as the immediate fail-closed boundary gate and
+  `AOA-T-0069` as the durable approval seam
+- chose `proof/review-evidence` for direct-read review before any
+  twenty-second shelf movement
+- kept proof verdict authority, eval-suite ownership, review-board workflow,
+  Agon move law, actor eligibility, route mutation, memory writes, runtime
+  behavior, KAG promotion, ToS canon, skill activation, and neighboring
+  runtime/owner/governance shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `proof/review-evidence` route card or receipt was created
+
 ## 2026-05-05 - Approval-evidence tree pilot migration
 
 Changed:

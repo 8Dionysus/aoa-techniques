@@ -567,8 +567,17 @@ status, relations, evidence, support files, or `tree_path` frontmatter. The
 root receipt is
 [`legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md`](../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md).
 
-The next reform slice should review the landed `governance/approval-evidence`
-shelf before choosing the twenty-second shelf.
+The landed twenty-first pilot review is
+[Landed Approval-Evidence Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-approval-evidence-pilot-review.md).
+It validates the second governance trunk shelf and chooses
+`proof/review-evidence` for the next direct-read migration review while
+keeping proof verdict authority, eval-suite ownership, review-board workflow,
+Agon move law, actor eligibility, route mutation, memory writes, runtime
+behavior, KAG promotion, ToS canon, skill activation, and neighboring
+runtime/owner/governance shelves outside the next move.
+
+The next reform slice should directly read `AOA-T-0105`, `AOA-T-0107`, and
+`AOA-T-0106` before any twenty-second shelf movement.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
