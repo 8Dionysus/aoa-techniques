@@ -429,7 +429,12 @@
    bundles in place, closes the rejected bulk shelf route, activates
    `governance/automation-readiness` over `AOA-T-0086`, `AOA-T-0087`, and
    `AOA-T-0088` as Candidate A, and keeps `governance/promotion-boundary` plus
-   `governance/practice-adoption-lifecycle` queued behind it.
+   `governance/practice-adoption-lifecycle` queued behind it. The
+   automation-readiness direct-read review is now landed as
+   `accepted-for-twenty-fifth-migration-pilot`; it accepts exactly
+   `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` while keeping the review
+   non-mutating and preserving all three as `domain: agent-workflows`,
+   `kind: assessment`, and `status: promoted`.
 
 ## Hold line
 

@@ -227,6 +227,9 @@ permission slip to remap techniques automatically.
   with no path movement and Candidate A set to
   `governance/automation-readiness` over `AOA-T-0086`, `AOA-T-0087`, and
   `AOA-T-0088`
+- automation-readiness direct-read review: landed as
+  `accepted-for-twenty-fifth-migration-pilot`, with `AOA-T-0086`,
+  `AOA-T-0087`, and `AOA-T-0088` accepted and no path movement yet
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -318,6 +321,7 @@ permission slip to remap techniques automatically.
 | [Landed Owner-Truth-Closeout Pilot Review](reviews/landed-owner-truth-closeout-pilot-review.md) | confirms the twenty-fourth migrated shelf stayed bounded as the fifth proof trunk shelf and chooses `governance/automation-governance` for direct-read split review | movement of `governance/automation-governance`, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, quest/playbook promotion doctrine, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
 | [Automation-Governance Direct-Read Split Review](reviews/automation-governance-direct-read-split-review.md) | reads the nine projected automation-governance leaves and rejects one bulk shelf before movement | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, quest/playbook promotion doctrine, Method-growth law, local owner consent, deletion, deprecation execution, proof authority, memory truth, routing policy, runtime behavior, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
 | [Automation-Governance Split Expansion Closeout](reviews/automation-governance-split-expansion-closeout.md) | closes the rejected bulk shelf route and activates Candidate A as `governance/automation-readiness` | path movement, Candidate A acceptance, Candidate B acceptance, Candidate C acceptance, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, quest/playbook promotion doctrine, Method-growth law, local owner consent, deletion, deprecation execution, proof authority, memory truth, routing policy, runtime behavior, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
+| [Automation-Readiness Direct-Read Migration Review](reviews/automation-readiness-direct-read-migration-review.md) | reads `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` directly and accepts Candidate A as the twenty-fifth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, scheduler doctrine, hidden automation governance, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, Candidate B, Candidate C, or the `tool-use/tool-gateway` singleton hold |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -672,3 +676,9 @@ shelf route, activates Candidate A as `governance/automation-readiness` over
 `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088`, and leaves
 `governance/promotion-boundary` plus `governance/practice-adoption-lifecycle`
 queued behind Candidate A.
+
+The `automation-readiness` direct-read review is now landed as
+`accepted-for-twenty-fifth-migration-pilot`. It accepts exactly `AOA-T-0086`,
+`AOA-T-0087`, and `AOA-T-0088` as a bounded governance shelf for automation fit
+classification, first honest landing, and approval-sensitivity burden without
+moving files.
