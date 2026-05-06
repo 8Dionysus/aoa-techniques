@@ -727,5 +727,20 @@ The next reform slice should review the landed
 `governance/practice-adoption-lifecycle` shelf before routing the
 `tool-use/tool-gateway` singleton or another discovered tail.
 
+The landed twenty-seventh pilot review is
+[Landed Practice-Adoption-Lifecycle Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-practice-adoption-lifecycle-pilot-review.md).
+It validates `practice-adoption-lifecycle` as the third landed split shelf and
+closes the rejected bulk automation-governance route: Candidate A lives in
+`governance/automation-readiness`, Candidate B lives in
+`governance/promotion-boundary`, and Candidate C lives in
+`governance/practice-adoption-lifecycle`. No projected automation-governance
+ID remains unaccounted.
+
+The next reform slice should run the direct-read singleton review for
+`tool-use/tool-gateway` over `AOA-T-0065` before any twenty-eighth movement.
+That review must decide whether the gateway can move as one deliberate
+singleton shelf, should remain held until a neighbor/import lands, or needs a
+narrower route.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

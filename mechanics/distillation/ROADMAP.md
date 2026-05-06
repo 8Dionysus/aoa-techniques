@@ -469,9 +469,12 @@
    `techniques/governance/practice-adoption-lifecycle/`, with support files
    moved, governance route-card accounting, root legacy receipt accounting,
    link repair, generated rebuilds, and release-check validation in the same
-   wave. The next bounded step is to review the landed
-   `practice-adoption-lifecycle` pilot before routing the tool-use singleton
-   or another discovered tail.
+   wave. The landed `practice-adoption-lifecycle` pilot review is now complete
+   as `pilot-validated`; it confirms the third automation split shelf held
+   after migration, closes the rejected bulk `automation-governance` tail with
+   all nine IDs accounted across three landed governance shelves, and chooses
+   `tool-use/tool-gateway` for direct-read singleton review before any
+   twenty-eighth movement.
 
 ## Hold line
 

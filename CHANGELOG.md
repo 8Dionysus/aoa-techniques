@@ -297,6 +297,10 @@ The format is intentionally simple and human-first.
   `techniques/governance/practice-adoption-lifecycle/` while keeping
   `domain`, `kind`, IDs, status, evidence, and `tree_path` frontmatter
   unchanged
+- accepted the landed `practice-adoption-lifecycle` pilot review, closed the
+  rejected bulk `automation-governance` split tail with all nine IDs
+  accounted, and selected `tool-use/tool-gateway` for direct-read singleton
+  review without moving a twenty-eighth shelf yet
 
 ### Validation
 

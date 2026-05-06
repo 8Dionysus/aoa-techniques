@@ -130,6 +130,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/promotion-boundary-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-promotion-boundary-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/practice-adoption-lifecycle-direct-read-migration-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-practice-adoption-lifecycle-pilot-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -8149,7 +8150,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Review the landed `governance/practice-adoption-lifecycle` pilot",
+            "Current latest tree migration: the `practice-adoption-lifecycle` pilot moved",
             root_roadmap,
         )
         self.assertIn(
@@ -8187,6 +8188,141 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+
+    def test_landed_practice_adoption_lifecycle_pilot_review_routes_tool_gateway(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-practice-adoption-lifecycle-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        projection = (
+            REPO_ROOT / "reports" / "technique_tree_projection.md"
+        ).read_text(encoding="utf-8")
+        agent_workflows_agents = (
+            REPO_ROOT / "techniques" / "agent-workflows" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Landed Practice-Adoption-Lifecycle Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn("split-tail-closed", review)
+        self.assertIn(
+            "No projected automation-governance ID remains unaccounted",
+            review,
+        )
+        self.assertIn(
+            "Run the direct-read singleton review for `tool-use/tool-gateway`",
+            review,
+        )
+        self.assertIn(
+            "landed-practice-adoption-lifecycle-pilot-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "landed practice-adoption-lifecycle pilot review: landed",
+            ingress,
+        )
+        self.assertIn(
+            "Landed practice-adoption-lifecycle pilot review",
+            landing_log,
+        )
+        self.assertIn("all nine split\n  IDs accounted", landing_log)
+        self.assertIn(
+            "landed `practice-adoption-lifecycle` pilot review is now complete",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the direct-read singleton review for `tool-use/tool-gateway`",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Landed Practice-Adoption-Lifecycle Pilot Review",
+            tree_contract,
+        )
+        self.assertIn("No projected automation-governance", tree_contract)
+        self.assertIn("ID remains unaccounted", tree_contract)
+        self.assertIn(
+            "accepted the landed `practice-adoption-lifecycle` pilot review",
+            changelog,
+        )
+        self.assertIn("| `split-review-needed` | `0` |", projection)
+        self.assertIn("| `singleton-hold` | `1` |", projection)
+        self.assertIn("mcp-gateway-proxy", agent_workflows_agents)
+
+        for technique_id, new_path in (
+            (
+                "AOA-T-0086",
+                "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0089",
+                "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0101",
+                "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0104",
+                "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertTrue((REPO_ROOT / new_path).is_file())
+
+        self.assertTrue(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "agent-workflows"
+                / "mcp-gateway-proxy"
+                / "TECHNIQUE.md"
+            ).is_file()
+        )
+        self.assertFalse(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "tool-use"
+                / "tool-gateway"
+                / "mcp-gateway-proxy"
+                / "TECHNIQUE.md"
+            ).exists()
+        )
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

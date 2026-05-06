@@ -3,6 +3,36 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed practice-adoption-lifecycle pilot review
+
+Changed:
+
+- added
+  [landed-practice-adoption-lifecycle-pilot-review](parts/technique-reform-ingress/reviews/landed-practice-adoption-lifecycle-pilot-review.md)
+  as the post-migration review for the third automation-governance split shelf
+- confirmed `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` stayed promoted,
+  kept `domain: agent-workflows`, and preserved their `guardrail`,
+  `assessment`, and `handoff` kind split after landing
+- closed the rejected bulk `automation-governance` route with all nine split
+  IDs accounted across `automation-readiness`, `promotion-boundary`, and
+  `practice-adoption-lifecycle`
+- selected `tool-use/tool-gateway` for direct-read singleton review before
+  any twenty-eighth movement
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no `tool-use/tool-gateway` shelf moved
+
 ## 2026-05-05 - Practice-adoption-lifecycle tree pilot migration
 
 Changed:

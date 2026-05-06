@@ -253,6 +253,10 @@ permission slip to remap techniques automatically.
   `AOA-T-0103`, and `AOA-T-0104` moved into
   `techniques/governance/practice-adoption-lifecycle/` and frontmatter
   preserved
+- landed practice-adoption-lifecycle pilot review: landed as
+  `pilot-validated`, with the third automation split shelf confirmed, no
+  automation-governance IDs left unaccounted, and `tool-use/tool-gateway`
+  chosen for direct-read singleton review before any twenty-eighth movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -350,6 +354,8 @@ permission slip to remap techniques automatically.
 | [Promotion-Boundary Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md) | preserves the twenty-sixth accepted path migration into `techniques/governance/promotion-boundary/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, skill acceptance, skill activation, quest/playbook promotion doctrine, role contract law, proof verdict authority, memory write, routing policy, Method-growth law, local owner consent, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, Candidate C, or the `tool-use/tool-gateway` singleton hold |
 | [Landed Promotion-Boundary Pilot Review](reviews/landed-promotion-boundary-pilot-review.md) | validates the second split shelf after migration and routes Candidate C to direct-read review | path movement, Candidate C acceptance, `tree_path` frontmatter, frontmatter remap, canonical promotion, skill acceptance, skill activation, quest/playbook promotion doctrine, role contract law, proof verdict authority, memory write, routing policy, Method-growth law, local owner consent, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
 | [Practice-Adoption-Lifecycle Direct-Read Migration Review](reviews/practice-adoption-lifecycle-direct-read-migration-review.md) | reads `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` directly and accepts Candidate C as the twenty-seventh migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, Method-growth law, local owner consent, deletion, deprecation execution, proof authority, memory truth, skill activation, route mutation, runtime change, permanent practice retention, sibling owner acceptance, KAG promotion, ToS canon, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
+| [Practice-Adoption-Lifecycle Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md) | preserves the twenty-seventh accepted path migration into `techniques/governance/practice-adoption-lifecycle/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, Method-growth law, local owner consent, deletion, deprecation execution, proof authority, memory truth, skill activation, route mutation, runtime change, permanent practice retention, sibling owner acceptance, KAG promotion, ToS canon, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
+| [Landed Practice-Adoption-Lifecycle Pilot Review](reviews/landed-practice-adoption-lifecycle-pilot-review.md) | validates the third split shelf after migration, closes the automation-governance split tail, and routes the singleton `tool-use/tool-gateway` review | path movement, `tool-use/tool-gateway` acceptance, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, Method-growth law, local owner consent, proof authority, memory truth, skill activation, route mutation, runtime change, broad orchestration governance, KAG promotion, or ToS canon |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -748,3 +754,18 @@ The `practice-adoption-lifecycle` migration is now landed. It moves exactly
 `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` into
 `techniques/governance/practice-adoption-lifecycle/`, preserves frontmatter,
 records the root legacy receipt, and leaves `tool-use/tool-gateway` queued.
+
+The landed `practice-adoption-lifecycle` pilot review is now complete as
+`pilot-validated`. It confirms the third automation split shelf held after
+migration, closes the rejected bulk `automation-governance` tail with all nine
+IDs accounted across three landed governance shelves, and leaves only the
+`tool-use/tool-gateway` singleton-hold review queued before any twenty-eighth
+movement.
+
+Run the direct-read singleton review for `tool-use/tool-gateway`.
+
+Read `AOA-T-0065`, its support files, the singleton-hold projection row, the
+current `agent-workflows` route card, and the future `tool-use` trunk contract
+before deciding whether the gateway can move as one deliberate singleton
+shelf, must remain held until another tool-use neighbor lands, or needs a
+narrower route. Do not move files in the review step.
