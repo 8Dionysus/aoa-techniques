@@ -49,5 +49,6 @@ Current reviews:
 - [agent-workflows-core-direct-read-migration-review](agent-workflows-core-direct-read-migration-review.md)
 - [landed-agent-workflows-core-pilot-review](landed-agent-workflows-core-pilot-review.md)
 - [donor-harvest-direct-read-migration-review](donor-harvest-direct-read-migration-review.md)
+- [landed-donor-harvest-pilot-review](landed-donor-harvest-pilot-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

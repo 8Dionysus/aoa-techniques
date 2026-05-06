@@ -512,5 +512,15 @@ root receipt is
 The next reform slice should review the landed `continuity/donor-harvest`
 shelf before choosing the twentieth shelf.
 
+The landed nineteenth pilot review is
+[Landed Donor-Harvest Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-donor-harvest-pilot-review.md).
+It validates `donor-harvest` as the third successful continuity trunk shelf,
+preserves `AOA-T-0077` as `handoff` and the other three leaves as `lift`, and
+chooses `governance/decision-routing` for the next direct-read migration
+review while keeping AoA constitutional authority, `aoa-routing` ownership,
+role contract law, runtime dispatch, approval policy, playbook design, hidden
+automation governance, and neighboring boundary-watch shelves outside the next
+move.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
