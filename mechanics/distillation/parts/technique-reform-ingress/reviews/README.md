@@ -60,5 +60,6 @@ Current reviews:
 - [landed-runtime-truth-lifecycle-pilot-review](landed-runtime-truth-lifecycle-pilot-review.md)
 - [owner-truth-closeout-direct-read-migration-review](owner-truth-closeout-direct-read-migration-review.md)
 - [landed-owner-truth-closeout-pilot-review](landed-owner-truth-closeout-pilot-review.md)
+- [automation-governance-direct-read-split-review](automation-governance-direct-read-split-review.md)
 
 These files are review packets, not generated reports and not bundle authority.

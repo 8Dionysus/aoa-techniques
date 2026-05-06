@@ -263,6 +263,11 @@ The format is intentionally simple and human-first.
 - accepted the landed `owner-truth-closeout` pilot review and selected
   `governance/automation-governance` for direct-read split review without
   moving a twenty-fifth shelf yet
+- rejected one bulk `governance/automation-governance` shelf after direct
+  reading and named `governance/automation-readiness`,
+  `governance/promotion-boundary`, and
+  `governance/practice-adoption-lifecycle` as split candidates before any
+  automation-governance path movement
 
 ### Validation
 

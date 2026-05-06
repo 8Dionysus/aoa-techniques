@@ -417,7 +417,14 @@
    trunk shelf, keeps ingress guard, audit closeout, remote owner endcap,
    generated publish validation, and mirror parity as distinct owner-truth
    atoms, and chooses `governance/automation-governance` for direct-read split
-   review before any twenty-fifth movement.
+   review before any twenty-fifth movement. The automation-governance
+   direct-read split review is now landed as
+   `split-required-before-migration`; it rejects one bulk shelf over
+   `AOA-T-0086`, `AOA-T-0087`, `AOA-T-0088`, `AOA-T-0089`, `AOA-T-0090`,
+   `AOA-T-0101`, `AOA-T-0102`, `AOA-T-0103`, and `AOA-T-0104`, and names
+   `governance/automation-readiness`, `governance/promotion-boundary`, and
+   `governance/practice-adoption-lifecycle` as the split candidates before
+   any automation-governance path movement.
 
 ## Hold line
 
