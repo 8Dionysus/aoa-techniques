@@ -22,6 +22,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- continued the selector/relation long pass with Wave C over execution,
+  owner-truth, and approval-evidence shelves, recording an explicit no-repair
+  hold for operating-order relation pressure without changing frontmatter or
+  generated selection surfaces
 - continued the selector/relation long pass with Wave B over instruction,
   KAG/source-lift, docs-boundary, and skill-support shelves, recording an
   explicit no-repair hold for current relation pressure without changing
