@@ -3,6 +3,43 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Practice-adoption-lifecycle direct-read migration review
+
+Changed:
+
+- added
+  [practice-adoption-lifecycle-direct-read-migration-review](parts/technique-reform-ingress/reviews/practice-adoption-lifecycle-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104`
+- accepted `governance/practice-adoption-lifecycle` as the twenty-seventh
+  bounded migration pilot without moving files
+- kept the shelf centered on local adoption gate, adopted-practice retention,
+  and obsolescence route posture
+- preserved `AOA-T-0101` as `domain: agent-workflows`, `kind: guardrail`,
+  `status: promoted`
+- preserved `AOA-T-0103` as `domain: agent-workflows`, `kind: assessment`,
+  `status: promoted`
+- preserved `AOA-T-0104` as `domain: agent-workflows`, `kind: handoff`,
+  `status: promoted`
+- kept Method-growth law, local owner consent, deletion, deprecation
+  execution, proof authority, memory truth, skill activation, route mutation,
+  runtime change, permanent practice retention, sibling owner acceptance, and
+  the tool-use singleton outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no `tool-use/tool-gateway` shelf moved
+
 ## 2026-05-05 - Landed promotion-boundary pilot review
 
 Changed:

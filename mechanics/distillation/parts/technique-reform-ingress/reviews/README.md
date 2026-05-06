@@ -66,5 +66,6 @@ Current reviews:
 - [landed-automation-readiness-pilot-review](landed-automation-readiness-pilot-review.md)
 - [promotion-boundary-direct-read-migration-review](promotion-boundary-direct-read-migration-review.md)
 - [landed-promotion-boundary-pilot-review](landed-promotion-boundary-pilot-review.md)
+- [practice-adoption-lifecycle-direct-read-migration-review](practice-adoption-lifecycle-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
