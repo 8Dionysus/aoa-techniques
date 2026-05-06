@@ -285,6 +285,11 @@ permission slip to remap techniques automatically.
   `continuity/handoff-continuation`, confirming `execution_profile` as scout
   suitability rather than empirical small-agent proof and setting the rhythm
   for a future long pass
+- execution-profile long pass: landed over all `107` current bundles, with
+  `33/33` small-agent fixture sketches, `21/21` medium rows calibrated,
+  `53/53` orchestration boundaries reviewed, `AOA-T-0095` carried as the only
+  profile-pressure repair edge, and empirical model proof routed to
+  `aoa-evals`
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -396,6 +401,11 @@ permission slip to remap techniques automatically.
 | [Bundle Anatomy Legacy And Provenance Hygiene](reviews/bundle-anatomy-legacy-provenance-hygiene.md) | confirms no new root or mechanic-local legacy receipt is needed for this reform pass | permission to add placeholder receipts or move active review packets into legacy |
 | [Bundle Anatomy Final Closeout Ledger](reviews/bundle-anatomy-final-closeout-ledger.md) | closes the first post-tree bundle reform pass and distills the temporary rhythm plan | broad leaf rewrite, frontmatter migration, status promotion, or automatic next cohort authority |
 | [Execution Profile Truth Boundary Pilot](reviews/execution-profile-truth-boundary-pilot.md) | calibrates `execution_profile` as scout suitability, not empirical small-agent proof, using `continuity/handoff-continuation` as the pilot shelf | required frontmatter, local-agent eval verdicts, mass relabeling, or technique leaf edits |
+| [Execution Profile Fixture Sketch Ledger](reviews/execution-profile-fixture-sketch-ledger.md) | defines future fixture sketches for all `33` current `small-agent` scout candidates | empirical model proof, eval harness authority, or profile relabeling |
+| [Execution Profile Registry Calibration Review](reviews/execution-profile-registry-calibration-review.md) | explains why registry wording, generated scout rules, schema, and leaves stay unchanged after review | permission to keep ignoring future eval evidence or overfit a generated keyword rule |
+| [Execution Profile Repair Queue Review](reviews/execution-profile-repair-queue-review.md) | carries `AOA-T-0095` as the single profile-pressure repair candidate and closes broad repair pressure | broad leaf rewrite, mass relabeling, or proof that GitHub-facing rows all require orchestration |
+| [Execution Profile Empirical Harness Decision](reviews/execution-profile-empirical-harness-decision.md) | routes real local small-agent proof to `aoa-evals` and names `AOA-T-0056` as the first future pilot | model verdicts, fixture execution, or eval bundle authority inside `aoa-techniques` |
+| [Execution Profile Long-Pass Closeout Ledger](reviews/execution-profile-long-pass-closeout-ledger.md) | closes the execution-profile long pass with `107/107` review coverage and temporary-plan distillation | frontmatter migration, generated scout mutation, technique leaf edits, or empirical small-agent proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -457,16 +467,17 @@ capsule defect found by the audit, left `105` healthy bundles untouched,
 declined broad template/schema/status churn, and removed the temporary rhythm
 plan after distilling it into the final closeout ledger.
 
-Current latest execution-profile pilot: `continuity/handoff-continuation` is
-reviewed as the first truth-boundary slice. The pass keeps current scout
-profiles, clarifies that `small-agent` is not empirical proof, and prepares the
-future long pass to collect fixture sketches before any local small-agent
-harness.
+Current latest execution-profile closeout: the long pass is closed. It reviewed
+all `107` current bundles through the generated execution-profile scout surface,
+kept current profile counts unchanged, produced fixture sketches for all `33`
+current `small-agent` rows, carried `AOA-T-0095` as the only profile-pressure
+repair edge, and routed empirical local model proof to `aoa-evals`.
 
-Next clean move: choose one bounded targeted reform slice from the closeout
-evidence. Do not restart a broad audit, do not mass-rewrite old-template
-bundles, and do not promote scout axes into frontmatter without a separate
-decision and validator wave.
+Next clean move: choose one bounded targeted slice from the closeout evidence.
+Do not restart a broad audit, do not mass-rewrite old-template bundles, do not
+promote scout axes into frontmatter without a separate decision and validator
+wave, and do not run local small-agent proof without an `aoa-evals` proof
+surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
