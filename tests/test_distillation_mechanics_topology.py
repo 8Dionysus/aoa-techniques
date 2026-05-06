@@ -8686,6 +8686,92 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn("not source truth for bundle meaning", projection_markdown)
 
+    def test_tree_route_card_consolidation_covers_current_trunks(self) -> None:
+        techniques_agents = (REPO_ROOT / "techniques" / "AGENTS.md").read_text(
+            encoding="utf-8"
+        )
+        validator = (REPO_ROOT / "scripts" / "validate_nested_agents.py").read_text(
+            encoding="utf-8"
+        )
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        current_trunks = (
+            "continuity",
+            "execution",
+            "governance",
+            "history",
+            "ingest",
+            "instruction",
+            "knowledge-lift",
+            "proof",
+            "recovery",
+            "tool-use",
+        )
+        retained_lanes = ("agent-workflows", "docs", "evaluation")
+
+        self.assertIn(
+            "`techniques/<trunk>/<shelf>/<slug>/TECHNIQUE.md`",
+            techniques_agents,
+        )
+        self.assertIn("tree route-card consolidation: landed", ingress)
+        self.assertIn("Tree route-card consolidation", landing_log)
+        self.assertIn("final migration ledger and generated parity pass", ingress)
+        self.assertIn("final migration ledger and generated parity pass", distillation_roadmap)
+        self.assertIn("Current latest tree route-card consolidation", root_roadmap)
+        self.assertIn("Tree route-card consolidation is now complete", tree_contract)
+        self.assertIn(
+            "consolidated tree route cards",
+            changelog,
+        )
+
+        for trunk in current_trunks:
+            with self.subTest(trunk=trunk):
+                agents = (
+                    REPO_ROOT / "techniques" / trunk / "AGENTS.md"
+                ).read_text(encoding="utf-8")
+                self.assertIn(
+                    "This is a tree trunk, not a frontmatter domain",
+                    agents,
+                )
+                self.assertIn("## Current Shelves", agents)
+                self.assertIn("## Trunk Rules", agents)
+                self.assertIn("Do not add `tree_path` frontmatter", agents)
+                self.assertIn(
+                    f'Path("techniques") / "{trunk}" / "AGENTS.md"',
+                    validator,
+                )
+
+        for lane in retained_lanes:
+            with self.subTest(lane=lane):
+                agents = (
+                    REPO_ROOT / "techniques" / lane / "AGENTS.md"
+                ).read_text(encoding="utf-8")
+                self.assertIn("retained frontmatter review lane", agents)
+                self.assertIn("not a current tree shelf", agents)
+                self.assertIn("Do not add a new leaf bundle directly", agents)
+                self.assertIn(
+                    f'Path("techniques") / "{lane}" / "AGENTS.md"',
+                    validator,
+                )
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT

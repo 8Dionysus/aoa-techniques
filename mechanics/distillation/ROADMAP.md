@@ -488,10 +488,17 @@
    review is now complete as `tree-closeout-validated`; it confirms `107/107`
    current bundle paths match projected paths, `28/28` shelves have root
    legacy receipts, and no split, singleton, or unassigned hold row remains.
-9. Run tree route-card consolidation as its own bounded pass before another
-   path movement, schema promotion, or fresh reform slice. Keep it focused on
-   current trunk/shelf readability, not new frontmatter or generated
-   projection authority.
+9. The tree route-card consolidation is now complete. Root
+   `techniques/AGENTS.md` names the current
+   `techniques/<trunk>/<shelf>/<slug>/TECHNIQUE.md` shape;
+   all current trunk cards now read as current-tree route cards; retained
+   `agent-workflows`, `docs`, and `evaluation` cards now read as frontmatter
+   lanes, not direct leaf homes; and nested AGENTS validation covers every
+   current trunk plus retained lane.
+10. Run the final migration ledger and generated parity pass. Confirm receipt
+   coverage, temporary-plan references, generated/report drift, and the final
+   next reform direction before another path movement, schema promotion, or
+   topology reform slice.
 
 ## Hold line
 

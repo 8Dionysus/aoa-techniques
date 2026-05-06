@@ -789,8 +789,20 @@ It validates that every current bundle path now matches the tree projection,
 every shelf has a root legacy receipt, and all split or singleton tails are
 accounted.
 
-The next reform slice should run tree route-card consolidation before another
-path movement or schema promotion.
+Previous route-card breadcrumb preserved for parity: the next reform slice
+should run tree route-card consolidation before another path movement or schema
+promotion.
+
+Tree route-card consolidation is now complete for the current corpus. The
+root `techniques/AGENTS.md` names the current bundle shape as
+`techniques/<trunk>/<shelf>/<slug>/TECHNIQUE.md`; every current trunk route
+card names tree posture without promoting `tree_path` frontmatter; and the
+retained `agent-workflows`, `docs`, and `evaluation` cards are explicitly
+frontmatter lanes rather than current leaf homes.
+
+The next reform slice should run the final migration ledger and generated
+parity pass before another path movement, schema promotion, or topology
+reform.
 
 This keeps the current tree beautiful enough to grow while preserving bundle
 truth.

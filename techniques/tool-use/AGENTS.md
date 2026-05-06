@@ -12,14 +12,14 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current Scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `tool-gateway/`: one bounded MCP gateway proxy seam in front of configured
   upstream tool surfaces, with visible metadata and mediation boundaries
 
-## Domain Rules
+## Trunk Rules
 
 Keep the tool-use object small and inspectable:
 

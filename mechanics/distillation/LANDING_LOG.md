@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Tree route-card consolidation
+
+Changed:
+
+- updated the root `techniques/AGENTS.md` route card to name the current
+  authored bundle shape as
+  `techniques/<trunk>/<shelf>/<slug>/TECHNIQUE.md`
+- consolidated all current trunk route cards around current shelves, trunk
+  rules, and the no-`tree_path` boundary
+- kept `agent-workflows`, `docs`, and `evaluation` as retained frontmatter
+  review lanes with no active direct leaf bundle
+- expanded `scripts/validate_nested_agents.py` so every current trunk and
+  retained lane is validator-backed
+- moved the next bounded step to the final migration ledger and generated
+  parity pass
+
+Verification lane:
+
+```bash
+python scripts/validate_nested_agents.py
+python -m unittest tests.test_nested_agents_docs
+python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo tests.test_roadmap_parity
+python scripts/validate_repo.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no `tree_path`, `family`, capability, substrate, execution-profile, or risk
+  frontmatter was added
+- no generated output became source truth
+
 ## 2026-05-05 - Whole-tree closeout review
 
 Changed:

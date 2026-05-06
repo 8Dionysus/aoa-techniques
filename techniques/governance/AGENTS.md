@@ -12,9 +12,9 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `decision-routing/`: keeps owner placement, branch choices, and route-risk
   posture visible as local decision support before action
@@ -31,7 +31,7 @@ Accepted pilot shelves:
   obsolescence posture visible before a practice becomes durable, stays active,
   or routes toward owner review
 
-## Domain rules
+## Trunk Rules
 
 Keep the governance object explicit:
 

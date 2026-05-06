@@ -4,25 +4,38 @@ Guidance for coding agents and humans working under `techniques/agent-workflows/
 
 ## Purpose
 
-This domain remains the frontmatter review lane for many reusable workflow
-techniques, but no active leaf bundle currently lives directly here after the
-tree pilots.
+`agent-workflows/` remains the retained frontmatter review lane for many
+reusable workflow techniques, but no active leaf bundle currently lives directly here after the tree pilots.
+
+This is a retained lane, not a current tree shelf. Use it when old links,
+frontmatter `domain`, or migration reviews need workflow provenance, then route
+new authored leaves into the current tree through
+`docs/TECHNIQUE_TREE_CONTRACT.md`.
 
 The former `mcp-gateway-proxy` representative now lives under
 `techniques/tool-use/tool-gateway/`. The former local practice lifecycle
 representatives now live under
 `techniques/governance/practice-adoption-lifecycle/`.
 
-## Domain rules
+## Lane Rules
 
-Keep the sequence explicit. These techniques should tell a reader what happens first, what gets checked, and how closure is reported.
-Preserve explicit dry-run, diff, verify, and report stages when they are part of the contract.
+Keep the sequence explicit. These techniques should tell a reader what happens
+first, what gets checked, and how closure is reported.
+Preserve explicit dry-run, diff, verify, and report stages when they are part of
+the contract.
 Prefer a small reversible slice over a sweeping one-shot flow.
 
 ## Boundary
 
-A technique belongs here when the workflow stays reusable across projects and remains lighter than a live skill or runtime playbook.
-If the object starts to encode project-specific operators, shell wrappers, or deployment posture, route that meaning to `aoa-skills` or the owning runtime repository instead of widening this technique.
+Do not add a new leaf bundle directly under this lane unless a reviewed tree
+projection proves that broad workflow placement is again the honest authored
+home.
+
+A technique belongs here when the workflow stays reusable across projects and
+remains lighter than a live skill or runtime playbook.
+If the object starts to encode project-specific operators, shell wrappers, or
+deployment posture, route that meaning to `aoa-skills` or the owning runtime
+repository instead of widening this technique.
 
 ## Hard NO
 

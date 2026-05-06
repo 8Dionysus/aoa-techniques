@@ -13,9 +13,9 @@ This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
 their existing `domain` and `kind` values when the reviewed move is only path
 architecture.
 
-## Current scope
+## Current Shelves
 
-Accepted pilot shelves:
+Current shelves:
 
 - `diagnosis-repair/`: turns reviewed friction into drift taxonomy, diagnosis,
   repair-shape, and checkpoint-bound repair posture while keeping each leaf
@@ -24,7 +24,7 @@ Accepted pilot shelves:
   stress receipt closeout, and receipt-first failure analysis under bounded
   recovery pressure while preserving validation-shaped leaves
 
-## Domain rules
+## Trunk Rules
 
 Keep the recovery object explicit:
 

@@ -11,12 +11,13 @@ The trunk is a placement aid for browseable technique canon. It is not
 `aoa-evals`, not proof verdict authority, and not a replacement for an owning
 repository's validation policy.
 
-## Domain rules
+This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
+their existing `domain` and `kind` values when the reviewed move is only path
+architecture.
 
-Keep proof-facing techniques narrow, portable, and explicit about what their
-evidence does and does not prove.
+## Current Shelves
 
-Current landed shelves:
+Current shelves:
 
 - `skill-support/`: bounded-context vocabulary, consumer-visible contract
   validation, and invariant-oriented coverage around capability or subsystem
@@ -43,6 +44,11 @@ Current landed shelves:
   release governance, cross-repo mirror co-ownership, skill activation,
   checkpoint automation, or closeout automation.
 
+## Trunk Rules
+
+Keep proof-facing techniques narrow, portable, and explicit about what their
+evidence does and does not prove.
+
 ## Boundary
 
 Do not widen a proof technique into an eval suite, release gate, runtime
@@ -60,6 +66,8 @@ Do not:
 - claim that a technique path proves quality by itself
 - change `domain` or `kind` frontmatter merely because the bundle now lives
   under `proof/`
+- Do not add `tree_path` frontmatter merely because a bundle lives under this
+  trunk
 - collapse context mapping, contract testing, and invariant coverage into one
   combined proof technique
 - collapse summary-contract generation, staged signal promotion, and CI
