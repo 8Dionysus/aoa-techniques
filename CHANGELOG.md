@@ -253,6 +253,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `runtime-truth-lifecycle` pilot review and selected
   `proof/owner-truth-closeout` for the next direct-read migration review
   without moving a twenty-fourth shelf yet
+- accepted the `owner-truth-closeout` direct-read migration review over
+  `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094` as
+  the twenty-fourth tree pilot while keeping the review itself non-mutating
 
 ### Validation
 

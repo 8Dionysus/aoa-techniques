@@ -3,6 +3,44 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Owner-truth-closeout direct-read migration review
+
+Changed:
+
+- added
+  [owner-truth-closeout-direct-read-migration-review](parts/technique-reform-ingress/reviews/owner-truth-closeout-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`,
+  `AOA-T-0096`, and `AOA-T-0094`
+- accepted `proof/owner-truth-closeout` as the twenty-fourth bounded migration
+  pilot without moving files
+- kept the shelf centered on owner-truth entry, proof-backed finding closeout,
+  GitHub-native owner endcaps, workflow-pinned generated publish validation,
+  and canonical-owner mirror parity
+- preserved `AOA-T-0091` as `kind: guardrail`, `AOA-T-0092` and
+  `AOA-T-0095` as `kind: workflow`, `AOA-T-0096` as `kind: validation`,
+  `AOA-T-0094` as `kind: distribution`, and all five bundles as `status:
+  promoted`
+- kept AoA constitutional authority, root `AGENTS.md` law, workspace install
+  doctrine, public-share approval policy, GitHub platform policy, release
+  governance, cross-repo mirror co-ownership, skill activation, checkpoint
+  automation, closeout automation, route mutation, memory writes, runtime
+  behavior, KAG promotion, ToS canon, `aoa-evals` verdict authority, and
+  neighboring automation/tool-use shelves outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique paths changed
+- no frontmatter changed
+- no `proof/owner-truth-closeout` route card or receipt was created
+- no `governance/automation-governance` or `tool-use/tool-gateway` shelf moved
+
 ## 2026-05-05 - Landed runtime-truth-lifecycle pilot review
 
 Changed:

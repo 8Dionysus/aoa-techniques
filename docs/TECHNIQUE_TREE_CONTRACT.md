@@ -622,8 +622,18 @@ governance, cross-repo mirror co-ownership, skill activation, checkpoint
 automation, closeout automation, and neighboring automation/tool-use shelves
 outside the next move.
 
-The next reform slice should run the `proof/owner-truth-closeout` direct-read
-review before choosing any twenty-fourth shelf movement.
+The twenty-fourth direct-read review is
+[Owner-Truth-Closeout Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/owner-truth-closeout-direct-read-migration-review.md).
+It accepts `proof/owner-truth-closeout` as a bounded shelf over `AOA-T-0091`,
+`AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094`, while preserving
+`AOA-T-0091` as `kind: guardrail`, `AOA-T-0092` and `AOA-T-0095` as `kind:
+workflow`, `AOA-T-0096` as `kind: validation`, `AOA-T-0094` as `kind:
+distribution`, all five as promoted, and their current `domain` truth.
+
+The twenty-fourth pilot migration moves exactly those five bundles into
+`techniques/proof/owner-truth-closeout/` without changing `domain`, `kind`,
+status, relations, evidence, support files, or `tree_path` frontmatter. The
+root receipt should be created in the same wave.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
