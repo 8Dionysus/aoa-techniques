@@ -79,5 +79,6 @@ Current reviews:
 - [bundle-anatomy-wave-c-review](bundle-anatomy-wave-c-review.md)
 - [bundle-anatomy-corpus-synthesis](bundle-anatomy-corpus-synthesis.md)
 - [bundle-anatomy-capsule-gap-repair-cohort](bundle-anatomy-capsule-gap-repair-cohort.md)
+- [bundle-anatomy-template-contract-feedback](bundle-anatomy-template-contract-feedback.md)
 
 These files are review packets, not generated reports and not bundle authority.
