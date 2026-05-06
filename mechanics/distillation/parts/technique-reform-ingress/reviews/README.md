@@ -99,5 +99,6 @@ Current reviews:
 - [selector-relation-wave-a-proof-execution-review](selector-relation-wave-a-proof-execution-review.md)
 - [ready-work-graphs-direct-relation-repair](ready-work-graphs-direct-relation-repair.md)
 - [selector-relation-wave-b-instruction-knowledge-review](selector-relation-wave-b-instruction-knowledge-review.md)
+- [selector-relation-wave-c-execution-owner-review](selector-relation-wave-c-execution-owner-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
