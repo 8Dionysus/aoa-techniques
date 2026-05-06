@@ -387,7 +387,12 @@
    execution route card updated, root legacy receipt accounting, link repair,
    generated rebuilds, and release-check validation in the same wave. The next
    bounded step is to review the landed `runtime-truth-lifecycle` pilot before
-   choosing any twenty-fourth shelf.
+   choosing any twenty-fourth shelf. The landed `runtime-truth-lifecycle`
+   pilot review is now complete as `pilot-validated`; it validates the fourth
+   execution trunk shelf, keeps render truth, local lifecycle, host readiness,
+   and baseline-first comparison as distinct runtime-adjacent atoms, and
+   chooses `proof/owner-truth-closeout` for direct-read review before any
+   twenty-fourth movement.
 
 ## Hold line
 

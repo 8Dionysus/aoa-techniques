@@ -6567,6 +6567,115 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
+    def test_landed_runtime_truth_lifecycle_pilot_review_selects_owner_truth_closeout(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-runtime-truth-lifecycle-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Runtime-Truth-Lifecycle Pilot Review", review)
+        self.assertIn("fourth successful shelf under the `execution` trunk", review)
+        self.assertIn("Choose `proof/owner-truth-closeout`", review)
+        self.assertIn("Do not move `proof/owner-truth-closeout`", review)
+        self.assertIn("root `AGENTS.md` law", review)
+        self.assertIn(
+            "Run a direct-read migration review for `proof/owner-truth-closeout`",
+            review,
+        )
+        self.assertIn("landed-runtime-truth-lifecycle-pilot-review", reviews_index)
+        self.assertIn(
+            "landed runtime-truth-lifecycle pilot review: landed",
+            ingress,
+        )
+        self.assertIn("proof/owner-truth-closeout", ingress)
+        self.assertIn("Landed runtime-truth-lifecycle pilot review", landing_log)
+        self.assertIn(
+            "landed `runtime-truth-lifecycle`\n   pilot review is now complete",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the `proof/owner-truth-closeout` direct-read migration review",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Landed Runtime-Truth-Lifecycle Pilot Review",
+            tree_contract,
+        )
+        self.assertIn("proof/owner-truth-closeout", tree_contract)
+        self.assertIn(
+            "accepted the landed `runtime-truth-lifecycle` pilot review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0091",
+                "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+                "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0092",
+                "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+                "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0095",
+                "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+                "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0096",
+                "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+                "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0094",
+                "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+                "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT

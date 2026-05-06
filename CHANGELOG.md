@@ -250,6 +250,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039` into
   `techniques/execution/runtime-truth-lifecycle/` while keeping `domain`,
   `kind`, IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `runtime-truth-lifecycle` pilot review and selected
+  `proof/owner-truth-closeout` for the next direct-read migration review
+  without moving a twenty-fourth shelf yet
 
 ### Validation
 
