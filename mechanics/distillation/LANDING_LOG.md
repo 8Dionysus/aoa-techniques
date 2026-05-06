@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Decision-routing direct-read migration review
+
+Changed:
+
+- added
+  [decision-routing-direct-read-migration-review](parts/technique-reform-ingress/reviews/decision-routing-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0076`, `AOA-T-0078`, and `AOA-T-0079`
+- accepted `governance/decision-routing` as the twentieth bounded migration
+  pilot without moving files
+- kept the shelf centered on local decision support: one owner-layer verdict,
+  explicit branch cards, and one small route-risk passport
+- preserved all three bundles as `status: promoted` and kept `domain`, `kind`,
+  IDs, evidence, relations, support files, maturity, validation-strength
+  metadata, and public-safety posture unchanged
+- kept AoA constitutional authority, `aoa-routing` ownership, role contract
+  law, runtime dispatch, approval policy, playbook design, hidden automation
+  governance, risk scoring doctrine, context-map doctrine, and neighboring
+  boundary-watch shelves outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no governance route card was created
+- no twentieth shelf migration landed from the review alone
+
 ## 2026-05-05 - Landed donor-harvest pilot review
 
 Changed:

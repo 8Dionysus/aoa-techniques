@@ -217,6 +217,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `donor-harvest` pilot review and selected
   `governance/decision-routing` for the next direct-read migration review
   without moving a twentieth shelf yet
+- accepted the `decision-routing` direct-read migration review over
+  `AOA-T-0076`, `AOA-T-0078`, and `AOA-T-0079` as the twentieth tree pilot
+  while keeping the review itself non-mutating
 
 ### Validation
 
