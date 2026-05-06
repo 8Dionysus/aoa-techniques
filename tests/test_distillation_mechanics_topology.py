@@ -7178,6 +7178,107 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertTrue((REPO_ROOT / current_path).is_file())
                 self.assertFalse((REPO_ROOT / future_path).exists())
 
+    def test_automation_governance_split_expansion_closeout_activates_candidate_a(
+        self,
+    ) -> None:
+        closeout = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "automation-governance-split-expansion-closeout.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Automation-Governance Split Expansion Closeout", closeout)
+        self.assertIn("split-expanded", closeout)
+        self.assertIn("no path migration", closeout)
+        self.assertIn("Candidate A", closeout)
+        self.assertIn("governance/automation-readiness", closeout)
+        self.assertIn("governance/promotion-boundary", closeout)
+        self.assertIn("governance/practice-adoption-lifecycle", closeout)
+        self.assertIn("Do not move files from this closeout", closeout)
+        self.assertIn(
+            "Run a direct-read review for Candidate A",
+            closeout,
+        )
+        self.assertIn(
+            "automation-governance-split-expansion-closeout",
+            reviews_index,
+        )
+        self.assertIn(
+            "automation-governance split expansion closeout: landed",
+            ingress,
+        )
+        self.assertIn("split-expanded", ingress)
+        self.assertIn(
+            "Automation-governance split expansion closeout",
+            landing_log,
+        )
+        self.assertIn(
+            "automation-governance split\n   expansion closeout is now landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the `governance/automation-readiness` direct-read review",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Automation-Governance Split Expansion Closeout",
+            tree_contract,
+        )
+        self.assertIn(
+            "landed the automation-governance split expansion closeout",
+            changelog,
+        )
+
+        for current_path, future_path in (
+            (
+                "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT

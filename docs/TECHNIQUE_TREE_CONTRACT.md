@@ -654,5 +654,13 @@ activate three candidate shelves: `governance/automation-readiness` over
 `AOA-T-0102`; and `governance/practice-adoption-lifecycle` over
 `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104`.
 
+The automation-governance split expansion closeout is
+[Automation-Governance Split Expansion Closeout](../mechanics/distillation/parts/technique-reform-ingress/reviews/automation-governance-split-expansion-closeout.md).
+It makes the split sequence explicit without moving files: Candidate A is
+`governance/automation-readiness`, Candidate B is
+`governance/promotion-boundary`, and Candidate C is
+`governance/practice-adoption-lifecycle`. Candidate A should receive the next
+direct-read review before any twenty-fifth shelf movement.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

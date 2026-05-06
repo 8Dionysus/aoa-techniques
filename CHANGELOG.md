@@ -268,6 +268,10 @@ The format is intentionally simple and human-first.
   `governance/promotion-boundary`, and
   `governance/practice-adoption-lifecycle` as split candidates before any
   automation-governance path movement
+- landed the automation-governance split expansion closeout, activated
+  `governance/automation-readiness` as Candidate A, and kept
+  `governance/promotion-boundary` plus
+  `governance/practice-adoption-lifecycle` queued without moving files
 
 ### Validation
 
