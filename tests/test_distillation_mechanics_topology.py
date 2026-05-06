@@ -126,6 +126,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/approval-evidence-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-approval-evidence-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/review-evidence-direct-read-migration-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-automation-readiness-pilot-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -7521,6 +7522,115 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+
+    def test_landed_automation_readiness_pilot_review_routes_candidate_b(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-automation-readiness-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Automation-Readiness Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn(
+            "The landed `governance/automation-readiness` shelf holds.",
+            review,
+        )
+        self.assertIn("generated tree projection keeps", review)
+        self.assertIn("Run a direct-read review for Candidate B", review)
+        self.assertIn("governance/promotion-boundary", review)
+        self.assertIn(
+            "landed-automation-readiness-pilot-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "landed automation-readiness pilot review: landed",
+            ingress,
+        )
+        self.assertIn("Landed automation-readiness pilot review", landing_log)
+        self.assertIn(
+            "automation-readiness` pilot review is now complete",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the `governance/promotion-boundary` direct-read review",
+            root_roadmap,
+        )
+        self.assertIn("Landed Automation-Readiness Pilot Review", tree_contract)
+        self.assertIn(
+            "accepted the landed `automation-readiness` pilot review",
+            changelog,
+        )
+
+        for old_path, new_path in (
+            (
+                "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(new_path=new_path):
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / new_path).is_file())
+
+        for current_path, future_path in (
+            (
+                "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

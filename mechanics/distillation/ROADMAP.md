@@ -440,7 +440,11 @@
    governance route-card accounting, root legacy receipt accounting, link
    repair, generated rebuilds, and release-check validation in the same wave.
    The next bounded step is to review the landed `automation-readiness` pilot
-   before choosing Candidate B or another split-route hold.
+   before choosing Candidate B or another split-route hold. The landed
+   `automation-readiness` pilot review is now complete as `pilot-validated`;
+   it confirms the first split shelf held after migration and chooses
+   `governance/promotion-boundary` for direct-read review before any
+   twenty-sixth movement.
 
 ## Hold line
 
