@@ -22,6 +22,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- started the selector/relation long pass with Wave A over proof and execution
+  shelves, strengthening `AOA-T-0050 ready-work-from-blocker-graph` from
+  `complements AOA-T-0049` to `requires AOA-T-0049` and recording the direct
+  repair under Distillation technique-reform ingress
 - strengthened `AOA-T-0058 receipt-confirmed-handoff-packet` and
   `AOA-T-0059 git-verified-handoff-claims` relations from
   `complements AOA-T-0057` to `requires AOA-T-0057`, with generated selection

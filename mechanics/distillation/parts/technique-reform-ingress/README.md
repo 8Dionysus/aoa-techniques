@@ -302,6 +302,13 @@ permission slip to remap techniques automatically.
   `AOA-T-0058` and `AOA-T-0059` from `complements AOA-T-0057` to
   `requires AOA-T-0057`; no new relation types, graph behavior, status,
   domain, kind, or path changes
+- selector/relation Wave A: landed over `proof/evaluation-chain`,
+  `proof/published-summary`, `execution/intent-chain`, and
+  `execution/ready-work-graphs`, confirming selector prompts and relation
+  posture for the first long-pass wave
+- ready-work-graphs direct relation repair: landed, strengthening only
+  `AOA-T-0050` from `complements AOA-T-0049` to `requires AOA-T-0049`;
+  no new relation types, graph behavior, status, domain, kind, or path changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -421,6 +428,8 @@ permission slip to remap techniques automatically.
 | [Topology Selector Handoff-Continuation Mini-Pilot](reviews/topology-selector-handoff-continuation-mini-pilot.md) | tests shelf-local selector prompts over `AOA-T-0056` through `AOA-T-0062` and identifies relation sequence guidance as the next useful thread | schema migration, frontmatter promotion, model proof, generated scout mutation, or bundle-local repair |
 | [Relations Composition Handoff-Continuation Pilot](reviews/relations-composition-handoff-continuation-pilot.md) | reads current relation contracts and the handoff-continuation shelf to separate strict packet dependency from ordinary adjacency | relation schema migration, new relation types, graph behavior, frontmatter mutation, generated catalog mutation, or model proof |
 | [Handoff-Continuation Direct Relation Repair](reviews/handoff-continuation-direct-relation-repair.md) | accepts `requires AOA-T-0057` for `AOA-T-0058` and `AOA-T-0059` from direct bundle contracts | new relation types, relation schema migration, graph behavior, broader shelf relation changes, status promotion, or model proof |
+| [Selector Relation Wave A Proof Execution Review](reviews/selector-relation-wave-a-proof-execution-review.md) | tests selector prompts and relation posture over the first long-pass wave: evaluation-chain, published-summary, intent-chain, and ready-work-graphs | relation schema migration, new relation types, scout-axis promotion, generated graph behavior, status/domain/kind/path changes, or model proof |
+| [Ready-Work-Graphs Direct Relation Repair](reviews/ready-work-graphs-direct-relation-repair.md) | accepts `requires AOA-T-0049` for `AOA-T-0050` because ready-work derivation needs an existing blocker graph contract | new relation types, graph behavior, broader ready-work relation changes, planning-ladder collapse, status promotion, or model proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -501,20 +510,28 @@ It confirmed that the current relation vocabulary is enough for the next move:
 candidates, while `AOA-T-0056`, `AOA-T-0060`, `AOA-T-0061`, and
 `AOA-T-0062` should stay on hold.
 
-Current latest direct relation repair: `AOA-T-0058` and `AOA-T-0059` now
-`requires AOA-T-0057`, because receipt and git-claim verification both depend
-on an existing structured handoff packet. The rest of
+Current latest handoff-continuation direct relation repair: `AOA-T-0058` and
+`AOA-T-0059` now `requires AOA-T-0057`, because receipt and git-claim
+verification both depend on an existing structured handoff packet. The rest of
 `continuity/handoff-continuation` remains held: no new relation types, no graph
 behavior, no status/domain/kind/path changes, and no model proof claim.
 
-Next clean move: move to the long selector/relation pass. Start from dense
-shelves where current `domain`, `kind`, and tree placement find the
-neighborhood but not the exact leaf. Use the rhythm proven here: selector
-prompts first, relation contract read second, direct repair only when bundle
-inputs and contracts justify one existing relation type. Do not restart a
-broad audit, do not add future relation names such as `follows`, do not promote
-scout axes into frontmatter without a separate decision and validator wave, and
-do not run local small-agent proof without an `aoa-evals` proof surface.
+Current latest selector/relation long-pass wave: Wave A is closed over
+`proof/evaluation-chain`, `proof/published-summary`, `execution/intent-chain`,
+and `execution/ready-work-graphs`. It confirmed that selector prompts can
+choose the correct leaf inside these shelves and accepted one direct repair:
+`AOA-T-0050` now `requires AOA-T-0049`, because ready-work queue derivation
+depends on an existing blocker graph contract.
+
+Next clean move: continue the long selector/relation pass with Wave B:
+`instruction/instruction-surface`, `knowledge-lift/kag-source-lift`,
+`instruction/docs-boundary`, and `proof/skill-support`. Use the same rhythm:
+selector prompts first, relation contract read second, direct repair only when
+bundle inputs and contracts justify one existing relation type. Do not restart
+a broad audit, do not add future relation names such as `follows`, do not
+promote scout axes into frontmatter without a separate decision and validator
+wave, and do not run local small-agent proof without an `aoa-evals` proof
+surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
