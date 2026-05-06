@@ -305,7 +305,14 @@
    continuity route card extended for the third shelf, root legacy receipt
    accounting, link repair, generated rebuilds, and release-check validation in
    the same wave. The next bounded step is to review the landed
-   `donor-harvest` pilot before choosing any twentieth shelf.
+   `donor-harvest` pilot before choosing any twentieth shelf. The landed
+   `donor-harvest` pilot review is now complete as `pilot-validated`,
+   validating the third `continuity` trunk shelf and choosing
+   `governance/decision-routing` for the next direct-read migration review
+   while keeping AoA constitutional authority, `aoa-routing` ownership, role
+   contract law, runtime dispatch, approval policy, playbook design, hidden
+   automation governance, and neighboring boundary-watch shelves outside the
+   next move.
 
 ## Hold line
 

@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed donor-harvest pilot review
+
+Changed:
+
+- added
+  [landed-donor-harvest-pilot-review](parts/technique-reform-ingress/reviews/landed-donor-harvest-pilot-review.md)
+  as the landed review after the nineteenth path migration
+- validated `donor-harvest` as the third successful continuity trunk shelf
+- confirmed the shelf remains reviewed-session continuity rather than memory
+  authority, playbook quest authority, progression doctrine, owner routing,
+  role progression, stats ownership, or session-closeout automation
+- preserved `AOA-T-0077` as `kind: handoff` and `AOA-T-0075`, `AOA-T-0084`,
+  and `AOA-T-0085` as `kind: lift`
+- chose `governance/decision-routing` for the next direct-read migration
+  review without moving files
+- kept AoA constitutional authority, `aoa-routing` ownership, role contract
+  law, runtime dispatch, approval policy, playbook design, hidden automation
+  governance, and neighboring boundary-watch shelves outside the next move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no governance route card was created
+- no `tree_path` frontmatter was added
+
 ## 2026-05-05 - Donor-harvest tree pilot migration
 
 Changed:

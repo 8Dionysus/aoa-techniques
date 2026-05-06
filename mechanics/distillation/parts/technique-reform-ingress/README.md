@@ -171,6 +171,9 @@ permission slip to remap techniques automatically.
   `AOA-T-0084`, and `AOA-T-0085` under
   `techniques/continuity/donor-harvest/` without frontmatter, status, or kind
   changes
+- landed donor-harvest pilot review: landed as `pilot-validated`, with
+  `governance/decision-routing` chosen for direct-read review before any
+  twentieth shelf movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -244,6 +247,7 @@ permission slip to remap techniques automatically.
 | [Landed Agent-Workflows-Core Pilot Review](reviews/landed-agent-workflows-core-pilot-review.md) | confirms the eighteenth migrated shelf stayed bounded as the third execution trunk shelf and chooses `continuity/donor-harvest` for direct-read review | movement of `continuity/donor-harvest`, `tree_path` frontmatter, frontmatter remap, memory authority, playbook quest authority, progression doctrine, owner routing, role progression, stats ownership, session-closeout automation, or neighboring continuity/governance shelves |
 | [Donor-Harvest Direct-Read Migration Review](reviews/donor-harvest-direct-read-migration-review.md) | reads `AOA-T-0075`, `AOA-T-0077`, `AOA-T-0084`, and `AOA-T-0085` directly and accepts the shelf as the nineteenth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, memory authority, playbook quest authority, progression doctrine, owner routing, role progression, stats ownership, session-closeout automation, neighboring continuity/governance shelves, or all remaining `agent-workflows` leaves |
 | [Donor-Harvest Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md) | preserves the nineteenth accepted path migration into `techniques/continuity/donor-harvest/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, memory authority, playbook quest authority, progression doctrine, owner routing, role progression, stats ownership, session-closeout automation, neighboring continuity/governance shelves, or all remaining `agent-workflows` leaves |
+| [Landed Donor-Harvest Pilot Review](reviews/landed-donor-harvest-pilot-review.md) | confirms the nineteenth migrated shelf stayed bounded as the third continuity trunk shelf and chooses `governance/decision-routing` for direct-read review | movement of `governance/decision-routing`, governance route-card creation, `tree_path` frontmatter, frontmatter remap, AoA constitutional authority, `aoa-routing` ownership, role contract law, runtime dispatch, approval policy, playbook design, hidden automation governance, or neighboring boundary-watch shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -496,5 +500,15 @@ The landed `agent-workflows-core` pilot review is now complete as
 `pilot-validated`. It validates the third execution trunk shelf and chooses
 `continuity/donor-harvest` for the next direct-read migration review.
 
-The next move is to run that direct-read review before moving any nineteenth
-shelf.
+The `donor-harvest` direct-read review is now landed as
+`accepted-for-nineteenth-migration-pilot`, accepting exactly `AOA-T-0075`,
+`AOA-T-0077`, `AOA-T-0084`, and `AOA-T-0085` without moving files.
+
+The nineteenth pilot migration is now landed: those four bundles live under
+`techniques/continuity/donor-harvest/`, the `continuity/` route card and root
+legacy receipt are updated, authored links were repaired, generated surfaces
+were rebuilt, and frontmatter stayed unchanged.
+
+The landed `donor-harvest` pilot review is now complete as `pilot-validated`.
+It validates the third continuity trunk shelf and chooses
+`governance/decision-routing` for the next direct-read migration review.
