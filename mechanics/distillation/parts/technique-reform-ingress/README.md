@@ -14,7 +14,8 @@ permission slip to remap techniques automatically.
 
 - public corpus: `107` bundles, `25` canonical, `82` promoted
 - authoritative frontmatter axes: `domain`, `kind`
-- corpus tree: design contract only, not migrated path truth
+- corpus tree: current authored path architecture across `10` trunks, `28`
+  shelves, and `107` leaf bundles
 - scout or design axes: `family`, `capability_class`, `substrate`,
   `execution_profile`, `risk_posture`, richer `relations`
 - family seed: `26` scout families, still weaker than bundle frontmatter
@@ -29,8 +30,8 @@ permission slip to remap techniques automatically.
   remap lane; no new frontmatter candidate chosen
 - family shelf review: landed as a tree-fitness review over `26` scout
   families; `family` remains scout-only and the corpus tree remains unmigrated
-- tree projection: landed as a generated, non-authoritative tree projection
-  and placement review over all `107` bundles
+- tree projection: landed as a generated, non-authoritative tree projection,
+  placement review, and current path drift audit over all `107` bundles
 - first tree projection review: landed with `review-compaction` selected for
   direct-read migration review, not path movement
 - review-compaction direct-read review: landed as
@@ -264,6 +265,10 @@ permission slip to remap techniques automatically.
   `techniques/tool-use/tool-gateway/` without frontmatter changes
 - landed tool-gateway pilot review: landed as `pilot-validated`, with the
   singleton resolved and whole-tree closeout review chosen next
+- whole-tree closeout review: landed as `tree-closeout-validated`, with all
+  `107` current bundle paths matching projected paths, `28/28` shelves backed
+  by root legacy receipts, and no remaining split, singleton, or unassigned
+  hold rows
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -280,7 +285,7 @@ permission slip to remap techniques automatically.
 | [Technique Topology Scout](../../../../reports/technique_topology_scout.md) | current generated projection over scout axes for review pressure | schema truth, migration authority, or bundle meaning |
 | [First Topology Scout Review Pack](reviews/first-topology-scout-review-pack.md) | first human readout from the scout projection and the next review lane | schema migration, bundle remap authority, or proof of generated correctness |
 | [Technique Family Scout](../../../../reports/technique_family_scout.md) | generated family counts and likely clusters | automatic frontmatter migration authority |
-| [Technique Tree Projection](../../../../reports/technique_tree_projection.md) | generated future trunk/shelf/path projection over all `107` bundles | path migration, `tree_path` frontmatter truth, or proof that future paths are current links |
+| [Technique Tree Projection](../../../../reports/technique_tree_projection.md) | generated trunk/shelf/path projection and current path drift audit over all `107` bundles | path migration, `tree_path` frontmatter truth, or proof that projection rows outrank authored bundles |
 | [Kind Ambiguity Audit](../../../../reports/kind_ambiguity_audit.md) | tie-break seams that deserve human review | automatic remap authority |
 | [First Kind Ambiguity Review Pack](reviews/first-kind-ambiguity-review-pack.md) | direct-read shortlist for later narrow remap work | frontmatter mutation, new kind authority, or status change |
 | [Second Kind Ambiguity Review Pack](reviews/second-kind-ambiguity-review-pack.md) | updated-audit read that routes `AOA-T-0054` to a `handoff` / `workflow` / `recovery` destination check | frontmatter mutation or proof that `AOA-T-0054` must move |
@@ -366,6 +371,7 @@ permission slip to remap techniques automatically.
 | [Tool-Gateway Direct-Read Singleton Review](reviews/tool-gateway-direct-read-singleton-review.md) | reads `AOA-T-0065` directly and accepts `tool-use/tool-gateway` as the twenty-eighth singleton migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
 | [Tool-Gateway Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md) | preserves the twenty-eighth accepted path migration into `techniques/tool-use/tool-gateway/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
 | [Landed Tool-Gateway Pilot Review](reviews/landed-tool-gateway-pilot-review.md) | validates the landed singleton shelf and routes whole-tree closeout review | path movement, route-card consolidation, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
+| [Whole-Tree Closeout Review](reviews/whole-tree-closeout-review.md) | validates the current tree as `107` bundles, `10` trunks, `28` shelves, `107/107` current path parity, `28/28` root receipts, and zero split/singleton/unassigned holds | route-card consolidation, path movement, `tree_path` frontmatter, family promotion, new required axes, frontmatter remap, canonical promotion, generated projection authority, sibling-owner authority, or final topology for future imports |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -393,8 +399,8 @@ It should continue one bounded slice at a time:
 ## Stop Lines
 
 - Do not add new required frontmatter fields in the first ingress pass.
-- Do not migrate the `techniques/` directory tree before a projection-first
-  review identifies one bounded pilot subtree.
+- Do not make any future `techniques/` path change before a projection-first
+  review and direct bundle reading identify one bounded subtree.
 - Do not add new `kind` values from handoff cues like `trace-probe`,
   `diagnosis`, `review`, `comparison`, `boundary`, or `stress-case`.
 - Do not remap bundle frontmatter from generated reports without reading the
@@ -784,7 +790,14 @@ and rebuilds generated surfaces.
 
 The landed `tool-gateway` pilot review is now complete as `pilot-validated`.
 It confirms the first `tool-use` shelf held after migration, resolves the
-former singleton hold, and chooses whole-tree closeout review before route-card
-consolidation or any next reform slice.
+former singleton hold, and chooses whole-tree closeout review before
+route-card consolidation or any next reform slice.
 
-Run the whole-tree closeout review.
+The whole-tree closeout review is now complete as `tree-closeout-validated`.
+It confirms `107/107` current paths match projected paths, `28/28` shelves
+have root legacy receipts, no split/singleton/unassigned hold rows remain, and
+the current tree is a path architecture rather than new frontmatter truth.
+
+Previous closeout breadcrumb preserved for parity: Run the whole-tree closeout review before route-card consolidation or another reform slice.
+
+Run tree route-card consolidation as its own bounded pass.

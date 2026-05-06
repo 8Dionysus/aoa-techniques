@@ -484,7 +484,14 @@
    rebuilds, and unchanged frontmatter. The landed `tool-gateway` pilot
    review is now complete as `pilot-validated`; it confirms the singleton
    shelf held after migration and chooses whole-tree closeout review before
-   route-card consolidation or another reform slice.
+   route-card consolidation or another reform slice. The whole-tree closeout
+   review is now complete as `tree-closeout-validated`; it confirms `107/107`
+   current bundle paths match projected paths, `28/28` shelves have root
+   legacy receipts, and no split, singleton, or unassigned hold row remains.
+9. Run tree route-card consolidation as its own bounded pass before another
+   path movement, schema promotion, or fresh reform slice. Keep it focused on
+   current trunk/shelf readability, not new frontmatter or generated
+   projection authority.
 
 ## Hold line
 

@@ -5,7 +5,7 @@ Do not edit it by hand; run `python scripts/build_tree_projection.py`.
 
 This projection is non-authoritative and weaker than authored bundle meaning. It is a placement review surface only; it must not be treated as frontmatter truth, schema truth, or automatic path migration authority.
 
-Use this projection to review future trunk and shelf placement before any directory move.
+Use this projection to audit current trunk and shelf placement, compare path drift, and review future placement changes before any new directory move.
 
 ## Projection Scope
 
@@ -187,6 +187,6 @@ Use this projection to review future trunk and shelf placement before any direct
 ## Boundaries
 
 - This projection is non-authoritative and weaker than authored bundle meaning. It is a placement review surface only; it must not be treated as frontmatter truth, schema truth, or automatic path migration authority.
-- This projection can choose review targets, but bundle directories remain unmoved.
-- A later migration must read bundle meaning directly, choose one bounded pilot subtree, and update links, generated surfaces, validators, docs, and decision records together.
+- This projection can audit current paths and choose review targets, but it is not source truth for bundle meaning or future moves.
+- Any later path change must read bundle meaning directly, choose one bounded subtree, and update links, generated surfaces, validators, docs, and decision records together.
 - `family` remains scout-only; `domain` and `kind` remain current frontmatter truth.

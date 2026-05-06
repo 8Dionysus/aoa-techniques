@@ -153,17 +153,18 @@
       "doc_path": "docs/TECHNIQUE_TREE_CONTRACT.md",
       "title": "Technique Tree Contract",
       "surface_group": "canon/authority",
-      "bounded_role": "corpus tree contract for scalable technique path architecture across trunks, shelves, and leaf bundles",
+      "bounded_role": "corpus tree contract for current scalable technique path architecture across trunks, shelves, and leaf bundles",
       "top_level_sections": [
         "Purpose",
         "Tree Law",
         "Tree Stack",
-        "Trunk Draft",
+        "Current Trunks",
         "Tree Versus Facets",
-        "Migration Rules",
+        "Path Change Rules",
         "Leaf Bundle Rules",
         "Generated Projection Path",
         "Stop Lines",
+        "Current Closeout",
         "Next Honest Build Path"
       ]
     },

@@ -497,7 +497,7 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_id": "technique_tree_contract",
         "doc_path": "docs/TECHNIQUE_TREE_CONTRACT.md",
         "surface_group": "canon/authority",
-        "bounded_role": "corpus tree contract for scalable technique path architecture across trunks, shelves, and leaf bundles",
+        "bounded_role": "corpus tree contract for current scalable technique path architecture across trunks, shelves, and leaf bundles",
     },
     {
         "doc_id": "technique_index",
@@ -6080,7 +6080,7 @@ def build_tree_projection_markdown(report: dict[str, Any]) -> str:
         "",
         TREE_PROJECTION_AUTHORITY_NOTE,
         "",
-        "Use this projection to review future trunk and shelf placement before any directory move.",
+        "Use this projection to audit current trunk and shelf placement, compare path drift, and review future placement changes before any new directory move.",
         "",
         "## Projection Scope",
         "",
@@ -6134,8 +6134,8 @@ def build_tree_projection_markdown(report: dict[str, Any]) -> str:
             "## Boundaries",
             "",
             f"- {TREE_PROJECTION_AUTHORITY_NOTE}",
-            "- This projection can choose review targets, but bundle directories remain unmoved.",
-            "- A later migration must read bundle meaning directly, choose one bounded pilot subtree, and update links, generated surfaces, validators, docs, and decision records together.",
+            "- This projection can audit current paths and choose review targets, but it is not source truth for bundle meaning or future moves.",
+            "- Any later path change must read bundle meaning directly, choose one bounded subtree, and update links, generated surfaces, validators, docs, and decision records together.",
             "- `family` remains scout-only; `domain` and `kind` remain current frontmatter truth.",
             "",
         ]
@@ -7687,7 +7687,10 @@ def validate_tree_projection_reports(repo_root: Path) -> None:
         fail(f"{json_path}: frontmatter_truth_axes must stay ['domain', 'kind']")
     if actual_report.get("target_path_shape") != TREE_PROJECTION_TARGET_PATH_SHAPE:
         fail(f"{json_path}: target_path_shape must stay stable")
-    if "non-authoritative" not in actual_markdown or "bundle directories remain unmoved" not in actual_markdown:
+    if (
+        "non-authoritative" not in actual_markdown
+        or "not source truth for bundle meaning" not in actual_markdown
+    ):
         fail(f"{markdown_path}: tree projection report must stay explicitly non-authoritative")
 
 

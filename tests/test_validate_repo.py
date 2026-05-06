@@ -1605,12 +1605,13 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 "Purpose",
                 "Tree Law",
                 "Tree Stack",
-                "Trunk Draft",
+                "Current Trunks",
                 "Tree Versus Facets",
-                "Migration Rules",
+                "Path Change Rules",
                 "Leaf Bundle Rules",
                 "Generated Projection Path",
                 "Stop Lines",
+                "Current Closeout",
                 "Next Honest Build Path",
             ),
             surfaces_by_path["docs/TECHNIQUE_TREE_CONTRACT.md"].top_level_sections,
@@ -2031,7 +2032,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         self.assertEqual(107, len(report["techniques"]))
         self.assertIn("non-authoritative", report_markdown)
-        self.assertIn("bundle directories remain unmoved", report_markdown)
+        self.assertIn("not source truth for bundle meaning", report_markdown)
         self.assertIn("pilot-candidate", report["review_status_counts"])
         self.assertIn("split-review-needed", report["review_status_counts"])
         self.assertIn("singleton-hold", report["review_status_counts"])
