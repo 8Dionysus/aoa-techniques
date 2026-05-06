@@ -6012,7 +6012,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
+            "Migrate exactly `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`",
             root_roadmap,
         )
         self.assertIn("Landed Approval-Evidence Pilot Review", tree_contract)
@@ -6112,7 +6112,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
+            "Migrate exactly `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`",
             root_roadmap,
         )
         self.assertIn("Review-Evidence Direct-Read Migration Review", tree_contract)
@@ -6209,7 +6209,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
+            "Migrate exactly `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`",
             root_roadmap,
         )
         self.assertIn("2026-05-05-review-evidence-tree-pilot", tree_contract)
@@ -6304,7 +6304,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Run the `execution/runtime-truth-lifecycle` direct-read migration review",
+            "Migrate exactly `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`",
             root_roadmap,
         )
         self.assertIn("Landed Review-Evidence Pilot Review", tree_contract)
@@ -6314,6 +6314,120 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn(
             "accepted the landed `review-evidence` pilot review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0036",
+                "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0038",
+                "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0037",
+                "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0039",
+                "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+                "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
+    def test_runtime_truth_lifecycle_direct_read_review_accepts_twenty_third_pilot(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "runtime-truth-lifecycle-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Runtime-Truth-Lifecycle Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-twenty-third-migration-pilot", review)
+        self.assertIn("Accept `execution/runtime-truth-lifecycle`", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("abyss-stack` runtime law", review)
+        self.assertIn("benchmark-suite governance", review)
+        self.assertIn("Run the twenty-third migration pilot", review)
+        self.assertIn(
+            "runtime-truth-lifecycle-direct-read-migration-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "runtime-truth-lifecycle direct-read review: landed",
+            ingress,
+        )
+        self.assertIn(
+            "accepted-for-twenty-third-migration-pilot",
+            ingress,
+        )
+        self.assertIn(
+            "Runtime-truth-lifecycle direct-read migration review",
+            landing_log,
+        )
+        self.assertIn(
+            "`runtime-truth-lifecycle`\n   direct-read review is now landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Migrate exactly `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Runtime-Truth-Lifecycle Direct-Read Migration Review",
+            tree_contract,
+        )
+        self.assertIn(
+            "moving those bundles into `techniques/execution/runtime-truth-lifecycle/`",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the `runtime-truth-lifecycle` direct-read migration review",
             changelog,
         )
 
