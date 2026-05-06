@@ -6,9 +6,9 @@ Guidance for coding agents and humans working under `techniques/agent-workflows/
 
 This domain stores reusable workflow techniques for bounded execution chains.
 
-Representative bundles here include `nearest-wrong-target-rejection`,
-`quest-unit-promotion-review`, `local-pattern-adoption-gate`,
-`skill-proposal-handoff-packet`, and `mcp-gateway-proxy`.
+Representative bundles here include `local-pattern-adoption-gate`,
+`adopted-practice-retention-review`,
+`superseded-practice-obsolescence-route`, and `mcp-gateway-proxy`.
 
 ## Domain rules
 

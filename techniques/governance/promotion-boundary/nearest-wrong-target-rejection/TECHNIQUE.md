@@ -90,7 +90,7 @@ pressure.
 - the reason for rejection stays boundary-focused
 - the technique strengthens one verdict; it does not replace the verdict workflow
 
-Relationship to adjacent techniques: unlike [AOA-T-0076](../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not decide the full placement verdict; it only strengthens that verdict by naming the nearest wrong target. Unlike [AOA-T-0089](../quest-unit-promotion-review/TECHNIQUE.md), it does not choose the final quest-promotion outcome; it makes the rejected adjacent outcome explicit once a chosen target already exists.
+Relationship to adjacent techniques: unlike [AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), this technique does not decide the full placement verdict; it only strengthens that verdict by naming the nearest wrong target. Unlike [AOA-T-0089](../quest-unit-promotion-review/TECHNIQUE.md), it does not choose the final quest-promotion outcome; it makes the rejected adjacent outcome explicit once a chosen target already exists.
 
 ## Risks
 

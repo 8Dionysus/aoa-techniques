@@ -36,12 +36,12 @@ def build_receipt(event_kind: str = "technique_promotion_receipt") -> dict:
         "evidence_refs": [
             {
                 "kind": "technique_bundle",
-                "ref": "repo:aoa-techniques/techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+                "ref": "repo:aoa-techniques/techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
             }
         ],
         "payload": {
             "promotion_state": "promoted",
-            "source_ref": "repo:aoa-techniques/techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+            "source_ref": "repo:aoa-techniques/techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
         },
     }
 

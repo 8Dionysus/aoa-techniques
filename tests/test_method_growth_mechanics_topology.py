@@ -121,7 +121,8 @@ class MethodGrowthMechanicsTopologyTestCase(unittest.TestCase):
         technique = (
             REPO_ROOT
             / "techniques"
-            / "agent-workflows"
+            / "governance"
+            / "promotion-boundary"
             / "skill-proposal-handoff-packet"
             / "TECHNIQUE.md"
         ).read_text(encoding="utf-8")

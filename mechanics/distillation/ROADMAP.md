@@ -449,7 +449,13 @@
    `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102` while keeping the review
    non-mutating and preserving their current frontmatter. The next bounded
    step is to migrate those three bundles into
-   `techniques/governance/promotion-boundary/`.
+   `techniques/governance/promotion-boundary/`. The twenty-sixth pilot
+   migration is now landed exactly for those three bundles under
+   `techniques/governance/promotion-boundary/`, with support files moved,
+   governance route-card accounting, root legacy receipt accounting, link
+   repair, generated rebuilds, and release-check validation in the same wave.
+   The next bounded step is to review the landed `promotion-boundary` pilot
+   before choosing Candidate C or another split-route hold.
 
 ## Hold line
 

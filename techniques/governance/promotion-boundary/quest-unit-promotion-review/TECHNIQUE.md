@@ -94,7 +94,7 @@ stay a quest or be promoted into the next honest owner surface.
 - `quest` and `defer` remain valid outputs
 - active quest state does not become canon merely because repetition exists
 
-Relationship to adjacent techniques: unlike [AOA-T-0076](../owner-layer-triage/TECHNIQUE.md), this technique starts from an already repeated quest unit and closes the final promotion verdict rather than performing a first owner-placement pass over any reusable unit. Unlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it owns the chosen promotion verdict itself rather than the explicit rejection pattern that keeps adjacent targets honest.
+Relationship to adjacent techniques: unlike [AOA-T-0076](../../decision-routing/owner-layer-triage/TECHNIQUE.md), this technique starts from an already repeated quest unit and closes the final promotion verdict rather than performing a first owner-placement pass over any reusable unit. Unlike [AOA-T-0090](../nearest-wrong-target-rejection/TECHNIQUE.md), it owns the chosen promotion verdict itself rather than the explicit rejection pattern that keeps adjacent targets honest.
 
 ## Risks
 

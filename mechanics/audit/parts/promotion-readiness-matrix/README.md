@@ -353,7 +353,7 @@ Shared blocker: these bundles keep adjacent owner targets and branch choices dis
 | [AOA-T-0076](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | Central owner-placement primitive for one bounded reusable unit, already reinforced by several mechanics anchors. | One second non-origin owner-placement pass where a candidate chooses one primary owner, one next artifact, and one nearest wrong target. |
 | [AOA-T-0078](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | Fork-card shape is clear, but still session-harvest-family heavy. | One live route where materially different next choices are captured as fork cards with gains, costs, owner targets, and stop conditions before action. |
 | [AOA-T-0079](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | Risk passport keeps branch risk readable, but still needs an independent route choosing or rejecting work because of the passport. | One second workflow where route selection or defer posture depends on an explicit risk passport rather than a vague risk paragraph. |
-| [AOA-T-0090](../../../../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) | Strong boundary companion to owner-layer triage and quest promotion. | One second owner-boundary review where explicitly rejecting the nearest wrong target prevents misplaced technique, skill, playbook, proof, memory, or route promotion. |
+| [AOA-T-0090](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | Strong boundary companion to owner-layer triage and quest promotion. | One second owner-boundary review where explicitly rejecting the nearest wrong target prevents misplaced technique, skill, playbook, proof, memory, or route promotion. |
 
 ### Pack 34 - Diagnosis And Repair Loop
 
@@ -391,7 +391,7 @@ Shared blocker: the quest verdict is clear, but still needs one repeated reviewe
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0089](../../../../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) | Good final verdict technique for one repeated reviewed quest-shaped unit. | One second repeated quest unit where the review keeps, defers, or promotes the unit with one owner target and one reason rather than collapsing repetition into generic reuse pressure. |
+| [AOA-T-0089](../../../../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) | Good final verdict technique for one repeated reviewed quest-shaped unit. | One second repeated quest unit where the review keeps, defers, or promotes the unit with one owner target and one reason rather than collapsing repetition into generic reuse pressure. |
 
 ### Pack 38 - Workspace Boundary And Proof Loop
 
@@ -424,7 +424,7 @@ Shared blocker: Method-growth extraction produced clean technique bundles, but t
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0101](../../../../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) | Good local adoption guardrail with explicit consent, compatibility, rollback, and retention watch. | One second local adoption route where upstream usefulness is held short of adoption until owner consent, compatibility, rollback, and retention are explicit. |
-| [AOA-T-0102](../../../../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) | Clean technique-to-skill handoff packet that does not imply skill acceptance. | One second route where a technique-side review emits a bounded skill proposal and `aoa-skills` acceptance remains separate. |
+| [AOA-T-0102](../../../../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | Clean technique-to-skill handoff packet that does not imply skill acceptance. | One second route where a technique-side review emits a bounded skill proposal and `aoa-skills` acceptance remains separate. |
 | [AOA-T-0103](../../../../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) | Retention review keeps adopted practice active only while evidence, usefulness, drift, and rollback stay visible. | One second adopted-practice review where keep, revise, quarantine, or retire posture changes because retention evidence is explicit. |
 | [AOA-T-0104](../../../../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) | Obsolescence route preserves owner receipt, retained lesson, and provenance during supersession or deprecation review. | One second practice replacement where supersede, merge, reanchor, defer, drop, or deprecation review happens without losing provenance. |
 

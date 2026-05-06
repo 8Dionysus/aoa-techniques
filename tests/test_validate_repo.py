@@ -2036,12 +2036,20 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("split-review-needed", report["review_status_counts"])
         self.assertIn("singleton-hold", report["review_status_counts"])
         self.assertEqual(
-            "split-review-needed",
+            "candidate",
             next(
                 entry
                 for entry in report["techniques"]
                 if entry["id"] == "AOA-T-0089"
             )["review_status"],
+        )
+        self.assertEqual(
+            "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+            next(
+                entry
+                for entry in report["techniques"]
+                if entry["id"] == "AOA-T-0089"
+            )["proposed_future_path"],
         )
         self.assertEqual(
             "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",

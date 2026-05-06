@@ -280,17 +280,17 @@ See also:
 |---|---|---|---|---|
 | approval-sensitivity-check checklist | `absent` | `7` | `techniques/governance/automation-readiness/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) |
 
-### [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
+### [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| quest-unit-promotion-review checklist | `absent` | `7` | `techniques/agent-workflows/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) |
+| quest-unit-promotion-review checklist | `absent` | `7` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) |
 
-### [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
+### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| nearest-wrong-target-rejection checklist | `absent` | `7` | `techniques/agent-workflows/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) |
+| nearest-wrong-target-rejection checklist | `absent` | `7` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
 
 ### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
 
@@ -328,11 +328,11 @@ See also:
 |---|---|---|---|---|
 | local-pattern-adoption-gate checklist | `absent` | `8` | `techniques/agent-workflows/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) |
 
-### [AOA-T-0102](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
+### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| skill-proposal-handoff-packet checklist | `present` | `10` | `techniques/agent-workflows/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) |
+| skill-proposal-handoff-packet checklist | `present` | `10` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) |
 
 ### [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
 

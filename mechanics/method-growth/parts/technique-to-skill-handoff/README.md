@@ -46,7 +46,7 @@ kind-safe projection are required.
 
 ## Extracted Atom
 
-[AOA-T-0102 skill-proposal-handoff-packet](../../../../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md)
+[AOA-T-0102 skill-proposal-handoff-packet](../../../../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md)
 carries the reusable handoff move from this part: emit one bounded proposal
 packet when technique-side adoption pressure should be reviewed by a
 skill-owning surface.

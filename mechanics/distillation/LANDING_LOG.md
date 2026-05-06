@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Promotion-boundary tree pilot migration
+
+Changed:
+
+- moved `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102` from
+  `techniques/agent-workflows/` into
+  `techniques/governance/promotion-boundary/`
+- added the root legacy receipt
+  [2026-05-05-promotion-boundary-tree-pilot](../../legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md)
+- updated governance and agent-workflows route-card accounting for the new
+  shelf
+- repaired active adjacent links into the moved promotion-boundary leaves and
+  existing decision-routing, automation-readiness, instruction, and
+  agent-workflows leaves
+- preserved all three bundles as `domain: agent-workflows`, while keeping
+  `kind: assessment`, `kind: guardrail`, and `kind: handoff` respectively
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no `governance/practice-adoption-lifecycle` or `tool-use/tool-gateway`
+  shelf moved
+
 ## 2026-05-05 - Promotion-boundary direct-read migration review
 
 Changed:

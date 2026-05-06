@@ -42987,10 +42987,10 @@
     },
     {
       "id": "AOA-T-0089",
-      "technique_path": "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/quest-unit-promotion-review/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -43117,7 +43117,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/quest-unit-promotion-review/notes/origin-evidence.md",
+          "note_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -43198,7 +43198,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/quest-unit-promotion-review/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -43342,10 +43342,10 @@
     },
     {
       "id": "AOA-T-0090",
-      "technique_path": "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/nearest-wrong-target-rejection/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -43472,7 +43472,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/nearest-wrong-target-rejection/notes/origin-evidence.md",
+          "note_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -43549,7 +43549,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/nearest-wrong-target-rejection/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -46973,10 +46973,10 @@
     },
     {
       "id": "AOA-T-0102",
-      "technique_path": "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "technique_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/skill-proposal-handoff-packet/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -47107,7 +47107,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/skill-proposal-handoff-packet/notes/origin-evidence.md",
+          "note_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -47196,7 +47196,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/skill-proposal-handoff-packet/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

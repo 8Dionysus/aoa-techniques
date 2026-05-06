@@ -587,7 +587,7 @@ See also:
 - Validate by: one automation candidate is named explicitly; mutation, authority, rollback, and health-check posture are visible; checkpoint_required is explicit when the...
 - Source: [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md)
 
-### [AOA-T-0089](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
+### [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
 
 - Summary: Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure.
 - Intent: Review one repeated, reviewed quest-shaped unit and decide whether it should stay a quest...
@@ -598,9 +598,9 @@ See also:
 - Core contract: the technique starts after review and after the repeated unit is already isolated; one repeated unit receives one...
 - Main risk: a mixed or weakly repeated unit is treated as promotion-ready.
 - Validate by: one repeated reviewed unit is named explicitly; the chosen owner target matches the repeat shape; keep-quest or defer posture...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md)
 
-### [AOA-T-0090](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
+### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
 
 - Summary: Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.
 - Intent: Make the nearest wrong target explicit when writing a bounded owner or promotion verdict...
@@ -611,7 +611,7 @@ See also:
 - Core contract: the rejection stays paired to one chosen target; the rejected target must be adjacent and plausible, not theatrical.
 - Main risk: the rejected target is not actually the nearest wrong one.
 - Validate by: the rejected target is adjacent and plausible; the rejection reason clarifies one concrete boundary; the chosen target becomes clearer...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md)
 
 ### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
 
@@ -691,7 +691,7 @@ See also:
 - Validate by: one shared pattern is named explicitly; one local owner and behavior surface are named explicitly; owner consent is explicit...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md)
 
-### [AOA-T-0102](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
+### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
 
 - Summary: Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.
 - Intent: Turn one technique-side adoption pressure into a bounded skill-proposal handoff packet, so the receiving...
@@ -702,7 +702,7 @@ See also:
 - Core contract: one packet carries one skill proposal for one receiving owner; technique canon remains the source of reusable practice...
 - Main risk: the packet quietly becomes a skill draft instead of a handoff.
 - Validate by: one reusable practice or technique candidate is named; one receiving skill owner is named; trigger boundary, inputs, outputs, workflow...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md)
 
 ### [AOA-T-0103](../techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
 
