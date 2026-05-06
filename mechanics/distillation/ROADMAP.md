@@ -353,7 +353,16 @@
    validates the second governance trunk shelf, preserves the immediate gate
    and durable approval seam as distinct leaves, and chooses
    `proof/review-evidence` for direct-read review before any twenty-second
-   movement.
+   movement. The `review-evidence` direct-read review is now landed as
+   `accepted-for-twenty-second-migration-pilot`; it accepts exactly
+   `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106` while keeping the review
+   non-mutating, preserving `AOA-T-0107` and `AOA-T-0105` as `kind:
+   guardrail`, preserving `AOA-T-0106` as `kind: artifact`, and keeping proof
+   verdict authority, eval-suite ownership, review-board workflow, Agon move
+   law, actor eligibility, evidence adequacy scoring, source-truth transfer,
+   route mutation, memory writes, runtime behavior, KAG promotion, ToS canon,
+   skill activation, neighboring proof/runtime/governance shelves, and all
+   remaining `agent-workflows` and `docs` leaves outside the shelf.
 
 ## Hold line
 
