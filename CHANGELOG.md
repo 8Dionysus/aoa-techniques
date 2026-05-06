@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- strengthened `AOA-T-0058 receipt-confirmed-handoff-packet` and
+  `AOA-T-0059 git-verified-handoff-claims` relations from
+  `complements AOA-T-0057` to `requires AOA-T-0057`, with generated selection
+  surfaces rebuilt and direct-relation repair evidence recorded under
+  Distillation technique-reform ingress
 - added an explicit agent-facing GitHub landing workflow, `.github/AGENTS.md`,
   expanded PR intake checks, and broader CODEOWNERS coverage for
   governance-critical route and canon surfaces

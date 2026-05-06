@@ -126,7 +126,7 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 | Field | Direction |
 |---|---|
 | Current posture | `domain` and `kind` are authoritative frontmatter; family, capability, substrate, execution profile, risk posture, and richer relations are explicit design axes. |
-| Next honest move | Enter future classification reform through `mechanics/distillation/parts/technique-reform-ingress/README.md`, use `config/technique_topology_axes.yaml` as the scout value registry and `reports/technique_topology_scout.md` as the generated readout, then strengthen `family` or generated scout axes only after the chosen slice has tests, docs, and a decision note. |
+| Next honest move | Enter the long selector/relation pass through `mechanics/distillation/parts/technique-reform-ingress/README.md`, starting from dense shelves where `domain`, `kind`, and tree placement find the neighborhood but not the exact leaf. Keep `config/technique_topology_axes.yaml` and `reports/technique_topology_scout.md` as scout evidence, and strengthen relations only when bundle inputs and contracts justify an existing relation type. |
 | Guardrail | Do not turn `agent-workflows`, `docs`, or tags into junk drawers for missing topology. |
 
 ## Horizon: Corpus Tree
@@ -134,7 +134,7 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 | Field | Direction |
 |---|---|
 | Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` now names the current root tree as trunks, shelves, and leaf bundles. The first full pass landed all `107` bundles under active `techniques/<trunk>/<shelf>/<slug>/` paths, across `10` active bundle trunks and `28` shelves, with `28/28` root legacy receipts, `107/107` current paths matching generated projection paths, no remaining split, singleton, or unassigned hold rows, validator-backed route cards for all current trunks plus retained frontmatter lanes, a final migration ledger, and a completed bundle anatomy closeout that audited all `107` bundles. |
-| Next honest move | Choose one bounded targeted reform slice from the closed bundle anatomy evidence, keeping old-template, owner-boundary, portability, and promotion-hold labels as review pressure rather than automatic rewrite queues. |
+| Next honest move | Keep the landed tree stable while the next reform wave works through selector and relation topology; do not move paths or add `tree_path` frontmatter while relation repair evidence is still being tested shelf by shelf. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 Historical tree migration breadcrumb row preserved for parity; current closeout above supersedes it as direction:
