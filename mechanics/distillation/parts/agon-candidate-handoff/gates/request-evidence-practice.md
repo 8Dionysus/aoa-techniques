@@ -56,7 +56,7 @@ The move has four fields:
 
 ## Landed Technique Bundle
 
-- [single-missing-evidence-request](../../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+- [single-missing-evidence-request](../../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md)
 
 ## Topology Read
 

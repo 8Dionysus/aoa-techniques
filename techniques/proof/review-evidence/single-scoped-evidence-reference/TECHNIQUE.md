@@ -118,13 +118,13 @@ verdict, or source-truth transfer.
   evidence-reference atom for ordinary technique use
 
 Relationship to adjacent techniques: unlike
-[AOA-T-0105](../../agent-workflows/single-missing-evidence-request/TECHNIQUE.md),
+[AOA-T-0105](../single-missing-evidence-request/TECHNIQUE.md),
 this technique offers one available reference instead of asking for one missing
 evidence object. Unlike
-[AOA-T-0043](../multi-source-primary-input-provenance/TECHNIQUE.md), it does not
-order multiple primary and supporting inputs. Unlike
-[AOA-T-0034](../../instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md), it does not
-transform or sanitize the referenced artifact.
+[AOA-T-0043](../../../instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md),
+it does not order multiple primary and supporting inputs. Unlike
+[AOA-T-0034](../../../instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md),
+it does not transform or sanitize the referenced artifact.
 
 ## Risks
 

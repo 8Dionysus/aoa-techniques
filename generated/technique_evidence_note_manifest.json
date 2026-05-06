@@ -48106,10 +48106,10 @@
     },
     {
       "id": "AOA-T-0105",
-      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/single-missing-evidence-request/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/review-evidence/single-missing-evidence-request/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -48244,7 +48244,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/single-missing-evidence-request/notes/origin-evidence.md",
+          "note_path": "techniques/proof/review-evidence/single-missing-evidence-request/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -48340,10 +48340,10 @@
     },
     {
       "id": "AOA-T-0106",
-      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/single-scoped-evidence-reference/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -48478,7 +48478,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/single-scoped-evidence-reference/notes/origin-evidence.md",
+          "note_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -48574,10 +48574,10 @@
     },
     {
       "id": "AOA-T-0107",
-      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/single-locus-claim-challenge/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/review-evidence/single-locus-claim-challenge/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -48712,7 +48712,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/single-locus-claim-challenge/notes/origin-evidence.md",
+          "note_path": "techniques/proof/review-evidence/single-locus-claim-challenge/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",

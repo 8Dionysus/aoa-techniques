@@ -58,7 +58,7 @@ The move has five fields:
 
 ## Landed Technique Bundle
 
-- [single-scoped-evidence-reference](../../../../../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+- [single-scoped-evidence-reference](../../../../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md)
 
 ## Topology Read
 
@@ -99,7 +99,7 @@ hand motion, not the law of the arena.
 
 ## Nearest Overlaps
 
-- [single-missing-evidence-request](../../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md):
+- [single-missing-evidence-request](../../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md):
   asks for one missing evidence object; this candidate offers one available
   reference with scope and limit.
 - [multi-source-primary-input-provenance](../../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md):

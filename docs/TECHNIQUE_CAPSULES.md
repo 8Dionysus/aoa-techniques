@@ -730,7 +730,7 @@ See also:
 - Validate by: one adopted or shadowed practice is named; current stage and owner receipt target are visible; the reason it should...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md)
 
-### [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
+### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
 
 - Summary: Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.
 - Intent: Ask for exactly one missing evidence object that could change a bounded review state...
@@ -741,9 +741,9 @@ See also:
 - Core contract: one use of the technique asks for one missing evidence object; the request is tied to one bounded...
 - Main risk: the request names a vague category instead of one concrete object.
 - Validate by: exactly one claim or decision point is named; exactly one missing evidence object is requested; the object is concrete...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md)
 
-### [AOA-T-0107](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
+### [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
 
 - Summary: Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.
 - Intent: Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support...
@@ -754,7 +754,7 @@ See also:
 - Core contract: one use of the technique challenges one target claim; the challenged locus is smaller than the whole topic...
 - Main risk: the challenge targets a broad topic instead of one claim.
 - Validate by: exactly one target claim is named; exactly one vulnerable locus is named inside that claim; the pressure reason explains...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md)
 
 ## `docs`
 
@@ -1109,7 +1109,7 @@ See also:
 - Validate by: the shared contract names exactly one canonical owner; each mirror carries explicit canonical-reference metadata; parity validation fails when owner...
 - Source: [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md)
 
-### [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
+### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
 
 - Summary: Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.
 - Intent: Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so...
@@ -1120,7 +1120,7 @@ See also:
 - Core contract: one use of the technique offers one evidence reference; the reference is tied to one bounded review state.
 - Main risk: the reference is vague and cannot be inspected.
 - Validate by: exactly one claim or decision point is named; exactly one evidence reference is offered; the reference is concrete enough...
-- Source: [TECHNIQUE.md](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md)
 
 ## `evaluation`
 

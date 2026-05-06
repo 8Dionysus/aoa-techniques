@@ -8552,7 +8552,7 @@
     {
       "id": "AOA-T-0105",
       "name": "single-missing-evidence-request",
-      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8587,7 +8587,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one use of the technique asks for one missing evidence object\n- the request is tied to one bounded review state\n- the object must be concrete enough to supply, rerun, cite, or declare absent\n- missing evidence may block or narrow review, but it is not proof of failure\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-request atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique\ndoes not turn reviewed evidence into a diagnosis packet; it asks for one missing\nobject before diagnosis or closure. Unlike\n[AOA-T-0032](../context-report-for-ci/TECHNIQUE.md), it does not emit a broad\nCI-facing context report; it names the one object whose presence or absence\nmatters now."
+          "content_markdown": "- one use of the technique asks for one missing evidence object\n- the request is tied to one bounded review state\n- the object must be concrete enough to supply, rerun, cite, or declare absent\n- missing evidence may block or narrow review, but it is not proof of failure\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-request atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0081](../../../recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md),\nthis technique does not turn reviewed evidence into a diagnosis packet; it asks\nfor one missing object before diagnosis or closure. Unlike\n[AOA-T-0032](../../evaluation-chain/context-report-for-ci/TECHNIQUE.md), it\ndoes not emit a broad CI-facing context report; it names the one object whose\npresence or absence matters now."
         },
         {
           "key": "risks",
@@ -8634,7 +8634,7 @@
     {
       "id": "AOA-T-0106",
       "name": "single-scoped-evidence-reference",
-      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8669,7 +8669,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one use of the technique offers one evidence reference\n- the reference is tied to one bounded review state\n- the reference must be inspectable enough for another reviewer to accept,\n  reject, quote, rerun, or ask for a different source\n- the support scope and support limit are both explicit\n- reliance is conditional until the reviewer inspects the reference\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-reference atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../../agent-workflows/single-missing-evidence-request/TECHNIQUE.md),\nthis technique offers one available reference instead of asking for one missing\nevidence object. Unlike\n[AOA-T-0043](../multi-source-primary-input-provenance/TECHNIQUE.md), it does not\norder multiple primary and supporting inputs. Unlike\n[AOA-T-0034](../../instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md), it does not\ntransform or sanitize the referenced artifact."
+          "content_markdown": "- one use of the technique offers one evidence reference\n- the reference is tied to one bounded review state\n- the reference must be inspectable enough for another reviewer to accept,\n  reject, quote, rerun, or ask for a different source\n- the support scope and support limit are both explicit\n- reliance is conditional until the reviewer inspects the reference\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, or Agon authority\n- the technique does not define Agon evidence law; it only distills a portable\n  evidence-reference atom for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../single-missing-evidence-request/TECHNIQUE.md),\nthis technique offers one available reference instead of asking for one missing\nevidence object. Unlike\n[AOA-T-0043](../../../instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md),\nit does not order multiple primary and supporting inputs. Unlike\n[AOA-T-0034](../../../instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md),\nit does not transform or sanitize the referenced artifact."
         },
         {
           "key": "risks",
@@ -8716,7 +8716,7 @@
     {
       "id": "AOA-T-0107",
       "name": "single-locus-claim-challenge",
-      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -8751,7 +8751,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one use of the technique challenges one target claim\n- the challenged locus is smaller than the whole topic, actor, repo, or route\n- the pressure reason addresses support, scope, or wording rather than tone\n- the next support question is concrete enough to answer, narrow, or defer\n- the stop condition makes clear that the challenge does not prove the claim\n  false\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, actor, or Agon authority\n- the technique does not define Agon challenge law; it only distills a portable\n  claim-pressure guardrail for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../single-missing-evidence-request/TECHNIQUE.md), this technique\nnames the vulnerable claim locus before asking for a specific missing evidence\nobject. Unlike\n[AOA-T-0106](../../docs/single-scoped-evidence-reference/TECHNIQUE.md), it does\nnot offer an available reference; it applies pressure to the claim that may need\nsupport. Unlike\n[AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), it does not\ndiagnose from reviewed evidence or name probable causes."
+          "content_markdown": "- one use of the technique challenges one target claim\n- the challenged locus is smaller than the whole topic, actor, repo, or route\n- the pressure reason addresses support, scope, or wording rather than tone\n- the next support question is concrete enough to answer, narrow, or defer\n- the stop condition makes clear that the challenge does not prove the claim\n  false\n- the output is read-only and smaller than evaluation, routing, runtime,\n  memory, skill, KAG, ToS, actor, or Agon authority\n- the technique does not define Agon challenge law; it only distills a portable\n  claim-pressure guardrail for ordinary technique use\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0105](../single-missing-evidence-request/TECHNIQUE.md), this technique\nnames the vulnerable claim locus before asking for a specific missing evidence\nobject. Unlike\n[AOA-T-0106](../single-scoped-evidence-reference/TECHNIQUE.md), it does not\noffer an available reference; it applies pressure to the claim that may need\nsupport. Unlike\n[AOA-T-0081](../../../recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md),\nit does not diagnose from reviewed evidence or name probable causes."
         },
         {
           "key": "risks",

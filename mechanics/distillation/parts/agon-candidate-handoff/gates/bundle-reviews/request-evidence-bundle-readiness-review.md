@@ -28,7 +28,7 @@ future bundle, change Agon source status, or promote this candidate.
 Suggested draft slug: `single-missing-evidence-request`.
 
 Landed bundle:
-[single-missing-evidence-request](../../../../../../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md)
+[single-missing-evidence-request](../../../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md)
 
 ## Atom Contract Read
 

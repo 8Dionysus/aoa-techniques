@@ -41,7 +41,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "docs" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "`single-scoped-evidence-reference`",
             "`canonical-owner-with-validated-mirror`",
             "documentation posture",
         ),
@@ -64,6 +63,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "`skill-support/`",
             "`evaluation-chain/`",
             "`published-summary/`",
+            "`review-evidence/`",
             "`aoa-evals`",
             "proof verdict authority",
             "CI ownership",

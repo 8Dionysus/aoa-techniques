@@ -230,7 +230,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
-          "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md"
+          "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0107",
@@ -238,7 +238,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.",
-          "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md"
+          "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0034",
@@ -610,7 +610,7 @@
           "domain": "docs",
           "status": "promoted",
           "summary": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.",
-          "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md"
+          "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0006",

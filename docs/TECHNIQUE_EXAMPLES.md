@@ -353,17 +353,17 @@ See also:
 |---|---|---|---|
 | Minimal superseded-practice obsolescence route | `present` | `techniques/agent-workflows/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md` | [TECHNIQUE.md](../techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md) |
 
-### [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
+### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal single-missing-evidence request | `present` | `techniques/agent-workflows/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) |
+| Minimal single-missing-evidence request | `present` | `techniques/proof/review-evidence/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) |
 
-### [AOA-T-0107](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
+### [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal single-locus claim challenge | `present` | `techniques/agent-workflows/single-locus-claim-challenge/examples/minimal-single-locus-claim-challenge.md` | [TECHNIQUE.md](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) |
+| Minimal single-locus claim challenge | `present` | `techniques/proof/review-evidence/single-locus-claim-challenge/examples/minimal-single-locus-claim-challenge.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) |
 
 ## `docs`
 
@@ -538,11 +538,11 @@ See also:
 |---|---|---|---|
 | Minimal Canonical Owner With Validated Mirror | `present` | `techniques/docs/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
 
-### [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
+### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal single-scoped evidence reference | `present` | `techniques/docs/single-scoped-evidence-reference/examples/minimal-single-scoped-evidence-reference.md` | [TECHNIQUE.md](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) |
+| Minimal single-scoped evidence reference | `present` | `techniques/proof/review-evidence/single-scoped-evidence-reference/examples/minimal-single-scoped-evidence-reference.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
 
 ## `evaluation`
 

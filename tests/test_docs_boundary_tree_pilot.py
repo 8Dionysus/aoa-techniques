@@ -54,12 +54,12 @@ LIVE_LINK_SURFACES = (
     "mechanics/audit/parts/promotion-wave-a-runbook/README.md",
     "mechanics/experience/parts/technique-candidate-bridge/README.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
-    "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+    "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
     "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md",
 )
 
 UNMOVED_DOCS_BUNDLES = (
-    "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+    "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
 )
 
 LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBOR = (

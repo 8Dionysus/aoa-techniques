@@ -91,7 +91,7 @@ LIVE_LINK_SURFACES = (
 )
 
 UNMOVED_DOCS_SHELVES = (
-    "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+    "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
 )
 
 LATER_MIGRATED_SKILL_DISCOVERY_NEIGHBOR = (

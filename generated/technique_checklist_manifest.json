@@ -4560,10 +4560,10 @@
     },
     {
       "id": "AOA-T-0105",
-      "technique_path": "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md",
+          "check_path": "techniques/proof/review-evidence/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md",
           "title": "single-missing-evidence-request checklist",
           "intro_markdown": "Use this checklist before asking for missing evidence inside a bounded review.",
           "items": [
@@ -4613,10 +4613,10 @@
     },
     {
       "id": "AOA-T-0106",
-      "technique_path": "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md",
+          "check_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md",
           "title": "single-scoped-evidence-reference checklist",
           "intro_markdown": "Use this checklist before offering a reference inside a bounded review.",
           "items": [
@@ -4666,10 +4666,10 @@
     },
     {
       "id": "AOA-T-0107",
-      "technique_path": "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
+      "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/single-locus-claim-challenge/checks/single-locus-claim-challenge-checklist.md",
+          "check_path": "techniques/proof/review-evidence/single-locus-claim-challenge/checks/single-locus-claim-challenge-checklist.md",
           "title": "single-locus-claim-challenge checklist",
           "intro_markdown": "Use this checklist before challenging a claim inside a bounded review.",
           "items": [

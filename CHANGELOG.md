@@ -238,6 +238,9 @@ The format is intentionally simple and human-first.
 - accepted the `review-evidence` direct-read migration review over
   `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106` as the twenty-second tree pilot
   while keeping the review itself non-mutating
+- moved `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106` into
+  `techniques/proof/review-evidence/` while keeping `domain`, `kind`, IDs,
+  status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

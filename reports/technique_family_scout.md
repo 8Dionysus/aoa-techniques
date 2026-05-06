@@ -337,9 +337,9 @@ Counts: `total` 3, `canonical` 0, `promoted` 3.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0105](../techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
-| [AOA-T-0107](../techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication. |
-| [AOA-T-0106](../techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
+| [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
+| [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication. |
+| [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
 
 ## `media-ingest`
 
