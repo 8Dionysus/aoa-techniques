@@ -5,7 +5,7 @@ Requested-only practice candidates behind epistemic move extensions. They are no
 ## Candidate surfaces
 
 ```text
-config/agon_epistemic_technique_candidates.seed.json
+config/agon_epistemic_technique_candidates.source.json
 generated/agon_epistemic_technique_candidates.min.json
 ```
 

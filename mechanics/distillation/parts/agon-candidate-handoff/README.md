@@ -47,7 +47,7 @@ Current frontier read:
 
 ## Structured Registry
 
-- [config/agon_candidate_handoff.seed.json](config/agon_candidate_handoff.seed.json)
+- [config/agon_candidate_handoff.source.json](config/agon_candidate_handoff.source.json)
   carries the complete handoff lane map.
 - [generated/agon_candidate_handoff.min.json](generated/agon_candidate_handoff.min.json)
   is derived evidence for counts, source coverage, first-narrowing watch, and

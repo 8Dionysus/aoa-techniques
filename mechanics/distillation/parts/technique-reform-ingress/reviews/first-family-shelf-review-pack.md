@@ -9,7 +9,7 @@ and
 [Technique Family Scout JSON](../../../../../reports/technique_family_scout.json)
 
 Registry:
-[Technique Family Seed](../../../../../config/technique_family_seed.yaml)
+[Technique Family Scout](../../../../../config/technique_family_scout.yaml)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)

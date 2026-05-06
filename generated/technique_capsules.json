@@ -1208,7 +1208,7 @@
     },
     {
       "id": "AOA-T-0087",
-      "name": "human-loop-to-seed-lift",
+      "name": "human-loop-to-first-landing",
       "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
       "one_line_intent": "Lift one recurring human loop into the first honest automation-facing landing without skipping the...",
       "use_when_short": "Use when a recurring reviewed route already has enough shape for a next-artifact decision or the real question is where...",
@@ -1218,7 +1218,7 @@
       "core_contract_short": "Core contract: the lift chooses the first honest landing; it does not grant live automation authority; schedule hints remain hints...",
       "main_risk_short": "Main risk: the route is forced into a skill when it really wants a scenario seed or defer verdict.",
       "validation_short": "Validate by checking one recurring reviewed loop is named; the first landing stays smaller than a full implementation; owner-layer and next-artifact posture...",
-      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md"
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0088",

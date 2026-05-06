@@ -92,7 +92,7 @@ still blocked, or not worth forcing yet.
 - verdicts remain bounded to readiness posture, not final implementation or routing doctrine
 - a strong fit does not remove the need for later owner-layer or checkpoint decisions
 
-Relationship to adjacent techniques: unlike [AOA-T-0087](../human-loop-to-seed-lift/TECHNIQUE.md), this technique does not choose the first honest landing or next artifact; it only classifies whether the route has enough shape to lift. Unlike [AOA-T-0088](../approval-sensitivity-check/TECHNIQUE.md), it does not own the checkpoint or approval analysis itself; it only includes approval sensitivity as one row in the matrix.
+Relationship to adjacent techniques: unlike [AOA-T-0087](../human-loop-to-first-landing/TECHNIQUE.md), this technique does not choose the first honest landing or next artifact; it only classifies whether the route has enough shape to lift. Unlike [AOA-T-0088](../approval-sensitivity-check/TECHNIQUE.md), it does not own the checkpoint or approval analysis itself; it only includes approval sensitivity as one row in the matrix.
 
 ## Risks
 

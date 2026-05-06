@@ -13,7 +13,7 @@
 
 ## What changed
 
-- paths: donor CLI and storage paths were replaced by markdown seed bundles, landing notes, and the published technique bundle
+- paths: donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle
 - services: this adaptation does not ship a tracker runtime, memory store, or ready-work command surface
 - dependencies: the graph now coordinates bounded landing tasks and shared-surface updates rather than issues inside the donor tracker
 - operating assumptions: the graph is kept as a reviewable working surface for staging and landing work, not as a product-facing issue system
@@ -31,7 +31,7 @@
 
 ## Evidence
 
-- source paths: `incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`
+- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result

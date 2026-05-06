@@ -3790,11 +3790,11 @@
     },
     {
       "id": "AOA-T-0087",
-      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md",
-          "title": "human-loop-to-seed-lift checklist",
+          "check_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/checks/human-loop-to-first-landing-checklist.md",
+          "title": "human-loop-to-first-landing checklist",
           "intro_markdown": "",
           "items": [
             {

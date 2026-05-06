@@ -174,7 +174,7 @@ See `checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md`.
 ## Promotion history
 
 - adapted from open-source `CLIP` and `PaddleOCR`
-- landed from `personal-ingest-wave-2`
+- landed from `personal-media-ingest`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for confidence-aware mixed-media bucketing
 
 ## Future evolution

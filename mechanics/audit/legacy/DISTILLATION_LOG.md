@@ -5,7 +5,7 @@
 The four pre-split audit files were moved into active part homes:
 
 - `PROMOTION_READINESS_MATRIX.md` -> `parts/promotion-readiness-matrix/README.md`
-- `PROMOTION_WAVE_A_RUNBOOK.md` -> `parts/promotion-wave-a-runbook/README.md`
+- `PROMOTION_WAVE_A_RUNBOOK.md` -> `parts/promotion-evidence-runbook/README.md`
 - `EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md` -> `parts/external-evidence-sprint-runbook/README.md`
 - `EXTERNAL_EVIDENCE_LEDGER.md` -> `parts/external-evidence-ledger/README.md`
 

@@ -23,7 +23,7 @@ candidate registries, or duplicate Agon source law inside Distillation.
 Create `mechanics/distillation/parts/agon-candidate-handoff/` as a
 Distillation-owned lane map over Agon requested-only candidates.
 
-The part keeps a seed registry and generated compact index that cover all `22`
+The part keeps a source registry and generated compact index that cover all `22`
 current Agon technique-side candidates: `12` move-binding candidates and `10`
 epistemic candidates. The builder validates each row against the Agon generated
 source registries and keeps the handoff in three lanes:

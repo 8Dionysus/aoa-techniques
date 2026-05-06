@@ -26,7 +26,7 @@ lanes for canonical proof.
 Move the four active Audit surfaces into `mechanics/audit/parts/`:
 
 - `promotion-readiness-matrix`
-- `promotion-wave-a-runbook`
+- `promotion-evidence-runbook`
 - `external-evidence-sprint-runbook`
 - `external-evidence-ledger`
 

@@ -13,7 +13,7 @@
 
 ## What changed
 
-- paths: donor daemon, compact job, and synthesis paths were replaced by markdown seed bundles, landing notes, and the published technique bundle
+- paths: donor daemon, compact job, and synthesis paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle
 - services: this adaptation does not ship a compact command, daemon worker, or fix loop
 - dependencies: the compaction pass now exists as a documentation-first reusable contract rather than as a donor runtime feature
 - operating assumptions: the technique is read as one bounded findings-hygiene pass, not as a full review platform
@@ -31,7 +31,7 @@
 
 ## Evidence
 
-- source paths: `incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`
+- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result

@@ -8,9 +8,9 @@ Rubric packet: [Bundle Anatomy Rubric Hardening](bundle-anatomy-rubric-hardening
 
 Audit waves:
 
-- [Bundle Anatomy Wave A Review](bundle-anatomy-wave-a-review.md)
-- [Bundle Anatomy Wave B Review](bundle-anatomy-wave-b-review.md)
-- [Bundle Anatomy Wave C Review](bundle-anatomy-wave-c-review.md)
+- [Bundle Anatomy Execution And Instruction Review](bundle-anatomy-execution-instruction-review.md)
+- [Bundle Anatomy Proof Continuity And Governance Review](bundle-anatomy-proof-continuity-governance-review.md)
+- [Bundle Anatomy Remaining Shelves Review](bundle-anatomy-remaining-shelves-review.md)
 
 Status: corpus-synthesis, no leaf repair, not path movement, not frontmatter
 migration, not status promotion.

@@ -45,12 +45,12 @@ posture, and does not move files from this review pack alone.
 - [AOA-T-0086 origin evidence](../../../../../techniques/agent-workflows/automation-fit-matrix/notes/origin-evidence.md)
 - [AOA-T-0086 second-context adaptation](../../../../../techniques/agent-workflows/automation-fit-matrix/notes/second-context-adaptation.md)
 - [AOA-T-0086 canonical readiness](../../../../../techniques/agent-workflows/automation-fit-matrix/notes/canonical-readiness.md)
-- [AOA-T-0087 human-loop-to-seed-lift](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md)
-- [AOA-T-0087 checklist](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md)
-- [AOA-T-0087 example](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/examples/minimal-human-loop-to-seed-lift.md)
-- [AOA-T-0087 origin evidence](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/notes/origin-evidence.md)
-- [AOA-T-0087 second-context adaptation](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/notes/second-context-adaptation.md)
-- [AOA-T-0087 canonical readiness](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/notes/canonical-readiness.md)
+- [AOA-T-0087 human-loop-to-first-landing](../../../../../techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md)
+- [AOA-T-0087 checklist](../../../../../techniques/agent-workflows/human-loop-to-first-landing/checks/human-loop-to-first-landing-checklist.md)
+- [AOA-T-0087 example](../../../../../techniques/agent-workflows/human-loop-to-first-landing/examples/minimal-human-loop-to-first-landing.md)
+- [AOA-T-0087 origin evidence](../../../../../techniques/agent-workflows/human-loop-to-first-landing/notes/origin-evidence.md)
+- [AOA-T-0087 second-context adaptation](../../../../../techniques/agent-workflows/human-loop-to-first-landing/notes/second-context-adaptation.md)
+- [AOA-T-0087 canonical readiness](../../../../../techniques/agent-workflows/human-loop-to-first-landing/notes/canonical-readiness.md)
 - [AOA-T-0088 approval-sensitivity-check](../../../../../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md)
 - [AOA-T-0088 checklist](../../../../../techniques/agent-workflows/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md)
 - [AOA-T-0088 example](../../../../../techniques/agent-workflows/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md)
@@ -118,7 +118,7 @@ status unchanged.
 | technique | current path | proposed path |
 |---|---|---|
 | `AOA-T-0086` | `techniques/agent-workflows/automation-fit-matrix/` | `techniques/governance/automation-readiness/automation-fit-matrix/` |
-| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-seed-lift/` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/` |
+| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-first-landing/` | `techniques/governance/automation-readiness/human-loop-to-first-landing/` |
 | `AOA-T-0088` | `techniques/agent-workflows/approval-sensitivity-check/` | `techniques/governance/automation-readiness/approval-sensitivity-check/` |
 
 ## Migration Requirements

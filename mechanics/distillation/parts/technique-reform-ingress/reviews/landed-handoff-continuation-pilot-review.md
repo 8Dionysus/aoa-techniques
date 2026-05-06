@@ -49,8 +49,8 @@ machinery and the next pressure should test a different root district.
 - [Handoff-continuation tree pilot receipt](../../../../../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
 - [Technique tree projection rows for `handoff-continuation` and
   `media-ingest`](../../../../../reports/technique_tree_projection.md)
-- `incoming/chat-wave-2-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_2.md`
-- `incoming/chat-wave-3-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_3.md`
+- `incoming/chat-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md`
+- `incoming/chat-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md`
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read
@@ -86,7 +86,7 @@ machinery and the next pressure should test a different root district.
 - The projection still labels landed shelves as `pilot-candidate`; that is
   tolerable while the projection remains non-authoritative, but later generated
   status language may need a separate review.
-- `incoming/` seed bundle paths still preserve their source staging shape. This
+- `incoming/` candidate bundle paths still preserve their source staging shape. This
   review only repairs candidate-doc links to current canonical bundles.
 - No `boundary-watch`, `split-review-needed`, or singleton shelf has moved.
 

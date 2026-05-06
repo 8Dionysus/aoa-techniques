@@ -805,7 +805,7 @@
         {
           "example_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md",
           "title": "minimal episode-bounded agent loop",
-          "body_markdown": "Episode goal:\n\n- draft one bounded seed bundle and record the remaining overlap question\n\nCheckpoint artifact:\n\n```markdown\n# Episode Checkpoint\n- completed: drafted the seed bundle skeleton\n- blocker: overlap with `AOA-T-0001` still needs boundary review\n- next_decision: `escalate`\n```\n\nWhy this example stays bounded:\n\n- the episode ends at one visible checkpoint instead of running indefinitely\n- the next move is explicit: continue, stop, or escalate\n- it does not import budgets, task trackers, launchd supervision, or a full autonomous mission runtime"
+          "body_markdown": "Episode goal:\n\n- draft one bounded candidate bundle and record the remaining overlap question\n\nCheckpoint artifact:\n\n```markdown\n# Episode Checkpoint\n- completed: drafted the candidate bundle skeleton\n- blocker: overlap with `AOA-T-0001` still needs boundary review\n- next_decision: `escalate`\n```\n\nWhy this example stays bounded:\n\n- the episode ends at one visible checkpoint instead of running indefinitely\n- the next move is explicit: continue, stop, or escalate\n- it does not import budgets, task trackers, launchd supervision, or a full autonomous mission runtime"
         }
       ]
     },
@@ -1075,11 +1075,11 @@
     },
     {
       "id": "AOA-T-0087",
-      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/examples/minimal-human-loop-to-seed-lift.md",
-          "title": "minimal human-loop-to-seed-lift",
+          "example_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/examples/minimal-human-loop-to-first-landing.md",
+          "title": "minimal human-loop-to-first-landing",
           "body_markdown": "```yaml\nseed_lift:\n  route: reviewed session closeout loop\n  owner_layer: aoa-playbooks\n  next_artifact: playbook_seed\n  nearest_wrong_target: live_scheduler\n  schedule_hint: nightly-after-review\n```\n\nWhy this example stays bounded:\n\n- it names one first honest landing instead of implementing the automation\n- it keeps the schedule hint advisory rather than sovereign\n- it preserves one rejected wrong target so promotion pressure stays explicit"
         }
       ]
@@ -1278,7 +1278,7 @@
         {
           "example_path": "techniques/proof/review-evidence/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md",
           "title": "Minimal single-missing-evidence request",
-          "body_markdown": "```yaml\nsingle_missing_evidence_request:\n  claim_or_decision: generated compact index was rebuilt after the seed registry changed\n  current_review_state: diff shows seed and generated files changed, but no builder receipt is visible\n  requested_object: one command receipt or CI line for `python path/to/build_registry.py --check` on the current branch\n  why_it_matters: the receipt distinguishes generated parity from hand-edited generated output\n  if_object_appears: mark generation parity observed and continue normal review\n  if_object_absent: keep generated index under review and do not treat it as validated\n  stop_line: do not issue proof or verdict; ask for this one object and stop\n```\n\nThis example asks for one object, not a full investigation. If the receipt is\nprovided, review can continue with observed generation parity. If it is absent,\nthe generated output remains under review, but the absence does not prove the\noutput is wrong."
+          "body_markdown": "```yaml\nsingle_missing_evidence_request:\n  claim_or_decision: generated compact index was rebuilt after the source registry changed\n  current_review_state: diff shows seed and generated files changed, but no builder receipt is visible\n  requested_object: one command receipt or CI line for `python path/to/build_registry.py --check` on the current branch\n  why_it_matters: the receipt distinguishes generated parity from hand-edited generated output\n  if_object_appears: mark generation parity observed and continue normal review\n  if_object_absent: keep generated index under review and do not treat it as validated\n  stop_line: do not issue proof or verdict; ask for this one object and stop\n```\n\nThis example asks for one object, not a full investigation. If the receipt is\nprovided, review can continue with observed generation parity. If it is absent,\nthe generated output remains under review, but the absence does not prove the\noutput is wrong."
         }
       ]
     },

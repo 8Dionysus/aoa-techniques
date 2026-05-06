@@ -9,7 +9,7 @@ import sys
 from typing import Any
 
 PART_ROOT = pathlib.Path(__file__).resolve().parents[1]
-SRC = PART_ROOT / "config" / "agon_epistemic_technique_candidates.seed.json"
+SRC = PART_ROOT / "config" / "agon_epistemic_technique_candidates.source.json"
 OUT = PART_ROOT / "generated" / "agon_epistemic_technique_candidates.min.json"
 ITEM_KEY = "techniques"
 REGISTRY_ID = "agon.epistemic_technique_candidates.registry.v1"

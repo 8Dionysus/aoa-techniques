@@ -1884,8 +1884,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             encoding="utf-8"
         )
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
-        family_seed = validate_repo.read_yaml(
-            REPO_ROOT / "config" / "technique_family_seed.yaml"
+        family_scout = validate_repo.read_yaml(
+            REPO_ROOT / "config" / "technique_family_scout.yaml"
         )
         topology_axes = validate_repo.read_yaml(
             REPO_ROOT / "config" / "technique_topology_axes.yaml"
@@ -1926,10 +1926,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 self.assertIn("TECHNIQUE_TOPOLOGY_CONTRACT.md", surface)
 
         self.assertIn("## Topology fit", template)
-        self.assertEqual("scout-foundation", family_seed["status"])
+        self.assertEqual("scout-foundation", family_scout["status"])
         self.assertIn(
             "Use family as a library shelf",
-            "\n".join(family_seed["core_rules"]),
+            "\n".join(family_scout["core_rules"]),
         )
         self.assertEqual("scout-foundation", topology_axes["status"])
         self.assertEqual(["domain", "kind"], topology_axes["frontmatter_truth_axes"])
@@ -1987,14 +1987,14 @@ class TechniqueContentSmokeTests(unittest.TestCase):
     def test_topology_scout_report_is_builder_aligned_and_non_authoritative(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         axis_registry = validate_repo.load_topology_axes_registry(REPO_ROOT)
-        wave1_overlay = validate_repo.load_wave1_kind_overlay(REPO_ROOT)
+        kind_overlay = validate_repo.load_kind_overlay(REPO_ROOT)
         report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_topology_scout.json")
         report_markdown = (
             REPO_ROOT / "reports" / "technique_topology_scout.md"
         ).read_text(encoding="utf-8")
 
         expected_report = validate_repo.build_topology_scout_payload(
-            catalog, axis_registry, wave1_overlay
+            catalog, axis_registry, kind_overlay
         )
         expected_markdown = validate_repo.build_topology_scout_markdown(expected_report)
 
@@ -2012,13 +2012,13 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_tree_projection_report_is_builder_aligned_and_non_authoritative(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
-        wave1_overlay = validate_repo.load_wave1_kind_overlay(REPO_ROOT)
+        kind_overlay = validate_repo.load_kind_overlay(REPO_ROOT)
         report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_tree_projection.json")
         report_markdown = (
             REPO_ROOT / "reports" / "technique_tree_projection.md"
         ).read_text(encoding="utf-8")
 
-        expected_report = validate_repo.build_tree_projection_payload(catalog, wave1_overlay)
+        expected_report = validate_repo.build_tree_projection_payload(catalog, kind_overlay)
         expected_markdown = validate_repo.build_tree_projection_markdown(expected_report)
 
         self.assertEqual(expected_report, report)
@@ -2448,8 +2448,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
     ) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         registry = validate_repo.load_kind_registry(REPO_ROOT)
-        family_seed = validate_repo.load_family_seed(REPO_ROOT)
-        wave1_overlay = validate_repo.load_wave1_kind_overlay(REPO_ROOT)
+        family_scout = validate_repo.load_family_scout(REPO_ROOT)
+        kind_overlay = validate_repo.load_kind_overlay(REPO_ROOT)
         report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_family_scout.json")
         report_markdown = (
             REPO_ROOT / "reports" / "technique_family_scout.md"
@@ -2459,11 +2459,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         ).read_text(encoding="utf-8")
 
         expected_report = validate_repo.build_family_scout_payload(
-            catalog, family_seed, wave1_overlay
+            catalog, family_scout, kind_overlay
         )
         expected_markdown = validate_repo.build_family_scout_markdown(expected_report)
         expected_audit = validate_repo.build_kind_ambiguity_audit_markdown(
-            catalog, registry, family_seed, wave1_overlay
+            catalog, registry, family_scout, kind_overlay
         )
 
         self.assertEqual(expected_report, report)

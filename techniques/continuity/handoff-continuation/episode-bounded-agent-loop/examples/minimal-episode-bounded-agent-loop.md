@@ -2,13 +2,13 @@
 
 Episode goal:
 
-- draft one bounded seed bundle and record the remaining overlap question
+- draft one bounded candidate bundle and record the remaining overlap question
 
 Checkpoint artifact:
 
 ```markdown
 # Episode Checkpoint
-- completed: drafted the seed bundle skeleton
+- completed: drafted the candidate bundle skeleton
 - blocker: overlap with `AOA-T-0001` still needs boundary review
 - next_decision: `escalate`
 ```

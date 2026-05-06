@@ -52,7 +52,7 @@ A release should make it easy to answer:
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
    - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULES.md`.
    - Use `TECHNIQUE_CAPSULE_GUIDE.md` as the authored contract reference when checking that the runtime card family stayed bounded.
-   - This also includes the kind doctrine and routing surfaces: `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `docs/TECHNIQUE_KINDS_SEED.md`, `generated/technique_kind_manifest.json`, `generated/technique_kind_manifest.min.json`, `docs/TECHNIQUE_KINDS.md`, `config/technique_kind_registry.yaml`, `data/technique_kind_wave1.yaml`, and `reports/wave1_kind_counts.md`.
+   - This also includes the kind doctrine and routing surfaces: `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `docs/TECHNIQUE_KIND_BASELINE.md`, `generated/technique_kind_manifest.json`, `generated/technique_kind_manifest.min.json`, `docs/TECHNIQUE_KINDS.md`, `config/technique_kind_registry.yaml`, `data/technique_kind_overlay.yaml`, and `reports/technique_kind_counts.md`.
    - Use `TECHNIQUE_KIND_GUIDE.md` as the authored contract reference when checking that kind stayed narrow, singular, and scout-only for family.
    - This now also includes the KAG/source-lift reader companions for sections, checklists, examples, and evidence notes:
      - `generated/technique_sections.full.json`

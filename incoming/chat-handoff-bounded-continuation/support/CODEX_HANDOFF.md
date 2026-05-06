@@ -1,0 +1,34 @@
+# Codex Handoff - Chat Handoff Bounded Continuation
+
+You are operating inside `aoa-techniques` under explicit human control.
+
+## Your job
+
+Use the staging surfaces in `incoming/chat-handoff-bounded-continuation/` to prepare candidate bundles for handoff and bounded continuation candidates.
+
+## Read first
+
+1. `README.md` at repo root
+2. `mechanics/distillation/parts/donor-refinery/README.md`
+3. `mechanics/distillation/parts/external-import-runbook/README.md`
+4. `TECHNIQUE_INDEX.md`
+5. `incoming/chat-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md`
+6. `incoming/chat-handoff-bounded-continuation/docs/CHAT_HANDOFF_BOUNDED_CONTINUATION_PLANTING_ORDER.md`
+
+## Operating posture
+
+- treat this wave as staging soil, not merge authority
+- keep bundle work inside `candidate_bundles/**`
+- do not edit `TECHNIQUE_INDEX.md`, `generated/**`, or repo-wide queue docs
+- keep governed actions and generic phase-sync out of this wave
+
+## Desired worker output
+
+Always answer in this shape:
+
+- candidate chosen
+- overlap watch
+- boundary statement
+- what stays out
+- files touched or proposed
+- whether operator approval is needed

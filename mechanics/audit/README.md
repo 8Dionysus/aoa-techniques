@@ -73,7 +73,7 @@ bundle status would move, update the bundle-local evidence route first.
 
 - [Promotion Readiness Matrix](parts/promotion-readiness-matrix/README.md):
   active readiness queues and owner-local promotion posture.
-- [Promotion Wave A Runbook](parts/promotion-wave-a-runbook/README.md):
+- [Promotion Evidence Runbook](parts/promotion-evidence-runbook/README.md):
   bounded promotion wave mechanics.
 - [External Evidence Sprint Runbook](parts/external-evidence-sprint-runbook/README.md):
   sprint path for evidence-gated external technique candidates.

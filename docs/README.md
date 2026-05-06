@@ -28,8 +28,8 @@ Choose the path that matches your question:
     - generated scout projection over those axes; use for review pressure, not migration authority
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
-  - [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)
-    - historical wave1 note; use it only as a pointer to the living kind guide and source files
+  - [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md)
+    - historical baseline note; use it only as a pointer to the living kind guide and source files
 - I need a small local runtime card for one technique:
   - [Technique Capsules](TECHNIQUE_CAPSULES.md)
   - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
@@ -46,7 +46,7 @@ Choose the path that matches your question:
   - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
   - [Mechanics](../mechanics/README.md)
   - [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-  - [Promotion Wave A Runbook](../mechanics/audit/parts/promotion-wave-a-runbook/README.md)
+  - [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
   - [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
   - [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
   - [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md)
@@ -61,7 +61,7 @@ Choose the path that matches your question:
   - [Agon Move Technique Bridge](../mechanics/agon/parts/move-technique-bridge/README.md)
   - [Agon Provenance](../mechanics/agon/PROVENANCE.md)
   - [`../mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`](../mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json)
-  - `../mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json`
+  - `../mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json`
 - I need to understand the repo's markdown-first caution discipline:
   - [Shadow Patterns](SHADOW_PATTERNS.md)
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
@@ -116,7 +116,7 @@ Choose the path that matches your question:
   - [Start Here](START_HERE.md)
   - [Releasing `aoa-techniques`](RELEASING.md)
 - I need the bounded cross-layer stress program shape before opening owner repos:
-  - [Chaos Wave Program](../mechanics/antifragility/parts/chaos-wave-program/README.md)
+  - [Chaos Stress Program](../mechanics/antifragility/parts/chaos-stress-program/README.md)
   - [`stress-receipt-reground-closeout`](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
 
 ## Surface Types
@@ -210,7 +210,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
 - [Mechanics](../mechanics/README.md)
 - [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-- [Promotion Wave A Runbook](../mechanics/audit/parts/promotion-wave-a-runbook/README.md)
+- [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
 - [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
 - [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
 - [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md)
@@ -222,7 +222,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
 - [External Import Runbook](../mechanics/distillation/parts/external-import-runbook/README.md)
 - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
-- [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)
+- [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md)
 - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
 - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
@@ -316,7 +316,7 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 1. [Start Here](START_HERE.md)
 2. [Roadmap](../ROADMAP.md) for repo-level direction
 3. [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-4. [Promotion Wave A Runbook](../mechanics/audit/parts/promotion-wave-a-runbook/README.md)
+4. [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
 5. [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
 6. [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
 

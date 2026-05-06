@@ -2,7 +2,7 @@
 
 Active local parts:
 
-- [Chaos Wave Program](chaos-wave-program/README.md)
+- [Chaos Stress Program](chaos-stress-program/README.md)
 - [Recovery Practice Bridge](recovery-practice-bridge/README.md)
 
 These parts keep technique-layer antifragility pressure legible. They do not

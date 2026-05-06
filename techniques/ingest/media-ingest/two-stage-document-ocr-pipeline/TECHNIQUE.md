@@ -173,7 +173,7 @@ See `checks/two-stage-document-ocr-pipeline-checklist.md`.
 ## Promotion history
 
 - adapted from open-source `PaddleOCR` and `docTR`
-- landed from `personal-ingest-wave-2`
+- landed from `personal-media-ingest`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for staged OCR handoff
 
 ## Future evolution

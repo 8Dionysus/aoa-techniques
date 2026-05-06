@@ -51,7 +51,7 @@ LIVE_LINK_SURFACES = (
     "docs/TECHNIQUE_SELECTION.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "mechanics/audit/parts/promotion-wave-a-runbook/README.md",
+    "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/experience/parts/technique-candidate-bridge/README.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
     "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",

@@ -173,7 +173,7 @@ See `checks/template-backed-field-extraction-after-ocr-checklist.md`.
 ## Promotion history
 
 - adapted from open-source `invoice2data`, `receiptparser`, and `receipt-parser-legacy`
-- landed from `personal-ingest-wave-2`
+- landed from `personal-media-ingest`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for post-OCR template-backed field extraction
 
 ## Future evolution

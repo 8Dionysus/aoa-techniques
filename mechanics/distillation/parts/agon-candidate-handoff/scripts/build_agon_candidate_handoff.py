@@ -10,7 +10,7 @@ from typing import Any
 
 PART_ROOT = Path(__file__).resolve().parents[1]
 REPO_ROOT = Path(__file__).resolve().parents[5]
-CONFIG_PATH = PART_ROOT / "config" / "agon_candidate_handoff.seed.json"
+CONFIG_PATH = PART_ROOT / "config" / "agon_candidate_handoff.source.json"
 GENERATED_PATH = PART_ROOT / "generated" / "agon_candidate_handoff.min.json"
 
 MOVE_SOURCE = (

@@ -30,7 +30,7 @@ It must not own:
 The seed adds:
 
 ```text
-config/agon_technique_binding_candidates.seed.json
+config/agon_technique_binding_candidates.source.json
 generated/agon_technique_binding_candidates.min.json
 ```
 

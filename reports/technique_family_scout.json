@@ -2,9 +2,9 @@
   "report_version": 1,
   "status": "scout-only-non-authoritative",
   "source_of_truth": {
-    "family_seed": "config/technique_family_seed.yaml",
+    "family_scout": "config/technique_family_scout.yaml",
     "kind_registry": "config/technique_kind_registry.yaml",
-    "wave1_mapping": "data/technique_kind_wave1.yaml",
+    "kind_overlay": "data/technique_kind_overlay.yaml",
     "catalog": "generated/technique_catalog.json"
   },
   "authority_note": "This report is scout-only, non-authoritative, and weaker than bundle frontmatter. It must not be treated as schema truth, frontmatter truth, or automatic remap authority.",
@@ -1871,7 +1871,7 @@
     },
     {
       "family": "automation-governance",
-      "summary": "Automation-worthiness, approval sensitivity, seed routing, and promotion-boundary review.",
+      "summary": "Automation-worthiness, approval sensitivity, candidate routing, and promotion-boundary review.",
       "typical_domains": [
         "agent-workflows"
       ],
@@ -1929,11 +1929,11 @@
         },
         {
           "id": "AOA-T-0087",
-          "name": "human-loop-to-seed-lift",
+          "name": "human-loop-to-first-landing",
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
-          "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+          "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
           "kind": "assessment"
         },
         {

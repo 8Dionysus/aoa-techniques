@@ -52,9 +52,9 @@ candidates or define Agon law.
 
 The current Agon technical artifacts live under their owning active parts:
 
-- `parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json`
+- `parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json`
 - `parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
-- `parts/epistemic-technique-candidates/config/agon_epistemic_technique_candidates.seed.json`
+- `parts/epistemic-technique-candidates/config/agon_epistemic_technique_candidates.source.json`
 - `parts/epistemic-technique-candidates/generated/agon_epistemic_technique_candidates.min.json`
 - matching part-local schemas, examples, scripts, tests, and recurrence manifests
 

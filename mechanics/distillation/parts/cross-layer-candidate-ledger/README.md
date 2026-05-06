@@ -57,7 +57,7 @@ The detailed pre-prune receipt is preserved at
 The part-local registry keeps the full donor-note universe machine-checkable
 without turning the ledger into promotion authority:
 
-- [config/cross_layer_candidate_registry.seed.json](config/cross_layer_candidate_registry.seed.json)
+- [config/cross_layer_candidate_registry.source.json](config/cross_layer_candidate_registry.source.json)
   carries the structured accounting for all `24` candidates.
 - [generated/cross_layer_candidate_registry.min.json](generated/cross_layer_candidate_registry.min.json)
   is derived evidence for counts, waves, source layers, and current gates.

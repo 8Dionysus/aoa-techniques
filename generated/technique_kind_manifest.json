@@ -1093,11 +1093,11 @@
         },
         {
           "id": "AOA-T-0087",
-          "name": "human-loop-to-seed-lift",
+          "name": "human-loop-to-first-landing",
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
-          "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md"
+          "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0088",

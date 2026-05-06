@@ -3271,7 +3271,7 @@ python -m unittest discover -s tests
 
 Changed:
 
-- added a part-local seed registry, schemas, example, builder, validator, tests,
+- added a part-local source registry, schemas, example, builder, validator, tests,
   and generated compact index for
   [parts/external-candidate-ledger](parts/external-candidate-ledger/README.md)
 - kept all `13` candidate verdicts, status counts, and the
@@ -3301,7 +3301,7 @@ Not moved:
 
 Changed:
 
-- added a part-local seed registry, schemas, example, builder, validator, tests,
+- added a part-local source registry, schemas, example, builder, validator, tests,
   and generated compact index for
   [parts/cross-layer-candidate-ledger](parts/cross-layer-candidate-ledger/README.md)
 - kept the `24` candidate universe, `6` already-staged rows, `10` landed wave
@@ -3419,7 +3419,7 @@ Changed:
 
 - added [parts/agon-candidate-handoff](parts/agon-candidate-handoff/README.md)
   as the Distillation lane map for Agon requested-only practice candidates
-- added a part-local seed registry, schemas, example, builder, validator, tests,
+- added a part-local source registry, schemas, example, builder, validator, tests,
   and generated compact index
 - mapped all `22` current Agon technique-side candidates: `12` Wave IV
   move-binding candidates and `10` Wave XV epistemic candidates

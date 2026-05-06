@@ -32,8 +32,8 @@ memory, proof, or mutation authority.
 This ledger distills:
 
 - [execution-profile-truth-boundary-pilot](execution-profile-truth-boundary-pilot.md)
-- [execution-profile-small-agent-wave-a-review](execution-profile-small-agent-wave-a-review.md)
-- [execution-profile-small-agent-wave-b-review](execution-profile-small-agent-wave-b-review.md)
+- [execution-profile-small-agent-core-shelves-review](execution-profile-small-agent-core-shelves-review.md)
+- [execution-profile-small-agent-remaining-shelves-review](execution-profile-small-agent-remaining-shelves-review.md)
 - [execution-profile-medium-agent-calibration-review](execution-profile-medium-agent-calibration-review.md)
 - [execution-profile-orchestration-boundary-review](execution-profile-orchestration-boundary-review.md)
 - `reports/technique_topology_scout.json`

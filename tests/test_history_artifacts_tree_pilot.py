@@ -71,7 +71,7 @@ LIVE_LINK_SURFACES = (
     "mechanics/checkpoint/parts/technique-anchors/README.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "mechanics/audit/parts/promotion-wave-a-runbook/README.md",
+    "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/audit/parts/external-evidence-sprint-runbook/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/external-candidate-ledger/README.md",

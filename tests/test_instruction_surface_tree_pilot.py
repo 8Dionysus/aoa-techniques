@@ -64,10 +64,10 @@ PILOT_BUNDLES = (
 LIVE_LINK_SURFACES = (
     "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",
-    "mechanics/audit/parts/promotion-wave-a-runbook/README.md",
+    "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
-    "mechanics/distillation/parts/cross-layer-candidate-ledger/config/cross_layer_candidate_registry.seed.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/config/cross_layer_candidate_registry.source.json",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/examples/cross_layer_candidate_registry_entry.example.json",
     "mechanics/distillation/parts/external-candidate-ledger/README.md",
     "mechanics/distillation/parts/long-gap-reentry/README.md",

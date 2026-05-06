@@ -6,7 +6,7 @@ kind: recovery
 status: promoted
 origin:
   project: Dionysus
-  path: aoa-chaos-wave1-seed/proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.seed.md
+  path: aoa-chaos-wave1-seed/proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.candidate.md
   note: Generalized from the aoa-chaos-wave1 donor pack, where runtime receipts, routing hints, playbook gates, KAG regrounding, and eval bridge candidates had to stay owner-scoped and reviewable under stress.
 owners:
   - 8Dionysus

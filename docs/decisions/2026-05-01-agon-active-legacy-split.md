@@ -47,7 +47,7 @@ The preserved wave receipts now live in:
   `PROVENANCE.md`.
 - Requested candidates remain requested only; this split does not promote a
   technique bundle.
-- Agon-specific seeds, generated indexes, schemas, examples, scripts, tests, and
+- Agon-specific source registries, generated indexes, schemas, examples, scripts, tests, and
   recurrence manifests were moved into part-local homes in the follow-up
   artifact-topology pass recorded in
   `docs/decisions/2026-05-01-agon-part-local-artifacts.md`.

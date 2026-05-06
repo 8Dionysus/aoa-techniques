@@ -69,7 +69,7 @@ generated surfaces, and validation.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Techniques route card](../../../../../techniques/AGENTS.md)
-- [Technique family seed row for `evaluation-chain`](../../../../../config/technique_family_seed.yaml)
+- [Technique family scout row for `evaluation-chain`](../../../../../config/technique_family_scout.yaml)
 - [Technique tree projection rows for `evaluation-chain`](../../../../../reports/technique_tree_projection.md)
 - [Technique family scout rows for `evaluation-chain`](../../../../../reports/technique_family_scout.md)
 - [Technique topology scout rows for `evaluation-chain`](../../../../../reports/technique_topology_scout.md)

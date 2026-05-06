@@ -2,7 +2,7 @@
 
 | Source | Current active route | Status |
 |---|---|---|
-| [CHAOS_WAVE1_PROGRAM](raw/CHAOS_WAVE1_PROGRAM.md) | [Chaos Wave Program](../parts/chaos-wave-program/README.md), [Recovery Practice Bridge](../parts/recovery-practice-bridge/README.md), [Provenance](../PROVENANCE.md) | Preserved raw donor-wave trace; active route distilled. |
+| [CHAOS_WAVE1_PROGRAM](raw/CHAOS_WAVE1_PROGRAM.md) | [Chaos Stress Program](../parts/chaos-stress-program/README.md), [Recovery Practice Bridge](../parts/recovery-practice-bridge/README.md), [Provenance](../PROVENANCE.md) | Preserved raw donor-wave trace; active route distilled. |
 
 ## Use Rule
 

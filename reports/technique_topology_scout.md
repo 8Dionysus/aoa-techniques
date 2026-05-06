@@ -1,6 +1,6 @@
 # Technique Topology Scout
 
-This file is generated from the topology axis registry, wave1 family overlay, and generated catalog.
+This file is generated from the topology axis registry, kind overlay, and generated catalog.
 Do not edit it by hand; run `python scripts/build_topology_scout.py`.
 
 This projection is scout-only, non-authoritative, and weaker than bundle frontmatter. It must not be treated as schema truth, frontmatter truth, or automatic remap authority.
@@ -123,7 +123,7 @@ Use this report to inspect likely capability, substrate, execution, and risk con
 | [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | `agent-workflows` | `lift` | `donor-harvest` | `transform`, `summarize`, `learn-from-artifact` | `conversation`, `tool-surfaces`, `data`, `history` | `small-agent` | `read-only`, `external-evidence` |
 | [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `lift` | `donor-harvest` | `transform`, `summarize`, `choose` | `conversation`, `tool-surfaces` | `orchestration-required` | `security-sensitive`, `external-evidence` |
 | [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `validate` | `conversation`, `tool-surfaces`, `human-approval-surfaces` | `medium-agent` | `read-only`, `approval-required` |
-| [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `read` | `conversation`, `tool-surfaces`, `history` | `medium-agent` | `read-only`, `degraded-mode` |
+| [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `read` | `conversation`, `tool-surfaces`, `history` | `medium-agent` | `read-only`, `degraded-mode` |
 | [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `read` | `conversation`, `tool-surfaces`, `ui`, `human-approval-surfaces` | `orchestration-required` | `mutating`, `approval-required`, `degraded-mode` |
 | [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) | `agent-workflows` | `assessment` | `automation-governance` | `compare`, `choose`, `observe` | `conversation`, `tool-surfaces`, `memory-adjacent-artifacts`, `human-approval-surfaces` | `medium-agent` | `read-only` |
 | [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `automation-governance` | `choose` | `conversation`, `tool-surfaces`, `human-approval-surfaces` | `small-agent` | `read-only` |

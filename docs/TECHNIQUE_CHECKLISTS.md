@@ -268,11 +268,11 @@ See also:
 |---|---|---|---|---|
 | automation-fit-matrix checklist | `absent` | `7` | `techniques/governance/automation-readiness/automation-fit-matrix/checks/automation-fit-matrix-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
 
-### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) - human-loop-to-first-landing (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| human-loop-to-seed-lift checklist | `absent` | `7` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/checks/human-loop-to-seed-lift-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) |
+| human-loop-to-first-landing checklist | `absent` | `7` | `techniques/governance/automation-readiness/human-loop-to-first-landing/checks/human-loop-to-first-landing-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) |
 
 ### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
 

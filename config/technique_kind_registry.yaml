@@ -1,6 +1,6 @@
 schema_version: 1
 axis_name: technique_kind
-status: wave1-seed
+status: baseline
 cardinality: exactly-one-primary-kind
 purpose: Primary reusable-practice axis that answers what sort of technique this is without replacing
   domain ownership.

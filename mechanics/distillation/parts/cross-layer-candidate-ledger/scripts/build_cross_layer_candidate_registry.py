@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 PART_ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = PART_ROOT / "config" / "cross_layer_candidate_registry.seed.json"
+CONFIG_PATH = PART_ROOT / "config" / "cross_layer_candidate_registry.source.json"
 GENERATED_PATH = PART_ROOT / "generated" / "cross_layer_candidate_registry.min.json"
 
 EXPECTED_SCHEMA_VERSION = "distillation-cross-layer-candidate-registry.seed/0.1"

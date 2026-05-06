@@ -13,7 +13,7 @@
 
 ## What changed
 
-- paths: donor daemon, hook, and queue paths were replaced by markdown seed bundles, landing notes, and the published technique bundle
+- paths: donor daemon, hook, and queue paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle
 - services: this adaptation does not ship a background review service, TUI, or fix loop
 - dependencies: the review artifact now exists as a documentation-first reusable contract rather than as a donor runtime feature
 - operating assumptions: the technique is read as one bounded post-commit review artifact pattern, not as a full review platform
@@ -31,7 +31,7 @@
 
 ## Evidence
 
-- source paths: `incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`
+- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result

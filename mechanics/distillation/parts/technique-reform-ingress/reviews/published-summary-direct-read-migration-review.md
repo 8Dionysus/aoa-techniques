@@ -84,7 +84,7 @@ generated surfaces, and validation.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Techniques route card](../../../../../techniques/AGENTS.md)
-- [Technique family seed row for `published-summary`](../../../../../config/technique_family_seed.yaml)
+- [Technique family scout row for `published-summary`](../../../../../config/technique_family_scout.yaml)
 - [Technique tree projection rows for `published-summary`](../../../../../reports/technique_tree_projection.md)
 - [Technique family scout rows for `published-summary`](../../../../../reports/technique_family_scout.md)
 - [Technique topology scout rows for `published-summary`](../../../../../reports/technique_topology_scout.md)

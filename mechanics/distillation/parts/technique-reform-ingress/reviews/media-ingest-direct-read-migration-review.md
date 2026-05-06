@@ -43,10 +43,10 @@ generated surfaces, and validation move together.
 - [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 - supporting `checks/`, `examples/`, and `notes/` files for the five bundles,
   scanned for invariant, adjacency, public-safety, and drift-pressure cues
-- [Personal Ingest Wave 2](../../../../../incoming/personal-ingest-wave-2/README.md)
-- [External Technique Candidates - Personal Ingest Wave 2](../../../../../incoming/personal-ingest-wave-2/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_INGEST_WAVE_2.md)
-- [Personal Ingest Wave 2 - Planting Order](../../../../../incoming/personal-ingest-wave-2/docs/PERSONAL_INGEST_WAVE_2_PLANTING_ORDER.md)
-- [Personal Ingest Wave 2 Donor Sources](../../../../../incoming/personal-ingest-wave-2/support/DONOR_SOURCES.md)
+- [Personal Media Ingest](../../../../../incoming/personal-media-ingest/README.md)
+- [External Technique Candidates - Personal Media Ingest](../../../../../incoming/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md)
+- [Personal Media Ingest - Planting Order](../../../../../incoming/personal-media-ingest/docs/PERSONAL_MEDIA_INGEST_PLANTING_ORDER.md)
+- [Personal Media Ingest Donor Sources](../../../../../incoming/personal-media-ingest/support/DONOR_SOURCES.md)
 - `reports/technique_tree_projection.md` rows for `AOA-T-0070` through
   `AOA-T-0074`
 - `reports/technique_topology_scout.md` rows for `AOA-T-0070` through
@@ -111,7 +111,7 @@ question, `ingest/media-ingest` is tighter than the old broad folder:
   intermediate objects
 - all five are `kind: ingest`, unlike the previous continuity shelves that had
   cross-kind stress cases
-- the Personal Ingest Wave 2 staging packet already groups the five landed
+- the Personal Media Ingest staging packet already groups the five landed
   bundles and keeps the auth/session bridge out
 - direct links between these bundles become easier to read if they are shelf
   siblings
@@ -139,7 +139,7 @@ A later migration wave should expect to update:
 
 - authored sibling links inside the five moved bundles, especially relative
   links among `AOA-T-0070`, `AOA-T-0071`, `AOA-T-0072`, and `AOA-T-0073`
-- links from incoming Personal Ingest Wave 2 candidate and planting surfaces
+- links from incoming Personal Media Ingest candidate and planting surfaces
 - links from Audit promotion-readiness matrix rows for `AOA-T-0070` through
   `AOA-T-0074`
 - generated reader docs such as `TECHNIQUE_INDEX.md`, `docs/TECHNIQUE_*`,

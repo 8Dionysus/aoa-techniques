@@ -22,7 +22,7 @@ into current behavior just because they once existed.
 | Evidence source | Active route | Distilled signal |
 |---|---|---|
 | Pre-split flat `PROMOTION_READINESS_MATRIX.md` | [parts/promotion-readiness-matrix](parts/promotion-readiness-matrix/README.md) | Promoted-corpus readiness stays visible as queue posture, lane counts, blockers, and suggested wave order. |
-| Pre-split flat `PROMOTION_WAVE_A_RUNBOOK.md` | [parts/promotion-wave-a-runbook](parts/promotion-wave-a-runbook/README.md) | The current promotion evidence-prep wave stays bounded to leading promoted candidates without status flips. |
+| Pre-split flat `PROMOTION_WAVE_A_RUNBOOK.md` | [parts/promotion-evidence-runbook](parts/promotion-evidence-runbook/README.md) | The current promotion evidence-prep wave stays bounded to leading promoted candidates without status flips. |
 | Pre-split flat `EXTERNAL_EVIDENCE_SPRINT_RUNBOOK.md` | [parts/external-evidence-sprint-runbook](parts/external-evidence-sprint-runbook/README.md) | External proof searches have an execution path that rejects adjacent fits and avoids stale lane reruns. |
 | Pre-split flat `EXTERNAL_EVIDENCE_LEDGER.md` | [parts/external-evidence-ledger](parts/external-evidence-ledger/README.md) | Searched-lane memory and closure precedents stay visible without replacing bundle-local notes. |
 | Former root closure-audit `ROADMAP.md` | [legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md](legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md) plus active Audit parts | The root roadmap now owns live repo direction; the former closure-audit baseline remains preserved as historical audit evidence. |

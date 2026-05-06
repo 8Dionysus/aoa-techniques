@@ -45,7 +45,7 @@ def test_agon_technique_binding_candidate_shape() -> None:
 def test_builder_rejects_candidates_without_skill_workflow_stop_line() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_technique_binding_candidates.seed.json").read_text(encoding="utf-8")
+        (PART_ROOT / "config" / "agon_technique_binding_candidates.source.json").read_text(encoding="utf-8")
     )
     config["candidates"][0]["must_not"] = [
         item for item in config["candidates"][0]["must_not"] if "skill workflow" not in item
