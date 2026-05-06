@@ -134,8 +134,10 @@ class PublishedSummaryTreePilotTestCase(unittest.TestCase):
         self.assertNotIn("published-summary-remediation-snapshot", evaluation)
         self.assertNotIn("telemetry-integrity-snapshot", evaluation)
         self.assertNotIn("required-vs-optional-source-rendering", evaluation)
-        self.assertIn("contextual-host-doctor", evaluation)
-        self.assertIn("baseline-first-additive-profile-benchmarks", evaluation)
+        self.assertNotIn("contextual-host-doctor", evaluation)
+        self.assertNotIn("baseline-first-additive-profile-benchmarks", evaluation)
+        self.assertIn("No active leaf bundles currently live directly here", evaluation)
+        self.assertIn("techniques/execution/", evaluation)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
         receipt = (

@@ -118,7 +118,9 @@ class EvaluationChainTreePilotTestCase(unittest.TestCase):
         self.assertNotIn("contract-first-smoke-summary", evaluation)
         self.assertNotIn("signal-first-gate-promotion", evaluation)
         self.assertNotIn("context-report-for-ci", evaluation)
-        self.assertIn("contextual-host-doctor", evaluation)
+        self.assertNotIn("contextual-host-doctor", evaluation)
+        self.assertIn("No active leaf bundles currently live directly here", evaluation)
+        self.assertIn("techniques/execution/", evaluation)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
         receipt = (

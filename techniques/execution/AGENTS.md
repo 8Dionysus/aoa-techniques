@@ -25,6 +25,9 @@ Accepted pilot shelves:
 - `agent-workflows-core/`: visible, bounded, reviewable agent-work backbone,
   bounded implementation slices, stateless single-shot fast paths, explicit
   confirmation seams, and shell-composable one-shot invocation.
+- `runtime-truth-lifecycle/`: pre-start rendered runtime truth, one-command
+  local service lifecycle, selector-aware host readiness, and baseline-first
+  additive profile comparison without becoming runtime owner law.
 
 ## Domain rules
 
@@ -38,7 +41,9 @@ Keep execution-facing techniques narrow and explicit:
 Do not turn an execution technique into project-management doctrine, staffing
 policy, backlog governance, generic agent doctrine, shell policy, product
 policy, approval policy, autonomous orchestration, hidden agent scheduling,
-runtime lifecycle law, proof authority, router ownership, API contract
+runtime lifecycle law, deployment ownership, monitoring platform doctrine, host
+policy, smoke-test law, benchmark-suite governance, product scoring, proof
+authority, `aoa-evals` verdict authority, router ownership, API contract
 authority, real-action permission, automation governance, CI policy, or a broad
 methodology stack.
 

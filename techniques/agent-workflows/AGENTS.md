@@ -6,9 +6,9 @@ Guidance for coding agents and humans working under `techniques/agent-workflows/
 
 This domain stores reusable workflow techniques for bounded execution chains.
 
-Representative bundles here include `render-truth-before-startup`,
-`one-command-service-lifecycle`, `workspace-root-ingress-and-mutation-gate`,
-`audit-to-closeout-proof-loop`, and `approval-sensitivity-check`.
+Representative bundles here include `workspace-root-ingress-and-mutation-gate`,
+`audit-to-closeout-proof-loop`, `approval-sensitivity-check`,
+`automation-fit-matrix`, and `mcp-gateway-proxy`.
 
 ## Domain rules
 

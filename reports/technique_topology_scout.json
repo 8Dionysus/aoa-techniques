@@ -259,7 +259,7 @@
       "kind": "composition",
       "status": "promoted",
       "summary": "Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.",
-      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
       "topology": {
         "family": "runtime-truth-lifecycle",
         "capability_class": [
@@ -286,7 +286,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.",
-      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
       "topology": {
         "family": "runtime-truth-lifecycle",
         "capability_class": [
@@ -2558,7 +2558,7 @@
       "kind": "validation",
       "status": "promoted",
       "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
-      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
       "topology": {
         "family": "runtime-truth-lifecycle",
         "capability_class": [
@@ -2585,7 +2585,7 @@
       "kind": "validation",
       "status": "promoted",
       "summary": "Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.",
-      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
       "topology": {
         "family": "runtime-truth-lifecycle",
         "capability_class": [

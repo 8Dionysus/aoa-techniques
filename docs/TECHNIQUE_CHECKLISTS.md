@@ -58,17 +58,17 @@ See also:
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 
-### [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
+### [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Render Truth Before Startup Checklist | `absent` | `10` | `techniques/agent-workflows/render-truth-before-startup/checks/render-truth-before-startup-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) |
+| Render Truth Before Startup Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/checks/render-truth-before-startup-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
 
-### [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
+### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/agent-workflows/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) |
+| One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
 
 ### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
 
@@ -584,17 +584,17 @@ See also:
 |---|---|---|---|---|
 | Context Report For CI Checklist | `absent` | `7` | `techniques/proof/evaluation-chain/context-report-for-ci/checks/context-report-for-ci-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
 
-### [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
+### [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Contextual Host Doctor Checklist | `absent` | `10` | `techniques/evaluation/contextual-host-doctor/checks/contextual-host-doctor-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) |
+| Contextual Host Doctor Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/checks/contextual-host-doctor-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
 
-### [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
+### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Baseline First Additive Profile Benchmarks Checklist | `absent` | `10` | `techniques/evaluation/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md` | [TECHNIQUE.md](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
+| Baseline First Additive Profile Benchmarks Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 
 ### [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
 

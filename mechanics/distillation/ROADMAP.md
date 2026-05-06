@@ -381,7 +381,13 @@
    `AOA-T-0039` as `kind: validation`, and runtime law, deployment ownership,
    monitoring doctrine, host policy, smoke-test law, benchmark governance,
    product scoring, `aoa-evals` verdict authority, and neighboring
-   owner/governance/tool-use shelves outside the shelf.
+   owner/governance/tool-use shelves outside the shelf. The twenty-third pilot
+   migration is now landed exactly for those four bundles under
+   `techniques/execution/runtime-truth-lifecycle/`, with support files moved,
+   execution route card updated, root legacy receipt accounting, link repair,
+   generated rebuilds, and release-check validation in the same wave. The next
+   bounded step is to review the landed `runtime-truth-lifecycle` pilot before
+   choosing any twenty-fourth shelf.
 
 ## Hold line
 

@@ -7,10 +7,10 @@ Guidance for coding agents and humans working under `techniques/evaluation/`.
 This domain stores reusable evaluation and validation techniques whose
 frontmatter `domain` remains `evaluation`.
 
-Representative bundles still living here include `contextual-host-doctor` and
-`baseline-first-additive-profile-benchmarks`. Proof-facing evaluation bundles
-may live under `techniques/proof/` when a reviewed tree migration places them
-there without changing their frontmatter domain.
+No active leaf bundles currently live directly here after reviewed tree
+migrations. Evaluation-frontmatter bundles may live under `techniques/proof/`
+or `techniques/execution/` when a reviewed tree migration places them there
+without changing their frontmatter domain.
 
 ## Domain rules
 

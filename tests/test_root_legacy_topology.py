@@ -48,6 +48,7 @@ class RootLegacyTopologyTestCase(unittest.TestCase):
         self.assertIn("legacy/receipts/2026-05-05-decision-routing-tree-pilot.md", index)
         self.assertIn("legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md", index)
         self.assertIn("legacy/receipts/2026-05-05-review-evidence-tree-pilot.md", index)
+        self.assertIn("legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md", index)
 
         expected_files = {
             "raw": ["README.md"],
@@ -73,6 +74,7 @@ class RootLegacyTopologyTestCase(unittest.TestCase):
                 "2026-05-05-published-summary-tree-pilot.md",
                 "2026-05-05-ready-work-graphs-tree-pilot.md",
                 "2026-05-05-review-evidence-tree-pilot.md",
+                "2026-05-05-runtime-truth-lifecycle-tree-pilot.md",
                 "2026-05-05-skill-discovery-tree-pilot.md",
                 "2026-05-05-skill-support-tree-pilot.md",
                 "README.md",

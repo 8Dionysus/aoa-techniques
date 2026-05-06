@@ -204,6 +204,9 @@ permission slip to remap techniques automatically.
 - runtime-truth-lifecycle direct-read review: landed as
   `accepted-for-twenty-third-migration-pilot`, with four runtime-adjacent
   execution bundles accepted and no path movement yet
+- runtime-truth-lifecycle migration: landed, with `AOA-T-0036`,
+  `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039` moved into
+  `techniques/execution/runtime-truth-lifecycle/` and frontmatter preserved
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -288,6 +291,7 @@ permission slip to remap techniques automatically.
 | [Review-Evidence Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md) | preserves the twenty-second accepted path migration into `techniques/proof/review-evidence/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, proof verdict authority, eval-suite ownership, review-board workflow, Agon move law, actor eligibility, evidence adequacy scoring, source-truth transfer, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, skill activation, neighboring proof/runtime/governance shelves, or all remaining `agent-workflows` and `docs` leaves |
 | [Landed Review-Evidence Pilot Review](reviews/landed-review-evidence-pilot-review.md) | confirms the twenty-second migrated shelf stayed bounded as the fourth proof trunk shelf and chooses `execution/runtime-truth-lifecycle` for direct-read review | movement of `execution/runtime-truth-lifecycle`, `tree_path` frontmatter, frontmatter remap, canonical promotion, `abyss-stack` runtime law, deployment ownership, monitoring platform doctrine, host policy, smoke-test law, benchmark-suite governance, product scoring, `aoa-evals` verdict authority, or neighboring owner/governance/tool-use shelves |
 | [Runtime-Truth-Lifecycle Direct-Read Migration Review](reviews/runtime-truth-lifecycle-direct-read-migration-review.md) | reads `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039` directly and accepts the shelf as the twenty-third migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, `abyss-stack` runtime law, deployment ownership, monitoring platform doctrine, host policy, smoke-test law, benchmark-suite governance, product scoring, `aoa-evals` verdict authority, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, skill activation, neighboring owner/governance/tool-use shelves, or all remaining `agent-workflows` and `evaluation` leaves |
+| [Runtime-Truth-Lifecycle Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md) | preserves the twenty-third accepted path migration into `techniques/execution/runtime-truth-lifecycle/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, `abyss-stack` runtime law, deployment ownership, monitoring platform doctrine, host policy, smoke-test law, benchmark-suite governance, product scoring, `aoa-evals` verdict authority, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, skill activation, neighboring owner/governance/tool-use shelves, or all remaining `agent-workflows` and `evaluation` leaves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -597,3 +601,9 @@ direct-read migration review before any twenty-third shelf movement.
 The `runtime-truth-lifecycle` direct-read review is now landed as
 `accepted-for-twenty-third-migration-pilot`, accepting exactly `AOA-T-0036`,
 `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039` without moving files.
+
+The `runtime-truth-lifecycle` migration is now landed. `AOA-T-0036`,
+`AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039` live under
+`techniques/execution/runtime-truth-lifecycle/` with support files moved,
+execution route card updated, root legacy receipt added, generated surfaces
+rebuilt, and frontmatter unchanged.

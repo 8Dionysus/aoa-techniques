@@ -1523,10 +1523,10 @@
     },
     {
       "id": "AOA-T-0036",
-      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/render-truth-before-startup/checks/render-truth-before-startup-checklist.md",
+          "check_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/checks/render-truth-before-startup-checklist.md",
           "title": "Render Truth Before Startup Checklist",
           "intro_markdown": "",
           "items": [
@@ -1576,10 +1576,10 @@
     },
     {
       "id": "AOA-T-0037",
-      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/contextual-host-doctor/checks/contextual-host-doctor-checklist.md",
+          "check_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/checks/contextual-host-doctor-checklist.md",
           "title": "Contextual Host Doctor Checklist",
           "intro_markdown": "",
           "items": [
@@ -1629,10 +1629,10 @@
     },
     {
       "id": "AOA-T-0038",
-      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md",
+          "check_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md",
           "title": "One-Command Service Lifecycle Checklist",
           "intro_markdown": "",
           "items": [
@@ -1682,10 +1682,10 @@
     },
     {
       "id": "AOA-T-0039",
-      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md",
+          "check_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md",
           "title": "Baseline First Additive Profile Benchmarks Checklist",
           "intro_markdown": "",
           "items": [

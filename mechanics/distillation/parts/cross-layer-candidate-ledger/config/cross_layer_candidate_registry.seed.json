@@ -237,7 +237,7 @@
       "landed_technique": {
         "domain": "agent-workflows",
         "id": "AOA-T-0036",
-        "path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md"
+        "path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into lifecycle control, readiness policy, or config publication",
@@ -274,7 +274,7 @@
       "landed_technique": {
         "domain": "evaluation",
         "id": "AOA-T-0037",
-        "path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md"
+        "path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into monitoring, smoke tests, or lifecycle control",
@@ -310,7 +310,7 @@
       "landed_technique": {
         "domain": "agent-workflows",
         "id": "AOA-T-0038",
-        "path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md"
+        "path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into generic launcher doctrine, install flows, or memory semantics",
@@ -346,7 +346,7 @@
       "landed_technique": {
         "domain": "evaluation",
         "id": "AOA-T-0039",
-        "path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md"
+        "path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md"
       },
       "law_local_bridge": {
         "bridge_stop_line": "do not widen into suite ownership, product scoring, or promotion policy",

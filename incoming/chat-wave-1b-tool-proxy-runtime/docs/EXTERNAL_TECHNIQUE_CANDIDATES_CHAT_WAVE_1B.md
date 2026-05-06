@@ -34,7 +34,7 @@ No remaining staged landing candidates in Wave 1B.
 
 | candidate | why excluded now | next honest move |
 |---|---|---|
-| `lifecycle-managed-tool-proxy` | lifecycle ownership collapses into [AOA-T-0038](../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) plus proxy-specific startup detail rather than one new smaller contract | reopen only if a proxy-owned lifecycle seam survives independently from general local stack lifecycle |
+| `lifecycle-managed-tool-proxy` | lifecycle ownership collapses into [AOA-T-0038](../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) plus proxy-specific startup detail rather than one new smaller contract | reopen only if a proxy-owned lifecycle seam survives independently from general local stack lifecycle |
 | `isolated-stateful-agent-runtime` | still cluster and sandbox platform doctrine rather than one bounded technique object | reopen only if a smaller runtime-slot contract survives without Kubernetes or product-platform breadth |
 | `bounded-single-step-agent` | already covered by `AOA-T-0023 stateless-single-shot-agent` | leave closed unless a new contract survives outside the single-shot fast path |
 | `confirm-before-tool-execution` | already covered by `AOA-T-0028 confirmation-gated-mutating-action` | leave closed unless a narrower tool-only confirmation seam appears |

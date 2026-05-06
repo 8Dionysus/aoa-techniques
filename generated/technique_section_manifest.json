@@ -1976,7 +1976,7 @@
     },
     {
       "id": "AOA-T-0036",
-      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -2032,7 +2032,7 @@
     },
     {
       "id": "AOA-T-0037",
-      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -2088,7 +2088,7 @@
     },
     {
       "id": "AOA-T-0038",
-      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -2144,7 +2144,7 @@
     },
     {
       "id": "AOA-T-0039",
-      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
