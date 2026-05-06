@@ -22,6 +22,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- continued the selector/relation long pass with Wave B over instruction,
+  KAG/source-lift, docs-boundary, and skill-support shelves, recording an
+  explicit no-repair hold for current relation pressure without changing
+  frontmatter or generated selection surfaces
 - started the selector/relation long pass with Wave A over proof and execution
   shelves, strengthening `AOA-T-0050 ready-work-from-blocker-graph` from
   `complements AOA-T-0049` to `requires AOA-T-0049` and recording the direct
