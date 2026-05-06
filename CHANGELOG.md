@@ -235,6 +235,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `approval-evidence` pilot review and selected
   `proof/review-evidence` for the next direct-read migration review without
   moving a twenty-second shelf yet
+- accepted the `review-evidence` direct-read migration review over
+  `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106` as the twenty-second tree pilot
+  while keeping the review itself non-mutating
 
 ### Validation
 

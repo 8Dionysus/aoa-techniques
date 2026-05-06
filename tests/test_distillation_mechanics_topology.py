@@ -125,6 +125,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-decision-routing-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/approval-evidence-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-approval-evidence-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/review-evidence-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -6016,7 +6017,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn("Landed Approval-Evidence Pilot Review", tree_contract)
         self.assertIn(
-            "directly read `AOA-T-0105`, `AOA-T-0107`, and\n`AOA-T-0106`",
+            "Review-Evidence Direct-Read Migration Review",
             tree_contract,
         )
         self.assertIn(
@@ -6039,6 +6040,106 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 "AOA-T-0107",
                 "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
                 "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0106",
+                "techniques/docs/single-scoped-evidence-reference/TECHNIQUE.md",
+                "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
+    def test_review_evidence_direct_read_review_accepts_twenty_second_pilot(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "review-evidence-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Review-Evidence Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-twenty-second-migration-pilot", review)
+        self.assertIn("Accept `proof/review-evidence`", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("proof verdict authority", review)
+        self.assertIn("source-truth transfer", review)
+        self.assertIn("Run the twenty-second migration pilot", review)
+        self.assertIn("review-evidence-direct-read-migration-review", reviews_index)
+        self.assertIn("review-evidence direct-read review: landed", ingress)
+        self.assertIn("accepted-for-twenty-second-migration-pilot", ingress)
+        self.assertIn("Review-evidence direct-read migration review", landing_log)
+        self.assertIn("no `proof/review-evidence` route card", landing_log)
+        self.assertIn(
+            "The `review-evidence` direct-read review is now landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Migrate exactly `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106`",
+            root_roadmap,
+        )
+        self.assertIn("Review-Evidence Direct-Read Migration Review", tree_contract)
+        self.assertIn(
+            "migrate exactly those three review-evidence\nbundles together",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the `review-evidence` direct-read migration review",
+            changelog,
+        )
+        self.assertFalse(
+            (
+                REPO_ROOT / "techniques" / "proof" / "review-evidence"
+            ).exists()
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0107",
+                "techniques/agent-workflows/single-locus-claim-challenge/TECHNIQUE.md",
+                "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0105",
+                "techniques/agent-workflows/single-missing-evidence-request/TECHNIQUE.md",
+                "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
             ),
             (
                 "AOA-T-0106",

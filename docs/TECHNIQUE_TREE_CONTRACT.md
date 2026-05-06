@@ -576,8 +576,16 @@ Agon move law, actor eligibility, route mutation, memory writes, runtime
 behavior, KAG promotion, ToS canon, skill activation, and neighboring
 runtime/owner/governance shelves outside the next move.
 
-The next reform slice should directly read `AOA-T-0105`, `AOA-T-0107`, and
-`AOA-T-0106` before any twenty-second shelf movement.
+The twenty-second direct-read review is
+[Review-Evidence Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/review-evidence-direct-read-migration-review.md).
+It accepts `proof/review-evidence` as a bounded shelf over `AOA-T-0107`,
+`AOA-T-0105`, and `AOA-T-0106`, while preserving `AOA-T-0107` and
+`AOA-T-0105` as `kind: guardrail`, `AOA-T-0106` as `kind: artifact`, all three
+as promoted, and their current `domain` truth.
+
+The next reform slice should migrate exactly those three review-evidence
+bundles together, with proof route-card update, root legacy receipt, link
+repair, generated rebuild, and validation.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
