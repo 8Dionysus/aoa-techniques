@@ -92,5 +92,6 @@ Current reviews:
 - [execution-profile-registry-calibration-review](execution-profile-registry-calibration-review.md)
 - [execution-profile-repair-queue-review](execution-profile-repair-queue-review.md)
 - [execution-profile-empirical-harness-decision](execution-profile-empirical-harness-decision.md)
+- [execution-profile-long-pass-closeout-ledger](execution-profile-long-pass-closeout-ledger.md)
 
 These files are review packets, not generated reports and not bundle authority.
