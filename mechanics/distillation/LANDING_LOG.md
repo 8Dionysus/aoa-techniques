@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed decision-routing pilot review
+
+Changed:
+
+- added
+  [landed-decision-routing-pilot-review](parts/technique-reform-ingress/reviews/landed-decision-routing-pilot-review.md)
+  as the landed review after the twentieth path migration
+- validated `techniques/governance/decision-routing/` as the first successful
+  governance trunk shelf
+- confirmed the shelf remained local decision support rather than AoA
+  constitutional authority, `aoa-routing` ownership, role contract law,
+  runtime dispatch, approval policy, playbook design, hidden automation
+  governance, risk scoring doctrine, or context-map doctrine
+- chose `governance/approval-evidence` for the next direct-read migration
+  review before any twenty-first shelf movement
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `governance/approval-evidence` route card or receipt was created
+- no security framework authority, approval policy, runtime job-runner
+  ownership, scheduler doctrine, trust-platform semantics, or broad
+  orchestration governance was imported
+
 ## 2026-05-05 - Decision-routing tree pilot migration
 
 Changed:

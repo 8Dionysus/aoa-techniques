@@ -328,7 +328,14 @@
    governance route card created, root legacy receipt accounting, link repair,
    generated rebuilds, and release-check validation in the same wave. The next
    bounded step is to review the landed `decision-routing` pilot before
-   choosing any twenty-first shelf.
+   choosing any twenty-first shelf. The landed `decision-routing` review is
+   now complete as `pilot-validated`; it validates the first governance trunk
+   shelf, preserves all three leaves as promoted local decision-support
+   techniques, and chooses `governance/approval-evidence` for direct-read
+   review before any twenty-first movement. The next bounded step is to read
+   `AOA-T-0068` and `AOA-T-0069` directly before deciding whether
+   fail-closed evidence gates and approval-bound durable jobs form one
+   migration shelf.
 
 ## Hold line
 
