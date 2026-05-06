@@ -43693,10 +43693,10 @@
     },
     {
       "id": "AOA-T-0091",
-      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -43823,7 +43823,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/notes/origin-evidence.md",
+          "note_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -43904,7 +43904,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -44048,10 +44048,10 @@
     },
     {
       "id": "AOA-T-0092",
-      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -44178,7 +44178,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/notes/origin-evidence.md",
+          "note_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -44259,7 +44259,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -44770,10 +44770,10 @@
     },
     {
       "id": "AOA-T-0094",
-      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/docs/canonical-owner-with-validated-mirror/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -44900,7 +44900,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/canonical-owner-with-validated-mirror/notes/origin-evidence.md",
+          "note_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -44981,7 +44981,7 @@
           ]
         },
         {
-          "note_path": "techniques/docs/canonical-owner-with-validated-mirror/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -45129,10 +45129,10 @@
     },
     {
       "id": "AOA-T-0095",
-      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -45259,7 +45259,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/notes/origin-evidence.md",
+          "note_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -45340,7 +45340,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -45488,10 +45488,10 @@
     },
     {
       "id": "AOA-T-0096",
-      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/notes/canonical-readiness.md",
+          "note_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -45626,7 +45626,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/notes/origin-evidence.md",
+          "note_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -45719,7 +45719,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/notes/second-context-adaptation.md",
+          "note_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

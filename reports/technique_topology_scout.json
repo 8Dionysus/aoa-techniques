@@ -1313,7 +1313,7 @@
       "kind": "guardrail",
       "status": "promoted",
       "summary": "Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.",
-      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "topology": {
         "family": "owner-truth-closeout",
         "capability_class": [
@@ -1339,7 +1339,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.",
-      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
       "topology": {
         "family": "owner-truth-closeout",
         "capability_class": [
@@ -1391,7 +1391,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.",
-      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
       "topology": {
         "family": "owner-truth-closeout",
         "capability_class": [
@@ -1416,7 +1416,7 @@
       "kind": "validation",
       "status": "promoted",
       "summary": "Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness.",
-      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
       "topology": {
         "family": "owner-truth-closeout",
         "capability_class": [
@@ -2282,7 +2282,7 @@
       "kind": "distribution",
       "status": "promoted",
       "summary": "Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned.",
-      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
       "topology": {
         "family": "owner-truth-closeout",
         "capability_class": [

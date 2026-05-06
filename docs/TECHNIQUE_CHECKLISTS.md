@@ -292,17 +292,17 @@ See also:
 |---|---|---|---|---|
 | nearest-wrong-target-rejection checklist | `absent` | `7` | `techniques/agent-workflows/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) |
 
-### [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
+### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| workspace-root-ingress-and-mutation-gate checklist | `absent` | `7` | `techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
+| workspace-root-ingress-and-mutation-gate checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
 
-### [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
+### [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| audit-to-closeout-proof-loop checklist | `present` | `8` | `techniques/agent-workflows/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
+| audit-to-closeout-proof-loop checklist | `present` | `8` | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) |
 
 ### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
 
@@ -310,17 +310,17 @@ See also:
 |---|---|---|---|---|
 | recommendation-truth-vs-host-actionability checklist | `absent` | `8` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
 
-### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
+### [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| github-only-owner-endcap-with-reality-sync Checklist | `absent` | `7` | `techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
+| github-only-owner-endcap-with-reality-sync Checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
 
-### [AOA-T-0096](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
+### [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| pinned-validation-matrix-before-generated-publish checklist | `absent` | `7` | `techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
+| pinned-validation-matrix-before-generated-publish checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
 
 ### [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
 
@@ -516,11 +516,11 @@ See also:
 |---|---|---|---|---|
 | capability-discovery checklist | `absent` | `8` | `techniques/instruction/capability-registry/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
-### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
+### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| Canonical Owner With Validated Mirror Checklist | `absent` | `7` | `techniques/docs/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
+| Canonical Owner With Validated Mirror Checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
 
 ### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
 

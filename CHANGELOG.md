@@ -256,6 +256,10 @@ The format is intentionally simple and human-first.
 - accepted the `owner-truth-closeout` direct-read migration review over
   `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094` as
   the twenty-fourth tree pilot while keeping the review itself non-mutating
+- moved `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and
+  `AOA-T-0094` into `techniques/proof/owner-truth-closeout/` while keeping
+  `domain`, `kind`, IDs, status, evidence, and `tree_path` frontmatter
+  unchanged
 
 ### Validation
 

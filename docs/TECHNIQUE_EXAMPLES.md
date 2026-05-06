@@ -299,17 +299,17 @@ See also:
 |---|---|---|---|
 | minimal nearest-wrong-target-rejection | `present` | `techniques/agent-workflows/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md` | [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md) |
 
-### [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
+### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal workspace-root-ingress-and-mutation-gate | `present` | `techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md` | [TECHNIQUE.md](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
+| minimal workspace-root-ingress-and-mutation-gate | `present` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
 
-### [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
+### [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal audit-to-closeout-proof-loop example | `present` | `techniques/agent-workflows/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md` | [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) |
+| Minimal audit-to-closeout-proof-loop example | `present` | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) |
 
 ### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
 
@@ -317,17 +317,17 @@ See also:
 |---|---|---|---|
 | minimal recommendation-truth-vs-host-actionability | `present` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
 
-### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
+### [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Example | `present` | `techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md` | [TECHNIQUE.md](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
+| Minimal Example | `present` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
 
-### [AOA-T-0096](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
+### [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal pinned-validation-matrix-before-generated-publish | `present` | `techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md` | [TECHNIQUE.md](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
+| minimal pinned-validation-matrix-before-generated-publish | `present` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
 
 ### [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
 
@@ -532,11 +532,11 @@ See also:
 |---|---|---|---|
 | minimal capability discovery | `present` | `techniques/instruction/capability-registry/capability-discovery/examples/minimal-capability-discovery.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
-### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
+### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| Minimal Canonical Owner With Validated Mirror | `present` | `techniques/docs/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md` | [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
+| Minimal Canonical Owner With Validated Mirror | `present` | `techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
 
 ### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
 

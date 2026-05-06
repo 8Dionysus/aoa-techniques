@@ -59,11 +59,11 @@ slice should run a direct-read review for `proof/owner-truth-closeout`.
 - [Technique tree projection rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../../../../../reports/technique_tree_projection.md)
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
-- [AOA-T-0091 workspace-root-ingress-and-mutation-gate](../../../../../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md)
-- [AOA-T-0092 audit-to-closeout-proof-loop](../../../../../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md)
-- [AOA-T-0095 github-only-owner-endcap-with-reality-sync](../../../../../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md)
-- [AOA-T-0096 pinned-validation-matrix-before-generated-publish](../../../../../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md)
-- [AOA-T-0094 canonical-owner-with-validated-mirror](../../../../../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md)
+- [AOA-T-0091 workspace-root-ingress-and-mutation-gate](../../../../../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md)
+- [AOA-T-0092 audit-to-closeout-proof-loop](../../../../../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md)
+- [AOA-T-0095 github-only-owner-endcap-with-reality-sync](../../../../../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md)
+- [AOA-T-0096 pinned-validation-matrix-before-generated-publish](../../../../../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md)
+- [AOA-T-0094 canonical-owner-with-validated-mirror](../../../../../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md)
 
 ## Landed Shape Read
 
