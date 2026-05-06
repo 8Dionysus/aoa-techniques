@@ -96,5 +96,7 @@ Current reviews:
 - [topology-selector-handoff-continuation-mini-pilot](topology-selector-handoff-continuation-mini-pilot.md)
 - [relations-composition-handoff-continuation-pilot](relations-composition-handoff-continuation-pilot.md)
 - [handoff-continuation-direct-relation-repair](handoff-continuation-direct-relation-repair.md)
+- [selector-relation-wave-a-proof-execution-review](selector-relation-wave-a-proof-execution-review.md)
+- [ready-work-graphs-direct-relation-repair](ready-work-graphs-direct-relation-repair.md)
 
 These files are review packets, not generated reports and not bundle authority.

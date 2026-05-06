@@ -2726,7 +2726,7 @@
       "export_ready": true,
       "relations": [
         {
-          "type": "complements",
+          "type": "requires",
           "target": "AOA-T-0049"
         },
         {

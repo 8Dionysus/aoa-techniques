@@ -25,7 +25,7 @@ validation_strength: source_backed
 public_safety_reviewed_at: 2026-03-27
 export_ready: true
 relations:
-  - type: complements
+  - type: requires
     target: AOA-T-0049
   - type: complements
     target: AOA-T-0001
