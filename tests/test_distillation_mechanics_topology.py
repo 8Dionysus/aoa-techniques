@@ -134,6 +134,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/tool-gateway-direct-read-singleton-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-tool-gateway-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/whole-tree-closeout-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -8771,6 +8772,87 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                     f'Path("techniques") / "{lane}" / "AGENTS.md"',
                     validator,
                 )
+
+    def test_final_tree_migration_ledger_closes_tree_program(self) -> None:
+        ledger = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "final-tree-migration-ledger.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        projection = json.loads(
+            (REPO_ROOT / "reports" / "technique_tree_projection.json").read_text(
+                encoding="utf-8"
+            )
+        )
+
+        self.assertIn("Final Tree Migration Ledger", ledger)
+        self.assertIn("final-ledger-validated", ledger)
+        self.assertIn("generated-parity-clean", ledger)
+        self.assertIn("receipts-complete", ledger)
+        self.assertIn("temporary-plan-distilled", ledger)
+        self.assertIn("ready-for-technique-bundle-reform", ledger)
+        self.assertIn("shelves with matching receipt | `28/28`", ledger)
+        self.assertIn("current path equals projected path | `107/107`", ledger)
+        self.assertIn(
+            "direct `techniques/<domain>/<slug>/TECHNIQUE.md` leaves | `0`",
+            ledger,
+        )
+        self.assertIn("Receipt matching is by projected shelf name", ledger)
+        self.assertIn("deleted locally. Future agents", ledger)
+        self.assertIn("Start technique-bundle reform", ledger)
+        self.assertIn("final-tree-migration-ledger", reviews_index)
+        self.assertIn("final tree migration ledger: landed", ingress)
+        self.assertIn("Final tree migration ledger", landing_log)
+        self.assertIn(
+            "final migration ledger and generated parity pass is now complete",
+            distillation_roadmap,
+        )
+        self.assertIn("Current latest final tree ledger", root_roadmap)
+        self.assertIn("Final Tree Migration Ledger", tree_contract)
+        self.assertIn(
+            "added the final tree migration ledger",
+            changelog,
+        )
+        self.assertEqual(107, len(projection["techniques"]))
+        self.assertEqual(
+            107,
+            sum(
+                entry["current_path"] == entry["proposed_future_path"]
+                for entry in projection["techniques"]
+            ),
+        )
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

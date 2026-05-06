@@ -804,5 +804,14 @@ The next reform slice should run the final migration ledger and generated
 parity pass before another path movement, schema promotion, or topology
 reform.
 
+The final ledger is
+[Final Tree Migration Ledger](../mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md).
+It validates generated parity, `28/28` shelf receipt coverage, temporary-plan
+distillation, and the transition from path migration into technique-bundle
+reform.
+
+The next reform program should start with a corpus-wide bundle anatomy and
+small-agent usability audit before changing individual leaves.
+
 This keeps the current tree beautiful enough to grow while preserving bundle
 truth.

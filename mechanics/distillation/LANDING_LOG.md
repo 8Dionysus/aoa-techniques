@@ -3,6 +3,35 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Final tree migration ledger
+
+Changed:
+
+- added
+  [final-tree-migration-ledger](parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md)
+  as the permanent closeout ledger for the tree migration program
+- confirmed `107/107` current paths still match generated projection paths
+- confirmed `28/28` current shelves have root legacy tree-pilot receipts
+- confirmed direct two-level technique leaves remain `0`
+- confirmed split, singleton, and unassigned projection holds remain `0`
+- distilled the temporary plan into permanent route surfaces and routed next
+  work toward technique-bundle reform
+
+Verification lane:
+
+```bash
+python scripts/release_check.py
+python -m unittest tests.test_nested_agents_docs tests.test_distillation_mechanics_topology tests.test_validate_repo tests.test_roadmap_parity
+python scripts/validate_repo.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no generated output became source truth
+- the temporary plan was not committed as an authority surface
+
 ## 2026-05-05 - Tree route-card consolidation
 
 Changed:

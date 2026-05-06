@@ -273,6 +273,9 @@ permission slip to remap techniques automatically.
   current-tree aware, retained `agent-workflows`, `docs`, and `evaluation`
   cards kept as frontmatter lanes, and nested AGENTS validation expanded to
   cover every trunk plus retained lane
+- final tree migration ledger: landed, with generated parity, `28/28` shelf
+  receipt coverage, temporary-plan distillation, and next direction toward
+  technique-bundle reform confirmed
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -377,6 +380,7 @@ permission slip to remap techniques automatically.
 | [Landed Tool-Gateway Pilot Review](reviews/landed-tool-gateway-pilot-review.md) | validates the landed singleton shelf and routes whole-tree closeout review | path movement, route-card consolidation, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
 | [Whole-Tree Closeout Review](reviews/whole-tree-closeout-review.md) | validates the current tree as `107` bundles, `10` trunks, `28` shelves, `107/107` current path parity, `28/28` root receipts, and zero split/singleton/unassigned holds | route-card consolidation, path movement, `tree_path` frontmatter, family promotion, new required axes, frontmatter remap, canonical promotion, generated projection authority, sibling-owner authority, or final topology for future imports |
 | [Nested AGENTS Validator](../../../../scripts/validate_nested_agents.py) | checks the current trunk route cards and retained frontmatter lanes remain present and shaped | bundle meaning, path movement, frontmatter remap, generated projection authority, or future topology acceptance |
+| [Final Tree Migration Ledger](reviews/final-tree-migration-ledger.md) | closes the tree migration program with generated parity, receipt coverage, temporary-plan disposition, and next reform direction | path movement, `tree_path` frontmatter, frontmatter remap, family promotion, bundle rewrite authority, generated projection authority, or future topology acceptance |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -812,4 +816,11 @@ AGENTS validation covers every current trunk plus retained lane.
 
 Previous route-card breadcrumb preserved for parity: Run tree route-card consolidation before another path movement, schema promotion, or reform slice.
 
-Run the final migration ledger and generated parity pass.
+The final tree migration ledger is now complete. It confirms generated parity,
+`28/28` shelf receipt coverage, `107/107` path parity, temporary-plan
+distillation, and no remaining split/singleton/unassigned projection holds.
+
+Previous final-ledger breadcrumb preserved for parity: Run the final migration ledger and generated parity pass.
+
+Start technique-bundle reform with a corpus-wide bundle anatomy and
+small-agent usability audit before changing individual leaves.
