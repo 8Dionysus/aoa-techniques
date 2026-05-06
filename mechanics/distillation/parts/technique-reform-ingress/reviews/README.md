@@ -76,5 +76,6 @@ Current reviews:
 - [bundle-anatomy-rubric-hardening](bundle-anatomy-rubric-hardening.md)
 - [bundle-anatomy-wave-a-review](bundle-anatomy-wave-a-review.md)
 - [bundle-anatomy-wave-b-review](bundle-anatomy-wave-b-review.md)
+- [bundle-anatomy-wave-c-review](bundle-anatomy-wave-c-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
