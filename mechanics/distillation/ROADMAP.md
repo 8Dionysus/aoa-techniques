@@ -348,7 +348,12 @@
    support files moved, governance route card updated, root legacy receipt
    accounting, link repair, generated rebuilds, and release-check validation
    in the same wave. The next bounded step is to review the landed
-   `approval-evidence` pilot before choosing any twenty-second shelf.
+   `approval-evidence` pilot before choosing any twenty-second shelf. The
+   landed `approval-evidence` review is now complete as `pilot-validated`; it
+   validates the second governance trunk shelf, preserves the immediate gate
+   and durable approval seam as distinct leaves, and chooses
+   `proof/review-evidence` for direct-read review before any twenty-second
+   movement.
 
 ## Hold line
 
