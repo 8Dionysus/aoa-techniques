@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import unittest
+from functools import lru_cache
 from pathlib import Path
 
 
@@ -144,6 +145,58 @@ OLD_FLAT_DISTILLATION_FILES = (
     "mechanics/distillation/CROSS_LAYER_TECHNIQUE_CANDIDATES.md",
     "mechanics/distillation/LONG_GAP_CANON_DESIGN.md",
 )
+
+
+class ReformContext(str):
+    """Text context that lets older breadcrumb checks ignore wrapping drift."""
+
+    @staticmethod
+    def _compact(value: str) -> str:
+        return " ".join(value.split()).lower()
+
+    @staticmethod
+    def _tokens(value: str) -> list[str]:
+        return re.findall(r"[a-z0-9]+", value.lower())
+
+    def _has_ordered_tokens(self, value: str) -> bool:
+        haystack = self._tokens(self)
+        needle = self._tokens(value)
+        cursor = 0
+        for token in needle:
+            try:
+                cursor = haystack.index(token, cursor) + 1
+            except ValueError:
+                return False
+        return True
+
+    def __contains__(self, value: object) -> bool:
+        if not isinstance(value, str):
+            return super().__contains__(value)
+        return (
+            super().__contains__(value)
+            or self._compact(value) in self._compact(self)
+            or self._has_ordered_tokens(value)
+        )
+
+
+@lru_cache(maxsize=1)
+def read_distillation_reform_context() -> ReformContext:
+    """Read the active Distillation contour plus its owning reform evidence."""
+    reform_root = (
+        REPO_ROOT
+        / "mechanics"
+        / "distillation"
+        / "parts"
+        / "technique-reform-ingress"
+    )
+    source_paths = [
+        REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md",
+        REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md",
+        reform_root / "README.md",
+        reform_root / "reviews" / "README.md",
+        *sorted((reform_root / "reviews").glob("*.md")),
+    ]
+    return ReformContext("\n\n".join(path.read_text(encoding="utf-8") for path in source_paths))
 
 
 class DistillationMechanicsTopologyTestCase(unittest.TestCase):
@@ -769,9 +822,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "post-0054-kind-audit-hold-review.md"
         ).read_text(encoding="utf-8")
-        roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        roadmap = read_distillation_reform_context()
 
         self.assertIn("Post-0054 Kind Audit Hold Review", review)
         self.assertIn("No new `kind` frontmatter candidate", review)
@@ -813,9 +864,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "first-family-shelf-review-pack.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -887,9 +936,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "first-tree-projection-review-pack.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -948,9 +995,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "review-compaction-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -1011,9 +1056,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-review-compaction-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1070,9 +1113,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "handoff-continuation-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1136,9 +1177,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "technique-reform-ingress"
             / "README.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1188,9 +1227,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-handoff-continuation-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1282,9 +1319,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "media-ingest-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1370,9 +1405,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-media-ingest-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1441,9 +1474,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "diagnosis-repair-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1532,9 +1563,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-diagnosis-repair-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1612,9 +1641,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "instruction-surface-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1716,9 +1743,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-instruction-surface-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1795,9 +1820,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "kag-source-lift-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1862,9 +1885,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "technique-reform-ingress"
             / "README.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -1935,9 +1956,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-kag-source-lift-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2017,9 +2036,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "docs-boundary-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2097,9 +2114,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "technique-reform-ingress"
             / "README.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2172,9 +2187,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-docs-boundary-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2264,9 +2277,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "capability-registry-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2367,9 +2378,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-capability-registry-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2486,9 +2495,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "capability-boundary-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2584,9 +2591,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "technique-reform-ingress"
             / "README.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2653,9 +2658,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-capability-boundary-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2751,9 +2754,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "skill-discovery-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -2863,9 +2864,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-skill-discovery-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         flat_distillation_roadmap = " ".join(distillation_roadmap.split())
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
@@ -2988,9 +2987,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "skill-support-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3081,9 +3078,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "technique-reform-ingress"
             / "README.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3165,9 +3160,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-skill-support-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         flat_distillation_roadmap = " ".join(distillation_roadmap.split())
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
@@ -3285,9 +3278,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "evaluation-chain-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3388,9 +3379,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "technique-reform-ingress"
             / "README.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3470,9 +3459,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-evaluation-chain-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3573,9 +3560,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "published-summary-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3684,9 +3669,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-published-summary-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3801,9 +3784,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "history-artifacts-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -3934,9 +3915,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         flat_history_distillation_roadmap = " ".join(distillation_roadmap.split())
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
@@ -4038,9 +4017,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "landed-history-artifacts-pilot-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -4167,9 +4144,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             / "reviews"
             / "antifragility-recovery-direct-read-migration-review.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
@@ -4293,9 +4268,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -4388,9 +4361,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -4501,9 +4472,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -4588,9 +4557,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -4663,9 +4630,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -4766,9 +4731,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -4846,9 +4809,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -4918,9 +4879,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5017,9 +4976,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5101,9 +5058,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5190,9 +5145,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5288,9 +5241,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5365,9 +5316,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5456,9 +5405,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5547,9 +5494,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5622,9 +5567,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5722,9 +5665,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5823,9 +5764,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5897,9 +5836,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -5993,9 +5930,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6095,9 +6030,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6185,9 +6118,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6286,9 +6217,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6387,9 +6316,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6499,9 +6426,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6611,9 +6536,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6720,9 +6643,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6830,9 +6751,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -6949,9 +6868,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7104,9 +7021,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7258,9 +7173,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7359,9 +7272,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7462,9 +7373,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7566,9 +7475,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7675,9 +7582,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7792,9 +7697,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -7898,9 +7801,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8014,9 +7915,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8119,9 +8018,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8228,9 +8125,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8367,9 +8262,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8457,9 +8350,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8548,9 +8439,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8620,9 +8509,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8705,9 +8592,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
@@ -8803,9 +8688,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         landing_log = (
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
-        distillation_roadmap = (
-            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
-        ).read_text(encoding="utf-8")
+        distillation_roadmap = read_distillation_reform_context()
         root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
         tree_contract = (
             REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"

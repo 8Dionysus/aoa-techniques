@@ -513,7 +513,11 @@
             },
             {
               "order": 2,
-              "text": "why:"
+              "text": "why this belongs in `aoa-techniques` rather than a stronger owner repo:"
+            },
+            {
+              "order": 3,
+              "text": "primary surface changed:\ntechnique bundle / topology-tree / mechanics / root-docs / legacy /\ngenerated / GitHub-platform / contributor-guidance / quest-roadmap-changelog /\nother"
             }
           ]
         },
@@ -528,7 +532,15 @@
             },
             {
               "order": 2,
+              "text": "generated outputs rebuilt from authored sources, if applicable:"
+            },
+            {
+              "order": 3,
               "text": "anything intentionally not validated:"
+            },
+            {
+              "order": 4,
+              "text": "remaining risk:"
             }
           ]
         },
@@ -539,27 +551,43 @@
           "items": [
             {
               "order": 1,
-              "text": "linked issue, if any:"
+              "text": "root or docs placement check, if applicable:\nchecked `docs/ROOT_SURFACE_LAW.md`; named the surface role; kept historical\nreceipts, raw donor material, generated outputs, and mechanic-local runbooks\nout of root by convenience"
             },
             {
               "order": 2,
-              "text": "related note or template included, if needed:"
+              "text": "technique canon check, if applicable:\nchecked `docs/TECHNIQUE_ATOM_CONTRACT.md`,\n`docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and\n`docs/TECHNIQUE_TREE_CONTRACT.md` when paths or tree posture moved; named\nthe atomic move, likely `domain`, primary `kind`, owner boundary, risks,\nvalidation, and nearest overlaps"
             },
             {
               "order": 3,
-              "text": "nearest existing technique or overlap watch, if this adds or imports a technique:"
+              "text": "mechanic check, if applicable:\nchecked `mechanics/README.md`, `mechanics/AGENTS.md`, the relevant\n`mechanics/<slug>/README.md`, and the relevant roadmap, provenance, landing,\nor receipt surface; did not claim sibling-owner acceptance, proof verdicts,\nruntime authority, memory canon, role authority, playbook choreography, KAG\ntruth, or AoA constitutional law"
             },
             {
               "order": 4,
-              "text": "what stays out of the donor or out of scope, if applicable:"
+              "text": "linked issue, if any:"
             },
             {
               "order": 5,
-              "text": "expected generated surfaces:"
+              "text": "related note or template included, if needed:"
             },
             {
               "order": 6,
+              "text": "nearest existing technique or overlap watch, if this adds or imports a technique:"
+            },
+            {
+              "order": 7,
+              "text": "what stays out of the donor or out of scope, if applicable:"
+            },
+            {
+              "order": 8,
+              "text": "expected generated surfaces:"
+            },
+            {
+              "order": 9,
               "text": "downstream repo impact, if any:"
+            },
+            {
+              "order": 10,
+              "text": "intentionally not included here:"
             }
           ]
         },
@@ -590,17 +618,32 @@
             },
             {
               "order": 5,
-              "text": "Relevant supporting notes or templates are included when needed, such as promotion, adaptation, or external-origin provenance.",
+              "text": "Relevant supporting notes or templates are included when needed, such as\npromotion, adaptation, or external-origin provenance.",
               "checked": false
             },
             {
               "order": 6,
-              "text": "Technique-boundary overlap and donor exclusions are named when the change adds or imports a technique.",
+              "text": "Technique-boundary overlap and donor exclusions are named when the change\nadds or imports a technique.",
               "checked": false
             },
             {
               "order": 7,
+              "text": "Generated files were rebuilt from authored sources, or no rebuild was\nneeded.",
+              "checked": false
+            },
+            {
+              "order": 8,
+              "text": "`Repo Validation` remains aligned with `python scripts/release_check.py`.",
+              "checked": false
+            },
+            {
+              "order": 9,
               "text": "No security-sensitive material is being disclosed publicly.",
+              "checked": false
+            },
+            {
+              "order": 10,
+              "text": "Remaining risk, skipped checks, generated parity, and owner-boundary\nfollow-up are named.",
               "checked": false
             }
           ]

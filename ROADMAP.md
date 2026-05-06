@@ -95,7 +95,7 @@ Current anchors:
 | Technique tree contract | `docs/TECHNIQUE_TREE_CONTRACT.md` |
 | Corpus map | `TECHNIQUE_INDEX.md`, `generated/technique_catalog.min.json` |
 | Small runtime cards | `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.min.json` |
-| Mechanics atlas | `mechanics/README.md`, `mechanics/*/README.md` |
+| Mechanics atlas | `mechanics/README.md`, `mechanics/AGENTS.md`, `mechanics/*/README.md` |
 | Audit and evidence posture | `mechanics/audit/parts/` |
 | Donor and candidate extraction | `mechanics/distillation/parts/` |
 | Durable obligations | `QUESTBOOK.md`, `quests/` |
@@ -228,8 +228,8 @@ Previous review breadcrumb preserved for parity: Run the `proof/owner-truth-clos
 
 | Field | Direction |
 |---|---|
-| Current posture | Mechanics packages now keep active routes, parts, provenance, landing logs, roadmaps, and legacy scaffolds. |
-| Next honest move | Use mechanics to preserve lineage and candidate pressure while extracting only one atomic practice at a time into `techniques/`. |
+| Current posture | Mechanics packages now keep active routes, parts, provenance, landing logs, package roadmaps, and legacy scaffolds; the root mechanics surface stays an atlas and local law route rather than a second roadmap authority. |
+| Next honest move | Use mechanics to preserve lineage and candidate pressure while extracting only one atomic practice at a time into `techniques/`, and keep package roadmaps strong enough for small-agent route choice without importing AoA center authority. |
 | Guardrail | Mechanics can prepare canon. They do not replace canon or silently change status. |
 
 ## Horizon: Evidence And Promotion
@@ -286,8 +286,8 @@ trigger is real.
   enough that a generated companion would reduce real reader load.
 
 An item belongs here only when its trigger is concrete and repo-level. If the
-future pressure is mechanic-local, use `mechanics/<slug>/ROADMAP.md`. If it is a
-durable obligation, use `QUESTBOOK.md` and `quests/`.
+future pressure is mechanic-local, use `mechanics/<slug>/ROADMAP.md`. If it is
+a durable obligation, use `QUESTBOOK.md` and `quests/`.
 
 ## Standing Direction
 

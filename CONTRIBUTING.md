@@ -63,6 +63,10 @@ Use the GitHub templates for the first public intake layer:
 - external import review
 
 Use the pull request template when opening a PR so the summary, validation, and public-safety checks stay explicit and reviewable.
+The agent-facing commit, push, pull request, validation, merge, and clean-main
+route lives in `AGENTS.md`. The GitHub templates keep the human-first intake
+shape aligned with that route; they do not replace the authored source docs.
+
 For new techniques or external imports, explicitly name:
 - the nearest existing technique or overlap watch
 - what stays out of the donor or proposal
@@ -75,7 +79,11 @@ Any later generated manifest over them is derived only and must not replace the 
 
 Do not use public issues for leaks, secrets, credentials, or infrastructure-sensitive details; follow `SECURITY.md` instead.
 
-The repo now carries one narrow `CODEOWNERS` map for `.github/`, `scripts/`, `docs/`, and `techniques/` so governance-critical surfaces keep an explicit review owner without widening ownership policy further.
+The repo carries one narrow `CODEOWNERS` map for governance-critical root
+files, public docs, GitHub platform surfaces, mechanics, generated companions,
+scripts, tests, templates, techniques, and provenance districts. It keeps an
+explicit review owner for public route and canon-shaping surfaces without
+turning CODEOWNERS into technique authorship authority.
 
 ## Preferred PR scope
 

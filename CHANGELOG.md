@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- added an explicit agent-facing GitHub landing workflow, `.github/AGENTS.md`,
+  expanded PR intake checks, and broader CODEOWNERS coverage for
+  governance-critical route and canon surfaces
+- corrected the mechanics direction split after comparing `aoa-techniques`
+  against the AoA center mechanics contour, keeping repo-level direction in
+  root `ROADMAP.md` and package-local pressure in `mechanics/<slug>/ROADMAP.md`
 - added a root charter and root surface law to separate public entry,
   repository authority, root placement, direction, obligations, and generated
   repo-doc routing

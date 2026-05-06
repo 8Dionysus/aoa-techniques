@@ -2,9 +2,13 @@
 
 This roadmap records future contour for the `aoa-techniques` release-support
 package. It does not change technique status, release status, generated
-contracts, or validator behavior by itself.
+contracts, owner consent, or validator behavior by itself.
 
-## Current State
+## Current Contour
+
+Release-support is the local route for installation, public-claim, migration,
+rollback, release ritual, and owner-handoff practice pressure that may become
+one portable technique.
 
 - `installation-techniques` is the local home for staged landing, migration
   safety, smoke gates, rollback, and replay-audit practice.
@@ -13,25 +17,33 @@ contracts, or validator behavior by itself.
 - Release-support pressure is currently non-ORQ candidate-only pressure in this
   repo, not a direct AoA owner-request landing.
 
-## Next Honest Moves
+## Next Work
 
-- Keep release-support references pointed at part-local homes as public-claim,
-  release, rollback, and owner-handoff practice candidates appear.
-- Add a new part only if repeated technique-layer release-support signals no
-  longer fit installation practice or sovereign release practice.
-- Promote a reusable release-support practice into `techniques/` only after it
-  can name one atomic move, likely domain, likely kind, family posture,
-  capability, substrate, execution profile, risk posture, relations, and
-  validation.
+1. Keep release-support references pointed at part-local homes as public-claim,
+   release, rollback, and owner-handoff practice candidates appear.
+2. Add a new part only if repeated technique-layer release-support signals no
+   longer fit installation practice or sovereign release practice.
+3. Promote a reusable release-support practice into `techniques/` only after it
+   can name one atomic move, likely domain, likely kind, family posture,
+   capability, substrate, execution profile, risk posture, relations, and
+   validation.
 
-## Stop-lines
+## When Time Comes
 
-- Do not approve releases from this package.
-- Do not make unverified public claims.
-- Do not substitute practice notes for operator consent or sibling owner
+- Add examples only when they are public-safe and do not imply release approval.
+- Route proof verdicts to `aoa-evals`, public projection to the publishing
+  owner, routing ABI to `aoa-routing`, SDK compatibility to `aoa-sdk`, runtime
+  deployment to the runtime owner, and Tree-of-Sophia write authority to ToS.
+- Reassess this roadmap after release-support pressure repeatedly points to the
+  same missing installation or release-support atom.
+
+## Out Of Scope
+
+- Release approval.
+- Unverified public claims.
+- Practice notes as substitutes for operator consent or sibling owner
   acceptance.
-- Do not allow operator substitution through release ritual wording.
-- Do not import AoA release-support law, proof verdicts, public projection,
-  routing ABI, SDK compatibility, stats summaries, runtime deployment, or
-  rollback execution into this package.
-- Do not import Tree-of-Sophia write authority into this package.
+- operator substitution through release ritual wording.
+- AoA release-support law, proof verdicts, public projection, routing ABI, SDK
+  compatibility, stats summaries, runtime deployment, rollback execution, or
+  Tree-of-Sophia write authority.
