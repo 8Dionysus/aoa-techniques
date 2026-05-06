@@ -260,6 +260,9 @@ The format is intentionally simple and human-first.
   `AOA-T-0094` into `techniques/proof/owner-truth-closeout/` while keeping
   `domain`, `kind`, IDs, status, evidence, and `tree_path` frontmatter
   unchanged
+- accepted the landed `owner-truth-closeout` pilot review and selected
+  `governance/automation-governance` for direct-read split review without
+  moving a twenty-fifth shelf yet
 
 ### Validation
 

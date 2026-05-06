@@ -3,6 +3,42 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed owner-truth-closeout pilot review
+
+Changed:
+
+- added
+  [landed-owner-truth-closeout-pilot-review](parts/technique-reform-ingress/reviews/landed-owner-truth-closeout-pilot-review.md)
+  as the landed review for the twenty-fourth tree pilot
+- accepted `owner-truth-closeout` as a successful migrated shelf and the fifth
+  proof trunk shelf
+- confirmed ingress guard, audit closeout, remote owner endcap, generated
+  publish validation, and mirror parity stayed separate one-use atoms under
+  one owner-truth closeout shelf
+- chose `governance/automation-governance` for direct-read split review before
+  any twenty-fifth shelf movement
+- preserved all five landed `owner-truth-closeout` bundles as promoted and
+  kept their `domain`, `kind`, evidence, support files, and path receipt
+  unchanged
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no `governance/automation-governance` bundle moved
+- no `tree_path`, `family`, capability, substrate, execution-profile, or risk
+  frontmatter was added
+- no automation policy authority, seed canon, skill acceptance, skill
+  activation, quest/playbook promotion doctrine, route mutation, memory write,
+  runtime behavior, KAG promotion, ToS canon, broad orchestration governance,
+  or `tool-use/tool-gateway` singleton hold moved
+
 ## 2026-05-05 - Owner-truth-closeout tree pilot migration
 
 Changed:
