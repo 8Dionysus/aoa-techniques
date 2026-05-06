@@ -89,5 +89,6 @@ Current reviews:
 - [execution-profile-medium-agent-calibration-review](execution-profile-medium-agent-calibration-review.md)
 - [execution-profile-orchestration-boundary-review](execution-profile-orchestration-boundary-review.md)
 - [execution-profile-fixture-sketch-ledger](execution-profile-fixture-sketch-ledger.md)
+- [execution-profile-registry-calibration-review](execution-profile-registry-calibration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
