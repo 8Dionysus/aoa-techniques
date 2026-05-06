@@ -88,5 +88,6 @@ Current reviews:
 - [execution-profile-small-agent-wave-b-review](execution-profile-small-agent-wave-b-review.md)
 - [execution-profile-medium-agent-calibration-review](execution-profile-medium-agent-calibration-review.md)
 - [execution-profile-orchestration-boundary-review](execution-profile-orchestration-boundary-review.md)
+- [execution-profile-fixture-sketch-ledger](execution-profile-fixture-sketch-ledger.md)
 
 These files are review packets, not generated reports and not bundle authority.
