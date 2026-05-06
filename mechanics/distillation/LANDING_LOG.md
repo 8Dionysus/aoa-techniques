@@ -3,6 +3,42 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Runtime-truth-lifecycle direct-read migration review
+
+Changed:
+
+- added
+  [runtime-truth-lifecycle-direct-read-migration-review](parts/technique-reform-ingress/reviews/runtime-truth-lifecycle-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`,
+  and `AOA-T-0039`
+- accepted `execution/runtime-truth-lifecycle` as the twenty-third bounded
+  migration pilot without moving files
+- kept the shelf centered on four runtime-adjacent execution moves: render
+  actual runtime truth, operate one local lifecycle entrypoint, check
+  selector-aware host readiness, and compare additive profiles against one
+  stable baseline shape
+- preserved `AOA-T-0036` as `kind: composition`, `AOA-T-0038` as `kind:
+  workflow`, `AOA-T-0037` and `AOA-T-0039` as `kind: validation`, and all four
+  bundles as `status: promoted`
+- kept `abyss-stack` runtime law, deployment ownership, monitoring platform
+  doctrine, host policy, smoke-test law, benchmark-suite governance, product
+  scoring, `aoa-evals` verdict authority, route mutation, memory writes,
+  runtime behavior, KAG promotion, ToS canon, skill activation, and neighboring
+  owner/governance/tool-use shelves outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `execution/runtime-truth-lifecycle` route card or receipt was created
+
 ## 2026-05-05 - Landed review-evidence pilot review
 
 Changed:

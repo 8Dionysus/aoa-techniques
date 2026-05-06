@@ -244,6 +244,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `review-evidence` pilot review and selected
   `execution/runtime-truth-lifecycle` for the next direct-read migration review
   without moving a twenty-third shelf yet
+- accepted the `runtime-truth-lifecycle` direct-read migration review over
+  `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039` as the
+  twenty-third tree pilot while keeping the review itself non-mutating
 
 ### Validation
 

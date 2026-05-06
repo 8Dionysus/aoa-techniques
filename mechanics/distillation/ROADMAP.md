@@ -372,7 +372,16 @@
    `pilot-validated`; it validates the fourth proof trunk shelf, preserves
    challenge, request, and reference as distinct one-atom review-evidence
    leaves, and chooses `execution/runtime-truth-lifecycle` for direct-read
-   review before any twenty-third movement.
+   review before any twenty-third movement. The `runtime-truth-lifecycle`
+   direct-read review is now landed as
+   `accepted-for-twenty-third-migration-pilot`; it accepts exactly
+   `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039` while keeping
+   the review non-mutating and preserving `AOA-T-0036` as `kind:
+   composition`, `AOA-T-0038` as `kind: workflow`, `AOA-T-0037` and
+   `AOA-T-0039` as `kind: validation`, and runtime law, deployment ownership,
+   monitoring doctrine, host policy, smoke-test law, benchmark governance,
+   product scoring, `aoa-evals` verdict authority, and neighboring
+   owner/governance/tool-use shelves outside the shelf.
 
 ## Hold line
 

@@ -598,8 +598,16 @@ platform doctrine, host policy, smoke-test law, benchmark-suite governance,
 product scoring, `aoa-evals` verdict authority, and neighboring
 owner/governance/tool-use shelves outside the next move.
 
-The next reform slice should run the `execution/runtime-truth-lifecycle`
-direct-read migration review before any twenty-third shelf movement.
+The twenty-third direct-read review is
+[Runtime-Truth-Lifecycle Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/runtime-truth-lifecycle-direct-read-migration-review.md).
+It accepts `execution/runtime-truth-lifecycle` as a bounded shelf over
+`AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`, while preserving
+`AOA-T-0036` as `kind: composition`, `AOA-T-0038` as `kind: workflow`,
+`AOA-T-0037` and `AOA-T-0039` as `kind: validation`, all four as promoted,
+and their current `domain` truth.
+
+The next reform slice should run the twenty-third migration pilot before
+moving those bundles into `techniques/execution/runtime-truth-lifecycle/`.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

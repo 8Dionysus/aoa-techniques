@@ -56,5 +56,6 @@ Current reviews:
 - [landed-approval-evidence-pilot-review](landed-approval-evidence-pilot-review.md)
 - [review-evidence-direct-read-migration-review](review-evidence-direct-read-migration-review.md)
 - [landed-review-evidence-pilot-review](landed-review-evidence-pilot-review.md)
+- [runtime-truth-lifecycle-direct-read-migration-review](runtime-truth-lifecycle-direct-read-migration-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
