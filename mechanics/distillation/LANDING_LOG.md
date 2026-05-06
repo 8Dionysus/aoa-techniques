@@ -3,6 +3,42 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Automation-readiness direct-read migration review
+
+Changed:
+
+- added
+  [automation-readiness-direct-read-migration-review](parts/technique-reform-ingress/reviews/automation-readiness-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088`
+- accepted `governance/automation-readiness` as the twenty-fifth bounded
+  migration pilot without moving files
+- kept the shelf centered on automation fit classification, first honest
+  landing, and approval-sensitivity burden
+- preserved all three bundles as `domain: agent-workflows`, `kind:
+  assessment`, and `status: promoted`
+- kept automation policy authority, seed canon, skill acceptance, skill
+  activation, scheduler doctrine, hidden automation governance, route
+  mutation, memory write, runtime behavior, KAG promotion, ToS canon, broad
+  orchestration governance, Candidate B, Candidate C, and the tool-use
+  singleton outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no `governance/promotion-boundary`,
+  `governance/practice-adoption-lifecycle`, or `tool-use/tool-gateway` shelf
+  moved
+
 ## 2026-05-05 - Automation-governance split expansion closeout
 
 Changed:

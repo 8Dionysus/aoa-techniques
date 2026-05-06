@@ -272,6 +272,9 @@ The format is intentionally simple and human-first.
   `governance/automation-readiness` as Candidate A, and kept
   `governance/promotion-boundary` plus
   `governance/practice-adoption-lifecycle` queued without moving files
+- accepted the `automation-readiness` direct-read migration review over
+  `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` as the twenty-fifth tree pilot
+  while keeping the review itself non-mutating
 
 ### Validation
 

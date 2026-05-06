@@ -662,5 +662,13 @@ It makes the split sequence explicit without moving files: Candidate A is
 `governance/practice-adoption-lifecycle`. Candidate A should receive the next
 direct-read review before any twenty-fifth shelf movement.
 
+The automation-readiness direct-read review is
+[Automation-Readiness Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/automation-readiness-direct-read-migration-review.md).
+It accepts Candidate A as the twenty-fifth migration pilot over `AOA-T-0086`,
+`AOA-T-0087`, and `AOA-T-0088`, while preserving all three as `domain:
+agent-workflows`, `kind: assessment`, and `status: promoted`. The next
+migration should move exactly those three bundles into
+`techniques/governance/automation-readiness/` without changing frontmatter.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
