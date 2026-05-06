@@ -182,8 +182,8 @@ Use statuses: `pending`, `active`, `blocked`, `landed`, `distilled`.
 | 05 Wave B repair gate | landed | explicit no-repair hold in [selector-relation-wave-b-instruction-knowledge-review](reviews/selector-relation-wave-b-instruction-knowledge-review.md) |
 | 06 Wave C selector/relation review | landed | [selector-relation-wave-c-execution-owner-review](reviews/selector-relation-wave-c-execution-owner-review.md) |
 | 07 Wave C repair gate | landed | explicit no-repair hold in [selector-relation-wave-c-execution-owner-review](reviews/selector-relation-wave-c-execution-owner-review.md) |
-| 08 Wave D selector/relation review | pending | Wave D review packet |
-| 09 Wave D repair gate | pending | direct repair packet or explicit no-repair hold |
+| 08 Wave D selector/relation review | landed | [selector-relation-wave-d-governance-split-review](reviews/selector-relation-wave-d-governance-split-review.md) |
+| 09 Wave D repair gate | landed | [practice-adoption-lifecycle-direct-relation-repair](reviews/practice-adoption-lifecycle-direct-relation-repair.md) |
 | 10 Wave E selector/relation review | pending | Wave E review packet |
 | 11 Wave E repair gate | pending | direct repair packet or explicit no-repair hold |
 | 12 Wave F selector/relation review | pending | Wave F review packet |

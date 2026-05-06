@@ -29,6 +29,8 @@ relations:
     target: AOA-T-0101
   - type: complements
     target: AOA-T-0090
+  - type: used_together_for
+    target: AOA-T-0104
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md

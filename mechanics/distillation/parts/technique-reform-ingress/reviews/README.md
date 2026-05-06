@@ -100,5 +100,7 @@ Current reviews:
 - [ready-work-graphs-direct-relation-repair](ready-work-graphs-direct-relation-repair.md)
 - [selector-relation-wave-b-instruction-knowledge-review](selector-relation-wave-b-instruction-knowledge-review.md)
 - [selector-relation-wave-c-execution-owner-review](selector-relation-wave-c-execution-owner-review.md)
+- [selector-relation-wave-d-governance-split-review](selector-relation-wave-d-governance-split-review.md)
+- [practice-adoption-lifecycle-direct-relation-repair](practice-adoption-lifecycle-direct-relation-repair.md)
 
 These files are review packets, not generated reports and not bundle authority.
