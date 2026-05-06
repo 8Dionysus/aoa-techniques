@@ -495,10 +495,13 @@
    `agent-workflows`, `docs`, and `evaluation` cards now read as frontmatter
    lanes, not direct leaf homes; and nested AGENTS validation covers every
    current trunk plus retained lane.
-10. Run the final migration ledger and generated parity pass. Confirm receipt
-   coverage, temporary-plan references, generated/report drift, and the final
-   next reform direction before another path movement, schema promotion, or
-   topology reform slice.
+10. The final migration ledger and generated parity pass is now complete. It
+   confirms `107/107` path parity, `28/28` shelf receipt coverage, no direct
+   two-level leaves, no split/singleton/unassigned projection holds, generated
+   parity after release check, and temporary-plan distillation into permanent
+   route surfaces. The next reform program should start with a corpus-wide
+   bundle anatomy and small-agent usability audit before changing individual
+   leaves.
 
 ## Hold line
 

@@ -316,6 +316,9 @@ The format is intentionally simple and human-first.
 - consolidated tree route cards so every current trunk and retained
   frontmatter lane is validator-backed, current-tree aware, and still weaker
   than authored bundle meaning
+- added the final tree migration ledger, confirming generated parity,
+  `28/28` shelf receipt coverage, temporary-plan distillation, and the next
+  direction toward technique-bundle reform
 
 ### Validation
 
