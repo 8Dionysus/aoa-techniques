@@ -455,7 +455,11 @@
    governance route-card accounting, root legacy receipt accounting, link
    repair, generated rebuilds, and release-check validation in the same wave.
    The next bounded step is to review the landed `promotion-boundary` pilot
-   before choosing Candidate C or another split-route hold.
+   before choosing Candidate C or another split-route hold. The landed
+   `promotion-boundary` pilot review is now complete as `pilot-validated`; it
+   confirms the second split shelf held after migration and chooses
+   `governance/practice-adoption-lifecycle` for direct-read review before any
+   twenty-seventh movement.
 
 ## Hold line
 

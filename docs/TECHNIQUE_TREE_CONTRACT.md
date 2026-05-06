@@ -703,5 +703,11 @@ The next reform slice should review the landed
 `governance/promotion-boundary` shelf before choosing Candidate C or another
 split-route hold.
 
+The landed twenty-sixth pilot review is
+[Landed Promotion-Boundary Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-promotion-boundary-pilot-review.md).
+It validates `promotion-boundary` as the second landed split shelf and chooses
+`governance/practice-adoption-lifecycle` for direct-read review before any
+twenty-seventh movement.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
