@@ -5056,7 +5056,7 @@
     },
     {
       "id": "AOA-T-0091",
-      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5112,7 +5112,7 @@
     },
     {
       "id": "AOA-T-0092",
-      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5224,7 +5224,7 @@
     },
     {
       "id": "AOA-T-0094",
-      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5280,7 +5280,7 @@
     },
     {
       "id": "AOA-T-0095",
-      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",
@@ -5336,7 +5336,7 @@
     },
     {
       "id": "AOA-T-0096",
-      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
       "sections": [
         {
           "heading": "Intent",

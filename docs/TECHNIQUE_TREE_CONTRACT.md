@@ -633,7 +633,11 @@ distribution`, all five as promoted, and their current `domain` truth.
 The twenty-fourth pilot migration moves exactly those five bundles into
 `techniques/proof/owner-truth-closeout/` without changing `domain`, `kind`,
 status, relations, evidence, support files, or `tree_path` frontmatter. The
-root receipt should be created in the same wave.
+root receipt is
+[`legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md`](../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md).
+
+The next reform slice should review the landed `proof/owner-truth-closeout`
+pilot before choosing any twenty-fifth shelf movement.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

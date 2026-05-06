@@ -406,7 +406,13 @@
    automation/tool-use shelves outside the move, and routes the next bounded
    step to the twenty-fourth pilot migration only after support-file carry,
    proof route-card update, root legacy receipt, link-repair, generated
-   surface, validation, PR checks, and merge move together.
+   surface, validation, PR checks, and merge move together. The twenty-fourth
+   pilot migration is now landed exactly for those five bundles under
+   `techniques/proof/owner-truth-closeout/`, with support files moved, proof
+   route-card accounting, root legacy receipt accounting, link repair,
+   generated rebuilds, and release-check validation in the same wave. The next
+   bounded step is to review the landed `owner-truth-closeout` pilot before
+   choosing any twenty-fifth shelf.
 
 ## Hold line
 

@@ -213,6 +213,9 @@ permission slip to remap techniques automatically.
 - owner-truth-closeout direct-read review: landed as
   `accepted-for-twenty-fourth-migration-pilot`, with five owner-truth bundles
   accepted and no path movement yet
+- owner-truth-closeout migration: landed, with `AOA-T-0091`, `AOA-T-0092`,
+  `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094` moved into
+  `techniques/proof/owner-truth-closeout/` and frontmatter preserved
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -300,6 +303,7 @@ permission slip to remap techniques automatically.
 | [Runtime-Truth-Lifecycle Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md) | preserves the twenty-third accepted path migration into `techniques/execution/runtime-truth-lifecycle/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, `abyss-stack` runtime law, deployment ownership, monitoring platform doctrine, host policy, smoke-test law, benchmark-suite governance, product scoring, `aoa-evals` verdict authority, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, skill activation, neighboring owner/governance/tool-use shelves, or all remaining `agent-workflows` and `evaluation` leaves |
 | [Landed Runtime-Truth-Lifecycle Pilot Review](reviews/landed-runtime-truth-lifecycle-pilot-review.md) | confirms the twenty-third migrated shelf stayed bounded as the fourth execution trunk shelf and chooses `proof/owner-truth-closeout` for direct-read review | movement of `proof/owner-truth-closeout`, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, root `AGENTS.md` law, workspace install doctrine, public-share approval policy, GitHub platform policy, release governance, cross-repo mirror co-ownership, skill activation, checkpoint automation, closeout automation, or neighboring automation/tool-use shelves |
 | [Owner-Truth-Closeout Direct-Read Migration Review](reviews/owner-truth-closeout-direct-read-migration-review.md) | reads `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094` directly and accepts the shelf as the twenty-fourth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, root `AGENTS.md` law, workspace install doctrine, public-share approval policy, GitHub platform policy, release governance, cross-repo mirror co-ownership, skill activation, checkpoint automation, closeout automation, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, `aoa-evals` verdict authority, neighboring automation/tool-use shelves, or all remaining `agent-workflows` and `docs` leaves |
+| [Owner-Truth-Closeout Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md) | preserves the twenty-fourth accepted path migration into `techniques/proof/owner-truth-closeout/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, root `AGENTS.md` law, workspace install doctrine, public-share approval policy, GitHub platform policy, release governance, cross-repo mirror co-ownership, skill activation, checkpoint automation, closeout automation, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, `aoa-evals` verdict authority, neighboring automation/tool-use shelves, or all remaining `agent-workflows` and `docs` leaves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -626,3 +630,9 @@ The `owner-truth-closeout` direct-read review is now landed as
 `accepted-for-twenty-fourth-migration-pilot`, accepting exactly `AOA-T-0091`,
 `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094` without moving
 files.
+
+The `owner-truth-closeout` migration is now landed. `AOA-T-0091`,
+`AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094` moved into
+`techniques/proof/owner-truth-closeout/` with support files moved,
+frontmatter preserved, proof route-card accounting added, active links
+repaired, generated surfaces rebuilt, and root legacy receipt recorded.

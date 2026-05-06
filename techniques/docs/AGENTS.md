@@ -7,7 +7,10 @@ Guidance for coding agents and humans working under `techniques/docs/`.
 This domain stores documentation, provenance, boundary, and source-surface
 techniques whose current reviewed home is still the broad `docs` domain.
 
-Representative bundles here include `canonical-owner-with-validated-mirror`.
+No active leaf bundles currently live directly here after reviewed tree
+migrations. Docs-frontmatter bundles may live under `techniques/instruction/`,
+`techniques/knowledge-lift/`, or `techniques/proof/` when a reviewed tree
+migration places them there without changing their frontmatter domain.
 
 ## Domain rules
 

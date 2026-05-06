@@ -42,7 +42,7 @@ LIVE_LINK_SURFACES = (
     "techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md",
     "techniques/agent-workflows/mcp-gateway-proxy/notes/canonical-readiness.md",
     "techniques/agent-workflows/mcp-gateway-proxy/notes/second-context-adaptation.md",
-    "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+    "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
     "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
     "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
     "techniques/instruction/capability-registry/capability-discovery/notes/canonical-readiness.md",

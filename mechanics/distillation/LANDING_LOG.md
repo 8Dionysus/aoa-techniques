@@ -3,6 +3,45 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Owner-truth-closeout tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and
+  `AOA-T-0094` into `techniques/proof/owner-truth-closeout/`
+- kept `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, and `AOA-T-0096` as
+  `domain: agent-workflows`
+- kept `AOA-T-0094` as `domain: docs`
+- kept `AOA-T-0091` as `kind: guardrail`, `AOA-T-0092` and `AOA-T-0095` as
+  `kind: workflow`, `AOA-T-0096` as `kind: validation`, and `AOA-T-0094` as
+  `kind: distribution`
+- added
+  [2026-05-05-owner-truth-closeout-tree-pilot](../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
+  as the root legacy receipt for the twenty-fourth migration
+- updated the proof route card to name `owner-truth-closeout/` as bounded
+  owner-truth entry, closeout, remote-owner, generated-publish, and mirror
+  validation support rather than owner law
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no AoA constitutional authority, root `AGENTS.md` law, workspace install
+  doctrine, public-share approval policy, GitHub platform policy, release
+  governance, cross-repo mirror co-ownership, skill activation, checkpoint
+  automation, closeout automation, route mutation, memory write, runtime
+  behavior, KAG promotion, ToS canon, `aoa-evals` verdict authority, or
+  neighboring automation/tool-use shelf moved
+
 ## 2026-05-05 - Owner-truth-closeout direct-read migration review
 
 Changed:

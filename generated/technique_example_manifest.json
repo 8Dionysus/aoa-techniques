@@ -1119,10 +1119,10 @@
     },
     {
       "id": "AOA-T-0091",
-      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md",
+          "example_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md",
           "title": "minimal workspace-root-ingress-and-mutation-gate",
           "body_markdown": "```yaml\nworkspace_posture:\n  workspace_root: /workspace\n  repo_root: /workspace/aoa-sdk\n  ingress:\n    command: aoa skills enter /workspace/aoa-sdk --root /workspace --intent-text \"inspect closeout seam\"\n    must_confirm: []\n  guard:\n    command: aoa skills guard /workspace/aoa-sdk --root /workspace --intent-text \"update closeout routing\" --mutation-surface code\n    must_confirm:\n      - approval_gate\n      - dry_run_first\n```\n\nWhy this example stays bounded:\n\n- it names one workspace root and one repo root instead of a whole install route\n- it makes ingress and guard visible without claiming they auto-resolve every decision\n- it shows mutation gating without widening into closeout or bootstrap doctrine"
         }
@@ -1130,10 +1130,10 @@
     },
     {
       "id": "AOA-T-0092",
-      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md",
+          "example_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md",
           "title": "Minimal audit-to-closeout-proof-loop example",
           "body_markdown": "Input findings:\n\n- `repo A accepts an optional path as required and aborts the closeout path`\n- `repo B appends JSONL receipts without restoring a missing trailing newline`\n\nProof-backed closeout:\n\n1. Re-confirm both findings in live code rather than trusting the audit wording alone.\n2. Patch the smallest owner-surface causes in each repository.\n3. Add one targeted regression seam for the optional-path behavior and one for the JSONL boundary behavior.\n4. Rerun the targeted checks immediately after each fix.\n5. Rerun the broader repo validation or full test suite before the findings are marked closed.\n6. Record any remaining warnings or follow-on seams instead of pretending the route is perfectly clean.\n\nWhy this works:\n\n- the findings are closed on named proof, not only on patch presence\n- the targeted checks prove the failure mode directly\n- the broader closeout rerun checks that the repositories still hold together after the local fixes"
         }
@@ -1152,10 +1152,10 @@
     },
     {
       "id": "AOA-T-0094",
-      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/docs/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md",
+          "example_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md",
           "title": "Minimal Canonical Owner With Validated Mirror",
           "body_markdown": "Use one canonical contract plus one legal mirror.\n\n- canonical copy:\n  - lives in the owner repository\n  - declares the owning repository explicitly\n  - carries the bounded vocabulary that consumers must accept\n- mirror copy:\n  - names the canonical source explicitly\n  - stays byte-for-byte or semantically equivalent on owner metadata and allowed vocabulary\n  - does not become the convenient place for local contract edits\n- consumer validation:\n  - reads the canonical vocabulary\n  - rejects unknown tokens before building downstream views\n\nIf rollout ordering, owner activation, or live publisher recovery becomes the main problem, treat that as a separate playbook rather than widening this technique."
         }
@@ -1163,10 +1163,10 @@
     },
     {
       "id": "AOA-T-0095",
-      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md",
+          "example_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md",
           "title": "Minimal Example",
           "body_markdown": "## Situation\n\nA coordination repository tracks one final owner-side contract change, but the\nowner repository is intentionally handled through GitHub only in the current\nenvironment.\n\n## Minimal route\n\n1. Write one bounded track packet with goal, non-goals, validator of record,\n   stop condition, and rollback marker.\n2. Open one owner-side issue and one PR branch in GitHub.\n3. Land the smallest owner-side contract doc or config change.\n4. Wait for the named PR checks to pass and merge the owner PR.\n5. In the same closeout pass, update the coordination repository so its\n   lifecycle markers and reality checks now point at the merged owner anchors.\n\n## Honest result\n\n- the owner repo remains the source of truth\n- GitHub-native validation proves only the bounded owner-side claim\n- the coordination layer no longer reports staged truth after the merge\n\n## Non-example\n\nDo not treat one green owner-side PR as proof of broad runtime parity or full\nproduct support beyond the merged owner contract."
         }
@@ -1174,10 +1174,10 @@
     },
     {
       "id": "AOA-T-0096",
-      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md",
+          "example_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md",
           "title": "minimal pinned-validation-matrix-before-generated-publish",
           "body_markdown": "```yaml\ngenerated_publish:\n  repo_root: /workspace/aoa-routing\n  outputs:\n    - generated/owner_layer_shortlist.min.json\n  workflow_pinned_inputs:\n    - repo: aoa-playbooks\n      ref: origin/main\n      required_surface: generated/playbook_review_status.min.json\n    - repo: aoa-skills\n      ref: workflow-pinned-sibling\n      required_surface: generated/core_skill_receipt_contracts.min.json\n  rebuild:\n    command: python scripts/build_router.py --check\n  publish_gate:\n    requires:\n      - pinned_matrix_rebuilt\n      - generated_diff_honest\n      - repo_validators_green\n```\n\nWhy this example stays bounded:\n\n- it names the generated outputs and the workflow-pinned inputs before publish\n- it makes the pinned matrix explicit instead of treating local workspace state\n  as automatically sufficient\n- it shows one publish gate without widening into full release choreography"
         }

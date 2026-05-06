@@ -3954,10 +3954,10 @@
     },
     {
       "id": "AOA-T-0091",
-      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md",
+          "check_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md",
           "title": "workspace-root-ingress-and-mutation-gate checklist",
           "intro_markdown": "",
           "items": [
@@ -3995,10 +3995,10 @@
     },
     {
       "id": "AOA-T-0092",
-      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md",
+          "check_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md",
           "title": "audit-to-closeout-proof-loop checklist",
           "intro_markdown": "Use this checklist when reviewing whether an audit remediation pass still behaves like a bounded proof-backed closeout loop instead of drifting into generic triage or rollout theater.",
           "items": [
@@ -4085,10 +4085,10 @@
     },
     {
       "id": "AOA-T-0094",
-      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/docs/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md",
+          "check_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md",
           "title": "Canonical Owner With Validated Mirror Checklist",
           "intro_markdown": "",
           "items": [
@@ -4126,10 +4126,10 @@
     },
     {
       "id": "AOA-T-0095",
-      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md",
+          "check_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md",
           "title": "github-only-owner-endcap-with-reality-sync Checklist",
           "intro_markdown": "",
           "items": [
@@ -4167,10 +4167,10 @@
     },
     {
       "id": "AOA-T-0096",
-      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
       "checklists": [
         {
-          "check_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md",
+          "check_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md",
           "title": "pinned-validation-matrix-before-generated-publish checklist",
           "intro_markdown": "",
           "items": [

@@ -4942,7 +4942,7 @@
       "kind": "guardrail",
       "status": "promoted",
       "summary": "Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.",
-      "technique_path": "techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "origin": {
         "project": "aoa-sdk + 8Dionysus",
         "path": "src/aoa_sdk/skills/detector.py + src/aoa_sdk/cli/main.py + docs/WORKSPACE_INSTALL.md + /srv/AGENTS.md",
@@ -5001,7 +5001,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.",
-      "technique_path": "techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
       "origin": {
         "project": "Dionysus + AoA ecosystem repos",
         "path": "reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md + aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md",
@@ -5111,7 +5111,7 @@
       "kind": "distribution",
       "status": "promoted",
       "summary": "Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned.",
-      "technique_path": "techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
       "origin": {
         "project": "Dionysus + aoa-stats + aoa-evals + aoa-skills",
         "path": "reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.md + aoa-stats/schemas/stats-event-envelope.schema.json + aoa-stats/scripts/build_views.py + aoa-evals/schemas/stats-event-envelope.schema.json + aoa-evals/scripts/validate_repo.py + aoa-skills/config/project_core_skill_kernel.json",
@@ -5166,7 +5166,7 @@
       "kind": "workflow",
       "status": "promoted",
       "summary": "Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.",
-      "technique_path": "techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
       "origin": {
         "project": "Dionysus + ATM10-Agent + AoA ecosystem repos",
         "path": "reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md + reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md + https://github.com/8Dionysus/ATM10-Agent/pull/50",
@@ -5221,7 +5221,7 @@
       "kind": "validation",
       "status": "promoted",
       "summary": "Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness.",
-      "technique_path": "techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
       "origin": {
         "project": "aoa-routing + aoa-skills + Dionysus",
         "path": "scripts/build_router.py + tests/test_live_workspace_contracts.py + scripts/publish_core_skill_receipts.py + reports/ecosystem-audits/2026-04-07.cross-repo.surface-detection-wave-rollout-session-harvest.md",

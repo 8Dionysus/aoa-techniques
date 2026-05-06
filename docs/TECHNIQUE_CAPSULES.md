@@ -613,7 +613,7 @@ See also:
 - Validate by: the rejected target is adjacent and plausible; the rejection reason clarifies one concrete boundary; the chosen target becomes clearer...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
 
-### [AOA-T-0091](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
+### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
 
 - Summary: Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.
 - Intent: Enter federated workspaces through one explicit ingress pass and require one explicit guard pass...
@@ -624,9 +624,9 @@ See also:
 - Core contract: the workspace root is explicit before ingress runs; one primary repo root is named for the current pass...
 - Main risk: ingress becomes symbolic and nobody actually reads the returned posture.
 - Validate by: ingress runs before substantial work begins; the current repo root and workspace root are explicit; risky mutation triggers a...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md)
 
-### [AOA-T-0092](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
+### [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
 
 - Summary: Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.
 - Intent: Turn a reviewed audit finding set into a proof-backed closeout loop by requiring live...
@@ -637,7 +637,7 @@ See also:
 - Core contract: no finding closes without live confirmation or an explicit non-repro explanation; fixes land in the owning source repository...
 - Main risk: audit wording is treated as truth without live confirmation.
 - Validate by: at least one finding was re-confirmed against live code or explicitly marked non-repro; each closed finding names a targeted...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md)
 
 ### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
 
@@ -652,7 +652,7 @@ See also:
 - Validate by: a recommendation can remain visible even when it is not directly executable on the host; activate_now contains only host-executable...
 - Source: [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md)
 
-### [AOA-T-0095](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
+### [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
 
 - Summary: Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.
 - Intent: Close a bounded remote-only owner surface through GitHub-native issue and PR flow, then immediately...
@@ -663,9 +663,9 @@ See also:
 - Core contract: the owner repository remains the source of truth for landed meaning; GitHub-native execution does not create a second...
 - Main risk: the coordination layer updates its own staging note before the owner PR is.
 - Validate by: the owner-side goal, non-goals, and stop condition were explicit before the; the owner repository merged the bounded change through...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md)
 
-### [AOA-T-0096](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
+### [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
 
 - Summary: Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness.
 - Intent: Rebuild and validate generated outputs against the same workflow-pinned sibling refs, mirrored surfaces, or...
@@ -676,7 +676,7 @@ See also:
 - Core contract: the workflow-pinned validation matrix is explicit before rebuild begins; local workspace state never silently substitutes for pinned refs.
 - Main risk: local rebuilds go green against workspace state while CI still reads older or.
 - Validate by: the workflow-pinned sibling refs or mirrored inputs were named explicitly; the local rebuild or --check pass used that same...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md)
 
 ### [AOA-T-0101](../techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
 
@@ -1096,7 +1096,7 @@ See also:
 - Validate by: discovery uses one explicit bounded query surface over published entries; query fields and match behavior are readable without opening...
 - Source: [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md)
 
-### [AOA-T-0094](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
+### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
 
 - Summary: Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned.
 - Intent: Keep one canonical owner for a cross-repo contract while still permitting nearby mirrors, as...
@@ -1107,7 +1107,7 @@ See also:
 - Core contract: exactly one repository owns the shared contract; a mirror is legal only when it stays subordinate to the...
 - Main risk: a mirror starts accepting local edits and becomes a shadow source of truth.
 - Validate by: the shared contract names exactly one canonical owner; each mirror carries explicit canonical-reference metadata; parity validation fails when owner...
-- Source: [TECHNIQUE.md](../techniques/docs/canonical-owner-with-validated-mirror/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md)
 
 ### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
 

@@ -35,6 +35,13 @@ Current landed shelves:
   and one scoped evidence reference without becoming proof verdict authority,
   eval-suite ownership, review-board workflow, Agon move law, actor
   eligibility, source-truth transfer, or evidence adequacy scoring.
+- `owner-truth-closeout/`: workspace ingress and mutation guard posture,
+  proof-backed finding closeout, GitHub-native owner endcaps, workflow-pinned
+  generated publish validation, and canonical-owner mirror parity without
+  becoming AoA constitutional authority, root `AGENTS.md` law, workspace
+  install doctrine, public-share approval policy, GitHub platform policy,
+  release governance, cross-repo mirror co-ownership, skill activation,
+  checkpoint automation, or closeout automation.
 
 ## Boundary
 
@@ -62,6 +69,9 @@ Do not:
   technique
 - collapse claim challenge, missing-evidence request, and scoped evidence
   reference into one combined proof technique
+- collapse ingress guard, audit closeout, GitHub owner endcap, generated
+  publish validation, and canonical-owner mirror parity into one combined
+  closeout technique
 - import sibling-owner authority into a portable technique bundle
 
 ## Validation
