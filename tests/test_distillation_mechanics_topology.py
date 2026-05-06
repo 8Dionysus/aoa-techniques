@@ -121,6 +121,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/history-artifacts-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/donor-harvest-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-donor-harvest-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/decision-routing-direct-read-migration-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -5462,14 +5463,95 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("Landed donor-harvest pilot review", landing_log)
         self.assertIn("third successful continuity trunk", landing_log)
         self.assertIn("The landed\n   `donor-harvest` pilot review", distillation_roadmap)
-        self.assertIn(
-            "Run the `governance/decision-routing` direct-read",
-            root_roadmap,
-        )
+        self.assertIn("chooses `governance/decision-routing`", root_roadmap)
         self.assertIn("Landed Donor-Harvest Pilot Review", tree_contract)
         self.assertIn("chooses `governance/decision-routing`", tree_contract)
         self.assertIn(
             "accepted the landed `donor-harvest` pilot review",
+            changelog,
+        )
+        self.assertFalse((REPO_ROOT / "techniques" / "governance").exists())
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0076",
+                "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+                "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0078",
+                "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+                "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0079",
+                "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+                "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
+    def test_decision_routing_direct_read_review_accepts_twentieth_pilot(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "decision-routing-direct-read-migration-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Decision-Routing Direct-Read Migration Review", review)
+        self.assertIn("accepted-for-twentieth-migration-pilot", review)
+        self.assertIn("Accept `governance/decision-routing`", review)
+        self.assertIn("Do not move files from this review pack alone", review)
+        self.assertIn("AoA constitutional authority", review)
+        self.assertIn("Run the twentieth migration pilot", review)
+        self.assertIn("decision-routing-direct-read-migration-review", reviews_index)
+        self.assertIn("decision-routing direct-read review: landed", ingress)
+        self.assertIn("accepted-for-twentieth-migration-pilot", ingress)
+        self.assertIn("Decision-routing direct-read migration review", landing_log)
+        self.assertIn("accepted-for-twentieth-migration-pilot", distillation_roadmap)
+        self.assertIn("twentieth pilot without moving files", root_roadmap)
+        self.assertIn("Decision-Routing Direct-Read Migration Review", tree_contract)
+        self.assertIn(
+            "accepted the `decision-routing` direct-read migration review",
             changelog,
         )
         self.assertFalse((REPO_ROOT / "techniques" / "governance").exists())

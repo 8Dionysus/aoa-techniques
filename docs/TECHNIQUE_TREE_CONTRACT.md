@@ -522,5 +522,19 @@ role contract law, runtime dispatch, approval policy, playbook design, hidden
 automation governance, and neighboring boundary-watch shelves outside the next
 move.
 
+The twentieth direct-read review is
+[Decision-Routing Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/decision-routing-direct-read-migration-review.md).
+It accepts exactly `AOA-T-0076`, `AOA-T-0078`, and `AOA-T-0079` for
+`techniques/governance/decision-routing/`, preserves all three as promoted
+`assessment` bundles, and keeps AoA constitutional authority, `aoa-routing`
+ownership, role contract law, runtime dispatch, approval policy, playbook
+design, hidden automation governance, risk scoring doctrine, context-map
+doctrine, neighboring boundary-watch shelves, and all remaining
+`agent-workflows` leaves outside the shelf.
+
+The next reform slice should migrate exactly those three decision-routing
+bundles together, with a compact governance route card, root legacy receipt,
+link repair, generated rebuild, and validation.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

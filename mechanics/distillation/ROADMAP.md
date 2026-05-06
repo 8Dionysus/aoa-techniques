@@ -312,7 +312,17 @@
    while keeping AoA constitutional authority, `aoa-routing` ownership, role
    contract law, runtime dispatch, approval policy, playbook design, hidden
    automation governance, and neighboring boundary-watch shelves outside the
-   next move.
+   next move. The `decision-routing` direct-read review is now landed as
+   `accepted-for-twentieth-migration-pilot`; it accepts exactly `AOA-T-0076`,
+   `AOA-T-0078`, and `AOA-T-0079` while keeping the review non-mutating,
+   preserving all three as promoted bundles, and keeping AoA constitutional
+   authority, `aoa-routing` ownership, role contract law, runtime dispatch,
+   approval policy, playbook design, hidden automation governance, risk
+   scoring doctrine, context-map doctrine, neighboring boundary-watch shelves,
+   and all remaining `agent-workflows` leaves outside the shelf. The next
+   bounded step is to migrate those three bundles only after path movement,
+   support-file carry, compact governance route card creation, receipt,
+   link-repair, generated surface, and validation work move together.
 
 ## Hold line
 
