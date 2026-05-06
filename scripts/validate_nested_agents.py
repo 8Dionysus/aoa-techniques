@@ -31,10 +31,23 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "agent-workflows" / "AGENTS.md",
         (
             "# AGENTS.md",
+            "no active leaf bundle currently lives directly here",
             "`techniques/governance/practice-adoption-lifecycle/`",
-            "`mcp-gateway-proxy`",
+            "`techniques/tool-use/tool-gateway/`",
             "explicit dry-run",
             "small reversible slice",
+        ),
+    ),
+    AgentsDocSpec(
+        Path("techniques") / "tool-use" / "AGENTS.md",
+        (
+            "# AGENTS.md",
+            "`tool-gateway/`",
+            "caller-facing surface",
+            "metadata",
+            "security-scanner",
+            "`aoa-skills`",
+            "`aoa-evals`",
         ),
     ),
     AgentsDocSpec(

@@ -746,9 +746,15 @@ The tool-gateway direct-read singleton review is
 [Tool-Gateway Direct-Read Singleton Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/tool-gateway-direct-read-singleton-review.md).
 It accepts `AOA-T-0065` as the twenty-eighth migration pilot and resolves the
 old singleton hold in favor of one deliberate `tool-use/tool-gateway` shelf.
-The next migration should move exactly that bundle into
+
+The twenty-eighth pilot migration moves exactly `AOA-T-0065` into
 `techniques/tool-use/tool-gateway/mcp-gateway-proxy/` without changing
-frontmatter.
+`domain`, `kind`, status, relations, evidence, support files, or `tree_path`
+frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md`](../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md).
+
+The next reform slice should review the landed `tool-use/tool-gateway` shelf
+before final consolidation or another discovered tail.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

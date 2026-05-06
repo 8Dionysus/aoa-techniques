@@ -39,13 +39,13 @@ promotion, ToS canon, or canonical technique promotion.
 
 ## Sources Read
 
-- [AOA-T-0065 mcp-gateway-proxy](../../../../../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md)
-- [AOA-T-0065 checklist](../../../../../techniques/agent-workflows/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md)
-- [AOA-T-0065 example](../../../../../techniques/agent-workflows/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md)
-- [AOA-T-0065 external origin](../../../../../techniques/agent-workflows/mcp-gateway-proxy/notes/external-origin.md)
-- [AOA-T-0065 external import review](../../../../../techniques/agent-workflows/mcp-gateway-proxy/notes/external-import-review.md)
-- [AOA-T-0065 second-context adaptation](../../../../../techniques/agent-workflows/mcp-gateway-proxy/notes/second-context-adaptation.md)
-- [AOA-T-0065 canonical readiness](../../../../../techniques/agent-workflows/mcp-gateway-proxy/notes/canonical-readiness.md)
+- [AOA-T-0065 mcp-gateway-proxy](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md)
+- [AOA-T-0065 checklist](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md)
+- [AOA-T-0065 example](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md)
+- [AOA-T-0065 external origin](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/notes/external-origin.md)
+- [AOA-T-0065 external import review](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/notes/external-import-review.md)
+- [AOA-T-0065 second-context adaptation](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/notes/second-context-adaptation.md)
+- [AOA-T-0065 canonical readiness](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/notes/canonical-readiness.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [First tree projection review pack](first-tree-projection-review-pack.md)

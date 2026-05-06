@@ -303,6 +303,9 @@ The format is intentionally simple and human-first.
   review without moving a twenty-eighth shelf yet
 - accepted the `tool-gateway` direct-read singleton review over `AOA-T-0065`
   as the twenty-eighth tree pilot while keeping the review itself non-mutating
+- moved `AOA-T-0065` into
+  `techniques/tool-use/tool-gateway/` while keeping `domain`, `kind`, ID,
+  status, evidence, and `tree_path` frontmatter unchanged
 
 ### Validation
 

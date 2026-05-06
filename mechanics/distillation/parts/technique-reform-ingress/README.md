@@ -260,6 +260,8 @@ permission slip to remap techniques automatically.
 - tool-gateway direct-read singleton review: landed as
   `accepted-for-twenty-eighth-migration-pilot`, with singleton path placement
   accepted for `AOA-T-0065` and no path movement yet
+- tool-gateway migration: landed exactly `AOA-T-0065` under
+  `techniques/tool-use/tool-gateway/` without frontmatter changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -360,6 +362,7 @@ permission slip to remap techniques automatically.
 | [Practice-Adoption-Lifecycle Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md) | preserves the twenty-seventh accepted path migration into `techniques/governance/practice-adoption-lifecycle/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, Method-growth law, local owner consent, deletion, deprecation execution, proof authority, memory truth, skill activation, route mutation, runtime change, permanent practice retention, sibling owner acceptance, KAG promotion, ToS canon, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
 | [Landed Practice-Adoption-Lifecycle Pilot Review](reviews/landed-practice-adoption-lifecycle-pilot-review.md) | validates the third split shelf after migration, closes the automation-governance split tail, and routes the singleton `tool-use/tool-gateway` review | path movement, `tool-use/tool-gateway` acceptance, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, Method-growth law, local owner consent, proof authority, memory truth, skill activation, route mutation, runtime change, broad orchestration governance, KAG promotion, or ToS canon |
 | [Tool-Gateway Direct-Read Singleton Review](reviews/tool-gateway-direct-read-singleton-review.md) | reads `AOA-T-0065` directly and accepts `tool-use/tool-gateway` as the twenty-eighth singleton migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
+| [Tool-Gateway Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md) | preserves the twenty-eighth accepted path migration into `techniques/tool-use/tool-gateway/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -771,10 +774,10 @@ The `tool-gateway` direct-read singleton review is now landed as
 `AOA-T-0065` as a deliberate singleton shelf under `tool-use/tool-gateway`,
 while keeping the review non-mutating and preserving current frontmatter.
 
-Run the twenty-eighth migration pilot.
+The `tool-gateway` migration is now landed. It moves exactly `AOA-T-0065`
+into `techniques/tool-use/tool-gateway/`, preserves frontmatter, records the
+root legacy receipt, creates the `tool-use` route card, repairs active links,
+and rebuilds generated surfaces.
 
-Move exactly `AOA-T-0065` into
-`techniques/tool-use/tool-gateway/mcp-gateway-proxy/` only after support-file
-carry, `tool-use` route-card creation, root legacy receipt, active link
-repair, generated rebuild, validation, commit, push, PR checks, and merge are
-handled together.
+Review the landed `tool-use/tool-gateway` pilot before final consolidation or
+choosing the next reform slice.

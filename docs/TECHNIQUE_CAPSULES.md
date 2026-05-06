@@ -301,7 +301,7 @@ See also:
 - Validate by: each episode has a bounded goal; every episode ends at a checkpoint or stop condition; the continue, stop, or...
 - Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md)
 
-### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
+### [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
 
 - Summary: Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.
 - Intent: Front multiple configured MCP servers through one bounded gateway proxy so callers can use...
@@ -312,7 +312,7 @@ See also:
 - Core contract: the gateway is an explicit intermediary rather than an invisible pass-through; callers interact with one bounded proxy surface...
 - Main risk: the gateway quietly becomes a full security platform instead of one bounded proxy seam.
 - Validate by: more than one upstream server or tool surface can be fronted through one gateway seam; callers can inspect proxied...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md)
 
 ### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
 

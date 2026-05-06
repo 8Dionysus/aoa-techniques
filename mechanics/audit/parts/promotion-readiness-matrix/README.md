@@ -261,7 +261,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded r
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0065](../../../../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) | Runtime-proxy sibling that keeps one explicit gateway seam in front of configured MCP servers with clear exclusions around scanner modes, lifecycle doctrine, and registry or product semantics. | One second public workflow surface where several configured tool servers are fronted through one explicit proxy seam with visible metadata and mediated calls, without widening into enterprise security or runtime-platform doctrine. |
+| [AOA-T-0065](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | Runtime-proxy sibling that keeps one explicit gateway seam in front of configured MCP servers with clear exclusions around scanner modes, lifecycle doctrine, and registry or product semantics. | One second public workflow surface where several configured tool servers are fronted through one explicit proxy seam with visible metadata and mediated calls, without widening into enterprise security or runtime-platform doctrine. |
 
 ### Pack 23 - Transcript Replay Artifact
 

@@ -477,9 +477,13 @@
    twenty-eighth movement. The `tool-gateway` direct-read singleton review is
    now landed as `accepted-for-twenty-eighth-migration-pilot`; it accepts
    exactly `AOA-T-0065` as a deliberate singleton shelf while keeping the
-   review non-mutating and preserving current frontmatter. The next bounded
-   step is to migrate that one bundle into
-   `techniques/tool-use/tool-gateway/mcp-gateway-proxy/`.
+   review non-mutating and preserving current frontmatter. The `tool-gateway`
+   migration is now landed exactly for that one bundle under
+   `techniques/tool-use/tool-gateway/mcp-gateway-proxy/`, with the `tool-use`
+   route card, root legacy receipt accounting, active link repair, generated
+   rebuilds, and unchanged frontmatter. The next bounded step is to review the
+   landed `tool-use/tool-gateway` pilot before final consolidation or choosing
+   the next reform slice.
 
 ## Hold line
 

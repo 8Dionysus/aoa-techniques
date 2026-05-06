@@ -155,11 +155,11 @@ See also:
 |---|---|---|---|
 | minimal episode-bounded agent loop | `present` | `techniques/continuity/handoff-continuation/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) |
 
-### [AOA-T-0065](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
+### [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal mcp-gateway-proxy | `present` | `techniques/agent-workflows/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md` | [TECHNIQUE.md](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) |
+| minimal mcp-gateway-proxy | `present` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md` | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
 
 ### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
 
