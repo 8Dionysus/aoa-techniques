@@ -219,6 +219,10 @@ permission slip to remap techniques automatically.
 - landed owner-truth-closeout pilot review: landed as `pilot-validated`, with
   the fifth proof trunk shelf confirmed and `governance/automation-governance`
   chosen for direct-read split review before any twenty-fifth movement
+- automation-governance direct-read split review: landed as
+  `split-required-before-migration`, rejecting one bulk shelf and naming
+  `governance/automation-readiness`, `governance/promotion-boundary`, and
+  `governance/practice-adoption-lifecycle` as split candidates
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -308,6 +312,7 @@ permission slip to remap techniques automatically.
 | [Owner-Truth-Closeout Direct-Read Migration Review](reviews/owner-truth-closeout-direct-read-migration-review.md) | reads `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0095`, `AOA-T-0096`, and `AOA-T-0094` directly and accepts the shelf as the twenty-fourth migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, root `AGENTS.md` law, workspace install doctrine, public-share approval policy, GitHub platform policy, release governance, cross-repo mirror co-ownership, skill activation, checkpoint automation, closeout automation, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, `aoa-evals` verdict authority, neighboring automation/tool-use shelves, or all remaining `agent-workflows` and `docs` leaves |
 | [Owner-Truth-Closeout Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md) | preserves the twenty-fourth accepted path migration into `techniques/proof/owner-truth-closeout/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, root `AGENTS.md` law, workspace install doctrine, public-share approval policy, GitHub platform policy, release governance, cross-repo mirror co-ownership, skill activation, checkpoint automation, closeout automation, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, `aoa-evals` verdict authority, neighboring automation/tool-use shelves, or all remaining `agent-workflows` and `docs` leaves |
 | [Landed Owner-Truth-Closeout Pilot Review](reviews/landed-owner-truth-closeout-pilot-review.md) | confirms the twenty-fourth migrated shelf stayed bounded as the fifth proof trunk shelf and chooses `governance/automation-governance` for direct-read split review | movement of `governance/automation-governance`, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, quest/playbook promotion doctrine, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
+| [Automation-Governance Direct-Read Split Review](reviews/automation-governance-direct-read-split-review.md) | reads the nine projected automation-governance leaves and rejects one bulk shelf before movement | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, automation policy authority, seed canon, skill acceptance, skill activation, quest/playbook promotion doctrine, Method-growth law, local owner consent, deletion, deprecation execution, proof authority, memory truth, routing policy, runtime behavior, broad orchestration governance, or the `tool-use/tool-gateway` singleton hold |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -647,3 +652,11 @@ guard, audit closeout, remote owner endcap, generated publish validation, and
 mirror parity as distinct owner-truth atoms, and chooses
 `governance/automation-governance` for direct-read split review before any
 twenty-fifth shelf movement.
+
+The `automation-governance` direct-read split review is now landed as
+`split-required-before-migration`. It rejects one bulk shelf over `AOA-T-0086`,
+`AOA-T-0087`, `AOA-T-0088`, `AOA-T-0089`, `AOA-T-0090`, `AOA-T-0101`,
+`AOA-T-0102`, `AOA-T-0103`, and `AOA-T-0104`, and names
+`governance/automation-readiness`, `governance/promotion-boundary`, and
+`governance/practice-adoption-lifecycle` as the split candidates to handle
+before any automation-governance path movement.

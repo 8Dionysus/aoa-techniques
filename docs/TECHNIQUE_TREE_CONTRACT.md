@@ -644,5 +644,15 @@ twenty-fifth shelf movement. That next review must decide whether the nine
 projected automation-governance leaves can move as one shelf or must split
 before any path migration.
 
+The automation-governance direct-read split review is
+[Automation-Governance Direct-Read Split Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/automation-governance-direct-read-split-review.md).
+It rejects one bulk `governance/automation-governance` shelf and preserves all
+nine bundles at their current paths. The next split-expansion step should
+activate three candidate shelves: `governance/automation-readiness` over
+`AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088`;
+`governance/promotion-boundary` over `AOA-T-0089`, `AOA-T-0090`, and
+`AOA-T-0102`; and `governance/practice-adoption-lifecycle` over
+`AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104`.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

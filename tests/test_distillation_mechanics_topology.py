@@ -7042,6 +7042,142 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertTrue((REPO_ROOT / current_path).is_file())
                 self.assertFalse((REPO_ROOT / future_path).exists())
 
+    def test_automation_governance_direct_read_split_review_rejects_bulk_shelf(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "automation-governance-direct-read-split-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Automation-Governance Direct-Read Split Review", review)
+        self.assertIn("split-required-before-migration", review)
+        self.assertIn(
+            "Reject `governance/automation-governance` as one bulk migration shelf",
+            review,
+        )
+        self.assertIn("governance/automation-readiness", review)
+        self.assertIn("governance/promotion-boundary", review)
+        self.assertIn("governance/practice-adoption-lifecycle", review)
+        self.assertIn("Do not move any `automation-governance` bundle", review)
+        self.assertIn("Run a split-expansion closeout", review)
+        self.assertIn(
+            "automation-governance-direct-read-split-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "automation-governance direct-read split review: landed",
+            ingress,
+        )
+        self.assertIn("split-required-before-migration", ingress)
+        self.assertIn(
+            "Automation-governance direct-read split review",
+            landing_log,
+        )
+        self.assertIn(
+            "automation-governance\n   direct-read split review is now landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the automation-governance split-expansion closeout",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Automation-Governance Direct-Read Split Review",
+            tree_contract,
+        )
+        self.assertIn(
+            "rejected one bulk `governance/automation-governance` shelf",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0086",
+                "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0087",
+                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0088",
+                "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0089",
+                "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0090",
+                "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0102",
+                "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0101",
+                "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0103",
+                "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0104",
+                "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT
