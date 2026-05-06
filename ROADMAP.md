@@ -133,8 +133,8 @@ surfaces keep checked mechanic landings. `CHANGELOG.md` keeps released history.
 
 | Field | Direction |
 |---|---|
-| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` now names the current root tree as trunks, shelves, and leaf bundles. The first full pass landed all `107` bundles under `techniques/<trunk>/<shelf>/<slug>/`, across `10` trunks and `28` shelves, with `28/28` root legacy receipts, `107/107` current paths matching generated projection paths, no remaining split, singleton, or unassigned hold rows, validator-backed route cards for all current trunks plus retained frontmatter lanes, and a final migration ledger distilling the temporary plan into permanent route surfaces. |
-| Next honest move | Start technique-bundle reform with a corpus-wide bundle anatomy and small-agent usability audit before changing individual leaves. |
+| Current posture | `docs/TECHNIQUE_TREE_CONTRACT.md` now names the current root tree as trunks, shelves, and leaf bundles. The first full pass landed all `107` bundles under active `techniques/<trunk>/<shelf>/<slug>/` paths, across `10` active bundle trunks and `28` shelves, with `28/28` root legacy receipts, `107/107` current paths matching generated projection paths, no remaining split, singleton, or unassigned hold rows, validator-backed route cards for all current trunks plus retained frontmatter lanes, a final migration ledger, and a completed bundle anatomy closeout that audited all `107` bundles. |
+| Next honest move | Choose one bounded targeted reform slice from the closed bundle anatomy evidence, keeping old-template, owner-boundary, portability, and promotion-hold labels as review pressure rather than automatic rewrite queues. |
 | Guardrail | Do not move all bundles in one wave, make `tree_path` required frontmatter prematurely, or copy the mechanics package shape into technique leaves. |
 
 Historical tree migration breadcrumb row preserved for parity; current closeout above supersedes it as direction:
@@ -157,6 +157,15 @@ Current latest final tree ledger: the final tree migration ledger validates
 generated parity, `28/28` shelf receipt coverage, temporary-plan distillation,
 and the transition from path migration into technique-bundle reform.
 Previous final-ledger breadcrumb preserved for parity: Run the final migration ledger and generated parity pass before another path movement, schema promotion, or reform slice.
+
+Current latest bundle anatomy closeout: the final bundle reform ledger validates
+the first post-tree anatomy pass over all `107` bundles, closes the lone
+capsule-reader repair cohort, records no schema, path, promotion, route-away,
+or legacy receipt tail, and moves next direction toward one chosen targeted
+reform slice.
+Previous bundle-anatomy breadcrumb preserved for parity: Start
+technique-bundle reform with a corpus-wide bundle anatomy and small-agent
+usability audit before changing individual leaves.
 
 Current latest tree migration: the `tool-gateway` pilot moved exactly
 `AOA-T-0065` into `techniques/tool-use/tool-gateway/` without changing

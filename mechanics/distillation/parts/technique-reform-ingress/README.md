@@ -276,6 +276,11 @@ permission slip to remap techniques automatically.
 - final tree migration ledger: landed, with generated parity, `28/28` shelf
   receipt coverage, temporary-plan distillation, and next direction toward
   technique-bundle reform confirmed
+- bundle anatomy reform closeout: landed, with all `107` bundles audited,
+  `105/107` left untouched, the `2/107` generated-reader capsule gaps repaired
+  through the builder, no remaining route-away or promotion action, no
+  frontmatter or schema migration, and next direction moved from broad audit
+  into targeted reform slices
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -381,6 +386,11 @@ permission slip to remap techniques automatically.
 | [Whole-Tree Closeout Review](reviews/whole-tree-closeout-review.md) | validates the current tree as `107` bundles, `10` trunks, `28` shelves, `107/107` current path parity, `28/28` root receipts, and zero split/singleton/unassigned holds | route-card consolidation, path movement, `tree_path` frontmatter, family promotion, new required axes, frontmatter remap, canonical promotion, generated projection authority, sibling-owner authority, or final topology for future imports |
 | [Nested AGENTS Validator](../../../../scripts/validate_nested_agents.py) | checks the current trunk route cards and retained frontmatter lanes remain present and shaped | bundle meaning, path movement, frontmatter remap, generated projection authority, or future topology acceptance |
 | [Final Tree Migration Ledger](reviews/final-tree-migration-ledger.md) | closes the tree migration program with generated parity, receipt coverage, temporary-plan disposition, and next reform direction | path movement, `tree_path` frontmatter, frontmatter remap, family promotion, bundle rewrite authority, generated projection authority, or future topology acceptance |
+| [Bundle Anatomy Corpus Synthesis](reviews/bundle-anatomy-corpus-synthesis.md) | reviews all `107` bundle anatomy rows and chooses the only concrete first repair cohort | leaf rewrite authority, template migration, status promotion, or route-away movement |
+| [Bundle Anatomy Capsule Gap Repair Cohort](reviews/bundle-anatomy-capsule-gap-repair-cohort.md) | repairs wrapped list extraction for generated capsule readability without changing technique source | bundle meaning change, generated hand-edit authority, or template modernization |
+| [Bundle Anatomy Post-Repair Follow-Through](reviews/bundle-anatomy-post-repair-follow-through.md) | closes repair-wave, topology-scout, capsule, promotion, and route-away follow-through gates | new schema fields, promotion, route-away handoff, or old-template backlog authority |
+| [Bundle Anatomy Legacy And Provenance Hygiene](reviews/bundle-anatomy-legacy-provenance-hygiene.md) | confirms no new root or mechanic-local legacy receipt is needed for this reform pass | permission to add placeholder receipts or move active review packets into legacy |
+| [Bundle Anatomy Final Closeout Ledger](reviews/bundle-anatomy-final-closeout-ledger.md) | closes the first post-tree bundle reform pass and distills the temporary rhythm plan | broad leaf rewrite, frontmatter migration, status promotion, or automatic next cohort authority |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -435,6 +445,17 @@ It should continue one bounded slice at a time:
 - [ ] Run the narrow builders touched by the slice plus `python scripts/release_check.py`.
 
 ## Next Honest Move
+
+Current latest bundle anatomy closeout: the first post-tree bundle reform pass
+is closed. It audited all `107` bundles, repaired the only generated-reader
+capsule defect found by the audit, left `105` healthy bundles untouched,
+declined broad template/schema/status churn, and removed the temporary rhythm
+plan after distilling it into the final closeout ledger.
+
+Next clean move: choose one bounded targeted reform slice from the closeout
+evidence. Do not restart a broad audit, do not mass-rewrite old-template
+bundles, and do not promote scout axes into frontmatter without a separate
+decision and validator wave.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
