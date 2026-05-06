@@ -91,5 +91,6 @@ Current reviews:
 - [execution-profile-fixture-sketch-ledger](execution-profile-fixture-sketch-ledger.md)
 - [execution-profile-registry-calibration-review](execution-profile-registry-calibration-review.md)
 - [execution-profile-repair-queue-review](execution-profile-repair-queue-review.md)
+- [execution-profile-empirical-harness-decision](execution-profile-empirical-harness-decision.md)
 
 These files are review packets, not generated reports and not bundle authority.
