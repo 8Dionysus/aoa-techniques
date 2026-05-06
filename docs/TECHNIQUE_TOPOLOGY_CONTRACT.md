@@ -210,6 +210,10 @@ catch-all domains.
 `execution_profile` should answer what kind of agent can execute the technique
 after selection.
 
+Until a local model harness records empirical results, execution-profile values
+are scout suitability estimates from authored bundle shape. They are not proof
+that a given small model has already executed the technique successfully.
+
 Likely profiles include:
 
 - `tiny-card`: executable from a capsule or one short section with obvious

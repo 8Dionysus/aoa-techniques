@@ -83,5 +83,6 @@ Current reviews:
 - [bundle-anatomy-post-repair-follow-through](bundle-anatomy-post-repair-follow-through.md)
 - [bundle-anatomy-legacy-provenance-hygiene](bundle-anatomy-legacy-provenance-hygiene.md)
 - [bundle-anatomy-final-closeout-ledger](bundle-anatomy-final-closeout-ledger.md)
+- [execution-profile-truth-boundary-pilot](execution-profile-truth-boundary-pilot.md)
 
 These files are review packets, not generated reports and not bundle authority.
