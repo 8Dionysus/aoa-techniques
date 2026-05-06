@@ -128,6 +128,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/review-evidence-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-automation-readiness-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/promotion-boundary-direct-read-migration-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-promotion-boundary-pilot-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -7855,6 +7856,122 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+
+    def test_landed_promotion_boundary_pilot_review_routes_candidate_c(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-promotion-boundary-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Promotion-Boundary Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn(
+            "The landed `governance/promotion-boundary` shelf holds.",
+            review,
+        )
+        self.assertIn("generated tree projection keeps", review)
+        self.assertIn("three unmoved automation-governance leaves", review)
+        self.assertIn("Run a direct-read review for Candidate C", review)
+        self.assertIn("governance/practice-adoption-lifecycle", review)
+        self.assertIn(
+            "landed-promotion-boundary-pilot-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "landed promotion-boundary pilot review: landed",
+            ingress,
+        )
+        self.assertIn(
+            "Landed promotion-boundary pilot review",
+            landing_log,
+        )
+        self.assertIn(
+            "promotion-boundary` pilot review is now complete",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the `governance/practice-adoption-lifecycle` direct-read review",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Landed Promotion-Boundary Pilot Review",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the landed `promotion-boundary` pilot review",
+            changelog,
+        )
+
+        for old_path, new_path in (
+            (
+                "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+                "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(new_path=new_path):
+                self.assertFalse((REPO_ROOT / old_path).exists())
+                self.assertTrue((REPO_ROOT / new_path).is_file())
+
+        for current_path, future_path in (
+            (
+                "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
+            ),
+            (
+                "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+                "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(current_path=current_path):
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

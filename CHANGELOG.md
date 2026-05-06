@@ -287,6 +287,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0089`, `AOA-T-0090`, and `AOA-T-0102` into
   `techniques/governance/promotion-boundary/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `promotion-boundary` pilot review and selected
+  `governance/practice-adoption-lifecycle` for direct-read review without
+  moving a twenty-seventh shelf yet
 
 ### Validation
 

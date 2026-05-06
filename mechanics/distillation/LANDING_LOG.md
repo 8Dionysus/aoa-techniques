@@ -3,6 +3,34 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed promotion-boundary pilot review
+
+Changed:
+
+- added
+  [landed-promotion-boundary-pilot-review](parts/technique-reform-ingress/reviews/landed-promotion-boundary-pilot-review.md)
+  as the post-migration review for the second automation-governance split shelf
+- validated `governance/promotion-boundary` as the second landed split shelf
+  after migration
+- confirmed the moved bundles kept `domain: agent-workflows`, `status:
+  promoted`, and their separate `kind: assessment`, `kind: guardrail`, and
+  `kind: handoff` values
+- selected `governance/practice-adoption-lifecycle` for direct-read review
+  before any twenty-seventh movement
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no Candidate C or `tool-use/tool-gateway` shelf was accepted yet
+
 ## 2026-05-05 - Promotion-boundary tree pilot migration
 
 Changed:
