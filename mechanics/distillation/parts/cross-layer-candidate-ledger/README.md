@@ -96,10 +96,10 @@ python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/te
 | candidate | landed technique | domain | landing note |
 |---|---|---|---|
 | `profile-preset-composition` | [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | `docs` | Wave A lead now lands as a bounded docs technique for module-profile-preset composition without widening into render, doctor, or lifecycle semantics. |
-| `render-truth-before-startup` | [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | Wave A second step now lands as a bounded pre-start rendered-truth workflow without widening into readiness checks, lifecycle control, or config publication. |
-| `contextual-host-doctor` | [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | Wave A third step now lands as a bounded selector-aware preflight diagnostic without widening into monitoring, smoke, or lifecycle control. |
-| `one-command-service-lifecycle` | [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | Wave A external anchor now lands as a bounded local lifecycle technique for one-entrypoint startup and shutdown without widening into launcher doctrine, install flows, or memory semantics. |
-| `baseline-first-additive-profile-benchmarks` | [AOA-T-0039](../../../../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `evaluation` | Wave A closing step now lands as a bounded baseline-then-additive comparison technique that keeps benchmark claims comparable without widening into suite ownership, product scoring, or promotion policy. |
+| `render-truth-before-startup` | [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | Wave A second step now lands as a bounded pre-start rendered-truth workflow without widening into readiness checks, lifecycle control, or config publication. |
+| `contextual-host-doctor` | [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | Wave A third step now lands as a bounded selector-aware preflight diagnostic without widening into monitoring, smoke, or lifecycle control. |
+| `one-command-service-lifecycle` | [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | Wave A external anchor now lands as a bounded local lifecycle technique for one-entrypoint startup and shutdown without widening into launcher doctrine, install flows, or memory semantics. |
+| `baseline-first-additive-profile-benchmarks` | [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `evaluation` | Wave A closing step now lands as a bounded baseline-then-additive comparison technique that keeps benchmark claims comparable without widening into suite ownership, product scoring, or promotion policy. |
 | `skill-vs-command-boundary` | [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | `docs` | Wave B opening step now lands as a bounded docs technique for keeping reusable skill meaning distinct from user-facing command wrappers without widening into propagation, marketplace policy, routing, or slash-command product semantics. |
 | `upstream-skill-health-checking` | [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | `evaluation` | Wave B third step now lands as a bounded source-readiness technique for checking upstream availability and manifest shape before selector surfacing without widening into monitoring, registry governance, or security scanning doctrine. |
 | `multi-source-primary-input-provenance` | [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | `docs` | Wave B closing step now lands as a bounded provenance-ordering technique for keeping one combined surface explicit about primary versus supporting inputs without widening into note-provenance lift, relation semantics, ranking, or bridge architecture. |
@@ -119,10 +119,10 @@ are preserved in the pre-prune receipt.
 Keep these compact anchors active:
 
 - Wave A landed [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md),
-  [AOA-T-0036](../../../../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md),
-  [AOA-T-0037](../../../../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md),
-  [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md),
-  and [AOA-T-0039](../../../../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md);
+  [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md),
+  [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md),
+  [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md),
+  and [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md);
   keep local lifecycle distinct from profile, rendered-truth, preflight, and
   additive-benchmark contracts.
 - Wave B landed [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md),

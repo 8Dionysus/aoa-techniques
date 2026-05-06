@@ -606,8 +606,15 @@ It accepts `execution/runtime-truth-lifecycle` as a bounded shelf over
 `AOA-T-0037` and `AOA-T-0039` as `kind: validation`, all four as promoted,
 and their current `domain` truth.
 
-The next reform slice should run the twenty-third migration pilot before
-moving those bundles into `techniques/execution/runtime-truth-lifecycle/`.
+The twenty-third pilot migration moves exactly those four bundles into
+`techniques/execution/runtime-truth-lifecycle/` without changing `domain`,
+`kind`, status, relations, evidence, support files, or `tree_path`
+frontmatter. The root receipt is
+[`legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md`](../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md).
+
+The next reform slice should review the landed
+`execution/runtime-truth-lifecycle` shelf before choosing the twenty-fourth
+shelf.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

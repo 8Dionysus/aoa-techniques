@@ -31,8 +31,8 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "agent-workflows" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "`one-command-service-lifecycle`",
-            "`render-truth-before-startup`",
+            "`workspace-root-ingress-and-mutation-gate`",
+            "`approval-sensitivity-check`",
             "explicit dry-run",
             "small reversible slice",
         ),
@@ -49,11 +49,23 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "evaluation" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "`contextual-host-doctor`",
-            "`baseline-first-additive-profile-benchmarks`",
+            "No active leaf bundles currently live directly here",
             "`techniques/proof/`",
+            "`techniques/execution/`",
             "proof posture",
             "`aoa-evals`",
+        ),
+    ),
+    AgentsDocSpec(
+        Path("techniques") / "execution" / "AGENTS.md",
+        (
+            "# AGENTS.md",
+            "`ready-work-graphs/`",
+            "`intent-chain/`",
+            "`agent-workflows-core/`",
+            "`runtime-truth-lifecycle/`",
+            "hidden orchestration",
+            "benchmark-suite governance",
         ),
     ),
     AgentsDocSpec(

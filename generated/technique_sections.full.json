@@ -2894,7 +2894,7 @@
     {
       "id": "AOA-T-0036",
       "name": "render-truth-before-startup",
-      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -2976,7 +2976,7 @@
     {
       "id": "AOA-T-0037",
       "name": "contextual-host-doctor",
-      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -3058,7 +3058,7 @@
     {
       "id": "AOA-T-0038",
       "name": "one-command-service-lifecycle",
-      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -3140,7 +3140,7 @@
     {
       "id": "AOA-T-0039",
       "name": "baseline-first-additive-profile-benchmarks",
-      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",

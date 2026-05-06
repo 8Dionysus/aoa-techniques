@@ -18670,10 +18670,10 @@
     },
     {
       "id": "AOA-T-0036",
-      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/render-truth-before-startup/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -18804,7 +18804,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/render-truth-before-startup/notes/origin-evidence.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -18885,7 +18885,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/render-truth-before-startup/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -19037,10 +19037,10 @@
     },
     {
       "id": "AOA-T-0037",
-      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/evaluation/contextual-host-doctor/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -19171,7 +19171,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/contextual-host-doctor/notes/origin-evidence.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -19252,7 +19252,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/contextual-host-doctor/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -19404,10 +19404,10 @@
     },
     {
       "id": "AOA-T-0038",
-      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/one-command-service-lifecycle/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -19547,7 +19547,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/one-command-service-lifecycle/notes/external-import-review.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/notes/external-import-review.md",
           "kind": "external_review",
           "title": "External Import Review",
           "note_shape": "typed_sections",
@@ -19710,7 +19710,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/one-command-service-lifecycle/notes/external-origin.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/notes/external-origin.md",
           "kind": "external_origin",
           "title": "External Origin Note",
           "note_shape": "typed_sections",
@@ -19808,7 +19808,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/one-command-service-lifecycle/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -19949,10 +19949,10 @@
     },
     {
       "id": "AOA-T-0039",
-      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/notes/canonical-readiness.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -20083,7 +20083,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/notes/origin-evidence.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -20173,7 +20173,7 @@
           ]
         },
         {
-          "note_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/notes/second-context-adaptation.md",
+          "note_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

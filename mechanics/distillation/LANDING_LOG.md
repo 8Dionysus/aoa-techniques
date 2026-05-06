@@ -3,6 +3,41 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Runtime-truth-lifecycle tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`
+  into `techniques/execution/runtime-truth-lifecycle/`
+- kept `AOA-T-0036` and `AOA-T-0038` as `domain: agent-workflows`
+- kept `AOA-T-0037` and `AOA-T-0039` as `domain: evaluation`
+- kept `AOA-T-0036` as `kind: composition`, `AOA-T-0038` as `kind:
+  workflow`, and `AOA-T-0037` plus `AOA-T-0039` as `kind: validation`
+- added
+  [2026-05-05-runtime-truth-lifecycle-tree-pilot](../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
+  as the root legacy receipt for the twenty-third migration
+- updated the execution route card to name `runtime-truth-lifecycle/` as local
+  runtime truth, lifecycle, readiness, and baseline-first comparison
+  discipline rather than runtime owner law
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/validate_nested_agents.py
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no frontmatter changed
+- no bundle was promoted to canonical
+- no `abyss-stack` runtime law, deployment ownership, monitoring platform
+  doctrine, host policy, smoke-test law, benchmark-suite governance, product
+  scoring, `aoa-evals` verdict authority, or neighboring owner/governance/tool
+  shelf moved
+
 ## 2026-05-05 - Runtime-truth-lifecycle direct-read migration review
 
 Changed:

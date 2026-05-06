@@ -106,7 +106,7 @@ See also:
 - Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
 - Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 
-### [AOA-T-0036](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
+### [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
 
 - Summary: Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.
 - Intent: Expose the actual composed runtime truth before startup so operators can review the effective...
@@ -117,9 +117,9 @@ See also:
 - Core contract: the render step shows the actual composed runtime view rather than only declared module, profile, or preset intent...
 - Main risk: teams inspect declared profiles and skip the actual rendered view even when overlays can change the final result.
 - Validate by: the selected runtime can be rendered before startup; the effective service list comes from the actual composed runtime view...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md)
 
-### [AOA-T-0038](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
+### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
 
 - Summary: Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.
 - Intent: Keep a bounded local service stack startable and stoppable through one explicit lifecycle entrypoint...
@@ -130,7 +130,7 @@ See also:
 - Core contract: one explicit operator-facing entrypoint owns local stack startup; prerequisite and build checks may sit inside that entrypoint, but...
 - Main risk: the supposed one-command entrypoint still depends on hidden manual prep in other terminals.
 - Validate by: one explicit operator-facing entrypoint starts the bounded local stack; prerequisite or build checks fail early or are reported clearly...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md)
 
 ### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
 
@@ -1241,7 +1241,7 @@ See also:
 - Validate by: the CI output is readable without inspecting the composition engine; source coverage is visible and bounded; token-estimate drift is...
 - Source: [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
 
-### [AOA-T-0037](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
+### [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
 
 - Summary: Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.
 - Intent: Expose whether the current host is shaped enough for the selected runtime before startup...
@@ -1252,9 +1252,9 @@ See also:
 - Core contract: the doctor verdict is selector-aware rather than one global readiness score; the same selection inputs used by nearby...
 - Main risk: a warning becomes ambient and stops influencing real preflight decisions.
 - Validate by: the readiness verdict changes when a different runtime selection changes what should matter; item-level ok, warn, and fail signals...
-- Source: [TECHNIQUE.md](../techniques/evaluation/contextual-host-doctor/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md)
 
-### [AOA-T-0039](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
+### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
 
 - Summary: Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.
 - Intent: Keep comparison discipline honest by running one stable baseline profile first, then comparing additive...
@@ -1265,7 +1265,7 @@ See also:
 - Core contract: the baseline profile runs before any additive comparison; additive profiles reuse the same measurement surface and artifact shape...
 - Main risk: the additive path quietly becomes the new default path.
 - Validate by: the baseline run happens before any additive run; the additive run uses the same measurement surface and artifact shape...
-- Source: [TECHNIQUE.md](../techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md)
 
 ### [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
 

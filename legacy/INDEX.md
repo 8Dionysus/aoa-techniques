@@ -3,7 +3,7 @@
 This index maps root-level legacy material to the active route or owner route
 that now carries the work.
 
-Current root legacy inventory: twenty-two receipts.
+Current root legacy inventory: twenty-three receipts.
 
 ## Inventory
 
@@ -31,6 +31,7 @@ Current root legacy inventory: twenty-two receipts.
 | `legacy/receipts/2026-05-05-decision-routing-tree-pilot.md` | `receipt` | `techniques/governance/decision-routing/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Twentieth accepted technique tree path migration receipt for `AOA-T-0076`, `AOA-T-0078`, and `AOA-T-0079`. |
 | `legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md` | `receipt` | `techniques/governance/approval-evidence/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Twenty-first accepted technique tree path migration receipt for `AOA-T-0068` and `AOA-T-0069`. |
 | `legacy/receipts/2026-05-05-review-evidence-tree-pilot.md` | `receipt` | `techniques/proof/review-evidence/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Twenty-second accepted technique tree path migration receipt for `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106`. |
+| `legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md` | `receipt` | `techniques/execution/runtime-truth-lifecycle/` plus `docs/TECHNIQUE_TREE_CONTRACT.md` | `landed` | Twenty-third accepted technique tree path migration receipt for `AOA-T-0036`, `AOA-T-0038`, `AOA-T-0037`, and `AOA-T-0039`. |
 
 ## Accounting Rule
 

@@ -514,10 +514,10 @@
     },
     {
       "id": "AOA-T-0036",
-      "technique_path": "techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/render-truth-before-startup/examples/minimal-render-truth-before-startup.md",
+          "example_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/examples/minimal-render-truth-before-startup.md",
           "title": "Minimal Render Truth Before Startup",
           "body_markdown": "Use a layered runtime selection, but render what the engine actually resolves before launch.\n\n```bash\nstack-profile-modules --profile app --profile ops --paths\nstack-profile-endpoints --profile app --profile ops\nstack-render-services --profile app --profile ops\nstack-render-config --profile app --profile ops --write /tmp/app-ops.rendered.yml\n```\n\nReview questions before startup:\n\n- which services are actually present in the composed runtime view\n- did the additive profile introduce the services you expected\n- did any overlay or merged setting change the final result in a surprising way\n- should the local rendered config file be deleted after inspection because it may contain sensitive values\n\nOnly after that review step:\n\n```bash\nstack-up --profile app --profile ops\n```"
         }
@@ -525,10 +525,10 @@
     },
     {
       "id": "AOA-T-0037",
-      "technique_path": "techniques/evaluation/contextual-host-doctor/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/evaluation/contextual-host-doctor/examples/minimal-contextual-host-doctor.md",
+          "example_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/examples/minimal-contextual-host-doctor.md",
           "title": "Minimal Contextual Host Doctor",
           "body_markdown": "Run a pre-start readiness check against the selected runtime rather than against one generic host checklist.\n\n```bash\nstack-doctor --preset accel-full\n```\n\nExample result:\n\n```text\nok   platform linux\nok   cmd  container-engine\nok   compose backend available\nwarn gpu device missing for selected accelerated runtime\nwarn internal-only layers selected; run deeper internal checks after startup\ndoctor check passed\nwarnings: 2\n```\n\nThe important behavior is contextual:\n\n- the GPU-device warning matters because the selected runtime includes acceleration\n- the internal-only reminder matters because the selected runtime includes layers that need deeper post-start checks\n- a different preset without acceleration should not raise the same hardware warning\n- this verdict helps decide whether startup is sensible, but it does not replace render review or smoke checks"
         }
@@ -536,10 +536,10 @@
     },
     {
       "id": "AOA-T-0038",
-      "technique_path": "techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md",
+          "example_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md",
           "title": "Minimal One-Command Service Lifecycle",
           "body_markdown": "Start a bounded local stack through one visible lifecycle entrypoint instead of asking the operator to coordinate several terminals.\n\n```bash\ndev-stack start --preset local-dev\n```\n\nExample result:\n\n```text\nchecking prerequisites...\nok   runtime engine available\nok   selected preset local-dev\nok   context service built\nstarting bounded local stack...\nrunning:\n- core service\n- context service\nstop with Ctrl+C\n```\n\nAfter the operator interrupts the run:\n\n```text\nshutting down bounded local stack...\nok   core service stopped\nok   context service stopped\nshutdown complete\n```\n\nThe important behavior is lifecycle ownership:\n\n- one visible entrypoint owns startup for the bounded local stack\n- the operator does not need a second terminal just to launch dependent services\n- startup output says what is now running and how to stop it\n- shutdown is part of the same contract, not a separate cleanup ritual\n- render review and readiness checks should already have happened through sibling techniques before this lifecycle step starts"
         }
@@ -547,10 +547,10 @@
     },
     {
       "id": "AOA-T-0039",
-      "technique_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/evaluation/baseline-first-additive-profile-benchmarks/examples/minimal-baseline-first-additive-profile-benchmarks.md",
+          "example_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/examples/minimal-baseline-first-additive-profile-benchmarks.md",
           "title": "Minimal Baseline First Additive Profile Benchmarks",
           "body_markdown": "Run one stable baseline profile first, then run the additive profile against the same summary shape.\n\n```bash\nbench-suite --profile baseline_first --summary-json runs/baseline/summary.json\nbench-suite --profile additive --summary-json runs/additive/summary.json\n```\n\nExample comparison:\n\n```text\nbaseline:  profile=baseline_first  surface=local  status=ok\nadditive:  profile=additive        surface=local  status=ok\nshape:     summary schema matched for both runs\ndelta:     additive profile remained comparable on the same measurement surface\n```\n\nThe important behavior is the ordering and the shape:\n\n- baseline first\n- same measurement surface\n- same artifact shape\n- additive setup stays separate from the default path\n- the report stays about comparison, not about ranking"
         }

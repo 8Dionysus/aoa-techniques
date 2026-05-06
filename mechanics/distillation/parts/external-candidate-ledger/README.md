@@ -125,7 +125,7 @@ Nearest overlap watch:
 The old wave notes are no longer active execution instructions, but their
 landed anchors remain useful for route memory:
 
-- Wave A external anchor: [AOA-T-0038](../../../../techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md)
+- Wave A external anchor: [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md)
 - Wave B external anchor: [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md)
 - Wave C external anchor: [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md)
 - adjacent landed imports from the earlier external backlog include
