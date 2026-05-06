@@ -290,6 +290,9 @@ The format is intentionally simple and human-first.
 - accepted the landed `promotion-boundary` pilot review and selected
   `governance/practice-adoption-lifecycle` for direct-read review without
   moving a twenty-seventh shelf yet
+- accepted the `practice-adoption-lifecycle` direct-read migration review over
+  `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` as the twenty-seventh tree
+  pilot while keeping the review itself non-mutating
 
 ### Validation
 

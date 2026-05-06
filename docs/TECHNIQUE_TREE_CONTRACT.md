@@ -709,5 +709,13 @@ It validates `promotion-boundary` as the second landed split shelf and chooses
 `governance/practice-adoption-lifecycle` for direct-read review before any
 twenty-seventh movement.
 
+The practice-adoption-lifecycle direct-read review is
+[Practice-Adoption-Lifecycle Direct-Read Migration Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/practice-adoption-lifecycle-direct-read-migration-review.md).
+It accepts Candidate C as the twenty-seventh migration pilot over
+`AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104`, while preserving current
+frontmatter and keeping the review non-mutating. The next migration should
+move exactly those three bundles into
+`techniques/governance/practice-adoption-lifecycle/`.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

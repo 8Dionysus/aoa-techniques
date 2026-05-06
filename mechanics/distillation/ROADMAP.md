@@ -459,7 +459,12 @@
    `promotion-boundary` pilot review is now complete as `pilot-validated`; it
    confirms the second split shelf held after migration and chooses
    `governance/practice-adoption-lifecycle` for direct-read review before any
-   twenty-seventh movement.
+   twenty-seventh movement. The practice-adoption-lifecycle direct-read review
+   is now landed as `accepted-for-twenty-seventh-migration-pilot`; it accepts
+   exactly `AOA-T-0101`, `AOA-T-0103`, and `AOA-T-0104` while keeping the
+   review non-mutating and preserving their current frontmatter. The next
+   bounded step is to migrate those three bundles into
+   `techniques/governance/practice-adoption-lifecycle/`.
 
 ## Hold line
 
