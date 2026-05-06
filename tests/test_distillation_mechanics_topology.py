@@ -6905,6 +6905,143 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
 
+    def test_landed_owner_truth_closeout_pilot_review_selects_automation_governance(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-owner-truth-closeout-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Owner-Truth-Closeout Pilot Review", review)
+        self.assertIn("fifth successful shelf under the `proof` trunk", review)
+        self.assertIn("Choose `governance/automation-governance`", review)
+        self.assertIn("direct-read split review", review)
+        self.assertIn("Do not move `governance/automation-governance`", review)
+        self.assertIn("split-review-needed", review)
+        self.assertIn("skill acceptance", review)
+        self.assertIn(
+            "Run a direct-read split review for `governance/automation-governance`",
+            review,
+        )
+        self.assertIn(
+            "landed-owner-truth-closeout-pilot-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "landed owner-truth-closeout pilot review: landed",
+            ingress,
+        )
+        self.assertIn("governance/automation-governance", ingress)
+        self.assertIn("Landed owner-truth-closeout pilot review", landing_log)
+        self.assertIn(
+            "landed `owner-truth-closeout` pilot\n   review is now complete",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Run the `governance/automation-governance` direct-read split review",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Owner-Truth-Closeout Pilot Review",
+            tree_contract,
+        )
+        self.assertIn(
+            "nine\nprojected automation-governance leaves",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the landed `owner-truth-closeout` pilot review",
+            changelog,
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0086",
+                "techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md",
+                "techniques/governance/automation-governance/automation-fit-matrix/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0087",
+                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/governance/automation-governance/human-loop-to-seed-lift/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0088",
+                "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
+                "techniques/governance/automation-governance/approval-sensitivity-check/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0089",
+                "techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md",
+                "techniques/governance/automation-governance/quest-unit-promotion-review/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0090",
+                "techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md",
+                "techniques/governance/automation-governance/nearest-wrong-target-rejection/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0101",
+                "techniques/agent-workflows/local-pattern-adoption-gate/TECHNIQUE.md",
+                "techniques/governance/automation-governance/local-pattern-adoption-gate/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0102",
+                "techniques/agent-workflows/skill-proposal-handoff-packet/TECHNIQUE.md",
+                "techniques/governance/automation-governance/skill-proposal-handoff-packet/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0103",
+                "techniques/agent-workflows/adopted-practice-retention-review/TECHNIQUE.md",
+                "techniques/governance/automation-governance/adopted-practice-retention-review/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0104",
+                "techniques/agent-workflows/superseded-practice-obsolescence-route/TECHNIQUE.md",
+                "techniques/governance/automation-governance/superseded-practice-obsolescence-route/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
+
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
             REPO_ROOT

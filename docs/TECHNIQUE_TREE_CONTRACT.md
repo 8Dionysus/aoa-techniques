@@ -636,8 +636,13 @@ status, relations, evidence, support files, or `tree_path` frontmatter. The
 root receipt is
 [`legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md`](../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md).
 
-The next reform slice should review the landed `proof/owner-truth-closeout`
-pilot before choosing any twenty-fifth shelf movement.
+The landed
+[Owner-Truth-Closeout Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-owner-truth-closeout-pilot-review.md)
+validates the shelf as the fifth proof trunk shelf and chooses
+`governance/automation-governance` for direct-read split review before any
+twenty-fifth shelf movement. That next review must decide whether the nine
+projected automation-governance leaves can move as one shelf or must split
+before any path migration.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

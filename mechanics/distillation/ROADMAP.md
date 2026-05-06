@@ -412,7 +412,12 @@
    route-card accounting, root legacy receipt accounting, link repair,
    generated rebuilds, and release-check validation in the same wave. The next
    bounded step is to review the landed `owner-truth-closeout` pilot before
-   choosing any twenty-fifth shelf.
+   choosing any twenty-fifth shelf. The landed `owner-truth-closeout` pilot
+   review is now complete as `pilot-validated`; it validates the fifth proof
+   trunk shelf, keeps ingress guard, audit closeout, remote owner endcap,
+   generated publish validation, and mirror parity as distinct owner-truth
+   atoms, and chooses `governance/automation-governance` for direct-read split
+   review before any twenty-fifth movement.
 
 ## Hold line
 
