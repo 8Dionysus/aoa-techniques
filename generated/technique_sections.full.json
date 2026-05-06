@@ -5518,7 +5518,7 @@
     {
       "id": "AOA-T-0068",
       "name": "fail-closed-evidence-gate",
-      "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5553,7 +5553,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the gate sits directly in front of mutating execution\n- non-allow verdicts block side effects rather than merely warning\n- one evidence artifact survives the verdict for later review\n- explicit allow is required for execution to continue\n- the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics\n- the evidence artifact supports review but does not itself become the whole trace or governance system\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike `approval-bound-durable-jobs`, it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself."
+          "content_markdown": "- the gate sits directly in front of mutating execution\n- non-allow verdicts block side effects rather than merely warning\n- one evidence artifact survives the verdict for later review\n- explicit allow is required for execution to continue\n- the technique stays smaller than human confirmation doctrine, durable-job orchestration, and broad policy-platform semantics\n- the evidence artifact supports review but does not itself become the whole trace or governance system\n\nRelationship to adjacent techniques: unlike [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), this technique does not center a human confirmation seam; it centers an execution-boundary verdict that fails closed unless allow is explicit. Unlike [AOA-T-0045](../../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md), it does not preserve a fuller run artifact with ordered steps and state-delta semantics. Unlike [approval-bound-durable-jobs](../approval-bound-durable-jobs/TECHNIQUE.md), it does not own multi-step pause and resume across longer-running work; it owns the bounded gate at the side-effect boundary itself."
         },
         {
           "key": "risks",
@@ -5593,14 +5593,14 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep [AOA-T-0028](../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) as the human-confirmation sibling rather than widening this bundle into human approval doctrine\n- keep durable multi-step continuation separate rather than absorbing longer-running job orchestration into the gate\n- reopen signed evidence as a separate sibling only if it survives without widening back into a full trace or policy platform"
+          "content_markdown": "- keep [AOA-T-0028](../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) as the human-confirmation sibling rather than widening this bundle into human approval doctrine\n- keep durable multi-step continuation separate rather than absorbing longer-running job orchestration into the gate\n- reopen signed evidence as a separate sibling only if it survives without widening back into a full trace or policy platform"
         }
       ]
     },
     {
       "id": "AOA-T-0069",
       "name": "approval-bound-durable-jobs",
-      "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+      "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -5635,7 +5635,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the job has a stable identity across pause and resume\n- checkpoint or status state survives the approval seam\n- continuation does not happen until approval is explicit\n- resume depends on durable state rather than on hidden memory or silent background continuity\n- the technique stays smaller than scheduler platforms, queue products, and broad orchestration doctrine\n- the durable job surface remains reviewable enough that another reader can tell whether it is running, paused, waiting for approval, or completed\n\nRelationship to adjacent techniques: unlike `fail-closed-evidence-gate`, this technique does not own the immediate execution verdict at one side-effect boundary; it owns longer-running continuity across an approval seam. Unlike [AOA-T-0062](../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md), it does not divide work into narrative episodes with continue, stop, or escalate decisions; it keeps one durable job identity stable across pause and resume. Unlike [AOA-T-0058](../../continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record receipt of a handoff packet; it preserves durable work state until approval allows continuation."
+          "content_markdown": "- the job has a stable identity across pause and resume\n- checkpoint or status state survives the approval seam\n- continuation does not happen until approval is explicit\n- resume depends on durable state rather than on hidden memory or silent background continuity\n- the technique stays smaller than scheduler platforms, queue products, and broad orchestration doctrine\n- the durable job surface remains reviewable enough that another reader can tell whether it is running, paused, waiting for approval, or completed\n\nRelationship to adjacent techniques: unlike [fail-closed-evidence-gate](../fail-closed-evidence-gate/TECHNIQUE.md), this technique does not own the immediate execution verdict at one side-effect boundary; it owns longer-running continuity across an approval seam. Unlike [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md), it does not divide work into narrative episodes with continue, stop, or escalate decisions; it keeps one durable job identity stable across pause and resume. Unlike [AOA-T-0058](../../../continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md), it does not record receipt of a handoff packet; it preserves durable work state until approval allows continuation."
         },
         {
           "key": "risks",
@@ -5675,7 +5675,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep `fail-closed-evidence-gate` as the immediate boundary-gate sibling rather than widening this bundle back into one-shot execution verdicts\n- keep [AOA-T-0062](../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) as the episode-structuring sibling rather than folding all continuation doctrine into durable jobs\n- reopen signed or portable evidence as a separate sibling only if it survives without widening into broad orchestration or governance systems"
+          "content_markdown": "- keep [fail-closed-evidence-gate](../fail-closed-evidence-gate/TECHNIQUE.md) as the immediate boundary-gate sibling rather than widening this bundle back into one-shot execution verdicts\n- keep [AOA-T-0062](../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) as the episode-structuring sibling rather than folding all continuation doctrine into durable jobs\n- reopen signed or portable evidence as a separate sibling only if it survives without widening into broad orchestration or governance systems"
         }
       ]
     },

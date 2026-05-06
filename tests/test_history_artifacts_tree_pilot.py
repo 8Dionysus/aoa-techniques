@@ -76,7 +76,7 @@ LIVE_LINK_SURFACES = (
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/external-candidate-ledger/README.md",
     "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
-    "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+    "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
     "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
     "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
     "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",

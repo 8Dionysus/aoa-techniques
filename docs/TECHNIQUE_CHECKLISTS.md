@@ -154,17 +154,17 @@ See also:
 |---|---|---|---|---|
 | mcp-gateway-proxy checklist | `absent` | `8` | `techniques/agent-workflows/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md) |
 
-### [AOA-T-0068](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
+### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| fail-closed-evidence-gate checklist | `absent` | `8` | `techniques/agent-workflows/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) |
+| fail-closed-evidence-gate checklist | `absent` | `8` | `techniques/governance/approval-evidence/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
 
-### [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
+### [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| approval-bound-durable-jobs checklist | `absent` | `8` | `techniques/agent-workflows/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) |
+| approval-bound-durable-jobs checklist | `absent` | `8` | `techniques/governance/approval-evidence/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) |
 
 ### [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
 

@@ -63,5 +63,5 @@ Relevant local docs and technique surfaces:
 - [bounded-relation-lift-for-kag](../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
 - [repo-doc-surface-lift](../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
 - [contract-test-design](../../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md)
-- [fail-closed-evidence-gate](../../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md)
+- [fail-closed-evidence-gate](../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md)
 - [audit-to-closeout-proof-loop](../../techniques/agent-workflows/audit-to-closeout-proof-loop/TECHNIQUE.md)

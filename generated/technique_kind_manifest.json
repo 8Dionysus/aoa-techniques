@@ -190,7 +190,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.",
-          "technique_path": "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md"
+          "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0090",
@@ -923,7 +923,7 @@
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
-          "technique_path": "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md"
+          "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0077",

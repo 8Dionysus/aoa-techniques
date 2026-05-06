@@ -314,7 +314,7 @@ See also:
 - Validate by: more than one upstream server or tool surface can be fronted through one gateway seam; callers can inspect proxied...
 - Source: [TECHNIQUE.md](../techniques/agent-workflows/mcp-gateway-proxy/TECHNIQUE.md)
 
-### [AOA-T-0068](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
+### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
 
 - Summary: Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.
 - Intent: Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit...
@@ -325,9 +325,9 @@ See also:
 - Core contract: the gate sits directly in front of mutating execution; non-allow verdicts block side effects rather than merely warning.
 - Main risk: the gate says non-allow but side effects still happen.
 - Validate by: the gate sits before a real mutating boundary; non-allow outcomes actually block side effects; one evidence artifact records the...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md)
 
-### [AOA-T-0069](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
+### [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
 
 - Summary: Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.
 - Intent: Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume...
@@ -338,7 +338,7 @@ See also:
 - Core contract: the job has a stable identity across pause and resume; checkpoint or status state survives the approval seam.
 - Main risk: job state is not durable enough to support safe resume.
 - Validate by: a stable job identity survives across pause and resume; checkpoint or status state remains inspectable at the approval seam...
-- Source: [TECHNIQUE.md](../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md)
 
 ### [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
 

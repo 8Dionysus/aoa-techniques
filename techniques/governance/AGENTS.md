@@ -18,6 +18,9 @@ Accepted pilot shelves:
 
 - `decision-routing/`: keeps owner placement, branch choices, and route-risk
   posture visible as local decision support before action
+- `approval-evidence/`: keeps approval-shaped boundary evidence visible before
+  mutation or continuation, while preserving the difference between one
+  fail-closed gate and one durable approval seam
 
 ## Domain rules
 
@@ -30,7 +33,8 @@ Keep the governance object explicit:
 
 Do not turn a governance technique into AoA constitutional authority,
 `aoa-routing` ownership, role contract law, runtime dispatch, approval policy,
-playbook design, or hidden automation governance.
+playbook design, security framework authority, scheduler doctrine, queue
+ownership, broad orchestration governance, or hidden automation governance.
 
 ## Boundary
 

@@ -186,6 +186,9 @@ permission slip to remap techniques automatically.
 - approval-evidence direct-read review: landed as
   `accepted-for-twenty-first-migration-pilot`, with two boundary-evidence
   bundles accepted and no path movement yet
+- approval-evidence migration: landed, with `AOA-T-0068` and `AOA-T-0069`
+  moved into `techniques/governance/approval-evidence/` and frontmatter
+  preserved
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -264,6 +267,7 @@ permission slip to remap techniques automatically.
 | [Decision-Routing Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-decision-routing-tree-pilot.md) | preserves the twentieth accepted path migration into `techniques/governance/decision-routing/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, AoA constitutional authority, `aoa-routing` ownership, role contract law, runtime dispatch, approval policy, playbook design, hidden automation governance, risk scoring doctrine, context-map doctrine, neighboring boundary-watch shelves, or all remaining `agent-workflows` leaves |
 | [Landed Decision-Routing Pilot Review](reviews/landed-decision-routing-pilot-review.md) | confirms the twentieth migrated shelf stayed bounded as the first governance trunk shelf and chooses `governance/approval-evidence` for direct-read review | movement of `governance/approval-evidence`, `tree_path` frontmatter, frontmatter remap, canonical promotion, security framework authority, approval policy, runtime job-runner ownership, scheduler doctrine, trust-platform semantics, broad orchestration governance, or neighboring proof/runtime shelves |
 | [Approval-Evidence Direct-Read Migration Review](reviews/approval-evidence-direct-read-migration-review.md) | reads `AOA-T-0068` and `AOA-T-0069` directly and accepts the shelf as the twenty-first migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, approval policy, security framework authority, trust-platform semantics, runtime job-runner ownership, scheduler doctrine, queue-product ownership, broad orchestration governance, neighboring proof/runtime shelves, or all remaining `agent-workflows` leaves |
+| [Approval-Evidence Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md) | preserves the twenty-first accepted path migration into `techniques/governance/approval-evidence/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, approval policy, security framework authority, trust-platform semantics, runtime job-runner ownership, scheduler doctrine, queue-product ownership, broad orchestration governance, neighboring proof/runtime shelves, or all remaining `agent-workflows` leaves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -545,3 +549,8 @@ The landed `decision-routing` pilot review is now complete as
 The `approval-evidence` direct-read review is now landed as
 `accepted-for-twenty-first-migration-pilot`, accepting exactly `AOA-T-0068`
 and `AOA-T-0069` without moving files.
+
+The `approval-evidence` migration is now landed. `AOA-T-0068` and
+`AOA-T-0069` live under `techniques/governance/approval-evidence/` with
+support files moved, root legacy receipt added, generated surfaces rebuilt,
+and frontmatter unchanged.

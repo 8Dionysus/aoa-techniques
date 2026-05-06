@@ -13,7 +13,7 @@ It does not create a canonical bundle or authorize import by itself.
 ## Overlap watch
 
 - [AOA-T-0045](../../../techniques/history/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
-- [AOA-T-0068](../../../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md)
+- [AOA-T-0068](../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md)
 
 ## Boundary statement
 
@@ -37,7 +37,7 @@ Even that smaller target is not stable enough yet, because the donor still prese
 
 - pack, callpack, and broader evidence-container doctrine
 - PKI, trust, and verification platform breadth
-- execution-gate semantics already bounded by [AOA-T-0068](../../../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md)
+- execution-gate semantics already bounded by [AOA-T-0068](../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md)
 - scheduler and durable-job semantics
 - speculative claims that signed traces already exist as one sharply bounded public artifact contract
 

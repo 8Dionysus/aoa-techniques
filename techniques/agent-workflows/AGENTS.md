@@ -7,9 +7,8 @@ Guidance for coding agents and humans working under `techniques/agent-workflows/
 This domain stores reusable workflow techniques for bounded execution chains.
 
 Representative bundles here include `render-truth-before-startup`,
-`one-command-service-lifecycle`, `fail-closed-evidence-gate`,
-`workspace-root-ingress-and-mutation-gate`, and
-`audit-to-closeout-proof-loop`.
+`one-command-service-lifecycle`, `workspace-root-ingress-and-mutation-gate`,
+`audit-to-closeout-proof-loop`, and `approval-sensitivity-check`.
 
 ## Domain rules
 

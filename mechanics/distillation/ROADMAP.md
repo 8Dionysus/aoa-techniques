@@ -343,9 +343,12 @@
    trust-platform semantics, runtime job-runner ownership, scheduler doctrine,
    queue-product ownership, broad orchestration governance, neighboring
    proof/runtime shelves, and all remaining `agent-workflows` leaves outside
-   the shelf. The next bounded step is to migrate those two bundles only after
-   path movement, support-file carry, governance route-card update, receipt,
-   link-repair, generated surface, and validation work move together.
+   the shelf. The twenty-first pilot migration is now landed exactly for
+   those two bundles under `techniques/governance/approval-evidence/`, with
+   support files moved, governance route card updated, root legacy receipt
+   accounting, link repair, generated rebuilds, and release-check validation
+   in the same wave. The next bounded step is to review the landed
+   `approval-evidence` pilot before choosing any twenty-second shelf.
 
 ## Hold line
 

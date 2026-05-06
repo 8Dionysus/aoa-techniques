@@ -50,10 +50,10 @@ slice should run a direct-read review for `governance/approval-evidence`.
 - [Technique family scout rows for `decision-routing` and `approval-evidence`](../../../../../reports/technique_family_scout.md)
 - [Technique topology scout rows for `decision-routing` and `approval-evidence`](../../../../../reports/technique_topology_scout.md)
 - [Technique tree projection rows for `decision-routing` and `approval-evidence`](../../../../../reports/technique_tree_projection.md)
-- [AOA-T-0068 fail-closed-evidence-gate](../../../../../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md)
-- [AOA-T-0068 canonical readiness](../../../../../techniques/agent-workflows/fail-closed-evidence-gate/notes/canonical-readiness.md)
-- [AOA-T-0069 approval-bound-durable-jobs](../../../../../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md)
-- [AOA-T-0069 canonical readiness](../../../../../techniques/agent-workflows/approval-bound-durable-jobs/notes/canonical-readiness.md)
+- [AOA-T-0068 fail-closed-evidence-gate](../../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md)
+- [AOA-T-0068 canonical readiness](../../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/canonical-readiness.md)
+- [AOA-T-0069 approval-bound-durable-jobs](../../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md)
+- [AOA-T-0069 canonical readiness](../../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/canonical-readiness.md)
 
 ## Landed Shape Read
 

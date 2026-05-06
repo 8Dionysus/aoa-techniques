@@ -22,8 +22,8 @@ It does not create a canonical bundle or authorize import by itself.
 |---|---|---|---|
 | `transcript-replay-artifact` | [AOA-T-0066](../../../techniques/history/transcript-replay-artifact/TECHNIQUE.md) | replayable post-capture artifact over existing saved sessions | session capture, transcript packaging, witness export, and hosted replay-platform doctrine |
 | `transcript-linked-code-lineage` | [AOA-T-0067](../../../techniques/history/transcript-linked-code-lineage/TECHNIQUE.md) | bounded code-to-evidence link from code history back to saved session artifacts | generic repo analytics, scorecards, hosted search, and retrieval-product doctrine |
-| `fail-closed-evidence-gate` | [AOA-T-0068](../../../techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md) | fail-closed execution-boundary gate with explicit evidence output | human confirmation doctrine, broad security constitutions, and total policy-platform semantics |
-| `approval-bound-durable-jobs` | [AOA-T-0069](../../../techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md) | durable jobs that pause and resume across one explicit approval seam | full orchestration platform, scheduler doctrine, and generic automation stacks |
+| `fail-closed-evidence-gate` | [AOA-T-0068](../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | fail-closed execution-boundary gate with explicit evidence output | human confirmation doctrine, broad security constitutions, and total policy-platform semantics |
+| `approval-bound-durable-jobs` | [AOA-T-0069](../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | durable jobs that pause and resume across one explicit approval seam | full orchestration platform, scheduler doctrine, and generic automation stacks |
 
 No remaining staged landing candidates in Wave 1C.
 
