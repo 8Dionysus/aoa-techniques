@@ -481,9 +481,10 @@
    migration is now landed exactly for that one bundle under
    `techniques/tool-use/tool-gateway/mcp-gateway-proxy/`, with the `tool-use`
    route card, root legacy receipt accounting, active link repair, generated
-   rebuilds, and unchanged frontmatter. The next bounded step is to review the
-   landed `tool-use/tool-gateway` pilot before final consolidation or choosing
-   the next reform slice.
+   rebuilds, and unchanged frontmatter. The landed `tool-gateway` pilot
+   review is now complete as `pilot-validated`; it confirms the singleton
+   shelf held after migration and chooses whole-tree closeout review before
+   route-card consolidation or another reform slice.
 
 ## Hold line
 

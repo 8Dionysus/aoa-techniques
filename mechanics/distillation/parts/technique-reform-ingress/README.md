@@ -262,6 +262,8 @@ permission slip to remap techniques automatically.
   accepted for `AOA-T-0065` and no path movement yet
 - tool-gateway migration: landed exactly `AOA-T-0065` under
   `techniques/tool-use/tool-gateway/` without frontmatter changes
+- landed tool-gateway pilot review: landed as `pilot-validated`, with the
+  singleton resolved and whole-tree closeout review chosen next
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -363,6 +365,7 @@ permission slip to remap techniques automatically.
 | [Landed Practice-Adoption-Lifecycle Pilot Review](reviews/landed-practice-adoption-lifecycle-pilot-review.md) | validates the third split shelf after migration, closes the automation-governance split tail, and routes the singleton `tool-use/tool-gateway` review | path movement, `tool-use/tool-gateway` acceptance, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, Method-growth law, local owner consent, proof authority, memory truth, skill activation, route mutation, runtime change, broad orchestration governance, KAG promotion, or ToS canon |
 | [Tool-Gateway Direct-Read Singleton Review](reviews/tool-gateway-direct-read-singleton-review.md) | reads `AOA-T-0065` directly and accepts `tool-use/tool-gateway` as the twenty-eighth singleton migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
 | [Tool-Gateway Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md) | preserves the twenty-eighth accepted path migration into `techniques/tool-use/tool-gateway/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
+| [Landed Tool-Gateway Pilot Review](reviews/landed-tool-gateway-pilot-review.md) | validates the landed singleton shelf and routes whole-tree closeout review | path movement, route-card consolidation, `tree_path` frontmatter, frontmatter remap, canonical promotion, MCP platform ownership, API gateway product doctrine, connector registry authority, tool marketplace curation, capability discovery policy, security-scanner doctrine, trust scoring, local service lifecycle, runtime deployment ownership, skill activation, route mutation, memory truth, KAG promotion, ToS canon, or broad orchestration governance |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -779,5 +782,9 @@ into `techniques/tool-use/tool-gateway/`, preserves frontmatter, records the
 root legacy receipt, creates the `tool-use` route card, repairs active links,
 and rebuilds generated surfaces.
 
-Review the landed `tool-use/tool-gateway` pilot before final consolidation or
-choosing the next reform slice.
+The landed `tool-gateway` pilot review is now complete as `pilot-validated`.
+It confirms the first `tool-use` shelf held after migration, resolves the
+former singleton hold, and chooses whole-tree closeout review before route-card
+consolidation or any next reform slice.
+
+Run the whole-tree closeout review.

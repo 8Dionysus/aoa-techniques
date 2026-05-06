@@ -132,6 +132,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/practice-adoption-lifecycle-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-practice-adoption-lifecycle-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/tool-gateway-direct-read-singleton-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-tool-gateway-pilot-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -8514,6 +8515,78 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertFalse(old_path.exists())
         self.assertTrue(new_path.is_file())
+
+    def test_landed_tool_gateway_pilot_review_routes_whole_tree_closeout(self) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-tool-gateway-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        projection = (
+            REPO_ROOT / "reports" / "technique_tree_projection.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Landed Tool-Gateway Pilot Review", review)
+        self.assertIn("pilot-validated", review)
+        self.assertIn("singleton-resolved", review)
+        self.assertIn("Choose whole-tree closeout review next", review)
+        self.assertIn("landed-tool-gateway-pilot-review", reviews_index)
+        self.assertIn("landed tool-gateway pilot review: landed", ingress)
+        self.assertIn("Run the whole-tree closeout review", ingress)
+        self.assertIn("Landed tool-gateway pilot review", landing_log)
+        self.assertIn("whole-tree closeout review", distillation_roadmap)
+        self.assertIn(
+            "Run the whole-tree closeout review",
+            root_roadmap,
+        )
+        self.assertIn("Landed Tool-Gateway Pilot Review", tree_contract)
+        self.assertIn(
+            "accepted the landed `tool-gateway` pilot review",
+            changelog,
+        )
+        self.assertIn("| `singleton-hold` | `0` |", projection)
+        self.assertTrue(
+            (
+                REPO_ROOT
+                / "techniques"
+                / "tool-use"
+                / "tool-gateway"
+                / "mcp-gateway-proxy"
+                / "TECHNIQUE.md"
+            ).is_file()
+        )
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

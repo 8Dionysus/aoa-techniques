@@ -306,6 +306,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0065` into
   `techniques/tool-use/tool-gateway/` while keeping `domain`, `kind`, ID,
   status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `tool-gateway` pilot review, resolved the singleton
+  shelf after migration, and selected whole-tree closeout review as the next
+  reform step
 
 ### Validation
 

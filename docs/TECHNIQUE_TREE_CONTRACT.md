@@ -753,8 +753,13 @@ The twenty-eighth pilot migration moves exactly `AOA-T-0065` into
 frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md`](../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md).
 
-The next reform slice should review the landed `tool-use/tool-gateway` shelf
-before final consolidation or another discovered tail.
+The landed twenty-eighth pilot review is
+[Landed Tool-Gateway Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-tool-gateway-pilot-review.md).
+It validates the singleton as the first `tool-use` shelf and chooses
+whole-tree closeout review.
+
+The next reform slice should run the whole-tree closeout review before
+route-card consolidation or another discovered tail.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
