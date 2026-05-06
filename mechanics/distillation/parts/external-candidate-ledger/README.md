@@ -41,7 +41,7 @@ checkout.
 The part-local registry keeps the compact ledger machine-checkable without
 turning it into technique canon:
 
-- [config/external_candidate_registry.seed.json](config/external_candidate_registry.seed.json)
+- [config/external_candidate_registry.source.json](config/external_candidate_registry.source.json)
   carries the structured candidate accounting.
 - [generated/external_candidate_registry.min.json](generated/external_candidate_registry.min.json)
   is derived evidence for counts, gates, donors, and the active narrowing lane.

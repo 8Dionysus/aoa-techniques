@@ -35,8 +35,8 @@ The current execution-profile counts remain unchanged:
 | phase | packet | result |
 |---|---|---|
 | pilot | [execution-profile-truth-boundary-pilot](execution-profile-truth-boundary-pilot.md) | calibrated `execution_profile` as scout suitability, not empirical proof |
-| Phase 1A | [execution-profile-small-agent-wave-a-review](execution-profile-small-agent-wave-a-review.md) | reviewed first `small-agent` shelves and established packed-fixture discipline |
-| Phase 1B | [execution-profile-small-agent-wave-b-review](execution-profile-small-agent-wave-b-review.md) | completed remaining `small-agent` rows and carried fixture sketch pressure forward |
+| Phase 1A | [execution-profile-small-agent-core-shelves-review](execution-profile-small-agent-core-shelves-review.md) | reviewed first `small-agent` shelves and established packed-fixture discipline |
+| Phase 1B | [execution-profile-small-agent-remaining-shelves-review](execution-profile-small-agent-remaining-shelves-review.md) | completed remaining `small-agent` rows and carried fixture sketch pressure forward |
 | Phase 2 | [execution-profile-medium-agent-calibration-review](execution-profile-medium-agent-calibration-review.md) | reviewed all medium rows and flagged `AOA-T-0095` as the one profile edge |
 | Phase 3 | [execution-profile-orchestration-boundary-review](execution-profile-orchestration-boundary-review.md) | reviewed all orchestration rows and confirmed the wrapper/authority boundary |
 | Phase 4 | [execution-profile-fixture-sketch-ledger](execution-profile-fixture-sketch-ledger.md) | collected fixture sketches for all `33/33` small-agent rows |

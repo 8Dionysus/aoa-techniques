@@ -561,7 +561,7 @@ See also:
 - Validate by: one reviewed recurring route is named explicitly; each row is evidence-backed or honestly marked unknown; the verdict matches the...
 - Source: [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md)
 
-### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) - human-loop-to-first-landing (`promoted`)
 
 - Summary: Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.
 - Intent: Lift one recurring human loop into the first honest automation-facing landing without skipping the...
@@ -572,7 +572,7 @@ See also:
 - Core contract: the lift chooses the first honest landing; it does not grant live automation authority; schedule hints remain hints...
 - Main risk: the route is forced into a skill when it really wants a scenario seed or defer verdict.
 - Validate by: one recurring reviewed loop is named; the first landing stays smaller than a full implementation; owner-layer and next-artifact posture...
-- Source: [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md)
+- Source: [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md)
 
 ### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
 

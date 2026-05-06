@@ -7,14 +7,14 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 PART_LOCAL_AGON_ARTIFACTS = (
-    "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json",
+    "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json",
     "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
     "mechanics/agon/parts/move-technique-bridge/examples/agon_technique_binding_candidate.example.json",
     "mechanics/agon/parts/move-technique-bridge/schemas/agon-technique-binding-candidate.schema.json",
     "mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py",
     "mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py",
     "mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py",
-    "mechanics/agon/parts/epistemic-technique-candidates/config/agon_epistemic_technique_candidates.seed.json",
+    "mechanics/agon/parts/epistemic-technique-candidates/config/agon_epistemic_technique_candidates.source.json",
     "mechanics/agon/parts/epistemic-technique-candidates/generated/agon_epistemic_technique_candidates.min.json",
     "mechanics/agon/parts/epistemic-technique-candidates/examples/agon_epistemic_technique_candidate.example.json",
     "mechanics/agon/parts/epistemic-technique-candidates/schemas/agon-epistemic-technique-candidate.schema.json",
@@ -29,8 +29,8 @@ PART_LOCAL_AGON_ARTIFACTS = (
 )
 
 ROOT_AGON_ARTIFACTS = (
-    "config/agon_technique_binding_candidates.seed.json",
-    "config/agon_epistemic_technique_candidates.seed.json",
+    "config/agon_technique_binding_candidates.source.json",
+    "config/agon_epistemic_technique_candidates.source.json",
     "generated/agon_technique_binding_candidates.min.json",
     "generated/agon_epistemic_technique_candidates.min.json",
     "examples/agon_technique_binding_candidate.example.json",

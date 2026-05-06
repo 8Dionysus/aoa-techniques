@@ -6,7 +6,7 @@ Date: 2026-05-01
 ## Context
 
 After the active/legacy Agon split, current behavior lived in
-`mechanics/agon/parts/`, but its seeds, generated indexes, schemas, examples,
+`mechanics/agon/parts/`, but its source registries, generated indexes, schemas, examples,
 scripts, tests, and recurrence manifests still lived in root technical
 districts. That preserved old paths but kept the live Agon mechanic split across
 two authority shapes: active part docs in the mechanic package, and technical

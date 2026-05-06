@@ -39,6 +39,6 @@ narrowing lane without re-reading the whole pre-prune receipt. The registry also
 makes the portable technique pressure explicit before any candidate is drafted.
 
 The tradeoff is another maintained artifact: when the ledger changes, the README
-and seed registry must move together, then the generated index must be rebuilt
+and source registry must move together, then the generated index must be rebuilt
 and validated. This is acceptable because it keeps the candidate ledger compact
 while avoiding silent reclassification.

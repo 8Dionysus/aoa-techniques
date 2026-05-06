@@ -6,7 +6,7 @@ from validate_repo import (
     build_topology_scout_markdown,
     build_topology_scout_payload,
     load_topology_axes_registry,
-    load_wave1_kind_overlay,
+    load_kind_overlay,
     read_json,
     write_json_file,
     write_text_file,
@@ -20,9 +20,9 @@ def main() -> int:
 
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
     axis_registry = load_topology_axes_registry(repo_root)
-    wave1_overlay = load_wave1_kind_overlay(repo_root)
+    kind_overlay = load_kind_overlay(repo_root)
 
-    report = build_topology_scout_payload(catalog, axis_registry, wave1_overlay)
+    report = build_topology_scout_payload(catalog, axis_registry, kind_overlay)
     markdown = build_topology_scout_markdown(report)
 
     json_path = reports_dir / "technique_topology_scout.json"

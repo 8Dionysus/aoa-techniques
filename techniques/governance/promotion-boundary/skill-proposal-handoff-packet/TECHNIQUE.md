@@ -131,7 +131,7 @@ Relationship to adjacent techniques: unlike
 [AOA-T-0040](../../../instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), this
 technique does not separate an already-shaped skill from a command wrapper; it
 packages a technique-side proposal before a skill exists. Unlike
-[AOA-T-0087](../../automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the
+[AOA-T-0087](../../automation-readiness/human-loop-to-first-landing/TECHNIQUE.md), it does not choose the
 first honest automation landing from a recurring human loop; it assumes a
 skill proposal is plausible and emits the packet for owner review. Unlike
 [AOA-T-0101](../../practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate

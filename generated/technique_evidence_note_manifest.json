@@ -23754,7 +23754,7 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "donor CLI and storage paths were replaced by markdown seed bundles, landing notes, and the published technique bundle"
+                  "value_markdown": "donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
                 },
                 {
                   "order": 2,
@@ -23818,7 +23818,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -24305,7 +24305,7 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "donor CLI and storage paths were replaced by markdown seed bundles, landing notes, and the published technique bundle"
+                  "value_markdown": "donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
                 },
                 {
                   "order": 2,
@@ -24369,7 +24369,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -24856,7 +24856,7 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "donor daemon, hook, and queue paths were replaced by markdown seed bundles, landing notes, and the published technique bundle"
+                  "value_markdown": "donor daemon, hook, and queue paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
                 },
                 {
                   "order": 2,
@@ -24920,7 +24920,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -25407,7 +25407,7 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "donor daemon, compact job, and synthesis paths were replaced by markdown seed bundles, landing notes, and the published technique bundle"
+                  "value_markdown": "donor daemon, compact job, and synthesis paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
                 },
                 {
                   "order": 2,
@@ -25471,7 +25471,7 @@
                 {
                   "order": 1,
                   "key": "source paths",
-                  "value_markdown": "`incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`"
+                  "value_markdown": "`incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
@@ -42261,10 +42261,10 @@
     },
     {
       "id": "AOA-T-0087",
-      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -42283,7 +42283,7 @@
                 {
                   "order": 2,
                   "key": "name",
-                  "value_markdown": "human-loop-to-seed-lift"
+                  "value_markdown": "human-loop-to-first-landing"
                 }
               ]
             },
@@ -42395,7 +42395,7 @@
           ]
         },
         {
-          "note_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/notes/origin-evidence.md",
+          "note_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -42414,7 +42414,7 @@
                 {
                   "order": 2,
                   "key": "name",
-                  "value_markdown": "human-loop-to-seed-lift"
+                  "value_markdown": "human-loop-to-first-landing"
                 }
               ]
             },
@@ -42476,7 +42476,7 @@
           ]
         },
         {
-          "note_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -42495,7 +42495,7 @@
                 {
                   "order": 2,
                   "key": "name",
-                  "value_markdown": "human-loop-to-seed-lift"
+                  "value_markdown": "human-loop-to-first-landing"
                 }
               ]
             },
@@ -46425,7 +46425,7 @@
                 {
                   "order": 4,
                   "key": "source files",
-                  "value_markdown": "- `README.md`\n- `proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.seed.md`\n- `proposed/abyss-stack/service_degradation_receipt.*.seed.json`\n- `proposed/abyss-stack/repair_safe_closeout_receipt.*.seed.json`\n- `proposed/aoa-playbooks/playbook_stress_lane.*.seed.json`\n- `proposed/aoa-kag/projection_health_receipt.*.seed.json`\n- `proposed/aoa-kag/regrounding_ticket.*.seed.json`\n- `proposed/aoa-evals/runtime_evidence_selection.*.seed.json`"
+                  "value_markdown": "- `README.md`\n- `proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.candidate.md`\n- `proposed/abyss-stack/service_degradation_receipt.*.source.json`\n- `proposed/abyss-stack/repair_safe_closeout_receipt.*.source.json`\n- `proposed/aoa-playbooks/playbook_stress_lane.*.source.json`\n- `proposed/aoa-kag/projection_health_receipt.*.source.json`\n- `proposed/aoa-kag/regrounding_ticket.*.source.json`\n- `proposed/aoa-evals/runtime_evidence_selection.*.source.json`"
                 }
               ]
             },
@@ -48280,7 +48280,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md`"
+                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.source.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/request-evidence-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/request-evidence-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/request-evidence-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/request-evidence-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md`"
                 }
               ]
             },
@@ -48514,7 +48514,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md`"
+                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.source.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/offer-evidence-reference-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md`"
                 }
               ]
             },
@@ -48748,7 +48748,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md`"
+                  "value_markdown": "- `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.source.json`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/challenge-claim-practice.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/challenge-claim-minimal-public-safe.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/challenge-claim-gate-checklist.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/evidence-notes/challenge-claim-gate-evidence-note.md`\n- `mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md`"
                 }
               ]
             },

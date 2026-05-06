@@ -223,7 +223,7 @@ def test_agon_candidate_handoff_shape() -> None:
 def test_builder_rejects_missing_source_candidate() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -236,7 +236,7 @@ def test_builder_rejects_missing_source_candidate() -> None:
 def test_builder_rejects_lane_atomic_status_drift() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -254,7 +254,7 @@ def test_builder_rejects_lane_atomic_status_drift() -> None:
 def test_builder_rejects_missing_gate_card() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -272,7 +272,7 @@ def test_builder_rejects_missing_gate_card() -> None:
 def test_builder_rejects_gate_card_on_hold_lane() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -289,7 +289,7 @@ def test_builder_rejects_gate_card_on_hold_lane() -> None:
 def test_builder_rejects_gate_card_pointing_to_child_artifact() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -311,7 +311,7 @@ def test_builder_rejects_gate_card_pointing_to_child_artifact() -> None:
 def test_builder_rejects_gate_example_without_gate_card() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -325,7 +325,7 @@ def test_builder_rejects_gate_example_without_gate_card() -> None:
 def test_builder_rejects_missing_gate_example() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -341,7 +341,7 @@ def test_builder_rejects_missing_gate_example() -> None:
 def test_builder_rejects_gate_checklist_without_gate_example() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -355,7 +355,7 @@ def test_builder_rejects_gate_checklist_without_gate_example() -> None:
 def test_builder_rejects_missing_gate_checklist() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -371,7 +371,7 @@ def test_builder_rejects_missing_gate_checklist() -> None:
 def test_builder_rejects_gate_evidence_note_without_gate_checklist() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -387,7 +387,7 @@ def test_builder_rejects_gate_evidence_note_without_gate_checklist() -> None:
 def test_builder_rejects_missing_gate_evidence_note() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -405,7 +405,7 @@ def test_builder_rejects_missing_gate_evidence_note() -> None:
 def test_builder_rejects_bundle_readiness_review_without_gate_evidence_note() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -423,7 +423,7 @@ def test_builder_rejects_bundle_readiness_review_without_gate_evidence_note() ->
 def test_builder_rejects_missing_bundle_readiness_review() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -443,7 +443,7 @@ def test_builder_rejects_missing_bundle_readiness_review() -> None:
 def test_builder_rejects_technique_bundle_without_bundle_readiness_review() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -459,7 +459,7 @@ def test_builder_rejects_technique_bundle_without_bundle_readiness_review() -> N
 def test_builder_rejects_missing_technique_bundle() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "agon_candidate_handoff.seed.json").read_text(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
             encoding="utf-8"
         )
     )

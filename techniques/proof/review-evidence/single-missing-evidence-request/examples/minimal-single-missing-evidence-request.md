@@ -2,7 +2,7 @@
 
 ```yaml
 single_missing_evidence_request:
-  claim_or_decision: generated compact index was rebuilt after the seed registry changed
+  claim_or_decision: generated compact index was rebuilt after the source registry changed
   current_review_state: diff shows seed and generated files changed, but no builder receipt is visible
   requested_object: one command receipt or CI line for `python path/to/build_registry.py --check` on the current branch
   why_it_matters: the receipt distinguishes generated parity from hand-edited generated output

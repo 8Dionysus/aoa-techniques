@@ -25,7 +25,7 @@ ACTIVE_AUDIT_SURFACES = (
 
 PART_LOCAL_AUDIT_READMES = (
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "mechanics/audit/parts/promotion-wave-a-runbook/README.md",
+    "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/audit/parts/external-evidence-sprint-runbook/README.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",
 )
@@ -63,7 +63,7 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
 
         for part_name in (
             "promotion-readiness-matrix",
-            "promotion-wave-a-runbook",
+            "promotion-evidence-runbook",
             "external-evidence-sprint-runbook",
             "external-evidence-ledger",
         ):
@@ -97,7 +97,7 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             / "README.md"
         ).read_text(encoding="utf-8")
 
-        self.assertIn("../promotion-wave-a-runbook/README.md", readiness)
+        self.assertIn("../promotion-evidence-runbook/README.md", readiness)
         self.assertIn("../promotion-readiness-matrix/README.md", sprint)
         self.assertIn("../external-evidence-ledger/README.md", sprint)
         self.assertIn("../external-evidence-sprint-runbook/README.md", ledger)
@@ -118,7 +118,7 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             / "mechanics"
             / "audit"
             / "parts"
-            / "promotion-wave-a-runbook"
+            / "promotion-evidence-runbook"
             / "README.md"
         ).read_text(encoding="utf-8")
         ledger = (

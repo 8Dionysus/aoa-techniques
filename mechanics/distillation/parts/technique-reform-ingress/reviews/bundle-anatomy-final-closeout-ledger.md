@@ -36,9 +36,9 @@ leaves. Active bundle paths are under the `10` generated/catalogued trunks.
 |---|---|
 | [Bundle Anatomy Baseline Inventory](bundle-anatomy-baseline-inventory.md) | counted all bundles, paths, generated presence, examples, checks, and notes |
 | [Bundle Anatomy Rubric Hardening](bundle-anatomy-rubric-hardening.md) | turned the audit into repeatable labels and repair-action posture |
-| [Bundle Anatomy Wave A Review](bundle-anatomy-wave-a-review.md) | audited execution and instruction shelves |
-| [Bundle Anatomy Wave B Review](bundle-anatomy-wave-b-review.md) | audited proof, continuity, and governance shelves |
-| [Bundle Anatomy Wave C Review](bundle-anatomy-wave-c-review.md) | audited knowledge-lift, ingest, history, recovery, and tool-use shelves |
+| [Bundle Anatomy Execution And Instruction Review](bundle-anatomy-execution-instruction-review.md) | audited execution and instruction shelves |
+| [Bundle Anatomy Proof Continuity And Governance Review](bundle-anatomy-proof-continuity-governance-review.md) | audited proof, continuity, and governance shelves |
+| [Bundle Anatomy Remaining Shelves Review](bundle-anatomy-remaining-shelves-review.md) | audited knowledge-lift, ingest, history, recovery, and tool-use shelves |
 | [Bundle Anatomy Corpus Synthesis](bundle-anatomy-corpus-synthesis.md) | synthesized all `107` rows and chose the first repair cohort |
 | [Bundle Anatomy Capsule Gap Repair Cohort](bundle-anatomy-capsule-gap-repair-cohort.md) | repaired wrapped Markdown list extraction for generated capsules |
 | [Bundle Anatomy Template And Contract Feedback](bundle-anatomy-template-contract-feedback.md) | recorded that no template, Atom, Topology, Tree, or ADR change was needed |

@@ -173,7 +173,7 @@ See `checks/perceptual-media-dedupe-with-threshold-review-checklist.md`.
 ## Promotion history
 
 - adapted from open-source `imagededup` and `imgdupes`
-- landed from `personal-ingest-wave-2`
+- landed from `personal-media-ingest`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for reviewable near-duplicate media grouping
 
 ## Future evolution

@@ -48,8 +48,8 @@ instruction or knowledge-lift shelves move.
 - [Media-ingest tree pilot receipt](../../../../../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
 - [Technique tree projection rows for `media-ingest` and
   `diagnosis-repair`](../../../../../reports/technique_tree_projection.md)
-- `incoming/personal-ingest-wave-2/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_INGEST_WAVE_2.md`
-- `incoming/personal-ingest-wave-2/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
+- `incoming/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md`
+- `incoming/personal-media-ingest/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read
@@ -61,7 +61,7 @@ instruction or knowledge-lift shelves move.
 | route card | present | `techniques/ingest/AGENTS.md` names the trunk boundary without turning `ingest` into a frontmatter domain |
 | root legacy | receipt only | active bundles moved directly between authored homes; `legacy/` preserves accounting |
 | generated surfaces | rebuilt | catalogs, capsules, sections, examples, checklists, evidence notes, family/topology reports, and tree projection point at current paths |
-| staging links | repaired | Personal Ingest Wave 2 candidate docs and the Telegram auth hold memo point at current authored paths |
+| staging links | repaired | Personal Media Ingest candidate docs and the Telegram auth hold memo point at current authored paths |
 | validation | green | release check covered unit tests, nested AGENTS coverage, and repository parity |
 
 ## What The Third Pilot Proved

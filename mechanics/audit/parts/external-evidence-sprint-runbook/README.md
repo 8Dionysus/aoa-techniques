@@ -6,7 +6,7 @@ Use it when the question is not "which promoted bundle is generally closest to `
 
 See also:
 - [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md)
-- [Promotion Wave A Runbook](../promotion-wave-a-runbook/README.md)
+- [Promotion Evidence Runbook](../promotion-evidence-runbook/README.md)
 - [External Evidence Ledger](../external-evidence-ledger/README.md)
 - [Long-Gap Canon Design](../../../distillation/parts/long-gap-reentry/README.md)
 - [Roadmap](../../../../ROADMAP.md)

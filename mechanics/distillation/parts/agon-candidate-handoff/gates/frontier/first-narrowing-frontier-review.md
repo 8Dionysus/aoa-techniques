@@ -1,7 +1,7 @@
 # First Narrowing Frontier Review
 
 Source registry:
-[agon_candidate_handoff.seed](../../config/agon_candidate_handoff.seed.json)
+[agon_candidate_handoff.seed](../../config/agon_candidate_handoff.source.json)
 
 Generated lens:
 [agon_candidate_handoff.min](../../generated/agon_candidate_handoff.min.json)

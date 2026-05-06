@@ -35,7 +35,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md) when a neighboring AoA repo needs the bounded `domain + kind` handoff
 - open [Technique Selection](TECHNIQUE_SELECTION.md) for one bounded pick by domain and current defaults
 - open [Selection Patterns](SELECTION_PATTERNS.md) when adjacency, working sets, or common next moves matter more than a flat list
-- open [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md) only when you need the historical wave1 note and source pointers
+- open [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md) only when you need the historical baseline note and source pointers
 - open [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) when you want the whole corpus map first
 - if you are an agent and want the smallest repo-owned runtime card before expanding markdown, open [Technique Capsules](TECHNIQUE_CAPSULES.md) or `../generated/technique_capsules.min.json`
 
@@ -45,7 +45,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md) for `promoted -> canonical` doctrine
 - open [Mechanics](../mechanics/README.md) when the question is which AoA cross-mechanic owns practice movement before, around, or after canon
 - open [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md) when the question is which `promoted` bundle can be honestly strengthened next and what proof is still missing
-- open [Promotion Wave A Runbook](../mechanics/audit/parts/promotion-wave-a-runbook/README.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
+- open [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
 - open [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md) when the question is how to run the live external-proof search over the remaining `promoted` queue without repeating stale lanes
 - open [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md) when the question is which external lanes have already been searched, rejected as adjacent, or honestly closed
 - open [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md) when the question is what can be extracted from an external donor without importing foreign doctrine

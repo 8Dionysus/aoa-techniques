@@ -63,7 +63,7 @@ slice should run a direct-read split review for
 - [Technique tree projection rows for `owner-truth-closeout` and `automation-governance`](../../../../../reports/technique_tree_projection.md)
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
 - [AOA-T-0086 automation-fit-matrix](../../../../../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md)
-- [AOA-T-0087 human-loop-to-seed-lift](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md)
+- [AOA-T-0087 human-loop-to-first-landing](../../../../../techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md)
 - [AOA-T-0088 approval-sensitivity-check](../../../../../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md)
 - [AOA-T-0089 quest-unit-promotion-review](../../../../../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md)
 - [AOA-T-0090 nearest-wrong-target-rejection](../../../../../techniques/agent-workflows/nearest-wrong-target-rejection/TECHNIQUE.md)
@@ -133,7 +133,7 @@ Projected shelf:
 | technique | current path | proposed path |
 |---|---|---|
 | `AOA-T-0086` | `techniques/agent-workflows/automation-fit-matrix/` | `techniques/governance/automation-governance/automation-fit-matrix/` |
-| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-seed-lift/` | `techniques/governance/automation-governance/human-loop-to-seed-lift/` |
+| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-first-landing/` | `techniques/governance/automation-governance/human-loop-to-first-landing/` |
 | `AOA-T-0088` | `techniques/agent-workflows/approval-sensitivity-check/` | `techniques/governance/automation-governance/approval-sensitivity-check/` |
 | `AOA-T-0089` | `techniques/agent-workflows/quest-unit-promotion-review/` | `techniques/governance/automation-governance/quest-unit-promotion-review/` |
 | `AOA-T-0090` | `techniques/agent-workflows/nearest-wrong-target-rejection/` | `techniques/governance/automation-governance/nearest-wrong-target-rejection/` |

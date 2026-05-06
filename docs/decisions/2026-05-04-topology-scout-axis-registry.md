@@ -13,7 +13,7 @@ truth, while `family`, `capability_class`, `substrate`,
 `execution_profile`, `risk_posture`, and richer relation topology remain
 weaker design axes.
 
-The family axis already has a seed registry and scout report. The other four
+The family axis already has a source registry and scout report. The other four
 axes had doctrine in the topology contract and mechanics gates, but no
 repo-owned value registry. Without a registry, the next generated projection
 would either invent values inside a builder or jump too quickly into schema and

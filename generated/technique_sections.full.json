@@ -5752,7 +5752,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `PaddleOCR` and `docTR`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for staged OCR handoff"
+          "content_markdown": "- adapted from open-source `PaddleOCR` and `docTR`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for staged OCR handoff"
         },
         {
           "key": "future_evolution",
@@ -5834,7 +5834,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `invoice2data`, `receiptparser`, and `receipt-parser-legacy`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for post-OCR template-backed field extraction"
+          "content_markdown": "- adapted from open-source `invoice2data`, `receiptparser`, and `receipt-parser-legacy`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for post-OCR template-backed field extraction"
         },
         {
           "key": "future_evolution",
@@ -5916,7 +5916,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `imagededup` and `imgdupes`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for reviewable near-duplicate media grouping"
+          "content_markdown": "- adapted from open-source `imagededup` and `imgdupes`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for reviewable near-duplicate media grouping"
         },
         {
           "key": "future_evolution",
@@ -5998,7 +5998,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `CLIP` and `PaddleOCR`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for confidence-aware mixed-media bucketing"
+          "content_markdown": "- adapted from open-source `CLIP` and `PaddleOCR`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for confidence-aware mixed-media bucketing"
         },
         {
           "key": "future_evolution",
@@ -6080,7 +6080,7 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp`\n- landed from `personal-ingest-wave-2`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for Telegram-source normalization into a local resumable store"
+          "content_markdown": "- adapted from open-source `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for Telegram-source normalization into a local resumable store"
         },
         {
           "key": "future_evolution",
@@ -7029,7 +7029,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- the matrix classifies one route; it does not create automation authority\n- row descriptions stay evidence-backed and small\n- verdicts remain bounded to readiness posture, not final implementation or routing doctrine\n- a strong fit does not remove the need for later owner-layer or checkpoint decisions\n\nRelationship to adjacent techniques: unlike [AOA-T-0087](../human-loop-to-seed-lift/TECHNIQUE.md), this technique does not choose the first honest landing or next artifact; it only classifies whether the route has enough shape to lift. Unlike [AOA-T-0088](../approval-sensitivity-check/TECHNIQUE.md), it does not own the checkpoint or approval analysis itself; it only includes approval sensitivity as one row in the matrix."
+          "content_markdown": "- the matrix classifies one route; it does not create automation authority\n- row descriptions stay evidence-backed and small\n- verdicts remain bounded to readiness posture, not final implementation or routing doctrine\n- a strong fit does not remove the need for later owner-layer or checkpoint decisions\n\nRelationship to adjacent techniques: unlike [AOA-T-0087](../human-loop-to-first-landing/TECHNIQUE.md), this technique does not choose the first honest landing or next artifact; it only classifies whether the route has enough shape to lift. Unlike [AOA-T-0088](../approval-sensitivity-check/TECHNIQUE.md), it does not own the checkpoint or approval analysis itself; it only includes approval sensitivity as one row in the matrix."
         },
         {
           "key": "risks",
@@ -7075,8 +7075,8 @@
     },
     {
       "id": "AOA-T-0087",
-      "name": "human-loop-to-seed-lift",
-      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "name": "human-loop-to-first-landing",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "sections": [
         {
           "key": "intent",
@@ -7121,7 +7121,7 @@
         {
           "key": "validation",
           "heading": "Validation",
-          "content_markdown": "Verify the technique by confirming that:\n- one recurring reviewed loop is named\n- the first landing stays smaller than a full implementation\n- owner-layer and next-artifact posture are explicit\n- schedule hints remain advisory only\n- the nearest wrong target is visible when classification pressure exists\n\nSee `checks/human-loop-to-seed-lift-checklist.md`."
+          "content_markdown": "Verify the technique by confirming that:\n- one recurring reviewed loop is named\n- the first landing stays smaller than a full implementation\n- owner-layer and next-artifact posture are explicit\n- schedule hints remain advisory only\n- the nearest wrong target is visible when classification pressure exists\n\nSee `checks/human-loop-to-first-landing-checklist.md`."
         },
         {
           "key": "adaptation_notes",
@@ -7136,12 +7136,12 @@
         {
           "key": "example",
           "heading": "Example",
-          "content_markdown": "See `examples/minimal-human-loop-to-seed-lift.md`."
+          "content_markdown": "See `examples/minimal-human-loop-to-first-landing.md`."
         },
         {
           "key": "checks",
           "heading": "Checks",
-          "content_markdown": "See `checks/human-loop-to-seed-lift-checklist.md`."
+          "content_markdown": "See `checks/human-loop-to-first-landing-checklist.md`."
         },
         {
           "key": "promotion_history",
@@ -8341,7 +8341,7 @@
         {
           "key": "contracts",
           "heading": "Contracts",
-          "content_markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../../instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../../automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../../practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
+          "content_markdown": "- one packet carries one skill proposal for one receiving owner\n- technique canon remains the source of reusable practice meaning\n- the receiving skill owner owns any accepted skill workflow, trigger\n  contract, packaging, and activation path\n- a packet may reference technique dependencies without copying or redefining\n  their meaning\n- a proposal packet is not skill acceptance, skill creation, skill activation,\n  runtime authority, proof verdict, or owner consent\n- `defer` is the correct result when workflow shape, trigger boundary, or\n  verification hints are too weak\n\nRelationship to adjacent techniques: unlike\n[AOA-T-0040](../../../instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), this\ntechnique does not separate an already-shaped skill from a command wrapper; it\npackages a technique-side proposal before a skill exists. Unlike\n[AOA-T-0087](../../automation-readiness/human-loop-to-first-landing/TECHNIQUE.md), it does not choose the\nfirst honest automation landing from a recurring human loop; it assumes a\nskill proposal is plausible and emits the packet for owner review. Unlike\n[AOA-T-0101](../../practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md), it does not gate\nlocal adoption itself; it can follow that gate when adoption pressure exposes a\nskill-shaped need."
         },
         {
           "key": "risks",

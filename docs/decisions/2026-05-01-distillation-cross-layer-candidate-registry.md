@@ -41,7 +41,7 @@ inherited external rows, and zero future-import lane without re-reading every
 table. The registry also makes portable technique pressure explicit for rows
 that are not yet technique-shaped.
 
-The tradeoff is artifact pairing: the README, seed registry, generated index,
+The tradeoff is artifact pairing: the README, source registry, generated index,
 and topology tests must move together when this ledger changes. This is
 intentional because recurrence and later compaction work need evidence without
 gaining promotion authority.

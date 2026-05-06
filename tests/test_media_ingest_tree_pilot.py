@@ -100,13 +100,13 @@ class MediaIngestTreePilotTestCase(unittest.TestCase):
 
     def test_incoming_personal_ingest_links_point_to_current_paths(self) -> None:
         docs_dir = (
-            REPO_ROOT / "incoming" / "personal-ingest-wave-2" / "docs"
+            REPO_ROOT / "incoming" / "personal-media-ingest" / "docs"
         )
         text = "\n".join(
             [
                 (
                     docs_dir
-                    / "EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_INGEST_WAVE_2.md"
+                    / "EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md"
                 ).read_text(encoding="utf-8"),
                 (
                     docs_dir

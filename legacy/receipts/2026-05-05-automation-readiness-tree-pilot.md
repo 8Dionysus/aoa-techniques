@@ -19,7 +19,7 @@ Twenty-fifth authored path migration:
 | technique | old path | new path |
 |---|---|---|
 | `AOA-T-0086` | `techniques/agent-workflows/automation-fit-matrix/` | `techniques/governance/automation-readiness/automation-fit-matrix/` |
-| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-seed-lift/` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/` |
+| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-seed-lift/` | `techniques/governance/automation-readiness/human-loop-to-first-landing/` |
 | `AOA-T-0088` | `techniques/agent-workflows/approval-sensitivity-check/` | `techniques/governance/automation-readiness/approval-sensitivity-check/` |
 
 ## Preserved

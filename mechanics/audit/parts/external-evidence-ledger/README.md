@@ -4,7 +4,7 @@ This ledger records the current search memory for external-evidence work over th
 
 Use it when the question is not "what is the whole promotion queue?", but "which external lanes have already been checked, what was adjacent-only, and where should the next honest search start?"
 
-This ledger complements [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md), [Promotion Wave A Runbook](../promotion-wave-a-runbook/README.md), and [External Evidence Sprint Runbook](../external-evidence-sprint-runbook/README.md).
+This ledger complements [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md), [Promotion Evidence Runbook](../promotion-evidence-runbook/README.md), and [External Evidence Sprint Runbook](../external-evidence-sprint-runbook/README.md).
 It does not replace bundle-local `notes/`.
 
 ## Recording Rules

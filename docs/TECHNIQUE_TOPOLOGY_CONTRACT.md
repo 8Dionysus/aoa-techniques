@@ -59,7 +59,7 @@ questions.
 | `tree_path` | architecture contract | authored placement spine for trunks, shelves, and leaf bundles | `docs/TECHNIQUE_TREE_CONTRACT.md`, future projection |
 | `domain` | authoritative frontmatter | first owner and review route | `docs/DOMAIN_MAP.md`, schema, validators |
 | `kind` | authoritative frontmatter | atomic move shape | `docs/TECHNIQUE_KIND_GUIDE.md`, `config/technique_kind_registry.yaml`, schema, validators |
-| `family` | scout-only | stable semantic shelf spanning domains or kinds | `config/technique_family_seed.yaml`, `reports/technique_family_scout.md` |
+| `family` | scout-only | stable semantic shelf spanning domains or kinds | `config/technique_family_scout.yaml`, `reports/technique_family_scout.md` |
 | `capability_class` | design axis | what agent capability the move exercises | `config/technique_topology_axes.yaml`, future generated projection |
 | `substrate` | design axis | what object or medium the move operates on | `config/technique_topology_axes.yaml`, future generated projection |
 | `execution_profile` | design axis | what size or orchestration level can execute it | `config/technique_topology_axes.yaml`, future capsule/catalog field |
@@ -114,7 +114,7 @@ kinds, narrow the atomic move or split the candidate.
 `family` is the future shelf layer.
 
 A family groups nearby techniques that may cross domains or kinds but belong to
-one durable semantic neighborhood. The current family seed is scout-only because
+one durable semantic neighborhood. The current family scout is scout-only because
 the corpus is still small and forcing frontmatter migration too early would
 create false precision.
 

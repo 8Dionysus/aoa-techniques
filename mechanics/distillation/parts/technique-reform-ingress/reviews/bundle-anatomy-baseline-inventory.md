@@ -206,7 +206,7 @@ This is not yet a human anatomy verdict. Labels ending in `-candidate` are inven
 | `AOA-T-0084` | `techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md` | `promoted` | `agent-workflows` | `lift` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |
 | `AOA-T-0085` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md` | `promoted` | `agent-workflows` | `lift` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |
 | `AOA-T-0086` | `techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md` | `promoted` | `agent-workflows` | `assessment` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |
-| `AOA-T-0087` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md` | `promoted` | `agent-workflows` | `assessment` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |
+| `AOA-T-0087` | `techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md` | `promoted` | `agent-workflows` | `assessment` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |
 | `AOA-T-0088` | `techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md` | `promoted` | `agent-workflows` | `assessment` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |
 | `AOA-T-0089` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md` | `promoted` | `agent-workflows` | `assessment` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |
 | `AOA-T-0090` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md` | `promoted` | `agent-workflows` | `guardrail` | 1 | 1 | 3 | `yes` | `match` | `inventory-pass` |

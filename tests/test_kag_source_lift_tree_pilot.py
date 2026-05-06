@@ -84,10 +84,10 @@ LIVE_LINK_SURFACES = (
     "mechanics/audit/parts/external-evidence-ledger/README.md",
     "mechanics/audit/parts/external-evidence-sprint-runbook/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "mechanics/audit/parts/promotion-wave-a-runbook/README.md",
+    "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/long-gap-reentry/README.md",
-    "incoming/chat-wave-1a-registry-discovery/docs/SEMANTIC_LINKAGE_RECORDS_NARROWING_MEMO.md",
+    "incoming/chat-registry-discovery/docs/SEMANTIC_LINKAGE_RECORDS_NARROWING_MEMO.md",
 )
 
 UNMOVED_DOCS_SHELVES = (

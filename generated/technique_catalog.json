@@ -4717,12 +4717,12 @@
     },
     {
       "id": "AOA-T-0087",
-      "name": "human-loop-to-seed-lift",
+      "name": "human-loop-to-first-landing",
       "domain": "agent-workflows",
       "kind": "assessment",
       "status": "promoted",
       "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
-      "technique_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "origin": {
         "project": "aoa-skills",
         "path": "skills/aoa-automation-opportunity-scan/SKILL.md + skills/aoa-automation-opportunity-scan/references/playbook-seed-bridge.md",
@@ -5422,7 +5422,7 @@
       "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
       "origin": {
         "project": "Dionysus",
-        "path": "aoa-chaos-wave1-seed/proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.seed.md",
+        "path": "aoa-chaos-wave1-seed/proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.candidate.md",
         "note": "Generalized from the aoa-chaos-wave1 donor pack, where runtime receipts, routing hints, playbook gates, KAG regrounding, and eval bridge candidates had to stay owner-scoped and reviewable under stress."
       },
       "owners": [

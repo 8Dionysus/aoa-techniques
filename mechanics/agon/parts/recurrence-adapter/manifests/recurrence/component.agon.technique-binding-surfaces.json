@@ -134,7 +134,7 @@
       "notes": "Requested-only practice candidates behind lawful moves.",
       "path_globs": [
         "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
-        "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json"
+        "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json"
       ]
     },
     {

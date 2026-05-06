@@ -8,7 +8,7 @@ technique review, owner-local receipts, repair proof, or cleanup acceptance.
 
 - Moved the pre-split chaos wave file into
   `legacy/raw/CHAOS_WAVE1_PROGRAM.md` and distilled its active route into
-  `parts/chaos-wave-program/README.md`.
+  `parts/chaos-stress-program/README.md`.
 - Added `parts/recovery-practice-bridge/README.md` to connect antifragility
   pressure to existing recovery and validation technique bundles without
   changing their status.

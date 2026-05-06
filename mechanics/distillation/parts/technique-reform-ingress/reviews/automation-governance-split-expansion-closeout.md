@@ -28,7 +28,7 @@ smaller candidate shelves.
 
 | order | candidate shelf | techniques | current paths | next action |
 |---|---|---|---|---|
-| A | `governance/automation-readiness` | `AOA-T-0086`, `AOA-T-0087`, `AOA-T-0088` | `techniques/agent-workflows/automation-fit-matrix/`, `techniques/agent-workflows/human-loop-to-seed-lift/`, `techniques/agent-workflows/approval-sensitivity-check/` | direct-read review before any movement |
+| A | `governance/automation-readiness` | `AOA-T-0086`, `AOA-T-0087`, `AOA-T-0088` | `techniques/agent-workflows/automation-fit-matrix/`, `techniques/agent-workflows/human-loop-to-first-landing/`, `techniques/agent-workflows/approval-sensitivity-check/` | direct-read review before any movement |
 | B | `governance/promotion-boundary` | `AOA-T-0089`, `AOA-T-0090`, `AOA-T-0102` | `techniques/agent-workflows/quest-unit-promotion-review/`, `techniques/agent-workflows/nearest-wrong-target-rejection/`, `techniques/agent-workflows/skill-proposal-handoff-packet/` | wait until Candidate A lands or is held |
 | C | `governance/practice-adoption-lifecycle` | `AOA-T-0101`, `AOA-T-0103`, `AOA-T-0104` | `techniques/agent-workflows/local-pattern-adoption-gate/`, `techniques/agent-workflows/adopted-practice-retention-review/`, `techniques/agent-workflows/superseded-practice-obsolescence-route/` | wait until Candidate B lands or is held |
 

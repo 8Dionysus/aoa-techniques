@@ -6,7 +6,7 @@ Use it when the question is not "which repo-wide closure wave should open next?"
 
 This doc complements [Roadmap](../../../../ROADMAP.md) and [Long-Gap Canon Design](../../../distillation/parts/long-gap-reentry/README.md).
 Bundle meaning still lives in each `TECHNIQUE.md` and `notes/canonical-readiness.md`.
-For the current actionable first wave, open [Promotion Wave A Runbook](../promotion-wave-a-runbook/README.md).
+For the current actionable first wave, open [Promotion Evidence Runbook](../promotion-evidence-runbook/README.md).
 
 ## Current Posture
 
@@ -382,7 +382,7 @@ Shared blocker: the automation family names fit, first landing, and approval bur
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0086](../../../../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md) | Fit matrix converts automation desire into evidence-backed readiness posture. | One second recurring route where determinism, proof posture, reversibility, or approval sensitivity changes the automation verdict. |
-| [AOA-T-0087](../../../../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md) | First-landing verdict keeps skill, playbook seed, technique candidate, repair quest, and defer outcomes distinct. | One second automation-facing route where a recurring human loop lands in the smallest honest next artifact instead of becoming hidden scheduling pressure. |
+| [AOA-T-0087](../../../../techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md) | First-landing verdict keeps skill, playbook seed, technique candidate, repair quest, and defer outcomes distinct. | One second automation-facing route where a recurring human loop lands in the smallest honest next artifact instead of becoming hidden scheduling pressure. |
 | [AOA-T-0088](../../../../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md) | Approval burden check downgrades seed-ready enthusiasm when checkpoint posture is missing. | One second automation candidate where rollback, self-change, or approval sensitivity forces checkpoint-required posture before any seed claim. |
 
 ### Pack 37 - Quest Promotion Verdict

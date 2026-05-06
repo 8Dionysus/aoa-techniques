@@ -49,7 +49,7 @@ files:
 
 Create two active parts:
 
-- `parts/chaos-wave-program/README.md`
+- `parts/chaos-stress-program/README.md`
 - `parts/recovery-practice-bridge/README.md`
 
 Add Antifragility to `mechanics/REQUEST_RECEIPTS.md` only under Non-ORQ Center

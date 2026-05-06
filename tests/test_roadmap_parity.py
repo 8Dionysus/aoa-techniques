@@ -100,7 +100,7 @@ class RoadmapParityTestCase(unittest.TestCase):
             "mechanics/agon/parts/move-technique-bridge/README.md",
             "mechanics/agon/legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md",
             "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
-            "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.seed.json",
+            "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json",
             "mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py",
             "mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py",
             "mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py",

@@ -113,16 +113,16 @@ REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
 REQUIRED_KAG_EXPORT_FILES = ("docs/KAG_EXPORT.md",)
 REQUIRED_KIND_DOCTRINE_FILES = (
     "docs/TECHNIQUE_KIND_GUIDE.md",
-    "docs/TECHNIQUE_KINDS_SEED.md",
+    "docs/TECHNIQUE_KIND_BASELINE.md",
     "docs/TECHNIQUE_KIND_HANDOFF_PACK.md",
 )
 REQUIRED_KIND_DATA_FILES = (
     "config/technique_kind_registry.yaml",
-    "config/technique_family_seed.yaml",
+    "config/technique_family_scout.yaml",
     "config/technique_topology_axes.yaml",
-    "data/technique_kind_wave1.yaml",
-    "data/technique_kind_wave1.csv",
-    "reports/wave1_kind_counts.md",
+    "data/technique_kind_overlay.yaml",
+    "data/technique_kind_overlay.csv",
+    "reports/technique_kind_counts.md",
 )
 REQUIRED_KIND_SURFACE_FILES = (
     "generated/technique_kind_manifest.json",
@@ -621,11 +621,11 @@ KIND_ORDER = (
 KIND_VALUES = set(KIND_ORDER)
 KIND_INDEX = {kind: index for index, kind in enumerate(KIND_ORDER)}
 TECHNIQUE_KIND_REGISTRY_PATH = "config/technique_kind_registry.yaml"
-TECHNIQUE_FAMILY_SEED_PATH = "config/technique_family_seed.yaml"
+TECHNIQUE_FAMILY_SCOUT_PATH = "config/technique_family_scout.yaml"
 TECHNIQUE_TOPOLOGY_AXES_PATH = "config/technique_topology_axes.yaml"
-TECHNIQUE_KIND_WAVE1_PATH = "data/technique_kind_wave1.yaml"
-TECHNIQUE_KIND_WAVE1_CSV_PATH = "data/technique_kind_wave1.csv"
-WAVE1_KIND_COUNTS_REPORT_PATH = "reports/wave1_kind_counts.md"
+TECHNIQUE_KIND_OVERLAY_PATH = "data/technique_kind_overlay.yaml"
+TECHNIQUE_KIND_OVERLAY_CSV_PATH = "data/technique_kind_overlay.csv"
+TECHNIQUE_KIND_COUNTS_REPORT_PATH = "reports/technique_kind_counts.md"
 TOPOLOGY_SCOUT_AXIS_ORDER = (
     "capability_class",
     "substrate",
@@ -646,9 +646,9 @@ KIND_MANIFEST_SOURCE_OF_TRUTH = {
 }
 FAMILY_SCOUT_REPORT_VERSION = 1
 FAMILY_SCOUT_SOURCE_OF_TRUTH = {
-    "family_seed": TECHNIQUE_FAMILY_SEED_PATH,
+    "family_scout": TECHNIQUE_FAMILY_SCOUT_PATH,
     "kind_registry": TECHNIQUE_KIND_REGISTRY_PATH,
-    "wave1_mapping": TECHNIQUE_KIND_WAVE1_PATH,
+    "kind_overlay": TECHNIQUE_KIND_OVERLAY_PATH,
     "catalog": "generated/technique_catalog.json",
 }
 FAMILY_SCOUT_AUTHORITY_NOTE = (
@@ -662,8 +662,8 @@ KIND_AMBIGUITY_AUTHORITY_NOTE = (
 TOPOLOGY_SCOUT_REPORT_VERSION = 1
 TOPOLOGY_SCOUT_SOURCE_OF_TRUTH = {
     "axis_registry": TECHNIQUE_TOPOLOGY_AXES_PATH,
-    "family_seed": TECHNIQUE_FAMILY_SEED_PATH,
-    "wave1_mapping": TECHNIQUE_KIND_WAVE1_PATH,
+    "family_scout": TECHNIQUE_FAMILY_SCOUT_PATH,
+    "kind_overlay": TECHNIQUE_KIND_OVERLAY_PATH,
     "catalog": "generated/technique_catalog.json",
 }
 TOPOLOGY_SCOUT_AUTHORITY_NOTE = (
@@ -675,8 +675,8 @@ TREE_PROJECTION_TARGET_PATH_SHAPE = "techniques/<trunk>/<shelf>/<technique-slug>
 TREE_PROJECTION_SOURCE_OF_TRUTH = {
     "tree_contract": "docs/TECHNIQUE_TREE_CONTRACT.md",
     "family_review": "mechanics/distillation/parts/technique-reform-ingress/reviews/first-family-shelf-review-pack.md",
-    "family_seed": TECHNIQUE_FAMILY_SEED_PATH,
-    "wave1_mapping": TECHNIQUE_KIND_WAVE1_PATH,
+    "family_scout": TECHNIQUE_FAMILY_SCOUT_PATH,
+    "kind_overlay": TECHNIQUE_KIND_OVERLAY_PATH,
     "catalog": "generated/technique_catalog.json",
 }
 TREE_PROJECTION_AUTHORITY_NOTE = (
@@ -1629,14 +1629,14 @@ def load_kind_registry(repo_root: Path) -> dict[str, Any]:
     return registry
 
 
-def load_family_seed(repo_root: Path) -> dict[str, Any]:
-    seed_path = repo_root / TECHNIQUE_FAMILY_SEED_PATH
-    if not seed_path.is_file():
-        fail(f"{repo_root}: missing family seed '{TECHNIQUE_FAMILY_SEED_PATH}'")
-    seed = read_yaml(seed_path)
-    if not isinstance(seed, dict):
-        fail(f"{seed_path}: family seed payload must be a mapping")
-    return seed
+def load_family_scout(repo_root: Path) -> dict[str, Any]:
+    scout_path = repo_root / TECHNIQUE_FAMILY_SCOUT_PATH
+    if not scout_path.is_file():
+        fail(f"{repo_root}: missing family scout '{TECHNIQUE_FAMILY_SCOUT_PATH}'")
+    scout = read_yaml(scout_path)
+    if not isinstance(scout, dict):
+        fail(f"{scout_path}: family scout payload must be a mapping")
+    return scout
 
 
 def load_topology_axes_registry(repo_root: Path) -> dict[str, Any]:
@@ -1649,13 +1649,13 @@ def load_topology_axes_registry(repo_root: Path) -> dict[str, Any]:
     return registry
 
 
-def load_wave1_kind_overlay(repo_root: Path) -> dict[str, Any]:
-    overlay_path = repo_root / TECHNIQUE_KIND_WAVE1_PATH
+def load_kind_overlay(repo_root: Path) -> dict[str, Any]:
+    overlay_path = repo_root / TECHNIQUE_KIND_OVERLAY_PATH
     if not overlay_path.is_file():
-        fail(f"{repo_root}: missing wave1 kind overlay '{TECHNIQUE_KIND_WAVE1_PATH}'")
+        fail(f"{repo_root}: missing kind overlay '{TECHNIQUE_KIND_OVERLAY_PATH}'")
     overlay = read_yaml(overlay_path)
     if not isinstance(overlay, dict):
-        fail(f"{overlay_path}: wave1 kind overlay payload must be a mapping")
+        fail(f"{overlay_path}: kind overlay payload must be a mapping")
     return overlay
 
 
@@ -2017,14 +2017,14 @@ def kind_registry_values_by_id(registry: dict[str, Any], registry_path: Path | s
     return values_by_id
 
 
-def family_seed_entries_by_id(seed: dict[str, Any], seed_path: Path | str) -> dict[str, dict[str, Any]]:
-    families = seed.get("families")
+def family_scout_entries_by_id(scout: dict[str, Any], scout_path: Path | str) -> dict[str, dict[str, Any]]:
+    families = scout.get("families")
     if not isinstance(families, list):
-        fail(f"{seed_path}: families must be a list")
+        fail(f"{scout_path}: families must be a list")
 
     entries_by_id: dict[str, dict[str, Any]] = {}
     for index, item in enumerate(families):
-        location = f"{seed_path}.families[{index}]"
+        location = f"{scout_path}.families[{index}]"
         if not isinstance(item, dict):
             fail(f"{location}: family entry must be an object")
         family_id = item.get("id")
@@ -2049,7 +2049,7 @@ def family_seed_entries_by_id(seed: dict[str, Any], seed_path: Path | str) -> di
     return entries_by_id
 
 
-def wave1_overlay_entries_by_id(overlay: dict[str, Any], overlay_path: Path | str) -> dict[str, dict[str, Any]]:
+def kind_overlay_entries_by_id(overlay: dict[str, Any], overlay_path: Path | str) -> dict[str, dict[str, Any]]:
     entries = overlay.get("entries")
     if not isinstance(entries, list):
         fail(f"{overlay_path}: entries must be a list")
@@ -2072,16 +2072,16 @@ def wave1_overlay_entries_by_id(overlay: dict[str, Any], overlay_path: Path | st
     return entries_by_id
 
 
-def validate_family_seed_alignment(repo_root: Path) -> None:
-    seed_path = repo_root / TECHNIQUE_FAMILY_SEED_PATH
-    seed = load_family_seed(repo_root)
-    if seed.get("schema_version") != 1:
-        fail(f"{seed_path}: schema_version must be 1")
-    if seed.get("axis_name") != "technique_family":
-        fail(f"{seed_path}: axis_name must stay 'technique_family'")
-    if seed.get("status") != "scout-foundation":
-        fail(f"{seed_path}: status must stay 'scout-foundation'")
-    family_seed_entries_by_id(seed, seed_path)
+def validate_family_scout_alignment(repo_root: Path) -> None:
+    scout_path = repo_root / TECHNIQUE_FAMILY_SCOUT_PATH
+    scout = load_family_scout(repo_root)
+    if scout.get("schema_version") != 1:
+        fail(f"{scout_path}: schema_version must be 1")
+    if scout.get("axis_name") != "technique_family":
+        fail(f"{scout_path}: axis_name must stay 'technique_family'")
+    if scout.get("status") != "scout-foundation":
+        fail(f"{scout_path}: status must stay 'scout-foundation'")
+    family_scout_entries_by_id(scout, scout_path)
 
 
 def validate_topology_axes_registry(repo_root: Path) -> None:
@@ -2155,19 +2155,19 @@ def validate_topology_axes_registry(repo_root: Path) -> None:
                 fail(f"{value_location}: choose_when must contain only non-empty strings")
 
 
-def validate_wave1_kind_overlay(repo_root: Path, records: list[TechniqueRecord]) -> None:
-    overlay_path = repo_root / TECHNIQUE_KIND_WAVE1_PATH
-    overlay = load_wave1_kind_overlay(repo_root)
+def validate_kind_overlay(repo_root: Path, records: list[TechniqueRecord]) -> None:
+    overlay_path = repo_root / TECHNIQUE_KIND_OVERLAY_PATH
+    overlay = load_kind_overlay(repo_root)
     if overlay.get("schema_version") != 1:
         fail(f"{overlay_path}: schema_version must be 1")
     if overlay.get("source_catalog_version") != 1:
         fail(f"{overlay_path}: source_catalog_version must be 1")
-    if overlay.get("source_of_truth") != "wave1-seed-overlay":
-        fail(f"{overlay_path}: source_of_truth must stay 'wave1-seed-overlay'")
+    if overlay.get("source_of_truth") != "kind-overlay":
+        fail(f"{overlay_path}: source_of_truth must stay 'kind-overlay'")
 
-    family_seed_path = repo_root / TECHNIQUE_FAMILY_SEED_PATH
-    family_entries = family_seed_entries_by_id(load_family_seed(repo_root), family_seed_path)
-    overlay_entries = wave1_overlay_entries_by_id(overlay, overlay_path)
+    family_scout_path = repo_root / TECHNIQUE_FAMILY_SCOUT_PATH
+    family_entries = family_scout_entries_by_id(load_family_scout(repo_root), family_scout_path)
+    overlay_entries = kind_overlay_entries_by_id(overlay, overlay_path)
     records_by_id = {record.id: record for record in records}
 
     if set(overlay_entries) != set(records_by_id):
@@ -2195,7 +2195,7 @@ def validate_wave1_kind_overlay(repo_root: Path, records: list[TechniqueRecord])
             if not isinstance(family, str) or not family:
                 fail(f"{overlay_path}: {technique_id} family must be a non-empty string when present")
             if family not in family_entries:
-                fail(f"{overlay_path}: {technique_id} family '{family}' is not declared in {family_seed_path}")
+                fail(f"{overlay_path}: {technique_id} family '{family}' is not declared in {family_scout_path}")
 
 
 def normalize_section_markdown(raw_markdown: str) -> str:
@@ -5398,7 +5398,7 @@ def build_kind_reader_markdown(full_manifest: dict[str, Any]) -> str:
         "See also:",
         "- [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)",
         "- [Technique Selection](TECHNIQUE_SELECTION.md)",
-        "- [Technique Kinds Seed](TECHNIQUE_KINDS_SEED.md)",
+        "- [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md)",
         "- [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)",
         "- [Full kind manifest](../generated/technique_kind_manifest.json)",
         "- [Min kind manifest](../generated/technique_kind_manifest.min.json)",
@@ -5484,17 +5484,17 @@ def build_kind_reader_markdown(full_manifest: dict[str, Any]) -> str:
 
 
 def build_family_scout_payload(
-    catalog: dict[str, Any], family_seed: dict[str, Any], wave1_overlay: dict[str, Any]
+    catalog: dict[str, Any], family_scout: dict[str, Any], kind_overlay: dict[str, Any]
 ) -> dict[str, Any]:
     catalog_entries = catalog.get("techniques")
     if not isinstance(catalog_entries, list):
         fail("generated/technique_catalog.json: techniques must be a list")
     catalog_by_id = {entry["id"]: entry for entry in catalog_entries}
-    family_entries = family_seed_entries_by_id(family_seed, TECHNIQUE_FAMILY_SEED_PATH)
-    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+    family_entries = family_scout_entries_by_id(family_scout, TECHNIQUE_FAMILY_SCOUT_PATH)
+    overlay_entries = kind_overlay_entries_by_id(kind_overlay, TECHNIQUE_KIND_OVERLAY_PATH)
 
     families_payload: list[dict[str, Any]] = []
-    for family in family_seed["families"]:
+    for family in family_scout["families"]:
         family_id = family["id"]
         family_catalog_entries = sorted(
             [
@@ -5546,7 +5546,7 @@ def build_family_scout_markdown(report: dict[str, Any]) -> str:
     lines = [
         "# Technique Family Scout",
         "",
-        "This file is generated from the current kind registry, family seed, wave1 overlay, and generated catalog.",
+        "This file is generated from the current kind registry, family scout, kind overlay, and generated catalog.",
         "Do not edit it by hand; run `python scripts/build_kind_manifest.py`.",
         "",
         FAMILY_SCOUT_AUTHORITY_NOTE,
@@ -5573,7 +5573,7 @@ def build_family_scout_markdown(report: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
-            f"Unassigned wave1 family suggestions: `{len(report['unassigned_technique_ids'])}`.",
+            f"Unassigned family suggestions: `{len(report['unassigned_technique_ids'])}`.",
             "",
         ]
     )
@@ -5605,7 +5605,7 @@ def build_family_scout_markdown(report: dict[str, Any]) -> str:
                 f"{escape_markdown_table_cell(technique['summary'])} |"
             )
         if not family["techniques"]:
-            lines.append("| _No wave1 techniques currently map here._ | - | - | - | - |")
+            lines.append("| _No overlay techniques currently map here._ | - | - | - | - |")
         lines.append("")
 
     lines.extend(
@@ -5674,21 +5674,21 @@ def ambiguity_verdict(current_hits: list[str], other_hits: list[str]) -> str:
 def build_kind_ambiguity_audit_markdown(
     catalog: dict[str, Any],
     registry: dict[str, Any],
-    family_seed: dict[str, Any],
-    wave1_overlay: dict[str, Any],
+    family_scout: dict[str, Any],
+    kind_overlay: dict[str, Any],
 ) -> str:
     catalog_entries = catalog.get("techniques")
     if not isinstance(catalog_entries, list):
         fail("generated/technique_catalog.json: techniques must be a list")
-    family_entries = family_seed_entries_by_id(family_seed, TECHNIQUE_FAMILY_SEED_PATH)
-    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+    family_entries = family_scout_entries_by_id(family_scout, TECHNIQUE_FAMILY_SCOUT_PATH)
+    overlay_entries = kind_overlay_entries_by_id(kind_overlay, TECHNIQUE_KIND_OVERLAY_PATH)
     tie_break_rules = kind_tie_break_rule_map(registry)
     catalog_by_id = {entry["id"]: entry for entry in catalog_entries}
 
     lines = [
         "# Kind Ambiguity Audit",
         "",
-        "This file is generated from the current kind registry, family seed, wave1 overlay, and generated catalog.",
+        "This file is generated from the current kind registry, family scout, kind overlay, and generated catalog.",
         "Do not edit it by hand; run `python scripts/build_kind_manifest.py`.",
         "",
         KIND_AMBIGUITY_AUTHORITY_NOTE,
@@ -5747,7 +5747,7 @@ def build_kind_ambiguity_audit_markdown(
             family_note = ""
             if isinstance(family, str) and family_has_both:
                 family_note = (
-                    f" Seed family `{family}` already spans both `{left_kind}` and `{right_kind}`."
+                    f" Scout family `{family}` already spans both `{left_kind}` and `{right_kind}`."
                 )
             verdict = ambiguity_verdict(current_hits, other_hits)
             lines.extend(
@@ -5903,12 +5903,12 @@ def count_list_values(entries: list[dict[str, Any]], axis: str) -> dict[str, int
 def build_topology_scout_payload(
     catalog: dict[str, Any],
     axis_registry: dict[str, Any],
-    wave1_overlay: dict[str, Any],
+    kind_overlay: dict[str, Any],
 ) -> dict[str, Any]:
     catalog_entries = catalog.get("techniques")
     if not isinstance(catalog_entries, list):
         fail("generated/technique_catalog.json: techniques must be a list")
-    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+    overlay_entries = kind_overlay_entries_by_id(kind_overlay, TECHNIQUE_KIND_OVERLAY_PATH)
     allowed_values_by_axis = topology_axis_value_ids(axis_registry)
     entries = [
         topology_scout_entry(entry, overlay_entries.get(entry["id"]), allowed_values_by_axis)
@@ -5940,7 +5940,7 @@ def build_topology_scout_markdown(report: dict[str, Any]) -> str:
     lines = [
         "# Technique Topology Scout",
         "",
-        "This file is generated from the topology axis registry, wave1 family overlay, and generated catalog.",
+        "This file is generated from the topology axis registry, kind overlay, and generated catalog.",
         "Do not edit it by hand; run `python scripts/build_topology_scout.py`.",
         "",
         TOPOLOGY_SCOUT_AUTHORITY_NOTE,
@@ -6059,12 +6059,12 @@ def tree_projection_entry(entry: dict[str, Any], overlay_entry: dict[str, Any] |
 
 def build_tree_projection_payload(
     catalog: dict[str, Any],
-    wave1_overlay: dict[str, Any],
+    kind_overlay: dict[str, Any],
 ) -> dict[str, Any]:
     catalog_entries = catalog.get("techniques")
     if not isinstance(catalog_entries, list):
         fail("generated/technique_catalog.json: techniques must be a list")
-    overlay_entries = wave1_overlay_entries_by_id(wave1_overlay, TECHNIQUE_KIND_WAVE1_PATH)
+    overlay_entries = kind_overlay_entries_by_id(kind_overlay, TECHNIQUE_KIND_OVERLAY_PATH)
     entries = [
         tree_projection_entry(entry, overlay_entries.get(entry["id"]))
         for entry in sorted(catalog_entries, key=kind_group_sort_key)
@@ -6093,7 +6093,7 @@ def build_tree_projection_markdown(report: dict[str, Any]) -> str:
     lines = [
         "# Technique Tree Projection",
         "",
-        "This file is generated from the technique tree contract, family shelf review, wave1 family overlay, and generated catalog.",
+        "This file is generated from the technique tree contract, family shelf review, kind overlay, and generated catalog.",
         "Do not edit it by hand; run `python scripts/build_tree_projection.py`.",
         "",
         TREE_PROJECTION_AUTHORITY_NOTE,
@@ -7609,13 +7609,13 @@ def validate_kind_scout_reports(repo_root: Path) -> None:
     audit_path = repo_root / "reports" / "kind_ambiguity_audit.md"
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
     registry = load_kind_registry(repo_root)
-    family_seed = load_family_seed(repo_root)
-    wave1_overlay = load_wave1_kind_overlay(repo_root)
+    family_scout = load_family_scout(repo_root)
+    kind_overlay = load_kind_overlay(repo_root)
 
-    expected_report = build_family_scout_payload(catalog, family_seed, wave1_overlay)
+    expected_report = build_family_scout_payload(catalog, family_scout, kind_overlay)
     expected_markdown = build_family_scout_markdown(expected_report)
     expected_audit = build_kind_ambiguity_audit_markdown(
-        catalog, registry, family_seed, wave1_overlay
+        catalog, registry, family_scout, kind_overlay
     )
     actual_report = read_json(json_path)
     actual_markdown = read_text(markdown_path)
@@ -7649,9 +7649,9 @@ def validate_topology_scout_reports(repo_root: Path) -> None:
     markdown_path = repo_root / "reports" / "technique_topology_scout.md"
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
     axis_registry = load_topology_axes_registry(repo_root)
-    wave1_overlay = load_wave1_kind_overlay(repo_root)
+    kind_overlay = load_kind_overlay(repo_root)
 
-    expected_report = build_topology_scout_payload(catalog, axis_registry, wave1_overlay)
+    expected_report = build_topology_scout_payload(catalog, axis_registry, kind_overlay)
     expected_markdown = build_topology_scout_markdown(expected_report)
     actual_report = read_json(json_path)
     actual_markdown = read_text(markdown_path)
@@ -7680,9 +7680,9 @@ def validate_tree_projection_reports(repo_root: Path) -> None:
     json_path = repo_root / "reports" / "technique_tree_projection.json"
     markdown_path = repo_root / "reports" / "technique_tree_projection.md"
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
-    wave1_overlay = load_wave1_kind_overlay(repo_root)
+    kind_overlay = load_kind_overlay(repo_root)
 
-    expected_report = build_tree_projection_payload(catalog, wave1_overlay)
+    expected_report = build_tree_projection_payload(catalog, kind_overlay)
     expected_markdown = build_tree_projection_markdown(expected_report)
     actual_report = read_json(json_path)
     actual_markdown = read_text(markdown_path)
@@ -8205,9 +8205,9 @@ def validate_repo(repo_root: Path) -> None:
     schema_store = load_schema_store(repo_root)
     validate_kind_axis_alignment(repo_root, schema_store)
     records = collect_techniques(repo_root, schema_store)
-    validate_family_seed_alignment(repo_root)
+    validate_family_scout_alignment(repo_root)
     validate_topology_axes_registry(repo_root)
-    validate_wave1_kind_overlay(repo_root, records)
+    validate_kind_overlay(repo_root, records)
     validate_selection_navigation_specs(records, repo_root)
     validate_repo_doc_navigation_specs(repo_root)
     validate_index(repo_root, records)
@@ -8259,7 +8259,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated repo doc surface manifest parity")
     print("[ok] validated generated kind manifest parity and reader surface")
     print("[ok] validated topology scout axis registry")
-    print("[ok] validated wave1 family scout and ambiguity audit parity")
+    print("[ok] validated kind-overlay family scout and ambiguity audit parity")
     print("[ok] validated topology scout projection parity")
     print("[ok] validated tree projection parity")
     print("[ok] validated generated selection and shadow surface parity")

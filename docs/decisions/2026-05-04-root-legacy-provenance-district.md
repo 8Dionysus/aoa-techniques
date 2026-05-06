@@ -10,7 +10,7 @@ Accepted
 
 `aoa-techniques` is preparing to move from broad domain folders toward a
 scalable technique tree. The repository also still has root-wide tail surfaces:
-incoming wave packets, seed material, pre-prune evidence, generated review
+incoming wave packets, candidate material, pre-prune evidence, generated review
 packets, and old route forms that may need preservation after active
 distillation.
 

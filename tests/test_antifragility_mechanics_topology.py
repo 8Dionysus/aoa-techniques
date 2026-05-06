@@ -24,7 +24,7 @@ ACTIVE_ANTIFRAGILITY_SURFACES = (
 )
 
 PART_LOCAL_ANTIFRAGILITY_READMES = (
-    "mechanics/antifragility/parts/chaos-wave-program/README.md",
+    "mechanics/antifragility/parts/chaos-stress-program/README.md",
     "mechanics/antifragility/parts/recovery-practice-bridge/README.md",
 )
 
@@ -66,7 +66,7 @@ class AntifragilityMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
 
         for part_name in (
-            "chaos-wave-program",
+            "chaos-stress-program",
             "recovery-practice-bridge",
         ):
             with self.subTest(part_name=part_name):
@@ -106,17 +106,17 @@ class AntifragilityMechanicsTopologyTestCase(unittest.TestCase):
                 "mechanics/antifragility/LANDING_LOG.md",
                 "mechanics/antifragility/ROADMAP.md",
                 "mechanics/antifragility/parts/README.md",
-                "mechanics/antifragility/parts/chaos-wave-program/README.md",
+                "mechanics/antifragility/parts/chaos-stress-program/README.md",
                 "mechanics/antifragility/parts/recovery-practice-bridge/README.md",
             )
         )
 
         self.assertNotIn(old_path, combined)
         self.assertIn(
-            "mechanics/antifragility/parts/chaos-wave-program/README.md",
+            "mechanics/antifragility/parts/chaos-stress-program/README.md",
             combined,
         )
-        self.assertIn("parts/chaos-wave-program/README.md", combined)
+        self.assertIn("parts/chaos-stress-program/README.md", combined)
         self.assertIn("parts/recovery-practice-bridge/README.md", combined)
 
     def test_antifragility_stop_lines_remain_explicit(self) -> None:

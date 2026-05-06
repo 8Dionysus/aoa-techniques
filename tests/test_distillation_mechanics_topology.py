@@ -42,7 +42,7 @@ PART_LOCAL_DISTILLATION_READMES = (
 )
 
 PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS = (
-    "mechanics/distillation/parts/external-candidate-ledger/config/external_candidate_registry.seed.json",
+    "mechanics/distillation/parts/external-candidate-ledger/config/external_candidate_registry.source.json",
     "mechanics/distillation/parts/external-candidate-ledger/generated/external_candidate_registry.min.json",
     "mechanics/distillation/parts/external-candidate-ledger/schemas/external-candidate-registry-entry.schema.json",
     "mechanics/distillation/parts/external-candidate-ledger/schemas/external-candidate-registry.schema.json",
@@ -53,7 +53,7 @@ PART_LOCAL_EXTERNAL_CANDIDATE_REGISTRY_ARTIFACTS = (
 )
 
 PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
-    "mechanics/distillation/parts/cross-layer-candidate-ledger/config/cross_layer_candidate_registry.seed.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/config/cross_layer_candidate_registry.source.json",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/schemas/cross-layer-candidate-registry-entry.schema.json",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/schemas/cross-layer-candidate-registry.schema.json",
@@ -64,7 +64,7 @@ PART_LOCAL_CROSS_LAYER_CANDIDATE_REGISTRY_ARTIFACTS = (
 )
 
 PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
-    "mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json",
+    "mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.source.json",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/README.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/README.md",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/request-evidence-bundle-readiness-review.md",
@@ -1239,16 +1239,16 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         incoming_wave2 = (
             REPO_ROOT
             / "incoming"
-            / "chat-wave-2-graph-review-mailbox"
+            / "chat-graph-review-mailbox"
             / "docs"
-            / "EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_2.md"
+            / "EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md"
         ).read_text(encoding="utf-8")
         incoming_wave3 = (
             REPO_ROOT
             / "incoming"
-            / "chat-wave-3-handoff-bounded-continuation"
+            / "chat-handoff-bounded-continuation"
             / "docs"
-            / "EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_3.md"
+            / "EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Landed Handoff-Continuation Pilot Review", review)
@@ -6927,8 +6927,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ),
             (
                 "AOA-T-0087",
-                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
-                "techniques/governance/automation-governance/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md",
+                "techniques/governance/automation-governance/human-loop-to-first-landing/TECHNIQUE.md",
                 False,
                 False,
             ),
@@ -7079,8 +7079,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ),
             (
                 "AOA-T-0087",
-                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
-                "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
                 False,
                 True,
             ),
@@ -7228,8 +7228,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
             ),
             (
-                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
-                "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
             ),
             (
                 "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",
@@ -7333,8 +7333,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             ),
             (
                 "AOA-T-0087",
-                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
-                "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
             ),
             (
                 "AOA-T-0088",
@@ -7428,7 +7428,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             (
                 "AOA-T-0087",
                 "techniques/agent-workflows/human-loop-to-seed-lift/",
-                "techniques/governance/automation-readiness/human-loop-to-seed-lift/",
+                "techniques/governance/automation-readiness/human-loop-to-first-landing/",
             ),
             (
                 "AOA-T-0088",
@@ -7520,8 +7520,8 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
             ),
             (
-                "techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md",
-                "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+                "techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md",
+                "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
             ),
             (
                 "techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md",

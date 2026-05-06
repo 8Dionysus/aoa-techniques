@@ -22,7 +22,7 @@ Open `legacy/raw/` only when the donor trace or original wave wording is needed.
 
 | Previous surface | Current active home | Preservation note |
 |---|---|---|
-| Pre-split flat `CHAOS_WAVE1_PROGRAM.md` | [parts/chaos-wave-program](parts/chaos-wave-program/README.md) and [parts/recovery-practice-bridge](parts/recovery-practice-bridge/README.md) | Donor digest and original wave program wording are preserved in [legacy/raw/CHAOS_WAVE1_PROGRAM.md](legacy/raw/CHAOS_WAVE1_PROGRAM.md). Active parts keep only the reusable technique-layer route. |
+| Pre-split flat `CHAOS_WAVE1_PROGRAM.md` | [parts/chaos-stress-program](parts/chaos-stress-program/README.md) and [parts/recovery-practice-bridge](parts/recovery-practice-bridge/README.md) | Donor digest and original wave program wording are preserved in [legacy/raw/CHAOS_WAVE1_PROGRAM.md](legacy/raw/CHAOS_WAVE1_PROGRAM.md). Active parts keep only the reusable technique-layer route. |
 
 ## AoA Center Relation
 

@@ -38,7 +38,7 @@ C shelves.
 | technique | landed path | preserved posture |
 |---|---|---|
 | `AOA-T-0086` | `techniques/governance/automation-readiness/automation-fit-matrix/` | `domain: agent-workflows`, `kind: assessment`, `status: promoted` |
-| `AOA-T-0087` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/` | `domain: agent-workflows`, `kind: assessment`, `status: promoted` |
+| `AOA-T-0087` | `techniques/governance/automation-readiness/human-loop-to-first-landing/` | `domain: agent-workflows`, `kind: assessment`, `status: promoted` |
 | `AOA-T-0088` | `techniques/governance/automation-readiness/approval-sensitivity-check/` | `domain: agent-workflows`, `kind: assessment`, `status: promoted` |
 
 ## What Improved

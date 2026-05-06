@@ -8,9 +8,9 @@ from validate_repo import (
     build_kind_ambiguity_audit_markdown,
     build_kind_manifest_payloads,
     build_kind_reader_markdown,
-    load_family_seed,
+    load_family_scout,
     load_kind_registry,
-    load_wave1_kind_overlay,
+    load_kind_overlay,
     read_json,
     write_json_file,
     write_text_file,
@@ -28,15 +28,15 @@ def main() -> int:
 
     catalog = read_json(generated_dir / "technique_catalog.json")
     registry = load_kind_registry(repo_root)
-    family_seed = load_family_seed(repo_root)
-    wave1_overlay = load_wave1_kind_overlay(repo_root)
+    family_scout = load_family_scout(repo_root)
+    kind_overlay = load_kind_overlay(repo_root)
 
     full_manifest, min_manifest = build_kind_manifest_payloads(catalog, registry)
-    family_report = build_family_scout_payload(catalog, family_seed, wave1_overlay)
+    family_report = build_family_scout_payload(catalog, family_scout, kind_overlay)
     kind_reader = build_kind_reader_markdown(full_manifest)
     family_markdown = build_family_scout_markdown(family_report)
     ambiguity_markdown = build_kind_ambiguity_audit_markdown(
-        catalog, registry, family_seed, wave1_overlay
+        catalog, registry, family_scout, kind_overlay
     )
 
     full_path = generated_dir / "technique_kind_manifest.json"

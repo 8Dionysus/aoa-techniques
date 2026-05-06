@@ -51,7 +51,7 @@ def test_cross_layer_candidate_registry_shape() -> None:
 def test_builder_rejects_landed_row_without_landed_technique() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "cross_layer_candidate_registry.seed.json").read_text(
+        (PART_ROOT / "config" / "cross_layer_candidate_registry.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -65,7 +65,7 @@ def test_builder_rejects_landed_row_without_landed_technique() -> None:
 def test_builder_rejects_inherited_row_without_inherited_status() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "cross_layer_candidate_registry.seed.json").read_text(
+        (PART_ROOT / "config" / "cross_layer_candidate_registry.source.json").read_text(
             encoding="utf-8"
         )
     )
@@ -79,7 +79,7 @@ def test_builder_rejects_inherited_row_without_inherited_status() -> None:
 def test_builder_rejects_portability_gap() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "cross_layer_candidate_registry.seed.json").read_text(
+        (PART_ROOT / "config" / "cross_layer_candidate_registry.source.json").read_text(
             encoding="utf-8"
         )
     )

@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 PART_ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = PART_ROOT / "config" / "agon_technique_binding_candidates.seed.json"
+CONFIG_PATH = PART_ROOT / "config" / "agon_technique_binding_candidates.source.json"
 GENERATED_PATH = PART_ROOT / "generated" / "agon_technique_binding_candidates.min.json"
 EXPECTED_SCHEMA_VERSION = "agon-technique-binding-candidates.seed/0.1"
 EXPECTED_INDEX_SCHEMA = "agon-technique-binding-candidates-index/0.1"

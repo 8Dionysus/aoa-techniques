@@ -42,8 +42,8 @@ public-safety posture, and current paths for all nine bundles.
 
 - [AOA-T-0086 automation-fit-matrix](../../../../../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md)
 - [AOA-T-0086 canonical readiness](../../../../../techniques/agent-workflows/automation-fit-matrix/notes/canonical-readiness.md)
-- [AOA-T-0087 human-loop-to-seed-lift](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/TECHNIQUE.md)
-- [AOA-T-0087 canonical readiness](../../../../../techniques/agent-workflows/human-loop-to-seed-lift/notes/canonical-readiness.md)
+- [AOA-T-0087 human-loop-to-first-landing](../../../../../techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md)
+- [AOA-T-0087 canonical readiness](../../../../../techniques/agent-workflows/human-loop-to-first-landing/notes/canonical-readiness.md)
 - [AOA-T-0088 approval-sensitivity-check](../../../../../techniques/agent-workflows/approval-sensitivity-check/TECHNIQUE.md)
 - [AOA-T-0088 canonical readiness](../../../../../techniques/agent-workflows/approval-sensitivity-check/notes/canonical-readiness.md)
 - [AOA-T-0089 quest-unit-promotion-review](../../../../../techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md)
@@ -101,7 +101,7 @@ public-safety posture, and current paths for all nine bundles.
 | technique | current path | proposed path |
 |---|---|---|
 | `AOA-T-0086` | `techniques/agent-workflows/automation-fit-matrix/` | `techniques/governance/automation-readiness/automation-fit-matrix/` |
-| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-seed-lift/` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/` |
+| `AOA-T-0087` | `techniques/agent-workflows/human-loop-to-first-landing/` | `techniques/governance/automation-readiness/human-loop-to-first-landing/` |
 | `AOA-T-0088` | `techniques/agent-workflows/approval-sensitivity-check/` | `techniques/governance/automation-readiness/approval-sensitivity-check/` |
 
 Read:

@@ -7,7 +7,7 @@
 ## Source project
 - name: aoa-techniques
 - source files:
-  - `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.seed.json`
+  - `mechanics/distillation/parts/agon-candidate-handoff/config/agon_candidate_handoff.source.json`
   - `mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md`
   - `mechanics/distillation/parts/agon-candidate-handoff/gates/examples/offer-evidence-reference-minimal-public-safe.md`
   - `mechanics/distillation/parts/agon-candidate-handoff/gates/checklists/offer-evidence-reference-gate-checklist.md`

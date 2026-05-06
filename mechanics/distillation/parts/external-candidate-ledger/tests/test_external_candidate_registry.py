@@ -46,7 +46,7 @@ def test_external_candidate_registry_shape() -> None:
 def test_builder_rejects_active_lane_without_named_atom() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "external_candidate_registry.seed.json").read_text(encoding="utf-8")
+        (PART_ROOT / "config" / "external_candidate_registry.source.json").read_text(encoding="utf-8")
     )
     config["candidates"][0]["atom_topology_gate"]["atomic_move_status"] = "not_named"
     case = unittest.TestCase()
@@ -57,7 +57,7 @@ def test_builder_rejects_active_lane_without_named_atom() -> None:
 def test_builder_rejects_portability_gap() -> None:
     builder = load_builder()
     config = json.loads(
-        (PART_ROOT / "config" / "external_candidate_registry.seed.json").read_text(encoding="utf-8")
+        (PART_ROOT / "config" / "external_candidate_registry.source.json").read_text(encoding="utf-8")
     )
     config["candidates"][0]["atom_topology_gate"]["portability_note"] = "donor-local only"
     case = unittest.TestCase()

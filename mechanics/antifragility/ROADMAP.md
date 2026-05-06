@@ -9,7 +9,7 @@ generated contracts, or validator behavior by itself.
 Antifragility is the local route for stress, chaos, degraded-mode, and
 recovery-oriented practice pressure that may become one portable technique.
 
-- `chaos-wave-program` is the local home for bounded chaos and stress program
+- `chaos-stress-program` is the local home for bounded chaos and stress program
   practice distilled from the pre-split donor-wave surface.
 - `recovery-practice-bridge` is the local home for bridges between
   antifragility pressure and current recovery or validation techniques.

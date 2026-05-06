@@ -13,7 +13,7 @@
 
 ## What changed
 
-- paths: donor CLI and storage paths were replaced by markdown seed bundles, landing notes, and the published technique bundle
+- paths: donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle
 - services: this adaptation does not ship a tracker runtime, queue API, or claim workflow surface
 - dependencies: the queue now derives next landing work from existing blocker notes or graph surfaces rather than from the donor tracker implementation
 - operating assumptions: the queue is treated as a bounded coordination seam inside repo work, not as a product-facing task board
@@ -31,7 +31,7 @@
 
 ## Evidence
 
-- source paths: `incoming/chat-wave-2-graph-review-mailbox/seed_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.seed.md`, `incoming/chat-wave-2-graph-review-mailbox/docs/CHAT_WAVE_2_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`
+- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result

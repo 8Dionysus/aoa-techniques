@@ -275,11 +275,11 @@ See also:
 |---|---|---|---|
 | minimal automation-fit-matrix | `present` | `techniques/governance/automation-readiness/automation-fit-matrix/examples/minimal-automation-fit-matrix.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
 
-### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) - human-loop-to-seed-lift (`promoted`)
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) - human-loop-to-first-landing (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal human-loop-to-seed-lift | `present` | `techniques/governance/automation-readiness/human-loop-to-seed-lift/examples/minimal-human-loop-to-seed-lift.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md) |
+| minimal human-loop-to-first-landing | `present` | `techniques/governance/automation-readiness/human-loop-to-first-landing/examples/minimal-human-loop-to-first-landing.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) |
 
 ### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
 

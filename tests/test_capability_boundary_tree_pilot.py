@@ -44,7 +44,7 @@ LIVE_LINK_SURFACES = (
     "mechanics/experience/parts/technique-candidate-bridge/README.md",
     "mechanics/distillation/parts/external-candidate-ledger/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
-    "mechanics/distillation/parts/cross-layer-candidate-ledger/config/cross_layer_candidate_registry.seed.json",
+    "mechanics/distillation/parts/cross-layer-candidate-ledger/config/cross_layer_candidate_registry.source.json",
     "mechanics/distillation/parts/agon-candidate-handoff/gates/offer-evidence-reference-practice.md",
     "mechanics/boundary-bridge/PROVENANCE.md",
     "mechanics/boundary-bridge/parts/derived-projection-anchors/README.md",

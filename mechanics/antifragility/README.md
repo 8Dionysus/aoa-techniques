@@ -76,7 +76,7 @@ matters. Stable reusable practice moves through `techniques/**/TECHNIQUE.md`.
 
 ## Functioning parts
 
-- [Chaos Wave Program](parts/chaos-wave-program/README.md): bounded chaos and
+- [Chaos Stress Program](parts/chaos-stress-program/README.md): bounded chaos and
   stress program shape, owner routing, degraded continuation, and evidence
   bridge posture.
 - [Recovery Practice Bridge](parts/recovery-practice-bridge/README.md):

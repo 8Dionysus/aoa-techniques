@@ -38,8 +38,8 @@ PILOT_BUNDLES = (
 
 LIVE_LINK_SURFACES = (
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "incoming/chat-wave-1a-registry-discovery/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_WAVE_1A.md",
-    "incoming/chat-wave-1a-registry-discovery/docs/SEMANTIC_LINKAGE_RECORDS_NARROWING_MEMO.md",
+    "incoming/chat-registry-discovery/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_REGISTRY_DISCOVERY.md",
+    "incoming/chat-registry-discovery/docs/SEMANTIC_LINKAGE_RECORDS_NARROWING_MEMO.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-docs-boundary-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/capability-registry-direct-read-migration-review.md",
 )

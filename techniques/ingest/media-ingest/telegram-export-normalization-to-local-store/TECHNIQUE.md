@@ -174,7 +174,7 @@ See `checks/telegram-export-normalization-to-local-store-checklist.md`.
 ## Promotion history
 
 - adapted from open-source `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp`
-- landed from `personal-ingest-wave-2`
+- landed from `personal-media-ingest`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for Telegram-source normalization into a local resumable store
 
 ## Future evolution

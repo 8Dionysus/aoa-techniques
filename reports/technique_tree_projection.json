@@ -4,8 +4,8 @@
   "source_of_truth": {
     "tree_contract": "docs/TECHNIQUE_TREE_CONTRACT.md",
     "family_review": "mechanics/distillation/parts/technique-reform-ingress/reviews/first-family-shelf-review-pack.md",
-    "family_seed": "config/technique_family_seed.yaml",
-    "wave1_mapping": "data/technique_kind_wave1.yaml",
+    "family_scout": "config/technique_family_scout.yaml",
+    "kind_overlay": "data/technique_kind_overlay.yaml",
     "catalog": "generated/technique_catalog.json"
   },
   "authority_note": "This projection is non-authoritative and weaker than authored bundle meaning. It is a placement review surface only; it must not be treated as frontmatter truth, schema truth, or automatic path migration authority.",
@@ -1001,16 +1001,16 @@
     },
     {
       "id": "AOA-T-0087",
-      "name": "human-loop-to-seed-lift",
+      "name": "human-loop-to-first-landing",
       "domain": "agent-workflows",
       "kind": "assessment",
       "status": "promoted",
       "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
-      "current_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "current_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "family": "automation-governance",
       "proposed_trunk": "governance",
       "proposed_shelf": "automation-readiness",
-      "proposed_future_path": "techniques/governance/automation-readiness/human-loop-to-seed-lift/TECHNIQUE.md",
+      "proposed_future_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "review_status": "candidate",
       "rationale_cues": [
         "family:automation-governance",

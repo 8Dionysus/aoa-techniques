@@ -12,13 +12,13 @@
 - source digest: `c029f6f9a7c7e3774b7378a895950f6a979b3d53d11b8bcbcec5f17579df5ee2`
 - source files:
   - `README.md`
-  - `proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.seed.md`
-  - `proposed/abyss-stack/service_degradation_receipt.*.seed.json`
-  - `proposed/abyss-stack/repair_safe_closeout_receipt.*.seed.json`
-  - `proposed/aoa-playbooks/playbook_stress_lane.*.seed.json`
-  - `proposed/aoa-kag/projection_health_receipt.*.seed.json`
-  - `proposed/aoa-kag/regrounding_ticket.*.seed.json`
-  - `proposed/aoa-evals/runtime_evidence_selection.*.seed.json`
+  - `proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.candidate.md`
+  - `proposed/abyss-stack/service_degradation_receipt.*.source.json`
+  - `proposed/abyss-stack/repair_safe_closeout_receipt.*.source.json`
+  - `proposed/aoa-playbooks/playbook_stress_lane.*.source.json`
+  - `proposed/aoa-kag/projection_health_receipt.*.source.json`
+  - `proposed/aoa-kag/regrounding_ticket.*.source.json`
+  - `proposed/aoa-evals/runtime_evidence_selection.*.source.json`
 
 ## Evidence
 

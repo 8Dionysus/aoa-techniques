@@ -301,7 +301,7 @@ permission slip to remap techniques automatically.
 | [Technique Topology Contract](../../../../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) | classification is faceted and `domain + kind` are current truth | readiness to migrate every bundle frontmatter field |
 | [Technique Tree Contract](../../../../docs/TECHNIQUE_TREE_CONTRACT.md) | future root path architecture should be a tree of trunks, shelves, and leaf bundles | authority to move every bundle or make `tree_path` required frontmatter |
 | [Technique Kind Registry](../../../../config/technique_kind_registry.yaml) | current `kind` values and tie-break rules | that Agon handoff labels like `trace-probe` or `review` are valid kind values |
-| [Technique Family Seed](../../../../config/technique_family_seed.yaml) | scout shelf candidates and family constraints | authoritative family assignment for every bundle |
+| [Technique Family Scout](../../../../config/technique_family_scout.yaml) | scout shelf candidates and family constraints | authoritative family assignment for every bundle |
 | [Technique Topology Axes Registry](../../../../config/technique_topology_axes.yaml) | scout values for `capability_class`, `substrate`, `execution_profile`, and `risk_posture` | required frontmatter fields or automatic bundle remapping |
 | [Technique Topology Scout](../../../../reports/technique_topology_scout.md) | current generated projection over scout axes for review pressure | schema truth, migration authority, or bundle meaning |
 | [First Topology Scout Review Pack](reviews/first-topology-scout-review-pack.md) | first human readout from the scout projection and the next review lane | schema migration, bundle remap authority, or proof of generated correctness |

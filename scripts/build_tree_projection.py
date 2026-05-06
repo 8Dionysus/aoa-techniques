@@ -5,7 +5,7 @@ from pathlib import Path
 from validate_repo import (
     build_tree_projection_markdown,
     build_tree_projection_payload,
-    load_wave1_kind_overlay,
+    load_kind_overlay,
     read_json,
     write_json_file,
     write_text_file,
@@ -18,9 +18,9 @@ def main() -> int:
     reports_dir.mkdir(exist_ok=True)
 
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
-    wave1_overlay = load_wave1_kind_overlay(repo_root)
+    kind_overlay = load_kind_overlay(repo_root)
 
-    report = build_tree_projection_payload(catalog, wave1_overlay)
+    report = build_tree_projection_payload(catalog, kind_overlay)
     markdown = build_tree_projection_markdown(report)
 
     json_path = reports_dir / "technique_tree_projection.json"
