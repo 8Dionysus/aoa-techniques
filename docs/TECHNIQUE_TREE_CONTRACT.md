@@ -612,9 +612,18 @@ The twenty-third pilot migration moves exactly those four bundles into
 frontmatter. The root receipt is
 [`legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md`](../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md).
 
-The next reform slice should review the landed
-`execution/runtime-truth-lifecycle` shelf before choosing the twenty-fourth
-shelf.
+The landed twenty-third pilot review is
+[Landed Runtime-Truth-Lifecycle Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-runtime-truth-lifecycle-pilot-review.md).
+It validates the fourth execution trunk shelf and chooses
+`proof/owner-truth-closeout` for the next direct-read migration review while
+keeping AoA constitutional authority, root `AGENTS.md` law, workspace install
+doctrine, public-share approval policy, GitHub platform policy, release
+governance, cross-repo mirror co-ownership, skill activation, checkpoint
+automation, closeout automation, and neighboring automation/tool-use shelves
+outside the next move.
+
+The next reform slice should run the `proof/owner-truth-closeout` direct-read
+review before choosing any twenty-fourth shelf movement.
 
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.

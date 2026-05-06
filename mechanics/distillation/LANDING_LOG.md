@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Landed runtime-truth-lifecycle pilot review
+
+Changed:
+
+- added
+  [landed-runtime-truth-lifecycle-pilot-review](parts/technique-reform-ingress/reviews/landed-runtime-truth-lifecycle-pilot-review.md)
+  as the landed review for the twenty-third tree pilot migration
+- validated `runtime-truth-lifecycle` as the fourth execution trunk shelf after
+  migration
+- kept render truth, local lifecycle, host readiness, and baseline-first
+  comparison as distinct runtime-adjacent atoms
+- chose `proof/owner-truth-closeout` for direct-read migration review before
+  any twenty-fourth shelf movement
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique paths changed
+- no frontmatter changed
+- no `proof/owner-truth-closeout` route card or receipt was created
+- no AoA constitutional authority, root `AGENTS.md` law, workspace install
+  doctrine, public-share approval policy, GitHub platform policy, release
+  governance, cross-repo mirror co-ownership, skill activation, checkpoint
+  automation, closeout automation, or neighboring automation/tool-use shelf
+  moved
+
 ## 2026-05-05 - Runtime-truth-lifecycle tree pilot migration
 
 Changed:
