@@ -37,7 +37,7 @@ Current local anchors include:
   (`AOA-T-0084`)
 - `techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md`
   (`AOA-T-0085`)
-- `techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md`
+- `techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md`
   (`AOA-T-0076`)
 - `techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md`
   (`AOA-T-0089`)

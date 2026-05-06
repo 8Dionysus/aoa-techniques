@@ -3,6 +3,40 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Decision-routing tree pilot migration
+
+Changed:
+
+- moved exactly `AOA-T-0076`, `AOA-T-0078`, and `AOA-T-0079` into
+  `techniques/governance/decision-routing/`
+- added `techniques/governance/AGENTS.md` with compact governance trunk
+  guidance
+- preserved root legacy accounting in
+  `legacy/receipts/2026-05-05-decision-routing-tree-pilot.md`
+- repaired authored links from adjacent techniques and active mechanics or
+  review sources to current paths
+- kept `domain`, `kind`, status, IDs, evidence, relations, support files,
+  maturity, validation-strength metadata, and public-safety posture unchanged
+- preserved all three bundles as `status: promoted`; path movement did not
+  imply canonical promotion
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
+python scripts/release_check.py
+```
+
+Not changed:
+
+- no `tree_path` frontmatter was added
+- no neighboring governance, proof, execution, tool-use, routing, role,
+  approval, automation, or remaining `agent-workflows` shelf was moved
+- no AoA constitutional authority, `aoa-routing` ownership, role contract law,
+  runtime dispatch, approval policy, playbook design, hidden automation
+  governance, risk scoring doctrine, or context-map doctrine was imported into
+  the shelf
+
 ## 2026-05-05 - Decision-routing direct-read migration review
 
 Changed:

@@ -90,7 +90,7 @@ probable cause or repair direction.
 - bounded labels should help later diagnosis rather than replace it
 - the taxonomy stays smaller than a full diagnosis packet
 
-Relationship to adjacent techniques: unlike [AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique does not claim probable causes, owner hints, or repair shapes over the whole packet; it only classifies the type of drift. Unlike [AOA-T-0076](../../../agent-workflows/owner-layer-triage/TECHNIQUE.md), it does not place one reusable unit into one owner layer.
+Relationship to adjacent techniques: unlike [AOA-T-0081](../diagnosis-from-reviewed-evidence/TECHNIQUE.md), this technique does not claim probable causes, owner hints, or repair shapes over the whole packet; it only classifies the type of drift. Unlike [AOA-T-0076](../../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md), it does not place one reusable unit into one owner layer.
 
 ## Risks
 

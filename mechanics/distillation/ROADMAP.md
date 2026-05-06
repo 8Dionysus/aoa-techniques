@@ -322,7 +322,13 @@
    and all remaining `agent-workflows` leaves outside the shelf. The next
    bounded step is to migrate those three bundles only after path movement,
    support-file carry, compact governance route card creation, receipt,
-   link-repair, generated surface, and validation work move together.
+   link-repair, generated surface, and validation work move together. The
+   twentieth pilot migration is now landed exactly for those three bundles
+   under `techniques/governance/decision-routing/`, with the compact
+   governance route card created, root legacy receipt accounting, link repair,
+   generated rebuilds, and release-check validation in the same wave. The next
+   bounded step is to review the landed `decision-routing` pilot before
+   choosing any twenty-first shelf.
 
 ## Hold line
 

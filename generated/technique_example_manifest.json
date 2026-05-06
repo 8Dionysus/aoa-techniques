@@ -954,10 +954,10 @@
     },
     {
       "id": "AOA-T-0076",
-      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/owner-layer-triage/examples/minimal-owner-layer-triage.md",
+          "example_path": "techniques/governance/decision-routing/owner-layer-triage/examples/minimal-owner-layer-triage.md",
           "title": "minimal owner-layer-triage",
           "body_markdown": "## Candidate unit\n\n```yaml\ncandidate_unit:\n  unit_name: explicit post-session donor harvest workflow\n  reuse_kind: mechanic\n  evidence_anchors:\n    - \"the reviewed session repeatedly performs one bounded post-session operator workflow\"\n```\n\n## Placement verdict\n\n```yaml\nowner_layer_verdict:\n  primary_owner_shape: bounded_executable_workflow\n  next_artifact: SKILL.md\n  rejected_nearest_wrong_target:\n    owner_shape: reusable_practice_canon\n    reason: \"the value here depends on a bounded operator workflow rather than on one abstract rule alone\"\n```\n\nWhy this example stays bounded:\n\n- it starts from one already isolated candidate unit\n- it chooses one primary owner verdict rather than several partial owners\n- it rejects the nearest wrong target explicitly instead of leaving the boundary implicit"
         }
@@ -976,10 +976,10 @@
     },
     {
       "id": "AOA-T-0078",
-      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/decision-fork-cards/examples/minimal-decision-fork-cards.md",
+          "example_path": "techniques/governance/decision-routing/decision-fork-cards/examples/minimal-decision-fork-cards.md",
           "title": "minimal decision-fork-cards",
           "body_markdown": "```yaml\nfork_cards:\n  - route: strengthen the donor nucleus first\n    likely_gain: clearer packet contract before any wider rollout\n    likely_cost: one extra focused hardening pass\n    likely_risk: delayed delivery of downstream siblings\n    first_owner_target: aoa-skills\n    stop_condition: \"stop if the nucleus changes no longer fit one bounded skill family\"\n  - route: extract the diagnosis seam next\n    likely_gain: repeated drift becomes explicit before repair\n    likely_cost: one more technique and skill pinning pass\n    likely_risk: diagnosis may outrun real usage proof\n    first_owner_target: aoa-techniques\n    stop_condition: \"stop if diagnosis starts smuggling repair work\"\n  - route: hold\n    likely_gain: avoids forced branching when evidence is still mixed\n    likely_cost: slower visible momentum\n    likely_risk: uncertainty may linger\n    first_owner_target: hold\n    stop_condition: \"reopen once reviewed evidence sharpens\"\n```\n\nWhy this example stays bounded:\n\n- each card represents a materially distinct next route\n- costs, risks, and stop conditions stay visible\n- the card set preserves choice instead of hiding one default route as policy"
         }
@@ -987,10 +987,10 @@
     },
     {
       "id": "AOA-T-0079",
-      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
       "examples": [
         {
-          "example_path": "techniques/agent-workflows/risk-passport-lift/examples/minimal-risk-passport-lift.md",
+          "example_path": "techniques/governance/decision-routing/risk-passport-lift/examples/minimal-risk-passport-lift.md",
           "title": "minimal risk-passport-lift",
           "body_markdown": "```yaml\nroute_passport:\n  route: extract the diagnosis seam next\n  difficulty: medium\n  risk: bounded-but-real\n  control_mode: explicit-review\n  delegate_tier: focused\n  stop_condition: \"stop if diagnosis starts performing repair work\"\n```\n\nWhy this example stays bounded:\n\n- it summarizes one route instead of replacing the branch card\n- it keeps posture descriptive rather than sovereign\n- it makes stop-condition posture visible without inflating into a full runbook"
         }

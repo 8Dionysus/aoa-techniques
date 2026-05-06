@@ -16,7 +16,7 @@ proof, routing, memory, and quest source stay elsewhere.
   (`techniques/agent-workflows/quest-unit-promotion-review/TECHNIQUE.md`) owns
   one bounded promotion verdict for one repeated reviewed quest unit.
 - `AOA-T-0078`
-  (`techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md`) keeps route
+  (`techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md`) keeps route
   cards explicit when a choice surface, not flavor, is the real need.
 - `mechanics/questbook/` keeps local Questbook source, index, projection, and
   harvest/promotion pressure visible.

@@ -54,9 +54,9 @@ slice should run a direct-read review for `governance/decision-routing`.
 - [Technique topology scout rows for `donor-harvest` and `decision-routing`](../../../../../reports/technique_topology_scout.md)
 - [Technique tree projection rows for `donor-harvest` and `decision-routing`](../../../../../reports/technique_tree_projection.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [AOA-T-0076 owner-layer-triage](../../../../../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md)
-- [AOA-T-0078 decision-fork-cards](../../../../../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md)
-- [AOA-T-0079 risk-passport-lift](../../../../../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md)
+- [AOA-T-0076 owner-layer-triage](../../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md)
+- [AOA-T-0078 decision-fork-cards](../../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md)
+- [AOA-T-0079 risk-passport-lift](../../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md)
 
 ## Landed Shape Read
 

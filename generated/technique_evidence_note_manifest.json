@@ -38240,10 +38240,10 @@
     },
     {
       "id": "AOA-T-0076",
-      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/owner-layer-triage/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/decision-routing/owner-layer-triage/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -38374,7 +38374,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/owner-layer-triage/notes/origin-evidence.md",
+          "note_path": "techniques/governance/decision-routing/owner-layer-triage/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -38455,7 +38455,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/owner-layer-triage/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/decision-routing/owner-layer-triage/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -38970,10 +38970,10 @@
     },
     {
       "id": "AOA-T-0078",
-      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/decision-fork-cards/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/decision-routing/decision-fork-cards/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -39104,7 +39104,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/decision-fork-cards/notes/origin-evidence.md",
+          "note_path": "techniques/governance/decision-routing/decision-fork-cards/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -39185,7 +39185,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/decision-fork-cards/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/decision-routing/decision-fork-cards/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",
@@ -39337,10 +39337,10 @@
     },
     {
       "id": "AOA-T-0079",
-      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md",
+      "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
       "notes": [
         {
-          "note_path": "techniques/agent-workflows/risk-passport-lift/notes/canonical-readiness.md",
+          "note_path": "techniques/governance/decision-routing/risk-passport-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
           "note_shape": "typed_sections",
@@ -39471,7 +39471,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/risk-passport-lift/notes/origin-evidence.md",
+          "note_path": "techniques/governance/decision-routing/risk-passport-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
           "note_shape": "typed_sections",
@@ -39552,7 +39552,7 @@
           ]
         },
         {
-          "note_path": "techniques/agent-workflows/risk-passport-lift/notes/second-context-adaptation.md",
+          "note_path": "techniques/governance/decision-routing/risk-passport-lift/notes/second-context-adaptation.md",
           "kind": "second_context",
           "title": "Second Context Adaptation",
           "note_shape": "typed_sections",

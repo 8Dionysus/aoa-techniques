@@ -1064,7 +1064,7 @@
       "core_contract_short": "Core contract: one candidate unit maps to one primary owner layer; usefulness is a reuse signal, not an owner layer...",
       "main_risk_short": "Main risk: one mixed unit is forced into one owner layer before it is actually split.",
       "validation_short": "Validate by checking the candidate unit is bounded and singular; one primary owner layer is named explicitly; the nearest wrong target is...",
-      "technique_path": "techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md"
+      "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0077",
@@ -1092,7 +1092,7 @@
       "core_contract_short": "Core contract: fork cards describe choices; they do not decide authority; each card must represent one materially distinct route.",
       "main_risk_short": "Main risk: the cards describe variants of the same route instead of real forks.",
       "validation_short": "Validate by checking the source material is reviewed; each card represents a materially distinct route; each route names gains, costs, risks, and...",
-      "technique_path": "techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md"
+      "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0079",
@@ -1106,7 +1106,7 @@
       "core_contract_short": "Core contract: one passport belongs to one route; the passport stays smaller than the branch card it complements.",
       "main_risk_short": "Main risk: the passport becomes a hidden scorecard instead of a small posture summary.",
       "validation_short": "Validate by checking each passport belongs to one explicit route; the field set stays small and reviewable; difficulty, risk, control mode, delegate...",
-      "technique_path": "techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md"
+      "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md"
     },
     {
       "id": "AOA-T-0080",

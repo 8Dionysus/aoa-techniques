@@ -94,7 +94,7 @@ instead of dissolving into vague risk prose or hidden planner metadata.
 - stop conditions remain explicit when risk or cost is meaningful
 - the passport informs branch choice but does not decide authority by itself
 
-Relationship to adjacent techniques: unlike [AOA-T-0078](../decision-fork-cards/TECHNIQUE.md), this technique does not decide which materially distinct branches exist; it only keeps route posture metadata small and explicit per branch. Unlike [AOA-T-0083](../checkpoint-bound-self-repair/TECHNIQUE.md), it does not govern mutation checkpoints over a repair packet; it only lifts comparison-ready route posture.
+Relationship to adjacent techniques: unlike [AOA-T-0078](../decision-fork-cards/TECHNIQUE.md), this technique does not decide which materially distinct branches exist; it only keeps route posture metadata small and explicit per branch. Unlike [AOA-T-0083](../../../recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md), it does not govern mutation checkpoints over a repair packet; it only lifts comparison-ready route posture.
 
 ## Risks
 

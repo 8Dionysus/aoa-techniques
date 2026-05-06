@@ -209,11 +209,11 @@ See also:
 |---|---|---|---|
 | minimal session-donor-harvest | `present` | `techniques/continuity/donor-harvest/session-donor-harvest/examples/minimal-session-donor-harvest.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
 
-### [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
+### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal owner-layer-triage | `present` | `techniques/agent-workflows/owner-layer-triage/examples/minimal-owner-layer-triage.md` | [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) |
+| minimal owner-layer-triage | `present` | `techniques/governance/decision-routing/owner-layer-triage/examples/minimal-owner-layer-triage.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
 
 ### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
 
@@ -221,17 +221,17 @@ See also:
 |---|---|---|---|
 | minimal harvest-packet-contract | `present` | `techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
 
-### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
+### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal decision-fork-cards | `present` | `techniques/agent-workflows/decision-fork-cards/examples/minimal-decision-fork-cards.md` | [TECHNIQUE.md](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) |
+| minimal decision-fork-cards | `present` | `techniques/governance/decision-routing/decision-fork-cards/examples/minimal-decision-fork-cards.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) |
 
-### [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
+### [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
-| minimal risk-passport-lift | `present` | `techniques/agent-workflows/risk-passport-lift/examples/minimal-risk-passport-lift.md` | [TECHNIQUE.md](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) |
+| minimal risk-passport-lift | `present` | `techniques/governance/decision-routing/risk-passport-lift/examples/minimal-risk-passport-lift.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
 

@@ -202,11 +202,11 @@ See also:
 |---|---|---|---|---|
 | session-donor-harvest checklist | `absent` | `8` | `techniques/continuity/donor-harvest/session-donor-harvest/checks/session-donor-harvest-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
 
-### [AOA-T-0076](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
+### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| owner-layer-triage checklist | `absent` | `8` | `techniques/agent-workflows/owner-layer-triage/checks/owner-layer-triage-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/owner-layer-triage/TECHNIQUE.md) |
+| owner-layer-triage checklist | `absent` | `8` | `techniques/governance/decision-routing/owner-layer-triage/checks/owner-layer-triage-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
 
 ### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
 
@@ -214,17 +214,17 @@ See also:
 |---|---|---|---|---|
 | harvest-packet-contract checklist | `absent` | `7` | `techniques/continuity/donor-harvest/harvest-packet-contract/checks/harvest-packet-contract-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
 
-### [AOA-T-0078](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
+### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| decision-fork-cards checklist | `absent` | `8` | `techniques/agent-workflows/decision-fork-cards/checks/decision-fork-cards-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/decision-fork-cards/TECHNIQUE.md) |
+| decision-fork-cards checklist | `absent` | `8` | `techniques/governance/decision-routing/decision-fork-cards/checks/decision-fork-cards-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) |
 
-### [AOA-T-0079](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
+### [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
-| risk-passport-lift checklist | `absent` | `7` | `techniques/agent-workflows/risk-passport-lift/checks/risk-passport-lift-checklist.md` | [TECHNIQUE.md](../techniques/agent-workflows/risk-passport-lift/TECHNIQUE.md) |
+| risk-passport-lift checklist | `absent` | `7` | `techniques/governance/decision-routing/risk-passport-lift/checks/risk-passport-lift-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
 

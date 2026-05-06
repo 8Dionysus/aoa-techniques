@@ -155,7 +155,7 @@ class DiagnosisRepairTreePilotTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
 
         self.assertIn(
-            "../../../agent-workflows/owner-layer-triage/TECHNIQUE.md",
+            "../../../governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
             session_taxonomy,
         )
         self.assertIn(
