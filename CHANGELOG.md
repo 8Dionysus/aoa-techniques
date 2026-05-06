@@ -223,6 +223,9 @@ The format is intentionally simple and human-first.
 - moved `AOA-T-0076`, `AOA-T-0078`, and `AOA-T-0079` into
   `techniques/governance/decision-routing/` while keeping `domain`, `kind`,
   IDs, status, evidence, and `tree_path` frontmatter unchanged
+- accepted the landed `decision-routing` pilot review and selected
+  `governance/approval-evidence` for the next direct-read migration review
+  without moving a twenty-first shelf yet
 
 ### Validation
 

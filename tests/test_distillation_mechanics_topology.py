@@ -122,6 +122,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/donor-harvest-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-donor-harvest-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/decision-routing-direct-read-migration-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-decision-routing-pilot-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -5676,6 +5677,107 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 self.assertIn(new_path, receipt)
                 self.assertFalse((REPO_ROOT / old_path).exists())
                 self.assertTrue((REPO_ROOT / new_path / "TECHNIQUE.md").is_file())
+
+    def test_landed_decision_routing_review_selects_approval_evidence(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "landed-decision-routing-pilot-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+
+        self.assertIn("Landed Decision-Routing Pilot Review", review)
+        self.assertIn(
+            "first successful shelf under the `governance` trunk",
+            review,
+        )
+        self.assertIn("Choose `governance/approval-evidence`", review)
+        self.assertIn("Do not move `governance/approval-evidence`", review)
+        self.assertIn(
+            "Run a direct-read migration review for `governance/approval-evidence`",
+            review,
+        )
+        self.assertIn("landed-decision-routing-pilot-review", reviews_index)
+        self.assertIn("landed decision-routing pilot review: landed", ingress)
+        self.assertIn("governance/approval-evidence", ingress)
+        self.assertIn("Landed decision-routing pilot review", landing_log)
+        self.assertIn("first successful\n  governance trunk shelf", landing_log)
+        self.assertIn("no `governance/approval-evidence` route card", landing_log)
+        self.assertIn(
+            "landed `decision-routing` review is\n   now complete",
+            distillation_roadmap,
+        )
+        self.assertIn("chooses `governance/approval-evidence`", root_roadmap)
+        self.assertIn(
+            "Run the `governance/approval-evidence` direct-read",
+            root_roadmap,
+        )
+        self.assertIn("Landed Decision-Routing Pilot Review", tree_contract)
+        self.assertIn(
+            "directly read `AOA-T-0068` and `AOA-T-0069`",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the landed `decision-routing` pilot review",
+            changelog,
+        )
+        self.assertFalse(
+            (
+                REPO_ROOT / "techniques" / "governance" / "approval-evidence"
+            ).exists()
+        )
+
+        for technique_id, current_path, future_path in (
+            (
+                "AOA-T-0068",
+                "techniques/agent-workflows/fail-closed-evidence-gate/TECHNIQUE.md",
+                "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
+            ),
+            (
+                "AOA-T-0069",
+                "techniques/agent-workflows/approval-bound-durable-jobs/TECHNIQUE.md",
+                "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
+            ),
+        ):
+            with self.subTest(technique_id=technique_id):
+                self.assertIn(technique_id, review)
+                self.assertIn(current_path.rsplit("/", 1)[0] + "/", review)
+                self.assertIn(future_path.rsplit("/", 1)[0] + "/", review)
+                self.assertTrue((REPO_ROOT / current_path).is_file())
+                self.assertFalse((REPO_ROOT / future_path).exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

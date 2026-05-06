@@ -545,5 +545,14 @@ root receipt is
 The next reform slice should review the landed `governance/decision-routing`
 shelf before choosing the twenty-first shelf.
 
+The landed twentieth pilot review is
+[Landed Decision-Routing Pilot Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/landed-decision-routing-pilot-review.md).
+It validates the first governance trunk shelf and chooses
+`governance/approval-evidence` for the next direct-read migration review
+without moving files.
+
+The next reform slice should directly read `AOA-T-0068` and `AOA-T-0069`
+before any twenty-first shelf movement.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
