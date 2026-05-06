@@ -198,6 +198,9 @@ permission slip to remap techniques automatically.
 - review-evidence migration: landed, with `AOA-T-0107`, `AOA-T-0105`, and
   `AOA-T-0106` moved into `techniques/proof/review-evidence/` and
   frontmatter preserved
+- landed review-evidence pilot review: landed as `pilot-validated`, with
+  `execution/runtime-truth-lifecycle` chosen for direct-read review before any
+  twenty-third shelf movement
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -280,6 +283,7 @@ permission slip to remap techniques automatically.
 | [Landed Approval-Evidence Pilot Review](reviews/landed-approval-evidence-pilot-review.md) | confirms the twenty-first migrated shelf stayed bounded as the second governance trunk shelf and chooses `proof/review-evidence` for direct-read review | movement of `proof/review-evidence`, `tree_path` frontmatter, frontmatter remap, canonical promotion, proof verdict authority, eval-suite ownership, review-board workflow, Agon move law, actor eligibility, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, skill activation, or neighboring runtime/owner/governance shelves |
 | [Review-Evidence Direct-Read Migration Review](reviews/review-evidence-direct-read-migration-review.md) | reads `AOA-T-0107`, `AOA-T-0105`, and `AOA-T-0106` directly and accepts the shelf as the twenty-second migration pilot | path movement by review alone, `tree_path` frontmatter, frontmatter remap, canonical promotion, proof verdict authority, eval-suite ownership, review-board workflow, Agon move law, actor eligibility, evidence adequacy scoring, source-truth transfer, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, skill activation, neighboring proof/runtime/governance shelves, or all remaining `agent-workflows` and `docs` leaves |
 | [Review-Evidence Tree Pilot Receipt](../../../../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md) | preserves the twenty-second accepted path migration into `techniques/proof/review-evidence/` | active technique provenance, `tree_path` frontmatter, frontmatter remap, canonical promotion, proof verdict authority, eval-suite ownership, review-board workflow, Agon move law, actor eligibility, evidence adequacy scoring, source-truth transfer, route mutation, memory write, runtime behavior, KAG promotion, ToS canon, skill activation, neighboring proof/runtime/governance shelves, or all remaining `agent-workflows` and `docs` leaves |
+| [Landed Review-Evidence Pilot Review](reviews/landed-review-evidence-pilot-review.md) | confirms the twenty-second migrated shelf stayed bounded as the fourth proof trunk shelf and chooses `execution/runtime-truth-lifecycle` for direct-read review | movement of `execution/runtime-truth-lifecycle`, `tree_path` frontmatter, frontmatter remap, canonical promotion, `abyss-stack` runtime law, deployment ownership, monitoring platform doctrine, host policy, smoke-test law, benchmark-suite governance, product scoring, `aoa-evals` verdict authority, or neighboring owner/governance/tool-use shelves |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -579,3 +583,9 @@ The `review-evidence` migration is now landed. `AOA-T-0107`, `AOA-T-0105`,
 and `AOA-T-0106` live under `techniques/proof/review-evidence/` with support
 files moved, proof route card updated, root legacy receipt added, generated
 surfaces rebuilt, and frontmatter unchanged.
+
+The landed `review-evidence` pilot review is now complete as
+`pilot-validated`. It validates the fourth proof trunk shelf, preserves claim
+challenge, missing-evidence request, and scoped reference as distinct
+one-atom leaves, and chooses `execution/runtime-truth-lifecycle` for the next
+direct-read migration review before any twenty-third shelf movement.
