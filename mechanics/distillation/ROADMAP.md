@@ -474,7 +474,12 @@
    after migration, closes the rejected bulk `automation-governance` tail with
    all nine IDs accounted across three landed governance shelves, and chooses
    `tool-use/tool-gateway` for direct-read singleton review before any
-   twenty-eighth movement.
+   twenty-eighth movement. The `tool-gateway` direct-read singleton review is
+   now landed as `accepted-for-twenty-eighth-migration-pilot`; it accepts
+   exactly `AOA-T-0065` as a deliberate singleton shelf while keeping the
+   review non-mutating and preserving current frontmatter. The next bounded
+   step is to migrate that one bundle into
+   `techniques/tool-use/tool-gateway/mcp-gateway-proxy/`.
 
 ## Hold line
 

@@ -742,5 +742,13 @@ That review must decide whether the gateway can move as one deliberate
 singleton shelf, should remain held until a neighbor/import lands, or needs a
 narrower route.
 
+The tool-gateway direct-read singleton review is
+[Tool-Gateway Direct-Read Singleton Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/tool-gateway-direct-read-singleton-review.md).
+It accepts `AOA-T-0065` as the twenty-eighth migration pilot and resolves the
+old singleton hold in favor of one deliberate `tool-use/tool-gateway` shelf.
+The next migration should move exactly that bundle into
+`techniques/tool-use/tool-gateway/mcp-gateway-proxy/` without changing
+frontmatter.
+
 This keeps the future tree beautiful enough to grow while preserving current
 bundle truth.
