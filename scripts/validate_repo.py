@@ -2304,12 +2304,30 @@ def markdown_to_plain_text(markdown: str) -> str:
 
 def capsule_markdown_items(markdown: str) -> list[str]:
     items: list[str] = []
-    for line in markdown.splitlines():
-        if not LEADING_LIST_MARKER_RE.match(line.strip()):
-            continue
-        plain_item = markdown_line_to_plain_text(line)
+    current_item_lines: list[str] = []
+
+    def flush_current_item() -> None:
+        if not current_item_lines:
+            return
+        plain_item = markdown_line_to_plain_text(" ".join(current_item_lines))
         if plain_item:
             items.append(plain_item)
+        current_item_lines.clear()
+
+    for raw_line in markdown.splitlines():
+        stripped = raw_line.strip()
+        if not stripped:
+            flush_current_item()
+            continue
+        if LEADING_LIST_MARKER_RE.match(stripped):
+            flush_current_item()
+            current_item_lines.append(stripped)
+            continue
+        if current_item_lines and (raw_line.startswith(" ") or raw_line.startswith("\t")):
+            current_item_lines.append(stripped)
+            continue
+        flush_current_item()
+    flush_current_item()
     return items
 
 

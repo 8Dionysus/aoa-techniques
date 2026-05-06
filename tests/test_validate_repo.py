@@ -2812,6 +2812,46 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             )
         )
 
+    def test_capsule_markdown_items_preserve_wrapped_bullets(self) -> None:
+        self.assertEqual(
+            [
+                "local rebuilds go green against workspace state while CI still reads older or pinned sibling refs and fails",
+                "repo-native validators also stay green",
+            ],
+            validate_repo.capsule_markdown_items(
+                """- local rebuilds go green against workspace state while CI still reads older or
+  pinned sibling refs and fails
+- repo-native validators also stay green"""
+            ),
+        )
+
+        risk_short = validate_repo.summarize_capsule_risk(
+            """### Failure modes
+
+- local rebuilds go green against workspace state while CI still reads older or
+  pinned sibling refs and fails
+
+### Negative effects
+
+- extra setup overhead
+
+### Misuse patterns
+
+- workspace-only validation
+"""
+        )
+        validation_short = validate_repo.summarize_capsule_validation(
+            """Verify the technique by confirming that:
+
+- the owner-side goal and stop condition were explicit before the
+  PR landed
+- the owner repository merged the bounded change"""
+        )
+
+        self.assertIn("older or pinned", risk_short)
+        self.assertNotIn("older or.", risk_short)
+        self.assertIn("before the PR landed", validation_short)
+
 
 class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def write_valid_surface(self, repo_root: Path) -> None:
