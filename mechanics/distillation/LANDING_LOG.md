@@ -3,6 +3,37 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Approval-evidence direct-read migration review
+
+Changed:
+
+- added
+  [approval-evidence-direct-read-migration-review](parts/technique-reform-ingress/reviews/approval-evidence-direct-read-migration-review.md)
+  as the direct-read review over `AOA-T-0068` and `AOA-T-0069`
+- accepted `governance/approval-evidence` as the twenty-first bounded
+  migration pilot without moving files
+- kept the shelf centered on approval-shaped boundary evidence: one
+  fail-closed execution gate and one approval-bound durable job seam
+- preserved `AOA-T-0068` as `kind: guardrail`, `AOA-T-0069` as
+  `kind: handoff`, and both bundles as `status: promoted`
+- kept approval policy, security framework authority, trust-platform
+  semantics, runtime job-runner ownership, scheduler doctrine, queue-product
+  ownership, broad orchestration governance, and neighboring proof/runtime
+  shelves outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle was moved
+- no frontmatter changed
+- no `governance/approval-evidence` route card or receipt was created
+
 ## 2026-05-05 - Landed decision-routing pilot review
 
 Changed:

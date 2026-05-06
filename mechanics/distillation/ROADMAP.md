@@ -335,7 +335,17 @@
    review before any twenty-first movement. The next bounded step is to read
    `AOA-T-0068` and `AOA-T-0069` directly before deciding whether
    fail-closed evidence gates and approval-bound durable jobs form one
-   migration shelf.
+   migration shelf. The `approval-evidence` direct-read review is now landed
+   as `accepted-for-twenty-first-migration-pilot`; it accepts exactly
+   `AOA-T-0068` and `AOA-T-0069` while keeping the review non-mutating,
+   preserving `AOA-T-0068` as `kind: guardrail`, preserving `AOA-T-0069` as
+   `kind: handoff`, and keeping approval policy, security framework authority,
+   trust-platform semantics, runtime job-runner ownership, scheduler doctrine,
+   queue-product ownership, broad orchestration governance, neighboring
+   proof/runtime shelves, and all remaining `agent-workflows` leaves outside
+   the shelf. The next bounded step is to migrate those two bundles only after
+   path movement, support-file carry, governance route-card update, receipt,
+   link-repair, generated surface, and validation work move together.
 
 ## Hold line
 
