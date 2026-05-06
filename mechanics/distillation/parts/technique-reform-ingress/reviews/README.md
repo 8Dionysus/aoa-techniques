@@ -74,5 +74,6 @@ Current reviews:
 - [final-tree-migration-ledger](final-tree-migration-ledger.md)
 - [bundle-anatomy-baseline-inventory](bundle-anatomy-baseline-inventory.md)
 - [bundle-anatomy-rubric-hardening](bundle-anatomy-rubric-hardening.md)
+- [bundle-anatomy-wave-a-review](bundle-anatomy-wave-a-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
