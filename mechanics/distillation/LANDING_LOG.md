@@ -3,6 +3,38 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Whole-tree closeout review
+
+Changed:
+
+- added
+  [whole-tree-closeout-review](parts/technique-reform-ingress/reviews/whole-tree-closeout-review.md)
+  as the closeout packet for the first full technique tree migration pass
+- confirmed the current tree covers `107` bundles across `10` trunks and `28`
+  shelves
+- confirmed `107/107` current paths match projected paths and no old
+  two-level direct broad-domain leaves remain under `techniques/`
+- confirmed `28/28` shelves have root legacy receipts
+- confirmed `split-review-needed`, `singleton-hold`, and `unassigned-hold`
+  projection rows are all `0`
+- moved the next bounded step to tree route-card consolidation
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no `tree_path`, `family`, capability, substrate, execution-profile, or risk
+  frontmatter was added
+- no generated projection row became source truth
+
 ## 2026-05-05 - Landed tool-gateway pilot review
 
 Changed:

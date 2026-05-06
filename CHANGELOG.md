@@ -309,6 +309,10 @@ The format is intentionally simple and human-first.
 - accepted the landed `tool-gateway` pilot review, resolved the singleton
   shelf after migration, and selected whole-tree closeout review as the next
   reform step
+- accepted the whole-tree closeout review, validating the current tree as
+  `107` bundles across `10` trunks and `28` shelves with `107/107` path
+  parity, `28/28` root receipts, and no remaining split, singleton, or
+  unassigned holds
 
 ### Validation
 

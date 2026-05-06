@@ -12,7 +12,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - the home for atomic executable moves: one technique should be compact enough to classify, template, verify, and hand to a small agent after orchestration supplies the right context
 - a standalone public library: external builders should be able to take one technique, capsule, or bundle into their own agent system without deploying OS Abyss or the whole AoA ecosystem
 - the owner of the technique topology contract: `domain` and `kind` are current frontmatter truth, while family, capability, substrate, execution profile, risk posture, and relation topology are explicit design axes for future scale
-- the owner of the technique tree contract: future corpus paths should form a scalable root tree of trunks, shelves, and leaf bundles without replacing frontmatter truth
+- the owner of the technique tree contract: current corpus paths now form a scalable root tree of trunks, shelves, and leaf bundles without replacing frontmatter truth
 - a repository for reusable techniques, not for bounded execution workflows, verdict logic, routing policy, or private project operations
 - the technique-layer home inside the AoA ontology spine; open [Ecosystem Context](ECOSYSTEM_CONTEXT.md) when the question is why this layer exists separately from skills, playbooks, evals, or runtime repos
 
@@ -20,7 +20,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 
 - open [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is whether a candidate is one atomic technique or a skill/playbook/chain wearing technique clothing
 - open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is how a technique should be classified beyond the first `domain` and `kind`
-- open [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when the question is where technique bundles should live in a scalable root tree or how a path migration should be staged
+- open [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when the question is where technique bundles live in the scalable root tree or how a future path change should be staged
 - open `../config/technique_topology_axes.yaml` when the question is which scout values currently exist for capability, substrate, execution profile, or risk posture; these values are not frontmatter truth
 - open `../reports/technique_topology_scout.md` when you need the current generated projection over those scout axes before proposing any migration
 - open [Charter](../CHARTER.md) when the question is what this repository may claim or own
@@ -74,7 +74,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - use [Roadmap](../ROADMAP.md) for repo-level direction rather than historical closure-audit accounting; historical root audit baseline now lives under Audit legacy
 - use [Root Legacy](../legacy/README.md) for repo-wide public-safe receipts, archives, and raw snapshots that no longer belong in `incoming/` or active docs
 - the intended growth shape is `1000+` compact, well-classified, template-backed techniques as an early target, with a faceted topology that can grow beyond that without turning `agent-workflows` or `docs` into junk drawers
-- the intended directory shape should move toward a tree of trunks, shelves, and leaf bundles only after projection-first review proves the path clearer than the current domain-folder layout
+- the current directory shape is a tree of trunks, shelves, and leaf bundles; future path changes still need projection-first review and direct bundle reading before movement
 - the current repo-wide operating shape is still `pick -> inspect -> expand -> object use`
 - AoA sibling links are allowed as provenance, owner-boundary, and deeper-context
   routes, but the core technique should remain understandable and reusable by a

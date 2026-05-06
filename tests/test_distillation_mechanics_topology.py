@@ -133,6 +133,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-practice-adoption-lifecycle-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/tool-gateway-direct-read-singleton-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-tool-gateway-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/whole-tree-closeout-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -8587,6 +8588,103 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 / "TECHNIQUE.md"
             ).is_file()
         )
+
+    def test_whole_tree_closeout_review_validates_current_tree(self) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "whole-tree-closeout-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        projection = json.loads(
+            (REPO_ROOT / "reports" / "technique_tree_projection.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        projection_markdown = (
+            REPO_ROOT / "reports" / "technique_tree_projection.md"
+        ).read_text(encoding="utf-8")
+
+        techniques = projection["techniques"]
+        receipts = sorted(
+            (REPO_ROOT / "legacy" / "receipts").glob("*tree-pilot.md")
+        )
+        direct_two_level_leaves = list(
+            (REPO_ROOT / "techniques").glob("*/*/TECHNIQUE.md")
+        )
+
+        self.assertIn("Whole-Tree Closeout Review", review)
+        self.assertIn("tree-closeout-validated", review)
+        self.assertIn("current-paths-match-projection", review)
+        self.assertIn("all-shelves-receipted", review)
+        self.assertIn("Run tree route-card consolidation", review)
+        self.assertIn("whole-tree-closeout-review", reviews_index)
+        self.assertIn("whole-tree closeout review: landed", ingress)
+        self.assertIn("Whole-tree closeout review", landing_log)
+        self.assertIn("tree route-card consolidation", distillation_roadmap)
+        self.assertIn(
+            "Run tree route-card consolidation",
+            root_roadmap,
+        )
+        self.assertIn("Whole-Tree Closeout Review", tree_contract)
+        self.assertIn(
+            "accepted the whole-tree closeout review",
+            changelog,
+        )
+        self.assertEqual(107, len(techniques))
+        self.assertEqual(
+            107,
+            sum(
+                entry["current_path"] == entry["proposed_future_path"]
+                for entry in techniques
+            ),
+        )
+        self.assertEqual(28, len(receipts))
+        self.assertEqual([], direct_two_level_leaves)
+        self.assertEqual(
+            0,
+            projection["review_status_counts"]["split-review-needed"],
+        )
+        self.assertEqual(
+            0,
+            projection["review_status_counts"]["singleton-hold"],
+        )
+        self.assertEqual(
+            0,
+            projection["review_status_counts"]["unassigned-hold"],
+        )
+        self.assertIn("not source truth for bundle meaning", projection_markdown)
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (

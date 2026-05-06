@@ -70,5 +70,6 @@ Current reviews:
 - [landed-practice-adoption-lifecycle-pilot-review](landed-practice-adoption-lifecycle-pilot-review.md)
 - [tool-gateway-direct-read-singleton-review](tool-gateway-direct-read-singleton-review.md)
 - [landed-tool-gateway-pilot-review](landed-tool-gateway-pilot-review.md)
+- [whole-tree-closeout-review](whole-tree-closeout-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
