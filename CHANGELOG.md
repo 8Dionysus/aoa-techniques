@@ -301,6 +301,8 @@ The format is intentionally simple and human-first.
   rejected bulk `automation-governance` split tail with all nine IDs
   accounted, and selected `tool-use/tool-gateway` for direct-read singleton
   review without moving a twenty-eighth shelf yet
+- accepted the `tool-gateway` direct-read singleton review over `AOA-T-0065`
+  as the twenty-eighth tree pilot while keeping the review itself non-mutating
 
 ### Validation
 

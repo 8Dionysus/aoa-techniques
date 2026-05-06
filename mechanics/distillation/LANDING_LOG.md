@@ -3,6 +3,39 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-05 - Tool-gateway direct-read singleton review
+
+Changed:
+
+- added
+  [tool-gateway-direct-read-singleton-review](parts/technique-reform-ingress/reviews/tool-gateway-direct-read-singleton-review.md)
+  as the direct-read review over `AOA-T-0065`
+- accepted `tool-use/tool-gateway` as the twenty-eighth bounded migration
+  pilot without moving files
+- treated the former singleton hold as resolved by direct reading: the old hold
+  was useful while larger split pressure remained, but `AOA-T-0065` is now the
+  last broad `agent-workflows` representative and has one honest tool-use home
+- preserved `AOA-T-0065` as `domain: agent-workflows`, `kind: composition`,
+  `status: promoted`
+- kept MCP platform ownership, API gateway product doctrine, connector
+  registry authority, tool marketplace curation, security-scanner doctrine,
+  trust scoring, runtime deployment ownership, skill activation, and canonical
+  promotion outside the move
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
+python scripts/validate_repo.py
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no frontmatter changed
+- no `tool-use/tool-gateway` shelf moved yet
+
 ## 2026-05-05 - Landed practice-adoption-lifecycle pilot review
 
 Changed:

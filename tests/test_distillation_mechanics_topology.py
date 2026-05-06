@@ -131,6 +131,7 @@ PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-promotion-boundary-pilot-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/practice-adoption-lifecycle-direct-read-migration-review.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/landed-practice-adoption-lifecycle-pilot-review.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/tool-gateway-direct-read-singleton-review.md",
 )
 
 OLD_FLAT_DISTILLATION_FILES = (
@@ -8265,7 +8266,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             distillation_roadmap,
         )
         self.assertIn(
-            "Run the direct-read singleton review for `tool-use/tool-gateway`",
+            "Previous tool-gateway breadcrumb preserved",
             root_roadmap,
         )
         self.assertIn(
@@ -8323,6 +8324,110 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
                 / "TECHNIQUE.md"
             ).exists()
         )
+
+    def test_tool_gateway_direct_read_singleton_review_accepts_twenty_eighth_pilot(
+        self,
+    ) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "tool-gateway-direct-read-singleton-review.md"
+        ).read_text(encoding="utf-8")
+        reviews_index = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        ingress = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+        distillation_roadmap = (
+            REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md"
+        ).read_text(encoding="utf-8")
+        root_roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
+        tree_contract = (
+            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
+        ).read_text(encoding="utf-8")
+        changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        projection = (
+            REPO_ROOT / "reports" / "technique_tree_projection.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Tool-Gateway Direct-Read Singleton Review", review)
+        self.assertIn("accepted-for-twenty-eighth-migration-pilot", review)
+        self.assertIn("singleton-accepted", review)
+        self.assertIn(
+            "Accept `tool-use/tool-gateway` as the twenty-eighth",
+            review,
+        )
+        self.assertIn("Move exactly `AOA-T-0065`", review)
+        self.assertIn(
+            "tool-gateway-direct-read-singleton-review",
+            reviews_index,
+        )
+        self.assertIn(
+            "tool-gateway direct-read singleton review: landed",
+            ingress,
+        )
+        self.assertIn(
+            "Tool-gateway direct-read singleton review",
+            landing_log,
+        )
+        self.assertIn(
+            "accepted `tool-use/tool-gateway` as the twenty-eighth",
+            landing_log,
+        )
+        self.assertIn(
+            "tool-gateway` direct-read singleton review is\n   now landed",
+            distillation_roadmap,
+        )
+        self.assertIn(
+            "Migrate exactly `AOA-T-0065`",
+            root_roadmap,
+        )
+        self.assertIn(
+            "Tool-Gateway Direct-Read Singleton Review",
+            tree_contract,
+        )
+        self.assertIn(
+            "accepted the `tool-gateway` direct-read singleton review",
+            changelog,
+        )
+        self.assertIn("| `singleton-hold` | `1` |", projection)
+
+        current_path = (
+            REPO_ROOT
+            / "techniques"
+            / "agent-workflows"
+            / "mcp-gateway-proxy"
+            / "TECHNIQUE.md"
+        )
+        future_path = (
+            REPO_ROOT
+            / "techniques"
+            / "tool-use"
+            / "tool-gateway"
+            / "mcp-gateway-proxy"
+            / "TECHNIQUE.md"
+        )
+        self.assertTrue(current_path.is_file())
+        self.assertFalse(future_path.exists())
 
     def test_cross_layer_candidate_ledger_has_preserved_pre_prune_receipt(self) -> None:
         active = (
