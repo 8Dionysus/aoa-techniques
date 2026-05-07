@@ -45,6 +45,25 @@ evidence:
 
 Reduce breakage at boundaries by expressing the expected interface behavior explicitly and verifying it at the contract surface rather than only through internal tests.
 
+## Atomic move
+
+Turn one consumer-visible boundary into an explicit contract check by naming
+its expected inputs, outputs, failure behavior, consumer assumptions, and
+smallest verification surface.
+
+## Topology fit
+
+- domain: `evaluation`
+- kind: `validation`
+- likely family: `skill-support`
+- likely capability class: `validate`
+- likely substrate: `tests`
+- execution profile: `small-agent`
+- risk posture: `read-only`
+
+Only `domain` and `kind` are current frontmatter truth. The remaining axes are
+review notes from the current scout surfaces.
+
 ## When to use
 
 - service or module boundaries with downstream consumers
@@ -82,6 +101,20 @@ Reduce breakage at boundaries by expressing the expected interface behavior expl
 4. avoid overfitting to internals that consumers never observe
 5. run the contract checks and record what they do and do not prove
 6. report the contract surface that is now explicit and any remaining weak edges
+
+## Small-agent execution shape
+
+After orchestration supplies the target boundary, a small agent should receive:
+
+- the boundary name and the consumer or downstream reader that depends on it
+- the observable input, output, and failure behavior to protect
+- any material downstream assumptions
+- the current test, smoke, summary, or checklist surface
+
+The agent should return one explicit contract check or contract-check plan plus
+a short statement of what the check guarantees and what stays outside the
+contract. It should stop before broad invariant coverage, hidden internal
+correctness, or eval-suite verdicts.
 
 ## Contracts
 

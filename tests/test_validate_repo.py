@@ -516,6 +516,26 @@ relations:
         with self.assertRaises(validate_repo.ValidationError):
             validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
 
+    def test_validate_sections_accepts_optional_template_sections_in_fixed_slots(self) -> None:
+        body = build_required_section_body(validate_repo.TECHNIQUE_SECTION_ORDER)
+
+        validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
+
+    def test_validate_sections_rejects_optional_template_section_out_of_order(self) -> None:
+        headings = list(validate_repo.REQUIRED_SECTIONS)
+        headings.insert(4, "Atomic move")
+        body = build_required_section_body(tuple(headings))
+
+        with self.assertRaises(validate_repo.ValidationError):
+            validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
+
+    def test_validate_sections_rejects_duplicate_optional_template_section(self) -> None:
+        headings = ("Intent", "Atomic move", "Atomic move") + validate_repo.REQUIRED_SECTIONS[1:]
+        body = build_required_section_body(headings)
+
+        with self.assertRaises(validate_repo.ValidationError):
+            validate_repo.validate_sections(body, Path("TECHNIQUE.md"))
+
     def test_validate_sections_ignores_fenced_markdown_headings(self) -> None:
         body = build_required_section_body().replace(
             "Bounded content for example.",

@@ -220,8 +220,8 @@ Previous review breadcrumb preserved for parity: Run the `proof/owner-truth-clos
 
 | Field | Direction |
 |---|---|
-| Current posture | Capsules and generated catalogs already provide compact lookup surfaces. |
-| Next honest move | Keep templates, capsules, examples, and checks shaped so a 2-4B model can execute one selected technique after context packing. |
+| Current posture | Capsules and generated catalogs already provide compact lookup surfaces, and the first template-modernization pilot has started over `proof/skill-support` by making the atom, topology fit, and small-agent execution shape explicit in source with optional fixed-slot validator support. |
+| Next honest move | Expand template modernization only through direct-read cohorts where the source shape materially improves `pick -> inspect -> execute`; review generated parity before any broader wave. |
 | Guardrail | Small-agent usability does not mean autonomous selection; routing and composition may belong to larger agents or neighboring layers. |
 
 ## Horizon: Mechanics To Canon
