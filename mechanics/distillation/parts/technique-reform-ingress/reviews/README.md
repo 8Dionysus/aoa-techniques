@@ -121,5 +121,6 @@ Current reviews:
 - [owner-boundary-bridge-wave-c-skill-instruction-capability-review](owner-boundary-bridge-wave-c-skill-instruction-capability-review.md)
 - [owner-boundary-bridge-wave-d-execution-runtime-review](owner-boundary-bridge-wave-d-execution-runtime-review.md)
 - [owner-boundary-bridge-wave-e-continuity-recovery-review](owner-boundary-bridge-wave-e-continuity-recovery-review.md)
+- [owner-boundary-bridge-wave-f-knowledge-ingest-history-tool-review](owner-boundary-bridge-wave-f-knowledge-ingest-history-tool-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
