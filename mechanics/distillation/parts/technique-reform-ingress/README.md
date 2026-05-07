@@ -396,6 +396,16 @@ permission slip to remap techniques automatically.
   shell, intent, graph, ready-work, render, host-doctor, lifecycle, and
   benchmark authority bounded; no source repairs, schema/frontmatter changes,
   generated-surface changes, or empirical small-agent proof
+- owner-boundary bridge Wave E: landed over `continuity/review-compaction`,
+  `continuity/handoff-continuation`, `continuity/donor-harvest`,
+  `recovery/diagnosis-repair`, and `recovery/antifragility-recovery`,
+  confirming `22` continuity and recovery leaves keep review, findings,
+  skill-availability, handoff, receipt, git verification, startup, resource
+  map, episode, donor, packet, progression, quest-overlay, taxonomy,
+  diagnosis, repair-shape, checkpoint, degraded-mode, receipt-first,
+  service-stop, and stress-closeout authority bounded; no source repairs,
+  schema/frontmatter changes, generated-surface changes, or empirical
+  small-agent proof
 
 ## Evidence Stack
 
@@ -537,6 +547,7 @@ permission slip to remap techniques automatically.
 | [Owner-Boundary Bridge Wave B Proof Publication Review](reviews/owner-boundary-bridge-wave-b-proof-publication-review.md) | confirms the second long-pass wave over proof, publication, and review-evidence shelves: `10` leaves keep summary, gate, CI report, published-summary, remediation, integrity, rendering, evidence request, evidence reference, and claim challenge authority bounded | source repair, eval-suite ownership, proof verdict authority, CI platform policy, release policy, generated truth, archive governance, review-board workflow, Agon move law, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Owner-Boundary Bridge Wave C Skill Instruction Capability Review](reviews/owner-boundary-bridge-wave-c-skill-instruction-capability-review.md) | confirms the third long-pass wave over instruction, skill-adjacent, capability, docs-boundary, and proof-support shelves: `22` leaves keep source/target, registry, command, discovery, contract, context-map, and invariant authority bounded | source repair, accepted skill workflow, command behavior, marketplace acceptance, registry product doctrine, routing policy, source-of-truth governance, runtime role law, eval-suite authority, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Owner-Boundary Bridge Wave D Execution Runtime Review](reviews/owner-boundary-bridge-wave-d-execution-runtime-review.md) | confirms the fourth long-pass wave over execution and runtime-adjacent shelves: `14` leaves keep workflow, slice, single-shot, confirmation, shell, intent, graph, ready-work, render, host-doctor, lifecycle, and benchmark authority bounded | source repair, accepted skill workflow, shell policy, host command law, dispatch ownership, scheduler product, playbook choreography, runtime deployment, service platform policy, monitor ownership, benchmark-suite governance, eval verdict authority, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
+| [Owner-Boundary Bridge Wave E Continuity Recovery Review](reviews/owner-boundary-bridge-wave-e-continuity-recovery-review.md) | confirms the fifth long-pass wave over continuity and recovery shelves: `22` leaves keep review, compaction, handoff, donor, diagnosis, checkpoint, degraded recovery, receipt analysis, service stop, and stress closeout authority bounded | source repair, memory truth, agent-role law, checkpoint doctrine, quest/progression authority, accepted skill behavior, routing policy, KAG substrate ownership, playbook choreography, runtime incident doctrine, service-operation ownership, eval verdict authority, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -682,24 +693,26 @@ moves, no schema/frontmatter changes, no generated-surface changes, and no
 empirical model-proof claim. The residual scan records repeated adapter needs
 as a future lightweight guide candidate, not as a current blocker.
 
-Current latest owner-boundary bridge wave: Wave D is closed over
-`execution/agent-workflows-core`, `execution/intent-chain`,
-`execution/ready-work-graphs`, and `execution/runtime-truth-lifecycle`. It
-confirms that execution and runtime-adjacent leaves can hold without source
-repair when workflow, slice, single-shot, confirmation, shell, intent, graph,
-ready-work, render, host-doctor, lifecycle, and benchmark moves stop before
-accepted skill workflows, shell policy, host command law, dispatch ownership,
-scheduler products, playbook choreography, runtime deployment, service
-platform policy, monitoring ownership, benchmark-suite governance, and eval
-verdict authority.
-
-Next clean move: continue the owner-boundary bridge long pass with Wave E over
+Current latest owner-boundary bridge wave: Wave E is closed over
 `continuity/review-compaction`, `continuity/handoff-continuation`,
 `continuity/donor-harvest`, `recovery/diagnosis-repair`, and
-`recovery/antifragility-recovery`. Do not restart portability as a broad
-audit, do not add future relation names such as `follows`, do not promote
-scout axes into frontmatter without a separate decision and validator wave,
-and do not run local small-agent proof without an `aoa-evals` proof surface.
+`recovery/antifragility-recovery`. It confirms that continuity and recovery
+leaves can hold without source repair when review, compaction,
+skill-availability, handoff, receipt, git verification, startup, resource map,
+episode, donor, packet, progression, quest-overlay, taxonomy, diagnosis,
+repair-shape, checkpoint, degraded-mode, receipt-first, service-stop, and
+stress-closeout moves stop before memory truth, agent-role law, checkpoint
+doctrine, quest/progression authority, accepted skill behavior, routing
+policy, KAG substrate ownership, playbook choreography, runtime incident
+doctrine, service-operation ownership, and eval verdict authority.
+
+Next clean move: continue the owner-boundary bridge long pass with Wave F over
+`knowledge-lift/kag-source-lift`, `ingest/media-ingest`,
+`history/history-artifacts`, and `tool-use/tool-gateway`. Do not restart
+portability as a broad audit, do not add future relation names such as
+`follows`, do not promote scout axes into frontmatter without a separate
+decision and validator wave, and do not run local small-agent proof without an
+`aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
