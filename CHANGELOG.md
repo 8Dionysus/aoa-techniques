@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- started the portability bridge reform lane with a
+  `continuity/handoff-continuation` mini-pilot, confirming all seven handoff
+  leaves are standalone-portable with ordinary external adapter surfaces and
+  recording the repeatable rhythm for the future portability long pass without
+  source rewrites, schema migration, OS Abyss adapter authority, or empirical
+  model proof
 - removed the retired selector/relation temporary long-pass plan after the
   Phase 15 closeout ledger became the durable resume surface
 - closed Phase 15 of the selector/relation long pass with a durable ledger
