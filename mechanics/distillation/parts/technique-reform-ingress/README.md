@@ -373,6 +373,14 @@ permission slip to remap techniques automatically.
   GitHub-owner, generated-publish, and mirror-parity authority bounded; no
   source repairs, schema/frontmatter changes, generated-surface changes, or
   empirical small-agent proof
+- owner-boundary bridge Wave B: landed over `proof/evaluation-chain`,
+  `proof/published-summary`, and `proof/review-evidence`, confirming `10`
+  proof, publication, and review-evidence leaves keep summary contracts,
+  staged gates, CI context reports, latest/history storage, remediation and
+  integrity snapshots, required/optional rendering, missing-evidence requests,
+  scoped references, and claim challenges bounded; no source repairs,
+  schema/frontmatter changes, generated-surface changes, or empirical
+  small-agent proof
 
 ## Evidence Stack
 
@@ -511,6 +519,7 @@ permission slip to remap techniques automatically.
 | [Owner-Boundary Bridge Promotion-Boundary Pilot](reviews/owner-boundary-bridge-promotion-boundary-pilot.md) | confirms the first owner-boundary bridge rhythm over `governance/promotion-boundary`: the three leaves name allowed bridges while keeping destination authority outside the technique atom | source repair, universal bridge blocks, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Owner-Boundary Bridge Practice-Adoption-Lifecycle Pilot](reviews/owner-boundary-bridge-practice-adoption-lifecycle-pilot.md) | confirms the second owner-boundary bridge rhythm over `governance/practice-adoption-lifecycle`: local adoption, retention, and obsolescence leaves keep authority bounded without source repair | source repair, Method-growth law import, deletion/deprecation execution, permanent retention, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Owner-Boundary Bridge Wave A Governance Owner Proof Review](reviews/owner-boundary-bridge-wave-a-governance-owner-proof-review.md) | confirms the first long-pass wave over owner-facing governance and proof shelves: `13` leaves keep route, approval, automation, ingress, owner-proof, GitHub-owner, generated-publish, and mirror-parity authority bounded | source repair, route policy, approval policy, live automation, eval verdict authority, GitHub platform policy, release governance, workspace install doctrine, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
+| [Owner-Boundary Bridge Wave B Proof Publication Review](reviews/owner-boundary-bridge-wave-b-proof-publication-review.md) | confirms the second long-pass wave over proof, publication, and review-evidence shelves: `10` leaves keep summary, gate, CI report, published-summary, remediation, integrity, rendering, evidence request, evidence reference, and claim challenge authority bounded | source repair, eval-suite ownership, proof verdict authority, CI platform policy, release policy, generated truth, archive governance, review-board workflow, Agon move law, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -656,20 +665,23 @@ moves, no schema/frontmatter changes, no generated-surface changes, and no
 empirical model-proof claim. The residual scan records repeated adapter needs
 as a future lightweight guide candidate, not as a current blocker.
 
-Current latest owner-boundary bridge wave: Wave A is closed over
-`governance/decision-routing`, `governance/approval-evidence`,
-`governance/automation-readiness`, and `proof/owner-truth-closeout`. It
-confirms that the first owner-facing governance/proof wave can hold without
-source repair when advisory choice, approval evidence, automation readiness,
-workspace ingress, owner-proof closeout, GitHub owner endcaps, generated
-publish, and mirror parity all stop before destination authority.
-
-Next clean move: continue the owner-boundary bridge long pass with Wave B over
+Current latest owner-boundary bridge wave: Wave B is closed over
 `proof/evaluation-chain`, `proof/published-summary`, and
-`proof/review-evidence`. Do not restart portability as a broad audit, do not
-add future relation names such as `follows`, do not promote scout axes into
-frontmatter without a separate decision and validator wave, and do not run
-local small-agent proof without an `aoa-evals` proof surface.
+`proof/review-evidence`. It confirms that proof, publication, and
+review-evidence leaves can hold without source repair when summary contracts,
+staged gates, CI reports, latest/history storage, remediation and integrity
+snapshots, required/optional rendering, evidence requests, scoped references,
+and claim challenges stop before proof verdict, generated truth, CI policy,
+review-board authority, and Agon move law.
+
+Next clean move: continue the owner-boundary bridge long pass with Wave C over
+`instruction/instruction-surface`, `instruction/docs-boundary`,
+`instruction/capability-registry`, `instruction/capability-boundary`,
+`instruction/skill-discovery`, and `proof/skill-support`. Do not restart
+portability as a broad audit, do not add future relation names such as
+`follows`, do not promote scout axes into frontmatter without a separate
+decision and validator wave, and do not run local small-agent proof without an
+`aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing

@@ -117,5 +117,6 @@ Current reviews:
 - [owner-boundary-bridge-promotion-boundary-pilot](owner-boundary-bridge-promotion-boundary-pilot.md)
 - [owner-boundary-bridge-practice-adoption-lifecycle-pilot](owner-boundary-bridge-practice-adoption-lifecycle-pilot.md)
 - [owner-boundary-bridge-wave-a-governance-owner-proof-review](owner-boundary-bridge-wave-a-governance-owner-proof-review.md)
+- [owner-boundary-bridge-wave-b-proof-publication-review](owner-boundary-bridge-wave-b-proof-publication-review.md)
 
 These files are review packets, not generated reports and not bundle authority.
