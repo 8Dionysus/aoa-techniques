@@ -109,5 +109,10 @@ Current reviews:
 - [selector-relation-residual-cross-wave-scan](selector-relation-residual-cross-wave-scan.md)
 - [selector-relation-long-pass-closeout-ledger](selector-relation-long-pass-closeout-ledger.md)
 - [portability-bridge-handoff-continuation-mini-pilot](portability-bridge-handoff-continuation-mini-pilot.md)
+- [portability-bridge-wave-a-history-ingest-continuity-recovery-review](portability-bridge-wave-a-history-ingest-continuity-recovery-review.md)
+- [portability-bridge-wave-b-runtime-recovery-tool-use-review](portability-bridge-wave-b-runtime-recovery-tool-use-review.md)
+- [portability-bridge-wave-c-owner-governance-knowledge-review](portability-bridge-wave-c-owner-governance-knowledge-review.md)
+- [portability-bridge-residual-cross-wave-scan](portability-bridge-residual-cross-wave-scan.md)
+- [portability-bridge-long-pass-closeout-ledger](portability-bridge-long-pass-closeout-ledger.md)
 
 These files are review packets, not generated reports and not bundle authority.

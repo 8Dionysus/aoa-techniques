@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- closed the portability bridge long pass across all `43` `portability-watch`
+  rows with Waves A through C, a residual cross-wave scan, and a closeout
+  ledger, confirming standalone portability without source repairs,
+  route-away moves, schema/frontmatter changes, generated-surface changes, OS
+  Abyss adapter authority, or empirical model proof
 - started the portability bridge reform lane with a
   `continuity/handoff-continuation` mini-pilot, confirming all seven handoff
   leaves are standalone-portable with ordinary external adapter surfaces and
