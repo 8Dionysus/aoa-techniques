@@ -188,7 +188,7 @@ Use statuses: `pending`, `active`, `blocked`, `landed`, `distilled`.
 | 11 Wave E repair gate | landed | [diagnosis-repair-direct-relation-repair](reviews/diagnosis-repair-direct-relation-repair.md) |
 | 12 Wave F selector/relation review | landed | [selector-relation-wave-f-capability-media-history-review](reviews/selector-relation-wave-f-capability-media-history-review.md) |
 | 13 Wave F repair gate | landed | [capability-media-direct-relation-repair](reviews/capability-media-direct-relation-repair.md) |
-| 14 residual singleton and cross-wave scan | pending | residual scan review |
+| 14 residual singleton and cross-wave scan | landed | [selector-relation-residual-cross-wave-scan](reviews/selector-relation-residual-cross-wave-scan.md) |
 | 15 closeout ledger | pending | final selector/relation closeout |
 | 16 temporary plan disposition | pending | this file removed after distillation |
 
@@ -531,6 +531,19 @@ Steps:
 10. Land if durable.
 
 Exit condition: no shelf remains unaccounted for in selector/relation scope.
+
+Landed result:
+
+- re-read the `tool-use/tool-gateway` singleton and kept
+  `AOA-T-0065 complements AOA-T-0038` because the gateway proxy seam does not
+  require the exact local service lifecycle technique;
+- re-scanned held relation pressure from Waves A through F and found no
+  additional direct object dependency;
+- confirmed accepted relation repairs are represented in generated relation
+  consumers;
+- added an explicit no-repair residual scan packet without new relation types,
+  schema changes, path changes, status changes, or empirical model-proof
+  claims.
 
 ## Phase 15: Closeout Ledger
 

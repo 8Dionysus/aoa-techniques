@@ -342,6 +342,10 @@ permission slip to remap techniques automatically.
   `requires AOA-T-0063` and adding
   `AOA-T-0071 requires AOA-T-0070`; no new relation types, graph behavior,
   status, domain, kind, or path changes
+- selector/relation residual scan: landed over `tool-use/tool-gateway` and
+  held candidates from Waves A through F, keeping
+  `AOA-T-0065 complements AOA-T-0038` and recording an explicit no-repair
+  verdict before closeout
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -471,6 +475,7 @@ permission slip to remap techniques automatically.
 | [Diagnosis-Repair Direct Relation Repair](reviews/diagnosis-repair-direct-relation-repair.md) | accepts `AOA-T-0082 requires AOA-T-0081` because repair-shape selection starts from the reviewed diagnosis-packet contract | `requires AOA-T-0080`, `requires AOA-T-0082` from checkpoint posture, relation schema migration, recovery mega-technique collapse, status/domain/kind/path changes, or model proof |
 | [Selector Relation Wave F Capability Media History Review](reviews/selector-relation-wave-f-capability-media-history-review.md) | tests selector prompts and relation posture over capability-registry, capability-boundary, skill-discovery, media-ingest, and history-artifacts shelves | relation schema migration, new relation types, registry product doctrine, installer behavior, media platform ownership, memory truth, status/domain/kind/path changes, or model proof |
 | [Capability Media Direct Relation Repair](reviews/capability-media-direct-relation-repair.md) | accepts `AOA-T-0064 requires AOA-T-0063` and `AOA-T-0071 requires AOA-T-0070` from direct object contracts | `requires AOA-T-0025`, `requires AOA-T-0041`, `requires AOA-T-0070` for media bucketing, strengthened history artifact chains, relation schema migration, product doctrine, status/domain/kind/path changes, or model proof |
+| [Selector Relation Residual Cross-Wave Scan](reviews/selector-relation-residual-cross-wave-scan.md) | closes the residual singleton and cross-wave relation scan with no additional source relation repair | relation schema migration, new relation types, `AOA-T-0065 requires AOA-T-0038`, generated hand edits, status/domain/kind/path changes, or model proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -595,13 +600,17 @@ while accepting two exact object-dependency repairs:
 `AOA-T-0064 requires AOA-T-0063` and
 `AOA-T-0071 requires AOA-T-0070`.
 
-Next clean move: continue the long selector/relation pass with Phase 14:
-residual singleton and cross-wave scan. Include `tool-use/tool-gateway`,
-low-density holds, and relation candidates held from Waves A through F. Do not
-restart a broad audit, do not add future relation names such as `follows`, do
-not promote scout axes into frontmatter without a separate decision and
-validator wave, and do not run local small-agent proof without an `aoa-evals`
-proof surface.
+Current latest selector/relation residual scan: Phase 14 is closed over
+`tool-use/tool-gateway` and held candidates from Waves A through F. It keeps
+`AOA-T-0065 complements AOA-T-0038`, confirms generated relation parity for
+all accepted repairs, and records no additional relation repair.
+
+Next clean move: continue the long selector/relation pass with Phase 15:
+final closeout ledger. Count coverage, accepted repairs, holds, generated
+rebuilds, validations, and future schema-pressure threads. Do not restart a
+broad audit, do not add future relation names such as `follows`, do not promote
+scout axes into frontmatter without a separate decision and validator wave,
+and do not run local small-agent proof without an `aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
