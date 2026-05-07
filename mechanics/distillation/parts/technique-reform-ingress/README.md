@@ -325,6 +325,14 @@ permission slip to remap techniques automatically.
 - practice-adoption-lifecycle direct relation repair: landed, adding only
   `AOA-T-0103 used_together_for AOA-T-0104`; no new relation types, graph
   behavior, status, domain, kind, or path changes
+- selector/relation Wave E: landed over `continuity/review-compaction`,
+  `continuity/donor-harvest`, `recovery/diagnosis-repair`, and
+  `recovery/antifragility-recovery`, preserving compaction, harvest,
+  diagnosis, repair, checkpoint, degraded-mode, and receipt-first boundaries
+- diagnosis-repair direct relation repair: landed, strengthening only
+  `AOA-T-0082` from `complements AOA-T-0081` to
+  `requires AOA-T-0081`; no new relation types, graph behavior, status,
+  domain, kind, or path changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -450,6 +458,8 @@ permission slip to remap techniques automatically.
 | [Selector Relation Wave C Execution Owner Review](reviews/selector-relation-wave-c-execution-owner-review.md) | tests selector prompts and relation posture over agent-workflows core, runtime-truth lifecycle, owner-truth closeout, and approval-evidence shelves, with no direct relation repair accepted | relation schema migration, new relation types, sequence law, runtime law, owner authority, approval policy, generated publish policy, status/domain/kind/path changes, or model proof |
 | [Selector Relation Wave D Governance Split Review](reviews/selector-relation-wave-d-governance-split-review.md) | tests selector prompts and relation posture over governance split shelves, preserving decision-routing, automation-readiness, promotion-boundary, and practice-adoption-lifecycle as separate neighborhoods | broad automation-governance doctrine, new relation types, graph behavior, owner authority, skill activation, Method-growth law, status/domain/kind/path changes, or model proof |
 | [Practice-Adoption-Lifecycle Direct Relation Repair](reviews/practice-adoption-lifecycle-direct-relation-repair.md) | accepts `AOA-T-0103 used_together_for AOA-T-0104` because retention review can route to an obsolescence packet | `requires AOA-T-0104`, relation schema migration, lifecycle relation vocabulary, deprecation execution, Method-growth law, status/domain/kind/path changes, or model proof |
+| [Selector Relation Wave E Continuity Recovery Review](reviews/selector-relation-wave-e-continuity-recovery-review.md) | tests selector prompts and relation posture over review-compaction, donor-harvest, diagnosis-repair, and antifragility-recovery shelves | relation schema migration, new relation types, recovery permission chains, memory truth, proof verdicts, runtime ownership, status/domain/kind/path changes, or model proof |
+| [Diagnosis-Repair Direct Relation Repair](reviews/diagnosis-repair-direct-relation-repair.md) | accepts `AOA-T-0082 requires AOA-T-0081` because repair-shape selection starts from the reviewed diagnosis-packet contract | `requires AOA-T-0080`, `requires AOA-T-0082` from checkpoint posture, relation schema migration, recovery mega-technique collapse, status/domain/kind/path changes, or model proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -550,22 +560,30 @@ current relation set is already bounded enough for these shelves and carries
 all tempting "precedes", "narrows", "same family", or owner-bridge pressure as
 holds rather than frontmatter mutation.
 
-Current latest selector/relation long-pass wave: Wave D is closed over
+Previous selector/relation long-pass wave: Wave D is closed over
 `governance/decision-routing`, `governance/automation-readiness`,
 `governance/promotion-boundary`, and
 `governance/practice-adoption-lifecycle`. It confirmed that the rejected broad
 `automation-governance` shelf should stay split and accepted one bounded
 operating-path repair: `AOA-T-0103 used_together_for AOA-T-0104`.
 
-Next clean move: continue the long selector/relation pass with Wave E:
+Current latest selector/relation long-pass wave: Wave E is closed over
 `continuity/review-compaction`, `continuity/donor-harvest`,
-`recovery/diagnosis-repair`, and `recovery/antifragility-recovery`. Use the
-same rhythm: selector prompts first, relation contract read second, direct
-repair only when bundle inputs and contracts justify one existing relation
-type. Do not restart a broad audit, do not add future relation names such as
-`follows`, do not promote scout axes into frontmatter without a separate
-decision and validator wave, and do not run local small-agent proof without an
-`aoa-evals` proof surface.
+`recovery/diagnosis-repair`, and `recovery/antifragility-recovery`. It
+confirmed that compaction, donor harvest, diagnosis, repair, checkpoint,
+degraded-mode, receipt-first review, and stress closeout should stay as
+separate leaves, while accepting one exact object-dependency repair:
+`AOA-T-0082 requires AOA-T-0081`.
+
+Next clean move: continue the long selector/relation pass with Wave F:
+`instruction/capability-registry`, `instruction/capability-boundary`,
+`instruction/skill-discovery`, `ingest/media-ingest`, and
+`history/history-artifacts`. Use the same rhythm: selector prompts first,
+relation contract read second, direct repair only when bundle inputs and
+contracts justify one existing relation type. Do not restart a broad audit, do
+not add future relation names such as `follows`, do not promote scout axes into
+frontmatter without a separate decision and validator wave, and do not run
+local small-agent proof without an `aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
