@@ -349,7 +349,7 @@ permission slip to remap techniques automatically.
 - selector/relation closeout ledger: landed with coverage for all `28`
   shelves and all `107` current bundles, `103` selector prompts or selector
   scenarios, `7` accepted direct relation repairs, and Phase 16 temporary-plan
-  disposition queued
+  disposition complete
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -613,19 +613,19 @@ generated relation parity for all accepted repairs, and records no additional
 relation repair.
 
 Current latest selector/relation closeout: Phase 15 is closed by the
-selector/relation long-pass closeout ledger. It records full current-corpus
-coverage over `28` shelves and `107` bundles, `103` selector prompts or
-selector scenarios, `7` accepted direct relation repairs, explicit relation
-hold classes, generated rebuild posture, validation menu, and future
-schema/eval routes.
+selector/relation long-pass closeout ledger, and Phase 16 removed the retired
+temporary plan. The durable ledger records full current-corpus coverage over
+`28` shelves and `107` bundles, `103` selector prompts or selector scenarios,
+`7` accepted direct relation repairs, explicit relation hold classes,
+generated rebuild posture, validation menu, and future schema/eval routes.
 
-Next clean move: continue the long selector/relation pass with Phase 16:
-temporary plan disposition. Confirm the closeout ledger is linked from route
-surfaces, remove `TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md`, and land that
-removal as its own durable wave. Do not restart a broad audit, do not add
-future relation names such as `follows`, do not promote scout axes into
-frontmatter without a separate decision and validator wave,
-and do not run local small-agent proof without an `aoa-evals` proof surface.
+Next clean move: leave the selector/relation long pass closed and choose the
+next technique reform lane from the durable closeout threads: relation
+vocabulary, selector-rationale schema, eval-owner small-agent proof, or
+targeted bundle-local repair. Do not restart a broad audit, do not add future
+relation names such as `follows`, do not promote scout axes into frontmatter
+without a separate decision and validator wave, and do not run local
+small-agent proof without an `aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
