@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- closed Phase 15 of the selector/relation long pass with a durable ledger
+  covering all `28` shelves and `107` current bundles, `103` selector prompts
+  or selector scenarios, `7` accepted direct relation repairs, explicit hold
+  classes, generated rebuild posture, validation rhythm, and Phase 16
+  temporary-plan disposition
 - continued the selector/relation long pass with the residual singleton,
   `proof/review-evidence` addendum, and cross-wave scan, keeping
   `AOA-T-0065 complements AOA-T-0038` plus the current review-evidence
