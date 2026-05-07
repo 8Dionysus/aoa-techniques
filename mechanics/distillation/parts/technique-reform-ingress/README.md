@@ -481,6 +481,7 @@ permission slip to remap techniques automatically.
 | [Capability Media Direct Relation Repair](reviews/capability-media-direct-relation-repair.md) | accepts `AOA-T-0064 requires AOA-T-0063` and `AOA-T-0071 requires AOA-T-0070` from direct object contracts | `requires AOA-T-0025`, `requires AOA-T-0041`, `requires AOA-T-0070` for media bucketing, strengthened history artifact chains, relation schema migration, product doctrine, status/domain/kind/path changes, or model proof |
 | [Selector Relation Residual Cross-Wave Scan](reviews/selector-relation-residual-cross-wave-scan.md) | closes the residual singleton, low-density review-evidence shelf, and cross-wave relation scan with no additional source relation repair | relation schema migration, new relation types, `AOA-T-0065 requires AOA-T-0038`, review-evidence sequence edges, generated hand edits, status/domain/kind/path changes, or model proof |
 | [Selector Relation Long-Pass Closeout Ledger](reviews/selector-relation-long-pass-closeout-ledger.md) | closes Phase 15 with full current-corpus selector/relation coverage, accepted repair counts, held relation classes, generated rebuild posture, validation menu, and future schema/eval routes | temporary-plan removal, schema migration, new relation types, scout-axis frontmatter, generated hand edits, status/domain/kind/path changes, sibling-owner authority, or model proof |
+| [Portability Bridge Handoff-Continuation Mini-Pilot](reviews/portability-bridge-handoff-continuation-mini-pilot.md) | calibrates the first portability bridge rhythm over `continuity/handoff-continuation`, confirming all seven leaves are standalone-portable with ordinary external adapter surfaces | source rewrite, schema migration, a generic portability frontmatter axis, OS Abyss adapter authority, sibling-owner route, or empirical small-agent proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -619,13 +620,24 @@ temporary plan. The durable ledger records full current-corpus coverage over
 `7` accepted direct relation repairs, explicit relation hold classes,
 generated rebuild posture, validation menu, and future schema/eval routes.
 
-Next clean move: leave the selector/relation long pass closed and choose the
-next technique reform lane from the durable closeout threads: relation
-vocabulary, selector-rationale schema, eval-owner small-agent proof, or
-targeted bundle-local repair. Do not restart a broad audit, do not add future
-relation names such as `follows`, do not promote scout axes into frontmatter
-without a separate decision and validator wave, and do not run local
-small-agent proof without an `aoa-evals` proof surface.
+Current latest portability bridge mini-pilot:
+`continuity/handoff-continuation` is closed as the first portability rhythm
+check. It confirmed that `AOA-T-0056` through `AOA-T-0062` are
+standalone-portable when an external adopter supplies ordinary adapter
+surfaces: channel storage, handoff artifact, receipt surface, git evidence,
+start-context surface, repo list, or checkpoint artifact. No bundle source
+repair, schema migration, OS Abyss adapter, or empirical model proof was
+accepted.
+
+Next clean move: leave the selector/relation long pass closed and use the
+portability bridge mini-pilot to write the next long-pass rhythm before
+touching more shelves. Start the first portability wave from high-pressure
+portable shelves such as `history/history-artifacts`, `ingest/media-ingest`,
+`continuity/donor-harvest`, and `recovery/antifragility-recovery`. Do not
+restart a broad audit, do not add future relation names such as `follows`, do
+not promote scout axes into frontmatter without a separate decision and
+validator wave, and do not run local small-agent proof without an `aoa-evals`
+proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing

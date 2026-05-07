@@ -108,5 +108,6 @@ Current reviews:
 - [capability-media-direct-relation-repair](capability-media-direct-relation-repair.md)
 - [selector-relation-residual-cross-wave-scan](selector-relation-residual-cross-wave-scan.md)
 - [selector-relation-long-pass-closeout-ledger](selector-relation-long-pass-closeout-ledger.md)
+- [portability-bridge-handoff-continuation-mini-pilot](portability-bridge-handoff-continuation-mini-pilot.md)
 
 These files are review packets, not generated reports and not bundle authority.
