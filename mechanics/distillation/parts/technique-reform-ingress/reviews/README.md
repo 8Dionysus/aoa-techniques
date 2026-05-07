@@ -122,5 +122,6 @@ Current reviews:
 - [owner-boundary-bridge-wave-d-execution-runtime-review](owner-boundary-bridge-wave-d-execution-runtime-review.md)
 - [owner-boundary-bridge-wave-e-continuity-recovery-review](owner-boundary-bridge-wave-e-continuity-recovery-review.md)
 - [owner-boundary-bridge-wave-f-knowledge-ingest-history-tool-review](owner-boundary-bridge-wave-f-knowledge-ingest-history-tool-review.md)
+- [owner-boundary-bridge-residual-cross-wave-scan](owner-boundary-bridge-residual-cross-wave-scan.md)
 
 These files are review packets, not generated reports and not bundle authority.

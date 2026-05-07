@@ -155,7 +155,7 @@ Use this exact loop for every wave:
   review.
 - [x] Phase 7: Wave F knowledge, ingest, history, and tool-use authority
   review.
-- [ ] Phase 8: residual cross-wave scan and repair queue decision.
+- [x] Phase 8: residual cross-wave scan and repair queue decision.
 - [ ] Phase 9: closeout ledger, temporary-plan disposition, and next lane.
 
 ## Calibration Pilots Accounted Set
