@@ -2,8 +2,8 @@
 
 Source packet: [Technique Reform Ingress](../README.md)
 
-Temporary plan:
-[Temporary Selector Relation Long-Pass Plan](../TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md)
+Closeout ledger:
+[Selector Relation Long-Pass Closeout Ledger](selector-relation-long-pass-closeout-ledger.md)
 
 Prior wave:
 [Selector Relation Wave E Continuity Recovery Review](selector-relation-wave-e-continuity-recovery-review.md)

@@ -2,8 +2,8 @@
 
 Source packet: [Technique Reform Ingress](../README.md)
 
-Temporary plan:
-[Temporary Selector Relation Long-Pass Plan](../TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md)
+Closeout ledger:
+[Selector Relation Long-Pass Closeout Ledger](selector-relation-long-pass-closeout-ledger.md)
 
 Prior wave:
 [Selector Relation Wave F Capability Media History Review](selector-relation-wave-f-capability-media-history-review.md)
@@ -175,5 +175,5 @@ material.
 Continue to Phase 15: write the final selector/relation closeout ledger.
 
 The closeout should count shelves, bundles, selector prompts, accepted repairs,
-holds, generated rebuilds, and validations; then distill this temporary plan
-into durable review memory before Phase 16 removes the temporary plan.
+holds, generated rebuilds, and validations, then keep the temporary-plan facts
+in durable review memory after Phase 16 removes the temporary plan.

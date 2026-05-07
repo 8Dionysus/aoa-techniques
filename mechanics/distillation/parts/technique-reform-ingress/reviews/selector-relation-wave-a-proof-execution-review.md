@@ -2,8 +2,8 @@
 
 Source packet: [Technique Reform Ingress](../README.md)
 
-Temporary plan:
-[Temporary Selector Relation Long-Pass Plan](../TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md)
+Closeout ledger:
+[Selector Relation Long-Pass Closeout Ledger](selector-relation-long-pass-closeout-ledger.md)
 
 Prior calibration packets:
 [Topology Selector Handoff-Continuation Pilot](topology-selector-handoff-continuation-mini-pilot.md),
@@ -187,4 +187,3 @@ consumers, and narrow validation.
 After landing, continue the temporary plan with Wave B:
 `instruction/instruction-surface`, `knowledge-lift/kag-source-lift`,
 `instruction/docs-boundary`, and `proof/skill-support`.
-

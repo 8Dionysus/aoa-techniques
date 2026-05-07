@@ -2,14 +2,16 @@
 
 Source packet: [Technique Reform Ingress](../README.md)
 
-Temporary plan:
-[Temporary Selector Relation Long-Pass Plan](../TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md)
+Retired temporary plan:
+`../TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md` was removed in Phase 16 after
+this ledger landed as durable review memory.
 
 Residual scan:
 [Selector Relation Residual Cross-Wave Scan](selector-relation-residual-cross-wave-scan.md)
 
-Status: Phase 15 closeout ledger, not schema migration, not frontmatter
-promotion, not relation vocabulary expansion, not empirical model proof.
+Status: Phase 15 closeout ledger with Phase 16 temporary-plan disposition
+applied, not schema migration, not frontmatter promotion, not relation
+vocabulary expansion, not empirical model proof.
 
 ## Verdict
 
@@ -210,9 +212,11 @@ Future bundle-local repair:
 
 ## Next Honest Move
 
-Run Phase 16: temporary plan disposition.
+Phase 16 is complete: the temporary selector/relation plan has been removed
+after this ledger became the durable resume surface.
 
-Before removing
-`mechanics/distillation/parts/technique-reform-ingress/TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md`,
-confirm this ledger is linked from the ingress README and reviews index, then
-delete the temporary plan and land that removal as its own durable wave.
+The selector/relation long pass should now stay closed. The next technique
+reform move should choose from the future threads above: relation vocabulary,
+selector-rationale schema, eval-owner small-agent proof, or targeted
+bundle-local repair. Do not restart the broad audit unless the current corpus
+or route surfaces materially change.

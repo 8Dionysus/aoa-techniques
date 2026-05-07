@@ -22,6 +22,8 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- removed the retired selector/relation temporary long-pass plan after the
+  Phase 15 closeout ledger became the durable resume surface
 - closed Phase 15 of the selector/relation long pass with a durable ledger
   covering all `28` shelves and `107` current bundles, `103` selector prompts
   or selector scenarios, `7` accepted direct relation repairs, explicit hold

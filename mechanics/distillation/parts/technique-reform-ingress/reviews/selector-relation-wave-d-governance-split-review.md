@@ -2,8 +2,8 @@
 
 Source packet: [Technique Reform Ingress](../README.md)
 
-Temporary plan:
-[Temporary Selector Relation Long-Pass Plan](../TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md)
+Closeout ledger:
+[Selector Relation Long-Pass Closeout Ledger](selector-relation-long-pass-closeout-ledger.md)
 
 Prior wave:
 [Selector Relation Wave C Execution Owner Review](selector-relation-wave-c-execution-owner-review.md)
@@ -199,4 +199,3 @@ consumers, and narrow validation.
 After landing, continue the temporary plan with Wave E:
 `continuity/review-compaction`, `continuity/donor-harvest`,
 `recovery/diagnosis-repair`, and `recovery/antifragility-recovery`.
-
