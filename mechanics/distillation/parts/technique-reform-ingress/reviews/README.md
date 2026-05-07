@@ -106,5 +106,6 @@ Current reviews:
 - [diagnosis-repair-direct-relation-repair](diagnosis-repair-direct-relation-repair.md)
 - [selector-relation-wave-f-capability-media-history-review](selector-relation-wave-f-capability-media-history-review.md)
 - [capability-media-direct-relation-repair](capability-media-direct-relation-repair.md)
+- [selector-relation-residual-cross-wave-scan](selector-relation-residual-cross-wave-scan.md)
 
 These files are review packets, not generated reports and not bundle authority.

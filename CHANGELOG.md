@@ -22,6 +22,9 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- continued the selector/relation long pass with the residual singleton and
+  cross-wave scan, keeping `AOA-T-0065 complements AOA-T-0038` and recording a
+  no-repair close before the final selector/relation ledger
 - continued the selector/relation long pass with Wave F over instruction
   capability, media-ingest, and history-artifact shelves, strengthening
   `AOA-T-0064 capability-discovery` from `complements AOA-T-0063` to
