@@ -115,5 +115,6 @@ Current reviews:
 - [portability-bridge-residual-cross-wave-scan](portability-bridge-residual-cross-wave-scan.md)
 - [portability-bridge-long-pass-closeout-ledger](portability-bridge-long-pass-closeout-ledger.md)
 - [owner-boundary-bridge-promotion-boundary-pilot](owner-boundary-bridge-promotion-boundary-pilot.md)
+- [owner-boundary-bridge-practice-adoption-lifecycle-pilot](owner-boundary-bridge-practice-adoption-lifecycle-pilot.md)
 
 These files are review packets, not generated reports and not bundle authority.

@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- landed the second owner-boundary bridge pilot over
+  `governance/practice-adoption-lifecycle`, confirming `AOA-T-0101`,
+  `AOA-T-0103`, and `AOA-T-0104` keep local adoption, retention, and
+  obsolescence authority bounded without source repairs, schema/frontmatter
+  changes, generated-surface changes, sibling-owner acceptance, or empirical
+  small-agent proof
 - landed the first owner-boundary bridge pilot over
   `governance/promotion-boundary`, confirming `AOA-T-0089`, `AOA-T-0090`,
   and `AOA-T-0102` keep destination authority outside the technique atom
