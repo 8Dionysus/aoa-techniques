@@ -151,7 +151,7 @@ Use this exact loop for every wave:
 - [x] Phase 3: Wave B proof and publication authority review.
 - [x] Phase 4: Wave C skill, instruction, and capability authority review.
 - [x] Phase 5: Wave D execution and runtime-adjacent authority review.
-- [ ] Phase 6: Wave E continuity, checkpoint, recovery, and donor authority
+- [x] Phase 6: Wave E continuity, checkpoint, recovery, and donor authority
   review.
 - [ ] Phase 7: Wave F knowledge, ingest, history, and tool-use authority
   review.
