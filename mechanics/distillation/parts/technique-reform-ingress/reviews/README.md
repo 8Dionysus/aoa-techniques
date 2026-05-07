@@ -114,5 +114,6 @@ Current reviews:
 - [portability-bridge-wave-c-owner-governance-knowledge-review](portability-bridge-wave-c-owner-governance-knowledge-review.md)
 - [portability-bridge-residual-cross-wave-scan](portability-bridge-residual-cross-wave-scan.md)
 - [portability-bridge-long-pass-closeout-ledger](portability-bridge-long-pass-closeout-ledger.md)
+- [owner-boundary-bridge-promotion-boundary-pilot](owner-boundary-bridge-promotion-boundary-pilot.md)
 
 These files are review packets, not generated reports and not bundle authority.

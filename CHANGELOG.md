@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- landed the first owner-boundary bridge pilot over
+  `governance/promotion-boundary`, confirming `AOA-T-0089`, `AOA-T-0090`,
+  and `AOA-T-0102` keep destination authority outside the technique atom
+  without source repairs, schema/frontmatter changes, generated-surface
+  changes, sibling-owner acceptance, or empirical small-agent proof
 - closed the portability bridge long pass across all `43` `portability-watch`
   rows with Waves A through C, a residual cross-wave scan, and a closeout
   ledger, confirming standalone portability without source repairs,

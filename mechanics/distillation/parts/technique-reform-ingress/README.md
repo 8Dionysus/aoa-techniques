@@ -356,6 +356,11 @@ permission slip to remap techniques automatically.
   through one mini-pilot plus Waves A through C, accepting no source repairs,
   no route-away moves, no schema/frontmatter changes, no generated-surface
   changes, and no empirical model-proof claim
+- owner-boundary bridge pilot: landed over
+  `governance/promotion-boundary`, confirming `AOA-T-0089`, `AOA-T-0090`,
+  and `AOA-T-0102` hold technique-local atoms while destination authority
+  stays with the relevant sibling owner; no source repairs, schema/frontmatter
+  changes, generated-surface changes, or empirical small-agent proof
 
 ## Evidence Stack
 
@@ -491,6 +496,7 @@ permission slip to remap techniques automatically.
 | [Portability Bridge Wave C Owner Governance Knowledge Review](reviews/portability-bridge-wave-c-owner-governance-knowledge-review.md) | closes `11` source-lift, owner-truth, approval, automation, and promotion rows without importing KAG truth, proof verdicts, skill acceptance, or governance law | KAG substrate ownership, GitHub policy, release automation, live automation, skill activation, sibling-owner consent, or empirical model proof |
 | [Portability Bridge Residual Cross-Wave Scan](reviews/portability-bridge-residual-cross-wave-scan.md) | accounts for all `43` portability-watch rows and records repeated adapter needs as future guide candidates, not current defects | source repair, route-away movement, new portability field, adapter package, or generated catalog authority |
 | [Portability Bridge Long-Pass Closeout Ledger](reviews/portability-bridge-long-pass-closeout-ledger.md) | closes the portability bridge long pass and distills the temporary rhythm into durable review packets and next-lane guidance | small-model execution proof, schema/frontmatter migration, OS Abyss adapter authority, or sibling-owner authority |
+| [Owner-Boundary Bridge Promotion-Boundary Pilot](reviews/owner-boundary-bridge-promotion-boundary-pilot.md) | confirms the first owner-boundary bridge rhythm over `governance/promotion-boundary`: the three leaves name allowed bridges while keeping destination authority outside the technique atom | source repair, universal bridge blocks, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -636,14 +642,17 @@ moves, no schema/frontmatter changes, no generated-surface changes, and no
 empirical model-proof claim. The residual scan records repeated adapter needs
 as a future lightweight guide candidate, not as a current blocker.
 
-Next clean move: leave portability closed and choose the next targeted reform
-lane. Best candidates are one owner-boundary bridge shelf review, one narrow
-template-modernization pilot where execution readability truly improves, or a
-small promotion-evidence cohort after owner-boundary pressure is clearer. Do
-not restart portability as a broad audit, do not add future relation names such
-as `follows`, do not promote scout axes into frontmatter without a separate
-decision and validator wave, and do not run local small-agent proof without an
-`aoa-evals` proof surface.
+Current latest owner-boundary bridge pilot: `governance/promotion-boundary`
+is closed as the first shelf-level rhythm. `AOA-T-0089`, `AOA-T-0090`, and
+`AOA-T-0102` hold without source repair because each bundle names one
+technique-local atom and keeps destination authority outside the technique.
+
+Next clean move: run the next owner-boundary bridge pilot on
+`governance/practice-adoption-lifecycle`, then decide whether the rhythm is
+strong enough for a long pass. Do not restart portability as a broad audit, do
+not add future relation names such as `follows`, do not promote scout axes into
+frontmatter without a separate decision and validator wave, and do not run
+local small-agent proof without an `aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
