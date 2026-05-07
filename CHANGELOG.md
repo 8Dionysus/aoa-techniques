@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- continued the selector/relation long pass with Wave F over instruction
+  capability, media-ingest, and history-artifact shelves, strengthening
+  `AOA-T-0064 capability-discovery` from `complements AOA-T-0063` to
+  `requires AOA-T-0063` and adding
+  `AOA-T-0071 requires AOA-T-0070` while holding optional OCR, skill curation,
+  and history artifact sequence pressure as bounded adjacency
 - continued the selector/relation long pass with Wave E over continuity and
   recovery shelves, strengthening `AOA-T-0082 repair-shape-from-diagnosis`
   from `complements AOA-T-0081` to `requires AOA-T-0081` while holding donor

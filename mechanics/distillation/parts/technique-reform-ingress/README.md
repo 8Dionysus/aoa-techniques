@@ -333,6 +333,15 @@ permission slip to remap techniques automatically.
   `AOA-T-0082` from `complements AOA-T-0081` to
   `requires AOA-T-0081`; no new relation types, graph behavior, status,
   domain, kind, or path changes
+- selector/relation Wave F: landed over `instruction/capability-registry`,
+  `instruction/capability-boundary`, `instruction/skill-discovery`,
+  `ingest/media-ingest`, and `history/history-artifacts`, preserving registry,
+  boundary, skill surfacing, media object, and history artifact stop-lines
+- capability-media direct relation repair: landed, strengthening only
+  `AOA-T-0064` from `complements AOA-T-0063` to
+  `requires AOA-T-0063` and adding
+  `AOA-T-0071 requires AOA-T-0070`; no new relation types, graph behavior,
+  status, domain, kind, or path changes
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -460,6 +469,8 @@ permission slip to remap techniques automatically.
 | [Practice-Adoption-Lifecycle Direct Relation Repair](reviews/practice-adoption-lifecycle-direct-relation-repair.md) | accepts `AOA-T-0103 used_together_for AOA-T-0104` because retention review can route to an obsolescence packet | `requires AOA-T-0104`, relation schema migration, lifecycle relation vocabulary, deprecation execution, Method-growth law, status/domain/kind/path changes, or model proof |
 | [Selector Relation Wave E Continuity Recovery Review](reviews/selector-relation-wave-e-continuity-recovery-review.md) | tests selector prompts and relation posture over review-compaction, donor-harvest, diagnosis-repair, and antifragility-recovery shelves | relation schema migration, new relation types, recovery permission chains, memory truth, proof verdicts, runtime ownership, status/domain/kind/path changes, or model proof |
 | [Diagnosis-Repair Direct Relation Repair](reviews/diagnosis-repair-direct-relation-repair.md) | accepts `AOA-T-0082 requires AOA-T-0081` because repair-shape selection starts from the reviewed diagnosis-packet contract | `requires AOA-T-0080`, `requires AOA-T-0082` from checkpoint posture, relation schema migration, recovery mega-technique collapse, status/domain/kind/path changes, or model proof |
+| [Selector Relation Wave F Capability Media History Review](reviews/selector-relation-wave-f-capability-media-history-review.md) | tests selector prompts and relation posture over capability-registry, capability-boundary, skill-discovery, media-ingest, and history-artifacts shelves | relation schema migration, new relation types, registry product doctrine, installer behavior, media platform ownership, memory truth, status/domain/kind/path changes, or model proof |
+| [Capability Media Direct Relation Repair](reviews/capability-media-direct-relation-repair.md) | accepts `AOA-T-0064 requires AOA-T-0063` and `AOA-T-0071 requires AOA-T-0070` from direct object contracts | `requires AOA-T-0025`, `requires AOA-T-0041`, `requires AOA-T-0070` for media bucketing, strengthened history artifact chains, relation schema migration, product doctrine, status/domain/kind/path changes, or model proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -567,7 +578,7 @@ Previous selector/relation long-pass wave: Wave D is closed over
 `automation-governance` shelf should stay split and accepted one bounded
 operating-path repair: `AOA-T-0103 used_together_for AOA-T-0104`.
 
-Current latest selector/relation long-pass wave: Wave E is closed over
+Previous selector/relation long-pass wave: Wave E is closed over
 `continuity/review-compaction`, `continuity/donor-harvest`,
 `recovery/diagnosis-repair`, and `recovery/antifragility-recovery`. It
 confirmed that compaction, donor harvest, diagnosis, repair, checkpoint,
@@ -575,15 +586,22 @@ degraded-mode, receipt-first review, and stress closeout should stay as
 separate leaves, while accepting one exact object-dependency repair:
 `AOA-T-0082 requires AOA-T-0081`.
 
-Next clean move: continue the long selector/relation pass with Wave F:
+Current latest selector/relation long-pass wave: Wave F is closed over
 `instruction/capability-registry`, `instruction/capability-boundary`,
 `instruction/skill-discovery`, `ingest/media-ingest`, and
-`history/history-artifacts`. Use the same rhythm: selector prompts first,
-relation contract read second, direct repair only when bundle inputs and
-contracts justify one existing relation type. Do not restart a broad audit, do
-not add future relation names such as `follows`, do not promote scout axes into
-frontmatter without a separate decision and validator wave, and do not run
-local small-agent proof without an `aoa-evals` proof surface.
+`history/history-artifacts`. It confirmed that registry entry lookup, skill
+surfacing, media handoffs, and saved history artifacts should stay bounded,
+while accepting two exact object-dependency repairs:
+`AOA-T-0064 requires AOA-T-0063` and
+`AOA-T-0071 requires AOA-T-0070`.
+
+Next clean move: continue the long selector/relation pass with Phase 14:
+residual singleton and cross-wave scan. Include `tool-use/tool-gateway`,
+low-density holds, and relation candidates held from Waves A through F. Do not
+restart a broad audit, do not add future relation names such as `follows`, do
+not promote scout axes into frontmatter without a separate decision and
+validator wave, and do not run local small-agent proof without an `aoa-evals`
+proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing

@@ -104,5 +104,7 @@ Current reviews:
 - [practice-adoption-lifecycle-direct-relation-repair](practice-adoption-lifecycle-direct-relation-repair.md)
 - [selector-relation-wave-e-continuity-recovery-review](selector-relation-wave-e-continuity-recovery-review.md)
 - [diagnosis-repair-direct-relation-repair](diagnosis-repair-direct-relation-repair.md)
+- [selector-relation-wave-f-capability-media-history-review](selector-relation-wave-f-capability-media-history-review.md)
+- [capability-media-direct-relation-repair](capability-media-direct-relation-repair.md)
 
 These files are review packets, not generated reports and not bundle authority.
