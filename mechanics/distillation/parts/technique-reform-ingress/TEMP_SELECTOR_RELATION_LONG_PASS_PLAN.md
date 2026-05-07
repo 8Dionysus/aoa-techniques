@@ -184,8 +184,8 @@ Use statuses: `pending`, `active`, `blocked`, `landed`, `distilled`.
 | 07 Wave C repair gate | landed | explicit no-repair hold in [selector-relation-wave-c-execution-owner-review](reviews/selector-relation-wave-c-execution-owner-review.md) |
 | 08 Wave D selector/relation review | landed | [selector-relation-wave-d-governance-split-review](reviews/selector-relation-wave-d-governance-split-review.md) |
 | 09 Wave D repair gate | landed | [practice-adoption-lifecycle-direct-relation-repair](reviews/practice-adoption-lifecycle-direct-relation-repair.md) |
-| 10 Wave E selector/relation review | pending | Wave E review packet |
-| 11 Wave E repair gate | pending | direct repair packet or explicit no-repair hold |
+| 10 Wave E selector/relation review | landed | [selector-relation-wave-e-continuity-recovery-review](reviews/selector-relation-wave-e-continuity-recovery-review.md) |
+| 11 Wave E repair gate | landed | [diagnosis-repair-direct-relation-repair](reviews/diagnosis-repair-direct-relation-repair.md) |
 | 12 Wave F selector/relation review | pending | Wave F review packet |
 | 13 Wave F repair gate | pending | direct repair packet or explicit no-repair hold |
 | 14 residual singleton and cross-wave scan | pending | residual scan review |
@@ -437,6 +437,17 @@ Repair gate:
 - Keep recovery technique meaning narrower than system recovery ownership.
 - Keep donor harvest distinct from memory truth and final provenance law.
 - Keep review compaction distinct from handoff receipt.
+
+Landed result:
+
+- accepted one object-dependency repair:
+  `AOA-T-0082 requires AOA-T-0081`, because repair-shape selection starts from
+  the diagnosis-packet contract;
+- held donor harvest, review compaction, checkpoint, and antifragility
+  sequence pressures as adjacency unless an exact object dependency exists;
+- added the Wave E review packet and direct relation repair packet without new
+  relation types, schema changes, path changes, status changes, or empirical
+  model-proof claims.
 
 ## Wave F: Instruction Capability Tail, Media, History
 

@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- continued the selector/relation long pass with Wave E over continuity and
+  recovery shelves, strengthening `AOA-T-0082 repair-shape-from-diagnosis`
+  from `complements AOA-T-0081` to `requires AOA-T-0081` while holding donor
+  harvest, review-compaction, checkpoint, and antifragility sequence pressure
+  as bounded adjacency
 - continued the selector/relation long pass with Wave D over governance split
   shelves, preserving the rejected broad automation-governance split and adding
   `AOA-T-0103 used_together_for AOA-T-0104` so retention reviews can point to

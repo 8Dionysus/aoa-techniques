@@ -102,5 +102,7 @@ Current reviews:
 - [selector-relation-wave-c-execution-owner-review](selector-relation-wave-c-execution-owner-review.md)
 - [selector-relation-wave-d-governance-split-review](selector-relation-wave-d-governance-split-review.md)
 - [practice-adoption-lifecycle-direct-relation-repair](practice-adoption-lifecycle-direct-relation-repair.md)
+- [selector-relation-wave-e-continuity-recovery-review](selector-relation-wave-e-continuity-recovery-review.md)
+- [diagnosis-repair-direct-relation-repair](diagnosis-repair-direct-relation-repair.md)
 
 These files are review packets, not generated reports and not bundle authority.
