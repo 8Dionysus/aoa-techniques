@@ -2151,6 +2151,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             tuple(re.findall(r"^## `(.+?)`$", rendered, flags=re.MULTILINE)),
         )
         self.assertIn("## Section Scope", rendered)
+        when_to_use_block = rendered.split("## `When to use`", 1)[1].split("\n## `", 1)[0]
+        self.assertIn("AOA-T-0016", when_to_use_block)
+        self.assertNotIn("| `4` |", when_to_use_block)
+        self.assertIn("| `2` |", when_to_use_block)
         self.assertNotIn(
             "Reduce unsafe, opaque, or non-reviewable agent changes by requiring a visible workflow before and after apply.",
             rendered,

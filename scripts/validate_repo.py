@@ -6370,6 +6370,7 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
     lines.append("")
 
     for heading in SECTION_LIFT_HEADINGS:
+        lifted_section_order = SECTION_LIFT_HEADINGS.index(heading) + 1
         lines.extend(
             [
                 f"## `{heading}`",
@@ -6380,11 +6381,7 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
         )
 
         for record in sorted_records:
-            section_order = next(
-                (order for order, section in enumerate(record.sections, start=1) if section.heading == heading),
-                None,
-            )
-            if section_order is None:
+            if not any(section.heading == heading for section in record.sections):
                 fail(f"{record.technique_path}: missing required lifted section '{heading}'")
 
             lines.append(
@@ -6392,7 +6389,7 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
                 f"{record_technique_link(repo_root, record)} - {escape_markdown_table_cell(record.name)} | "
                 f"`{record.domain}` | "
                 f"`{record.status}` | "
-                f"`{section_order}` | "
+                f"`{lifted_section_order}` | "
                 f"{technique_source_link(repo_root, record)} |"
             )
 
