@@ -508,6 +508,7 @@ Landed result:
 Scope:
 
 - `tool-use/tool-gateway`
+- `proof/review-evidence`
 - any low-density shelves not adequately covered by earlier waves
 - relation candidates held from Waves A through F
 
@@ -537,6 +538,9 @@ Landed result:
 - re-read the `tool-use/tool-gateway` singleton and kept
   `AOA-T-0065 complements AOA-T-0038` because the gateway proxy seam does not
   require the exact local service lifecycle technique;
+- re-read `proof/review-evidence` and kept `AOA-T-0105`, `AOA-T-0106`, and
+  `AOA-T-0107` relation edges as complements because the shelf contains three
+  separate one-use review-evidence atoms, not a fixed execution chain;
 - re-scanned held relation pressure from Waves A through F and found no
   additional direct object dependency;
 - confirmed accepted relation repairs are represented in generated relation
