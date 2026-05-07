@@ -153,7 +153,7 @@ Use this exact loop for every wave:
 - [x] Phase 5: Wave D execution and runtime-adjacent authority review.
 - [x] Phase 6: Wave E continuity, checkpoint, recovery, and donor authority
   review.
-- [ ] Phase 7: Wave F knowledge, ingest, history, and tool-use authority
+- [x] Phase 7: Wave F knowledge, ingest, history, and tool-use authority
   review.
 - [ ] Phase 8: residual cross-wave scan and repair queue decision.
 - [ ] Phase 9: closeout ledger, temporary-plan disposition, and next lane.
