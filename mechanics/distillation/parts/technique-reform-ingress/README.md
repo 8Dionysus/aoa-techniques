@@ -352,6 +352,10 @@ permission slip to remap techniques automatically.
   disposition complete
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
+- portability bridge long pass: closed all `43` `portability-watch` rows
+  through one mini-pilot plus Waves A through C, accepting no source repairs,
+  no route-away moves, no schema/frontmatter changes, no generated-surface
+  changes, and no empirical model-proof claim
 
 ## Evidence Stack
 
@@ -482,6 +486,11 @@ permission slip to remap techniques automatically.
 | [Selector Relation Residual Cross-Wave Scan](reviews/selector-relation-residual-cross-wave-scan.md) | closes the residual singleton, low-density review-evidence shelf, and cross-wave relation scan with no additional source relation repair | relation schema migration, new relation types, `AOA-T-0065 requires AOA-T-0038`, review-evidence sequence edges, generated hand edits, status/domain/kind/path changes, or model proof |
 | [Selector Relation Long-Pass Closeout Ledger](reviews/selector-relation-long-pass-closeout-ledger.md) | closes Phase 15 with full current-corpus selector/relation coverage, accepted repair counts, held relation classes, generated rebuild posture, validation menu, and future schema/eval routes | temporary-plan removal, schema migration, new relation types, scout-axis frontmatter, generated hand edits, status/domain/kind/path changes, sibling-owner authority, or model proof |
 | [Portability Bridge Handoff-Continuation Mini-Pilot](reviews/portability-bridge-handoff-continuation-mini-pilot.md) | calibrates the first portability bridge rhythm over `continuity/handoff-continuation`, confirming all seven leaves are standalone-portable with ordinary external adapter surfaces | source rewrite, schema migration, a generic portability frontmatter axis, OS Abyss adapter authority, sibling-owner route, or empirical small-agent proof |
+| [Portability Bridge Wave A History Ingest Continuity Recovery Review](reviews/portability-bridge-wave-a-history-ingest-continuity-recovery-review.md) | closes `19` portability-watch rows across history artifacts, media ingest, donor harvest, and antifragility recovery with no source repair | OS Abyss memory, media-platform doctrine, donor-harvest authority, runtime incident doctrine, schema migration, generated-surface change, or empirical model proof |
+| [Portability Bridge Wave B Runtime Recovery Tool-Use Review](reviews/portability-bridge-wave-b-runtime-recovery-tool-use-review.md) | closes `6` runtime, recovery, and tool-use boundary rows while keeping local runtime handles, skill recovery, checkpoint repair, and MCP gateway substrates portable | runtime owner law, platform launcher doctrine, marketplace/install policy, scanner product authority, schema migration, or empirical model proof |
+| [Portability Bridge Wave C Owner Governance Knowledge Review](reviews/portability-bridge-wave-c-owner-governance-knowledge-review.md) | closes `11` source-lift, owner-truth, approval, automation, and promotion rows without importing KAG truth, proof verdicts, skill acceptance, or governance law | KAG substrate ownership, GitHub policy, release automation, live automation, skill activation, sibling-owner consent, or empirical model proof |
+| [Portability Bridge Residual Cross-Wave Scan](reviews/portability-bridge-residual-cross-wave-scan.md) | accounts for all `43` portability-watch rows and records repeated adapter needs as future guide candidates, not current defects | source repair, route-away movement, new portability field, adapter package, or generated catalog authority |
+| [Portability Bridge Long-Pass Closeout Ledger](reviews/portability-bridge-long-pass-closeout-ledger.md) | closes the portability bridge long pass and distills the temporary rhythm into durable review packets and next-lane guidance | small-model execution proof, schema/frontmatter migration, OS Abyss adapter authority, or sibling-owner authority |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -620,24 +629,21 @@ temporary plan. The durable ledger records full current-corpus coverage over
 `7` accepted direct relation repairs, explicit relation hold classes,
 generated rebuild posture, validation menu, and future schema/eval routes.
 
-Current latest portability bridge mini-pilot:
-`continuity/handoff-continuation` is closed as the first portability rhythm
-check. It confirmed that `AOA-T-0056` through `AOA-T-0062` are
-standalone-portable when an external adopter supplies ordinary adapter
-surfaces: channel storage, handoff artifact, receipt surface, git evidence,
-start-context surface, repo list, or checkpoint artifact. No bundle source
-repair, schema migration, OS Abyss adapter, or empirical model proof was
-accepted.
+Current latest portability bridge closeout: the long pass is closed. It
+reviewed all `43` `portability-watch` rows through the handoff-continuation
+mini-pilot plus Waves A through C, accepted no source repairs, no route-away
+moves, no schema/frontmatter changes, no generated-surface changes, and no
+empirical model-proof claim. The residual scan records repeated adapter needs
+as a future lightweight guide candidate, not as a current blocker.
 
-Next clean move: leave the selector/relation long pass closed and use the
-portability bridge mini-pilot to write the next long-pass rhythm before
-touching more shelves. Start the first portability wave from high-pressure
-portable shelves such as `history/history-artifacts`, `ingest/media-ingest`,
-`continuity/donor-harvest`, and `recovery/antifragility-recovery`. Do not
-restart a broad audit, do not add future relation names such as `follows`, do
-not promote scout axes into frontmatter without a separate decision and
-validator wave, and do not run local small-agent proof without an `aoa-evals`
-proof surface.
+Next clean move: leave portability closed and choose the next targeted reform
+lane. Best candidates are one owner-boundary bridge shelf review, one narrow
+template-modernization pilot where execution readability truly improves, or a
+small promotion-evidence cohort after owner-boundary pressure is clearer. Do
+not restart portability as a broad audit, do not add future relation names such
+as `follows`, do not promote scout axes into frontmatter without a separate
+decision and validator wave, and do not run local small-agent proof without an
+`aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
