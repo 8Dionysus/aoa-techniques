@@ -2,13 +2,13 @@
 
 Source packet: [Technique Reform Ingress](README.md)
 
-Status: active temporary rhythm plan for the next owner-boundary bridge long
-pass.
+Status: superseded temporary rhythm plan. The durable closeout is
+[Owner-Boundary Bridge Long-Pass Closeout Ledger](reviews/owner-boundary-bridge-long-pass-closeout-ledger.md).
 
-This file is a working control surface. Keep it current while the long pass is
-active, then distill it into reviewed packets and remove it or mark its
-disposition in the closeout ledger. It is not bundle authority, not a roadmap,
-not a schema proposal, and not a generated catalog.
+This file was the working control surface for the long pass. It is now
+preserved as traceable rhythm provenance because the wave packets link to it.
+It is not current task authority, not bundle authority, not a roadmap, not a
+schema proposal, and not a generated catalog.
 
 ## Purpose
 
@@ -156,7 +156,7 @@ Use this exact loop for every wave:
 - [x] Phase 7: Wave F knowledge, ingest, history, and tool-use authority
   review.
 - [x] Phase 8: residual cross-wave scan and repair queue decision.
-- [ ] Phase 9: closeout ledger, temporary-plan disposition, and next lane.
+- [x] Phase 9: closeout ledger, temporary-plan disposition, and next lane.
 
 ## Calibration Pilots Accounted Set
 
