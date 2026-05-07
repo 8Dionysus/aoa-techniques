@@ -25,7 +25,7 @@ validation_strength: source_backed
 public_safety_reviewed_at: 2026-03-28
 export_ready: true
 relations:
-  - type: complements
+  - type: requires
     target: AOA-T-0063
 evidence:
   - kind: external_origin

@@ -186,8 +186,8 @@ Use statuses: `pending`, `active`, `blocked`, `landed`, `distilled`.
 | 09 Wave D repair gate | landed | [practice-adoption-lifecycle-direct-relation-repair](reviews/practice-adoption-lifecycle-direct-relation-repair.md) |
 | 10 Wave E selector/relation review | landed | [selector-relation-wave-e-continuity-recovery-review](reviews/selector-relation-wave-e-continuity-recovery-review.md) |
 | 11 Wave E repair gate | landed | [diagnosis-repair-direct-relation-repair](reviews/diagnosis-repair-direct-relation-repair.md) |
-| 12 Wave F selector/relation review | pending | Wave F review packet |
-| 13 Wave F repair gate | pending | direct repair packet or explicit no-repair hold |
+| 12 Wave F selector/relation review | landed | [selector-relation-wave-f-capability-media-history-review](reviews/selector-relation-wave-f-capability-media-history-review.md) |
+| 13 Wave F repair gate | landed | [capability-media-direct-relation-repair](reviews/capability-media-direct-relation-repair.md) |
 | 14 residual singleton and cross-wave scan | pending | residual scan review |
 | 15 closeout ledger | pending | final selector/relation closeout |
 | 16 temporary plan disposition | pending | this file removed after distillation |
@@ -487,6 +487,21 @@ Repair gate:
 - Do not import skill installer behavior.
 - Do not treat history artifacts as memory truth.
 - Do not turn media ingest into general data-platform ownership.
+
+Landed result:
+
+- accepted two object-dependency repairs:
+  `AOA-T-0064 requires AOA-T-0063`, because capability discovery queries
+  published registry entries, and `AOA-T-0063` owns the local entry contract;
+  and `AOA-T-0071 requires AOA-T-0070`, because field extraction consumes the
+  structured OCR handoff owned by `AOA-T-0070`;
+- held capability spec to entry publication, skill curation to readiness,
+  recommendation to upstream health, optional OCR side-channel, and history
+  artifact sequence pressures as adjacency unless an exact object dependency
+  exists;
+- added the Wave F review packet and direct relation repair packet without new
+  relation types, schema changes, path changes, status changes, or empirical
+  model-proof claims.
 
 ## Phase 14: Residual Singleton And Cross-Wave Scan
 

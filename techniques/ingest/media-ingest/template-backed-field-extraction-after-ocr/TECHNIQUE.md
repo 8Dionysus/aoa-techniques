@@ -24,7 +24,9 @@ review_required: true
 validation_strength: source_backed
 public_safety_reviewed_at: 2026-03-28
 export_ready: true
-relations: []
+relations:
+  - type: requires
+    target: AOA-T-0070
 evidence:
   - kind: external_origin
     path: notes/external-origin.md
