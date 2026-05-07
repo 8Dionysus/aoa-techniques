@@ -346,6 +346,10 @@ permission slip to remap techniques automatically.
   `proof/review-evidence`, and held candidates from Waves A through F, keeping
   `AOA-T-0065 complements AOA-T-0038` plus the current review-evidence
   complement edges and recording an explicit no-repair verdict before closeout
+- selector/relation closeout ledger: landed with coverage for all `28`
+  shelves and all `107` current bundles, `103` selector prompts or selector
+  scenarios, `7` accepted direct relation repairs, and Phase 16 temporary-plan
+  disposition queued
 - Agon handoff proof point: `3` gate-to-bundle routes landed, `8` ungated
   first-narrowing candidates remain in `first_narrowing_frontier`
 
@@ -476,6 +480,7 @@ permission slip to remap techniques automatically.
 | [Selector Relation Wave F Capability Media History Review](reviews/selector-relation-wave-f-capability-media-history-review.md) | tests selector prompts and relation posture over capability-registry, capability-boundary, skill-discovery, media-ingest, and history-artifacts shelves | relation schema migration, new relation types, registry product doctrine, installer behavior, media platform ownership, memory truth, status/domain/kind/path changes, or model proof |
 | [Capability Media Direct Relation Repair](reviews/capability-media-direct-relation-repair.md) | accepts `AOA-T-0064 requires AOA-T-0063` and `AOA-T-0071 requires AOA-T-0070` from direct object contracts | `requires AOA-T-0025`, `requires AOA-T-0041`, `requires AOA-T-0070` for media bucketing, strengthened history artifact chains, relation schema migration, product doctrine, status/domain/kind/path changes, or model proof |
 | [Selector Relation Residual Cross-Wave Scan](reviews/selector-relation-residual-cross-wave-scan.md) | closes the residual singleton, low-density review-evidence shelf, and cross-wave relation scan with no additional source relation repair | relation schema migration, new relation types, `AOA-T-0065 requires AOA-T-0038`, review-evidence sequence edges, generated hand edits, status/domain/kind/path changes, or model proof |
+| [Selector Relation Long-Pass Closeout Ledger](reviews/selector-relation-long-pass-closeout-ledger.md) | closes Phase 15 with full current-corpus selector/relation coverage, accepted repair counts, held relation classes, generated rebuild posture, validation menu, and future schema/eval routes | temporary-plan removal, schema migration, new relation types, scout-axis frontmatter, generated hand edits, status/domain/kind/path changes, sibling-owner authority, or model proof |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -607,11 +612,19 @@ current review-evidence complement edges as non-sequential atoms, confirms
 generated relation parity for all accepted repairs, and records no additional
 relation repair.
 
-Next clean move: continue the long selector/relation pass with Phase 15:
-final closeout ledger. Count coverage, accepted repairs, holds, generated
-rebuilds, validations, and future schema-pressure threads. Do not restart a
-broad audit, do not add future relation names such as `follows`, do not promote
-scout axes into frontmatter without a separate decision and validator wave,
+Current latest selector/relation closeout: Phase 15 is closed by the
+selector/relation long-pass closeout ledger. It records full current-corpus
+coverage over `28` shelves and `107` bundles, `103` selector prompts or
+selector scenarios, `7` accepted direct relation repairs, explicit relation
+hold classes, generated rebuild posture, validation menu, and future
+schema/eval routes.
+
+Next clean move: continue the long selector/relation pass with Phase 16:
+temporary plan disposition. Confirm the closeout ledger is linked from route
+surfaces, remove `TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md`, and land that
+removal as its own durable wave. Do not restart a broad audit, do not add
+future relation names such as `follows`, do not promote scout axes into
+frontmatter without a separate decision and validator wave,
 and do not run local small-agent proof without an `aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and

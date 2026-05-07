@@ -189,7 +189,7 @@ Use statuses: `pending`, `active`, `blocked`, `landed`, `distilled`.
 | 12 Wave F selector/relation review | landed | [selector-relation-wave-f-capability-media-history-review](reviews/selector-relation-wave-f-capability-media-history-review.md) |
 | 13 Wave F repair gate | landed | [capability-media-direct-relation-repair](reviews/capability-media-direct-relation-repair.md) |
 | 14 residual singleton and cross-wave scan | landed | [selector-relation-residual-cross-wave-scan](reviews/selector-relation-residual-cross-wave-scan.md) |
-| 15 closeout ledger | pending | final selector/relation closeout |
+| 15 closeout ledger | landed | [selector-relation-long-pass-closeout-ledger](reviews/selector-relation-long-pass-closeout-ledger.md) |
 | 16 temporary plan disposition | pending | this file removed after distillation |
 
 ## Phase 00: Plan Seed
@@ -579,6 +579,19 @@ Steps:
 
 Exit condition: durable review surfaces explain the long pass without needing
 this temporary plan.
+
+Landed result:
+
+- wrote the final selector/relation closeout ledger with coverage for all `28`
+  shelves and all `107` current bundles;
+- counted `103` selector prompts or selector scenarios and `7` accepted direct
+  relation repairs;
+- preserved the relation holds, generated rebuild posture, validation menu,
+  future schema-pressure threads, and eval-owner route without changing
+  schema, paths, status, `domain`, `kind`, relation vocabulary, or scout-axis
+  frontmatter;
+- left this temporary plan in place for Phase 16 removal after the durable
+  ledger is linked from route surfaces.
 
 ## Phase 16: Temporary Plan Disposition
 
