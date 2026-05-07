@@ -45,6 +45,25 @@ evidence:
 
 Reduce weak example-only validation by expressing stable system or domain truths as invariant-oriented checks that should hold across many cases.
 
+## Atomic move
+
+Turn one meaningful stable rule into bounded invariant-oriented checks by
+naming the invariant, the reviewed input space, generator assumptions, and the
+validation report shape.
+
+## Topology fit
+
+- domain: `evaluation`
+- kind: `validation`
+- likely family: `skill-support`
+- likely capability class: `validate`
+- likely substrate: `tests`
+- execution profile: `small-agent`
+- risk posture: `read-only`
+
+Only `domain` and `kind` are current frontmatter truth. The remaining axes are
+review notes from the current scout surfaces.
+
 ## When to use
 
 - rules that should hold across a wide input or state space
@@ -82,6 +101,20 @@ Reduce weak example-only validation by expressing stable system or domain truths
 4. keep the generator or input strategy bounded and reviewable
 5. run the checks and record what properties now constrain behavior
 6. report what the properties do and do not prove
+
+## Small-agent execution shape
+
+After orchestration supplies the target rule, a small agent should receive:
+
+- the stable truth or rule that should hold across many cases
+- the current examples, tests, or known weak coverage
+- the bounded input space or generator assumptions
+- the expected report format for protected truth and remaining limits
+
+The agent should return one or more invariant statements plus a bounded check
+or check plan that broadens coverage beyond fixed examples. It should stop
+before consumer-boundary contract design, vague random-data testing, or eval
+verdict authority.
 
 ## Contracts
 

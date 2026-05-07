@@ -45,6 +45,25 @@ evidence:
 
 Reduce semantic confusion and misplaced changes by naming bounded contexts, clarifying their responsibilities, and making the handoff interfaces between them visible.
 
+## Atomic move
+
+Map one confused responsibility area into named contexts or subsystem zones,
+with visible inside/outside boundaries, handoff points, and vocabulary notes
+for the next scoped change.
+
+## Topology fit
+
+- domain: `docs`
+- kind: `artifact`
+- likely family: `skill-support`
+- likely capability class: `write`, `observe`, `handoff`
+- likely substrate: `docs`, `instructions`, `ui`
+- execution profile: `small-agent`
+- risk posture: `read-only`
+
+Only `domain` and `kind` are current frontmatter truth. The remaining axes are
+review notes from the current scout surfaces.
+
 ## When to use
 
 - repositories with several domains, services, or subsystems that can blur together
@@ -81,6 +100,20 @@ Reduce semantic confusion and misplaced changes by naming bounded contexts, clar
 4. describe the handoff points, interfaces, or translation surfaces between contexts
 5. surface ambiguous terms and propose clearer language
 6. report how the map should constrain future changes or reviews
+
+## Small-agent execution shape
+
+After orchestration supplies the target area, a small agent should receive:
+
+- the ambiguous terms or neighboring areas that keep blurring together
+- the immediate change, review, or docs surface that needs scoping
+- any known responsibilities, inputs, outputs, or handoff surfaces
+- the desired level of formality for the map
+
+The agent should return a compact context map with named responsibilities,
+handoff points, vocabulary clarifications, and one scoping note for what stays
+out of the next change. It should stop before generic architecture taxonomy,
+DDD formalism, or owner-authority decisions.
 
 ## Contracts
 

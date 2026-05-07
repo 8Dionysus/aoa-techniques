@@ -22,6 +22,13 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- started the template modernization lane with a bounded
+  `proof/skill-support` pilot, adding explicit `Atomic move`, `Topology fit`,
+  and `Small-agent execution shape` sections to `AOA-T-0015`, `AOA-T-0016`,
+  and `AOA-T-0017` without frontmatter, status, path, relation, support-file,
+  template-contract, sibling-skill, generated-hand-edit, or empirical
+  small-agent proof changes; the validator now allows those template sections
+  as optional fixed-slot headings without forcing a full-corpus rewrite
 - landed the second owner-boundary bridge pilot over
   `governance/practice-adoption-lifecycle`, confirming `AOA-T-0101`,
   `AOA-T-0103`, and `AOA-T-0104` keep local adoption, retention, and

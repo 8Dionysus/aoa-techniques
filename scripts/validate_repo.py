@@ -26,6 +26,31 @@ REQUIRED_SECTIONS = (
     "Promotion history",
     "Future evolution",
 )
+OPTIONAL_TEMPLATE_SECTIONS = (
+    "Atomic move",
+    "Topology fit",
+    "Small-agent execution shape",
+)
+TECHNIQUE_SECTION_ORDER = (
+    "Intent",
+    "Atomic move",
+    "Topology fit",
+    "When to use",
+    "When not to use",
+    "Inputs",
+    "Outputs",
+    "Core procedure",
+    "Small-agent execution shape",
+    "Contracts",
+    "Risks",
+    "Validation",
+    "Adaptation notes",
+    "Public sanitization notes",
+    "Example",
+    "Checks",
+    "Promotion history",
+    "Future evolution",
+)
 SECTION_LIFT_HEADINGS = REQUIRED_SECTIONS[:10]
 CAPSULE_SECTION_HEADINGS = (
     "Intent",
@@ -2536,18 +2561,33 @@ def validate_sections(body: str, technique_path: Path) -> tuple[TechniqueSection
         if occurrence_count > 1:
             fail(f"{technique_path}: required section '## {required_section}' must appear exactly once")
 
-    unexpected_sections = [heading for heading in present_sections if heading not in REQUIRED_SECTIONS]
+    for optional_section in OPTIONAL_TEMPLATE_SECTIONS:
+        occurrence_count = present_sections.count(optional_section)
+        if occurrence_count > 1:
+            fail(f"{technique_path}: optional section '## {optional_section}' must appear at most once")
+
+    allowed_sections = set(REQUIRED_SECTIONS) | set(OPTIONAL_TEMPLATE_SECTIONS)
+    unexpected_sections = [heading for heading in present_sections if heading not in allowed_sections]
     if unexpected_sections:
         unexpected = ", ".join(f"'## {heading}'" for heading in unexpected_sections)
         fail(f"{technique_path}: unexpected top-level sections found [{unexpected}]")
 
-    if tuple(present_sections) != REQUIRED_SECTIONS:
-        expected = ", ".join(f"'## {heading}'" for heading in REQUIRED_SECTIONS)
+    expected_order = tuple(
+        heading for heading in TECHNIQUE_SECTION_ORDER if heading in present_sections
+    )
+    if tuple(present_sections) != expected_order:
+        expected = ", ".join(f"'## {heading}'" for heading in expected_order)
         actual = ", ".join(f"'## {heading}'" for heading in present_sections) or "(none)"
         fail(
             f"{technique_path}: top-level sections must stay in standard order [{expected}], "
             f"found [{actual}]"
         )
+
+    sections_by_heading = {section.heading: section for section in sections}
+    for optional_section in OPTIONAL_TEMPLATE_SECTIONS:
+        section = sections_by_heading.get(optional_section)
+        if section is not None and not section.markdown:
+            fail(f"{technique_path}: optional section '## {optional_section}' must not be empty")
 
     risk_sections = [section for section in sections if section.heading == "Risks"]
     if len(risk_sections) != 1:
@@ -6330,6 +6370,7 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
     lines.append("")
 
     for heading in SECTION_LIFT_HEADINGS:
+        lifted_section_order = SECTION_LIFT_HEADINGS.index(heading) + 1
         lines.extend(
             [
                 f"## `{heading}`",
@@ -6340,11 +6381,7 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
         )
 
         for record in sorted_records:
-            section_order = next(
-                (order for order, section in enumerate(record.sections, start=1) if section.heading == heading),
-                None,
-            )
-            if section_order is None:
+            if not any(section.heading == heading for section in record.sections):
                 fail(f"{record.technique_path}: missing required lifted section '{heading}'")
 
             lines.append(
@@ -6352,7 +6389,7 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
                 f"{record_technique_link(repo_root, record)} - {escape_markdown_table_cell(record.name)} | "
                 f"`{record.domain}` | "
                 f"`{record.status}` | "
-                f"`{section_order}` | "
+                f"`{lifted_section_order}` | "
                 f"{technique_source_link(repo_root, record)} |"
             )
 

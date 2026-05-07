@@ -423,6 +423,13 @@ permission slip to remap techniques automatically.
   no accepted source repairs, no accepted owner-boundary relation repairs, no
   schema/frontmatter/generated changes, and the temporary rhythm plan marked
   superseded rather than deleted
+- template modernization skill-support pilot: selected `proof/skill-support`
+  as the first source-shape pilot and added explicit `Atomic move`,
+  `Topology fit`, and `Small-agent execution shape` sections to `AOA-T-0015`,
+  `AOA-T-0016`, and `AOA-T-0017` without frontmatter, status, path, relation,
+  support-file, or template-contract changes; the validator now allows these
+  template-modernization sections as optional fixed-slot headings instead of
+  forcing a full-corpus rewrite
 
 ## Evidence Stack
 
@@ -568,6 +575,8 @@ permission slip to remap techniques automatically.
 | [Owner-Boundary Bridge Wave F Knowledge Ingest History Tool Review](reviews/owner-boundary-bridge-wave-f-knowledge-ingest-history-tool-review.md) | confirms the sixth long-pass wave over knowledge-lift, ingest, history, and tool-use shelves: `20` leaves keep source-lift, media ingest, history artifact, and MCP gateway authority bounded | source repair, KAG graph truth, retrieval policy, media-platform doctrine, cleanup/deletion policy, auth/session doctrine, memory truth, transcript canon, hosted viewer product, repo analytics, MCP platform law, marketplace ownership, scanner/trust scoring, runtime deployment, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Owner-Boundary Bridge Residual Cross-Wave Scan](reviews/owner-boundary-bridge-residual-cross-wave-scan.md) | accounts for the two calibration pilots plus Waves A through F as `28/28` shelves, `107/107` bundles, `107` unique boundary rows, and an empty owner-boundary repair queue | source repair, direct relation repair, schema/frontmatter migration, generated-surface change, universal bridge blocks, sibling-owner acceptance, or empirical small-agent proof |
 | [Owner-Boundary Bridge Long-Pass Closeout Ledger](reviews/owner-boundary-bridge-long-pass-closeout-ledger.md) | closes the owner-boundary bridge long pass as durable review memory with full current-corpus coverage, empty repair queue, temporary-plan disposition, and next-lane guidance toward a small template modernization pilot | bundle authority, source rewrite, direct relation repair, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
+| [Template Modernization Skill-Support Pilot](reviews/template-modernization-skill-support-pilot.md) | starts source-shape modernization with `proof/skill-support`, adding explicit atom, topology-fit, small-agent execution sections, and bounded optional-section validator alignment | mass old-template rewrite, required-section migration across all bundles, template-contract change, schema/frontmatter migration, relation repair, sibling-skill acceptance, generated hand edit, or empirical small-agent proof |
+| [Template Modernization Optional Sections Decision](../../../../docs/decisions/2026-05-06-template-modernization-optional-sections.md) | records why the validator allows the three template-modernization sections as optional fixed-slot headings | full-corpus required-section migration, frontmatter promotion, generated hand edit, or proof that every old-template bundle needs repair |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
@@ -738,12 +747,21 @@ source repair, accepts no owner-boundary relation repair, marks the temporary
 plan superseded, and routes the next technique-reform lane toward a small
 template modernization pilot rather than another broad boundary audit.
 
-Next clean move: plan a small `Template Modernization Pilot` over one to three
-direct-read bundles where the source shape would become more executable for a
-small agent. Do not restart portability or owner-boundary as broad audits, do
-not add future relation names such as `follows`, do not promote scout axes into
-frontmatter without a separate decision and validator wave, and do not run
-local small-agent proof without an `aoa-evals` proof surface.
+Current latest template modernization pilot: `proof/skill-support` is the first
+source-shape cohort. `AOA-T-0015`, `AOA-T-0016`, and `AOA-T-0017` now expose
+explicit `Atomic move`, `Topology fit`, and `Small-agent execution shape`
+sections while preserving frontmatter, paths, relations, support files,
+template contracts, sibling-skill boundaries, and empirical-proof routing. The
+validator accepts these as optional fixed-slot template-modernization sections
+instead of turning them into a full-corpus required-section migration.
+
+Next clean move: review this pilot's generated parity and start the template
+modernization long pass from direct evidence, not from a global
+`old-template-watch` rewrite. Do not stop after the first comfortable cohort,
+do not restart portability or owner-boundary as broad audits, do not add future
+relation names such as `follows`, do not promote scout axes into frontmatter
+without a separate decision and validator wave, and do not run local
+small-agent proof without an `aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing
