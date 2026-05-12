@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `59` techniques
-- matrix categorization status: `59` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `58` techniques
+- matrix categorization status: `58` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `anthropics/cwc-long-running-agents`' structured `PROGRESS.md` restart convention plus `openclaw-memory-kit`'s compaction memoryFlush and bootstrap handoff path, while keeping transcript packaging, mailbox receipt, git verification, memory search, hook policy, cron memory, and long-running-harness doctrine outside the bundle
+- latest graduation wave: [AOA-T-0060](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `anthropics/cwc-long-running-agents`' `Always start here` convention: read `PROGRESS.md` before anything else, then run `git log --oneline -10` and a smoke/build/test baseline check before work, while keeping handoff authoring, git-claim verification, startup test doctrine, task routing, and long-running-harness governance outside the bundle
+- prior graduation wave: [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `anthropics/cwc-long-running-agents`' structured `PROGRESS.md` restart convention plus `openclaw-memory-kit`'s compaction memoryFlush and bootstrap handoff path, while keeping transcript packaging, mailbox receipt, git verification, memory search, hook policy, cron memory, and long-running-harness doctrine outside the bundle
 - latest evidence pass: [AOA-T-0059](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) remains `promoted` after the 2026-05-12 Pack 16 search ruled out `confab-framework`, `LifeOS`, `session-handoff`, Mimir, SLOPE, and `cwc-long-running-agents` lanes as adjacent or partial rather than clean proof of receiver-side verified/mismatched/unverifiable handoff-claim outcomes against git evidence before continuation
 - latest evidence pass: [AOA-T-0058](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) remains `promoted` after the 2026-05-12 Pack 15 search ruled out `cmux` request ACKs, Gas Town handoff mail/session cycling/escalation ACKs, and exact phrase GitHub code-search lanes as adjacent rather than proof of receiver-side acceptance of a specific handoff packet before continuation
 - prior graduation wave: [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `mycel`'s AI-agent mailbox, thread identity, replayable thread log, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows, while keeping ACK semantics separate from remote delivery proof and handoff authorization
@@ -194,11 +195,7 @@ Shared blocker: the donor family and repo-local adaptation both show a bounded h
 
 ### Pack 17 - Session Opening Ritual Before Work
 
-Shared blocker: the donor family and repo-local adaptation both show a bounded session-opening seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one overnight-agent lineage plus one import.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0060](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | Session-start sibling that keeps one visible pre-mutation read-and-verify ritual explicit with clear exclusions around task picking, startup test doctrine, and full boot or orchestration stacks. | One second public workflow surface where resumed sessions visibly re-read current context and verify baseline state before the first edit without widening into task routing, startup test suites, or mission-governance doctrine. |
+Pack 17 is closed. [AOA-T-0060](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) moved to `canonical` after `anthropics/cwc-long-running-agents` showed exact-fit public reinforcement for a pre-mutation opening ritual: read `PROGRESS.md` before doing anything else, run `git log --oneline -10`, and run a project smoke/build/test baseline check before work without requiring this bundle to absorb handoff authoring, detailed git-claim verification, task picking, baseline test doctrine, evaluator loops, or full harness governance.
 
 ### Pack 18 - Cross-Repo Resource Map Bootstrap
 

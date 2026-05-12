@@ -3,7 +3,7 @@ id: AOA-T-0060
 name: session-opening-ritual-before-work
 domain: agent-workflows
 kind: handoff
-status: promoted
+status: canonical
 origin:
   project: thebasedcapital/nightcrawler
   path: README.md + skills/nightcrawler-episode.md
@@ -17,12 +17,12 @@ tags:
   - baseline
   - verification
 summary: Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # session-opening-ritual-before-work

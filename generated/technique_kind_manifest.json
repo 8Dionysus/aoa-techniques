@@ -849,8 +849,8 @@
       ],
       "counts": {
         "total": 11,
-        "canonical": 2,
-        "promoted": 9,
+        "canonical": 3,
+        "promoted": 8,
         "by_domain": {
           "agent-workflows": 11,
           "docs": 0,
@@ -878,6 +878,14 @@
           "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md"
         },
         {
+          "id": "AOA-T-0060",
+          "name": "session-opening-ritual-before-work",
+          "domain": "agent-workflows",
+          "status": "canonical",
+          "summary": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.",
+          "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md"
+        },
+        {
           "id": "AOA-T-0058",
           "name": "receipt-confirmed-handoff-packet",
           "domain": "agent-workflows",
@@ -892,14 +900,6 @@
           "status": "promoted",
           "summary": "Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone.",
           "technique_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0060",
-          "name": "session-opening-ritual-before-work",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.",
-          "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0061",

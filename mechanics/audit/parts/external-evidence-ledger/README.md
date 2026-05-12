@@ -180,6 +180,44 @@ outbound handoff generation, git-state capture, session-start orientation,
 branch cleanliness checks, or full code-review/provenance systems unless they
 also expose the narrow handoff-claim verdict seam.
 
+## AOA-T-0060 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`anthropics/cwc-long-running-agents` at
+`ffd563d668a97a38d4aa092bf0d5b1507c046629` provides the clean public source
+for Pack 17. The inspected `claude-code-config/.claude/CLAUDE.md` file carries
+file-level Apache-2.0 SPDX metadata and states the opening ritual directly.
+
+Accepted evidence:
+
+- The `Always start here` section says to read `PROGRESS.md` before doing
+  anything else, treating it as the handoff note from the previous session.
+- If `PROGRESS.md` does not exist, the convention creates it with `Done`,
+  `In progress`, `Next`, and `Notes` sections before work proceeds.
+- The same startup section then runs `git log --oneline -10` to inspect recent
+  committed work and runs a project smoke test, build, or test command once so
+  the session starts from a visible baseline instead of a broken handoff.
+- The root README explains why: fresh sessions have no memory, context-window
+  summaries lose detail, `PROGRESS.md` is re-read first thing on every restart,
+  and git commits provide a second record.
+
+Rejected or bounded:
+
+- Do not import the full `cwc-long-running-agents` harness, evaluator, default
+  FAIL contract, proof gate, kill switch, steering hook, one-feature policy, or
+  unattended-loop guidance.
+- Treat smoke/build/test as one project-shaped baseline option, not universal
+  startup test doctrine.
+- Keep handoff packet creation in AOA-T-0057, concrete git-claim verification
+  in AOA-T-0059, and broader task routing or harness lifecycle outside this
+  bundle.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow order: read current context before mutation,
+check one visible current-state baseline, record mismatch or proceed decision,
+and keep task selection, detailed claim verification, and full boot doctrine
+outside the opening seam.
+
 ## AOA-T-0056 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.

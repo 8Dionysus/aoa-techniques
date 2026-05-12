@@ -118,6 +118,12 @@ See also:
 |---|---|---|---|
 | minimal structured handoff before compaction | `present` | `techniques/continuity/handoff-continuation/structured-handoff-before-compaction/examples/minimal-structured-handoff-before-compaction.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) |
 
+### [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal session-opening ritual before work | `present` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -136,12 +142,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal session-opening ritual before work | `present` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) |
 
 ### [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
 

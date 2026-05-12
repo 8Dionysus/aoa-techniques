@@ -22,6 +22,14 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0060 session-opening-ritual-before-work` to `canonical`
+  after `anthropics/cwc-long-running-agents` showed exact-fit public
+  reinforcement for reading `PROGRESS.md` before any work, then checking recent
+  git history and a smoke/build/test baseline before mutation, while excluding
+  handoff authoring, detailed git-claim verification, task routing, universal
+  startup test doctrine, evaluator loops, and full long-running-harness
+  governance, updating Audit queue posture from `59` promoted techniques to
+  `58`
 - recorded the 2026-05-12 Pack 16 evidence pass for `AOA-T-0059
   git-verified-handoff-claims`; `confab-framework`, LifeOS handoff-pack,
   `session-handoff`, Mimir handoff-context, SLOPE compaction handoffs, and
