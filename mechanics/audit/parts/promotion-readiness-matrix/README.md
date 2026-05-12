@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `77` techniques
-- matrix categorization status: `77` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `74` techniques
+- matrix categorization status: `74` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) and [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Metaflow Devstack's one-entrypoint local lifecycle surface and LOCOMO / OpenClaw's baseline-first additive benchmark surface
+- latest graduation wave: [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), and [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from ai-rulez's managed skill/rule fan-out, Claude Code's layered memory/rules precedence, and Cline Rules' fragment-first rule/context source layer
+- prior graduation wave: [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) and [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Metaflow Devstack's one-entrypoint local lifecycle surface and LOCOMO / OpenClaw's baseline-first additive benchmark surface
 - prior graduation wave: [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Get Physics Done's selected-runtime `gpd doctor` readiness surface
 - earlier same-day graduation wave: [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Dockform's plan/render-before-apply operator seam
 - earlier same-day graduation wave: [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Aider's `.aider.chat.history.md` session-artifact family and committed public repository examples
@@ -60,7 +61,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `29` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `26` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `35` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `10` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -100,18 +101,15 @@ Shared blocker: the remaining row still needs one more live consumer without col
 `AOA-T-0038` has since exited this matrix through a separate follow-up canonical review after Metaflow Devstack closed the missing one-entrypoint local lifecycle proof gap without widening into generic launcher, install wizard, deployment, or platform doctrine.
 `AOA-T-0039` has since exited this matrix through a separate follow-up canonical review after LOCOMO / OpenClaw closed the missing baseline-first additive benchmark proof gap without widening into product scoring, benchmark-suite governance, or rolling baseline policy.
 
-### Pack 4 - Instruction-Surface Cluster
+### Pack 4 - Instruction-Surface Cluster Residual
 
-Shared blocker: the cluster already reads coherently beside canonical [AOA-T-0012](../../../../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md), but each promoted sibling still needs one more live contract outside donor documentation.
+The instruction-surface promotion pass closed [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), and [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) as canonical rows after exact-fit public reinforcement from ai-rulez, Claude Code, and Cline. The residual Pack 4 row is now the report-only proof sibling below.
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | Managed-target propagation sibling. | One second repo or surface family using shared-skill propagation as a real managed-target fan-out. |
-| [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | Hierarchical loading sibling with bounded precedence rules. | One second repo or surface family using the same layered rule hierarchy in practice. |
-| [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | Fragment-authoring sibling to canonical composition. | One second repo where fragment-first authoring is a real source-layer practice. |
 | [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | Report-only sibling to canonical composition, not the composition engine itself; the latest public agent-markdown, prompt-eval CI, context-packing, token-budget, LLM-ready-docs, prompt-cost, context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality lanes remain adjacent because they emit PR checks, eval matrices, before/after prompt reports, repo activity summaries, token/cost telemetry, packed-context outputs, badges, documentation conversion, generated context bundles, configuration drift checks, graph reports, or quality scores rather than the same read-only composition coverage-and-drift artifact. | One second repo or surface family using the same CI-facing context report as a read-only composition coverage/drift artifact rather than PR policy checks, prompt eval reports, activity summaries, token badges, repo-packing outputs, prompt cost estimates, LLM-ready-doc generation, context compilation, fragment assembly, graph context, or repo-quality scoring. |
 
-`AOA-T-0013` now anchors the canonical local-source fan-out default for this cluster, while the promoted siblings below keep their narrower blockers.
+`AOA-T-0013`, `AOA-T-0027`, `AOA-T-0029`, and `AOA-T-0030` now anchor distinct canonical instruction-surface defaults; `AOA-T-0032` remains promoted because it still needs a second exact-fit CI-facing composition report.
 
 ### Pack 5 - Skill Ecosystem And Curated Inputs
 

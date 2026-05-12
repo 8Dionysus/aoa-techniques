@@ -408,6 +408,24 @@ See also:
 |---|---|---|---|---|
 | Relation Lift Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
+### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Cross-Agent Skill Propagation Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
+
+### [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Nested Rule Loading Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/nested-rule-loading/checks/nested-rule-loading-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
+
+### [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Fragmented Agent Context Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/fragmented-agent-context/checks/fragmented-agent-context-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
+
 ### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -437,24 +455,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Capability Spec Versioning Checklist | `absent` | `7` | `techniques/instruction/capability-registry/capability-spec-versioning/checks/capability-spec-versioning-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
-
-### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Cross-Agent Skill Propagation Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/checks/cross-agent-skill-propagation-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
-
-### [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Nested Rule Loading Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/nested-rule-loading/checks/nested-rule-loading-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
-
-### [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Fragmented Agent Context Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/fragmented-agent-context/checks/fragmented-agent-context-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
 ### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 

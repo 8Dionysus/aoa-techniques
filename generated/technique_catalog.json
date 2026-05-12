@@ -1493,7 +1493,7 @@
       "name": "cross-agent-skill-propagation",
       "domain": "docs",
       "kind": "distribution",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
       "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
       "origin": {
@@ -1511,12 +1511,12 @@
         "agent-instructions",
         "anti-drift"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -1540,6 +1540,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -1607,7 +1611,7 @@
       "name": "nested-rule-loading",
       "domain": "docs",
       "kind": "composition",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
       "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
       "origin": {
@@ -1625,12 +1629,12 @@
         "rule-loading",
         "anti-drift"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -1654,6 +1658,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -1662,7 +1670,7 @@
       "name": "fragmented-agent-context",
       "domain": "docs",
       "kind": "composition",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
       "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
       "origin": {
@@ -1680,12 +1688,12 @@
         "modular-authoring",
         "source-partitioning"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -1709,6 +1717,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

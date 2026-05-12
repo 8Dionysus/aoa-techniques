@@ -25,10 +25,10 @@ AOA-T-0023,stateless-single-shot-agent,agent-workflows,canonical,workflow,agent-
 AOA-T-0024,upstream-mirroring-with-provenance,docs,promoted,distribution,instruction-surface
 AOA-T-0025,capability-spec-versioning,docs,promoted,artifact,capability-registry
 AOA-T-0026,session-capture-as-repo-artifact,history,promoted,artifact,history-artifacts
-AOA-T-0027,cross-agent-skill-propagation,docs,promoted,distribution,instruction-surface
+AOA-T-0027,cross-agent-skill-propagation,docs,canonical,distribution,instruction-surface
 AOA-T-0028,confirmation-gated-mutating-action,agent-workflows,canonical,guardrail,agent-workflows-core
-AOA-T-0029,nested-rule-loading,docs,promoted,composition,instruction-surface
-AOA-T-0030,fragmented-agent-context,docs,promoted,composition,instruction-surface
+AOA-T-0029,nested-rule-loading,docs,canonical,composition,instruction-surface
+AOA-T-0030,fragmented-agent-context,docs,canonical,composition,instruction-surface
 AOA-T-0031,shell-composable-agent-invocation,agent-workflows,canonical,composition,agent-workflows-core
 AOA-T-0032,context-report-for-ci,evaluation,promoted,validation,evaluation-chain
 AOA-T-0033,decision-rationale-recording,docs,promoted,artifact,docs-boundary

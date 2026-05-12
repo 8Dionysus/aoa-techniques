@@ -165,7 +165,7 @@ entries:
 - id: AOA-T-0027
   name: cross-agent-skill-propagation
   domain: docs
-  status: promoted
+  status: canonical
   kind: distribution
   family: instruction-surface
 - id: AOA-T-0028
@@ -177,13 +177,13 @@ entries:
 - id: AOA-T-0029
   name: nested-rule-loading
   domain: docs
-  status: promoted
+  status: canonical
   kind: composition
   family: instruction-surface
 - id: AOA-T-0030
   name: fragmented-agent-context
   domain: docs
-  status: promoted
+  status: canonical
   kind: composition
   family: instruction-surface
 - id: AOA-T-0031

@@ -61,6 +61,7 @@ Closed precedents:
 - [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) has exited this sprint lane through a separate canonical review after Get Physics Done's selected-runtime `gpd doctor` surface closed the contextual preflight readiness gap.
 - [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) has exited this sprint lane through a canonical review after Metaflow Devstack closed the one-entrypoint local lifecycle gap.
 - [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) has exited this sprint lane through a canonical review after LOCOMO / OpenClaw closed the baseline-first additive benchmark gap.
+- [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), and [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) have exited this sprint lane through a canonical review after ai-rulez, Claude Code memory/rules, and Cline Rules closed the managed fan-out, layered precedence, and fragment-first context gaps.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:

@@ -5,16 +5,16 @@
 - name: fragmented-agent-context
 
 ## Target project
-- name: aoa-techniques
-- environment: public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline
-- runtime: documentation-first repository that records the fragment-first authoring pattern rather than shipping the donor composition engine itself
+- name: Cline Rules
+- environment: public Cline documentation for persistent project and global rule/context files
+- runtime: workspace `.clinerules/` markdown and text files that Cline combines into the agent's rule context, with optional conditional path activation
 
 ## What changed
 
-- paths: the donor uses smaller markdown fragments that can later compose into one generated context artifact; this adaptation keeps only the fragment-first authoring layer and presents it as a generic modular-source pattern
-- services: no deterministic generator, JSON report command, or CI stack is required in this repository
-- dependencies: the adaptation depends on bounded fragment scope, legible placement, and fragment-first editing rather than on one donor CLI
-- operating assumptions: contributors should review fragment ownership directly and treat any later aggregate artifact as a separate downstream concern
+- paths: Cline stores workspace rules in `.clinerules/` at project root, with separate markdown files such as coding, testing, and architecture guidance
+- services: no deterministic generator, JSON report command, CI stack, or generated aggregate artifact is required for this proof
+- dependencies: the adaptation depends on rule/context fragments staying editable, topic-focused, version-controlled, and scoped by filename, content, or optional path conditions
+- operating assumptions: contributors edit the source fragments directly and treat Cline's combined runtime context as downstream consumption rather than the canonical authored file
 
 ## What stayed invariant
 
@@ -24,15 +24,17 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can become vague if a project keeps many small files but loses the bounded scope that makes the fragments meaningful
-- some repositories may over-fragment the context layer and create route friction without clearer ownership
+- Cline combines the fragments for use, so reviewers must keep the source layer distinct from the consumed context
+- conditional activation can tempt teams to treat runtime loading behavior as the main technique instead of fragment-first authoring
+- rule toggles can hide whether a fragment is active, so the proof must stay on authored fragment structure rather than session behavior
 
 ## Evidence
 
-- the donor README describes smaller context fragments as the scalable authoring layer
-- the donor feature surface separates fragment authoring from composition, reporting, and migration helpers
-- this imported technique narrows those behaviors into one reusable docs pattern for modular context sources before deterministic assembly
+- Cline Rules documentation checked on 2026-05-12 describes rules as persistent markdown instructions and project-specific context
+- it stores workspace rules in `.clinerules/`, shows a multi-file layout with `coding.md`, `testing.md`, and `architecture.md`, processes all `.md` and `.txt` files inside `.clinerules/`, and recommends one concern per file
+- it supports optional path conditions, but the exact-fit proof here is the fragment-first authored rule/context layer, not conditional activation or runtime injection
 
 ## Result
 
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific generator breadth
+- exact-fit second context confirmed
+- the bundle can move from documentation-first promoted posture to canonical default, as long as it stays about bounded fragment-first source authoring rather than generated composition, CI reporting, runtime injection, or rule-toggle behavior

@@ -22,6 +22,13 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0027 cross-agent-skill-propagation`, `AOA-T-0029
+  nested-rule-loading`, and `AOA-T-0030 fragmented-agent-context` to
+  `canonical` after ai-rulez, Claude Code memory/rules, and Cline Rules
+  showed exact-fit public instruction-surface reinforcement for managed
+  skill/rule fan-out, layered rule precedence, and fragment-first authored
+  context respectively, updating Audit queue posture from `77` promoted
+  techniques to `74`
 - promoted `AOA-T-0038 one-command-service-lifecycle` to `canonical` after
   Metaflow Devstack showed a public one-entrypoint local lifecycle contract
   with service selection, dependency startup, readiness follow-through,

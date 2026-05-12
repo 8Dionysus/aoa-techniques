@@ -3,7 +3,7 @@ id: AOA-T-0027
 name: cross-agent-skill-propagation
 domain: docs
 kind: distribution
-status: promoted
+status: canonical
 origin:
   project: ruler
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - agent-instructions
   - anti-drift
 summary: Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-21
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # cross-agent-skill-propagation

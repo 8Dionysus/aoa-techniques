@@ -1,6 +1,6 @@
 # Instruction-Surface Semantic Review
 
-This review-only pilot checks whether the current instruction-surface cluster still reads as six distinct techniques rather than one blurred "managed generated agent docs" package.
+This review-only pilot checks whether the current instruction-surface cluster still reads as six distinct techniques rather than one blurred "managed generated agent docs" package. It remains the semantic boundary record after the 2026-05-12 Pack 4 promotion-evidence pass moved `AOA-T-0027`, `AOA-T-0029`, and `AOA-T-0030` to `canonical`.
 
 Why this cluster was chosen now:
 
@@ -99,4 +99,4 @@ Overall outcome: `clear with two watch seams`
 
 No immediate semantic-remediation wave is justified for this cluster from this pilot alone.
 
-Concrete example strengthening has already landed for all six techniques, `ruler` is now explicitly locked both as the bounded external origin for `AOA-T-0013` and as the adjacent import origin for `AOA-T-0027` plus `AOA-T-0029`, while `agents-md` now lands as the adjacent import origin for `AOA-T-0030`. `AOA-T-0013` has since graduated through follow-up canonical review after `dyoshikawa/rulesync` and `EmberAGI/arbitrum-vibekit` confirmed one-source -> many-target instruction distribution beyond the first `aoa-skills` donor. The next step should therefore move to one future live managed-target propagation context for `AOA-T-0027`, and later live second contexts for `AOA-T-0029` plus `AOA-T-0030`, rather than more example-only reinforcement or another import-only review.
+Concrete example strengthening has already landed for all six techniques, `ruler` is now explicitly locked both as the bounded external origin for `AOA-T-0013` and as the adjacent import origin for `AOA-T-0027` plus `AOA-T-0029`, while `agents-md` now lands as the adjacent import origin for `AOA-T-0030`. `AOA-T-0013` graduated through follow-up canonical review after `dyoshikawa/rulesync` and `EmberAGI/arbitrum-vibekit` confirmed one-source -> many-target instruction distribution beyond the first `aoa-skills` donor. `AOA-T-0027`, `AOA-T-0029`, and `AOA-T-0030` have since graduated through the Pack 4 promotion-evidence pass after ai-rulez, Claude Code memory/rules, and Cline Rules confirmed managed skill/rule fan-out, layered precedence, and fragment-first context authoring outside the donor lineages. The next instruction-surface closure pressure should therefore stay on `AOA-T-0024` and `AOA-T-0035`, while `AOA-T-0032` remains in proof/evaluation as the report-only residual rather than an instruction-surface remediation item.

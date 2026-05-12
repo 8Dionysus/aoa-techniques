@@ -5,16 +5,16 @@
 - name: cross-agent-skill-propagation
 
 ## Target project
-- name: aoa-techniques
-- environment: public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline
-- runtime: documentation-first repository that records the propagation pattern rather than shipping the donor distribution engine itself
+- name: ai-rulez
+- environment: public cross-tool AI configuration manager
+- runtime: `.ai-rulez/` source tree plus `generate` command that emits native agent-tool outputs for multiple supported targets
 
 ## What changed
 
-- paths: the donor uses one canonical source directory plus managed agent-facing targets; this adaptation presents a generic source-to-target propagation pattern that can fit other curated collections
-- services: no MCP propagation, installer integration, or registry generator is required in this repository
-- dependencies: the adaptation depends on declared source ownership, repeatable propagation, and adjacent managed targets, not on the donor CLI
-- operating assumptions: contributors should treat managed targets as derived outputs and keep local wrapper notes visibly separate
+- paths: ai-rulez keeps rules, context, skills, agents, and commands under `.ai-rulez/`, then emits native target files for Claude, Cursor, Copilot, Gemini, Cline, Continue, Codex, OpenCode, and related tools
+- services: the proof surface is the managed source-to-target generation path, not the MCP server, marketplace, remote include, or builtin-domain breadth
+- dependencies: the adaptation depends on one editable source layer, declared presets or profiles, and repeatable target generation
+- operating assumptions: generated target files are downstream outputs of the `.ai-rulez/` source tree and should not become independent hand-maintained authorities
 
 ## What stayed invariant
 
@@ -24,15 +24,17 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can become vague if a project copies managed targets but drops the canonical source as the actual propagation authority
-- some repositories may keep target files but stop treating the source as the real contract owner
+- the target list is wider than this technique needs, so the reusable proof must stay on managed-target propagation rather than cross-tool product governance
+- ai-rulez also covers agents, commands, MCP, profiles, builtins, and remote includes; those remain adjacent product breadth, not part of the technique contract
+- generated target files can still drift if a downstream repository edits them directly and stops regenerating from `.ai-rulez/`
 
 ## Evidence
 
-- the donor `README.md` describes one canonical source plus automatic distribution to multiple agent-facing outputs
-- the public tests show repeated application without duplicating shared instructions in managed targets
-- this imported technique narrows those behaviors into one reusable docs pattern for skill or rule propagation with managed outputs
+- ai-rulez `README.md` at `Goldziher/ai-rulez@c704b8cfbeb752a9e1273a2ccfae7511054ff107` describes writing rules, context, skills, agents, and commands once in `.ai-rulez/`, then running `generate` for native tool outputs across 19 platforms
+- ai-rulez `docs/configuration.md` at the same commit describes file-based source inputs for `.ai-rulez/rules/*.md`, `.ai-rulez/context/*.md`, `.ai-rulez/skills/{name}/SKILL.md`, `.ai-rulez/agents/*.md`, profile-scoped generation, and built-in presets that map to target surfaces such as `CLAUDE.md`, `.cursorrules`, `.github/copilot-instructions.md`, and `.clinerules/`
+- this is exact-fit reinforcement because the same editable source layer fans out into multiple managed agent-facing outputs while skills and rules stay authored before target generation
 
 ## Result
 
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific product breadth
+- exact-fit second context confirmed
+- the bundle can move from documentation-first promoted posture to canonical default, as long as product-width target support, MCP management, marketplace behavior, and profile policy remain outside the technique

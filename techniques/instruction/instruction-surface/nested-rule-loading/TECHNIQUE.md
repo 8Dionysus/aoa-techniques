@@ -3,7 +3,7 @@ id: AOA-T-0029
 name: nested-rule-loading
 domain: docs
 kind: composition
-status: promoted
+status: canonical
 origin:
   project: ruler
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - rule-loading
   - anti-drift
 summary: Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-21
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # nested-rule-loading

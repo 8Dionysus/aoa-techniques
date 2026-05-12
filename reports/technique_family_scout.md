@@ -14,7 +14,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `agent-workflows-core` | Safe bounded agent execution backbone, one-shot posture, and mutation seam discipline. | `5` | `5` | `0` |
 | `intent-chain` | Intent normalization, dry-run validation, and safe rollout of new intent types. | `2` | `1` | `1` |
 | `docs-boundary` | Document-role separation, status snapshots, rationale notes, and public-safe sharing hygiene. | `4` | `3` | `1` |
-| `instruction-surface` | Composed, mirrored, layered, and propagated instruction or context surfaces with explicit source ownership. | `7` | `2` | `5` |
+| `instruction-surface` | Composed, mirrored, layered, and propagated instruction or context surfaces with explicit source ownership. | `7` | `5` | `2` |
 | `evaluation-chain` | Machine-readable validation contract production and staged promotion from signal to enforcement. | `3` | `2` | `1` |
 | `published-summary` | Published summary storage, remediation, integrity, and rendering policy. | `4` | `4` | `0` |
 | `skill-support` | Boundary-contract testing, invariant coverage, and bounded-context vocabulary around capability seams. | `3` | `3` | `0` |
@@ -94,16 +94,16 @@ Composed, mirrored, layered, and propagated instruction or context surfaces with
 Typical domains: `docs`.
 Typical kinds: `composition`, `distribution`.
 
-Counts: `total` 7, `canonical` 2, `promoted` 5.
+Counts: `total` 7, `canonical` 5, `promoted` 2.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) | `docs` | `composition` | `canonical` | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
 | [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) | `docs` | `distribution` | `canonical` | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. |
+| [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | `docs` | `distribution` | `canonical` | Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth. |
+| [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | `docs` | `composition` | `canonical` | Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership. |
+| [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | `docs` | `composition` | `canonical` | Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact. |
 | [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | `docs` | `distribution` | `promoted` | Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source. |
-| [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | `docs` | `distribution` | `promoted` | Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth. |
-| [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | `docs` | `composition` | `promoted` | Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership. |
-| [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | `docs` | `composition` | `promoted` | Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact. |
 | [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | `docs` | `composition` | `promoted` | Compose small reusable profiles into named presets so runtime posture stays reviewable without flattening composition into one opaque config or launcher doctrine. |
 
 ## `evaluation-chain`

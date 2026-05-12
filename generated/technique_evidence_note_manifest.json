@@ -14023,6 +14023,179 @@
       "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0027"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "cross-agent-skill-propagation"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for propagating one shared skill or rule core into multiple managed agent-facing targets"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on managed-target fan-out rather than broader rule distribution, marketplace curation, MCP propagation, profile policy, nested loading, or runtime role behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "target files become semi-canonical because contributors edit them directly after generation or propagation"
+                },
+                {
+                  "order": 2,
+                  "text": "the shared skill or rule core becomes too target-specific to survive repeatable fan-out"
+                },
+                {
+                  "order": 3,
+                  "text": "a cross-tool config system is mistaken for proof that every generated target carries the same bounded meaning"
+                },
+                {
+                  "order": 4,
+                  "text": "propagation succeeds mechanically while wrappers or destination conventions change the shared intent"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "managed propagation can hide drift because every target still appears fresh"
+                },
+                {
+                  "order": 2,
+                  "text": "one shared core can become bland if target-specific requirements are forced into the source"
+                },
+                {
+                  "order": 3,
+                  "text": "canonical status can encourage propagation into tools that do not need the shared skill or rule"
+                },
+                {
+                  "order": 4,
+                  "text": "target-native formats can distract reviewers from checking whether the shared core still owns the meaning"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the bundle for generic one-source rule distribution that belongs to `AOA-T-0013`"
+                },
+                {
+                  "order": 2,
+                  "text": "treating skill marketplace discovery, MCP sync, profile composition, or runtime role setup as part of this contract"
+                },
+                {
+                  "order": 3,
+                  "text": "adding enough target-specific wrapper logic that each destination becomes an independent policy layer"
+                },
+                {
+                  "order": 4,
+                  "text": "claiming parity from generated files without checking the source-to-target relation"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pull requests edit target files without touching or regenerating from the canonical source"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers cannot identify the shared skill or rule core after looking at the target outputs"
+                },
+                {
+                  "order": 3,
+                  "text": "target wrappers carry substantive instructions not present in the source"
+                },
+                {
+                  "order": 4,
+                  "text": "discussion focuses on supported tool count rather than on source ownership, managed fan-out, and repeatability"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the canonical source explicit and route shared changes through it before propagation"
+                },
+                {
+                  "order": 2,
+                  "text": "keep wrappers minimal and destination-focused"
+                },
+                {
+                  "order": 3,
+                  "text": "treat target-native format support as an adapter concern, not as technique meaning"
+                },
+                {
+                  "order": 4,
+                  "text": "split broader marketplace, MCP, profile, nested-loading, and runtime-role behavior into sibling techniques or owner repos"
+                },
+                {
+                  "order": 5,
+                  "text": "revisit canonical status if the technique starts being used mainly for generic config generation instead of managed propagation of one shared skill or rule core"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for target drift, wrapper creep, tool-count overreach, and sibling-boundary widening around the instruction-surface cluster"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -14053,7 +14226,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -14069,18 +14242,18 @@
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                  "key": "exact-fit second context",
+                  "value_markdown": "ai-rulez proves the contract outside the donor by keeping rules, context, skills, agents, and commands in `.ai-rulez/` and generating native agent-tool outputs for many targets"
                 },
                 {
                   "order": 3,
                   "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "value_markdown": "the first import review passed, and the ai-rulez pass confirms managed skill or rule propagation survives without importing marketplace, MCP, profile-policy, or cross-tool product governance"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, exact-fit public second-context evidence, and an adverse-effects review"
                 }
               ]
             },
@@ -14091,7 +14264,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when one shared skill or rule core must reach multiple agent-facing targets without turning each target into a canonical home"
+                  "text": "this is the right canonical default when one shared skill or rule core must reach multiple agent-facing targets without turning each target into a canonical home"
                 },
                 {
                   "order": 2,
@@ -14100,6 +14273,10 @@
                 {
                   "order": 3,
                   "text": "it also stays distinct from `AOA-T-0024`, which is about upstream mirroring with provenance rather than local skill or rule propagation"
+                },
+                {
+                  "order": 4,
+                  "text": "ai-rulez confirms that the move can survive outside the donor even when the source layer covers rules, context, skills, agents, and commands, because the reusable proof is still managed-source fan-out into target-native agent surfaces"
                 }
               ]
             },
@@ -14111,7 +14288,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -14126,7 +14303,12 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the examples, checklist, adaptation notes, and ai-rulez evidence remain understandable without hidden donor-repo context"
+                },
+                {
+                  "order": 5,
+                  "key": "public-safety boundary",
+                  "value_markdown": "ai-rulez target names and content types are cited only as evidence of managed multi-target propagation, not as universal required tools, marketplace policy, MCP doctrine, or cross-agent product governance"
                 }
               ]
             },
@@ -14137,11 +14319,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on managed propagation of one shared skill or rule source into multiple agent-facing targets"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses the same shared-skill propagation contract as a real managed-target fan-out rather than only as imported documentation"
+                  "text": "future review should reject surfaces that are only one-source rule distribution, target-specific hand copies, skill marketplace curation, MCP propagation, profile policy, or broad cross-tool configuration governance without the same shared-source managed-target fan-out"
                 }
               ]
             },
@@ -14152,11 +14334,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0027` `promoted`"
+                  "text": "promote `AOA-T-0027` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the shared-skill propagation contract survives outside the donor repository"
+                  "text": "use `AOA-T-0027` as the default instruction-surface technique when the reusable object is one shared skill or rule core propagated into multiple managed agent-facing targets while sibling techniques own broader rule distribution, nested precedence, provenance mirroring, marketplace curation, and runtime behavior"
                 }
               ]
             }
@@ -14281,11 +14463,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                  "text": "at import time, this was a successful bounded external import and the bundle was strong enough to enter the corpus as a `promoted` technique"
                 },
                 {
                   "order": 3,
-                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                  "text": "at import time, the import path was strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
                 }
               ]
             },
@@ -14296,7 +14478,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "at import time, the smallest remaining gap was one live second context beyond the donor and documentation-first adaptation"
                 },
                 {
                   "order": 2,
@@ -14311,11 +14493,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "accept `AOA-T-0027` as a bounded external import and publish it as `promoted`"
+                  "text": "import-time recommendation: accept `AOA-T-0027` as a bounded external import and initially classify it as `promoted`"
                 },
                 {
                   "order": 2,
-                  "text": "defer any canonical review until another live adopter confirms that the shared-skill propagation contract survives outside the donor repository"
+                  "text": "later canonical review is owned by `notes/canonical-readiness.md` and `notes/adverse-effects-review.md`, not by this import receipt"
                 }
               ]
             }
@@ -14456,17 +14638,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "ai-rulez"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                  "value_markdown": "public cross-tool AI configuration manager"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that records the propagation pattern rather than shipping the donor distribution engine itself"
+                  "value_markdown": "`.ai-rulez/` source tree plus `generate` command that emits native agent-tool outputs for multiple supported targets"
                 }
               ]
             },
@@ -14478,22 +14660,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor uses one canonical source directory plus managed agent-facing targets; this adaptation presents a generic source-to-target propagation pattern that can fit other curated collections"
+                  "value_markdown": "ai-rulez keeps rules, context, skills, agents, and commands under `.ai-rulez/`, then emits native target files for Claude, Cursor, Copilot, Gemini, Cline, Continue, Codex, OpenCode, and related tools"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "no MCP propagation, installer integration, or registry generator is required in this repository"
+                  "value_markdown": "the proof surface is the managed source-to-target generation path, not the MCP server, marketplace, remote include, or builtin-domain breadth"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on declared source ownership, repeatable propagation, and adjacent managed targets, not on the donor CLI"
+                  "value_markdown": "the adaptation depends on one editable source layer, declared presets or profiles, and repeatable target generation"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should treat managed targets as derived outputs and keep local wrapper notes visibly separate"
+                  "value_markdown": "generated target files are downstream outputs of the `.ai-rulez/` source tree and should not become independent hand-maintained authorities"
                 }
               ]
             },
@@ -14526,11 +14708,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can become vague if a project copies managed targets but drops the canonical source as the actual propagation authority"
+                  "text": "the target list is wider than this technique needs, so the reusable proof must stay on managed-target propagation rather than cross-tool product governance"
                 },
                 {
                   "order": 2,
-                  "text": "some repositories may keep target files but stop treating the source as the real contract owner"
+                  "text": "ai-rulez also covers agents, commands, MCP, profiles, builtins, and remote includes; those remain adjacent product breadth, not part of the technique contract"
+                },
+                {
+                  "order": 3,
+                  "text": "generated target files can still drift if a downstream repository edits them directly and stops regenerating from `.ai-rulez/`"
                 }
               ]
             },
@@ -14541,15 +14727,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the donor `README.md` describes one canonical source plus automatic distribution to multiple agent-facing outputs"
+                  "text": "ai-rulez `README.md` at `Goldziher/ai-rulez@c704b8cfbeb752a9e1273a2ccfae7511054ff107` describes writing rules, context, skills, agents, and commands once in `.ai-rulez/`, then running `generate` for native tool outputs across 19 platforms"
                 },
                 {
                   "order": 2,
-                  "text": "the public tests show repeated application without duplicating shared instructions in managed targets"
+                  "text": "ai-rulez `docs/configuration.md` at the same commit describes file-based source inputs for `.ai-rulez/rules/*.md`, `.ai-rulez/context/*.md`, `.ai-rulez/skills/{name}/SKILL.md`, `.ai-rulez/agents/*.md`, profile-scoped generation, and built-in presets that map to target surfaces such as `CLAUDE.md`, `.cursorrules`, `.github/copilot-instructions.md`, and `.clinerules/`"
                 },
                 {
                   "order": 3,
-                  "text": "this imported technique narrows those behaviors into one reusable docs pattern for skill or rule propagation with managed outputs"
+                  "text": "this is exact-fit reinforcement because the same editable source layer fans out into multiple managed agent-facing outputs while skills and rules stay authored before target generation"
                 }
               ]
             },
@@ -14560,7 +14746,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific product breadth"
+                  "text": "exact-fit second context confirmed"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can move from documentation-first promoted posture to canonical default, as long as product-width target support, MCP management, marketplace behavior, and profile policy remain outside the technique"
                 }
               ]
             }
@@ -15287,6 +15477,179 @@
       "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/instruction/instruction-surface/nested-rule-loading/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0029"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nested-rule-loading"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for hierarchical rule loading with explicit, reviewable precedence"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on parent/nested layer order rather than multi-target propagation, fragment hygiene, runtime injection, hidden prompt control, or product-width memory behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "precedence becomes implicit and reviewers cannot explain why one instruction layer wins"
+                },
+                {
+                  "order": 2,
+                  "text": "nested layers start carrying shared policy that should live in the parent source"
+                },
+                {
+                  "order": 3,
+                  "text": "lazy or conditional loading hides important scoped rules from review"
+                },
+                {
+                  "order": 4,
+                  "text": "hierarchical loading is treated as a general import system without an ownership or precedence contract"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "layered rules can make simple instructions harder to audit"
+                },
+                {
+                  "order": 2,
+                  "text": "closer or later-loaded files can accidentally shadow broader guidance"
+                },
+                {
+                  "order": 3,
+                  "text": "overuse of nested layers can fragment shared meaning and create local exceptions as default behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "canonical status can make teams add hierarchy before a flat instruction surface has actually become insufficient"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the bundle for one-source fan-out that belongs to `AOA-T-0013`"
+                },
+                {
+                  "order": 2,
+                  "text": "using the bundle for managed skill or rule propagation that belongs to `AOA-T-0027`"
+                },
+                {
+                  "order": 3,
+                  "text": "using hierarchy as a way to hide target-specific policy or prompt-control tricks"
+                },
+                {
+                  "order": 4,
+                  "text": "treating all topic-file organization as nested-rule loading even when no precedence decision exists"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot list parent, nested, and local layers in the order they load"
+                },
+                {
+                  "order": 2,
+                  "text": "a nested layer is cited as the real source of a shared rule"
+                },
+                {
+                  "order": 3,
+                  "text": "removing one scoped layer changes unrelated instruction behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "discussions focus on product memory features rather than rule hierarchy, scope, and precedence"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "document the loading order beside the hierarchy"
+                },
+                {
+                  "order": 2,
+                  "text": "route shared rules back to the parent source when a nested layer starts carrying general policy"
+                },
+                {
+                  "order": 3,
+                  "text": "keep nested layers small, scoped, and easy to remove"
+                },
+                {
+                  "order": 4,
+                  "text": "verify loaded context or resolved output when precedence changes"
+                },
+                {
+                  "order": 5,
+                  "text": "split target fan-out, fragment authoring, runtime injection, and hidden prompt-control behavior into sibling techniques or owner repos"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for implicit precedence, nested-source drift, over-layering, and sibling-boundary widening around the instruction-surface cluster"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/instruction/instruction-surface/nested-rule-loading/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -15317,7 +15680,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -15333,18 +15696,18 @@
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                  "key": "exact-fit second context",
+                  "value_markdown": "Claude Code documentation proves a real layered instruction hierarchy through scoped `CLAUDE.md` locations, directory-walk loading, subdirectory on-demand loading, `.claude/rules/`, and explicit priority ordering for broader versus more specific instruction layers"
                 },
                 {
                   "order": 3,
                   "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "value_markdown": "the first import review passed, and the Claude Code pass confirms the hierarchy-plus-precedence contract survives without importing donor CLI breadth, multi-target propagation, MCP behavior, skill propagation, or installer policy"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, exact-fit public second-context evidence, and an adverse-effects review"
                 }
               ]
             },
@@ -15355,7 +15718,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when a repository needs hierarchical rule layers with explicit precedence and one-way ownership"
+                  "text": "this is the right canonical default when a repository needs hierarchical rule layers with explicit precedence and one-way ownership"
                 },
                 {
                   "order": 2,
@@ -15364,6 +15727,10 @@
                 {
                   "order": 3,
                   "text": "it stays distinct from `AOA-T-0027`, which is about managed-target propagation of a shared skill or rule core rather than nested loading"
+                },
+                {
+                  "order": 4,
+                  "text": "Claude Code confirms that the move can survive outside the donor even when implementation is a live agent-product instruction loader rather than a standalone rule-distribution tool"
                 }
               ]
             },
@@ -15375,7 +15742,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -15390,7 +15757,12 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the examples, checklist, adaptation notes, and Claude Code evidence remain understandable without hidden donor-repo context"
+                },
+                {
+                  "order": 5,
+                  "key": "public-safety boundary",
+                  "value_markdown": "Claude Code details are cited only as evidence of hierarchical loading and priority ordering, not as universal Claude memory doctrine, hidden prompt control, path-specific product endorsement, or a requirement to use Claude Code"
                 }
               ]
             },
@@ -15401,11 +15773,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on hierarchical rule loading with explicit, reviewable precedence"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses the same nested-loading contract as a real layered rule hierarchy rather than only as imported documentation"
+                  "text": "future review should reject surfaces that are only generic file imports, fragment organization, target fan-out, config generation, runtime injection, or product memory systems without the same parent/nested rule hierarchy and precedence seam"
                 }
               ]
             },
@@ -15416,11 +15788,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0029` `promoted`"
+                  "text": "promote `AOA-T-0029` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the nested-loading contract survives outside the donor repository"
+                  "text": "use `AOA-T-0029` as the default instruction-surface technique when parent and nested rule layers must resolve through explicit precedence while sibling techniques own multi-target distribution, managed skill propagation, fragment-first authoring, and upstream mirroring"
                 }
               ]
             }
@@ -15545,11 +15917,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                  "text": "at import time, this was a successful bounded external import and the bundle was strong enough to enter the corpus as a `promoted` technique"
                 },
                 {
                   "order": 3,
-                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                  "text": "at import time, the import path was strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
                 }
               ]
             },
@@ -15560,7 +15932,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "at import time, the smallest remaining gap was one live second context beyond the donor and documentation-first adaptation"
                 },
                 {
                   "order": 2,
@@ -15575,11 +15947,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "accept `AOA-T-0029` as a bounded external import and publish it as `promoted`"
+                  "text": "import-time recommendation: accept `AOA-T-0029` as a bounded external import and initially classify it as `promoted`"
                 },
                 {
                   "order": 2,
-                  "text": "defer any canonical review until another live adopter confirms that hierarchical rule loading survives outside the donor repository"
+                  "text": "later canonical review is owned by `notes/canonical-readiness.md` and `notes/adverse-effects-review.md`, not by this import receipt"
                 }
               ]
             }
@@ -15720,17 +16092,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "Claude Code memory and rules"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                  "value_markdown": "public Claude Code documentation for project, user, local, managed, nested, and path-scoped instruction surfaces"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that records the nested-loading pattern rather than shipping the donor loader itself"
+                  "value_markdown": "`CLAUDE.md`, `CLAUDE.local.md`, and `.claude/rules/` files loaded through directory hierarchy, import, and path-scope rules"
                 }
               ]
             },
@@ -15742,22 +16114,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor supports layered rule loading with explicit precedence; this adaptation presents that hierarchy as a generic public technique with one canonical source and subordinate nested layers"
+                  "value_markdown": "Claude Code loads `CLAUDE.md` and `CLAUDE.local.md` files while walking up from the working directory, discovers subtree files on demand, and also supports `.claude/rules/` markdown files with optional path scoping"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "no MCP propagation, installer integration, or skills propagation is required in this repository"
+                  "value_markdown": "no donor CLI, MCP propagation, skill propagation, installer behavior, or multi-target distribution is required for this proof"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on declared source ownership, nested layer precedence, and repeatable loading, not on the donor CLI breadth"
+                  "value_markdown": "the adaptation depends on declared scope, loading order, closer-file priority, and repeatable path-triggered rule inclusion"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should treat nested layers as scoped additions and keep local wrapper notes visibly separate"
+                  "value_markdown": "parent instructions carry shared project context while nested files and path-scoped rules stay subordinate, scoped, and reviewable"
                 }
               ]
             },
@@ -15790,11 +16162,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can become vague if a project adds nested layers but drops the canonical source as the actual ownership authority"
+                  "text": "Claude Code concatenates loaded files rather than enforcing a strict override engine, so the proof must stay on declared order and priority rather than hidden conflict resolution"
                 },
                 {
                   "order": 2,
-                  "text": "some repositories may keep layered files but stop treating precedence as part of the real contract"
+                  "text": "project rules can become a fragment library if topic splits dominate the hierarchy question"
+                },
+                {
+                  "order": 3,
+                  "text": "path-scoped rules load lazily, so reviewers need to check the source hierarchy and the loaded context rather than only the session start view"
                 }
               ]
             },
@@ -15805,15 +16181,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the donor `README.md` describes hierarchical rule behavior with explicit precedence in the broader rule system"
+                  "text": "Claude Code memory documentation checked on 2026-05-12 states that `CLAUDE.md` files have scoped locations, more specific locations take precedence over broader ones, hierarchy files above the working directory load at launch, and subdirectory files load on demand"
                 },
                 {
                   "order": 2,
-                  "text": "the public contract can be narrowed to nested loading without carrying over the rest of the donor breadth"
+                  "text": "the same documentation describes filesystem-root-to-working-directory ordering, closer files being read later, and user-level rules loading before project rules so project rules have higher priority"
                 },
                 {
                   "order": 3,
-                  "text": "this imported technique keeps the core at hierarchy plus precedence, which is reusable across repositories that layer rule sources"
+                  "text": "`.claude/rules/` adds a recursive markdown rule layer with topic files, unconditional rules, and path-scoped rules that load only for matching files"
                 }
               ]
             },
@@ -15824,7 +16200,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific product breadth"
+                  "text": "exact-fit second context confirmed"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can move from documentation-first promoted posture to canonical default, as long as it stays about hierarchical loading and explicit precedence rather than hidden prompt control, multi-target propagation, generic fragment management, or product-width Claude Code memory doctrine"
                 }
               ]
             }
@@ -15836,6 +16216,179 @@
       "id": "AOA-T-0030",
       "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/instruction/instruction-surface/fragmented-agent-context/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0030"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "fragmented-agent-context"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for bounded fragment-first agent-context authoring before deterministic assembly or reporting becomes the center of gravity"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on editable fragment sources rather than generated composition, CI reporting, runtime injection, path-trigger behavior, or rule-toggle policy"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "fragments become arbitrary small files without clear ownership or topic scope"
+                },
+                {
+                  "order": 2,
+                  "text": "a combined or generated context becomes the file contributors edit first"
+                },
+                {
+                  "order": 3,
+                  "text": "conditional runtime loading distracts reviewers from the authored fragment layer"
+                },
+                {
+                  "order": 4,
+                  "text": "fragment count grows until finding the relevant instruction is harder than reading one larger file"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "fragment-first authoring can add navigation friction for small projects"
+                },
+                {
+                  "order": 2,
+                  "text": "local fragments can hide duplicate guidance across nearby files"
+                },
+                {
+                  "order": 3,
+                  "text": "source partitioning can create a false sense of modularity when the real problem is stale or conflicting content"
+                },
+                {
+                  "order": 4,
+                  "text": "canonical status can encourage over-fragmentation before a repository has enough context to justify it"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the bundle for deterministic composition into one artifact that belongs to `AOA-T-0012`"
+                },
+                {
+                  "order": 2,
+                  "text": "using the bundle for CI-facing context reports that belong to `AOA-T-0032`"
+                },
+                {
+                  "order": 3,
+                  "text": "treating file-glob activation, rule toggles, or runtime injection as the reusable object"
+                },
+                {
+                  "order": 4,
+                  "text": "creating generic catch-all fragments that only move clutter from one file into many files"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot explain what each fragment owns"
+                },
+                {
+                  "order": 2,
+                  "text": "several fragments repeat the same rule with small wording differences"
+                },
+                {
+                  "order": 3,
+                  "text": "contributors edit the generated or combined context instead of the source fragments"
+                },
+                {
+                  "order": 4,
+                  "text": "discussion focuses on activation mechanics rather than fragment scope, placement, and authorship"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep one concern per fragment and name files by owned scope"
+                },
+                {
+                  "order": 2,
+                  "text": "merge or delete fragments whose boundaries no longer help reviewers"
+                },
+                {
+                  "order": 3,
+                  "text": "route edits back to fragments instead of patching generated or combined context"
+                },
+                {
+                  "order": 4,
+                  "text": "keep deterministic assembly, CI reports, runtime injection, path-trigger behavior, and toggle policy in sibling techniques or owner repos"
+                },
+                {
+                  "order": 5,
+                  "text": "revisit canonical status if the technique starts being used mainly for fragment quantity rather than clearer source ownership"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for over-fragmentation, duplicate guidance, generated-output drift, and sibling-boundary widening around the instruction-surface cluster"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/instruction/instruction-surface/fragmented-agent-context/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -15867,7 +16420,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -15883,18 +16436,18 @@
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same fragment-first authoring contract as a documentation-first adaptation with examples and a checklist"
+                  "key": "exact-fit second context",
+                  "value_markdown": "Cline Rules proves the fragment-first authoring contract outside the donor through workspace `.clinerules/` markdown and text files, topic-specific files such as coding, testing, and architecture guidance, all-file combination into one rule context, and a best-practice rule of one concern per file"
                 },
                 {
                   "order": 3,
                   "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "value_markdown": "the first import review passed, and the Cline pass confirms fragment-first source authoring survives without importing deterministic composition, CI reporting, runtime injection, or rule-toggle policy"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, exact-fit public second-context evidence, and an adverse-effects review"
                 }
               ]
             },
@@ -15905,7 +16458,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the problem is fragment-first context authoring before any generated aggregate or CI report becomes the center of gravity"
+                  "text": "this is the right canonical default when the problem is fragment-first context authoring before any generated aggregate or CI report becomes the center of gravity"
                 },
                 {
                   "order": 2,
@@ -15914,6 +16467,10 @@
                 {
                   "order": 3,
                   "text": "it remains narrower than `AOA-T-0032`, which stays centered on CI-facing reporting over composition outcomes rather than on authoring the fragment layer itself"
+                },
+                {
+                  "order": 4,
+                  "text": "Cline confirms that the move can survive outside the donor even when the consumer combines fragments at runtime, because the reusable object remains the authored fragment layer and bounded source partitioning"
                 }
               ]
             },
@@ -15925,7 +16482,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -15940,7 +16497,12 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the public examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the public examples, checklist, adaptation notes, and Cline evidence remain understandable without hidden donor-repo context"
+                },
+                {
+                  "order": 5,
+                  "key": "public-safety boundary",
+                  "value_markdown": "Cline rule paths and activation details are cited only as evidence of bounded authored fragments, not as universal editor doctrine, runtime injection policy, or a requirement to use Cline"
                 }
               ]
             },
@@ -15951,11 +16513,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on bounded fragment-first source authoring"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository where fragment-first context authoring is used as a real source-layer practice rather than only as imported documentation"
+                  "text": "future review should reject surfaces that are only deterministic assemblers, context compilers, generated reports, runtime injection systems, toggle UIs, or path-trigger mechanisms without the same editable fragment-source layer"
                 }
               ]
             },
@@ -15966,11 +16528,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0030` `promoted`"
+                  "text": "promote `AOA-T-0030` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that fragment-first authoring survives outside the donor repository"
+                  "text": "use `AOA-T-0030` as the default instruction-surface technique when agent context or rule guidance should first be split into bounded editable fragments while sibling techniques own deterministic assembly, CI reporting, nested precedence, and runtime loading behavior"
                 }
               ]
             }
@@ -16095,11 +16657,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                  "text": "at import time, this was a successful bounded external import and the bundle was strong enough to enter the corpus as a `promoted` technique"
                 },
                 {
                   "order": 3,
-                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
+                  "text": "at import time, the import path was strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context"
                 }
               ]
             },
@@ -16110,7 +16672,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "at import time, the smallest remaining gap was one live second context beyond the donor and documentation-first adaptation"
                 },
                 {
                   "order": 2,
@@ -16125,11 +16687,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "accept `AOA-T-0030` as a bounded external import and publish it as `promoted`"
+                  "text": "import-time recommendation: accept `AOA-T-0030` as a bounded external import and initially classify it as `promoted`"
                 },
                 {
                   "order": 2,
-                  "text": "defer any canonical review until another live adopter confirms that fragment-first context authoring survives outside the donor repository"
+                  "text": "later canonical review is owned by `notes/canonical-readiness.md` and `notes/adverse-effects-review.md`, not by this import receipt"
                 }
               ]
             }
@@ -16270,17 +16832,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "Cline Rules"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline"
+                  "value_markdown": "public Cline documentation for persistent project and global rule/context files"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that records the fragment-first authoring pattern rather than shipping the donor composition engine itself"
+                  "value_markdown": "workspace `.clinerules/` markdown and text files that Cline combines into the agent's rule context, with optional conditional path activation"
                 }
               ]
             },
@@ -16292,22 +16854,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor uses smaller markdown fragments that can later compose into one generated context artifact; this adaptation keeps only the fragment-first authoring layer and presents it as a generic modular-source pattern"
+                  "value_markdown": "Cline stores workspace rules in `.clinerules/` at project root, with separate markdown files such as coding, testing, and architecture guidance"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "no deterministic generator, JSON report command, or CI stack is required in this repository"
+                  "value_markdown": "no deterministic generator, JSON report command, CI stack, or generated aggregate artifact is required for this proof"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on bounded fragment scope, legible placement, and fragment-first editing rather than on one donor CLI"
+                  "value_markdown": "the adaptation depends on rule/context fragments staying editable, topic-focused, version-controlled, and scoped by filename, content, or optional path conditions"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should review fragment ownership directly and treat any later aggregate artifact as a separate downstream concern"
+                  "value_markdown": "contributors edit the source fragments directly and treat Cline's combined runtime context as downstream consumption rather than the canonical authored file"
                 }
               ]
             },
@@ -16340,11 +16902,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can become vague if a project keeps many small files but loses the bounded scope that makes the fragments meaningful"
+                  "text": "Cline combines the fragments for use, so reviewers must keep the source layer distinct from the consumed context"
                 },
                 {
                   "order": 2,
-                  "text": "some repositories may over-fragment the context layer and create route friction without clearer ownership"
+                  "text": "conditional activation can tempt teams to treat runtime loading behavior as the main technique instead of fragment-first authoring"
+                },
+                {
+                  "order": 3,
+                  "text": "rule toggles can hide whether a fragment is active, so the proof must stay on authored fragment structure rather than session behavior"
                 }
               ]
             },
@@ -16355,15 +16921,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the donor README describes smaller context fragments as the scalable authoring layer"
+                  "text": "Cline Rules documentation checked on 2026-05-12 describes rules as persistent markdown instructions and project-specific context"
                 },
                 {
                   "order": 2,
-                  "text": "the donor feature surface separates fragment authoring from composition, reporting, and migration helpers"
+                  "text": "it stores workspace rules in `.clinerules/`, shows a multi-file layout with `coding.md`, `testing.md`, and `architecture.md`, processes all `.md` and `.txt` files inside `.clinerules/`, and recommends one concern per file"
                 },
                 {
                   "order": 3,
-                  "text": "this imported technique narrows those behaviors into one reusable docs pattern for modular context sources before deterministic assembly"
+                  "text": "it supports optional path conditions, but the exact-fit proof here is the fragment-first authored rule/context layer, not conditional activation or runtime injection"
                 }
               ]
             },
@@ -16374,7 +16940,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific generator breadth"
+                  "text": "exact-fit second context confirmed"
+                },
+                {
+                  "order": 2,
+                  "text": "the bundle can move from documentation-first promoted posture to canonical default, as long as it stays about bounded fragment-first source authoring rather than generated composition, CI reporting, runtime injection, or rule-toggle behavior"
                 }
               ]
             }
