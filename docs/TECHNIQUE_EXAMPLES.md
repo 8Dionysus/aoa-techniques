@@ -160,6 +160,12 @@ See also:
 |---|---|---|---|
 | minimal-two-stage-document-ocr-pipeline | `present` | `techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/examples/minimal-two-stage-document-ocr-pipeline.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) |
 
+### [AOA-T-0071](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-template-backed-field-extraction-after-ocr | `present` | `techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/examples/minimal-template-backed-field-extraction-after-ocr.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -178,12 +184,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0071](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal-template-backed-field-extraction-after-ocr | `present` | `techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/examples/minimal-template-backed-field-extraction-after-ocr.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
 
 ### [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
 

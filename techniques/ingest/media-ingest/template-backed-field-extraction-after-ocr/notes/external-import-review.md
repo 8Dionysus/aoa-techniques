@@ -33,14 +33,14 @@
 
 - result: pass
 - this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique
-- the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor parser family
+- the original import path was strong enough for initial publication; canonical status is now justified by the separate 2026-05-12 YomiToku review recorded in `notes/canonical-readiness.md` and `notes/second-context-adaptation.md`
 
 ## Remaining gaps
 
-- the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation
-- a future stronger context should show another public workflow where OCR-derived text is turned into a bounded field object through visible templates or heuristics with explicit review fallback
+- no import-path blocker remains for canonical status
+- future review should keep imported parser families, OCR engines, schema products, locale policy, LLM extraction services, bookkeeping flows, and ingestion automation outside the bounded field-extraction contract
 
 ## Recommendation
 
-- accept `AOA-T-0071` as a bounded external import and publish it as `promoted`
-- defer any canonical review until another live adopter confirms that the post-OCR extraction contract survives outside the current donor parser family
+- keep this note as the import receipt for the original promoted publication
+- use `notes/canonical-readiness.md` and `notes/adverse-effects-review.md` for the current canonical posture

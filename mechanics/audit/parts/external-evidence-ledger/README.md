@@ -51,7 +51,53 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | `cwc-long-running-agents` plus `openclaw-memory-kit` | A public long-running agent harness and a public OpenClaw memory kit both keep a structured progress or handoff packet visible before restart, compaction, or wake-up without making the packet a transcript, mailbox, git-verification, memory-search, hook-policy, cron-memory, or harness-governance system. |
 | [AOA-T-0069](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | `pydantic/pydantic-ai` plus LangGraph boundary check | A public agent framework can end an agent run on deferred approvals or external calls, preserve pending-call identity, resume with saved message history and deferred results, and pair that with durable execution support without making the technique a scheduler or workflow-platform doctrine. |
 | [AOA-T-0070](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | `JaidedAI/EasyOCR` | A public OCR library can keep detection and recognition separately visible, return bounding boxes, recognized text, and confidence as one structured result, and leave downstream extraction or review outside the OCR handoff contract. |
+| [AOA-T-0071](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | `kotaro-kinoshita/yomitoku` | A public document extractor can use schema-defined field targets, visible rule methods, source metadata, confidence, and not-found posture to turn OCR/layout output into bounded fields without becoming OCR staging, LLM extraction, or accounting automation. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0071 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`kotaro-kinoshita/yomitoku` at
+`51a51f4ce21d8a0b34998be1a9f03dfb50fa6925` provides the clean public source
+for Pack 28. The repository is CC BY-NC-SA 4.0 licensed, so it is used as
+evidence only: do not import code, schema text, model weights, sample images,
+commercial-use posture, OCR engine setup, LLM server behavior, or product
+workflow into `aoa-techniques`.
+
+Accepted evidence:
+
+- `README_EN.md` exposes `YomiToku Extractor` as structured data extraction
+  from document images and PDFs through a YAML schema and JSON output.
+- `docs/extractor.en.md` defines schema fields, value types, normalization,
+  `cell_id`, `bbox`, `description`, `regex`, and merge behavior.
+- rule-based extraction has an explicit method order and marks no-match scalar
+  extraction with `source: not_found` and low confidence.
+- JSON output preserves normalized value, raw text, confidence, source, cell
+  ids, and bounding boxes; table output keeps row fields plus source metadata.
+- `src/yomitoku/extractor/schema.py` and
+  `src/yomitoku/extractor/rule_pipeline.py` implement the schema and rule
+  extraction path directly, and `tests/test_extractor.py` covers `cell_id`,
+  `bbox`, `regex`, fallback, `not_found`, and source-metadata behavior.
+
+Rejected or bounded:
+
+- Do not treat YomiToku's OCR engine, layout analyzer, Japanese-document focus,
+  model setup, LLM extraction mode, vLLM server path, visualization output, or
+  commercial edition as invariant requirements.
+- `codebywiam/invoice-ocr` was inspected as adjacent MIT-licensed invoice OCR
+  app evidence for regex field extraction and manual correction, but it is too
+  application-shaped and weak on schema/evidence metadata to be primary proof.
+- `nzregs/receipt-api` was inspected as adjacent MIT-licensed receipt API
+  evidence for OCR-result line reconstruction and regex extraction of ABN,
+  date, and total, but it is older and narrower than the needed schema-backed
+  field-object contract.
+
+Future search shape: future sources can reinforce this canonical default only
+if they preserve the same narrow field-extraction seam: upstream OCR or layout
+handoff, explicit field set, visible template or heuristic selection,
+source-evidence or confidence, explicit missing or conflicting result posture,
+and a stop-line before locale doctrine, bookkeeping automation, storage,
+cleanup, LLM products, or full document-understanding stacks.
 
 ## AOA-T-0070 External Evidence Notes
 
