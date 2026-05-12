@@ -21,15 +21,16 @@ The long pass continues the current Audit lane:
 
 Current live constraint:
 
-- the `AOA-T-0032` exemplar pass has been drafted in this branch;
+- the `AOA-T-0032` exemplar pass is already landed as adjacent searched-lane
+  memory, and `AOA-T-0032` remains the single lead queue item;
 - `AOA-T-0026` closed during Stage A1 with exact-fit Aider
   `.aider.chat.history.md` public artifact-family evidence and exits the live
   promoted queue through canonical review;
 - `AOA-T-0036` closed during Stage A2 with exact-fit Dockform
   plan/render-before-apply evidence and exits the live promoted queue through
   canonical review;
-- unrelated `.agents/skills/**` changes are present in the worktree and must
-  stay outside this long-pass scope unless the user explicitly routes them in;
+- the live generated catalog currently contains `80` promoted techniques and
+  `27` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -68,6 +69,96 @@ jq -r '.techniques[] | select(.status=="promoted") | .id' generated/technique_ca
 
 The pass is incomplete if the final accounted ID set differs from generated
 catalog truth.
+
+## Current Live Promoted Accounting Table
+
+This table is the working slot map for the full pass. Every current promoted
+technique has exactly one row here. Fill the `outcome` and `durable note`
+columns only after the bundle has completed the phase rhythm below and the
+result has been distilled into the appropriate durable surface.
+
+| stage | technique | domain/kind | pack or lane | outcome | durable note |
+|---|---|---|---|---|---|
+| Stage 1 | [AOA-T-0032 context-report-for-ci](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | evaluation / validation | lead queue; Pack 4 report-only proof lane | pending |  |
+| Stage 2 | [AOA-T-0005 new-intent-rollout-checklist](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | agent-workflows / workflow | Pack 1 long-gap donor lane | pending |  |
+| Stage 2 | [AOA-T-0022 risk-and-negative-effect-lift](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | docs / lift | Pack 1 long-gap donor lane | pending |  |
+| Stage 2 | [AOA-T-0035 profile-preset-composition](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | docs / composition | Pack 3 runtime operator stack | pending |  |
+| Stage 2 | [AOA-T-0037 contextual-host-doctor](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | evaluation / validation | Pack 3 runtime operator stack | pending |  |
+| Stage 2 | [AOA-T-0038 one-command-service-lifecycle](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | agent-workflows / workflow | Pack 3 runtime operator stack | pending |  |
+| Stage 2 | [AOA-T-0039 baseline-first-additive-profile-benchmarks](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | evaluation / validation | Pack 3 runtime operator stack | pending |  |
+| Stage 2 | [AOA-T-0027 cross-agent-skill-propagation](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | docs / distribution | Pack 4 instruction-surface cluster | pending |  |
+| Stage 2 | [AOA-T-0029 nested-rule-loading](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | docs / composition | Pack 4 instruction-surface cluster | pending |  |
+| Stage 2 | [AOA-T-0030 fragmented-agent-context](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | docs / composition | Pack 4 instruction-surface cluster | pending |  |
+| Stage 2 | [AOA-T-0024 upstream-mirroring-with-provenance](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | docs / distribution | Pack 5 skill ecosystem and curated inputs | pending |  |
+| Stage 2 | [AOA-T-0025 capability-spec-versioning](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | docs / artifact | Pack 5 skill ecosystem and curated inputs | pending |  |
+| Stage 2 | [AOA-T-0040 skill-vs-command-boundary](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | docs / guardrail | Pack 5 skill ecosystem and curated inputs | pending |  |
+| Stage 2 | [AOA-T-0041 skill-marketplace-curation](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | docs / discovery | Pack 5 skill ecosystem and curated inputs | pending |  |
+| Stage 2 | [AOA-T-0042 upstream-skill-health-checking](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | evaluation / validation | Pack 5 skill ecosystem and curated inputs | pending |  |
+| Stage 2 | [AOA-T-0043 multi-source-primary-input-provenance](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | docs / guardrail | Pack 5 skill ecosystem and curated inputs | pending |  |
+| Stage 2 | [AOA-T-0020 evidence-note-provenance-lift](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
+| Stage 2 | [AOA-T-0046 repo-doc-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
+| Stage 2 | [AOA-T-0047 github-review-template-lift](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
+| Stage 2 | [AOA-T-0048 semantic-review-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
+| Stage 2 | [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | history / artifact | Pack 7 history artifacts remainder | pending |  |
+| Stage 2 | [AOA-T-0033 decision-rationale-recording](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | docs / artifact | Pack 8 internal docs practice | pending |  |
+| Stage 3 | [AOA-T-0049 dependency-aware-task-graph](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
+| Stage 3 | [AOA-T-0050 ready-work-from-blocker-graph](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
+| Stage 3 | [AOA-T-0051 commit-triggered-background-review](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | pending |  |
+| Stage 3 | [AOA-T-0052 review-findings-compaction](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | pending |  |
+| Stage 3 | [AOA-T-0054 compaction-resilient-skill-loading](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | agent-workflows / recovery | Pack 11 post-compaction skill recovery | pending |  |
+| Stage 3 | [AOA-T-0055 requirements-design-tasks-ladder](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | agent-workflows / workflow | Pack 12 planning ladder | pending |  |
+| Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | pending |  |
+| Stage 3 | [AOA-T-0057 structured-handoff-before-compaction](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | agent-workflows / handoff | Pack 14 structured handoff before compaction | pending |  |
+| Stage 3 | [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 15 receipt-confirmed handoff packet | pending |  |
+| Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | pending |  |
+| Stage 3 | [AOA-T-0060 session-opening-ritual-before-work](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | agent-workflows / handoff | Pack 17 session opening ritual before work | pending |  |
+| Stage 3 | [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | agent-workflows / handoff | Pack 18 cross-repo resource map bootstrap | pending |  |
+| Stage 3 | [AOA-T-0062 episode-bounded-agent-loop](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | agent-workflows / handoff | Pack 19 episode-bounded agent loop | pending |  |
+| Stage 4 | [AOA-T-0063 versioned-agent-registry-contract](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | docs / artifact | Pack 20 versioned agent registry contract | pending |  |
+| Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | pending |  |
+| Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | pending |  |
+| Stage 4 | [AOA-T-0066 transcript-replay-artifact](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | history / artifact | Pack 23 transcript replay artifact | pending |  |
+| Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | pending |  |
+| Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | pending |  |
+| Stage 4 | [AOA-T-0069 approval-bound-durable-jobs](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | agent-workflows / handoff | Pack 26 approval-bound durable jobs | pending |  |
+| Stage 4 | [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | agent-workflows / ingest | Pack 27 OCR staged handoff | pending |  |
+| Stage 4 | [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 28 post-OCR template field extraction | pending |  |
+| Stage 4 | [AOA-T-0072 perceptual-media-dedupe-with-threshold-review](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | agent-workflows / ingest | Pack 29 perceptual media dedupe | pending |  |
+| Stage 4 | [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 30 semantic media bucketing | pending |  |
+| Stage 4 | [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | agent-workflows / ingest | Pack 31 Telegram export normalization | pending |  |
+| Stage 5 | [AOA-T-0075 session-donor-harvest](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | agent-workflows / lift | Pack 32 reviewed session harvest spine | pending |  |
+| Stage 5 | [AOA-T-0077 harvest-packet-contract](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | agent-workflows / handoff | Pack 32 reviewed session harvest spine | pending |  |
+| Stage 5 | [AOA-T-0076 owner-layer-triage](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
+| Stage 5 | [AOA-T-0078 decision-fork-cards](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
+| Stage 5 | [AOA-T-0079 risk-passport-lift](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
+| Stage 5 | [AOA-T-0090 nearest-wrong-target-rejection](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | agent-workflows / guardrail | Pack 33 owner route fork discipline | pending |  |
+| Stage 5 | [AOA-T-0080 session-drift-taxonomy](../../../../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | pending |  |
+| Stage 5 | [AOA-T-0081 diagnosis-from-reviewed-evidence](../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | pending |  |
+| Stage 5 | [AOA-T-0082 repair-shape-from-diagnosis](../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | agent-workflows / recovery | Pack 34 diagnosis and repair loop | pending |  |
+| Stage 5 | [AOA-T-0083 checkpoint-bound-self-repair](../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | agent-workflows / recovery | Pack 34 diagnosis and repair loop | pending |  |
+| Stage 5 | [AOA-T-0084 progression-evidence-lift](../../../../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | agent-workflows / lift | Pack 35 progression and quest reflection | pending |  |
+| Stage 5 | [AOA-T-0085 multi-axis-quest-overlay](../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | agent-workflows / lift | Pack 35 progression and quest reflection | pending |  |
+| Stage 5 | [AOA-T-0086 automation-fit-matrix](../../../../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | agent-workflows / assessment | Pack 36 automation opportunity gates | pending |  |
+| Stage 5 | [AOA-T-0087 human-loop-to-first-landing](../../../../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) | agent-workflows / assessment | Pack 36 automation opportunity gates | pending |  |
+| Stage 5 | [AOA-T-0088 approval-sensitivity-check](../../../../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) | agent-workflows / assessment | Pack 36 automation opportunity gates | pending |  |
+| Stage 5 | [AOA-T-0089 quest-unit-promotion-review](../../../../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) | agent-workflows / assessment | Pack 37 quest promotion verdict | pending |  |
+| Stage 6 | [AOA-T-0091 workspace-root-ingress-and-mutation-gate](../../../../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 38 workspace boundary and proof loop | pending |  |
+| Stage 6 | [AOA-T-0092 audit-to-closeout-proof-loop](../../../../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) | agent-workflows / workflow | Pack 38 workspace boundary and proof loop | pending |  |
+| Stage 6 | [AOA-T-0093 recommendation-truth-vs-host-actionability](../../../../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | agent-workflows / guardrail | Pack 38 workspace boundary and proof loop | pending |  |
+| Stage 6 | [AOA-T-0094 canonical-owner-with-validated-mirror](../../../../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) | docs / distribution | Pack 38 workspace boundary and proof loop | pending |  |
+| Stage 6 | [AOA-T-0095 github-only-owner-endcap-with-reality-sync](../../../../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | agent-workflows / workflow | Pack 38 workspace boundary and proof loop | pending |  |
+| Stage 6 | [AOA-T-0096 pinned-validation-matrix-before-generated-publish](../../../../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | agent-workflows / validation | Pack 38 workspace boundary and proof loop | pending |  |
+| Stage 6 | [AOA-T-0097 degrade-reground-recover](../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) | system-recovery / recovery | Pack 39 antifragility recovery fresh scaffolding | pending |  |
+| Stage 6 | [AOA-T-0098 receipt-first-failure-analysis](../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) | validation-patterns / validation | Pack 39 antifragility recovery fresh scaffolding | pending |  |
+| Stage 6 | [AOA-T-0099 isolated-service-stop-on-shared-substrate](../../../../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | system-recovery / recovery | Pack 39 antifragility recovery fresh scaffolding | pending |  |
+| Stage 6 | [AOA-T-0100 stress-receipt-reground-closeout](../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) | system-recovery / recovery | Pack 39 antifragility recovery fresh scaffolding | pending |  |
+| Stage 6 | [AOA-T-0101 local-pattern-adoption-gate](../../../../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 40 method-growth extraction family | pending |  |
+| Stage 6 | [AOA-T-0102 skill-proposal-handoff-packet](../../../../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 40 method-growth extraction family | pending |  |
+| Stage 6 | [AOA-T-0103 adopted-practice-retention-review](../../../../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) | agent-workflows / assessment | Pack 40 method-growth extraction family | pending |  |
+| Stage 6 | [AOA-T-0104 superseded-practice-obsolescence-route](../../../../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) | agent-workflows / handoff | Pack 40 method-growth extraction family | pending |  |
+| Stage 6 | [AOA-T-0105 single-missing-evidence-request](../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | agent-workflows / guardrail | Pack 41 Agon handoff extraction family | pending |  |
+| Stage 6 | [AOA-T-0106 single-scoped-evidence-reference](../../../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) | docs / artifact | Pack 41 Agon handoff extraction family | pending |  |
+| Stage 6 | [AOA-T-0107 single-locus-claim-challenge](../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) | agent-workflows / guardrail | Pack 41 Agon handoff extraction family | pending |  |
 
 ## Non-Goals
 
@@ -217,9 +308,8 @@ search result looks promising.
 
 1. Confirm current branch and intended diff.
 2. List unrelated dirty surfaces and mark them out of scope.
-3. If the current `AOA-T-0032` exemplar is still uncommitted, choose one:
-   - land it first as the exemplar package;
-   - or keep it as the base and explicitly include it in the next PR.
+3. Confirm `AOA-T-0032`, `AOA-T-0026`, and `AOA-T-0036` are treated as the
+   landed calibration history described above, not as uncommitted branch state.
 4. Do not stage `.agents/skills/**` unless the user routes that separate skill
    work into the current branch.
 
