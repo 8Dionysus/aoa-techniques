@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `61` techniques
-- matrix categorization status: `61` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `60` techniques
+- matrix categorization status: `60` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from SpecForge-Agent's requirement, design, and task artifact sequence before implementation, with GitHub Spec Kit used as supporting boundary evidence rather than methodology import
+- latest graduation wave: [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `mycel`'s AI-agent mailbox, thread identity, replayable thread log, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows, while keeping ACK semantics separate from remote delivery proof and handoff authorization
+- prior graduation wave: [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from SpecForge-Agent's requirement, design, and task artifact sequence before implementation, with GitHub Spec Kit used as supporting boundary evidence rather than methodology import
 - prior graduation wave: [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Claude Code's official skill content lifecycle, including post-compaction reattachment and re-invocation from canonical skill sources
 - prior graduation wave: [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) and [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Qodo / PR-Agent's push-triggered review updates, persistent review comments, visible findings, incremental update behavior, and per-commit findings added/resolved audit trail
 - prior graduation wave: [AOA-T-0049](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Taskwarrior's dependency, blocked / blocking, unblocked, cycle-prevention, and prerequisite-completion behavior
@@ -69,7 +70,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `16` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `15` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `34` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -166,11 +167,7 @@ Pack 12 is closed. [AOA-T-0055](../../../../techniques/execution/ready-work-grap
 
 ### Pack 13 - Channelized Mailbox
 
-Shared blocker: the donor and repo-local adaptation both show a bounded named-channel mailbox seam, but one more live adopter is still needed so the pattern reads as reusable coordination infrastructure rather than one messaging repository lineage plus one import.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | Durable mailbox sibling that keeps named channels, ordered replay, and explicit acknowledgment visible with clear exclusions around handoff governance and full messaging-platform doctrine. | One second public workflow surface where named channels, replay, and explicit acknowledgment survive session gaps in practice without widening into orchestration policy, transcript history, or messaging-platform breadth. |
+Pack 13 is closed. [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) moved to `canonical` after `mycel` showed exact-fit public reinforcement for an AI-agent mailbox with stable message identity, thread identity as a bounded lane, ordered thread logs, per-relay sync cursors, local outbox retry, read and delivery state, and explicit local ACK rows keyed by logical message ID. `MCP Agent Mail` was inspected as a close adjacent mailbox/ack surface, but its license rider keeps it out of the clean primary evidence role for this public canonical proof. The bundle keeps ACK state separate from remote delivery confirmation, handoff authorization, transcript history, trust policy, encryption, adapters, and full messaging-platform doctrine.
 
 ### Pack 14 - Structured Handoff Before Compaction
 

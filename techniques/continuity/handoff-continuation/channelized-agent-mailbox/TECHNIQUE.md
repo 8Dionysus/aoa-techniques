@@ -3,7 +3,7 @@ id: AOA-T-0056
 name: channelized-agent-mailbox
 domain: agent-workflows
 kind: handoff
-status: promoted
+status: canonical
 origin:
   project: agentralabs/agentic-comm
   path: README.md + GUIDE.md + crates/agentic-comm/src/channel.rs + docs/public/SCENARIOS-AGENTIC-COMM.md
@@ -17,12 +17,12 @@ tags:
   - channel
   - replay
 summary: Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations: []
 evidence:
@@ -34,6 +34,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # channelized-agent-mailbox
@@ -181,4 +183,4 @@ See `checks/channelized-agent-mailbox-checklist.md`.
 
 - keep handoff packet and continuation-permission doctrine separate instead of widening this bundle into cross-agent authorization
 - keep transcript packaging and history indexing separate instead of treating mailbox history as the post-capture artifact family
-- add a stronger second live context if another public workflow surface uses a bounded named-channel mailbox with replay and acknowledgment in practice
+- preserve the `mycel` boundary: thread or mailbox identity, replayable history, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows can reinforce this bundle, but remote delivery confirmation, trust tiers, encryption, transport routing, adapters, and agent-platform behavior remain outside the technique

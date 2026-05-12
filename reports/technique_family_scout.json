@@ -1254,8 +1254,8 @@
       ],
       "counts": {
         "total": 7,
-        "canonical": 0,
-        "promoted": 7,
+        "canonical": 1,
+        "promoted": 6,
         "by_domain": {
           "agent-workflows": 7,
           "docs": 0,
@@ -1293,7 +1293,7 @@
           "id": "AOA-T-0056",
           "name": "channelized-agent-mailbox",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack.",
           "technique_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
           "kind": "handoff"

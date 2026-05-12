@@ -8,8 +8,9 @@ original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 `AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`,
 the Pack 8 closure for `AOA-T-0033`, the Pack 9 closures for `AOA-T-0049`
 plus `AOA-T-0050`, and the Pack 10 closures for `AOA-T-0051` plus
-`AOA-T-0052`, the Pack 11 closure for `AOA-T-0054`, and the Pack 12 closure
-for `AOA-T-0055`, the live promoted queue is `61` bundles. This
+`AOA-T-0052`, the Pack 11 closure for `AOA-T-0054`, the Pack 12 closure
+for `AOA-T-0055`, and the Pack 13 closure for `AOA-T-0056`, the live
+promoted queue is `60` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -76,8 +77,12 @@ Current live constraint:
 - `AOA-T-0055` closed during Stage 3 with exact-fit SpecForge-Agent
   requirements, design, and task artifact evidence plus GitHub Spec Kit
   boundary support and exits the live promoted queue through canonical review;
-- the live generated catalog currently contains `61` promoted techniques and
-  `46` canonical techniques;
+- `AOA-T-0056` closed during Stage 3 with exact-fit `mycel` channelized
+  mailbox evidence, including bounded thread identity, replayable thread logs,
+  sync cursor, outbox retry, read/delivery state, and explicit local ACK rows,
+  and exits the live promoted queue through canonical review;
+- the live generated catalog currently contains `60` promoted techniques and
+  `47` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -88,13 +93,13 @@ matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
-Pack 11, and Pack 12 closures is `61` promoted techniques,
+Pack 11, Pack 12, and Pack 13 closures is `60` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
-`AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, and `AOA-T-0055`
-counted as closed rows rather than remaining targets.
+`AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
+and `AOA-T-0056` counted as closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -109,7 +114,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with twenty-one closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty-two closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -162,7 +167,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0052 review-findings-compaction](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | exact-fit second context; exits to canonical | Qodo / PR-Agent persistent review comments and per-commit findings audit trail close the findings compaction gap |
 | Stage 3 | [AOA-T-0054 compaction-resilient-skill-loading](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | agent-workflows / recovery | Pack 11 post-compaction skill recovery | exact-fit second context; exits to canonical | Claude Code skill content lifecycle closes the post-compaction skill reattachment and re-invocation gap |
 | Stage 3 | [AOA-T-0055 requirements-design-tasks-ladder](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | agent-workflows / workflow | Pack 12 planning ladder | exact-fit second context; exits to canonical | SpecForge-Agent requirements/design/tasks artifact sequence closes the pre-execution planning ladder gap; GitHub Spec Kit supports the layer boundary without importing SDD doctrine |
-| Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | pending |  |
+| Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | exact-fit second context; exits to canonical | `mycel` bounded AI-agent mailbox closes the thread/mailbox replay and explicit local ACK gap |
 | Stage 3 | [AOA-T-0057 structured-handoff-before-compaction](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | agent-workflows / handoff | Pack 14 structured handoff before compaction | pending |  |
 | Stage 3 | [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 15 receipt-confirmed handoff packet | pending |  |
 | Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | pending |  |
@@ -293,7 +298,9 @@ external adopter, markdown-first reuse, or long-gap donor proof.
 14. Pack 12 - Planning Ladder: `AOA-T-0055` - closed; exact-fit
     SpecForge-Agent requirements, design, and tasks artifact evidence found,
     bundle-local canonical review approved
-15. Pack 13 - Channelized Mailbox: `AOA-T-0056`
+15. Pack 13 - Channelized Mailbox: `AOA-T-0056` - closed; exact-fit
+    `mycel` mailbox, thread, sync, outbox, read/delivery, and local ACK
+    evidence found, bundle-local canonical review approved
 16. Pack 14 - Structured Handoff Before Compaction: `AOA-T-0057`
 17. Pack 15 - Receipt-Confirmed Handoff Packet: `AOA-T-0058`
 18. Pack 16 - Git-Verified Handoff Claims: `AOA-T-0059`
@@ -357,11 +364,11 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `61` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `60` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, and
-    `AOA-T-0055` rows against generated catalog truth.
+    `AOA-T-0055`, and `AOA-T-0056` rows against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -968,6 +975,38 @@ Reject:
 - agent-platform architecture, memory, and session management;
 - task dependency graph, ready-frontier derivation, ranking, staffing, or
   tracker behavior.
+
+### AOA-T-0056: `channelized-agent-mailbox`
+
+Stage 3 Pack 13 verdict, 2026-05-12: exact-fit second context found.
+`mycel` keeps an AI CLI agent mailbox with stable `msg_id`, bounded
+`thread_id` lanes, ordered thread logs, per-relay sync cursors, local outbox
+retry, `read_status`, `delivery_status`, and explicit local ACK rows keyed by
+logical message ID. This closes the channelized-mailbox gap without widening
+into remote delivery proof, handoff authorization, transcript history, trust
+policy, encryption, adapters, broker governance, or messaging-platform
+doctrine. `MCP Agent Mail` was inspected as a close adjacent mailbox/ack
+surface, but its license rider keeps it out of the clean primary evidence role
+for this public canonical proof.
+
+Exact evidence:
+
+- a mailbox or thread lane names the bounded coordination surface;
+- messages have stable logical IDs and ordered replay through thread logs,
+  inbox output, or sync cursor;
+- outbox retry and sync state support recovery across offline/session gaps;
+- acknowledgment state is explicit and inspectable as local handled/read state;
+- ACK is not claimed as remote delivery proof or continuation permission.
+
+Reject:
+
+- full messaging-platform adoption, broker governance, federation, analytics,
+  or dashboard behavior;
+- trust, encryption, relay, A2A, MCP, or adapter doctrine;
+- transcript packaging, history indexing, memory, or witness export;
+- handoff authorization, stop/return/escalation rules, or acceptance workflow;
+- remote delivery confirmation unless it is the actual future object of a new
+  sibling technique.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

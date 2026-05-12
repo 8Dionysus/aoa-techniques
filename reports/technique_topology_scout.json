@@ -446,6 +446,30 @@
       }
     },
     {
+      "id": "AOA-T-0056",
+      "name": "channelized-agent-mailbox",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack.",
+      "technique_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
+      "topology": {
+        "family": "handoff-continuation",
+        "capability_class": [
+          "handoff"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -464,30 +488,6 @@
           "tool-surfaces"
         ],
         "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0056",
-      "name": "channelized-agent-mailbox",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack.",
-      "technique_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
-      "topology": {
-        "family": "handoff-continuation",
-        "capability_class": [
-          "handoff"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history"
-        ],
-        "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
         ]

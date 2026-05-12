@@ -339,7 +339,7 @@ entries:
 - id: AOA-T-0056
   name: channelized-agent-mailbox
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: handoff
   family: handoff-continuation
 - id: AOA-T-0057

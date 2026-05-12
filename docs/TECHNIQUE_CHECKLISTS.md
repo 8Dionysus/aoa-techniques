@@ -100,17 +100,17 @@ See also:
 |---|---|---|---|---|
 | requirements-design-tasks-ladder checklist | `absent` | `8` | `techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/checks/requirements-design-tasks-ladder-checklist.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) |
 
+### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| channelized-agent-mailbox checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/channelized-agent-mailbox/checks/channelized-agent-mailbox-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| channelized-agent-mailbox checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/channelized-agent-mailbox/checks/channelized-agent-mailbox-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) |
 
 ### [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
 

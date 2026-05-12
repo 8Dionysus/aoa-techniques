@@ -38,9 +38,9 @@ class RoadmapParityTestCase(unittest.TestCase):
 
         readiness_matrix = (REPO_ROOT / "mechanics/audit/parts/promotion-readiness-matrix/README.md").read_text(encoding="utf-8")
 
-        self.assertEqual(promoted_count, 61)
+        self.assertEqual(promoted_count, 60)
         self.assertIn(f"current promoted corpus: `{promoted_count}` techniques", readiness_matrix)
-        self.assertIn("`61` promoted techniques are explicitly categorized", readiness_matrix)
+        self.assertIn("`60` promoted techniques are explicitly categorized", readiness_matrix)
         self.assertIn("Wave 0 matrix expansion is closed", readiness_matrix)
         self.assertIn("`v0.4 matrix-expansion lane` | `0`", readiness_matrix)
         self.assertIn("`AOA-T-0075` through `AOA-T-0107`", readiness_matrix)
