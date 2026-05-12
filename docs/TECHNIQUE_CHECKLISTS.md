@@ -438,6 +438,12 @@ See also:
 |---|---|---|---|---|
 | Fragmented Agent Context Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/fragmented-agent-context/checks/fragmented-agent-context-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
+### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Decision Rationale Recording Checklist | `absent` | `12` | `techniques/instruction/docs-boundary/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
+
 ### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -473,12 +479,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Caution Lift Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/checks/caution-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) |
-
-### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Decision Rationale Recording Checklist | `absent` | `12` | `techniques/instruction/docs-boundary/decision-rationale-recording/checks/decision-rationale-recording-checklist.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
 
 ### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 

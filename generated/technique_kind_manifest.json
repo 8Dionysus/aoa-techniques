@@ -544,8 +544,8 @@
       ],
       "counts": {
         "total": 14,
-        "canonical": 9,
-        "promoted": 5,
+        "canonical": 10,
+        "promoted": 4,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 7,
@@ -592,7 +592,7 @@
           "id": "AOA-T-0033",
           "name": "decision-rationale-recording",
           "domain": "docs",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
           "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md"
         },

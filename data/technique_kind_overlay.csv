@@ -31,7 +31,7 @@ AOA-T-0029,nested-rule-loading,docs,canonical,composition,instruction-surface
 AOA-T-0030,fragmented-agent-context,docs,canonical,composition,instruction-surface
 AOA-T-0031,shell-composable-agent-invocation,agent-workflows,canonical,composition,agent-workflows-core
 AOA-T-0032,context-report-for-ci,evaluation,promoted,validation,evaluation-chain
-AOA-T-0033,decision-rationale-recording,docs,promoted,artifact,docs-boundary
+AOA-T-0033,decision-rationale-recording,docs,canonical,artifact,docs-boundary
 AOA-T-0034,public-safe-artifact-sanitization,docs,canonical,guardrail,docs-boundary
 AOA-T-0035,profile-preset-composition,docs,promoted,composition,instruction-surface
 AOA-T-0036,render-truth-before-startup,agent-workflows,canonical,composition,runtime-truth-lifecycle

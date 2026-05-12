@@ -25,7 +25,7 @@ See also:
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `6` | `4` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `5` | `2` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `3` | `1` |
-| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `9` | `5` |
+| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `10` | `4` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
 | `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `1` | `1` |
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `0` | `11` |
@@ -222,7 +222,7 @@ Do not use this when:
 - the technique mainly derives a secondary lookup surface from another authoritative source
 - the main promise is stepwise execution or approval gating
 
-Counts: `total` 14, `canonical` 9, `promoted` 5.
+Counts: `total` 14, `canonical` 10, `promoted` 4.
 
 | domain | entries |
 |---|---|
@@ -239,7 +239,7 @@ Counts: `total` 14, `canonical` 9, `promoted` 5.
 | [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) | `docs` | `canonical` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. | [TECHNIQUE.md](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) | `docs` | `canonical` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work. | [TECHNIQUE.md](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) |
 | [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | `docs` | `canonical` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
-| [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | `docs` | `promoted` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
+| [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | `docs` | `canonical` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
 | [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | `docs` | `promoted` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
 | [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `promoted` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
 | [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) | `evaluation` | `canonical` | Dual-write summary pattern that keeps a stable latest alias, preserves nested history, and prevents double-count accumulation. | [TECHNIQUE.md](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md) |

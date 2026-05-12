@@ -3,7 +3,7 @@ id: AOA-T-0033
 name: decision-rationale-recording
 domain: docs
 kind: artifact
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-adr-write/SKILL.md
@@ -16,12 +16,12 @@ tags:
   - rationale
   - reviewable
 summary: Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-22
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations: []
 evidence:
@@ -31,6 +31,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # decision-rationale-recording

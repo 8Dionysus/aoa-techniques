@@ -927,6 +927,19 @@ See also:
 - Validate by: the fragment set is the editable source of truth; each fragment has bounded scope that a reviewer can explain...
 - Source: [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md)
 
+### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`canonical`)
+
+- Summary: Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.
+- Intent: Record one meaningful decision in a compact, reviewable note that preserves context, options, rationale...
+- Use when: a real choice has been made and the reason needs to stay reviewable or multiple viable options were...
+- Avoid when: trivial obvious edits that do not deserve a decision note or tasks whose real need is source-of-truth clarification.
+- Needs: one bounded decision subject; the viable options considered; the constraints that shaped the choice.
+- Produces: one concise decision note; an explicit decision statement; the context that led to the decision.
+- Core contract: the note must preserve context, options, rationale, and consequences; the note must stay bounded to one decision rather...
+- Main risk: the note captures a summary but not the actual decision tradeoff.
+- Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the not-chosen option and the...
+- Source: [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
+
 ### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 - Summary: Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.
@@ -1004,19 +1017,6 @@ See also:
 - Main risk: reviewers can mistake the presence of five caution subsections for proof that the technique's shadow is already fully...
 - Validate by: the source bundle keeps Failure modes, Negative effects, Misuse patterns, Detection signals, and Mitigations inside ## Risks; caution lookup...
 - Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
-
-### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
-
-- Summary: Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.
-- Intent: Record one meaningful decision in a compact, reviewable note that preserves context, options, rationale...
-- Use when: a real choice has been made and the reason needs to stay reviewable or multiple viable options were...
-- Avoid when: trivial obvious edits that do not deserve a decision note or tasks whose real need is source-of-truth clarification.
-- Needs: one bounded decision subject; the viable options considered; the constraints that shaped the choice.
-- Produces: one concise decision note; an explicit decision statement; the context that led to the decision.
-- Core contract: the note must preserve context, options, rationale, and consequences; the note must stay bounded to one decision rather...
-- Main risk: the note captures a summary but not the actual decision tradeoff.
-- Validate by: one real decision is named clearly; context, options, rationale, and consequences are all visible; the not-chosen option and the...
-- Source: [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
 
 ### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 

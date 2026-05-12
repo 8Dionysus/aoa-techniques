@@ -1624,6 +1624,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0033",
+      "name": "decision-rationale-recording",
+      "domain": "docs",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
+      "current_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
+      "family": "docs-boundary",
+      "proposed_trunk": "instruction",
+      "proposed_shelf": "docs-boundary",
+      "proposed_future_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:docs-boundary",
+        "domain:docs",
+        "kind:artifact",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
       "id": "AOA-T-0034",
       "name": "public-safe-artifact-sanitization",
       "domain": "docs",
@@ -1754,28 +1776,6 @@
         "review_status:pilot-candidate"
       ],
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0033",
-      "name": "decision-rationale-recording",
-      "domain": "docs",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
-      "current_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
-      "family": "docs-boundary",
-      "proposed_trunk": "instruction",
-      "proposed_shelf": "docs-boundary",
-      "proposed_future_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:docs-boundary",
-        "domain:docs",
-        "kind:artifact",
-        "status:promoted",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0035",

@@ -1934,6 +1934,32 @@
       }
     },
     {
+      "id": "AOA-T-0033",
+      "name": "decision-rationale-recording",
+      "domain": "docs",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
+      "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
+      "topology": {
+        "family": "docs-boundary",
+        "capability_class": [
+          "write",
+          "read",
+          "interpret"
+        ],
+        "substrate": [
+          "docs",
+          "instructions",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0034",
       "name": "public-safe-artifact-sanitization",
       "domain": "docs",
@@ -2083,32 +2109,6 @@
         "substrate": [
           "docs",
           "data"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0033",
-      "name": "decision-rationale-recording",
-      "domain": "docs",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
-      "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
-      "topology": {
-        "family": "docs-boundary",
-        "capability_class": [
-          "write",
-          "read",
-          "interpret"
-        ],
-        "substrate": [
-          "docs",
-          "instructions",
-          "human-approval-surfaces"
         ],
         "execution_profile": "small-agent",
         "risk_posture": [

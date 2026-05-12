@@ -38,7 +38,7 @@ PILOT_BUNDLES = (
         "AOA-T-0033",
         "decision-rationale-recording",
         "artifact",
-        "promoted",
+        "canonical",
         "techniques/docs/decision-rationale-recording",
         "techniques/instruction/docs-boundary/decision-rationale-recording",
     ),

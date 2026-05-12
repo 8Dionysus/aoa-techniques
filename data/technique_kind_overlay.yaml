@@ -201,7 +201,7 @@ entries:
 - id: AOA-T-0033
   name: decision-rationale-recording
   domain: docs
-  status: promoted
+  status: canonical
   kind: artifact
   family: docs-boundary
 - id: AOA-T-0034

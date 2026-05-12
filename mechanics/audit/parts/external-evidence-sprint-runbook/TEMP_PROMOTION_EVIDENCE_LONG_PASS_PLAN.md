@@ -5,8 +5,8 @@ original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 `AOA-T-0036` A2 closure, `AOA-T-0037` Stage 2 closure, Pack 3 closures for
 `AOA-T-0038` plus `AOA-T-0039`, and Pack 4 closures for `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, and the Pack 5 closures for `AOA-T-0024`,
-`AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, and `AOA-T-0045`,
-the live promoted queue is `68` bundles. This
+`AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, and
+the Pack 8 closure for `AOA-T-0033`, the live promoted queue is `67` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -55,8 +55,11 @@ Current live constraint:
 - `AOA-T-0045` closed during Stage 2 with exact-fit Maida / AgentDbg
   local run trace evidence and exits the live promoted queue through canonical
   review;
-- the live generated catalog currently contains `68` promoted techniques and
-  `39` canonical techniques;
+- `AOA-T-0033` closed during Stage 2 with exact-fit Markdown Architectural
+  Decision Records evidence and exits the live promoted queue through
+  canonical review;
+- the live generated catalog currently contains `67` promoted techniques and
+  `40` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -66,13 +69,13 @@ Move from one exemplar evidence cycle into a complete, repeatable,
 matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
-`AOA-T-0030` closures plus the Pack 5 and Pack 7 closures is `68` promoted
-techniques,
+`AOA-T-0030` closures plus the Pack 5, Pack 7, and Pack 8 closures is `67`
+promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
-`AOA-T-0041`, `AOA-T-0043`, and `AOA-T-0045` counted as closed rows rather
-than remaining targets.
+`AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, and `AOA-T-0033` counted as closed
+rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -87,7 +90,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with fourteen closed canonical rows.
+This is an original `82/82` promoted-corpus plan with fifteen closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -132,7 +135,7 @@ result has been distilled into the appropriate durable surface.
 | Stage 2 | [AOA-T-0047 github-review-template-lift](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | first second-context support; remains promoted | GitHub issue / pull request template intake recorded; needs review-specific template manifest before canonical promotion |
 | Stage 2 | [AOA-T-0048 semantic-review-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | adjacent lanes recorded; remains promoted | AI review, code review summary, quality-report, and scoring lanes ruled adjacent |
 | Stage 2 | [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | history / artifact | Pack 7 history artifacts remainder | exact-fit second context; exits to canonical | Maida / AgentDbg local run trace contract closes the structured witness trace gap |
-| Stage 2 | [AOA-T-0033 decision-rationale-recording](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | docs / artifact | Pack 8 internal docs practice | pending |  |
+| Stage 2 | [AOA-T-0033 decision-rationale-recording](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | docs / artifact | Pack 8 internal docs practice | exact-fit second context; exits to canonical | MADR one-decision record practice closes the decision-rationale gap |
 | Stage 3 | [AOA-T-0049 dependency-aware-task-graph](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
 | Stage 3 | [AOA-T-0050 ready-work-from-blocker-graph](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
 | Stage 3 | [AOA-T-0051 commit-triggered-background-review](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | pending |  |
@@ -247,7 +250,8 @@ CI-report artifact, history artifact, and runtime truth seam.
 9. Pack 7 - History Artifacts remainder: `AOA-T-0045` - closed; exact-fit
    Maida / AgentDbg local run trace evidence found, bundle-local canonical
    review approved
-10. Pack 8 - Internal Docs Practice: `AOA-T-0033`
+10. Pack 8 - Internal Docs Practice: `AOA-T-0033` - closed; exact-fit MADR
+    one-decision record evidence found, bundle-local canonical review approved
 
 Purpose: close the older promoted families whose blockers are mostly live
 external adopter, markdown-first reuse, or long-gap donor proof.
@@ -322,9 +326,9 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `68` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `67` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
-    `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0045` rows against
+    `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, and `AOA-T-0033` rows against
     generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
@@ -346,9 +350,9 @@ search result looks promising.
 
 1. Confirm current branch and intended diff.
 2. List unrelated dirty surfaces and mark them out of scope.
-3. Confirm `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`, `AOA-T-0037`,
-   `AOA-T-0038`, and `AOA-T-0039` are treated as the
-   landed calibration history described above, not as uncommitted branch state.
+3. Confirm `AOA-T-0032` plus closed rows from Pack 1 through Pack 8 are treated
+   as the landed calibration history described above, not as uncommitted branch
+   state.
 4. Do not stage `.agents/skills/**` unless the user routes that separate skill
    work into the current branch.
 
@@ -740,6 +744,31 @@ Reject:
 - session search or indexing without state-delta trace semantics;
 - hosted observability that owns monitoring or alert policy;
 - eval harnesses that score the run instead of preserving the review artifact.
+
+### AOA-T-0033: `decision-rationale-recording`
+
+Stage 2 Pack 8 verdict, 2026-05-12: exact-fit second context found. Markdown
+Architectural Decision Records preserves one decision as a public Markdown
+record with context/problem, considered options, chosen outcome with
+justification, and consequences. MADR also uses its own decision records in
+`docs/decisions`, which closes the second-live-consumer gap without widening
+the technique into source-of-truth governance, architecture taxonomy,
+decision-log tooling, or ADR process ownership.
+
+Exact evidence:
+
+- one bounded decision record;
+- context or problem statement remains visible;
+- considered options and the chosen outcome are recorded;
+- rationale and accepted consequences stay inspectable later.
+
+Reject:
+
+- generic changelog entries without alternatives or consequences;
+- architecture taxonomy or source-of-truth maps;
+- decision-log tooling that manages records but does not preserve the rationale
+  shape;
+- multi-decision policies that hide the single tradeoff.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 
