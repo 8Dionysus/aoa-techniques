@@ -60,7 +60,7 @@ PILOT_BUNDLES = (
         "transcript-linked-code-lineage",
         "history",
         "artifact",
-        "promoted",
+        "canonical",
         "techniques/history/transcript-linked-code-lineage",
         "techniques/history/history-artifacts/transcript-linked-code-lineage",
     ),

@@ -22,6 +22,16 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0067 transcript-linked-code-lineage` to `canonical` after
+  `ai4curation/ai-blame` showed exact-fit public reinforcement for deriving
+  line- and block-level attribution from AI agent execution traces with
+  timestamp, model, session id, and agent-tool metadata, then reopening saved
+  transcripts from the code inspection path, while `empathic/toolpath` was
+  used only as supporting provenance-document shape evidence and AI-percentage
+  scoring, policy gates, review enforcement, transcript indexing, hosted
+  search, dashboards, telemetry, repository analytics, and memory recall stay
+  outside the bundle, updating Audit queue posture from `52` promoted
+  techniques to `51`
 - promoted `AOA-T-0066 transcript-replay-artifact` to `canonical` after
   `dataprofessor/cortex-replay` and Snowflake's public Cortex Code replay
   guide showed exact-fit public reinforcement for transforming already-saved

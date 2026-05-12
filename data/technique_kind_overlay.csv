@@ -65,7 +65,7 @@ AOA-T-0063,versioned-agent-registry-contract,docs,canonical,artifact,capability-
 AOA-T-0064,capability-discovery,docs,canonical,discovery,capability-registry
 AOA-T-0065,mcp-gateway-proxy,agent-workflows,canonical,composition,tool-gateway
 AOA-T-0066,transcript-replay-artifact,history,canonical,artifact,history-artifacts
-AOA-T-0067,transcript-linked-code-lineage,history,promoted,artifact,history-artifacts
+AOA-T-0067,transcript-linked-code-lineage,history,canonical,artifact,history-artifacts
 AOA-T-0068,fail-closed-evidence-gate,agent-workflows,promoted,guardrail,approval-evidence
 AOA-T-0069,approval-bound-durable-jobs,agent-workflows,promoted,handoff,approval-evidence
 AOA-T-0070,two-stage-document-ocr-pipeline,agent-workflows,promoted,ingest,media-ingest

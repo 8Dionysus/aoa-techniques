@@ -19,7 +19,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `published-summary` | Published summary storage, remediation, integrity, and rendering policy. | `4` | `4` | `0` |
 | `skill-support` | Boundary-contract testing, invariant coverage, and bounded-context vocabulary around capability seams. | `3` | `3` | `0` |
 | `kag-source-lift` | Section, metadata, provenance, relation, repo-doc, and review-surface lift from authoritative markdown. | `8` | `3` | `5` |
-| `history-artifacts` | Capture, version, replay, index, and lineage-link session evidence as durable reviewable artifacts. | `6` | `5` | `1` |
+| `history-artifacts` | Capture, version, replay, index, and lineage-link session evidence as durable reviewable artifacts. | `6` | `6` | `0` |
 | `runtime-truth-lifecycle` | Render effective runtime truth, check host readiness, operate service lifecycle, and benchmark additive profiles. | `4` | `4` | `0` |
 | `capability-registry` | Versioned capability or registry contracts and bounded lookup over published entries. | `3` | `3` | `0` |
 | `capability-boundary` | Explicit separation between capability meaning, input provenance, recommendation truth, and host actionability. | `3` | `2` | `1` |
@@ -179,7 +179,7 @@ Capture, version, replay, index, and lineage-link session evidence as durable re
 Typical domains: `history`.
 Typical kinds: `artifact`.
 
-Counts: `total` 6, `canonical` 5, `promoted` 1.
+Counts: `total` 6, `canonical` 6, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
@@ -188,7 +188,7 @@ Counts: `total` 6, `canonical` 5, `promoted` 1.
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | `history` | `artifact` | `canonical` | Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind. |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `history` | `artifact` | `canonical` | Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine. |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | `history` | `artifact` | `canonical` | Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine. |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | `history` | `artifact` | `promoted` | Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine. |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | `history` | `artifact` | `canonical` | Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine. |
 
 ## `runtime-truth-lifecycle`
 

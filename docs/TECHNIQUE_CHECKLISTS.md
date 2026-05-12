@@ -662,7 +662,7 @@ See also:
 |---|---|---|---|---|
 | transcript-replay-artifact checklist | `absent` | `8` | `techniques/history/history-artifacts/transcript-replay-artifact/checks/transcript-replay-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
 
-### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|

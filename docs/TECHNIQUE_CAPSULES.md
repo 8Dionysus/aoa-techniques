@@ -1403,7 +1403,7 @@ See also:
 - Validate by: replay starts from an already-saved session artifact; message order or equivalent flow cues survive into the replay surface; the...
 - Source: [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md)
 
-### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`canonical`)
 
 - Summary: Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine.
 - Intent: Link code history back to saved session evidence so reviewers can reopen the originating...

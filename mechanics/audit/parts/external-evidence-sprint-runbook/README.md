@@ -96,6 +96,7 @@ Closed precedents:
 - [AOA-T-0064](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) has exited this sprint lane through a canonical review after Nacos's A2A Registry guide closed the bounded discovery-query gap with SDK name lookup, HTTP detail lookup, explicit list/search parameters, and future search dimensions kept outside the current contract.
 - [AOA-T-0065](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) has exited this sprint lane through a canonical review after `smart-mcp-proxy/mcpproxy-go` closed the gateway-proxy gap with one MCP client endpoint over multiple configured upstream servers, tool metadata discovery, mediated `call_tool_*` variants, server-scoped tool names, and proxy-boundary sensitive-data inspection.
 - [AOA-T-0066](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) has exited this sprint lane through a canonical review after `dataprofessor/cortex-replay` plus Snowflake's public Cortex Code replay guide closed the transcript-replay gap with already-saved session transcripts transformed into one self-contained interactive replay artifact, bounded filtering/redaction controls, and source-artifact authority kept visible.
+- [AOA-T-0067](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) has exited this sprint lane through a canonical review after `ai4curation/ai-blame` closed the code-lineage gap with AI trace-derived line attribution, session id metadata, transcript listing/viewing, and review workflows that reopen saved session evidence from code lines or blocks.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:
@@ -119,6 +120,7 @@ Why this order:
 - `AOA-T-0064` is closed; future discovery work should split only if ranking, recommendation, endpoint subscription, runtime invocation, trust or signature policy, marketplace curation, graph semantics, registry product workflow, or broader registry protocol governance becomes the actual object
 - `AOA-T-0065` is closed; future gateway work should split only if routing mode selection, tool ranking, quarantine governance, scanner policy, local service lifecycle, OAuth or token management, UI/dashboard behavior, endpoint subscription, or broader MCP platform governance becomes the actual object
 - `AOA-T-0066` is closed; future replay work should split only if first-save capture, transcript packaging, local indexing, witness forensics, hosted sharing, dashboards, replay editors, memory systems, or publishing platforms become the actual object
+- `AOA-T-0067` is closed; future lineage work should split only if AI-percentage scoring, policy gates, review enforcement, transcript indexing, hosted search, dashboards, telemetry, repository analytics, or memory recall becomes the actual object
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
   now has searched-lane memory, so repeat searches should start from a real
   new-intent rollout artifact rather than NLU/eval/benchmark overlap

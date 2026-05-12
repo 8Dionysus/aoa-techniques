@@ -3,7 +3,7 @@ id: AOA-T-0067
 name: transcript-linked-code-lineage
 domain: history
 kind: artifact
-status: promoted
+status: canonical
 origin:
   project: git-ai-project/git-ai
   path: README.md + specs/git_ai_standard_v3.0.0.md + skills/ask/SKILL.md
@@ -17,12 +17,12 @@ tags:
   - code
   - provenance
 summary: Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # transcript-linked-code-lineage
@@ -91,7 +93,7 @@ Link code history back to saved session evidence so reviewers can reopen the ori
 - the technique stays smaller than generic repo analytics, hosted search, or memory-product doctrine
 - the technique does not own performance telemetry, authorship scoring, or free-form Q and A products
 
-Relationship to adjacent techniques: unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), this technique does not preserve a fuller run artifact with ordered steps and state deltas; it links code anchors back to evidence that already exists. Unlike [AOA-T-0059](../../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md), it does not verify present-tense handoff claims against git state; it preserves lineage from code history back to prior evidence. It also stays smaller than generic blame analytics because the center of gravity is the stable code-to-evidence link itself.
+Relationship to adjacent techniques: unlike [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md), this technique does not preserve a fuller run artifact with ordered steps and state deltas; it links code anchors back to evidence that already exists. Unlike [AOA-T-0059](../../../continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md), it does not verify present-tense handoff claims against git state; it preserves lineage from code history back to prior evidence. It also stays smaller than generic blame analytics because the center of gravity is the stable code-to-evidence link itself.
 
 ## Risks
 

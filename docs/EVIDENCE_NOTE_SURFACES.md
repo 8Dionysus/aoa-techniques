@@ -21,7 +21,7 @@ See also:
 | `origin_evidence` | Origin Evidence | `typed_sections` | `4` fixed sections: `Technique`, `Source project`, `Evidence`, `Interpretation` | `64` |
 | `second_context` | Second Context Adaptation | `typed_sections` | `7` fixed sections: `Technique`, `Target project`, `What changed`, `What stayed invariant`, `Risks introduced by adaptation`, `Evidence`, `Result` | `102` |
 | `canonical_readiness` | Canonical Readiness | `typed_sections` | `7` fixed sections: `Technique`, `Verdict`, `Evidence summary`, `Default-use rationale`, `Fresh public-safety check`, `Remaining gaps`, `Recommendation` | `103` |
-| `adverse_effects_review` | Adverse Effects Review | `typed_sections` | `8` fixed sections: `Technique`, `Review focus`, `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, `Mitigations`, `Recommendation` | `55` |
+| `adverse_effects_review` | Adverse Effects Review | `typed_sections` | `8` fixed sections: `Technique`, `Review focus`, `Failure modes`, `Negative effects`, `Misuse patterns`, `Detection signals`, `Mitigations`, `Recommendation` | `56` |
 | `external_origin` | External Origin Note | `typed_sections` | `4` fixed sections: `Source`, `What changed`, `Public-safety review`, `Review notes` | `41` |
 | `external_review` | External Import Review | `typed_sections` | `8` fixed sections: `Technique`, `Verdict`, `Evidence summary`, `Boundedness check`, `Provenance readability`, `Import-path assessment`, `Remaining gaps`, `Recommendation` | `41` |
 | `support_note` | Support Note | `opaque_body` | opaque note body only | `2` |
@@ -369,6 +369,7 @@ See also:
 | Adverse Effects Review | `typed_sections` | `8` typed sections | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | `techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/notes/adverse-effects-review.md` | [Note](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/notes/adverse-effects-review.md) |
 | Adverse Effects Review | `typed_sections` | `8` typed sections | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `techniques/history/history-artifacts/local-first-session-index/notes/adverse-effects-review.md` | [Note](../techniques/history/history-artifacts/local-first-session-index/notes/adverse-effects-review.md) |
 | Adverse Effects Review | `typed_sections` | `8` typed sections | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | `techniques/history/history-artifacts/transcript-replay-artifact/notes/adverse-effects-review.md` | [Note](../techniques/history/history-artifacts/transcript-replay-artifact/notes/adverse-effects-review.md) |
+| Adverse Effects Review | `typed_sections` | `8` typed sections | [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | `techniques/history/history-artifacts/transcript-linked-code-lineage/notes/adverse-effects-review.md` | [Note](../techniques/history/history-artifacts/transcript-linked-code-lineage/notes/adverse-effects-review.md) |
 
 ## `external_origin` - External Origin Note
 

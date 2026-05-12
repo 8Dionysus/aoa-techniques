@@ -687,7 +687,7 @@ See also:
 |---|---|---|---|
 | minimal transcript-replay-artifact | `present` | `techniques/history/history-artifacts/transcript-replay-artifact/examples/minimal-transcript-replay-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
 
-### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`promoted`)
+### [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
