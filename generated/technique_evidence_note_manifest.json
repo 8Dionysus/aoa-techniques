@@ -37058,6 +37058,183 @@
       "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0063"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "versioned-agent-registry-contract"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for publishing one registry-facing capability or agent entry as an explicit named and versioned record with bounded metadata or a stable reference"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve the entry contract without turning it into capability-spec ownership, discovery policy, fuzzy search, ranking, trust or signature policy, endpoint subscription, marketplace curation, graph semantics, or registry product governance"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a registry entry changes content while keeping the same version, so consumers cannot tell which publication contract they are reading"
+                },
+                {
+                  "order": 2,
+                  "text": "name, namespace, version, reference, and metadata are split across implementation internals instead of being visible at the entry layer"
+                },
+                {
+                  "order": 3,
+                  "text": "annotations expand until the registry entry quietly owns capability meaning, trust state, discovery ranking, or graph relations"
+                },
+                {
+                  "order": 4,
+                  "text": "a default or current version pointer changes without review, creating silent drift between the published entry and what consumers receive"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "small local capability specs can gain unnecessary publication ceremony when no registry-facing entry exists"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can mistake versioned publication for validated trust, quality, or runtime compatibility"
+                },
+                {
+                  "order": 3,
+                  "text": "entry metadata can become a dumping ground for search filters, policy flags, endpoint health, and marketplace labels"
+                },
+                {
+                  "order": 4,
+                  "text": "a registry product can make the reusable contract look platform-specific if publication, query, subscription, and runtime invocation are described as one object"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using this technique as a general capability-spec schema instead of a registry-entry publication contract"
+                },
+                {
+                  "order": 2,
+                  "text": "treating a named versioned entry as if it proves discovery ranking, trust, signature validity, or endpoint availability"
+                },
+                {
+                  "order": 3,
+                  "text": "importing registry console workflows, SDK lifecycle, service endpoints, authentication, or subscription behavior into the technique"
+                },
+                {
+                  "order": 4,
+                  "text": "using entry annotations as a backdoor for marketplace curation, graph semantics, or owner-routing policy"
+                },
+                {
+                  "order": 5,
+                  "text": "updating a default version pointer as a hidden rollout instead of an explicit publication change"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot state the entry name, version, reference or payload boundary, and metadata purpose without reading registry runtime code"
+                },
+                {
+                  "order": 2,
+                  "text": "the contract starts listing query filters, ranking rules, fuzzy search, trust gates, or endpoint-selection behavior as core entry fields"
+                },
+                {
+                  "order": 3,
+                  "text": "the current default version changes but no publication review names why the new version is the default"
+                },
+                {
+                  "order": 4,
+                  "text": "adjacent techniques such as capability-spec versioning, capability discovery, marketplace curation, or relation lift are being copied into this bundle instead of linked or routed"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep entry identity, version, reference or payload boundary, and bounded metadata visible in the publication surface"
+                },
+                {
+                  "order": 2,
+                  "text": "require review when entry identity, version semantics, default-version pointer, reference meaning, or metadata interpretation changes"
+                },
+                {
+                  "order": 3,
+                  "text": "route capability schema work to AOA-T-0025 and discovery/query behavior to AOA-T-0064"
+                },
+                {
+                  "order": 4,
+                  "text": "keep trust, signature, endpoint selection, marketplace curation, graph semantics, registry runtime, and product-console behavior in their owning layers"
+                },
+                {
+                  "order": 5,
+                  "text": "trim metadata that does not help another reader understand the bounded published entry"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0063` to `canonical` and use this note as the watch surface for version drift, metadata creep, hidden default-version rollout, discovery/ranking absorption, trust-policy absorption, and registry-product creep"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -37088,34 +37265,34 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around discovery queries, semantic linkage, trust services, and registry runtime breadth"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around discovery queries, semantic linkage, trust services, and registry runtime breadth"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same contract as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "text": "`nacos-group/nacos-group.github.io` provides exact-fit public reinforcement beyond the donor family: its A2A Registry guide treats AgentCards as registered agent entries with namespace/name identity, unique versions, a current default published version, SDK and HTTP publication paths, and explicit AgentCard fields such as name, description, URL, version, and protocol version"
+                },
+                {
+                  "order": 5,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for the same bounded named/versioned registry-entry contract"
                 }
               ]
             },
@@ -37126,11 +37303,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is making a registry-facing capability entry explicit and versioned instead of hiding publication meaning in runtime or directory internals"
+                  "text": "this is the right canonical default when the main problem is making a registry-facing capability entry explicit and versioned instead of hiding publication meaning in runtime or directory internals"
                 },
                 {
                   "order": 2,
                   "text": "it remains narrower than [AOA-T-0025](../../capability-spec-versioning/TECHNIQUE.md) because it owns the publication contract for a registry entry rather than the full capability spec, and it remains narrower than [AOA-T-0041](../../../skill-discovery/skill-marketplace-curation/TECHNIQUE.md) because it does not curate discovery or selection"
+                },
+                {
+                  "order": 3,
+                  "text": "it is now strong enough as a canonical default because the Nacos source repeats the same entry-contract shape in a separate live agent-registry family without requiring this bundle to absorb Nacos product semantics, A2A runtime invocation, discovery ranking, fuzzy search, endpoint subscription, or trust policy"
                 }
               ]
             },
@@ -37142,7 +37323,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -37157,7 +37338,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `nacos-group/nacos-group.github.io` source is Apache-2.0 licensed and no source code, credentials, private deployment state, local endpoints, or Nacos-specific runtime setup was copied into the technique"
                 }
               ]
             },
@@ -37168,11 +37349,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses a versioned registry-entry contract as a real publication surface rather than only as imported documentation"
+                  "text": "future registry-entry sources can reinforce the default, but they must preserve the narrow boundary: one explicit registry-facing entry identity, one version, one bounded publication payload or reference, and reviewable metadata without collapsing into discovery, ranking, trust, runtime invocation, or marketplace curation"
                 }
               ]
             },
@@ -37183,11 +37364,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0063` `promoted`"
+                  "text": "move `AOA-T-0063` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the registry-entry contract survives outside the donor repository"
+                  "text": "add an adverse-effects review to preserve the boundary between versioned registry-entry publication, capability-spec ownership, discovery/query behavior, endpoint subscription, trust or signature policy, marketplace curation, graph semantics, and registry product governance"
                 }
               ]
             }

@@ -468,6 +468,12 @@ See also:
 |---|---|---|---|---|
 | multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| versioned-agent-registry-contract checklist | `absent` | `8` | `techniques/instruction/capability-registry/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -503,12 +509,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
-
-### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| versioned-agent-registry-contract checklist | `absent` | `8` | `techniques/instruction/capability-registry/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
 
 ### [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
 

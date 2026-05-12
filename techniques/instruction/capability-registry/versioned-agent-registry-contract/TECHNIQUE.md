@@ -3,7 +3,7 @@ id: AOA-T-0063
 name: versioned-agent-registry-contract
 domain: docs
 kind: artifact
-status: promoted
+status: canonical
 origin:
   project: agntcy/dir
   path: README.md + proto/agntcy/dir/core/v1/record.proto
@@ -17,12 +17,12 @@ tags:
   - versioning
   - contract
 summary: Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # versioned-agent-registry-contract

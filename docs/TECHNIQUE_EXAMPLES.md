@@ -484,6 +484,12 @@ See also:
 |---|---|---|---|
 | Minimal Multi-Source Primary Input Provenance | `present` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal versioned agent-registry contract | `present` | `techniques/instruction/capability-registry/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | example | body | example path | source |
@@ -519,12 +525,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Semantic Review Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
-
-### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal versioned agent-registry contract | `present` | `techniques/instruction/capability-registry/versioned-agent-registry-contract/examples/minimal-versioned-agent-registry-contract.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
 
 ### [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
 
