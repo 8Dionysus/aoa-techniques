@@ -20,7 +20,7 @@ See also:
 
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
-| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `5` | `8` |
+| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `7` | `6` |
 | `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `6` | `7` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `6` | `4` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `5` | `2` |
@@ -45,7 +45,7 @@ Do not use this when:
 - the primary value is blocking unsafe actions
 - the technique is mainly about durable artifact shape, not the work loop
 
-Counts: `total` 13, `canonical` 5, `promoted` 8.
+Counts: `total` 13, `canonical` 7, `promoted` 6.
 
 | domain | entries |
 |---|---|
@@ -63,9 +63,9 @@ Counts: `total` 13, `canonical` 5, `promoted` 8.
 | [AOA-T-0014](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) | `agent-workflows` | `canonical` | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) | `agent-workflows` | `canonical` | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) |
 | [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | `canonical` | Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
+| [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `canonical` | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
+| [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `canonical` | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `promoted` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
-| [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 | [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | `agent-workflows` | `promoted` | Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance. | [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) |
 | [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | `agent-workflows` | `promoted` | Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface. | [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) |
 | [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | `agent-workflows` | `promoted` | Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack. | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) |

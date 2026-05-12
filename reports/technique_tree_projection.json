@@ -250,6 +250,50 @@
       "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
+      "id": "AOA-T-0049",
+      "name": "dependency-aware-task-graph",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
+      "current_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
+      "family": "ready-work-graphs",
+      "proposed_trunk": "execution",
+      "proposed_shelf": "ready-work-graphs",
+      "proposed_future_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:ready-work-graphs",
+        "domain:agent-workflows",
+        "kind:workflow",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
+      "id": "AOA-T-0050",
+      "name": "ready-work-from-blocker-graph",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
+      "current_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "family": "ready-work-graphs",
+      "proposed_trunk": "execution",
+      "proposed_shelf": "ready-work-graphs",
+      "proposed_future_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:ready-work-graphs",
+        "domain:agent-workflows",
+        "kind:workflow",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -264,50 +308,6 @@
       "review_status": "candidate",
       "rationale_cues": [
         "family:intent-chain",
-        "domain:agent-workflows",
-        "kind:workflow",
-        "status:promoted",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0049",
-      "name": "dependency-aware-task-graph",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
-      "current_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
-      "family": "ready-work-graphs",
-      "proposed_trunk": "execution",
-      "proposed_shelf": "ready-work-graphs",
-      "proposed_future_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:ready-work-graphs",
-        "domain:agent-workflows",
-        "kind:workflow",
-        "status:promoted",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0050",
-      "name": "ready-work-from-blocker-graph",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
-      "current_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
-      "family": "ready-work-graphs",
-      "proposed_trunk": "execution",
-      "proposed_shelf": "ready-work-graphs",
-      "proposed_future_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:ready-work-graphs",
         "domain:agent-workflows",
         "kind:workflow",
         "status:promoted",

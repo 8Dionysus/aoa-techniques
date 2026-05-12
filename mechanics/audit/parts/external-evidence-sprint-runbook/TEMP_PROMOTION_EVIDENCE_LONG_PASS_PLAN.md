@@ -5,8 +5,9 @@ original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 `AOA-T-0036` A2 closure, `AOA-T-0037` Stage 2 closure, Pack 3 closures for
 `AOA-T-0038` plus `AOA-T-0039`, and Pack 4 closures for `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, and the Pack 5 closures for `AOA-T-0024`,
-`AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, and
-the Pack 8 closure for `AOA-T-0033`, the live promoted queue is `67` bundles. This
+`AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`,
+the Pack 8 closure for `AOA-T-0033`, and the Pack 9 closures for `AOA-T-0049`
+plus `AOA-T-0050`, the live promoted queue is `65` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -58,8 +59,12 @@ Current live constraint:
 - `AOA-T-0033` closed during Stage 2 with exact-fit Markdown Architectural
   Decision Records evidence and exits the live promoted queue through
   canonical review;
-- the live generated catalog currently contains `67` promoted techniques and
-  `40` canonical techniques;
+- `AOA-T-0049` and `AOA-T-0050` closed during Stage 3 with exact-fit
+  Taskwarrior dependency, blocked / blocking, unblocked, cycle-prevention, and
+  prerequisite-completion evidence and exit the live promoted queue through
+  canonical review;
+- the live generated catalog currently contains `65` promoted techniques and
+  `42` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -69,13 +74,13 @@ Move from one exemplar evidence cycle into a complete, repeatable,
 matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
-`AOA-T-0030` closures plus the Pack 5, Pack 7, and Pack 8 closures is `67`
-promoted techniques,
+`AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, and Pack 9 closures is
+`65` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
-`AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, and `AOA-T-0033` counted as closed
-rows rather than remaining targets.
+`AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`, and
+`AOA-T-0050` counted as closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -90,7 +95,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with fifteen closed canonical rows.
+This is an original `82/82` promoted-corpus plan with seventeen closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -136,8 +141,8 @@ result has been distilled into the appropriate durable surface.
 | Stage 2 | [AOA-T-0048 semantic-review-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | adjacent lanes recorded; remains promoted | AI review, code review summary, quality-report, and scoring lanes ruled adjacent |
 | Stage 2 | [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | history / artifact | Pack 7 history artifacts remainder | exact-fit second context; exits to canonical | Maida / AgentDbg local run trace contract closes the structured witness trace gap |
 | Stage 2 | [AOA-T-0033 decision-rationale-recording](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | docs / artifact | Pack 8 internal docs practice | exact-fit second context; exits to canonical | MADR one-decision record practice closes the decision-rationale gap |
-| Stage 3 | [AOA-T-0049 dependency-aware-task-graph](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
-| Stage 3 | [AOA-T-0050 ready-work-from-blocker-graph](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
+| Stage 3 | [AOA-T-0049 dependency-aware-task-graph](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | exact-fit second context; exits to canonical | Taskwarrior dependency graph state closes the blocker-aware graph gap |
+| Stage 3 | [AOA-T-0050 ready-work-from-blocker-graph](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | exact-fit second context; exits to canonical | Taskwarrior blocked / unblocked reports close the ready-frontier gap |
 | Stage 3 | [AOA-T-0051 commit-triggered-background-review](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | pending |  |
 | Stage 3 | [AOA-T-0052 review-findings-compaction](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | pending |  |
 | Stage 3 | [AOA-T-0054 compaction-resilient-skill-loading](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | agent-workflows / recovery | Pack 11 post-compaction skill recovery | pending |  |
@@ -258,7 +263,10 @@ external adopter, markdown-first reuse, or long-gap donor proof.
 
 ### Stage 3: Workflow And Continuity Packs
 
-11. Pack 9 - Graph Work Coordination: `AOA-T-0049`, `AOA-T-0050`
+11. Pack 9 - Graph Work Coordination: `AOA-T-0049`, `AOA-T-0050` - closed;
+    exact-fit Taskwarrior dependency, blocked / blocking, unblocked,
+    cycle-prevention, and prerequisite-completion evidence found, bundle-local
+    canonical reviews approved
 12. Pack 10 - Background Review Loop: `AOA-T-0051`, `AOA-T-0052`
 13. Pack 11 - Post-Compaction Skill Recovery: `AOA-T-0054`
 14. Pack 12 - Planning Ladder: `AOA-T-0055`
@@ -326,10 +334,10 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `67` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `65` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
-    `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, and `AOA-T-0033` rows against
-    generated catalog truth.
+    `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
+    and `AOA-T-0050` rows against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -350,7 +358,7 @@ search result looks promising.
 
 1. Confirm current branch and intended diff.
 2. List unrelated dirty surfaces and mark them out of scope.
-3. Confirm `AOA-T-0032` plus closed rows from Pack 1 through Pack 8 are treated
+3. Confirm `AOA-T-0032` plus closed rows from Pack 1 through Pack 9 are treated
    as the landed calibration history described above, not as uncommitted branch
    state.
 4. Do not stage `.agents/skills/**` unless the user routes that separate skill
@@ -769,6 +777,56 @@ Reject:
 - decision-log tooling that manages records but does not preserve the rationale
   shape;
 - multi-decision policies that hide the single tradeoff.
+
+### AOA-T-0049: `dependency-aware-task-graph`
+
+Stage 3 Pack 9 verdict, 2026-05-12: exact-fit second context found.
+Taskwarrior's public dependency surface keeps task dependency edges explicit,
+rejects circular dependencies, derives `BLOCKED` / `BLOCKING` state, and
+unblocks downstream work when a prerequisite completes. This closes the
+dependency-aware graph gap without widening into Taskwarrior's urgency,
+scheduling, context, sync, report customization, or full task-management
+surface.
+
+Exact evidence:
+
+- dependency edges are explicit;
+- cycles are rejected;
+- blocked and blocking state can be derived from task dependencies;
+- completing a prerequisite changes downstream blocked state.
+
+Reject:
+
+- generic task lists without dependency edges;
+- build DAGs that only execute commands and do not preserve reviewable work
+  nodes;
+- full tracker or PM systems where ranking, staffing, scheduling, or dashboards
+  become the real contract;
+- graph stores that act as memory or knowledge substrate rather than work
+  coordination.
+
+### AOA-T-0050: `ready-work-from-blocker-graph`
+
+Stage 3 Pack 9 verdict, 2026-05-12: exact-fit second context found.
+Taskwarrior's public reports and tests keep blocked work distinct from
+unblocked work and verify that completing a prerequisite removes downstream
+`BLOCKED` state. This closes the ready-frontier gap without turning the bundle
+into urgency scoring, broad prioritization, scheduling, context, sync, or task
+manager product doctrine.
+
+Exact evidence:
+
+- blocked work remains excluded from the blocker-free frontier;
+- blocked and unblocked states are visible;
+- completing a prerequisite updates frontier eligibility;
+- later urgency or report behavior remains outside the blocker-free invariant.
+
+Reject:
+
+- open-task reports that treat all open work as ready;
+- priority queues that do not first exclude blocked work;
+- scheduling or staffing systems where ranking replaces blocker truth;
+- graph-authoring surfaces that do not derive a ready frontier.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

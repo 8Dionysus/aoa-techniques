@@ -3,7 +3,7 @@ id: AOA-T-0049
 name: dependency-aware-task-graph
 domain: agent-workflows
 kind: workflow
-status: promoted
+status: canonical
 origin:
   project: steveyegge/beads
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - ready-work
   - coordination
 summary: Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-27
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # dependency-aware-task-graph

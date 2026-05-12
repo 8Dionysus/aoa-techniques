@@ -64,23 +64,23 @@ See also:
 |---|---|---|---|---|
 | One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
 
-### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
+### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | dependency-aware-task-graph checklist | `present` | `8` | `techniques/execution/ready-work-graphs/dependency-aware-task-graph/checks/dependency-aware-task-graph-checklist.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
 
-### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
+### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | ready-work-from-blocker-graph checklist | `present` | `8` | `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
+
+### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 
 ### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 

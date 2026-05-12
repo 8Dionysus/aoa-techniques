@@ -24,7 +24,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `capability-registry` | Versioned capability or registry contracts and bounded lookup over published entries. | `3` | `1` | `2` |
 | `capability-boundary` | Explicit separation between capability meaning, input provenance, recommendation truth, and host actionability. | `3` | `2` | `1` |
 | `skill-discovery` | Editorial discovery and health visibility over upstream-owned skill sources. | `2` | `1` | `1` |
-| `ready-work-graphs` | Dependency-aware planning, frontier selection, and laddering from requirements to tasks. | `3` | `0` | `3` |
+| `ready-work-graphs` | Dependency-aware planning, frontier selection, and laddering from requirements to tasks. | `3` | `2` | `1` |
 | `review-compaction` | Background review triggering, findings compaction, and recovery of capability loading after compaction. | `3` | `0` | `3` |
 | `handoff-continuation` | Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams. | `7` | `0` | `7` |
 | `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `0` | `1` |
@@ -257,12 +257,12 @@ Dependency-aware planning, frontier selection, and laddering from requirements t
 Typical domains: `agent-workflows`.
 Typical kinds: `workflow`.
 
-Counts: `total` 3, `canonical` 0, `promoted` 3.
+Counts: `total` 3, `canonical` 2, `promoted` 1.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. |
-| [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. |
+| [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `workflow` | `canonical` | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. |
+| [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `workflow` | `canonical` | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. |
 | [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack. |
 
 ## `review-compaction`

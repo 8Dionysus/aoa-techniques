@@ -283,35 +283,11 @@
       }
     },
     {
-      "id": "AOA-T-0005",
-      "name": "new-intent-rollout-checklist",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
-      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
-      "topology": {
-        "family": "intent-chain",
-        "capability_class": [
-          "plan",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
       "id": "AOA-T-0049",
       "name": "dependency-aware-task-graph",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
       "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "topology": {
@@ -338,7 +314,7 @@
       "name": "ready-work-from-blocker-graph",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
       "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "topology": {
@@ -353,6 +329,30 @@
           "tool-surfaces",
           "memory-adjacent-artifacts",
           "graph-adjacent-artifacts"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0005",
+      "name": "new-intent-rollout-checklist",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "promoted",
+      "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
+      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
+      "topology": {
+        "family": "intent-chain",
+        "capability_class": [
+          "plan",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces"
         ],
         "execution_profile": "medium-agent",
         "risk_posture": [

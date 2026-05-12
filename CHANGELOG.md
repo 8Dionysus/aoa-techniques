@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0049 dependency-aware-task-graph` and `AOA-T-0050
+  ready-work-from-blocker-graph` to `canonical` after Taskwarrior showed
+  exact-fit public dependency, blocked / blocking, unblocked, cycle-prevention,
+  and prerequisite-completion behavior, updating Audit queue posture from `67`
+  promoted techniques to `65`
 - promoted `AOA-T-0033 decision-rationale-recording` to `canonical` after
   Markdown Architectural Decision Records showed an exact-fit public
   one-decision record pattern with context/problem, considered options, chosen

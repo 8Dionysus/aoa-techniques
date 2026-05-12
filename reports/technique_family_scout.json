@@ -1111,8 +1111,8 @@
       ],
       "counts": {
         "total": 3,
-        "canonical": 0,
-        "promoted": 3,
+        "canonical": 2,
+        "promoted": 1,
         "by_domain": {
           "agent-workflows": 3,
           "docs": 0,
@@ -1146,7 +1146,7 @@
           "id": "AOA-T-0049",
           "name": "dependency-aware-task-graph",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
           "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
           "kind": "workflow"
@@ -1155,7 +1155,7 @@
           "id": "AOA-T-0050",
           "name": "ready-work-from-blocker-graph",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
           "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
           "kind": "workflow"

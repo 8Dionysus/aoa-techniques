@@ -297,13 +297,13 @@ entries:
 - id: AOA-T-0049
   name: dependency-aware-task-graph
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: ready-work-graphs
 - id: AOA-T-0050
   name: ready-work-from-blocker-graph
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: ready-work-graphs
 - id: AOA-T-0051

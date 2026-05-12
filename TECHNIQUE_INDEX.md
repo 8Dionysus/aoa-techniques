@@ -14,6 +14,8 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0031 | shell-composable-agent-invocation | agent-workflows | canonical | Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops. |
 | AOA-T-0036 | render-truth-before-startup | agent-workflows | canonical | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. |
 | AOA-T-0038 | one-command-service-lifecycle | agent-workflows | canonical | Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine. |
+| AOA-T-0049 | dependency-aware-task-graph | agent-workflows | canonical | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. |
+| AOA-T-0050 | ready-work-from-blocker-graph | agent-workflows | canonical | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. |
 | AOA-T-0002 | source-of-truth-layout | docs | canonical | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. |
 | AOA-T-0009 | lightweight-status-snapshot | docs | canonical | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
 | AOA-T-0012 | deterministic-context-composition | docs | canonical | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. |
@@ -52,8 +54,6 @@ This file is the repository-wide map of public techniques.
 | id | name | domain | status | summary |
 |---|---|---|---|---|
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
-| AOA-T-0049 | dependency-aware-task-graph | agent-workflows | promoted | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. |
-| AOA-T-0050 | ready-work-from-blocker-graph | agent-workflows | promoted | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. |
 | AOA-T-0051 | commit-triggered-background-review | agent-workflows | promoted | Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance. |
 | AOA-T-0052 | review-findings-compaction | agent-workflows | promoted | Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface. |
 | AOA-T-0054 | compaction-resilient-skill-loading | agent-workflows | promoted | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. |

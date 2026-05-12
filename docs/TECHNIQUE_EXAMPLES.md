@@ -70,24 +70,24 @@ See also:
 |---|---|---|---|
 | Minimal One-Command Service Lifecycle | `present` | `techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
 
+### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal dependency-aware-task-graph example | `present` | `techniques/execution/ready-work-graphs/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
+
+### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal ready-work-from-blocker-graph example | `present` | `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Non-UI Intent Rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal dependency-aware-task-graph example | `present` | `techniques/execution/ready-work-graphs/dependency-aware-task-graph/examples/minimal-dependency-aware-task-graph.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
-
-### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal ready-work-from-blocker-graph example | `present` | `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 
 ### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 
