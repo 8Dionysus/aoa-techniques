@@ -11,6 +11,7 @@
 - origin evidence is strong enough to justify a promoted public bundle
 - the second context adaptation kept the contract bounded around source availability and manifest-readiness before surfacing
 - the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one wave of adjacent discovery infrastructure rather than multiple independent downstream consumers
+- 2026-05-12 Pack 5 search found useful adjacent skill-ecosystem surfaces, including `shskills` manifest plus `doctor`, `fast-agent` registry-backed skill install/update behavior, and Aescut registry risk checks, but each widens into install state, managed registry behavior, security or permission review, or update/doctor commands rather than the same minimal pre-surface source availability plus manifest-readiness verdict
 
 ## Default-use rationale
 - this is useful when the missing object is a bounded readiness verdict over upstream-owned skill sources before they become selectable inputs
@@ -26,6 +27,7 @@
 ## Remaining gaps
 - the bundle would benefit from a second independent downstream consumer that uses the same pre-surface readiness boundary
 - the separation from monitoring, curation, and security scanning should stay tested through future sibling imports
+- the next honest search shape is a public source-intake or catalog-publish workflow that checks one upstream skill source for reachability plus minimal `SKILL.md` or manifest parseability before surfacing it, without adding install/update management, security scoring, registry governance, or generic monitoring
 
 ## Recommendation
 - keep `AOA-T-0042` as `promoted`

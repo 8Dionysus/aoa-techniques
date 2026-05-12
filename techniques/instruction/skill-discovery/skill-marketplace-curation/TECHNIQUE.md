@@ -3,7 +3,7 @@ id: AOA-T-0041
 name: skill-marketplace-curation
 domain: docs
 kind: discovery
-status: promoted
+status: canonical
 origin:
   project: n-skills
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - discovery
   - curation
 summary: Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-23
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # skill-marketplace-curation

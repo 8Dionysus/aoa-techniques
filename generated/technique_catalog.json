@@ -1324,7 +1324,7 @@
       "name": "upstream-mirroring-with-provenance",
       "domain": "docs",
       "kind": "distribution",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source.",
       "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
       "origin": {
@@ -1342,12 +1342,12 @@
         "sync",
         "attribution"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -1371,6 +1371,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -1379,7 +1383,7 @@
       "name": "capability-spec-versioning",
       "domain": "docs",
       "kind": "artifact",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy.",
       "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md",
       "origin": {
@@ -1397,12 +1401,12 @@
         "contract",
         "agent-facing"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-21",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -1426,6 +1430,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -2217,7 +2225,7 @@
       "name": "skill-vs-command-boundary",
       "domain": "docs",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy.",
       "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
       "origin": {
@@ -2235,12 +2243,12 @@
         "boundaries",
         "capability"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-23",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -2260,6 +2268,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -2268,7 +2280,7 @@
       "name": "skill-marketplace-curation",
       "domain": "docs",
       "kind": "discovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy.",
       "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
       "origin": {
@@ -2286,12 +2298,12 @@
         "discovery",
         "curation"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-23",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -2315,6 +2327,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -2374,7 +2390,7 @@
       "name": "multi-source-primary-input-provenance",
       "domain": "docs",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine.",
       "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
       "origin": {
@@ -2392,12 +2408,12 @@
         "bridge-contracts",
         "source-priority"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-23",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -2421,6 +2437,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

@@ -780,8 +780,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             domain_values,
         )
         self.assertEqual(validate_repo.KIND_VALUES, kind_values)
-        self.assertEqual(33, status_counts["canonical"])
-        self.assertEqual(74, status_counts["promoted"])
+        self.assertEqual(38, status_counts["canonical"])
+        self.assertEqual(69, status_counts["promoted"])
 
     def test_kind_manifest_matches_builder_projection_and_order(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
@@ -947,7 +947,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         canonical_records = [record for record in records if record.status == "canonical"]
         promoted_records = [record for record in records if record.status == "promoted"]
 
-        self.assertEqual(33, len(canonical_records))
+        self.assertEqual(38, len(canonical_records))
 
         for record in canonical_records:
             self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
@@ -981,7 +981,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md": "keep this review as the canonical-core anchor",
             "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md": "open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package",
             "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
-            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "The next instruction-surface closure pressure should therefore stay on `AOA-T-0024` and `AOA-T-0035`",
+            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "The next instruction-surface closure pressure should therefore stay on `AOA-T-0035`",
             "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017`",
             "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md": "keep `AOA-T-0019` narrow as the canonical metadata spine",
         }
@@ -2566,7 +2566,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
             scope["section_scope"],
         )
-        self.assertEqual(33, adverse_note_count)
+        self.assertEqual(38, adverse_note_count)
 
     def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
         technique_dir = REPO_ROOT / "techniques" / "demo"

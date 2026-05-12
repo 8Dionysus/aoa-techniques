@@ -3,7 +3,7 @@ id: AOA-T-0043
 name: multi-source-primary-input-provenance
 domain: docs
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: aoa-kag + Tree-of-Sophia bridge contracts
   path: docs/README.md
@@ -17,12 +17,12 @@ tags:
   - bridge-contracts
   - source-priority
 summary: Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-23
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # multi-source-primary-input-provenance

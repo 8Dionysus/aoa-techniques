@@ -4,7 +4,9 @@ Status: temporary working plan for a full promotion-evidence pass over the
 original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 `AOA-T-0036` A2 closure, `AOA-T-0037` Stage 2 closure, Pack 3 closures for
 `AOA-T-0038` plus `AOA-T-0039`, and Pack 4 closures for `AOA-T-0027`,
-`AOA-T-0029`, and `AOA-T-0030`, the live promoted queue is `74` bundles. This
+`AOA-T-0029`, `AOA-T-0030`, and the Pack 5 closures for `AOA-T-0024`,
+`AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, and `AOA-T-0043`, the live promoted
+queue is `69` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -43,8 +45,15 @@ Current live constraint:
 - `AOA-T-0027`, `AOA-T-0029`, and `AOA-T-0030` closed during Stage 2 with
   exact-fit ai-rulez, Claude Code memory/rules, and Cline Rules evidence and
   exit the live promoted queue through canonical review;
-- the live generated catalog currently contains `74` promoted techniques and
-  `33` canonical techniques;
+- `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, and `AOA-T-0043`
+  closed during Stage 2 with exact-fit managedcode/dotnet-skills, A2A Agent
+  Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus
+  evidence and exit the live promoted queue through canonical review;
+- `AOA-T-0042` remains the Pack 5 residual because the current manifest/doctor,
+  registry-update, and security-risk lanes are adjacent rather than exact-fit
+  pre-surface source-readiness evidence;
+- the live generated catalog currently contains `69` promoted techniques and
+  `38` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -54,9 +63,11 @@ Move from one exemplar evidence cycle into a complete, repeatable,
 matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
-`AOA-T-0030` closures is `74` promoted techniques, with `AOA-T-0026`,
+`AOA-T-0030` closures plus the Pack 5 closures is `69` promoted techniques,
+with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
-`AOA-T-0029`, and `AOA-T-0030` counted as closed rows rather than remaining
+`AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
+`AOA-T-0041`, and `AOA-T-0043` counted as closed rows rather than remaining
 targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
@@ -106,12 +117,12 @@ result has been distilled into the appropriate durable surface.
 | Stage 2 | [AOA-T-0027 cross-agent-skill-propagation](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | docs / distribution | Pack 4 instruction-surface cluster | closed canonical | exact-fit ai-rulez managed source -> many target outputs |
 | Stage 2 | [AOA-T-0029 nested-rule-loading](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | docs / composition | Pack 4 instruction-surface cluster | closed canonical | exact-fit Claude Code hierarchy, priority, and path-scoped rules |
 | Stage 2 | [AOA-T-0030 fragmented-agent-context](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | docs / composition | Pack 4 instruction-surface cluster | closed canonical | exact-fit Cline Rules fragment-first `.clinerules/` source layer |
-| Stage 2 | [AOA-T-0024 upstream-mirroring-with-provenance](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | docs / distribution | Pack 5 skill ecosystem and curated inputs | pending |  |
-| Stage 2 | [AOA-T-0025 capability-spec-versioning](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | docs / artifact | Pack 5 skill ecosystem and curated inputs | pending |  |
-| Stage 2 | [AOA-T-0040 skill-vs-command-boundary](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | docs / guardrail | Pack 5 skill ecosystem and curated inputs | pending |  |
-| Stage 2 | [AOA-T-0041 skill-marketplace-curation](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | docs / discovery | Pack 5 skill ecosystem and curated inputs | pending |  |
-| Stage 2 | [AOA-T-0042 upstream-skill-health-checking](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | evaluation / validation | Pack 5 skill ecosystem and curated inputs | pending |  |
-| Stage 2 | [AOA-T-0043 multi-source-primary-input-provenance](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | docs / guardrail | Pack 5 skill ecosystem and curated inputs | pending |  |
+| Stage 2 | [AOA-T-0024 upstream-mirroring-with-provenance](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | docs / distribution | Pack 5 skill ecosystem and curated inputs | exact-fit second context; exits to canonical | managedcode/dotnet-skills external-source pins, verbatim upstream payloads, and sibling local metadata close the mirror-provenance gap |
+| Stage 2 | [AOA-T-0025 capability-spec-versioning](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | docs / artifact | Pack 5 skill ecosystem and curated inputs | exact-fit second context; exits to canonical | A2A Agent Card closes the versioned capability-contract gap |
+| Stage 2 | [AOA-T-0040 skill-vs-command-boundary](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | docs / guardrail | Pack 5 skill ecosystem and curated inputs | exact-fit second context; exits to canonical | Claude Code skills close the skill-command ownership and invocation-control gap |
+| Stage 2 | [AOA-T-0041 skill-marketplace-curation](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | docs / discovery | Pack 5 skill ecosystem and curated inputs | exact-fit second context; exits to canonical | VoltAgent awesome-agent-skills closes the editorial curation gap |
+| Stage 2 | [AOA-T-0042 upstream-skill-health-checking](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | evaluation / validation | Pack 5 skill ecosystem and curated inputs | adjacent lanes recorded; remains promoted | shskills, fast-agent, and Aescut lanes widen into install/update/security/registry behavior rather than minimal pre-surface source readiness |
+| Stage 2 | [AOA-T-0043 multi-source-primary-input-provenance](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | docs / guardrail | Pack 5 skill ecosystem and curated inputs | exact-fit second context; exits to canonical | StableNexus primary source-document plus supporting-source separation closes the bridge-ordering gap |
 | Stage 2 | [AOA-T-0020 evidence-note-provenance-lift](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
 | Stage 2 | [AOA-T-0046 repo-doc-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
 | Stage 2 | [AOA-T-0047 github-review-template-lift](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
@@ -224,8 +235,8 @@ CI-report artifact, history artifact, and runtime truth seam.
    `AOA-T-0027`, `AOA-T-0029`, and `AOA-T-0030`; residual Pack 4 evidence
    pressure remains only on `AOA-T-0032`
 7. Pack 5 - Skill Ecosystem And Curated Inputs: `AOA-T-0024`,
-   `AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0042`,
-   `AOA-T-0043`
+   `AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, and `AOA-T-0043`
+   are closed canonical rows; `AOA-T-0042` remains an adjacent hold
 8. Pack 6 - KAG / Source-Lift Evidence Prep: `AOA-T-0020`,
    `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
 9. Pack 7 - History Artifacts remainder: `AOA-T-0045`
@@ -304,7 +315,7 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `74` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `69` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, and `AOA-T-0030` rows against
     generated catalog truth.

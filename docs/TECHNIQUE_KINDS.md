@@ -21,13 +21,13 @@ See also:
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
 | `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `5` | `8` |
-| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `4` | `9` |
+| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `6` | `7` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `6` | `4` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `5` | `2` |
-| `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `2` | `2` |
-| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `7` | `7` |
+| `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `3` | `1` |
+| `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `8` | `6` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
-| `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `0` | `2` |
+| `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `1` | `1` |
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `0` | `11` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
 | `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `10` | `0` | `10` |
@@ -84,7 +84,7 @@ Do not use this when:
 - the technique mostly verifies correctness after the fact
 - the primary value is assembling or publishing artifacts
 
-Counts: `total` 13, `canonical` 4, `promoted` 9.
+Counts: `total` 13, `canonical` 6, `promoted` 7.
 
 | domain | entries |
 |---|---|
@@ -106,8 +106,8 @@ Counts: `total` 13, `canonical` 4, `promoted` 9.
 | [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | `agent-workflows` | `promoted` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. | [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) |
 | [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) | `agent-workflows` | `promoted` | Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication. | [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) |
 | [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) | `docs` | `canonical` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. | [TECHNIQUE.md](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) |
-| [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | `docs` | `promoted` | Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy. | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
-| [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | `docs` | `promoted` | Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine. | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
+| [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | `docs` | `canonical` | Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy. | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
+| [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | `docs` | `canonical` | Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine. | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 | [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) | `evaluation` | `canonical` | Staged pattern for promoting an observed validation signal into strict enforcement without losing diagnostics or widening the fail surface too early. | [TECHNIQUE.md](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md) |
 | [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) | `evaluation` | `canonical` | Distinguish strict required sources from tolerant optional sources so operator-facing summary surfaces remain useful without hiding true hard failures. | [TECHNIQUE.md](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md) |
 
@@ -192,7 +192,7 @@ Do not use this when:
 - the technique is mainly composing inputs into one result
 - the technique mostly defines the durable artifact itself
 
-Counts: `total` 4, `canonical` 2, `promoted` 2.
+Counts: `total` 4, `canonical` 3, `promoted` 1.
 
 | domain | entries |
 |---|---|
@@ -206,8 +206,8 @@ Counts: `total` 4, `canonical` 2, `promoted` 2.
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
 | [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) | `docs` | `canonical` | Keep one canonical rule source and distribute it to multiple agent-facing instruction surfaces without turning each target into a hand-maintained source of truth. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md) |
+| [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | `docs` | `canonical` | Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | `docs` | `canonical` | Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
-| [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) | `docs` | `promoted` | Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
 | [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) | `docs` | `promoted` | Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned. | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
 
 ## `artifact`
@@ -222,7 +222,7 @@ Do not use this when:
 - the technique mainly derives a secondary lookup surface from another authoritative source
 - the main promise is stepwise execution or approval gating
 
-Counts: `total` 14, `canonical` 7, `promoted` 7.
+Counts: `total` 14, `canonical` 8, `promoted` 6.
 
 | domain | entries |
 |---|---|
@@ -238,7 +238,7 @@ Counts: `total` 14, `canonical` 7, `promoted` 7.
 | [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) | `docs` | `canonical` | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. | [TECHNIQUE.md](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) |
 | [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) | `docs` | `canonical` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. | [TECHNIQUE.md](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) |
 | [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) | `docs` | `canonical` | Reduce semantic drift by naming bounded contexts, separating responsibilities, and making handoff interfaces visible for docs and scoping work. | [TECHNIQUE.md](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md) |
-| [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | `docs` | `promoted` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
+| [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | `docs` | `canonical` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
 | [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | `docs` | `promoted` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
 | [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | `docs` | `promoted` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
 | [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `promoted` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
@@ -300,7 +300,7 @@ Do not use this when:
 - the technique mainly versions or stores the authoritative contract
 - the main value is safety gating or route diagnosis
 
-Counts: `total` 2, `canonical` 0, `promoted` 2.
+Counts: `total` 2, `canonical` 1, `promoted` 1.
 
 | domain | entries |
 |---|---|
@@ -313,7 +313,7 @@ Counts: `total` 2, `canonical` 0, `promoted` 2.
 
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
-| [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | `docs` | `promoted` | Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy. | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
+| [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | `docs` | `canonical` | Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy. | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
 | [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | `docs` | `promoted` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
 ## `handoff`

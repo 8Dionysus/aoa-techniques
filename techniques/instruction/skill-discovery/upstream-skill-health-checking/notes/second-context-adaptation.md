@@ -30,7 +30,8 @@
 - the public technique stays in `evaluation` because the reusable object is a bounded readiness verdict, not a docs curation surface or registry control plane
 - both donor contexts reinforce the same seam: upstream-backed entries need a smaller readiness check before local discovery surfaces depend on them
 - the adapted bundle preserves the key invariant that availability and minimal manifest shape can be reviewed without importing broader registry doctrine
+- 2026-05-12 public recheck: `shskills` manifest plus `doctor`, `fast-agent` registry-managed skill install/update behavior, and Aescut skill/MCP risk checks are useful adjacent surfaces, but they widen into install state, update management, managed registries, security or permission review, or broader agent-tool trust rather than the same minimal pre-surface source-readiness verdict
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded evaluation technique for upstream source readiness before surfacing
+- note: the adapted bundle stays readable as a bounded evaluation technique for upstream source readiness before surfacing, but remains promoted until another exact-fit public consumer uses the same pre-surface availability plus manifest-readiness boundary

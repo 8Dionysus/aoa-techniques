@@ -12199,6 +12199,179 @@
       "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0024"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "upstream-mirroring-with-provenance"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for mirroring upstream-owned content into a local curated collection while preserving explicit source ownership and adjacent provenance"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on mirror provenance and subordinate local copies rather than marketplace curation, installer behavior, registry generation, sync policy, or local canonical-source fan-out"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "mirrored content is edited locally until the upstream source no longer owns the meaning in practice"
+                },
+                {
+                  "order": 2,
+                  "text": "provenance metadata exists but no longer matches the mirrored payload or source manifest"
+                },
+                {
+                  "order": 3,
+                  "text": "fetch pins and import scripts look trustworthy while reviewers can no longer tell which content is upstream-owned and which content is local wrapper material"
+                },
+                {
+                  "order": 4,
+                  "text": "local metadata is injected into upstream markdown and blurs the boundary between mirrored payload and local curation"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "canonical status can encourage projects to mirror more upstream content than they can review or refresh"
+                },
+                {
+                  "order": 2,
+                  "text": "provenance overhead can become ceremonial if the mirror is rarely resynced or checked"
+                },
+                {
+                  "order": 3,
+                  "text": "a convenient local copy can reduce attention to upstream license, maintenance, and authorship changes"
+                },
+                {
+                  "order": 4,
+                  "text": "tightly pinned mirrors can lag behind important upstream fixes if stale pins are never reviewed"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the technique as a generic marketplace, registry, or installer contract"
+                },
+                {
+                  "order": 2,
+                  "text": "treating mirrored local files as new canonical sources because they live in the current repository"
+                },
+                {
+                  "order": 3,
+                  "text": "adding local policy, categories, or compatibility metadata directly to the mirrored upstream payload"
+                },
+                {
+                  "order": 4,
+                  "text": "claiming provenance from a source manifest while dropping adjacent attribution or local wrapper separation"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "pull requests edit mirrored payloads directly without touching the source manifest, provenance record, or upstream reference"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers cannot name the upstream repository, source path, and local destination from the local files alone"
+                },
+                {
+                  "order": 3,
+                  "text": "local wrapper notes and upstream payloads are mixed in the same file"
+                },
+                {
+                  "order": 4,
+                  "text": "sync or import changes are discussed mainly as convenience tooling rather than ownership preservation"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep upstream source, local destination, and provenance carrier visible together"
+                },
+                {
+                  "order": 2,
+                  "text": "keep local metadata in sibling files or wrapper surfaces instead of mutating upstream markdown"
+                },
+                {
+                  "order": 3,
+                  "text": "review source manifests and adjacent provenance whenever mirrored payloads change"
+                },
+                {
+                  "order": 4,
+                  "text": "route editorial curation, health checking, installer behavior, and registry policy to sibling techniques"
+                },
+                {
+                  "order": 5,
+                  "text": "revisit canonical status if the bundle is used mainly to justify bulk copying rather than reviewable upstream-owned mirrors"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for local-copy authority drift, stale provenance, wrapper/payload mixing, and sync-substrate overreach"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -12229,7 +12402,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -12241,22 +12414,22 @@
                 {
                   "order": 1,
                   "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around marketplace policy, registry generation, installer behavior, and other product-width detail"
+                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around marketplace policy, registry generation, installer behavior, and product-width sync detail"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                  "key": "first second context",
+                  "value_markdown": "`aoa-techniques` records the same contract as a documentation-first adaptation with examples and a checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "key": "exact public reinforcement",
+                  "value_markdown": "`managedcode/dotnet-skills` keeps external upstream repositories in a dedicated `external-sources/` area, uses `vendir.yml` and `vendir.lock.yml` for fetch-and-pin, copies upstream `SKILL.md`, `AGENT.md`, and `references/` content verbatim, and keeps local-only metadata in sibling `manifest.json` files instead of injecting it into upstream markdown"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                  "value_markdown": "the bundle now carries a checklist, two examples, a clean external-origin note, one documentation-first adaptation, one exact-fit public second context beyond the donor, and an adverse-effects review"
                 }
               ]
             },
@@ -12267,7 +12440,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when a local collection wants to mirror upstream-owned content with explicit provenance instead of silently claiming the mirrored copy as a new canonical source"
+                  "text": "this is the right canonical default when a local collection wants to mirror upstream-owned content with explicit provenance instead of silently claiming the mirrored copy as a new canonical source"
                 },
                 {
                   "order": 2,
@@ -12275,7 +12448,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "it also remains distinct from `AOA-T-0020`, which is about typed note-kind provenance in derived manifests rather than mirrored content plus adjacent attribution"
+                  "text": "it remains narrower than `AOA-T-0041`, which owns editorial skill discoverability rather than mirror provenance, fetch pins, or local copy ownership"
                 }
               ]
             },
@@ -12287,7 +12460,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -12296,11 +12469,16 @@
                 },
                 {
                   "order": 3,
+                  "key": "source checked",
+                  "value_markdown": "`managedcode/dotnet-skills` at `1f47038f03a9bd0f7e927969ae271e122cd23777`"
+                },
+                {
+                  "order": 4,
                   "key": "sanitization still holds",
                   "value_markdown": "the bundle keeps only the reusable mirroring-plus-provenance contract and excludes marketplace, installer, and registry detail"
                 },
                 {
-                  "order": 4,
+                  "order": 5,
                   "key": "public reuse check",
                   "value_markdown": "the public examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
                 }
@@ -12313,11 +12491,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains for the current canonical contract"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or collection proving that manifest-driven upstream mirroring plus adjacent provenance works outside the donor repo"
+                  "text": "future work may still add a narrower checksum/pin-verification sibling if mirror integrity becomes the reusable center rather than upstream ownership and adjacent provenance"
                 }
               ]
             },
@@ -12328,11 +12506,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0024` `promoted`"
+                  "text": "promote `AOA-T-0024` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the mirroring-plus-provenance contract survives outside the donor repository"
+                  "text": "keep `notes/adverse-effects-review.md` as the watch surface for local-copy authority drift, provenance-file staleness, and sync-substrate overreach"
                 }
               ]
             }
@@ -12721,6 +12899,10 @@
                 {
                   "order": 3,
                   "text": "this imported technique narrows those behaviors into one reusable docs pattern for manifest-driven mirroring with provenance"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-12 public reinforcement: `managedcode/dotnet-skills` keeps upstream repositories in a dedicated `external-sources/` area, uses `vendir.yml` plus `vendir.lock.yml` for fetch-and-pin, copies upstream `SKILL.md`, `AGENT.md`, and `references/` content verbatim, and keeps local-only metadata in sibling `manifest.json` files"
                 }
               ]
             },
@@ -12731,7 +12913,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific marketplace or registry breadth"
+                  "text": "works as a documentation-first second context and now has exact-fit public reinforcement beyond the original donor without carrying over marketplace, installer, or registry breadth"
                 }
               ]
             }
@@ -12743,6 +12925,179 @@
       "id": "AOA-T-0025",
       "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/instruction/capability-registry/capability-spec-versioning/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0025"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "capability-spec-versioning"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for keeping one agent-facing capability contract explicit, versioned, and reviewable at the spec layer"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on capability contract versioning rather than registry lifecycle, routing policy, orchestration, provider implementation detail, or protocol-platform breadth"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "version numbers change without compatibility review, making versions decorative rather than contractual"
+                },
+                {
+                  "order": 2,
+                  "text": "implementation behavior drifts while the spec remains unchanged and still appears authoritative"
+                },
+                {
+                  "order": 3,
+                  "text": "capability docs absorb provider, registry, or orchestration details until the stable contract is hard to find"
+                },
+                {
+                  "order": 4,
+                  "text": "clients or downstream readers treat the spec as proof that every optional capability can safely be used without checking declared support"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "canonical status can add spec ceremony to unstable prototypes that need experimentation more than versioned contracts"
+                },
+                {
+                  "order": 2,
+                  "text": "contract wording can slow iteration if every implementation detail is forced through the spec surface"
+                },
+                {
+                  "order": 3,
+                  "text": "a strong spec can make unsupported or partially supported implementations look more compatible than they are"
+                },
+                {
+                  "order": 4,
+                  "text": "versioned specs can tempt teams to solve routing or registry problems in the wrong file"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "widening the capability spec into registry product doctrine, marketplace discovery, or plan orchestration"
+                },
+                {
+                  "order": 2,
+                  "text": "changing versions as release labels without naming contract-level compatibility effects"
+                },
+                {
+                  "order": 3,
+                  "text": "burying invariants behind provider-specific code examples"
+                },
+                {
+                  "order": 4,
+                  "text": "treating one protocol's agent card, capability declaration, or implementation shape as universal schema law"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot explain what a version change means without reading implementation diffs"
+                },
+                {
+                  "order": 2,
+                  "text": "compatibility notes disappear while version fields keep changing"
+                },
+                {
+                  "order": 3,
+                  "text": "capability docs spend more space on routing, registry storage, provider adapters, or execution history than on inputs, outputs, and invariants"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream consumers call optional capability paths without validating declared support first"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the spec small enough to name purpose, version, inputs, outputs, and invariants in reviewable language"
+                },
+                {
+                  "order": 2,
+                  "text": "require compatibility notes when version changes affect consumers"
+                },
+                {
+                  "order": 3,
+                  "text": "keep implementations, providers, and protocol adapters subordinate to the contract"
+                },
+                {
+                  "order": 4,
+                  "text": "split registry lifecycle, routing, orchestration, discovery, and compatibility-matrix policy into sibling techniques"
+                },
+                {
+                  "order": 5,
+                  "text": "revisit canonical status if versioning becomes release branding rather than a real contract seam"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for version ceremony, spec/implementation drift, registry overreach, and hidden optional-capability assumptions"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/instruction/capability-registry/capability-spec-versioning/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -12774,7 +13129,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -12790,18 +13145,18 @@
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                  "key": "first second context",
+                  "value_markdown": "`aoa-techniques` records the same contract as a documentation-first adaptation with examples and a checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "key": "exact public reinforcement",
+                  "value_markdown": "the A2A Protocol uses a discoverable Agent Card with protocol version, capabilities, supported interfaces, available skills, caching/version behavior, and capability validation rules that clients check before using optional operations"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "value_markdown": "the bundle now carries a checklist, two examples, a clean external-origin note, one documentation-first adaptation, one exact-fit public protocol surface beyond the donor, and an adverse-effects review"
                 }
               ]
             },
@@ -12812,11 +13167,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is keeping one agent-facing capability contract explicit and versioned instead of hiding it in provider code or runtime glue"
+                  "text": "this is the right canonical default when the main problem is keeping one agent-facing capability contract explicit and versioned instead of hiding it in provider code or runtime glue"
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than workflow or routing techniques because it only owns the contract surface, not execution sequencing, registry lifecycle, or dispatch policy"
+                  "text": "it remains narrower than workflow or routing techniques because it only owns the contract surface, not execution sequencing, registry lifecycle, marketplace discovery, or dispatch policy"
+                },
+                {
+                  "order": 3,
+                  "text": "it also stays distinct from `AOA-T-0063`, which owns registry-facing agent records rather than the smaller capability-spec contract itself"
                 }
               ]
             },
@@ -12828,7 +13187,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -12837,11 +13196,16 @@
                 },
                 {
                   "order": 3,
-                  "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable capability-spec contract and excludes donor-specific runtime, CLI, persistence, and learning detail"
+                  "key": "source checked",
+                  "value_markdown": "A2A Protocol specification and `a2aproject/A2A` HEAD `ae6a562d5d972f2c4b184f748bb32e1fa9aa7bf2`"
                 },
                 {
                   "order": 4,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle keeps only the reusable capability-spec contract and excludes donor-specific runtime, CLI, persistence, learning, and protocol-platform detail"
+                },
+                {
+                  "order": 5,
                   "key": "public reuse check",
                   "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
                 }
@@ -12854,11 +13218,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains for the current canonical contract"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses a versioned capability spec as a real agent-facing contract rather than only as imported documentation"
+                  "text": "future work may still add a separate capability compatibility-matrix sibling if version transition policy becomes its own reusable object"
                 }
               ]
             },
@@ -12869,11 +13233,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0025` `promoted`"
+                  "text": "promote `AOA-T-0025` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the versioned capability-contract pattern survives outside the donor repository"
+                  "text": "keep `notes/adverse-effects-review.md` as the watch surface for version-number ceremony, registry drift, and implementation detail overwhelming the spec"
                 }
               ]
             }
@@ -13262,6 +13626,10 @@
                 {
                   "order": 3,
                   "text": "this imported technique narrows that public donor surface to one reusable contract: versioned capability specification as the reviewable capability boundary"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-12 public reinforcement: the A2A Protocol uses a discoverable Agent Card with protocol version, supported interfaces, capabilities, skills, version-aware caching, and capability validation before optional operations are used"
                 }
               ]
             },
@@ -13272,7 +13640,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific orchestration, persistence, or learning breadth"
+                  "text": "works as a documentation-first second context and now has exact-fit public protocol reinforcement without carrying over donor-specific orchestration, persistence, registry, or learning breadth"
                 }
               ]
             }
@@ -21971,6 +22339,179 @@
       "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0040"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "skill-vs-command-boundary"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for separating reusable skill meaning from user-facing command invocation and command-local workflow entrypoints"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on the skill-command ownership split rather than marketplace curation, one-source fan-out, shell doctrine, routing policy, or product-specific command design"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "command files copy full skill meaning until the reusable capability only exists inside invocation wrappers"
+                },
+                {
+                  "order": 2,
+                  "text": "a skill becomes command-specific because arguments, output formatting, and user-timing constraints are written into the shared artifact"
+                },
+                {
+                  "order": 3,
+                  "text": "platforms that expose skills through slash invocation make reviewers forget that invocation syntax and reusable meaning are still different review questions"
+                },
+                {
+                  "order": 4,
+                  "text": "side-effectful task skills are auto-invoked because invocation control is not reviewed separately from skill content"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "canonical status can encourage teams to split tiny one-off prompts into skills and commands even when no reusable capability exists"
+                },
+                {
+                  "order": 2,
+                  "text": "strict separation can create duplicate wording if the command cannot reference the skill cleanly"
+                },
+                {
+                  "order": 3,
+                  "text": "command wrappers can hide important constraints if reviewers only inspect the shared skill artifact"
+                },
+                {
+                  "order": 4,
+                  "text": "skill reuse can become brittle when several commands depend on unstated command-local assumptions"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating every slash command as proof of reusable skill meaning"
+                },
+                {
+                  "order": 2,
+                  "text": "folding command syntax, shell commands, routing hints, or marketplace metadata into the reusable skill contract"
+                },
+                {
+                  "order": 3,
+                  "text": "using the technique for cross-agent propagation that belongs to `AOA-T-0027`"
+                },
+                {
+                  "order": 4,
+                  "text": "claiming the boundary is satisfied when skill and command artifacts duplicate each other without a reference rule"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the same procedure appears in both skill and command files with small uncontrolled variations"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers cannot identify which artifact owns reusable guidance and which artifact owns invocation behavior"
+                },
+                {
+                  "order": 3,
+                  "text": "command arguments or output requirements become prerequisites for reading the skill"
+                },
+                {
+                  "order": 4,
+                  "text": "routing or marketplace discussions dominate a review that should be about skill meaning and command entry"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep one explicit rule for how a command references or invokes the reusable skill"
+                },
+                {
+                  "order": 2,
+                  "text": "keep skill bodies focused on reusable capability and command files focused on user-facing invocation details"
+                },
+                {
+                  "order": 3,
+                  "text": "use invocation-control fields or local policy for side-effectful actions instead of hiding timing constraints in prose"
+                },
+                {
+                  "order": 4,
+                  "text": "route propagation, marketplace curation, shell composability, and routing hints to sibling techniques"
+                },
+                {
+                  "order": 5,
+                  "text": "revisit canonical status if platforms collapse the distinction so far that invocation control becomes the real reusable object"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for duplicated guidance, command-local skill drift, unsafe auto-invocation, and widening into routing or shell-command doctrine"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -22001,7 +22542,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -22016,11 +22557,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation keeps the contract bounded with live support from `aoa-skills` and `aoa-routing`"
+                  "text": "the first second context adaptation keeps the contract bounded with live support from `aoa-skills` and `aoa-routing`"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still proven mainly through one donor lineage"
+                  "text": "exact public reinforcement: Claude Code skills keep reusable capability instructions in `SKILL.md` directories with optional supporting files, frontmatter, automatic loading, and direct `/skill-name` invocation, while built-in commands remain fixed session controls and invocation controls such as `disable-model-invocation` preserve command-like user timing for side-effectful actions"
+                },
+                {
+                  "order": 4,
+                  "text": "validation strength: the bundle now has a checklist, a public-safe example, origin evidence, one documentation-first adaptation, one exact-fit public skill/command invocation surface beyond the donor lineage, and an adverse-effects review"
                 }
               ]
             },
@@ -22031,19 +22576,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when a repository has both reusable skills and explicit command entrypoints and needs a stable ownership split between them"
+                  "text": "this is the right canonical default when a repository has both reusable skill meaning and explicit user-facing entrypoints and needs the ownership split to remain visible"
                 },
                 {
                   "order": 2,
-                  "text": "it is strongest when command syntax, arguments, and structured workflow should stay separate from reusable capability meaning"
+                  "text": "it is strongest when command syntax, arguments, invocation timing, or structured workflow should stay separate from reusable capability meaning"
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default docs technique for every capability-layer boundary problem"
-                },
-                {
-                  "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it remains narrower than marketplace curation, routing policy, shell-command doctrine, or one-source propagation"
                 }
               ]
             },
@@ -22055,7 +22596,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-23"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -22064,8 +22605,18 @@
                 },
                 {
                   "order": 3,
+                  "key": "source checked",
+                  "value_markdown": "Claude Code skills and slash-command documentation"
+                },
+                {
+                  "order": 4,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published bundle keeps only the reusable ownership split while stripping donor-specific plugin mechanics, model routing, and command catalogs"
+                  "value_markdown": "the published bundle keeps only the reusable ownership split while stripping donor-specific plugin mechanics, model routing, command catalogs, and product naming"
+                },
+                {
+                  "order": 5,
+                  "key": "public reuse check",
+                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
                 }
               ]
             },
@@ -22076,11 +22627,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent donor that keeps the same skill-command split outside the current plugin-oriented lineage"
+                  "text": "no blocking promotion gap remains for the current canonical contract"
                 },
                 {
                   "order": 2,
-                  "text": "the line between reusable skill meaning and user-facing command invocation should stay tested against future Wave B siblings so it does not drift into marketplace, routing, or shell-command doctrine"
+                  "text": "future work should still revisit the boundary if a platform fully collapses command files into skills and the reusable object becomes invocation-control policy rather than a skill-command ownership split"
                 }
               ]
             },
@@ -22091,11 +22642,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0040` as `promoted`"
+                  "text": "promote `AOA-T-0040` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same skill-command split beyond the current donor lineage"
+                  "text": "keep `notes/adverse-effects-review.md` as the watch surface for command syntax swallowing reusable skill meaning, routing creep, and shell-command overreach"
                 }
               ]
             }
@@ -22313,6 +22864,10 @@
                 {
                   "order": 3,
                   "text": "`aoa-routing/README.md` and `aoa-routing/generated/task_to_surface_hints.json` keep `skill` as a separate source kind with inspect and expand surfaces instead of turning routing hints into skill meaning"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-12 public reinforcement: Claude Code skills keep reusable instructions in `SKILL.md` directories with optional supporting files and frontmatter, allow direct `/skill-name` invocation, and preserve invocation controls for task-like or side-effectful entries"
                 }
               ]
             },
@@ -22329,7 +22884,7 @@
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded docs technique for artifact ownership between reusable skills and command entrypoints"
+                  "value_markdown": "the adapted bundle stays readable as a bounded docs technique for artifact ownership between reusable skills and command entrypoints, with exact-fit public reinforcement outside the original plugin lineage"
                 }
               ]
             }
@@ -22341,6 +22896,179 @@
       "id": "AOA-T-0041",
       "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0041"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "skill-marketplace-curation"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for a bounded editorial discovery layer over upstream-owned skill sources"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on local discoverability and editorial grouping rather than mirror provenance, source health, installer behavior, registry governance, trust scoring, or capability ownership"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the curated catalog starts acting as the canonical source for the underlying skills"
+                },
+                {
+                  "order": 2,
+                  "text": "entries are copied into a list without enough editorial grouping, summaries, or source links to add real discovery value"
+                },
+                {
+                  "order": 3,
+                  "text": "installability, safety, popularity, or compatibility claims appear without a separate owning review surface"
+                },
+                {
+                  "order": 4,
+                  "text": "categories and featured rows become hidden ranking policy rather than lightweight navigation"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "canonical status can encourage broad skill catalogs that are easy to browse but hard to verify"
+                },
+                {
+                  "order": 2,
+                  "text": "curated lists can launder weak or stale upstream skills by placing them beside stronger entries"
+                },
+                {
+                  "order": 3,
+                  "text": "editorial grouping can bias users toward visible entries without recording why they were selected"
+                },
+                {
+                  "order": 4,
+                  "text": "discovery surfaces can become large enough that maintenance becomes registry work in disguise"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using curation as a substitute for upstream mirroring provenance, source-readiness checks, or security review"
+                },
+                {
+                  "order": 2,
+                  "text": "treating category placement as proof of quality or trust"
+                },
+                {
+                  "order": 3,
+                  "text": "mixing installer commands and registry payload details into the editorial catalog contract"
+                },
+                {
+                  "order": 4,
+                  "text": "hiding upstream ownership behind local descriptions and badges"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "entries lack visible upstream source links or clear ownership"
+                },
+                {
+                  "order": 2,
+                  "text": "catalog language talks about install, trust, score, or verification more than discovery and grouping"
+                },
+                {
+                  "order": 3,
+                  "text": "maintainers cannot explain the editorial reason an entry is listed"
+                },
+                {
+                  "order": 4,
+                  "text": "users treat the curated list as the authoritative skill source instead of a navigation layer"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep source ownership and outbound links visible for each curated entry"
+                },
+                {
+                  "order": 2,
+                  "text": "keep curation descriptions short, editorial, and separate from install or trust claims"
+                },
+                {
+                  "order": 3,
+                  "text": "route source health, mirroring provenance, security review, and registry governance to sibling techniques"
+                },
+                {
+                  "order": 4,
+                  "text": "periodically prune or mark stale entries rather than expanding the catalog indefinitely"
+                },
+                {
+                  "order": 5,
+                  "text": "revisit canonical status if the technique is used mainly for registry operation or ranking rather than editorial discoverability"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for catalog authority drift, thin curation, hidden ranking, and install or trust overreach"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -22372,7 +23100,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -22388,18 +23116,18 @@
                 },
                 {
                   "order": 2,
-                  "key": "public reinforcement",
+                  "key": "first reinforcement",
                   "value_markdown": "the donor uses categories, featured quality language, and an explicit discovery surface rather than only raw source mirroring"
                 },
                 {
                   "order": 3,
-                  "key": "adjacent-seam reinforcement",
-                  "value_markdown": "the current bundle stays cleanly distinct from `AOA-T-0024` mirroring/provenance and `AOA-T-0040` skill-versus-command ownership"
+                  "key": "exact public reinforcement",
+                  "value_markdown": "`VoltAgent/awesome-agent-skills` is a public curated collection of agent skills, groups skills by source families and topic sections, and presents short editorial descriptions and outbound source links without owning the underlying skill meaning, installer behavior, or registry governance"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now has one checklist, one example, and an explicit external-import review with clear exclusions"
+                  "value_markdown": "the bundle now has a checklist, one example, a clean external-origin note, an explicit external-import review, one exact-fit public curated collection beyond the donor, and an adverse-effects review"
                 }
               ]
             },
@@ -22410,7 +23138,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when a local collection wants to surface upstream-owned skills through one bounded discovery layer without claiming ownership of the underlying skills"
+                  "text": "this is the right canonical default when a local collection wants to surface upstream-owned skills through one bounded discovery layer without claiming ownership of the underlying skills"
                 },
                 {
                   "order": 2,
@@ -22430,7 +23158,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-23"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -22439,13 +23167,18 @@
                 },
                 {
                   "order": 3,
+                  "key": "source checked",
+                  "value_markdown": "`VoltAgent/awesome-agent-skills` at `95fa85de2b8044984d8ee790d0a4c1884ff2cf0b`"
+                },
+                {
+                  "order": 4,
                   "key": "sanitization still holds",
                   "value_markdown": "the bundle keeps only the reusable curation contract and excludes donor-specific installer, registry, and sync implementation details"
                 },
                 {
-                  "order": 4,
+                  "order": 5,
                   "key": "public reuse check",
-                  "value_markdown": "the current wording remains understandable without needing the original donor repository's full product surface"
+                  "value_markdown": "the current wording remains understandable without needing either source repository's full product surface"
                 }
               ]
             },
@@ -22456,11 +23189,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is one second live context that shows the same editorial discovery layer surviving outside the donor repository"
+                  "text": "no blocking promotion gap remains for the current canonical contract"
                 },
                 {
                   "order": 2,
-                  "text": "category and featured examples are intentionally thin here, so a future follow-up could strengthen the bundle with a second public curated collection if needed"
+                  "text": "future work may still add a separate registry-trust or install-substrate sibling if a curation surface begins making safety, availability, or installability claims"
                 }
               ]
             },
@@ -22471,11 +23204,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0041` `promoted`"
+                  "text": "promote `AOA-T-0041` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until a second live context confirms that curated discoverability can stay editorial and bounded without drifting into registry or installer behavior"
+                  "text": "keep `notes/adverse-effects-review.md` as the watch surface for catalog authority drift, thin curation, registry overreach, and hidden install policy"
                 }
               ]
             }
@@ -22869,6 +23602,10 @@
                 {
                   "order": 3,
                   "text": "this imported technique narrows those behaviors into one reusable docs pattern for local discoverability over upstream-owned skills"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-12 public reinforcement: `VoltAgent/awesome-agent-skills` presents a curated public collection of agent skills grouped by source families and topic sections, with short descriptions and outbound source links rather than taking ownership of installer behavior or registry governance"
                 }
               ]
             },
@@ -22879,7 +23616,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor-specific installer, registry, or sync breadth"
+                  "text": "works as a documentation-first second context and now has exact-fit public curated-collection reinforcement without carrying over donor-specific installer, registry, or sync breadth"
                 }
               ]
             }
@@ -22942,6 +23679,10 @@
                 {
                   "order": 3,
                   "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one wave of adjacent discovery infrastructure rather than multiple independent downstream consumers"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-12 Pack 5 search found useful adjacent skill-ecosystem surfaces, including `shskills` manifest plus `doctor`, `fast-agent` registry-backed skill install/update behavior, and Aescut registry risk checks, but each widens into install state, managed registry behavior, security or permission review, or update/doctor commands rather than the same minimal pre-surface source availability plus manifest-readiness verdict"
                 }
               ]
             },
@@ -23002,6 +23743,10 @@
                 {
                   "order": 2,
                   "text": "the separation from monitoring, curation, and security scanning should stay tested through future sibling imports"
+                },
+                {
+                  "order": 3,
+                  "text": "the next honest search shape is a public source-intake or catalog-publish workflow that checks one upstream skill source for reachability plus minimal `SKILL.md` or manifest parseability before surfacing it, without adding install/update management, security scoring, registry governance, or generic monitoring"
                 }
               ]
             },
@@ -23230,6 +23975,10 @@
                 {
                   "order": 3,
                   "text": "the adapted bundle preserves the key invariant that availability and minimal manifest shape can be reviewed without importing broader registry doctrine"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-12 public recheck: `shskills` manifest plus `doctor`, `fast-agent` registry-managed skill install/update behavior, and Aescut skill/MCP risk checks are useful adjacent surfaces, but they widen into install state, update management, managed registries, security or permission review, or broader agent-tool trust rather than the same minimal pre-surface source-readiness verdict"
                 }
               ]
             },
@@ -23246,7 +23995,7 @@
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded evaluation technique for upstream source readiness before surfacing"
+                  "value_markdown": "the adapted bundle stays readable as a bounded evaluation technique for upstream source readiness before surfacing, but remains promoted until another exact-fit public consumer uses the same pre-surface availability plus manifest-readiness boundary"
                 }
               ]
             }
@@ -23258,6 +24007,179 @@
       "id": "AOA-T-0043",
       "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0043"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "multi-source-primary-input-provenance"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for marking one primary source input and supporting inputs when a bridge or docs surface combines multiple source materials"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on visible source-priority ordering rather than graph semantics, evidence grading, retrieval ranking, proof doctrine, or note-provenance metadata"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "all inputs are flattened into an equal list and the source that anchors the surface disappears"
+                },
+                {
+                  "order": 2,
+                  "text": "supporting inputs quietly become hidden primary sources because the authored markdown does not preserve priority"
+                },
+                {
+                  "order": 3,
+                  "text": "primary/supporting labels are misread as trust scores or retrieval ranking"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream readers reorder or summarize sources without carrying the priority relation forward"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "canonical status can make authors over-label inputs even when priority does not matter"
+                },
+                {
+                  "order": 2,
+                  "text": "explicit priority can make a surface feel less neutral if writers do not explain why the primary input anchors the contract"
+                },
+                {
+                  "order": 3,
+                  "text": "supporting sources may be underused when readers treat them as merely decorative"
+                },
+                {
+                  "order": 4,
+                  "text": "a simple ordering rule can attract broader evidence-quality debates that belong elsewhere"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using primary/supporting labels to encode trust score, evidence grade, or search ranking"
+                },
+                {
+                  "order": 2,
+                  "text": "treating note provenance handles as enough to prove multi-source input priority"
+                },
+                {
+                  "order": 3,
+                  "text": "expanding bridge surfaces into graph traversal, synthesis policy, or proof-fit assessment"
+                },
+                {
+                  "order": 4,
+                  "text": "naming several primary inputs because choosing one anchor is uncomfortable"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot answer which source anchors the surface after reading it"
+                },
+                {
+                  "order": 2,
+                  "text": "downstream docs cite supporting inputs as if they owned the main meaning"
+                },
+                {
+                  "order": 3,
+                  "text": "discussions shift toward ranking, retrieval, graph export, or proof scoring"
+                },
+                {
+                  "order": 4,
+                  "text": "the priority order appears only in generated metadata, not in authored markdown"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "name exactly one primary input when the bridge needs priority"
+                },
+                {
+                  "order": 2,
+                  "text": "name supporting inputs as useful but secondary to the primary anchor"
+                },
+                {
+                  "order": 3,
+                  "text": "keep the order visible in authored markdown and preserve it in downstream reader surfaces"
+                },
+                {
+                  "order": 4,
+                  "text": "route evidence grade, ranking, traversal, graph export, and proof-fit work to sibling techniques or owner repos"
+                },
+                {
+                  "order": 5,
+                  "text": "revisit canonical status if the bundle starts being used as a ranking or proof doctrine shortcut"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for source flattening, hidden ranking, over-labeling, and bridge drift into graph or proof authority"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -23289,7 +24211,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -23304,11 +24226,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "the contract is clear about source-priority ordering and stays separate from note provenance and relation semantics"
+                  "text": "the contract is clear about source-priority ordering and stays separate from note provenance, relation semantics, ranking, and graph traversal"
                 },
                 {
                   "order": 3,
-                  "text": "the pattern would benefit from one more live consumer before being considered the default docs approach"
+                  "text": "exact public reinforcement: StableNexus Research Desk methodology requires published notes to stay source-led, show a primary source-document card, keep additional supporting sources separate, and separate external source material, interpretation, and operational implications; its public notes also preserve additional source documents and supporting docs/cases as distinct support surfaces"
+                },
+                {
+                  "order": 4,
+                  "text": "validation strength: the bundle now has a checklist, a public-safe example, origin evidence, one documentation-first adaptation, one exact-fit public bridge-style methodology beyond the origin lineage, and an adverse-effects review"
                 }
               ]
             },
@@ -23319,7 +24245,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when a combined docs surface must expose which source input is primary before downstream readers depend on it"
+                  "text": "this is the right canonical default when a combined docs surface must expose which source input is primary before downstream readers depend on it"
                 },
                 {
                   "order": 2,
@@ -23327,7 +24253,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default multi-source bridge pattern across multiple public repos"
+                  "text": "it stays narrower than graph semantics, relation lift, retrieval ranking, proof grading, or source-truth transfer"
                 }
               ]
             },
@@ -23339,7 +24265,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-23"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -23348,8 +24274,18 @@
                 },
                 {
                   "order": 3,
+                  "key": "source checked",
+                  "value_markdown": "StableNexus Research Desk methodology and public note surfaces"
+                },
+                {
+                  "order": 4,
                   "key": "sanitization still holds",
                   "value_markdown": "the published bundle keeps only the primary-versus-supporting ordering contract while stripping graph semantics, ranking behavior, note-provenance machinery, and broader bridge-platform doctrine"
+                },
+                {
+                  "order": 5,
+                  "key": "public reuse check",
+                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden AoA or Tree-of-Sophia context"
                 }
               ]
             },
@@ -23360,11 +24296,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "one more live context would help prove the same ordering rule survives a different bridge shape"
+                  "text": "no blocking promotion gap remains for the current canonical contract"
                 },
                 {
                   "order": 2,
-                  "text": "the boundary against ranking and graph semantics should stay visible in future examples"
+                  "text": "future work may still add a proof-fit or evidence-grade sibling if a bridge needs to judge source strength rather than only preserve primary/supporting order"
                 }
               ]
             },
@@ -23375,11 +24311,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0043` as `promoted`"
+                  "text": "promote `AOA-T-0043` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness after another public bridge surface confirms the same primary-versus-supporting input order"
+                  "text": "keep `notes/adverse-effects-review.md` as the watch surface for hidden ranking, source flattening, and bridge drift into graph or proof doctrine"
                 }
               ]
             }
@@ -23580,6 +24516,10 @@
                 {
                   "order": 3,
                   "text": "the adapted bundle preserves the same smaller seam: source-priority ordering remains visible without importing graph traversal, note provenance handles, or ranking doctrine"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-12 public reinforcement: StableNexus Research Desk methodology requires notes to be source-led, show a primary source-document card, keep supporting sources separate, and separate external material from interpretation and operational implications"
                 }
               ]
             },
@@ -23596,7 +24536,7 @@
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle reads as a bounded docs technique for explicit source-priority ordering"
+                  "value_markdown": "the adapted bundle reads as a bounded docs technique for explicit source-priority ordering, with exact-fit public bridge-method reinforcement outside the origin lineage"
                 }
               ]
             }

@@ -5,28 +5,30 @@
 - name: skill-vs-command-boundary
 
 ## Verdict
-- not approved for canonical promotion yet
+- approve for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the second context adaptation keeps the contract bounded with live support from `aoa-skills` and `aoa-routing`
-- the bundle now has a checklist and a public-safe example, but the pattern is still proven mainly through one donor lineage
+- the first second context adaptation keeps the contract bounded with live support from `aoa-skills` and `aoa-routing`
+- exact public reinforcement: Claude Code skills keep reusable capability instructions in `SKILL.md` directories with optional supporting files, frontmatter, automatic loading, and direct `/skill-name` invocation, while built-in commands remain fixed session controls and invocation controls such as `disable-model-invocation` preserve command-like user timing for side-effectful actions
+- validation strength: the bundle now has a checklist, a public-safe example, origin evidence, one documentation-first adaptation, one exact-fit public skill/command invocation surface beyond the donor lineage, and an adverse-effects review
 
 ## Default-use rationale
-- this is useful when a repository has both reusable skills and explicit command entrypoints and needs a stable ownership split between them
-- it is strongest when command syntax, arguments, and structured workflow should stay separate from reusable capability meaning
-- it is not yet proven as the default docs technique for every capability-layer boundary problem
-- the current evidence supports promotion, but not canonical status
+- this is the right canonical default when a repository has both reusable skill meaning and explicit user-facing entrypoints and needs the ownership split to remain visible
+- it is strongest when command syntax, arguments, invocation timing, or structured workflow should stay separate from reusable capability meaning
+- it remains narrower than marketplace curation, routing policy, shell-command doctrine, or one-source propagation
 
 ## Fresh public-safety check
-- review date: 2026-03-23
+- review date: 2026-05-12
 - result: pass
-- sanitization still holds: the published bundle keeps only the reusable ownership split while stripping donor-specific plugin mechanics, model routing, and command catalogs
+- source checked: Claude Code skills and slash-command documentation
+- sanitization still holds: the published bundle keeps only the reusable ownership split while stripping donor-specific plugin mechanics, model routing, command catalogs, and product naming
+- public reuse check: the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context
 
 ## Remaining gaps
-- the bundle would benefit from a second independent donor that keeps the same skill-command split outside the current plugin-oriented lineage
-- the line between reusable skill meaning and user-facing command invocation should stay tested against future Wave B siblings so it does not drift into marketplace, routing, or shell-command doctrine
+- no blocking promotion gap remains for the current canonical contract
+- future work should still revisit the boundary if a platform fully collapses command files into skills and the reusable object becomes invocation-control policy rather than a skill-command ownership split
 
 ## Recommendation
-- keep `AOA-T-0040` as `promoted`
-- revisit canonical readiness only after at least one more live context proves the same skill-command split beyond the current donor lineage
+- promote `AOA-T-0040` to `canonical`
+- keep `notes/adverse-effects-review.md` as the watch surface for command syntax swallowing reusable skill meaning, routing creep, and shell-command overreach

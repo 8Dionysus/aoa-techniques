@@ -147,13 +147,13 @@ entries:
 - id: AOA-T-0024
   name: upstream-mirroring-with-provenance
   domain: docs
-  status: promoted
+  status: canonical
   kind: distribution
   family: instruction-surface
 - id: AOA-T-0025
   name: capability-spec-versioning
   domain: docs
-  status: promoted
+  status: canonical
   kind: artifact
   family: capability-registry
 - id: AOA-T-0026
@@ -243,13 +243,13 @@ entries:
 - id: AOA-T-0040
   name: skill-vs-command-boundary
   domain: docs
-  status: promoted
+  status: canonical
   kind: guardrail
   family: capability-boundary
 - id: AOA-T-0041
   name: skill-marketplace-curation
   domain: docs
-  status: promoted
+  status: canonical
   kind: discovery
   family: skill-discovery
 - id: AOA-T-0042
@@ -261,7 +261,7 @@ entries:
 - id: AOA-T-0043
   name: multi-source-primary-input-provenance
   domain: docs
-  status: promoted
+  status: canonical
   kind: guardrail
   family: capability-boundary
 - id: AOA-T-0044

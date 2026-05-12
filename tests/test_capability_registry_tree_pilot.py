@@ -14,7 +14,7 @@ PILOT_BUNDLES = (
         "AOA-T-0025",
         "capability-spec-versioning",
         "artifact",
-        "promoted",
+        "canonical",
         "techniques/docs/capability-spec-versioning",
         "techniques/instruction/capability-registry/capability-spec-versioning",
     ),

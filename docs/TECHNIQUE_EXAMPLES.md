@@ -418,6 +418,20 @@ See also:
 |---|---|---|---|
 | Direct Relation To Selection Hint | `present` | `techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
+### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Curated Mirror With Attribution | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
+| Minimal Upstream Mirroring With Provenance | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
+
+### [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Capability Upgrade With Compat Window | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
+| Minimal Capability Spec Versioning | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
+
 ### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`canonical`)
 
 | example | body | example path | source |
@@ -446,6 +460,24 @@ See also:
 |---|---|---|---|
 | Scenario | `present` | `techniques/instruction/docs-boundary/public-safe-artifact-sanitization/examples/minimal-public-safe-artifact-sanitization.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
+### [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Skill Vs Command Boundary | `present` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
+
+### [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Skill Marketplace Curation | `present` | `techniques/instruction/skill-discovery/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
+
+### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Multi-Source Primary Input Provenance | `present` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | example | body | example path | source |
@@ -458,20 +490,6 @@ See also:
 |---|---|---|---|
 | Minimal Risk And Negative-Effect Lift | `present` | `techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/examples/minimal-risk-and-negative-effect-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) |
 
-### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Curated Mirror With Attribution | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/concrete-curated-mirror-with-attribution.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
-| Minimal Upstream Mirroring With Provenance | `present` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/examples/minimal-upstream-mirroring-with-provenance.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
-
-### [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Capability Upgrade With Compat Window | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
-| Minimal Capability Spec Versioning | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
-
 ### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
 | example | body | example path | source |
@@ -483,24 +501,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Profile Preset Composition | `present` | `techniques/instruction/instruction-surface/profile-preset-composition/examples/minimal-profile-preset-composition.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
-
-### [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Skill Vs Command Boundary | `present` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/examples/minimal-skill-vs-command-boundary.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
-
-### [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Skill Marketplace Curation | `present` | `techniques/instruction/skill-discovery/skill-marketplace-curation/examples/minimal-skill-marketplace-curation.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
-
-### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Multi-Source Primary Input Provenance | `present` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
 ### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
 
