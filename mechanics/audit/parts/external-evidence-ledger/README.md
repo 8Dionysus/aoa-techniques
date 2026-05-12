@@ -191,6 +191,51 @@ five headings together as their risk section. Do not count broad AI safety,
 security taxonomy, governance framework, or `Failure modes` plus `Blind spots`
 surfaces unless they actually adopt the same five-part markdown contract.
 
+## AOA-T-0035 Stage 2 Long-Pass Notes
+
+2026-05-12 result: no exact-fit second consumer found.
+The pass moved `AOA-T-0035` out of pending Pack 3 posture and recorded the
+first durable adjacent-lane boundary for profile, preset, module, and
+composition lookalikes.
+
+Searched and rejected as adjacent:
+
+- GitHub code search for exact combinations around `preset`, `profile`,
+  `module`, `resolved`, `dedupe`, `first appearance`, `--list-profiles`, and
+  `--list-presets` found no public non-origin candidate carrying the full
+  three-layer composition contract.
+- [Docker Compose profiles](https://docs.docker.com/compose/how-tos/profiles/):
+  useful service-profile activation and environment selection, but the object
+  is service gating inside a Compose application rather than a separate
+  module -> profile -> preset contract with preset-first profile expansion and
+  read-only inspection as the technique center.
+- [SoS report plugin profiles and policy presets](https://sos.readthedocs.io/en/main/plugins.html)
+  plus [`sos report` preset/profile options](https://manpages.ubuntu.com/manpages/bionic/man1/sosreport.1.html):
+  useful adjacent vocabulary where plugins belong to profiles and presets
+  store option sets, but the preset layer is an option/default set rather than
+  an ordered profile bundle that expands to deduped modules before launch.
+- [VS Code Profiles](https://code.visualstudio.com/docs/configure/profiles):
+  useful named editor configuration sets that can be switched, exported, and
+  imported, but they are complete profile states rather than an explicit
+  module -> profile -> preset layering contract.
+- [Dev Container Features](https://containers.dev/features) and
+  [Templates](https://containers.dev/templates): useful reusable environment
+  building blocks and starter packages, but the public object is feature or
+  template selection rather than ordered preset expansion over profiles.
+- [Kustomize bases and overlays](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/):
+  useful declarative composition, resource assembly, and overlay reuse, but it
+  is Kubernetes configuration customization rather than profile/preset runtime
+  posture composition with the same dedupe and inspection rule.
+
+Next honest search shape: look for a public runtime or tool repository where
+small modules are grouped into ordered profiles, named presets are ordered
+profile bundles, preset-expanded profiles resolve before direct profiles,
+duplicate profiles and modules are kept once at first appearance, and a
+read-only command or artifact shows the resolved profiles/modules before
+startup. Do not count profile-only systems, editor profiles, option presets,
+templates, overlays, or generic config renderers unless they carry the same
+layer contract.
+
 ## AOA-T-0026 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found, and `AOA-T-0026` exited the

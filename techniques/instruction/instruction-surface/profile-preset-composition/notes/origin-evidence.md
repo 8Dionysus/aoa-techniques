@@ -7,15 +7,15 @@
 ## Source project
 - name: abyss-stack
 - source files:
-  - `docs/PROFILES.md`
-  - `docs/PRESETS.md`
-  - `docs/PROFILE_RECIPES.md`
-  - `compose/README.md`
-  - `compose/presets/README.md`
-  - `scripts/aoa-lib.sh`
-  - `scripts/aoa-preset-profiles`
-  - `scripts/aoa-profile-modules`
-  - `scripts/aoa-profile-endpoints`
+  - `Configs/docs/PROFILES.md`
+  - `Configs/docs/PRESETS.md`
+  - `Configs/docs/PROFILE_RECIPES.md`
+  - `Configs/compose/README.md`
+  - `Configs/compose/presets/README.md`
+  - `Configs/scripts/aoa-lib.sh`
+  - `Configs/scripts/aoa-preset-profiles`
+  - `Configs/scripts/aoa-profile-modules`
+  - `Configs/scripts/aoa-profile-endpoints`
 
 ## Evidence
 - the donor docs define profiles as small ordered module lists rather than as hidden fragments of one giant compose file

@@ -18666,6 +18666,16 @@
                   "order": 3,
                   "key": "sanitization still holds",
                   "value_markdown": "the published technique keeps only the reusable layering and inspection contract while stripping donor-specific ports, host paths, and local lifecycle detail"
+                },
+                {
+                  "order": 4,
+                  "key": "2026-05-12 long-pass check",
+                  "value_markdown": "no exact-fit second consumer found in the searched public lanes. Docker Compose service profiles, SoS report profiles/presets, VS Code Profiles, Dev Container Features/Templates, and Kustomize bases/overlays are useful adjacent composition patterns, but they do not carry the same three-layer `modules -> profiles -> presets` contract with preset-first resolution, first-appearance dedupe, and read-only inspection as one bounded technique."
+                },
+                {
+                  "order": 5,
+                  "key": "2026-05-12 code-search check",
+                  "value_markdown": "exact phrase searches for profile/preset/module resolution, first-appearance duplicate handling, and combined `--list-profiles` / `--list-presets` surfaces produced no public non-origin exact-fit candidate."
                 }
               ]
             },
@@ -18738,7 +18748,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `docs/PROFILES.md`\n- `docs/PRESETS.md`\n- `docs/PROFILE_RECIPES.md`\n- `compose/README.md`\n- `compose/presets/README.md`\n- `scripts/aoa-lib.sh`\n- `scripts/aoa-preset-profiles`\n- `scripts/aoa-profile-modules`\n- `scripts/aoa-profile-endpoints`"
+                  "value_markdown": "- `Configs/docs/PROFILES.md`\n- `Configs/docs/PRESETS.md`\n- `Configs/docs/PROFILE_RECIPES.md`\n- `Configs/compose/README.md`\n- `Configs/compose/presets/README.md`\n- `Configs/scripts/aoa-lib.sh`\n- `Configs/scripts/aoa-preset-profiles`\n- `Configs/scripts/aoa-profile-modules`\n- `Configs/scripts/aoa-profile-endpoints`"
                 }
               ]
             },
