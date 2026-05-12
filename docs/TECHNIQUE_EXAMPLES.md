@@ -64,18 +64,18 @@ See also:
 |---|---|---|---|
 | Minimal Render Truth Before Startup | `present` | `techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/examples/minimal-render-truth-before-startup.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
 
+### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal One-Command Service Lifecycle | `present` | `techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Non-UI Intent Rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal One-Command Service Lifecycle | `present` | `techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/examples/minimal-one-command-service-lifecycle.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
 
 ### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
 
@@ -607,18 +607,18 @@ See also:
 |---|---|---|---|
 | Minimal Contextual Host Doctor | `present` | `techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/examples/minimal-contextual-host-doctor.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
 
+### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Baseline First Additive Profile Benchmarks | `present` | `techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/examples/minimal-baseline-first-additive-profile-benchmarks.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
+
 ### [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Context Composition CI Report | `present` | `techniques/proof/evaluation-chain/context-report-for-ci/examples/concrete-context-composition-ci-report.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
 | Minimal Context Report For CI | `present` | `techniques/proof/evaluation-chain/context-report-for-ci/examples/minimal-context-report-for-ci.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
-
-### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Baseline First Additive Profile Benchmarks | `present` | `techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/examples/minimal-baseline-first-additive-profile-benchmarks.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 
 ### [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
 

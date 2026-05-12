@@ -20,9 +20,9 @@ See also:
 
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
-| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `4` | `9` |
+| `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `5` | `8` |
 | `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `4` | `9` |
-| `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `5` | `5` |
+| `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `6` | `4` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `3` | `4` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `7` | `7` |
@@ -45,7 +45,7 @@ Do not use this when:
 - the primary value is blocking unsafe actions
 - the technique is mainly about durable artifact shape, not the work loop
 
-Counts: `total` 13, `canonical` 4, `promoted` 9.
+Counts: `total` 13, `canonical` 5, `promoted` 8.
 
 | domain | entries |
 |---|---|
@@ -62,8 +62,8 @@ Counts: `total` 13, `canonical` 4, `promoted` 9.
 | [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) | `agent-workflows` | `canonical` | Safe workflow that normalizes intent into a traceable plan, validates it with dry-run, and enforces contract checks before any real execution path exists. | [TECHNIQUE.md](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md) |
 | [AOA-T-0014](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) | `agent-workflows` | `canonical` | Implement a bounded behavior slice through test-first discipline, minimal implementation, and explicit refactor limits. | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md) |
 | [AOA-T-0023](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) | `agent-workflows` | `canonical` | Keep shell-side agent work mostly stateless and bounded to one confirmed step per invocation so runs stay composable, reviewable, and low-memory by default. | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) |
+| [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | `canonical` | Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
 | [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | `agent-workflows` | `promoted` | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-| [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | `promoted` | Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
 | [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory. | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) |
 | [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | `agent-workflows` | `promoted` | Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory. | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 | [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | `agent-workflows` | `promoted` | Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance. | [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) |
@@ -123,7 +123,7 @@ Do not use this when:
 - the technique mainly classifies options or diagnoses routes without claiming proof
 - the primary value is a durable artifact layout or history container
 
-Counts: `total` 10, `canonical` 5, `promoted` 5.
+Counts: `total` 10, `canonical` 6, `promoted` 4.
 
 | domain | entries |
 |---|---|
@@ -142,8 +142,8 @@ Counts: `total` 10, `canonical` 5, `promoted` 5.
 | [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) | `evaluation` | `canonical` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. | [TECHNIQUE.md](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) | `evaluation` | `canonical` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 | [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | `canonical` | Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
+| [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `evaluation` | `canonical` | Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 | [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | `evaluation` | `promoted` | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
-| [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `evaluation` | `promoted` | Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 | [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | `evaluation` | `promoted` | Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine. | [TECHNIQUE.md](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) |
 | [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) | `validation-patterns` | `promoted` | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) |
 

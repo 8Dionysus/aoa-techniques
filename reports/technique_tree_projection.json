@@ -228,6 +228,28 @@
       "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
+      "id": "AOA-T-0038",
+      "name": "one-command-service-lifecycle",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.",
+      "current_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
+      "family": "runtime-truth-lifecycle",
+      "proposed_trunk": "execution",
+      "proposed_shelf": "runtime-truth-lifecycle",
+      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
+      "review_status": "boundary-watch",
+      "rationale_cues": [
+        "family:runtime-truth-lifecycle",
+        "domain:agent-workflows",
+        "kind:workflow",
+        "status:canonical",
+        "review_status:boundary-watch"
+      ],
+      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -248,28 +270,6 @@
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0038",
-      "name": "one-command-service-lifecycle",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.",
-      "current_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
-      "family": "runtime-truth-lifecycle",
-      "proposed_trunk": "execution",
-      "proposed_shelf": "runtime-truth-lifecycle",
-      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
-      "review_status": "boundary-watch",
-      "rationale_cues": [
-        "family:runtime-truth-lifecycle",
-        "domain:agent-workflows",
-        "kind:workflow",
-        "status:promoted",
-        "review_status:boundary-watch"
-      ],
-      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
       "id": "AOA-T-0049",
@@ -2152,6 +2152,28 @@
       "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
+      "id": "AOA-T-0039",
+      "name": "baseline-first-additive-profile-benchmarks",
+      "domain": "evaluation",
+      "kind": "validation",
+      "status": "canonical",
+      "summary": "Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.",
+      "current_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "family": "runtime-truth-lifecycle",
+      "proposed_trunk": "execution",
+      "proposed_shelf": "runtime-truth-lifecycle",
+      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "review_status": "boundary-watch",
+      "rationale_cues": [
+        "family:runtime-truth-lifecycle",
+        "domain:evaluation",
+        "kind:validation",
+        "status:canonical",
+        "review_status:boundary-watch"
+      ],
+      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
+    },
+    {
       "id": "AOA-T-0032",
       "name": "context-report-for-ci",
       "domain": "evaluation",
@@ -2172,28 +2194,6 @@
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0039",
-      "name": "baseline-first-additive-profile-benchmarks",
-      "domain": "evaluation",
-      "kind": "validation",
-      "status": "promoted",
-      "summary": "Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.",
-      "current_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
-      "family": "runtime-truth-lifecycle",
-      "proposed_trunk": "execution",
-      "proposed_shelf": "runtime-truth-lifecycle",
-      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
-      "review_status": "boundary-watch",
-      "rationale_cues": [
-        "family:runtime-truth-lifecycle",
-        "domain:evaluation",
-        "kind:validation",
-        "status:promoted",
-        "review_status:boundary-watch"
-      ],
-      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
       "id": "AOA-T-0042",

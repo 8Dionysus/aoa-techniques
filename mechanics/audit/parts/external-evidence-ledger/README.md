@@ -28,6 +28,8 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) | OpenAI Codex CLI `codex exec` | A real stdin/stdout/file-first one-shot operator path exists beyond donor documentation and local adaptation. |
 | [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | Aider plus committed public `.aider.chat.history.md` artifacts | Local AI coding session capture can survive as a project-visible Markdown artifact beyond the donor product family. |
 | [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | Dockform plan/render-before-apply plus masked full Compose render | Effective local runtime truth can be rendered, reviewed, and confirmed before startup without becoming lifecycle, readiness, deployment-preview, or secret-publication authority. |
+| [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | Metaflow Devstack | One local operator entrypoint can select services, resolve dependencies, start the local stack, wait through follow-through, expose the operator shell path, and tear the stack down without becoming generic launcher doctrine. |
+| [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | LOCOMO / OpenClaw benchmark harness | Baseline and additive profile backends can reuse the same corpus, runner, artifact family, parallel path, and summary surface without turning comparison into product scoring or benchmark governance. |
 | [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) | `claude-code-log` | Already-saved session transcripts can survive as portable Markdown review artifacts beyond the donor product family. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
 
@@ -275,6 +277,77 @@ Future watch shape: keep `AOA-T-0037` centered on selected-target doctor
 readiness with item-level severity, and route render truth, lifecycle,
 permission alignment, plan validation, build truth, smoke, and monitoring back
 to their sibling techniques or owner repos.
+
+## AOA-T-0038 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found, and `AOA-T-0038` exited the
+promoted queue through a bundle-local canonical review.
+
+Searched and accepted:
+
+- [Metaflow Devstack README](https://github.com/Netflix/metaflow/blob/6d509db6a094bcba585681a1193e590cb4d8074e/devtools/README.md)
+  documents a local Kubernetes development stack with `make up`, `make
+  all-up`, `SERVICES_OVERRIDE=... make up`, `make shell`, and `make down`;
+  service selection and dependency resolution stay inside the devstack
+  lifecycle contract.
+- [Metaflow Devstack Makefile](https://github.com/Netflix/metaflow/blob/6d509db6a094bcba585681a1193e590cb4d8074e/devtools/Makefile)
+  keeps Docker checks, local tool setup, service selection or override,
+  Minikube tunnel startup, Tilt startup, operator next steps, shell handoff,
+  and teardown under one bounded local lifecycle surface.
+- [Metaflow service picker](https://github.com/Netflix/metaflow/blob/6d509db6a094bcba585681a1193e590cb4d8074e/devtools/pick_services.sh)
+  supports interactive service selection and a default all-services path while
+  preserving one lifecycle entrypoint.
+- [Metaflow non-TUI devstack start path](https://github.com/Netflix/metaflow/blob/6d509db6a094bcba585681a1193e590cb4d8074e/devtools/ci/start-devstack.sh)
+  starts the local stack without the Tilt TUI and waits for API, Tiltfile, and
+  generated config readiness before handing control onward.
+
+Rejected as still adjacent:
+
+- Generic launchers, install wizards, plain Docker Compose `up`/`down`, and
+  Kubernetes or Tilt documentation remain adjacent unless one repo-owned local
+  lifecycle contract owns startup, follow-through, and teardown for a bounded
+  stack.
+- Readiness checks, render previews, smoke tests, and benchmark harnesses
+  remain sibling surfaces unless their entrypoint also owns the bounded local
+  lifecycle.
+
+Future watch shape: keep `AOA-T-0038` centered on operator-triggered local
+stack lifecycle, and route profile composition, rendered truth, readiness
+diagnosis, smoke testing, and benchmark comparison back to sibling techniques.
+
+## AOA-T-0039 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found, and `AOA-T-0039` exited the
+promoted queue through a bundle-local canonical review.
+
+Searched and accepted:
+
+- [LOCOMO / OpenClaw README](https://github.com/lancedb/locomo-eval/blob/1754b8fe4c7c05d4edbb7f133309c0ab6f4974e0/README.md)
+  names `memory-core` as the baseline backend, compares `memory-lancedb` and
+  `memory-lancedb-pro` as additive backends, and keeps all three on the same
+  LOCOMO benchmark output family.
+- [LOCOMO runner](https://github.com/lancedb/locomo-eval/blob/1754b8fe4c7c05d4edbb7f133309c0ab6f4974e0/src/runner.py)
+  writes the same run artifacts and summary shape across backend scripts.
+- [LOCOMO parallel runner](https://github.com/lancedb/locomo-eval/blob/1754b8fe4c7c05d4edbb7f133309c0ab6f4974e0/scripts/run_parallel.py)
+  preserves the same output contract while enabling parallel benchmark
+  execution.
+- [LOCOMO result summarizer](https://github.com/lancedb/locomo-eval/blob/1754b8fe4c7c05d4edbb7f133309c0ab6f4974e0/scripts/summarize_results.py)
+  reads the shared `summary.json` family and renders comparable results across
+  baseline and additive runs.
+
+Rejected as still adjacent:
+
+- Benchmark matrices, A/B tests, product leaderboards, rolling baseline gates,
+  and regression dashboards remain adjacent unless the baseline-first and
+  additive paths share the same measurement surface and artifact shape.
+- Baseline fixtures or Criterion-style performance history remain adjacent
+  unless additive profiles are explicitly compared against the same baseline
+  profile without mutating the default path.
+
+Future watch shape: keep `AOA-T-0039` centered on stable baseline-first
+comparison discipline, and route benchmark-suite governance, promotion policy,
+rolling regression gates, product scoring, profile composition, and lifecycle
+control to their owning techniques or repos.
 
 ## AOA-T-0026 External Evidence Notes
 
