@@ -1254,8 +1254,8 @@
       ],
       "counts": {
         "total": 7,
-        "canonical": 1,
-        "promoted": 6,
+        "canonical": 2,
+        "promoted": 5,
         "by_domain": {
           "agent-workflows": 7,
           "docs": 0,
@@ -1302,7 +1302,7 @@
           "id": "AOA-T-0057",
           "name": "structured-handoff-before-compaction",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.",
           "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
           "kind": "handoff"

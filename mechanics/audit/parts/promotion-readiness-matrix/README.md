@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `60` techniques
-- matrix categorization status: `60` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `59` techniques
+- matrix categorization status: `59` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `mycel`'s AI-agent mailbox, thread identity, replayable thread log, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows, while keeping ACK semantics separate from remote delivery proof and handoff authorization
+- latest graduation wave: [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `anthropics/cwc-long-running-agents`' structured `PROGRESS.md` restart convention plus `openclaw-memory-kit`'s compaction memoryFlush and bootstrap handoff path, while keeping transcript packaging, mailbox receipt, git verification, memory search, hook policy, cron memory, and long-running-harness doctrine outside the bundle
+- prior graduation wave: [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from `mycel`'s AI-agent mailbox, thread identity, replayable thread log, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows, while keeping ACK semantics separate from remote delivery proof and handoff authorization
 - prior graduation wave: [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from SpecForge-Agent's requirement, design, and task artifact sequence before implementation, with GitHub Spec Kit used as supporting boundary evidence rather than methodology import
 - prior graduation wave: [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Claude Code's official skill content lifecycle, including post-compaction reattachment and re-invocation from canonical skill sources
 - prior graduation wave: [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) and [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Qodo / PR-Agent's push-triggered review updates, persistent review comments, visible findings, incremental update behavior, and per-commit findings added/resolved audit trail
@@ -70,7 +71,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `15` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `14` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `34` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -171,11 +172,7 @@ Pack 13 is closed. [AOA-T-0056](../../../../techniques/continuity/handoff-contin
 
 ### Pack 14 - Structured Handoff Before Compaction
 
-Shared blocker: the donor pair and repo-local adaptation both show a bounded pre-compaction handoff seam, but one more live adopter is still needed so the pattern reads as reusable continuation infrastructure rather than one episode-orchestrator lineage plus one import.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | Pre-compaction handoff sibling that keeps one explicit continuation packet visible with clear exclusions around transcript packaging, mailbox delivery, and broad phase governance. | One second public workflow surface where a structured handoff packet is written and read before context loss in practice without widening into transcript doctrine, delivery protocol, or orchestration governance. |
+Pack 14 is closed. [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) moved to `canonical` after `anthropics/cwc-long-running-agents` showed exact-fit public reinforcement for agent-maintained `PROGRESS.md` handoff notes that are read before restart, kept current after work items, and backed by git checkpoints because fresh sessions and context-window summaries lose detail. `openclaw-memory-kit` supports the compaction-specific boundary with a `memoryFlush` prompt that writes `memory/handoff.md` before compression and a bootstrap path that reads the handoff after wake-up or compaction. Codex and Hermes issue threads were inspected only as adjacent pressure, not primary proof. The bundle keeps structured continuation packets separate from transcript packaging, mailbox receipt, git verification, memory search, cron memory, hook policy, session databases, and full long-running-agent harnesses.
 
 ### Pack 15 - Receipt-Confirmed Handoff Packet
 

@@ -32958,6 +32958,191 @@
       "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0057"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "structured-handoff-before-compaction"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for writing one structured continuation packet before compaction, rollover, or restart reduces working context"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve the packet contract without turning it into transcript packaging, mailbox delivery, receipt approval, memory search, hook governance, or a full long-running-agent harness"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the packet is created after context loss, so missing details have already been summarized away"
+                },
+                {
+                  "order": 2,
+                  "text": "completed, blocked, and next-step fields collapse into vague narrative prose"
+                },
+                {
+                  "order": 3,
+                  "text": "references omit concrete files, commits, commands, artifacts, or validation already run"
+                },
+                {
+                  "order": 4,
+                  "text": "the next session skips the packet and resumes from memory or chat fragments"
+                },
+                {
+                  "order": 5,
+                  "text": "a progress or handoff file is updated mechanically but no longer reflects current work"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "small tasks can gain unnecessary ceremony if every pause becomes a full handoff packet"
+                },
+                {
+                  "order": 2,
+                  "text": "agents can overtrust the packet and stop checking git state, files, tests, or current instructions"
+                },
+                {
+                  "order": 3,
+                  "text": "a constantly growing packet can become a transcript substitute that crowds out the next session"
+                },
+                {
+                  "order": 4,
+                  "text": "hook or cron automation can hide the fact that the packet was stale, incomplete, or never read"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating a freeform summary as if it satisfies the structured handoff contract"
+                },
+                {
+                  "order": 2,
+                  "text": "using the packet as approval for continuation instead of routing receipt, verification, or permission to sibling techniques"
+                },
+                {
+                  "order": 3,
+                  "text": "storing secrets, private paths, or unreviewed drafts because \"the next agent needs context\""
+                },
+                {
+                  "order": 4,
+                  "text": "importing memory-search, session-history, vector database, scheduling, or harness-loop machinery into a technique that only needs a small packet"
+                },
+                {
+                  "order": 5,
+                  "text": "replacing source-state verification with the handoff's claims"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the incoming session cannot name its first honest move from the packet alone"
+                },
+                {
+                  "order": 2,
+                  "text": "the packet has a \"next\" field but no blocker, reference, or validation history"
+                },
+                {
+                  "order": 3,
+                  "text": "handoff claims cite work done but no files, commits, artifacts, or commands"
+                },
+                {
+                  "order": 4,
+                  "text": "repeated compactions produce summaries of summaries instead of one current packet"
+                },
+                {
+                  "order": 5,
+                  "text": "discussion shifts from continuation fields to cron schedules, vector memory, session databases, or lifecycle policy"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "create or refresh the packet before compaction, rollover, or restart pressure becomes active"
+                },
+                {
+                  "order": 2,
+                  "text": "keep done, in-progress or blocked, next, and references as explicit fields"
+                },
+                {
+                  "order": 3,
+                  "text": "require the next session to read the packet before the first mutation and then verify source state separately"
+                },
+                {
+                  "order": 4,
+                  "text": "keep the packet short enough to be scanned cold; move transcript history, witness traces, mailbox receipt, and git-claim verification to sibling techniques"
+                },
+                {
+                  "order": 5,
+                  "text": "mark automated handoff writers as backstops, not proof that the packet was accurate or consumed"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0057` to `canonical` and use this note as the watch surface for late packets, vague summaries, packet-overtrust, transcript drift, automation-staleness, and memory/harness overreach"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -32988,34 +33173,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around launchd supervision, mission loops, immutable task tracking, checkpoint stacks, mailbox delivery semantics, and broader orchestration doctrine"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around launchd supervision, mission loops, immutable task tracking, checkpoint stacks, mailbox delivery semantics, and broader orchestration doctrine"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same pre-compaction handoff seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same pre-compaction handoff seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the current donor family"
+                  "text": "`anthropics/cwc-long-running-agents` provides exact-fit public reinforcement beyond the donor family: long-running agent sessions keep a structured `PROGRESS.md`, read it first on restart, update it after completed items, and use git checkpointing plus a stop-hook backstop because fresh sessions and context-window summaries lose detail"
+                },
+                {
+                  "order": 5,
+                  "text": "`AlekseiUL/openclaw-memory-kit` provides supporting compaction-specific reinforcement: its OpenClaw compaction config writes `memory/handoff.md` before compression with fixed topic, decisions, TODO, files, context, and drafts fields, and its bootstrap template reads that handoff before continuing after wake-up or compaction"
+                },
+                {
+                  "order": 6,
+                  "text": "adjacent pressure: Codex and Hermes public issues request compact handoff or fresh-session handoff behavior, but those issue threads are treated only as evidence of need, not as primary workflow proof"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and two public reinforcement surfaces for structured handoff artifacts across restart or compaction boundaries"
                 }
               ]
             },
@@ -33026,7 +33219,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is preserving bounded continuation state across compaction or session rollover"
+                  "text": "this is the right canonical default when the main problem is preserving bounded continuation state across compaction, session rollover, restart, or fresh-session handoff"
                 },
                 {
                   "order": 2,
@@ -33035,6 +33228,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than mailbox transport and the active phase-synchronized handoff lane because it does not own delivery, receipt, or continuation-permission doctrine"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a default because the external reinforcement repeats the same fields-and-read-before-work shape without requiring the bundle to absorb long-running harness loops, cron memory, vector search, session databases, or hook policy"
                 }
               ]
             },
@@ -33046,7 +33243,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -33061,7 +33258,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; `cwc-long-running-agents` is Apache-2.0 public evidence and `openclaw-memory-kit` is MIT public evidence, with no source code, private data, credentials, or restricted workflow details copied into the technique"
                 }
               ]
             },
@@ -33072,11 +33269,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface that writes and reads a structured handoff packet before context loss without widening into transcript packaging, mailbox protocol, or general phase governance"
+                  "text": "future work can add another pre-compaction hook, fresh-session handoff, or progress-file implementation, but it must preserve the narrow boundary: one structured packet, written before context loss or kept current ahead of restart, read before continuation, and verified separately against source state"
+                },
+                {
+                  "order": 3,
+                  "text": "keep the automation caveat visible: hooks, crons, and stop callbacks can help write the packet, but they are not proof that the packet is accurate, current, or consumed"
                 }
               ]
             },
@@ -33087,11 +33288,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0057` `promoted`"
+                  "text": "move `AOA-T-0057` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the handoff packet contract survives outside the current donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between structured continuation packets, transcript packaging, mailbox receipt, git verification, memory search, hook policy, and full long-running-agent harnesses"
                 }
               ]
             }
@@ -33397,6 +33598,11 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first corpus that records one bounded continuation-packet seam rather than shipping the donors' orchestrator loops, checkpoint files, or startup automation"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "- name: Harness Primitives for Long-Running Claude Agents\n- repository: `anthropics/cwc-long-running-agents`\n- observed revision: `ffd563d668a97a38d4aa092bf0d5b1507c046629`\n- license: Apache-2.0\n- public surfaces: `README.md`, `claude-code-config/.claude/CLAUDE.md`, `claude-code-config/README.md`, and `claude-code-config/.claude/hooks/commit-on-stop.sh`\n- supporting reinforcement: `AlekseiUL/openclaw-memory-kit` at `b154ad075ee96e7c20edcebf2e9aa93a02493262`, MIT, with `config/compaction.json`, `config/memory-flush.json`, `templates/handoff.md`, and `templates/BOOTSTRAP.md`\n- adjacent pressure: `openai/codex#21673`, `NousResearch/hermes-agent#20372`, and `NousResearch/hermes-agent#499` show public demand for compact handoff or handoff-oriented compaction, but are request or design-discussion surfaces rather than primary proof"
                 }
               ]
             },
@@ -33424,6 +33630,11 @@
                   "order": 4,
                   "key": "operating assumptions",
                   "value_markdown": "contributors should read the technique as one pre-compaction handoff artifact seam before broader governance, transcript, or delivery layers"
+                },
+                {
+                  "order": 5,
+                  "key": "external reinforcement",
+                  "value_markdown": "`cwc-long-running-agents` repeats the same durable packet pattern through a `PROGRESS.md` convention that fresh sessions read first, while `openclaw-memory-kit` repeats the compaction-specific handoff shape through a memory-flush prompt and bootstrap read path"
                 }
               ]
             },
@@ -33446,6 +33657,11 @@
                   "order": 3,
                   "key": "safety rules",
                   "value_markdown": "the technique remains outside mailbox delivery semantics, transcript packaging, witness export, and broad continuation-governance doctrine"
+                },
+                {
+                  "order": 4,
+                  "key": "boundary",
+                  "value_markdown": "automation can refresh or commit the packet, but the reusable technique remains the packet-and-read-before-work contract rather than the hook, cron, vector memory, or harness loop"
                 }
               ]
             },
@@ -33465,6 +33681,10 @@
                 {
                   "order": 3,
                   "text": "the public bundle could drift into transcript or witness doctrine if the handoff packet becomes a total run artifact instead of a bounded continuation packet"
+                },
+                {
+                  "order": 4,
+                  "text": "progress-file and memory-flush reinforcement can tempt a wider memory-system import; the bundle should keep cron schedules, vector search, session-history APIs, and stop-hook policy outside the canonical technique"
                 }
               ]
             },
@@ -33488,6 +33708,26 @@
                 {
                   "order": 4,
                   "text": "both donors present the handoff object as the continuation surface rather than as a hidden memory mechanism"
+                },
+                {
+                  "order": 5,
+                  "text": "`cwc-long-running-agents` frames agent-maintained handoff as one of the core long-running primitives because fresh sessions have no memory and context-window summaries lose detail; its convention says the agent reads `PROGRESS.md` before any work, creates it with `Done`, `In progress`, `Next`, and `Notes` sections if absent, updates it after completed items, and uses git history as a second record."
+                },
+                {
+                  "order": 6,
+                  "text": "`cwc-long-running-agents` pairs the convention with a stop-hook backstop that commits tracked changes at session end so work remains durable across restarts without making the handoff file a transcript or mailbox."
+                },
+                {
+                  "order": 7,
+                  "text": "`openclaw-memory-kit` configures compaction safeguard mode with a `memoryFlush` prompt that writes `memory/handoff.md` before compression using fixed `Topic`, `Decisions`, `TODO`, `Files`, `Context`, and `Drafts` sections."
+                },
+                {
+                  "order": 8,
+                  "text": "`openclaw-memory-kit` ships a `handoff.md` template with the same continuation fields and a `BOOTSTRAP.md` that reads the handoff immediately after wake-up or compaction before verifying recent session history."
+                },
+                {
+                  "order": 9,
+                  "text": "Codex and Hermes issue surfaces were inspected as adjacent pressure: they ask for compact handoff, copyable handoff, or handoff-oriented compaction, but they are not used as primary proof because requests and design discussions do not by themselves show a landed workflow surface."
                 }
               ]
             },
@@ -33498,7 +33738,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves one bounded pre-compaction handoff contract without carrying over the donors' runtime stacks, checkpoint machinery, or broader orchestration semantics"
+                  "text": "works across donor, documentation-first, long-running-harness, and compaction-memory contexts while preserving one bounded pre-compaction handoff contract: a structured continuation packet exists before context loss, stays small enough to read cold, names done or blocked work plus next steps and references, and is read before continuation. It does not carry over donor runtime stacks, cron memory, vector search, session databases, stop-hook policy, transcript packaging, mailbox receipt, or broader orchestration semantics."
                 }
               ]
             }

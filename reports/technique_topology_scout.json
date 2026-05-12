@@ -470,6 +470,33 @@
       }
     },
     {
+      "id": "AOA-T-0057",
+      "name": "structured-handoff-before-compaction",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.",
+      "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
+      "topology": {
+        "family": "handoff-continuation",
+        "capability_class": [
+          "handoff",
+          "plan",
+          "write"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history",
+          "memory-adjacent-artifacts"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -488,33 +515,6 @@
           "tool-surfaces"
         ],
         "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0057",
-      "name": "structured-handoff-before-compaction",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.",
-      "technique_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
-      "topology": {
-        "family": "handoff-continuation",
-        "capability_class": [
-          "handoff",
-          "plan",
-          "write"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history",
-          "memory-adjacent-artifacts"
-        ],
-        "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
         ]

@@ -9,8 +9,9 @@ original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 the Pack 8 closure for `AOA-T-0033`, the Pack 9 closures for `AOA-T-0049`
 plus `AOA-T-0050`, and the Pack 10 closures for `AOA-T-0051` plus
 `AOA-T-0052`, the Pack 11 closure for `AOA-T-0054`, the Pack 12 closure
-for `AOA-T-0055`, and the Pack 13 closure for `AOA-T-0056`, the live
-promoted queue is `60` bundles. This
+for `AOA-T-0055`, the Pack 13 closure for `AOA-T-0056`, and the Pack 14
+closure for `AOA-T-0057`, the live
+promoted queue is `59` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -81,8 +82,12 @@ Current live constraint:
   mailbox evidence, including bounded thread identity, replayable thread logs,
   sync cursor, outbox retry, read/delivery state, and explicit local ACK rows,
   and exits the live promoted queue through canonical review;
-- the live generated catalog currently contains `60` promoted techniques and
-  `47` canonical techniques;
+- `AOA-T-0057` closed during Stage 3 with exact-fit
+  `cwc-long-running-agents` structured progress-file handoff evidence plus
+  `openclaw-memory-kit` compaction memoryFlush handoff evidence and exits the
+  live promoted queue through canonical review;
+- the live generated catalog currently contains `59` promoted techniques and
+  `48` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -93,13 +98,14 @@ matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
-Pack 11, Pack 12, and Pack 13 closures is `60` promoted techniques,
+Pack 11, Pack 12, Pack 13, and Pack 14 closures is `59` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
-and `AOA-T-0056` counted as closed rows rather than remaining targets.
+`AOA-T-0056`, and `AOA-T-0057` counted as closed rows rather than remaining
+targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -114,7 +120,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with twenty-two closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty-three closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -168,7 +174,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0054 compaction-resilient-skill-loading](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | agent-workflows / recovery | Pack 11 post-compaction skill recovery | exact-fit second context; exits to canonical | Claude Code skill content lifecycle closes the post-compaction skill reattachment and re-invocation gap |
 | Stage 3 | [AOA-T-0055 requirements-design-tasks-ladder](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | agent-workflows / workflow | Pack 12 planning ladder | exact-fit second context; exits to canonical | SpecForge-Agent requirements/design/tasks artifact sequence closes the pre-execution planning ladder gap; GitHub Spec Kit supports the layer boundary without importing SDD doctrine |
 | Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | exact-fit second context; exits to canonical | `mycel` bounded AI-agent mailbox closes the thread/mailbox replay and explicit local ACK gap |
-| Stage 3 | [AOA-T-0057 structured-handoff-before-compaction](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | agent-workflows / handoff | Pack 14 structured handoff before compaction | pending |  |
+| Stage 3 | [AOA-T-0057 structured-handoff-before-compaction](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | agent-workflows / handoff | Pack 14 structured handoff before compaction | exact-fit second context; exits to canonical | `cwc-long-running-agents` progress-file handoff plus `openclaw-memory-kit` compaction memoryFlush handoff closes the pre-context-loss packet gap |
 | Stage 3 | [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 15 receipt-confirmed handoff packet | pending |  |
 | Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | pending |  |
 | Stage 3 | [AOA-T-0060 session-opening-ritual-before-work](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | agent-workflows / handoff | Pack 17 session opening ritual before work | pending |  |
@@ -301,7 +307,10 @@ external adopter, markdown-first reuse, or long-gap donor proof.
 15. Pack 13 - Channelized Mailbox: `AOA-T-0056` - closed; exact-fit
     `mycel` mailbox, thread, sync, outbox, read/delivery, and local ACK
     evidence found, bundle-local canonical review approved
-16. Pack 14 - Structured Handoff Before Compaction: `AOA-T-0057`
+16. Pack 14 - Structured Handoff Before Compaction: `AOA-T-0057` - closed;
+    exact-fit `cwc-long-running-agents` progress-file handoff and
+    `openclaw-memory-kit` compaction memoryFlush handoff evidence found,
+    bundle-local canonical review approved
 17. Pack 15 - Receipt-Confirmed Handoff Packet: `AOA-T-0058`
 18. Pack 16 - Git-Verified Handoff Claims: `AOA-T-0059`
 19. Pack 17 - Session Opening Ritual Before Work: `AOA-T-0060`
@@ -364,11 +373,12 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `60` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `59` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
-    `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, and
-    `AOA-T-0055`, and `AOA-T-0056` rows against generated catalog truth.
+    `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
+    `AOA-T-0055`, `AOA-T-0056`, and `AOA-T-0057` rows against generated
+    catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1007,6 +1017,44 @@ Reject:
 - handoff authorization, stop/return/escalation rules, or acceptance workflow;
 - remote delivery confirmation unless it is the actual future object of a new
   sibling technique.
+
+### AOA-T-0057: `structured-handoff-before-compaction`
+
+Stage 3 Pack 14 verdict, 2026-05-12: exact-fit second context found.
+`anthropics/cwc-long-running-agents` keeps long-running work resumable through
+an agent-maintained `PROGRESS.md` convention that fresh sessions read first,
+with `Done`, `In progress`, `Next`, and `Notes` sections, regular updates
+after work items, and git checkpoints because fresh sessions have no memory
+and context-window summaries lose detail. `AlekseiUL/openclaw-memory-kit`
+supports the compaction-specific edge with a `memoryFlush` prompt that writes
+`memory/handoff.md` before compression and a bootstrap template that reads the
+handoff after wake-up or compaction. This closes the pre-context-loss
+structured handoff gap without widening into transcript packaging, mailbox
+receipt, git verification, memory search, cron memory, session databases,
+hook policy, or full long-running-agent harness governance.
+
+Exact evidence:
+
+- one structured progress or handoff packet exists before restart or
+  compaction consumes useful working context;
+- the packet has explicit done, in-progress or blocked, next, notes/context,
+  files, decisions, or draft fields rather than vague summary prose;
+- the next session reads the packet before continuing work;
+- git checkpoints, stop hooks, or memoryFlush prompts act as durability
+  backstops rather than replacing the packet's meaning;
+- issue surfaces around compact/fresh-session handoff are treated as pressure
+  only, not as primary proof.
+
+Reject:
+
+- transcript packaging, replay history, witness traces, or searchable session
+  archives;
+- mailbox delivery, receipt acknowledgment, or handoff authorization;
+- git-claim verification as proof that packet claims are true;
+- vector memory, daily diary, consolidation, session-history APIs, and
+  long-term memory recall;
+- full harness, evaluator, proof gate, kill switch, steering hook, unattended
+  loop, cron, or lifecycle governance.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

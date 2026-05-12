@@ -106,17 +106,17 @@ See also:
 |---|---|---|---|---|
 | channelized-agent-mailbox checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/channelized-agent-mailbox/checks/channelized-agent-mailbox-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) |
 
+### [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| structured-handoff-before-compaction checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/structured-handoff-before-compaction/checks/structured-handoff-before-compaction-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| structured-handoff-before-compaction checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/structured-handoff-before-compaction/checks/structured-handoff-before-compaction-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) |
 
 ### [AOA-T-0058](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`promoted`)
 

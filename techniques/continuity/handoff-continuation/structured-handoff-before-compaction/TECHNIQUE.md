@@ -3,7 +3,7 @@ id: AOA-T-0057
 name: structured-handoff-before-compaction
 domain: agent-workflows
 kind: handoff
-status: promoted
+status: canonical
 origin:
   project: thebasedcapital/nightcrawler + yan5xu/code-relay
   path: README.md + skills/nightcrawler-episode.md + README.md
@@ -17,12 +17,12 @@ tags:
   - checkpoint
   - continuation
 summary: Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # structured-handoff-before-compaction
@@ -180,4 +182,6 @@ See `checks/structured-handoff-before-compaction-checklist.md`.
 
 - keep receipt and acknowledgment semantics separate instead of widening this bundle into delivery protocol
 - keep git-verification and transcript-packaging siblings separate instead of using the handoff as a total truth surface
+- keep progress-file, memory-flush, and bootstrap examples bounded to the shared contract: one structured packet exists before context loss and is read before restart
+- do not import cron memory, vector search, session database, hook policy, or long-running harness governance when the useful move is only the continuation packet
 - reopen the broader phase-synchronized handoff lane only if continuation permission and stop or return rules can be stated as a smaller bounded contract
