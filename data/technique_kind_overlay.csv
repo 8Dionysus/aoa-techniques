@@ -43,7 +43,7 @@ AOA-T-0041,skill-marketplace-curation,docs,canonical,discovery,skill-discovery
 AOA-T-0042,upstream-skill-health-checking,evaluation,promoted,validation,skill-discovery
 AOA-T-0043,multi-source-primary-input-provenance,docs,canonical,guardrail,capability-boundary
 AOA-T-0044,versionable-session-transcripts,history,canonical,artifact,history-artifacts
-AOA-T-0045,witness-trace-as-reviewable-artifact,history,promoted,artifact,history-artifacts
+AOA-T-0045,witness-trace-as-reviewable-artifact,history,canonical,artifact,history-artifacts
 AOA-T-0046,repo-doc-surface-lift,docs,promoted,lift,kag-source-lift
 AOA-T-0047,github-review-template-lift,docs,promoted,lift,kag-source-lift
 AOA-T-0048,semantic-review-surface-lift,docs,promoted,lift,kag-source-lift

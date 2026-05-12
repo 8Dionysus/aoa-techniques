@@ -61,7 +61,6 @@ Run the external evidence queue in this order:
      remains `promoted`; the 2026-05-12 Pack 6 pass ruled out AI review, code
      review summary, quality-report, and scoring lanes as adjacent
 4. next long-pass evidence targets:
-   - [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
    - [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
 5. long-gap holds:
    - [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
@@ -84,6 +83,7 @@ Closed precedents:
 - [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) has exited this sprint lane through a canonical review after LOCOMO / OpenClaw closed the baseline-first additive benchmark gap.
 - [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), and [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) have exited this sprint lane through a canonical review after ai-rulez, Claude Code memory/rules, and Cline Rules closed the managed fan-out, layered precedence, and fragment-first context gaps.
 - [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md), [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) have exited this sprint lane through a canonical review after managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus closed the mirror-provenance, versioned-capability, skill-command, editorial-curation, and primary/supporting source-ordering gaps.
+- [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) has exited this sprint lane through a canonical review after Maida / AgentDbg closed the structured run trace artifact gap.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:

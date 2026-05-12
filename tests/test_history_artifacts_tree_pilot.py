@@ -42,7 +42,7 @@ PILOT_BUNDLES = (
         "witness-trace-as-reviewable-artifact",
         "history",
         "artifact",
-        "promoted",
+        "canonical",
         "techniques/history/witness-trace-as-reviewable-artifact",
         "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact",
     ),

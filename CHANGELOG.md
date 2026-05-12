@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0045 witness-trace-as-reviewable-artifact` to
+  `canonical` after Maida / AgentDbg showed an exact-fit public trace-artifact
+  contract with local `run.json`, ordered `events.jsonl`, LLM/tool/error/state
+  events, redaction/truncation, and a human-readable timeline / summary panel,
+  updating Audit queue posture from `69` promoted techniques to `68`
 - advanced the Stage 2 Pack 6 KAG/source-lift evidence pass without status
   flips: `AOA-T-0046 repo-doc-surface-lift` gained first second-context
   support from `nuxt-content/nuxt-llms`, `AOA-T-0047

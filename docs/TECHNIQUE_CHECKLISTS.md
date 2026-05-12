@@ -644,17 +644,17 @@ See also:
 |---|---|---|---|---|
 | Versionable Session Transcripts Checklist | `absent` | `9` | `techniques/history/history-artifacts/versionable-session-transcripts/checks/versionable-session-transcripts-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) |
 
+### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Witness Trace As Reviewable Artifact Checklist | `absent` | `9` | `techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
+
 ### [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | local-first-session-index checklist | `absent` | `8` | `techniques/history/history-artifacts/local-first-session-index/checks/local-first-session-index-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
-
-### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Witness Trace As Reviewable Artifact Checklist | `absent` | `9` | `techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/checks/witness-trace-as-reviewable-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 
 ### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
 

@@ -25259,6 +25259,179 @@
       "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0045"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "witness-trace-as-reviewable-artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for preserving one substantial agent or automation run as a structured reviewable trace artifact before downstream memory, compost, canon, or promotion decisions"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on trace export, ordered events, state-delta visibility, redaction, and summary posture rather than letting transcript packaging, hosted observability, memory writeback, or eval scoring become the real contract"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "trace capture becomes a noisy default for trivial runs where a short note or transcript reference would be enough"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers treat the trace summary or timeline as proof of correctness instead of a guide to inspect the actual event stream"
+                },
+                {
+                  "order": 3,
+                  "text": "state-delta payloads leak sensitive operational detail because redaction is weak or applied too late"
+                },
+                {
+                  "order": 4,
+                  "text": "the trace artifact quietly becomes a new memory object or promotion verdict because downstream ownership is not explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "structured traces add review and storage overhead compared with smaller summaries"
+                },
+                {
+                  "order": 2,
+                  "text": "local trace artifacts can feel more authoritative than authored decisions, status surfaces, or memory objects"
+                },
+                {
+                  "order": 3,
+                  "text": "rich event streams can expose tool arguments, state changes, or failure paths that need careful public-safety review"
+                },
+                {
+                  "order": 4,
+                  "text": "a useful trace viewer can tempt teams to widen the technique into a tracing platform or hosted observability workflow"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "applying witness traces to every run instead of substantial, review-worthy runs"
+                },
+                {
+                  "order": 2,
+                  "text": "using the witness trace as repository policy, canonical memory, or automated promotion evidence"
+                },
+                {
+                  "order": 3,
+                  "text": "folding transcript export, search, indexing, monitoring dashboards, alerting, or scoring into the trace artifact contract"
+                },
+                {
+                  "order": 4,
+                  "text": "preserving raw secret-bearing payloads or hidden reasoning because the trace is \"for review\""
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the trace has no clear bounded run identity, goal, or review scope"
+                },
+                {
+                  "order": 2,
+                  "text": "state-delta and tool-visibility fields are missing even though the run changed external state"
+                },
+                {
+                  "order": 3,
+                  "text": "the human-readable summary tells reviewers what to believe rather than what to inspect next"
+                },
+                {
+                  "order": 4,
+                  "text": "later memory, compost, canon, or eval surfaces cite the trace as a verdict instead of as source evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reserve this technique for substantial runs where reviewability matters"
+                },
+                {
+                  "order": 2,
+                  "text": "keep transcript capture, transcript packaging, local indexing, memory writeback, promotion routes, and eval policy as sibling or downstream concerns"
+                },
+                {
+                  "order": 3,
+                  "text": "apply redaction-first handling before sharing or publication"
+                },
+                {
+                  "order": 4,
+                  "text": "keep the summary as a review guide and route correctness claims to proof/eval surfaces"
+                },
+                {
+                  "order": 5,
+                  "text": "split richer trace schemas or hosted observability needs into separate tooling or techniques instead of widening this artifact contract"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0045` to `canonical` and use this note as the watch surface for trace-as-memory drift, trace-as-verdict drift, over-capture noise, and expansion into transcript, indexing, observability, or scoring authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -25289,7 +25462,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -25308,7 +25481,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still proven mainly through one witness/compost donor lineage"
+                  "text": "Maida / AgentDbg provides exact-fit public reinforcement: one local agent run persists a structured event stream plus run metadata, shows LLM calls, tool calls, errors, state updates, loop warnings, redaction/truncation, and a local timeline / summary panel for review"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle now has a checklist, a public-safe example, origin evidence, second-context adaptation, and external trace-format reinforcement beyond the witness/compost donor lineage"
                 }
               ]
             },
@@ -25327,11 +25504,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default history technique for every reviewable-run problem"
+                  "text": "it is now the natural default when a project needs one bounded run trace artifact for review before deciding what, if anything, should feed memory, compost, canon, or another downstream layer"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "transcript capture, transcript packaging, and local indexing remain narrower siblings rather than replacements for the structured trace artifact"
                 }
               ]
             },
@@ -25343,7 +25520,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-23"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -25354,6 +25531,11 @@
                   "order": 3,
                   "key": "sanitization still holds",
                   "value_markdown": "the published technique keeps only the reusable trace-export and summary contract while stripping donor-specific role choreography, eval anchors, and deep-recall posture"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the external reinforcement is from public Maida / AgentDbg docs and schemas, not private traces or hidden operational history"
                 }
               ]
             },
@@ -25364,11 +25546,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current witness/compost pilot lineage"
+                  "text": "future work can add more examples of paired JSON plus Markdown trace artifacts, but no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "the line between structured witness trace and transcript packaging should stay tested through future sibling use"
+                  "text": "the line between structured witness trace, transcript packaging, memory writeback, and hosted observability should stay guarded in future adaptations"
                 }
               ]
             },
@@ -25379,11 +25561,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0045` as `promoted`"
+                  "text": "move `AOA-T-0045` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the contract beyond the current donor lineage"
+                  "text": "add an adverse-effects review to preserve the caution boundary after promotion"
                 }
               ]
             }
@@ -25517,6 +25699,11 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "human and agent contribution workflow over portable, reviewable technique bundles"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "- name: Maida / AgentDbg\n- repository: `AgentDbg/AgentDbg`\n- observed revision: `8a14dad4ee9bd1c45a354bf2f0b497f8e3f30273`\n- public surfaces: `README.md`, `docs/reference/trace-format.md`, `schemas/run.schema.json`"
                 }
               ]
             },
@@ -25540,6 +25727,10 @@
                 {
                   "order": 4,
                   "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                },
+                {
+                  "order": 5,
+                  "text": "the external Maida reinforcement proves the same non-transcript trace-artifact shape in a local-first agent debugger: one run has `run.json` metadata, `events.jsonl` event stream, ordered LLM/tool/error/state events, redaction/truncation, and a human-readable timeline / summary panel for review"
                 }
               ]
             },
@@ -25563,6 +25754,10 @@
                 {
                   "order": 4,
                   "text": "writeback and promotion stay downstream of the trace rather than inside it"
+                },
+                {
+                  "order": 5,
+                  "text": "external trace storage remains local and review-first rather than becoming memory authority, hosted observability doctrine, or promotion policy"
                 }
               ]
             },
@@ -25582,6 +25777,10 @@
                 {
                   "order": 3,
                   "text": "a minimal example can feel too abstract if it does not show both the structured trace and the human-readable summary"
+                },
+                {
+                  "order": 4,
+                  "text": "a debugger timeline can be mistaken for this whole technique unless the state-delta and pre-downstream-review boundary stay explicit"
                 }
               ]
             },
@@ -25601,6 +25800,10 @@
                 {
                   "order": 3,
                   "text": "the donor evidence remains strong enough to support a bounded promoted bundle without importing pilot-only role or runtime detail"
+                },
+                {
+                  "order": 4,
+                  "text": "Maida's public trace-format contract keeps one local run directory with `events.jsonl` and `run.json`, ordered events, `STATE_UPDATE` snapshots or diffs, `TOOL_CALL` and `LLM_CALL` payloads, `ERROR` and loop-warning evidence, redaction/truncation rules, and a run summary panel in the local viewer"
                 }
               ]
             },
@@ -25612,12 +25815,12 @@
                 {
                   "order": 1,
                   "key": "verdict",
-                  "value_markdown": "works"
+                  "value_markdown": "works across origin and external trace-artifact contexts"
                 },
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a public history technique for reviewable witness trace export"
+                  "value_markdown": "the adapted bundle now has exact-fit external reinforcement for reviewable witness trace export without widening into transcript packaging, memory writeback, hosted observability, or promotion policy"
                 }
               ]
             }

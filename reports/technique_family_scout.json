@@ -719,8 +719,8 @@
       ],
       "counts": {
         "total": 6,
-        "canonical": 3,
-        "promoted": 3,
+        "canonical": 4,
+        "promoted": 2,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 0,
@@ -747,8 +747,8 @@
       "technique_ids": [
         "AOA-T-0026",
         "AOA-T-0044",
-        "AOA-T-0053",
         "AOA-T-0045",
+        "AOA-T-0053",
         "AOA-T-0066",
         "AOA-T-0067"
       ],
@@ -772,21 +772,21 @@
           "kind": "artifact"
         },
         {
+          "id": "AOA-T-0045",
+          "name": "witness-trace-as-reviewable-artifact",
+          "domain": "history",
+          "status": "canonical",
+          "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
+          "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+          "kind": "artifact"
+        },
+        {
           "id": "AOA-T-0053",
           "name": "local-first-session-index",
           "domain": "history",
           "status": "canonical",
           "summary": "Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.",
           "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
-          "kind": "artifact"
-        },
-        {
-          "id": "AOA-T-0045",
-          "name": "witness-trace-as-reviewable-artifact",
-          "domain": "history",
-          "status": "promoted",
-          "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
-          "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
           "kind": "artifact"
         },
         {
