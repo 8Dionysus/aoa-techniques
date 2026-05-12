@@ -309,13 +309,13 @@ entries:
 - id: AOA-T-0051
   name: commit-triggered-background-review
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: review-compaction
 - id: AOA-T-0052
   name: review-findings-compaction
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: review-compaction
 - id: AOA-T-0053

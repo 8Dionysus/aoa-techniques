@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `65` techniques
-- matrix categorization status: `65` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `63` techniques
+- matrix categorization status: `63` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0049](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Taskwarrior's dependency, blocked / blocking, unblocked, cycle-prevention, and prerequisite-completion behavior
+- latest graduation wave: [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) and [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Qodo / PR-Agent's push-triggered review updates, persistent review comments, visible findings, incremental update behavior, and per-commit findings added/resolved audit trail
+- prior graduation wave: [AOA-T-0049](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Taskwarrior's dependency, blocked / blocking, unblocked, cycle-prevention, and prerequisite-completion behavior
 - prior graduation wave: [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from MADR's one-decision record template and own decision-record practice
 - prior graduation wave: [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Maida / AgentDbg's local run trace contract
 - prior graduation wave: [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md), [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus source-method surfaces
@@ -66,7 +67,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `20` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `18` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `34` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -151,12 +152,7 @@ Pack 9 is closed. [AOA-T-0049](../../../../techniques/execution/ready-work-graph
 
 ### Pack 10 - Background Review Loop
 
-Shared blocker: the donor and repo-local adaptation both show a clean post-commit review artifact seam, but one more live adopter is still needed so the pattern reads as reusable workflow infrastructure rather than one review product lineage plus one import.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | Commit-bound asynchronous review sibling with clear exclusions around fix loops, queue UI, and CI governance. | One second public workflow surface where commits trigger bounded asynchronous review artifacts without widening into remediation, merge automation, or full CI policy. |
-| [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | Findings-hygiene sibling that verifies and consolidates current review output before action. | One second public workflow surface where repeated or stale findings are revalidated and consolidated without widening into backlog policy, remediation, or generic issue management. |
+Pack 10 is closed. [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) and [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) moved to `canonical` after Qodo / PR-Agent showed exact-fit public reinforcement for push-triggered review updates, persistent review comments, visible findings, incremental update behavior, and per-commit findings added/resolved audit trail without requiring either technique to absorb auto-fix, auto-approval, merge policy, chat, broad CI, or PR-governance behavior.
 
 ### Pack 11 - Post-Compaction Skill Recovery
 

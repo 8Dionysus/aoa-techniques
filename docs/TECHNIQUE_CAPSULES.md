@@ -145,20 +145,7 @@ See also:
 - Validate by: only blocker-free eligible nodes appear in the queue; blocked reasons remain visible for excluded tasks; queue updates track graph...
 - Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md)
 
-### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
-
-- Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
-- Intent: Extend an existing intent -> plan -> dry-run -> contract-check pipeline with one new...
-- Use when: an automation chain already exists and the rollout is extending that shared chain, not redesigning it or one...
-- Avoid when: there is no stable intent-chain contract yet or the rollout path performs real side effects before dry-run validation.
-- Needs: an existing intent-chain workflow with normalization, dry-run, and contract-check steps already in place; a canonical fixture location...
-- Produces: one canonical fixture for the new intent; one dedicated smoke path for the new intent rollout; one...
-- Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.
-- Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
-- Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
-- Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
-
-### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
+### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`canonical`)
 
 - Summary: Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.
 - Intent: Launch a bounded review pass after a visible commit boundary and preserve the result...
@@ -171,7 +158,7 @@ See also:
 - Validate by: the review artifact names the triggering commit or diff; findings survive as read-only output; no automatic merge or rewrite...
 - Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md)
 
-### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
+### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`canonical`)
 
 - Summary: Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.
 - Intent: Turn a noisy or repeated findings set into a smaller current review surface by...
@@ -183,6 +170,19 @@ See also:
 - Main risk: real distinct findings are merged incorrectly.
 - Validate by: duplicate findings collapse into one representative; invalidated findings are removed or marked stale; current references still point to live...
 - Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md)
+
+### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+
+- Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
+- Intent: Extend an existing intent -> plan -> dry-run -> contract-check pipeline with one new...
+- Use when: an automation chain already exists and the rollout is extending that shared chain, not redesigning it or one...
+- Avoid when: there is no stable intent-chain contract yet or the rollout path performs real side effects before dry-run validation.
+- Needs: an existing intent-chain workflow with normalization, dry-run, and contract-check steps already in place; a canonical fixture location...
+- Produces: one canonical fixture for the new intent; one dedicated smoke path for the new intent rollout; one...
+- Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.
+- Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
+- Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
+- Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 
 ### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
 

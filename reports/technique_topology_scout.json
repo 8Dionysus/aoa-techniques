@@ -337,35 +337,11 @@
       }
     },
     {
-      "id": "AOA-T-0005",
-      "name": "new-intent-rollout-checklist",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
-      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
-      "topology": {
-        "family": "intent-chain",
-        "capability_class": [
-          "plan",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
       "id": "AOA-T-0051",
       "name": "commit-triggered-background-review",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.",
       "technique_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
       "topology": {
@@ -392,7 +368,7 @@
       "name": "review-findings-compaction",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.",
       "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
       "topology": {
@@ -407,6 +383,30 @@
           "tool-surfaces",
           "code",
           "tests"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0005",
+      "name": "new-intent-rollout-checklist",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "promoted",
+      "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
+      "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md",
+      "topology": {
+        "family": "intent-chain",
+        "capability_class": [
+          "plan",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces"
         ],
         "execution_profile": "medium-agent",
         "risk_posture": [

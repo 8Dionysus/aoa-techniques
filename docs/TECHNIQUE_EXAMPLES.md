@@ -82,24 +82,24 @@ See also:
 |---|---|---|---|
 | Minimal ready-work-from-blocker-graph example | `present` | `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/examples/minimal-ready-work-from-blocker-graph.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 
+### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal commit-triggered-background-review example | `present` | `techniques/continuity/review-compaction/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) |
+
+### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal review-findings-compaction example | `present` | `techniques/continuity/review-compaction/review-findings-compaction/examples/minimal-review-findings-compaction.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Non-UI Intent Rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal commit-triggered-background-review example | `present` | `techniques/continuity/review-compaction/commit-triggered-background-review/examples/minimal-commit-triggered-background-review.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) |
-
-### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal review-findings-compaction example | `present` | `techniques/continuity/review-compaction/review-findings-compaction/examples/minimal-review-findings-compaction.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) |
 
 ### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
 

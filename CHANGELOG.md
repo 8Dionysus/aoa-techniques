@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0051 commit-triggered-background-review` and `AOA-T-0052
+  review-findings-compaction` to `canonical` after Qodo / PR-Agent showed
+  exact-fit public push-triggered review updates, persistent review comments,
+  visible findings, incremental update behavior, and per-commit findings
+  added/resolved audit trail, updating Audit queue posture from `65` promoted
+  techniques to `63`
 - promoted `AOA-T-0049 dependency-aware-task-graph` and `AOA-T-0050
   ready-work-from-blocker-graph` to `canonical` after Taskwarrior showed
   exact-fit public dependency, blocked / blocking, unblocked, cycle-prevention,

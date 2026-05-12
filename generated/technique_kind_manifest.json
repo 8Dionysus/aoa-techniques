@@ -33,8 +33,8 @@
       ],
       "counts": {
         "total": 13,
-        "canonical": 7,
-        "promoted": 6,
+        "canonical": 9,
+        "promoted": 4,
         "by_domain": {
           "agent-workflows": 13,
           "docs": 0,
@@ -102,18 +102,10 @@
           "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md"
         },
         {
-          "id": "AOA-T-0005",
-          "name": "new-intent-rollout-checklist",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
-          "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md"
-        },
-        {
           "id": "AOA-T-0051",
           "name": "commit-triggered-background-review",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.",
           "technique_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md"
         },
@@ -121,9 +113,17 @@
           "id": "AOA-T-0052",
           "name": "review-findings-compaction",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.",
           "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0005",
+          "name": "new-intent-rollout-checklist",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
+          "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0055",
