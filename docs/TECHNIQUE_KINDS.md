@@ -21,7 +21,7 @@ See also:
 | kind | summary | total | canonical | promoted |
 |---|---|---|---|---|
 | `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `10` | `3` |
-| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `6` | `7` |
+| `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `7` | `6` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `6` | `4` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `6` | `1` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `3` | `1` |
@@ -84,7 +84,7 @@ Do not use this when:
 - the technique mostly verifies correctness after the fact
 - the primary value is assembling or publishing artifacts
 
-Counts: `total` 13, `canonical` 6, `promoted` 7.
+Counts: `total` 13, `canonical` 7, `promoted` 6.
 
 | domain | entries |
 |---|---|
@@ -98,7 +98,7 @@ Counts: `total` 13, `canonical` 6, `promoted` 7.
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
 | [AOA-T-0028](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) | `agent-workflows` | `canonical` | Require one explicit confirmation seam before a read or plan flow crosses into a mutating action so the action stays reviewable without widening into a multi-step autonomous loop. | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) |
-| [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | `agent-workflows` | `promoted` | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
+| [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | `agent-workflows` | `canonical` | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
 | [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | `agent-workflows` | `promoted` | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
 | [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `agent-workflows` | `promoted` | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
 | [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |

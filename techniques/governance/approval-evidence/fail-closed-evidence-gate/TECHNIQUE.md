@@ -3,7 +3,7 @@ id: AOA-T-0068
 name: fail-closed-evidence-gate
 domain: agent-workflows
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: Clyra-AI/gait
   path: README.md + docs/agent_integration_boundary.md + docs/mcp_capability_matrix.md
@@ -17,12 +17,12 @@ tags:
   - evidence
   - approval
 summary: Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # fail-closed-evidence-gate

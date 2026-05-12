@@ -136,6 +136,12 @@ See also:
 |---|---|---|---|---|
 | mcp-gateway-proxy checklist | `absent` | `8` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/checks/mcp-gateway-proxy-checklist.md` | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
 
+### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| fail-closed-evidence-gate checklist | `absent` | `8` | `techniques/governance/approval-evidence/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -153,12 +159,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| fail-closed-evidence-gate checklist | `absent` | `8` | `techniques/governance/approval-evidence/fail-closed-evidence-gate/checks/fail-closed-evidence-gate-checklist.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
 
 ### [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
 

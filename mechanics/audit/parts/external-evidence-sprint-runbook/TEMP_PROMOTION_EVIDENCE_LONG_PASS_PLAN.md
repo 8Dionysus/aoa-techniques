@@ -15,8 +15,9 @@ closure for `AOA-T-0057`, the Pack 15 adjacent-only closure for
 closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, the Pack
 19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, the
 Pack 21 closure for `AOA-T-0064`, the Pack 22 closure for `AOA-T-0065`, the
-Pack 23 closure for `AOA-T-0066`, and the Pack 24 closure for `AOA-T-0067`,
-the live promoted queue is `51` bundles.
+Pack 23 closure for `AOA-T-0066`, the Pack 24 closure for `AOA-T-0067`, and
+the Pack 25 closure for `AOA-T-0068`, the live promoted queue is `50`
+bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
@@ -122,8 +123,13 @@ Current live constraint:
   metadata, and reviewer workflows that reopen saved transcripts from focused
   line or block inspection, and exits the live promoted queue through
   canonical review;
-- the live generated catalog currently contains `51` promoted techniques and
-  `56` canonical techniques;
+- `AOA-T-0068` closed during Stage 4 with exact-fit `mvar-security/clawzero`
+  evidence for deterministic execution-boundary enforcement before tool or
+  process sinks, explicit allow or block decisions, adapter-level blocked
+  execution, and witness artifacts that preserve reviewable verdict evidence,
+  and exits the live promoted queue through canonical review;
+- the live generated catalog currently contains `50` promoted techniques and
+  `57` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -135,7 +141,7 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
-Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, and Pack 24 closures is `51` promoted techniques,
+Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, and Pack 25 closures is `50` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
@@ -143,8 +149,8 @@ with `AOA-T-0026`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
 `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`, and
-`AOA-T-0066`, and `AOA-T-0067` counted as closed rows rather than remaining
-targets.
+`AOA-T-0066`, `AOA-T-0067`, and `AOA-T-0068` counted as closed rows rather
+than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -159,7 +165,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with twenty-eight closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty-nine closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -224,7 +230,7 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | exact-fit second context; exits to canonical | `smart-mcp-proxy/mcpproxy-go` single MCP endpoint, multiple upstream servers, metadata indexing, mediated call variants, and proxy-boundary sensitive-data inspection close the bounded gateway-proxy gap |
 | Stage 4 | [AOA-T-0066 transcript-replay-artifact](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | history / artifact | Pack 23 transcript replay artifact | exact-fit second context; exits to canonical | `dataprofessor/cortex-replay` plus Snowflake Cortex Code replay guide close the bounded post-capture replay-artifact gap |
 | Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | exact-fit second context; exits to canonical | `ai4curation/ai-blame` trace-derived line blame, session metadata, and transcript view workflows close the bounded code-to-evidence lineage gap |
-| Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | pending |  |
+| Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | exact-fit second context; exits to canonical | `mvar-security/clawzero` deterministic execution boundary, explicit block decisions, adapter-level blocked execution, and witness artifacts close the bounded fail-closed evidence-gate gap |
 | Stage 4 | [AOA-T-0069 approval-bound-durable-jobs](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | agent-workflows / handoff | Pack 26 approval-bound durable jobs | pending |  |
 | Stage 4 | [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | agent-workflows / ingest | Pack 27 OCR staged handoff | pending |  |
 | Stage 4 | [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 28 post-OCR template field extraction | pending |  |
@@ -402,7 +408,14 @@ families without collapsing them into one generic "agent workflow" proof lane.
     reviewer workflows can reopen saved transcripts from the code inspection
     surface while scorecards, policies, dashboards, hosted search, repository
     analytics, and memory recall stay outside the contract
-27. Pack 25 - Fail-Closed Evidence Gate: `AOA-T-0068`
+27. Pack 25 - Fail-Closed Evidence Gate: `AOA-T-0068` - closed;
+    exact-fit `mvar-security/clawzero` evidence found: model-output-to-tool
+    execution boundaries are enforced before sinks run, non-allow decisions
+    raise or block wrapped execution, and witness artifacts preserve reviewable
+    verdict evidence while human approval, durable jobs, signed-witness
+    infrastructure, attack packs, policy platforms, gateway products,
+    sandboxing, compliance export, and budget controls stay outside the
+    contract
 28. Pack 26 - Approval-Bound Durable Jobs: `AOA-T-0069`
 29. Pack 27 - OCR Staged Handoff: `AOA-T-0070`
 30. Pack 28 - Post-OCR Template Field Extraction: `AOA-T-0071`
@@ -448,13 +461,14 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `54` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `50` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
     `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`,
     `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`,
-    and `AOA-T-0064` rows against generated catalog truth.
+    `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, and
+    `AOA-T-0068` rows against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1533,6 +1547,43 @@ Reject:
   analytics, chat-with-history, or memory recall;
 - Toolpath share/resume behavior, graph-format governance, live watching, or
   pathbase behavior.
+
+### AOA-T-0068: `fail-closed-evidence-gate`
+
+Stage 4 Pack 25 verdict, 2026-05-12: exact-fit second context found.
+`mvar-security/clawzero` keeps the reusable object as one execution-boundary
+gate before AI-agent tool or process sinks: model output is separated from
+tool execution by deterministic sink evaluation, non-allow decisions block or
+raise before wrapped execution proceeds, and witness artifacts keep the
+decision basis reviewable. OpenAI Agents SDK guardrails support the narrower
+boundary semantics through blocking input guardrails and pre-execution tool
+input guardrails, but they remain supporting because coverage depends on
+execution mode and tool class.
+
+Exact evidence:
+
+- ClawZero describes policy enforcement between model output and tool execution;
+- verified claims record reproducible blocked outcomes for shell, package,
+  temporal-taint, budget-limit, and witness-verification paths;
+- tests show protected LangChain, OpenClaw, and MCP tool calls raising blocked
+  execution when sink decisions are non-allow;
+- witness surfaces preserve timestamp, runtime, sink type, target, decision,
+  reason code, policy id, provenance, adapter, engine, and signature fields;
+- OpenAI Agents SDK documents blocking input guardrails before agent execution,
+  tool input guardrails before custom function-tool execution, reject or
+  exception behavior, and optional output details for review.
+
+Reject:
+
+- ClawZero attack demonstrations, named policy profiles, adapter APIs, CLI
+  command families, temporal-taint engine, package trust controls, SARIF
+  export, compliance mapping, budget controls, or MVAR governance;
+- signed-witness chains or cryptographic verification as a default technique
+  requirement;
+- human approval, durable jobs, sandbox products, gateway products, or broad
+  policy authoring;
+- treating parallel input guardrails, hosted tools, built-in execution tools,
+  or handoff pipelines as universally fail-closed.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

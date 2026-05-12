@@ -40775,6 +40775,173 @@
       "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0068"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "fail-closed-evidence-gate"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `mvar-security/clawzero`, with OpenAI Agents SDK guardrails used only as supporting boundary-semantics evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that the bundle remains one fail-closed execution-boundary gate with reviewable evidence, not a broad policy platform, security product, human approval loop, durable job orchestrator, or witness-signing framework"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "advisory checks are described as fail-closed even though side effects can still happen"
+                },
+                {
+                  "order": 2,
+                  "text": "parallel or post-hoc guardrails are treated as sufficient for side-effect prevention when they can run too late"
+                },
+                {
+                  "order": 3,
+                  "text": "evidence records prove that a check ran, but not that the mutating action was actually blocked"
+                },
+                {
+                  "order": 4,
+                  "text": "broad policy platforms, attack-pack harnesses, witness-signing infrastructure, or compliance suites become hidden requirements for the technique"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "fail-closed gates add friction and can block legitimate local work when the verdict surface is too coarse"
+                },
+                {
+                  "order": 2,
+                  "text": "shallow evidence can create false confidence by showing a block label without enough context to review the blocked action"
+                },
+                {
+                  "order": 3,
+                  "text": "over-broad gates can push simple human-confirmation needs into heavier machine-policy or security-platform machinery"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using this bundle as a substitute for [AOA-T-0028](../../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) when the actual need is explicit human confirmation before mutation"
+                },
+                {
+                  "order": 2,
+                  "text": "using this bundle as a substitute for [AOA-T-0045](../../../../history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) when the actual need is a fuller run trace with ordered events and state deltas"
+                },
+                {
+                  "order": 3,
+                  "text": "using this bundle as a substitute for [approval-bound-durable-jobs](../../approval-bound-durable-jobs/TECHNIQUE.md) when the actual need is checkpoint, pause, approval, and resume across longer-running work"
+                },
+                {
+                  "order": 4,
+                  "text": "importing attack demonstrations, policy-profile matrices, adapter-specific command names, signed-witness chains, compliance export formats, or framework setup as invariant requirements"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the gate can emit a non-allow verdict while the action still executes"
+                },
+                {
+                  "order": 2,
+                  "text": "examples say \"blocked\" but do not name the candidate action, verdict, and evidence surface"
+                },
+                {
+                  "order": 3,
+                  "text": "implementation advice centers policy authoring, security products, signed receipts, or attack-pack validation more than one boundary immediately before side effects"
+                },
+                {
+                  "order": 4,
+                  "text": "reviewers cannot tell whether ambiguous, missing, or errored verdicts default to block rather than allow"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require explicit allow before side effects continue"
+                },
+                {
+                  "order": 2,
+                  "text": "treat missing, ambiguous, failed, or non-allow verdicts as blocked until a bounded review resolves them"
+                },
+                {
+                  "order": 3,
+                  "text": "keep one concise evidence record for the verdict and basis, while routing full traces, signed witness chains, compliance exports, and durable job state to sibling techniques"
+                },
+                {
+                  "order": 4,
+                  "text": "document coverage limits when a framework guardrail only applies to certain tool types, execution modes, or pipeline stages"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow guardrail when the gate sits directly before a mutating boundary, non-allow blocks execution, and a reviewable evidence surface survives the verdict"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb human approval, durable orchestration, total policy-platform governance, signed-witness infrastructure, attack harnesses, or broad security-product semantics into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -40805,34 +40972,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around broader governance stacks, pack formats, durable jobs, and trust-product semantics"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around broader governance stacks, pack formats, durable jobs, and trust-product semantics"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same fail-closed execution seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same fail-closed execution seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor family"
+                  "text": "`mvar-security/clawzero` provides exact-fit public reinforcement beyond the donor family: it frames the reusable object as a deterministic execution boundary between model output and tool execution, evaluates sink requests before commands or tool calls run, returns explicit allow or block decisions, raises blocked execution in adapters, and generates witness artifacts for later review"
+                },
+                {
+                  "order": 5,
+                  "text": "ClawZero's verified-claims and test surfaces reinforce that shell, credential, HTTP, filesystem, LangChain, OpenClaw, MCP, and session-runtime lanes keep block decisions before execution and keep witness or session evidence inspectable"
+                },
+                {
+                  "order": 6,
+                  "text": "OpenAI Agents SDK guardrails provide supporting boundary semantics: blocking input guardrails can prevent agent execution before tool calls, tool input guardrails run before custom function tools execute, and `ToolGuardrailFunctionOutput` / `GuardrailFunctionOutput` can carry check details; the bundle keeps SDK coverage limits explicit because parallel input guardrails, hosted tools, built-in execution tools, and handoffs are not a universal fail-closed seam"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for non-allow outcomes blocking side effects while review evidence survives"
                 }
               ]
             },
@@ -40843,7 +41018,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is blocking mutation on non-allow while preserving reviewable evidence at the boundary"
+                  "text": "this is the right canonical default when the main problem is blocking mutation on non-allow while preserving reviewable evidence at the boundary"
                 },
                 {
                   "order": 2,
@@ -40852,6 +41027,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than a durable-jobs surface because it does not own checkpoint, pause, and resume semantics across longer-running work"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because ClawZero repeats the same execution-boundary gate with explicit decision evidence outside the donor family while letting this bundle reject total policy-platform doctrine, framework-specific adapters, attack-pack governance, signed-witness infrastructure, compliance suites, and human approval flows"
                 }
               ]
             },
@@ -40863,7 +41042,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -40878,7 +41057,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected ClawZero source is Apache-2.0 licensed and no source code, attack payloads, local paths, credentials, witness signatures, product setup instructions, or platform-specific runtime wiring were copied into the technique"
                 }
               ]
             },
@@ -40889,11 +41068,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses one bounded fail-closed evidence gate without widening into full policy-platform doctrine"
+                  "text": "future gate sources can reinforce the default, but they must preserve the narrow boundary: a candidate mutating action, one verdict surface before side effects, explicit non-allow blocking, and one reviewable evidence surface, without importing broad governance platforms, policy authoring stacks, signed-witness infrastructure, attack packs, compliance suites, human approval doctrine, durable job orchestration, or total trust frameworks"
                 }
               ]
             },
@@ -40904,11 +41083,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0068` `promoted`"
+                  "text": "move `AOA-T-0068` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the fail-closed execution seam survives outside the donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between fail-closed execution gates, human confirmation, witness traces, durable approval jobs, broad policy engines, and security-platform evidence"
                 }
               ]
             }

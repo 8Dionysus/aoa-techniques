@@ -411,7 +411,7 @@ entries:
 - id: AOA-T-0068
   name: fail-closed-evidence-gate
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: guardrail
   family: approval-evidence
 - id: AOA-T-0069

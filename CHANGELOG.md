@@ -22,6 +22,16 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0068 fail-closed-evidence-gate` to `canonical` after
+  `mvar-security/clawzero` showed exact-fit public reinforcement for a
+  deterministic execution boundary between model output and tool/process
+  execution, with explicit allow or block decisions, adapter-level blocked
+  execution, and witness artifacts preserving reviewable verdict evidence,
+  while OpenAI Agents SDK guardrails were used only as supporting boundary
+  semantics and human approval, durable jobs, signed-witness infrastructure,
+  attack packs, policy authoring, gateway products, sandboxing, compliance
+  export, budget controls, and total trust governance stay outside the bundle,
+  updating Audit queue posture from `51` promoted techniques to `50`
 - promoted `AOA-T-0067 transcript-linked-code-lineage` to `canonical` after
   `ai4curation/ai-blame` showed exact-fit public reinforcement for deriving
   line- and block-level attribution from AI agent execution traces with

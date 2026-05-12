@@ -3844,7 +3844,7 @@
       "name": "fail-closed-evidence-gate",
       "domain": "agent-workflows",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.",
       "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
       "origin": {
@@ -3862,12 +3862,12 @@
         "evidence",
         "approval"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-28",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -3891,6 +3891,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
